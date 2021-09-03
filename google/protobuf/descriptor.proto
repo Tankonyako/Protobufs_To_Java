@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 package google.protobuf;
 
 option optimize_for = SPEED;
@@ -279,3 +281,4 @@ message GeneratedCodeInfo {
 
 	repeated .google.protobuf.GeneratedCodeInfo.Annotation annotation = 1;
 }
+

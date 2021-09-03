@@ -1,5 +1,7 @@
-import "steammessages_unified_base.steamclient.proto";
-import "steammessages_remoteclient_service_messages.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
+import "steam/steammessages_remoteclient_service_messages.proto";
 
 option cc_generic_services = true;
 
@@ -87,3 +89,4 @@ service RemoteClientSteamClient {
 		option (method_description) = "Send a Remote Play Together packet to a Steam client";
 	}
 }
+

@@ -1,4 +1,6 @@
-import "netmessages.proto";
+syntax = "proto2";
+
+import "csgo/netmessages.proto";
 
 enum EHitGroup {
 	EHG_Generic = 0;
@@ -123,3 +125,4 @@ message VacNetShot {
 	repeated float delta_yaw_window = 6;
 	repeated float delta_pitch_window = 7;
 }
+

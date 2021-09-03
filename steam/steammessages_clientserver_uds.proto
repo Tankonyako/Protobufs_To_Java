@@ -1,4 +1,6 @@
-import "steammessages_base.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -102,3 +104,4 @@ message CMsgClientSetClientAppUpdateState {
 message CMsgClientSetClientAppUpdateStateResponse {
 	optional uint32 result = 1;
 }
+

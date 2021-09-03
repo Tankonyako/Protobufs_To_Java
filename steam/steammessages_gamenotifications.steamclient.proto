@@ -1,4 +1,6 @@
-import "steammessages_unified_base.steamclient.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
@@ -153,3 +155,4 @@ service GameNotificationsClient {
 		option (method_description) = "Notification that the user's status has changed";
 	}
 }
+

@@ -1,5 +1,7 @@
-import "steammessages_base.proto";
-import "encrypted_app_ticket.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
+import "steam/encrypted_app_ticket.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -371,3 +373,4 @@ message CMsgClientClanState {
 	repeated .CMsgClientClanState.Event announcements = 7;
 	optional bool chat_room_private = 8;
 }
+

@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 import "google/protobuf/descriptor.proto";
 
 option optimize_for = SPEED;
@@ -81,3 +83,4 @@ message CMsgAppRights {
 	optional bool manage_pricing = 14;
 	optional bool broadcast_live = 15;
 }
+

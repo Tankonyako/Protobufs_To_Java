@@ -1,4 +1,6 @@
-import "steammessages_unified_base.steamclient.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
@@ -165,3 +167,4 @@ service FriendMessagesClient {
 		option (method_description) = "New message reaction from a friend.";
 	}
 }
+

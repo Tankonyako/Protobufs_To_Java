@@ -1,5 +1,7 @@
-import "steammessages_unified_base.steamclient.proto";
-import "steammessages_clientserver_friends.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
+import "steam/steammessages_clientserver_friends.proto";
 
 option cc_generic_services = true;
 
@@ -1278,3 +1280,4 @@ service ChatUsabilityClient {
 		option (method_description) = "Request client send usability metrics";
 	}
 }
+

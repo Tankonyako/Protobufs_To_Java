@@ -1,4 +1,6 @@
-import "enums.proto";
+syntax = "proto2";
+
+import "steam/enums.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -139,3 +141,4 @@ message CMsgBluetoothDevicesData {
 	repeated .CMsgBluetoothDevicesData.Adapter adapters = 1;
 	repeated .CMsgBluetoothDevicesData.Device devices = 2;
 }
+

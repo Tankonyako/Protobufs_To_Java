@@ -1,5 +1,7 @@
-import "steammessages_unified_base.steamclient.proto";
-import "clientmetrics.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
+import "steam/clientmetrics.proto";
 
 option cc_generic_services = true;
 
@@ -147,3 +149,4 @@ service ClientMetrics {
 	rpc ClientCloudAppSyncStats (.CClientMetrics_CloudAppSyncStats_Notification) returns (.NoResponse);
 	rpc ClientDownloadResponseCodeCounts (.CClientMetrics_ContentDownloadResponse_Counts_Notification) returns (.NoResponse);
 }
+

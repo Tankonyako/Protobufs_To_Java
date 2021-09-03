@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 option optimize_for = SPEED;
 option cc_generic_services = true;
 
@@ -45,3 +47,4 @@ message CClientNotificationAchievement {
 message CClientNotificationLowBattery {
 	optional float pct_remaining = 1;
 }
+

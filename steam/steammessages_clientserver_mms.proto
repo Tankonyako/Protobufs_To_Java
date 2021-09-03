@@ -1,4 +1,6 @@
-import "steammessages_base.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -226,3 +228,4 @@ message CMsgClientMMSGetLobbyStatusResponse {
 	optional fixed64 steam_id_lobby = 2;
 	optional .EMMSLobbyStatus lobby_status = 3 [default = k_EMMSLobbyStatusInvalid];
 }
+

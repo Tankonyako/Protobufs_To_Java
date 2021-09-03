@@ -1,4 +1,6 @@
-import "steamnetworkingsockets_messages_certs.proto";
+syntax = "proto2";
+
+import "steam/steamnetworkingsockets_messages_certs.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -189,3 +191,4 @@ message CMsgSteamNetworkingICESessionSummary {
 	optional uint32 ice_enable_var = 14;
 	optional uint32 local_candidate_types_allowed = 15;
 }
+

@@ -1,5 +1,7 @@
-import "steammessages_base.proto";
-import "steammessages_remoteclient_discovery.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
+import "steam/steammessages_remoteclient_discovery.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -97,3 +99,4 @@ message CMsgRemoteClientGetControllerConfigResponse {
 message CMsgRemoteClientStreamingEnabled {
 	required bool enabled = 1;
 }
+

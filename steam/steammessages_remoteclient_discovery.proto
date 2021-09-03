@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 option optimize_for = SPEED;
 
 enum ERemoteClientBroadcastMsg {
@@ -216,3 +218,4 @@ message CMsgRemoteDeviceStreamTransportSignal {
 	optional bytes token = 1;
 	optional bytes payload = 2;
 }
+

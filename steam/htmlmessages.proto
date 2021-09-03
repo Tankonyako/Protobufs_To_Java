@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
@@ -950,3 +952,4 @@ message CMsgBrowserViewPostMessageToParentRequest {
 	optional string args = 3;
 	optional string requesting_url = 4;
 }
+

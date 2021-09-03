@@ -1,4 +1,6 @@
-import "steammessages.proto";
+syntax = "proto2";
+
+import "steam/steammessages.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -531,3 +533,4 @@ message CMsgGameServerInfo {
 	optional uint32 parent_relay_count = 17;
 	optional fixed64 tv_secret_code = 18;
 }
+

@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 import "google/protobuf/descriptor.proto";
 
 option optimize_for = SPEED;
@@ -31,3 +33,4 @@ enum EProtoExecutionSite {
 
 message NoResponse {
 }
+

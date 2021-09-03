@@ -1,4 +1,6 @@
-import "steammessages_base.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = true;
@@ -129,3 +131,4 @@ enum EBluetoothDeviceType {
 	k_BluetoothDeviceType_Gamepad = 10;
 	k_BluetoothDeviceType_Keyboard = 11;
 }
+

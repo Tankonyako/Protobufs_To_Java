@@ -1,4 +1,6 @@
-import "steammessages_base.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -68,3 +70,4 @@ message CMsgClientLBSGetLBEntriesResponse {
 	optional int32 leaderboard_entry_count = 2;
 	repeated .CMsgClientLBSGetLBEntriesResponse.Entry entries = 3;
 }
+

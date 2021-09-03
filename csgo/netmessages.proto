@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 import "google/protobuf/descriptor.proto";
 
 option cc_generic_services = false;
@@ -489,3 +491,4 @@ message CCLCMsg_HltvReplay {
 message CSVCMsg_Broadcast_Command {
 	optional string cmd = 1;
 }
+

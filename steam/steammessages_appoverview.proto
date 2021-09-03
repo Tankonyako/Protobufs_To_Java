@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 option optimize_for = SPEED;
 option cc_generic_services = true;
 
@@ -157,3 +159,4 @@ message CAppBootstrapData {
 message CLibraryBootstrapData {
 	repeated .CAppBootstrapData app_data = 1;
 }
+

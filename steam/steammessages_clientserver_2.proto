@@ -1,4 +1,6 @@
-import "steammessages_base.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -773,3 +775,4 @@ message CMsgBadgeCraftedNotification {
 	optional uint32 appid = 1;
 	optional uint32 badge_level = 2;
 }
+

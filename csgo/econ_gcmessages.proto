@@ -1,4 +1,6 @@
-import "steammessages.proto";
+syntax = "proto2";
+
+import "steam/steammessages.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -223,3 +225,4 @@ message CMsgGCItemCustomizationNotification {
 	repeated uint64 item_id = 1;
 	optional uint32 request = 2;
 }
+

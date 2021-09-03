@@ -1,4 +1,6 @@
-import "steammessages.proto";
+syntax = "proto2";
+
+import "steam/steammessages.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -366,3 +368,4 @@ message CMsgCraftCommonStatClock {
 message CMsgGCQuestDiscard_Request {
 	optional uint64 quest_id = 1;
 }
+

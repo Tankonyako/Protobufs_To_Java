@@ -1,5 +1,7 @@
-import "steammessages.proto";
-import "base_gcmessages.proto";
+syntax = "proto2";
+
+import "steam/steammessages.proto";
+import "tf2/base_gcmessages.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -1616,3 +1618,4 @@ message GCQuestStrangeEvent {
 	optional uint32 strange_event_id = 4;
 	optional uint32 score = 5;
 }
+

@@ -1,6 +1,8 @@
+syntax = "proto2";
+
 import "google/protobuf/descriptor.proto";
-import "netmessages.proto";
-import "cstrike15_gcmessages.proto";
+import "csgo/netmessages.proto";
+import "csgo/cstrike15_gcmessages.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -595,3 +597,4 @@ message CCSUsrMsg_ServerRankRevealAll {
 	optional int32 seconds_till_shutdown = 1;
 	optional .CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve reservation = 2;
 }
+

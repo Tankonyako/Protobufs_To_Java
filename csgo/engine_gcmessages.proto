@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 import "google/protobuf/descriptor.proto";
 
 option cc_generic_services = false;
@@ -14,3 +16,4 @@ message CEngineGotvSyncPacket {
 	optional float keyframe_interval = 10;
 	optional uint32 cdndelay = 11;
 }
+

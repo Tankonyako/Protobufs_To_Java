@@ -1,5 +1,7 @@
-import "steammessages_unified_base.steamclient.proto";
-import "enums.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
+import "steam/enums.proto";
 
 option cc_generic_services = true;
 
@@ -689,3 +691,4 @@ service PublishedFileClient {
 		option (method_description) = "Notification from the server when a published file is deleted";
 	}
 }
+

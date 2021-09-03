@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 enum EInputMode {
 	k_EInputModeUnknown = 0;
 	k_EInputModeMouse = 1;
@@ -136,3 +138,4 @@ message CVirtualControllerGlobalConfig {
 	optional bool rumble_enabled = 4 [default = true];
 	optional bool shake_fade_enabled = 5;
 }
+

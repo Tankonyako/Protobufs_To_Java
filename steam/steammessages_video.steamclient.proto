@@ -1,4 +1,6 @@
-import "steammessages_unified_base.steamclient.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
@@ -81,3 +83,4 @@ service FovasVideo {
 		option (method_description) = "Retrieve the OPF settings JSON blob. Available via the Client for 360 Player App";
 	}
 }
+

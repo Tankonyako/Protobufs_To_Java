@@ -1,4 +1,6 @@
-import "steammessages.proto";
+syntax = "proto2";
+
+import "steam/steammessages.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -300,3 +302,4 @@ message CProductInfo_SetRichPresenceLocalization_Request {
 
 message CProductInfo_SetRichPresenceLocalization_Response {
 }
+

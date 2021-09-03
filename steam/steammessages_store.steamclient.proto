@@ -1,4 +1,6 @@
-import "steammessages_unified_base.steamclient.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
@@ -108,3 +110,4 @@ service StoreClient {
 		option (method_description) = "Notification from server to client that the user's store preferences have changed";
 	}
 }
+

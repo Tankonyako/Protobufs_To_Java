@@ -1,4 +1,6 @@
-import "steammessages_base.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -155,3 +157,4 @@ message CMsgGSComputeNewPlayerCompatibilityResponse {
 	optional int32 ct_you_dont_like = 5;
 	optional int32 ct_clanmembers_dont_like_you = 6;
 }
+

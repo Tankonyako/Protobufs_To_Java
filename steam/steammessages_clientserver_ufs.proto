@@ -1,4 +1,6 @@
-import "steammessages_base.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -170,3 +172,4 @@ message CMsgClientUFSShareFileResponse {
 	optional int32 eresult = 1 [default = 2];
 	optional fixed64 hcontent = 2 [default = 18446744073709551615];
 }
+

@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 import "google/protobuf/descriptor.proto";
 
 option optimize_for = SPEED;
@@ -596,3 +598,4 @@ message CMsgQuestMapNodeCondition {
 message CMsgHeaderOnly {
 	required .CMsgProtoDefHeader header = 1;
 }
+

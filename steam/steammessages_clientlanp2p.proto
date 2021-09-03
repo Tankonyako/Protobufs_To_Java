@@ -1,4 +1,6 @@
-import "steammessages_base.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -24,3 +26,4 @@ message CMsgClientLANP2PRequestChunksResponse {
 
 	repeated .CMsgClientLANP2PRequestChunksResponse.ChunkData chunk_responses = 1;
 }
+

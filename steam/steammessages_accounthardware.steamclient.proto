@@ -1,4 +1,6 @@
-import "steammessages_unified_base.steamclient.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
@@ -184,3 +186,4 @@ service AccountHardware {
 		option (method_description) = "Registers a valve index component to a customer";
 	}
 }
+

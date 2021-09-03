@@ -1,5 +1,7 @@
-import "steammessages_unified_base.steamclient.proto";
-import "enums.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
+import "steam/enums.proto";
 
 option cc_generic_services = true;
 
@@ -903,3 +905,4 @@ service PlayerClient {
 		option (method_description) = "Notification from server that privacy settings changed";
 	}
 }
+

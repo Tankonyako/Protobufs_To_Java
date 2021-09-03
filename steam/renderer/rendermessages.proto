@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
@@ -891,3 +893,4 @@ message CMsgRequestRenderCallback {
 	optional .CMsgPoint bottom_right_padding = 5;
 	optional bool needs_redraw_every_frame = 6;
 }
+

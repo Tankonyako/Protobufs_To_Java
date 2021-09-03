@@ -1,6 +1,8 @@
-import "steammessages_unified_base.steamclient.proto";
-import "enums.proto";
-import "iclient_objects.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
+import "steam/enums.proto";
+import "steam/iclient_objects.proto";
 
 option cc_generic_services = true;
 
@@ -450,3 +452,4 @@ service CloudClient {
 		option (method_description) = "Cloud state for the given app has changed.";
 	}
 }
+

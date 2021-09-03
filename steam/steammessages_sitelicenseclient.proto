@@ -1,4 +1,6 @@
-import "steammessages_base.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -36,3 +38,4 @@ message CMsgClientSiteLicenseGetContentCacheInfoResponse {
 	optional uint32 p2p_group = 4;
 	optional string ip_address = 5;
 }
+

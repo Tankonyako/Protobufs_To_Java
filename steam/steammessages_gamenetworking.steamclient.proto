@@ -1,4 +1,6 @@
-import "steammessages_unified_base.steamclient.proto";
+syntax = "proto2";
+
+import "steam/steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
@@ -40,3 +42,4 @@ service GameNetworking {
 		option (method_description) = "Client informs server it is done with the FakeIP.";
 	}
 }
+

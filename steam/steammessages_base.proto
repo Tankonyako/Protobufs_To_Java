@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 import "google/protobuf/descriptor.proto";
 
 option optimize_for = SPEED;
@@ -277,3 +279,4 @@ message CPackageReservationStatus {
 	optional uint32 time_expires = 7;
 	optional uint32 time_reserved = 8;
 }
+

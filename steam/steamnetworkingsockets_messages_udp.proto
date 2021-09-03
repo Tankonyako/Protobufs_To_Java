@@ -1,5 +1,7 @@
-import "steamnetworkingsockets_messages_certs.proto";
-import "steamnetworkingsockets_messages.proto";
+syntax = "proto2";
+
+import "steam/steamnetworkingsockets_messages_certs.proto";
+import "steam/steamnetworkingsockets_messages.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -73,3 +75,4 @@ message CMsgSteamSockets_UDP_Stats {
 	optional .CMsgSteamDatagramConnectionQuality stats = 1;
 	optional uint32 flags = 3;
 }
+

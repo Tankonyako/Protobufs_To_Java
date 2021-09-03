@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 import "google/protobuf/descriptor.proto";
 
 option cc_generic_services = false;
@@ -68,3 +70,4 @@ enum ENetworkDisconnectionReason {
 	NETWORK_DISCONNECT_SENDNETOVERFLOW = 58 [(network_connection_token) = "#GameUI_Disconnect_SendNetOverflow"];
 	NETWORK_DISCONNECT_PLAYER_REMOVED_FROM_HOST_SESSION = 59 [(network_connection_token) = "#GameUI_Disconnect_PlayerRemovedFromHostSession"];
 }
+

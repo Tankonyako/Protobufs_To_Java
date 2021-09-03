@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
@@ -43,3 +45,4 @@ message CClientMetrics_ContentDownloadResponse_HostCounts {
 message CClientMetrics_ContentDownloadResponse_Hosts {
 	repeated .CClientMetrics_ContentDownloadResponse_HostCounts hosts = 1;
 }
+

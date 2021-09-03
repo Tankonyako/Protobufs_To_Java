@@ -1,4 +1,6 @@
-import "steammessages_base.proto";
+syntax = "proto2";
+
+import "steam/steammessages_base.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -128,3 +130,4 @@ message SiteServerUI_ContentCacheConfig_Request {
 
 message SiteServerUI_ContentCacheConfig_Response {
 }
+
