@@ -1379,21 +1379,23 @@ public final class SteammessagesWorkshopSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n.steam/steammessages_workshop.steamclie" +
-      "nt.proto\0322steam/steammessages_unified_ba" +
-      "se.steamclient.proto\"0\n\037CWorkshop_GetEUL" +
-      "AStatus_Request\022\r\n\005appid\030\001 \001(\r\"u\n CWorks" +
-      "hop_GetEULAStatus_Response\022\017\n\007version\030\001 " +
-      "\001(\r\022\030\n\020timestamp_action\030\002 \001(\r\022\020\n\010accepte" +
-      "d\030\003 \001(\010\022\024\n\014needs_action\030\004 \001(\0102\306\001\n\010Worksh" +
-      "op\022\214\001\n\rGetEULAStatus\022 .CWorkshop_GetEULA" +
-      "Status_Request\032!.CWorkshop_GetEULAStatus" +
-      "_Response\"6\202\265\0302Retrieve the status of th" +
-      "e user\'s EULA acceptance.\032+\202\265\030\'A service" +
-      " to access published file dataB\003\200\001\001"
+      "nt.proto\032\036steam/steammessages_base.proto" +
+      "\0322steam/steammessages_unified_base.steam" +
+      "client.proto\"0\n\037CWorkshop_GetEULAStatus_" +
+      "Request\022\r\n\005appid\030\001 \001(\r\"u\n CWorkshop_GetE" +
+      "ULAStatus_Response\022\017\n\007version\030\001 \001(\r\022\030\n\020t" +
+      "imestamp_action\030\002 \001(\r\022\020\n\010accepted\030\003 \001(\010\022" +
+      "\024\n\014needs_action\030\004 \001(\0102\306\001\n\010Workshop\022\214\001\n\rG" +
+      "etEULAStatus\022 .CWorkshop_GetEULAStatus_R" +
+      "equest\032!.CWorkshop_GetEULAStatus_Respons" +
+      "e\"6\202\265\0302Retrieve the status of the user\'s" +
+      " EULA acceptance.\032+\202\265\030\'A service to acce" +
+      "ss published file dataB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CWorkshop_GetEULAStatus_Request_descriptor =
@@ -1414,6 +1416,7 @@ public final class SteammessagesWorkshopSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

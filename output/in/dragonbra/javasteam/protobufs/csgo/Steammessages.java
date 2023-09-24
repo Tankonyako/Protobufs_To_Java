@@ -6546,23 +6546,6 @@ public final class Steammessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string UNUSED_job_name = 1;</code>
-     * @return Whether the uNUSEDJobName field is set.
-     */
-    boolean hasUNUSEDJobName();
-    /**
-     * <code>optional string UNUSED_job_name = 1;</code>
-     * @return The uNUSEDJobName.
-     */
-    java.lang.String getUNUSEDJobName();
-    /**
-     * <code>optional string UNUSED_job_name = 1;</code>
-     * @return The bytes for uNUSEDJobName.
-     */
-    com.google.protobuf.ByteString
-        getUNUSEDJobNameBytes();
-
-    /**
      * <code>optional string interface_name = 2;</code>
      * @return Whether the interfaceName field is set.
      */
@@ -6661,7 +6644,6 @@ public final class Steammessages {
       super(builder);
     }
     private CMsgWebAPIRequest() {
-      uNUSEDJobName_ = "";
       interfaceName_ = "";
       methodName_ = "";
     }
@@ -6697,32 +6679,26 @@ public final class Steammessages {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              uNUSEDJobName_ = bs;
-              break;
-            }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               interfaceName_ = bs;
               break;
             }
             case 26: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               methodName_ = bs;
               break;
             }
             case 32: {
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               version_ = input.readUInt32();
               break;
             }
             case 42: {
               Steammessages.CMsgWebAPIKey.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000010) != 0)) {
+              if (((bitField0_ & 0x00000008) != 0)) {
                 subBuilder = apiKey_.toBuilder();
               }
               apiKey_ = input.readMessage(Steammessages.CMsgWebAPIKey.PARSER, extensionRegistry);
@@ -6730,12 +6706,12 @@ public final class Steammessages {
                 subBuilder.mergeFrom(apiKey_);
                 apiKey_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             }
             case 50: {
               Steammessages.CMsgHttpRequest.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000020) != 0)) {
+              if (((bitField0_ & 0x00000010) != 0)) {
                 subBuilder = request_.toBuilder();
               }
               request_ = input.readMessage(Steammessages.CMsgHttpRequest.PARSER, extensionRegistry);
@@ -6743,11 +6719,11 @@ public final class Steammessages {
                 subBuilder.mergeFrom(request_);
                 request_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               routingAppId_ = input.readUInt32();
               break;
             }
@@ -6784,54 +6760,6 @@ public final class Steammessages {
     }
 
     private int bitField0_;
-    public static final int UNUSED_JOB_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object uNUSEDJobName_;
-    /**
-     * <code>optional string UNUSED_job_name = 1;</code>
-     * @return Whether the uNUSEDJobName field is set.
-     */
-    @java.lang.Override
-    public boolean hasUNUSEDJobName() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional string UNUSED_job_name = 1;</code>
-     * @return The uNUSEDJobName.
-     */
-    @java.lang.Override
-    public java.lang.String getUNUSEDJobName() {
-      java.lang.Object ref = uNUSEDJobName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uNUSEDJobName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string UNUSED_job_name = 1;</code>
-     * @return The bytes for uNUSEDJobName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUNUSEDJobNameBytes() {
-      java.lang.Object ref = uNUSEDJobName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uNUSEDJobName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int INTERFACE_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object interfaceName_;
     /**
@@ -6840,7 +6768,7 @@ public final class Steammessages {
      */
     @java.lang.Override
     public boolean hasInterfaceName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>optional string interface_name = 2;</code>
@@ -6888,7 +6816,7 @@ public final class Steammessages {
      */
     @java.lang.Override
     public boolean hasMethodName() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>optional string method_name = 3;</code>
@@ -6936,7 +6864,7 @@ public final class Steammessages {
      */
     @java.lang.Override
     public boolean hasVersion() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>optional uint32 version = 4;</code>
@@ -6955,7 +6883,7 @@ public final class Steammessages {
      */
     @java.lang.Override
     public boolean hasApiKey() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>optional .CMsgWebAPIKey api_key = 5;</code>
@@ -6981,7 +6909,7 @@ public final class Steammessages {
      */
     @java.lang.Override
     public boolean hasRequest() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>optional .CMsgHttpRequest request = 6;</code>
@@ -7007,7 +6935,7 @@ public final class Steammessages {
      */
     @java.lang.Override
     public boolean hasRoutingAppId() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>optional uint32 routing_app_id = 7;</code>
@@ -7033,24 +6961,21 @@ public final class Steammessages {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uNUSEDJobName_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, interfaceName_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, methodName_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeUInt32(4, version_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(5, getApiKey());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(6, getRequest());
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeUInt32(7, routingAppId_);
       }
       unknownFields.writeTo(output);
@@ -7063,27 +6988,24 @@ public final class Steammessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uNUSEDJobName_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, interfaceName_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, methodName_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, version_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getApiKey());
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getRequest());
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, routingAppId_);
       }
@@ -7102,11 +7024,6 @@ public final class Steammessages {
       }
       Steammessages.CMsgWebAPIRequest other = (Steammessages.CMsgWebAPIRequest) obj;
 
-      if (hasUNUSEDJobName() != other.hasUNUSEDJobName()) return false;
-      if (hasUNUSEDJobName()) {
-        if (!getUNUSEDJobName()
-            .equals(other.getUNUSEDJobName())) return false;
-      }
       if (hasInterfaceName() != other.hasInterfaceName()) return false;
       if (hasInterfaceName()) {
         if (!getInterfaceName()
@@ -7148,10 +7065,6 @@ public final class Steammessages {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasUNUSEDJobName()) {
-        hash = (37 * hash) + UNUSED_JOB_NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getUNUSEDJobName().hashCode();
-      }
       if (hasInterfaceName()) {
         hash = (37 * hash) + INTERFACE_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getInterfaceName().hashCode();
@@ -7311,28 +7224,26 @@ public final class Steammessages {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        uNUSEDJobName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         interfaceName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         methodName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         version_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (apiKeyBuilder_ == null) {
           apiKey_ = null;
         } else {
           apiKeyBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (requestBuilder_ == null) {
           request_ = null;
         } else {
           requestBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         routingAppId_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -7364,38 +7275,34 @@ public final class Steammessages {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.uNUSEDJobName_ = uNUSEDJobName_;
+        result.interfaceName_ = interfaceName_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.interfaceName_ = interfaceName_;
+        result.methodName_ = methodName_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.version_ = version_;
           to_bitField0_ |= 0x00000004;
         }
-        result.methodName_ = methodName_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.version_ = version_;
-          to_bitField0_ |= 0x00000008;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
           if (apiKeyBuilder_ == null) {
             result.apiKey_ = apiKey_;
           } else {
             result.apiKey_ = apiKeyBuilder_.build();
           }
-          to_bitField0_ |= 0x00000010;
+          to_bitField0_ |= 0x00000008;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           if (requestBuilder_ == null) {
             result.request_ = request_;
           } else {
             result.request_ = requestBuilder_.build();
           }
-          to_bitField0_ |= 0x00000020;
+          to_bitField0_ |= 0x00000010;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.routingAppId_ = routingAppId_;
-          to_bitField0_ |= 0x00000040;
+          to_bitField0_ |= 0x00000020;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -7446,18 +7353,13 @@ public final class Steammessages {
 
       public Builder mergeFrom(Steammessages.CMsgWebAPIRequest other) {
         if (other == Steammessages.CMsgWebAPIRequest.getDefaultInstance()) return this;
-        if (other.hasUNUSEDJobName()) {
-          bitField0_ |= 0x00000001;
-          uNUSEDJobName_ = other.uNUSEDJobName_;
-          onChanged();
-        }
         if (other.hasInterfaceName()) {
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
           interfaceName_ = other.interfaceName_;
           onChanged();
         }
         if (other.hasMethodName()) {
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           methodName_ = other.methodName_;
           onChanged();
         }
@@ -7503,97 +7405,13 @@ public final class Steammessages {
       }
       private int bitField0_;
 
-      private java.lang.Object uNUSEDJobName_ = "";
-      /**
-       * <code>optional string UNUSED_job_name = 1;</code>
-       * @return Whether the uNUSEDJobName field is set.
-       */
-      public boolean hasUNUSEDJobName() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional string UNUSED_job_name = 1;</code>
-       * @return The uNUSEDJobName.
-       */
-      public java.lang.String getUNUSEDJobName() {
-        java.lang.Object ref = uNUSEDJobName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uNUSEDJobName_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string UNUSED_job_name = 1;</code>
-       * @return The bytes for uNUSEDJobName.
-       */
-      public com.google.protobuf.ByteString
-          getUNUSEDJobNameBytes() {
-        java.lang.Object ref = uNUSEDJobName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uNUSEDJobName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string UNUSED_job_name = 1;</code>
-       * @param value The uNUSEDJobName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUNUSEDJobName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        uNUSEDJobName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string UNUSED_job_name = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUNUSEDJobName() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        uNUSEDJobName_ = getDefaultInstance().getUNUSEDJobName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string UNUSED_job_name = 1;</code>
-       * @param value The bytes for uNUSEDJobName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUNUSEDJobNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        uNUSEDJobName_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object interfaceName_ = "";
       /**
        * <code>optional string interface_name = 2;</code>
        * @return Whether the interfaceName field is set.
        */
       public boolean hasInterfaceName() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>optional string interface_name = 2;</code>
@@ -7640,7 +7458,7 @@ public final class Steammessages {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000001;
         interfaceName_ = value;
         onChanged();
         return this;
@@ -7650,7 +7468,7 @@ public final class Steammessages {
        * @return This builder for chaining.
        */
       public Builder clearInterfaceName() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         interfaceName_ = getDefaultInstance().getInterfaceName();
         onChanged();
         return this;
@@ -7665,7 +7483,7 @@ public final class Steammessages {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000001;
         interfaceName_ = value;
         onChanged();
         return this;
@@ -7677,7 +7495,7 @@ public final class Steammessages {
        * @return Whether the methodName field is set.
        */
       public boolean hasMethodName() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>optional string method_name = 3;</code>
@@ -7724,7 +7542,7 @@ public final class Steammessages {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000002;
         methodName_ = value;
         onChanged();
         return this;
@@ -7734,7 +7552,7 @@ public final class Steammessages {
        * @return This builder for chaining.
        */
       public Builder clearMethodName() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         methodName_ = getDefaultInstance().getMethodName();
         onChanged();
         return this;
@@ -7749,7 +7567,7 @@ public final class Steammessages {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000002;
         methodName_ = value;
         onChanged();
         return this;
@@ -7762,7 +7580,7 @@ public final class Steammessages {
        */
       @java.lang.Override
       public boolean hasVersion() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>optional uint32 version = 4;</code>
@@ -7778,7 +7596,7 @@ public final class Steammessages {
        * @return This builder for chaining.
        */
       public Builder setVersion(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         version_ = value;
         onChanged();
         return this;
@@ -7788,7 +7606,7 @@ public final class Steammessages {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         version_ = 0;
         onChanged();
         return this;
@@ -7802,7 +7620,7 @@ public final class Steammessages {
        * @return Whether the apiKey field is set.
        */
       public boolean hasApiKey() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>optional .CMsgWebAPIKey api_key = 5;</code>
@@ -7828,7 +7646,7 @@ public final class Steammessages {
         } else {
           apiKeyBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -7842,7 +7660,7 @@ public final class Steammessages {
         } else {
           apiKeyBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -7850,7 +7668,7 @@ public final class Steammessages {
        */
       public Builder mergeApiKey(Steammessages.CMsgWebAPIKey value) {
         if (apiKeyBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
+          if (((bitField0_ & 0x00000008) != 0) &&
               apiKey_ != null &&
               apiKey_ != Steammessages.CMsgWebAPIKey.getDefaultInstance()) {
             apiKey_ =
@@ -7862,7 +7680,7 @@ public final class Steammessages {
         } else {
           apiKeyBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -7875,14 +7693,14 @@ public final class Steammessages {
         } else {
           apiKeyBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
       /**
        * <code>optional .CMsgWebAPIKey api_key = 5;</code>
        */
       public Steammessages.CMsgWebAPIKey.Builder getApiKeyBuilder() {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return getApiKeyFieldBuilder().getBuilder();
       }
@@ -7922,7 +7740,7 @@ public final class Steammessages {
        * @return Whether the request field is set.
        */
       public boolean hasRequest() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>optional .CMsgHttpRequest request = 6;</code>
@@ -7948,7 +7766,7 @@ public final class Steammessages {
         } else {
           requestBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         return this;
       }
       /**
@@ -7962,7 +7780,7 @@ public final class Steammessages {
         } else {
           requestBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         return this;
       }
       /**
@@ -7970,7 +7788,7 @@ public final class Steammessages {
        */
       public Builder mergeRequest(Steammessages.CMsgHttpRequest value) {
         if (requestBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
+          if (((bitField0_ & 0x00000010) != 0) &&
               request_ != null &&
               request_ != Steammessages.CMsgHttpRequest.getDefaultInstance()) {
             request_ =
@@ -7982,7 +7800,7 @@ public final class Steammessages {
         } else {
           requestBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         return this;
       }
       /**
@@ -7995,14 +7813,14 @@ public final class Steammessages {
         } else {
           requestBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
       /**
        * <code>optional .CMsgHttpRequest request = 6;</code>
        */
       public Steammessages.CMsgHttpRequest.Builder getRequestBuilder() {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
@@ -8041,7 +7859,7 @@ public final class Steammessages {
        */
       @java.lang.Override
       public boolean hasRoutingAppId() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>optional uint32 routing_app_id = 7;</code>
@@ -8057,7 +7875,7 @@ public final class Steammessages {
        * @return This builder for chaining.
        */
       public Builder setRoutingAppId(int value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         routingAppId_ = value;
         onChanged();
         return this;
@@ -8067,7 +7885,7 @@ public final class Steammessages {
        * @return This builder for chaining.
        */
       public Builder clearRoutingAppId() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         routingAppId_ = 0;
         onChanged();
         return this;
@@ -52254,6 +52072,23 @@ public final class Steammessages {
      * @return The eresult.
      */
     int getEresult();
+
+    /**
+     * <code>optional string message = 2;</code>
+     * @return Whether the message field is set.
+     */
+    boolean hasMessage();
+    /**
+     * <code>optional string message = 2;</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>optional string message = 2;</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
   }
   /**
    * Protobuf type {@code CMsgGCMsgMasterSetDirectory_Response}
@@ -52269,6 +52104,7 @@ public final class Steammessages {
     }
     private CMsgGCMsgMasterSetDirectory_Response() {
       eresult_ = 2;
+      message_ = "";
     }
 
     @java.lang.Override
@@ -52305,6 +52141,12 @@ public final class Steammessages {
             case 8: {
               bitField0_ |= 0x00000001;
               eresult_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              message_ = bs;
               break;
             }
             default: {
@@ -52359,6 +52201,54 @@ public final class Steammessages {
       return eresult_;
     }
 
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object message_;
+    /**
+     * <code>optional string message = 2;</code>
+     * @return Whether the message field is set.
+     */
+    @java.lang.Override
+    public boolean hasMessage() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          message_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -52376,6 +52266,9 @@ public final class Steammessages {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeInt32(1, eresult_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -52388,6 +52281,9 @@ public final class Steammessages {
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, eresult_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -52409,6 +52305,11 @@ public final class Steammessages {
         if (getEresult()
             != other.getEresult()) return false;
       }
+      if (hasMessage() != other.hasMessage()) return false;
+      if (hasMessage()) {
+        if (!getMessage()
+            .equals(other.getMessage())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -52423,6 +52324,10 @@ public final class Steammessages {
       if (hasEresult()) {
         hash = (37 * hash) + ERESULT_FIELD_NUMBER;
         hash = (53 * hash) + getEresult();
+      }
+      if (hasMessage()) {
+        hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getMessage().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -52559,6 +52464,8 @@ public final class Steammessages {
         super.clear();
         eresult_ = 2;
         bitField0_ = (bitField0_ & ~0x00000001);
+        message_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -52591,6 +52498,10 @@ public final class Steammessages {
           to_bitField0_ |= 0x00000001;
         }
         result.eresult_ = eresult_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.message_ = message_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -52642,6 +52553,11 @@ public final class Steammessages {
         if (other == Steammessages.CMsgGCMsgMasterSetDirectory_Response.getDefaultInstance()) return this;
         if (other.hasEresult()) {
           setEresult(other.getEresult());
+        }
+        if (other.hasMessage()) {
+          bitField0_ |= 0x00000002;
+          message_ = other.message_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -52708,6 +52624,90 @@ public final class Steammessages {
       public Builder clearEresult() {
         bitField0_ = (bitField0_ & ~0x00000001);
         eresult_ = 2;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>optional string message = 2;</code>
+       * @return Whether the message field is set.
+       */
+      public boolean hasMessage() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            message_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        message_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        message_ = getDefaultInstance().getMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        message_ = value;
         onChanged();
         return this;
       }
@@ -76064,249 +76064,249 @@ public final class Steammessages {
       ".CMsgHttpRequest.QueryParam\022\014\n\004body\030\007 \001(" +
       "\014\022\030\n\020absolute_timeout\030\010 \001(\r\032,\n\rRequestHe" +
       "ader\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\032)\n\nQue" +
-      "ryParam\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\014\"\306\001\n" +
-      "\021CMsgWebAPIRequest\022\027\n\017UNUSED_job_name\030\001 " +
-      "\001(\t\022\026\n\016interface_name\030\002 \001(\t\022\023\n\013method_na" +
-      "me\030\003 \001(\t\022\017\n\007version\030\004 \001(\r\022\037\n\007api_key\030\005 \001" +
-      "(\0132\016.CMsgWebAPIKey\022!\n\007request\030\006 \001(\0132\020.CM" +
-      "sgHttpRequest\022\026\n\016routing_app_id\030\007 \001(\r\"\227\001" +
-      "\n\020CMsgHttpResponse\022\023\n\013status_code\030\001 \001(\r\022" +
-      "1\n\007headers\030\002 \003(\0132 .CMsgHttpResponse.Resp" +
-      "onseHeader\022\014\n\004body\030\003 \001(\014\032-\n\016ResponseHead" +
-      "er\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"@\n\022CMsgA" +
-      "MFindAccounts\022\023\n\013search_type\030\001 \001(\r\022\025\n\rse" +
-      "arch_string\030\002 \001(\t\".\n\032CMsgAMFindAccountsR" +
-      "esponse\022\020\n\010steam_id\030\001 \003(\006\"\220\001\n\022CMsgNotify" +
-      "Watchdog\022\016\n\006source\030\001 \001(\r\022\022\n\nalert_type\030\002" +
-      " \001(\r\022\031\n\021alert_destination\030\003 \001(\r\022\020\n\010criti" +
-      "cal\030\004 \001(\010\022\014\n\004time\030\005 \001(\r\022\r\n\005appid\030\006 \001(\r\022\014" +
-      "\n\004text\030\007 \001(\t\"$\n\021CMsgAMGetLicenses\022\017\n\007ste" +
-      "amid\030\001 \001(\006\"P\n\022CMsgPackageLicense\022\022\n\npack" +
-      "age_id\030\001 \001(\r\022\024\n\014time_created\030\002 \001(\r\022\020\n\010ow" +
-      "ner_id\030\003 \001(\r\"Q\n\031CMsgAMGetLicensesRespons" +
-      "e\022$\n\007license\030\001 \003(\0132\023.CMsgPackageLicense\022" +
-      "\016\n\006result\030\002 \001(\r\"J\n\026CMsgAMGetUserGameStat" +
-      "s\022\020\n\010steam_id\030\001 \001(\006\022\017\n\007game_id\030\002 \001(\006\022\r\n\005" +
-      "stats\030\003 \003(\r\"\352\002\n\036CMsgAMGetUserGameStatsRe" +
-      "sponse\022\020\n\010steam_id\030\001 \001(\006\022\017\n\007game_id\030\002 \001(" +
-      "\006\022\022\n\007eresult\030\003 \001(\005:\0012\0224\n\005stats\030\004 \003(\0132%.C" +
-      "MsgAMGetUserGameStatsResponse.Stats\022N\n\022a" +
-      "chievement_blocks\030\005 \003(\01322.CMsgAMGetUserG" +
-      "ameStatsResponse.Achievement_Blocks\032,\n\005S" +
-      "tats\022\017\n\007stat_id\030\001 \001(\r\022\022\n\nstat_value\030\002 \001(" +
-      "\r\032]\n\022Achievement_Blocks\022\026\n\016achievement_i" +
-      "d\030\001 \001(\r\022\032\n\022achievement_bit_id\030\002 \001(\r\022\023\n\013u" +
-      "nlock_time\030\003 \001(\007\">\n\024CMsgGCGetCommandList" +
-      "\022\016\n\006app_id\030\001 \001(\r\022\026\n\016command_prefix\030\002 \001(\t" +
-      "\"4\n\034CMsgGCGetCommandListResponse\022\024\n\014comm" +
-      "and_name\030\001 \003(\t\"\"\n\022CGCMsgMemCachedGet\022\014\n\004" +
-      "keys\030\001 \003(\t\"|\n\032CGCMsgMemCachedGetResponse" +
-      "\0224\n\006values\030\001 \003(\0132$.CGCMsgMemCachedGetRes" +
-      "ponse.ValueTag\032(\n\010ValueTag\022\r\n\005found\030\001 \001(" +
-      "\010\022\r\n\005value\030\002 \001(\014\"g\n\022CGCMsgMemCachedSet\022)" +
-      "\n\004keys\030\001 \003(\0132\033.CGCMsgMemCachedSet.KeyPai" +
-      "r\032&\n\007KeyPair\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\014\"%\n\025CGCMsgMemCachedDelete\022\014\n\004keys\030\001 \003(\t" +
-      "\"\026\n\024CGCMsgMemCachedStats\"\270\002\n\034CGCMsgMemCa" +
-      "chedStatsResponse\022\030\n\020curr_connections\030\001 " +
-      "\001(\004\022\017\n\007cmd_get\030\002 \001(\004\022\017\n\007cmd_set\030\003 \001(\004\022\021\n" +
-      "\tcmd_flush\030\004 \001(\004\022\020\n\010get_hits\030\005 \001(\004\022\022\n\nge" +
-      "t_misses\030\006 \001(\004\022\023\n\013delete_hits\030\007 \001(\004\022\025\n\rd" +
-      "elete_misses\030\010 \001(\004\022\022\n\nbytes_read\030\t \001(\004\022\025" +
-      "\n\rbytes_written\030\n \001(\004\022\026\n\016limit_maxbytes\030" +
-      "\013 \001(\004\022\022\n\ncurr_items\030\014 \001(\004\022\021\n\tevictions\030\r" +
-      " \001(\004\022\r\n\005bytes\030\016 \001(\004\"(\n\016CGCMsgSQLStats\022\026\n" +
-      "\016schema_catalog\030\001 \001(\r\"\233\002\n\026CGCMsgSQLStats" +
-      "Response\022\017\n\007threads\030\001 \001(\r\022\031\n\021threads_con" +
-      "nected\030\002 \001(\r\022\026\n\016threads_active\030\003 \001(\r\022\034\n\024" +
-      "operations_submitted\030\004 \001(\r\022$\n\034prepared_s" +
-      "tatements_executed\030\005 \001(\r\022(\n non_prepared" +
-      "_statements_executed\030\006 \001(\r\022\030\n\020deadlock_r" +
-      "etries\030\007 \001(\r\022%\n\035operations_timed_out_in_" +
-      "queue\030\010 \001(\r\022\016\n\006errors\030\t \001(\r\"i\n\024CMsgAMAdd" +
-      "FreeLicense\022\017\n\007steamid\030\001 \001(\006\022\021\n\tip_publi" +
-      "c\030\002 \001(\r\022\021\n\tpackageid\030\003 \001(\r\022\032\n\022store_coun" +
-      "try_code\030\004 \001(\t\"c\n\034CMsgAMAddFreeLicenseRe" +
-      "sponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\036\n\026purchase_r" +
-      "esult_detail\030\002 \001(\005\022\017\n\007transid\030\003 \001(\006\"\"\n\023C" +
-      "GCMsgGetIPLocation\022\013\n\003ips\030\001 \003(\007\"p\n\017CIPLo" +
-      "cationInfo\022\n\n\002ip\030\001 \001(\r\022\020\n\010latitude\030\002 \001(\002" +
-      "\022\021\n\tlongitude\030\003 \001(\002\022\017\n\007country\030\004 \001(\t\022\r\n\005" +
-      "state\030\005 \001(\t\022\014\n\004city\030\006 \001(\t\">\n\033CGCMsgGetIP" +
-      "LocationResponse\022\037\n\005infos\030\001 \003(\0132\020.CIPLoc" +
-      "ationInfo\"?\n\027CGCMsgSystemStatsSchema\022\021\n\t" +
-      "gc_app_id\030\001 \001(\r\022\021\n\tschema_kv\030\002 \001(\014\"\026\n\024CG" +
-      "CMsgGetSystemStats\"\305\002\n\034CGCMsgGetSystemSt" +
-      "atsResponse\022\021\n\tgc_app_id\030\001 \001(\r\022\020\n\010stats_" +
-      "kv\030\002 \001(\014\022\023\n\013active_jobs\030\003 \001(\r\022\025\n\ryieldin" +
-      "g_jobs\030\004 \001(\r\022\025\n\ruser_sessions\030\005 \001(\r\022\034\n\024g" +
-      "ame_server_sessions\030\006 \001(\r\022\020\n\010socaches\030\007 " +
-      "\001(\r\022\032\n\022socaches_to_unload\030\010 \001(\r\022\030\n\020socac" +
-      "hes_loading\030\t \001(\r\022\027\n\017writeback_queue\030\n \001" +
-      "(\r\022\025\n\rsteamid_locks\030\013 \001(\r\022\023\n\013logon_queue" +
-      "\030\014 \001(\r\022\022\n\nlogon_jobs\030\r \001(\r\"\342\002\n\017CMsgAMSen" +
-      "dEmail\022\017\n\007steamid\030\001 \001(\006\022\026\n\016email_msg_typ" +
-      "e\030\002 \001(\r\022\024\n\014email_format\030\003 \001(\r\022I\n\023persona" +
-      "_name_tokens\030\005 \003(\0132,.CMsgAMSendEmail.Per" +
-      "sonaNameReplacementToken\022\021\n\tsource_gc\030\006 " +
-      "\001(\r\0221\n\006tokens\030\007 \003(\0132!.CMsgAMSendEmail.Re" +
-      "placementToken\032;\n\020ReplacementToken\022\022\n\nto" +
-      "ken_name\030\001 \001(\t\022\023\n\013token_value\030\002 \001(\t\032B\n\033P" +
-      "ersonaNameReplacementToken\022\017\n\007steamid\030\001 " +
-      "\001(\006\022\022\n\ntoken_name\030\002 \001(\t\"-\n\027CMsgAMSendEma" +
-      "ilResponse\022\022\n\007eresult\030\001 \001(\r:\0012\"j\n\026CMsgGC" +
-      "GetEmailTemplate\022\016\n\006app_id\030\001 \001(\r\022\026\n\016emai" +
-      "l_msg_type\030\002 \001(\r\022\022\n\nemail_lang\030\003 \001(\005\022\024\n\014" +
-      "email_format\030\004 \001(\005\"_\n\036CMsgGCGetEmailTemp" +
-      "lateResponse\022\022\n\007eresult\030\001 \001(\r:\0012\022\027\n\017temp" +
-      "late_exists\030\002 \001(\010\022\020\n\010template\030\003 \001(\t\"\204\001\n\027" +
-      "CMsgAMGrantGuestPasses2\022\020\n\010steam_id\030\001 \001(" +
-      "\006\022\022\n\npackage_id\030\002 \001(\r\022\027\n\017passes_to_grant" +
-      "\030\003 \001(\005\022\032\n\022days_to_expiration\030\004 \001(\005\022\016\n\006ac" +
-      "tion\030\005 \001(\005\"P\n\037CMsgAMGrantGuestPasses2Res" +
-      "ponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\031\n\016passes_gran" +
-      "ted\030\002 \001(\005:\0010\"L\n\036CGCSystemMsg_GetAccountD" +
-      "etails\022\017\n\007steamid\030\001 \001(\006\022\r\n\005appid\030\002 \001(\r:\n" +
-      "\200\246\035\200\001\210\246\035\200\004\"\360\007\n\'CGCSystemMsg_GetAccountDe" +
-      "tails_Response\022\035\n\022eresult_deprecated\030\001 \001" +
-      "(\r:\0012\022\024\n\014account_name\030\002 \001(\t\022\024\n\014persona_n" +
-      "ame\030\003 \001(\t\022\031\n\021is_profile_public\030\004 \001(\010\022\033\n\023" +
-      "is_inventory_public\030\005 \001(\010\022\025\n\ris_vac_bann" +
-      "ed\030\007 \001(\010\022\025\n\ris_cyber_cafe\030\010 \001(\010\022\031\n\021is_sc" +
-      "hool_account\030\t \001(\010\022\022\n\nis_limited\030\n \001(\010\022\025" +
-      "\n\ris_subscribed\030\013 \001(\010\022\017\n\007package\030\014 \001(\r\022\035" +
-      "\n\025is_free_trial_account\030\r \001(\010\022\035\n\025free_tr" +
-      "ial_expiration\030\016 \001(\r\022\027\n\017is_low_violence\030" +
-      "\017 \001(\010\022\036\n\026is_account_locked_down\030\020 \001(\010\022\033\n" +
-      "\023is_community_banned\030\021 \001(\010\022\027\n\017is_trade_b" +
-      "anned\030\022 \001(\010\022\034\n\024trade_ban_expiration\030\023 \001(" +
-      "\r\022\021\n\taccountid\030\024 \001(\r\022\033\n\023suspension_end_t" +
-      "ime\030\025 \001(\r\022\020\n\010currency\030\026 \001(\t\022\023\n\013steam_lev" +
-      "el\030\027 \001(\r\022\024\n\014friend_count\030\030 \001(\r\022\035\n\025accoun" +
-      "t_creation_time\030\031 \001(\r\022\035\n\025is_steamguard_e" +
-      "nabled\030\033 \001(\010\022\031\n\021is_phone_verified\030\034 \001(\010\022" +
-      "\"\n\032is_two_factor_auth_enabled\030\035 \001(\010\022\037\n\027t" +
-      "wo_factor_enabled_time\030\036 \001(\r\022\037\n\027phone_ve" +
-      "rification_time\030\037 \001(\r\022\020\n\010phone_id\030! \001(\004\022" +
-      "\034\n\024is_phone_identifying\030\" \001(\010\022\032\n\022rt_iden" +
-      "tity_linked\030# \001(\r\022\025\n\rrt_birth_date\030$ \001(\r" +
-      "\022\030\n\020txn_country_code\030% \001(\t\022\036\n\026has_accept" +
-      "ed_china_ssa\030& \001(\010\022\035\n\025is_banned_steam_ch" +
-      "ina\030\' \001(\010:\n\200\246\035\200\001\210\246\035\200\004\")\n\025CMsgGCGetPerson" +
-      "aNames\022\020\n\010steamids\030\001 \003(\006\"\276\001\n\036CMsgGCGetPe" +
-      "rsonaNames_Response\022F\n\021succeeded_lookups" +
-      "\030\001 \003(\0132+.CMsgGCGetPersonaNames_Response." +
-      "PersonaName\022\036\n\026failed_lookup_steamids\030\002 " +
-      "\003(\006\0324\n\013PersonaName\022\017\n\007steamid\030\001 \001(\006\022\024\n\014p" +
-      "ersona_name\030\002 \001(\t\"D\n\025CMsgGCCheckFriendsh" +
-      "ip\022\024\n\014steamid_left\030\001 \001(\006\022\025\n\rsteamid_righ" +
-      "t\030\002 \001(\006\"K\n\036CMsgGCCheckFriendship_Respons" +
-      "e\022\017\n\007success\030\001 \001(\010\022\030\n\020found_friendship\030\002" +
-      " \001(\010\"\310\001\n\033CMsgGCMsgMasterSetDirectory\022\030\n\020" +
-      "master_dir_index\030\001 \001(\r\022/\n\003dir\030\002 \003(\0132\".CM" +
-      "sgGCMsgMasterSetDirectory.SubGC\032^\n\005SubGC" +
-      "\022\021\n\tdir_index\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\013\n\003box" +
-      "\030\003 \001(\t\022\024\n\014command_line\030\004 \001(\t\022\021\n\tgc_binar" +
-      "y\030\005 \001(\t\":\n$CMsgGCMsgMasterSetDirectory_R" +
-      "esponse\022\022\n\007eresult\030\001 \001(\005:\0012\"=\n(CMsgGCMsg" +
-      "WebAPIJobRequestForwardResponse\022\021\n\tdir_i" +
-      "ndex\030\001 \001(\r\"8\n%CGCSystemMsg_GetPurchaseTr" +
-      "ust_Request\022\017\n\007steamid\030\001 \001(\006\"\255\001\n&CGCSyst" +
-      "emMsg_GetPurchaseTrust_Response\022\"\n\032has_p" +
-      "rior_purchase_history\030\001 \001(\010\022%\n\035has_no_re" +
-      "cent_password_resets\030\002 \001(\010\022\036\n\026is_wallet_" +
-      "cash_trusted\030\003 \001(\010\022\030\n\020time_all_trusted\030\004" +
-      " \001(\r\"\217\001\n\035CMsgGCHAccountVacStatusChange\022\020" +
-      "\n\010steam_id\030\001 \001(\006\022\016\n\006app_id\030\002 \001(\r\022\033\n\023rtim" +
-      "e_vacban_starts\030\003 \001(\r\022\025\n\ris_banned_now\030\004" +
-      " \001(\010\022\030\n\020is_banned_future\030\005 \001(\010\".\n\033CMsgGC" +
-      "GetPartnerAccountLink\022\017\n\007steamid\030\001 \001(\006\"\204" +
-      "\001\n$CMsgGCGetPartnerAccountLink_Response\022" +
-      "\014\n\004pwid\030\001 \001(\r\022\017\n\007nexonid\030\002 \001(\r\022\020\n\010agecla" +
-      "ss\030\003 \001(\005\022\031\n\013id_verified\030\004 \001(\010:\004true\022\020\n\010i" +
-      "s_adult\030\005 \001(\010\"\275\002\n\021CMsgGCRoutingInfo\022\021\n\td" +
-      "ir_index\030\001 \003(\r\0228\n\006method\030\002 \001(\0162 .CMsgGCR" +
-      "outingInfo.RoutingMethod:\006RANDOM\022;\n\010fall" +
-      "back\030\003 \001(\0162 .CMsgGCRoutingInfo.RoutingMe" +
-      "thod:\007DISCARD\022\026\n\016protobuf_field\030\004 \001(\r\022\024\n" +
-      "\014webapi_param\030\005 \001(\t\"p\n\rRoutingMethod\022\n\n\006" +
-      "RANDOM\020\000\022\013\n\007DISCARD\020\001\022\022\n\016CLIENT_STEAMID\020" +
-      "\002\022\031\n\025PROTOBUF_FIELD_UINT64\020\003\022\027\n\023WEBAPI_P" +
-      "ARAM_UINT64\020\004\"\265\001\n\037CMsgGCMsgMasterSetWebA" +
-      "PIRouting\0227\n\007entries\030\001 \003(\0132&.CMsgGCMsgMa" +
-      "sterSetWebAPIRouting.Entry\032Y\n\005Entry\022\026\n\016i" +
-      "nterface_name\030\001 \001(\t\022\023\n\013method_name\030\002 \001(\t" +
-      "\022#\n\007routing\030\003 \001(\0132\022.CMsgGCRoutingInfo\"\240\001" +
-      "\n\"CMsgGCMsgMasterSetClientMsgRouting\022:\n\007" +
-      "entries\030\001 \003(\0132).CMsgGCMsgMasterSetClient" +
-      "MsgRouting.Entry\032>\n\005Entry\022\020\n\010msg_type\030\001 " +
-      "\001(\r\022#\n\007routing\030\002 \001(\0132\022.CMsgGCRoutingInfo" +
-      "\">\n(CMsgGCMsgMasterSetWebAPIRouting_Resp" +
-      "onse\022\022\n\007eresult\030\001 \001(\005:\0012\"A\n+CMsgGCMsgMas" +
-      "terSetClientMsgRouting_Response\022\022\n\007eresu" +
-      "lt\030\001 \001(\005:\0012\"\234\002\n\023CMsgGCMsgSetOptions\022,\n\007o" +
-      "ptions\030\001 \003(\0162\033.CMsgGCMsgSetOptions.Optio" +
-      "n\022<\n\021client_msg_ranges\030\002 \003(\0132!.CMsgGCMsg" +
-      "SetOptions.MessageRange\032)\n\014MessageRange\022" +
-      "\013\n\003low\030\001 \002(\r\022\014\n\004high\030\002 \002(\r\"n\n\006Option\022\030\n\024" +
-      "NOTIFY_USER_SESSIONS\020\000\022\032\n\026NOTIFY_SERVER_" +
-      "SESSIONS\020\001\022\027\n\023NOTIFY_ACHIEVEMENTS\020\002\022\025\n\021N" +
-      "OTIFY_VAC_ACTION\020\003\"\362\002\n\024CMsgGCHUpdateSess" +
-      "ion\022\020\n\010steam_id\030\001 \001(\006\022\016\n\006app_id\030\002 \001(\r\022\016\n" +
-      "\006online\030\003 \001(\010\022\027\n\017server_steam_id\030\004 \001(\006\022\023" +
-      "\n\013server_addr\030\005 \001(\r\022\023\n\013server_port\030\006 \001(\r" +
-      "\022\017\n\007os_type\030\007 \001(\r\022\023\n\013client_addr\030\010 \001(\r\0226" +
-      "\n\014extra_fields\030\t \003(\0132 .CMsgGCHUpdateSess" +
-      "ion.ExtraField\022\020\n\010owner_id\030\n \001(\006\022\030\n\020cm_s" +
-      "ession_sysid\030\013 \001(\r\022\035\n\025cm_session_identif" +
-      "ier\030\014 \001(\r\022\021\n\tdepot_ids\030\r \003(\r\032)\n\nExtraFie" +
-      "ld\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\354\001\n$CMsg" +
-      "NotificationOfSuspiciousActivity\022\017\n\007stea" +
-      "mid\030\001 \001(\006\022\r\n\005appid\030\002 \001(\r\022W\n\022multiple_ins" +
-      "tances\030\003 \001(\0132;.CMsgNotificationOfSuspici" +
-      "ousActivity.MultipleGameInstances\032K\n\025Mul" +
-      "tipleGameInstances\022\032\n\022app_instance_count" +
-      "\030\001 \001(\r\022\026\n\016other_steamids\030\002 \003(\006\"\362\004\n\026CMsgD" +
-      "PPartnerMicroTxns\022\r\n\005appid\030\001 \001(\r\022\017\n\007gc_n" +
-      "ame\030\002 \001(\t\0224\n\007partner\030\003 \001(\0132#.CMsgDPPartn" +
-      "erMicroTxns.PartnerInfo\022=\n\014transactions\030" +
-      "\004 \003(\0132\'.CMsgDPPartnerMicroTxns.PartnerMi" +
-      "croTxn\032\333\002\n\017PartnerMicroTxn\022\021\n\tinit_time\030" +
-      "\001 \001(\r\022\030\n\020last_update_time\030\002 \001(\r\022\016\n\006txn_i" +
-      "d\030\003 \001(\004\022\022\n\naccount_id\030\004 \001(\r\022\021\n\tline_item" +
-      "\030\005 \001(\r\022\017\n\007item_id\030\006 \001(\004\022\021\n\tdef_index\030\007 \001" +
-      "(\r\022\r\n\005price\030\010 \001(\004\022\013\n\003tax\030\t \001(\004\022\021\n\tprice_" +
-      "usd\030\n \001(\004\022\017\n\007tax_usd\030\013 \001(\004\022\025\n\rpurchase_t" +
-      "ype\030\014 \001(\r\022\026\n\016steam_txn_type\030\r \001(\r\022\024\n\014cou" +
-      "ntry_code\030\016 \001(\t\022\023\n\013region_code\030\017 \001(\t\022\020\n\010" +
-      "quantity\030\020 \001(\005\022\024\n\014ref_trans_id\030\021 \001(\004\032e\n\013" +
-      "PartnerInfo\022\022\n\npartner_id\030\001 \001(\r\022\024\n\014partn" +
-      "er_name\030\002 \001(\t\022\025\n\rcurrency_code\030\003 \001(\t\022\025\n\r" +
-      "currency_name\030\004 \001(\t\"\376\002\n\036CMsgDPPartnerMic" +
-      "roTxnsResponse\022\022\n\007eresult\030\001 \001(\r:\0012\022J\n\nee" +
-      "rrorcode\030\002 \001(\0162*.CMsgDPPartnerMicroTxnsR" +
-      "esponse.EErrorCode:\nk_MsgValid\"\373\001\n\nEErro" +
-      "rCode\022\016\n\nk_MsgValid\020\000\022\025\n\021k_MsgInvalidApp" +
-      "ID\020\001\022\033\n\027k_MsgInvalidPartnerInfo\020\002\022\027\n\023k_M" +
-      "sgNoTransactions\020\003\022\023\n\017k_MsgSQLFailure\020\004\022" +
-      "\037\n\033k_MsgPartnerInfoDiscrepancy\020\005\022 \n\034k_Ms" +
-      "gTransactionInsertFailed\020\007\022\027\n\023k_MsgAlrea" +
-      "dyRunning\020\010\022\037\n\033k_MsgInvalidTransactionDa" +
-      "ta\020\t\"w\n;CChinaAgreementSessions_StartAgr" +
-      "eementSessionInGame_Request\022\r\n\005appid\030\001 \001" +
-      "(\r\022\017\n\007steamid\030\002 \001(\006\022\030\n\020client_ipaddress\030" +
-      "\003 \001(\t\"U\n<CChinaAgreementSessions_StartAg" +
-      "reementSessionInGame_Response\022\025\n\ragreeme" +
-      "nt_url\030\001 \001(\t*\266\001\n\020GCProtoBufMsgSrc\022 \n\034GCP" +
-      "rotoBufMsgSrc_Unspecified\020\000\022\037\n\033GCProtoBu" +
-      "fMsgSrc_FromSystem\020\001\022 \n\034GCProtoBufMsgSrc" +
-      "_FromSteamID\020\002\022\033\n\027GCProtoBufMsgSrc_FromG" +
-      "C\020\003\022 \n\034GCProtoBufMsgSrc_ReplySystem\020\004:9\n" +
-      "\tkey_field\022\035.google.protobuf.FieldOption" +
-      "s\030\340\324\003 \001(\010:\005false:A\n\022msgpool_soft_limit\022\037" +
-      ".google.protobuf.MessageOptions\030\340\324\003 \001(\005:" +
-      "\00232:B\n\022msgpool_hard_limit\022\037.google.proto" +
-      "buf.MessageOptions\030\341\324\003 \001(\005:\003384B\005H\001\200\001\000"
+      "ryParam\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\014\"\255\001\n" +
+      "\021CMsgWebAPIRequest\022\026\n\016interface_name\030\002 \001" +
+      "(\t\022\023\n\013method_name\030\003 \001(\t\022\017\n\007version\030\004 \001(\r" +
+      "\022\037\n\007api_key\030\005 \001(\0132\016.CMsgWebAPIKey\022!\n\007req" +
+      "uest\030\006 \001(\0132\020.CMsgHttpRequest\022\026\n\016routing_" +
+      "app_id\030\007 \001(\r\"\227\001\n\020CMsgHttpResponse\022\023\n\013sta" +
+      "tus_code\030\001 \001(\r\0221\n\007headers\030\002 \003(\0132 .CMsgHt" +
+      "tpResponse.ResponseHeader\022\014\n\004body\030\003 \001(\014\032" +
+      "-\n\016ResponseHeader\022\014\n\004name\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t\"@\n\022CMsgAMFindAccounts\022\023\n\013search_t" +
+      "ype\030\001 \001(\r\022\025\n\rsearch_string\030\002 \001(\t\".\n\032CMsg" +
+      "AMFindAccountsResponse\022\020\n\010steam_id\030\001 \003(\006" +
+      "\"\220\001\n\022CMsgNotifyWatchdog\022\016\n\006source\030\001 \001(\r\022" +
+      "\022\n\nalert_type\030\002 \001(\r\022\031\n\021alert_destination" +
+      "\030\003 \001(\r\022\020\n\010critical\030\004 \001(\010\022\014\n\004time\030\005 \001(\r\022\r" +
+      "\n\005appid\030\006 \001(\r\022\014\n\004text\030\007 \001(\t\"$\n\021CMsgAMGet" +
+      "Licenses\022\017\n\007steamid\030\001 \001(\006\"P\n\022CMsgPackage" +
+      "License\022\022\n\npackage_id\030\001 \001(\r\022\024\n\014time_crea" +
+      "ted\030\002 \001(\r\022\020\n\010owner_id\030\003 \001(\r\"Q\n\031CMsgAMGet" +
+      "LicensesResponse\022$\n\007license\030\001 \003(\0132\023.CMsg" +
+      "PackageLicense\022\016\n\006result\030\002 \001(\r\"J\n\026CMsgAM" +
+      "GetUserGameStats\022\020\n\010steam_id\030\001 \001(\006\022\017\n\007ga" +
+      "me_id\030\002 \001(\006\022\r\n\005stats\030\003 \003(\r\"\352\002\n\036CMsgAMGet" +
+      "UserGameStatsResponse\022\020\n\010steam_id\030\001 \001(\006\022" +
+      "\017\n\007game_id\030\002 \001(\006\022\022\n\007eresult\030\003 \001(\005:\0012\0224\n\005" +
+      "stats\030\004 \003(\0132%.CMsgAMGetUserGameStatsResp" +
+      "onse.Stats\022N\n\022achievement_blocks\030\005 \003(\01322" +
+      ".CMsgAMGetUserGameStatsResponse.Achievem" +
+      "ent_Blocks\032,\n\005Stats\022\017\n\007stat_id\030\001 \001(\r\022\022\n\n" +
+      "stat_value\030\002 \001(\r\032]\n\022Achievement_Blocks\022\026" +
+      "\n\016achievement_id\030\001 \001(\r\022\032\n\022achievement_bi" +
+      "t_id\030\002 \001(\r\022\023\n\013unlock_time\030\003 \001(\007\">\n\024CMsgG" +
+      "CGetCommandList\022\016\n\006app_id\030\001 \001(\r\022\026\n\016comma" +
+      "nd_prefix\030\002 \001(\t\"4\n\034CMsgGCGetCommandListR" +
+      "esponse\022\024\n\014command_name\030\001 \003(\t\"\"\n\022CGCMsgM" +
+      "emCachedGet\022\014\n\004keys\030\001 \003(\t\"|\n\032CGCMsgMemCa" +
+      "chedGetResponse\0224\n\006values\030\001 \003(\0132$.CGCMsg" +
+      "MemCachedGetResponse.ValueTag\032(\n\010ValueTa" +
+      "g\022\r\n\005found\030\001 \001(\010\022\r\n\005value\030\002 \001(\014\"g\n\022CGCMs" +
+      "gMemCachedSet\022)\n\004keys\030\001 \003(\0132\033.CGCMsgMemC" +
+      "achedSet.KeyPair\032&\n\007KeyPair\022\014\n\004name\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\014\"%\n\025CGCMsgMemCachedDelet" +
+      "e\022\014\n\004keys\030\001 \003(\t\"\026\n\024CGCMsgMemCachedStats\"" +
+      "\270\002\n\034CGCMsgMemCachedStatsResponse\022\030\n\020curr" +
+      "_connections\030\001 \001(\004\022\017\n\007cmd_get\030\002 \001(\004\022\017\n\007c" +
+      "md_set\030\003 \001(\004\022\021\n\tcmd_flush\030\004 \001(\004\022\020\n\010get_h" +
+      "its\030\005 \001(\004\022\022\n\nget_misses\030\006 \001(\004\022\023\n\013delete_" +
+      "hits\030\007 \001(\004\022\025\n\rdelete_misses\030\010 \001(\004\022\022\n\nbyt" +
+      "es_read\030\t \001(\004\022\025\n\rbytes_written\030\n \001(\004\022\026\n\016" +
+      "limit_maxbytes\030\013 \001(\004\022\022\n\ncurr_items\030\014 \001(\004" +
+      "\022\021\n\tevictions\030\r \001(\004\022\r\n\005bytes\030\016 \001(\004\"(\n\016CG" +
+      "CMsgSQLStats\022\026\n\016schema_catalog\030\001 \001(\r\"\233\002\n" +
+      "\026CGCMsgSQLStatsResponse\022\017\n\007threads\030\001 \001(\r" +
+      "\022\031\n\021threads_connected\030\002 \001(\r\022\026\n\016threads_a" +
+      "ctive\030\003 \001(\r\022\034\n\024operations_submitted\030\004 \001(" +
+      "\r\022$\n\034prepared_statements_executed\030\005 \001(\r\022" +
+      "(\n non_prepared_statements_executed\030\006 \001(" +
+      "\r\022\030\n\020deadlock_retries\030\007 \001(\r\022%\n\035operation" +
+      "s_timed_out_in_queue\030\010 \001(\r\022\016\n\006errors\030\t \001" +
+      "(\r\"i\n\024CMsgAMAddFreeLicense\022\017\n\007steamid\030\001 " +
+      "\001(\006\022\021\n\tip_public\030\002 \001(\r\022\021\n\tpackageid\030\003 \001(" +
+      "\r\022\032\n\022store_country_code\030\004 \001(\t\"c\n\034CMsgAMA" +
+      "ddFreeLicenseResponse\022\022\n\007eresult\030\001 \001(\005:\001" +
+      "2\022\036\n\026purchase_result_detail\030\002 \001(\005\022\017\n\007tra" +
+      "nsid\030\003 \001(\006\"\"\n\023CGCMsgGetIPLocation\022\013\n\003ips" +
+      "\030\001 \003(\007\"p\n\017CIPLocationInfo\022\n\n\002ip\030\001 \001(\r\022\020\n" +
+      "\010latitude\030\002 \001(\002\022\021\n\tlongitude\030\003 \001(\002\022\017\n\007co" +
+      "untry\030\004 \001(\t\022\r\n\005state\030\005 \001(\t\022\014\n\004city\030\006 \001(\t" +
+      "\">\n\033CGCMsgGetIPLocationResponse\022\037\n\005infos" +
+      "\030\001 \003(\0132\020.CIPLocationInfo\"?\n\027CGCMsgSystem" +
+      "StatsSchema\022\021\n\tgc_app_id\030\001 \001(\r\022\021\n\tschema" +
+      "_kv\030\002 \001(\014\"\026\n\024CGCMsgGetSystemStats\"\305\002\n\034CG" +
+      "CMsgGetSystemStatsResponse\022\021\n\tgc_app_id\030" +
+      "\001 \001(\r\022\020\n\010stats_kv\030\002 \001(\014\022\023\n\013active_jobs\030\003" +
+      " \001(\r\022\025\n\ryielding_jobs\030\004 \001(\r\022\025\n\ruser_sess" +
+      "ions\030\005 \001(\r\022\034\n\024game_server_sessions\030\006 \001(\r" +
+      "\022\020\n\010socaches\030\007 \001(\r\022\032\n\022socaches_to_unload" +
+      "\030\010 \001(\r\022\030\n\020socaches_loading\030\t \001(\r\022\027\n\017writ" +
+      "eback_queue\030\n \001(\r\022\025\n\rsteamid_locks\030\013 \001(\r" +
+      "\022\023\n\013logon_queue\030\014 \001(\r\022\022\n\nlogon_jobs\030\r \001(" +
+      "\r\"\342\002\n\017CMsgAMSendEmail\022\017\n\007steamid\030\001 \001(\006\022\026" +
+      "\n\016email_msg_type\030\002 \001(\r\022\024\n\014email_format\030\003" +
+      " \001(\r\022I\n\023persona_name_tokens\030\005 \003(\0132,.CMsg" +
+      "AMSendEmail.PersonaNameReplacementToken\022" +
+      "\021\n\tsource_gc\030\006 \001(\r\0221\n\006tokens\030\007 \003(\0132!.CMs" +
+      "gAMSendEmail.ReplacementToken\032;\n\020Replace" +
+      "mentToken\022\022\n\ntoken_name\030\001 \001(\t\022\023\n\013token_v" +
+      "alue\030\002 \001(\t\032B\n\033PersonaNameReplacementToke" +
+      "n\022\017\n\007steamid\030\001 \001(\006\022\022\n\ntoken_name\030\002 \001(\t\"-" +
+      "\n\027CMsgAMSendEmailResponse\022\022\n\007eresult\030\001 \001" +
+      "(\r:\0012\"j\n\026CMsgGCGetEmailTemplate\022\016\n\006app_i" +
+      "d\030\001 \001(\r\022\026\n\016email_msg_type\030\002 \001(\r\022\022\n\nemail" +
+      "_lang\030\003 \001(\005\022\024\n\014email_format\030\004 \001(\005\"_\n\036CMs" +
+      "gGCGetEmailTemplateResponse\022\022\n\007eresult\030\001" +
+      " \001(\r:\0012\022\027\n\017template_exists\030\002 \001(\010\022\020\n\010temp" +
+      "late\030\003 \001(\t\"\204\001\n\027CMsgAMGrantGuestPasses2\022\020" +
+      "\n\010steam_id\030\001 \001(\006\022\022\n\npackage_id\030\002 \001(\r\022\027\n\017" +
+      "passes_to_grant\030\003 \001(\005\022\032\n\022days_to_expirat" +
+      "ion\030\004 \001(\005\022\016\n\006action\030\005 \001(\005\"P\n\037CMsgAMGrant" +
+      "GuestPasses2Response\022\022\n\007eresult\030\001 \001(\005:\0012" +
+      "\022\031\n\016passes_granted\030\002 \001(\005:\0010\"L\n\036CGCSystem" +
+      "Msg_GetAccountDetails\022\017\n\007steamid\030\001 \001(\006\022\r" +
+      "\n\005appid\030\002 \001(\r:\n\200\246\035\200\001\210\246\035\200\004\"\360\007\n\'CGCSystemM" +
+      "sg_GetAccountDetails_Response\022\035\n\022eresult" +
+      "_deprecated\030\001 \001(\r:\0012\022\024\n\014account_name\030\002 \001" +
+      "(\t\022\024\n\014persona_name\030\003 \001(\t\022\031\n\021is_profile_p" +
+      "ublic\030\004 \001(\010\022\033\n\023is_inventory_public\030\005 \001(\010" +
+      "\022\025\n\ris_vac_banned\030\007 \001(\010\022\025\n\ris_cyber_cafe" +
+      "\030\010 \001(\010\022\031\n\021is_school_account\030\t \001(\010\022\022\n\nis_" +
+      "limited\030\n \001(\010\022\025\n\ris_subscribed\030\013 \001(\010\022\017\n\007" +
+      "package\030\014 \001(\r\022\035\n\025is_free_trial_account\030\r" +
+      " \001(\010\022\035\n\025free_trial_expiration\030\016 \001(\r\022\027\n\017i" +
+      "s_low_violence\030\017 \001(\010\022\036\n\026is_account_locke" +
+      "d_down\030\020 \001(\010\022\033\n\023is_community_banned\030\021 \001(" +
+      "\010\022\027\n\017is_trade_banned\030\022 \001(\010\022\034\n\024trade_ban_" +
+      "expiration\030\023 \001(\r\022\021\n\taccountid\030\024 \001(\r\022\033\n\023s" +
+      "uspension_end_time\030\025 \001(\r\022\020\n\010currency\030\026 \001" +
+      "(\t\022\023\n\013steam_level\030\027 \001(\r\022\024\n\014friend_count\030" +
+      "\030 \001(\r\022\035\n\025account_creation_time\030\031 \001(\r\022\035\n\025" +
+      "is_steamguard_enabled\030\033 \001(\010\022\031\n\021is_phone_" +
+      "verified\030\034 \001(\010\022\"\n\032is_two_factor_auth_ena" +
+      "bled\030\035 \001(\010\022\037\n\027two_factor_enabled_time\030\036 " +
+      "\001(\r\022\037\n\027phone_verification_time\030\037 \001(\r\022\020\n\010" +
+      "phone_id\030! \001(\004\022\034\n\024is_phone_identifying\030\"" +
+      " \001(\010\022\032\n\022rt_identity_linked\030# \001(\r\022\025\n\rrt_b" +
+      "irth_date\030$ \001(\r\022\030\n\020txn_country_code\030% \001(" +
+      "\t\022\036\n\026has_accepted_china_ssa\030& \001(\010\022\035\n\025is_" +
+      "banned_steam_china\030\' \001(\010:\n\200\246\035\200\001\210\246\035\200\004\")\n\025" +
+      "CMsgGCGetPersonaNames\022\020\n\010steamids\030\001 \003(\006\"" +
+      "\276\001\n\036CMsgGCGetPersonaNames_Response\022F\n\021su" +
+      "cceeded_lookups\030\001 \003(\0132+.CMsgGCGetPersona" +
+      "Names_Response.PersonaName\022\036\n\026failed_loo" +
+      "kup_steamids\030\002 \003(\006\0324\n\013PersonaName\022\017\n\007ste" +
+      "amid\030\001 \001(\006\022\024\n\014persona_name\030\002 \001(\t\"D\n\025CMsg" +
+      "GCCheckFriendship\022\024\n\014steamid_left\030\001 \001(\006\022" +
+      "\025\n\rsteamid_right\030\002 \001(\006\"K\n\036CMsgGCCheckFri" +
+      "endship_Response\022\017\n\007success\030\001 \001(\010\022\030\n\020fou" +
+      "nd_friendship\030\002 \001(\010\"\310\001\n\033CMsgGCMsgMasterS" +
+      "etDirectory\022\030\n\020master_dir_index\030\001 \001(\r\022/\n" +
+      "\003dir\030\002 \003(\0132\".CMsgGCMsgMasterSetDirectory" +
+      ".SubGC\032^\n\005SubGC\022\021\n\tdir_index\030\001 \001(\r\022\014\n\004na" +
+      "me\030\002 \001(\t\022\013\n\003box\030\003 \001(\t\022\024\n\014command_line\030\004 " +
+      "\001(\t\022\021\n\tgc_binary\030\005 \001(\t\"K\n$CMsgGCMsgMaste" +
+      "rSetDirectory_Response\022\022\n\007eresult\030\001 \001(\005:" +
+      "\0012\022\017\n\007message\030\002 \001(\t\"=\n(CMsgGCMsgWebAPIJo" +
+      "bRequestForwardResponse\022\021\n\tdir_index\030\001 \001" +
+      "(\r\"8\n%CGCSystemMsg_GetPurchaseTrust_Requ" +
+      "est\022\017\n\007steamid\030\001 \001(\006\"\255\001\n&CGCSystemMsg_Ge" +
+      "tPurchaseTrust_Response\022\"\n\032has_prior_pur" +
+      "chase_history\030\001 \001(\010\022%\n\035has_no_recent_pas" +
+      "sword_resets\030\002 \001(\010\022\036\n\026is_wallet_cash_tru" +
+      "sted\030\003 \001(\010\022\030\n\020time_all_trusted\030\004 \001(\r\"\217\001\n" +
+      "\035CMsgGCHAccountVacStatusChange\022\020\n\010steam_" +
+      "id\030\001 \001(\006\022\016\n\006app_id\030\002 \001(\r\022\033\n\023rtime_vacban" +
+      "_starts\030\003 \001(\r\022\025\n\ris_banned_now\030\004 \001(\010\022\030\n\020" +
+      "is_banned_future\030\005 \001(\010\".\n\033CMsgGCGetPartn" +
+      "erAccountLink\022\017\n\007steamid\030\001 \001(\006\"\204\001\n$CMsgG" +
+      "CGetPartnerAccountLink_Response\022\014\n\004pwid\030" +
+      "\001 \001(\r\022\017\n\007nexonid\030\002 \001(\r\022\020\n\010ageclass\030\003 \001(\005" +
+      "\022\031\n\013id_verified\030\004 \001(\010:\004true\022\020\n\010is_adult\030" +
+      "\005 \001(\010\"\275\002\n\021CMsgGCRoutingInfo\022\021\n\tdir_index" +
+      "\030\001 \003(\r\0228\n\006method\030\002 \001(\0162 .CMsgGCRoutingIn" +
+      "fo.RoutingMethod:\006RANDOM\022;\n\010fallback\030\003 \001" +
+      "(\0162 .CMsgGCRoutingInfo.RoutingMethod:\007DI" +
+      "SCARD\022\026\n\016protobuf_field\030\004 \001(\r\022\024\n\014webapi_" +
+      "param\030\005 \001(\t\"p\n\rRoutingMethod\022\n\n\006RANDOM\020\000" +
+      "\022\013\n\007DISCARD\020\001\022\022\n\016CLIENT_STEAMID\020\002\022\031\n\025PRO" +
+      "TOBUF_FIELD_UINT64\020\003\022\027\n\023WEBAPI_PARAM_UIN" +
+      "T64\020\004\"\265\001\n\037CMsgGCMsgMasterSetWebAPIRoutin" +
+      "g\0227\n\007entries\030\001 \003(\0132&.CMsgGCMsgMasterSetW" +
+      "ebAPIRouting.Entry\032Y\n\005Entry\022\026\n\016interface" +
+      "_name\030\001 \001(\t\022\023\n\013method_name\030\002 \001(\t\022#\n\007rout" +
+      "ing\030\003 \001(\0132\022.CMsgGCRoutingInfo\"\240\001\n\"CMsgGC" +
+      "MsgMasterSetClientMsgRouting\022:\n\007entries\030" +
+      "\001 \003(\0132).CMsgGCMsgMasterSetClientMsgRouti" +
+      "ng.Entry\032>\n\005Entry\022\020\n\010msg_type\030\001 \001(\r\022#\n\007r" +
+      "outing\030\002 \001(\0132\022.CMsgGCRoutingInfo\">\n(CMsg" +
+      "GCMsgMasterSetWebAPIRouting_Response\022\022\n\007" +
+      "eresult\030\001 \001(\005:\0012\"A\n+CMsgGCMsgMasterSetCl" +
+      "ientMsgRouting_Response\022\022\n\007eresult\030\001 \001(\005" +
+      ":\0012\"\234\002\n\023CMsgGCMsgSetOptions\022,\n\007options\030\001" +
+      " \003(\0162\033.CMsgGCMsgSetOptions.Option\022<\n\021cli" +
+      "ent_msg_ranges\030\002 \003(\0132!.CMsgGCMsgSetOptio" +
+      "ns.MessageRange\032)\n\014MessageRange\022\013\n\003low\030\001" +
+      " \002(\r\022\014\n\004high\030\002 \002(\r\"n\n\006Option\022\030\n\024NOTIFY_U" +
+      "SER_SESSIONS\020\000\022\032\n\026NOTIFY_SERVER_SESSIONS" +
+      "\020\001\022\027\n\023NOTIFY_ACHIEVEMENTS\020\002\022\025\n\021NOTIFY_VA" +
+      "C_ACTION\020\003\"\362\002\n\024CMsgGCHUpdateSession\022\020\n\010s" +
+      "team_id\030\001 \001(\006\022\016\n\006app_id\030\002 \001(\r\022\016\n\006online\030" +
+      "\003 \001(\010\022\027\n\017server_steam_id\030\004 \001(\006\022\023\n\013server" +
+      "_addr\030\005 \001(\r\022\023\n\013server_port\030\006 \001(\r\022\017\n\007os_t" +
+      "ype\030\007 \001(\r\022\023\n\013client_addr\030\010 \001(\r\0226\n\014extra_" +
+      "fields\030\t \003(\0132 .CMsgGCHUpdateSession.Extr" +
+      "aField\022\020\n\010owner_id\030\n \001(\006\022\030\n\020cm_session_s" +
+      "ysid\030\013 \001(\r\022\035\n\025cm_session_identifier\030\014 \001(" +
+      "\r\022\021\n\tdepot_ids\030\r \003(\r\032)\n\nExtraField\022\014\n\004na" +
+      "me\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\354\001\n$CMsgNotifica" +
+      "tionOfSuspiciousActivity\022\017\n\007steamid\030\001 \001(" +
+      "\006\022\r\n\005appid\030\002 \001(\r\022W\n\022multiple_instances\030\003" +
+      " \001(\0132;.CMsgNotificationOfSuspiciousActiv" +
+      "ity.MultipleGameInstances\032K\n\025MultipleGam" +
+      "eInstances\022\032\n\022app_instance_count\030\001 \001(\r\022\026" +
+      "\n\016other_steamids\030\002 \003(\006\"\362\004\n\026CMsgDPPartner" +
+      "MicroTxns\022\r\n\005appid\030\001 \001(\r\022\017\n\007gc_name\030\002 \001(" +
+      "\t\0224\n\007partner\030\003 \001(\0132#.CMsgDPPartnerMicroT" +
+      "xns.PartnerInfo\022=\n\014transactions\030\004 \003(\0132\'." +
+      "CMsgDPPartnerMicroTxns.PartnerMicroTxn\032\333" +
+      "\002\n\017PartnerMicroTxn\022\021\n\tinit_time\030\001 \001(\r\022\030\n" +
+      "\020last_update_time\030\002 \001(\r\022\016\n\006txn_id\030\003 \001(\004\022" +
+      "\022\n\naccount_id\030\004 \001(\r\022\021\n\tline_item\030\005 \001(\r\022\017" +
+      "\n\007item_id\030\006 \001(\004\022\021\n\tdef_index\030\007 \001(\r\022\r\n\005pr" +
+      "ice\030\010 \001(\004\022\013\n\003tax\030\t \001(\004\022\021\n\tprice_usd\030\n \001(" +
+      "\004\022\017\n\007tax_usd\030\013 \001(\004\022\025\n\rpurchase_type\030\014 \001(" +
+      "\r\022\026\n\016steam_txn_type\030\r \001(\r\022\024\n\014country_cod" +
+      "e\030\016 \001(\t\022\023\n\013region_code\030\017 \001(\t\022\020\n\010quantity" +
+      "\030\020 \001(\005\022\024\n\014ref_trans_id\030\021 \001(\004\032e\n\013PartnerI" +
+      "nfo\022\022\n\npartner_id\030\001 \001(\r\022\024\n\014partner_name\030" +
+      "\002 \001(\t\022\025\n\rcurrency_code\030\003 \001(\t\022\025\n\rcurrency" +
+      "_name\030\004 \001(\t\"\376\002\n\036CMsgDPPartnerMicroTxnsRe" +
+      "sponse\022\022\n\007eresult\030\001 \001(\r:\0012\022J\n\neerrorcode" +
+      "\030\002 \001(\0162*.CMsgDPPartnerMicroTxnsResponse." +
+      "EErrorCode:\nk_MsgValid\"\373\001\n\nEErrorCode\022\016\n" +
+      "\nk_MsgValid\020\000\022\025\n\021k_MsgInvalidAppID\020\001\022\033\n\027" +
+      "k_MsgInvalidPartnerInfo\020\002\022\027\n\023k_MsgNoTran" +
+      "sactions\020\003\022\023\n\017k_MsgSQLFailure\020\004\022\037\n\033k_Msg" +
+      "PartnerInfoDiscrepancy\020\005\022 \n\034k_MsgTransac" +
+      "tionInsertFailed\020\007\022\027\n\023k_MsgAlreadyRunnin" +
+      "g\020\010\022\037\n\033k_MsgInvalidTransactionData\020\t\"w\n;" +
+      "CChinaAgreementSessions_StartAgreementSe" +
+      "ssionInGame_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007st" +
+      "eamid\030\002 \001(\006\022\030\n\020client_ipaddress\030\003 \001(\t\"U\n" +
+      "<CChinaAgreementSessions_StartAgreementS" +
+      "essionInGame_Response\022\025\n\ragreement_url\030\001" +
+      " \001(\t*\266\001\n\020GCProtoBufMsgSrc\022 \n\034GCProtoBufM" +
+      "sgSrc_Unspecified\020\000\022\037\n\033GCProtoBufMsgSrc_" +
+      "FromSystem\020\001\022 \n\034GCProtoBufMsgSrc_FromSte" +
+      "amID\020\002\022\033\n\027GCProtoBufMsgSrc_FromGC\020\003\022 \n\034G" +
+      "CProtoBufMsgSrc_ReplySystem\020\004:9\n\tkey_fie" +
+      "ld\022\035.google.protobuf.FieldOptions\030\340\324\003 \001(" +
+      "\010:\005false:A\n\022msgpool_soft_limit\022\037.google." +
+      "protobuf.MessageOptions\030\340\324\003 \001(\005:\00232:B\n\022m" +
+      "sgpool_hard_limit\022\037.google.protobuf.Mess" +
+      "ageOptions\030\341\324\003 \001(\005:\003384"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -76348,7 +76348,7 @@ public final class Steammessages {
     internal_static_CMsgWebAPIRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgWebAPIRequest_descriptor,
-        new java.lang.String[] { "UNUSEDJobName", "InterfaceName", "MethodName", "Version", "ApiKey", "Request", "RoutingAppId", });
+        new java.lang.String[] { "InterfaceName", "MethodName", "Version", "ApiKey", "Request", "RoutingAppId", });
     internal_static_CMsgHttpResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_CMsgHttpResponse_fieldAccessorTable = new
@@ -76648,7 +76648,7 @@ public final class Steammessages {
     internal_static_CMsgGCMsgMasterSetDirectory_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgGCMsgMasterSetDirectory_Response_descriptor,
-        new java.lang.String[] { "Eresult", });
+        new java.lang.String[] { "Eresult", "Message", });
     internal_static_CMsgGCMsgWebAPIJobRequestForwardResponse_descriptor =
       getDescriptor().getMessageTypes().get(45);
     internal_static_CMsgGCMsgWebAPIJobRequestForwardResponse_fieldAccessorTable = new

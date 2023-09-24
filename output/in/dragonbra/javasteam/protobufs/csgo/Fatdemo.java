@@ -5842,15 +5842,15 @@ public final class Fatdemo {
     int getAccountId();
 
     /**
-     * <code>optional int32 user_id = 2;</code>
-     * @return Whether the userId field is set.
+     * <code>optional int32 player_slot = 2 [default = -1];</code>
+     * @return Whether the playerSlot field is set.
      */
-    boolean hasUserId();
+    boolean hasPlayerSlot();
     /**
-     * <code>optional int32 user_id = 2;</code>
-     * @return The userId.
+     * <code>optional int32 player_slot = 2 [default = -1];</code>
+     * @return The playerSlot.
      */
-    int getUserId();
+    int getPlayerSlot();
 
     /**
      * <code>optional int32 entindex = 3;</code>
@@ -5917,11 +5917,11 @@ public final class Fatdemo {
      * <code>optional .CMsgVector abspos = 7;</code>
      * @return The abspos.
      */
-    Netmessages.CMsgVector getAbspos();
+    Networkbasetypes.CMsgVector getAbspos();
     /**
      * <code>optional .CMsgVector abspos = 7;</code>
      */
-    Netmessages.CMsgVectorOrBuilder getAbsposOrBuilder();
+    Networkbasetypes.CMsgVectorOrBuilder getAbsposOrBuilder();
 
     /**
      * <code>optional .CMsgQAngle eyeangle = 8;</code>
@@ -5932,11 +5932,11 @@ public final class Fatdemo {
      * <code>optional .CMsgQAngle eyeangle = 8;</code>
      * @return The eyeangle.
      */
-    Netmessages.CMsgQAngle getEyeangle();
+    Networkbasetypes.CMsgQAngle getEyeangle();
     /**
      * <code>optional .CMsgQAngle eyeangle = 8;</code>
      */
-    Netmessages.CMsgQAngleOrBuilder getEyeangleOrBuilder();
+    Networkbasetypes.CMsgQAngleOrBuilder getEyeangleOrBuilder();
 
     /**
      * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
@@ -5947,11 +5947,11 @@ public final class Fatdemo {
      * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
      * @return The eyeangleFwd.
      */
-    Netmessages.CMsgVector getEyeangleFwd();
+    Networkbasetypes.CMsgVector getEyeangleFwd();
     /**
      * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
      */
-    Netmessages.CMsgVectorOrBuilder getEyeangleFwdOrBuilder();
+    Networkbasetypes.CMsgVectorOrBuilder getEyeangleFwdOrBuilder();
 
     /**
      * <code>optional int32 health = 10;</code>
@@ -6100,6 +6100,7 @@ public final class Fatdemo {
       super(builder);
     }
     private MLPlayerState() {
+      playerSlot_ = -1;
       name_ = "";
       clan_ = "";
       team_ = 0;
@@ -6144,7 +6145,7 @@ public final class Fatdemo {
             }
             case 16: {
               bitField0_ |= 0x00000002;
-              userId_ = input.readInt32();
+              playerSlot_ = input.readInt32();
               break;
             }
             case 24: {
@@ -6177,11 +6178,11 @@ public final class Fatdemo {
               break;
             }
             case 58: {
-              Netmessages.CMsgVector.Builder subBuilder = null;
+              Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000040) != 0)) {
                 subBuilder = abspos_.toBuilder();
               }
-              abspos_ = input.readMessage(Netmessages.CMsgVector.PARSER, extensionRegistry);
+              abspos_ = input.readMessage(Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(abspos_);
                 abspos_ = subBuilder.buildPartial();
@@ -6190,11 +6191,11 @@ public final class Fatdemo {
               break;
             }
             case 66: {
-              Netmessages.CMsgQAngle.Builder subBuilder = null;
+              Networkbasetypes.CMsgQAngle.Builder subBuilder = null;
               if (((bitField0_ & 0x00000080) != 0)) {
                 subBuilder = eyeangle_.toBuilder();
               }
-              eyeangle_ = input.readMessage(Netmessages.CMsgQAngle.PARSER, extensionRegistry);
+              eyeangle_ = input.readMessage(Networkbasetypes.CMsgQAngle.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(eyeangle_);
                 eyeangle_ = subBuilder.buildPartial();
@@ -6203,11 +6204,11 @@ public final class Fatdemo {
               break;
             }
             case 74: {
-              Netmessages.CMsgVector.Builder subBuilder = null;
+              Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000100) != 0)) {
                 subBuilder = eyeangleFwd_.toBuilder();
               }
-              eyeangleFwd_ = input.readMessage(Netmessages.CMsgVector.PARSER, extensionRegistry);
+              eyeangleFwd_ = input.readMessage(Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(eyeangleFwd_);
                 eyeangleFwd_ = subBuilder.buildPartial();
@@ -6329,23 +6330,23 @@ public final class Fatdemo {
       return accountId_;
     }
 
-    public static final int USER_ID_FIELD_NUMBER = 2;
-    private int userId_;
+    public static final int PLAYER_SLOT_FIELD_NUMBER = 2;
+    private int playerSlot_;
     /**
-     * <code>optional int32 user_id = 2;</code>
-     * @return Whether the userId field is set.
+     * <code>optional int32 player_slot = 2 [default = -1];</code>
+     * @return Whether the playerSlot field is set.
      */
     @java.lang.Override
-    public boolean hasUserId() {
+    public boolean hasPlayerSlot() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional int32 user_id = 2;</code>
-     * @return The userId.
+     * <code>optional int32 player_slot = 2 [default = -1];</code>
+     * @return The playerSlot.
      */
     @java.lang.Override
-    public int getUserId() {
-      return userId_;
+    public int getPlayerSlot() {
+      return playerSlot_;
     }
 
     public static final int ENTINDEX_FIELD_NUMBER = 3;
@@ -6483,7 +6484,7 @@ public final class Fatdemo {
     }
 
     public static final int ABSPOS_FIELD_NUMBER = 7;
-    private Netmessages.CMsgVector abspos_;
+    private Networkbasetypes.CMsgVector abspos_;
     /**
      * <code>optional .CMsgVector abspos = 7;</code>
      * @return Whether the abspos field is set.
@@ -6497,19 +6498,19 @@ public final class Fatdemo {
      * @return The abspos.
      */
     @java.lang.Override
-    public Netmessages.CMsgVector getAbspos() {
-      return abspos_ == null ? Netmessages.CMsgVector.getDefaultInstance() : abspos_;
+    public Networkbasetypes.CMsgVector getAbspos() {
+      return abspos_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : abspos_;
     }
     /**
      * <code>optional .CMsgVector abspos = 7;</code>
      */
     @java.lang.Override
-    public Netmessages.CMsgVectorOrBuilder getAbsposOrBuilder() {
-      return abspos_ == null ? Netmessages.CMsgVector.getDefaultInstance() : abspos_;
+    public Networkbasetypes.CMsgVectorOrBuilder getAbsposOrBuilder() {
+      return abspos_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : abspos_;
     }
 
     public static final int EYEANGLE_FIELD_NUMBER = 8;
-    private Netmessages.CMsgQAngle eyeangle_;
+    private Networkbasetypes.CMsgQAngle eyeangle_;
     /**
      * <code>optional .CMsgQAngle eyeangle = 8;</code>
      * @return Whether the eyeangle field is set.
@@ -6523,19 +6524,19 @@ public final class Fatdemo {
      * @return The eyeangle.
      */
     @java.lang.Override
-    public Netmessages.CMsgQAngle getEyeangle() {
-      return eyeangle_ == null ? Netmessages.CMsgQAngle.getDefaultInstance() : eyeangle_;
+    public Networkbasetypes.CMsgQAngle getEyeangle() {
+      return eyeangle_ == null ? Networkbasetypes.CMsgQAngle.getDefaultInstance() : eyeangle_;
     }
     /**
      * <code>optional .CMsgQAngle eyeangle = 8;</code>
      */
     @java.lang.Override
-    public Netmessages.CMsgQAngleOrBuilder getEyeangleOrBuilder() {
-      return eyeangle_ == null ? Netmessages.CMsgQAngle.getDefaultInstance() : eyeangle_;
+    public Networkbasetypes.CMsgQAngleOrBuilder getEyeangleOrBuilder() {
+      return eyeangle_ == null ? Networkbasetypes.CMsgQAngle.getDefaultInstance() : eyeangle_;
     }
 
     public static final int EYEANGLE_FWD_FIELD_NUMBER = 9;
-    private Netmessages.CMsgVector eyeangleFwd_;
+    private Networkbasetypes.CMsgVector eyeangleFwd_;
     /**
      * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
      * @return Whether the eyeangleFwd field is set.
@@ -6549,15 +6550,15 @@ public final class Fatdemo {
      * @return The eyeangleFwd.
      */
     @java.lang.Override
-    public Netmessages.CMsgVector getEyeangleFwd() {
-      return eyeangleFwd_ == null ? Netmessages.CMsgVector.getDefaultInstance() : eyeangleFwd_;
+    public Networkbasetypes.CMsgVector getEyeangleFwd() {
+      return eyeangleFwd_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : eyeangleFwd_;
     }
     /**
      * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
      */
     @java.lang.Override
-    public Netmessages.CMsgVectorOrBuilder getEyeangleFwdOrBuilder() {
-      return eyeangleFwd_ == null ? Netmessages.CMsgVector.getDefaultInstance() : eyeangleFwd_;
+    public Networkbasetypes.CMsgVectorOrBuilder getEyeangleFwdOrBuilder() {
+      return eyeangleFwd_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : eyeangleFwd_;
     }
 
     public static final int HEALTH_FIELD_NUMBER = 10;
@@ -6808,7 +6809,7 @@ public final class Fatdemo {
         output.writeInt32(1, accountId_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeInt32(2, userId_);
+        output.writeInt32(2, playerSlot_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeInt32(3, entindex_);
@@ -6879,7 +6880,7 @@ public final class Fatdemo {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, userId_);
+          .computeInt32Size(2, playerSlot_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -6971,10 +6972,10 @@ public final class Fatdemo {
         if (getAccountId()
             != other.getAccountId()) return false;
       }
-      if (hasUserId() != other.hasUserId()) return false;
-      if (hasUserId()) {
-        if (getUserId()
-            != other.getUserId()) return false;
+      if (hasPlayerSlot() != other.hasPlayerSlot()) return false;
+      if (hasPlayerSlot()) {
+        if (getPlayerSlot()
+            != other.getPlayerSlot()) return false;
       }
       if (hasEntindex() != other.hasEntindex()) return false;
       if (hasEntindex()) {
@@ -7080,9 +7081,9 @@ public final class Fatdemo {
         hash = (37 * hash) + ACCOUNT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getAccountId();
       }
-      if (hasUserId()) {
-        hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getUserId();
+      if (hasPlayerSlot()) {
+        hash = (37 * hash) + PLAYER_SLOT_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayerSlot();
       }
       if (hasEntindex()) {
         hash = (37 * hash) + ENTINDEX_FIELD_NUMBER;
@@ -7300,7 +7301,7 @@ public final class Fatdemo {
         super.clear();
         accountId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        userId_ = 0;
+        playerSlot_ = -1;
         bitField0_ = (bitField0_ & ~0x00000002);
         entindex_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -7387,9 +7388,9 @@ public final class Fatdemo {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.userId_ = userId_;
           to_bitField0_ |= 0x00000002;
         }
+        result.playerSlot_ = playerSlot_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.entindex_ = entindex_;
           to_bitField0_ |= 0x00000004;
@@ -7531,8 +7532,8 @@ public final class Fatdemo {
         if (other.hasAccountId()) {
           setAccountId(other.getAccountId());
         }
-        if (other.hasUserId()) {
-          setUserId(other.getUserId());
+        if (other.hasPlayerSlot()) {
+          setPlayerSlot(other.getPlayerSlot());
         }
         if (other.hasEntindex()) {
           setEntindex(other.getEntindex());
@@ -7684,41 +7685,41 @@ public final class Fatdemo {
         return this;
       }
 
-      private int userId_ ;
+      private int playerSlot_ = -1;
       /**
-       * <code>optional int32 user_id = 2;</code>
-       * @return Whether the userId field is set.
+       * <code>optional int32 player_slot = 2 [default = -1];</code>
+       * @return Whether the playerSlot field is set.
        */
       @java.lang.Override
-      public boolean hasUserId() {
+      public boolean hasPlayerSlot() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional int32 user_id = 2;</code>
-       * @return The userId.
+       * <code>optional int32 player_slot = 2 [default = -1];</code>
+       * @return The playerSlot.
        */
       @java.lang.Override
-      public int getUserId() {
-        return userId_;
+      public int getPlayerSlot() {
+        return playerSlot_;
       }
       /**
-       * <code>optional int32 user_id = 2;</code>
-       * @param value The userId to set.
+       * <code>optional int32 player_slot = 2 [default = -1];</code>
+       * @param value The playerSlot to set.
        * @return This builder for chaining.
        */
-      public Builder setUserId(int value) {
+      public Builder setPlayerSlot(int value) {
         bitField0_ |= 0x00000002;
-        userId_ = value;
+        playerSlot_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 user_id = 2;</code>
+       * <code>optional int32 player_slot = 2 [default = -1];</code>
        * @return This builder for chaining.
        */
-      public Builder clearUserId() {
+      public Builder clearPlayerSlot() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        userId_ = 0;
+        playerSlot_ = -1;
         onChanged();
         return this;
       }
@@ -7973,9 +7974,9 @@ public final class Fatdemo {
         return this;
       }
 
-      private Netmessages.CMsgVector abspos_;
+      private Networkbasetypes.CMsgVector abspos_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgVector, Netmessages.CMsgVector.Builder, Netmessages.CMsgVectorOrBuilder> absposBuilder_;
+          Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder> absposBuilder_;
       /**
        * <code>optional .CMsgVector abspos = 7;</code>
        * @return Whether the abspos field is set.
@@ -7987,9 +7988,9 @@ public final class Fatdemo {
        * <code>optional .CMsgVector abspos = 7;</code>
        * @return The abspos.
        */
-      public Netmessages.CMsgVector getAbspos() {
+      public Networkbasetypes.CMsgVector getAbspos() {
         if (absposBuilder_ == null) {
-          return abspos_ == null ? Netmessages.CMsgVector.getDefaultInstance() : abspos_;
+          return abspos_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : abspos_;
         } else {
           return absposBuilder_.getMessage();
         }
@@ -7997,7 +7998,7 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgVector abspos = 7;</code>
        */
-      public Builder setAbspos(Netmessages.CMsgVector value) {
+      public Builder setAbspos(Networkbasetypes.CMsgVector value) {
         if (absposBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8014,7 +8015,7 @@ public final class Fatdemo {
        * <code>optional .CMsgVector abspos = 7;</code>
        */
       public Builder setAbspos(
-          Netmessages.CMsgVector.Builder builderForValue) {
+          Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (absposBuilder_ == null) {
           abspos_ = builderForValue.build();
           onChanged();
@@ -8027,13 +8028,13 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgVector abspos = 7;</code>
        */
-      public Builder mergeAbspos(Netmessages.CMsgVector value) {
+      public Builder mergeAbspos(Networkbasetypes.CMsgVector value) {
         if (absposBuilder_ == null) {
           if (((bitField0_ & 0x00000040) != 0) &&
               abspos_ != null &&
-              abspos_ != Netmessages.CMsgVector.getDefaultInstance()) {
+              abspos_ != Networkbasetypes.CMsgVector.getDefaultInstance()) {
             abspos_ =
-              Netmessages.CMsgVector.newBuilder(abspos_).mergeFrom(value).buildPartial();
+              Networkbasetypes.CMsgVector.newBuilder(abspos_).mergeFrom(value).buildPartial();
           } else {
             abspos_ = value;
           }
@@ -8060,7 +8061,7 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgVector abspos = 7;</code>
        */
-      public Netmessages.CMsgVector.Builder getAbsposBuilder() {
+      public Networkbasetypes.CMsgVector.Builder getAbsposBuilder() {
         bitField0_ |= 0x00000040;
         onChanged();
         return getAbsposFieldBuilder().getBuilder();
@@ -8068,23 +8069,23 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgVector abspos = 7;</code>
        */
-      public Netmessages.CMsgVectorOrBuilder getAbsposOrBuilder() {
+      public Networkbasetypes.CMsgVectorOrBuilder getAbsposOrBuilder() {
         if (absposBuilder_ != null) {
           return absposBuilder_.getMessageOrBuilder();
         } else {
           return abspos_ == null ?
-              Netmessages.CMsgVector.getDefaultInstance() : abspos_;
+              Networkbasetypes.CMsgVector.getDefaultInstance() : abspos_;
         }
       }
       /**
        * <code>optional .CMsgVector abspos = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgVector, Netmessages.CMsgVector.Builder, Netmessages.CMsgVectorOrBuilder> 
+          Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder> 
           getAbsposFieldBuilder() {
         if (absposBuilder_ == null) {
           absposBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Netmessages.CMsgVector, Netmessages.CMsgVector.Builder, Netmessages.CMsgVectorOrBuilder>(
+              Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder>(
                   getAbspos(),
                   getParentForChildren(),
                   isClean());
@@ -8093,9 +8094,9 @@ public final class Fatdemo {
         return absposBuilder_;
       }
 
-      private Netmessages.CMsgQAngle eyeangle_;
+      private Networkbasetypes.CMsgQAngle eyeangle_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgQAngle, Netmessages.CMsgQAngle.Builder, Netmessages.CMsgQAngleOrBuilder> eyeangleBuilder_;
+          Networkbasetypes.CMsgQAngle, Networkbasetypes.CMsgQAngle.Builder, Networkbasetypes.CMsgQAngleOrBuilder> eyeangleBuilder_;
       /**
        * <code>optional .CMsgQAngle eyeangle = 8;</code>
        * @return Whether the eyeangle field is set.
@@ -8107,9 +8108,9 @@ public final class Fatdemo {
        * <code>optional .CMsgQAngle eyeangle = 8;</code>
        * @return The eyeangle.
        */
-      public Netmessages.CMsgQAngle getEyeangle() {
+      public Networkbasetypes.CMsgQAngle getEyeangle() {
         if (eyeangleBuilder_ == null) {
-          return eyeangle_ == null ? Netmessages.CMsgQAngle.getDefaultInstance() : eyeangle_;
+          return eyeangle_ == null ? Networkbasetypes.CMsgQAngle.getDefaultInstance() : eyeangle_;
         } else {
           return eyeangleBuilder_.getMessage();
         }
@@ -8117,7 +8118,7 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgQAngle eyeangle = 8;</code>
        */
-      public Builder setEyeangle(Netmessages.CMsgQAngle value) {
+      public Builder setEyeangle(Networkbasetypes.CMsgQAngle value) {
         if (eyeangleBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8134,7 +8135,7 @@ public final class Fatdemo {
        * <code>optional .CMsgQAngle eyeangle = 8;</code>
        */
       public Builder setEyeangle(
-          Netmessages.CMsgQAngle.Builder builderForValue) {
+          Networkbasetypes.CMsgQAngle.Builder builderForValue) {
         if (eyeangleBuilder_ == null) {
           eyeangle_ = builderForValue.build();
           onChanged();
@@ -8147,13 +8148,13 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgQAngle eyeangle = 8;</code>
        */
-      public Builder mergeEyeangle(Netmessages.CMsgQAngle value) {
+      public Builder mergeEyeangle(Networkbasetypes.CMsgQAngle value) {
         if (eyeangleBuilder_ == null) {
           if (((bitField0_ & 0x00000080) != 0) &&
               eyeangle_ != null &&
-              eyeangle_ != Netmessages.CMsgQAngle.getDefaultInstance()) {
+              eyeangle_ != Networkbasetypes.CMsgQAngle.getDefaultInstance()) {
             eyeangle_ =
-              Netmessages.CMsgQAngle.newBuilder(eyeangle_).mergeFrom(value).buildPartial();
+              Networkbasetypes.CMsgQAngle.newBuilder(eyeangle_).mergeFrom(value).buildPartial();
           } else {
             eyeangle_ = value;
           }
@@ -8180,7 +8181,7 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgQAngle eyeangle = 8;</code>
        */
-      public Netmessages.CMsgQAngle.Builder getEyeangleBuilder() {
+      public Networkbasetypes.CMsgQAngle.Builder getEyeangleBuilder() {
         bitField0_ |= 0x00000080;
         onChanged();
         return getEyeangleFieldBuilder().getBuilder();
@@ -8188,23 +8189,23 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgQAngle eyeangle = 8;</code>
        */
-      public Netmessages.CMsgQAngleOrBuilder getEyeangleOrBuilder() {
+      public Networkbasetypes.CMsgQAngleOrBuilder getEyeangleOrBuilder() {
         if (eyeangleBuilder_ != null) {
           return eyeangleBuilder_.getMessageOrBuilder();
         } else {
           return eyeangle_ == null ?
-              Netmessages.CMsgQAngle.getDefaultInstance() : eyeangle_;
+              Networkbasetypes.CMsgQAngle.getDefaultInstance() : eyeangle_;
         }
       }
       /**
        * <code>optional .CMsgQAngle eyeangle = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgQAngle, Netmessages.CMsgQAngle.Builder, Netmessages.CMsgQAngleOrBuilder> 
+          Networkbasetypes.CMsgQAngle, Networkbasetypes.CMsgQAngle.Builder, Networkbasetypes.CMsgQAngleOrBuilder> 
           getEyeangleFieldBuilder() {
         if (eyeangleBuilder_ == null) {
           eyeangleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Netmessages.CMsgQAngle, Netmessages.CMsgQAngle.Builder, Netmessages.CMsgQAngleOrBuilder>(
+              Networkbasetypes.CMsgQAngle, Networkbasetypes.CMsgQAngle.Builder, Networkbasetypes.CMsgQAngleOrBuilder>(
                   getEyeangle(),
                   getParentForChildren(),
                   isClean());
@@ -8213,9 +8214,9 @@ public final class Fatdemo {
         return eyeangleBuilder_;
       }
 
-      private Netmessages.CMsgVector eyeangleFwd_;
+      private Networkbasetypes.CMsgVector eyeangleFwd_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgVector, Netmessages.CMsgVector.Builder, Netmessages.CMsgVectorOrBuilder> eyeangleFwdBuilder_;
+          Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder> eyeangleFwdBuilder_;
       /**
        * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
        * @return Whether the eyeangleFwd field is set.
@@ -8227,9 +8228,9 @@ public final class Fatdemo {
        * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
        * @return The eyeangleFwd.
        */
-      public Netmessages.CMsgVector getEyeangleFwd() {
+      public Networkbasetypes.CMsgVector getEyeangleFwd() {
         if (eyeangleFwdBuilder_ == null) {
-          return eyeangleFwd_ == null ? Netmessages.CMsgVector.getDefaultInstance() : eyeangleFwd_;
+          return eyeangleFwd_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : eyeangleFwd_;
         } else {
           return eyeangleFwdBuilder_.getMessage();
         }
@@ -8237,7 +8238,7 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
        */
-      public Builder setEyeangleFwd(Netmessages.CMsgVector value) {
+      public Builder setEyeangleFwd(Networkbasetypes.CMsgVector value) {
         if (eyeangleFwdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8254,7 +8255,7 @@ public final class Fatdemo {
        * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
        */
       public Builder setEyeangleFwd(
-          Netmessages.CMsgVector.Builder builderForValue) {
+          Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (eyeangleFwdBuilder_ == null) {
           eyeangleFwd_ = builderForValue.build();
           onChanged();
@@ -8267,13 +8268,13 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
        */
-      public Builder mergeEyeangleFwd(Netmessages.CMsgVector value) {
+      public Builder mergeEyeangleFwd(Networkbasetypes.CMsgVector value) {
         if (eyeangleFwdBuilder_ == null) {
           if (((bitField0_ & 0x00000100) != 0) &&
               eyeangleFwd_ != null &&
-              eyeangleFwd_ != Netmessages.CMsgVector.getDefaultInstance()) {
+              eyeangleFwd_ != Networkbasetypes.CMsgVector.getDefaultInstance()) {
             eyeangleFwd_ =
-              Netmessages.CMsgVector.newBuilder(eyeangleFwd_).mergeFrom(value).buildPartial();
+              Networkbasetypes.CMsgVector.newBuilder(eyeangleFwd_).mergeFrom(value).buildPartial();
           } else {
             eyeangleFwd_ = value;
           }
@@ -8300,7 +8301,7 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
        */
-      public Netmessages.CMsgVector.Builder getEyeangleFwdBuilder() {
+      public Networkbasetypes.CMsgVector.Builder getEyeangleFwdBuilder() {
         bitField0_ |= 0x00000100;
         onChanged();
         return getEyeangleFwdFieldBuilder().getBuilder();
@@ -8308,23 +8309,23 @@ public final class Fatdemo {
       /**
        * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
        */
-      public Netmessages.CMsgVectorOrBuilder getEyeangleFwdOrBuilder() {
+      public Networkbasetypes.CMsgVectorOrBuilder getEyeangleFwdOrBuilder() {
         if (eyeangleFwdBuilder_ != null) {
           return eyeangleFwdBuilder_.getMessageOrBuilder();
         } else {
           return eyeangleFwd_ == null ?
-              Netmessages.CMsgVector.getDefaultInstance() : eyeangleFwd_;
+              Networkbasetypes.CMsgVector.getDefaultInstance() : eyeangleFwd_;
         }
       }
       /**
        * <code>optional .CMsgVector eyeangle_fwd = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgVector, Netmessages.CMsgVector.Builder, Netmessages.CMsgVectorOrBuilder> 
+          Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder> 
           getEyeangleFwdFieldBuilder() {
         if (eyeangleFwdBuilder_ == null) {
           eyeangleFwdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Netmessages.CMsgVector, Netmessages.CMsgVector.Builder, Netmessages.CMsgVectorOrBuilder>(
+              Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder>(
                   getEyeangleFwd(),
                   getParentForChildren(),
                   isClean());
@@ -13574,60 +13575,60 @@ public final class Fatdemo {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022csgo/fatdemo.proto\032\026csgo/netmessages.p" +
-      "roto\"M\n\006MLDict\022\013\n\003key\030\001 \001(\t\022\022\n\nval_strin" +
-      "g\030\002 \001(\t\022\017\n\007val_int\030\003 \001(\005\022\021\n\tval_float\030\004 " +
-      "\001(\002\"4\n\007MLEvent\022\022\n\nevent_name\030\001 \001(\t\022\025\n\004da" +
-      "ta\030\002 \003(\0132\007.MLDict\"b\n\014MLMatchState\022\021\n\tgam" +
-      "e_mode\030\001 \001(\t\022\r\n\005phase\030\002 \001(\t\022\r\n\005round\030\003 \001" +
-      "(\005\022\020\n\010score_ct\030\004 \001(\005\022\017\n\007score_t\030\005 \001(\005\"W\n" +
-      "\014MLRoundState\022\r\n\005phase\030\001 \001(\t\022$\n\010win_team" +
-      "\030\002 \001(\0162\006.ETeam:\nET_Unknown\022\022\n\nbomb_state" +
-      "\030\003 \001(\t\"\270\001\n\rMLWeaponState\022\r\n\005index\030\001 \001(\005\022" +
-      "\014\n\004name\030\002 \001(\t\022%\n\004type\030\003 \001(\0162\014.EWeaponTyp" +
-      "e:\tEWT_Knife\022\021\n\tammo_clip\030\004 \001(\005\022\025\n\rammo_" +
-      "clip_max\030\005 \001(\005\022\024\n\014ammo_reserve\030\006 \001(\005\022\r\n\005" +
-      "state\030\007 \001(\t\022\024\n\014recoil_index\030\010 \001(\002\"\263\003\n\rML" +
-      "PlayerState\022\022\n\naccount_id\030\001 \001(\005\022\017\n\007user_" +
-      "id\030\002 \001(\005\022\020\n\010entindex\030\003 \001(\005\022\014\n\004name\030\004 \001(\t" +
-      "\022\014\n\004clan\030\005 \001(\t\022 \n\004team\030\006 \001(\0162\006.ETeam:\nET" +
-      "_Unknown\022\033\n\006abspos\030\007 \001(\0132\013.CMsgVector\022\035\n" +
-      "\010eyeangle\030\010 \001(\0132\013.CMsgQAngle\022!\n\014eyeangle" +
-      "_fwd\030\t \001(\0132\013.CMsgVector\022\016\n\006health\030\n \001(\005\022" +
-      "\r\n\005armor\030\013 \001(\005\022\017\n\007flashed\030\014 \001(\002\022\016\n\006smoke" +
-      "d\030\r \001(\002\022\r\n\005money\030\016 \001(\005\022\023\n\013round_kills\030\017 " +
-      "\001(\005\022\024\n\014round_killhs\030\020 \001(\005\022\017\n\007burning\030\021 \001" +
-      "(\002\022\016\n\006helmet\030\022 \001(\010\022\022\n\ndefuse_kit\030\023 \001(\010\022\037" +
-      "\n\007weapons\030\024 \003(\0132\016.MLWeaponState\"j\n\013MLGam" +
-      "eState\022\034\n\005match\030\001 \001(\0132\r.MLMatchState\022\034\n\005" +
-      "round\030\002 \001(\0132\r.MLRoundState\022\037\n\007players\030\003 " +
-      "\003(\0132\016.MLPlayerState\"\\\n\014MLDemoHeader\022\020\n\010m" +
-      "ap_name\030\001 \001(\t\022\021\n\ttick_rate\030\002 \001(\005\022\017\n\007vers" +
-      "ion\030\003 \001(\r\022\026\n\016steam_universe\030\004 \001(\r\"S\n\006MLT" +
-      "ick\022\022\n\ntick_count\030\001 \001(\005\022\033\n\005state\030\002 \001(\0132\014" +
-      ".MLGameState\022\030\n\006events\030\003 \003(\0132\010.MLEvent\"\270" +
-      "\001\n\nVacNetShot\022\026\n\016steamid_player\030\001 \001(\006\022\024\n" +
-      "\014round_number\030\002 \001(\005\022\020\n\010hit_type\030\003 \001(\005\022\023\n" +
-      "\013weapon_type\030\004 \001(\005\022\037\n\027distance_to_hurt_t" +
-      "arget\030\005 \001(\002\022\030\n\020delta_yaw_window\030\006 \003(\002\022\032\n" +
-      "\022delta_pitch_window\030\007 \003(\002*\254\001\n\tEHitGroup\022" +
-      "\017\n\013EHG_Generic\020\000\022\014\n\010EHG_Head\020\001\022\r\n\tEHG_Ch" +
-      "est\020\002\022\017\n\013EHG_Stomach\020\003\022\017\n\013EHG_LeftArm\020\004\022" +
-      "\020\n\014EHG_RightArm\020\005\022\017\n\013EHG_LeftLeg\020\006\022\020\n\014EH" +
-      "G_RightLeg\020\007\022\014\n\010EHG_Gear\020\010\022\014\n\010EHG_Miss\020\t" +
-      "*F\n\005ETeam\022\016\n\nET_Unknown\020\000\022\020\n\014ET_Spectato" +
-      "r\020\001\022\020\n\014ET_Terrorist\020\002\022\t\n\005ET_CT\020\003*\344\001\n\013EWe" +
-      "aponType\022\r\n\tEWT_Knife\020\000\022\016\n\nEWT_Pistol\020\001\022" +
-      "\025\n\021EWT_SubMachineGun\020\002\022\r\n\tEWT_Rifle\020\003\022\017\n" +
-      "\013EWT_Shotgun\020\004\022\023\n\017EWT_SniperRifle\020\005\022\022\n\016E" +
-      "WT_MachineGun\020\006\022\n\n\006EWT_C4\020\007\022\017\n\013EWT_Grena" +
-      "de\020\010\022\021\n\rEWT_Equipment\020\t\022\025\n\021EWT_Stackable" +
-      "Item\020\n\022\017\n\013EWT_Unknown\020\013"
+      "\n\022csgo/fatdemo.proto\032\033csgo/networkbasety" +
+      "pes.proto\"M\n\006MLDict\022\013\n\003key\030\001 \001(\t\022\022\n\nval_" +
+      "string\030\002 \001(\t\022\017\n\007val_int\030\003 \001(\005\022\021\n\tval_flo" +
+      "at\030\004 \001(\002\"4\n\007MLEvent\022\022\n\nevent_name\030\001 \001(\t\022" +
+      "\025\n\004data\030\002 \003(\0132\007.MLDict\"b\n\014MLMatchState\022\021" +
+      "\n\tgame_mode\030\001 \001(\t\022\r\n\005phase\030\002 \001(\t\022\r\n\005roun" +
+      "d\030\003 \001(\005\022\020\n\010score_ct\030\004 \001(\005\022\017\n\007score_t\030\005 \001" +
+      "(\005\"W\n\014MLRoundState\022\r\n\005phase\030\001 \001(\t\022$\n\010win" +
+      "_team\030\002 \001(\0162\006.ETeam:\nET_Unknown\022\022\n\nbomb_" +
+      "state\030\003 \001(\t\"\270\001\n\rMLWeaponState\022\r\n\005index\030\001" +
+      " \001(\005\022\014\n\004name\030\002 \001(\t\022%\n\004type\030\003 \001(\0162\014.EWeap" +
+      "onType:\tEWT_Knife\022\021\n\tammo_clip\030\004 \001(\005\022\025\n\r" +
+      "ammo_clip_max\030\005 \001(\005\022\024\n\014ammo_reserve\030\006 \001(" +
+      "\005\022\r\n\005state\030\007 \001(\t\022\024\n\014recoil_index\030\010 \001(\002\"\273" +
+      "\003\n\rMLPlayerState\022\022\n\naccount_id\030\001 \001(\005\022\027\n\013" +
+      "player_slot\030\002 \001(\005:\002-1\022\020\n\010entindex\030\003 \001(\005\022" +
+      "\014\n\004name\030\004 \001(\t\022\014\n\004clan\030\005 \001(\t\022 \n\004team\030\006 \001(" +
+      "\0162\006.ETeam:\nET_Unknown\022\033\n\006abspos\030\007 \001(\0132\013." +
+      "CMsgVector\022\035\n\010eyeangle\030\010 \001(\0132\013.CMsgQAngl" +
+      "e\022!\n\014eyeangle_fwd\030\t \001(\0132\013.CMsgVector\022\016\n\006" +
+      "health\030\n \001(\005\022\r\n\005armor\030\013 \001(\005\022\017\n\007flashed\030\014" +
+      " \001(\002\022\016\n\006smoked\030\r \001(\002\022\r\n\005money\030\016 \001(\005\022\023\n\013r" +
+      "ound_kills\030\017 \001(\005\022\024\n\014round_killhs\030\020 \001(\005\022\017" +
+      "\n\007burning\030\021 \001(\002\022\016\n\006helmet\030\022 \001(\010\022\022\n\ndefus" +
+      "e_kit\030\023 \001(\010\022\037\n\007weapons\030\024 \003(\0132\016.MLWeaponS" +
+      "tate\"j\n\013MLGameState\022\034\n\005match\030\001 \001(\0132\r.MLM" +
+      "atchState\022\034\n\005round\030\002 \001(\0132\r.MLRoundState\022" +
+      "\037\n\007players\030\003 \003(\0132\016.MLPlayerState\"\\\n\014MLDe" +
+      "moHeader\022\020\n\010map_name\030\001 \001(\t\022\021\n\ttick_rate\030" +
+      "\002 \001(\005\022\017\n\007version\030\003 \001(\r\022\026\n\016steam_universe" +
+      "\030\004 \001(\r\"S\n\006MLTick\022\022\n\ntick_count\030\001 \001(\005\022\033\n\005" +
+      "state\030\002 \001(\0132\014.MLGameState\022\030\n\006events\030\003 \003(" +
+      "\0132\010.MLEvent\"\270\001\n\nVacNetShot\022\026\n\016steamid_pl" +
+      "ayer\030\001 \001(\006\022\024\n\014round_number\030\002 \001(\005\022\020\n\010hit_" +
+      "type\030\003 \001(\005\022\023\n\013weapon_type\030\004 \001(\005\022\037\n\027dista" +
+      "nce_to_hurt_target\030\005 \001(\002\022\030\n\020delta_yaw_wi" +
+      "ndow\030\006 \003(\002\022\032\n\022delta_pitch_window\030\007 \003(\002*\254" +
+      "\001\n\tEHitGroup\022\017\n\013EHG_Generic\020\000\022\014\n\010EHG_Hea" +
+      "d\020\001\022\r\n\tEHG_Chest\020\002\022\017\n\013EHG_Stomach\020\003\022\017\n\013E" +
+      "HG_LeftArm\020\004\022\020\n\014EHG_RightArm\020\005\022\017\n\013EHG_Le" +
+      "ftLeg\020\006\022\020\n\014EHG_RightLeg\020\007\022\014\n\010EHG_Gear\020\010\022" +
+      "\014\n\010EHG_Miss\020\t*F\n\005ETeam\022\016\n\nET_Unknown\020\000\022\020" +
+      "\n\014ET_Spectator\020\001\022\020\n\014ET_Terrorist\020\002\022\t\n\005ET" +
+      "_CT\020\003*\344\001\n\013EWeaponType\022\r\n\tEWT_Knife\020\000\022\016\n\n" +
+      "EWT_Pistol\020\001\022\025\n\021EWT_SubMachineGun\020\002\022\r\n\tE" +
+      "WT_Rifle\020\003\022\017\n\013EWT_Shotgun\020\004\022\023\n\017EWT_Snipe" +
+      "rRifle\020\005\022\022\n\016EWT_MachineGun\020\006\022\n\n\006EWT_C4\020\007" +
+      "\022\017\n\013EWT_Grenade\020\010\022\021\n\rEWT_Equipment\020\t\022\025\n\021" +
+      "EWT_StackableItem\020\n\022\017\n\013EWT_Unknown\020\013"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          Netmessages.getDescriptor(),
+          Networkbasetypes.getDescriptor(),
         });
     internal_static_MLDict_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -13664,7 +13665,7 @@ public final class Fatdemo {
     internal_static_MLPlayerState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MLPlayerState_descriptor,
-        new java.lang.String[] { "AccountId", "UserId", "Entindex", "Name", "Clan", "Team", "Abspos", "Eyeangle", "EyeangleFwd", "Health", "Armor", "Flashed", "Smoked", "Money", "RoundKills", "RoundKillhs", "Burning", "Helmet", "DefuseKit", "Weapons", });
+        new java.lang.String[] { "AccountId", "PlayerSlot", "Entindex", "Name", "Clan", "Team", "Abspos", "Eyeangle", "EyeangleFwd", "Health", "Armor", "Flashed", "Smoked", "Money", "RoundKills", "RoundKillhs", "Burning", "Helmet", "DefuseKit", "Weapons", });
     internal_static_MLGameState_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_MLGameState_fieldAccessorTable = new
@@ -13689,7 +13690,7 @@ public final class Fatdemo {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VacNetShot_descriptor,
         new java.lang.String[] { "SteamidPlayer", "RoundNumber", "HitType", "WeaponType", "DistanceToHurtTarget", "DeltaYawWindow", "DeltaPitchWindow", });
-    Netmessages.getDescriptor();
+    Networkbasetypes.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

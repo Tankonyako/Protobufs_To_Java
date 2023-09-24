@@ -75,6 +75,10 @@ public final class SteammessagesRemoteclientDiscovery {
      * <code>k_ERemoteDeviceStreamingProgress = 13;</code>
      */
     k_ERemoteDeviceStreamingProgress(13),
+    /**
+     * <code>k_ERemoteDeviceAuthorizationConfirmed = 14;</code>
+     */
+    k_ERemoteDeviceAuthorizationConfirmed(14),
     ;
 
     /**
@@ -133,6 +137,10 @@ public final class SteammessagesRemoteclientDiscovery {
      * <code>k_ERemoteDeviceStreamingProgress = 13;</code>
      */
     public static final int k_ERemoteDeviceStreamingProgress_VALUE = 13;
+    /**
+     * <code>k_ERemoteDeviceAuthorizationConfirmed = 14;</code>
+     */
+    public static final int k_ERemoteDeviceAuthorizationConfirmed_VALUE = 14;
 
 
     public final int getNumber() {
@@ -169,6 +177,7 @@ public final class SteammessagesRemoteclientDiscovery {
         case 11: return k_ERemoteClientBroadcastMsgClientIDDeconflict;
         case 12: return k_ERemoteDeviceStreamTransportSignal;
         case 13: return k_ERemoteDeviceStreamingProgress;
+        case 14: return k_ERemoteDeviceAuthorizationConfirmed;
         default: return null;
       }
     }
@@ -243,6 +252,10 @@ public final class SteammessagesRemoteclientDiscovery {
      * <code>k_ERemoteClientServiceContentCache = 8;</code>
      */
     k_ERemoteClientServiceContentCache(8),
+    /**
+     * <code>k_ERemoteClientServiceContentServer = 16;</code>
+     */
+    k_ERemoteClientServiceContentServer(16),
     ;
 
     /**
@@ -265,6 +278,10 @@ public final class SteammessagesRemoteclientDiscovery {
      * <code>k_ERemoteClientServiceContentCache = 8;</code>
      */
     public static final int k_ERemoteClientServiceContentCache_VALUE = 8;
+    /**
+     * <code>k_ERemoteClientServiceContentServer = 16;</code>
+     */
+    public static final int k_ERemoteClientServiceContentServer_VALUE = 16;
 
 
     public final int getNumber() {
@@ -292,6 +309,7 @@ public final class SteammessagesRemoteclientDiscovery {
         case 2: return k_ERemoteClientServiceGameStreaming;
         case 4: return k_ERemoteClientServiceSiteLicense;
         case 8: return k_ERemoteClientServiceContentCache;
+        case 16: return k_ERemoteClientServiceContentServer;
         default: return null;
       }
     }
@@ -525,6 +543,10 @@ public final class SteammessagesRemoteclientDiscovery {
      * <code>k_EStreamDeviceFormFactorTV = 4;</code>
      */
     k_EStreamDeviceFormFactorTV(4),
+    /**
+     * <code>k_EStreamDeviceFormFactorVRHeadset = 5;</code>
+     */
+    k_EStreamDeviceFormFactorVRHeadset(5),
     ;
 
     /**
@@ -547,6 +569,10 @@ public final class SteammessagesRemoteclientDiscovery {
      * <code>k_EStreamDeviceFormFactorTV = 4;</code>
      */
     public static final int k_EStreamDeviceFormFactorTV_VALUE = 4;
+    /**
+     * <code>k_EStreamDeviceFormFactorVRHeadset = 5;</code>
+     */
+    public static final int k_EStreamDeviceFormFactorVRHeadset_VALUE = 5;
 
 
     public final int getNumber() {
@@ -574,6 +600,7 @@ public final class SteammessagesRemoteclientDiscovery {
         case 2: return k_EStreamDeviceFormFactorTablet;
         case 3: return k_EStreamDeviceFormFactorComputer;
         case 4: return k_EStreamDeviceFormFactorTV;
+        case 5: return k_EStreamDeviceFormFactorVRHeadset;
         default: return null;
       }
     }
@@ -641,9 +668,9 @@ public final class SteammessagesRemoteclientDiscovery {
      */
     k_EStreamTransportUDPRelay(2),
     /**
-     * <code>k_EStreamTransportWebRTC = 3;</code>
+     * <code>k_EStreamTransportWebRTC_OBSOLETE = 3;</code>
      */
-    k_EStreamTransportWebRTC(3),
+    k_EStreamTransportWebRTC_OBSOLETE(3),
     /**
      * <code>k_EStreamTransportSDR = 4;</code>
      */
@@ -671,9 +698,9 @@ public final class SteammessagesRemoteclientDiscovery {
      */
     public static final int k_EStreamTransportUDPRelay_VALUE = 2;
     /**
-     * <code>k_EStreamTransportWebRTC = 3;</code>
+     * <code>k_EStreamTransportWebRTC_OBSOLETE = 3;</code>
      */
-    public static final int k_EStreamTransportWebRTC_VALUE = 3;
+    public static final int k_EStreamTransportWebRTC_OBSOLETE_VALUE = 3;
     /**
      * <code>k_EStreamTransportSDR = 4;</code>
      */
@@ -711,7 +738,7 @@ public final class SteammessagesRemoteclientDiscovery {
         case 0: return k_EStreamTransportNone;
         case 1: return k_EStreamTransportUDP;
         case 2: return k_EStreamTransportUDPRelay;
-        case 3: return k_EStreamTransportWebRTC;
+        case 3: return k_EStreamTransportWebRTC_OBSOLETE;
         case 4: return k_EStreamTransportSDR;
         case 5: return k_EStreamTransportUDP_SNS;
         case 6: return k_EStreamTransportUDPRelay_SNS;
@@ -785,6 +812,10 @@ public final class SteammessagesRemoteclientDiscovery {
      * <code>k_EStreamInterfaceDesktop = 3;</code>
      */
     k_EStreamInterfaceDesktop(3),
+    /**
+     * <code>k_EStreamInterfaceSteamVR = 4;</code>
+     */
+    k_EStreamInterfaceSteamVR(4),
     ;
 
     /**
@@ -803,6 +834,10 @@ public final class SteammessagesRemoteclientDiscovery {
      * <code>k_EStreamInterfaceDesktop = 3;</code>
      */
     public static final int k_EStreamInterfaceDesktop_VALUE = 3;
+    /**
+     * <code>k_EStreamInterfaceSteamVR = 4;</code>
+     */
+    public static final int k_EStreamInterfaceSteamVR_VALUE = 4;
 
 
     public final int getNumber() {
@@ -829,6 +864,7 @@ public final class SteammessagesRemoteclientDiscovery {
         case 1: return k_EStreamInterfaceRecentGames;
         case 2: return k_EStreamInterfaceBigPicture;
         case 3: return k_EStreamInterfaceDesktop;
+        case 4: return k_EStreamInterfaceSteamVR;
         default: return null;
       }
     }
@@ -1129,15 +1165,15 @@ public final class SteammessagesRemoteclientDiscovery {
     long getInstanceId();
 
     /**
-     * <code>optional uint64 device_id = 4;</code>
-     * @return Whether the deviceId field is set.
+     * <code>optional uint64 device_id_OBSOLETE = 4;</code>
+     * @return Whether the deviceIdOBSOLETE field is set.
      */
-    boolean hasDeviceId();
+    boolean hasDeviceIdOBSOLETE();
     /**
-     * <code>optional uint64 device_id = 4;</code>
-     * @return The deviceId.
+     * <code>optional uint64 device_id_OBSOLETE = 4;</code>
+     * @return The deviceIdOBSOLETE.
      */
-    long getDeviceId();
+    long getDeviceIdOBSOLETE();
 
     /**
      * <code>optional bytes device_token = 5;</code>
@@ -1222,7 +1258,7 @@ public final class SteammessagesRemoteclientDiscovery {
             }
             case 32: {
               bitField0_ |= 0x00000008;
-              deviceId_ = input.readUInt64();
+              deviceIdOBSOLETE_ = input.readUInt64();
               break;
             }
             case 42: {
@@ -1320,23 +1356,23 @@ public final class SteammessagesRemoteclientDiscovery {
       return instanceId_;
     }
 
-    public static final int DEVICE_ID_FIELD_NUMBER = 4;
-    private long deviceId_;
+    public static final int DEVICE_ID_OBSOLETE_FIELD_NUMBER = 4;
+    private long deviceIdOBSOLETE_;
     /**
-     * <code>optional uint64 device_id = 4;</code>
-     * @return Whether the deviceId field is set.
+     * <code>optional uint64 device_id_OBSOLETE = 4;</code>
+     * @return Whether the deviceIdOBSOLETE field is set.
      */
     @java.lang.Override
-    public boolean hasDeviceId() {
+    public boolean hasDeviceIdOBSOLETE() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>optional uint64 device_id = 4;</code>
-     * @return The deviceId.
+     * <code>optional uint64 device_id_OBSOLETE = 4;</code>
+     * @return The deviceIdOBSOLETE.
      */
     @java.lang.Override
-    public long getDeviceId() {
-      return deviceId_;
+    public long getDeviceIdOBSOLETE() {
+      return deviceIdOBSOLETE_;
     }
 
     public static final int DEVICE_TOKEN_FIELD_NUMBER = 5;
@@ -1382,7 +1418,7 @@ public final class SteammessagesRemoteclientDiscovery {
         output.writeUInt64(3, instanceId_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeUInt64(4, deviceId_);
+        output.writeUInt64(4, deviceIdOBSOLETE_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeBytes(5, deviceToken_);
@@ -1410,7 +1446,7 @@ public final class SteammessagesRemoteclientDiscovery {
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, deviceId_);
+          .computeUInt64Size(4, deviceIdOBSOLETE_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1445,10 +1481,10 @@ public final class SteammessagesRemoteclientDiscovery {
         if (getInstanceId()
             != other.getInstanceId()) return false;
       }
-      if (hasDeviceId() != other.hasDeviceId()) return false;
-      if (hasDeviceId()) {
-        if (getDeviceId()
-            != other.getDeviceId()) return false;
+      if (hasDeviceIdOBSOLETE() != other.hasDeviceIdOBSOLETE()) return false;
+      if (hasDeviceIdOBSOLETE()) {
+        if (getDeviceIdOBSOLETE()
+            != other.getDeviceIdOBSOLETE()) return false;
       }
       if (hasDeviceToken() != other.hasDeviceToken()) return false;
       if (hasDeviceToken()) {
@@ -1480,10 +1516,10 @@ public final class SteammessagesRemoteclientDiscovery {
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getInstanceId());
       }
-      if (hasDeviceId()) {
-        hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
+      if (hasDeviceIdOBSOLETE()) {
+        hash = (37 * hash) + DEVICE_ID_OBSOLETE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getDeviceId());
+            getDeviceIdOBSOLETE());
       }
       if (hasDeviceToken()) {
         hash = (37 * hash) + DEVICE_TOKEN_FIELD_NUMBER;
@@ -1628,7 +1664,7 @@ public final class SteammessagesRemoteclientDiscovery {
         bitField0_ = (bitField0_ & ~0x00000002);
         instanceId_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
-        deviceId_ = 0L;
+        deviceIdOBSOLETE_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000008);
         deviceToken_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -1673,7 +1709,7 @@ public final class SteammessagesRemoteclientDiscovery {
           to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.deviceId_ = deviceId_;
+          result.deviceIdOBSOLETE_ = deviceIdOBSOLETE_;
           to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
@@ -1738,8 +1774,8 @@ public final class SteammessagesRemoteclientDiscovery {
         if (other.hasInstanceId()) {
           setInstanceId(other.getInstanceId());
         }
-        if (other.hasDeviceId()) {
-          setDeviceId(other.getDeviceId());
+        if (other.hasDeviceIdOBSOLETE()) {
+          setDeviceIdOBSOLETE(other.getDeviceIdOBSOLETE());
         }
         if (other.hasDeviceToken()) {
           setDeviceToken(other.getDeviceToken());
@@ -1895,41 +1931,41 @@ public final class SteammessagesRemoteclientDiscovery {
         return this;
       }
 
-      private long deviceId_ ;
+      private long deviceIdOBSOLETE_ ;
       /**
-       * <code>optional uint64 device_id = 4;</code>
-       * @return Whether the deviceId field is set.
+       * <code>optional uint64 device_id_OBSOLETE = 4;</code>
+       * @return Whether the deviceIdOBSOLETE field is set.
        */
       @java.lang.Override
-      public boolean hasDeviceId() {
+      public boolean hasDeviceIdOBSOLETE() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>optional uint64 device_id = 4;</code>
-       * @return The deviceId.
+       * <code>optional uint64 device_id_OBSOLETE = 4;</code>
+       * @return The deviceIdOBSOLETE.
        */
       @java.lang.Override
-      public long getDeviceId() {
-        return deviceId_;
+      public long getDeviceIdOBSOLETE() {
+        return deviceIdOBSOLETE_;
       }
       /**
-       * <code>optional uint64 device_id = 4;</code>
-       * @param value The deviceId to set.
+       * <code>optional uint64 device_id_OBSOLETE = 4;</code>
+       * @param value The deviceIdOBSOLETE to set.
        * @return This builder for chaining.
        */
-      public Builder setDeviceId(long value) {
+      public Builder setDeviceIdOBSOLETE(long value) {
         bitField0_ |= 0x00000008;
-        deviceId_ = value;
+        deviceIdOBSOLETE_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint64 device_id = 4;</code>
+       * <code>optional uint64 device_id_OBSOLETE = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearDeviceId() {
+      public Builder clearDeviceIdOBSOLETE() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        deviceId_ = 0L;
+        deviceIdOBSOLETE_ = 0L;
         onChanged();
         return this;
       }
@@ -2304,6 +2340,39 @@ public final class SteammessagesRemoteclientDiscovery {
      * @return The remoteplayActive.
      */
     boolean getRemoteplayActive();
+
+    /**
+     * <code>optional uint32 supported_services = 23;</code>
+     * @return Whether the supportedServices field is set.
+     */
+    boolean hasSupportedServices();
+    /**
+     * <code>optional uint32 supported_services = 23;</code>
+     * @return The supportedServices.
+     */
+    int getSupportedServices();
+
+    /**
+     * <code>optional bool steam_deck = 24;</code>
+     * @return Whether the steamDeck field is set.
+     */
+    boolean hasSteamDeck();
+    /**
+     * <code>optional bool steam_deck = 24;</code>
+     * @return The steamDeck.
+     */
+    boolean getSteamDeck();
+
+    /**
+     * <code>optional uint64 steam_version = 25;</code>
+     * @return Whether the steamVersion field is set.
+     */
+    boolean hasSteamVersion();
+    /**
+     * <code>optional uint64 steam_version = 25;</code>
+     * @return The steamVersion.
+     */
+    long getSteamVersion();
   }
   /**
    * Protobuf type {@code CMsgRemoteClientBroadcastStatus}
@@ -2468,6 +2537,21 @@ public final class SteammessagesRemoteclientDiscovery {
             case 176: {
               bitField0_ |= 0x00010000;
               remoteplayActive_ = input.readBool();
+              break;
+            }
+            case 184: {
+              bitField0_ |= 0x00020000;
+              supportedServices_ = input.readUInt32();
+              break;
+            }
+            case 192: {
+              bitField0_ |= 0x00040000;
+              steamDeck_ = input.readBool();
+              break;
+            }
+            case 200: {
+              bitField0_ |= 0x00080000;
+              steamVersion_ = input.readUInt64();
               break;
             }
             default: {
@@ -3626,6 +3710,63 @@ public final class SteammessagesRemoteclientDiscovery {
       return remoteplayActive_;
     }
 
+    public static final int SUPPORTED_SERVICES_FIELD_NUMBER = 23;
+    private int supportedServices_;
+    /**
+     * <code>optional uint32 supported_services = 23;</code>
+     * @return Whether the supportedServices field is set.
+     */
+    @java.lang.Override
+    public boolean hasSupportedServices() {
+      return ((bitField0_ & 0x00020000) != 0);
+    }
+    /**
+     * <code>optional uint32 supported_services = 23;</code>
+     * @return The supportedServices.
+     */
+    @java.lang.Override
+    public int getSupportedServices() {
+      return supportedServices_;
+    }
+
+    public static final int STEAM_DECK_FIELD_NUMBER = 24;
+    private boolean steamDeck_;
+    /**
+     * <code>optional bool steam_deck = 24;</code>
+     * @return Whether the steamDeck field is set.
+     */
+    @java.lang.Override
+    public boolean hasSteamDeck() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <code>optional bool steam_deck = 24;</code>
+     * @return The steamDeck.
+     */
+    @java.lang.Override
+    public boolean getSteamDeck() {
+      return steamDeck_;
+    }
+
+    public static final int STEAM_VERSION_FIELD_NUMBER = 25;
+    private long steamVersion_;
+    /**
+     * <code>optional uint64 steam_version = 25;</code>
+     * @return Whether the steamVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasSteamVersion() {
+      return ((bitField0_ & 0x00080000) != 0);
+    }
+    /**
+     * <code>optional uint64 steam_version = 25;</code>
+     * @return The steamVersion.
+     */
+    @java.lang.Override
+    public long getSteamVersion() {
+      return steamVersion_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3699,6 +3840,15 @@ public final class SteammessagesRemoteclientDiscovery {
       }
       if (((bitField0_ & 0x00010000) != 0)) {
         output.writeBool(22, remoteplayActive_);
+      }
+      if (((bitField0_ & 0x00020000) != 0)) {
+        output.writeUInt32(23, supportedServices_);
+      }
+      if (((bitField0_ & 0x00040000) != 0)) {
+        output.writeBool(24, steamDeck_);
+      }
+      if (((bitField0_ & 0x00080000) != 0)) {
+        output.writeUInt64(25, steamVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -3794,6 +3944,18 @@ public final class SteammessagesRemoteclientDiscovery {
       if (((bitField0_ & 0x00010000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(22, remoteplayActive_);
+      }
+      if (((bitField0_ & 0x00020000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(23, supportedServices_);
+      }
+      if (((bitField0_ & 0x00040000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(24, steamDeck_);
+      }
+      if (((bitField0_ & 0x00080000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(25, steamVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3901,6 +4063,21 @@ public final class SteammessagesRemoteclientDiscovery {
         if (getRemoteplayActive()
             != other.getRemoteplayActive()) return false;
       }
+      if (hasSupportedServices() != other.hasSupportedServices()) return false;
+      if (hasSupportedServices()) {
+        if (getSupportedServices()
+            != other.getSupportedServices()) return false;
+      }
+      if (hasSteamDeck() != other.hasSteamDeck()) return false;
+      if (hasSteamDeck()) {
+        if (getSteamDeck()
+            != other.getSteamDeck()) return false;
+      }
+      if (hasSteamVersion() != other.hasSteamVersion()) return false;
+      if (hasSteamVersion()) {
+        if (getSteamVersion()
+            != other.getSteamVersion()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3997,6 +4174,20 @@ public final class SteammessagesRemoteclientDiscovery {
         hash = (37 * hash) + REMOTEPLAY_ACTIVE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getRemoteplayActive());
+      }
+      if (hasSupportedServices()) {
+        hash = (37 * hash) + SUPPORTED_SERVICES_FIELD_NUMBER;
+        hash = (53 * hash) + getSupportedServices();
+      }
+      if (hasSteamDeck()) {
+        hash = (37 * hash) + STEAM_DECK_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSteamDeck());
+      }
+      if (hasSteamVersion()) {
+        hash = (37 * hash) + STEAM_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSteamVersion());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4176,6 +4367,12 @@ public final class SteammessagesRemoteclientDiscovery {
         bitField0_ = (bitField0_ & ~0x00040000);
         remoteplayActive_ = false;
         bitField0_ = (bitField0_ & ~0x00080000);
+        supportedServices_ = 0;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        steamDeck_ = false;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        steamVersion_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00400000);
         return this;
       }
 
@@ -4290,6 +4487,18 @@ public final class SteammessagesRemoteclientDiscovery {
         if (((from_bitField0_ & 0x00080000) != 0)) {
           result.remoteplayActive_ = remoteplayActive_;
           to_bitField0_ |= 0x00010000;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.supportedServices_ = supportedServices_;
+          to_bitField0_ |= 0x00020000;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.steamDeck_ = steamDeck_;
+          to_bitField0_ |= 0x00040000;
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.steamVersion_ = steamVersion_;
+          to_bitField0_ |= 0x00080000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -4440,6 +4649,15 @@ public final class SteammessagesRemoteclientDiscovery {
         }
         if (other.hasRemoteplayActive()) {
           setRemoteplayActive(other.getRemoteplayActive());
+        }
+        if (other.hasSupportedServices()) {
+          setSupportedServices(other.getSupportedServices());
+        }
+        if (other.hasSteamDeck()) {
+          setSteamDeck(other.getSteamDeck());
+        }
+        if (other.hasSteamVersion()) {
+          setSteamVersion(other.getSteamVersion());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5678,6 +5896,123 @@ public final class SteammessagesRemoteclientDiscovery {
       public Builder clearRemoteplayActive() {
         bitField0_ = (bitField0_ & ~0x00080000);
         remoteplayActive_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int supportedServices_ ;
+      /**
+       * <code>optional uint32 supported_services = 23;</code>
+       * @return Whether the supportedServices field is set.
+       */
+      @java.lang.Override
+      public boolean hasSupportedServices() {
+        return ((bitField0_ & 0x00100000) != 0);
+      }
+      /**
+       * <code>optional uint32 supported_services = 23;</code>
+       * @return The supportedServices.
+       */
+      @java.lang.Override
+      public int getSupportedServices() {
+        return supportedServices_;
+      }
+      /**
+       * <code>optional uint32 supported_services = 23;</code>
+       * @param value The supportedServices to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupportedServices(int value) {
+        bitField0_ |= 0x00100000;
+        supportedServices_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 supported_services = 23;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupportedServices() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        supportedServices_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean steamDeck_ ;
+      /**
+       * <code>optional bool steam_deck = 24;</code>
+       * @return Whether the steamDeck field is set.
+       */
+      @java.lang.Override
+      public boolean hasSteamDeck() {
+        return ((bitField0_ & 0x00200000) != 0);
+      }
+      /**
+       * <code>optional bool steam_deck = 24;</code>
+       * @return The steamDeck.
+       */
+      @java.lang.Override
+      public boolean getSteamDeck() {
+        return steamDeck_;
+      }
+      /**
+       * <code>optional bool steam_deck = 24;</code>
+       * @param value The steamDeck to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamDeck(boolean value) {
+        bitField0_ |= 0x00200000;
+        steamDeck_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool steam_deck = 24;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamDeck() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        steamDeck_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long steamVersion_ ;
+      /**
+       * <code>optional uint64 steam_version = 25;</code>
+       * @return Whether the steamVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasSteamVersion() {
+        return ((bitField0_ & 0x00400000) != 0);
+      }
+      /**
+       * <code>optional uint64 steam_version = 25;</code>
+       * @return The steamVersion.
+       */
+      @java.lang.Override
+      public long getSteamVersion() {
+        return steamVersion_;
+      }
+      /**
+       * <code>optional uint64 steam_version = 25;</code>
+       * @param value The steamVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamVersion(long value) {
+        bitField0_ |= 0x00400000;
+        steamVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 steam_version = 25;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamVersion() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        steamVersion_ = 0L;
         onChanged();
         return this;
       }
@@ -7086,6 +7421,17 @@ public final class SteammessagesRemoteclientDiscovery {
      * @return The encryptedRequest.
      */
     com.google.protobuf.ByteString getEncryptedRequest();
+
+    /**
+     * <code>optional bytes auth_key = 4;</code>
+     * @return Whether the authKey field is set.
+     */
+    boolean hasAuthKey();
+    /**
+     * <code>optional bytes auth_key = 4;</code>
+     * @return The authKey.
+     */
+    com.google.protobuf.ByteString getAuthKey();
   }
   /**
    * Protobuf type {@code CMsgRemoteDeviceAuthorizationRequest}
@@ -7103,6 +7449,7 @@ public final class SteammessagesRemoteclientDiscovery {
       deviceToken_ = com.google.protobuf.ByteString.EMPTY;
       deviceName_ = "";
       encryptedRequest_ = com.google.protobuf.ByteString.EMPTY;
+      authKey_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -7150,6 +7497,11 @@ public final class SteammessagesRemoteclientDiscovery {
             case 26: {
               bitField0_ |= 0x00000004;
               encryptedRequest_ = input.readBytes();
+              break;
+            }
+            case 34: {
+              bitField0_ |= 0x00000008;
+              authKey_ = input.readBytes();
               break;
             }
             default: {
@@ -8942,6 +9294,25 @@ public final class SteammessagesRemoteclientDiscovery {
       return encryptedRequest_;
     }
 
+    public static final int AUTH_KEY_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString authKey_;
+    /**
+     * <code>optional bytes auth_key = 4;</code>
+     * @return Whether the authKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthKey() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional bytes auth_key = 4;</code>
+     * @return The authKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAuthKey() {
+      return authKey_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8973,6 +9344,9 @@ public final class SteammessagesRemoteclientDiscovery {
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeBytes(3, encryptedRequest_);
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBytes(4, authKey_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8992,6 +9366,10 @@ public final class SteammessagesRemoteclientDiscovery {
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, encryptedRequest_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, authKey_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9023,6 +9401,11 @@ public final class SteammessagesRemoteclientDiscovery {
         if (!getEncryptedRequest()
             .equals(other.getEncryptedRequest())) return false;
       }
+      if (hasAuthKey() != other.hasAuthKey()) return false;
+      if (hasAuthKey()) {
+        if (!getAuthKey()
+            .equals(other.getAuthKey())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9045,6 +9428,10 @@ public final class SteammessagesRemoteclientDiscovery {
       if (hasEncryptedRequest()) {
         hash = (37 * hash) + ENCRYPTED_REQUEST_FIELD_NUMBER;
         hash = (53 * hash) + getEncryptedRequest().hashCode();
+      }
+      if (hasAuthKey()) {
+        hash = (37 * hash) + AUTH_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthKey().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9185,6 +9572,8 @@ public final class SteammessagesRemoteclientDiscovery {
         bitField0_ = (bitField0_ & ~0x00000002);
         encryptedRequest_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        authKey_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -9225,6 +9614,10 @@ public final class SteammessagesRemoteclientDiscovery {
           to_bitField0_ |= 0x00000004;
         }
         result.encryptedRequest_ = encryptedRequest_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.authKey_ = authKey_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -9284,6 +9677,9 @@ public final class SteammessagesRemoteclientDiscovery {
         }
         if (other.hasEncryptedRequest()) {
           setEncryptedRequest(other.getEncryptedRequest());
+        }
+        if (other.hasAuthKey()) {
+          setAuthKey(other.getAuthKey());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9485,6 +9881,48 @@ public final class SteammessagesRemoteclientDiscovery {
       public Builder clearEncryptedRequest() {
         bitField0_ = (bitField0_ & ~0x00000004);
         encryptedRequest_ = getDefaultInstance().getEncryptedRequest();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString authKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes auth_key = 4;</code>
+       * @return Whether the authKey field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuthKey() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bytes auth_key = 4;</code>
+       * @return The authKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAuthKey() {
+        return authKey_;
+      }
+      /**
+       * <code>optional bytes auth_key = 4;</code>
+       * @param value The authKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthKey(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        authKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes auth_key = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthKey() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        authKey_ = getDefaultInstance().getAuthKey();
         onChanged();
         return this;
       }
@@ -9984,6 +10422,28 @@ public final class SteammessagesRemoteclientDiscovery {
      * @return The steamid.
      */
     long getSteamid();
+
+    /**
+     * <code>optional bytes auth_key = 3;</code>
+     * @return Whether the authKey field is set.
+     */
+    boolean hasAuthKey();
+    /**
+     * <code>optional bytes auth_key = 3;</code>
+     * @return The authKey.
+     */
+    com.google.protobuf.ByteString getAuthKey();
+
+    /**
+     * <code>optional bytes device_token = 4;</code>
+     * @return Whether the deviceToken field is set.
+     */
+    boolean hasDeviceToken();
+    /**
+     * <code>optional bytes device_token = 4;</code>
+     * @return The deviceToken.
+     */
+    com.google.protobuf.ByteString getDeviceToken();
   }
   /**
    * Protobuf type {@code CMsgRemoteDeviceAuthorizationResponse}
@@ -9999,6 +10459,8 @@ public final class SteammessagesRemoteclientDiscovery {
     }
     private CMsgRemoteDeviceAuthorizationResponse() {
       result_ = 0;
+      authKey_ = com.google.protobuf.ByteString.EMPTY;
+      deviceToken_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -10047,6 +10509,16 @@ public final class SteammessagesRemoteclientDiscovery {
             case 17: {
               bitField0_ |= 0x00000002;
               steamid_ = input.readFixed64();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              authKey_ = input.readBytes();
+              break;
+            }
+            case 34: {
+              bitField0_ |= 0x00000008;
+              deviceToken_ = input.readBytes();
               break;
             }
             default: {
@@ -10120,6 +10592,44 @@ public final class SteammessagesRemoteclientDiscovery {
       return steamid_;
     }
 
+    public static final int AUTH_KEY_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString authKey_;
+    /**
+     * <code>optional bytes auth_key = 3;</code>
+     * @return Whether the authKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthKey() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bytes auth_key = 3;</code>
+     * @return The authKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAuthKey() {
+      return authKey_;
+    }
+
+    public static final int DEVICE_TOKEN_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString deviceToken_;
+    /**
+     * <code>optional bytes device_token = 4;</code>
+     * @return Whether the deviceToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeviceToken() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional bytes device_token = 4;</code>
+     * @return The deviceToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDeviceToken() {
+      return deviceToken_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10144,6 +10654,12 @@ public final class SteammessagesRemoteclientDiscovery {
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeFixed64(2, steamid_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBytes(3, authKey_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBytes(4, deviceToken_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10160,6 +10676,14 @@ public final class SteammessagesRemoteclientDiscovery {
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed64Size(2, steamid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, authKey_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, deviceToken_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10185,6 +10709,16 @@ public final class SteammessagesRemoteclientDiscovery {
         if (getSteamid()
             != other.getSteamid()) return false;
       }
+      if (hasAuthKey() != other.hasAuthKey()) return false;
+      if (hasAuthKey()) {
+        if (!getAuthKey()
+            .equals(other.getAuthKey())) return false;
+      }
+      if (hasDeviceToken() != other.hasDeviceToken()) return false;
+      if (hasDeviceToken()) {
+        if (!getDeviceToken()
+            .equals(other.getDeviceToken())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10204,6 +10738,14 @@ public final class SteammessagesRemoteclientDiscovery {
         hash = (37 * hash) + STEAMID_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getSteamid());
+      }
+      if (hasAuthKey()) {
+        hash = (37 * hash) + AUTH_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthKey().hashCode();
+      }
+      if (hasDeviceToken()) {
+        hash = (37 * hash) + DEVICE_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getDeviceToken().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10342,6 +10884,10 @@ public final class SteammessagesRemoteclientDiscovery {
         bitField0_ = (bitField0_ & ~0x00000001);
         steamid_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
+        authKey_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        deviceToken_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -10378,6 +10924,14 @@ public final class SteammessagesRemoteclientDiscovery {
           result.steamid_ = steamid_;
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.authKey_ = authKey_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.deviceToken_ = deviceToken_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -10432,6 +10986,12 @@ public final class SteammessagesRemoteclientDiscovery {
         }
         if (other.hasSteamid()) {
           setSteamid(other.getSteamid());
+        }
+        if (other.hasAuthKey()) {
+          setAuthKey(other.getAuthKey());
+        }
+        if (other.hasDeviceToken()) {
+          setDeviceToken(other.getDeviceToken());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10547,6 +11107,90 @@ public final class SteammessagesRemoteclientDiscovery {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.ByteString authKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes auth_key = 3;</code>
+       * @return Whether the authKey field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuthKey() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bytes auth_key = 3;</code>
+       * @return The authKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAuthKey() {
+        return authKey_;
+      }
+      /**
+       * <code>optional bytes auth_key = 3;</code>
+       * @param value The authKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthKey(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        authKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes auth_key = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthKey() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        authKey_ = getDefaultInstance().getAuthKey();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString deviceToken_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes device_token = 4;</code>
+       * @return Whether the deviceToken field is set.
+       */
+      @java.lang.Override
+      public boolean hasDeviceToken() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bytes device_token = 4;</code>
+       * @return The deviceToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDeviceToken() {
+        return deviceToken_;
+      }
+      /**
+       * <code>optional bytes device_token = 4;</code>
+       * @param value The deviceToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeviceToken(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        deviceToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes device_token = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeviceToken() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        deviceToken_ = getDefaultInstance().getDeviceToken();
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10595,6 +11239,547 @@ public final class SteammessagesRemoteclientDiscovery {
 
     @java.lang.Override
     public SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgRemoteDeviceAuthorizationConfirmedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgRemoteDeviceAuthorizationConfirmed)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];</code>
+     * @return The result.
+     */
+    SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult getResult();
+  }
+  /**
+   * Protobuf type {@code CMsgRemoteDeviceAuthorizationConfirmed}
+   */
+  public static final class CMsgRemoteDeviceAuthorizationConfirmed extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgRemoteDeviceAuthorizationConfirmed)
+      CMsgRemoteDeviceAuthorizationConfirmedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgRemoteDeviceAuthorizationConfirmed.newBuilder() to construct.
+    private CMsgRemoteDeviceAuthorizationConfirmed(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgRemoteDeviceAuthorizationConfirmed() {
+      result_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgRemoteDeviceAuthorizationConfirmed();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgRemoteDeviceAuthorizationConfirmed(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult value = SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                result_ = rawValue;
+              }
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesRemoteclientDiscovery.internal_static_CMsgRemoteDeviceAuthorizationConfirmed_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesRemoteclientDiscovery.internal_static_CMsgRemoteDeviceAuthorizationConfirmed_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed.class, SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private int result_;
+    /**
+     * <code>required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override public boolean hasResult() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];</code>
+     * @return The result.
+     */
+    @java.lang.Override public SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult getResult() {
+      @SuppressWarnings("deprecation")
+      SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult result = SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult.valueOf(result_);
+      return result == null ? SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult.k_ERemoteDeviceAuthorizationSuccess : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasResult()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, result_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, result_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed)) {
+        return super.equals(obj);
+      }
+      SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed other = (SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed) obj;
+
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (result_ != other.result_) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + result_;
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgRemoteDeviceAuthorizationConfirmed}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgRemoteDeviceAuthorizationConfirmed)
+        SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesRemoteclientDiscovery.internal_static_CMsgRemoteDeviceAuthorizationConfirmed_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesRemoteclientDiscovery.internal_static_CMsgRemoteDeviceAuthorizationConfirmed_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed.class, SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed.Builder.class);
+      }
+
+      // Construct using SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        result_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesRemoteclientDiscovery.internal_static_CMsgRemoteDeviceAuthorizationConfirmed_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed getDefaultInstanceForType() {
+        return SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed build() {
+        SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed buildPartial() {
+        SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed result = new SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.result_ = result_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed) {
+          return mergeFrom((SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed other) {
+        if (other == SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed.getDefaultInstance()) return this;
+        if (other.hasResult()) {
+          setResult(other.getResult());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasResult()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int result_ = 0;
+      /**
+       * <code>required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];</code>
+       * @return Whether the result field is set.
+       */
+      @java.lang.Override public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];</code>
+       * @return The result.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult getResult() {
+        @SuppressWarnings("deprecation")
+        SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult result = SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult.valueOf(result_);
+        return result == null ? SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult.k_ERemoteDeviceAuthorizationSuccess : result;
+      }
+      /**
+       * <code>required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(SteammessagesRemoteclientDiscovery.ERemoteDeviceAuthorizationResult value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        result_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgRemoteDeviceAuthorizationConfirmed)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgRemoteDeviceAuthorizationConfirmed)
+    private static final SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed();
+    }
+
+    public static SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgRemoteDeviceAuthorizationConfirmed>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgRemoteDeviceAuthorizationConfirmed>() {
+      @java.lang.Override
+      public CMsgRemoteDeviceAuthorizationConfirmed parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgRemoteDeviceAuthorizationConfirmed(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgRemoteDeviceAuthorizationConfirmed> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgRemoteDeviceAuthorizationConfirmed> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesRemoteclientDiscovery.CMsgRemoteDeviceAuthorizationConfirmed getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -16656,6 +17841,17 @@ public final class SteammessagesRemoteclientDiscovery {
      * @return The requestId.
      */
     int getRequestId();
+
+    /**
+     * <code>optional bool update_secret = 3;</code>
+     * @return Whether the updateSecret field is set.
+     */
+    boolean hasUpdateSecret();
+    /**
+     * <code>optional bool update_secret = 3;</code>
+     * @return The updateSecret.
+     */
+    boolean getUpdateSecret();
   }
   /**
    * Protobuf type {@code CMsgRemoteDeviceProofRequest}
@@ -16712,6 +17908,11 @@ public final class SteammessagesRemoteclientDiscovery {
             case 16: {
               bitField0_ |= 0x00000002;
               requestId_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              updateSecret_ = input.readBool();
               break;
             }
             default: {
@@ -16785,6 +17986,25 @@ public final class SteammessagesRemoteclientDiscovery {
       return requestId_;
     }
 
+    public static final int UPDATE_SECRET_FIELD_NUMBER = 3;
+    private boolean updateSecret_;
+    /**
+     * <code>optional bool update_secret = 3;</code>
+     * @return Whether the updateSecret field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateSecret() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool update_secret = 3;</code>
+     * @return The updateSecret.
+     */
+    @java.lang.Override
+    public boolean getUpdateSecret() {
+      return updateSecret_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16809,6 +18029,9 @@ public final class SteammessagesRemoteclientDiscovery {
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeUInt32(2, requestId_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, updateSecret_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16825,6 +18048,10 @@ public final class SteammessagesRemoteclientDiscovery {
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, requestId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, updateSecret_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -16851,6 +18078,11 @@ public final class SteammessagesRemoteclientDiscovery {
         if (getRequestId()
             != other.getRequestId()) return false;
       }
+      if (hasUpdateSecret() != other.hasUpdateSecret()) return false;
+      if (hasUpdateSecret()) {
+        if (getUpdateSecret()
+            != other.getUpdateSecret()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16869,6 +18101,11 @@ public final class SteammessagesRemoteclientDiscovery {
       if (hasRequestId()) {
         hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
         hash = (53 * hash) + getRequestId();
+      }
+      if (hasUpdateSecret()) {
+        hash = (37 * hash) + UPDATE_SECRET_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUpdateSecret());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -17007,6 +18244,8 @@ public final class SteammessagesRemoteclientDiscovery {
         bitField0_ = (bitField0_ & ~0x00000001);
         requestId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
+        updateSecret_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -17042,6 +18281,10 @@ public final class SteammessagesRemoteclientDiscovery {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.requestId_ = requestId_;
           to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.updateSecret_ = updateSecret_;
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -17097,6 +18340,9 @@ public final class SteammessagesRemoteclientDiscovery {
         }
         if (other.hasRequestId()) {
           setRequestId(other.getRequestId());
+        }
+        if (other.hasUpdateSecret()) {
+          setUpdateSecret(other.getUpdateSecret());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -17211,6 +18457,45 @@ public final class SteammessagesRemoteclientDiscovery {
         onChanged();
         return this;
       }
+
+      private boolean updateSecret_ ;
+      /**
+       * <code>optional bool update_secret = 3;</code>
+       * @return Whether the updateSecret field is set.
+       */
+      @java.lang.Override
+      public boolean hasUpdateSecret() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool update_secret = 3;</code>
+       * @return The updateSecret.
+       */
+      @java.lang.Override
+      public boolean getUpdateSecret() {
+        return updateSecret_;
+      }
+      /**
+       * <code>optional bool update_secret = 3;</code>
+       * @param value The updateSecret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdateSecret(boolean value) {
+        bitField0_ |= 0x00000004;
+        updateSecret_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool update_secret = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdateSecret() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        updateSecret_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -17289,6 +18574,17 @@ public final class SteammessagesRemoteclientDiscovery {
      * @return The requestId.
      */
     int getRequestId();
+
+    /**
+     * <code>optional bool updated_secret = 3;</code>
+     * @return Whether the updatedSecret field is set.
+     */
+    boolean hasUpdatedSecret();
+    /**
+     * <code>optional bool updated_secret = 3;</code>
+     * @return The updatedSecret.
+     */
+    boolean getUpdatedSecret();
   }
   /**
    * Protobuf type {@code CMsgRemoteDeviceProofResponse}
@@ -17345,6 +18641,11 @@ public final class SteammessagesRemoteclientDiscovery {
             case 16: {
               bitField0_ |= 0x00000002;
               requestId_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              updatedSecret_ = input.readBool();
               break;
             }
             default: {
@@ -17418,6 +18719,25 @@ public final class SteammessagesRemoteclientDiscovery {
       return requestId_;
     }
 
+    public static final int UPDATED_SECRET_FIELD_NUMBER = 3;
+    private boolean updatedSecret_;
+    /**
+     * <code>optional bool updated_secret = 3;</code>
+     * @return Whether the updatedSecret field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatedSecret() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool updated_secret = 3;</code>
+     * @return The updatedSecret.
+     */
+    @java.lang.Override
+    public boolean getUpdatedSecret() {
+      return updatedSecret_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17442,6 +18762,9 @@ public final class SteammessagesRemoteclientDiscovery {
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeUInt32(2, requestId_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, updatedSecret_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -17458,6 +18781,10 @@ public final class SteammessagesRemoteclientDiscovery {
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, requestId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, updatedSecret_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -17484,6 +18811,11 @@ public final class SteammessagesRemoteclientDiscovery {
         if (getRequestId()
             != other.getRequestId()) return false;
       }
+      if (hasUpdatedSecret() != other.hasUpdatedSecret()) return false;
+      if (hasUpdatedSecret()) {
+        if (getUpdatedSecret()
+            != other.getUpdatedSecret()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17502,6 +18834,11 @@ public final class SteammessagesRemoteclientDiscovery {
       if (hasRequestId()) {
         hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
         hash = (53 * hash) + getRequestId();
+      }
+      if (hasUpdatedSecret()) {
+        hash = (37 * hash) + UPDATED_SECRET_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUpdatedSecret());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -17640,6 +18977,8 @@ public final class SteammessagesRemoteclientDiscovery {
         bitField0_ = (bitField0_ & ~0x00000001);
         requestId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
+        updatedSecret_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -17675,6 +19014,10 @@ public final class SteammessagesRemoteclientDiscovery {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.requestId_ = requestId_;
           to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.updatedSecret_ = updatedSecret_;
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -17730,6 +19073,9 @@ public final class SteammessagesRemoteclientDiscovery {
         }
         if (other.hasRequestId()) {
           setRequestId(other.getRequestId());
+        }
+        if (other.hasUpdatedSecret()) {
+          setUpdatedSecret(other.getUpdatedSecret());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -17841,6 +19187,45 @@ public final class SteammessagesRemoteclientDiscovery {
       public Builder clearRequestId() {
         bitField0_ = (bitField0_ & ~0x00000002);
         requestId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean updatedSecret_ ;
+      /**
+       * <code>optional bool updated_secret = 3;</code>
+       * @return Whether the updatedSecret field is set.
+       */
+      @java.lang.Override
+      public boolean hasUpdatedSecret() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool updated_secret = 3;</code>
+       * @return The updatedSecret.
+       */
+      @java.lang.Override
+      public boolean getUpdatedSecret() {
+        return updatedSecret_;
+      }
+      /**
+       * <code>optional bool updated_secret = 3;</code>
+       * @param value The updatedSecret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdatedSecret(boolean value) {
+        bitField0_ |= 0x00000004;
+        updatedSecret_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool updated_secret = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdatedSecret() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        updatedSecret_ = false;
         onChanged();
         return this;
       }
@@ -18573,6 +19958,11 @@ public final class SteammessagesRemoteclientDiscovery {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgRemoteDeviceAuthorizationResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgRemoteDeviceAuthorizationConfirmed_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgRemoteDeviceAuthorizationConfirmed_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgRemoteDeviceStreamingRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -18622,102 +20012,112 @@ public final class SteammessagesRemoteclientDiscovery {
   static {
     java.lang.String[] descriptorData = {
       "\n0steam/steammessages_remoteclient_disco" +
-      "very.proto\"\306\001\n\037CMsgRemoteClientBroadcast" +
+      "very.proto\"\317\001\n\037CMsgRemoteClientBroadcast" +
       "Header\022\021\n\tclient_id\030\001 \001(\004\022R\n\010msg_type\030\002 " +
       "\001(\0162\032.ERemoteClientBroadcastMsg:$k_ERemo" +
       "teClientBroadcastMsgDiscovery\022\023\n\013instanc" +
-      "e_id\030\003 \001(\004\022\021\n\tdevice_id\030\004 \001(\004\022\024\n\014device_" +
-      "token\030\005 \001(\014\"\265\004\n\037CMsgRemoteClientBroadcas" +
-      "tStatus\022\017\n\007version\030\001 \001(\005\022\023\n\013min_version\030" +
-      "\002 \001(\005\022\024\n\014connect_port\030\003 \001(\r\022\020\n\010hostname\030" +
-      "\004 \001(\t\022\030\n\020enabled_services\030\006 \001(\r\022\021\n\006ostyp" +
-      "e\030\007 \001(\005:\0010\022\017\n\007is64bit\030\010 \001(\010\0224\n\005users\030\t \003" +
-      "(\0132%.CMsgRemoteClientBroadcastStatus.Use" +
-      "r\022\021\n\teuniverse\030\013 \001(\005\022\021\n\ttimestamp\030\014 \001(\r\022" +
-      "\025\n\rscreen_locked\030\r \001(\010\022\025\n\rgames_running\030" +
-      "\016 \001(\010\022\025\n\rmac_addresses\030\017 \003(\t\022\037\n\027download" +
-      "_lan_peer_group\030\020 \001(\r\022\033\n\023broadcasting_ac" +
-      "tive\030\021 \001(\010\022\021\n\tvr_active\030\022 \001(\010\022\032\n\022content" +
-      "_cache_port\030\023 \001(\r\022\024\n\014ip_addresses\030\024 \003(\t\022" +
-      "\031\n\021public_ip_address\030\025 \001(\t\022\031\n\021remoteplay" +
-      "_active\030\026 \001(\010\032,\n\004User\022\017\n\007steamid\030\001 \001(\006\022\023" +
+      "e_id\030\003 \001(\004\022\032\n\022device_id_OBSOLETE\030\004 \001(\004\022\024" +
+      "\n\014device_token\030\005 \001(\014\"\374\004\n\037CMsgRemoteClien" +
+      "tBroadcastStatus\022\017\n\007version\030\001 \001(\005\022\023\n\013min" +
+      "_version\030\002 \001(\005\022\024\n\014connect_port\030\003 \001(\r\022\020\n\010" +
+      "hostname\030\004 \001(\t\022\030\n\020enabled_services\030\006 \001(\r" +
+      "\022\021\n\006ostype\030\007 \001(\005:\0010\022\017\n\007is64bit\030\010 \001(\010\0224\n\005" +
+      "users\030\t \003(\0132%.CMsgRemoteClientBroadcastS" +
+      "tatus.User\022\021\n\teuniverse\030\013 \001(\005\022\021\n\ttimesta" +
+      "mp\030\014 \001(\r\022\025\n\rscreen_locked\030\r \001(\010\022\025\n\rgames" +
+      "_running\030\016 \001(\010\022\025\n\rmac_addresses\030\017 \003(\t\022\037\n" +
+      "\027download_lan_peer_group\030\020 \001(\r\022\033\n\023broadc" +
+      "asting_active\030\021 \001(\010\022\021\n\tvr_active\030\022 \001(\010\022\032" +
+      "\n\022content_cache_port\030\023 \001(\r\022\024\n\014ip_address" +
+      "es\030\024 \003(\t\022\031\n\021public_ip_address\030\025 \001(\t\022\031\n\021r" +
+      "emoteplay_active\030\026 \001(\010\022\032\n\022supported_serv" +
+      "ices\030\027 \001(\r\022\022\n\nsteam_deck\030\030 \001(\010\022\025\n\rsteam_" +
+      "version\030\031 \001(\004\032,\n\004User\022\017\n\007steamid\030\001 \001(\006\022\023" +
       "\n\013auth_key_id\030\002 \001(\r\"I\n\"CMsgRemoteClientB" +
       "roadcastDiscovery\022\017\n\007seq_num\030\001 \001(\r\022\022\n\ncl" +
       "ient_ids\030\002 \003(\004\"A\n+CMsgRemoteClientBroadc" +
       "astClientIDDeconflict\022\022\n\nclient_ids\030\002 \003(" +
-      "\004\"\317\003\n$CMsgRemoteDeviceAuthorizationReque" +
+      "\004\"\341\003\n$CMsgRemoteDeviceAuthorizationReque" +
       "st\022\024\n\014device_token\030\001 \002(\014\022\023\n\013device_name\030" +
-      "\002 \001(\t\022\031\n\021encrypted_request\030\003 \002(\014\032\247\002\n\021CKe" +
-      "yEscrow_Ticket\022\020\n\010password\030\001 \001(\014\022\022\n\niden" +
-      "tifier\030\002 \001(\004\022\017\n\007payload\030\003 \001(\014\022\021\n\ttimesta" +
-      "mp\030\004 \001(\r\022f\n\005usage\030\005 \001(\01625.CMsgRemoteDevi" +
-      "ceAuthorizationRequest.EKeyEscrowUsage: " +
-      "k_EKeyEscrowUsageStreamingDevice\022\023\n\013devi" +
-      "ce_name\030\006 \001(\t\022\024\n\014device_model\030\007 \001(\t\022\025\n\rd" +
-      "evice_serial\030\010 \001(\t\022\036\n\026device_provisionin" +
-      "g_id\030\t \001(\r\"7\n\017EKeyEscrowUsage\022$\n k_EKeyE" +
-      "scrowUsageStreamingDevice\020\000\",\n*CMsgRemot" +
-      "eDeviceAuthorizationCancelRequest\"\220\001\n%CM" +
-      "sgRemoteDeviceAuthorizationResponse\022V\n\006r" +
-      "esult\030\001 \002(\0162!.ERemoteDeviceAuthorization" +
-      "Result:#k_ERemoteDeviceAuthorizationSucc" +
-      "ess\022\017\n\007steamid\030\002 \001(\006\"\221\006\n CMsgRemoteDevic" +
-      "eStreamingRequest\022\022\n\nrequest_id\030\001 \002(\r\022\034\n" +
-      "\024maximum_resolution_x\030\002 \001(\005\022\034\n\024maximum_r" +
-      "esolution_y\030\003 \001(\005\022\036\n\023audio_channel_count" +
-      "\030\004 \001(\005:\0012\022\026\n\016device_version\030\005 \001(\t\022\026\n\016str" +
-      "eam_desktop\030\006 \001(\010\022\024\n\014device_token\030\007 \001(\014\022" +
-      "\013\n\003pin\030\010 \001(\014\022$\n\026enable_video_streaming\030\t" +
-      " \001(\010:\004true\022$\n\026enable_audio_streaming\030\n \001" +
-      "(\010:\004true\022$\n\026enable_input_streaming\030\013 \001(\010" +
-      ":\004true\022\024\n\014network_test\030\014 \001(\010\022\021\n\tclient_i" +
-      "d\030\r \001(\004\022.\n\023supported_transport\030\016 \003(\0162\021.E" +
-      "StreamTransport\022\022\n\nrestricted\030\017 \001(\010\022O\n\013f" +
-      "orm_factor\030\020 \001(\0162\030.EStreamDeviceFormFact" +
-      "or: k_EStreamDeviceFormFactorUnknown\022\025\n\r" +
-      "gamepad_count\030\021 \001(\005\022C\n\010gamepads\030\022 \003(\01321." +
-      "CMsgRemoteDeviceStreamingRequest.Reserve" +
-      "dGamepad\022\016\n\006gameid\030\023 \001(\004\022F\n\020stream_inter" +
-      "face\030\024 \001(\0162\021.EStreamInterface:\031k_EStream" +
-      "InterfaceDefault\032F\n\017ReservedGamepad\022\027\n\017c" +
-      "ontroller_type\030\001 \001(\r\022\032\n\022controller_subty" +
-      "pe\030\002 \001(\r\"<\n&CMsgRemoteDeviceStreamingCan" +
-      "celRequest\022\022\n\nrequest_id\030\001 \002(\r\"I\n!CMsgRe" +
-      "moteDeviceStreamingProgress\022\022\n\nrequest_i" +
-      "d\030\001 \002(\r\022\020\n\010progress\030\002 \001(\002\"\225\002\n!CMsgRemote" +
-      "DeviceStreamingResponse\022\022\n\nrequest_id\030\001 " +
-      "\002(\r\022N\n\006result\030\002 \002(\0162\035.ERemoteDeviceStrea" +
-      "mingResult:\037k_ERemoteDeviceStreamingSucc" +
-      "ess\022\014\n\004port\030\003 \001(\r\022\035\n\025encrypted_session_k" +
-      "ey\030\004 \001(\014\022;\n\ttransport\030\006 \001(\0162\021.EStreamTra" +
-      "nsport:\025k_EStreamTransportUDP\022\024\n\014relay_s" +
-      "erver\030\007 \001(\t\022\014\n\004cert\030\010 \001(\t\"E\n\034CMsgRemoteD" +
-      "eviceProofRequest\022\021\n\tchallenge\030\001 \002(\014\022\022\n\n" +
-      "request_id\030\002 \001(\r\"E\n\035CMsgRemoteDeviceProo" +
-      "fResponse\022\020\n\010response\030\001 \002(\014\022\022\n\nrequest_i" +
-      "d\030\002 \001(\r\"G\n%CMsgRemoteDeviceStreamTranspo" +
-      "rtSignal\022\r\n\005token\030\001 \001(\014\022\017\n\007payload\030\002 \001(\014" +
-      "*\322\004\n\031ERemoteClientBroadcastMsg\022(\n$k_ERem" +
-      "oteClientBroadcastMsgDiscovery\020\000\022%\n!k_ER" +
-      "emoteClientBroadcastMsgStatus\020\001\022&\n\"k_ERe" +
-      "moteClientBroadcastMsgOffline\020\002\022\'\n#k_ERe" +
-      "moteDeviceAuthorizationRequest\020\003\022(\n$k_ER" +
-      "emoteDeviceAuthorizationResponse\020\004\022#\n\037k_" +
-      "ERemoteDeviceStreamingRequest\020\005\022$\n k_ERe" +
-      "moteDeviceStreamingResponse\020\006\022\037\n\033k_ERemo" +
-      "teDeviceProofRequest\020\007\022 \n\034k_ERemoteDevic" +
-      "eProofResponse\020\010\022-\n)k_ERemoteDeviceAutho" +
-      "rizationCancelRequest\020\t\022)\n%k_ERemoteDevi" +
-      "ceStreamingCancelRequest\020\n\0221\n-k_ERemoteC" +
-      "lientBroadcastMsgClientIDDeconflict\020\013\022(\n" +
-      "$k_ERemoteDeviceStreamTransportSignal\020\014\022" +
-      "$\n k_ERemoteDeviceStreamingProgress\020\r*\327\001" +
-      "\n\024ERemoteClientService\022\036\n\032k_ERemoteClien" +
-      "tServiceNone\020\000\022\'\n#k_ERemoteClientService" +
-      "RemoteControl\020\001\022\'\n#k_ERemoteClientServic" +
-      "eGameStreaming\020\002\022%\n!k_ERemoteClientServi" +
-      "ceSiteLicense\020\004\022&\n\"k_ERemoteClientServic" +
-      "eContentCache\020\010*\227\003\n ERemoteDeviceAuthori" +
+      "\002 \001(\t\022\031\n\021encrypted_request\030\003 \002(\014\022\020\n\010auth" +
+      "_key\030\004 \001(\014\032\247\002\n\021CKeyEscrow_Ticket\022\020\n\010pass" +
+      "word\030\001 \001(\014\022\022\n\nidentifier\030\002 \001(\004\022\017\n\007payloa" +
+      "d\030\003 \001(\014\022\021\n\ttimestamp\030\004 \001(\r\022f\n\005usage\030\005 \001(" +
+      "\01625.CMsgRemoteDeviceAuthorizationRequest" +
+      ".EKeyEscrowUsage: k_EKeyEscrowUsageStrea" +
+      "mingDevice\022\023\n\013device_name\030\006 \001(\t\022\024\n\014devic" +
+      "e_model\030\007 \001(\t\022\025\n\rdevice_serial\030\010 \001(\t\022\036\n\026" +
+      "device_provisioning_id\030\t \001(\r\"7\n\017EKeyEscr" +
+      "owUsage\022$\n k_EKeyEscrowUsageStreamingDev" +
+      "ice\020\000\",\n*CMsgRemoteDeviceAuthorizationCa" +
+      "ncelRequest\"\270\001\n%CMsgRemoteDeviceAuthoriz" +
+      "ationResponse\022V\n\006result\030\001 \002(\0162!.ERemoteD" +
+      "eviceAuthorizationResult:#k_ERemoteDevic" +
+      "eAuthorizationSuccess\022\017\n\007steamid\030\002 \001(\006\022\020" +
+      "\n\010auth_key\030\003 \001(\014\022\024\n\014device_token\030\004 \001(\014\"\200" +
+      "\001\n&CMsgRemoteDeviceAuthorizationConfirme" +
+      "d\022V\n\006result\030\001 \002(\0162!.ERemoteDeviceAuthori" +
+      "zationResult:#k_ERemoteDeviceAuthorizati" +
+      "onSuccess\"\221\006\n CMsgRemoteDeviceStreamingR" +
+      "equest\022\022\n\nrequest_id\030\001 \002(\r\022\034\n\024maximum_re" +
+      "solution_x\030\002 \001(\005\022\034\n\024maximum_resolution_y" +
+      "\030\003 \001(\005\022\036\n\023audio_channel_count\030\004 \001(\005:\0012\022\026" +
+      "\n\016device_version\030\005 \001(\t\022\026\n\016stream_desktop" +
+      "\030\006 \001(\010\022\024\n\014device_token\030\007 \001(\014\022\013\n\003pin\030\010 \001(" +
+      "\014\022$\n\026enable_video_streaming\030\t \001(\010:\004true\022" +
+      "$\n\026enable_audio_streaming\030\n \001(\010:\004true\022$\n" +
+      "\026enable_input_streaming\030\013 \001(\010:\004true\022\024\n\014n" +
+      "etwork_test\030\014 \001(\010\022\021\n\tclient_id\030\r \001(\004\022.\n\023" +
+      "supported_transport\030\016 \003(\0162\021.EStreamTrans" +
+      "port\022\022\n\nrestricted\030\017 \001(\010\022O\n\013form_factor\030" +
+      "\020 \001(\0162\030.EStreamDeviceFormFactor: k_EStre" +
+      "amDeviceFormFactorUnknown\022\025\n\rgamepad_cou" +
+      "nt\030\021 \001(\005\022C\n\010gamepads\030\022 \003(\01321.CMsgRemoteD" +
+      "eviceStreamingRequest.ReservedGamepad\022\016\n" +
+      "\006gameid\030\023 \001(\004\022F\n\020stream_interface\030\024 \001(\0162" +
+      "\021.EStreamInterface:\031k_EStreamInterfaceDe" +
+      "fault\032F\n\017ReservedGamepad\022\027\n\017controller_t" +
+      "ype\030\001 \001(\r\022\032\n\022controller_subtype\030\002 \001(\r\"<\n" +
+      "&CMsgRemoteDeviceStreamingCancelRequest\022" +
+      "\022\n\nrequest_id\030\001 \002(\r\"I\n!CMsgRemoteDeviceS" +
+      "treamingProgress\022\022\n\nrequest_id\030\001 \002(\r\022\020\n\010" +
+      "progress\030\002 \001(\002\"\225\002\n!CMsgRemoteDeviceStrea" +
+      "mingResponse\022\022\n\nrequest_id\030\001 \002(\r\022N\n\006resu" +
+      "lt\030\002 \002(\0162\035.ERemoteDeviceStreamingResult:" +
+      "\037k_ERemoteDeviceStreamingSuccess\022\014\n\004port" +
+      "\030\003 \001(\r\022\035\n\025encrypted_session_key\030\004 \001(\014\022;\n" +
+      "\ttransport\030\006 \001(\0162\021.EStreamTransport:\025k_E" +
+      "StreamTransportUDP\022\024\n\014relay_server\030\007 \001(\t" +
+      "\022\014\n\004cert\030\010 \001(\t\"\\\n\034CMsgRemoteDeviceProofR" +
+      "equest\022\021\n\tchallenge\030\001 \002(\014\022\022\n\nrequest_id\030" +
+      "\002 \001(\r\022\025\n\rupdate_secret\030\003 \001(\010\"]\n\035CMsgRemo" +
+      "teDeviceProofResponse\022\020\n\010response\030\001 \002(\014\022" +
+      "\022\n\nrequest_id\030\002 \001(\r\022\026\n\016updated_secret\030\003 " +
+      "\001(\010\"G\n%CMsgRemoteDeviceStreamTransportSi" +
+      "gnal\022\r\n\005token\030\001 \001(\014\022\017\n\007payload\030\002 \001(\014*\375\004\n" +
+      "\031ERemoteClientBroadcastMsg\022(\n$k_ERemoteC" +
+      "lientBroadcastMsgDiscovery\020\000\022%\n!k_ERemot" +
+      "eClientBroadcastMsgStatus\020\001\022&\n\"k_ERemote" +
+      "ClientBroadcastMsgOffline\020\002\022\'\n#k_ERemote" +
+      "DeviceAuthorizationRequest\020\003\022(\n$k_ERemot" +
+      "eDeviceAuthorizationResponse\020\004\022#\n\037k_ERem" +
+      "oteDeviceStreamingRequest\020\005\022$\n k_ERemote" +
+      "DeviceStreamingResponse\020\006\022\037\n\033k_ERemoteDe" +
+      "viceProofRequest\020\007\022 \n\034k_ERemoteDevicePro" +
+      "ofResponse\020\010\022-\n)k_ERemoteDeviceAuthoriza" +
+      "tionCancelRequest\020\t\022)\n%k_ERemoteDeviceSt" +
+      "reamingCancelRequest\020\n\0221\n-k_ERemoteClien" +
+      "tBroadcastMsgClientIDDeconflict\020\013\022(\n$k_E" +
+      "RemoteDeviceStreamTransportSignal\020\014\022$\n k" +
+      "_ERemoteDeviceStreamingProgress\020\r\022)\n%k_E" +
+      "RemoteDeviceAuthorizationConfirmed\020\016*\200\002\n" +
+      "\024ERemoteClientService\022\036\n\032k_ERemoteClient" +
+      "ServiceNone\020\000\022\'\n#k_ERemoteClientServiceR" +
+      "emoteControl\020\001\022\'\n#k_ERemoteClientService" +
+      "GameStreaming\020\002\022%\n!k_ERemoteClientServic" +
+      "eSiteLicense\020\004\022&\n\"k_ERemoteClientService" +
+      "ContentCache\020\010\022\'\n#k_ERemoteClientService" +
+      "ContentServer\020\020*\227\003\n ERemoteDeviceAuthori" +
       "zationResult\022\'\n#k_ERemoteDeviceAuthoriza" +
       "tionSuccess\020\000\022&\n\"k_ERemoteDeviceAuthoriz" +
       "ationDenied\020\001\022+\n\'k_ERemoteDeviceAuthoriz" +
@@ -18727,22 +20127,24 @@ public final class SteammessagesRemoteclientDiscovery {
       "orizationInProgress\020\005\022(\n$k_ERemoteDevice" +
       "AuthorizationTimedOut\020\006\022&\n\"k_ERemoteDevi" +
       "ceAuthorizationFailed\020\007\022(\n$k_ERemoteDevi" +
-      "ceAuthorizationCanceled\020\010*\320\001\n\027EStreamDev" +
+      "ceAuthorizationCanceled\020\010*\370\001\n\027EStreamDev" +
       "iceFormFactor\022$\n k_EStreamDeviceFormFact" +
       "orUnknown\020\000\022\"\n\036k_EStreamDeviceFormFactor" +
       "Phone\020\001\022#\n\037k_EStreamDeviceFormFactorTabl" +
       "et\020\002\022%\n!k_EStreamDeviceFormFactorCompute" +
-      "r\020\003\022\037\n\033k_EStreamDeviceFormFactorTV\020\004*\345\001\n" +
+      "r\020\003\022\037\n\033k_EStreamDeviceFormFactorTV\020\004\022&\n\"" +
+      "k_EStreamDeviceFormFactorVRHeadset\020\005*\356\001\n" +
       "\020EStreamTransport\022\032\n\026k_EStreamTransportN" +
       "one\020\000\022\031\n\025k_EStreamTransportUDP\020\001\022\036\n\032k_ES" +
-      "treamTransportUDPRelay\020\002\022\034\n\030k_EStreamTra" +
-      "nsportWebRTC\020\003\022\031\n\025k_EStreamTransportSDR\020" +
-      "\004\022\035\n\031k_EStreamTransportUDP_SNS\020\005\022\"\n\036k_ES" +
-      "treamTransportUDPRelay_SNS\020\006*\225\001\n\020EStream" +
-      "Interface\022\035\n\031k_EStreamInterfaceDefault\020\000" +
-      "\022!\n\035k_EStreamInterfaceRecentGames\020\001\022 \n\034k" +
-      "_EStreamInterfaceBigPicture\020\002\022\035\n\031k_EStre" +
-      "amInterfaceDesktop\020\003*\210\005\n\034ERemoteDeviceSt" +
+      "treamTransportUDPRelay\020\002\022%\n!k_EStreamTra" +
+      "nsportWebRTC_OBSOLETE\020\003\022\031\n\025k_EStreamTran" +
+      "sportSDR\020\004\022\035\n\031k_EStreamTransportUDP_SNS\020" +
+      "\005\022\"\n\036k_EStreamTransportUDPRelay_SNS\020\006*\264\001" +
+      "\n\020EStreamInterface\022\035\n\031k_EStreamInterface" +
+      "Default\020\000\022!\n\035k_EStreamInterfaceRecentGam" +
+      "es\020\001\022 \n\034k_EStreamInterfaceBigPicture\020\002\022\035" +
+      "\n\031k_EStreamInterfaceDesktop\020\003\022\035\n\031k_EStre" +
+      "amInterfaceSteamVR\020\004*\210\005\n\034ERemoteDeviceSt" +
       "reamingResult\022#\n\037k_ERemoteDeviceStreamin" +
       "gSuccess\020\000\022(\n$k_ERemoteDeviceStreamingUn" +
       "authorized\020\001\022(\n$k_ERemoteDeviceStreaming" +
@@ -18769,13 +20171,13 @@ public final class SteammessagesRemoteclientDiscovery {
     internal_static_CMsgRemoteClientBroadcastHeader_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteClientBroadcastHeader_descriptor,
-        new java.lang.String[] { "ClientId", "MsgType", "InstanceId", "DeviceId", "DeviceToken", });
+        new java.lang.String[] { "ClientId", "MsgType", "InstanceId", "DeviceIdOBSOLETE", "DeviceToken", });
     internal_static_CMsgRemoteClientBroadcastStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CMsgRemoteClientBroadcastStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteClientBroadcastStatus_descriptor,
-        new java.lang.String[] { "Version", "MinVersion", "ConnectPort", "Hostname", "EnabledServices", "Ostype", "Is64Bit", "Users", "Euniverse", "Timestamp", "ScreenLocked", "GamesRunning", "MacAddresses", "DownloadLanPeerGroup", "BroadcastingActive", "VrActive", "ContentCachePort", "IpAddresses", "PublicIpAddress", "RemoteplayActive", });
+        new java.lang.String[] { "Version", "MinVersion", "ConnectPort", "Hostname", "EnabledServices", "Ostype", "Is64Bit", "Users", "Euniverse", "Timestamp", "ScreenLocked", "GamesRunning", "MacAddresses", "DownloadLanPeerGroup", "BroadcastingActive", "VrActive", "ContentCachePort", "IpAddresses", "PublicIpAddress", "RemoteplayActive", "SupportedServices", "SteamDeck", "SteamVersion", });
     internal_static_CMsgRemoteClientBroadcastStatus_User_descriptor =
       internal_static_CMsgRemoteClientBroadcastStatus_descriptor.getNestedTypes().get(0);
     internal_static_CMsgRemoteClientBroadcastStatus_User_fieldAccessorTable = new
@@ -18799,7 +20201,7 @@ public final class SteammessagesRemoteclientDiscovery {
     internal_static_CMsgRemoteDeviceAuthorizationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteDeviceAuthorizationRequest_descriptor,
-        new java.lang.String[] { "DeviceToken", "DeviceName", "EncryptedRequest", });
+        new java.lang.String[] { "DeviceToken", "DeviceName", "EncryptedRequest", "AuthKey", });
     internal_static_CMsgRemoteDeviceAuthorizationRequest_CKeyEscrow_Ticket_descriptor =
       internal_static_CMsgRemoteDeviceAuthorizationRequest_descriptor.getNestedTypes().get(0);
     internal_static_CMsgRemoteDeviceAuthorizationRequest_CKeyEscrow_Ticket_fieldAccessorTable = new
@@ -18817,9 +20219,15 @@ public final class SteammessagesRemoteclientDiscovery {
     internal_static_CMsgRemoteDeviceAuthorizationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteDeviceAuthorizationResponse_descriptor,
-        new java.lang.String[] { "Result", "Steamid", });
-    internal_static_CMsgRemoteDeviceStreamingRequest_descriptor =
+        new java.lang.String[] { "Result", "Steamid", "AuthKey", "DeviceToken", });
+    internal_static_CMsgRemoteDeviceAuthorizationConfirmed_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_CMsgRemoteDeviceAuthorizationConfirmed_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgRemoteDeviceAuthorizationConfirmed_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_CMsgRemoteDeviceStreamingRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CMsgRemoteDeviceStreamingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteDeviceStreamingRequest_descriptor,
@@ -18831,37 +20239,37 @@ public final class SteammessagesRemoteclientDiscovery {
         internal_static_CMsgRemoteDeviceStreamingRequest_ReservedGamepad_descriptor,
         new java.lang.String[] { "ControllerType", "ControllerSubtype", });
     internal_static_CMsgRemoteDeviceStreamingCancelRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CMsgRemoteDeviceStreamingCancelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteDeviceStreamingCancelRequest_descriptor,
         new java.lang.String[] { "RequestId", });
     internal_static_CMsgRemoteDeviceStreamingProgress_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CMsgRemoteDeviceStreamingProgress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteDeviceStreamingProgress_descriptor,
         new java.lang.String[] { "RequestId", "Progress", });
     internal_static_CMsgRemoteDeviceStreamingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CMsgRemoteDeviceStreamingResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteDeviceStreamingResponse_descriptor,
         new java.lang.String[] { "RequestId", "Result", "Port", "EncryptedSessionKey", "Transport", "RelayServer", "Cert", });
     internal_static_CMsgRemoteDeviceProofRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CMsgRemoteDeviceProofRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteDeviceProofRequest_descriptor,
-        new java.lang.String[] { "Challenge", "RequestId", });
+        new java.lang.String[] { "Challenge", "RequestId", "UpdateSecret", });
     internal_static_CMsgRemoteDeviceProofResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CMsgRemoteDeviceProofResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteDeviceProofResponse_descriptor,
-        new java.lang.String[] { "Response", "RequestId", });
+        new java.lang.String[] { "Response", "RequestId", "UpdatedSecret", });
     internal_static_CMsgRemoteDeviceStreamTransportSignal_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CMsgRemoteDeviceStreamTransportSignal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgRemoteDeviceStreamTransportSignal_descriptor,

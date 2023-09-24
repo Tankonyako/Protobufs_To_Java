@@ -3359,6 +3359,2963 @@ public final class SteammessagesUseraccountSteamclient {
 
   }
 
+  public interface CUserAccount_GetClientWalletDetails_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserAccount_GetClientWalletDetails_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool include_balance_in_usd = 1;</code>
+     * @return Whether the includeBalanceInUsd field is set.
+     */
+    boolean hasIncludeBalanceInUsd();
+    /**
+     * <code>optional bool include_balance_in_usd = 1;</code>
+     * @return The includeBalanceInUsd.
+     */
+    boolean getIncludeBalanceInUsd();
+
+    /**
+     * <code>optional int32 wallet_region = 2 [default = 1];</code>
+     * @return Whether the walletRegion field is set.
+     */
+    boolean hasWalletRegion();
+    /**
+     * <code>optional int32 wallet_region = 2 [default = 1];</code>
+     * @return The walletRegion.
+     */
+    int getWalletRegion();
+
+    /**
+     * <code>optional bool include_formatted_balance = 3;</code>
+     * @return Whether the includeFormattedBalance field is set.
+     */
+    boolean hasIncludeFormattedBalance();
+    /**
+     * <code>optional bool include_formatted_balance = 3;</code>
+     * @return The includeFormattedBalance.
+     */
+    boolean getIncludeFormattedBalance();
+  }
+  /**
+   * Protobuf type {@code CUserAccount_GetClientWalletDetails_Request}
+   */
+  public static final class CUserAccount_GetClientWalletDetails_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CUserAccount_GetClientWalletDetails_Request)
+      CUserAccount_GetClientWalletDetails_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CUserAccount_GetClientWalletDetails_Request.newBuilder() to construct.
+    private CUserAccount_GetClientWalletDetails_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CUserAccount_GetClientWalletDetails_Request() {
+      walletRegion_ = 1;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CUserAccount_GetClientWalletDetails_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserAccount_GetClientWalletDetails_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              includeBalanceInUsd_ = input.readBool();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              walletRegion_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              includeFormattedBalance_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetClientWalletDetails_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetClientWalletDetails_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request.class, SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int INCLUDE_BALANCE_IN_USD_FIELD_NUMBER = 1;
+    private boolean includeBalanceInUsd_;
+    /**
+     * <code>optional bool include_balance_in_usd = 1;</code>
+     * @return Whether the includeBalanceInUsd field is set.
+     */
+    @java.lang.Override
+    public boolean hasIncludeBalanceInUsd() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool include_balance_in_usd = 1;</code>
+     * @return The includeBalanceInUsd.
+     */
+    @java.lang.Override
+    public boolean getIncludeBalanceInUsd() {
+      return includeBalanceInUsd_;
+    }
+
+    public static final int WALLET_REGION_FIELD_NUMBER = 2;
+    private int walletRegion_;
+    /**
+     * <code>optional int32 wallet_region = 2 [default = 1];</code>
+     * @return Whether the walletRegion field is set.
+     */
+    @java.lang.Override
+    public boolean hasWalletRegion() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional int32 wallet_region = 2 [default = 1];</code>
+     * @return The walletRegion.
+     */
+    @java.lang.Override
+    public int getWalletRegion() {
+      return walletRegion_;
+    }
+
+    public static final int INCLUDE_FORMATTED_BALANCE_FIELD_NUMBER = 3;
+    private boolean includeFormattedBalance_;
+    /**
+     * <code>optional bool include_formatted_balance = 3;</code>
+     * @return Whether the includeFormattedBalance field is set.
+     */
+    @java.lang.Override
+    public boolean hasIncludeFormattedBalance() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool include_formatted_balance = 3;</code>
+     * @return The includeFormattedBalance.
+     */
+    @java.lang.Override
+    public boolean getIncludeFormattedBalance() {
+      return includeFormattedBalance_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, includeBalanceInUsd_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, walletRegion_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, includeFormattedBalance_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, includeBalanceInUsd_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, walletRegion_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, includeFormattedBalance_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request other = (SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request) obj;
+
+      if (hasIncludeBalanceInUsd() != other.hasIncludeBalanceInUsd()) return false;
+      if (hasIncludeBalanceInUsd()) {
+        if (getIncludeBalanceInUsd()
+            != other.getIncludeBalanceInUsd()) return false;
+      }
+      if (hasWalletRegion() != other.hasWalletRegion()) return false;
+      if (hasWalletRegion()) {
+        if (getWalletRegion()
+            != other.getWalletRegion()) return false;
+      }
+      if (hasIncludeFormattedBalance() != other.hasIncludeFormattedBalance()) return false;
+      if (hasIncludeFormattedBalance()) {
+        if (getIncludeFormattedBalance()
+            != other.getIncludeFormattedBalance()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIncludeBalanceInUsd()) {
+        hash = (37 * hash) + INCLUDE_BALANCE_IN_USD_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIncludeBalanceInUsd());
+      }
+      if (hasWalletRegion()) {
+        hash = (37 * hash) + WALLET_REGION_FIELD_NUMBER;
+        hash = (53 * hash) + getWalletRegion();
+      }
+      if (hasIncludeFormattedBalance()) {
+        hash = (37 * hash) + INCLUDE_FORMATTED_BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIncludeFormattedBalance());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserAccount_GetClientWalletDetails_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserAccount_GetClientWalletDetails_Request)
+        SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetClientWalletDetails_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetClientWalletDetails_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request.class, SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        includeBalanceInUsd_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        walletRegion_ = 1;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        includeFormattedBalance_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetClientWalletDetails_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request getDefaultInstanceForType() {
+        return SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request build() {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request buildPartial() {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request result = new SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.includeBalanceInUsd_ = includeBalanceInUsd_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.walletRegion_ = walletRegion_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.includeFormattedBalance_ = includeFormattedBalance_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request) {
+          return mergeFrom((SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request other) {
+        if (other == SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request.getDefaultInstance()) return this;
+        if (other.hasIncludeBalanceInUsd()) {
+          setIncludeBalanceInUsd(other.getIncludeBalanceInUsd());
+        }
+        if (other.hasWalletRegion()) {
+          setWalletRegion(other.getWalletRegion());
+        }
+        if (other.hasIncludeFormattedBalance()) {
+          setIncludeFormattedBalance(other.getIncludeFormattedBalance());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean includeBalanceInUsd_ ;
+      /**
+       * <code>optional bool include_balance_in_usd = 1;</code>
+       * @return Whether the includeBalanceInUsd field is set.
+       */
+      @java.lang.Override
+      public boolean hasIncludeBalanceInUsd() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional bool include_balance_in_usd = 1;</code>
+       * @return The includeBalanceInUsd.
+       */
+      @java.lang.Override
+      public boolean getIncludeBalanceInUsd() {
+        return includeBalanceInUsd_;
+      }
+      /**
+       * <code>optional bool include_balance_in_usd = 1;</code>
+       * @param value The includeBalanceInUsd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludeBalanceInUsd(boolean value) {
+        bitField0_ |= 0x00000001;
+        includeBalanceInUsd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool include_balance_in_usd = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncludeBalanceInUsd() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        includeBalanceInUsd_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int walletRegion_ = 1;
+      /**
+       * <code>optional int32 wallet_region = 2 [default = 1];</code>
+       * @return Whether the walletRegion field is set.
+       */
+      @java.lang.Override
+      public boolean hasWalletRegion() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional int32 wallet_region = 2 [default = 1];</code>
+       * @return The walletRegion.
+       */
+      @java.lang.Override
+      public int getWalletRegion() {
+        return walletRegion_;
+      }
+      /**
+       * <code>optional int32 wallet_region = 2 [default = 1];</code>
+       * @param value The walletRegion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletRegion(int value) {
+        bitField0_ |= 0x00000002;
+        walletRegion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 wallet_region = 2 [default = 1];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWalletRegion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        walletRegion_ = 1;
+        onChanged();
+        return this;
+      }
+
+      private boolean includeFormattedBalance_ ;
+      /**
+       * <code>optional bool include_formatted_balance = 3;</code>
+       * @return Whether the includeFormattedBalance field is set.
+       */
+      @java.lang.Override
+      public boolean hasIncludeFormattedBalance() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool include_formatted_balance = 3;</code>
+       * @return The includeFormattedBalance.
+       */
+      @java.lang.Override
+      public boolean getIncludeFormattedBalance() {
+        return includeFormattedBalance_;
+      }
+      /**
+       * <code>optional bool include_formatted_balance = 3;</code>
+       * @param value The includeFormattedBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludeFormattedBalance(boolean value) {
+        bitField0_ |= 0x00000004;
+        includeFormattedBalance_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool include_formatted_balance = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncludeFormattedBalance() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        includeFormattedBalance_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CUserAccount_GetClientWalletDetails_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserAccount_GetClientWalletDetails_Request)
+    private static final SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request();
+    }
+
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CUserAccount_GetClientWalletDetails_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CUserAccount_GetClientWalletDetails_Request>() {
+      @java.lang.Override
+      public CUserAccount_GetClientWalletDetails_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserAccount_GetClientWalletDetails_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CUserAccount_GetClientWalletDetails_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserAccount_GetClientWalletDetails_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesUseraccountSteamclient.CUserAccount_GetClientWalletDetails_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CUserAccount_GetWalletDetails_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserAccount_GetWalletDetails_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool has_wallet = 1;</code>
+     * @return Whether the hasWallet field is set.
+     */
+    boolean hasHasWallet();
+    /**
+     * <code>optional bool has_wallet = 1;</code>
+     * @return The hasWallet.
+     */
+    boolean getHasWallet();
+
+    /**
+     * <code>optional string user_country_code = 2;</code>
+     * @return Whether the userCountryCode field is set.
+     */
+    boolean hasUserCountryCode();
+    /**
+     * <code>optional string user_country_code = 2;</code>
+     * @return The userCountryCode.
+     */
+    java.lang.String getUserCountryCode();
+    /**
+     * <code>optional string user_country_code = 2;</code>
+     * @return The bytes for userCountryCode.
+     */
+    com.google.protobuf.ByteString
+        getUserCountryCodeBytes();
+
+    /**
+     * <code>optional string wallet_country_code = 3;</code>
+     * @return Whether the walletCountryCode field is set.
+     */
+    boolean hasWalletCountryCode();
+    /**
+     * <code>optional string wallet_country_code = 3;</code>
+     * @return The walletCountryCode.
+     */
+    java.lang.String getWalletCountryCode();
+    /**
+     * <code>optional string wallet_country_code = 3;</code>
+     * @return The bytes for walletCountryCode.
+     */
+    com.google.protobuf.ByteString
+        getWalletCountryCodeBytes();
+
+    /**
+     * <code>optional string wallet_state = 4;</code>
+     * @return Whether the walletState field is set.
+     */
+    boolean hasWalletState();
+    /**
+     * <code>optional string wallet_state = 4;</code>
+     * @return The walletState.
+     */
+    java.lang.String getWalletState();
+    /**
+     * <code>optional string wallet_state = 4;</code>
+     * @return The bytes for walletState.
+     */
+    com.google.protobuf.ByteString
+        getWalletStateBytes();
+
+    /**
+     * <code>optional int64 balance = 5;</code>
+     * @return Whether the balance field is set.
+     */
+    boolean hasBalance();
+    /**
+     * <code>optional int64 balance = 5;</code>
+     * @return The balance.
+     */
+    long getBalance();
+
+    /**
+     * <code>optional int64 delayed_balance = 6;</code>
+     * @return Whether the delayedBalance field is set.
+     */
+    boolean hasDelayedBalance();
+    /**
+     * <code>optional int64 delayed_balance = 6;</code>
+     * @return The delayedBalance.
+     */
+    long getDelayedBalance();
+
+    /**
+     * <code>optional int32 currency_code = 7;</code>
+     * @return Whether the currencyCode field is set.
+     */
+    boolean hasCurrencyCode();
+    /**
+     * <code>optional int32 currency_code = 7;</code>
+     * @return The currencyCode.
+     */
+    int getCurrencyCode();
+
+    /**
+     * <code>optional uint32 time_most_recent_txn = 8;</code>
+     * @return Whether the timeMostRecentTxn field is set.
+     */
+    boolean hasTimeMostRecentTxn();
+    /**
+     * <code>optional uint32 time_most_recent_txn = 8;</code>
+     * @return The timeMostRecentTxn.
+     */
+    int getTimeMostRecentTxn();
+
+    /**
+     * <code>optional uint64 most_recent_txnid = 9;</code>
+     * @return Whether the mostRecentTxnid field is set.
+     */
+    boolean hasMostRecentTxnid();
+    /**
+     * <code>optional uint64 most_recent_txnid = 9;</code>
+     * @return The mostRecentTxnid.
+     */
+    long getMostRecentTxnid();
+
+    /**
+     * <code>optional int64 balance_in_usd = 10;</code>
+     * @return Whether the balanceInUsd field is set.
+     */
+    boolean hasBalanceInUsd();
+    /**
+     * <code>optional int64 balance_in_usd = 10;</code>
+     * @return The balanceInUsd.
+     */
+    long getBalanceInUsd();
+
+    /**
+     * <code>optional int64 delayed_balance_in_usd = 11;</code>
+     * @return Whether the delayedBalanceInUsd field is set.
+     */
+    boolean hasDelayedBalanceInUsd();
+    /**
+     * <code>optional int64 delayed_balance_in_usd = 11;</code>
+     * @return The delayedBalanceInUsd.
+     */
+    long getDelayedBalanceInUsd();
+
+    /**
+     * <code>optional bool has_wallet_in_other_regions = 12;</code>
+     * @return Whether the hasWalletInOtherRegions field is set.
+     */
+    boolean hasHasWalletInOtherRegions();
+    /**
+     * <code>optional bool has_wallet_in_other_regions = 12;</code>
+     * @return The hasWalletInOtherRegions.
+     */
+    boolean getHasWalletInOtherRegions();
+
+    /**
+     * <code>repeated int32 other_regions = 13;</code>
+     * @return A list containing the otherRegions.
+     */
+    java.util.List<java.lang.Integer> getOtherRegionsList();
+    /**
+     * <code>repeated int32 other_regions = 13;</code>
+     * @return The count of otherRegions.
+     */
+    int getOtherRegionsCount();
+    /**
+     * <code>repeated int32 other_regions = 13;</code>
+     * @param index The index of the element to return.
+     * @return The otherRegions at the given index.
+     */
+    int getOtherRegions(int index);
+
+    /**
+     * <code>optional string formatted_balance = 14;</code>
+     * @return Whether the formattedBalance field is set.
+     */
+    boolean hasFormattedBalance();
+    /**
+     * <code>optional string formatted_balance = 14;</code>
+     * @return The formattedBalance.
+     */
+    java.lang.String getFormattedBalance();
+    /**
+     * <code>optional string formatted_balance = 14;</code>
+     * @return The bytes for formattedBalance.
+     */
+    com.google.protobuf.ByteString
+        getFormattedBalanceBytes();
+  }
+  /**
+   * Protobuf type {@code CUserAccount_GetWalletDetails_Response}
+   */
+  public static final class CUserAccount_GetWalletDetails_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CUserAccount_GetWalletDetails_Response)
+      CUserAccount_GetWalletDetails_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CUserAccount_GetWalletDetails_Response.newBuilder() to construct.
+    private CUserAccount_GetWalletDetails_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CUserAccount_GetWalletDetails_Response() {
+      userCountryCode_ = "";
+      walletCountryCode_ = "";
+      walletState_ = "";
+      otherRegions_ = emptyIntList();
+      formattedBalance_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CUserAccount_GetWalletDetails_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserAccount_GetWalletDetails_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              hasWallet_ = input.readBool();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              userCountryCode_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              walletCountryCode_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              walletState_ = bs;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              balance_ = input.readInt64();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              delayedBalance_ = input.readInt64();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              currencyCode_ = input.readInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              timeMostRecentTxn_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              mostRecentTxnid_ = input.readUInt64();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              balanceInUsd_ = input.readInt64();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000400;
+              delayedBalanceInUsd_ = input.readInt64();
+              break;
+            }
+            case 96: {
+              bitField0_ |= 0x00000800;
+              hasWalletInOtherRegions_ = input.readBool();
+              break;
+            }
+            case 104: {
+              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
+                otherRegions_ = newIntList();
+                mutable_bitField0_ |= 0x00001000;
+              }
+              otherRegions_.addInt(input.readInt32());
+              break;
+            }
+            case 106: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00001000) != 0) && input.getBytesUntilLimit() > 0) {
+                otherRegions_ = newIntList();
+                mutable_bitField0_ |= 0x00001000;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                otherRegions_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 114: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00001000;
+              formattedBalance_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00001000) != 0)) {
+          otherRegions_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetWalletDetails_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetWalletDetails_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response.class, SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int HAS_WALLET_FIELD_NUMBER = 1;
+    private boolean hasWallet_;
+    /**
+     * <code>optional bool has_wallet = 1;</code>
+     * @return Whether the hasWallet field is set.
+     */
+    @java.lang.Override
+    public boolean hasHasWallet() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool has_wallet = 1;</code>
+     * @return The hasWallet.
+     */
+    @java.lang.Override
+    public boolean getHasWallet() {
+      return hasWallet_;
+    }
+
+    public static final int USER_COUNTRY_CODE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object userCountryCode_;
+    /**
+     * <code>optional string user_country_code = 2;</code>
+     * @return Whether the userCountryCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserCountryCode() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string user_country_code = 2;</code>
+     * @return The userCountryCode.
+     */
+    @java.lang.Override
+    public java.lang.String getUserCountryCode() {
+      java.lang.Object ref = userCountryCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          userCountryCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string user_country_code = 2;</code>
+     * @return The bytes for userCountryCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserCountryCodeBytes() {
+      java.lang.Object ref = userCountryCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userCountryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WALLET_COUNTRY_CODE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object walletCountryCode_;
+    /**
+     * <code>optional string wallet_country_code = 3;</code>
+     * @return Whether the walletCountryCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasWalletCountryCode() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string wallet_country_code = 3;</code>
+     * @return The walletCountryCode.
+     */
+    @java.lang.Override
+    public java.lang.String getWalletCountryCode() {
+      java.lang.Object ref = walletCountryCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          walletCountryCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string wallet_country_code = 3;</code>
+     * @return The bytes for walletCountryCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWalletCountryCodeBytes() {
+      java.lang.Object ref = walletCountryCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        walletCountryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WALLET_STATE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object walletState_;
+    /**
+     * <code>optional string wallet_state = 4;</code>
+     * @return Whether the walletState field is set.
+     */
+    @java.lang.Override
+    public boolean hasWalletState() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string wallet_state = 4;</code>
+     * @return The walletState.
+     */
+    @java.lang.Override
+    public java.lang.String getWalletState() {
+      java.lang.Object ref = walletState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          walletState_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string wallet_state = 4;</code>
+     * @return The bytes for walletState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWalletStateBytes() {
+      java.lang.Object ref = walletState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        walletState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BALANCE_FIELD_NUMBER = 5;
+    private long balance_;
+    /**
+     * <code>optional int64 balance = 5;</code>
+     * @return Whether the balance field is set.
+     */
+    @java.lang.Override
+    public boolean hasBalance() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional int64 balance = 5;</code>
+     * @return The balance.
+     */
+    @java.lang.Override
+    public long getBalance() {
+      return balance_;
+    }
+
+    public static final int DELAYED_BALANCE_FIELD_NUMBER = 6;
+    private long delayedBalance_;
+    /**
+     * <code>optional int64 delayed_balance = 6;</code>
+     * @return Whether the delayedBalance field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelayedBalance() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional int64 delayed_balance = 6;</code>
+     * @return The delayedBalance.
+     */
+    @java.lang.Override
+    public long getDelayedBalance() {
+      return delayedBalance_;
+    }
+
+    public static final int CURRENCY_CODE_FIELD_NUMBER = 7;
+    private int currencyCode_;
+    /**
+     * <code>optional int32 currency_code = 7;</code>
+     * @return Whether the currencyCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasCurrencyCode() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional int32 currency_code = 7;</code>
+     * @return The currencyCode.
+     */
+    @java.lang.Override
+    public int getCurrencyCode() {
+      return currencyCode_;
+    }
+
+    public static final int TIME_MOST_RECENT_TXN_FIELD_NUMBER = 8;
+    private int timeMostRecentTxn_;
+    /**
+     * <code>optional uint32 time_most_recent_txn = 8;</code>
+     * @return Whether the timeMostRecentTxn field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeMostRecentTxn() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 time_most_recent_txn = 8;</code>
+     * @return The timeMostRecentTxn.
+     */
+    @java.lang.Override
+    public int getTimeMostRecentTxn() {
+      return timeMostRecentTxn_;
+    }
+
+    public static final int MOST_RECENT_TXNID_FIELD_NUMBER = 9;
+    private long mostRecentTxnid_;
+    /**
+     * <code>optional uint64 most_recent_txnid = 9;</code>
+     * @return Whether the mostRecentTxnid field is set.
+     */
+    @java.lang.Override
+    public boolean hasMostRecentTxnid() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional uint64 most_recent_txnid = 9;</code>
+     * @return The mostRecentTxnid.
+     */
+    @java.lang.Override
+    public long getMostRecentTxnid() {
+      return mostRecentTxnid_;
+    }
+
+    public static final int BALANCE_IN_USD_FIELD_NUMBER = 10;
+    private long balanceInUsd_;
+    /**
+     * <code>optional int64 balance_in_usd = 10;</code>
+     * @return Whether the balanceInUsd field is set.
+     */
+    @java.lang.Override
+    public boolean hasBalanceInUsd() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional int64 balance_in_usd = 10;</code>
+     * @return The balanceInUsd.
+     */
+    @java.lang.Override
+    public long getBalanceInUsd() {
+      return balanceInUsd_;
+    }
+
+    public static final int DELAYED_BALANCE_IN_USD_FIELD_NUMBER = 11;
+    private long delayedBalanceInUsd_;
+    /**
+     * <code>optional int64 delayed_balance_in_usd = 11;</code>
+     * @return Whether the delayedBalanceInUsd field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelayedBalanceInUsd() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional int64 delayed_balance_in_usd = 11;</code>
+     * @return The delayedBalanceInUsd.
+     */
+    @java.lang.Override
+    public long getDelayedBalanceInUsd() {
+      return delayedBalanceInUsd_;
+    }
+
+    public static final int HAS_WALLET_IN_OTHER_REGIONS_FIELD_NUMBER = 12;
+    private boolean hasWalletInOtherRegions_;
+    /**
+     * <code>optional bool has_wallet_in_other_regions = 12;</code>
+     * @return Whether the hasWalletInOtherRegions field is set.
+     */
+    @java.lang.Override
+    public boolean hasHasWalletInOtherRegions() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional bool has_wallet_in_other_regions = 12;</code>
+     * @return The hasWalletInOtherRegions.
+     */
+    @java.lang.Override
+    public boolean getHasWalletInOtherRegions() {
+      return hasWalletInOtherRegions_;
+    }
+
+    public static final int OTHER_REGIONS_FIELD_NUMBER = 13;
+    private com.google.protobuf.Internal.IntList otherRegions_;
+    /**
+     * <code>repeated int32 other_regions = 13;</code>
+     * @return A list containing the otherRegions.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getOtherRegionsList() {
+      return otherRegions_;
+    }
+    /**
+     * <code>repeated int32 other_regions = 13;</code>
+     * @return The count of otherRegions.
+     */
+    public int getOtherRegionsCount() {
+      return otherRegions_.size();
+    }
+    /**
+     * <code>repeated int32 other_regions = 13;</code>
+     * @param index The index of the element to return.
+     * @return The otherRegions at the given index.
+     */
+    public int getOtherRegions(int index) {
+      return otherRegions_.getInt(index);
+    }
+
+    public static final int FORMATTED_BALANCE_FIELD_NUMBER = 14;
+    private volatile java.lang.Object formattedBalance_;
+    /**
+     * <code>optional string formatted_balance = 14;</code>
+     * @return Whether the formattedBalance field is set.
+     */
+    @java.lang.Override
+    public boolean hasFormattedBalance() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional string formatted_balance = 14;</code>
+     * @return The formattedBalance.
+     */
+    @java.lang.Override
+    public java.lang.String getFormattedBalance() {
+      java.lang.Object ref = formattedBalance_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          formattedBalance_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string formatted_balance = 14;</code>
+     * @return The bytes for formattedBalance.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFormattedBalanceBytes() {
+      java.lang.Object ref = formattedBalance_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        formattedBalance_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, hasWallet_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userCountryCode_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, walletCountryCode_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, walletState_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt64(5, balance_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt64(6, delayedBalance_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeInt32(7, currencyCode_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(8, timeMostRecentTxn_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeUInt64(9, mostRecentTxnid_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeInt64(10, balanceInUsd_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeInt64(11, delayedBalanceInUsd_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeBool(12, hasWalletInOtherRegions_);
+      }
+      for (int i = 0; i < otherRegions_.size(); i++) {
+        output.writeInt32(13, otherRegions_.getInt(i));
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, formattedBalance_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, hasWallet_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userCountryCode_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, walletCountryCode_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, walletState_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, balance_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, delayedBalance_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, currencyCode_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, timeMostRecentTxn_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, mostRecentTxnid_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(10, balanceInUsd_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(11, delayedBalanceInUsd_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, hasWalletInOtherRegions_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < otherRegions_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(otherRegions_.getInt(i));
+        }
+        size += dataSize;
+        size += 1 * getOtherRegionsList().size();
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, formattedBalance_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response other = (SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response) obj;
+
+      if (hasHasWallet() != other.hasHasWallet()) return false;
+      if (hasHasWallet()) {
+        if (getHasWallet()
+            != other.getHasWallet()) return false;
+      }
+      if (hasUserCountryCode() != other.hasUserCountryCode()) return false;
+      if (hasUserCountryCode()) {
+        if (!getUserCountryCode()
+            .equals(other.getUserCountryCode())) return false;
+      }
+      if (hasWalletCountryCode() != other.hasWalletCountryCode()) return false;
+      if (hasWalletCountryCode()) {
+        if (!getWalletCountryCode()
+            .equals(other.getWalletCountryCode())) return false;
+      }
+      if (hasWalletState() != other.hasWalletState()) return false;
+      if (hasWalletState()) {
+        if (!getWalletState()
+            .equals(other.getWalletState())) return false;
+      }
+      if (hasBalance() != other.hasBalance()) return false;
+      if (hasBalance()) {
+        if (getBalance()
+            != other.getBalance()) return false;
+      }
+      if (hasDelayedBalance() != other.hasDelayedBalance()) return false;
+      if (hasDelayedBalance()) {
+        if (getDelayedBalance()
+            != other.getDelayedBalance()) return false;
+      }
+      if (hasCurrencyCode() != other.hasCurrencyCode()) return false;
+      if (hasCurrencyCode()) {
+        if (getCurrencyCode()
+            != other.getCurrencyCode()) return false;
+      }
+      if (hasTimeMostRecentTxn() != other.hasTimeMostRecentTxn()) return false;
+      if (hasTimeMostRecentTxn()) {
+        if (getTimeMostRecentTxn()
+            != other.getTimeMostRecentTxn()) return false;
+      }
+      if (hasMostRecentTxnid() != other.hasMostRecentTxnid()) return false;
+      if (hasMostRecentTxnid()) {
+        if (getMostRecentTxnid()
+            != other.getMostRecentTxnid()) return false;
+      }
+      if (hasBalanceInUsd() != other.hasBalanceInUsd()) return false;
+      if (hasBalanceInUsd()) {
+        if (getBalanceInUsd()
+            != other.getBalanceInUsd()) return false;
+      }
+      if (hasDelayedBalanceInUsd() != other.hasDelayedBalanceInUsd()) return false;
+      if (hasDelayedBalanceInUsd()) {
+        if (getDelayedBalanceInUsd()
+            != other.getDelayedBalanceInUsd()) return false;
+      }
+      if (hasHasWalletInOtherRegions() != other.hasHasWalletInOtherRegions()) return false;
+      if (hasHasWalletInOtherRegions()) {
+        if (getHasWalletInOtherRegions()
+            != other.getHasWalletInOtherRegions()) return false;
+      }
+      if (!getOtherRegionsList()
+          .equals(other.getOtherRegionsList())) return false;
+      if (hasFormattedBalance() != other.hasFormattedBalance()) return false;
+      if (hasFormattedBalance()) {
+        if (!getFormattedBalance()
+            .equals(other.getFormattedBalance())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHasWallet()) {
+        hash = (37 * hash) + HAS_WALLET_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHasWallet());
+      }
+      if (hasUserCountryCode()) {
+        hash = (37 * hash) + USER_COUNTRY_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getUserCountryCode().hashCode();
+      }
+      if (hasWalletCountryCode()) {
+        hash = (37 * hash) + WALLET_COUNTRY_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getWalletCountryCode().hashCode();
+      }
+      if (hasWalletState()) {
+        hash = (37 * hash) + WALLET_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getWalletState().hashCode();
+      }
+      if (hasBalance()) {
+        hash = (37 * hash) + BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getBalance());
+      }
+      if (hasDelayedBalance()) {
+        hash = (37 * hash) + DELAYED_BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDelayedBalance());
+      }
+      if (hasCurrencyCode()) {
+        hash = (37 * hash) + CURRENCY_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrencyCode();
+      }
+      if (hasTimeMostRecentTxn()) {
+        hash = (37 * hash) + TIME_MOST_RECENT_TXN_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeMostRecentTxn();
+      }
+      if (hasMostRecentTxnid()) {
+        hash = (37 * hash) + MOST_RECENT_TXNID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMostRecentTxnid());
+      }
+      if (hasBalanceInUsd()) {
+        hash = (37 * hash) + BALANCE_IN_USD_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getBalanceInUsd());
+      }
+      if (hasDelayedBalanceInUsd()) {
+        hash = (37 * hash) + DELAYED_BALANCE_IN_USD_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDelayedBalanceInUsd());
+      }
+      if (hasHasWalletInOtherRegions()) {
+        hash = (37 * hash) + HAS_WALLET_IN_OTHER_REGIONS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHasWalletInOtherRegions());
+      }
+      if (getOtherRegionsCount() > 0) {
+        hash = (37 * hash) + OTHER_REGIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOtherRegionsList().hashCode();
+      }
+      if (hasFormattedBalance()) {
+        hash = (37 * hash) + FORMATTED_BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getFormattedBalance().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserAccount_GetWalletDetails_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserAccount_GetWalletDetails_Response)
+        SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetWalletDetails_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetWalletDetails_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response.class, SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hasWallet_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userCountryCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        walletCountryCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        walletState_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        balance_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        delayedBalance_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        currencyCode_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        timeMostRecentTxn_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        mostRecentTxnid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        balanceInUsd_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        delayedBalanceInUsd_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        hasWalletInOtherRegions_ = false;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        otherRegions_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        formattedBalance_ = "";
+        bitField0_ = (bitField0_ & ~0x00002000);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetWalletDetails_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response getDefaultInstanceForType() {
+        return SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response build() {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response buildPartial() {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response result = new SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hasWallet_ = hasWallet_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.userCountryCode_ = userCountryCode_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.walletCountryCode_ = walletCountryCode_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.walletState_ = walletState_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.balance_ = balance_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.delayedBalance_ = delayedBalance_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.currencyCode_ = currencyCode_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.timeMostRecentTxn_ = timeMostRecentTxn_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.mostRecentTxnid_ = mostRecentTxnid_;
+          to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.balanceInUsd_ = balanceInUsd_;
+          to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.delayedBalanceInUsd_ = delayedBalanceInUsd_;
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.hasWalletInOtherRegions_ = hasWalletInOtherRegions_;
+          to_bitField0_ |= 0x00000800;
+        }
+        if (((bitField0_ & 0x00001000) != 0)) {
+          otherRegions_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00001000);
+        }
+        result.otherRegions_ = otherRegions_;
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.formattedBalance_ = formattedBalance_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response) {
+          return mergeFrom((SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response other) {
+        if (other == SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response.getDefaultInstance()) return this;
+        if (other.hasHasWallet()) {
+          setHasWallet(other.getHasWallet());
+        }
+        if (other.hasUserCountryCode()) {
+          bitField0_ |= 0x00000002;
+          userCountryCode_ = other.userCountryCode_;
+          onChanged();
+        }
+        if (other.hasWalletCountryCode()) {
+          bitField0_ |= 0x00000004;
+          walletCountryCode_ = other.walletCountryCode_;
+          onChanged();
+        }
+        if (other.hasWalletState()) {
+          bitField0_ |= 0x00000008;
+          walletState_ = other.walletState_;
+          onChanged();
+        }
+        if (other.hasBalance()) {
+          setBalance(other.getBalance());
+        }
+        if (other.hasDelayedBalance()) {
+          setDelayedBalance(other.getDelayedBalance());
+        }
+        if (other.hasCurrencyCode()) {
+          setCurrencyCode(other.getCurrencyCode());
+        }
+        if (other.hasTimeMostRecentTxn()) {
+          setTimeMostRecentTxn(other.getTimeMostRecentTxn());
+        }
+        if (other.hasMostRecentTxnid()) {
+          setMostRecentTxnid(other.getMostRecentTxnid());
+        }
+        if (other.hasBalanceInUsd()) {
+          setBalanceInUsd(other.getBalanceInUsd());
+        }
+        if (other.hasDelayedBalanceInUsd()) {
+          setDelayedBalanceInUsd(other.getDelayedBalanceInUsd());
+        }
+        if (other.hasHasWalletInOtherRegions()) {
+          setHasWalletInOtherRegions(other.getHasWalletInOtherRegions());
+        }
+        if (!other.otherRegions_.isEmpty()) {
+          if (otherRegions_.isEmpty()) {
+            otherRegions_ = other.otherRegions_;
+            bitField0_ = (bitField0_ & ~0x00001000);
+          } else {
+            ensureOtherRegionsIsMutable();
+            otherRegions_.addAll(other.otherRegions_);
+          }
+          onChanged();
+        }
+        if (other.hasFormattedBalance()) {
+          bitField0_ |= 0x00002000;
+          formattedBalance_ = other.formattedBalance_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean hasWallet_ ;
+      /**
+       * <code>optional bool has_wallet = 1;</code>
+       * @return Whether the hasWallet field is set.
+       */
+      @java.lang.Override
+      public boolean hasHasWallet() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional bool has_wallet = 1;</code>
+       * @return The hasWallet.
+       */
+      @java.lang.Override
+      public boolean getHasWallet() {
+        return hasWallet_;
+      }
+      /**
+       * <code>optional bool has_wallet = 1;</code>
+       * @param value The hasWallet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHasWallet(boolean value) {
+        bitField0_ |= 0x00000001;
+        hasWallet_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool has_wallet = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHasWallet() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hasWallet_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userCountryCode_ = "";
+      /**
+       * <code>optional string user_country_code = 2;</code>
+       * @return Whether the userCountryCode field is set.
+       */
+      public boolean hasUserCountryCode() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string user_country_code = 2;</code>
+       * @return The userCountryCode.
+       */
+      public java.lang.String getUserCountryCode() {
+        java.lang.Object ref = userCountryCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            userCountryCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string user_country_code = 2;</code>
+       * @return The bytes for userCountryCode.
+       */
+      public com.google.protobuf.ByteString
+          getUserCountryCodeBytes() {
+        java.lang.Object ref = userCountryCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userCountryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string user_country_code = 2;</code>
+       * @param value The userCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserCountryCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        userCountryCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string user_country_code = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserCountryCode() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        userCountryCode_ = getDefaultInstance().getUserCountryCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string user_country_code = 2;</code>
+       * @param value The bytes for userCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        userCountryCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object walletCountryCode_ = "";
+      /**
+       * <code>optional string wallet_country_code = 3;</code>
+       * @return Whether the walletCountryCode field is set.
+       */
+      public boolean hasWalletCountryCode() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string wallet_country_code = 3;</code>
+       * @return The walletCountryCode.
+       */
+      public java.lang.String getWalletCountryCode() {
+        java.lang.Object ref = walletCountryCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            walletCountryCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string wallet_country_code = 3;</code>
+       * @return The bytes for walletCountryCode.
+       */
+      public com.google.protobuf.ByteString
+          getWalletCountryCodeBytes() {
+        java.lang.Object ref = walletCountryCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          walletCountryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string wallet_country_code = 3;</code>
+       * @param value The walletCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletCountryCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        walletCountryCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string wallet_country_code = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWalletCountryCode() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        walletCountryCode_ = getDefaultInstance().getWalletCountryCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string wallet_country_code = 3;</code>
+       * @param value The bytes for walletCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        walletCountryCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object walletState_ = "";
+      /**
+       * <code>optional string wallet_state = 4;</code>
+       * @return Whether the walletState field is set.
+       */
+      public boolean hasWalletState() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string wallet_state = 4;</code>
+       * @return The walletState.
+       */
+      public java.lang.String getWalletState() {
+        java.lang.Object ref = walletState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            walletState_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string wallet_state = 4;</code>
+       * @return The bytes for walletState.
+       */
+      public com.google.protobuf.ByteString
+          getWalletStateBytes() {
+        java.lang.Object ref = walletState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          walletState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string wallet_state = 4;</code>
+       * @param value The walletState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        walletState_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string wallet_state = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWalletState() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        walletState_ = getDefaultInstance().getWalletState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string wallet_state = 4;</code>
+       * @param value The bytes for walletState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        walletState_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long balance_ ;
+      /**
+       * <code>optional int64 balance = 5;</code>
+       * @return Whether the balance field is set.
+       */
+      @java.lang.Override
+      public boolean hasBalance() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional int64 balance = 5;</code>
+       * @return The balance.
+       */
+      @java.lang.Override
+      public long getBalance() {
+        return balance_;
+      }
+      /**
+       * <code>optional int64 balance = 5;</code>
+       * @param value The balance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBalance(long value) {
+        bitField0_ |= 0x00000010;
+        balance_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 balance = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBalance() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        balance_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long delayedBalance_ ;
+      /**
+       * <code>optional int64 delayed_balance = 6;</code>
+       * @return Whether the delayedBalance field is set.
+       */
+      @java.lang.Override
+      public boolean hasDelayedBalance() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional int64 delayed_balance = 6;</code>
+       * @return The delayedBalance.
+       */
+      @java.lang.Override
+      public long getDelayedBalance() {
+        return delayedBalance_;
+      }
+      /**
+       * <code>optional int64 delayed_balance = 6;</code>
+       * @param value The delayedBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelayedBalance(long value) {
+        bitField0_ |= 0x00000020;
+        delayedBalance_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 delayed_balance = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelayedBalance() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        delayedBalance_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int currencyCode_ ;
+      /**
+       * <code>optional int32 currency_code = 7;</code>
+       * @return Whether the currencyCode field is set.
+       */
+      @java.lang.Override
+      public boolean hasCurrencyCode() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional int32 currency_code = 7;</code>
+       * @return The currencyCode.
+       */
+      @java.lang.Override
+      public int getCurrencyCode() {
+        return currencyCode_;
+      }
+      /**
+       * <code>optional int32 currency_code = 7;</code>
+       * @param value The currencyCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrencyCode(int value) {
+        bitField0_ |= 0x00000040;
+        currencyCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 currency_code = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrencyCode() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        currencyCode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int timeMostRecentTxn_ ;
+      /**
+       * <code>optional uint32 time_most_recent_txn = 8;</code>
+       * @return Whether the timeMostRecentTxn field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeMostRecentTxn() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 time_most_recent_txn = 8;</code>
+       * @return The timeMostRecentTxn.
+       */
+      @java.lang.Override
+      public int getTimeMostRecentTxn() {
+        return timeMostRecentTxn_;
+      }
+      /**
+       * <code>optional uint32 time_most_recent_txn = 8;</code>
+       * @param value The timeMostRecentTxn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeMostRecentTxn(int value) {
+        bitField0_ |= 0x00000080;
+        timeMostRecentTxn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 time_most_recent_txn = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeMostRecentTxn() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        timeMostRecentTxn_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long mostRecentTxnid_ ;
+      /**
+       * <code>optional uint64 most_recent_txnid = 9;</code>
+       * @return Whether the mostRecentTxnid field is set.
+       */
+      @java.lang.Override
+      public boolean hasMostRecentTxnid() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint64 most_recent_txnid = 9;</code>
+       * @return The mostRecentTxnid.
+       */
+      @java.lang.Override
+      public long getMostRecentTxnid() {
+        return mostRecentTxnid_;
+      }
+      /**
+       * <code>optional uint64 most_recent_txnid = 9;</code>
+       * @param value The mostRecentTxnid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMostRecentTxnid(long value) {
+        bitField0_ |= 0x00000100;
+        mostRecentTxnid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 most_recent_txnid = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMostRecentTxnid() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        mostRecentTxnid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long balanceInUsd_ ;
+      /**
+       * <code>optional int64 balance_in_usd = 10;</code>
+       * @return Whether the balanceInUsd field is set.
+       */
+      @java.lang.Override
+      public boolean hasBalanceInUsd() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional int64 balance_in_usd = 10;</code>
+       * @return The balanceInUsd.
+       */
+      @java.lang.Override
+      public long getBalanceInUsd() {
+        return balanceInUsd_;
+      }
+      /**
+       * <code>optional int64 balance_in_usd = 10;</code>
+       * @param value The balanceInUsd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBalanceInUsd(long value) {
+        bitField0_ |= 0x00000200;
+        balanceInUsd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 balance_in_usd = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBalanceInUsd() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        balanceInUsd_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long delayedBalanceInUsd_ ;
+      /**
+       * <code>optional int64 delayed_balance_in_usd = 11;</code>
+       * @return Whether the delayedBalanceInUsd field is set.
+       */
+      @java.lang.Override
+      public boolean hasDelayedBalanceInUsd() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional int64 delayed_balance_in_usd = 11;</code>
+       * @return The delayedBalanceInUsd.
+       */
+      @java.lang.Override
+      public long getDelayedBalanceInUsd() {
+        return delayedBalanceInUsd_;
+      }
+      /**
+       * <code>optional int64 delayed_balance_in_usd = 11;</code>
+       * @param value The delayedBalanceInUsd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelayedBalanceInUsd(long value) {
+        bitField0_ |= 0x00000400;
+        delayedBalanceInUsd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 delayed_balance_in_usd = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelayedBalanceInUsd() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        delayedBalanceInUsd_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean hasWalletInOtherRegions_ ;
+      /**
+       * <code>optional bool has_wallet_in_other_regions = 12;</code>
+       * @return Whether the hasWalletInOtherRegions field is set.
+       */
+      @java.lang.Override
+      public boolean hasHasWalletInOtherRegions() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional bool has_wallet_in_other_regions = 12;</code>
+       * @return The hasWalletInOtherRegions.
+       */
+      @java.lang.Override
+      public boolean getHasWalletInOtherRegions() {
+        return hasWalletInOtherRegions_;
+      }
+      /**
+       * <code>optional bool has_wallet_in_other_regions = 12;</code>
+       * @param value The hasWalletInOtherRegions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHasWalletInOtherRegions(boolean value) {
+        bitField0_ |= 0x00000800;
+        hasWalletInOtherRegions_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool has_wallet_in_other_regions = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHasWalletInOtherRegions() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        hasWalletInOtherRegions_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList otherRegions_ = emptyIntList();
+      private void ensureOtherRegionsIsMutable() {
+        if (!((bitField0_ & 0x00001000) != 0)) {
+          otherRegions_ = mutableCopy(otherRegions_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+      /**
+       * <code>repeated int32 other_regions = 13;</code>
+       * @return A list containing the otherRegions.
+       */
+      public java.util.List<java.lang.Integer>
+          getOtherRegionsList() {
+        return ((bitField0_ & 0x00001000) != 0) ?
+                 java.util.Collections.unmodifiableList(otherRegions_) : otherRegions_;
+      }
+      /**
+       * <code>repeated int32 other_regions = 13;</code>
+       * @return The count of otherRegions.
+       */
+      public int getOtherRegionsCount() {
+        return otherRegions_.size();
+      }
+      /**
+       * <code>repeated int32 other_regions = 13;</code>
+       * @param index The index of the element to return.
+       * @return The otherRegions at the given index.
+       */
+      public int getOtherRegions(int index) {
+        return otherRegions_.getInt(index);
+      }
+      /**
+       * <code>repeated int32 other_regions = 13;</code>
+       * @param index The index to set the value at.
+       * @param value The otherRegions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOtherRegions(
+          int index, int value) {
+        ensureOtherRegionsIsMutable();
+        otherRegions_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 other_regions = 13;</code>
+       * @param value The otherRegions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOtherRegions(int value) {
+        ensureOtherRegionsIsMutable();
+        otherRegions_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 other_regions = 13;</code>
+       * @param values The otherRegions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOtherRegions(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureOtherRegionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, otherRegions_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 other_regions = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOtherRegions() {
+        otherRegions_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object formattedBalance_ = "";
+      /**
+       * <code>optional string formatted_balance = 14;</code>
+       * @return Whether the formattedBalance field is set.
+       */
+      public boolean hasFormattedBalance() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional string formatted_balance = 14;</code>
+       * @return The formattedBalance.
+       */
+      public java.lang.String getFormattedBalance() {
+        java.lang.Object ref = formattedBalance_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            formattedBalance_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string formatted_balance = 14;</code>
+       * @return The bytes for formattedBalance.
+       */
+      public com.google.protobuf.ByteString
+          getFormattedBalanceBytes() {
+        java.lang.Object ref = formattedBalance_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          formattedBalance_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string formatted_balance = 14;</code>
+       * @param value The formattedBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormattedBalance(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        formattedBalance_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string formatted_balance = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFormattedBalance() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        formattedBalance_ = getDefaultInstance().getFormattedBalance();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string formatted_balance = 14;</code>
+       * @param value The bytes for formattedBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormattedBalanceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        formattedBalance_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CUserAccount_GetWalletDetails_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserAccount_GetWalletDetails_Response)
+    private static final SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response();
+    }
+
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CUserAccount_GetWalletDetails_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CUserAccount_GetWalletDetails_Response>() {
+      @java.lang.Override
+      public CUserAccount_GetWalletDetails_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserAccount_GetWalletDetails_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CUserAccount_GetWalletDetails_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserAccount_GetWalletDetails_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesUseraccountSteamclient.CUserAccount_GetWalletDetails_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CUserAccount_GetAccountLinkStatus_RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CUserAccount_GetAccountLinkStatus_Request)
       com.google.protobuf.MessageOrBuilder {
@@ -5435,6 +8392,1136 @@ public final class SteammessagesUseraccountSteamclient {
 
     @java.lang.Override
     public SteammessagesUseraccountSteamclient.CUserAccount_CancelLicenseForApp_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CUserAccount_GetUserCountry_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserAccount_GetUserCountry_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return Whether the steamid field is set.
+     */
+    boolean hasSteamid();
+    /**
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return The steamid.
+     */
+    long getSteamid();
+  }
+  /**
+   * Protobuf type {@code CUserAccount_GetUserCountry_Request}
+   */
+  public static final class CUserAccount_GetUserCountry_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CUserAccount_GetUserCountry_Request)
+      CUserAccount_GetUserCountry_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CUserAccount_GetUserCountry_Request.newBuilder() to construct.
+    private CUserAccount_GetUserCountry_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CUserAccount_GetUserCountry_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CUserAccount_GetUserCountry_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserAccount_GetUserCountry_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              bitField0_ |= 0x00000001;
+              steamid_ = input.readFixed64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetUserCountry_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetUserCountry_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request.class, SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int STEAMID_FIELD_NUMBER = 1;
+    private long steamid_;
+    /**
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return Whether the steamid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSteamid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return The steamid.
+     */
+    @java.lang.Override
+    public long getSteamid() {
+      return steamid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeFixed64(1, steamid_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(1, steamid_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request other = (SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request) obj;
+
+      if (hasSteamid() != other.hasSteamid()) return false;
+      if (hasSteamid()) {
+        if (getSteamid()
+            != other.getSteamid()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSteamid()) {
+        hash = (37 * hash) + STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSteamid());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserAccount_GetUserCountry_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserAccount_GetUserCountry_Request)
+        SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetUserCountry_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetUserCountry_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request.class, SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        steamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetUserCountry_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request getDefaultInstanceForType() {
+        return SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request build() {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request buildPartial() {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request result = new SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.steamid_ = steamid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request) {
+          return mergeFrom((SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request other) {
+        if (other == SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request.getDefaultInstance()) return this;
+        if (other.hasSteamid()) {
+          setSteamid(other.getSteamid());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long steamid_ ;
+      /**
+       * <code>optional fixed64 steamid = 1;</code>
+       * @return Whether the steamid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSteamid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional fixed64 steamid = 1;</code>
+       * @return The steamid.
+       */
+      @java.lang.Override
+      public long getSteamid() {
+        return steamid_;
+      }
+      /**
+       * <code>optional fixed64 steamid = 1;</code>
+       * @param value The steamid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamid(long value) {
+        bitField0_ |= 0x00000001;
+        steamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 steamid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        steamid_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CUserAccount_GetUserCountry_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserAccount_GetUserCountry_Request)
+    private static final SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request();
+    }
+
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CUserAccount_GetUserCountry_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CUserAccount_GetUserCountry_Request>() {
+      @java.lang.Override
+      public CUserAccount_GetUserCountry_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserAccount_GetUserCountry_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CUserAccount_GetUserCountry_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserAccount_GetUserCountry_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CUserAccount_GetUserCountry_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserAccount_GetUserCountry_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string country = 1;</code>
+     * @return Whether the country field is set.
+     */
+    boolean hasCountry();
+    /**
+     * <code>optional string country = 1;</code>
+     * @return The country.
+     */
+    java.lang.String getCountry();
+    /**
+     * <code>optional string country = 1;</code>
+     * @return The bytes for country.
+     */
+    com.google.protobuf.ByteString
+        getCountryBytes();
+  }
+  /**
+   * Protobuf type {@code CUserAccount_GetUserCountry_Response}
+   */
+  public static final class CUserAccount_GetUserCountry_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CUserAccount_GetUserCountry_Response)
+      CUserAccount_GetUserCountry_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CUserAccount_GetUserCountry_Response.newBuilder() to construct.
+    private CUserAccount_GetUserCountry_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CUserAccount_GetUserCountry_Response() {
+      country_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CUserAccount_GetUserCountry_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserAccount_GetUserCountry_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              country_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetUserCountry_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetUserCountry_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response.class, SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int COUNTRY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object country_;
+    /**
+     * <code>optional string country = 1;</code>
+     * @return Whether the country field is set.
+     */
+    @java.lang.Override
+    public boolean hasCountry() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string country = 1;</code>
+     * @return The country.
+     */
+    @java.lang.Override
+    public java.lang.String getCountry() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          country_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string country = 1;</code>
+     * @return The bytes for country.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCountryBytes() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        country_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, country_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, country_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response other = (SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response) obj;
+
+      if (hasCountry() != other.hasCountry()) return false;
+      if (hasCountry()) {
+        if (!getCountry()
+            .equals(other.getCountry())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCountry()) {
+        hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
+        hash = (53 * hash) + getCountry().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserAccount_GetUserCountry_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserAccount_GetUserCountry_Response)
+        SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetUserCountry_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetUserCountry_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response.class, SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        country_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesUseraccountSteamclient.internal_static_CUserAccount_GetUserCountry_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response getDefaultInstanceForType() {
+        return SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response build() {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response buildPartial() {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response result = new SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.country_ = country_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response) {
+          return mergeFrom((SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response other) {
+        if (other == SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response.getDefaultInstance()) return this;
+        if (other.hasCountry()) {
+          bitField0_ |= 0x00000001;
+          country_ = other.country_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object country_ = "";
+      /**
+       * <code>optional string country = 1;</code>
+       * @return Whether the country field is set.
+       */
+      public boolean hasCountry() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string country = 1;</code>
+       * @return The country.
+       */
+      public java.lang.String getCountry() {
+        java.lang.Object ref = country_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            country_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string country = 1;</code>
+       * @return The bytes for country.
+       */
+      public com.google.protobuf.ByteString
+          getCountryBytes() {
+        java.lang.Object ref = country_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          country_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string country = 1;</code>
+       * @param value The country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountry(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        country_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string country = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountry() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        country_ = getDefaultInstance().getCountry();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string country = 1;</code>
+       * @param value The bytes for country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        country_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CUserAccount_GetUserCountry_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserAccount_GetUserCountry_Response)
+    private static final SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response();
+    }
+
+    public static SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CUserAccount_GetUserCountry_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CUserAccount_GetUserCountry_Response>() {
+      @java.lang.Override
+      public CUserAccount_GetUserCountry_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserAccount_GetUserCountry_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CUserAccount_GetUserCountry_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserAccount_GetUserCountry_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesUseraccountSteamclient.CUserAccount_GetUserCountry_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -18636,6 +22723,16 @@ public final class SteammessagesUseraccountSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CUserAccount_GetAvailableValveDiscountPromotions_Response_ValveDiscountPromotionDetails_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserAccount_GetClientWalletDetails_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CUserAccount_GetClientWalletDetails_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserAccount_GetWalletDetails_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CUserAccount_GetWalletDetails_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CUserAccount_GetAccountLinkStatus_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -18655,6 +22752,16 @@ public final class SteammessagesUseraccountSteamclient {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CUserAccount_CancelLicenseForApp_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserAccount_GetUserCountry_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CUserAccount_GetUserCountry_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserAccount_GetUserCountry_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CUserAccount_GetUserCountry_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CUserAccount_CreateFriendInviteToken_Request_descriptor;
   private static final 
@@ -18755,162 +22862,189 @@ public final class SteammessagesUseraccountSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n1steam/steammessages_useraccount.steamc" +
-      "lient.proto\0322steam/steammessages_unified" +
-      "_base.steamclient.proto\"P\n8CUserAccount_" +
-      "GetAvailableValveDiscountPromotions_Requ" +
-      "est\022\024\n\014country_code\030\001 \001(\t\"\205\004\n9CUserAccou" +
-      "nt_GetAvailableValveDiscountPromotions_R" +
-      "esponse\022l\n\npromotions\030\001 \003(\0132X.CUserAccou" +
-      "nt_GetAvailableValveDiscountPromotions_R" +
-      "esponse.ValveDiscountPromotionDetails\032\331\002" +
-      "\n\035ValveDiscountPromotionDetails\022\023\n\013promo" +
-      "tionid\030\001 \001(\r\022\035\n\025promotion_description\030\002 " +
-      "\001(\t\022\033\n\023minimum_cart_amount\030\003 \001(\003\022\'\n\037mini" +
-      "mum_cart_amount_for_display\030\004 \001(\003\022\027\n\017dis" +
-      "count_amount\030\005 \001(\003\022\025\n\rcurrency_code\030\006 \001(" +
-      "\005\022\033\n\023available_use_count\030\007 \001(\005\022!\n\031promot" +
-      "ional_discount_type\030\010 \001(\005\022\031\n\021loyalty_rew" +
-      "ard_id\030\t \001(\005\022\034\n\024localized_name_token\030\n \001" +
-      "(\t\022\025\n\rmax_use_count\030\013 \001(\005\"+\n)CUserAccoun" +
-      "t_GetAccountLinkStatus_Request\"}\n*CUserA" +
-      "ccount_GetAccountLinkStatus_Response\022\014\n\004" +
-      "pwid\030\001 \001(\r\022\035\n\025identity_verification\030\002 \001(" +
-      "\r\022\"\n\032performed_age_verification\030\003 \001(\010\"9\n" +
-      "(CUserAccount_CancelLicenseForApp_Reques" +
-      "t\022\r\n\005appid\030\001 \001(\r\"+\n)CUserAccount_CancelL" +
-      "icenseForApp_Response\"r\n,CUserAccount_Cr" +
-      "eateFriendInviteToken_Request\022\024\n\014invite_" +
-      "limit\030\001 \001(\r\022\027\n\017invite_duration\030\002 \001(\r\022\023\n\013" +
-      "invite_note\030\003 \001(\t\"\231\001\n-CUserAccount_Creat" +
-      "eFriendInviteToken_Response\022\024\n\014invite_to" +
-      "ken\030\001 \001(\t\022\024\n\014invite_limit\030\002 \001(\004\022\027\n\017invit" +
-      "e_duration\030\003 \001(\004\022\024\n\014time_created\030\004 \001(\007\022\r" +
-      "\n\005valid\030\005 \001(\010\",\n*CUserAccount_GetFriendI" +
-      "nviteTokens_Request\"m\n+CUserAccount_GetF" +
-      "riendInviteTokens_Response\022>\n\006tokens\030\001 \003" +
-      "(\0132..CUserAccount_CreateFriendInviteToke" +
-      "n_Response\"S\n*CUserAccount_ViewFriendInv" +
-      "iteToken_Request\022\017\n\007steamid\030\001 \001(\006\022\024\n\014inv" +
-      "ite_token\030\002 \001(\t\"f\n+CUserAccount_ViewFrie" +
-      "ndInviteToken_Response\022\r\n\005valid\030\001 \001(\010\022\017\n" +
-      "\007steamid\030\002 \001(\004\022\027\n\017invite_duration\030\003 \001(\004\"" +
-      "U\n,CUserAccount_RedeemFriendInviteToken_" +
-      "Request\022\017\n\007steamid\030\001 \001(\006\022\024\n\014invite_token" +
-      "\030\002 \001(\t\"/\n-CUserAccount_RedeemFriendInvit" +
-      "eToken_Response\"D\n,CUserAccount_RevokeFr" +
-      "iendInviteToken_Request\022\024\n\014invite_token\030" +
-      "\001 \001(\t\"/\n-CUserAccount_RevokeFriendInvite" +
-      "Token_Response\">\n\'CUserAccount_RegisterC" +
-      "ompatTool_Request\022\023\n\013compat_tool\030\001 \001(\r\"*" +
-      "\n(CUserAccount_RegisterCompatTool_Respon" +
-      "se\"\234\003\n,CAccountLinking_GetLinkedAccountI" +
-      "nfo_Request\022H\n\014account_type\030\001 \001(\0162\025.EInt" +
-      "ernalAccountType:\033k_EInternalSteamAccoun" +
-      "tType\022+\n\naccount_id\030\002 \001(\004B\027\202\265\030\023Internal " +
-      "account ID\022t\n\006filter\030\003 \001(\0162\025.EExternalAc" +
-      "countType:\017k_EExternalNoneB<\202\265\0308if speci" +
-      "fied then only return this external acco" +
-      "unt type\022\177\n\023return_access_token\030\004 \001(\010Bb\202" +
-      "\265\030^if provided and true, then returns va" +
-      "lid access token if available. It may re" +
-      "fresh the token. \"\213\006\n-CAccountLinking_Ge" +
-      "tLinkedAccountInfo_Response\022h\n\021external_" +
-      "accounts\030\001 \003(\0132M.CAccountLinking_GetLink" +
-      "edAccountInfo_Response.CExternalAccountT" +
-      "uple_Response\032\357\004\n\036CExternalAccountTuple_" +
-      "Response\022=\n\rexternal_type\030\001 \001(\0162\025.EExter" +
-      "nalAccountType:\017k_EExternalNone\022;\n\013exter" +
-      "nal_id\030\002 \001(\tB&\202\265\030\"unique external accoun" +
-      "t identifier\022:\n\022external_user_name\030\003 \001(\t" +
-      "B\036\202\265\030\032user readable; best effort\022S\n\014exte" +
-      "rnal_url\030\004 \001(\tB=\202\265\0309required for all, ca" +
-      "n be a sentinal to verify correctness\022@\n" +
-      "\014access_token\030\005 \001(\tB*\202\265\030&provided if req" +
-      "ueest and it was valid.\022k\n\023access_token_" +
-      "secret\030\006 \001(\tBN\202\265\030Jrequired for OAuth v1 " +
-      "and signing the message, provided with a" +
-      "ccess token.\022\220\001\n\010is_valid\030\007 \001(\010B~\202\265\030zIf " +
-      "false, it means access token no longer w" +
-      "ork (expired, disconnected) and the link" +
-      " is now broken. Inform user to refresh.\"" +
-      "w\n.CEmbeddedClient_AuthorizeCurrentDevic" +
-      "e_Request\022\017\n\007steamid\030\001 \001(\006\022\r\n\005appid\030\002 \001(" +
-      "\r\022\023\n\013device_info\030\003 \001(\t\022\020\n\010deviceid\030\004 \001(\r" +
-      "\"`\n\025CEmbeddedClient_Token\022\017\n\007steamid\030\001 \001" +
-      "(\006\022\024\n\014client_token\030\002 \001(\014\022\016\n\006expiry\030\003 \001(\r" +
-      "\022\020\n\010deviceid\030\004 \001(\r\"a\n(CEmbeddedClient_Au" +
-      "thorizeDevice_Response\022\016\n\006result\030\001 \001(\r\022%" +
-      "\n\005token\030\002 \001(\0132\026.CEmbeddedClient_Token*\215\001" +
-      "\n\024EInternalAccountType\022\037\n\033k_EInternalSte" +
-      "amAccountType\020\001\022\027\n\023k_EInternalClanType\020\002" +
-      "\022\026\n\022k_EInternalAppType\020\003\022#\n\037k_EInternalB" +
-      "roadcastChannelType\020\004*\206\002\n\024EExternalAccou" +
-      "ntType\022\023\n\017k_EExternalNone\020\000\022\033\n\027k_EExtern" +
-      "alSteamAccount\020\001\022\034\n\030k_EExternalGoogleAcc" +
-      "ount\020\002\022\036\n\032k_EExternalFacebookAccount\020\003\022\035" +
-      "\n\031k_EExternalTwitterAccount\020\004\022\034\n\030k_EExte" +
-      "rnalTwitchAccount\020\005\022$\n k_EExternalYouTub" +
-      "eChannelAccount\020\006\022\033\n\027k_EExternalFacebook" +
-      "Page\020\0072\313\014\n\013UserAccount\022\340\001\n#GetAvailableV" +
-      "alveDiscountPromotions\0229.CUserAccount_Ge" +
-      "tAvailableValveDiscountPromotions_Reques" +
-      "t\032:.CUserAccount_GetAvailableValveDiscou" +
-      "ntPromotions_Response\"B\202\265\030>Gets the avai" +
-      "lable promotional discounts available to" +
-      " the user\022\220\001\n\024GetAccountLinkStatus\022*.CUs" +
-      "erAccount_GetAccountLinkStatus_Request\032+" +
-      ".CUserAccount_GetAccountLinkStatus_Respo" +
-      "nse\"\037\202\265\030\033Fetches account link status\022\223\001\n" +
-      "\023CancelLicenseForApp\022).CUserAccount_Canc" +
-      "elLicenseForApp_Request\032*.CUserAccount_C" +
-      "ancelLicenseForApp_Response\"%\202\265\030!Cancels" +
-      " a free license for a user\022\304\001\n\027CreateFri" +
-      "endInviteToken\022-.CUserAccount_CreateFrie" +
-      "ndInviteToken_Request\032..CUserAccount_Cre" +
-      "ateFriendInviteToken_Response\"J\202\265\030FCreat" +
-      "e a limited-use token that can be used t" +
-      "o create a friend request\022\241\001\n\025GetFriendI" +
-      "nviteTokens\022+.CUserAccount_GetFriendInvi" +
-      "teTokens_Request\032,.CUserAccount_GetFrien" +
-      "dInviteTokens_Response\"-\202\265\030)Get the set " +
-      "of active tokens for the user\022\233\001\n\025ViewFr" +
-      "iendInviteToken\022+.CUserAccount_ViewFrien" +
-      "dInviteToken_Request\032,.CUserAccount_View" +
-      "FriendInviteToken_Response\"\'\202\265\030#View det" +
-      "ails about an invite token \022\267\001\n\027RedeemFr" +
-      "iendInviteToken\022-.CUserAccount_RedeemFri" +
-      "endInviteToken_Request\032..CUserAccount_Re" +
-      "deemFriendInviteToken_Response\"=\202\265\0309Crea" +
-      "te a friend relationship using the given" +
-      " invite token\022\242\001\n\027RevokeFriendInviteToke" +
-      "n\022-.CUserAccount_RevokeFriendInviteToken" +
-      "_Request\032..CUserAccount_RevokeFriendInvi" +
-      "teToken_Response\"(\202\265\030$Revoke an active f" +
-      "riend invite token\022\230\001\n\022RegisterCompatToo" +
-      "l\022(.CUserAccount_RegisterCompatTool_Requ" +
-      "est\032).CUserAccount_RegisterCompatTool_Re" +
-      "sponse\"-\202\265\030)Register intended account us" +
-      "age of a tool\032-\202\265\030)A service to get user" +
-      " account information2\235\002\n\016AccountLinking\022" +
-      "\323\001\n\024GetLinkedAccountInfo\022-.CAccountLinki" +
-      "ng_GetLinkedAccountInfo_Request\032..CAccou" +
-      "ntLinking_GetLinkedAccountInfo_Response\"" +
-      "\\\202\265\030XList all my active linked external " +
-      "accounts; may be requested to return the" +
-      " access token\0325\202\265\0301A service to manage a" +
-      "nd link to external accounts2\244\002\n\016Embedde" +
-      "dClient\022\301\001\n\026AuthorizeCurrentDevice\022/.CEm" +
-      "beddedClient_AuthorizeCurrentDevice_Requ" +
-      "est\032).CEmbeddedClient_AuthorizeDevice_Re" +
-      "sponse\"K\202\265\030GUse a logged-in (password/et" +
-      "c) session to create a durable access to" +
-      "ken\032N\202\265\030JService to authorize and manage" +
-      " Steam functions directly embedded in ga" +
-      "mesB\003\200\001\001"
+      "lient.proto\032\036steam/steammessages_base.pr" +
+      "oto\0322steam/steammessages_unified_base.st" +
+      "eamclient.proto\"P\n8CUserAccount_GetAvail" +
+      "ableValveDiscountPromotions_Request\022\024\n\014c" +
+      "ountry_code\030\001 \001(\t\"\205\004\n9CUserAccount_GetAv" +
+      "ailableValveDiscountPromotions_Response\022" +
+      "l\n\npromotions\030\001 \003(\0132X.CUserAccount_GetAv" +
+      "ailableValveDiscountPromotions_Response." +
+      "ValveDiscountPromotionDetails\032\331\002\n\035ValveD" +
+      "iscountPromotionDetails\022\023\n\013promotionid\030\001" +
+      " \001(\r\022\035\n\025promotion_description\030\002 \001(\t\022\033\n\023m" +
+      "inimum_cart_amount\030\003 \001(\003\022\'\n\037minimum_cart" +
+      "_amount_for_display\030\004 \001(\003\022\027\n\017discount_am" +
+      "ount\030\005 \001(\003\022\025\n\rcurrency_code\030\006 \001(\005\022\033\n\023ava" +
+      "ilable_use_count\030\007 \001(\005\022!\n\031promotional_di" +
+      "scount_type\030\010 \001(\005\022\031\n\021loyalty_reward_id\030\t" +
+      " \001(\005\022\034\n\024localized_name_token\030\n \001(\t\022\025\n\rma" +
+      "x_use_count\030\013 \001(\005\"\212\001\n+CUserAccount_GetCl" +
+      "ientWalletDetails_Request\022\036\n\026include_bal" +
+      "ance_in_usd\030\001 \001(\010\022\030\n\rwallet_region\030\002 \001(\005" +
+      ":\0011\022!\n\031include_formatted_balance\030\003 \001(\010\"\223" +
+      "\003\n&CUserAccount_GetWalletDetails_Respons" +
+      "e\022\022\n\nhas_wallet\030\001 \001(\010\022\031\n\021user_country_co" +
+      "de\030\002 \001(\t\022\033\n\023wallet_country_code\030\003 \001(\t\022\024\n" +
+      "\014wallet_state\030\004 \001(\t\022\017\n\007balance\030\005 \001(\003\022\027\n\017" +
+      "delayed_balance\030\006 \001(\003\022\025\n\rcurrency_code\030\007" +
+      " \001(\005\022\034\n\024time_most_recent_txn\030\010 \001(\r\022\031\n\021mo" +
+      "st_recent_txnid\030\t \001(\004\022\026\n\016balance_in_usd\030" +
+      "\n \001(\003\022\036\n\026delayed_balance_in_usd\030\013 \001(\003\022#\n" +
+      "\033has_wallet_in_other_regions\030\014 \001(\010\022\025\n\rot" +
+      "her_regions\030\r \003(\005\022\031\n\021formatted_balance\030\016" +
+      " \001(\t\"+\n)CUserAccount_GetAccountLinkStatu" +
+      "s_Request\"}\n*CUserAccount_GetAccountLink" +
+      "Status_Response\022\014\n\004pwid\030\001 \001(\r\022\035\n\025identit" +
+      "y_verification\030\002 \001(\r\022\"\n\032performed_age_ve" +
+      "rification\030\003 \001(\010\"9\n(CUserAccount_CancelL" +
+      "icenseForApp_Request\022\r\n\005appid\030\001 \001(\r\"+\n)C" +
+      "UserAccount_CancelLicenseForApp_Response" +
+      "\"6\n#CUserAccount_GetUserCountry_Request\022" +
+      "\017\n\007steamid\030\001 \001(\006\"7\n$CUserAccount_GetUser" +
+      "Country_Response\022\017\n\007country\030\001 \001(\t\"r\n,CUs" +
+      "erAccount_CreateFriendInviteToken_Reques" +
+      "t\022\024\n\014invite_limit\030\001 \001(\r\022\027\n\017invite_durati" +
+      "on\030\002 \001(\r\022\023\n\013invite_note\030\003 \001(\t\"\231\001\n-CUserA" +
+      "ccount_CreateFriendInviteToken_Response\022" +
+      "\024\n\014invite_token\030\001 \001(\t\022\024\n\014invite_limit\030\002 " +
+      "\001(\004\022\027\n\017invite_duration\030\003 \001(\004\022\024\n\014time_cre" +
+      "ated\030\004 \001(\007\022\r\n\005valid\030\005 \001(\010\",\n*CUserAccoun" +
+      "t_GetFriendInviteTokens_Request\"m\n+CUser" +
+      "Account_GetFriendInviteTokens_Response\022>" +
+      "\n\006tokens\030\001 \003(\0132..CUserAccount_CreateFrie" +
+      "ndInviteToken_Response\"S\n*CUserAccount_V" +
+      "iewFriendInviteToken_Request\022\017\n\007steamid\030" +
+      "\001 \001(\006\022\024\n\014invite_token\030\002 \001(\t\"f\n+CUserAcco" +
+      "unt_ViewFriendInviteToken_Response\022\r\n\005va" +
+      "lid\030\001 \001(\010\022\017\n\007steamid\030\002 \001(\004\022\027\n\017invite_dur" +
+      "ation\030\003 \001(\004\"U\n,CUserAccount_RedeemFriend" +
+      "InviteToken_Request\022\017\n\007steamid\030\001 \001(\006\022\024\n\014" +
+      "invite_token\030\002 \001(\t\"/\n-CUserAccount_Redee" +
+      "mFriendInviteToken_Response\"D\n,CUserAcco" +
+      "unt_RevokeFriendInviteToken_Request\022\024\n\014i" +
+      "nvite_token\030\001 \001(\t\"/\n-CUserAccount_Revoke" +
+      "FriendInviteToken_Response\">\n\'CUserAccou" +
+      "nt_RegisterCompatTool_Request\022\023\n\013compat_" +
+      "tool\030\001 \001(\r\"*\n(CUserAccount_RegisterCompa" +
+      "tTool_Response\"\234\003\n,CAccountLinking_GetLi" +
+      "nkedAccountInfo_Request\022H\n\014account_type\030" +
+      "\001 \001(\0162\025.EInternalAccountType:\033k_EInterna" +
+      "lSteamAccountType\022+\n\naccount_id\030\002 \001(\004B\027\202" +
+      "\265\030\023Internal account ID\022t\n\006filter\030\003 \001(\0162\025" +
+      ".EExternalAccountType:\017k_EExternalNoneB<" +
+      "\202\265\0308if specified then only return this e" +
+      "xternal account type\022\177\n\023return_access_to" +
+      "ken\030\004 \001(\010Bb\202\265\030^if provided and true, the" +
+      "n returns valid access token if availabl" +
+      "e. It may refresh the token. \"\213\006\n-CAccou" +
+      "ntLinking_GetLinkedAccountInfo_Response\022" +
+      "h\n\021external_accounts\030\001 \003(\0132M.CAccountLin" +
+      "king_GetLinkedAccountInfo_Response.CExte" +
+      "rnalAccountTuple_Response\032\357\004\n\036CExternalA" +
+      "ccountTuple_Response\022=\n\rexternal_type\030\001 " +
+      "\001(\0162\025.EExternalAccountType:\017k_EExternalN" +
+      "one\022;\n\013external_id\030\002 \001(\tB&\202\265\030\"unique ext" +
+      "ernal account identifier\022:\n\022external_use" +
+      "r_name\030\003 \001(\tB\036\202\265\030\032user readable; best ef" +
+      "fort\022S\n\014external_url\030\004 \001(\tB=\202\265\0309required" +
+      " for all, can be a sentinal to verify co" +
+      "rrectness\022@\n\014access_token\030\005 \001(\tB*\202\265\030&pro" +
+      "vided if requeest and it was valid.\022k\n\023a" +
+      "ccess_token_secret\030\006 \001(\tBN\202\265\030Jrequired f" +
+      "or OAuth v1 and signing the message, pro" +
+      "vided with access token.\022\220\001\n\010is_valid\030\007 " +
+      "\001(\010B~\202\265\030zIf false, it means access token" +
+      " no longer work (expired, disconnected) " +
+      "and the link is now broken. Inform user " +
+      "to refresh.\"w\n.CEmbeddedClient_Authorize" +
+      "CurrentDevice_Request\022\017\n\007steamid\030\001 \001(\006\022\r" +
+      "\n\005appid\030\002 \001(\r\022\023\n\013device_info\030\003 \001(\t\022\020\n\010de" +
+      "viceid\030\004 \001(\r\"`\n\025CEmbeddedClient_Token\022\017\n" +
+      "\007steamid\030\001 \001(\006\022\024\n\014client_token\030\002 \001(\014\022\016\n\006" +
+      "expiry\030\003 \001(\r\022\020\n\010deviceid\030\004 \001(\r\"a\n(CEmbed" +
+      "dedClient_AuthorizeDevice_Response\022\016\n\006re" +
+      "sult\030\001 \001(\r\022%\n\005token\030\002 \001(\0132\026.CEmbeddedCli" +
+      "ent_Token*\215\001\n\024EInternalAccountType\022\037\n\033k_" +
+      "EInternalSteamAccountType\020\001\022\027\n\023k_EIntern" +
+      "alClanType\020\002\022\026\n\022k_EInternalAppType\020\003\022#\n\037" +
+      "k_EInternalBroadcastChannelType\020\004*\206\002\n\024EE" +
+      "xternalAccountType\022\023\n\017k_EExternalNone\020\000\022" +
+      "\033\n\027k_EExternalSteamAccount\020\001\022\034\n\030k_EExter" +
+      "nalGoogleAccount\020\002\022\036\n\032k_EExternalFaceboo" +
+      "kAccount\020\003\022\035\n\031k_EExternalTwitterAccount\020" +
+      "\004\022\034\n\030k_EExternalTwitchAccount\020\005\022$\n k_EEx" +
+      "ternalYouTubeChannelAccount\020\006\022\033\n\027k_EExte" +
+      "rnalFacebookPage\020\0072\301\017\n\013UserAccount\022\340\001\n#G" +
+      "etAvailableValveDiscountPromotions\0229.CUs" +
+      "erAccount_GetAvailableValveDiscountPromo" +
+      "tions_Request\032:.CUserAccount_GetAvailabl" +
+      "eValveDiscountPromotions_Response\"B\202\265\030>G" +
+      "ets the available promotional discounts " +
+      "available to the user\022\247\001\n\026GetClientWalle" +
+      "tDetails\022,.CUserAccount_GetClientWalletD" +
+      "etails_Request\032\'.CUserAccount_GetWalletD" +
+      "etails_Response\"6\202\265\0302Returns balance and" +
+      " details about any users wallet\022\220\001\n\024GetA" +
+      "ccountLinkStatus\022*.CUserAccount_GetAccou" +
+      "ntLinkStatus_Request\032+.CUserAccount_GetA" +
+      "ccountLinkStatus_Response\"\037\202\265\030\033Fetches a" +
+      "ccount link status\022\223\001\n\023CancelLicenseForA" +
+      "pp\022).CUserAccount_CancelLicenseForApp_Re" +
+      "quest\032*.CUserAccount_CancelLicenseForApp" +
+      "_Response\"%\202\265\030!Cancels a free license fo" +
+      "r a user\022\311\001\n\016GetUserCountry\022$.CUserAccou" +
+      "nt_GetUserCountry_Request\032%.CUserAccount" +
+      "_GetUserCountry_Response\"j\202\265\030fGet the co" +
+      "untry code associated with the passed st" +
+      "eamid (only available for logged-in user" +
+      " or support)\022\304\001\n\027CreateFriendInviteToken" +
+      "\022-.CUserAccount_CreateFriendInviteToken_" +
+      "Request\032..CUserAccount_CreateFriendInvit" +
+      "eToken_Response\"J\202\265\030FCreate a limited-us" +
+      "e token that can be used to create a fri" +
+      "end request\022\241\001\n\025GetFriendInviteTokens\022+." +
+      "CUserAccount_GetFriendInviteTokens_Reque" +
+      "st\032,.CUserAccount_GetFriendInviteTokens_" +
+      "Response\"-\202\265\030)Get the set of active toke" +
+      "ns for the user\022\233\001\n\025ViewFriendInviteToke" +
+      "n\022+.CUserAccount_ViewFriendInviteToken_R" +
+      "equest\032,.CUserAccount_ViewFriendInviteTo" +
+      "ken_Response\"\'\202\265\030#View details about an " +
+      "invite token \022\267\001\n\027RedeemFriendInviteToke" +
+      "n\022-.CUserAccount_RedeemFriendInviteToken" +
+      "_Request\032..CUserAccount_RedeemFriendInvi" +
+      "teToken_Response\"=\202\265\0309Create a friend re" +
+      "lationship using the given invite token\022" +
+      "\242\001\n\027RevokeFriendInviteToken\022-.CUserAccou" +
+      "nt_RevokeFriendInviteToken_Request\032..CUs" +
+      "erAccount_RevokeFriendInviteToken_Respon" +
+      "se\"(\202\265\030$Revoke an active friend invite t" +
+      "oken\022\230\001\n\022RegisterCompatTool\022(.CUserAccou" +
+      "nt_RegisterCompatTool_Request\032).CUserAcc" +
+      "ount_RegisterCompatTool_Response\"-\202\265\030)Re" +
+      "gister intended account usage of a tool\032" +
+      "-\202\265\030)A service to get user account infor" +
+      "mation2\235\002\n\016AccountLinking\022\323\001\n\024GetLinkedA" +
+      "ccountInfo\022-.CAccountLinking_GetLinkedAc" +
+      "countInfo_Request\032..CAccountLinking_GetL" +
+      "inkedAccountInfo_Response\"\\\202\265\030XList all " +
+      "my active linked external accounts; may " +
+      "be requested to return the access token\032" +
+      "5\202\265\0301A service to manage and link to ext" +
+      "ernal accounts2\244\002\n\016EmbeddedClient\022\301\001\n\026Au" +
+      "thorizeCurrentDevice\022/.CEmbeddedClient_A" +
+      "uthorizeCurrentDevice_Request\032).CEmbedde" +
+      "dClient_AuthorizeDevice_Response\"K\202\265\030GUs" +
+      "e a logged-in (password/etc) session to " +
+      "create a durable access token\032N\202\265\030JServi" +
+      "ce to authorize and manage Steam functio" +
+      "ns directly embedded in gamesB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CUserAccount_GetAvailableValveDiscountPromotions_Request_descriptor =
@@ -18931,110 +23065,134 @@ public final class SteammessagesUseraccountSteamclient {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_GetAvailableValveDiscountPromotions_Response_ValveDiscountPromotionDetails_descriptor,
         new java.lang.String[] { "Promotionid", "PromotionDescription", "MinimumCartAmount", "MinimumCartAmountForDisplay", "DiscountAmount", "CurrencyCode", "AvailableUseCount", "PromotionalDiscountType", "LoyaltyRewardId", "LocalizedNameToken", "MaxUseCount", });
-    internal_static_CUserAccount_GetAccountLinkStatus_Request_descriptor =
+    internal_static_CUserAccount_GetClientWalletDetails_Request_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_CUserAccount_GetClientWalletDetails_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CUserAccount_GetClientWalletDetails_Request_descriptor,
+        new java.lang.String[] { "IncludeBalanceInUsd", "WalletRegion", "IncludeFormattedBalance", });
+    internal_static_CUserAccount_GetWalletDetails_Response_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_CUserAccount_GetWalletDetails_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CUserAccount_GetWalletDetails_Response_descriptor,
+        new java.lang.String[] { "HasWallet", "UserCountryCode", "WalletCountryCode", "WalletState", "Balance", "DelayedBalance", "CurrencyCode", "TimeMostRecentTxn", "MostRecentTxnid", "BalanceInUsd", "DelayedBalanceInUsd", "HasWalletInOtherRegions", "OtherRegions", "FormattedBalance", });
+    internal_static_CUserAccount_GetAccountLinkStatus_Request_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CUserAccount_GetAccountLinkStatus_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_GetAccountLinkStatus_Request_descriptor,
         new java.lang.String[] { });
     internal_static_CUserAccount_GetAccountLinkStatus_Response_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CUserAccount_GetAccountLinkStatus_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_GetAccountLinkStatus_Response_descriptor,
         new java.lang.String[] { "Pwid", "IdentityVerification", "PerformedAgeVerification", });
     internal_static_CUserAccount_CancelLicenseForApp_Request_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CUserAccount_CancelLicenseForApp_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_CancelLicenseForApp_Request_descriptor,
         new java.lang.String[] { "Appid", });
     internal_static_CUserAccount_CancelLicenseForApp_Response_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CUserAccount_CancelLicenseForApp_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_CancelLicenseForApp_Response_descriptor,
         new java.lang.String[] { });
+    internal_static_CUserAccount_GetUserCountry_Request_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_CUserAccount_GetUserCountry_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CUserAccount_GetUserCountry_Request_descriptor,
+        new java.lang.String[] { "Steamid", });
+    internal_static_CUserAccount_GetUserCountry_Response_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_CUserAccount_GetUserCountry_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CUserAccount_GetUserCountry_Response_descriptor,
+        new java.lang.String[] { "Country", });
     internal_static_CUserAccount_CreateFriendInviteToken_Request_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CUserAccount_CreateFriendInviteToken_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_CreateFriendInviteToken_Request_descriptor,
         new java.lang.String[] { "InviteLimit", "InviteDuration", "InviteNote", });
     internal_static_CUserAccount_CreateFriendInviteToken_Response_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CUserAccount_CreateFriendInviteToken_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_CreateFriendInviteToken_Response_descriptor,
         new java.lang.String[] { "InviteToken", "InviteLimit", "InviteDuration", "TimeCreated", "Valid", });
     internal_static_CUserAccount_GetFriendInviteTokens_Request_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CUserAccount_GetFriendInviteTokens_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_GetFriendInviteTokens_Request_descriptor,
         new java.lang.String[] { });
     internal_static_CUserAccount_GetFriendInviteTokens_Response_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CUserAccount_GetFriendInviteTokens_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_GetFriendInviteTokens_Response_descriptor,
         new java.lang.String[] { "Tokens", });
     internal_static_CUserAccount_ViewFriendInviteToken_Request_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CUserAccount_ViewFriendInviteToken_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_ViewFriendInviteToken_Request_descriptor,
         new java.lang.String[] { "Steamid", "InviteToken", });
     internal_static_CUserAccount_ViewFriendInviteToken_Response_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CUserAccount_ViewFriendInviteToken_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_ViewFriendInviteToken_Response_descriptor,
         new java.lang.String[] { "Valid", "Steamid", "InviteDuration", });
     internal_static_CUserAccount_RedeemFriendInviteToken_Request_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CUserAccount_RedeemFriendInviteToken_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_RedeemFriendInviteToken_Request_descriptor,
         new java.lang.String[] { "Steamid", "InviteToken", });
     internal_static_CUserAccount_RedeemFriendInviteToken_Response_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CUserAccount_RedeemFriendInviteToken_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_RedeemFriendInviteToken_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CUserAccount_RevokeFriendInviteToken_Request_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CUserAccount_RevokeFriendInviteToken_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_RevokeFriendInviteToken_Request_descriptor,
         new java.lang.String[] { "InviteToken", });
     internal_static_CUserAccount_RevokeFriendInviteToken_Response_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_CUserAccount_RevokeFriendInviteToken_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_RevokeFriendInviteToken_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CUserAccount_RegisterCompatTool_Request_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_CUserAccount_RegisterCompatTool_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_RegisterCompatTool_Request_descriptor,
         new java.lang.String[] { "CompatTool", });
     internal_static_CUserAccount_RegisterCompatTool_Response_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_CUserAccount_RegisterCompatTool_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CUserAccount_RegisterCompatTool_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CAccountLinking_GetLinkedAccountInfo_Request_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_CAccountLinking_GetLinkedAccountInfo_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CAccountLinking_GetLinkedAccountInfo_Request_descriptor,
         new java.lang.String[] { "AccountType", "AccountId", "Filter", "ReturnAccessToken", });
     internal_static_CAccountLinking_GetLinkedAccountInfo_Response_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_CAccountLinking_GetLinkedAccountInfo_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CAccountLinking_GetLinkedAccountInfo_Response_descriptor,
@@ -19046,19 +23204,19 @@ public final class SteammessagesUseraccountSteamclient {
         internal_static_CAccountLinking_GetLinkedAccountInfo_Response_CExternalAccountTuple_Response_descriptor,
         new java.lang.String[] { "ExternalType", "ExternalId", "ExternalUserName", "ExternalUrl", "AccessToken", "AccessTokenSecret", "IsValid", });
     internal_static_CEmbeddedClient_AuthorizeCurrentDevice_Request_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_CEmbeddedClient_AuthorizeCurrentDevice_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CEmbeddedClient_AuthorizeCurrentDevice_Request_descriptor,
         new java.lang.String[] { "Steamid", "Appid", "DeviceInfo", "Deviceid", });
     internal_static_CEmbeddedClient_Token_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_CEmbeddedClient_Token_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CEmbeddedClient_Token_descriptor,
         new java.lang.String[] { "Steamid", "ClientToken", "Expiry", "Deviceid", });
     internal_static_CEmbeddedClient_AuthorizeDevice_Response_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_CEmbeddedClient_AuthorizeDevice_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CEmbeddedClient_AuthorizeDevice_Response_descriptor,
@@ -19070,6 +23228,7 @@ public final class SteammessagesUseraccountSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

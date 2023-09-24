@@ -14,6 +14,1047 @@ public final class SteammessagesShaderSteamclient {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface CShader_GetShaderReportingCadence_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CShader_GetShaderReportingCadence_Request)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CShader_GetShaderReportingCadence_Request}
+   */
+  public static final class CShader_GetShaderReportingCadence_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CShader_GetShaderReportingCadence_Request)
+      CShader_GetShaderReportingCadence_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CShader_GetShaderReportingCadence_Request.newBuilder() to construct.
+    private CShader_GetShaderReportingCadence_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CShader_GetShaderReportingCadence_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CShader_GetShaderReportingCadence_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CShader_GetShaderReportingCadence_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesShaderSteamclient.internal_static_CShader_GetShaderReportingCadence_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesShaderSteamclient.internal_static_CShader_GetShaderReportingCadence_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request.class, SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request other = (SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CShader_GetShaderReportingCadence_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CShader_GetShaderReportingCadence_Request)
+        SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesShaderSteamclient.internal_static_CShader_GetShaderReportingCadence_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesShaderSteamclient.internal_static_CShader_GetShaderReportingCadence_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request.class, SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesShaderSteamclient.internal_static_CShader_GetShaderReportingCadence_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request getDefaultInstanceForType() {
+        return SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request build() {
+        SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request buildPartial() {
+        SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request result = new SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request) {
+          return mergeFrom((SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request other) {
+        if (other == SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CShader_GetShaderReportingCadence_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CShader_GetShaderReportingCadence_Request)
+    private static final SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request();
+    }
+
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CShader_GetShaderReportingCadence_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CShader_GetShaderReportingCadence_Request>() {
+      @java.lang.Override
+      public CShader_GetShaderReportingCadence_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CShader_GetShaderReportingCadence_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CShader_GetShaderReportingCadence_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CShader_GetShaderReportingCadence_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CShader_GetShaderReportingCadence_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CShader_GetShaderReportingCadence_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 rereport_time_threshold = 1;</code>
+     * @return Whether the rereportTimeThreshold field is set.
+     */
+    boolean hasRereportTimeThreshold();
+    /**
+     * <code>optional uint64 rereport_time_threshold = 1;</code>
+     * @return The rereportTimeThreshold.
+     */
+    long getRereportTimeThreshold();
+
+    /**
+     * <code>optional uint32 percent_to_rereport = 2;</code>
+     * @return Whether the percentToRereport field is set.
+     */
+    boolean hasPercentToRereport();
+    /**
+     * <code>optional uint32 percent_to_rereport = 2;</code>
+     * @return The percentToRereport.
+     */
+    int getPercentToRereport();
+  }
+  /**
+   * Protobuf type {@code CShader_GetShaderReportingCadence_Response}
+   */
+  public static final class CShader_GetShaderReportingCadence_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CShader_GetShaderReportingCadence_Response)
+      CShader_GetShaderReportingCadence_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CShader_GetShaderReportingCadence_Response.newBuilder() to construct.
+    private CShader_GetShaderReportingCadence_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CShader_GetShaderReportingCadence_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CShader_GetShaderReportingCadence_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CShader_GetShaderReportingCadence_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              rereportTimeThreshold_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              percentToRereport_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesShaderSteamclient.internal_static_CShader_GetShaderReportingCadence_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesShaderSteamclient.internal_static_CShader_GetShaderReportingCadence_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response.class, SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REREPORT_TIME_THRESHOLD_FIELD_NUMBER = 1;
+    private long rereportTimeThreshold_;
+    /**
+     * <code>optional uint64 rereport_time_threshold = 1;</code>
+     * @return Whether the rereportTimeThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasRereportTimeThreshold() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 rereport_time_threshold = 1;</code>
+     * @return The rereportTimeThreshold.
+     */
+    @java.lang.Override
+    public long getRereportTimeThreshold() {
+      return rereportTimeThreshold_;
+    }
+
+    public static final int PERCENT_TO_REREPORT_FIELD_NUMBER = 2;
+    private int percentToRereport_;
+    /**
+     * <code>optional uint32 percent_to_rereport = 2;</code>
+     * @return Whether the percentToRereport field is set.
+     */
+    @java.lang.Override
+    public boolean hasPercentToRereport() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 percent_to_rereport = 2;</code>
+     * @return The percentToRereport.
+     */
+    @java.lang.Override
+    public int getPercentToRereport() {
+      return percentToRereport_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, rereportTimeThreshold_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, percentToRereport_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, rereportTimeThreshold_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, percentToRereport_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response other = (SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response) obj;
+
+      if (hasRereportTimeThreshold() != other.hasRereportTimeThreshold()) return false;
+      if (hasRereportTimeThreshold()) {
+        if (getRereportTimeThreshold()
+            != other.getRereportTimeThreshold()) return false;
+      }
+      if (hasPercentToRereport() != other.hasPercentToRereport()) return false;
+      if (hasPercentToRereport()) {
+        if (getPercentToRereport()
+            != other.getPercentToRereport()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRereportTimeThreshold()) {
+        hash = (37 * hash) + REREPORT_TIME_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRereportTimeThreshold());
+      }
+      if (hasPercentToRereport()) {
+        hash = (37 * hash) + PERCENT_TO_REREPORT_FIELD_NUMBER;
+        hash = (53 * hash) + getPercentToRereport();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CShader_GetShaderReportingCadence_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CShader_GetShaderReportingCadence_Response)
+        SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesShaderSteamclient.internal_static_CShader_GetShaderReportingCadence_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesShaderSteamclient.internal_static_CShader_GetShaderReportingCadence_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response.class, SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        rereportTimeThreshold_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        percentToRereport_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesShaderSteamclient.internal_static_CShader_GetShaderReportingCadence_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response getDefaultInstanceForType() {
+        return SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response build() {
+        SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response buildPartial() {
+        SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response result = new SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rereportTimeThreshold_ = rereportTimeThreshold_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.percentToRereport_ = percentToRereport_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response) {
+          return mergeFrom((SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response other) {
+        if (other == SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response.getDefaultInstance()) return this;
+        if (other.hasRereportTimeThreshold()) {
+          setRereportTimeThreshold(other.getRereportTimeThreshold());
+        }
+        if (other.hasPercentToRereport()) {
+          setPercentToRereport(other.getPercentToRereport());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long rereportTimeThreshold_ ;
+      /**
+       * <code>optional uint64 rereport_time_threshold = 1;</code>
+       * @return Whether the rereportTimeThreshold field is set.
+       */
+      @java.lang.Override
+      public boolean hasRereportTimeThreshold() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 rereport_time_threshold = 1;</code>
+       * @return The rereportTimeThreshold.
+       */
+      @java.lang.Override
+      public long getRereportTimeThreshold() {
+        return rereportTimeThreshold_;
+      }
+      /**
+       * <code>optional uint64 rereport_time_threshold = 1;</code>
+       * @param value The rereportTimeThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRereportTimeThreshold(long value) {
+        bitField0_ |= 0x00000001;
+        rereportTimeThreshold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 rereport_time_threshold = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRereportTimeThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rereportTimeThreshold_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int percentToRereport_ ;
+      /**
+       * <code>optional uint32 percent_to_rereport = 2;</code>
+       * @return Whether the percentToRereport field is set.
+       */
+      @java.lang.Override
+      public boolean hasPercentToRereport() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 percent_to_rereport = 2;</code>
+       * @return The percentToRereport.
+       */
+      @java.lang.Override
+      public int getPercentToRereport() {
+        return percentToRereport_;
+      }
+      /**
+       * <code>optional uint32 percent_to_rereport = 2;</code>
+       * @param value The percentToRereport to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPercentToRereport(int value) {
+        bitField0_ |= 0x00000002;
+        percentToRereport_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 percent_to_rereport = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPercentToRereport() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        percentToRereport_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CShader_GetShaderReportingCadence_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CShader_GetShaderReportingCadence_Response)
+    private static final SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response();
+    }
+
+    public static SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CShader_GetShaderReportingCadence_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CShader_GetShaderReportingCadence_Response>() {
+      @java.lang.Override
+      public CShader_GetShaderReportingCadence_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CShader_GetShaderReportingCadence_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CShader_GetShaderReportingCadence_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CShader_GetShaderReportingCadence_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesShaderSteamclient.CShader_GetShaderReportingCadence_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CShader_RegisterShader_RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CShader_RegisterShader_Request)
       com.google.protobuf.MessageOrBuilder {
@@ -6885,6 +7926,51 @@ public final class SteammessagesShaderSteamclient {
      * @return The manifestid.
      */
     long getManifestid();
+
+    /**
+     * <code>optional string gpu_desc = 4;</code>
+     * @return Whether the gpuDesc field is set.
+     */
+    boolean hasGpuDesc();
+    /**
+     * <code>optional string gpu_desc = 4;</code>
+     * @return The gpuDesc.
+     */
+    java.lang.String getGpuDesc();
+    /**
+     * <code>optional string gpu_desc = 4;</code>
+     * @return The bytes for gpuDesc.
+     */
+    com.google.protobuf.ByteString
+        getGpuDescBytes();
+
+    /**
+     * <code>optional string driver_desc = 5;</code>
+     * @return Whether the driverDesc field is set.
+     */
+    boolean hasDriverDesc();
+    /**
+     * <code>optional string driver_desc = 5;</code>
+     * @return The driverDesc.
+     */
+    java.lang.String getDriverDesc();
+    /**
+     * <code>optional string driver_desc = 5;</code>
+     * @return The bytes for driverDesc.
+     */
+    com.google.protobuf.ByteString
+        getDriverDescBytes();
+
+    /**
+     * <code>optional bytes depot_encryption_key = 6;</code>
+     * @return Whether the depotEncryptionKey field is set.
+     */
+    boolean hasDepotEncryptionKey();
+    /**
+     * <code>optional bytes depot_encryption_key = 6;</code>
+     * @return The depotEncryptionKey.
+     */
+    com.google.protobuf.ByteString getDepotEncryptionKey();
   }
   /**
    * Protobuf type {@code CShader_GetStaleBucket_Response}
@@ -6899,6 +7985,9 @@ public final class SteammessagesShaderSteamclient {
       super(builder);
     }
     private CShader_GetStaleBucket_Response() {
+      gpuDesc_ = "";
+      driverDesc_ = "";
+      depotEncryptionKey_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -6945,6 +8034,23 @@ public final class SteammessagesShaderSteamclient {
             case 24: {
               bitField0_ |= 0x00000004;
               manifestid_ = input.readUInt64();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              gpuDesc_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              driverDesc_ = bs;
+              break;
+            }
+            case 50: {
+              bitField0_ |= 0x00000020;
+              depotEncryptionKey_ = input.readBytes();
               break;
             }
             default: {
@@ -7037,6 +8143,121 @@ public final class SteammessagesShaderSteamclient {
       return manifestid_;
     }
 
+    public static final int GPU_DESC_FIELD_NUMBER = 4;
+    private volatile java.lang.Object gpuDesc_;
+    /**
+     * <code>optional string gpu_desc = 4;</code>
+     * @return Whether the gpuDesc field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpuDesc() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string gpu_desc = 4;</code>
+     * @return The gpuDesc.
+     */
+    @java.lang.Override
+    public java.lang.String getGpuDesc() {
+      java.lang.Object ref = gpuDesc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          gpuDesc_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string gpu_desc = 4;</code>
+     * @return The bytes for gpuDesc.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGpuDescBytes() {
+      java.lang.Object ref = gpuDesc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gpuDesc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DRIVER_DESC_FIELD_NUMBER = 5;
+    private volatile java.lang.Object driverDesc_;
+    /**
+     * <code>optional string driver_desc = 5;</code>
+     * @return Whether the driverDesc field is set.
+     */
+    @java.lang.Override
+    public boolean hasDriverDesc() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string driver_desc = 5;</code>
+     * @return The driverDesc.
+     */
+    @java.lang.Override
+    public java.lang.String getDriverDesc() {
+      java.lang.Object ref = driverDesc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          driverDesc_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string driver_desc = 5;</code>
+     * @return The bytes for driverDesc.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDriverDescBytes() {
+      java.lang.Object ref = driverDesc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        driverDesc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPOT_ENCRYPTION_KEY_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString depotEncryptionKey_;
+    /**
+     * <code>optional bytes depot_encryption_key = 6;</code>
+     * @return Whether the depotEncryptionKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepotEncryptionKey() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional bytes depot_encryption_key = 6;</code>
+     * @return The depotEncryptionKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDepotEncryptionKey() {
+      return depotEncryptionKey_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7060,6 +8281,15 @@ public final class SteammessagesShaderSteamclient {
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeUInt64(3, manifestid_);
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, gpuDesc_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, driverDesc_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeBytes(6, depotEncryptionKey_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7080,6 +8310,16 @@ public final class SteammessagesShaderSteamclient {
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, manifestid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, gpuDesc_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, driverDesc_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, depotEncryptionKey_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7111,6 +8351,21 @@ public final class SteammessagesShaderSteamclient {
         if (getManifestid()
             != other.getManifestid()) return false;
       }
+      if (hasGpuDesc() != other.hasGpuDesc()) return false;
+      if (hasGpuDesc()) {
+        if (!getGpuDesc()
+            .equals(other.getGpuDesc())) return false;
+      }
+      if (hasDriverDesc() != other.hasDriverDesc()) return false;
+      if (hasDriverDesc()) {
+        if (!getDriverDesc()
+            .equals(other.getDriverDesc())) return false;
+      }
+      if (hasDepotEncryptionKey() != other.hasDepotEncryptionKey()) return false;
+      if (hasDepotEncryptionKey()) {
+        if (!getDepotEncryptionKey()
+            .equals(other.getDepotEncryptionKey())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7135,6 +8390,18 @@ public final class SteammessagesShaderSteamclient {
         hash = (37 * hash) + MANIFESTID_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getManifestid());
+      }
+      if (hasGpuDesc()) {
+        hash = (37 * hash) + GPU_DESC_FIELD_NUMBER;
+        hash = (53 * hash) + getGpuDesc().hashCode();
+      }
+      if (hasDriverDesc()) {
+        hash = (37 * hash) + DRIVER_DESC_FIELD_NUMBER;
+        hash = (53 * hash) + getDriverDesc().hashCode();
+      }
+      if (hasDepotEncryptionKey()) {
+        hash = (37 * hash) + DEPOT_ENCRYPTION_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getDepotEncryptionKey().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7275,6 +8542,12 @@ public final class SteammessagesShaderSteamclient {
         bitField0_ = (bitField0_ & ~0x00000002);
         manifestid_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
+        gpuDesc_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        driverDesc_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        depotEncryptionKey_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -7315,6 +8588,18 @@ public final class SteammessagesShaderSteamclient {
           result.manifestid_ = manifestid_;
           to_bitField0_ |= 0x00000004;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.gpuDesc_ = gpuDesc_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.driverDesc_ = driverDesc_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.depotEncryptionKey_ = depotEncryptionKey_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7372,6 +8657,19 @@ public final class SteammessagesShaderSteamclient {
         }
         if (other.hasManifestid()) {
           setManifestid(other.getManifestid());
+        }
+        if (other.hasGpuDesc()) {
+          bitField0_ |= 0x00000008;
+          gpuDesc_ = other.gpuDesc_;
+          onChanged();
+        }
+        if (other.hasDriverDesc()) {
+          bitField0_ |= 0x00000010;
+          driverDesc_ = other.driverDesc_;
+          onChanged();
+        }
+        if (other.hasDepotEncryptionKey()) {
+          setDepotEncryptionKey(other.getDepotEncryptionKey());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7516,6 +8814,216 @@ public final class SteammessagesShaderSteamclient {
       public Builder clearManifestid() {
         bitField0_ = (bitField0_ & ~0x00000004);
         manifestid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object gpuDesc_ = "";
+      /**
+       * <code>optional string gpu_desc = 4;</code>
+       * @return Whether the gpuDesc field is set.
+       */
+      public boolean hasGpuDesc() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string gpu_desc = 4;</code>
+       * @return The gpuDesc.
+       */
+      public java.lang.String getGpuDesc() {
+        java.lang.Object ref = gpuDesc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            gpuDesc_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string gpu_desc = 4;</code>
+       * @return The bytes for gpuDesc.
+       */
+      public com.google.protobuf.ByteString
+          getGpuDescBytes() {
+        java.lang.Object ref = gpuDesc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gpuDesc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string gpu_desc = 4;</code>
+       * @param value The gpuDesc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGpuDesc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        gpuDesc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string gpu_desc = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGpuDesc() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        gpuDesc_ = getDefaultInstance().getGpuDesc();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string gpu_desc = 4;</code>
+       * @param value The bytes for gpuDesc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGpuDescBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        gpuDesc_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object driverDesc_ = "";
+      /**
+       * <code>optional string driver_desc = 5;</code>
+       * @return Whether the driverDesc field is set.
+       */
+      public boolean hasDriverDesc() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string driver_desc = 5;</code>
+       * @return The driverDesc.
+       */
+      public java.lang.String getDriverDesc() {
+        java.lang.Object ref = driverDesc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            driverDesc_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string driver_desc = 5;</code>
+       * @return The bytes for driverDesc.
+       */
+      public com.google.protobuf.ByteString
+          getDriverDescBytes() {
+        java.lang.Object ref = driverDesc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          driverDesc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string driver_desc = 5;</code>
+       * @param value The driverDesc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDriverDesc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        driverDesc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string driver_desc = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDriverDesc() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        driverDesc_ = getDefaultInstance().getDriverDesc();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string driver_desc = 5;</code>
+       * @param value The bytes for driverDesc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDriverDescBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        driverDesc_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString depotEncryptionKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes depot_encryption_key = 6;</code>
+       * @return Whether the depotEncryptionKey field is set.
+       */
+      @java.lang.Override
+      public boolean hasDepotEncryptionKey() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional bytes depot_encryption_key = 6;</code>
+       * @return The depotEncryptionKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDepotEncryptionKey() {
+        return depotEncryptionKey_;
+      }
+      /**
+       * <code>optional bytes depot_encryption_key = 6;</code>
+       * @param value The depotEncryptionKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepotEncryptionKey(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        depotEncryptionKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes depot_encryption_key = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepotEncryptionKey() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        depotEncryptionKey_ = getDefaultInstance().getDepotEncryptionKey();
         onChanged();
         return this;
       }
@@ -9442,6 +10950,16 @@ public final class SteammessagesShaderSteamclient {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CShader_GetShaderReportingCadence_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CShader_GetShaderReportingCadence_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CShader_GetShaderReportingCadence_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CShader_GetShaderReportingCadence_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CShader_RegisterShader_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9511,63 +11029,87 @@ public final class SteammessagesShaderSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n,steam/steammessages_shader.steamclient" +
-      ".proto\0322steam/steammessages_unified_base" +
-      ".steamclient.proto\"\311\001\n\036CShader_RegisterS" +
-      "hader_Request\022\r\n\005appid\030\001 \001(\r\022\020\n\010gpu_desc" +
-      "\030\002 \001(\t\022\023\n\013driver_desc\030\003 \001(\t\0227\n\007shaders\030\004" +
-      " \003(\0132&.CShader_RegisterShader_Request.Sh" +
-      "ader\0328\n\006Shader\022\025\n\rcache_key_sha\030\001 \001(\014\022\027\n" +
-      "\017shader_code_sha\030\002 \001(\014\"<\n\037CShader_Regist" +
-      "erShader_Response\022\031\n\021requested_codeids\030\001" +
-      " \003(\r\"\240\001\n\032CShader_SendShader_Request\022\r\n\005a" +
-      "ppid\030\001 \001(\r\0227\n\007shaders\030\002 \003(\0132&.CShader_Se" +
-      "ndShader_Request.ShaderCode\032:\n\nShaderCod" +
-      "e\022\027\n\017shader_code_sha\030\001 \001(\014\022\023\n\013shader_cod" +
-      "e\030\002 \001(\014\"\035\n\033CShader_SendShader_Response\"Y" +
-      "\n!CShader_GetBucketManifest_Request\022\r\n\005a" +
-      "ppid\030\001 \001(\r\022\020\n\010gpu_desc\030\002 \001(\t\022\023\n\013driver_d" +
-      "esc\030\003 \001(\t\"]\n\"CShader_GetBucketManifest_R" +
-      "esponse\022\022\n\nmanifestid\030\001 \001(\004\022\021\n\tdepotsize" +
-      "\030\002 \001(\004\022\020\n\010bucketid\030\003 \001(\004\"G\n\036CShader_GetS" +
-      "taleBucket_Request\022\020\n\010gpu_desc\030\001 \001(\t\022\023\n\013" +
-      "driver_desc\030\002 \001(\t\"V\n\037CShader_GetStaleBuc" +
-      "ket_Response\022\020\n\010bucketid\030\001 \001(\004\022\r\n\005appid\030" +
-      "\002 \001(\r\022\022\n\nmanifestid\030\003 \001(\004\"\267\001\n#CShader_Re" +
-      "portExternalBuild_Request\022\r\n\005appid\030\001 \001(\r" +
-      "\022\020\n\010gpu_desc\030\002 \001(\t\022\023\n\013driver_desc\030\003 \001(\t\022" +
-      "\022\n\nmanifestid\030\004 \001(\004\022\027\n\017source_gpu_desc\030\005" +
-      " \001(\t\022\032\n\022source_driver_desc\030\006 \001(\t\022\021\n\tdepo" +
-      "tsize\030\007 \001(\004\"&\n$CShader_ReportExternalBui" +
-      "ld_Response2\273\006\n\006Shader\022\276\001\n\016RegisterShade" +
-      "r\022\037.CShader_RegisterShader_Request\032 .CSh" +
-      "ader_RegisterShader_Response\"i\202\265\030eClient" +
-      " just finished playing a game, detected " +
-      "new shader cache entries and is notifyin" +
-      "g us about them\022\217\001\n\nSendShader\022\033.CShader" +
-      "_SendShader_Request\032\034.CShader_SendShader" +
-      "_Response\"F\202\265\030BClient is sending us actu" +
-      "al compiled shader code that we requeste" +
-      "d\022\255\001\n\021GetBucketManifest\022\".CShader_GetBuc" +
-      "ketManifest_Request\032#.CShader_GetBucketM" +
-      "anifest_Response\"O\202\265\030KClient wants to kn" +
-      "ow the manifest ID to fetch (if any) for" +
-      " a bucket\'s depot\022\216\001\n\016GetStaleBucket\022\037.C" +
-      "Shader_GetStaleBucket_Request\032 .CShader_" +
-      "GetStaleBucket_Response\"9\202\265\0305Job to get " +
-      "a stale bucket given a gpu and driver de" +
-      "sc\022\210\001\n\023ReportExternalBuild\022$.CShader_Rep" +
-      "ortExternalBuild_Request\032%.CShader_Repor" +
-      "tExternalBuild_Response\"$\202\265\030 Report an e" +
-      "xernally built bucket\032\022\202\265\030\016Shader method" +
-      "sB\003\200\001\001"
+      ".proto\032\036steam/steammessages_base.proto\0322" +
+      "steam/steammessages_unified_base.steamcl" +
+      "ient.proto\"+\n)CShader_GetShaderReporting" +
+      "Cadence_Request\"j\n*CShader_GetShaderRepo" +
+      "rtingCadence_Response\022\037\n\027rereport_time_t" +
+      "hreshold\030\001 \001(\004\022\033\n\023percent_to_rereport\030\002 " +
+      "\001(\r\"\311\001\n\036CShader_RegisterShader_Request\022\r" +
+      "\n\005appid\030\001 \001(\r\022\020\n\010gpu_desc\030\002 \001(\t\022\023\n\013drive" +
+      "r_desc\030\003 \001(\t\0227\n\007shaders\030\004 \003(\0132&.CShader_" +
+      "RegisterShader_Request.Shader\0328\n\006Shader\022" +
+      "\025\n\rcache_key_sha\030\001 \001(\014\022\027\n\017shader_code_sh" +
+      "a\030\002 \001(\014\"<\n\037CShader_RegisterShader_Respon" +
+      "se\022\031\n\021requested_codeids\030\001 \003(\r\"\240\001\n\032CShade" +
+      "r_SendShader_Request\022\r\n\005appid\030\001 \001(\r\0227\n\007s" +
+      "haders\030\002 \003(\0132&.CShader_SendShader_Reques" +
+      "t.ShaderCode\032:\n\nShaderCode\022\027\n\017shader_cod" +
+      "e_sha\030\001 \001(\014\022\023\n\013shader_code\030\002 \001(\014\"\035\n\033CSha" +
+      "der_SendShader_Response\"Y\n!CShader_GetBu" +
+      "cketManifest_Request\022\r\n\005appid\030\001 \001(\r\022\020\n\010g" +
+      "pu_desc\030\002 \001(\t\022\023\n\013driver_desc\030\003 \001(\t\"]\n\"CS" +
+      "hader_GetBucketManifest_Response\022\022\n\nmani" +
+      "festid\030\001 \001(\004\022\021\n\tdepotsize\030\002 \001(\004\022\020\n\010bucke" +
+      "tid\030\003 \001(\004\"G\n\036CShader_GetStaleBucket_Requ" +
+      "est\022\020\n\010gpu_desc\030\001 \001(\t\022\023\n\013driver_desc\030\002 \001" +
+      "(\t\"\233\001\n\037CShader_GetStaleBucket_Response\022\020" +
+      "\n\010bucketid\030\001 \001(\004\022\r\n\005appid\030\002 \001(\r\022\022\n\nmanif" +
+      "estid\030\003 \001(\004\022\020\n\010gpu_desc\030\004 \001(\t\022\023\n\013driver_" +
+      "desc\030\005 \001(\t\022\034\n\024depot_encryption_key\030\006 \001(\014" +
+      "\"\267\001\n#CShader_ReportExternalBuild_Request" +
+      "\022\r\n\005appid\030\001 \001(\r\022\020\n\010gpu_desc\030\002 \001(\t\022\023\n\013dri" +
+      "ver_desc\030\003 \001(\t\022\022\n\nmanifestid\030\004 \001(\004\022\027\n\017so" +
+      "urce_gpu_desc\030\005 \001(\t\022\032\n\022source_driver_des" +
+      "c\030\006 \001(\t\022\021\n\tdepotsize\030\007 \001(\004\"&\n$CShader_Re" +
+      "portExternalBuild_Response2\371\007\n\006Shader\022\273\001" +
+      "\n\031GetShaderReportingCadence\022*.CShader_Ge" +
+      "tShaderReportingCadence_Request\032+.CShade" +
+      "r_GetShaderReportingCadence_Response\"E\202\265" +
+      "\030AInformation about how often a client s" +
+      "hould re-report shader hits\022\276\001\n\016Register" +
+      "Shader\022\037.CShader_RegisterShader_Request\032" +
+      " .CShader_RegisterShader_Response\"i\202\265\030eC" +
+      "lient just finished playing a game, dete" +
+      "cted new shader cache entries and is not" +
+      "ifying us about them\022\217\001\n\nSendShader\022\033.CS" +
+      "hader_SendShader_Request\032\034.CShader_SendS" +
+      "hader_Response\"F\202\265\030BClient is sending us" +
+      " actual compiled shader code that we req" +
+      "uested\022\255\001\n\021GetBucketManifest\022\".CShader_G" +
+      "etBucketManifest_Request\032#.CShader_GetBu" +
+      "cketManifest_Response\"O\202\265\030KClient wants " +
+      "to know the manifest ID to fetch (if any" +
+      ") for a bucket\'s depot\022\216\001\n\016GetStaleBucke" +
+      "t\022\037.CShader_GetStaleBucket_Request\032 .CSh" +
+      "ader_GetStaleBucket_Response\"9\202\265\0305Job to" +
+      " get a stale bucket given a gpu and driv" +
+      "er desc\022\210\001\n\023ReportExternalBuild\022$.CShade" +
+      "r_ReportExternalBuild_Request\032%.CShader_" +
+      "ReportExternalBuild_Response\"$\202\265\030 Report" +
+      " an exernally built bucket\032\022\202\265\030\016Shader m" +
+      "ethodsB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
-    internal_static_CShader_RegisterShader_Request_descriptor =
+    internal_static_CShader_GetShaderReportingCadence_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_CShader_GetShaderReportingCadence_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CShader_GetShaderReportingCadence_Request_descriptor,
+        new java.lang.String[] { });
+    internal_static_CShader_GetShaderReportingCadence_Response_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_CShader_GetShaderReportingCadence_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CShader_GetShaderReportingCadence_Response_descriptor,
+        new java.lang.String[] { "RereportTimeThreshold", "PercentToRereport", });
+    internal_static_CShader_RegisterShader_Request_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CShader_RegisterShader_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CShader_RegisterShader_Request_descriptor,
@@ -9579,13 +11121,13 @@ public final class SteammessagesShaderSteamclient {
         internal_static_CShader_RegisterShader_Request_Shader_descriptor,
         new java.lang.String[] { "CacheKeySha", "ShaderCodeSha", });
     internal_static_CShader_RegisterShader_Response_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CShader_RegisterShader_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CShader_RegisterShader_Response_descriptor,
         new java.lang.String[] { "RequestedCodeids", });
     internal_static_CShader_SendShader_Request_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CShader_SendShader_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CShader_SendShader_Request_descriptor,
@@ -9597,43 +11139,43 @@ public final class SteammessagesShaderSteamclient {
         internal_static_CShader_SendShader_Request_ShaderCode_descriptor,
         new java.lang.String[] { "ShaderCodeSha", "ShaderCode", });
     internal_static_CShader_SendShader_Response_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CShader_SendShader_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CShader_SendShader_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CShader_GetBucketManifest_Request_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CShader_GetBucketManifest_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CShader_GetBucketManifest_Request_descriptor,
         new java.lang.String[] { "Appid", "GpuDesc", "DriverDesc", });
     internal_static_CShader_GetBucketManifest_Response_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CShader_GetBucketManifest_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CShader_GetBucketManifest_Response_descriptor,
         new java.lang.String[] { "Manifestid", "Depotsize", "Bucketid", });
     internal_static_CShader_GetStaleBucket_Request_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CShader_GetStaleBucket_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CShader_GetStaleBucket_Request_descriptor,
         new java.lang.String[] { "GpuDesc", "DriverDesc", });
     internal_static_CShader_GetStaleBucket_Response_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CShader_GetStaleBucket_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CShader_GetStaleBucket_Response_descriptor,
-        new java.lang.String[] { "Bucketid", "Appid", "Manifestid", });
+        new java.lang.String[] { "Bucketid", "Appid", "Manifestid", "GpuDesc", "DriverDesc", "DepotEncryptionKey", });
     internal_static_CShader_ReportExternalBuild_Request_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CShader_ReportExternalBuild_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CShader_ReportExternalBuild_Request_descriptor,
         new java.lang.String[] { "Appid", "GpuDesc", "DriverDesc", "Manifestid", "SourceGpuDesc", "SourceDriverDesc", "Depotsize", });
     internal_static_CShader_ReportExternalBuild_Response_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CShader_ReportExternalBuild_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CShader_ReportExternalBuild_Response_descriptor,
@@ -9644,6 +11186,7 @@ public final class SteammessagesShaderSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

@@ -14,6 +14,1848 @@ public final class SteammessagesTwofactorSteamclient {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface CTwoFactor_Time_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CTwoFactor_Time_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 sender_time = 1 [(.description) = "Current time on the sender (for stats, don&#92;'t trust this)"];</code>
+     * @return Whether the senderTime field is set.
+     */
+    boolean hasSenderTime();
+    /**
+     * <code>optional uint64 sender_time = 1 [(.description) = "Current time on the sender (for stats, don&#92;'t trust this)"];</code>
+     * @return The senderTime.
+     */
+    long getSenderTime();
+  }
+  /**
+   * Protobuf type {@code CTwoFactor_Time_Request}
+   */
+  public static final class CTwoFactor_Time_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CTwoFactor_Time_Request)
+      CTwoFactor_Time_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CTwoFactor_Time_Request.newBuilder() to construct.
+    private CTwoFactor_Time_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CTwoFactor_Time_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CTwoFactor_Time_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CTwoFactor_Time_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              senderTime_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_Time_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_Time_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SENDER_TIME_FIELD_NUMBER = 1;
+    private long senderTime_;
+    /**
+     * <code>optional uint64 sender_time = 1 [(.description) = "Current time on the sender (for stats, don&#92;'t trust this)"];</code>
+     * @return Whether the senderTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasSenderTime() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 sender_time = 1 [(.description) = "Current time on the sender (for stats, don&#92;'t trust this)"];</code>
+     * @return The senderTime.
+     */
+    @java.lang.Override
+    public long getSenderTime() {
+      return senderTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, senderTime_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, senderTime_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request other = (SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request) obj;
+
+      if (hasSenderTime() != other.hasSenderTime()) return false;
+      if (hasSenderTime()) {
+        if (getSenderTime()
+            != other.getSenderTime()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSenderTime()) {
+        hash = (37 * hash) + SENDER_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSenderTime());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CTwoFactor_Time_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CTwoFactor_Time_Request)
+        SteammessagesTwofactorSteamclient.CTwoFactor_Time_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_Time_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_Time_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        senderTime_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_Time_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request getDefaultInstanceForType() {
+        return SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request build() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request buildPartial() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request result = new SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.senderTime_ = senderTime_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request) {
+          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request other) {
+        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request.getDefaultInstance()) return this;
+        if (other.hasSenderTime()) {
+          setSenderTime(other.getSenderTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long senderTime_ ;
+      /**
+       * <code>optional uint64 sender_time = 1 [(.description) = "Current time on the sender (for stats, don&#92;'t trust this)"];</code>
+       * @return Whether the senderTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasSenderTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 sender_time = 1 [(.description) = "Current time on the sender (for stats, don&#92;'t trust this)"];</code>
+       * @return The senderTime.
+       */
+      @java.lang.Override
+      public long getSenderTime() {
+        return senderTime_;
+      }
+      /**
+       * <code>optional uint64 sender_time = 1 [(.description) = "Current time on the sender (for stats, don&#92;'t trust this)"];</code>
+       * @param value The senderTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderTime(long value) {
+        bitField0_ |= 0x00000001;
+        senderTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 sender_time = 1 [(.description) = "Current time on the sender (for stats, don&#92;'t trust this)"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSenderTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        senderTime_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CTwoFactor_Time_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CTwoFactor_Time_Request)
+    private static final SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request();
+    }
+
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_Time_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_Time_Request>() {
+      @java.lang.Override
+      public CTwoFactor_Time_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CTwoFactor_Time_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CTwoFactor_Time_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CTwoFactor_Time_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesTwofactorSteamclient.CTwoFactor_Time_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CTwoFactor_Time_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CTwoFactor_Time_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 server_time = 1 [(.description) = "Current server time"];</code>
+     * @return Whether the serverTime field is set.
+     */
+    boolean hasServerTime();
+    /**
+     * <code>optional uint64 server_time = 1 [(.description) = "Current server time"];</code>
+     * @return The serverTime.
+     */
+    long getServerTime();
+
+    /**
+     * <code>optional uint64 skew_tolerance_seconds = 2 [(.description) = "Time skew we&#92;'ll tolerate before applying an adjustment"];</code>
+     * @return Whether the skewToleranceSeconds field is set.
+     */
+    boolean hasSkewToleranceSeconds();
+    /**
+     * <code>optional uint64 skew_tolerance_seconds = 2 [(.description) = "Time skew we&#92;'ll tolerate before applying an adjustment"];</code>
+     * @return The skewToleranceSeconds.
+     */
+    long getSkewToleranceSeconds();
+
+    /**
+     * <code>optional uint64 large_time_jink = 3 [(.description) = "Re-sync if local time jitters by this much"];</code>
+     * @return Whether the largeTimeJink field is set.
+     */
+    boolean hasLargeTimeJink();
+    /**
+     * <code>optional uint64 large_time_jink = 3 [(.description) = "Re-sync if local time jitters by this much"];</code>
+     * @return The largeTimeJink.
+     */
+    long getLargeTimeJink();
+
+    /**
+     * <code>optional uint32 probe_frequency_seconds = 4 [(.description) = "Time probe frequency if phone time is synchronized"];</code>
+     * @return Whether the probeFrequencySeconds field is set.
+     */
+    boolean hasProbeFrequencySeconds();
+    /**
+     * <code>optional uint32 probe_frequency_seconds = 4 [(.description) = "Time probe frequency if phone time is synchronized"];</code>
+     * @return The probeFrequencySeconds.
+     */
+    int getProbeFrequencySeconds();
+
+    /**
+     * <code>optional uint32 adjusted_time_probe_frequency_seconds = 5 [(.description) = "Time probe frequency if phone time is not synchronized"];</code>
+     * @return Whether the adjustedTimeProbeFrequencySeconds field is set.
+     */
+    boolean hasAdjustedTimeProbeFrequencySeconds();
+    /**
+     * <code>optional uint32 adjusted_time_probe_frequency_seconds = 5 [(.description) = "Time probe frequency if phone time is not synchronized"];</code>
+     * @return The adjustedTimeProbeFrequencySeconds.
+     */
+    int getAdjustedTimeProbeFrequencySeconds();
+
+    /**
+     * <code>optional uint32 hint_probe_frequency_seconds = 6 [(.description) = "Floor of probe frequency, no matter what"];</code>
+     * @return Whether the hintProbeFrequencySeconds field is set.
+     */
+    boolean hasHintProbeFrequencySeconds();
+    /**
+     * <code>optional uint32 hint_probe_frequency_seconds = 6 [(.description) = "Floor of probe frequency, no matter what"];</code>
+     * @return The hintProbeFrequencySeconds.
+     */
+    int getHintProbeFrequencySeconds();
+
+    /**
+     * <code>optional uint32 sync_timeout = 7 [(.description) = "More than this, and we call the current sync failed"];</code>
+     * @return Whether the syncTimeout field is set.
+     */
+    boolean hasSyncTimeout();
+    /**
+     * <code>optional uint32 sync_timeout = 7 [(.description) = "More than this, and we call the current sync failed"];</code>
+     * @return The syncTimeout.
+     */
+    int getSyncTimeout();
+
+    /**
+     * <code>optional uint32 try_again_seconds = 8 [(.description) = "Seconds to try again after a failed sync"];</code>
+     * @return Whether the tryAgainSeconds field is set.
+     */
+    boolean hasTryAgainSeconds();
+    /**
+     * <code>optional uint32 try_again_seconds = 8 [(.description) = "Seconds to try again after a failed sync"];</code>
+     * @return The tryAgainSeconds.
+     */
+    int getTryAgainSeconds();
+
+    /**
+     * <code>optional uint32 max_attempts = 9 [(.description) = "# times we&#92;'ll ask for server time before we bail"];</code>
+     * @return Whether the maxAttempts field is set.
+     */
+    boolean hasMaxAttempts();
+    /**
+     * <code>optional uint32 max_attempts = 9 [(.description) = "# times we&#92;'ll ask for server time before we bail"];</code>
+     * @return The maxAttempts.
+     */
+    int getMaxAttempts();
+  }
+  /**
+   * Protobuf type {@code CTwoFactor_Time_Response}
+   */
+  public static final class CTwoFactor_Time_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CTwoFactor_Time_Response)
+      CTwoFactor_Time_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CTwoFactor_Time_Response.newBuilder() to construct.
+    private CTwoFactor_Time_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CTwoFactor_Time_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CTwoFactor_Time_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CTwoFactor_Time_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              serverTime_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              skewToleranceSeconds_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              largeTimeJink_ = input.readUInt64();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              probeFrequencySeconds_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              adjustedTimeProbeFrequencySeconds_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              hintProbeFrequencySeconds_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              syncTimeout_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              tryAgainSeconds_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              maxAttempts_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_Time_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_Time_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SERVER_TIME_FIELD_NUMBER = 1;
+    private long serverTime_;
+    /**
+     * <code>optional uint64 server_time = 1 [(.description) = "Current server time"];</code>
+     * @return Whether the serverTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerTime() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 server_time = 1 [(.description) = "Current server time"];</code>
+     * @return The serverTime.
+     */
+    @java.lang.Override
+    public long getServerTime() {
+      return serverTime_;
+    }
+
+    public static final int SKEW_TOLERANCE_SECONDS_FIELD_NUMBER = 2;
+    private long skewToleranceSeconds_;
+    /**
+     * <code>optional uint64 skew_tolerance_seconds = 2 [(.description) = "Time skew we&#92;'ll tolerate before applying an adjustment"];</code>
+     * @return Whether the skewToleranceSeconds field is set.
+     */
+    @java.lang.Override
+    public boolean hasSkewToleranceSeconds() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 skew_tolerance_seconds = 2 [(.description) = "Time skew we&#92;'ll tolerate before applying an adjustment"];</code>
+     * @return The skewToleranceSeconds.
+     */
+    @java.lang.Override
+    public long getSkewToleranceSeconds() {
+      return skewToleranceSeconds_;
+    }
+
+    public static final int LARGE_TIME_JINK_FIELD_NUMBER = 3;
+    private long largeTimeJink_;
+    /**
+     * <code>optional uint64 large_time_jink = 3 [(.description) = "Re-sync if local time jitters by this much"];</code>
+     * @return Whether the largeTimeJink field is set.
+     */
+    @java.lang.Override
+    public boolean hasLargeTimeJink() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint64 large_time_jink = 3 [(.description) = "Re-sync if local time jitters by this much"];</code>
+     * @return The largeTimeJink.
+     */
+    @java.lang.Override
+    public long getLargeTimeJink() {
+      return largeTimeJink_;
+    }
+
+    public static final int PROBE_FREQUENCY_SECONDS_FIELD_NUMBER = 4;
+    private int probeFrequencySeconds_;
+    /**
+     * <code>optional uint32 probe_frequency_seconds = 4 [(.description) = "Time probe frequency if phone time is synchronized"];</code>
+     * @return Whether the probeFrequencySeconds field is set.
+     */
+    @java.lang.Override
+    public boolean hasProbeFrequencySeconds() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 probe_frequency_seconds = 4 [(.description) = "Time probe frequency if phone time is synchronized"];</code>
+     * @return The probeFrequencySeconds.
+     */
+    @java.lang.Override
+    public int getProbeFrequencySeconds() {
+      return probeFrequencySeconds_;
+    }
+
+    public static final int ADJUSTED_TIME_PROBE_FREQUENCY_SECONDS_FIELD_NUMBER = 5;
+    private int adjustedTimeProbeFrequencySeconds_;
+    /**
+     * <code>optional uint32 adjusted_time_probe_frequency_seconds = 5 [(.description) = "Time probe frequency if phone time is not synchronized"];</code>
+     * @return Whether the adjustedTimeProbeFrequencySeconds field is set.
+     */
+    @java.lang.Override
+    public boolean hasAdjustedTimeProbeFrequencySeconds() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint32 adjusted_time_probe_frequency_seconds = 5 [(.description) = "Time probe frequency if phone time is not synchronized"];</code>
+     * @return The adjustedTimeProbeFrequencySeconds.
+     */
+    @java.lang.Override
+    public int getAdjustedTimeProbeFrequencySeconds() {
+      return adjustedTimeProbeFrequencySeconds_;
+    }
+
+    public static final int HINT_PROBE_FREQUENCY_SECONDS_FIELD_NUMBER = 6;
+    private int hintProbeFrequencySeconds_;
+    /**
+     * <code>optional uint32 hint_probe_frequency_seconds = 6 [(.description) = "Floor of probe frequency, no matter what"];</code>
+     * @return Whether the hintProbeFrequencySeconds field is set.
+     */
+    @java.lang.Override
+    public boolean hasHintProbeFrequencySeconds() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional uint32 hint_probe_frequency_seconds = 6 [(.description) = "Floor of probe frequency, no matter what"];</code>
+     * @return The hintProbeFrequencySeconds.
+     */
+    @java.lang.Override
+    public int getHintProbeFrequencySeconds() {
+      return hintProbeFrequencySeconds_;
+    }
+
+    public static final int SYNC_TIMEOUT_FIELD_NUMBER = 7;
+    private int syncTimeout_;
+    /**
+     * <code>optional uint32 sync_timeout = 7 [(.description) = "More than this, and we call the current sync failed"];</code>
+     * @return Whether the syncTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasSyncTimeout() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional uint32 sync_timeout = 7 [(.description) = "More than this, and we call the current sync failed"];</code>
+     * @return The syncTimeout.
+     */
+    @java.lang.Override
+    public int getSyncTimeout() {
+      return syncTimeout_;
+    }
+
+    public static final int TRY_AGAIN_SECONDS_FIELD_NUMBER = 8;
+    private int tryAgainSeconds_;
+    /**
+     * <code>optional uint32 try_again_seconds = 8 [(.description) = "Seconds to try again after a failed sync"];</code>
+     * @return Whether the tryAgainSeconds field is set.
+     */
+    @java.lang.Override
+    public boolean hasTryAgainSeconds() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 try_again_seconds = 8 [(.description) = "Seconds to try again after a failed sync"];</code>
+     * @return The tryAgainSeconds.
+     */
+    @java.lang.Override
+    public int getTryAgainSeconds() {
+      return tryAgainSeconds_;
+    }
+
+    public static final int MAX_ATTEMPTS_FIELD_NUMBER = 9;
+    private int maxAttempts_;
+    /**
+     * <code>optional uint32 max_attempts = 9 [(.description) = "# times we&#92;'ll ask for server time before we bail"];</code>
+     * @return Whether the maxAttempts field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxAttempts() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional uint32 max_attempts = 9 [(.description) = "# times we&#92;'ll ask for server time before we bail"];</code>
+     * @return The maxAttempts.
+     */
+    @java.lang.Override
+    public int getMaxAttempts() {
+      return maxAttempts_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, serverTime_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(2, skewToleranceSeconds_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(3, largeTimeJink_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(4, probeFrequencySeconds_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt32(5, adjustedTimeProbeFrequencySeconds_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeUInt32(6, hintProbeFrequencySeconds_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeUInt32(7, syncTimeout_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(8, tryAgainSeconds_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeUInt32(9, maxAttempts_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, serverTime_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, skewToleranceSeconds_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, largeTimeJink_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, probeFrequencySeconds_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, adjustedTimeProbeFrequencySeconds_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, hintProbeFrequencySeconds_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, syncTimeout_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, tryAgainSeconds_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, maxAttempts_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response other = (SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response) obj;
+
+      if (hasServerTime() != other.hasServerTime()) return false;
+      if (hasServerTime()) {
+        if (getServerTime()
+            != other.getServerTime()) return false;
+      }
+      if (hasSkewToleranceSeconds() != other.hasSkewToleranceSeconds()) return false;
+      if (hasSkewToleranceSeconds()) {
+        if (getSkewToleranceSeconds()
+            != other.getSkewToleranceSeconds()) return false;
+      }
+      if (hasLargeTimeJink() != other.hasLargeTimeJink()) return false;
+      if (hasLargeTimeJink()) {
+        if (getLargeTimeJink()
+            != other.getLargeTimeJink()) return false;
+      }
+      if (hasProbeFrequencySeconds() != other.hasProbeFrequencySeconds()) return false;
+      if (hasProbeFrequencySeconds()) {
+        if (getProbeFrequencySeconds()
+            != other.getProbeFrequencySeconds()) return false;
+      }
+      if (hasAdjustedTimeProbeFrequencySeconds() != other.hasAdjustedTimeProbeFrequencySeconds()) return false;
+      if (hasAdjustedTimeProbeFrequencySeconds()) {
+        if (getAdjustedTimeProbeFrequencySeconds()
+            != other.getAdjustedTimeProbeFrequencySeconds()) return false;
+      }
+      if (hasHintProbeFrequencySeconds() != other.hasHintProbeFrequencySeconds()) return false;
+      if (hasHintProbeFrequencySeconds()) {
+        if (getHintProbeFrequencySeconds()
+            != other.getHintProbeFrequencySeconds()) return false;
+      }
+      if (hasSyncTimeout() != other.hasSyncTimeout()) return false;
+      if (hasSyncTimeout()) {
+        if (getSyncTimeout()
+            != other.getSyncTimeout()) return false;
+      }
+      if (hasTryAgainSeconds() != other.hasTryAgainSeconds()) return false;
+      if (hasTryAgainSeconds()) {
+        if (getTryAgainSeconds()
+            != other.getTryAgainSeconds()) return false;
+      }
+      if (hasMaxAttempts() != other.hasMaxAttempts()) return false;
+      if (hasMaxAttempts()) {
+        if (getMaxAttempts()
+            != other.getMaxAttempts()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasServerTime()) {
+        hash = (37 * hash) + SERVER_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getServerTime());
+      }
+      if (hasSkewToleranceSeconds()) {
+        hash = (37 * hash) + SKEW_TOLERANCE_SECONDS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSkewToleranceSeconds());
+      }
+      if (hasLargeTimeJink()) {
+        hash = (37 * hash) + LARGE_TIME_JINK_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getLargeTimeJink());
+      }
+      if (hasProbeFrequencySeconds()) {
+        hash = (37 * hash) + PROBE_FREQUENCY_SECONDS_FIELD_NUMBER;
+        hash = (53 * hash) + getProbeFrequencySeconds();
+      }
+      if (hasAdjustedTimeProbeFrequencySeconds()) {
+        hash = (37 * hash) + ADJUSTED_TIME_PROBE_FREQUENCY_SECONDS_FIELD_NUMBER;
+        hash = (53 * hash) + getAdjustedTimeProbeFrequencySeconds();
+      }
+      if (hasHintProbeFrequencySeconds()) {
+        hash = (37 * hash) + HINT_PROBE_FREQUENCY_SECONDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHintProbeFrequencySeconds();
+      }
+      if (hasSyncTimeout()) {
+        hash = (37 * hash) + SYNC_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getSyncTimeout();
+      }
+      if (hasTryAgainSeconds()) {
+        hash = (37 * hash) + TRY_AGAIN_SECONDS_FIELD_NUMBER;
+        hash = (53 * hash) + getTryAgainSeconds();
+      }
+      if (hasMaxAttempts()) {
+        hash = (37 * hash) + MAX_ATTEMPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxAttempts();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CTwoFactor_Time_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CTwoFactor_Time_Response)
+        SteammessagesTwofactorSteamclient.CTwoFactor_Time_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_Time_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_Time_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        serverTime_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        skewToleranceSeconds_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        largeTimeJink_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        probeFrequencySeconds_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        adjustedTimeProbeFrequencySeconds_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        hintProbeFrequencySeconds_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        syncTimeout_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        tryAgainSeconds_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        maxAttempts_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_Time_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response getDefaultInstanceForType() {
+        return SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response build() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response buildPartial() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response result = new SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.serverTime_ = serverTime_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.skewToleranceSeconds_ = skewToleranceSeconds_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.largeTimeJink_ = largeTimeJink_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.probeFrequencySeconds_ = probeFrequencySeconds_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.adjustedTimeProbeFrequencySeconds_ = adjustedTimeProbeFrequencySeconds_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.hintProbeFrequencySeconds_ = hintProbeFrequencySeconds_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.syncTimeout_ = syncTimeout_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.tryAgainSeconds_ = tryAgainSeconds_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.maxAttempts_ = maxAttempts_;
+          to_bitField0_ |= 0x00000100;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response) {
+          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response other) {
+        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response.getDefaultInstance()) return this;
+        if (other.hasServerTime()) {
+          setServerTime(other.getServerTime());
+        }
+        if (other.hasSkewToleranceSeconds()) {
+          setSkewToleranceSeconds(other.getSkewToleranceSeconds());
+        }
+        if (other.hasLargeTimeJink()) {
+          setLargeTimeJink(other.getLargeTimeJink());
+        }
+        if (other.hasProbeFrequencySeconds()) {
+          setProbeFrequencySeconds(other.getProbeFrequencySeconds());
+        }
+        if (other.hasAdjustedTimeProbeFrequencySeconds()) {
+          setAdjustedTimeProbeFrequencySeconds(other.getAdjustedTimeProbeFrequencySeconds());
+        }
+        if (other.hasHintProbeFrequencySeconds()) {
+          setHintProbeFrequencySeconds(other.getHintProbeFrequencySeconds());
+        }
+        if (other.hasSyncTimeout()) {
+          setSyncTimeout(other.getSyncTimeout());
+        }
+        if (other.hasTryAgainSeconds()) {
+          setTryAgainSeconds(other.getTryAgainSeconds());
+        }
+        if (other.hasMaxAttempts()) {
+          setMaxAttempts(other.getMaxAttempts());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long serverTime_ ;
+      /**
+       * <code>optional uint64 server_time = 1 [(.description) = "Current server time"];</code>
+       * @return Whether the serverTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasServerTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 server_time = 1 [(.description) = "Current server time"];</code>
+       * @return The serverTime.
+       */
+      @java.lang.Override
+      public long getServerTime() {
+        return serverTime_;
+      }
+      /**
+       * <code>optional uint64 server_time = 1 [(.description) = "Current server time"];</code>
+       * @param value The serverTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerTime(long value) {
+        bitField0_ |= 0x00000001;
+        serverTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 server_time = 1 [(.description) = "Current server time"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        serverTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long skewToleranceSeconds_ ;
+      /**
+       * <code>optional uint64 skew_tolerance_seconds = 2 [(.description) = "Time skew we&#92;'ll tolerate before applying an adjustment"];</code>
+       * @return Whether the skewToleranceSeconds field is set.
+       */
+      @java.lang.Override
+      public boolean hasSkewToleranceSeconds() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 skew_tolerance_seconds = 2 [(.description) = "Time skew we&#92;'ll tolerate before applying an adjustment"];</code>
+       * @return The skewToleranceSeconds.
+       */
+      @java.lang.Override
+      public long getSkewToleranceSeconds() {
+        return skewToleranceSeconds_;
+      }
+      /**
+       * <code>optional uint64 skew_tolerance_seconds = 2 [(.description) = "Time skew we&#92;'ll tolerate before applying an adjustment"];</code>
+       * @param value The skewToleranceSeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSkewToleranceSeconds(long value) {
+        bitField0_ |= 0x00000002;
+        skewToleranceSeconds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 skew_tolerance_seconds = 2 [(.description) = "Time skew we&#92;'ll tolerate before applying an adjustment"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSkewToleranceSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        skewToleranceSeconds_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long largeTimeJink_ ;
+      /**
+       * <code>optional uint64 large_time_jink = 3 [(.description) = "Re-sync if local time jitters by this much"];</code>
+       * @return Whether the largeTimeJink field is set.
+       */
+      @java.lang.Override
+      public boolean hasLargeTimeJink() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint64 large_time_jink = 3 [(.description) = "Re-sync if local time jitters by this much"];</code>
+       * @return The largeTimeJink.
+       */
+      @java.lang.Override
+      public long getLargeTimeJink() {
+        return largeTimeJink_;
+      }
+      /**
+       * <code>optional uint64 large_time_jink = 3 [(.description) = "Re-sync if local time jitters by this much"];</code>
+       * @param value The largeTimeJink to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLargeTimeJink(long value) {
+        bitField0_ |= 0x00000004;
+        largeTimeJink_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 large_time_jink = 3 [(.description) = "Re-sync if local time jitters by this much"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLargeTimeJink() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        largeTimeJink_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int probeFrequencySeconds_ ;
+      /**
+       * <code>optional uint32 probe_frequency_seconds = 4 [(.description) = "Time probe frequency if phone time is synchronized"];</code>
+       * @return Whether the probeFrequencySeconds field is set.
+       */
+      @java.lang.Override
+      public boolean hasProbeFrequencySeconds() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 probe_frequency_seconds = 4 [(.description) = "Time probe frequency if phone time is synchronized"];</code>
+       * @return The probeFrequencySeconds.
+       */
+      @java.lang.Override
+      public int getProbeFrequencySeconds() {
+        return probeFrequencySeconds_;
+      }
+      /**
+       * <code>optional uint32 probe_frequency_seconds = 4 [(.description) = "Time probe frequency if phone time is synchronized"];</code>
+       * @param value The probeFrequencySeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProbeFrequencySeconds(int value) {
+        bitField0_ |= 0x00000008;
+        probeFrequencySeconds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 probe_frequency_seconds = 4 [(.description) = "Time probe frequency if phone time is synchronized"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProbeFrequencySeconds() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        probeFrequencySeconds_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int adjustedTimeProbeFrequencySeconds_ ;
+      /**
+       * <code>optional uint32 adjusted_time_probe_frequency_seconds = 5 [(.description) = "Time probe frequency if phone time is not synchronized"];</code>
+       * @return Whether the adjustedTimeProbeFrequencySeconds field is set.
+       */
+      @java.lang.Override
+      public boolean hasAdjustedTimeProbeFrequencySeconds() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 adjusted_time_probe_frequency_seconds = 5 [(.description) = "Time probe frequency if phone time is not synchronized"];</code>
+       * @return The adjustedTimeProbeFrequencySeconds.
+       */
+      @java.lang.Override
+      public int getAdjustedTimeProbeFrequencySeconds() {
+        return adjustedTimeProbeFrequencySeconds_;
+      }
+      /**
+       * <code>optional uint32 adjusted_time_probe_frequency_seconds = 5 [(.description) = "Time probe frequency if phone time is not synchronized"];</code>
+       * @param value The adjustedTimeProbeFrequencySeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdjustedTimeProbeFrequencySeconds(int value) {
+        bitField0_ |= 0x00000010;
+        adjustedTimeProbeFrequencySeconds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 adjusted_time_probe_frequency_seconds = 5 [(.description) = "Time probe frequency if phone time is not synchronized"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdjustedTimeProbeFrequencySeconds() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        adjustedTimeProbeFrequencySeconds_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int hintProbeFrequencySeconds_ ;
+      /**
+       * <code>optional uint32 hint_probe_frequency_seconds = 6 [(.description) = "Floor of probe frequency, no matter what"];</code>
+       * @return Whether the hintProbeFrequencySeconds field is set.
+       */
+      @java.lang.Override
+      public boolean hasHintProbeFrequencySeconds() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint32 hint_probe_frequency_seconds = 6 [(.description) = "Floor of probe frequency, no matter what"];</code>
+       * @return The hintProbeFrequencySeconds.
+       */
+      @java.lang.Override
+      public int getHintProbeFrequencySeconds() {
+        return hintProbeFrequencySeconds_;
+      }
+      /**
+       * <code>optional uint32 hint_probe_frequency_seconds = 6 [(.description) = "Floor of probe frequency, no matter what"];</code>
+       * @param value The hintProbeFrequencySeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHintProbeFrequencySeconds(int value) {
+        bitField0_ |= 0x00000020;
+        hintProbeFrequencySeconds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 hint_probe_frequency_seconds = 6 [(.description) = "Floor of probe frequency, no matter what"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHintProbeFrequencySeconds() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        hintProbeFrequencySeconds_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int syncTimeout_ ;
+      /**
+       * <code>optional uint32 sync_timeout = 7 [(.description) = "More than this, and we call the current sync failed"];</code>
+       * @return Whether the syncTimeout field is set.
+       */
+      @java.lang.Override
+      public boolean hasSyncTimeout() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional uint32 sync_timeout = 7 [(.description) = "More than this, and we call the current sync failed"];</code>
+       * @return The syncTimeout.
+       */
+      @java.lang.Override
+      public int getSyncTimeout() {
+        return syncTimeout_;
+      }
+      /**
+       * <code>optional uint32 sync_timeout = 7 [(.description) = "More than this, and we call the current sync failed"];</code>
+       * @param value The syncTimeout to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSyncTimeout(int value) {
+        bitField0_ |= 0x00000040;
+        syncTimeout_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 sync_timeout = 7 [(.description) = "More than this, and we call the current sync failed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSyncTimeout() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        syncTimeout_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int tryAgainSeconds_ ;
+      /**
+       * <code>optional uint32 try_again_seconds = 8 [(.description) = "Seconds to try again after a failed sync"];</code>
+       * @return Whether the tryAgainSeconds field is set.
+       */
+      @java.lang.Override
+      public boolean hasTryAgainSeconds() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 try_again_seconds = 8 [(.description) = "Seconds to try again after a failed sync"];</code>
+       * @return The tryAgainSeconds.
+       */
+      @java.lang.Override
+      public int getTryAgainSeconds() {
+        return tryAgainSeconds_;
+      }
+      /**
+       * <code>optional uint32 try_again_seconds = 8 [(.description) = "Seconds to try again after a failed sync"];</code>
+       * @param value The tryAgainSeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTryAgainSeconds(int value) {
+        bitField0_ |= 0x00000080;
+        tryAgainSeconds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 try_again_seconds = 8 [(.description) = "Seconds to try again after a failed sync"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTryAgainSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        tryAgainSeconds_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int maxAttempts_ ;
+      /**
+       * <code>optional uint32 max_attempts = 9 [(.description) = "# times we&#92;'ll ask for server time before we bail"];</code>
+       * @return Whether the maxAttempts field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxAttempts() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint32 max_attempts = 9 [(.description) = "# times we&#92;'ll ask for server time before we bail"];</code>
+       * @return The maxAttempts.
+       */
+      @java.lang.Override
+      public int getMaxAttempts() {
+        return maxAttempts_;
+      }
+      /**
+       * <code>optional uint32 max_attempts = 9 [(.description) = "# times we&#92;'ll ask for server time before we bail"];</code>
+       * @param value The maxAttempts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxAttempts(int value) {
+        bitField0_ |= 0x00000100;
+        maxAttempts_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 max_attempts = 9 [(.description) = "# times we&#92;'ll ask for server time before we bail"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxAttempts() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        maxAttempts_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CTwoFactor_Time_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CTwoFactor_Time_Response)
+    private static final SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response();
+    }
+
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_Time_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_Time_Response>() {
+      @java.lang.Override
+      public CTwoFactor_Time_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CTwoFactor_Time_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CTwoFactor_Time_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CTwoFactor_Time_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesTwofactorSteamclient.CTwoFactor_Time_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CTwoFactor_Status_RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CTwoFactor_Status_Request)
       com.google.protobuf.MessageOrBuilder {
@@ -702,6 +2544,17 @@ public final class SteammessagesTwofactorSteamclient {
      * @return The timeTransferred.
      */
     int getTimeTransferred();
+
+    /**
+     * <code>optional uint32 version = 14 [(.description) = "Current token version"];</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <code>optional uint32 version = 14 [(.description) = "Current token version"];</code>
+     * @return The version.
+     */
+    int getVersion();
   }
   /**
    * Protobuf type {@code CTwoFactor_Status_Response}
@@ -818,6 +2671,11 @@ public final class SteammessagesTwofactorSteamclient {
             case 104: {
               bitField0_ |= 0x00001000;
               timeTransferred_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00002000;
+              version_ = input.readUInt32();
               break;
             }
             default: {
@@ -1187,6 +3045,25 @@ public final class SteammessagesTwofactorSteamclient {
       return timeTransferred_;
     }
 
+    public static final int VERSION_FIELD_NUMBER = 14;
+    private int version_;
+    /**
+     * <code>optional uint32 version = 14 [(.description) = "Current token version"];</code>
+     * @return Whether the version field is set.
+     */
+    @java.lang.Override
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>optional uint32 version = 14 [(.description) = "Current token version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public int getVersion() {
+      return version_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1239,6 +3116,9 @@ public final class SteammessagesTwofactorSteamclient {
       }
       if (((bitField0_ & 0x00001000) != 0)) {
         output.writeUInt32(13, timeTransferred_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        output.writeUInt32(14, version_);
       }
       unknownFields.writeTo(output);
     }
@@ -1297,6 +3177,10 @@ public final class SteammessagesTwofactorSteamclient {
       if (((bitField0_ & 0x00001000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, timeTransferred_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, version_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1378,6 +3262,11 @@ public final class SteammessagesTwofactorSteamclient {
         if (getTimeTransferred()
             != other.getTimeTransferred()) return false;
       }
+      if (hasVersion() != other.hasVersion()) return false;
+      if (hasVersion()) {
+        if (getVersion()
+            != other.getVersion()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1443,6 +3332,10 @@ public final class SteammessagesTwofactorSteamclient {
       if (hasTimeTransferred()) {
         hash = (37 * hash) + TIME_TRANSFERRED_FIELD_NUMBER;
         hash = (53 * hash) + getTimeTransferred();
+      }
+      if (hasVersion()) {
+        hash = (37 * hash) + VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getVersion();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1603,6 +3496,8 @@ public final class SteammessagesTwofactorSteamclient {
         bitField0_ = (bitField0_ & ~0x00000800);
         timeTransferred_ = 0;
         bitField0_ = (bitField0_ & ~0x00001000);
+        version_ = 0;
+        bitField0_ = (bitField0_ & ~0x00002000);
         return this;
       }
 
@@ -1682,6 +3577,10 @@ public final class SteammessagesTwofactorSteamclient {
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.timeTransferred_ = timeTransferred_;
           to_bitField0_ |= 0x00001000;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.version_ = version_;
+          to_bitField0_ |= 0x00002000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -1776,6 +3675,9 @@ public final class SteammessagesTwofactorSteamclient {
         }
         if (other.hasTimeTransferred()) {
           setTimeTransferred(other.getTimeTransferred());
+        }
+        if (other.hasVersion()) {
+          setVersion(other.getVersion());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2448,6 +4350,45 @@ public final class SteammessagesTwofactorSteamclient {
         onChanged();
         return this;
       }
+
+      private int version_ ;
+      /**
+       * <code>optional uint32 version = 14 [(.description) = "Current token version"];</code>
+       * @return Whether the version field is set.
+       */
+      @java.lang.Override
+      public boolean hasVersion() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional uint32 version = 14 [(.description) = "Current token version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public int getVersion() {
+        return version_;
+      }
+      /**
+       * <code>optional uint32 version = 14 [(.description) = "Current token version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(int value) {
+        bitField0_ |= 0x00002000;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 version = 14 [(.description) = "Current token version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        version_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2607,6 +4548,17 @@ public final class SteammessagesTwofactorSteamclient {
      */
     com.google.protobuf.ByteString
         getHttpHeadersBytes(int index);
+
+    /**
+     * <code>optional uint32 version = 8 [default = 1, (.description) = "What the version of our token should be"];</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <code>optional uint32 version = 8 [default = 1, (.description) = "What the version of our token should be"];</code>
+     * @return The version.
+     */
+    int getVersion();
   }
   /**
    * Protobuf type {@code CTwoFactor_AddAuthenticator_Request}
@@ -2624,6 +4576,7 @@ public final class SteammessagesTwofactorSteamclient {
       deviceIdentifier_ = "";
       smsPhoneId_ = "";
       httpHeaders_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      version_ = 1;
     }
 
     @java.lang.Override
@@ -2696,6 +4649,11 @@ public final class SteammessagesTwofactorSteamclient {
                 mutable_bitField0_ |= 0x00000040;
               }
               httpHeaders_.add(bs);
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000040;
+              version_ = input.readUInt32();
               break;
             }
             default: {
@@ -2941,6 +4899,25 @@ public final class SteammessagesTwofactorSteamclient {
       return httpHeaders_.getByteString(index);
     }
 
+    public static final int VERSION_FIELD_NUMBER = 8;
+    private int version_;
+    /**
+     * <code>optional uint32 version = 8 [default = 1, (.description) = "What the version of our token should be"];</code>
+     * @return Whether the version field is set.
+     */
+    @java.lang.Override
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional uint32 version = 8 [default = 1, (.description) = "What the version of our token should be"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public int getVersion() {
+      return version_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2975,6 +4952,9 @@ public final class SteammessagesTwofactorSteamclient {
       }
       for (int i = 0; i < httpHeaders_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, httpHeaders_.getRaw(i));
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeUInt32(8, version_);
       }
       unknownFields.writeTo(output);
     }
@@ -3014,6 +4994,10 @@ public final class SteammessagesTwofactorSteamclient {
         }
         size += dataSize;
         size += 1 * getHttpHeadersList().size();
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, version_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3062,6 +5046,11 @@ public final class SteammessagesTwofactorSteamclient {
       }
       if (!getHttpHeadersList()
           .equals(other.getHttpHeadersList())) return false;
+      if (hasVersion() != other.hasVersion()) return false;
+      if (hasVersion()) {
+        if (getVersion()
+            != other.getVersion()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3103,6 +5092,10 @@ public final class SteammessagesTwofactorSteamclient {
       if (getHttpHeadersCount() > 0) {
         hash = (37 * hash) + HTTP_HEADERS_FIELD_NUMBER;
         hash = (53 * hash) + getHttpHeadersList().hashCode();
+      }
+      if (hasVersion()) {
+        hash = (37 * hash) + VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getVersion();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3251,6 +5244,8 @@ public final class SteammessagesTwofactorSteamclient {
         bitField0_ = (bitField0_ & ~0x00000020);
         httpHeaders_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000040);
+        version_ = 1;
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -3308,6 +5303,10 @@ public final class SteammessagesTwofactorSteamclient {
           bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.httpHeaders_ = httpHeaders_;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.version_ = version_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3388,6 +5387,9 @@ public final class SteammessagesTwofactorSteamclient {
             httpHeaders_.addAll(other.httpHeaders_);
           }
           onChanged();
+        }
+        if (other.hasVersion()) {
+          setVersion(other.getVersion());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3851,6 +5853,45 @@ public final class SteammessagesTwofactorSteamclient {
         onChanged();
         return this;
       }
+
+      private int version_ = 1;
+      /**
+       * <code>optional uint32 version = 8 [default = 1, (.description) = "What the version of our token should be"];</code>
+       * @return Whether the version field is set.
+       */
+      @java.lang.Override
+      public boolean hasVersion() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 version = 8 [default = 1, (.description) = "What the version of our token should be"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public int getVersion() {
+        return version_;
+      }
+      /**
+       * <code>optional uint32 version = 8 [default = 1, (.description) = "What the version of our token should be"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(int value) {
+        bitField0_ |= 0x00000080;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 version = 8 [default = 1, (.description) = "What the version of our token should be"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        version_ = 1;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4041,6 +6082,23 @@ public final class SteammessagesTwofactorSteamclient {
      * @return The status.
      */
     int getStatus();
+
+    /**
+     * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+     * @return Whether the phoneNumberHint field is set.
+     */
+    boolean hasPhoneNumberHint();
+    /**
+     * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+     * @return The phoneNumberHint.
+     */
+    java.lang.String getPhoneNumberHint();
+    /**
+     * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+     * @return The bytes for phoneNumberHint.
+     */
+    com.google.protobuf.ByteString
+        getPhoneNumberHintBytes();
   }
   /**
    * Protobuf type {@code CTwoFactor_AddAuthenticator_Response}
@@ -4062,6 +6120,7 @@ public final class SteammessagesTwofactorSteamclient {
       tokenGid_ = "";
       identitySecret_ = com.google.protobuf.ByteString.EMPTY;
       secret1_ = com.google.protobuf.ByteString.EMPTY;
+      phoneNumberHint_ = "";
     }
 
     @java.lang.Override
@@ -4147,6 +6206,12 @@ public final class SteammessagesTwofactorSteamclient {
             case 80: {
               bitField0_ |= 0x00000200;
               status_ = input.readInt32();
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              phoneNumberHint_ = bs;
               break;
             }
             default: {
@@ -4488,6 +6553,54 @@ public final class SteammessagesTwofactorSteamclient {
       return status_;
     }
 
+    public static final int PHONE_NUMBER_HINT_FIELD_NUMBER = 11;
+    private volatile java.lang.Object phoneNumberHint_;
+    /**
+     * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+     * @return Whether the phoneNumberHint field is set.
+     */
+    @java.lang.Override
+    public boolean hasPhoneNumberHint() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+     * @return The phoneNumberHint.
+     */
+    @java.lang.Override
+    public java.lang.String getPhoneNumberHint() {
+      java.lang.Object ref = phoneNumberHint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          phoneNumberHint_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+     * @return The bytes for phoneNumberHint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPhoneNumberHintBytes() {
+      java.lang.Object ref = phoneNumberHint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        phoneNumberHint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4531,6 +6644,9 @@ public final class SteammessagesTwofactorSteamclient {
       }
       if (((bitField0_ & 0x00000200) != 0)) {
         output.writeInt32(10, status_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, phoneNumberHint_);
       }
       unknownFields.writeTo(output);
     }
@@ -4576,6 +6692,9 @@ public final class SteammessagesTwofactorSteamclient {
       if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(10, status_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, phoneNumberHint_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4642,6 +6761,11 @@ public final class SteammessagesTwofactorSteamclient {
         if (getStatus()
             != other.getStatus()) return false;
       }
+      if (hasPhoneNumberHint() != other.hasPhoneNumberHint()) return false;
+      if (hasPhoneNumberHint()) {
+        if (!getPhoneNumberHint()
+            .equals(other.getPhoneNumberHint())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4694,6 +6818,10 @@ public final class SteammessagesTwofactorSteamclient {
       if (hasStatus()) {
         hash = (37 * hash) + STATUS_FIELD_NUMBER;
         hash = (53 * hash) + getStatus();
+      }
+      if (hasPhoneNumberHint()) {
+        hash = (37 * hash) + PHONE_NUMBER_HINT_FIELD_NUMBER;
+        hash = (53 * hash) + getPhoneNumberHint().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4848,6 +6976,8 @@ public final class SteammessagesTwofactorSteamclient {
         bitField0_ = (bitField0_ & ~0x00000100);
         status_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
+        phoneNumberHint_ = "";
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -4916,6 +7046,10 @@ public final class SteammessagesTwofactorSteamclient {
           result.status_ = status_;
           to_bitField0_ |= 0x00000200;
         }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.phoneNumberHint_ = phoneNumberHint_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -5002,6 +7136,11 @@ public final class SteammessagesTwofactorSteamclient {
         }
         if (other.hasStatus()) {
           setStatus(other.getStatus());
+        }
+        if (other.hasPhoneNumberHint()) {
+          bitField0_ |= 0x00000400;
+          phoneNumberHint_ = other.phoneNumberHint_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5608,6 +7747,90 @@ public final class SteammessagesTwofactorSteamclient {
       public Builder clearStatus() {
         bitField0_ = (bitField0_ & ~0x00000200);
         status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object phoneNumberHint_ = "";
+      /**
+       * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+       * @return Whether the phoneNumberHint field is set.
+       */
+      public boolean hasPhoneNumberHint() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+       * @return The phoneNumberHint.
+       */
+      public java.lang.String getPhoneNumberHint() {
+        java.lang.Object ref = phoneNumberHint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            phoneNumberHint_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+       * @return The bytes for phoneNumberHint.
+       */
+      public com.google.protobuf.ByteString
+          getPhoneNumberHintBytes() {
+        java.lang.Object ref = phoneNumberHint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phoneNumberHint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+       * @param value The phoneNumberHint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneNumberHint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        phoneNumberHint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPhoneNumberHint() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        phoneNumberHint_ = getDefaultInstance().getPhoneNumberHint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string phone_number_hint = 11 [(.description) = "a portion of the phone number the SMS code was sent to"];</code>
+       * @param value The bytes for phoneNumberHint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneNumberHintBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        phoneNumberHint_ = value;
         onChanged();
         return this;
       }
@@ -6889,6 +9112,17 @@ public final class SteammessagesTwofactorSteamclient {
      */
     com.google.protobuf.ByteString
         getHttpHeadersBytes(int index);
+
+    /**
+     * <code>optional bool validate_sms_code = 6 [(.description) = "When finalizing with an SMS code, pass the request on to the PhoneService to update its state too."];</code>
+     * @return Whether the validateSmsCode field is set.
+     */
+    boolean hasValidateSmsCode();
+    /**
+     * <code>optional bool validate_sms_code = 6 [(.description) = "When finalizing with an SMS code, pass the request on to the PhoneService to update its state too."];</code>
+     * @return The validateSmsCode.
+     */
+    boolean getValidateSmsCode();
   }
   /**
    * Protobuf type {@code CTwoFactor_FinalizeAddAuthenticator_Request}
@@ -6968,6 +9202,11 @@ public final class SteammessagesTwofactorSteamclient {
                 mutable_bitField0_ |= 0x00000010;
               }
               httpHeaders_.add(bs);
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000010;
+              validateSmsCode_ = input.readBool();
               break;
             }
             default: {
@@ -7175,6 +9414,25 @@ public final class SteammessagesTwofactorSteamclient {
       return httpHeaders_.getByteString(index);
     }
 
+    public static final int VALIDATE_SMS_CODE_FIELD_NUMBER = 6;
+    private boolean validateSmsCode_;
+    /**
+     * <code>optional bool validate_sms_code = 6 [(.description) = "When finalizing with an SMS code, pass the request on to the PhoneService to update its state too."];</code>
+     * @return Whether the validateSmsCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasValidateSmsCode() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional bool validate_sms_code = 6 [(.description) = "When finalizing with an SMS code, pass the request on to the PhoneService to update its state too."];</code>
+     * @return The validateSmsCode.
+     */
+    @java.lang.Override
+    public boolean getValidateSmsCode() {
+      return validateSmsCode_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7203,6 +9461,9 @@ public final class SteammessagesTwofactorSteamclient {
       }
       for (int i = 0; i < httpHeaders_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, httpHeaders_.getRaw(i));
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeBool(6, validateSmsCode_);
       }
       unknownFields.writeTo(output);
     }
@@ -7234,6 +9495,10 @@ public final class SteammessagesTwofactorSteamclient {
         }
         size += dataSize;
         size += 1 * getHttpHeadersList().size();
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, validateSmsCode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7272,6 +9537,11 @@ public final class SteammessagesTwofactorSteamclient {
       }
       if (!getHttpHeadersList()
           .equals(other.getHttpHeadersList())) return false;
+      if (hasValidateSmsCode() != other.hasValidateSmsCode()) return false;
+      if (hasValidateSmsCode()) {
+        if (getValidateSmsCode()
+            != other.getValidateSmsCode()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7304,6 +9574,11 @@ public final class SteammessagesTwofactorSteamclient {
       if (getHttpHeadersCount() > 0) {
         hash = (37 * hash) + HTTP_HEADERS_FIELD_NUMBER;
         hash = (53 * hash) + getHttpHeadersList().hashCode();
+      }
+      if (hasValidateSmsCode()) {
+        hash = (37 * hash) + VALIDATE_SMS_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getValidateSmsCode());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7448,6 +9723,8 @@ public final class SteammessagesTwofactorSteamclient {
         bitField0_ = (bitField0_ & ~0x00000008);
         httpHeaders_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
+        validateSmsCode_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -7497,6 +9774,10 @@ public final class SteammessagesTwofactorSteamclient {
           bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.httpHeaders_ = httpHeaders_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.validateSmsCode_ = validateSmsCode_;
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7571,6 +9852,9 @@ public final class SteammessagesTwofactorSteamclient {
             httpHeaders_.addAll(other.httpHeaders_);
           }
           onChanged();
+        }
+        if (other.hasValidateSmsCode()) {
+          setValidateSmsCode(other.getValidateSmsCode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7953,6 +10237,45 @@ public final class SteammessagesTwofactorSteamclient {
   }
   ensureHttpHeadersIsMutable();
         httpHeaders_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean validateSmsCode_ ;
+      /**
+       * <code>optional bool validate_sms_code = 6 [(.description) = "When finalizing with an SMS code, pass the request on to the PhoneService to update its state too."];</code>
+       * @return Whether the validateSmsCode field is set.
+       */
+      @java.lang.Override
+      public boolean hasValidateSmsCode() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional bool validate_sms_code = 6 [(.description) = "When finalizing with an SMS code, pass the request on to the PhoneService to update its state too."];</code>
+       * @return The validateSmsCode.
+       */
+      @java.lang.Override
+      public boolean getValidateSmsCode() {
+        return validateSmsCode_;
+      }
+      /**
+       * <code>optional bool validate_sms_code = 6 [(.description) = "When finalizing with an SMS code, pass the request on to the PhoneService to update its state too."];</code>
+       * @param value The validateSmsCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidateSmsCode(boolean value) {
+        bitField0_ |= 0x00000020;
+        validateSmsCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool validate_sms_code = 6 [(.description) = "When finalizing with an SMS code, pass the request on to the PhoneService to update its state too."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidateSmsCode() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        validateSmsCode_ = false;
         onChanged();
         return this;
       }
@@ -8827,6 +11150,1150 @@ public final class SteammessagesTwofactorSteamclient {
 
     @java.lang.Override
     public SteammessagesTwofactorSteamclient.CTwoFactor_FinalizeAddAuthenticator_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CTwoFactor_UpdateTokenVersion_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CTwoFactor_UpdateTokenVersion_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return Whether the steamid field is set.
+     */
+    boolean hasSteamid();
+    /**
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return The steamid.
+     */
+    long getSteamid();
+
+    /**
+     * <code>optional uint32 version = 2 [(.description) = "What the version of our token should be"];</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <code>optional uint32 version = 2 [(.description) = "What the version of our token should be"];</code>
+     * @return The version.
+     */
+    int getVersion();
+
+    /**
+     * <code>optional bytes signature = 3 [(.description) = "HMAC digest over user&#92;'s private key"];</code>
+     * @return Whether the signature field is set.
+     */
+    boolean hasSignature();
+    /**
+     * <code>optional bytes signature = 3 [(.description) = "HMAC digest over user&#92;'s private key"];</code>
+     * @return The signature.
+     */
+    com.google.protobuf.ByteString getSignature();
+  }
+  /**
+   * Protobuf type {@code CTwoFactor_UpdateTokenVersion_Request}
+   */
+  public static final class CTwoFactor_UpdateTokenVersion_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CTwoFactor_UpdateTokenVersion_Request)
+      CTwoFactor_UpdateTokenVersion_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CTwoFactor_UpdateTokenVersion_Request.newBuilder() to construct.
+    private CTwoFactor_UpdateTokenVersion_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CTwoFactor_UpdateTokenVersion_Request() {
+      signature_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CTwoFactor_UpdateTokenVersion_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CTwoFactor_UpdateTokenVersion_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              bitField0_ |= 0x00000001;
+              steamid_ = input.readFixed64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              version_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              signature_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_UpdateTokenVersion_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_UpdateTokenVersion_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int STEAMID_FIELD_NUMBER = 1;
+    private long steamid_;
+    /**
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return Whether the steamid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSteamid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return The steamid.
+     */
+    @java.lang.Override
+    public long getSteamid() {
+      return steamid_;
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private int version_;
+    /**
+     * <code>optional uint32 version = 2 [(.description) = "What the version of our token should be"];</code>
+     * @return Whether the version field is set.
+     */
+    @java.lang.Override
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 version = 2 [(.description) = "What the version of our token should be"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public int getVersion() {
+      return version_;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString signature_;
+    /**
+     * <code>optional bytes signature = 3 [(.description) = "HMAC digest over user&#92;'s private key"];</code>
+     * @return Whether the signature field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignature() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bytes signature = 3 [(.description) = "HMAC digest over user&#92;'s private key"];</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignature() {
+      return signature_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeFixed64(1, steamid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, version_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBytes(3, signature_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(1, steamid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, version_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, signature_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request other = (SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request) obj;
+
+      if (hasSteamid() != other.hasSteamid()) return false;
+      if (hasSteamid()) {
+        if (getSteamid()
+            != other.getSteamid()) return false;
+      }
+      if (hasVersion() != other.hasVersion()) return false;
+      if (hasVersion()) {
+        if (getVersion()
+            != other.getVersion()) return false;
+      }
+      if (hasSignature() != other.hasSignature()) return false;
+      if (hasSignature()) {
+        if (!getSignature()
+            .equals(other.getSignature())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSteamid()) {
+        hash = (37 * hash) + STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSteamid());
+      }
+      if (hasVersion()) {
+        hash = (37 * hash) + VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getVersion();
+      }
+      if (hasSignature()) {
+        hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+        hash = (53 * hash) + getSignature().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CTwoFactor_UpdateTokenVersion_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CTwoFactor_UpdateTokenVersion_Request)
+        SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_UpdateTokenVersion_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_UpdateTokenVersion_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        steamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        version_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signature_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_UpdateTokenVersion_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request getDefaultInstanceForType() {
+        return SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request build() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request buildPartial() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request result = new SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.steamid_ = steamid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.signature_ = signature_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request) {
+          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request other) {
+        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request.getDefaultInstance()) return this;
+        if (other.hasSteamid()) {
+          setSteamid(other.getSteamid());
+        }
+        if (other.hasVersion()) {
+          setVersion(other.getVersion());
+        }
+        if (other.hasSignature()) {
+          setSignature(other.getSignature());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long steamid_ ;
+      /**
+       * <code>optional fixed64 steamid = 1;</code>
+       * @return Whether the steamid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSteamid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional fixed64 steamid = 1;</code>
+       * @return The steamid.
+       */
+      @java.lang.Override
+      public long getSteamid() {
+        return steamid_;
+      }
+      /**
+       * <code>optional fixed64 steamid = 1;</code>
+       * @param value The steamid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamid(long value) {
+        bitField0_ |= 0x00000001;
+        steamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 steamid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        steamid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int version_ ;
+      /**
+       * <code>optional uint32 version = 2 [(.description) = "What the version of our token should be"];</code>
+       * @return Whether the version field is set.
+       */
+      @java.lang.Override
+      public boolean hasVersion() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 version = 2 [(.description) = "What the version of our token should be"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public int getVersion() {
+        return version_;
+      }
+      /**
+       * <code>optional uint32 version = 2 [(.description) = "What the version of our token should be"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(int value) {
+        bitField0_ |= 0x00000002;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 version = 2 [(.description) = "What the version of our token should be"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        version_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes signature = 3 [(.description) = "HMAC digest over user&#92;'s private key"];</code>
+       * @return Whether the signature field is set.
+       */
+      @java.lang.Override
+      public boolean hasSignature() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bytes signature = 3 [(.description) = "HMAC digest over user&#92;'s private key"];</code>
+       * @return The signature.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignature() {
+        return signature_;
+      }
+      /**
+       * <code>optional bytes signature = 3 [(.description) = "HMAC digest over user&#92;'s private key"];</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignature(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        signature_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes signature = 3 [(.description) = "HMAC digest over user&#92;'s private key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignature() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CTwoFactor_UpdateTokenVersion_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CTwoFactor_UpdateTokenVersion_Request)
+    private static final SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request();
+    }
+
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_UpdateTokenVersion_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_UpdateTokenVersion_Request>() {
+      @java.lang.Override
+      public CTwoFactor_UpdateTokenVersion_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CTwoFactor_UpdateTokenVersion_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CTwoFactor_UpdateTokenVersion_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CTwoFactor_UpdateTokenVersion_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CTwoFactor_UpdateTokenVersion_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CTwoFactor_UpdateTokenVersion_Response)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CTwoFactor_UpdateTokenVersion_Response}
+   */
+  public static final class CTwoFactor_UpdateTokenVersion_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CTwoFactor_UpdateTokenVersion_Response)
+      CTwoFactor_UpdateTokenVersion_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CTwoFactor_UpdateTokenVersion_Response.newBuilder() to construct.
+    private CTwoFactor_UpdateTokenVersion_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CTwoFactor_UpdateTokenVersion_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CTwoFactor_UpdateTokenVersion_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CTwoFactor_UpdateTokenVersion_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_UpdateTokenVersion_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_UpdateTokenVersion_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response other = (SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CTwoFactor_UpdateTokenVersion_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CTwoFactor_UpdateTokenVersion_Response)
+        SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_UpdateTokenVersion_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_UpdateTokenVersion_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_UpdateTokenVersion_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response getDefaultInstanceForType() {
+        return SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response build() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response buildPartial() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response result = new SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response) {
+          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response other) {
+        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CTwoFactor_UpdateTokenVersion_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CTwoFactor_UpdateTokenVersion_Response)
+    private static final SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response();
+    }
+
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_UpdateTokenVersion_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_UpdateTokenVersion_Response>() {
+      @java.lang.Override
+      public CTwoFactor_UpdateTokenVersion_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CTwoFactor_UpdateTokenVersion_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CTwoFactor_UpdateTokenVersion_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CTwoFactor_UpdateTokenVersion_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesTwofactorSteamclient.CTwoFactor_UpdateTokenVersion_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10459,48 +13926,30 @@ public final class SteammessagesTwofactorSteamclient {
 
   }
 
-  public interface CTwoFactor_CreateEmergencyCodes_RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CTwoFactor_CreateEmergencyCodes_Request)
+  public interface CTwoFactor_RemoveAuthenticatorViaChallengeStart_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string code = 1;</code>
-     * @return Whether the code field is set.
-     */
-    boolean hasCode();
-    /**
-     * <code>optional string code = 1;</code>
-     * @return The code.
-     */
-    java.lang.String getCode();
-    /**
-     * <code>optional string code = 1;</code>
-     * @return The bytes for code.
-     */
-    com.google.protobuf.ByteString
-        getCodeBytes();
   }
   /**
-   * Protobuf type {@code CTwoFactor_CreateEmergencyCodes_Request}
+   * Protobuf type {@code CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request}
    */
-  public static final class CTwoFactor_CreateEmergencyCodes_Request extends
+  public static final class CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CTwoFactor_CreateEmergencyCodes_Request)
-      CTwoFactor_CreateEmergencyCodes_RequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request)
+      CTwoFactor_RemoveAuthenticatorViaChallengeStart_RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CTwoFactor_CreateEmergencyCodes_Request.newBuilder() to construct.
-    private CTwoFactor_CreateEmergencyCodes_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request.newBuilder() to construct.
+    private CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CTwoFactor_CreateEmergencyCodes_Request() {
-      code_ = "";
+    private CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CTwoFactor_CreateEmergencyCodes_Request();
+      return new CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request();
     }
 
     @java.lang.Override
@@ -10508,7 +13957,436 @@ public final class SteammessagesTwofactorSteamclient {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CTwoFactor_CreateEmergencyCodes_Request(
+    private CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request other = (SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request)
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request getDefaultInstanceForType() {
+        return SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request build() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request buildPartial() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request result = new SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request) {
+          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request other) {
+        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request)
+    private static final SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request();
+    }
+
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request>() {
+      @java.lang.Override
+      public CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CTwoFactor_RemoveAuthenticatorViaChallengeStart_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+     * @return Whether the success field is set.
+     */
+    boolean hasSuccess();
+    /**
+     * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+     * @return The success.
+     */
+    boolean getSuccess();
+  }
+  /**
+   * Protobuf type {@code CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response}
+   */
+  public static final class CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response)
+      CTwoFactor_RemoveAuthenticatorViaChallengeStart_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response.newBuilder() to construct.
+    private CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -10527,10 +14405,9 @@ public final class SteammessagesTwofactorSteamclient {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 8: {
               bitField0_ |= 0x00000001;
-              code_ = bs;
+              success_ = input.readBool();
               break;
             }
             default: {
@@ -10554,64 +14431,35 @@ public final class SteammessagesTwofactorSteamclient {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_CreateEmergencyCodes_Request_descriptor;
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_CreateEmergencyCodes_Request_fieldAccessorTable
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request.Builder.class);
+              SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response.Builder.class);
     }
 
     private int bitField0_;
-    public static final int CODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object code_;
+    public static final int SUCCESS_FIELD_NUMBER = 1;
+    private boolean success_;
     /**
-     * <code>optional string code = 1;</code>
-     * @return Whether the code field is set.
+     * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+     * @return Whether the success field is set.
      */
     @java.lang.Override
-    public boolean hasCode() {
+    public boolean hasSuccess() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional string code = 1;</code>
-     * @return The code.
+     * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+     * @return The success.
      */
     @java.lang.Override
-    public java.lang.String getCode() {
-      java.lang.Object ref = code_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          code_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string code = 1;</code>
-     * @return The bytes for code.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCodeBytes() {
-      java.lang.Object ref = code_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        code_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public boolean getSuccess() {
+      return success_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -10629,7 +14477,7 @@ public final class SteammessagesTwofactorSteamclient {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, code_);
+        output.writeBool(1, success_);
       }
       unknownFields.writeTo(output);
     }
@@ -10641,7 +14489,8 @@ public final class SteammessagesTwofactorSteamclient {
 
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, code_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, success_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10653,15 +14502,15 @@ public final class SteammessagesTwofactorSteamclient {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request)) {
+      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response)) {
         return super.equals(obj);
       }
-      SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request other = (SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request) obj;
+      SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response other = (SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response) obj;
 
-      if (hasCode() != other.hasCode()) return false;
-      if (hasCode()) {
-        if (!getCode()
-            .equals(other.getCode())) return false;
+      if (hasSuccess() != other.hasSuccess()) return false;
+      if (hasSuccess()) {
+        if (getSuccess()
+            != other.getSuccess()) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -10674,78 +14523,79 @@ public final class SteammessagesTwofactorSteamclient {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasCode()) {
-        hash = (37 * hash) + CODE_FIELD_NUMBER;
-        hash = (53 * hash) + getCode().hashCode();
+      if (hasSuccess()) {
+        hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSuccess());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseFrom(byte[] data)
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseFrom(java.io.InputStream input)
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseDelimitedFrom(java.io.InputStream input)
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseDelimitedFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10758,7 +14608,7 @@ public final class SteammessagesTwofactorSteamclient {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request prototype) {
+    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10774,26 +14624,26 @@ public final class SteammessagesTwofactorSteamclient {
       return builder;
     }
     /**
-     * Protobuf type {@code CTwoFactor_CreateEmergencyCodes_Request}
+     * Protobuf type {@code CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CTwoFactor_CreateEmergencyCodes_Request)
-        SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_RequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response)
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_CreateEmergencyCodes_Request_descriptor;
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_CreateEmergencyCodes_Request_fieldAccessorTable
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request.Builder.class);
+                SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response.Builder.class);
       }
 
-      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request.newBuilder()
+      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -10811,7 +14661,7 @@ public final class SteammessagesTwofactorSteamclient {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        code_ = "";
+        success_ = false;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
@@ -10819,17 +14669,17 @@ public final class SteammessagesTwofactorSteamclient {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_CreateEmergencyCodes_Request_descriptor;
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response_descriptor;
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request getDefaultInstanceForType() {
-        return SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request.getDefaultInstance();
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response getDefaultInstanceForType() {
+        return SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request build() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request result = buildPartial();
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response build() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10837,14 +14687,14 @@ public final class SteammessagesTwofactorSteamclient {
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request buildPartial() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request result = new SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request(this);
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response buildPartial() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response result = new SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.success_ = success_;
           to_bitField0_ |= 0x00000001;
         }
-        result.code_ = code_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -10884,20 +14734,18 @@ public final class SteammessagesTwofactorSteamclient {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request) {
-          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request)other);
+        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response) {
+          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request other) {
-        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request.getDefaultInstance()) return this;
-        if (other.hasCode()) {
-          bitField0_ |= 0x00000001;
-          code_ = other.code_;
-          onChanged();
+      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response other) {
+        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response.getDefaultInstance()) return this;
+        if (other.hasSuccess()) {
+          setSuccess(other.getSuccess());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10914,11 +14762,11 @@ public final class SteammessagesTwofactorSteamclient {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request parsedMessage = null;
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request) e.getUnfinishedMessage();
+          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -10929,86 +14777,41 @@ public final class SteammessagesTwofactorSteamclient {
       }
       private int bitField0_;
 
-      private java.lang.Object code_ = "";
+      private boolean success_ ;
       /**
-       * <code>optional string code = 1;</code>
-       * @return Whether the code field is set.
+       * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+       * @return Whether the success field is set.
        */
-      public boolean hasCode() {
+      @java.lang.Override
+      public boolean hasSuccess() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional string code = 1;</code>
-       * @return The code.
+       * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+       * @return The success.
        */
-      public java.lang.String getCode() {
-        java.lang.Object ref = code_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            code_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public boolean getSuccess() {
+        return success_;
       }
       /**
-       * <code>optional string code = 1;</code>
-       * @return The bytes for code.
-       */
-      public com.google.protobuf.ByteString
-          getCodeBytes() {
-        java.lang.Object ref = code_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          code_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string code = 1;</code>
-       * @param value The code to set.
+       * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+       * @param value The success to set.
        * @return This builder for chaining.
        */
-      public Builder setCode(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        code_ = value;
+      public Builder setSuccess(boolean value) {
+        bitField0_ |= 0x00000001;
+        success_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string code = 1;</code>
+       * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearCode() {
+      public Builder clearSuccess() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        code_ = getDefaultInstance().getCode();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string code = 1;</code>
-       * @param value The bytes for code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        code_ = value;
+        success_ = false;
         onChanged();
         return this;
       }
@@ -11025,96 +14828,111 @@ public final class SteammessagesTwofactorSteamclient {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:CTwoFactor_CreateEmergencyCodes_Request)
+      // @@protoc_insertion_point(builder_scope:CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response)
     }
 
-    // @@protoc_insertion_point(class_scope:CTwoFactor_CreateEmergencyCodes_Request)
-    private static final SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response)
+    private static final SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request();
+      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response();
     }
 
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request getDefaultInstance() {
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_CreateEmergencyCodes_Request>
-        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_CreateEmergencyCodes_Request>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response>() {
       @java.lang.Override
-      public CTwoFactor_CreateEmergencyCodes_Request parsePartialFrom(
+      public CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CTwoFactor_CreateEmergencyCodes_Request(input, extensionRegistry);
+        return new CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CTwoFactor_CreateEmergencyCodes_Request> parser() {
+    public static com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CTwoFactor_CreateEmergencyCodes_Request> getParserForType() {
+    public com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Request getDefaultInstanceForType() {
+    public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface CTwoFactor_CreateEmergencyCodes_ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CTwoFactor_CreateEmergencyCodes_Response)
+  public interface CTwoFactor_RemoveAuthenticatorViaChallengeContinue_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-     * @return A list containing the codes.
+     * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+     * @return Whether the smsCode field is set.
      */
-    java.util.List<java.lang.String>
-        getCodesList();
+    boolean hasSmsCode();
     /**
-     * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-     * @return The count of codes.
+     * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+     * @return The smsCode.
      */
-    int getCodesCount();
+    java.lang.String getSmsCode();
     /**
-     * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-     * @param index The index of the element to return.
-     * @return The codes at the given index.
-     */
-    java.lang.String getCodes(int index);
-    /**
-     * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the codes at the given index.
+     * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+     * @return The bytes for smsCode.
      */
     com.google.protobuf.ByteString
-        getCodesBytes(int index);
+        getSmsCodeBytes();
+
+    /**
+     * <code>optional bool generate_new_token = 2 [(.description) = "Generate new token (instead of removing old one)"];</code>
+     * @return Whether the generateNewToken field is set.
+     */
+    boolean hasGenerateNewToken();
+    /**
+     * <code>optional bool generate_new_token = 2 [(.description) = "Generate new token (instead of removing old one)"];</code>
+     * @return The generateNewToken.
+     */
+    boolean getGenerateNewToken();
+
+    /**
+     * <code>optional uint32 version = 3 [default = 1, (.description) = "What the version of our token should be"];</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <code>optional uint32 version = 3 [default = 1, (.description) = "What the version of our token should be"];</code>
+     * @return The version.
+     */
+    int getVersion();
   }
   /**
-   * Protobuf type {@code CTwoFactor_CreateEmergencyCodes_Response}
+   * Protobuf type {@code CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request}
    */
-  public static final class CTwoFactor_CreateEmergencyCodes_Response extends
+  public static final class CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CTwoFactor_CreateEmergencyCodes_Response)
-      CTwoFactor_CreateEmergencyCodes_ResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request)
+      CTwoFactor_RemoveAuthenticatorViaChallengeContinue_RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CTwoFactor_CreateEmergencyCodes_Response.newBuilder() to construct.
-    private CTwoFactor_CreateEmergencyCodes_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request.newBuilder() to construct.
+    private CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CTwoFactor_CreateEmergencyCodes_Response() {
-      codes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request() {
+      smsCode_ = "";
+      version_ = 1;
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CTwoFactor_CreateEmergencyCodes_Response();
+      return new CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request();
     }
 
     @java.lang.Override
@@ -11122,7 +14940,7 @@ public final class SteammessagesTwofactorSteamclient {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CTwoFactor_CreateEmergencyCodes_Response(
+    private CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -11143,11 +14961,18 @@ public final class SteammessagesTwofactorSteamclient {
               break;
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                codes_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              codes_.add(bs);
+              bitField0_ |= 0x00000001;
+              smsCode_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              generateNewToken_ = input.readBool();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              version_ = input.readUInt32();
               break;
             }
             default: {
@@ -11165,59 +14990,108 @@ public final class SteammessagesTwofactorSteamclient {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          codes_ = codes_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_CreateEmergencyCodes_Response_descriptor;
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_CreateEmergencyCodes_Response_fieldAccessorTable
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response.Builder.class);
+              SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request.Builder.class);
     }
 
-    public static final int CODES_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList codes_;
+    private int bitField0_;
+    public static final int SMS_CODE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object smsCode_;
     /**
-     * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-     * @return A list containing the codes.
+     * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+     * @return Whether the smsCode field is set.
      */
-    public com.google.protobuf.ProtocolStringList
-        getCodesList() {
-      return codes_;
+    @java.lang.Override
+    public boolean hasSmsCode() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-     * @return The count of codes.
+     * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+     * @return The smsCode.
      */
-    public int getCodesCount() {
-      return codes_.size();
+    @java.lang.Override
+    public java.lang.String getSmsCode() {
+      java.lang.Object ref = smsCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          smsCode_ = s;
+        }
+        return s;
+      }
     }
     /**
-     * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-     * @param index The index of the element to return.
-     * @return The codes at the given index.
+     * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+     * @return The bytes for smsCode.
      */
-    public java.lang.String getCodes(int index) {
-      return codes_.get(index);
-    }
-    /**
-     * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the codes at the given index.
-     */
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getCodesBytes(int index) {
-      return codes_.getByteString(index);
+        getSmsCodeBytes() {
+      java.lang.Object ref = smsCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        smsCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GENERATE_NEW_TOKEN_FIELD_NUMBER = 2;
+    private boolean generateNewToken_;
+    /**
+     * <code>optional bool generate_new_token = 2 [(.description) = "Generate new token (instead of removing old one)"];</code>
+     * @return Whether the generateNewToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasGenerateNewToken() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool generate_new_token = 2 [(.description) = "Generate new token (instead of removing old one)"];</code>
+     * @return The generateNewToken.
+     */
+    @java.lang.Override
+    public boolean getGenerateNewToken() {
+      return generateNewToken_;
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 3;
+    private int version_;
+    /**
+     * <code>optional uint32 version = 3 [default = 1, (.description) = "What the version of our token should be"];</code>
+     * @return Whether the version field is set.
+     */
+    @java.lang.Override
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 version = 3 [default = 1, (.description) = "What the version of our token should be"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public int getVersion() {
+      return version_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11234,8 +15108,14 @@ public final class SteammessagesTwofactorSteamclient {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < codes_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, codes_.getRaw(i));
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, smsCode_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, generateNewToken_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, version_);
       }
       unknownFields.writeTo(output);
     }
@@ -11246,13 +15126,16 @@ public final class SteammessagesTwofactorSteamclient {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < codes_.size(); i++) {
-          dataSize += computeStringSizeNoTag(codes_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getCodesList().size();
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, smsCode_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, generateNewToken_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, version_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11264,13 +15147,26 @@ public final class SteammessagesTwofactorSteamclient {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response)) {
+      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request)) {
         return super.equals(obj);
       }
-      SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response other = (SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response) obj;
+      SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request other = (SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request) obj;
 
-      if (!getCodesList()
-          .equals(other.getCodesList())) return false;
+      if (hasSmsCode() != other.hasSmsCode()) return false;
+      if (hasSmsCode()) {
+        if (!getSmsCode()
+            .equals(other.getSmsCode())) return false;
+      }
+      if (hasGenerateNewToken() != other.hasGenerateNewToken()) return false;
+      if (hasGenerateNewToken()) {
+        if (getGenerateNewToken()
+            != other.getGenerateNewToken()) return false;
+      }
+      if (hasVersion() != other.hasVersion()) return false;
+      if (hasVersion()) {
+        if (getVersion()
+            != other.getVersion()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11282,78 +15178,87 @@ public final class SteammessagesTwofactorSteamclient {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getCodesCount() > 0) {
-        hash = (37 * hash) + CODES_FIELD_NUMBER;
-        hash = (53 * hash) + getCodesList().hashCode();
+      if (hasSmsCode()) {
+        hash = (37 * hash) + SMS_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getSmsCode().hashCode();
+      }
+      if (hasGenerateNewToken()) {
+        hash = (37 * hash) + GENERATE_NEW_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getGenerateNewToken());
+      }
+      if (hasVersion()) {
+        hash = (37 * hash) + VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getVersion();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseFrom(byte[] data)
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseFrom(java.io.InputStream input)
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseDelimitedFrom(java.io.InputStream input)
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseDelimitedFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11366,7 +15271,7 @@ public final class SteammessagesTwofactorSteamclient {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response prototype) {
+    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -11382,26 +15287,26 @@ public final class SteammessagesTwofactorSteamclient {
       return builder;
     }
     /**
-     * Protobuf type {@code CTwoFactor_CreateEmergencyCodes_Response}
+     * Protobuf type {@code CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CTwoFactor_CreateEmergencyCodes_Response)
-        SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_ResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request)
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_CreateEmergencyCodes_Response_descriptor;
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_CreateEmergencyCodes_Response_fieldAccessorTable
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response.Builder.class);
+                SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request.Builder.class);
       }
 
-      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response.newBuilder()
+      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -11419,25 +15324,29 @@ public final class SteammessagesTwofactorSteamclient {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        codes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        smsCode_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
+        generateNewToken_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        version_ = 1;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_CreateEmergencyCodes_Response_descriptor;
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request_descriptor;
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response getDefaultInstanceForType() {
-        return SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response.getDefaultInstance();
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request getDefaultInstanceForType() {
+        return SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response build() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response result = buildPartial();
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request build() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -11445,14 +15354,23 @@ public final class SteammessagesTwofactorSteamclient {
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response buildPartial() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response result = new SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response(this);
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request buildPartial() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request result = new SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request(this);
         int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          codes_ = codes_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
         }
-        result.codes_ = codes_;
+        result.smsCode_ = smsCode_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.generateNewToken_ = generateNewToken_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.version_ = version_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -11491,25 +15409,26 @@ public final class SteammessagesTwofactorSteamclient {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response) {
-          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response)other);
+        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request) {
+          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response other) {
-        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response.getDefaultInstance()) return this;
-        if (!other.codes_.isEmpty()) {
-          if (codes_.isEmpty()) {
-            codes_ = other.codes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureCodesIsMutable();
-            codes_.addAll(other.codes_);
-          }
+      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request other) {
+        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request.getDefaultInstance()) return this;
+        if (other.hasSmsCode()) {
+          bitField0_ |= 0x00000001;
+          smsCode_ = other.smsCode_;
           onChanged();
+        }
+        if (other.hasGenerateNewToken()) {
+          setGenerateNewToken(other.getGenerateNewToken());
+        }
+        if (other.hasVersion()) {
+          setVersion(other.getVersion());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11526,11 +15445,11 @@ public final class SteammessagesTwofactorSteamclient {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response parsedMessage = null;
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response) e.getUnfinishedMessage();
+          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -11541,111 +15460,164 @@ public final class SteammessagesTwofactorSteamclient {
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList codes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureCodesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          codes_ = new com.google.protobuf.LazyStringArrayList(codes_);
-          bitField0_ |= 0x00000001;
-         }
-      }
+      private java.lang.Object smsCode_ = "";
       /**
-       * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-       * @return A list containing the codes.
+       * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+       * @return Whether the smsCode field is set.
        */
-      public com.google.protobuf.ProtocolStringList
-          getCodesList() {
-        return codes_.getUnmodifiableView();
+      public boolean hasSmsCode() {
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-       * @return The count of codes.
+       * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+       * @return The smsCode.
        */
-      public int getCodesCount() {
-        return codes_.size();
+      public java.lang.String getSmsCode() {
+        java.lang.Object ref = smsCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            smsCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-       * @param index The index of the element to return.
-       * @return The codes at the given index.
-       */
-      public java.lang.String getCodes(int index) {
-        return codes_.get(index);
-      }
-      /**
-       * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the codes at the given index.
+       * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+       * @return The bytes for smsCode.
        */
       public com.google.protobuf.ByteString
-          getCodesBytes(int index) {
-        return codes_.getByteString(index);
+          getSmsCodeBytes() {
+        java.lang.Object ref = smsCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          smsCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-       * @param index The index to set the value at.
-       * @param value The codes to set.
+       * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+       * @param value The smsCode to set.
        * @return This builder for chaining.
        */
-      public Builder setCodes(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCodesIsMutable();
-        codes_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-       * @param value The codes to add.
-       * @return This builder for chaining.
-       */
-      public Builder addCodes(
+      public Builder setSmsCode(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureCodesIsMutable();
-        codes_.add(value);
+  bitField0_ |= 0x00000001;
+        smsCode_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-       * @param values The codes to add.
+       * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
        * @return This builder for chaining.
        */
-      public Builder addAllCodes(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureCodesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, codes_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCodes() {
-        codes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      public Builder clearSmsCode() {
         bitField0_ = (bitField0_ & ~0x00000001);
+        smsCode_ = getDefaultInstance().getSmsCode();
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string codes = 1 [(.description) = "Emergency codes"];</code>
-       * @param value The bytes of the codes to add.
+       * <code>optional string sms_code = 1 [(.description) = "Code from SMS"];</code>
+       * @param value The bytes for smsCode to set.
        * @return This builder for chaining.
        */
-      public Builder addCodesBytes(
+      public Builder setSmsCodeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureCodesIsMutable();
-        codes_.add(value);
+  bitField0_ |= 0x00000001;
+        smsCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean generateNewToken_ ;
+      /**
+       * <code>optional bool generate_new_token = 2 [(.description) = "Generate new token (instead of removing old one)"];</code>
+       * @return Whether the generateNewToken field is set.
+       */
+      @java.lang.Override
+      public boolean hasGenerateNewToken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool generate_new_token = 2 [(.description) = "Generate new token (instead of removing old one)"];</code>
+       * @return The generateNewToken.
+       */
+      @java.lang.Override
+      public boolean getGenerateNewToken() {
+        return generateNewToken_;
+      }
+      /**
+       * <code>optional bool generate_new_token = 2 [(.description) = "Generate new token (instead of removing old one)"];</code>
+       * @param value The generateNewToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenerateNewToken(boolean value) {
+        bitField0_ |= 0x00000002;
+        generateNewToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool generate_new_token = 2 [(.description) = "Generate new token (instead of removing old one)"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGenerateNewToken() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        generateNewToken_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int version_ = 1;
+      /**
+       * <code>optional uint32 version = 3 [default = 1, (.description) = "What the version of our token should be"];</code>
+       * @return Whether the version field is set.
+       */
+      @java.lang.Override
+      public boolean hasVersion() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 version = 3 [default = 1, (.description) = "What the version of our token should be"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public int getVersion() {
+        return version_;
+      }
+      /**
+       * <code>optional uint32 version = 3 [default = 1, (.description) = "What the version of our token should be"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(int value) {
+        bitField0_ |= 0x00000004;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 version = 3 [default = 1, (.description) = "What the version of our token should be"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        version_ = 1;
         onChanged();
         return this;
       }
@@ -11662,81 +15634,233 @@ public final class SteammessagesTwofactorSteamclient {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:CTwoFactor_CreateEmergencyCodes_Response)
+      // @@protoc_insertion_point(builder_scope:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request)
     }
 
-    // @@protoc_insertion_point(class_scope:CTwoFactor_CreateEmergencyCodes_Response)
-    private static final SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request)
+    private static final SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response();
+      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request();
     }
 
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response getDefaultInstance() {
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_CreateEmergencyCodes_Response>
-        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_CreateEmergencyCodes_Response>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request>() {
       @java.lang.Override
-      public CTwoFactor_CreateEmergencyCodes_Response parsePartialFrom(
+      public CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CTwoFactor_CreateEmergencyCodes_Response(input, extensionRegistry);
+        return new CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CTwoFactor_CreateEmergencyCodes_Response> parser() {
+    public static com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CTwoFactor_CreateEmergencyCodes_Response> getParserForType() {
+    public com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public SteammessagesTwofactorSteamclient.CTwoFactor_CreateEmergencyCodes_Response getDefaultInstanceForType() {
+    public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface CTwoFactor_DestroyEmergencyCodes_RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CTwoFactor_DestroyEmergencyCodes_Request)
+  public interface CRemoveAuthenticatorViaChallengeContinue_Replacement_TokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CRemoveAuthenticatorViaChallengeContinue_Replacement_Token)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional fixed64 steamid = 1 [(.description) = "steamid to use"];</code>
+     * <code>optional bytes shared_secret = 1 [(.description) = "Shared secret between server and authenticator"];</code>
+     * @return Whether the sharedSecret field is set.
+     */
+    boolean hasSharedSecret();
+    /**
+     * <code>optional bytes shared_secret = 1 [(.description) = "Shared secret between server and authenticator"];</code>
+     * @return The sharedSecret.
+     */
+    com.google.protobuf.ByteString getSharedSecret();
+
+    /**
+     * <code>optional fixed64 serial_number = 2 [(.description) = "Authenticator serial number (unique per token)"];</code>
+     * @return Whether the serialNumber field is set.
+     */
+    boolean hasSerialNumber();
+    /**
+     * <code>optional fixed64 serial_number = 2 [(.description) = "Authenticator serial number (unique per token)"];</code>
+     * @return The serialNumber.
+     */
+    long getSerialNumber();
+
+    /**
+     * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+     * @return Whether the revocationCode field is set.
+     */
+    boolean hasRevocationCode();
+    /**
+     * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+     * @return The revocationCode.
+     */
+    java.lang.String getRevocationCode();
+    /**
+     * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+     * @return The bytes for revocationCode.
+     */
+    com.google.protobuf.ByteString
+        getRevocationCodeBytes();
+
+    /**
+     * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+     * @return Whether the uri field is set.
+     */
+    boolean hasUri();
+    /**
+     * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+     * @return The uri.
+     */
+    java.lang.String getUri();
+    /**
+     * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+     * @return The bytes for uri.
+     */
+    com.google.protobuf.ByteString
+        getUriBytes();
+
+    /**
+     * <code>optional uint64 server_time = 5 [(.description) = "Current server time"];</code>
+     * @return Whether the serverTime field is set.
+     */
+    boolean hasServerTime();
+    /**
+     * <code>optional uint64 server_time = 5 [(.description) = "Current server time"];</code>
+     * @return The serverTime.
+     */
+    long getServerTime();
+
+    /**
+     * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+     * @return Whether the accountName field is set.
+     */
+    boolean hasAccountName();
+    /**
+     * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+     * @return The accountName.
+     */
+    java.lang.String getAccountName();
+    /**
+     * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+     * @return The bytes for accountName.
+     */
+    com.google.protobuf.ByteString
+        getAccountNameBytes();
+
+    /**
+     * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+     * @return Whether the tokenGid field is set.
+     */
+    boolean hasTokenGid();
+    /**
+     * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+     * @return The tokenGid.
+     */
+    java.lang.String getTokenGid();
+    /**
+     * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+     * @return The bytes for tokenGid.
+     */
+    com.google.protobuf.ByteString
+        getTokenGidBytes();
+
+    /**
+     * <code>optional bytes identity_secret = 8 [(.description) = "Secret used for identity attestation (e.g., for eventing)"];</code>
+     * @return Whether the identitySecret field is set.
+     */
+    boolean hasIdentitySecret();
+    /**
+     * <code>optional bytes identity_secret = 8 [(.description) = "Secret used for identity attestation (e.g., for eventing)"];</code>
+     * @return The identitySecret.
+     */
+    com.google.protobuf.ByteString getIdentitySecret();
+
+    /**
+     * <code>optional bytes secret_1 = 9 [(.description) = "Spare shared secret"];</code>
+     * @return Whether the secret1 field is set.
+     */
+    boolean hasSecret1();
+    /**
+     * <code>optional bytes secret_1 = 9 [(.description) = "Spare shared secret"];</code>
+     * @return The secret1.
+     */
+    com.google.protobuf.ByteString getSecret1();
+
+    /**
+     * <code>optional int32 status = 10 [(.description) = "Result code"];</code>
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+    /**
+     * <code>optional int32 status = 10 [(.description) = "Result code"];</code>
+     * @return The status.
+     */
+    int getStatus();
+
+    /**
+     * <code>optional uint32 steamguard_scheme = 11 [(.description) = "Type of Steam Guard to use once token is removed"];</code>
+     * @return Whether the steamguardScheme field is set.
+     */
+    boolean hasSteamguardScheme();
+    /**
+     * <code>optional uint32 steamguard_scheme = 11 [(.description) = "Type of Steam Guard to use once token is removed"];</code>
+     * @return The steamguardScheme.
+     */
+    int getSteamguardScheme();
+
+    /**
+     * <code>optional fixed64 steamid = 12 [(.description) = "steamid that owns the secret"];</code>
      * @return Whether the steamid field is set.
      */
     boolean hasSteamid();
     /**
-     * <code>optional fixed64 steamid = 1 [(.description) = "steamid to use"];</code>
+     * <code>optional fixed64 steamid = 12 [(.description) = "steamid that owns the secret"];</code>
      * @return The steamid.
      */
     long getSteamid();
   }
   /**
-   * Protobuf type {@code CTwoFactor_DestroyEmergencyCodes_Request}
+   * Protobuf type {@code CRemoveAuthenticatorViaChallengeContinue_Replacement_Token}
    */
-  public static final class CTwoFactor_DestroyEmergencyCodes_Request extends
+  public static final class CRemoveAuthenticatorViaChallengeContinue_Replacement_Token extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CTwoFactor_DestroyEmergencyCodes_Request)
-      CTwoFactor_DestroyEmergencyCodes_RequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:CRemoveAuthenticatorViaChallengeContinue_Replacement_Token)
+      CRemoveAuthenticatorViaChallengeContinue_Replacement_TokenOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CTwoFactor_DestroyEmergencyCodes_Request.newBuilder() to construct.
-    private CTwoFactor_DestroyEmergencyCodes_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.newBuilder() to construct.
+    private CRemoveAuthenticatorViaChallengeContinue_Replacement_Token(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CTwoFactor_DestroyEmergencyCodes_Request() {
+    private CRemoveAuthenticatorViaChallengeContinue_Replacement_Token() {
+      sharedSecret_ = com.google.protobuf.ByteString.EMPTY;
+      revocationCode_ = "";
+      uri_ = "";
+      accountName_ = "";
+      tokenGid_ = "";
+      identitySecret_ = com.google.protobuf.ByteString.EMPTY;
+      secret1_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CTwoFactor_DestroyEmergencyCodes_Request();
+      return new CRemoveAuthenticatorViaChallengeContinue_Replacement_Token();
     }
 
     @java.lang.Override
@@ -11744,7 +15868,7 @@ public final class SteammessagesTwofactorSteamclient {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CTwoFactor_DestroyEmergencyCodes_Request(
+    private CRemoveAuthenticatorViaChallengeContinue_Replacement_Token(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -11763,8 +15887,67 @@ public final class SteammessagesTwofactorSteamclient {
             case 0:
               done = true;
               break;
-            case 9: {
+            case 10: {
               bitField0_ |= 0x00000001;
+              sharedSecret_ = input.readBytes();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              serialNumber_ = input.readFixed64();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              revocationCode_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              uri_ = bs;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              serverTime_ = input.readUInt64();
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              accountName_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              tokenGid_ = bs;
+              break;
+            }
+            case 66: {
+              bitField0_ |= 0x00000080;
+              identitySecret_ = input.readBytes();
+              break;
+            }
+            case 74: {
+              bitField0_ |= 0x00000100;
+              secret1_ = input.readBytes();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              status_ = input.readInt32();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000400;
+              steamguardScheme_ = input.readUInt32();
+              break;
+            }
+            case 97: {
+              bitField0_ |= 0x00000800;
               steamid_ = input.readFixed64();
               break;
             }
@@ -11789,30 +15972,355 @@ public final class SteammessagesTwofactorSteamclient {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_DestroyEmergencyCodes_Request_descriptor;
+      return SteammessagesTwofactorSteamclient.internal_static_CRemoveAuthenticatorViaChallengeContinue_Replacement_Token_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_DestroyEmergencyCodes_Request_fieldAccessorTable
+      return SteammessagesTwofactorSteamclient.internal_static_CRemoveAuthenticatorViaChallengeContinue_Replacement_Token_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request.Builder.class);
+              SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.class, SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.Builder.class);
     }
 
     private int bitField0_;
-    public static final int STEAMID_FIELD_NUMBER = 1;
+    public static final int SHARED_SECRET_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sharedSecret_;
+    /**
+     * <code>optional bytes shared_secret = 1 [(.description) = "Shared secret between server and authenticator"];</code>
+     * @return Whether the sharedSecret field is set.
+     */
+    @java.lang.Override
+    public boolean hasSharedSecret() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bytes shared_secret = 1 [(.description) = "Shared secret between server and authenticator"];</code>
+     * @return The sharedSecret.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSharedSecret() {
+      return sharedSecret_;
+    }
+
+    public static final int SERIAL_NUMBER_FIELD_NUMBER = 2;
+    private long serialNumber_;
+    /**
+     * <code>optional fixed64 serial_number = 2 [(.description) = "Authenticator serial number (unique per token)"];</code>
+     * @return Whether the serialNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasSerialNumber() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional fixed64 serial_number = 2 [(.description) = "Authenticator serial number (unique per token)"];</code>
+     * @return The serialNumber.
+     */
+    @java.lang.Override
+    public long getSerialNumber() {
+      return serialNumber_;
+    }
+
+    public static final int REVOCATION_CODE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object revocationCode_;
+    /**
+     * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+     * @return Whether the revocationCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasRevocationCode() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+     * @return The revocationCode.
+     */
+    @java.lang.Override
+    public java.lang.String getRevocationCode() {
+      java.lang.Object ref = revocationCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          revocationCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+     * @return The bytes for revocationCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevocationCodeBytes() {
+      java.lang.Object ref = revocationCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        revocationCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URI_FIELD_NUMBER = 4;
+    private volatile java.lang.Object uri_;
+    /**
+     * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+     * @return Whether the uri field is set.
+     */
+    @java.lang.Override
+    public boolean hasUri() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+     * @return The uri.
+     */
+    @java.lang.Override
+    public java.lang.String getUri() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          uri_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+     * @return The bytes for uri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUriBytes() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVER_TIME_FIELD_NUMBER = 5;
+    private long serverTime_;
+    /**
+     * <code>optional uint64 server_time = 5 [(.description) = "Current server time"];</code>
+     * @return Whether the serverTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerTime() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint64 server_time = 5 [(.description) = "Current server time"];</code>
+     * @return The serverTime.
+     */
+    @java.lang.Override
+    public long getServerTime() {
+      return serverTime_;
+    }
+
+    public static final int ACCOUNT_NAME_FIELD_NUMBER = 6;
+    private volatile java.lang.Object accountName_;
+    /**
+     * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+     * @return Whether the accountName field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccountName() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+     * @return The accountName.
+     */
+    @java.lang.Override
+    public java.lang.String getAccountName() {
+      java.lang.Object ref = accountName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          accountName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+     * @return The bytes for accountName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountNameBytes() {
+      java.lang.Object ref = accountName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accountName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_GID_FIELD_NUMBER = 7;
+    private volatile java.lang.Object tokenGid_;
+    /**
+     * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+     * @return Whether the tokenGid field is set.
+     */
+    @java.lang.Override
+    public boolean hasTokenGid() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+     * @return The tokenGid.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenGid() {
+      java.lang.Object ref = tokenGid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          tokenGid_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+     * @return The bytes for tokenGid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenGidBytes() {
+      java.lang.Object ref = tokenGid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenGid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDENTITY_SECRET_FIELD_NUMBER = 8;
+    private com.google.protobuf.ByteString identitySecret_;
+    /**
+     * <code>optional bytes identity_secret = 8 [(.description) = "Secret used for identity attestation (e.g., for eventing)"];</code>
+     * @return Whether the identitySecret field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdentitySecret() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional bytes identity_secret = 8 [(.description) = "Secret used for identity attestation (e.g., for eventing)"];</code>
+     * @return The identitySecret.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getIdentitySecret() {
+      return identitySecret_;
+    }
+
+    public static final int SECRET_1_FIELD_NUMBER = 9;
+    private com.google.protobuf.ByteString secret1_;
+    /**
+     * <code>optional bytes secret_1 = 9 [(.description) = "Spare shared secret"];</code>
+     * @return Whether the secret1 field is set.
+     */
+    @java.lang.Override
+    public boolean hasSecret1() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional bytes secret_1 = 9 [(.description) = "Spare shared secret"];</code>
+     * @return The secret1.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSecret1() {
+      return secret1_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 10;
+    private int status_;
+    /**
+     * <code>optional int32 status = 10 [(.description) = "Result code"];</code>
+     * @return Whether the status field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional int32 status = 10 [(.description) = "Result code"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public int getStatus() {
+      return status_;
+    }
+
+    public static final int STEAMGUARD_SCHEME_FIELD_NUMBER = 11;
+    private int steamguardScheme_;
+    /**
+     * <code>optional uint32 steamguard_scheme = 11 [(.description) = "Type of Steam Guard to use once token is removed"];</code>
+     * @return Whether the steamguardScheme field is set.
+     */
+    @java.lang.Override
+    public boolean hasSteamguardScheme() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional uint32 steamguard_scheme = 11 [(.description) = "Type of Steam Guard to use once token is removed"];</code>
+     * @return The steamguardScheme.
+     */
+    @java.lang.Override
+    public int getSteamguardScheme() {
+      return steamguardScheme_;
+    }
+
+    public static final int STEAMID_FIELD_NUMBER = 12;
     private long steamid_;
     /**
-     * <code>optional fixed64 steamid = 1 [(.description) = "steamid to use"];</code>
+     * <code>optional fixed64 steamid = 12 [(.description) = "steamid that owns the secret"];</code>
      * @return Whether the steamid field is set.
      */
     @java.lang.Override
     public boolean hasSteamid() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
-     * <code>optional fixed64 steamid = 1 [(.description) = "steamid to use"];</code>
+     * <code>optional fixed64 steamid = 12 [(.description) = "steamid that owns the secret"];</code>
      * @return The steamid.
      */
     @java.lang.Override
@@ -11835,7 +16343,40 @@ public final class SteammessagesTwofactorSteamclient {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeFixed64(1, steamid_);
+        output.writeBytes(1, sharedSecret_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeFixed64(2, serialNumber_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, revocationCode_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uri_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt64(5, serverTime_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, accountName_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, tokenGid_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeBytes(8, identitySecret_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeBytes(9, secret1_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeInt32(10, status_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeUInt32(11, steamguardScheme_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeFixed64(12, steamid_);
       }
       unknownFields.writeTo(output);
     }
@@ -11848,7 +16389,47 @@ public final class SteammessagesTwofactorSteamclient {
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed64Size(1, steamid_);
+          .computeBytesSize(1, sharedSecret_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(2, serialNumber_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, revocationCode_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uri_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, serverTime_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, accountName_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, tokenGid_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, identitySecret_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, secret1_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, status_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, steamguardScheme_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(12, steamid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11860,11 +16441,66 @@ public final class SteammessagesTwofactorSteamclient {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request)) {
+      if (!(obj instanceof SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token)) {
         return super.equals(obj);
       }
-      SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request other = (SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request) obj;
+      SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token other = (SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token) obj;
 
+      if (hasSharedSecret() != other.hasSharedSecret()) return false;
+      if (hasSharedSecret()) {
+        if (!getSharedSecret()
+            .equals(other.getSharedSecret())) return false;
+      }
+      if (hasSerialNumber() != other.hasSerialNumber()) return false;
+      if (hasSerialNumber()) {
+        if (getSerialNumber()
+            != other.getSerialNumber()) return false;
+      }
+      if (hasRevocationCode() != other.hasRevocationCode()) return false;
+      if (hasRevocationCode()) {
+        if (!getRevocationCode()
+            .equals(other.getRevocationCode())) return false;
+      }
+      if (hasUri() != other.hasUri()) return false;
+      if (hasUri()) {
+        if (!getUri()
+            .equals(other.getUri())) return false;
+      }
+      if (hasServerTime() != other.hasServerTime()) return false;
+      if (hasServerTime()) {
+        if (getServerTime()
+            != other.getServerTime()) return false;
+      }
+      if (hasAccountName() != other.hasAccountName()) return false;
+      if (hasAccountName()) {
+        if (!getAccountName()
+            .equals(other.getAccountName())) return false;
+      }
+      if (hasTokenGid() != other.hasTokenGid()) return false;
+      if (hasTokenGid()) {
+        if (!getTokenGid()
+            .equals(other.getTokenGid())) return false;
+      }
+      if (hasIdentitySecret() != other.hasIdentitySecret()) return false;
+      if (hasIdentitySecret()) {
+        if (!getIdentitySecret()
+            .equals(other.getIdentitySecret())) return false;
+      }
+      if (hasSecret1() != other.hasSecret1()) return false;
+      if (hasSecret1()) {
+        if (!getSecret1()
+            .equals(other.getSecret1())) return false;
+      }
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (getStatus()
+            != other.getStatus()) return false;
+      }
+      if (hasSteamguardScheme() != other.hasSteamguardScheme()) return false;
+      if (hasSteamguardScheme()) {
+        if (getSteamguardScheme()
+            != other.getSteamguardScheme()) return false;
+      }
       if (hasSteamid() != other.hasSteamid()) return false;
       if (hasSteamid()) {
         if (getSteamid()
@@ -11881,6 +16517,52 @@ public final class SteammessagesTwofactorSteamclient {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSharedSecret()) {
+        hash = (37 * hash) + SHARED_SECRET_FIELD_NUMBER;
+        hash = (53 * hash) + getSharedSecret().hashCode();
+      }
+      if (hasSerialNumber()) {
+        hash = (37 * hash) + SERIAL_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSerialNumber());
+      }
+      if (hasRevocationCode()) {
+        hash = (37 * hash) + REVOCATION_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getRevocationCode().hashCode();
+      }
+      if (hasUri()) {
+        hash = (37 * hash) + URI_FIELD_NUMBER;
+        hash = (53 * hash) + getUri().hashCode();
+      }
+      if (hasServerTime()) {
+        hash = (37 * hash) + SERVER_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getServerTime());
+      }
+      if (hasAccountName()) {
+        hash = (37 * hash) + ACCOUNT_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountName().hashCode();
+      }
+      if (hasTokenGid()) {
+        hash = (37 * hash) + TOKEN_GID_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenGid().hashCode();
+      }
+      if (hasIdentitySecret()) {
+        hash = (37 * hash) + IDENTITY_SECRET_FIELD_NUMBER;
+        hash = (53 * hash) + getIdentitySecret().hashCode();
+      }
+      if (hasSecret1()) {
+        hash = (37 * hash) + SECRET_1_FIELD_NUMBER;
+        hash = (53 * hash) + getSecret1().hashCode();
+      }
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus();
+      }
+      if (hasSteamguardScheme()) {
+        hash = (37 * hash) + STEAMGUARD_SCHEME_FIELD_NUMBER;
+        hash = (53 * hash) + getSteamguardScheme();
+      }
       if (hasSteamid()) {
         hash = (37 * hash) + STEAMID_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -11891,69 +16573,69 @@ public final class SteammessagesTwofactorSteamclient {
       return hash;
     }
 
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseFrom(byte[] data)
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseFrom(java.io.InputStream input)
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseDelimitedFrom(java.io.InputStream input)
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseDelimitedFrom(
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parseFrom(
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11966,7 +16648,7 @@ public final class SteammessagesTwofactorSteamclient {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request prototype) {
+    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -11982,26 +16664,26 @@ public final class SteammessagesTwofactorSteamclient {
       return builder;
     }
     /**
-     * Protobuf type {@code CTwoFactor_DestroyEmergencyCodes_Request}
+     * Protobuf type {@code CRemoveAuthenticatorViaChallengeContinue_Replacement_Token}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CTwoFactor_DestroyEmergencyCodes_Request)
-        SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_RequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CRemoveAuthenticatorViaChallengeContinue_Replacement_Token)
+        SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_TokenOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_DestroyEmergencyCodes_Request_descriptor;
+        return SteammessagesTwofactorSteamclient.internal_static_CRemoveAuthenticatorViaChallengeContinue_Replacement_Token_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_DestroyEmergencyCodes_Request_fieldAccessorTable
+        return SteammessagesTwofactorSteamclient.internal_static_CRemoveAuthenticatorViaChallengeContinue_Replacement_Token_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request.Builder.class);
+                SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.class, SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.Builder.class);
       }
 
-      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request.newBuilder()
+      // Construct using SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -12019,25 +16701,47 @@ public final class SteammessagesTwofactorSteamclient {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        steamid_ = 0L;
+        sharedSecret_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        serialNumber_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        revocationCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        uri_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        serverTime_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        accountName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        tokenGid_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        identitySecret_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        secret1_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        status_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        steamguardScheme_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        steamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_DestroyEmergencyCodes_Request_descriptor;
+        return SteammessagesTwofactorSteamclient.internal_static_CRemoveAuthenticatorViaChallengeContinue_Replacement_Token_descriptor;
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request getDefaultInstanceForType() {
-        return SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request.getDefaultInstance();
+      public SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token getDefaultInstanceForType() {
+        return SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.getDefaultInstance();
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request build() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request result = buildPartial();
+      public SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token build() {
+        SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -12045,13 +16749,57 @@ public final class SteammessagesTwofactorSteamclient {
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request buildPartial() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request result = new SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request(this);
+      public SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token buildPartial() {
+        SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token result = new SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.steamid_ = steamid_;
           to_bitField0_ |= 0x00000001;
+        }
+        result.sharedSecret_ = sharedSecret_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.serialNumber_ = serialNumber_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.revocationCode_ = revocationCode_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.uri_ = uri_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.serverTime_ = serverTime_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.accountName_ = accountName_;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.tokenGid_ = tokenGid_;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.identitySecret_ = identitySecret_;
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.secret1_ = secret1_;
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.status_ = status_;
+          to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.steamguardScheme_ = steamguardScheme_;
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.steamid_ = steamid_;
+          to_bitField0_ |= 0x00000800;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -12092,16 +16840,57 @@ public final class SteammessagesTwofactorSteamclient {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request) {
-          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request)other);
+        if (other instanceof SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token) {
+          return mergeFrom((SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request other) {
-        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request.getDefaultInstance()) return this;
+      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token other) {
+        if (other == SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.getDefaultInstance()) return this;
+        if (other.hasSharedSecret()) {
+          setSharedSecret(other.getSharedSecret());
+        }
+        if (other.hasSerialNumber()) {
+          setSerialNumber(other.getSerialNumber());
+        }
+        if (other.hasRevocationCode()) {
+          bitField0_ |= 0x00000004;
+          revocationCode_ = other.revocationCode_;
+          onChanged();
+        }
+        if (other.hasUri()) {
+          bitField0_ |= 0x00000008;
+          uri_ = other.uri_;
+          onChanged();
+        }
+        if (other.hasServerTime()) {
+          setServerTime(other.getServerTime());
+        }
+        if (other.hasAccountName()) {
+          bitField0_ |= 0x00000020;
+          accountName_ = other.accountName_;
+          onChanged();
+        }
+        if (other.hasTokenGid()) {
+          bitField0_ |= 0x00000040;
+          tokenGid_ = other.tokenGid_;
+          onChanged();
+        }
+        if (other.hasIdentitySecret()) {
+          setIdentitySecret(other.getIdentitySecret());
+        }
+        if (other.hasSecret1()) {
+          setSecret1(other.getSecret1());
+        }
+        if (other.hasStatus()) {
+          setStatus(other.getStatus());
+        }
+        if (other.hasSteamguardScheme()) {
+          setSteamguardScheme(other.getSteamguardScheme());
+        }
         if (other.hasSteamid()) {
           setSteamid(other.getSteamid());
         }
@@ -12120,11 +16909,11 @@ public final class SteammessagesTwofactorSteamclient {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request parsedMessage = null;
+        SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request) e.getUnfinishedMessage();
+          parsedMessage = (SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -12135,17 +16924,635 @@ public final class SteammessagesTwofactorSteamclient {
       }
       private int bitField0_;
 
+      private com.google.protobuf.ByteString sharedSecret_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes shared_secret = 1 [(.description) = "Shared secret between server and authenticator"];</code>
+       * @return Whether the sharedSecret field is set.
+       */
+      @java.lang.Override
+      public boolean hasSharedSecret() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional bytes shared_secret = 1 [(.description) = "Shared secret between server and authenticator"];</code>
+       * @return The sharedSecret.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSharedSecret() {
+        return sharedSecret_;
+      }
+      /**
+       * <code>optional bytes shared_secret = 1 [(.description) = "Shared secret between server and authenticator"];</code>
+       * @param value The sharedSecret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSharedSecret(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        sharedSecret_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes shared_secret = 1 [(.description) = "Shared secret between server and authenticator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSharedSecret() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sharedSecret_ = getDefaultInstance().getSharedSecret();
+        onChanged();
+        return this;
+      }
+
+      private long serialNumber_ ;
+      /**
+       * <code>optional fixed64 serial_number = 2 [(.description) = "Authenticator serial number (unique per token)"];</code>
+       * @return Whether the serialNumber field is set.
+       */
+      @java.lang.Override
+      public boolean hasSerialNumber() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional fixed64 serial_number = 2 [(.description) = "Authenticator serial number (unique per token)"];</code>
+       * @return The serialNumber.
+       */
+      @java.lang.Override
+      public long getSerialNumber() {
+        return serialNumber_;
+      }
+      /**
+       * <code>optional fixed64 serial_number = 2 [(.description) = "Authenticator serial number (unique per token)"];</code>
+       * @param value The serialNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSerialNumber(long value) {
+        bitField0_ |= 0x00000002;
+        serialNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 serial_number = 2 [(.description) = "Authenticator serial number (unique per token)"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSerialNumber() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        serialNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object revocationCode_ = "";
+      /**
+       * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+       * @return Whether the revocationCode field is set.
+       */
+      public boolean hasRevocationCode() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+       * @return The revocationCode.
+       */
+      public java.lang.String getRevocationCode() {
+        java.lang.Object ref = revocationCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            revocationCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+       * @return The bytes for revocationCode.
+       */
+      public com.google.protobuf.ByteString
+          getRevocationCodeBytes() {
+        java.lang.Object ref = revocationCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          revocationCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+       * @param value The revocationCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevocationCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        revocationCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevocationCode() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        revocationCode_ = getDefaultInstance().getRevocationCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string revocation_code = 3 [(.description) = "code used to revoke authenticator"];</code>
+       * @param value The bytes for revocationCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevocationCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        revocationCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uri_ = "";
+      /**
+       * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+       * @return Whether the uri field is set.
+       */
+      public boolean hasUri() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+       * @return The uri.
+       */
+      public java.lang.String getUri() {
+        java.lang.Object ref = uri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            uri_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+       * @return The bytes for uri.
+       */
+      public com.google.protobuf.ByteString
+          getUriBytes() {
+        java.lang.Object ref = uri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        uri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUri() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        uri_ = getDefaultInstance().getUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uri = 4 [(.description) = "URI for QR code generation"];</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        uri_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long serverTime_ ;
+      /**
+       * <code>optional uint64 server_time = 5 [(.description) = "Current server time"];</code>
+       * @return Whether the serverTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasServerTime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint64 server_time = 5 [(.description) = "Current server time"];</code>
+       * @return The serverTime.
+       */
+      @java.lang.Override
+      public long getServerTime() {
+        return serverTime_;
+      }
+      /**
+       * <code>optional uint64 server_time = 5 [(.description) = "Current server time"];</code>
+       * @param value The serverTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerTime(long value) {
+        bitField0_ |= 0x00000010;
+        serverTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 server_time = 5 [(.description) = "Current server time"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        serverTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accountName_ = "";
+      /**
+       * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+       * @return Whether the accountName field is set.
+       */
+      public boolean hasAccountName() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+       * @return The accountName.
+       */
+      public java.lang.String getAccountName() {
+        java.lang.Object ref = accountName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            accountName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+       * @return The bytes for accountName.
+       */
+      public com.google.protobuf.ByteString
+          getAccountNameBytes() {
+        java.lang.Object ref = accountName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accountName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+       * @param value The accountName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        accountName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountName() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        accountName_ = getDefaultInstance().getAccountName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string account_name = 6 [(.description) = "Account name to display on token client"];</code>
+       * @param value The bytes for accountName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        accountName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenGid_ = "";
+      /**
+       * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+       * @return Whether the tokenGid field is set.
+       */
+      public boolean hasTokenGid() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+       * @return The tokenGid.
+       */
+      public java.lang.String getTokenGid() {
+        java.lang.Object ref = tokenGid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            tokenGid_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+       * @return The bytes for tokenGid.
+       */
+      public com.google.protobuf.ByteString
+          getTokenGidBytes() {
+        java.lang.Object ref = tokenGid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenGid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+       * @param value The tokenGid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenGid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        tokenGid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenGid() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        tokenGid_ = getDefaultInstance().getTokenGid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string token_gid = 7 [(.description) = "Token GID assigned by server"];</code>
+       * @param value The bytes for tokenGid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenGidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        tokenGid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString identitySecret_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes identity_secret = 8 [(.description) = "Secret used for identity attestation (e.g., for eventing)"];</code>
+       * @return Whether the identitySecret field is set.
+       */
+      @java.lang.Override
+      public boolean hasIdentitySecret() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional bytes identity_secret = 8 [(.description) = "Secret used for identity attestation (e.g., for eventing)"];</code>
+       * @return The identitySecret.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getIdentitySecret() {
+        return identitySecret_;
+      }
+      /**
+       * <code>optional bytes identity_secret = 8 [(.description) = "Secret used for identity attestation (e.g., for eventing)"];</code>
+       * @param value The identitySecret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentitySecret(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        identitySecret_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes identity_secret = 8 [(.description) = "Secret used for identity attestation (e.g., for eventing)"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdentitySecret() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        identitySecret_ = getDefaultInstance().getIdentitySecret();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString secret1_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes secret_1 = 9 [(.description) = "Spare shared secret"];</code>
+       * @return Whether the secret1 field is set.
+       */
+      @java.lang.Override
+      public boolean hasSecret1() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional bytes secret_1 = 9 [(.description) = "Spare shared secret"];</code>
+       * @return The secret1.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSecret1() {
+        return secret1_;
+      }
+      /**
+       * <code>optional bytes secret_1 = 9 [(.description) = "Spare shared secret"];</code>
+       * @param value The secret1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecret1(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        secret1_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes secret_1 = 9 [(.description) = "Spare shared secret"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecret1() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        secret1_ = getDefaultInstance().getSecret1();
+        onChanged();
+        return this;
+      }
+
+      private int status_ ;
+      /**
+       * <code>optional int32 status = 10 [(.description) = "Result code"];</code>
+       * @return Whether the status field is set.
+       */
+      @java.lang.Override
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional int32 status = 10 [(.description) = "Result code"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>optional int32 status = 10 [(.description) = "Result code"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(int value) {
+        bitField0_ |= 0x00000200;
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 status = 10 [(.description) = "Result code"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int steamguardScheme_ ;
+      /**
+       * <code>optional uint32 steamguard_scheme = 11 [(.description) = "Type of Steam Guard to use once token is removed"];</code>
+       * @return Whether the steamguardScheme field is set.
+       */
+      @java.lang.Override
+      public boolean hasSteamguardScheme() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional uint32 steamguard_scheme = 11 [(.description) = "Type of Steam Guard to use once token is removed"];</code>
+       * @return The steamguardScheme.
+       */
+      @java.lang.Override
+      public int getSteamguardScheme() {
+        return steamguardScheme_;
+      }
+      /**
+       * <code>optional uint32 steamguard_scheme = 11 [(.description) = "Type of Steam Guard to use once token is removed"];</code>
+       * @param value The steamguardScheme to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamguardScheme(int value) {
+        bitField0_ |= 0x00000400;
+        steamguardScheme_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 steamguard_scheme = 11 [(.description) = "Type of Steam Guard to use once token is removed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamguardScheme() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        steamguardScheme_ = 0;
+        onChanged();
+        return this;
+      }
+
       private long steamid_ ;
       /**
-       * <code>optional fixed64 steamid = 1 [(.description) = "steamid to use"];</code>
+       * <code>optional fixed64 steamid = 12 [(.description) = "steamid that owns the secret"];</code>
        * @return Whether the steamid field is set.
        */
       @java.lang.Override
       public boolean hasSteamid() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
-       * <code>optional fixed64 steamid = 1 [(.description) = "steamid to use"];</code>
+       * <code>optional fixed64 steamid = 12 [(.description) = "steamid that owns the secret"];</code>
        * @return The steamid.
        */
       @java.lang.Override
@@ -12153,22 +17560,22 @@ public final class SteammessagesTwofactorSteamclient {
         return steamid_;
       }
       /**
-       * <code>optional fixed64 steamid = 1 [(.description) = "steamid to use"];</code>
+       * <code>optional fixed64 steamid = 12 [(.description) = "steamid that owns the secret"];</code>
        * @param value The steamid to set.
        * @return This builder for chaining.
        */
       public Builder setSteamid(long value) {
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000800;
         steamid_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional fixed64 steamid = 1 [(.description) = "steamid to use"];</code>
+       * <code>optional fixed64 steamid = 12 [(.description) = "steamid that owns the secret"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSteamid() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000800);
         steamid_ = 0L;
         onChanged();
         return this;
@@ -12186,70 +17593,96 @@ public final class SteammessagesTwofactorSteamclient {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:CTwoFactor_DestroyEmergencyCodes_Request)
+      // @@protoc_insertion_point(builder_scope:CRemoveAuthenticatorViaChallengeContinue_Replacement_Token)
     }
 
-    // @@protoc_insertion_point(class_scope:CTwoFactor_DestroyEmergencyCodes_Request)
-    private static final SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CRemoveAuthenticatorViaChallengeContinue_Replacement_Token)
+    private static final SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request();
+      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token();
     }
 
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request getDefaultInstance() {
+    public static SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_DestroyEmergencyCodes_Request>
-        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_DestroyEmergencyCodes_Request>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CRemoveAuthenticatorViaChallengeContinue_Replacement_Token>
+        PARSER = new com.google.protobuf.AbstractParser<CRemoveAuthenticatorViaChallengeContinue_Replacement_Token>() {
       @java.lang.Override
-      public CTwoFactor_DestroyEmergencyCodes_Request parsePartialFrom(
+      public CRemoveAuthenticatorViaChallengeContinue_Replacement_Token parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CTwoFactor_DestroyEmergencyCodes_Request(input, extensionRegistry);
+        return new CRemoveAuthenticatorViaChallengeContinue_Replacement_Token(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CTwoFactor_DestroyEmergencyCodes_Request> parser() {
+    public static com.google.protobuf.Parser<CRemoveAuthenticatorViaChallengeContinue_Replacement_Token> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CTwoFactor_DestroyEmergencyCodes_Request> getParserForType() {
+    public com.google.protobuf.Parser<CRemoveAuthenticatorViaChallengeContinue_Replacement_Token> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Request getDefaultInstanceForType() {
+    public SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface CTwoFactor_DestroyEmergencyCodes_ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CTwoFactor_DestroyEmergencyCodes_Response)
+  public interface CTwoFactor_RemoveAuthenticatorViaChallengeContinue_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+     * @return Whether the success field is set.
+     */
+    boolean hasSuccess();
+    /**
+     * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+     * @return The success.
+     */
+    boolean getSuccess();
+
+    /**
+     * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+     * @return Whether the replacementToken field is set.
+     */
+    boolean hasReplacementToken();
+    /**
+     * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+     * @return The replacementToken.
+     */
+    SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token getReplacementToken();
+    /**
+     * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+     */
+    SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_TokenOrBuilder getReplacementTokenOrBuilder();
   }
   /**
-   * Protobuf type {@code CTwoFactor_DestroyEmergencyCodes_Response}
+   * Protobuf type {@code CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response}
    */
-  public static final class CTwoFactor_DestroyEmergencyCodes_Response extends
+  public static final class CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CTwoFactor_DestroyEmergencyCodes_Response)
-      CTwoFactor_DestroyEmergencyCodes_ResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response)
+      CTwoFactor_RemoveAuthenticatorViaChallengeContinue_ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CTwoFactor_DestroyEmergencyCodes_Response.newBuilder() to construct.
-    private CTwoFactor_DestroyEmergencyCodes_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response.newBuilder() to construct.
+    private CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CTwoFactor_DestroyEmergencyCodes_Response() {
+    private CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CTwoFactor_DestroyEmergencyCodes_Response();
+      return new CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response();
     }
 
     @java.lang.Override
@@ -12257,1042 +17690,7 @@ public final class SteammessagesTwofactorSteamclient {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CTwoFactor_DestroyEmergencyCodes_Response(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_DestroyEmergencyCodes_Response_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_DestroyEmergencyCodes_Response_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response)) {
-        return super.equals(obj);
-      }
-      SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response other = (SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response) obj;
-
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CTwoFactor_DestroyEmergencyCodes_Response}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CTwoFactor_DestroyEmergencyCodes_Response)
-        SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_ResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_DestroyEmergencyCodes_Response_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_DestroyEmergencyCodes_Response_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response.Builder.class);
-      }
-
-      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_DestroyEmergencyCodes_Response_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response getDefaultInstanceForType() {
-        return SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response build() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response buildPartial() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response result = new SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response) {
-          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response other) {
-        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CTwoFactor_DestroyEmergencyCodes_Response)
-    }
-
-    // @@protoc_insertion_point(class_scope:CTwoFactor_DestroyEmergencyCodes_Response)
-    private static final SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response();
-    }
-
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_DestroyEmergencyCodes_Response>
-        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_DestroyEmergencyCodes_Response>() {
-      @java.lang.Override
-      public CTwoFactor_DestroyEmergencyCodes_Response parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CTwoFactor_DestroyEmergencyCodes_Response(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CTwoFactor_DestroyEmergencyCodes_Response> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CTwoFactor_DestroyEmergencyCodes_Response> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesTwofactorSteamclient.CTwoFactor_DestroyEmergencyCodes_Response getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CTwoFactor_ValidateToken_RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CTwoFactor_ValidateToken_Request)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-     * @return Whether the code field is set.
-     */
-    boolean hasCode();
-    /**
-     * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-     * @return The code.
-     */
-    java.lang.String getCode();
-    /**
-     * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-     * @return The bytes for code.
-     */
-    com.google.protobuf.ByteString
-        getCodeBytes();
-  }
-  /**
-   * Protobuf type {@code CTwoFactor_ValidateToken_Request}
-   */
-  public static final class CTwoFactor_ValidateToken_Request extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CTwoFactor_ValidateToken_Request)
-      CTwoFactor_ValidateToken_RequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CTwoFactor_ValidateToken_Request.newBuilder() to construct.
-    private CTwoFactor_ValidateToken_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CTwoFactor_ValidateToken_Request() {
-      code_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CTwoFactor_ValidateToken_Request();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CTwoFactor_ValidateToken_Request(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              code_ = bs;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_ValidateToken_Request_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_ValidateToken_Request_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int CODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object code_;
-    /**
-     * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-     * @return Whether the code field is set.
-     */
-    @java.lang.Override
-    public boolean hasCode() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-     * @return The code.
-     */
-    @java.lang.Override
-    public java.lang.String getCode() {
-      java.lang.Object ref = code_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          code_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-     * @return The bytes for code.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCodeBytes() {
-      java.lang.Object ref = code_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        code_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, code_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, code_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request)) {
-        return super.equals(obj);
-      }
-      SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request other = (SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request) obj;
-
-      if (hasCode() != other.hasCode()) return false;
-      if (hasCode()) {
-        if (!getCode()
-            .equals(other.getCode())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasCode()) {
-        hash = (37 * hash) + CODE_FIELD_NUMBER;
-        hash = (53 * hash) + getCode().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CTwoFactor_ValidateToken_Request}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CTwoFactor_ValidateToken_Request)
-        SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_RequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_ValidateToken_Request_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_ValidateToken_Request_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request.class, SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request.Builder.class);
-      }
-
-      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        code_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_ValidateToken_Request_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request getDefaultInstanceForType() {
-        return SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request build() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request buildPartial() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request result = new SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.code_ = code_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request) {
-          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request other) {
-        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request.getDefaultInstance()) return this;
-        if (other.hasCode()) {
-          bitField0_ |= 0x00000001;
-          code_ = other.code_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object code_ = "";
-      /**
-       * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-       * @return Whether the code field is set.
-       */
-      public boolean hasCode() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-       * @return The code.
-       */
-      public java.lang.String getCode() {
-        java.lang.Object ref = code_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            code_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-       * @return The bytes for code.
-       */
-      public com.google.protobuf.ByteString
-          getCodeBytes() {
-        java.lang.Object ref = code_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          code_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        code_ = getDefaultInstance().getCode();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string code = 1 [(.description) = "code to validate"];</code>
-       * @param value The bytes for code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CTwoFactor_ValidateToken_Request)
-    }
-
-    // @@protoc_insertion_point(class_scope:CTwoFactor_ValidateToken_Request)
-    private static final SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request();
-    }
-
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_ValidateToken_Request>
-        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_ValidateToken_Request>() {
-      @java.lang.Override
-      public CTwoFactor_ValidateToken_Request parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CTwoFactor_ValidateToken_Request(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CTwoFactor_ValidateToken_Request> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CTwoFactor_ValidateToken_Request> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Request getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CTwoFactor_ValidateToken_ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CTwoFactor_ValidateToken_Response)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional bool valid = 1 [(.description) = "result of validation"];</code>
-     * @return Whether the valid field is set.
-     */
-    boolean hasValid();
-    /**
-     * <code>optional bool valid = 1 [(.description) = "result of validation"];</code>
-     * @return The valid.
-     */
-    boolean getValid();
-  }
-  /**
-   * Protobuf type {@code CTwoFactor_ValidateToken_Response}
-   */
-  public static final class CTwoFactor_ValidateToken_Response extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CTwoFactor_ValidateToken_Response)
-      CTwoFactor_ValidateToken_ResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CTwoFactor_ValidateToken_Response.newBuilder() to construct.
-    private CTwoFactor_ValidateToken_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CTwoFactor_ValidateToken_Response() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CTwoFactor_ValidateToken_Response();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CTwoFactor_ValidateToken_Response(
+    private CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -13313,7 +17711,20 @@ public final class SteammessagesTwofactorSteamclient {
               break;
             case 8: {
               bitField0_ |= 0x00000001;
-              valid_ = input.readBool();
+              success_ = input.readBool();
+              break;
+            }
+            case 18: {
+              SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = replacementToken_.toBuilder();
+              }
+              replacementToken_ = input.readMessage(SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replacementToken_);
+                replacementToken_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
               break;
             }
             default: {
@@ -13337,35 +17748,61 @@ public final class SteammessagesTwofactorSteamclient {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_ValidateToken_Response_descriptor;
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_ValidateToken_Response_fieldAccessorTable
+      return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response.Builder.class);
+              SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response.Builder.class);
     }
 
     private int bitField0_;
-    public static final int VALID_FIELD_NUMBER = 1;
-    private boolean valid_;
+    public static final int SUCCESS_FIELD_NUMBER = 1;
+    private boolean success_;
     /**
-     * <code>optional bool valid = 1 [(.description) = "result of validation"];</code>
-     * @return Whether the valid field is set.
+     * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+     * @return Whether the success field is set.
      */
     @java.lang.Override
-    public boolean hasValid() {
+    public boolean hasSuccess() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional bool valid = 1 [(.description) = "result of validation"];</code>
-     * @return The valid.
+     * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+     * @return The success.
      */
     @java.lang.Override
-    public boolean getValid() {
-      return valid_;
+    public boolean getSuccess() {
+      return success_;
+    }
+
+    public static final int REPLACEMENT_TOKEN_FIELD_NUMBER = 2;
+    private SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacementToken_;
+    /**
+     * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+     * @return Whether the replacementToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplacementToken() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+     * @return The replacementToken.
+     */
+    @java.lang.Override
+    public SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token getReplacementToken() {
+      return replacementToken_ == null ? SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.getDefaultInstance() : replacementToken_;
+    }
+    /**
+     * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_TokenOrBuilder getReplacementTokenOrBuilder() {
+      return replacementToken_ == null ? SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.getDefaultInstance() : replacementToken_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -13383,7 +17820,10 @@ public final class SteammessagesTwofactorSteamclient {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeBool(1, valid_);
+        output.writeBool(1, success_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getReplacementToken());
       }
       unknownFields.writeTo(output);
     }
@@ -13396,7 +17836,11 @@ public final class SteammessagesTwofactorSteamclient {
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, valid_);
+          .computeBoolSize(1, success_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getReplacementToken());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13408,15 +17852,20 @@ public final class SteammessagesTwofactorSteamclient {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response)) {
+      if (!(obj instanceof SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response)) {
         return super.equals(obj);
       }
-      SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response other = (SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response) obj;
+      SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response other = (SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response) obj;
 
-      if (hasValid() != other.hasValid()) return false;
-      if (hasValid()) {
-        if (getValid()
-            != other.getValid()) return false;
+      if (hasSuccess() != other.hasSuccess()) return false;
+      if (hasSuccess()) {
+        if (getSuccess()
+            != other.getSuccess()) return false;
+      }
+      if (hasReplacementToken() != other.hasReplacementToken()) return false;
+      if (hasReplacementToken()) {
+        if (!getReplacementToken()
+            .equals(other.getReplacementToken())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -13429,79 +17878,83 @@ public final class SteammessagesTwofactorSteamclient {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasValid()) {
-        hash = (37 * hash) + VALID_FIELD_NUMBER;
+      if (hasSuccess()) {
+        hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getValid());
+            getSuccess());
+      }
+      if (hasReplacementToken()) {
+        hash = (37 * hash) + REPLACEMENT_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getReplacementToken().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseFrom(byte[] data)
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseFrom(java.io.InputStream input)
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseDelimitedFrom(java.io.InputStream input)
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseDelimitedFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parseFrom(
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13514,7 +17967,7 @@ public final class SteammessagesTwofactorSteamclient {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response prototype) {
+    public static Builder newBuilder(SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -13530,26 +17983,26 @@ public final class SteammessagesTwofactorSteamclient {
       return builder;
     }
     /**
-     * Protobuf type {@code CTwoFactor_ValidateToken_Response}
+     * Protobuf type {@code CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CTwoFactor_ValidateToken_Response)
-        SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_ResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response)
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_ValidateToken_Response_descriptor;
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_ValidateToken_Response_fieldAccessorTable
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response.Builder.class);
+                SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response.class, SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response.Builder.class);
       }
 
-      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response.newBuilder()
+      // Construct using SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -13562,30 +18015,37 @@ public final class SteammessagesTwofactorSteamclient {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getReplacementTokenFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        valid_ = false;
+        success_ = false;
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (replacementTokenBuilder_ == null) {
+          replacementToken_ = null;
+        } else {
+          replacementTokenBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_ValidateToken_Response_descriptor;
+        return SteammessagesTwofactorSteamclient.internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response_descriptor;
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response getDefaultInstanceForType() {
-        return SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response.getDefaultInstance();
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response getDefaultInstanceForType() {
+        return SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response.getDefaultInstance();
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response build() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response result = buildPartial();
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response build() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -13593,13 +18053,21 @@ public final class SteammessagesTwofactorSteamclient {
       }
 
       @java.lang.Override
-      public SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response buildPartial() {
-        SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response result = new SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response(this);
+      public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response buildPartial() {
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response result = new SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.valid_ = valid_;
+          result.success_ = success_;
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (replacementTokenBuilder_ == null) {
+            result.replacementToken_ = replacementToken_;
+          } else {
+            result.replacementToken_ = replacementTokenBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -13640,18 +18108,21 @@ public final class SteammessagesTwofactorSteamclient {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response) {
-          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response)other);
+        if (other instanceof SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response) {
+          return mergeFrom((SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response other) {
-        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response.getDefaultInstance()) return this;
-        if (other.hasValid()) {
-          setValid(other.getValid());
+      public Builder mergeFrom(SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response other) {
+        if (other == SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response.getDefaultInstance()) return this;
+        if (other.hasSuccess()) {
+          setSuccess(other.getSuccess());
+        }
+        if (other.hasReplacementToken()) {
+          mergeReplacementToken(other.getReplacementToken());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13668,11 +18139,11 @@ public final class SteammessagesTwofactorSteamclient {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response parsedMessage = null;
+        SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response) e.getUnfinishedMessage();
+          parsedMessage = (SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -13683,43 +18154,163 @@ public final class SteammessagesTwofactorSteamclient {
       }
       private int bitField0_;
 
-      private boolean valid_ ;
+      private boolean success_ ;
       /**
-       * <code>optional bool valid = 1 [(.description) = "result of validation"];</code>
-       * @return Whether the valid field is set.
+       * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+       * @return Whether the success field is set.
        */
       @java.lang.Override
-      public boolean hasValid() {
+      public boolean hasSuccess() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional bool valid = 1 [(.description) = "result of validation"];</code>
-       * @return The valid.
+       * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+       * @return The success.
        */
       @java.lang.Override
-      public boolean getValid() {
-        return valid_;
+      public boolean getSuccess() {
+        return success_;
       }
       /**
-       * <code>optional bool valid = 1 [(.description) = "result of validation"];</code>
-       * @param value The valid to set.
+       * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
+       * @param value The success to set.
        * @return This builder for chaining.
        */
-      public Builder setValid(boolean value) {
+      public Builder setSuccess(boolean value) {
         bitField0_ |= 0x00000001;
-        valid_ = value;
+        success_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bool valid = 1 [(.description) = "result of validation"];</code>
+       * <code>optional bool success = 1 [(.description) = "True if succeeded, or want more tries with an authenticator_code"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearValid() {
+      public Builder clearSuccess() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        valid_ = false;
+        success_ = false;
         onChanged();
         return this;
+      }
+
+      private SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacementToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token, SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.Builder, SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_TokenOrBuilder> replacementTokenBuilder_;
+      /**
+       * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+       * @return Whether the replacementToken field is set.
+       */
+      public boolean hasReplacementToken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+       * @return The replacementToken.
+       */
+      public SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token getReplacementToken() {
+        if (replacementTokenBuilder_ == null) {
+          return replacementToken_ == null ? SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.getDefaultInstance() : replacementToken_;
+        } else {
+          return replacementTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+       */
+      public Builder setReplacementToken(SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token value) {
+        if (replacementTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replacementToken_ = value;
+          onChanged();
+        } else {
+          replacementTokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+       */
+      public Builder setReplacementToken(
+          SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.Builder builderForValue) {
+        if (replacementTokenBuilder_ == null) {
+          replacementToken_ = builderForValue.build();
+          onChanged();
+        } else {
+          replacementTokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+       */
+      public Builder mergeReplacementToken(SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token value) {
+        if (replacementTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              replacementToken_ != null &&
+              replacementToken_ != SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.getDefaultInstance()) {
+            replacementToken_ =
+              SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.newBuilder(replacementToken_).mergeFrom(value).buildPartial();
+          } else {
+            replacementToken_ = value;
+          }
+          onChanged();
+        } else {
+          replacementTokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+       */
+      public Builder clearReplacementToken() {
+        if (replacementTokenBuilder_ == null) {
+          replacementToken_ = null;
+          onChanged();
+        } else {
+          replacementTokenBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+       */
+      public SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.Builder getReplacementTokenBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getReplacementTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+       */
+      public SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_TokenOrBuilder getReplacementTokenOrBuilder() {
+        if (replacementTokenBuilder_ != null) {
+          return replacementTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return replacementToken_ == null ?
+              SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.getDefaultInstance() : replacementToken_;
+        }
+      }
+      /**
+       * <code>optional .CRemoveAuthenticatorViaChallengeContinue_Replacement_Token replacement_token = 2 [(.description) = "Fresh secret to install"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token, SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.Builder, SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_TokenOrBuilder> 
+          getReplacementTokenFieldBuilder() {
+        if (replacementTokenBuilder_ == null) {
+          replacementTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token, SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token.Builder, SteammessagesTwofactorSteamclient.CRemoveAuthenticatorViaChallengeContinue_Replacement_TokenOrBuilder>(
+                  getReplacementToken(),
+                  getParentForChildren(),
+                  isClean());
+          replacementToken_ = null;
+        }
+        return replacementTokenBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13734,46 +18325,56 @@ public final class SteammessagesTwofactorSteamclient {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:CTwoFactor_ValidateToken_Response)
+      // @@protoc_insertion_point(builder_scope:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response)
     }
 
-    // @@protoc_insertion_point(class_scope:CTwoFactor_ValidateToken_Response)
-    private static final SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response)
+    private static final SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response();
+      DEFAULT_INSTANCE = new SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response();
     }
 
-    public static SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response getDefaultInstance() {
+    public static SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_ValidateToken_Response>
-        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_ValidateToken_Response>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response>() {
       @java.lang.Override
-      public CTwoFactor_ValidateToken_Response parsePartialFrom(
+      public CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CTwoFactor_ValidateToken_Response(input, extensionRegistry);
+        return new CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CTwoFactor_ValidateToken_Response> parser() {
+    public static com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CTwoFactor_ValidateToken_Response> getParserForType() {
+    public com.google.protobuf.Parser<CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public SteammessagesTwofactorSteamclient.CTwoFactor_ValidateToken_Response getDefaultInstanceForType() {
+    public SteammessagesTwofactorSteamclient.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CTwoFactor_Time_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CTwoFactor_Time_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CTwoFactor_Time_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CTwoFactor_Time_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CTwoFactor_Status_Request_descriptor;
   private static final 
@@ -13815,6 +18416,16 @@ public final class SteammessagesTwofactorSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CTwoFactor_FinalizeAddAuthenticator_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CTwoFactor_UpdateTokenVersion_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CTwoFactor_UpdateTokenVersion_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CTwoFactor_UpdateTokenVersion_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CTwoFactor_UpdateTokenVersion_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CTwoFactor_RemoveAuthenticator_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -13825,35 +18436,30 @@ public final class SteammessagesTwofactorSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CTwoFactor_RemoveAuthenticator_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CTwoFactor_CreateEmergencyCodes_Request_descriptor;
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CTwoFactor_CreateEmergencyCodes_Request_fieldAccessorTable;
+      internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CTwoFactor_CreateEmergencyCodes_Response_descriptor;
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CTwoFactor_CreateEmergencyCodes_Response_fieldAccessorTable;
+      internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CTwoFactor_DestroyEmergencyCodes_Request_descriptor;
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CTwoFactor_DestroyEmergencyCodes_Request_fieldAccessorTable;
+      internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CTwoFactor_DestroyEmergencyCodes_Response_descriptor;
+    internal_static_CRemoveAuthenticatorViaChallengeContinue_Replacement_Token_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CTwoFactor_DestroyEmergencyCodes_Response_fieldAccessorTable;
+      internal_static_CRemoveAuthenticatorViaChallengeContinue_Replacement_Token_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CTwoFactor_ValidateToken_Request_descriptor;
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CTwoFactor_ValidateToken_Request_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CTwoFactor_ValidateToken_Response_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CTwoFactor_ValidateToken_Response_fieldAccessorTable;
+      internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13864,240 +18470,328 @@ public final class SteammessagesTwofactorSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n/steam/steammessages_twofactor.steamcli" +
-      "ent.proto\0322steam/steammessages_unified_b" +
-      "ase.steamclient.proto\"@\n\031CTwoFactor_Stat" +
-      "us_Request\022#\n\007steamid\030\001 \001(\006B\022\202\265\030\016steamid" +
-      " to use\"\306\007\n\032CTwoFactor_Status_Response\022&" +
-      "\n\005state\030\001 \001(\rB\027\202\265\030\023Authenticator state\022=" +
-      "\n\023inactivation_reason\030\002 \001(\rB \202\265\030\034Inactiv" +
-      "ation reason (if any)\0225\n\022authenticator_t" +
-      "ype\030\003 \001(\rB\031\202\265\030\025Type of authenticator\022L\n\025" +
-      "authenticator_allowed\030\004 \001(\010B-\202\265\030)Account" +
-      " allowed to have an authenticator?\022;\n\021st" +
-      "eamguard_scheme\030\005 \001(\rB \202\265\030\034Steam Guard s" +
-      "cheme in effect\022A\n\ttoken_gid\030\006 \001(\tB.\202\265\030*" +
-      "String rep of token GID assigned by serv" +
-      "er\022B\n\017email_validated\030\007 \001(\010B)\202\265\030%Account" +
-      " has verified email capability\022?\n\021device" +
-      "_identifier\030\010 \001(\tB$\202\265\030 Authenticator (ph" +
-      "one) identifier\0224\n\014time_created\030\t \001(\rB\036\202" +
-      "\265\030\032When the token was created\022W\n\035revocat" +
-      "ion_attempts_remaining\030\n \001(\rB0\202\265\030,Number" +
-      " of revocation code attempts remaining\022^" +
-      "\n\020classified_agent\030\013 \001(\tBD\202\265\030@Agent that" +
-      " added the authenticator (e.g., ios / an" +
-      "droid / other)\022g\n\034allow_external_authent" +
-      "icator\030\014 \001(\010BA\202\265\030=Allow a third-party au" +
-      "thenticator (in addition to two-factor)\022" +
-      "_\n\020time_transferred\030\r \001(\rBE\202\265\030AWhen the " +
-      "token was transferred from another devic" +
-      "e, if applicable\"\262\003\n#CTwoFactor_AddAuthe" +
-      "nticator_Request\022#\n\007steamid\030\001 \001(\006B\022\202\265\030\016s" +
-      "teamid to use\022:\n\022authenticator_time\030\002 \001(" +
-      "\004B\036\202\265\030\032Current authenticator time\022?\n\rser" +
-      "ial_number\030\003 \001(\006B(\202\265\030$locally computed s" +
-      "erial (deprecated)\0222\n\022authenticator_type" +
-      "\030\004 \001(\rB\026\202\265\030\022Authenticator type\0227\n\021device" +
-      "_identifier\030\005 \001(\tB\034\202\265\030\030Authenticator ide" +
-      "ntifier\022A\n\014sms_phone_id\030\006 \001(\tB+\202\265\030\'ID of" +
-      " phone to use for SMS verification\0229\n\014ht" +
-      "tp_headers\030\007 \003(\tB#\202\265\030\037HTTP headers alter" +
-      "nating by K/V\"\363\004\n$CTwoFactor_AddAuthenti" +
-      "cator_Response\022I\n\rshared_secret\030\001 \001(\014B2\202" +
-      "\265\030.Shared secret between server and auth" +
-      "enticator\022I\n\rserial_number\030\002 \001(\006B2\202\265\030.Au" +
-      "thenticator serial number (unique per to" +
-      "ken)\022>\n\017revocation_code\030\003 \001(\tB%\202\265\030!code " +
-      "used to revoke authenticator\022+\n\003uri\030\004 \001(" +
-      "\tB\036\202\265\030\032URI for QR code generation\022,\n\013ser" +
-      "ver_time\030\005 \001(\004B\027\202\265\030\023Current server time\022" +
-      "A\n\014account_name\030\006 \001(\tB+\202\265\030\'Account name " +
-      "to display on token client\0223\n\ttoken_gid\030" +
-      "\007 \001(\tB \202\265\030\034Token GID assigned by server\022" +
-      "V\n\017identity_secret\030\010 \001(\014B=\202\265\0309Secret use" +
-      "d for identity attestation (e.g., for ev" +
-      "enting)\022)\n\010secret_1\030\t \001(\014B\027\202\265\030\023Spare sha" +
-      "red secret\022\037\n\006status\030\n \001(\005B\017\202\265\030\013Result c" +
-      "ode\"\335\001\n\034CTwoFactor_SendEmail_Request\022#\n\007" +
-      "steamid\030\001 \001(\006B\022\202\265\030\016Steamid to use\022F\n\nema" +
-      "il_type\030\002 \001(\rB2\202\265\030.Type of email to send" +
-      " (ETwoFactorEmailType::*)\022P\n\027include_act" +
-      "ivation_code\030\003 \001(\010B/\202\265\030+Include activati" +
-      "on code in email parameters\"\037\n\035CTwoFacto" +
-      "r_SendEmail_Response\"\303\002\n+CTwoFactor_Fina" +
-      "lizeAddAuthenticator_Request\022#\n\007steamid\030" +
-      "\001 \001(\006B\022\202\265\030\016steamid to use\0221\n\022authenticat" +
-      "or_code\030\002 \001(\tB\025\202\265\030\021Current auth code\022:\n\022" +
-      "authenticator_time\030\003 \001(\004B\036\202\265\030\032Current au" +
-      "thenticator time\022E\n\017activation_code\030\004 \001(" +
-      "\tB,\202\265\030(Activation code from out-of-band " +
-      "message\0229\n\014http_headers\030\005 \003(\tB#\202\265\030\037HTTP " +
-      "headers alternating by K/V\"\351\001\n,CTwoFacto" +
-      "r_FinalizeAddAuthenticator_Response\022:\n\007s" +
-      "uccess\030\001 \001(\010B)\202\265\030%True if succeeded, or " +
-      "want more tries\022.\n\twant_more\030\002 \001(\010B\033\202\265\030\027" +
-      "True if want more tries\022,\n\013server_time\030\003" +
-      " \001(\004B\027\202\265\030\023Current server time\022\037\n\006status\030" +
-      "\004 \001(\005B\017\202\265\030\013Result code\"\313\002\n&CTwoFactor_Re" +
-      "moveAuthenticator_Request\022<\n\017revocation_" +
-      "code\030\002 \001(\tB#\202\265\030\037Password needed to remov" +
-      "e token\022H\n\021revocation_reason\030\005 \001(\rB-\202\265\030)" +
-      "Reason the authenticator is being remove" +
-      "d\022O\n\021steamguard_scheme\030\006 \001(\rB4\202\265\0300Type o" +
-      "f Steam Guard to use once token is remov" +
-      "ed\022H\n\035remove_all_steamguard_cookies\030\007 \001(" +
-      "\010B!\202\265\030\035Remove all steamguard cookies\"\376\001\n" +
-      "\'CTwoFactor_RemoveAuthenticator_Response" +
-      "\022L\n\007success\030\001 \001(\010B;\202\265\0307True if request s" +
-      "ucceeeded. The mobile app checks this.\022," +
-      "\n\013server_time\030\003 \001(\004B\027\202\265\030\023Current server " +
-      "time\022W\n\035revocation_attempts_remaining\030\005 " +
-      "\001(\rB0\202\265\030,Number of revocation code attem" +
-      "pts remaining\"7\n\'CTwoFactor_CreateEmerge" +
-      "ncyCodes_Request\022\014\n\004code\030\001 \001(\t\"N\n(CTwoFa" +
-      "ctor_CreateEmergencyCodes_Response\022\"\n\005co" +
-      "des\030\001 \003(\tB\023\202\265\030\017Emergency codes\"O\n(CTwoFa" +
-      "ctor_DestroyEmergencyCodes_Request\022#\n\007st" +
-      "eamid\030\001 \001(\006B\022\202\265\030\016steamid to use\"+\n)CTwoF" +
-      "actor_DestroyEmergencyCodes_Response\"F\n " +
-      "CTwoFactor_ValidateToken_Request\022\"\n\004code" +
-      "\030\001 \001(\tB\024\202\265\030\020code to validate\"L\n!CTwoFact" +
-      "or_ValidateToken_Response\022\'\n\005valid\030\001 \001(\010" +
-      "B\030\202\265\030\024result of validation2\204\n\n\tTwoFactor" +
-      "\022\214\001\n\013QueryStatus\022\032.CTwoFactor_Status_Req" +
-      "uest\032\033.CTwoFactor_Status_Response\"D\202\265\030@G" +
-      "et two-factor authentication settings fo" +
-      "r the logged-in account\022\232\001\n\020AddAuthentic" +
-      "ator\022$.CTwoFactor_AddAuthenticator_Reque" +
-      "st\032%.CTwoFactor_AddAuthenticator_Respons" +
-      "e\"9\202\265\0305Add two-factor authenticator to t" +
-      "he logged-in account\022i\n\tSendEmail\022\035.CTwo" +
-      "Factor_SendEmail_Request\032\036.CTwoFactor_Se" +
-      "ndEmail_Response\"\035\202\265\030\031Send email to the " +
-      "account\022\301\001\n\030FinalizeAddAuthenticator\022,.C" +
-      "TwoFactor_FinalizeAddAuthenticator_Reque" +
-      "st\032-.CTwoFactor_FinalizeAddAuthenticator" +
-      "_Response\"H\202\265\030DFinalize two-factor authe" +
-      "ntication addition to the logged-in acco" +
-      "unt\022\262\001\n\023RemoveAuthenticator\022\'.CTwoFactor" +
-      "_RemoveAuthenticator_Request\032(.CTwoFacto" +
-      "r_RemoveAuthenticator_Response\"H\202\265\030DRemo" +
-      "ve two-factor authentication addition fr" +
-      "om the logged-in account\022\227\001\n\024CreateEmerg" +
-      "encyCodes\022(.CTwoFactor_CreateEmergencyCo" +
-      "des_Request\032).CTwoFactor_CreateEmergency" +
-      "Codes_Response\"*\202\265\030&Generate emergency a" +
-      "uthenticator codes\022\251\001\n\025DestroyEmergencyC" +
-      "odes\022).CTwoFactor_DestroyEmergencyCodes_" +
-      "Request\032*.CTwoFactor_DestroyEmergencyCod" +
-      "es_Response\"9\202\265\0305Destroy emergency authe" +
-      "nticator codes for the account\022z\n\rValida" +
-      "teToken\022!.CTwoFactor_ValidateToken_Reque" +
-      "st\032\".CTwoFactor_ValidateToken_Response\"\"" +
-      "\202\265\030\036Validate (and consume) a token\032%\202\265\030!" +
+      "ent.proto\032\036steam/steammessages_base.prot" +
+      "o\0322steam/steammessages_unified_base.stea" +
+      "mclient.proto\"l\n\027CTwoFactor_Time_Request" +
+      "\022Q\n\013sender_time\030\001 \001(\004B<\202\265\0308Current time " +
+      "on the sender (for stats, don\'t trust th" +
+      "is)\"\351\005\n\030CTwoFactor_Time_Response\022,\n\013serv" +
+      "er_time\030\001 \001(\004B\027\202\265\030\023Current server time\022Z" +
+      "\n\026skew_tolerance_seconds\030\002 \001(\004B:\202\265\0306Time" +
+      " skew we\'ll tolerate before applying an " +
+      "adjustment\022G\n\017large_time_jink\030\003 \001(\004B.\202\265\030" +
+      "*Re-sync if local time jitters by this m" +
+      "uch\022W\n\027probe_frequency_seconds\030\004 \001(\rB6\202\265" +
+      "\0302Time probe frequency if phone time is " +
+      "synchronized\022i\n%adjusted_time_probe_freq" +
+      "uency_seconds\030\005 \001(\rB:\202\265\0306Time probe freq" +
+      "uency if phone time is not synchronized\022" +
+      "R\n\034hint_probe_frequency_seconds\030\006 \001(\rB,\202" +
+      "\265\030(Floor of probe frequency, no matter w" +
+      "hat\022M\n\014sync_timeout\030\007 \001(\rB7\202\265\0303More than" +
+      " this, and we call the current sync fail" +
+      "ed\022G\n\021try_again_seconds\030\010 \001(\rB,\202\265\030(Secon" +
+      "ds to try again after a failed sync\022J\n\014m" +
+      "ax_attempts\030\t \001(\rB4\202\265\0300# times we\'ll ask" +
+      " for server time before we bail\"@\n\031CTwoF" +
+      "actor_Status_Request\022#\n\007steamid\030\001 \001(\006B\022\202" +
+      "\265\030\016steamid to use\"\362\007\n\032CTwoFactor_Status_" +
+      "Response\022&\n\005state\030\001 \001(\rB\027\202\265\030\023Authenticat" +
+      "or state\022=\n\023inactivation_reason\030\002 \001(\rB \202" +
+      "\265\030\034Inactivation reason (if any)\0225\n\022authe" +
+      "nticator_type\030\003 \001(\rB\031\202\265\030\025Type of authent" +
+      "icator\022L\n\025authenticator_allowed\030\004 \001(\010B-\202" +
+      "\265\030)Account allowed to have an authentica" +
+      "tor?\022;\n\021steamguard_scheme\030\005 \001(\rB \202\265\030\034Ste" +
+      "am Guard scheme in effect\022A\n\ttoken_gid\030\006" +
+      " \001(\tB.\202\265\030*String rep of token GID assign" +
+      "ed by server\022B\n\017email_validated\030\007 \001(\010B)\202" +
+      "\265\030%Account has verified email capability" +
+      "\022?\n\021device_identifier\030\010 \001(\tB$\202\265\030 Authent" +
+      "icator (phone) identifier\0224\n\014time_create" +
+      "d\030\t \001(\rB\036\202\265\030\032When the token was created\022" +
+      "W\n\035revocation_attempts_remaining\030\n \001(\rB0" +
+      "\202\265\030,Number of revocation code attempts r" +
+      "emaining\022^\n\020classified_agent\030\013 \001(\tBD\202\265\030@" +
+      "Agent that added the authenticator (e.g." +
+      ", ios / android / other)\022g\n\034allow_extern" +
+      "al_authenticator\030\014 \001(\010BA\202\265\030=Allow a thir" +
+      "d-party authenticator (in addition to tw" +
+      "o-factor)\022_\n\020time_transferred\030\r \001(\rBE\202\265\030" +
+      "AWhen the token was transferred from ano" +
+      "ther device, if applicable\022*\n\007version\030\016 " +
+      "\001(\rB\031\202\265\030\025Current token version\"\363\003\n#CTwoF" +
+      "actor_AddAuthenticator_Request\022#\n\007steami" +
+      "d\030\001 \001(\006B\022\202\265\030\016steamid to use\022:\n\022authentic" +
+      "ator_time\030\002 \001(\004B\036\202\265\030\032Current authenticat" +
+      "or time\022?\n\rserial_number\030\003 \001(\006B(\202\265\030$loca" +
+      "lly computed serial (deprecated)\0222\n\022auth" +
+      "enticator_type\030\004 \001(\rB\026\202\265\030\022Authenticator " +
+      "type\0227\n\021device_identifier\030\005 \001(\tB\034\202\265\030\030Aut" +
+      "henticator identifier\022A\n\014sms_phone_id\030\006 " +
+      "\001(\tB+\202\265\030\'ID of phone to use for SMS veri" +
+      "fication\0229\n\014http_headers\030\007 \003(\tB#\202\265\030\037HTTP" +
+      " headers alternating by K/V\022?\n\007version\030\010" +
+      " \001(\r:\0011B+\202\265\030\'What the version of our tok" +
+      "en should be\"\312\005\n$CTwoFactor_AddAuthentic" +
+      "ator_Response\022I\n\rshared_secret\030\001 \001(\014B2\202\265" +
+      "\030.Shared secret between server and authe" +
+      "nticator\022I\n\rserial_number\030\002 \001(\006B2\202\265\030.Aut" +
+      "henticator serial number (unique per tok" +
+      "en)\022>\n\017revocation_code\030\003 \001(\tB%\202\265\030!code u" +
+      "sed to revoke authenticator\022+\n\003uri\030\004 \001(\t" +
+      "B\036\202\265\030\032URI for QR code generation\022,\n\013serv" +
+      "er_time\030\005 \001(\004B\027\202\265\030\023Current server time\022A" +
+      "\n\014account_name\030\006 \001(\tB+\202\265\030\'Account name t" +
+      "o display on token client\0223\n\ttoken_gid\030\007" +
+      " \001(\tB \202\265\030\034Token GID assigned by server\022V" +
+      "\n\017identity_secret\030\010 \001(\014B=\202\265\0309Secret used" +
+      " for identity attestation (e.g., for eve" +
+      "nting)\022)\n\010secret_1\030\t \001(\014B\027\202\265\030\023Spare shar" +
+      "ed secret\022\037\n\006status\030\n \001(\005B\017\202\265\030\013Result co" +
+      "de\022U\n\021phone_number_hint\030\013 \001(\tB:\202\265\0306a por" +
+      "tion of the phone number the SMS code wa" +
+      "s sent to\"\335\001\n\034CTwoFactor_SendEmail_Reque" +
+      "st\022#\n\007steamid\030\001 \001(\006B\022\202\265\030\016Steamid to use\022" +
+      "F\n\nemail_type\030\002 \001(\rB2\202\265\030.Type of email t" +
+      "o send (ETwoFactorEmailType::*)\022P\n\027inclu" +
+      "de_activation_code\030\003 \001(\010B/\202\265\030+Include ac" +
+      "tivation code in email parameters\"\037\n\035CTw" +
+      "oFactor_SendEmail_Response\"\307\003\n+CTwoFacto" +
+      "r_FinalizeAddAuthenticator_Request\022#\n\007st" +
+      "eamid\030\001 \001(\006B\022\202\265\030\016steamid to use\0221\n\022authe" +
+      "nticator_code\030\002 \001(\tB\025\202\265\030\021Current auth co" +
+      "de\022:\n\022authenticator_time\030\003 \001(\004B\036\202\265\030\032Curr" +
+      "ent authenticator time\022E\n\017activation_cod" +
+      "e\030\004 \001(\tB,\202\265\030(Activation code from out-of" +
+      "-band message\0229\n\014http_headers\030\005 \003(\tB#\202\265\030" +
+      "\037HTTP headers alternating by K/V\022\201\001\n\021val" +
+      "idate_sms_code\030\006 \001(\010Bf\202\265\030bWhen finalizin" +
+      "g with an SMS code, pass the request on " +
+      "to the PhoneService to update its state " +
+      "too.\"\351\001\n,CTwoFactor_FinalizeAddAuthentic" +
+      "ator_Response\022:\n\007success\030\001 \001(\010B)\202\265\030%True" +
+      " if succeeded, or want more tries\022.\n\twan" +
+      "t_more\030\002 \001(\010B\033\202\265\030\027True if want more trie" +
+      "s\022,\n\013server_time\030\003 \001(\004B\027\202\265\030\023Current serv" +
+      "er time\022\037\n\006status\030\004 \001(\005B\017\202\265\030\013Result code" +
+      "\"\262\001\n%CTwoFactor_UpdateTokenVersion_Reque" +
+      "st\022\017\n\007steamid\030\001 \001(\006\022<\n\007version\030\002 \001(\rB+\202\265" +
+      "\030\'What the version of our token should b" +
+      "e\022:\n\tsignature\030\003 \001(\014B\'\202\265\030#HMAC digest ov" +
+      "er user\'s private key\"(\n&CTwoFactor_Upda" +
+      "teTokenVersion_Response\"\313\002\n&CTwoFactor_R" +
+      "emoveAuthenticator_Request\022<\n\017revocation" +
+      "_code\030\002 \001(\tB#\202\265\030\037Password needed to remo" +
+      "ve token\022H\n\021revocation_reason\030\005 \001(\rB-\202\265\030" +
+      ")Reason the authenticator is being remov" +
+      "ed\022O\n\021steamguard_scheme\030\006 \001(\rB4\202\265\0300Type " +
+      "of Steam Guard to use once token is remo" +
+      "ved\022H\n\035remove_all_steamguard_cookies\030\007 \001" +
+      "(\010B!\202\265\030\035Remove all steamguard cookies\"\376\001" +
+      "\n\'CTwoFactor_RemoveAuthenticator_Respons" +
+      "e\022L\n\007success\030\001 \001(\010B;\202\265\0307True if request " +
+      "succeeeded. The mobile app checks this.\022" +
+      ",\n\013server_time\030\003 \001(\004B\027\202\265\030\023Current server" +
+      " time\022W\n\035revocation_attempts_remaining\030\005" +
+      " \001(\rB0\202\265\030,Number of revocation code atte" +
+      "mpts remaining\"9\n7CTwoFactor_RemoveAuthe" +
+      "nticatorViaChallengeStart_Request\"\221\001\n8CT" +
+      "woFactor_RemoveAuthenticatorViaChallenge" +
+      "Start_Response\022U\n\007success\030\001 \001(\010BD\202\265\030@Tru" +
+      "e if succeeded, or want more tries with " +
+      "an authenticator_code\"\364\001\n:CTwoFactor_Rem" +
+      "oveAuthenticatorViaChallengeContinue_Req" +
+      "uest\022#\n\010sms_code\030\001 \001(\tB\021\202\265\030\rCode from SM" +
+      "S\022P\n\022generate_new_token\030\002 \001(\010B4\202\265\0300Gener" +
+      "ate new token (instead of removing old o" +
+      "ne)\022?\n\007version\030\003 \001(\r:\0011B+\202\265\030\'What the ve" +
+      "rsion of our token should be\"\215\006\n:CRemove" +
+      "AuthenticatorViaChallengeContinue_Replac" +
+      "ement_Token\022I\n\rshared_secret\030\001 \001(\014B2\202\265\030." +
+      "Shared secret between server and authent" +
+      "icator\022I\n\rserial_number\030\002 \001(\006B2\202\265\030.Authe" +
+      "nticator serial number (unique per token" +
+      ")\022>\n\017revocation_code\030\003 \001(\tB%\202\265\030!code use" +
+      "d to revoke authenticator\022+\n\003uri\030\004 \001(\tB\036" +
+      "\202\265\030\032URI for QR code generation\022,\n\013server" +
+      "_time\030\005 \001(\004B\027\202\265\030\023Current server time\022A\n\014" +
+      "account_name\030\006 \001(\tB+\202\265\030\'Account name to " +
+      "display on token client\0223\n\ttoken_gid\030\007 \001" +
+      "(\tB \202\265\030\034Token GID assigned by server\022V\n\017" +
+      "identity_secret\030\010 \001(\014B=\202\265\0309Secret used f" +
+      "or identity attestation (e.g., for event" +
+      "ing)\022)\n\010secret_1\030\t \001(\014B\027\202\265\030\023Spare shared" +
+      " secret\022\037\n\006status\030\n \001(\005B\017\202\265\030\013Result code" +
+      "\022O\n\021steamguard_scheme\030\013 \001(\rB4\202\265\0300Type of" +
+      " Steam Guard to use once token is remove" +
+      "d\0221\n\007steamid\030\014 \001(\006B \202\265\030\034steamid that own" +
+      "s the secret\"\211\002\n;CTwoFactor_RemoveAuthen" +
+      "ticatorViaChallengeContinue_Response\022U\n\007" +
+      "success\030\001 \001(\010BD\202\265\030@True if succeeded, or" +
+      " want more tries with an authenticator_c" +
+      "ode\022s\n\021replacement_token\030\002 \001(\0132;.CRemove" +
+      "AuthenticatorViaChallengeContinue_Replac" +
+      "ement_TokenB\033\202\265\030\027Fresh secret to install" +
+      "2\346\013\n\tTwoFactor\022k\n\tQueryTime\022\030.CTwoFactor" +
+      "_Time_Request\032\031.CTwoFactor_Time_Response" +
+      "\")\202\265\030%Get server\'s idea of the current t" +
+      "ime\022\214\001\n\013QueryStatus\022\032.CTwoFactor_Status_" +
+      "Request\032\033.CTwoFactor_Status_Response\"D\202\265" +
+      "\030@Get two-factor authentication settings" +
+      " for the logged-in account\022\232\001\n\020AddAuthen" +
+      "ticator\022$.CTwoFactor_AddAuthenticator_Re" +
+      "quest\032%.CTwoFactor_AddAuthenticator_Resp" +
+      "onse\"9\202\265\0305Add two-factor authenticator t" +
+      "o the logged-in account\022i\n\tSendEmail\022\035.C" +
+      "TwoFactor_SendEmail_Request\032\036.CTwoFactor" +
+      "_SendEmail_Response\"\035\202\265\030\031Send email to t" +
+      "he account\022\301\001\n\030FinalizeAddAuthenticator\022" +
+      ",.CTwoFactor_FinalizeAddAuthenticator_Re" +
+      "quest\032-.CTwoFactor_FinalizeAddAuthentica" +
+      "tor_Response\"H\202\265\030DFinalize two-factor au" +
+      "thentication addition to the logged-in a" +
+      "ccount\022\212\001\n\022UpdateTokenVersion\022&.CTwoFact" +
+      "or_UpdateTokenVersion_Request\032\'.CTwoFact" +
+      "or_UpdateTokenVersion_Response\"#\202\265\030\037Upda" +
+      "te the version for my token\022\262\001\n\023RemoveAu" +
+      "thenticator\022\'.CTwoFactor_RemoveAuthentic" +
+      "ator_Request\032(.CTwoFactor_RemoveAuthenti" +
+      "cator_Response\"H\202\265\030DRemove two-factor au" +
+      "thentication addition from the logged-in" +
+      " account\022\314\001\n$RemoveAuthenticatorViaChall" +
+      "engeStart\0228.CTwoFactor_RemoveAuthenticat" +
+      "orViaChallengeStart_Request\0329.CTwoFactor" +
+      "_RemoveAuthenticatorViaChallengeStart_Re" +
+      "sponse\"/\202\265\030+Start challenge-based authen" +
+      "ticator removal\022\330\001\n\'RemoveAuthenticatorV" +
+      "iaChallengeContinue\022;.CTwoFactor_RemoveA" +
+      "uthenticatorViaChallengeContinue_Request" +
+      "\032<.CTwoFactor_RemoveAuthenticatorViaChal" +
+      "lengeContinue_Response\"2\202\265\030.Continue cha" +
+      "llenge-based authenticator removal\032%\202\265\030!" +
       "Two Factor Authentication ServiceB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
-    internal_static_CTwoFactor_Status_Request_descriptor =
+    internal_static_CTwoFactor_Time_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_CTwoFactor_Time_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CTwoFactor_Time_Request_descriptor,
+        new java.lang.String[] { "SenderTime", });
+    internal_static_CTwoFactor_Time_Response_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_CTwoFactor_Time_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CTwoFactor_Time_Response_descriptor,
+        new java.lang.String[] { "ServerTime", "SkewToleranceSeconds", "LargeTimeJink", "ProbeFrequencySeconds", "AdjustedTimeProbeFrequencySeconds", "HintProbeFrequencySeconds", "SyncTimeout", "TryAgainSeconds", "MaxAttempts", });
+    internal_static_CTwoFactor_Status_Request_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CTwoFactor_Status_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CTwoFactor_Status_Request_descriptor,
         new java.lang.String[] { "Steamid", });
     internal_static_CTwoFactor_Status_Response_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CTwoFactor_Status_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CTwoFactor_Status_Response_descriptor,
-        new java.lang.String[] { "State", "InactivationReason", "AuthenticatorType", "AuthenticatorAllowed", "SteamguardScheme", "TokenGid", "EmailValidated", "DeviceIdentifier", "TimeCreated", "RevocationAttemptsRemaining", "ClassifiedAgent", "AllowExternalAuthenticator", "TimeTransferred", });
+        new java.lang.String[] { "State", "InactivationReason", "AuthenticatorType", "AuthenticatorAllowed", "SteamguardScheme", "TokenGid", "EmailValidated", "DeviceIdentifier", "TimeCreated", "RevocationAttemptsRemaining", "ClassifiedAgent", "AllowExternalAuthenticator", "TimeTransferred", "Version", });
     internal_static_CTwoFactor_AddAuthenticator_Request_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CTwoFactor_AddAuthenticator_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CTwoFactor_AddAuthenticator_Request_descriptor,
-        new java.lang.String[] { "Steamid", "AuthenticatorTime", "SerialNumber", "AuthenticatorType", "DeviceIdentifier", "SmsPhoneId", "HttpHeaders", });
+        new java.lang.String[] { "Steamid", "AuthenticatorTime", "SerialNumber", "AuthenticatorType", "DeviceIdentifier", "SmsPhoneId", "HttpHeaders", "Version", });
     internal_static_CTwoFactor_AddAuthenticator_Response_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CTwoFactor_AddAuthenticator_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CTwoFactor_AddAuthenticator_Response_descriptor,
-        new java.lang.String[] { "SharedSecret", "SerialNumber", "RevocationCode", "Uri", "ServerTime", "AccountName", "TokenGid", "IdentitySecret", "Secret1", "Status", });
+        new java.lang.String[] { "SharedSecret", "SerialNumber", "RevocationCode", "Uri", "ServerTime", "AccountName", "TokenGid", "IdentitySecret", "Secret1", "Status", "PhoneNumberHint", });
     internal_static_CTwoFactor_SendEmail_Request_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CTwoFactor_SendEmail_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CTwoFactor_SendEmail_Request_descriptor,
         new java.lang.String[] { "Steamid", "EmailType", "IncludeActivationCode", });
     internal_static_CTwoFactor_SendEmail_Response_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CTwoFactor_SendEmail_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CTwoFactor_SendEmail_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CTwoFactor_FinalizeAddAuthenticator_Request_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CTwoFactor_FinalizeAddAuthenticator_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CTwoFactor_FinalizeAddAuthenticator_Request_descriptor,
-        new java.lang.String[] { "Steamid", "AuthenticatorCode", "AuthenticatorTime", "ActivationCode", "HttpHeaders", });
+        new java.lang.String[] { "Steamid", "AuthenticatorCode", "AuthenticatorTime", "ActivationCode", "HttpHeaders", "ValidateSmsCode", });
     internal_static_CTwoFactor_FinalizeAddAuthenticator_Response_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CTwoFactor_FinalizeAddAuthenticator_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CTwoFactor_FinalizeAddAuthenticator_Response_descriptor,
         new java.lang.String[] { "Success", "WantMore", "ServerTime", "Status", });
+    internal_static_CTwoFactor_UpdateTokenVersion_Request_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_CTwoFactor_UpdateTokenVersion_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CTwoFactor_UpdateTokenVersion_Request_descriptor,
+        new java.lang.String[] { "Steamid", "Version", "Signature", });
+    internal_static_CTwoFactor_UpdateTokenVersion_Response_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_CTwoFactor_UpdateTokenVersion_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CTwoFactor_UpdateTokenVersion_Response_descriptor,
+        new java.lang.String[] { });
     internal_static_CTwoFactor_RemoveAuthenticator_Request_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CTwoFactor_RemoveAuthenticator_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CTwoFactor_RemoveAuthenticator_Request_descriptor,
         new java.lang.String[] { "RevocationCode", "RevocationReason", "SteamguardScheme", "RemoveAllSteamguardCookies", });
     internal_static_CTwoFactor_RemoveAuthenticator_Response_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CTwoFactor_RemoveAuthenticator_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CTwoFactor_RemoveAuthenticator_Response_descriptor,
         new java.lang.String[] { "Success", "ServerTime", "RevocationAttemptsRemaining", });
-    internal_static_CTwoFactor_CreateEmergencyCodes_Request_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_CTwoFactor_CreateEmergencyCodes_Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CTwoFactor_CreateEmergencyCodes_Request_descriptor,
-        new java.lang.String[] { "Code", });
-    internal_static_CTwoFactor_CreateEmergencyCodes_Response_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_CTwoFactor_CreateEmergencyCodes_Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CTwoFactor_CreateEmergencyCodes_Response_descriptor,
-        new java.lang.String[] { "Codes", });
-    internal_static_CTwoFactor_DestroyEmergencyCodes_Request_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_CTwoFactor_DestroyEmergencyCodes_Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CTwoFactor_DestroyEmergencyCodes_Request_descriptor,
-        new java.lang.String[] { "Steamid", });
-    internal_static_CTwoFactor_DestroyEmergencyCodes_Response_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_CTwoFactor_DestroyEmergencyCodes_Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CTwoFactor_DestroyEmergencyCodes_Response_descriptor,
-        new java.lang.String[] { });
-    internal_static_CTwoFactor_ValidateToken_Request_descriptor =
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request_descriptor =
       getDescriptor().getMessageTypes().get(14);
-    internal_static_CTwoFactor_ValidateToken_Request_fieldAccessorTable = new
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CTwoFactor_ValidateToken_Request_descriptor,
-        new java.lang.String[] { "Code", });
-    internal_static_CTwoFactor_ValidateToken_Response_descriptor =
+        internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request_descriptor,
+        new java.lang.String[] { });
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response_descriptor =
       getDescriptor().getMessageTypes().get(15);
-    internal_static_CTwoFactor_ValidateToken_Response_fieldAccessorTable = new
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CTwoFactor_ValidateToken_Response_descriptor,
-        new java.lang.String[] { "Valid", });
+        internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response_descriptor,
+        new java.lang.String[] { "Success", });
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request_descriptor,
+        new java.lang.String[] { "SmsCode", "GenerateNewToken", "Version", });
+    internal_static_CRemoveAuthenticatorViaChallengeContinue_Replacement_Token_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_CRemoveAuthenticatorViaChallengeContinue_Replacement_Token_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CRemoveAuthenticatorViaChallengeContinue_Replacement_Token_descriptor,
+        new java.lang.String[] { "SharedSecret", "SerialNumber", "RevocationCode", "Uri", "ServerTime", "AccountName", "TokenGid", "IdentitySecret", "Secret1", "Status", "SteamguardScheme", "Steamid", });
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response_descriptor,
+        new java.lang.String[] { "Success", "ReplacementToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(SteammessagesUnifiedBaseSteamclient.description);
@@ -14105,6 +18799,7 @@ public final class SteammessagesTwofactorSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

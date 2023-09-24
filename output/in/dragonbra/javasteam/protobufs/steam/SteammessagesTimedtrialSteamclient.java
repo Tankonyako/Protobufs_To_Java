@@ -3786,38 +3786,40 @@ public final class SteammessagesTimedtrialSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n0steam/steammessages_timedtrial.steamcl" +
-      "ient.proto\0322steam/steammessages_unified_" +
-      "base.steamclient.proto\"5\n$CTimedTrial_Ge" +
-      "tTimeRemaining_Request\022\r\n\005appid\030\001 \001(\r\"\204\001" +
-      "\n%CTimedTrial_GetTimeRemaining_Response\022" +
-      "\026\n\016seconds_played\030\001 \001(\r\022\027\n\017seconds_allow" +
-      "ed\030\002 \001(\r\022\021\n\tpackageid\030\003 \001(\r\022\027\n\017mastersub" +
-      "_appid\030\004 \001(\r\"K\n\"CTimedTrial_RecordPlayti" +
-      "me_Request\022\r\n\005appid\030\001 \001(\r\022\026\n\016seconds_pla" +
-      "yed\030\002 \001(\r\"V\n#CTimedTrial_RecordPlaytime_" +
-      "Response\022\026\n\016seconds_played\030\001 \001(\r\022\027\n\017seco" +
-      "nds_allowed\030\002 \001(\r\"2\n!CTimedTrial_ResetPl" +
-      "aytime_Request\022\r\n\005appid\030\001 \001(\r\"U\n\"CTimedT" +
-      "rial_ResetPlaytime_Response\022\026\n\016seconds_p" +
-      "layed\030\001 \001(\r\022\027\n\017seconds_allowed\030\002 \001(\r2\233\004\n" +
-      "\nTimedTrial\022\255\001\n\020GetTimeRemaining\022%.CTime" +
-      "dTrial_GetTimeRemaining_Request\032&.CTimed" +
-      "Trial_GetTimeRemaining_Response\"J\202\265\030FRet" +
-      "urns the amount of time a user has left " +
-      "on a timed trial for an app\022\224\001\n\016RecordPl" +
-      "aytime\022#.CTimedTrial_RecordPlaytime_Requ" +
-      "est\032$.CTimedTrial_RecordPlaytime_Respons" +
-      "e\"7\202\265\0303Updates the user\'s remaining play" +
-      "time while in game\022\222\001\n\rResetPlaytime\022\".C" +
-      "TimedTrial_ResetPlaytime_Request\032#.CTime" +
-      "dTrial_ResetPlaytime_Response\"8\202\265\0304Reset" +
-      " the user\'s remaining playtime (develope" +
-      "r only)\0321\202\265\030-A service to get user timed" +
-      " trial informationB\003\200\001\001"
+      "ient.proto\032\036steam/steammessages_base.pro" +
+      "to\0322steam/steammessages_unified_base.ste" +
+      "amclient.proto\"5\n$CTimedTrial_GetTimeRem" +
+      "aining_Request\022\r\n\005appid\030\001 \001(\r\"\204\001\n%CTimed" +
+      "Trial_GetTimeRemaining_Response\022\026\n\016secon" +
+      "ds_played\030\001 \001(\r\022\027\n\017seconds_allowed\030\002 \001(\r" +
+      "\022\021\n\tpackageid\030\003 \001(\r\022\027\n\017mastersub_appid\030\004" +
+      " \001(\r\"K\n\"CTimedTrial_RecordPlaytime_Reque" +
+      "st\022\r\n\005appid\030\001 \001(\r\022\026\n\016seconds_played\030\002 \001(" +
+      "\r\"V\n#CTimedTrial_RecordPlaytime_Response" +
+      "\022\026\n\016seconds_played\030\001 \001(\r\022\027\n\017seconds_allo" +
+      "wed\030\002 \001(\r\"2\n!CTimedTrial_ResetPlaytime_R" +
+      "equest\022\r\n\005appid\030\001 \001(\r\"U\n\"CTimedTrial_Res" +
+      "etPlaytime_Response\022\026\n\016seconds_played\030\001 " +
+      "\001(\r\022\027\n\017seconds_allowed\030\002 \001(\r2\233\004\n\nTimedTr" +
+      "ial\022\255\001\n\020GetTimeRemaining\022%.CTimedTrial_G" +
+      "etTimeRemaining_Request\032&.CTimedTrial_Ge" +
+      "tTimeRemaining_Response\"J\202\265\030FReturns the" +
+      " amount of time a user has left on a tim" +
+      "ed trial for an app\022\224\001\n\016RecordPlaytime\022#" +
+      ".CTimedTrial_RecordPlaytime_Request\032$.CT" +
+      "imedTrial_RecordPlaytime_Response\"7\202\265\0303U" +
+      "pdates the user\'s remaining playtime whi" +
+      "le in game\022\222\001\n\rResetPlaytime\022\".CTimedTri" +
+      "al_ResetPlaytime_Request\032#.CTimedTrial_R" +
+      "esetPlaytime_Response\"8\202\265\0304Reset the use" +
+      "r\'s remaining playtime (developer only)\032" +
+      "1\202\265\030-A service to get user timed trial i" +
+      "nformationB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CTimedTrial_GetTimeRemaining_Request_descriptor =
@@ -3862,6 +3864,7 @@ public final class SteammessagesTimedtrialSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

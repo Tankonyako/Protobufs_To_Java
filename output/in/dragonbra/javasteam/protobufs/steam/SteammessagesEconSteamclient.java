@@ -14,2368 +14,20 @@ public final class SteammessagesEconSteamclient {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface CEcon_GetTradeOfferAccessToken_RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CEcon_GetTradeOfferAccessToken_Request)
+  public interface CEcon_GetInventoryItemsWithDescriptions_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CEcon_GetInventoryItemsWithDescriptions_Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional bool generate_new_token = 1;</code>
-     * @return Whether the generateNewToken field is set.
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return Whether the steamid field is set.
      */
-    boolean hasGenerateNewToken();
+    boolean hasSteamid();
     /**
-     * <code>optional bool generate_new_token = 1;</code>
-     * @return The generateNewToken.
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return The steamid.
      */
-    boolean getGenerateNewToken();
-  }
-  /**
-   * Protobuf type {@code CEcon_GetTradeOfferAccessToken_Request}
-   */
-  public static final class CEcon_GetTradeOfferAccessToken_Request extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CEcon_GetTradeOfferAccessToken_Request)
-      CEcon_GetTradeOfferAccessToken_RequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CEcon_GetTradeOfferAccessToken_Request.newBuilder() to construct.
-    private CEcon_GetTradeOfferAccessToken_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CEcon_GetTradeOfferAccessToken_Request() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CEcon_GetTradeOfferAccessToken_Request();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CEcon_GetTradeOfferAccessToken_Request(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              bitField0_ |= 0x00000001;
-              generateNewToken_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Request_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Request_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.class, SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int GENERATE_NEW_TOKEN_FIELD_NUMBER = 1;
-    private boolean generateNewToken_;
-    /**
-     * <code>optional bool generate_new_token = 1;</code>
-     * @return Whether the generateNewToken field is set.
-     */
-    @java.lang.Override
-    public boolean hasGenerateNewToken() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional bool generate_new_token = 1;</code>
-     * @return The generateNewToken.
-     */
-    @java.lang.Override
-    public boolean getGenerateNewToken() {
-      return generateNewToken_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeBool(1, generateNewToken_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, generateNewToken_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request)) {
-        return super.equals(obj);
-      }
-      SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request other = (SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request) obj;
-
-      if (hasGenerateNewToken() != other.hasGenerateNewToken()) return false;
-      if (hasGenerateNewToken()) {
-        if (getGenerateNewToken()
-            != other.getGenerateNewToken()) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasGenerateNewToken()) {
-        hash = (37 * hash) + GENERATE_NEW_TOKEN_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getGenerateNewToken());
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CEcon_GetTradeOfferAccessToken_Request}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CEcon_GetTradeOfferAccessToken_Request)
-        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_RequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Request_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Request_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.class, SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.Builder.class);
-      }
-
-      // Construct using SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        generateNewToken_ = false;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Request_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request getDefaultInstanceForType() {
-        return SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request build() {
-        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request buildPartial() {
-        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request result = new SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.generateNewToken_ = generateNewToken_;
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request) {
-          return mergeFrom((SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request other) {
-        if (other == SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.getDefaultInstance()) return this;
-        if (other.hasGenerateNewToken()) {
-          setGenerateNewToken(other.getGenerateNewToken());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean generateNewToken_ ;
-      /**
-       * <code>optional bool generate_new_token = 1;</code>
-       * @return Whether the generateNewToken field is set.
-       */
-      @java.lang.Override
-      public boolean hasGenerateNewToken() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional bool generate_new_token = 1;</code>
-       * @return The generateNewToken.
-       */
-      @java.lang.Override
-      public boolean getGenerateNewToken() {
-        return generateNewToken_;
-      }
-      /**
-       * <code>optional bool generate_new_token = 1;</code>
-       * @param value The generateNewToken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGenerateNewToken(boolean value) {
-        bitField0_ |= 0x00000001;
-        generateNewToken_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool generate_new_token = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGenerateNewToken() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        generateNewToken_ = false;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CEcon_GetTradeOfferAccessToken_Request)
-    }
-
-    // @@protoc_insertion_point(class_scope:CEcon_GetTradeOfferAccessToken_Request)
-    private static final SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request();
-    }
-
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Request>
-        PARSER = new com.google.protobuf.AbstractParser<CEcon_GetTradeOfferAccessToken_Request>() {
-      @java.lang.Override
-      public CEcon_GetTradeOfferAccessToken_Request parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CEcon_GetTradeOfferAccessToken_Request(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Request> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Request> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CEcon_GetTradeOfferAccessToken_ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CEcon_GetTradeOfferAccessToken_Response)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string trade_offer_access_token = 1;</code>
-     * @return Whether the tradeOfferAccessToken field is set.
-     */
-    boolean hasTradeOfferAccessToken();
-    /**
-     * <code>optional string trade_offer_access_token = 1;</code>
-     * @return The tradeOfferAccessToken.
-     */
-    java.lang.String getTradeOfferAccessToken();
-    /**
-     * <code>optional string trade_offer_access_token = 1;</code>
-     * @return The bytes for tradeOfferAccessToken.
-     */
-    com.google.protobuf.ByteString
-        getTradeOfferAccessTokenBytes();
-  }
-  /**
-   * Protobuf type {@code CEcon_GetTradeOfferAccessToken_Response}
-   */
-  public static final class CEcon_GetTradeOfferAccessToken_Response extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CEcon_GetTradeOfferAccessToken_Response)
-      CEcon_GetTradeOfferAccessToken_ResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CEcon_GetTradeOfferAccessToken_Response.newBuilder() to construct.
-    private CEcon_GetTradeOfferAccessToken_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CEcon_GetTradeOfferAccessToken_Response() {
-      tradeOfferAccessToken_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CEcon_GetTradeOfferAccessToken_Response();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CEcon_GetTradeOfferAccessToken_Response(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              tradeOfferAccessToken_ = bs;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Response_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Response_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.class, SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int TRADE_OFFER_ACCESS_TOKEN_FIELD_NUMBER = 1;
-    private volatile java.lang.Object tradeOfferAccessToken_;
-    /**
-     * <code>optional string trade_offer_access_token = 1;</code>
-     * @return Whether the tradeOfferAccessToken field is set.
-     */
-    @java.lang.Override
-    public boolean hasTradeOfferAccessToken() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional string trade_offer_access_token = 1;</code>
-     * @return The tradeOfferAccessToken.
-     */
-    @java.lang.Override
-    public java.lang.String getTradeOfferAccessToken() {
-      java.lang.Object ref = tradeOfferAccessToken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          tradeOfferAccessToken_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string trade_offer_access_token = 1;</code>
-     * @return The bytes for tradeOfferAccessToken.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTradeOfferAccessTokenBytes() {
-      java.lang.Object ref = tradeOfferAccessToken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        tradeOfferAccessToken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tradeOfferAccessToken_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tradeOfferAccessToken_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response)) {
-        return super.equals(obj);
-      }
-      SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response other = (SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response) obj;
-
-      if (hasTradeOfferAccessToken() != other.hasTradeOfferAccessToken()) return false;
-      if (hasTradeOfferAccessToken()) {
-        if (!getTradeOfferAccessToken()
-            .equals(other.getTradeOfferAccessToken())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTradeOfferAccessToken()) {
-        hash = (37 * hash) + TRADE_OFFER_ACCESS_TOKEN_FIELD_NUMBER;
-        hash = (53 * hash) + getTradeOfferAccessToken().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CEcon_GetTradeOfferAccessToken_Response}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CEcon_GetTradeOfferAccessToken_Response)
-        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_ResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Response_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Response_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.class, SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.Builder.class);
-      }
-
-      // Construct using SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        tradeOfferAccessToken_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Response_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response getDefaultInstanceForType() {
-        return SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response build() {
-        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response buildPartial() {
-        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response result = new SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.tradeOfferAccessToken_ = tradeOfferAccessToken_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response) {
-          return mergeFrom((SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response other) {
-        if (other == SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.getDefaultInstance()) return this;
-        if (other.hasTradeOfferAccessToken()) {
-          bitField0_ |= 0x00000001;
-          tradeOfferAccessToken_ = other.tradeOfferAccessToken_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object tradeOfferAccessToken_ = "";
-      /**
-       * <code>optional string trade_offer_access_token = 1;</code>
-       * @return Whether the tradeOfferAccessToken field is set.
-       */
-      public boolean hasTradeOfferAccessToken() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional string trade_offer_access_token = 1;</code>
-       * @return The tradeOfferAccessToken.
-       */
-      public java.lang.String getTradeOfferAccessToken() {
-        java.lang.Object ref = tradeOfferAccessToken_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            tradeOfferAccessToken_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string trade_offer_access_token = 1;</code>
-       * @return The bytes for tradeOfferAccessToken.
-       */
-      public com.google.protobuf.ByteString
-          getTradeOfferAccessTokenBytes() {
-        java.lang.Object ref = tradeOfferAccessToken_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          tradeOfferAccessToken_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string trade_offer_access_token = 1;</code>
-       * @param value The tradeOfferAccessToken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTradeOfferAccessToken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        tradeOfferAccessToken_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string trade_offer_access_token = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTradeOfferAccessToken() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        tradeOfferAccessToken_ = getDefaultInstance().getTradeOfferAccessToken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string trade_offer_access_token = 1;</code>
-       * @param value The bytes for tradeOfferAccessToken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTradeOfferAccessTokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        tradeOfferAccessToken_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CEcon_GetTradeOfferAccessToken_Response)
-    }
-
-    // @@protoc_insertion_point(class_scope:CEcon_GetTradeOfferAccessToken_Response)
-    private static final SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response();
-    }
-
-    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Response>
-        PARSER = new com.google.protobuf.AbstractParser<CEcon_GetTradeOfferAccessToken_Response>() {
-      @java.lang.Override
-      public CEcon_GetTradeOfferAccessToken_Response parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CEcon_GetTradeOfferAccessToken_Response(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Response> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Response> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CEcon_ClientGetItemShopOverlayAuthURL_RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CEcon_ClientGetItemShopOverlayAuthURL_Request)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string return_url = 1;</code>
-     * @return Whether the returnUrl field is set.
-     */
-    boolean hasReturnUrl();
-    /**
-     * <code>optional string return_url = 1;</code>
-     * @return The returnUrl.
-     */
-    java.lang.String getReturnUrl();
-    /**
-     * <code>optional string return_url = 1;</code>
-     * @return The bytes for returnUrl.
-     */
-    com.google.protobuf.ByteString
-        getReturnUrlBytes();
-  }
-  /**
-   * Protobuf type {@code CEcon_ClientGetItemShopOverlayAuthURL_Request}
-   */
-  public static final class CEcon_ClientGetItemShopOverlayAuthURL_Request extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CEcon_ClientGetItemShopOverlayAuthURL_Request)
-      CEcon_ClientGetItemShopOverlayAuthURL_RequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CEcon_ClientGetItemShopOverlayAuthURL_Request.newBuilder() to construct.
-    private CEcon_ClientGetItemShopOverlayAuthURL_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CEcon_ClientGetItemShopOverlayAuthURL_Request() {
-      returnUrl_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CEcon_ClientGetItemShopOverlayAuthURL_Request();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CEcon_ClientGetItemShopOverlayAuthURL_Request(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              returnUrl_ = bs;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.class, SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int RETURN_URL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object returnUrl_;
-    /**
-     * <code>optional string return_url = 1;</code>
-     * @return Whether the returnUrl field is set.
-     */
-    @java.lang.Override
-    public boolean hasReturnUrl() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional string return_url = 1;</code>
-     * @return The returnUrl.
-     */
-    @java.lang.Override
-    public java.lang.String getReturnUrl() {
-      java.lang.Object ref = returnUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          returnUrl_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string return_url = 1;</code>
-     * @return The bytes for returnUrl.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getReturnUrlBytes() {
-      java.lang.Object ref = returnUrl_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        returnUrl_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, returnUrl_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, returnUrl_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request)) {
-        return super.equals(obj);
-      }
-      SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request other = (SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request) obj;
-
-      if (hasReturnUrl() != other.hasReturnUrl()) return false;
-      if (hasReturnUrl()) {
-        if (!getReturnUrl()
-            .equals(other.getReturnUrl())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasReturnUrl()) {
-        hash = (37 * hash) + RETURN_URL_FIELD_NUMBER;
-        hash = (53 * hash) + getReturnUrl().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CEcon_ClientGetItemShopOverlayAuthURL_Request}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CEcon_ClientGetItemShopOverlayAuthURL_Request)
-        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_RequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.class, SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.Builder.class);
-      }
-
-      // Construct using SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        returnUrl_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request getDefaultInstanceForType() {
-        return SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request build() {
-        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request buildPartial() {
-        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request result = new SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.returnUrl_ = returnUrl_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request) {
-          return mergeFrom((SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request other) {
-        if (other == SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.getDefaultInstance()) return this;
-        if (other.hasReturnUrl()) {
-          bitField0_ |= 0x00000001;
-          returnUrl_ = other.returnUrl_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object returnUrl_ = "";
-      /**
-       * <code>optional string return_url = 1;</code>
-       * @return Whether the returnUrl field is set.
-       */
-      public boolean hasReturnUrl() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional string return_url = 1;</code>
-       * @return The returnUrl.
-       */
-      public java.lang.String getReturnUrl() {
-        java.lang.Object ref = returnUrl_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            returnUrl_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string return_url = 1;</code>
-       * @return The bytes for returnUrl.
-       */
-      public com.google.protobuf.ByteString
-          getReturnUrlBytes() {
-        java.lang.Object ref = returnUrl_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          returnUrl_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string return_url = 1;</code>
-       * @param value The returnUrl to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReturnUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        returnUrl_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string return_url = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReturnUrl() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        returnUrl_ = getDefaultInstance().getReturnUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string return_url = 1;</code>
-       * @param value The bytes for returnUrl to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReturnUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        returnUrl_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CEcon_ClientGetItemShopOverlayAuthURL_Request)
-    }
-
-    // @@protoc_insertion_point(class_scope:CEcon_ClientGetItemShopOverlayAuthURL_Request)
-    private static final SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request();
-    }
-
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Request>
-        PARSER = new com.google.protobuf.AbstractParser<CEcon_ClientGetItemShopOverlayAuthURL_Request>() {
-      @java.lang.Override
-      public CEcon_ClientGetItemShopOverlayAuthURL_Request parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CEcon_ClientGetItemShopOverlayAuthURL_Request(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Request> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Request> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CEcon_ClientGetItemShopOverlayAuthURL_ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CEcon_ClientGetItemShopOverlayAuthURL_Response)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string url = 1;</code>
-     * @return Whether the url field is set.
-     */
-    boolean hasUrl();
-    /**
-     * <code>optional string url = 1;</code>
-     * @return The url.
-     */
-    java.lang.String getUrl();
-    /**
-     * <code>optional string url = 1;</code>
-     * @return The bytes for url.
-     */
-    com.google.protobuf.ByteString
-        getUrlBytes();
-  }
-  /**
-   * Protobuf type {@code CEcon_ClientGetItemShopOverlayAuthURL_Response}
-   */
-  public static final class CEcon_ClientGetItemShopOverlayAuthURL_Response extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CEcon_ClientGetItemShopOverlayAuthURL_Response)
-      CEcon_ClientGetItemShopOverlayAuthURL_ResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CEcon_ClientGetItemShopOverlayAuthURL_Response.newBuilder() to construct.
-    private CEcon_ClientGetItemShopOverlayAuthURL_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CEcon_ClientGetItemShopOverlayAuthURL_Response() {
-      url_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CEcon_ClientGetItemShopOverlayAuthURL_Response();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CEcon_ClientGetItemShopOverlayAuthURL_Response(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              url_ = bs;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.class, SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int URL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object url_;
-    /**
-     * <code>optional string url = 1;</code>
-     * @return Whether the url field is set.
-     */
-    @java.lang.Override
-    public boolean hasUrl() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional string url = 1;</code>
-     * @return The url.
-     */
-    @java.lang.Override
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          url_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string url = 1;</code>
-     * @return The bytes for url.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response)) {
-        return super.equals(obj);
-      }
-      SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response other = (SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response) obj;
-
-      if (hasUrl() != other.hasUrl()) return false;
-      if (hasUrl()) {
-        if (!getUrl()
-            .equals(other.getUrl())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasUrl()) {
-        hash = (37 * hash) + URL_FIELD_NUMBER;
-        hash = (53 * hash) + getUrl().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CEcon_ClientGetItemShopOverlayAuthURL_Response}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CEcon_ClientGetItemShopOverlayAuthURL_Response)
-        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_ResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.class, SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.Builder.class);
-      }
-
-      // Construct using SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        url_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response getDefaultInstanceForType() {
-        return SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response build() {
-        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response buildPartial() {
-        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response result = new SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.url_ = url_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response) {
-          return mergeFrom((SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response other) {
-        if (other == SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.getDefaultInstance()) return this;
-        if (other.hasUrl()) {
-          bitField0_ |= 0x00000001;
-          url_ = other.url_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object url_ = "";
-      /**
-       * <code>optional string url = 1;</code>
-       * @return Whether the url field is set.
-       */
-      public boolean hasUrl() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional string url = 1;</code>
-       * @return The url.
-       */
-      public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            url_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string url = 1;</code>
-       * @return The bytes for url.
-       */
-      public com.google.protobuf.ByteString
-          getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string url = 1;</code>
-       * @param value The url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string url = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUrl() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        url_ = getDefaultInstance().getUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string url = 1;</code>
-       * @param value The bytes for url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CEcon_ClientGetItemShopOverlayAuthURL_Response)
-    }
-
-    // @@protoc_insertion_point(class_scope:CEcon_ClientGetItemShopOverlayAuthURL_Response)
-    private static final SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response();
-    }
-
-    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Response>
-        PARSER = new com.google.protobuf.AbstractParser<CEcon_ClientGetItemShopOverlayAuthURL_Response>() {
-      @java.lang.Override
-      public CEcon_ClientGetItemShopOverlayAuthURL_Response parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CEcon_ClientGetItemShopOverlayAuthURL_Response(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Response> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Response> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CEcon_GetAssetClassInfo_RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CEcon_GetAssetClassInfo_Request)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string language = 1;</code>
-     * @return Whether the language field is set.
-     */
-    boolean hasLanguage();
-    /**
-     * <code>optional string language = 1;</code>
-     * @return The language.
-     */
-    java.lang.String getLanguage();
-    /**
-     * <code>optional string language = 1;</code>
-     * @return The bytes for language.
-     */
-    com.google.protobuf.ByteString
-        getLanguageBytes();
+    long getSteamid();
 
     /**
      * <code>optional uint32 appid = 2;</code>
@@ -2389,51 +41,113 @@ public final class SteammessagesEconSteamclient {
     int getAppid();
 
     /**
-     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     * <code>optional uint64 contextid = 3;</code>
+     * @return Whether the contextid field is set.
      */
-    java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> 
-        getClassesList();
+    boolean hasContextid();
     /**
-     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     * <code>optional uint64 contextid = 3;</code>
+     * @return The contextid.
      */
-    SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getClasses(int index);
+    long getContextid();
+
     /**
-     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     * <code>optional bool get_descriptions = 4;</code>
+     * @return Whether the getDescriptions field is set.
      */
-    int getClassesCount();
+    boolean hasGetDescriptions();
     /**
-     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     * <code>optional bool get_descriptions = 4;</code>
+     * @return The getDescriptions.
      */
-    java.util.List<? extends SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder> 
-        getClassesOrBuilderList();
+    boolean getGetDescriptions();
+
     /**
-     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     * <code>optional bool for_trade_offer_verification = 10;</code>
+     * @return Whether the forTradeOfferVerification field is set.
      */
-    SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder getClassesOrBuilder(
-        int index);
+    boolean hasForTradeOfferVerification();
+    /**
+     * <code>optional bool for_trade_offer_verification = 10;</code>
+     * @return The forTradeOfferVerification.
+     */
+    boolean getForTradeOfferVerification();
+
+    /**
+     * <code>optional string language = 5;</code>
+     * @return Whether the language field is set.
+     */
+    boolean hasLanguage();
+    /**
+     * <code>optional string language = 5;</code>
+     * @return The language.
+     */
+    java.lang.String getLanguage();
+    /**
+     * <code>optional string language = 5;</code>
+     * @return The bytes for language.
+     */
+    com.google.protobuf.ByteString
+        getLanguageBytes();
+
+    /**
+     * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
+     * @return Whether the filters field is set.
+     */
+    boolean hasFilters();
+    /**
+     * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
+     * @return The filters.
+     */
+    SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions getFilters();
+    /**
+     * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
+     */
+    SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptionsOrBuilder getFiltersOrBuilder();
+
+    /**
+     * <code>optional uint64 start_assetid = 8;</code>
+     * @return Whether the startAssetid field is set.
+     */
+    boolean hasStartAssetid();
+    /**
+     * <code>optional uint64 start_assetid = 8;</code>
+     * @return The startAssetid.
+     */
+    long getStartAssetid();
+
+    /**
+     * <code>optional int32 count = 9;</code>
+     * @return Whether the count field is set.
+     */
+    boolean hasCount();
+    /**
+     * <code>optional int32 count = 9;</code>
+     * @return The count.
+     */
+    int getCount();
   }
   /**
-   * Protobuf type {@code CEcon_GetAssetClassInfo_Request}
+   * Protobuf type {@code CEcon_GetInventoryItemsWithDescriptions_Request}
    */
-  public static final class CEcon_GetAssetClassInfo_Request extends
+  public static final class CEcon_GetInventoryItemsWithDescriptions_Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CEcon_GetAssetClassInfo_Request)
-      CEcon_GetAssetClassInfo_RequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:CEcon_GetInventoryItemsWithDescriptions_Request)
+      CEcon_GetInventoryItemsWithDescriptions_RequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CEcon_GetAssetClassInfo_Request.newBuilder() to construct.
-    private CEcon_GetAssetClassInfo_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CEcon_GetInventoryItemsWithDescriptions_Request.newBuilder() to construct.
+    private CEcon_GetInventoryItemsWithDescriptions_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CEcon_GetAssetClassInfo_Request() {
+    private CEcon_GetInventoryItemsWithDescriptions_Request() {
       language_ = "";
-      classes_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CEcon_GetAssetClassInfo_Request();
+      return new CEcon_GetInventoryItemsWithDescriptions_Request();
     }
 
     @java.lang.Override
@@ -2441,7 +155,7 @@ public final class SteammessagesEconSteamclient {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CEcon_GetAssetClassInfo_Request(
+    private CEcon_GetInventoryItemsWithDescriptions_Request(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2460,10 +174,9 @@ public final class SteammessagesEconSteamclient {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 9: {
               bitField0_ |= 0x00000001;
-              language_ = bs;
+              steamid_ = input.readFixed64();
               break;
             }
             case 16: {
@@ -2471,13 +184,48 @@ public final class SteammessagesEconSteamclient {
               appid_ = input.readUInt32();
               break;
             }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                classes_ = new java.util.ArrayList<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class>();
-                mutable_bitField0_ |= 0x00000004;
+            case 24: {
+              bitField0_ |= 0x00000004;
+              contextid_ = input.readUInt64();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              getDescriptions_ = input.readBool();
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              language_ = bs;
+              break;
+            }
+            case 50: {
+              SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) != 0)) {
+                subBuilder = filters_.toBuilder();
               }
-              classes_.add(
-                  input.readMessage(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.PARSER, extensionRegistry));
+              filters_ = input.readMessage(SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(filters_);
+                filters_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              startAssetid_ = input.readUInt64();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              count_ = input.readInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000010;
+              forTradeOfferVerification_ = input.readBool();
               break;
             }
             default: {
@@ -2495,72 +243,105 @@ public final class SteammessagesEconSteamclient {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          classes_ = java.util.Collections.unmodifiableList(classes_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_descriptor;
+      return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_fieldAccessorTable
+      return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Builder.class);
+              SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.class, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.Builder.class);
     }
 
-    public interface ClassOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:CEcon_GetAssetClassInfo_Request.Class)
+    public interface FilterOptionsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional uint64 classid = 1;</code>
-       * @return Whether the classid field is set.
+       * <code>repeated uint64 assetids = 1;</code>
+       * @return A list containing the assetids.
        */
-      boolean hasClassid();
+      java.util.List<java.lang.Long> getAssetidsList();
       /**
-       * <code>optional uint64 classid = 1;</code>
-       * @return The classid.
+       * <code>repeated uint64 assetids = 1;</code>
+       * @return The count of assetids.
        */
-      long getClassid();
+      int getAssetidsCount();
+      /**
+       * <code>repeated uint64 assetids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The assetids at the given index.
+       */
+      long getAssetids(int index);
 
       /**
-       * <code>optional uint64 instanceid = 2;</code>
-       * @return Whether the instanceid field is set.
+       * <code>repeated uint32 currencyids = 2;</code>
+       * @return A list containing the currencyids.
        */
-      boolean hasInstanceid();
+      java.util.List<java.lang.Integer> getCurrencyidsList();
       /**
-       * <code>optional uint64 instanceid = 2;</code>
-       * @return The instanceid.
+       * <code>repeated uint32 currencyids = 2;</code>
+       * @return The count of currencyids.
        */
-      long getInstanceid();
+      int getCurrencyidsCount();
+      /**
+       * <code>repeated uint32 currencyids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The currencyids at the given index.
+       */
+      int getCurrencyids(int index);
+
+      /**
+       * <code>optional bool tradable_only = 3;</code>
+       * @return Whether the tradableOnly field is set.
+       */
+      boolean hasTradableOnly();
+      /**
+       * <code>optional bool tradable_only = 3;</code>
+       * @return The tradableOnly.
+       */
+      boolean getTradableOnly();
+
+      /**
+       * <code>optional bool marketable_only = 4;</code>
+       * @return Whether the marketableOnly field is set.
+       */
+      boolean hasMarketableOnly();
+      /**
+       * <code>optional bool marketable_only = 4;</code>
+       * @return The marketableOnly.
+       */
+      boolean getMarketableOnly();
     }
     /**
-     * Protobuf type {@code CEcon_GetAssetClassInfo_Request.Class}
+     * Protobuf type {@code CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions}
      */
-    public static final class Class extends
+    public static final class FilterOptions extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:CEcon_GetAssetClassInfo_Request.Class)
-        ClassOrBuilder {
+        // @@protoc_insertion_point(message_implements:CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions)
+        FilterOptionsOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use Class.newBuilder() to construct.
-      private Class(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use FilterOptions.newBuilder() to construct.
+      private FilterOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private Class() {
+      private FilterOptions() {
+        assetids_ = emptyLongList();
+        currencyids_ = emptyIntList();
       }
 
       @java.lang.Override
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(
           UnusedPrivateParameter unused) {
-        return new Class();
+        return new FilterOptions();
       }
 
       @java.lang.Override
@@ -2568,7 +349,7 @@ public final class SteammessagesEconSteamclient {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private Class(
+      private FilterOptions(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2588,13 +369,55 @@ public final class SteammessagesEconSteamclient {
                 done = true;
                 break;
               case 8: {
-                bitField0_ |= 0x00000001;
-                classid_ = input.readUInt64();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  assetids_ = newLongList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                assetids_.addLong(input.readUInt64());
+                break;
+              }
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                  assetids_ = newLongList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                while (input.getBytesUntilLimit() > 0) {
+                  assetids_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
                 break;
               }
               case 16: {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  currencyids_ = newIntList();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                currencyids_.addInt(input.readUInt32());
+                break;
+              }
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                  currencyids_ = newIntList();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                while (input.getBytesUntilLimit() > 0) {
+                  currencyids_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000001;
+                tradableOnly_ = input.readBool();
+                break;
+              }
+              case 32: {
                 bitField0_ |= 0x00000002;
-                instanceid_ = input.readUInt64();
+                marketableOnly_ = input.readBool();
                 break;
               }
               default: {
@@ -2612,60 +435,120 @@ public final class SteammessagesEconSteamclient {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            assetids_.makeImmutable(); // C
+          }
+          if (((mutable_bitField0_ & 0x00000002) != 0)) {
+            currencyids_.makeImmutable(); // C
+          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_Class_descriptor;
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_Class_fieldAccessorTable
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder.class);
+                SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.class, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.Builder.class);
       }
 
       private int bitField0_;
-      public static final int CLASSID_FIELD_NUMBER = 1;
-      private long classid_;
+      public static final int ASSETIDS_FIELD_NUMBER = 1;
+      private com.google.protobuf.Internal.LongList assetids_;
       /**
-       * <code>optional uint64 classid = 1;</code>
-       * @return Whether the classid field is set.
+       * <code>repeated uint64 assetids = 1;</code>
+       * @return A list containing the assetids.
        */
       @java.lang.Override
-      public boolean hasClassid() {
+      public java.util.List<java.lang.Long>
+          getAssetidsList() {
+        return assetids_;
+      }
+      /**
+       * <code>repeated uint64 assetids = 1;</code>
+       * @return The count of assetids.
+       */
+      public int getAssetidsCount() {
+        return assetids_.size();
+      }
+      /**
+       * <code>repeated uint64 assetids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The assetids at the given index.
+       */
+      public long getAssetids(int index) {
+        return assetids_.getLong(index);
+      }
+
+      public static final int CURRENCYIDS_FIELD_NUMBER = 2;
+      private com.google.protobuf.Internal.IntList currencyids_;
+      /**
+       * <code>repeated uint32 currencyids = 2;</code>
+       * @return A list containing the currencyids.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Integer>
+          getCurrencyidsList() {
+        return currencyids_;
+      }
+      /**
+       * <code>repeated uint32 currencyids = 2;</code>
+       * @return The count of currencyids.
+       */
+      public int getCurrencyidsCount() {
+        return currencyids_.size();
+      }
+      /**
+       * <code>repeated uint32 currencyids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The currencyids at the given index.
+       */
+      public int getCurrencyids(int index) {
+        return currencyids_.getInt(index);
+      }
+
+      public static final int TRADABLE_ONLY_FIELD_NUMBER = 3;
+      private boolean tradableOnly_;
+      /**
+       * <code>optional bool tradable_only = 3;</code>
+       * @return Whether the tradableOnly field is set.
+       */
+      @java.lang.Override
+      public boolean hasTradableOnly() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional uint64 classid = 1;</code>
-       * @return The classid.
+       * <code>optional bool tradable_only = 3;</code>
+       * @return The tradableOnly.
        */
       @java.lang.Override
-      public long getClassid() {
-        return classid_;
+      public boolean getTradableOnly() {
+        return tradableOnly_;
       }
 
-      public static final int INSTANCEID_FIELD_NUMBER = 2;
-      private long instanceid_;
+      public static final int MARKETABLE_ONLY_FIELD_NUMBER = 4;
+      private boolean marketableOnly_;
       /**
-       * <code>optional uint64 instanceid = 2;</code>
-       * @return Whether the instanceid field is set.
+       * <code>optional bool marketable_only = 4;</code>
+       * @return Whether the marketableOnly field is set.
        */
       @java.lang.Override
-      public boolean hasInstanceid() {
+      public boolean hasMarketableOnly() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional uint64 instanceid = 2;</code>
-       * @return The instanceid.
+       * <code>optional bool marketable_only = 4;</code>
+       * @return The marketableOnly.
        */
       @java.lang.Override
-      public long getInstanceid() {
-        return instanceid_;
+      public boolean getMarketableOnly() {
+        return marketableOnly_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -2682,11 +565,17 @@ public final class SteammessagesEconSteamclient {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
+        for (int i = 0; i < assetids_.size(); i++) {
+          output.writeUInt64(1, assetids_.getLong(i));
+        }
+        for (int i = 0; i < currencyids_.size(); i++) {
+          output.writeUInt32(2, currencyids_.getInt(i));
+        }
         if (((bitField0_ & 0x00000001) != 0)) {
-          output.writeUInt64(1, classid_);
+          output.writeBool(3, tradableOnly_);
         }
         if (((bitField0_ & 0x00000002) != 0)) {
-          output.writeUInt64(2, instanceid_);
+          output.writeBool(4, marketableOnly_);
         }
         unknownFields.writeTo(output);
       }
@@ -2697,13 +586,31 @@ public final class SteammessagesEconSteamclient {
         if (size != -1) return size;
 
         size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < assetids_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeUInt64SizeNoTag(assetids_.getLong(i));
+          }
+          size += dataSize;
+          size += 1 * getAssetidsList().size();
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < currencyids_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeUInt32SizeNoTag(currencyids_.getInt(i));
+          }
+          size += dataSize;
+          size += 1 * getCurrencyidsList().size();
+        }
         if (((bitField0_ & 0x00000001) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt64Size(1, classid_);
+            .computeBoolSize(3, tradableOnly_);
         }
         if (((bitField0_ & 0x00000002) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt64Size(2, instanceid_);
+            .computeBoolSize(4, marketableOnly_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -2715,20 +622,24 @@ public final class SteammessagesEconSteamclient {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class)) {
+        if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions)) {
           return super.equals(obj);
         }
-        SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class other = (SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class) obj;
+        SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions other = (SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions) obj;
 
-        if (hasClassid() != other.hasClassid()) return false;
-        if (hasClassid()) {
-          if (getClassid()
-              != other.getClassid()) return false;
+        if (!getAssetidsList()
+            .equals(other.getAssetidsList())) return false;
+        if (!getCurrencyidsList()
+            .equals(other.getCurrencyidsList())) return false;
+        if (hasTradableOnly() != other.hasTradableOnly()) return false;
+        if (hasTradableOnly()) {
+          if (getTradableOnly()
+              != other.getTradableOnly()) return false;
         }
-        if (hasInstanceid() != other.hasInstanceid()) return false;
-        if (hasInstanceid()) {
-          if (getInstanceid()
-              != other.getInstanceid()) return false;
+        if (hasMarketableOnly() != other.hasMarketableOnly()) return false;
+        if (hasMarketableOnly()) {
+          if (getMarketableOnly()
+              != other.getMarketableOnly()) return false;
         }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
@@ -2741,84 +652,92 @@ public final class SteammessagesEconSteamclient {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasClassid()) {
-          hash = (37 * hash) + CLASSID_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getClassid());
+        if (getAssetidsCount() > 0) {
+          hash = (37 * hash) + ASSETIDS_FIELD_NUMBER;
+          hash = (53 * hash) + getAssetidsList().hashCode();
         }
-        if (hasInstanceid()) {
-          hash = (37 * hash) + INSTANCEID_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getInstanceid());
+        if (getCurrencyidsCount() > 0) {
+          hash = (37 * hash) + CURRENCYIDS_FIELD_NUMBER;
+          hash = (53 * hash) + getCurrencyidsList().hashCode();
+        }
+        if (hasTradableOnly()) {
+          hash = (37 * hash) + TRADABLE_ONLY_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getTradableOnly());
+        }
+        if (hasMarketableOnly()) {
+          hash = (37 * hash) + MARKETABLE_ONLY_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getMarketableOnly());
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
       }
 
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(byte[] data)
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(java.io.InputStream input)
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseDelimitedFrom(java.io.InputStream input)
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseDelimitedFrom(
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -2831,7 +750,7 @@ public final class SteammessagesEconSteamclient {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class prototype) {
+      public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -2847,26 +766,26 @@ public final class SteammessagesEconSteamclient {
         return builder;
       }
       /**
-       * Protobuf type {@code CEcon_GetAssetClassInfo_Request.Class}
+       * Protobuf type {@code CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:CEcon_GetAssetClassInfo_Request.Class)
-          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder {
+          // @@protoc_insertion_point(builder_implements:CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions)
+          SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptionsOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_Class_descriptor;
+          return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_Class_fieldAccessorTable
+          return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder.class);
+                  SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.class, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.Builder.class);
         }
 
-        // Construct using SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.newBuilder()
+        // Construct using SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -2884,27 +803,31 @@ public final class SteammessagesEconSteamclient {
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          classid_ = 0L;
+          assetids_ = emptyLongList();
           bitField0_ = (bitField0_ & ~0x00000001);
-          instanceid_ = 0L;
+          currencyids_ = emptyIntList();
           bitField0_ = (bitField0_ & ~0x00000002);
+          tradableOnly_ = false;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          marketableOnly_ = false;
+          bitField0_ = (bitField0_ & ~0x00000008);
           return this;
         }
 
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_Class_descriptor;
+          return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions_descriptor;
         }
 
         @java.lang.Override
-        public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getDefaultInstanceForType() {
-          return SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.getDefaultInstance();
+        public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions getDefaultInstanceForType() {
+          return SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.getDefaultInstance();
         }
 
         @java.lang.Override
-        public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class build() {
-          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class result = buildPartial();
+        public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions build() {
+          SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -2912,16 +835,26 @@ public final class SteammessagesEconSteamclient {
         }
 
         @java.lang.Override
-        public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class buildPartial() {
-          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class result = new SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class(this);
+        public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions buildPartial() {
+          SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions result = new SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.classid_ = classid_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            assetids_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.assetids_ = assetids_;
+          if (((bitField0_ & 0x00000002) != 0)) {
+            currencyids_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.currencyids_ = currencyids_;
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.tradableOnly_ = tradableOnly_;
             to_bitField0_ |= 0x00000001;
           }
-          if (((from_bitField0_ & 0x00000002) != 0)) {
-            result.instanceid_ = instanceid_;
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.marketableOnly_ = marketableOnly_;
             to_bitField0_ |= 0x00000002;
           }
           result.bitField0_ = to_bitField0_;
@@ -2963,21 +896,41 @@ public final class SteammessagesEconSteamclient {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class) {
-            return mergeFrom((SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class)other);
+          if (other instanceof SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions) {
+            return mergeFrom((SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class other) {
-          if (other == SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.getDefaultInstance()) return this;
-          if (other.hasClassid()) {
-            setClassid(other.getClassid());
+        public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions other) {
+          if (other == SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.getDefaultInstance()) return this;
+          if (!other.assetids_.isEmpty()) {
+            if (assetids_.isEmpty()) {
+              assetids_ = other.assetids_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAssetidsIsMutable();
+              assetids_.addAll(other.assetids_);
+            }
+            onChanged();
           }
-          if (other.hasInstanceid()) {
-            setInstanceid(other.getInstanceid());
+          if (!other.currencyids_.isEmpty()) {
+            if (currencyids_.isEmpty()) {
+              currencyids_ = other.currencyids_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureCurrencyidsIsMutable();
+              currencyids_.addAll(other.currencyids_);
+            }
+            onChanged();
+          }
+          if (other.hasTradableOnly()) {
+            setTradableOnly(other.getTradableOnly());
+          }
+          if (other.hasMarketableOnly()) {
+            setMarketableOnly(other.getMarketableOnly());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -2994,11 +947,11 @@ public final class SteammessagesEconSteamclient {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parsedMessage = null;
+          SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class) e.getUnfinishedMessage();
+            parsedMessage = (SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -3009,80 +962,238 @@ public final class SteammessagesEconSteamclient {
         }
         private int bitField0_;
 
-        private long classid_ ;
-        /**
-         * <code>optional uint64 classid = 1;</code>
-         * @return Whether the classid field is set.
-         */
-        @java.lang.Override
-        public boolean hasClassid() {
-          return ((bitField0_ & 0x00000001) != 0);
+        private com.google.protobuf.Internal.LongList assetids_ = emptyLongList();
+        private void ensureAssetidsIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            assetids_ = mutableCopy(assetids_);
+            bitField0_ |= 0x00000001;
+           }
         }
         /**
-         * <code>optional uint64 classid = 1;</code>
-         * @return The classid.
+         * <code>repeated uint64 assetids = 1;</code>
+         * @return A list containing the assetids.
          */
-        @java.lang.Override
-        public long getClassid() {
-          return classid_;
+        public java.util.List<java.lang.Long>
+            getAssetidsList() {
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(assetids_) : assetids_;
         }
         /**
-         * <code>optional uint64 classid = 1;</code>
-         * @param value The classid to set.
+         * <code>repeated uint64 assetids = 1;</code>
+         * @return The count of assetids.
+         */
+        public int getAssetidsCount() {
+          return assetids_.size();
+        }
+        /**
+         * <code>repeated uint64 assetids = 1;</code>
+         * @param index The index of the element to return.
+         * @return The assetids at the given index.
+         */
+        public long getAssetids(int index) {
+          return assetids_.getLong(index);
+        }
+        /**
+         * <code>repeated uint64 assetids = 1;</code>
+         * @param index The index to set the value at.
+         * @param value The assetids to set.
          * @return This builder for chaining.
          */
-        public Builder setClassid(long value) {
-          bitField0_ |= 0x00000001;
-          classid_ = value;
+        public Builder setAssetids(
+            int index, long value) {
+          ensureAssetidsIsMutable();
+          assetids_.setLong(index, value);
           onChanged();
           return this;
         }
         /**
-         * <code>optional uint64 classid = 1;</code>
+         * <code>repeated uint64 assetids = 1;</code>
+         * @param value The assetids to add.
          * @return This builder for chaining.
          */
-        public Builder clearClassid() {
+        public Builder addAssetids(long value) {
+          ensureAssetidsIsMutable();
+          assetids_.addLong(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated uint64 assetids = 1;</code>
+         * @param values The assetids to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAssetids(
+            java.lang.Iterable<? extends java.lang.Long> values) {
+          ensureAssetidsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assetids_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated uint64 assetids = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAssetids() {
+          assetids_ = emptyLongList();
           bitField0_ = (bitField0_ & ~0x00000001);
-          classid_ = 0L;
           onChanged();
           return this;
         }
 
-        private long instanceid_ ;
-        /**
-         * <code>optional uint64 instanceid = 2;</code>
-         * @return Whether the instanceid field is set.
-         */
-        @java.lang.Override
-        public boolean hasInstanceid() {
-          return ((bitField0_ & 0x00000002) != 0);
+        private com.google.protobuf.Internal.IntList currencyids_ = emptyIntList();
+        private void ensureCurrencyidsIsMutable() {
+          if (!((bitField0_ & 0x00000002) != 0)) {
+            currencyids_ = mutableCopy(currencyids_);
+            bitField0_ |= 0x00000002;
+           }
         }
         /**
-         * <code>optional uint64 instanceid = 2;</code>
-         * @return The instanceid.
+         * <code>repeated uint32 currencyids = 2;</code>
+         * @return A list containing the currencyids.
          */
-        @java.lang.Override
-        public long getInstanceid() {
-          return instanceid_;
+        public java.util.List<java.lang.Integer>
+            getCurrencyidsList() {
+          return ((bitField0_ & 0x00000002) != 0) ?
+                   java.util.Collections.unmodifiableList(currencyids_) : currencyids_;
         }
         /**
-         * <code>optional uint64 instanceid = 2;</code>
-         * @param value The instanceid to set.
+         * <code>repeated uint32 currencyids = 2;</code>
+         * @return The count of currencyids.
+         */
+        public int getCurrencyidsCount() {
+          return currencyids_.size();
+        }
+        /**
+         * <code>repeated uint32 currencyids = 2;</code>
+         * @param index The index of the element to return.
+         * @return The currencyids at the given index.
+         */
+        public int getCurrencyids(int index) {
+          return currencyids_.getInt(index);
+        }
+        /**
+         * <code>repeated uint32 currencyids = 2;</code>
+         * @param index The index to set the value at.
+         * @param value The currencyids to set.
          * @return This builder for chaining.
          */
-        public Builder setInstanceid(long value) {
-          bitField0_ |= 0x00000002;
-          instanceid_ = value;
+        public Builder setCurrencyids(
+            int index, int value) {
+          ensureCurrencyidsIsMutable();
+          currencyids_.setInt(index, value);
           onChanged();
           return this;
         }
         /**
-         * <code>optional uint64 instanceid = 2;</code>
+         * <code>repeated uint32 currencyids = 2;</code>
+         * @param value The currencyids to add.
          * @return This builder for chaining.
          */
-        public Builder clearInstanceid() {
+        public Builder addCurrencyids(int value) {
+          ensureCurrencyidsIsMutable();
+          currencyids_.addInt(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated uint32 currencyids = 2;</code>
+         * @param values The currencyids to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllCurrencyids(
+            java.lang.Iterable<? extends java.lang.Integer> values) {
+          ensureCurrencyidsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, currencyids_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated uint32 currencyids = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCurrencyids() {
+          currencyids_ = emptyIntList();
           bitField0_ = (bitField0_ & ~0x00000002);
-          instanceid_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private boolean tradableOnly_ ;
+        /**
+         * <code>optional bool tradable_only = 3;</code>
+         * @return Whether the tradableOnly field is set.
+         */
+        @java.lang.Override
+        public boolean hasTradableOnly() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>optional bool tradable_only = 3;</code>
+         * @return The tradableOnly.
+         */
+        @java.lang.Override
+        public boolean getTradableOnly() {
+          return tradableOnly_;
+        }
+        /**
+         * <code>optional bool tradable_only = 3;</code>
+         * @param value The tradableOnly to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTradableOnly(boolean value) {
+          bitField0_ |= 0x00000004;
+          tradableOnly_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool tradable_only = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTradableOnly() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          tradableOnly_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean marketableOnly_ ;
+        /**
+         * <code>optional bool marketable_only = 4;</code>
+         * @return Whether the marketableOnly field is set.
+         */
+        @java.lang.Override
+        public boolean hasMarketableOnly() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <code>optional bool marketable_only = 4;</code>
+         * @return The marketableOnly.
+         */
+        @java.lang.Override
+        public boolean getMarketableOnly() {
+          return marketableOnly_;
+        }
+        /**
+         * <code>optional bool marketable_only = 4;</code>
+         * @param value The marketableOnly to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMarketableOnly(boolean value) {
+          bitField0_ |= 0x00000008;
+          marketableOnly_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool marketable_only = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMarketableOnly() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          marketableOnly_ = false;
           onChanged();
           return this;
         }
@@ -3099,93 +1210,64 @@ public final class SteammessagesEconSteamclient {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:CEcon_GetAssetClassInfo_Request.Class)
+        // @@protoc_insertion_point(builder_scope:CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions)
       }
 
-      // @@protoc_insertion_point(class_scope:CEcon_GetAssetClassInfo_Request.Class)
-      private static final SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions)
+      private static final SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class();
+        DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions();
       }
 
-      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getDefaultInstance() {
+      public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      @java.lang.Deprecated public static final com.google.protobuf.Parser<Class>
-          PARSER = new com.google.protobuf.AbstractParser<Class>() {
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<FilterOptions>
+          PARSER = new com.google.protobuf.AbstractParser<FilterOptions>() {
         @java.lang.Override
-        public Class parsePartialFrom(
+        public FilterOptions parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Class(input, extensionRegistry);
+          return new FilterOptions(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<Class> parser() {
+      public static com.google.protobuf.Parser<FilterOptions> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<Class> getParserForType() {
+      public com.google.protobuf.Parser<FilterOptions> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getDefaultInstanceForType() {
+      public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
     }
 
     private int bitField0_;
-    public static final int LANGUAGE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object language_;
+    public static final int STEAMID_FIELD_NUMBER = 1;
+    private long steamid_;
     /**
-     * <code>optional string language = 1;</code>
-     * @return Whether the language field is set.
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return Whether the steamid field is set.
      */
     @java.lang.Override
-    public boolean hasLanguage() {
+    public boolean hasSteamid() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional string language = 1;</code>
-     * @return The language.
+     * <code>optional fixed64 steamid = 1;</code>
+     * @return The steamid.
      */
     @java.lang.Override
-    public java.lang.String getLanguage() {
-      java.lang.Object ref = language_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          language_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string language = 1;</code>
-     * @return The bytes for language.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLanguageBytes() {
-      java.lang.Object ref = language_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        language_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getSteamid() {
+      return steamid_;
     }
 
     public static final int APPID_FIELD_NUMBER = 2;
@@ -3207,44 +1289,173 @@ public final class SteammessagesEconSteamclient {
       return appid_;
     }
 
-    public static final int CLASSES_FIELD_NUMBER = 3;
-    private java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> classes_;
+    public static final int CONTEXTID_FIELD_NUMBER = 3;
+    private long contextid_;
     /**
-     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     * <code>optional uint64 contextid = 3;</code>
+     * @return Whether the contextid field is set.
      */
     @java.lang.Override
-    public java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> getClassesList() {
-      return classes_;
+    public boolean hasContextid() {
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     * <code>optional uint64 contextid = 3;</code>
+     * @return The contextid.
      */
     @java.lang.Override
-    public java.util.List<? extends SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder> 
-        getClassesOrBuilderList() {
-      return classes_;
+    public long getContextid() {
+      return contextid_;
+    }
+
+    public static final int GET_DESCRIPTIONS_FIELD_NUMBER = 4;
+    private boolean getDescriptions_;
+    /**
+     * <code>optional bool get_descriptions = 4;</code>
+     * @return Whether the getDescriptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasGetDescriptions() {
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     * <code>optional bool get_descriptions = 4;</code>
+     * @return The getDescriptions.
      */
     @java.lang.Override
-    public int getClassesCount() {
-      return classes_.size();
+    public boolean getGetDescriptions() {
+      return getDescriptions_;
+    }
+
+    public static final int FOR_TRADE_OFFER_VERIFICATION_FIELD_NUMBER = 10;
+    private boolean forTradeOfferVerification_;
+    /**
+     * <code>optional bool for_trade_offer_verification = 10;</code>
+     * @return Whether the forTradeOfferVerification field is set.
+     */
+    @java.lang.Override
+    public boolean hasForTradeOfferVerification() {
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     * <code>optional bool for_trade_offer_verification = 10;</code>
+     * @return The forTradeOfferVerification.
      */
     @java.lang.Override
-    public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getClasses(int index) {
-      return classes_.get(index);
+    public boolean getForTradeOfferVerification() {
+      return forTradeOfferVerification_;
+    }
+
+    public static final int LANGUAGE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object language_;
+    /**
+     * <code>optional string language = 5;</code>
+     * @return Whether the language field is set.
+     */
+    @java.lang.Override
+    public boolean hasLanguage() {
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     * <code>optional string language = 5;</code>
+     * @return The language.
      */
     @java.lang.Override
-    public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder getClassesOrBuilder(
-        int index) {
-      return classes_.get(index);
+    public java.lang.String getLanguage() {
+      java.lang.Object ref = language_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          language_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string language = 5;</code>
+     * @return The bytes for language.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLanguageBytes() {
+      java.lang.Object ref = language_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        language_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTERS_FIELD_NUMBER = 6;
+    private SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters_;
+    /**
+     * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
+     * @return Whether the filters field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilters() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
+     * @return The filters.
+     */
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions getFilters() {
+      return filters_ == null ? SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.getDefaultInstance() : filters_;
+    }
+    /**
+     * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
+     */
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptionsOrBuilder getFiltersOrBuilder() {
+      return filters_ == null ? SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.getDefaultInstance() : filters_;
+    }
+
+    public static final int START_ASSETID_FIELD_NUMBER = 8;
+    private long startAssetid_;
+    /**
+     * <code>optional uint64 start_assetid = 8;</code>
+     * @return Whether the startAssetid field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartAssetid() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint64 start_assetid = 8;</code>
+     * @return The startAssetid.
+     */
+    @java.lang.Override
+    public long getStartAssetid() {
+      return startAssetid_;
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 9;
+    private int count_;
+    /**
+     * <code>optional int32 count = 9;</code>
+     * @return Whether the count field is set.
+     */
+    @java.lang.Override
+    public boolean hasCount() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional int32 count = 9;</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public int getCount() {
+      return count_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3262,13 +1473,31 @@ public final class SteammessagesEconSteamclient {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, language_);
+        output.writeFixed64(1, steamid_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeUInt32(2, appid_);
       }
-      for (int i = 0; i < classes_.size(); i++) {
-        output.writeMessage(3, classes_.get(i));
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(3, contextid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBool(4, getDescriptions_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, language_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeMessage(6, getFilters());
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt64(8, startAssetid_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeInt32(9, count_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeBool(10, forTradeOfferVerification_);
       }
       unknownFields.writeTo(output);
     }
@@ -3280,15 +1509,39 @@ public final class SteammessagesEconSteamclient {
 
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, language_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(1, steamid_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, appid_);
       }
-      for (int i = 0; i < classes_.size(); i++) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, classes_.get(i));
+          .computeUInt64Size(3, contextid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, getDescriptions_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, language_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getFilters());
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, startAssetid_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, count_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, forTradeOfferVerification_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3300,23 +1553,56 @@ public final class SteammessagesEconSteamclient {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request)) {
+      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request)) {
         return super.equals(obj);
       }
-      SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request other = (SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request) obj;
+      SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request other = (SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request) obj;
 
-      if (hasLanguage() != other.hasLanguage()) return false;
-      if (hasLanguage()) {
-        if (!getLanguage()
-            .equals(other.getLanguage())) return false;
+      if (hasSteamid() != other.hasSteamid()) return false;
+      if (hasSteamid()) {
+        if (getSteamid()
+            != other.getSteamid()) return false;
       }
       if (hasAppid() != other.hasAppid()) return false;
       if (hasAppid()) {
         if (getAppid()
             != other.getAppid()) return false;
       }
-      if (!getClassesList()
-          .equals(other.getClassesList())) return false;
+      if (hasContextid() != other.hasContextid()) return false;
+      if (hasContextid()) {
+        if (getContextid()
+            != other.getContextid()) return false;
+      }
+      if (hasGetDescriptions() != other.hasGetDescriptions()) return false;
+      if (hasGetDescriptions()) {
+        if (getGetDescriptions()
+            != other.getGetDescriptions()) return false;
+      }
+      if (hasForTradeOfferVerification() != other.hasForTradeOfferVerification()) return false;
+      if (hasForTradeOfferVerification()) {
+        if (getForTradeOfferVerification()
+            != other.getForTradeOfferVerification()) return false;
+      }
+      if (hasLanguage() != other.hasLanguage()) return false;
+      if (hasLanguage()) {
+        if (!getLanguage()
+            .equals(other.getLanguage())) return false;
+      }
+      if (hasFilters() != other.hasFilters()) return false;
+      if (hasFilters()) {
+        if (!getFilters()
+            .equals(other.getFilters())) return false;
+      }
+      if (hasStartAssetid() != other.hasStartAssetid()) return false;
+      if (hasStartAssetid()) {
+        if (getStartAssetid()
+            != other.getStartAssetid()) return false;
+      }
+      if (hasCount() != other.hasCount()) return false;
+      if (hasCount()) {
+        if (getCount()
+            != other.getCount()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3328,86 +1614,115 @@ public final class SteammessagesEconSteamclient {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasLanguage()) {
-        hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
-        hash = (53 * hash) + getLanguage().hashCode();
+      if (hasSteamid()) {
+        hash = (37 * hash) + STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSteamid());
       }
       if (hasAppid()) {
         hash = (37 * hash) + APPID_FIELD_NUMBER;
         hash = (53 * hash) + getAppid();
       }
-      if (getClassesCount() > 0) {
-        hash = (37 * hash) + CLASSES_FIELD_NUMBER;
-        hash = (53 * hash) + getClassesList().hashCode();
+      if (hasContextid()) {
+        hash = (37 * hash) + CONTEXTID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getContextid());
+      }
+      if (hasGetDescriptions()) {
+        hash = (37 * hash) + GET_DESCRIPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getGetDescriptions());
+      }
+      if (hasForTradeOfferVerification()) {
+        hash = (37 * hash) + FOR_TRADE_OFFER_VERIFICATION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getForTradeOfferVerification());
+      }
+      if (hasLanguage()) {
+        hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getLanguage().hashCode();
+      }
+      if (hasFilters()) {
+        hash = (37 * hash) + FILTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFilters().hashCode();
+      }
+      if (hasStartAssetid()) {
+        hash = (37 * hash) + START_ASSETID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getStartAssetid());
+      }
+      if (hasCount()) {
+        hash = (37 * hash) + COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getCount();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(byte[] data)
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(java.io.InputStream input)
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseDelimitedFrom(java.io.InputStream input)
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseDelimitedFrom(
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3420,7 +1735,7 @@ public final class SteammessagesEconSteamclient {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request prototype) {
+    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3436,26 +1751,26 @@ public final class SteammessagesEconSteamclient {
       return builder;
     }
     /**
-     * Protobuf type {@code CEcon_GetAssetClassInfo_Request}
+     * Protobuf type {@code CEcon_GetInventoryItemsWithDescriptions_Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CEcon_GetAssetClassInfo_Request)
-        SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_RequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CEcon_GetInventoryItemsWithDescriptions_Request)
+        SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_descriptor;
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_fieldAccessorTable
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Builder.class);
+                SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.class, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.Builder.class);
       }
 
-      // Construct using SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.newBuilder()
+      // Construct using SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3468,39 +1783,51 @@ public final class SteammessagesEconSteamclient {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getClassesFieldBuilder();
+          getFiltersFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        language_ = "";
+        steamid_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
         appid_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (classesBuilder_ == null) {
-          classes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+        contextid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        getDescriptions_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        forTradeOfferVerification_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        language_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (filtersBuilder_ == null) {
+          filters_ = null;
         } else {
-          classesBuilder_.clear();
+          filtersBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        startAssetid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        count_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_descriptor;
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_descriptor;
       }
 
       @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request getDefaultInstanceForType() {
-        return SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.getDefaultInstance();
+      public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request getDefaultInstanceForType() {
+        return SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request build() {
-        SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request result = buildPartial();
+      public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request build() {
+        SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3508,26 +1835,49 @@ public final class SteammessagesEconSteamclient {
       }
 
       @java.lang.Override
-      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request buildPartial() {
-        SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request result = new SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request(this);
+      public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request buildPartial() {
+        SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request result = new SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.steamid_ = steamid_;
           to_bitField0_ |= 0x00000001;
         }
-        result.language_ = language_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.appid_ = appid_;
           to_bitField0_ |= 0x00000002;
         }
-        if (classesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
-            classes_ = java.util.Collections.unmodifiableList(classes_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.contextid_ = contextid_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.getDescriptions_ = getDescriptions_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.forTradeOfferVerification_ = forTradeOfferVerification_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.language_ = language_;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          if (filtersBuilder_ == null) {
+            result.filters_ = filters_;
+          } else {
+            result.filters_ = filtersBuilder_.build();
           }
-          result.classes_ = classes_;
-        } else {
-          result.classes_ = classesBuilder_.build();
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.startAssetid_ = startAssetid_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.count_ = count_;
+          to_bitField0_ |= 0x00000100;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -3568,49 +1918,44 @@ public final class SteammessagesEconSteamclient {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request) {
-          return mergeFrom((SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request)other);
+        if (other instanceof SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request) {
+          return mergeFrom((SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request other) {
-        if (other == SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.getDefaultInstance()) return this;
-        if (other.hasLanguage()) {
-          bitField0_ |= 0x00000001;
-          language_ = other.language_;
-          onChanged();
+      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request other) {
+        if (other == SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.getDefaultInstance()) return this;
+        if (other.hasSteamid()) {
+          setSteamid(other.getSteamid());
         }
         if (other.hasAppid()) {
           setAppid(other.getAppid());
         }
-        if (classesBuilder_ == null) {
-          if (!other.classes_.isEmpty()) {
-            if (classes_.isEmpty()) {
-              classes_ = other.classes_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureClassesIsMutable();
-              classes_.addAll(other.classes_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.classes_.isEmpty()) {
-            if (classesBuilder_.isEmpty()) {
-              classesBuilder_.dispose();
-              classesBuilder_ = null;
-              classes_ = other.classes_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              classesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getClassesFieldBuilder() : null;
-            } else {
-              classesBuilder_.addAllMessages(other.classes_);
-            }
-          }
+        if (other.hasContextid()) {
+          setContextid(other.getContextid());
+        }
+        if (other.hasGetDescriptions()) {
+          setGetDescriptions(other.getGetDescriptions());
+        }
+        if (other.hasForTradeOfferVerification()) {
+          setForTradeOfferVerification(other.getForTradeOfferVerification());
+        }
+        if (other.hasLanguage()) {
+          bitField0_ |= 0x00000020;
+          language_ = other.language_;
+          onChanged();
+        }
+        if (other.hasFilters()) {
+          mergeFilters(other.getFilters());
+        }
+        if (other.hasStartAssetid()) {
+          setStartAssetid(other.getStartAssetid());
+        }
+        if (other.hasCount()) {
+          setCount(other.getCount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3627,11 +1972,11 @@ public final class SteammessagesEconSteamclient {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parsedMessage = null;
+        SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request) e.getUnfinishedMessage();
+          parsedMessage = (SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3642,86 +1987,41 @@ public final class SteammessagesEconSteamclient {
       }
       private int bitField0_;
 
-      private java.lang.Object language_ = "";
+      private long steamid_ ;
       /**
-       * <code>optional string language = 1;</code>
-       * @return Whether the language field is set.
+       * <code>optional fixed64 steamid = 1;</code>
+       * @return Whether the steamid field is set.
        */
-      public boolean hasLanguage() {
+      @java.lang.Override
+      public boolean hasSteamid() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional string language = 1;</code>
-       * @return The language.
+       * <code>optional fixed64 steamid = 1;</code>
+       * @return The steamid.
        */
-      public java.lang.String getLanguage() {
-        java.lang.Object ref = language_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            language_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public long getSteamid() {
+        return steamid_;
       }
       /**
-       * <code>optional string language = 1;</code>
-       * @return The bytes for language.
-       */
-      public com.google.protobuf.ByteString
-          getLanguageBytes() {
-        java.lang.Object ref = language_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          language_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string language = 1;</code>
-       * @param value The language to set.
+       * <code>optional fixed64 steamid = 1;</code>
+       * @param value The steamid to set.
        * @return This builder for chaining.
        */
-      public Builder setLanguage(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        language_ = value;
+      public Builder setSteamid(long value) {
+        bitField0_ |= 0x00000001;
+        steamid_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string language = 1;</code>
+       * <code>optional fixed64 steamid = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearLanguage() {
+      public Builder clearSteamid() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        language_ = getDefaultInstance().getLanguage();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string language = 1;</code>
-       * @param value The bytes for language to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLanguageBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        language_ = value;
+        steamid_ = 0L;
         onChanged();
         return this;
       }
@@ -3765,244 +2065,403 @@ public final class SteammessagesEconSteamclient {
         return this;
       }
 
-      private java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> classes_ =
-        java.util.Collections.emptyList();
-      private void ensureClassesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          classes_ = new java.util.ArrayList<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class>(classes_);
-          bitField0_ |= 0x00000004;
-         }
+      private long contextid_ ;
+      /**
+       * <code>optional uint64 contextid = 3;</code>
+       * @return Whether the contextid field is set.
+       */
+      @java.lang.Override
+      public boolean hasContextid() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint64 contextid = 3;</code>
+       * @return The contextid.
+       */
+      @java.lang.Override
+      public long getContextid() {
+        return contextid_;
+      }
+      /**
+       * <code>optional uint64 contextid = 3;</code>
+       * @param value The contextid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContextid(long value) {
+        bitField0_ |= 0x00000004;
+        contextid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 contextid = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContextid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        contextid_ = 0L;
+        onChanged();
+        return this;
       }
 
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder> classesBuilder_;
+      private boolean getDescriptions_ ;
+      /**
+       * <code>optional bool get_descriptions = 4;</code>
+       * @return Whether the getDescriptions field is set.
+       */
+      @java.lang.Override
+      public boolean hasGetDescriptions() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool get_descriptions = 4;</code>
+       * @return The getDescriptions.
+       */
+      @java.lang.Override
+      public boolean getGetDescriptions() {
+        return getDescriptions_;
+      }
+      /**
+       * <code>optional bool get_descriptions = 4;</code>
+       * @param value The getDescriptions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGetDescriptions(boolean value) {
+        bitField0_ |= 0x00000008;
+        getDescriptions_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool get_descriptions = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGetDescriptions() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        getDescriptions_ = false;
+        onChanged();
+        return this;
+      }
 
+      private boolean forTradeOfferVerification_ ;
       /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       * <code>optional bool for_trade_offer_verification = 10;</code>
+       * @return Whether the forTradeOfferVerification field is set.
        */
-      public java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> getClassesList() {
-        if (classesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(classes_);
+      @java.lang.Override
+      public boolean hasForTradeOfferVerification() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional bool for_trade_offer_verification = 10;</code>
+       * @return The forTradeOfferVerification.
+       */
+      @java.lang.Override
+      public boolean getForTradeOfferVerification() {
+        return forTradeOfferVerification_;
+      }
+      /**
+       * <code>optional bool for_trade_offer_verification = 10;</code>
+       * @param value The forTradeOfferVerification to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForTradeOfferVerification(boolean value) {
+        bitField0_ |= 0x00000010;
+        forTradeOfferVerification_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool for_trade_offer_verification = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForTradeOfferVerification() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        forTradeOfferVerification_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object language_ = "";
+      /**
+       * <code>optional string language = 5;</code>
+       * @return Whether the language field is set.
+       */
+      public boolean hasLanguage() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string language = 5;</code>
+       * @return The language.
+       */
+      public java.lang.String getLanguage() {
+        java.lang.Object ref = language_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            language_ = s;
+          }
+          return s;
         } else {
-          return classesBuilder_.getMessageList();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       * <code>optional string language = 5;</code>
+       * @return The bytes for language.
        */
-      public int getClassesCount() {
-        if (classesBuilder_ == null) {
-          return classes_.size();
+      public com.google.protobuf.ByteString
+          getLanguageBytes() {
+        java.lang.Object ref = language_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          language_ = b;
+          return b;
         } else {
-          return classesBuilder_.getCount();
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       * <code>optional string language = 5;</code>
+       * @param value The language to set.
+       * @return This builder for chaining.
        */
-      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getClasses(int index) {
-        if (classesBuilder_ == null) {
-          return classes_.get(index);
+      public Builder setLanguage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        language_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string language = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLanguage() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        language_ = getDefaultInstance().getLanguage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string language = 5;</code>
+       * @param value The bytes for language to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        language_ = value;
+        onChanged();
+        return this;
+      }
+
+      private SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.Builder, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptionsOrBuilder> filtersBuilder_;
+      /**
+       * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
+       * @return Whether the filters field is set.
+       */
+      public boolean hasFilters() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
+       * @return The filters.
+       */
+      public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions getFilters() {
+        if (filtersBuilder_ == null) {
+          return filters_ == null ? SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.getDefaultInstance() : filters_;
         } else {
-          return classesBuilder_.getMessage(index);
+          return filtersBuilder_.getMessage();
         }
       }
       /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
        */
-      public Builder setClasses(
-          int index, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class value) {
-        if (classesBuilder_ == null) {
+      public Builder setFilters(SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions value) {
+        if (filtersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureClassesIsMutable();
-          classes_.set(index, value);
+          filters_ = value;
           onChanged();
         } else {
-          classesBuilder_.setMessage(index, value);
+          filtersBuilder_.setMessage(value);
         }
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
        */
-      public Builder setClasses(
-          int index, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder builderForValue) {
-        if (classesBuilder_ == null) {
-          ensureClassesIsMutable();
-          classes_.set(index, builderForValue.build());
+      public Builder setFilters(
+          SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.Builder builderForValue) {
+        if (filtersBuilder_ == null) {
+          filters_ = builderForValue.build();
           onChanged();
         } else {
-          classesBuilder_.setMessage(index, builderForValue.build());
+          filtersBuilder_.setMessage(builderForValue.build());
         }
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
        */
-      public Builder addClasses(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class value) {
-        if (classesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+      public Builder mergeFilters(SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions value) {
+        if (filtersBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+              filters_ != null &&
+              filters_ != SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.getDefaultInstance()) {
+            filters_ =
+              SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.newBuilder(filters_).mergeFrom(value).buildPartial();
+          } else {
+            filters_ = value;
           }
-          ensureClassesIsMutable();
-          classes_.add(value);
           onChanged();
         } else {
-          classesBuilder_.addMessage(value);
+          filtersBuilder_.mergeFrom(value);
         }
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
        */
-      public Builder addClasses(
-          int index, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class value) {
-        if (classesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureClassesIsMutable();
-          classes_.add(index, value);
+      public Builder clearFilters() {
+        if (filtersBuilder_ == null) {
+          filters_ = null;
           onChanged();
         } else {
-          classesBuilder_.addMessage(index, value);
+          filtersBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
       /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
        */
-      public Builder addClasses(
-          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder builderForValue) {
-        if (classesBuilder_ == null) {
-          ensureClassesIsMutable();
-          classes_.add(builderForValue.build());
-          onChanged();
+      public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.Builder getFiltersBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getFiltersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptionsOrBuilder getFiltersOrBuilder() {
+        if (filtersBuilder_ != null) {
+          return filtersBuilder_.getMessageOrBuilder();
         } else {
-          classesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
-       */
-      public Builder addClasses(
-          int index, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder builderForValue) {
-        if (classesBuilder_ == null) {
-          ensureClassesIsMutable();
-          classes_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          classesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
-       */
-      public Builder addAllClasses(
-          java.lang.Iterable<? extends SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> values) {
-        if (classesBuilder_ == null) {
-          ensureClassesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, classes_);
-          onChanged();
-        } else {
-          classesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
-       */
-      public Builder clearClasses() {
-        if (classesBuilder_ == null) {
-          classes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          classesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
-       */
-      public Builder removeClasses(int index) {
-        if (classesBuilder_ == null) {
-          ensureClassesIsMutable();
-          classes_.remove(index);
-          onChanged();
-        } else {
-          classesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
-       */
-      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder getClassesBuilder(
-          int index) {
-        return getClassesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
-       */
-      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder getClassesOrBuilder(
-          int index) {
-        if (classesBuilder_ == null) {
-          return classes_.get(index);  } else {
-          return classesBuilder_.getMessageOrBuilder(index);
+          return filters_ == null ?
+              SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.getDefaultInstance() : filters_;
         }
       }
       /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       * <code>optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;</code>
        */
-      public java.util.List<? extends SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder> 
-           getClassesOrBuilderList() {
-        if (classesBuilder_ != null) {
-          return classesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(classes_);
-        }
-      }
-      /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
-       */
-      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder addClassesBuilder() {
-        return getClassesFieldBuilder().addBuilder(
-            SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
-       */
-      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder addClassesBuilder(
-          int index) {
-        return getClassesFieldBuilder().addBuilder(
-            index, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
-       */
-      public java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder> 
-           getClassesBuilderList() {
-        return getClassesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder> 
-          getClassesFieldBuilder() {
-        if (classesBuilder_ == null) {
-          classesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder>(
-                  classes_,
-                  ((bitField0_ & 0x00000004) != 0),
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.Builder, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptionsOrBuilder> 
+          getFiltersFieldBuilder() {
+        if (filtersBuilder_ == null) {
+          filtersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions.Builder, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptionsOrBuilder>(
+                  getFilters(),
                   getParentForChildren(),
                   isClean());
-          classes_ = null;
+          filters_ = null;
         }
-        return classesBuilder_;
+        return filtersBuilder_;
+      }
+
+      private long startAssetid_ ;
+      /**
+       * <code>optional uint64 start_assetid = 8;</code>
+       * @return Whether the startAssetid field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartAssetid() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint64 start_assetid = 8;</code>
+       * @return The startAssetid.
+       */
+      @java.lang.Override
+      public long getStartAssetid() {
+        return startAssetid_;
+      }
+      /**
+       * <code>optional uint64 start_assetid = 8;</code>
+       * @param value The startAssetid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartAssetid(long value) {
+        bitField0_ |= 0x00000080;
+        startAssetid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 start_assetid = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartAssetid() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        startAssetid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int count_ ;
+      /**
+       * <code>optional int32 count = 9;</code>
+       * @return Whether the count field is set.
+       */
+      @java.lang.Override
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional int32 count = 9;</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>optional int32 count = 9;</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(int value) {
+        bitField0_ |= 0x00000100;
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 count = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        count_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4017,41 +2476,1363 @@ public final class SteammessagesEconSteamclient {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:CEcon_GetAssetClassInfo_Request)
+      // @@protoc_insertion_point(builder_scope:CEcon_GetInventoryItemsWithDescriptions_Request)
     }
 
-    // @@protoc_insertion_point(class_scope:CEcon_GetAssetClassInfo_Request)
-    private static final SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CEcon_GetInventoryItemsWithDescriptions_Request)
+    private static final SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request();
+      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request();
     }
 
-    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request getDefaultInstance() {
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_GetAssetClassInfo_Request>
-        PARSER = new com.google.protobuf.AbstractParser<CEcon_GetAssetClassInfo_Request>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_GetInventoryItemsWithDescriptions_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CEcon_GetInventoryItemsWithDescriptions_Request>() {
       @java.lang.Override
-      public CEcon_GetAssetClassInfo_Request parsePartialFrom(
+      public CEcon_GetInventoryItemsWithDescriptions_Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CEcon_GetAssetClassInfo_Request(input, extensionRegistry);
+        return new CEcon_GetInventoryItemsWithDescriptions_Request(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CEcon_GetAssetClassInfo_Request> parser() {
+    public static com.google.protobuf.Parser<CEcon_GetInventoryItemsWithDescriptions_Request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CEcon_GetAssetClassInfo_Request> getParserForType() {
+    public com.google.protobuf.Parser<CEcon_GetInventoryItemsWithDescriptions_Request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request getDefaultInstanceForType() {
+    public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CEcon_AssetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CEcon_Asset)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return Whether the appid field is set.
+     */
+    boolean hasAppid();
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return The appid.
+     */
+    int getAppid();
+
+    /**
+     * <code>optional uint64 contextid = 2;</code>
+     * @return Whether the contextid field is set.
+     */
+    boolean hasContextid();
+    /**
+     * <code>optional uint64 contextid = 2;</code>
+     * @return The contextid.
+     */
+    long getContextid();
+
+    /**
+     * <code>optional uint64 assetid = 3;</code>
+     * @return Whether the assetid field is set.
+     */
+    boolean hasAssetid();
+    /**
+     * <code>optional uint64 assetid = 3;</code>
+     * @return The assetid.
+     */
+    long getAssetid();
+
+    /**
+     * <code>optional uint64 classid = 4;</code>
+     * @return Whether the classid field is set.
+     */
+    boolean hasClassid();
+    /**
+     * <code>optional uint64 classid = 4;</code>
+     * @return The classid.
+     */
+    long getClassid();
+
+    /**
+     * <code>optional uint64 instanceid = 5;</code>
+     * @return Whether the instanceid field is set.
+     */
+    boolean hasInstanceid();
+    /**
+     * <code>optional uint64 instanceid = 5;</code>
+     * @return The instanceid.
+     */
+    long getInstanceid();
+
+    /**
+     * <code>optional uint32 currencyid = 6 [(.description) = "Set currencyid if it&#92;'s a currency, assetid for an item"];</code>
+     * @return Whether the currencyid field is set.
+     */
+    boolean hasCurrencyid();
+    /**
+     * <code>optional uint32 currencyid = 6 [(.description) = "Set currencyid if it&#92;'s a currency, assetid for an item"];</code>
+     * @return The currencyid.
+     */
+    int getCurrencyid();
+
+    /**
+     * <code>optional int64 amount = 7;</code>
+     * @return Whether the amount field is set.
+     */
+    boolean hasAmount();
+    /**
+     * <code>optional int64 amount = 7;</code>
+     * @return The amount.
+     */
+    long getAmount();
+
+    /**
+     * <code>optional bool missing = 8;</code>
+     * @return Whether the missing field is set.
+     */
+    boolean hasMissing();
+    /**
+     * <code>optional bool missing = 8;</code>
+     * @return The missing.
+     */
+    boolean getMissing();
+
+    /**
+     * <code>optional int64 est_usd = 9;</code>
+     * @return Whether the estUsd field is set.
+     */
+    boolean hasEstUsd();
+    /**
+     * <code>optional int64 est_usd = 9;</code>
+     * @return The estUsd.
+     */
+    long getEstUsd();
+  }
+  /**
+   * Protobuf type {@code CEcon_Asset}
+   */
+  public static final class CEcon_Asset extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CEcon_Asset)
+      CEcon_AssetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CEcon_Asset.newBuilder() to construct.
+    private CEcon_Asset(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CEcon_Asset() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CEcon_Asset();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CEcon_Asset(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              appid_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              contextid_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              assetid_ = input.readUInt64();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              classid_ = input.readUInt64();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              instanceid_ = input.readUInt64();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              currencyid_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              amount_ = input.readInt64();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              missing_ = input.readBool();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              estUsd_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_Asset_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_Asset_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesEconSteamclient.CEcon_Asset.class, SteammessagesEconSteamclient.CEcon_Asset.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int APPID_FIELD_NUMBER = 1;
+    private int appid_;
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return Whether the appid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return The appid.
+     */
+    @java.lang.Override
+    public int getAppid() {
+      return appid_;
+    }
+
+    public static final int CONTEXTID_FIELD_NUMBER = 2;
+    private long contextid_;
+    /**
+     * <code>optional uint64 contextid = 2;</code>
+     * @return Whether the contextid field is set.
+     */
+    @java.lang.Override
+    public boolean hasContextid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 contextid = 2;</code>
+     * @return The contextid.
+     */
+    @java.lang.Override
+    public long getContextid() {
+      return contextid_;
+    }
+
+    public static final int ASSETID_FIELD_NUMBER = 3;
+    private long assetid_;
+    /**
+     * <code>optional uint64 assetid = 3;</code>
+     * @return Whether the assetid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAssetid() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint64 assetid = 3;</code>
+     * @return The assetid.
+     */
+    @java.lang.Override
+    public long getAssetid() {
+      return assetid_;
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 4;
+    private long classid_;
+    /**
+     * <code>optional uint64 classid = 4;</code>
+     * @return Whether the classid field is set.
+     */
+    @java.lang.Override
+    public boolean hasClassid() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint64 classid = 4;</code>
+     * @return The classid.
+     */
+    @java.lang.Override
+    public long getClassid() {
+      return classid_;
+    }
+
+    public static final int INSTANCEID_FIELD_NUMBER = 5;
+    private long instanceid_;
+    /**
+     * <code>optional uint64 instanceid = 5;</code>
+     * @return Whether the instanceid field is set.
+     */
+    @java.lang.Override
+    public boolean hasInstanceid() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint64 instanceid = 5;</code>
+     * @return The instanceid.
+     */
+    @java.lang.Override
+    public long getInstanceid() {
+      return instanceid_;
+    }
+
+    public static final int CURRENCYID_FIELD_NUMBER = 6;
+    private int currencyid_;
+    /**
+     * <code>optional uint32 currencyid = 6 [(.description) = "Set currencyid if it&#92;'s a currency, assetid for an item"];</code>
+     * @return Whether the currencyid field is set.
+     */
+    @java.lang.Override
+    public boolean hasCurrencyid() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional uint32 currencyid = 6 [(.description) = "Set currencyid if it&#92;'s a currency, assetid for an item"];</code>
+     * @return The currencyid.
+     */
+    @java.lang.Override
+    public int getCurrencyid() {
+      return currencyid_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 7;
+    private long amount_;
+    /**
+     * <code>optional int64 amount = 7;</code>
+     * @return Whether the amount field is set.
+     */
+    @java.lang.Override
+    public boolean hasAmount() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional int64 amount = 7;</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    public static final int MISSING_FIELD_NUMBER = 8;
+    private boolean missing_;
+    /**
+     * <code>optional bool missing = 8;</code>
+     * @return Whether the missing field is set.
+     */
+    @java.lang.Override
+    public boolean hasMissing() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional bool missing = 8;</code>
+     * @return The missing.
+     */
+    @java.lang.Override
+    public boolean getMissing() {
+      return missing_;
+    }
+
+    public static final int EST_USD_FIELD_NUMBER = 9;
+    private long estUsd_;
+    /**
+     * <code>optional int64 est_usd = 9;</code>
+     * @return Whether the estUsd field is set.
+     */
+    @java.lang.Override
+    public boolean hasEstUsd() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional int64 est_usd = 9;</code>
+     * @return The estUsd.
+     */
+    @java.lang.Override
+    public long getEstUsd() {
+      return estUsd_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, appid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(2, contextid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(3, assetid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt64(4, classid_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt64(5, instanceid_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeUInt32(6, currencyid_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeInt64(7, amount_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeBool(8, missing_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeInt64(9, estUsd_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, appid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, contextid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, assetid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, classid_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, instanceid_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, currencyid_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, amount_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, missing_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, estUsd_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_Asset)) {
+        return super.equals(obj);
+      }
+      SteammessagesEconSteamclient.CEcon_Asset other = (SteammessagesEconSteamclient.CEcon_Asset) obj;
+
+      if (hasAppid() != other.hasAppid()) return false;
+      if (hasAppid()) {
+        if (getAppid()
+            != other.getAppid()) return false;
+      }
+      if (hasContextid() != other.hasContextid()) return false;
+      if (hasContextid()) {
+        if (getContextid()
+            != other.getContextid()) return false;
+      }
+      if (hasAssetid() != other.hasAssetid()) return false;
+      if (hasAssetid()) {
+        if (getAssetid()
+            != other.getAssetid()) return false;
+      }
+      if (hasClassid() != other.hasClassid()) return false;
+      if (hasClassid()) {
+        if (getClassid()
+            != other.getClassid()) return false;
+      }
+      if (hasInstanceid() != other.hasInstanceid()) return false;
+      if (hasInstanceid()) {
+        if (getInstanceid()
+            != other.getInstanceid()) return false;
+      }
+      if (hasCurrencyid() != other.hasCurrencyid()) return false;
+      if (hasCurrencyid()) {
+        if (getCurrencyid()
+            != other.getCurrencyid()) return false;
+      }
+      if (hasAmount() != other.hasAmount()) return false;
+      if (hasAmount()) {
+        if (getAmount()
+            != other.getAmount()) return false;
+      }
+      if (hasMissing() != other.hasMissing()) return false;
+      if (hasMissing()) {
+        if (getMissing()
+            != other.getMissing()) return false;
+      }
+      if (hasEstUsd() != other.hasEstUsd()) return false;
+      if (hasEstUsd()) {
+        if (getEstUsd()
+            != other.getEstUsd()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAppid()) {
+        hash = (37 * hash) + APPID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppid();
+      }
+      if (hasContextid()) {
+        hash = (37 * hash) + CONTEXTID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getContextid());
+      }
+      if (hasAssetid()) {
+        hash = (37 * hash) + ASSETID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAssetid());
+      }
+      if (hasClassid()) {
+        hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getClassid());
+      }
+      if (hasInstanceid()) {
+        hash = (37 * hash) + INSTANCEID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getInstanceid());
+      }
+      if (hasCurrencyid()) {
+        hash = (37 * hash) + CURRENCYID_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrencyid();
+      }
+      if (hasAmount()) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAmount());
+      }
+      if (hasMissing()) {
+        hash = (37 * hash) + MISSING_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getMissing());
+      }
+      if (hasEstUsd()) {
+        hash = (37 * hash) + EST_USD_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getEstUsd());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_Asset parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_Asset parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_Asset prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CEcon_Asset}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CEcon_Asset)
+        SteammessagesEconSteamclient.CEcon_AssetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_Asset_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_Asset_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesEconSteamclient.CEcon_Asset.class, SteammessagesEconSteamclient.CEcon_Asset.Builder.class);
+      }
+
+      // Construct using SteammessagesEconSteamclient.CEcon_Asset.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        appid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        contextid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        assetid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        classid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        instanceid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        currencyid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        amount_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        missing_ = false;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        estUsd_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_Asset_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_Asset getDefaultInstanceForType() {
+        return SteammessagesEconSteamclient.CEcon_Asset.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_Asset build() {
+        SteammessagesEconSteamclient.CEcon_Asset result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_Asset buildPartial() {
+        SteammessagesEconSteamclient.CEcon_Asset result = new SteammessagesEconSteamclient.CEcon_Asset(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appid_ = appid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contextid_ = contextid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.assetid_ = assetid_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.classid_ = classid_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.instanceid_ = instanceid_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.currencyid_ = currencyid_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.amount_ = amount_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.missing_ = missing_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.estUsd_ = estUsd_;
+          to_bitField0_ |= 0x00000100;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesEconSteamclient.CEcon_Asset) {
+          return mergeFrom((SteammessagesEconSteamclient.CEcon_Asset)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_Asset other) {
+        if (other == SteammessagesEconSteamclient.CEcon_Asset.getDefaultInstance()) return this;
+        if (other.hasAppid()) {
+          setAppid(other.getAppid());
+        }
+        if (other.hasContextid()) {
+          setContextid(other.getContextid());
+        }
+        if (other.hasAssetid()) {
+          setAssetid(other.getAssetid());
+        }
+        if (other.hasClassid()) {
+          setClassid(other.getClassid());
+        }
+        if (other.hasInstanceid()) {
+          setInstanceid(other.getInstanceid());
+        }
+        if (other.hasCurrencyid()) {
+          setCurrencyid(other.getCurrencyid());
+        }
+        if (other.hasAmount()) {
+          setAmount(other.getAmount());
+        }
+        if (other.hasMissing()) {
+          setMissing(other.getMissing());
+        }
+        if (other.hasEstUsd()) {
+          setEstUsd(other.getEstUsd());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesEconSteamclient.CEcon_Asset parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesEconSteamclient.CEcon_Asset) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int appid_ ;
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @param value The appid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppid(int value) {
+        bitField0_ |= 0x00000001;
+        appid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long contextid_ ;
+      /**
+       * <code>optional uint64 contextid = 2;</code>
+       * @return Whether the contextid field is set.
+       */
+      @java.lang.Override
+      public boolean hasContextid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 contextid = 2;</code>
+       * @return The contextid.
+       */
+      @java.lang.Override
+      public long getContextid() {
+        return contextid_;
+      }
+      /**
+       * <code>optional uint64 contextid = 2;</code>
+       * @param value The contextid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContextid(long value) {
+        bitField0_ |= 0x00000002;
+        contextid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 contextid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContextid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contextid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetid_ ;
+      /**
+       * <code>optional uint64 assetid = 3;</code>
+       * @return Whether the assetid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAssetid() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint64 assetid = 3;</code>
+       * @return The assetid.
+       */
+      @java.lang.Override
+      public long getAssetid() {
+        return assetid_;
+      }
+      /**
+       * <code>optional uint64 assetid = 3;</code>
+       * @param value The assetid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetid(long value) {
+        bitField0_ |= 0x00000004;
+        assetid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 assetid = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        assetid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long classid_ ;
+      /**
+       * <code>optional uint64 classid = 4;</code>
+       * @return Whether the classid field is set.
+       */
+      @java.lang.Override
+      public boolean hasClassid() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint64 classid = 4;</code>
+       * @return The classid.
+       */
+      @java.lang.Override
+      public long getClassid() {
+        return classid_;
+      }
+      /**
+       * <code>optional uint64 classid = 4;</code>
+       * @param value The classid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassid(long value) {
+        bitField0_ |= 0x00000008;
+        classid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 classid = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassid() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        classid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long instanceid_ ;
+      /**
+       * <code>optional uint64 instanceid = 5;</code>
+       * @return Whether the instanceid field is set.
+       */
+      @java.lang.Override
+      public boolean hasInstanceid() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint64 instanceid = 5;</code>
+       * @return The instanceid.
+       */
+      @java.lang.Override
+      public long getInstanceid() {
+        return instanceid_;
+      }
+      /**
+       * <code>optional uint64 instanceid = 5;</code>
+       * @param value The instanceid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceid(long value) {
+        bitField0_ |= 0x00000010;
+        instanceid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 instanceid = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceid() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        instanceid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int currencyid_ ;
+      /**
+       * <code>optional uint32 currencyid = 6 [(.description) = "Set currencyid if it&#92;'s a currency, assetid for an item"];</code>
+       * @return Whether the currencyid field is set.
+       */
+      @java.lang.Override
+      public boolean hasCurrencyid() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint32 currencyid = 6 [(.description) = "Set currencyid if it&#92;'s a currency, assetid for an item"];</code>
+       * @return The currencyid.
+       */
+      @java.lang.Override
+      public int getCurrencyid() {
+        return currencyid_;
+      }
+      /**
+       * <code>optional uint32 currencyid = 6 [(.description) = "Set currencyid if it&#92;'s a currency, assetid for an item"];</code>
+       * @param value The currencyid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrencyid(int value) {
+        bitField0_ |= 0x00000020;
+        currencyid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 currencyid = 6 [(.description) = "Set currencyid if it&#92;'s a currency, assetid for an item"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrencyid() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        currencyid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <code>optional int64 amount = 7;</code>
+       * @return Whether the amount field is set.
+       */
+      @java.lang.Override
+      public boolean hasAmount() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional int64 amount = 7;</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>optional int64 amount = 7;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+        bitField0_ |= 0x00000040;
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 amount = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean missing_ ;
+      /**
+       * <code>optional bool missing = 8;</code>
+       * @return Whether the missing field is set.
+       */
+      @java.lang.Override
+      public boolean hasMissing() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional bool missing = 8;</code>
+       * @return The missing.
+       */
+      @java.lang.Override
+      public boolean getMissing() {
+        return missing_;
+      }
+      /**
+       * <code>optional bool missing = 8;</code>
+       * @param value The missing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMissing(boolean value) {
+        bitField0_ |= 0x00000080;
+        missing_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool missing = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMissing() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        missing_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long estUsd_ ;
+      /**
+       * <code>optional int64 est_usd = 9;</code>
+       * @return Whether the estUsd field is set.
+       */
+      @java.lang.Override
+      public boolean hasEstUsd() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional int64 est_usd = 9;</code>
+       * @return The estUsd.
+       */
+      @java.lang.Override
+      public long getEstUsd() {
+        return estUsd_;
+      }
+      /**
+       * <code>optional int64 est_usd = 9;</code>
+       * @param value The estUsd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEstUsd(long value) {
+        bitField0_ |= 0x00000100;
+        estUsd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 est_usd = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEstUsd() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        estUsd_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CEcon_Asset)
+    }
+
+    // @@protoc_insertion_point(class_scope:CEcon_Asset)
+    private static final SteammessagesEconSteamclient.CEcon_Asset DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_Asset();
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_Asset getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_Asset>
+        PARSER = new com.google.protobuf.AbstractParser<CEcon_Asset>() {
+      @java.lang.Override
+      public CEcon_Asset parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CEcon_Asset(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CEcon_Asset> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CEcon_Asset> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_Asset getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -13690,6 +13471,5988 @@ public final class SteammessagesEconSteamclient {
 
   }
 
+  public interface CEcon_GetInventoryItemsWithDescriptions_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CEcon_GetInventoryItemsWithDescriptions_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CEcon_Asset assets = 1;</code>
+     */
+    java.util.List<SteammessagesEconSteamclient.CEcon_Asset> 
+        getAssetsList();
+    /**
+     * <code>repeated .CEcon_Asset assets = 1;</code>
+     */
+    SteammessagesEconSteamclient.CEcon_Asset getAssets(int index);
+    /**
+     * <code>repeated .CEcon_Asset assets = 1;</code>
+     */
+    int getAssetsCount();
+    /**
+     * <code>repeated .CEcon_Asset assets = 1;</code>
+     */
+    java.util.List<? extends SteammessagesEconSteamclient.CEcon_AssetOrBuilder> 
+        getAssetsOrBuilderList();
+    /**
+     * <code>repeated .CEcon_Asset assets = 1;</code>
+     */
+    SteammessagesEconSteamclient.CEcon_AssetOrBuilder getAssetsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .CEconItem_Description descriptions = 2;</code>
+     */
+    java.util.List<SteammessagesEconSteamclient.CEconItem_Description> 
+        getDescriptionsList();
+    /**
+     * <code>repeated .CEconItem_Description descriptions = 2;</code>
+     */
+    SteammessagesEconSteamclient.CEconItem_Description getDescriptions(int index);
+    /**
+     * <code>repeated .CEconItem_Description descriptions = 2;</code>
+     */
+    int getDescriptionsCount();
+    /**
+     * <code>repeated .CEconItem_Description descriptions = 2;</code>
+     */
+    java.util.List<? extends SteammessagesEconSteamclient.CEconItem_DescriptionOrBuilder> 
+        getDescriptionsOrBuilderList();
+    /**
+     * <code>repeated .CEconItem_Description descriptions = 2;</code>
+     */
+    SteammessagesEconSteamclient.CEconItem_DescriptionOrBuilder getDescriptionsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+     */
+    java.util.List<SteammessagesEconSteamclient.CEcon_Asset> 
+        getMissingAssetsList();
+    /**
+     * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+     */
+    SteammessagesEconSteamclient.CEcon_Asset getMissingAssets(int index);
+    /**
+     * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+     */
+    int getMissingAssetsCount();
+    /**
+     * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+     */
+    java.util.List<? extends SteammessagesEconSteamclient.CEcon_AssetOrBuilder> 
+        getMissingAssetsOrBuilderList();
+    /**
+     * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+     */
+    SteammessagesEconSteamclient.CEcon_AssetOrBuilder getMissingAssetsOrBuilder(
+        int index);
+
+    /**
+     * <code>optional bool more_items = 4;</code>
+     * @return Whether the moreItems field is set.
+     */
+    boolean hasMoreItems();
+    /**
+     * <code>optional bool more_items = 4;</code>
+     * @return The moreItems.
+     */
+    boolean getMoreItems();
+
+    /**
+     * <code>optional uint64 last_assetid = 5;</code>
+     * @return Whether the lastAssetid field is set.
+     */
+    boolean hasLastAssetid();
+    /**
+     * <code>optional uint64 last_assetid = 5;</code>
+     * @return The lastAssetid.
+     */
+    long getLastAssetid();
+
+    /**
+     * <code>optional uint32 total_inventory_count = 6;</code>
+     * @return Whether the totalInventoryCount field is set.
+     */
+    boolean hasTotalInventoryCount();
+    /**
+     * <code>optional uint32 total_inventory_count = 6;</code>
+     * @return The totalInventoryCount.
+     */
+    int getTotalInventoryCount();
+  }
+  /**
+   * Protobuf type {@code CEcon_GetInventoryItemsWithDescriptions_Response}
+   */
+  public static final class CEcon_GetInventoryItemsWithDescriptions_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CEcon_GetInventoryItemsWithDescriptions_Response)
+      CEcon_GetInventoryItemsWithDescriptions_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CEcon_GetInventoryItemsWithDescriptions_Response.newBuilder() to construct.
+    private CEcon_GetInventoryItemsWithDescriptions_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CEcon_GetInventoryItemsWithDescriptions_Response() {
+      assets_ = java.util.Collections.emptyList();
+      descriptions_ = java.util.Collections.emptyList();
+      missingAssets_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CEcon_GetInventoryItemsWithDescriptions_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CEcon_GetInventoryItemsWithDescriptions_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                assets_ = new java.util.ArrayList<SteammessagesEconSteamclient.CEcon_Asset>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              assets_.add(
+                  input.readMessage(SteammessagesEconSteamclient.CEcon_Asset.PARSER, extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                descriptions_ = new java.util.ArrayList<SteammessagesEconSteamclient.CEconItem_Description>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              descriptions_.add(
+                  input.readMessage(SteammessagesEconSteamclient.CEconItem_Description.PARSER, extensionRegistry));
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                missingAssets_ = new java.util.ArrayList<SteammessagesEconSteamclient.CEcon_Asset>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              missingAssets_.add(
+                  input.readMessage(SteammessagesEconSteamclient.CEcon_Asset.PARSER, extensionRegistry));
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000001;
+              moreItems_ = input.readBool();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000002;
+              lastAssetid_ = input.readUInt64();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000004;
+              totalInventoryCount_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          assets_ = java.util.Collections.unmodifiableList(assets_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          descriptions_ = java.util.Collections.unmodifiableList(descriptions_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          missingAssets_ = java.util.Collections.unmodifiableList(missingAssets_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response.class, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ASSETS_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesEconSteamclient.CEcon_Asset> assets_;
+    /**
+     * <code>repeated .CEcon_Asset assets = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesEconSteamclient.CEcon_Asset> getAssetsList() {
+      return assets_;
+    }
+    /**
+     * <code>repeated .CEcon_Asset assets = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesEconSteamclient.CEcon_AssetOrBuilder> 
+        getAssetsOrBuilderList() {
+      return assets_;
+    }
+    /**
+     * <code>repeated .CEcon_Asset assets = 1;</code>
+     */
+    @java.lang.Override
+    public int getAssetsCount() {
+      return assets_.size();
+    }
+    /**
+     * <code>repeated .CEcon_Asset assets = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_Asset getAssets(int index) {
+      return assets_.get(index);
+    }
+    /**
+     * <code>repeated .CEcon_Asset assets = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_AssetOrBuilder getAssetsOrBuilder(
+        int index) {
+      return assets_.get(index);
+    }
+
+    public static final int DESCRIPTIONS_FIELD_NUMBER = 2;
+    private java.util.List<SteammessagesEconSteamclient.CEconItem_Description> descriptions_;
+    /**
+     * <code>repeated .CEconItem_Description descriptions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesEconSteamclient.CEconItem_Description> getDescriptionsList() {
+      return descriptions_;
+    }
+    /**
+     * <code>repeated .CEconItem_Description descriptions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesEconSteamclient.CEconItem_DescriptionOrBuilder> 
+        getDescriptionsOrBuilderList() {
+      return descriptions_;
+    }
+    /**
+     * <code>repeated .CEconItem_Description descriptions = 2;</code>
+     */
+    @java.lang.Override
+    public int getDescriptionsCount() {
+      return descriptions_.size();
+    }
+    /**
+     * <code>repeated .CEconItem_Description descriptions = 2;</code>
+     */
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEconItem_Description getDescriptions(int index) {
+      return descriptions_.get(index);
+    }
+    /**
+     * <code>repeated .CEconItem_Description descriptions = 2;</code>
+     */
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEconItem_DescriptionOrBuilder getDescriptionsOrBuilder(
+        int index) {
+      return descriptions_.get(index);
+    }
+
+    public static final int MISSING_ASSETS_FIELD_NUMBER = 3;
+    private java.util.List<SteammessagesEconSteamclient.CEcon_Asset> missingAssets_;
+    /**
+     * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesEconSteamclient.CEcon_Asset> getMissingAssetsList() {
+      return missingAssets_;
+    }
+    /**
+     * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesEconSteamclient.CEcon_AssetOrBuilder> 
+        getMissingAssetsOrBuilderList() {
+      return missingAssets_;
+    }
+    /**
+     * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+     */
+    @java.lang.Override
+    public int getMissingAssetsCount() {
+      return missingAssets_.size();
+    }
+    /**
+     * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_Asset getMissingAssets(int index) {
+      return missingAssets_.get(index);
+    }
+    /**
+     * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_AssetOrBuilder getMissingAssetsOrBuilder(
+        int index) {
+      return missingAssets_.get(index);
+    }
+
+    public static final int MORE_ITEMS_FIELD_NUMBER = 4;
+    private boolean moreItems_;
+    /**
+     * <code>optional bool more_items = 4;</code>
+     * @return Whether the moreItems field is set.
+     */
+    @java.lang.Override
+    public boolean hasMoreItems() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool more_items = 4;</code>
+     * @return The moreItems.
+     */
+    @java.lang.Override
+    public boolean getMoreItems() {
+      return moreItems_;
+    }
+
+    public static final int LAST_ASSETID_FIELD_NUMBER = 5;
+    private long lastAssetid_;
+    /**
+     * <code>optional uint64 last_assetid = 5;</code>
+     * @return Whether the lastAssetid field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastAssetid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 last_assetid = 5;</code>
+     * @return The lastAssetid.
+     */
+    @java.lang.Override
+    public long getLastAssetid() {
+      return lastAssetid_;
+    }
+
+    public static final int TOTAL_INVENTORY_COUNT_FIELD_NUMBER = 6;
+    private int totalInventoryCount_;
+    /**
+     * <code>optional uint32 total_inventory_count = 6;</code>
+     * @return Whether the totalInventoryCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalInventoryCount() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 total_inventory_count = 6;</code>
+     * @return The totalInventoryCount.
+     */
+    @java.lang.Override
+    public int getTotalInventoryCount() {
+      return totalInventoryCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < assets_.size(); i++) {
+        output.writeMessage(1, assets_.get(i));
+      }
+      for (int i = 0; i < descriptions_.size(); i++) {
+        output.writeMessage(2, descriptions_.get(i));
+      }
+      for (int i = 0; i < missingAssets_.size(); i++) {
+        output.writeMessage(3, missingAssets_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(4, moreItems_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(5, lastAssetid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(6, totalInventoryCount_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < assets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, assets_.get(i));
+      }
+      for (int i = 0; i < descriptions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, descriptions_.get(i));
+      }
+      for (int i = 0; i < missingAssets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, missingAssets_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, moreItems_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, lastAssetid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, totalInventoryCount_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response other = (SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response) obj;
+
+      if (!getAssetsList()
+          .equals(other.getAssetsList())) return false;
+      if (!getDescriptionsList()
+          .equals(other.getDescriptionsList())) return false;
+      if (!getMissingAssetsList()
+          .equals(other.getMissingAssetsList())) return false;
+      if (hasMoreItems() != other.hasMoreItems()) return false;
+      if (hasMoreItems()) {
+        if (getMoreItems()
+            != other.getMoreItems()) return false;
+      }
+      if (hasLastAssetid() != other.hasLastAssetid()) return false;
+      if (hasLastAssetid()) {
+        if (getLastAssetid()
+            != other.getLastAssetid()) return false;
+      }
+      if (hasTotalInventoryCount() != other.hasTotalInventoryCount()) return false;
+      if (hasTotalInventoryCount()) {
+        if (getTotalInventoryCount()
+            != other.getTotalInventoryCount()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAssetsCount() > 0) {
+        hash = (37 * hash) + ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetsList().hashCode();
+      }
+      if (getDescriptionsCount() > 0) {
+        hash = (37 * hash) + DESCRIPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDescriptionsList().hashCode();
+      }
+      if (getMissingAssetsCount() > 0) {
+        hash = (37 * hash) + MISSING_ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getMissingAssetsList().hashCode();
+      }
+      if (hasMoreItems()) {
+        hash = (37 * hash) + MORE_ITEMS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getMoreItems());
+      }
+      if (hasLastAssetid()) {
+        hash = (37 * hash) + LAST_ASSETID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getLastAssetid());
+      }
+      if (hasTotalInventoryCount()) {
+        hash = (37 * hash) + TOTAL_INVENTORY_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalInventoryCount();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CEcon_GetInventoryItemsWithDescriptions_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CEcon_GetInventoryItemsWithDescriptions_Response)
+        SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response.class, SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAssetsFieldBuilder();
+          getDescriptionsFieldBuilder();
+          getMissingAssetsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          assetsBuilder_.clear();
+        }
+        if (descriptionsBuilder_ == null) {
+          descriptions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          descriptionsBuilder_.clear();
+        }
+        if (missingAssetsBuilder_ == null) {
+          missingAssets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          missingAssetsBuilder_.clear();
+        }
+        moreItems_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        lastAssetid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        totalInventoryCount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetInventoryItemsWithDescriptions_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response getDefaultInstanceForType() {
+        return SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response build() {
+        SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response buildPartial() {
+        SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response result = new SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (assetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            assets_ = java.util.Collections.unmodifiableList(assets_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.assets_ = assets_;
+        } else {
+          result.assets_ = assetsBuilder_.build();
+        }
+        if (descriptionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            descriptions_ = java.util.Collections.unmodifiableList(descriptions_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.descriptions_ = descriptions_;
+        } else {
+          result.descriptions_ = descriptionsBuilder_.build();
+        }
+        if (missingAssetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            missingAssets_ = java.util.Collections.unmodifiableList(missingAssets_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.missingAssets_ = missingAssets_;
+        } else {
+          result.missingAssets_ = missingAssetsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.moreItems_ = moreItems_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.lastAssetid_ = lastAssetid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.totalInventoryCount_ = totalInventoryCount_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response) {
+          return mergeFrom((SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response other) {
+        if (other == SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response.getDefaultInstance()) return this;
+        if (assetsBuilder_ == null) {
+          if (!other.assets_.isEmpty()) {
+            if (assets_.isEmpty()) {
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAssetsIsMutable();
+              assets_.addAll(other.assets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assets_.isEmpty()) {
+            if (assetsBuilder_.isEmpty()) {
+              assetsBuilder_.dispose();
+              assetsBuilder_ = null;
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              assetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetsFieldBuilder() : null;
+            } else {
+              assetsBuilder_.addAllMessages(other.assets_);
+            }
+          }
+        }
+        if (descriptionsBuilder_ == null) {
+          if (!other.descriptions_.isEmpty()) {
+            if (descriptions_.isEmpty()) {
+              descriptions_ = other.descriptions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureDescriptionsIsMutable();
+              descriptions_.addAll(other.descriptions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.descriptions_.isEmpty()) {
+            if (descriptionsBuilder_.isEmpty()) {
+              descriptionsBuilder_.dispose();
+              descriptionsBuilder_ = null;
+              descriptions_ = other.descriptions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              descriptionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDescriptionsFieldBuilder() : null;
+            } else {
+              descriptionsBuilder_.addAllMessages(other.descriptions_);
+            }
+          }
+        }
+        if (missingAssetsBuilder_ == null) {
+          if (!other.missingAssets_.isEmpty()) {
+            if (missingAssets_.isEmpty()) {
+              missingAssets_ = other.missingAssets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureMissingAssetsIsMutable();
+              missingAssets_.addAll(other.missingAssets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.missingAssets_.isEmpty()) {
+            if (missingAssetsBuilder_.isEmpty()) {
+              missingAssetsBuilder_.dispose();
+              missingAssetsBuilder_ = null;
+              missingAssets_ = other.missingAssets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              missingAssetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMissingAssetsFieldBuilder() : null;
+            } else {
+              missingAssetsBuilder_.addAllMessages(other.missingAssets_);
+            }
+          }
+        }
+        if (other.hasMoreItems()) {
+          setMoreItems(other.getMoreItems());
+        }
+        if (other.hasLastAssetid()) {
+          setLastAssetid(other.getLastAssetid());
+        }
+        if (other.hasTotalInventoryCount()) {
+          setTotalInventoryCount(other.getTotalInventoryCount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesEconSteamclient.CEcon_Asset> assets_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          assets_ = new java.util.ArrayList<SteammessagesEconSteamclient.CEcon_Asset>(assets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesEconSteamclient.CEcon_Asset, SteammessagesEconSteamclient.CEcon_Asset.Builder, SteammessagesEconSteamclient.CEcon_AssetOrBuilder> assetsBuilder_;
+
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public java.util.List<SteammessagesEconSteamclient.CEcon_Asset> getAssetsList() {
+        if (assetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assets_);
+        } else {
+          return assetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public int getAssetsCount() {
+        if (assetsBuilder_ == null) {
+          return assets_.size();
+        } else {
+          return assetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_Asset getAssets(int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);
+        } else {
+          return assetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public Builder setAssets(
+          int index, SteammessagesEconSteamclient.CEcon_Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.set(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public Builder setAssets(
+          int index, SteammessagesEconSteamclient.CEcon_Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public Builder addAssets(SteammessagesEconSteamclient.CEcon_Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public Builder addAssets(
+          int index, SteammessagesEconSteamclient.CEcon_Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public Builder addAssets(
+          SteammessagesEconSteamclient.CEcon_Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public Builder addAssets(
+          int index, SteammessagesEconSteamclient.CEcon_Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public Builder addAllAssets(
+          java.lang.Iterable<? extends SteammessagesEconSteamclient.CEcon_Asset> values) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assets_);
+          onChanged();
+        } else {
+          assetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public Builder clearAssets() {
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          assetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public Builder removeAssets(int index) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.remove(index);
+          onChanged();
+        } else {
+          assetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_Asset.Builder getAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_AssetOrBuilder getAssetsOrBuilder(
+          int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);  } else {
+          return assetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public java.util.List<? extends SteammessagesEconSteamclient.CEcon_AssetOrBuilder> 
+           getAssetsOrBuilderList() {
+        if (assetsBuilder_ != null) {
+          return assetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assets_);
+        }
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_Asset.Builder addAssetsBuilder() {
+        return getAssetsFieldBuilder().addBuilder(
+            SteammessagesEconSteamclient.CEcon_Asset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_Asset.Builder addAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().addBuilder(
+            index, SteammessagesEconSteamclient.CEcon_Asset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CEcon_Asset assets = 1;</code>
+       */
+      public java.util.List<SteammessagesEconSteamclient.CEcon_Asset.Builder> 
+           getAssetsBuilderList() {
+        return getAssetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesEconSteamclient.CEcon_Asset, SteammessagesEconSteamclient.CEcon_Asset.Builder, SteammessagesEconSteamclient.CEcon_AssetOrBuilder> 
+          getAssetsFieldBuilder() {
+        if (assetsBuilder_ == null) {
+          assetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesEconSteamclient.CEcon_Asset, SteammessagesEconSteamclient.CEcon_Asset.Builder, SteammessagesEconSteamclient.CEcon_AssetOrBuilder>(
+                  assets_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assets_ = null;
+        }
+        return assetsBuilder_;
+      }
+
+      private java.util.List<SteammessagesEconSteamclient.CEconItem_Description> descriptions_ =
+        java.util.Collections.emptyList();
+      private void ensureDescriptionsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          descriptions_ = new java.util.ArrayList<SteammessagesEconSteamclient.CEconItem_Description>(descriptions_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesEconSteamclient.CEconItem_Description, SteammessagesEconSteamclient.CEconItem_Description.Builder, SteammessagesEconSteamclient.CEconItem_DescriptionOrBuilder> descriptionsBuilder_;
+
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public java.util.List<SteammessagesEconSteamclient.CEconItem_Description> getDescriptionsList() {
+        if (descriptionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(descriptions_);
+        } else {
+          return descriptionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public int getDescriptionsCount() {
+        if (descriptionsBuilder_ == null) {
+          return descriptions_.size();
+        } else {
+          return descriptionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public SteammessagesEconSteamclient.CEconItem_Description getDescriptions(int index) {
+        if (descriptionsBuilder_ == null) {
+          return descriptions_.get(index);
+        } else {
+          return descriptionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public Builder setDescriptions(
+          int index, SteammessagesEconSteamclient.CEconItem_Description value) {
+        if (descriptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDescriptionsIsMutable();
+          descriptions_.set(index, value);
+          onChanged();
+        } else {
+          descriptionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public Builder setDescriptions(
+          int index, SteammessagesEconSteamclient.CEconItem_Description.Builder builderForValue) {
+        if (descriptionsBuilder_ == null) {
+          ensureDescriptionsIsMutable();
+          descriptions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          descriptionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public Builder addDescriptions(SteammessagesEconSteamclient.CEconItem_Description value) {
+        if (descriptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDescriptionsIsMutable();
+          descriptions_.add(value);
+          onChanged();
+        } else {
+          descriptionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public Builder addDescriptions(
+          int index, SteammessagesEconSteamclient.CEconItem_Description value) {
+        if (descriptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDescriptionsIsMutable();
+          descriptions_.add(index, value);
+          onChanged();
+        } else {
+          descriptionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public Builder addDescriptions(
+          SteammessagesEconSteamclient.CEconItem_Description.Builder builderForValue) {
+        if (descriptionsBuilder_ == null) {
+          ensureDescriptionsIsMutable();
+          descriptions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          descriptionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public Builder addDescriptions(
+          int index, SteammessagesEconSteamclient.CEconItem_Description.Builder builderForValue) {
+        if (descriptionsBuilder_ == null) {
+          ensureDescriptionsIsMutable();
+          descriptions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          descriptionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public Builder addAllDescriptions(
+          java.lang.Iterable<? extends SteammessagesEconSteamclient.CEconItem_Description> values) {
+        if (descriptionsBuilder_ == null) {
+          ensureDescriptionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, descriptions_);
+          onChanged();
+        } else {
+          descriptionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public Builder clearDescriptions() {
+        if (descriptionsBuilder_ == null) {
+          descriptions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          descriptionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public Builder removeDescriptions(int index) {
+        if (descriptionsBuilder_ == null) {
+          ensureDescriptionsIsMutable();
+          descriptions_.remove(index);
+          onChanged();
+        } else {
+          descriptionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public SteammessagesEconSteamclient.CEconItem_Description.Builder getDescriptionsBuilder(
+          int index) {
+        return getDescriptionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public SteammessagesEconSteamclient.CEconItem_DescriptionOrBuilder getDescriptionsOrBuilder(
+          int index) {
+        if (descriptionsBuilder_ == null) {
+          return descriptions_.get(index);  } else {
+          return descriptionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public java.util.List<? extends SteammessagesEconSteamclient.CEconItem_DescriptionOrBuilder> 
+           getDescriptionsOrBuilderList() {
+        if (descriptionsBuilder_ != null) {
+          return descriptionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(descriptions_);
+        }
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public SteammessagesEconSteamclient.CEconItem_Description.Builder addDescriptionsBuilder() {
+        return getDescriptionsFieldBuilder().addBuilder(
+            SteammessagesEconSteamclient.CEconItem_Description.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public SteammessagesEconSteamclient.CEconItem_Description.Builder addDescriptionsBuilder(
+          int index) {
+        return getDescriptionsFieldBuilder().addBuilder(
+            index, SteammessagesEconSteamclient.CEconItem_Description.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CEconItem_Description descriptions = 2;</code>
+       */
+      public java.util.List<SteammessagesEconSteamclient.CEconItem_Description.Builder> 
+           getDescriptionsBuilderList() {
+        return getDescriptionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesEconSteamclient.CEconItem_Description, SteammessagesEconSteamclient.CEconItem_Description.Builder, SteammessagesEconSteamclient.CEconItem_DescriptionOrBuilder> 
+          getDescriptionsFieldBuilder() {
+        if (descriptionsBuilder_ == null) {
+          descriptionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesEconSteamclient.CEconItem_Description, SteammessagesEconSteamclient.CEconItem_Description.Builder, SteammessagesEconSteamclient.CEconItem_DescriptionOrBuilder>(
+                  descriptions_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          descriptions_ = null;
+        }
+        return descriptionsBuilder_;
+      }
+
+      private java.util.List<SteammessagesEconSteamclient.CEcon_Asset> missingAssets_ =
+        java.util.Collections.emptyList();
+      private void ensureMissingAssetsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          missingAssets_ = new java.util.ArrayList<SteammessagesEconSteamclient.CEcon_Asset>(missingAssets_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesEconSteamclient.CEcon_Asset, SteammessagesEconSteamclient.CEcon_Asset.Builder, SteammessagesEconSteamclient.CEcon_AssetOrBuilder> missingAssetsBuilder_;
+
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public java.util.List<SteammessagesEconSteamclient.CEcon_Asset> getMissingAssetsList() {
+        if (missingAssetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(missingAssets_);
+        } else {
+          return missingAssetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public int getMissingAssetsCount() {
+        if (missingAssetsBuilder_ == null) {
+          return missingAssets_.size();
+        } else {
+          return missingAssetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_Asset getMissingAssets(int index) {
+        if (missingAssetsBuilder_ == null) {
+          return missingAssets_.get(index);
+        } else {
+          return missingAssetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public Builder setMissingAssets(
+          int index, SteammessagesEconSteamclient.CEcon_Asset value) {
+        if (missingAssetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMissingAssetsIsMutable();
+          missingAssets_.set(index, value);
+          onChanged();
+        } else {
+          missingAssetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public Builder setMissingAssets(
+          int index, SteammessagesEconSteamclient.CEcon_Asset.Builder builderForValue) {
+        if (missingAssetsBuilder_ == null) {
+          ensureMissingAssetsIsMutable();
+          missingAssets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          missingAssetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public Builder addMissingAssets(SteammessagesEconSteamclient.CEcon_Asset value) {
+        if (missingAssetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMissingAssetsIsMutable();
+          missingAssets_.add(value);
+          onChanged();
+        } else {
+          missingAssetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public Builder addMissingAssets(
+          int index, SteammessagesEconSteamclient.CEcon_Asset value) {
+        if (missingAssetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMissingAssetsIsMutable();
+          missingAssets_.add(index, value);
+          onChanged();
+        } else {
+          missingAssetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public Builder addMissingAssets(
+          SteammessagesEconSteamclient.CEcon_Asset.Builder builderForValue) {
+        if (missingAssetsBuilder_ == null) {
+          ensureMissingAssetsIsMutable();
+          missingAssets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          missingAssetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public Builder addMissingAssets(
+          int index, SteammessagesEconSteamclient.CEcon_Asset.Builder builderForValue) {
+        if (missingAssetsBuilder_ == null) {
+          ensureMissingAssetsIsMutable();
+          missingAssets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          missingAssetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public Builder addAllMissingAssets(
+          java.lang.Iterable<? extends SteammessagesEconSteamclient.CEcon_Asset> values) {
+        if (missingAssetsBuilder_ == null) {
+          ensureMissingAssetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, missingAssets_);
+          onChanged();
+        } else {
+          missingAssetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public Builder clearMissingAssets() {
+        if (missingAssetsBuilder_ == null) {
+          missingAssets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          missingAssetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public Builder removeMissingAssets(int index) {
+        if (missingAssetsBuilder_ == null) {
+          ensureMissingAssetsIsMutable();
+          missingAssets_.remove(index);
+          onChanged();
+        } else {
+          missingAssetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_Asset.Builder getMissingAssetsBuilder(
+          int index) {
+        return getMissingAssetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_AssetOrBuilder getMissingAssetsOrBuilder(
+          int index) {
+        if (missingAssetsBuilder_ == null) {
+          return missingAssets_.get(index);  } else {
+          return missingAssetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public java.util.List<? extends SteammessagesEconSteamclient.CEcon_AssetOrBuilder> 
+           getMissingAssetsOrBuilderList() {
+        if (missingAssetsBuilder_ != null) {
+          return missingAssetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(missingAssets_);
+        }
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_Asset.Builder addMissingAssetsBuilder() {
+        return getMissingAssetsFieldBuilder().addBuilder(
+            SteammessagesEconSteamclient.CEcon_Asset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_Asset.Builder addMissingAssetsBuilder(
+          int index) {
+        return getMissingAssetsFieldBuilder().addBuilder(
+            index, SteammessagesEconSteamclient.CEcon_Asset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CEcon_Asset missing_assets = 3 [(.description) = "This list of assets in the original list we could not find in the users inventory"];</code>
+       */
+      public java.util.List<SteammessagesEconSteamclient.CEcon_Asset.Builder> 
+           getMissingAssetsBuilderList() {
+        return getMissingAssetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesEconSteamclient.CEcon_Asset, SteammessagesEconSteamclient.CEcon_Asset.Builder, SteammessagesEconSteamclient.CEcon_AssetOrBuilder> 
+          getMissingAssetsFieldBuilder() {
+        if (missingAssetsBuilder_ == null) {
+          missingAssetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesEconSteamclient.CEcon_Asset, SteammessagesEconSteamclient.CEcon_Asset.Builder, SteammessagesEconSteamclient.CEcon_AssetOrBuilder>(
+                  missingAssets_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          missingAssets_ = null;
+        }
+        return missingAssetsBuilder_;
+      }
+
+      private boolean moreItems_ ;
+      /**
+       * <code>optional bool more_items = 4;</code>
+       * @return Whether the moreItems field is set.
+       */
+      @java.lang.Override
+      public boolean hasMoreItems() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool more_items = 4;</code>
+       * @return The moreItems.
+       */
+      @java.lang.Override
+      public boolean getMoreItems() {
+        return moreItems_;
+      }
+      /**
+       * <code>optional bool more_items = 4;</code>
+       * @param value The moreItems to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMoreItems(boolean value) {
+        bitField0_ |= 0x00000008;
+        moreItems_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool more_items = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMoreItems() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        moreItems_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long lastAssetid_ ;
+      /**
+       * <code>optional uint64 last_assetid = 5;</code>
+       * @return Whether the lastAssetid field is set.
+       */
+      @java.lang.Override
+      public boolean hasLastAssetid() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint64 last_assetid = 5;</code>
+       * @return The lastAssetid.
+       */
+      @java.lang.Override
+      public long getLastAssetid() {
+        return lastAssetid_;
+      }
+      /**
+       * <code>optional uint64 last_assetid = 5;</code>
+       * @param value The lastAssetid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastAssetid(long value) {
+        bitField0_ |= 0x00000010;
+        lastAssetid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 last_assetid = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastAssetid() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        lastAssetid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int totalInventoryCount_ ;
+      /**
+       * <code>optional uint32 total_inventory_count = 6;</code>
+       * @return Whether the totalInventoryCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotalInventoryCount() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint32 total_inventory_count = 6;</code>
+       * @return The totalInventoryCount.
+       */
+      @java.lang.Override
+      public int getTotalInventoryCount() {
+        return totalInventoryCount_;
+      }
+      /**
+       * <code>optional uint32 total_inventory_count = 6;</code>
+       * @param value The totalInventoryCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalInventoryCount(int value) {
+        bitField0_ |= 0x00000020;
+        totalInventoryCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 total_inventory_count = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalInventoryCount() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        totalInventoryCount_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CEcon_GetInventoryItemsWithDescriptions_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CEcon_GetInventoryItemsWithDescriptions_Response)
+    private static final SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response();
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_GetInventoryItemsWithDescriptions_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CEcon_GetInventoryItemsWithDescriptions_Response>() {
+      @java.lang.Override
+      public CEcon_GetInventoryItemsWithDescriptions_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CEcon_GetInventoryItemsWithDescriptions_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CEcon_GetInventoryItemsWithDescriptions_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CEcon_GetInventoryItemsWithDescriptions_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_GetInventoryItemsWithDescriptions_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CEcon_GetTradeOfferAccessToken_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CEcon_GetTradeOfferAccessToken_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool generate_new_token = 1;</code>
+     * @return Whether the generateNewToken field is set.
+     */
+    boolean hasGenerateNewToken();
+    /**
+     * <code>optional bool generate_new_token = 1;</code>
+     * @return The generateNewToken.
+     */
+    boolean getGenerateNewToken();
+  }
+  /**
+   * Protobuf type {@code CEcon_GetTradeOfferAccessToken_Request}
+   */
+  public static final class CEcon_GetTradeOfferAccessToken_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CEcon_GetTradeOfferAccessToken_Request)
+      CEcon_GetTradeOfferAccessToken_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CEcon_GetTradeOfferAccessToken_Request.newBuilder() to construct.
+    private CEcon_GetTradeOfferAccessToken_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CEcon_GetTradeOfferAccessToken_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CEcon_GetTradeOfferAccessToken_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CEcon_GetTradeOfferAccessToken_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              generateNewToken_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.class, SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int GENERATE_NEW_TOKEN_FIELD_NUMBER = 1;
+    private boolean generateNewToken_;
+    /**
+     * <code>optional bool generate_new_token = 1;</code>
+     * @return Whether the generateNewToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasGenerateNewToken() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool generate_new_token = 1;</code>
+     * @return The generateNewToken.
+     */
+    @java.lang.Override
+    public boolean getGenerateNewToken() {
+      return generateNewToken_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, generateNewToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, generateNewToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request other = (SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request) obj;
+
+      if (hasGenerateNewToken() != other.hasGenerateNewToken()) return false;
+      if (hasGenerateNewToken()) {
+        if (getGenerateNewToken()
+            != other.getGenerateNewToken()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasGenerateNewToken()) {
+        hash = (37 * hash) + GENERATE_NEW_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getGenerateNewToken());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CEcon_GetTradeOfferAccessToken_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CEcon_GetTradeOfferAccessToken_Request)
+        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.class, SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        generateNewToken_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request getDefaultInstanceForType() {
+        return SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request build() {
+        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request buildPartial() {
+        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request result = new SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.generateNewToken_ = generateNewToken_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request) {
+          return mergeFrom((SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request other) {
+        if (other == SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request.getDefaultInstance()) return this;
+        if (other.hasGenerateNewToken()) {
+          setGenerateNewToken(other.getGenerateNewToken());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean generateNewToken_ ;
+      /**
+       * <code>optional bool generate_new_token = 1;</code>
+       * @return Whether the generateNewToken field is set.
+       */
+      @java.lang.Override
+      public boolean hasGenerateNewToken() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional bool generate_new_token = 1;</code>
+       * @return The generateNewToken.
+       */
+      @java.lang.Override
+      public boolean getGenerateNewToken() {
+        return generateNewToken_;
+      }
+      /**
+       * <code>optional bool generate_new_token = 1;</code>
+       * @param value The generateNewToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenerateNewToken(boolean value) {
+        bitField0_ |= 0x00000001;
+        generateNewToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool generate_new_token = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGenerateNewToken() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        generateNewToken_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CEcon_GetTradeOfferAccessToken_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CEcon_GetTradeOfferAccessToken_Request)
+    private static final SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request();
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CEcon_GetTradeOfferAccessToken_Request>() {
+      @java.lang.Override
+      public CEcon_GetTradeOfferAccessToken_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CEcon_GetTradeOfferAccessToken_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CEcon_GetTradeOfferAccessToken_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CEcon_GetTradeOfferAccessToken_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string trade_offer_access_token = 1;</code>
+     * @return Whether the tradeOfferAccessToken field is set.
+     */
+    boolean hasTradeOfferAccessToken();
+    /**
+     * <code>optional string trade_offer_access_token = 1;</code>
+     * @return The tradeOfferAccessToken.
+     */
+    java.lang.String getTradeOfferAccessToken();
+    /**
+     * <code>optional string trade_offer_access_token = 1;</code>
+     * @return The bytes for tradeOfferAccessToken.
+     */
+    com.google.protobuf.ByteString
+        getTradeOfferAccessTokenBytes();
+  }
+  /**
+   * Protobuf type {@code CEcon_GetTradeOfferAccessToken_Response}
+   */
+  public static final class CEcon_GetTradeOfferAccessToken_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CEcon_GetTradeOfferAccessToken_Response)
+      CEcon_GetTradeOfferAccessToken_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CEcon_GetTradeOfferAccessToken_Response.newBuilder() to construct.
+    private CEcon_GetTradeOfferAccessToken_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CEcon_GetTradeOfferAccessToken_Response() {
+      tradeOfferAccessToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CEcon_GetTradeOfferAccessToken_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CEcon_GetTradeOfferAccessToken_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              tradeOfferAccessToken_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.class, SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TRADE_OFFER_ACCESS_TOKEN_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tradeOfferAccessToken_;
+    /**
+     * <code>optional string trade_offer_access_token = 1;</code>
+     * @return Whether the tradeOfferAccessToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasTradeOfferAccessToken() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string trade_offer_access_token = 1;</code>
+     * @return The tradeOfferAccessToken.
+     */
+    @java.lang.Override
+    public java.lang.String getTradeOfferAccessToken() {
+      java.lang.Object ref = tradeOfferAccessToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          tradeOfferAccessToken_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string trade_offer_access_token = 1;</code>
+     * @return The bytes for tradeOfferAccessToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTradeOfferAccessTokenBytes() {
+      java.lang.Object ref = tradeOfferAccessToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tradeOfferAccessToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tradeOfferAccessToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tradeOfferAccessToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response other = (SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response) obj;
+
+      if (hasTradeOfferAccessToken() != other.hasTradeOfferAccessToken()) return false;
+      if (hasTradeOfferAccessToken()) {
+        if (!getTradeOfferAccessToken()
+            .equals(other.getTradeOfferAccessToken())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTradeOfferAccessToken()) {
+        hash = (37 * hash) + TRADE_OFFER_ACCESS_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getTradeOfferAccessToken().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CEcon_GetTradeOfferAccessToken_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CEcon_GetTradeOfferAccessToken_Response)
+        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.class, SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tradeOfferAccessToken_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetTradeOfferAccessToken_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response getDefaultInstanceForType() {
+        return SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response build() {
+        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response buildPartial() {
+        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response result = new SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.tradeOfferAccessToken_ = tradeOfferAccessToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response) {
+          return mergeFrom((SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response other) {
+        if (other == SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response.getDefaultInstance()) return this;
+        if (other.hasTradeOfferAccessToken()) {
+          bitField0_ |= 0x00000001;
+          tradeOfferAccessToken_ = other.tradeOfferAccessToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object tradeOfferAccessToken_ = "";
+      /**
+       * <code>optional string trade_offer_access_token = 1;</code>
+       * @return Whether the tradeOfferAccessToken field is set.
+       */
+      public boolean hasTradeOfferAccessToken() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string trade_offer_access_token = 1;</code>
+       * @return The tradeOfferAccessToken.
+       */
+      public java.lang.String getTradeOfferAccessToken() {
+        java.lang.Object ref = tradeOfferAccessToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            tradeOfferAccessToken_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string trade_offer_access_token = 1;</code>
+       * @return The bytes for tradeOfferAccessToken.
+       */
+      public com.google.protobuf.ByteString
+          getTradeOfferAccessTokenBytes() {
+        java.lang.Object ref = tradeOfferAccessToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tradeOfferAccessToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string trade_offer_access_token = 1;</code>
+       * @param value The tradeOfferAccessToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTradeOfferAccessToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        tradeOfferAccessToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string trade_offer_access_token = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTradeOfferAccessToken() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tradeOfferAccessToken_ = getDefaultInstance().getTradeOfferAccessToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string trade_offer_access_token = 1;</code>
+       * @param value The bytes for tradeOfferAccessToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTradeOfferAccessTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        tradeOfferAccessToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CEcon_GetTradeOfferAccessToken_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CEcon_GetTradeOfferAccessToken_Response)
+    private static final SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response();
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CEcon_GetTradeOfferAccessToken_Response>() {
+      @java.lang.Override
+      public CEcon_GetTradeOfferAccessToken_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CEcon_GetTradeOfferAccessToken_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CEcon_GetTradeOfferAccessToken_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_GetTradeOfferAccessToken_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CEcon_ClientGetItemShopOverlayAuthURL_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CEcon_ClientGetItemShopOverlayAuthURL_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string return_url = 1;</code>
+     * @return Whether the returnUrl field is set.
+     */
+    boolean hasReturnUrl();
+    /**
+     * <code>optional string return_url = 1;</code>
+     * @return The returnUrl.
+     */
+    java.lang.String getReturnUrl();
+    /**
+     * <code>optional string return_url = 1;</code>
+     * @return The bytes for returnUrl.
+     */
+    com.google.protobuf.ByteString
+        getReturnUrlBytes();
+  }
+  /**
+   * Protobuf type {@code CEcon_ClientGetItemShopOverlayAuthURL_Request}
+   */
+  public static final class CEcon_ClientGetItemShopOverlayAuthURL_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CEcon_ClientGetItemShopOverlayAuthURL_Request)
+      CEcon_ClientGetItemShopOverlayAuthURL_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CEcon_ClientGetItemShopOverlayAuthURL_Request.newBuilder() to construct.
+    private CEcon_ClientGetItemShopOverlayAuthURL_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CEcon_ClientGetItemShopOverlayAuthURL_Request() {
+      returnUrl_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CEcon_ClientGetItemShopOverlayAuthURL_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CEcon_ClientGetItemShopOverlayAuthURL_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              returnUrl_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.class, SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RETURN_URL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object returnUrl_;
+    /**
+     * <code>optional string return_url = 1;</code>
+     * @return Whether the returnUrl field is set.
+     */
+    @java.lang.Override
+    public boolean hasReturnUrl() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string return_url = 1;</code>
+     * @return The returnUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getReturnUrl() {
+      java.lang.Object ref = returnUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          returnUrl_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string return_url = 1;</code>
+     * @return The bytes for returnUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReturnUrlBytes() {
+      java.lang.Object ref = returnUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        returnUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, returnUrl_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, returnUrl_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request other = (SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request) obj;
+
+      if (hasReturnUrl() != other.hasReturnUrl()) return false;
+      if (hasReturnUrl()) {
+        if (!getReturnUrl()
+            .equals(other.getReturnUrl())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasReturnUrl()) {
+        hash = (37 * hash) + RETURN_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getReturnUrl().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CEcon_ClientGetItemShopOverlayAuthURL_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CEcon_ClientGetItemShopOverlayAuthURL_Request)
+        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.class, SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        returnUrl_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request getDefaultInstanceForType() {
+        return SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request build() {
+        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request buildPartial() {
+        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request result = new SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.returnUrl_ = returnUrl_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request) {
+          return mergeFrom((SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request other) {
+        if (other == SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request.getDefaultInstance()) return this;
+        if (other.hasReturnUrl()) {
+          bitField0_ |= 0x00000001;
+          returnUrl_ = other.returnUrl_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object returnUrl_ = "";
+      /**
+       * <code>optional string return_url = 1;</code>
+       * @return Whether the returnUrl field is set.
+       */
+      public boolean hasReturnUrl() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string return_url = 1;</code>
+       * @return The returnUrl.
+       */
+      public java.lang.String getReturnUrl() {
+        java.lang.Object ref = returnUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            returnUrl_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string return_url = 1;</code>
+       * @return The bytes for returnUrl.
+       */
+      public com.google.protobuf.ByteString
+          getReturnUrlBytes() {
+        java.lang.Object ref = returnUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          returnUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string return_url = 1;</code>
+       * @param value The returnUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReturnUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        returnUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string return_url = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReturnUrl() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        returnUrl_ = getDefaultInstance().getReturnUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string return_url = 1;</code>
+       * @param value The bytes for returnUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReturnUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        returnUrl_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CEcon_ClientGetItemShopOverlayAuthURL_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CEcon_ClientGetItemShopOverlayAuthURL_Request)
+    private static final SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request();
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CEcon_ClientGetItemShopOverlayAuthURL_Request>() {
+      @java.lang.Override
+      public CEcon_ClientGetItemShopOverlayAuthURL_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CEcon_ClientGetItemShopOverlayAuthURL_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CEcon_ClientGetItemShopOverlayAuthURL_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CEcon_ClientGetItemShopOverlayAuthURL_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string url = 1;</code>
+     * @return Whether the url field is set.
+     */
+    boolean hasUrl();
+    /**
+     * <code>optional string url = 1;</code>
+     * @return The url.
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>optional string url = 1;</code>
+     * @return The bytes for url.
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+  }
+  /**
+   * Protobuf type {@code CEcon_ClientGetItemShopOverlayAuthURL_Response}
+   */
+  public static final class CEcon_ClientGetItemShopOverlayAuthURL_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CEcon_ClientGetItemShopOverlayAuthURL_Response)
+      CEcon_ClientGetItemShopOverlayAuthURL_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CEcon_ClientGetItemShopOverlayAuthURL_Response.newBuilder() to construct.
+    private CEcon_ClientGetItemShopOverlayAuthURL_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CEcon_ClientGetItemShopOverlayAuthURL_Response() {
+      url_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CEcon_ClientGetItemShopOverlayAuthURL_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CEcon_ClientGetItemShopOverlayAuthURL_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              url_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.class, SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int URL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object url_;
+    /**
+     * <code>optional string url = 1;</code>
+     * @return Whether the url field is set.
+     */
+    @java.lang.Override
+    public boolean hasUrl() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string url = 1;</code>
+     * @return The url.
+     */
+    @java.lang.Override
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          url_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string url = 1;</code>
+     * @return The bytes for url.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response other = (SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response) obj;
+
+      if (hasUrl() != other.hasUrl()) return false;
+      if (hasUrl()) {
+        if (!getUrl()
+            .equals(other.getUrl())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUrl()) {
+        hash = (37 * hash) + URL_FIELD_NUMBER;
+        hash = (53 * hash) + getUrl().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CEcon_ClientGetItemShopOverlayAuthURL_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CEcon_ClientGetItemShopOverlayAuthURL_Response)
+        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.class, SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        url_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response getDefaultInstanceForType() {
+        return SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response build() {
+        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response buildPartial() {
+        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response result = new SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.url_ = url_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response) {
+          return mergeFrom((SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response other) {
+        if (other == SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response.getDefaultInstance()) return this;
+        if (other.hasUrl()) {
+          bitField0_ |= 0x00000001;
+          url_ = other.url_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object url_ = "";
+      /**
+       * <code>optional string url = 1;</code>
+       * @return Whether the url field is set.
+       */
+      public boolean hasUrl() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string url = 1;</code>
+       * @return The url.
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            url_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string url = 1;</code>
+       * @return The bytes for url.
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string url = 1;</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrl() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        url_ = getDefaultInstance().getUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url = 1;</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CEcon_ClientGetItemShopOverlayAuthURL_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CEcon_ClientGetItemShopOverlayAuthURL_Response)
+    private static final SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response();
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CEcon_ClientGetItemShopOverlayAuthURL_Response>() {
+      @java.lang.Override
+      public CEcon_ClientGetItemShopOverlayAuthURL_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CEcon_ClientGetItemShopOverlayAuthURL_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CEcon_ClientGetItemShopOverlayAuthURL_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_ClientGetItemShopOverlayAuthURL_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CEcon_GetAssetClassInfo_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CEcon_GetAssetClassInfo_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string language = 1;</code>
+     * @return Whether the language field is set.
+     */
+    boolean hasLanguage();
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The language.
+     */
+    java.lang.String getLanguage();
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The bytes for language.
+     */
+    com.google.protobuf.ByteString
+        getLanguageBytes();
+
+    /**
+     * <code>optional uint32 appid = 2;</code>
+     * @return Whether the appid field is set.
+     */
+    boolean hasAppid();
+    /**
+     * <code>optional uint32 appid = 2;</code>
+     * @return The appid.
+     */
+    int getAppid();
+
+    /**
+     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     */
+    java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> 
+        getClassesList();
+    /**
+     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     */
+    SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getClasses(int index);
+    /**
+     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     */
+    int getClassesCount();
+    /**
+     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     */
+    java.util.List<? extends SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder> 
+        getClassesOrBuilderList();
+    /**
+     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     */
+    SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder getClassesOrBuilder(
+        int index);
+
+    /**
+     * <code>optional bool high_pri = 4;</code>
+     * @return Whether the highPri field is set.
+     */
+    boolean hasHighPri();
+    /**
+     * <code>optional bool high_pri = 4;</code>
+     * @return The highPri.
+     */
+    boolean getHighPri();
+  }
+  /**
+   * Protobuf type {@code CEcon_GetAssetClassInfo_Request}
+   */
+  public static final class CEcon_GetAssetClassInfo_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CEcon_GetAssetClassInfo_Request)
+      CEcon_GetAssetClassInfo_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CEcon_GetAssetClassInfo_Request.newBuilder() to construct.
+    private CEcon_GetAssetClassInfo_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CEcon_GetAssetClassInfo_Request() {
+      language_ = "";
+      classes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CEcon_GetAssetClassInfo_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CEcon_GetAssetClassInfo_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              language_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              appid_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                classes_ = new java.util.ArrayList<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              classes_.add(
+                  input.readMessage(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.PARSER, extensionRegistry));
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000004;
+              highPri_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          classes_ = java.util.Collections.unmodifiableList(classes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Builder.class);
+    }
+
+    public interface ClassOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CEcon_GetAssetClassInfo_Request.Class)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint64 classid = 1;</code>
+       * @return Whether the classid field is set.
+       */
+      boolean hasClassid();
+      /**
+       * <code>optional uint64 classid = 1;</code>
+       * @return The classid.
+       */
+      long getClassid();
+
+      /**
+       * <code>optional uint64 instanceid = 2;</code>
+       * @return Whether the instanceid field is set.
+       */
+      boolean hasInstanceid();
+      /**
+       * <code>optional uint64 instanceid = 2;</code>
+       * @return The instanceid.
+       */
+      long getInstanceid();
+    }
+    /**
+     * Protobuf type {@code CEcon_GetAssetClassInfo_Request.Class}
+     */
+    public static final class Class extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CEcon_GetAssetClassInfo_Request.Class)
+        ClassOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Class.newBuilder() to construct.
+      private Class(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Class() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Class();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Class(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                bitField0_ |= 0x00000001;
+                classid_ = input.readUInt64();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                instanceid_ = input.readUInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_Class_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_Class_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int CLASSID_FIELD_NUMBER = 1;
+      private long classid_;
+      /**
+       * <code>optional uint64 classid = 1;</code>
+       * @return Whether the classid field is set.
+       */
+      @java.lang.Override
+      public boolean hasClassid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 classid = 1;</code>
+       * @return The classid.
+       */
+      @java.lang.Override
+      public long getClassid() {
+        return classid_;
+      }
+
+      public static final int INSTANCEID_FIELD_NUMBER = 2;
+      private long instanceid_;
+      /**
+       * <code>optional uint64 instanceid = 2;</code>
+       * @return Whether the instanceid field is set.
+       */
+      @java.lang.Override
+      public boolean hasInstanceid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 instanceid = 2;</code>
+       * @return The instanceid.
+       */
+      @java.lang.Override
+      public long getInstanceid() {
+        return instanceid_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeUInt64(1, classid_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt64(2, instanceid_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(1, classid_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(2, instanceid_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class)) {
+          return super.equals(obj);
+        }
+        SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class other = (SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class) obj;
+
+        if (hasClassid() != other.hasClassid()) return false;
+        if (hasClassid()) {
+          if (getClassid()
+              != other.getClassid()) return false;
+        }
+        if (hasInstanceid() != other.hasInstanceid()) return false;
+        if (hasInstanceid()) {
+          if (getInstanceid()
+              != other.getInstanceid()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasClassid()) {
+          hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getClassid());
+        }
+        if (hasInstanceid()) {
+          hash = (37 * hash) + INSTANCEID_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getInstanceid());
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CEcon_GetAssetClassInfo_Request.Class}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CEcon_GetAssetClassInfo_Request.Class)
+          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_Class_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_Class_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder.class);
+        }
+
+        // Construct using SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          classid_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          instanceid_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_Class_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getDefaultInstanceForType() {
+          return SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class build() {
+          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class buildPartial() {
+          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class result = new SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.classid_ = classid_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.instanceid_ = instanceid_;
+            to_bitField0_ |= 0x00000002;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class) {
+            return mergeFrom((SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class other) {
+          if (other == SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.getDefaultInstance()) return this;
+          if (other.hasClassid()) {
+            setClassid(other.getClassid());
+          }
+          if (other.hasInstanceid()) {
+            setInstanceid(other.getInstanceid());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private long classid_ ;
+        /**
+         * <code>optional uint64 classid = 1;</code>
+         * @return Whether the classid field is set.
+         */
+        @java.lang.Override
+        public boolean hasClassid() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional uint64 classid = 1;</code>
+         * @return The classid.
+         */
+        @java.lang.Override
+        public long getClassid() {
+          return classid_;
+        }
+        /**
+         * <code>optional uint64 classid = 1;</code>
+         * @param value The classid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setClassid(long value) {
+          bitField0_ |= 0x00000001;
+          classid_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint64 classid = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearClassid() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          classid_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long instanceid_ ;
+        /**
+         * <code>optional uint64 instanceid = 2;</code>
+         * @return Whether the instanceid field is set.
+         */
+        @java.lang.Override
+        public boolean hasInstanceid() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint64 instanceid = 2;</code>
+         * @return The instanceid.
+         */
+        @java.lang.Override
+        public long getInstanceid() {
+          return instanceid_;
+        }
+        /**
+         * <code>optional uint64 instanceid = 2;</code>
+         * @param value The instanceid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setInstanceid(long value) {
+          bitField0_ |= 0x00000002;
+          instanceid_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint64 instanceid = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearInstanceid() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          instanceid_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CEcon_GetAssetClassInfo_Request.Class)
+      }
+
+      // @@protoc_insertion_point(class_scope:CEcon_GetAssetClassInfo_Request.Class)
+      private static final SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class();
+      }
+
+      public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Class>
+          PARSER = new com.google.protobuf.AbstractParser<Class>() {
+        @java.lang.Override
+        public Class parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Class(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Class> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Class> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int LANGUAGE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object language_;
+    /**
+     * <code>optional string language = 1;</code>
+     * @return Whether the language field is set.
+     */
+    @java.lang.Override
+    public boolean hasLanguage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The language.
+     */
+    @java.lang.Override
+    public java.lang.String getLanguage() {
+      java.lang.Object ref = language_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          language_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string language = 1;</code>
+     * @return The bytes for language.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLanguageBytes() {
+      java.lang.Object ref = language_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        language_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APPID_FIELD_NUMBER = 2;
+    private int appid_;
+    /**
+     * <code>optional uint32 appid = 2;</code>
+     * @return Whether the appid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 appid = 2;</code>
+     * @return The appid.
+     */
+    @java.lang.Override
+    public int getAppid() {
+      return appid_;
+    }
+
+    public static final int CLASSES_FIELD_NUMBER = 3;
+    private java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> classes_;
+    /**
+     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> getClassesList() {
+      return classes_;
+    }
+    /**
+     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder> 
+        getClassesOrBuilderList() {
+      return classes_;
+    }
+    /**
+     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     */
+    @java.lang.Override
+    public int getClassesCount() {
+      return classes_.size();
+    }
+    /**
+     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     */
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getClasses(int index) {
+      return classes_.get(index);
+    }
+    /**
+     * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+     */
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder getClassesOrBuilder(
+        int index) {
+      return classes_.get(index);
+    }
+
+    public static final int HIGH_PRI_FIELD_NUMBER = 4;
+    private boolean highPri_;
+    /**
+     * <code>optional bool high_pri = 4;</code>
+     * @return Whether the highPri field is set.
+     */
+    @java.lang.Override
+    public boolean hasHighPri() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool high_pri = 4;</code>
+     * @return The highPri.
+     */
+    @java.lang.Override
+    public boolean getHighPri() {
+      return highPri_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, language_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, appid_);
+      }
+      for (int i = 0; i < classes_.size(); i++) {
+        output.writeMessage(3, classes_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(4, highPri_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, language_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, appid_);
+      }
+      for (int i = 0; i < classes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, classes_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, highPri_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request other = (SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request) obj;
+
+      if (hasLanguage() != other.hasLanguage()) return false;
+      if (hasLanguage()) {
+        if (!getLanguage()
+            .equals(other.getLanguage())) return false;
+      }
+      if (hasAppid() != other.hasAppid()) return false;
+      if (hasAppid()) {
+        if (getAppid()
+            != other.getAppid()) return false;
+      }
+      if (!getClassesList()
+          .equals(other.getClassesList())) return false;
+      if (hasHighPri() != other.hasHighPri()) return false;
+      if (hasHighPri()) {
+        if (getHighPri()
+            != other.getHighPri()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLanguage()) {
+        hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getLanguage().hashCode();
+      }
+      if (hasAppid()) {
+        hash = (37 * hash) + APPID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppid();
+      }
+      if (getClassesCount() > 0) {
+        hash = (37 * hash) + CLASSES_FIELD_NUMBER;
+        hash = (53 * hash) + getClassesList().hashCode();
+      }
+      if (hasHighPri()) {
+        hash = (37 * hash) + HIGH_PRI_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHighPri());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CEcon_GetAssetClassInfo_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CEcon_GetAssetClassInfo_Request)
+        SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getClassesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        language_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (classesBuilder_ == null) {
+          classes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          classesBuilder_.clear();
+        }
+        highPri_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesEconSteamclient.internal_static_CEcon_GetAssetClassInfo_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request getDefaultInstanceForType() {
+        return SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request build() {
+        SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request buildPartial() {
+        SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request result = new SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.language_ = language_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appid_ = appid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (classesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            classes_ = java.util.Collections.unmodifiableList(classes_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.classes_ = classes_;
+        } else {
+          result.classes_ = classesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.highPri_ = highPri_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request) {
+          return mergeFrom((SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request other) {
+        if (other == SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.getDefaultInstance()) return this;
+        if (other.hasLanguage()) {
+          bitField0_ |= 0x00000001;
+          language_ = other.language_;
+          onChanged();
+        }
+        if (other.hasAppid()) {
+          setAppid(other.getAppid());
+        }
+        if (classesBuilder_ == null) {
+          if (!other.classes_.isEmpty()) {
+            if (classes_.isEmpty()) {
+              classes_ = other.classes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureClassesIsMutable();
+              classes_.addAll(other.classes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.classes_.isEmpty()) {
+            if (classesBuilder_.isEmpty()) {
+              classesBuilder_.dispose();
+              classesBuilder_ = null;
+              classes_ = other.classes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              classesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClassesFieldBuilder() : null;
+            } else {
+              classesBuilder_.addAllMessages(other.classes_);
+            }
+          }
+        }
+        if (other.hasHighPri()) {
+          setHighPri(other.getHighPri());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object language_ = "";
+      /**
+       * <code>optional string language = 1;</code>
+       * @return Whether the language field is set.
+       */
+      public boolean hasLanguage() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @return The language.
+       */
+      public java.lang.String getLanguage() {
+        java.lang.Object ref = language_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            language_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @return The bytes for language.
+       */
+      public com.google.protobuf.ByteString
+          getLanguageBytes() {
+        java.lang.Object ref = language_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          language_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @param value The language to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        language_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLanguage() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        language_ = getDefaultInstance().getLanguage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       * @param value The bytes for language to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        language_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int appid_ ;
+      /**
+       * <code>optional uint32 appid = 2;</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 2;</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+      /**
+       * <code>optional uint32 appid = 2;</code>
+       * @param value The appid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppid(int value) {
+        bitField0_ |= 0x00000002;
+        appid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 appid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> classes_ =
+        java.util.Collections.emptyList();
+      private void ensureClassesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          classes_ = new java.util.ArrayList<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class>(classes_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder> classesBuilder_;
+
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> getClassesList() {
+        if (classesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(classes_);
+        } else {
+          return classesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public int getClassesCount() {
+        if (classesBuilder_ == null) {
+          return classes_.size();
+        } else {
+          return classesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class getClasses(int index) {
+        if (classesBuilder_ == null) {
+          return classes_.get(index);
+        } else {
+          return classesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public Builder setClasses(
+          int index, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class value) {
+        if (classesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassesIsMutable();
+          classes_.set(index, value);
+          onChanged();
+        } else {
+          classesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public Builder setClasses(
+          int index, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder builderForValue) {
+        if (classesBuilder_ == null) {
+          ensureClassesIsMutable();
+          classes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          classesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public Builder addClasses(SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class value) {
+        if (classesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassesIsMutable();
+          classes_.add(value);
+          onChanged();
+        } else {
+          classesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public Builder addClasses(
+          int index, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class value) {
+        if (classesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassesIsMutable();
+          classes_.add(index, value);
+          onChanged();
+        } else {
+          classesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public Builder addClasses(
+          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder builderForValue) {
+        if (classesBuilder_ == null) {
+          ensureClassesIsMutable();
+          classes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          classesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public Builder addClasses(
+          int index, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder builderForValue) {
+        if (classesBuilder_ == null) {
+          ensureClassesIsMutable();
+          classes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          classesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public Builder addAllClasses(
+          java.lang.Iterable<? extends SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class> values) {
+        if (classesBuilder_ == null) {
+          ensureClassesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, classes_);
+          onChanged();
+        } else {
+          classesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public Builder clearClasses() {
+        if (classesBuilder_ == null) {
+          classes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          classesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public Builder removeClasses(int index) {
+        if (classesBuilder_ == null) {
+          ensureClassesIsMutable();
+          classes_.remove(index);
+          onChanged();
+        } else {
+          classesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder getClassesBuilder(
+          int index) {
+        return getClassesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder getClassesOrBuilder(
+          int index) {
+        if (classesBuilder_ == null) {
+          return classes_.get(index);  } else {
+          return classesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public java.util.List<? extends SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder> 
+           getClassesOrBuilderList() {
+        if (classesBuilder_ != null) {
+          return classesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(classes_);
+        }
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder addClassesBuilder() {
+        return getClassesFieldBuilder().addBuilder(
+            SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder addClassesBuilder(
+          int index) {
+        return getClassesFieldBuilder().addBuilder(
+            index, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;</code>
+       */
+      public java.util.List<SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder> 
+           getClassesBuilderList() {
+        return getClassesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder> 
+          getClassesFieldBuilder() {
+        if (classesBuilder_ == null) {
+          classesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.Class.Builder, SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request.ClassOrBuilder>(
+                  classes_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          classes_ = null;
+        }
+        return classesBuilder_;
+      }
+
+      private boolean highPri_ ;
+      /**
+       * <code>optional bool high_pri = 4;</code>
+       * @return Whether the highPri field is set.
+       */
+      @java.lang.Override
+      public boolean hasHighPri() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool high_pri = 4;</code>
+       * @return The highPri.
+       */
+      @java.lang.Override
+      public boolean getHighPri() {
+        return highPri_;
+      }
+      /**
+       * <code>optional bool high_pri = 4;</code>
+       * @param value The highPri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHighPri(boolean value) {
+        bitField0_ |= 0x00000008;
+        highPri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool high_pri = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHighPri() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        highPri_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CEcon_GetAssetClassInfo_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CEcon_GetAssetClassInfo_Request)
+    private static final SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request();
+    }
+
+    public static SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CEcon_GetAssetClassInfo_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CEcon_GetAssetClassInfo_Request>() {
+      @java.lang.Override
+      public CEcon_GetAssetClassInfo_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CEcon_GetAssetClassInfo_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CEcon_GetAssetClassInfo_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CEcon_GetAssetClassInfo_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesEconSteamclient.CEcon_GetAssetClassInfo_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CEcon_GetAssetClassInfo_ResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CEcon_GetAssetClassInfo_Response)
       com.google.protobuf.MessageOrBuilder {
@@ -14484,6 +20247,46 @@ public final class SteammessagesEconSteamclient {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CEcon_Asset_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CEcon_Asset_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CEconItem_DescriptionLine_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CEconItem_DescriptionLine_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CEconItem_Action_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CEconItem_Action_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CEconItem_Description_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CEconItem_Description_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CEconItem_Tag_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CEconItem_Tag_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CEcon_GetInventoryItemsWithDescriptions_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CEcon_GetInventoryItemsWithDescriptions_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CEcon_GetTradeOfferAccessToken_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14514,26 +20317,6 @@ public final class SteammessagesEconSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CEcon_GetAssetClassInfo_Request_Class_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CEconItem_DescriptionLine_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CEconItem_DescriptionLine_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CEconItem_Action_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CEconItem_Action_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CEconItem_Description_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CEconItem_Description_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CEconItem_Tag_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CEconItem_Tag_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CEcon_GetAssetClassInfo_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14548,140 +20331,196 @@ public final class SteammessagesEconSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n*steam/steammessages_econ.steamclient.p" +
-      "roto\0322steam/steammessages_unified_base.s" +
-      "teamclient.proto\"D\n&CEcon_GetTradeOfferA" +
-      "ccessToken_Request\022\032\n\022generate_new_token" +
-      "\030\001 \001(\010\"K\n\'CEcon_GetTradeOfferAccessToken" +
-      "_Response\022 \n\030trade_offer_access_token\030\001 " +
-      "\001(\t\"C\n-CEcon_ClientGetItemShopOverlayAut" +
-      "hURL_Request\022\022\n\nreturn_url\030\001 \001(\t\"=\n.CEco" +
-      "n_ClientGetItemShopOverlayAuthURL_Respon" +
-      "se\022\013\n\003url\030\001 \001(\t\"\251\001\n\037CEcon_GetAssetClassI" +
-      "nfo_Request\022\020\n\010language\030\001 \001(\t\022\r\n\005appid\030\002" +
-      " \001(\r\0227\n\007classes\030\003 \003(\0132&.CEcon_GetAssetCl" +
-      "assInfo_Request.Class\032,\n\005Class\022\017\n\007classi" +
-      "d\030\001 \001(\004\022\022\n\ninstanceid\030\002 \001(\004\"V\n\031CEconItem" +
-      "_DescriptionLine\022\014\n\004type\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t\022\r\n\005color\030\003 \001(\t\022\r\n\005label\030\004 \001(\t\".\n\020C" +
-      "EconItem_Action\022\014\n\004link\030\001 \001(\t\022\014\n\004name\030\002 " +
-      "\001(\t\"\343\006\n\025CEconItem_Description\022\r\n\005appid\030\001" +
-      " \001(\005\022\017\n\007classid\030\002 \001(\004\022\022\n\ninstanceid\030\003 \001(" +
-      "\004\022\020\n\010currency\030\004 \001(\010\022\030\n\020background_color\030" +
-      "\005 \001(\t\022\020\n\010icon_url\030\006 \001(\t\022\026\n\016icon_url_larg" +
-      "e\030\007 \001(\t\0220\n\014descriptions\030\010 \003(\0132\032.CEconIte" +
-      "m_DescriptionLine\022\020\n\010tradable\030\t \001(\010\022\"\n\007a" +
-      "ctions\030\n \003(\0132\021.CEconItem_Action\0226\n\022owner" +
-      "_descriptions\030\013 \003(\0132\032.CEconItem_Descript" +
-      "ionLine\022(\n\rowner_actions\030\014 \003(\0132\021.CEconIt" +
-      "em_Action\022\025\n\rfraudwarnings\030\r \003(\t\022\014\n\004name" +
-      "\030\016 \001(\t\022\022\n\nname_color\030\017 \001(\t\022\014\n\004type\030\020 \001(\t" +
-      "\022\023\n\013market_name\030\021 \001(\t\022\030\n\020market_hash_nam" +
-      "e\030\022 \001(\t\022\022\n\nmarket_fee\030\023 \001(\t\022\026\n\016market_fe" +
-      "e_app\030\034 \001(\005\022.\n\016contained_item\030\024 \001(\0132\026.CE" +
-      "conItem_Description\022)\n\016market_actions\030\025 " +
-      "\003(\0132\021.CEconItem_Action\022\021\n\tcommodity\030\026 \001(" +
-      "\010\022#\n\033market_tradable_restriction\030\027 \001(\005\022%" +
-      "\n\035market_marketable_restriction\030\030 \001(\005\022\022\n" +
-      "\nmarketable\030\031 \001(\010\022\034\n\004tags\030\032 \003(\0132\016.CEconI" +
-      "tem_Tag\022\027\n\017item_expiration\030\033 \001(\t\022&\n\036mark" +
-      "et_buy_country_restriction\030\036 \001(\t\022\'\n\037mark" +
-      "et_sell_country_restriction\030\037 \001(\t\"\230\003\n\rCE" +
-      "conItem_Tag\0221\n\005appid\030\001 \001(\rB\"\202\265\030\036The app " +
-      "that contains the item\022J\n\010category\030\002 \001(\t" +
-      "B8\202\265\0304The internal name of the category " +
-      "the tag belongs to\0227\n\rinternal_name\030\003 \001(" +
-      "\tB \202\265\030\034The internal name of the tag\022G\n\027l" +
-      "ocalized_category_name\030\004 \001(\tB&\202\265\030\"The lo" +
-      "calized name of the category\022=\n\022localize" +
-      "d_tag_name\030\005 \001(\tB!\202\265\030\035The localized name" +
-      " of the tag\022G\n\005color\030\006 \001(\tB8\202\265\0304The colo" +
-      "r to use when displaying the tag to the " +
-      "user\"P\n CEcon_GetAssetClassInfo_Response" +
-      "\022,\n\014descriptions\030\001 \003(\0132\026.CEconItem_Descr" +
-      "iption2\342\004\n\004Econ\022\232\001\n\030GetTradeOfferAccessT" +
-      "oken\022\'.CEcon_GetTradeOfferAccessToken_Re" +
-      "quest\032(.CEcon_GetTradeOfferAccessToken_R" +
-      "esponse\"+\202\265\030\'Get the user\'s trade offer " +
-      "access token\022\331\001\n\037ClientGetItemShopOverla" +
-      "yAuthURL\022..CEcon_ClientGetItemShopOverla" +
-      "yAuthURL_Request\032/.CEcon_ClientGetItemSh" +
-      "opOverlayAuthURL_Response\"U\202\265\030QGenerates" +
-      " a URL which sets a secure cookie for in" +
-      "-game-browser itemshop purchases\022\237\001\n\021Get" +
-      "AssetClassInfo\022 .CEcon_GetAssetClassInfo" +
-      "_Request\032!.CEcon_GetAssetClassInfo_Respo" +
-      "nse\"E\202\265\030AReturns description information" +
-      " about the passed in asset classes\032?\202\265\030;" +
-      "A service that provides communication wi" +
-      "th the econ serversB\003\200\001\001"
+      "roto\032\036steam/steammessages_base.proto\0322st" +
+      "eam/steammessages_unified_base.steamclie" +
+      "nt.proto\"\225\003\n/CEcon_GetInventoryItemsWith" +
+      "Descriptions_Request\022\017\n\007steamid\030\001 \001(\006\022\r\n" +
+      "\005appid\030\002 \001(\r\022\021\n\tcontextid\030\003 \001(\004\022\030\n\020get_d" +
+      "escriptions\030\004 \001(\010\022$\n\034for_trade_offer_ver" +
+      "ification\030\n \001(\010\022\020\n\010language\030\005 \001(\t\022O\n\007fil" +
+      "ters\030\006 \001(\0132>.CEcon_GetInventoryItemsWith" +
+      "Descriptions_Request.FilterOptions\022\025\n\rst" +
+      "art_assetid\030\010 \001(\004\022\r\n\005count\030\t \001(\005\032f\n\rFilt" +
+      "erOptions\022\020\n\010assetids\030\001 \003(\004\022\023\n\013currencyi" +
+      "ds\030\002 \003(\r\022\025\n\rtradable_only\030\003 \001(\010\022\027\n\017marke" +
+      "table_only\030\004 \001(\010\"\347\001\n\013CEcon_Asset\022\r\n\005appi" +
+      "d\030\001 \001(\r\022\021\n\tcontextid\030\002 \001(\004\022\017\n\007assetid\030\003 " +
+      "\001(\004\022\017\n\007classid\030\004 \001(\004\022\022\n\ninstanceid\030\005 \001(\004" +
+      "\022N\n\ncurrencyid\030\006 \001(\rB:\202\265\0306Set currencyid" +
+      " if it\'s a currency, assetid for an item" +
+      "\022\016\n\006amount\030\007 \001(\003\022\017\n\007missing\030\010 \001(\010\022\017\n\007est" +
+      "_usd\030\t \001(\003\"V\n\031CEconItem_DescriptionLine\022" +
+      "\014\n\004type\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022\r\n\005color\030\003 " +
+      "\001(\t\022\r\n\005label\030\004 \001(\t\".\n\020CEconItem_Action\022\014" +
+      "\n\004link\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"\343\006\n\025CEconItem" +
+      "_Description\022\r\n\005appid\030\001 \001(\005\022\017\n\007classid\030\002" +
+      " \001(\004\022\022\n\ninstanceid\030\003 \001(\004\022\020\n\010currency\030\004 \001" +
+      "(\010\022\030\n\020background_color\030\005 \001(\t\022\020\n\010icon_url" +
+      "\030\006 \001(\t\022\026\n\016icon_url_large\030\007 \001(\t\0220\n\014descri" +
+      "ptions\030\010 \003(\0132\032.CEconItem_DescriptionLine" +
+      "\022\020\n\010tradable\030\t \001(\010\022\"\n\007actions\030\n \003(\0132\021.CE" +
+      "conItem_Action\0226\n\022owner_descriptions\030\013 \003" +
+      "(\0132\032.CEconItem_DescriptionLine\022(\n\rowner_" +
+      "actions\030\014 \003(\0132\021.CEconItem_Action\022\025\n\rfrau" +
+      "dwarnings\030\r \003(\t\022\014\n\004name\030\016 \001(\t\022\022\n\nname_co" +
+      "lor\030\017 \001(\t\022\014\n\004type\030\020 \001(\t\022\023\n\013market_name\030\021" +
+      " \001(\t\022\030\n\020market_hash_name\030\022 \001(\t\022\022\n\nmarket" +
+      "_fee\030\023 \001(\t\022\026\n\016market_fee_app\030\034 \001(\005\022.\n\016co" +
+      "ntained_item\030\024 \001(\0132\026.CEconItem_Descripti" +
+      "on\022)\n\016market_actions\030\025 \003(\0132\021.CEconItem_A" +
+      "ction\022\021\n\tcommodity\030\026 \001(\010\022#\n\033market_trada" +
+      "ble_restriction\030\027 \001(\005\022%\n\035market_marketab" +
+      "le_restriction\030\030 \001(\005\022\022\n\nmarketable\030\031 \001(\010" +
+      "\022\034\n\004tags\030\032 \003(\0132\016.CEconItem_Tag\022\027\n\017item_e" +
+      "xpiration\030\033 \001(\t\022&\n\036market_buy_country_re" +
+      "striction\030\036 \001(\t\022\'\n\037market_sell_country_r" +
+      "estriction\030\037 \001(\t\"\230\003\n\rCEconItem_Tag\0221\n\005ap" +
+      "pid\030\001 \001(\rB\"\202\265\030\036The app that contains the" +
+      " item\022J\n\010category\030\002 \001(\tB8\202\265\0304The interna" +
+      "l name of the category the tag belongs t" +
+      "o\0227\n\rinternal_name\030\003 \001(\tB \202\265\030\034The intern" +
+      "al name of the tag\022G\n\027localized_category" +
+      "_name\030\004 \001(\tB&\202\265\030\"The localized name of t" +
+      "he category\022=\n\022localized_tag_name\030\005 \001(\tB" +
+      "!\202\265\030\035The localized name of the tag\022G\n\005co" +
+      "lor\030\006 \001(\tB8\202\265\0304The color to use when dis" +
+      "playing the tag to the user\"\304\002\n0CEcon_Ge" +
+      "tInventoryItemsWithDescriptions_Response" +
+      "\022\034\n\006assets\030\001 \003(\0132\014.CEcon_Asset\022,\n\014descri" +
+      "ptions\030\002 \003(\0132\026.CEconItem_Description\022{\n\016" +
+      "missing_assets\030\003 \003(\0132\014.CEcon_AssetBU\202\265\030Q" +
+      "This list of assets in the original list" +
+      " we could not find in the users inventor" +
+      "y\022\022\n\nmore_items\030\004 \001(\010\022\024\n\014last_assetid\030\005 " +
+      "\001(\004\022\035\n\025total_inventory_count\030\006 \001(\r\"D\n&CE" +
+      "con_GetTradeOfferAccessToken_Request\022\032\n\022" +
+      "generate_new_token\030\001 \001(\010\"K\n\'CEcon_GetTra" +
+      "deOfferAccessToken_Response\022 \n\030trade_off" +
+      "er_access_token\030\001 \001(\t\"C\n-CEcon_ClientGet" +
+      "ItemShopOverlayAuthURL_Request\022\022\n\nreturn" +
+      "_url\030\001 \001(\t\"=\n.CEcon_ClientGetItemShopOve" +
+      "rlayAuthURL_Response\022\013\n\003url\030\001 \001(\t\"\273\001\n\037CE" +
+      "con_GetAssetClassInfo_Request\022\020\n\010languag" +
+      "e\030\001 \001(\t\022\r\n\005appid\030\002 \001(\r\0227\n\007classes\030\003 \003(\0132" +
+      "&.CEcon_GetAssetClassInfo_Request.Class\022" +
+      "\020\n\010high_pri\030\004 \001(\010\032,\n\005Class\022\017\n\007classid\030\001 " +
+      "\001(\004\022\022\n\ninstanceid\030\002 \001(\004\"P\n CEcon_GetAsse" +
+      "tClassInfo_Response\022,\n\014descriptions\030\001 \003(" +
+      "\0132\026.CEconItem_Description2\266\006\n\004Econ\022\321\001\n!G" +
+      "etInventoryItemsWithDescriptions\0220.CEcon" +
+      "_GetInventoryItemsWithDescriptions_Reque" +
+      "st\0321.CEcon_GetInventoryItemsWithDescript" +
+      "ions_Response\"G\202\265\030CGets a set of items f" +
+      "rom a users inventory, along with descri" +
+      "ptions\022\232\001\n\030GetTradeOfferAccessToken\022\'.CE" +
+      "con_GetTradeOfferAccessToken_Request\032(.C" +
+      "Econ_GetTradeOfferAccessToken_Response\"+" +
+      "\202\265\030\'Get the user\'s trade offer access to" +
+      "ken\022\331\001\n\037ClientGetItemShopOverlayAuthURL\022" +
+      "..CEcon_ClientGetItemShopOverlayAuthURL_" +
+      "Request\032/.CEcon_ClientGetItemShopOverlay" +
+      "AuthURL_Response\"U\202\265\030QGenerates a URL wh" +
+      "ich sets a secure cookie for in-game-bro" +
+      "wser itemshop purchases\022\237\001\n\021GetAssetClas" +
+      "sInfo\022 .CEcon_GetAssetClassInfo_Request\032" +
+      "!.CEcon_GetAssetClassInfo_Response\"E\202\265\030A" +
+      "Returns description information about th" +
+      "e passed in asset classes\032?\202\265\030;A service" +
+      " that provides communication with the ec" +
+      "on serversB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
-    internal_static_CEcon_GetTradeOfferAccessToken_Request_descriptor =
+    internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_descriptor,
+        new java.lang.String[] { "Steamid", "Appid", "Contextid", "GetDescriptions", "ForTradeOfferVerification", "Language", "Filters", "StartAssetid", "Count", });
+    internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions_descriptor =
+      internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_descriptor.getNestedTypes().get(0);
+    internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions_descriptor,
+        new java.lang.String[] { "Assetids", "Currencyids", "TradableOnly", "MarketableOnly", });
+    internal_static_CEcon_Asset_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_CEcon_Asset_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CEcon_Asset_descriptor,
+        new java.lang.String[] { "Appid", "Contextid", "Assetid", "Classid", "Instanceid", "Currencyid", "Amount", "Missing", "EstUsd", });
+    internal_static_CEconItem_DescriptionLine_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_CEconItem_DescriptionLine_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CEconItem_DescriptionLine_descriptor,
+        new java.lang.String[] { "Type", "Value", "Color", "Label", });
+    internal_static_CEconItem_Action_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_CEconItem_Action_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CEconItem_Action_descriptor,
+        new java.lang.String[] { "Link", "Name", });
+    internal_static_CEconItem_Description_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_CEconItem_Description_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CEconItem_Description_descriptor,
+        new java.lang.String[] { "Appid", "Classid", "Instanceid", "Currency", "BackgroundColor", "IconUrl", "IconUrlLarge", "Descriptions", "Tradable", "Actions", "OwnerDescriptions", "OwnerActions", "Fraudwarnings", "Name", "NameColor", "Type", "MarketName", "MarketHashName", "MarketFee", "MarketFeeApp", "ContainedItem", "MarketActions", "Commodity", "MarketTradableRestriction", "MarketMarketableRestriction", "Marketable", "Tags", "ItemExpiration", "MarketBuyCountryRestriction", "MarketSellCountryRestriction", });
+    internal_static_CEconItem_Tag_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_CEconItem_Tag_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CEconItem_Tag_descriptor,
+        new java.lang.String[] { "Appid", "Category", "InternalName", "LocalizedCategoryName", "LocalizedTagName", "Color", });
+    internal_static_CEcon_GetInventoryItemsWithDescriptions_Response_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_CEcon_GetInventoryItemsWithDescriptions_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CEcon_GetInventoryItemsWithDescriptions_Response_descriptor,
+        new java.lang.String[] { "Assets", "Descriptions", "MissingAssets", "MoreItems", "LastAssetid", "TotalInventoryCount", });
+    internal_static_CEcon_GetTradeOfferAccessToken_Request_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CEcon_GetTradeOfferAccessToken_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CEcon_GetTradeOfferAccessToken_Request_descriptor,
         new java.lang.String[] { "GenerateNewToken", });
     internal_static_CEcon_GetTradeOfferAccessToken_Response_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CEcon_GetTradeOfferAccessToken_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CEcon_GetTradeOfferAccessToken_Response_descriptor,
         new java.lang.String[] { "TradeOfferAccessToken", });
     internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Request_descriptor,
         new java.lang.String[] { "ReturnUrl", });
     internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CEcon_ClientGetItemShopOverlayAuthURL_Response_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_CEcon_GetAssetClassInfo_Request_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CEcon_GetAssetClassInfo_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CEcon_GetAssetClassInfo_Request_descriptor,
-        new java.lang.String[] { "Language", "Appid", "Classes", });
+        new java.lang.String[] { "Language", "Appid", "Classes", "HighPri", });
     internal_static_CEcon_GetAssetClassInfo_Request_Class_descriptor =
       internal_static_CEcon_GetAssetClassInfo_Request_descriptor.getNestedTypes().get(0);
     internal_static_CEcon_GetAssetClassInfo_Request_Class_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CEcon_GetAssetClassInfo_Request_Class_descriptor,
         new java.lang.String[] { "Classid", "Instanceid", });
-    internal_static_CEconItem_DescriptionLine_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_CEconItem_DescriptionLine_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CEconItem_DescriptionLine_descriptor,
-        new java.lang.String[] { "Type", "Value", "Color", "Label", });
-    internal_static_CEconItem_Action_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_CEconItem_Action_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CEconItem_Action_descriptor,
-        new java.lang.String[] { "Link", "Name", });
-    internal_static_CEconItem_Description_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_CEconItem_Description_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CEconItem_Description_descriptor,
-        new java.lang.String[] { "Appid", "Classid", "Instanceid", "Currency", "BackgroundColor", "IconUrl", "IconUrlLarge", "Descriptions", "Tradable", "Actions", "OwnerDescriptions", "OwnerActions", "Fraudwarnings", "Name", "NameColor", "Type", "MarketName", "MarketHashName", "MarketFee", "MarketFeeApp", "ContainedItem", "MarketActions", "Commodity", "MarketTradableRestriction", "MarketMarketableRestriction", "Marketable", "Tags", "ItemExpiration", "MarketBuyCountryRestriction", "MarketSellCountryRestriction", });
-    internal_static_CEconItem_Tag_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_CEconItem_Tag_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CEconItem_Tag_descriptor,
-        new java.lang.String[] { "Appid", "Category", "InternalName", "LocalizedCategoryName", "LocalizedTagName", "Color", });
     internal_static_CEcon_GetAssetClassInfo_Response_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CEcon_GetAssetClassInfo_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CEcon_GetAssetClassInfo_Response_descriptor,
@@ -14693,6 +20532,7 @@ public final class SteammessagesEconSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

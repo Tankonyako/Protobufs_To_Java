@@ -19184,137 +19184,138 @@ public final class SteammessagesInventorySteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n/steam/steammessages_inventory.steamcli" +
-      "ent.proto\0322steam/steammessages_unified_b" +
-      "ase.steamclient.proto\"A\n\037CInventory_GetI" +
-      "nventory_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007steam" +
-      "id\030\002 \001(\004\"\277\001\n\023CInventory_Response\022\014\n\004etag" +
-      "\030\001 \001(\t\022\026\n\016removeditemids\030\002 \003(\004\022\021\n\titem_j" +
-      "son\030\003 \001(\t\022\024\n\014itemdef_json\030\004 \001(\t\022\016\n\006ticke" +
-      "t\030\005 \001(\014\022I\n\010replayed\030\006 \001(\010B7\202\265\0303If true, " +
-      "the requestid given was processed earlie" +
-      "r.\"\216\001\n\037CInventory_ExchangeItem_Request\022\r" +
-      "\n\005appid\030\001 \001(\r\022\017\n\007steamid\030\002 \001(\004\022\027\n\017materi" +
-      "alsitemid\030\003 \003(\004\022\031\n\021materialsquantity\030\004 \003" +
-      "(\r\022\027\n\017outputitemdefid\030\005 \001(\004\"O\n-CInventor" +
-      "y_GetEligiblePromoItemDefIDs_Request\022\r\n\005" +
-      "appid\030\001 \001(\r\022\017\n\007steamid\030\002 \001(\004\"D\n.CInvento" +
-      "ry_GetEligiblePromoItemDefIDs_Response\022\022" +
-      "\n\nitemdefids\030\001 \003(\004\"\314\003\n\032CInventory_AddIte" +
-      "m_Request\022\r\n\005appid\030\001 \001(\r\022\021\n\titemdefid\030\002 " +
-      "\003(\004\022\025\n\ritempropsjson\030\003 \003(\t\022\017\n\007steamid\030\004 " +
-      "\001(\004\022\\\n\006notify\030\005 \001(\010BL\202\265\030HShould notify t" +
-      "he user that the item was added to their" +
-      " Steam Inventory.\022\021\n\trequestid\030\006 \001(\004\022j\n\021" +
-      "trade_restriction\030\007 \001(\010BO\202\265\030KIf true, ap" +
-      "ply the default trade and market restric" +
-      "tion times to this item.\022\206\001\n\013is_purchase" +
-      "\030\010 \001(\010:\005falseBj\202\265\030fIf set, treat request" +
-      "id as a txnid and create this item as a " +
-      "result of user microtransaction purchase" +
-      ".\"\345\002\n\036CInventory_ModifyItems_Request\022\r\n\005" +
-      "appid\030\001 \001(\r\022\017\n\007steamid\030\002 \001(\004\022C\n\007updates\030" +
-      "\003 \003(\01322.CInventory_ModifyItems_Request.I" +
-      "temPropertyUpdate\022\021\n\ttimestamp\030\004 \001(\r\032\312\001\n" +
-      "\022ItemPropertyUpdate\022\016\n\006itemid\030\001 \001(\004\022\027\n\017r" +
-      "emove_property\030\002 \001(\010\022\025\n\rproperty_name\030\003 " +
-      "\001(\t\022\033\n\023property_value_bool\030\004 \001(\010\022\032\n\022prop" +
-      "erty_value_int\030\005 \001(\003\022\035\n\025property_value_s" +
-      "tring\030\006 \001(\t\022\034\n\024property_value_float\030\007 \001(" +
-      "\002\"F\n\"CInventory_ConsumePlaytime_Request\022" +
-      "\r\n\005appid\030\001 \001(\r\022\021\n\titemdefid\030\002 \001(\004\"\210\001\n\036CI" +
-      "nventory_ConsumeItem_Request\022\r\n\005appid\030\001 " +
-      "\001(\r\022\016\n\006itemid\030\002 \001(\004\022\020\n\010quantity\030\003 \001(\r\022\021\n" +
-      "\ttimestamp\030\004 \001(\t\022\017\n\007steamid\030\005 \001(\004\022\021\n\treq" +
-      "uestid\030\006 \001(\004\"W\n!CInventory_DevSetNextDro" +
-      "p_Request\022\r\n\005appid\030\001 \001(\r\022\021\n\titemdefid\030\002 " +
-      "\001(\004\022\020\n\010droptime\030\003 \001(\t\"e\n!CInventory_Spli" +
-      "tItemStack_Request\022\r\n\005appid\030\001 \001(\r\022\016\n\006ite" +
-      "mid\030\002 \001(\004\022\020\n\010quantity\030\003 \001(\r\022\017\n\007steamid\030\005" +
-      " \001(\004\"\200\001\n$CInventory_CombineItemStacks_Re" +
-      "quest\022\r\n\005appid\030\001 \001(\r\022\022\n\nfromitemid\030\002 \001(\004" +
-      "\022\022\n\ndestitemid\030\003 \001(\004\022\020\n\010quantity\030\004 \001(\r\022\017" +
-      "\n\007steamid\030\007 \001(\006\"2\n!CInventory_GetItemDef" +
-      "Meta_Request\022\r\n\005appid\030\001 \001(\r\"F\n\"CInventor" +
-      "y_GetItemDefMeta_Response\022\020\n\010modified\030\001 " +
-      "\001(\r\022\016\n\006digest\030\002 \001(\t\"(\n&CInventory_GetUse" +
-      "rPurchaseInfo_Request\"<\n\'CInventory_GetU" +
-      "serPurchaseInfo_Response\022\021\n\tecurrency\030\001 " +
-      "\001(\005\"\262\001\n\037CInventory_PurchaseInit_Request\022" +
-      "\r\n\005appid\030\001 \001(\r\022\020\n\010language\030\002 \001(\005\022=\n\nline" +
-      "_items\030\003 \003(\0132).CInventory_PurchaseInit_R" +
-      "equest.LineItem\032/\n\010LineItem\022\021\n\titemdefid" +
-      "\030\001 \001(\004\022\020\n\010quantity\030\002 \001(\r\"D\n CInventory_P" +
-      "urchaseInit_Response\022\017\n\007orderid\030\001 \001(\004\022\017\n" +
-      "\007transid\030\002 \001(\004\"W\n#CInventory_PurchaseFin" +
-      "alize_Request\022\r\n\005appid\030\001 \001(\r\022\020\n\010language" +
-      "\030\002 \001(\005\022\017\n\007orderid\030\003 \001(\004\"Q\n\036CInventory_In" +
-      "spectItem_Request\022\021\n\titemdefid\030\001 \001(\004\022\016\n\006" +
-      "itemid\030\002 \001(\006\022\014\n\004tags\030\003 \001(\t\"i\n&CInventory" +
-      "Client_NewItems_Notification\022\r\n\005appid\030\001 " +
-      "\001(\r\0220\n\022inventory_response\030\002 \001(\0132\024.CInven" +
-      "tory_Response2\273\020\n\tInventory\022z\n\014GetInvent" +
-      "ory\022 .CInventory_GetInventory_Request\032\024." +
-      "CInventory_Response\"2\202\265\030.Retrieves a use" +
-      "rs inventory as a big JSON blob\022o\n\014Excha" +
-      "ngeItem\022 .CInventory_ExchangeItem_Reques" +
-      "t\032\024.CInventory_Response\"\'\202\265\030#Craft an it" +
-      "em in a user\'s inventory\022\275\001\n\032GetEligible" +
-      "PromoItemDefIDs\022..CInventory_GetEligible" +
-      "PromoItemDefIDs_Request\032/.CInventory_Get" +
-      "EligiblePromoItemDefIDs_Response\">\202\265\030:Re" +
-      "turns a list of promo item defs the user" +
-      " is eligible for\022n\n\014AddPromoItem\022\033.CInve" +
-      "ntory_AddItem_Request\032\024.CInventory_Respo" +
-      "nse\"+\202\265\030\'Adds a promo item to a user\'s i" +
-      "nventory\022\211\001\n\017SafeModifyItems\022\037.CInventor" +
-      "y_ModifyItems_Request\032\024.CInventory_Respo" +
-      "nse\"?\202\265\030;Modify an item in a user\'s inve" +
-      "ntory (safe properties only)\022\207\001\n\017Consume" +
-      "Playtime\022#.CInventory_ConsumePlaytime_Re" +
-      "quest\032\024.CInventory_Response\"9\202\265\0305Consume" +
-      "s playtime and possibly returns a grante" +
-      "d item\022Y\n\013ConsumeItem\022\037.CInventory_Consu" +
-      "meItem_Request\032\024.CInventory_Response\"\023\202\265" +
-      "\030\017Consume an item\022n\n\017DevGenerateItem\022\033.C" +
-      "Inventory_AddItem_Request\032\024.CInventory_R" +
-      "esponse\"(\202\265\030$Grant an item when in devel" +
-      "oper mode\022_\n\016DevSetNextDrop\022\".CInventory" +
-      "_DevSetNextDrop_Request\032\024.CInventory_Res" +
-      "ponse\"\023\202\265\030\017Consume an item\022s\n\016SplitItemS" +
-      "tack\022\".CInventory_SplitItemStack_Request" +
-      "\032\024.CInventory_Response\"\'\202\265\030#Split an ite" +
-      "m stack into two stacks\022q\n\021CombineItemSt" +
-      "acks\022%.CInventory_CombineItemStacks_Requ" +
-      "est\032\024.CInventory_Response\"\037\202\265\030\033Combine t" +
-      "wo stacks of items\022\234\001\n\016GetItemDefMeta\022\"." +
-      "CInventory_GetItemDefMeta_Request\032#.CInv" +
-      "entory_GetItemDefMeta_Response\"A\202\265\030=Get " +
-      "metadata about the current item definiti" +
-      "on for this game.\022\247\001\n\023GetUserPurchaseInf" +
-      "o\022\'.CInventory_GetUserPurchaseInfo_Reque" +
-      "st\032(.CInventory_GetUserPurchaseInfo_Resp" +
-      "onse\"=\202\265\0309Returns information about the " +
-      "user such as their currency\022|\n\014PurchaseI" +
-      "nit\022 .CInventory_PurchaseInit_Request\032!." +
-      "CInventory_PurchaseInit_Response\"\'\202\265\030#In" +
-      "itializes a purchase for the user\022u\n\020Pur" +
-      "chaseFinalize\022$.CInventory_PurchaseFinal" +
-      "ize_Request\032\024.CInventory_Response\"%\202\265\030!F" +
-      "inalizes a purchase for the user\022x\n\013Insp" +
-      "ectItem\022\037.CInventory_InspectItem_Request" +
-      "\032\024.CInventory_Response\"2\202\265\030.Get item det" +
-      "ail given a valid inspection token\032/\202\265\030+" +
-      "A service that provides access to invent" +
-      "ory2\304\001\n\017InventoryClient\022z\n\016NotifyNewItem" +
-      "s\022\'.CInventoryClient_NewItems_Notificati" +
-      "on\032\013.NoResponse\"2\202\265\030.Notify client that " +
-      "the user received new items\0325\202\265\030-Client " +
-      "notifications inventory service events\300\265" +
-      "\030\002B\003\200\001\001"
+      "ent.proto\032\036steam/steammessages_base.prot" +
+      "o\0322steam/steammessages_unified_base.stea" +
+      "mclient.proto\"A\n\037CInventory_GetInventory" +
+      "_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007steamid\030\002 \001(\004" +
+      "\"\277\001\n\023CInventory_Response\022\014\n\004etag\030\001 \001(\t\022\026" +
+      "\n\016removeditemids\030\002 \003(\004\022\021\n\titem_json\030\003 \001(" +
+      "\t\022\024\n\014itemdef_json\030\004 \001(\t\022\016\n\006ticket\030\005 \001(\014\022" +
+      "I\n\010replayed\030\006 \001(\010B7\202\265\0303If true, the requ" +
+      "estid given was processed earlier.\"\216\001\n\037C" +
+      "Inventory_ExchangeItem_Request\022\r\n\005appid\030" +
+      "\001 \001(\r\022\017\n\007steamid\030\002 \001(\004\022\027\n\017materialsitemi" +
+      "d\030\003 \003(\004\022\031\n\021materialsquantity\030\004 \003(\r\022\027\n\017ou" +
+      "tputitemdefid\030\005 \001(\004\"O\n-CInventory_GetEli" +
+      "giblePromoItemDefIDs_Request\022\r\n\005appid\030\001 " +
+      "\001(\r\022\017\n\007steamid\030\002 \001(\004\"D\n.CInventory_GetEl" +
+      "igiblePromoItemDefIDs_Response\022\022\n\nitemde" +
+      "fids\030\001 \003(\004\"\314\003\n\032CInventory_AddItem_Reques" +
+      "t\022\r\n\005appid\030\001 \001(\r\022\021\n\titemdefid\030\002 \003(\004\022\025\n\ri" +
+      "tempropsjson\030\003 \003(\t\022\017\n\007steamid\030\004 \001(\004\022\\\n\006n" +
+      "otify\030\005 \001(\010BL\202\265\030HShould notify the user " +
+      "that the item was added to their Steam I" +
+      "nventory.\022\021\n\trequestid\030\006 \001(\004\022j\n\021trade_re" +
+      "striction\030\007 \001(\010BO\202\265\030KIf true, apply the " +
+      "default trade and market restriction tim" +
+      "es to this item.\022\206\001\n\013is_purchase\030\010 \001(\010:\005" +
+      "falseBj\202\265\030fIf set, treat requestid as a " +
+      "txnid and create this item as a result o" +
+      "f user microtransaction purchase.\"\345\002\n\036CI" +
+      "nventory_ModifyItems_Request\022\r\n\005appid\030\001 " +
+      "\001(\r\022\017\n\007steamid\030\002 \001(\004\022C\n\007updates\030\003 \003(\01322." +
+      "CInventory_ModifyItems_Request.ItemPrope" +
+      "rtyUpdate\022\021\n\ttimestamp\030\004 \001(\r\032\312\001\n\022ItemPro" +
+      "pertyUpdate\022\016\n\006itemid\030\001 \001(\004\022\027\n\017remove_pr" +
+      "operty\030\002 \001(\010\022\025\n\rproperty_name\030\003 \001(\t\022\033\n\023p" +
+      "roperty_value_bool\030\004 \001(\010\022\032\n\022property_val" +
+      "ue_int\030\005 \001(\003\022\035\n\025property_value_string\030\006 " +
+      "\001(\t\022\034\n\024property_value_float\030\007 \001(\002\"F\n\"CIn" +
+      "ventory_ConsumePlaytime_Request\022\r\n\005appid" +
+      "\030\001 \001(\r\022\021\n\titemdefid\030\002 \001(\004\"\210\001\n\036CInventory" +
+      "_ConsumeItem_Request\022\r\n\005appid\030\001 \001(\r\022\016\n\006i" +
+      "temid\030\002 \001(\004\022\020\n\010quantity\030\003 \001(\r\022\021\n\ttimesta" +
+      "mp\030\004 \001(\t\022\017\n\007steamid\030\005 \001(\004\022\021\n\trequestid\030\006" +
+      " \001(\004\"W\n!CInventory_DevSetNextDrop_Reques" +
+      "t\022\r\n\005appid\030\001 \001(\r\022\021\n\titemdefid\030\002 \001(\004\022\020\n\010d" +
+      "roptime\030\003 \001(\t\"e\n!CInventory_SplitItemSta" +
+      "ck_Request\022\r\n\005appid\030\001 \001(\r\022\016\n\006itemid\030\002 \001(" +
+      "\004\022\020\n\010quantity\030\003 \001(\r\022\017\n\007steamid\030\005 \001(\004\"\200\001\n" +
+      "$CInventory_CombineItemStacks_Request\022\r\n" +
+      "\005appid\030\001 \001(\r\022\022\n\nfromitemid\030\002 \001(\004\022\022\n\ndest" +
+      "itemid\030\003 \001(\004\022\020\n\010quantity\030\004 \001(\r\022\017\n\007steami" +
+      "d\030\007 \001(\006\"2\n!CInventory_GetItemDefMeta_Req" +
+      "uest\022\r\n\005appid\030\001 \001(\r\"F\n\"CInventory_GetIte" +
+      "mDefMeta_Response\022\020\n\010modified\030\001 \001(\r\022\016\n\006d" +
+      "igest\030\002 \001(\t\"(\n&CInventory_GetUserPurchas" +
+      "eInfo_Request\"<\n\'CInventory_GetUserPurch" +
+      "aseInfo_Response\022\021\n\tecurrency\030\001 \001(\005\"\262\001\n\037" +
+      "CInventory_PurchaseInit_Request\022\r\n\005appid" +
+      "\030\001 \001(\r\022\020\n\010language\030\002 \001(\005\022=\n\nline_items\030\003" +
+      " \003(\0132).CInventory_PurchaseInit_Request.L" +
+      "ineItem\032/\n\010LineItem\022\021\n\titemdefid\030\001 \001(\004\022\020" +
+      "\n\010quantity\030\002 \001(\r\"D\n CInventory_PurchaseI" +
+      "nit_Response\022\017\n\007orderid\030\001 \001(\004\022\017\n\007transid" +
+      "\030\002 \001(\004\"W\n#CInventory_PurchaseFinalize_Re" +
+      "quest\022\r\n\005appid\030\001 \001(\r\022\020\n\010language\030\002 \001(\005\022\017" +
+      "\n\007orderid\030\003 \001(\004\"Q\n\036CInventory_InspectIte" +
+      "m_Request\022\021\n\titemdefid\030\001 \001(\004\022\016\n\006itemid\030\002" +
+      " \001(\006\022\014\n\004tags\030\003 \001(\t\"i\n&CInventoryClient_N" +
+      "ewItems_Notification\022\r\n\005appid\030\001 \001(\r\0220\n\022i" +
+      "nventory_response\030\002 \001(\0132\024.CInventory_Res" +
+      "ponse2\273\020\n\tInventory\022z\n\014GetInventory\022 .CI" +
+      "nventory_GetInventory_Request\032\024.CInvento" +
+      "ry_Response\"2\202\265\030.Retrieves a users inven" +
+      "tory as a big JSON blob\022o\n\014ExchangeItem\022" +
+      " .CInventory_ExchangeItem_Request\032\024.CInv" +
+      "entory_Response\"\'\202\265\030#Craft an item in a " +
+      "user\'s inventory\022\275\001\n\032GetEligiblePromoIte" +
+      "mDefIDs\022..CInventory_GetEligiblePromoIte" +
+      "mDefIDs_Request\032/.CInventory_GetEligible" +
+      "PromoItemDefIDs_Response\">\202\265\030:Returns a " +
+      "list of promo item defs the user is elig" +
+      "ible for\022n\n\014AddPromoItem\022\033.CInventory_Ad" +
+      "dItem_Request\032\024.CInventory_Response\"+\202\265\030" +
+      "\'Adds a promo item to a user\'s inventory" +
+      "\022\211\001\n\017SafeModifyItems\022\037.CInventory_Modify" +
+      "Items_Request\032\024.CInventory_Response\"?\202\265\030" +
+      ";Modify an item in a user\'s inventory (s" +
+      "afe properties only)\022\207\001\n\017ConsumePlaytime" +
+      "\022#.CInventory_ConsumePlaytime_Request\032\024." +
+      "CInventory_Response\"9\202\265\0305Consumes playti" +
+      "me and possibly returns a granted item\022Y" +
+      "\n\013ConsumeItem\022\037.CInventory_ConsumeItem_R" +
+      "equest\032\024.CInventory_Response\"\023\202\265\030\017Consum" +
+      "e an item\022n\n\017DevGenerateItem\022\033.CInventor" +
+      "y_AddItem_Request\032\024.CInventory_Response\"" +
+      "(\202\265\030$Grant an item when in developer mod" +
+      "e\022_\n\016DevSetNextDrop\022\".CInventory_DevSetN" +
+      "extDrop_Request\032\024.CInventory_Response\"\023\202" +
+      "\265\030\017Consume an item\022s\n\016SplitItemStack\022\".C" +
+      "Inventory_SplitItemStack_Request\032\024.CInve" +
+      "ntory_Response\"\'\202\265\030#Split an item stack " +
+      "into two stacks\022q\n\021CombineItemStacks\022%.C" +
+      "Inventory_CombineItemStacks_Request\032\024.CI" +
+      "nventory_Response\"\037\202\265\030\033Combine two stack" +
+      "s of items\022\234\001\n\016GetItemDefMeta\022\".CInvento" +
+      "ry_GetItemDefMeta_Request\032#.CInventory_G" +
+      "etItemDefMeta_Response\"A\202\265\030=Get metadata" +
+      " about the current item definition for t" +
+      "his game.\022\247\001\n\023GetUserPurchaseInfo\022\'.CInv" +
+      "entory_GetUserPurchaseInfo_Request\032(.CIn" +
+      "ventory_GetUserPurchaseInfo_Response\"=\202\265" +
+      "\0309Returns information about the user suc" +
+      "h as their currency\022|\n\014PurchaseInit\022 .CI" +
+      "nventory_PurchaseInit_Request\032!.CInvento" +
+      "ry_PurchaseInit_Response\"\'\202\265\030#Initialize" +
+      "s a purchase for the user\022u\n\020PurchaseFin" +
+      "alize\022$.CInventory_PurchaseFinalize_Requ" +
+      "est\032\024.CInventory_Response\"%\202\265\030!Finalizes" +
+      " a purchase for the user\022x\n\013InspectItem\022" +
+      "\037.CInventory_InspectItem_Request\032\024.CInve" +
+      "ntory_Response\"2\202\265\030.Get item detail give" +
+      "n a valid inspection token\032/\202\265\030+A servic" +
+      "e that provides access to inventory2\304\001\n\017" +
+      "InventoryClient\022z\n\016NotifyNewItems\022\'.CInv" +
+      "entoryClient_NewItems_Notification\032\013.NoR" +
+      "esponse\"2\202\265\030.Notify client that the user" +
+      " received new items\0325\202\265\030-Client notifica" +
+      "tions inventory service events\300\265\030\002B\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CInventory_GetInventory_Request_descriptor =
@@ -19463,6 +19464,7 @@ public final class SteammessagesInventorySteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

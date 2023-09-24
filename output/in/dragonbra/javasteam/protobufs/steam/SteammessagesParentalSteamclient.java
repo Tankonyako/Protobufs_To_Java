@@ -637,6 +637,1624 @@ public final class SteammessagesParentalSteamclient {
 
   }
 
+  public interface ParentalPlaytimeDayOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ParentalPlaytimeDay)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 allowed_time_windows = 1 [(.description) = "A bitfield where each bit represents a thirty minute window into the day, with bit 0 being midnight-12:30AM"];</code>
+     * @return Whether the allowedTimeWindows field is set.
+     */
+    boolean hasAllowedTimeWindows();
+    /**
+     * <code>optional uint64 allowed_time_windows = 1 [(.description) = "A bitfield where each bit represents a thirty minute window into the day, with bit 0 being midnight-12:30AM"];</code>
+     * @return The allowedTimeWindows.
+     */
+    long getAllowedTimeWindows();
+
+    /**
+     * <code>optional uint32 allowed_daily_minutes = 2 [(.description) = "Total number of minutes of playtime for the day"];</code>
+     * @return Whether the allowedDailyMinutes field is set.
+     */
+    boolean hasAllowedDailyMinutes();
+    /**
+     * <code>optional uint32 allowed_daily_minutes = 2 [(.description) = "Total number of minutes of playtime for the day"];</code>
+     * @return The allowedDailyMinutes.
+     */
+    int getAllowedDailyMinutes();
+  }
+  /**
+   * Protobuf type {@code ParentalPlaytimeDay}
+   */
+  public static final class ParentalPlaytimeDay extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ParentalPlaytimeDay)
+      ParentalPlaytimeDayOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ParentalPlaytimeDay.newBuilder() to construct.
+    private ParentalPlaytimeDay(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ParentalPlaytimeDay() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ParentalPlaytimeDay();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ParentalPlaytimeDay(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              allowedTimeWindows_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              allowedDailyMinutes_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesParentalSteamclient.internal_static_ParentalPlaytimeDay_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesParentalSteamclient.internal_static_ParentalPlaytimeDay_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesParentalSteamclient.ParentalPlaytimeDay.class, SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ALLOWED_TIME_WINDOWS_FIELD_NUMBER = 1;
+    private long allowedTimeWindows_;
+    /**
+     * <code>optional uint64 allowed_time_windows = 1 [(.description) = "A bitfield where each bit represents a thirty minute window into the day, with bit 0 being midnight-12:30AM"];</code>
+     * @return Whether the allowedTimeWindows field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllowedTimeWindows() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 allowed_time_windows = 1 [(.description) = "A bitfield where each bit represents a thirty minute window into the day, with bit 0 being midnight-12:30AM"];</code>
+     * @return The allowedTimeWindows.
+     */
+    @java.lang.Override
+    public long getAllowedTimeWindows() {
+      return allowedTimeWindows_;
+    }
+
+    public static final int ALLOWED_DAILY_MINUTES_FIELD_NUMBER = 2;
+    private int allowedDailyMinutes_;
+    /**
+     * <code>optional uint32 allowed_daily_minutes = 2 [(.description) = "Total number of minutes of playtime for the day"];</code>
+     * @return Whether the allowedDailyMinutes field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllowedDailyMinutes() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 allowed_daily_minutes = 2 [(.description) = "Total number of minutes of playtime for the day"];</code>
+     * @return The allowedDailyMinutes.
+     */
+    @java.lang.Override
+    public int getAllowedDailyMinutes() {
+      return allowedDailyMinutes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, allowedTimeWindows_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, allowedDailyMinutes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, allowedTimeWindows_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, allowedDailyMinutes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesParentalSteamclient.ParentalPlaytimeDay)) {
+        return super.equals(obj);
+      }
+      SteammessagesParentalSteamclient.ParentalPlaytimeDay other = (SteammessagesParentalSteamclient.ParentalPlaytimeDay) obj;
+
+      if (hasAllowedTimeWindows() != other.hasAllowedTimeWindows()) return false;
+      if (hasAllowedTimeWindows()) {
+        if (getAllowedTimeWindows()
+            != other.getAllowedTimeWindows()) return false;
+      }
+      if (hasAllowedDailyMinutes() != other.hasAllowedDailyMinutes()) return false;
+      if (hasAllowedDailyMinutes()) {
+        if (getAllowedDailyMinutes()
+            != other.getAllowedDailyMinutes()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAllowedTimeWindows()) {
+        hash = (37 * hash) + ALLOWED_TIME_WINDOWS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAllowedTimeWindows());
+      }
+      if (hasAllowedDailyMinutes()) {
+        hash = (37 * hash) + ALLOWED_DAILY_MINUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedDailyMinutes();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesParentalSteamclient.ParentalPlaytimeDay prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ParentalPlaytimeDay}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ParentalPlaytimeDay)
+        SteammessagesParentalSteamclient.ParentalPlaytimeDayOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesParentalSteamclient.internal_static_ParentalPlaytimeDay_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesParentalSteamclient.internal_static_ParentalPlaytimeDay_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesParentalSteamclient.ParentalPlaytimeDay.class, SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder.class);
+      }
+
+      // Construct using SteammessagesParentalSteamclient.ParentalPlaytimeDay.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        allowedTimeWindows_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        allowedDailyMinutes_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesParentalSteamclient.internal_static_ParentalPlaytimeDay_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.ParentalPlaytimeDay getDefaultInstanceForType() {
+        return SteammessagesParentalSteamclient.ParentalPlaytimeDay.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.ParentalPlaytimeDay build() {
+        SteammessagesParentalSteamclient.ParentalPlaytimeDay result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.ParentalPlaytimeDay buildPartial() {
+        SteammessagesParentalSteamclient.ParentalPlaytimeDay result = new SteammessagesParentalSteamclient.ParentalPlaytimeDay(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.allowedTimeWindows_ = allowedTimeWindows_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.allowedDailyMinutes_ = allowedDailyMinutes_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesParentalSteamclient.ParentalPlaytimeDay) {
+          return mergeFrom((SteammessagesParentalSteamclient.ParentalPlaytimeDay)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesParentalSteamclient.ParentalPlaytimeDay other) {
+        if (other == SteammessagesParentalSteamclient.ParentalPlaytimeDay.getDefaultInstance()) return this;
+        if (other.hasAllowedTimeWindows()) {
+          setAllowedTimeWindows(other.getAllowedTimeWindows());
+        }
+        if (other.hasAllowedDailyMinutes()) {
+          setAllowedDailyMinutes(other.getAllowedDailyMinutes());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesParentalSteamclient.ParentalPlaytimeDay parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesParentalSteamclient.ParentalPlaytimeDay) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long allowedTimeWindows_ ;
+      /**
+       * <code>optional uint64 allowed_time_windows = 1 [(.description) = "A bitfield where each bit represents a thirty minute window into the day, with bit 0 being midnight-12:30AM"];</code>
+       * @return Whether the allowedTimeWindows field is set.
+       */
+      @java.lang.Override
+      public boolean hasAllowedTimeWindows() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 allowed_time_windows = 1 [(.description) = "A bitfield where each bit represents a thirty minute window into the day, with bit 0 being midnight-12:30AM"];</code>
+       * @return The allowedTimeWindows.
+       */
+      @java.lang.Override
+      public long getAllowedTimeWindows() {
+        return allowedTimeWindows_;
+      }
+      /**
+       * <code>optional uint64 allowed_time_windows = 1 [(.description) = "A bitfield where each bit represents a thirty minute window into the day, with bit 0 being midnight-12:30AM"];</code>
+       * @param value The allowedTimeWindows to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedTimeWindows(long value) {
+        bitField0_ |= 0x00000001;
+        allowedTimeWindows_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 allowed_time_windows = 1 [(.description) = "A bitfield where each bit represents a thirty minute window into the day, with bit 0 being midnight-12:30AM"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowedTimeWindows() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        allowedTimeWindows_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int allowedDailyMinutes_ ;
+      /**
+       * <code>optional uint32 allowed_daily_minutes = 2 [(.description) = "Total number of minutes of playtime for the day"];</code>
+       * @return Whether the allowedDailyMinutes field is set.
+       */
+      @java.lang.Override
+      public boolean hasAllowedDailyMinutes() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 allowed_daily_minutes = 2 [(.description) = "Total number of minutes of playtime for the day"];</code>
+       * @return The allowedDailyMinutes.
+       */
+      @java.lang.Override
+      public int getAllowedDailyMinutes() {
+        return allowedDailyMinutes_;
+      }
+      /**
+       * <code>optional uint32 allowed_daily_minutes = 2 [(.description) = "Total number of minutes of playtime for the day"];</code>
+       * @param value The allowedDailyMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedDailyMinutes(int value) {
+        bitField0_ |= 0x00000002;
+        allowedDailyMinutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 allowed_daily_minutes = 2 [(.description) = "Total number of minutes of playtime for the day"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowedDailyMinutes() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        allowedDailyMinutes_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ParentalPlaytimeDay)
+    }
+
+    // @@protoc_insertion_point(class_scope:ParentalPlaytimeDay)
+    private static final SteammessagesParentalSteamclient.ParentalPlaytimeDay DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesParentalSteamclient.ParentalPlaytimeDay();
+    }
+
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeDay getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ParentalPlaytimeDay>
+        PARSER = new com.google.protobuf.AbstractParser<ParentalPlaytimeDay>() {
+      @java.lang.Override
+      public ParentalPlaytimeDay parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ParentalPlaytimeDay(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ParentalPlaytimeDay> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ParentalPlaytimeDay> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesParentalSteamclient.ParentalPlaytimeDay getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParentalPlaytimeRestrictionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ParentalPlaytimeRestrictions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 tz_offset = 1 [(.description) = "Time zone offset to use to determine when days roll over"];</code>
+     * @return Whether the tzOffset field is set.
+     */
+    boolean hasTzOffset();
+    /**
+     * <code>optional int32 tz_offset = 1 [(.description) = "Time zone offset to use to determine when days roll over"];</code>
+     * @return The tzOffset.
+     */
+    int getTzOffset();
+
+    /**
+     * <code>optional bool apply_playtime_restrictions = 2 [(.description) = "If true, apply the playtime restrictions described here"];</code>
+     * @return Whether the applyPlaytimeRestrictions field is set.
+     */
+    boolean hasApplyPlaytimeRestrictions();
+    /**
+     * <code>optional bool apply_playtime_restrictions = 2 [(.description) = "If true, apply the playtime restrictions described here"];</code>
+     * @return The applyPlaytimeRestrictions.
+     */
+    boolean getApplyPlaytimeRestrictions();
+
+    /**
+     * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+     */
+    java.util.List<SteammessagesParentalSteamclient.ParentalPlaytimeDay> 
+        getPlaytimeDaysList();
+    /**
+     * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+     */
+    SteammessagesParentalSteamclient.ParentalPlaytimeDay getPlaytimeDays(int index);
+    /**
+     * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+     */
+    int getPlaytimeDaysCount();
+    /**
+     * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+     */
+    java.util.List<? extends SteammessagesParentalSteamclient.ParentalPlaytimeDayOrBuilder> 
+        getPlaytimeDaysOrBuilderList();
+    /**
+     * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+     */
+    SteammessagesParentalSteamclient.ParentalPlaytimeDayOrBuilder getPlaytimeDaysOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ParentalPlaytimeRestrictions}
+   */
+  public static final class ParentalPlaytimeRestrictions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ParentalPlaytimeRestrictions)
+      ParentalPlaytimeRestrictionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ParentalPlaytimeRestrictions.newBuilder() to construct.
+    private ParentalPlaytimeRestrictions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ParentalPlaytimeRestrictions() {
+      playtimeDays_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ParentalPlaytimeRestrictions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ParentalPlaytimeRestrictions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              tzOffset_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              applyPlaytimeRestrictions_ = input.readBool();
+              break;
+            }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                playtimeDays_ = new java.util.ArrayList<SteammessagesParentalSteamclient.ParentalPlaytimeDay>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              playtimeDays_.add(
+                  input.readMessage(SteammessagesParentalSteamclient.ParentalPlaytimeDay.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          playtimeDays_ = java.util.Collections.unmodifiableList(playtimeDays_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesParentalSteamclient.internal_static_ParentalPlaytimeRestrictions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesParentalSteamclient.internal_static_ParentalPlaytimeRestrictions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.class, SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TZ_OFFSET_FIELD_NUMBER = 1;
+    private int tzOffset_;
+    /**
+     * <code>optional int32 tz_offset = 1 [(.description) = "Time zone offset to use to determine when days roll over"];</code>
+     * @return Whether the tzOffset field is set.
+     */
+    @java.lang.Override
+    public boolean hasTzOffset() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional int32 tz_offset = 1 [(.description) = "Time zone offset to use to determine when days roll over"];</code>
+     * @return The tzOffset.
+     */
+    @java.lang.Override
+    public int getTzOffset() {
+      return tzOffset_;
+    }
+
+    public static final int APPLY_PLAYTIME_RESTRICTIONS_FIELD_NUMBER = 2;
+    private boolean applyPlaytimeRestrictions_;
+    /**
+     * <code>optional bool apply_playtime_restrictions = 2 [(.description) = "If true, apply the playtime restrictions described here"];</code>
+     * @return Whether the applyPlaytimeRestrictions field is set.
+     */
+    @java.lang.Override
+    public boolean hasApplyPlaytimeRestrictions() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool apply_playtime_restrictions = 2 [(.description) = "If true, apply the playtime restrictions described here"];</code>
+     * @return The applyPlaytimeRestrictions.
+     */
+    @java.lang.Override
+    public boolean getApplyPlaytimeRestrictions() {
+      return applyPlaytimeRestrictions_;
+    }
+
+    public static final int PLAYTIME_DAYS_FIELD_NUMBER = 15;
+    private java.util.List<SteammessagesParentalSteamclient.ParentalPlaytimeDay> playtimeDays_;
+    /**
+     * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesParentalSteamclient.ParentalPlaytimeDay> getPlaytimeDaysList() {
+      return playtimeDays_;
+    }
+    /**
+     * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesParentalSteamclient.ParentalPlaytimeDayOrBuilder> 
+        getPlaytimeDaysOrBuilderList() {
+      return playtimeDays_;
+    }
+    /**
+     * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+     */
+    @java.lang.Override
+    public int getPlaytimeDaysCount() {
+      return playtimeDays_.size();
+    }
+    /**
+     * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesParentalSteamclient.ParentalPlaytimeDay getPlaytimeDays(int index) {
+      return playtimeDays_.get(index);
+    }
+    /**
+     * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesParentalSteamclient.ParentalPlaytimeDayOrBuilder getPlaytimeDaysOrBuilder(
+        int index) {
+      return playtimeDays_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, tzOffset_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, applyPlaytimeRestrictions_);
+      }
+      for (int i = 0; i < playtimeDays_.size(); i++) {
+        output.writeMessage(15, playtimeDays_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, tzOffset_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, applyPlaytimeRestrictions_);
+      }
+      for (int i = 0; i < playtimeDays_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, playtimeDays_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions)) {
+        return super.equals(obj);
+      }
+      SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions other = (SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions) obj;
+
+      if (hasTzOffset() != other.hasTzOffset()) return false;
+      if (hasTzOffset()) {
+        if (getTzOffset()
+            != other.getTzOffset()) return false;
+      }
+      if (hasApplyPlaytimeRestrictions() != other.hasApplyPlaytimeRestrictions()) return false;
+      if (hasApplyPlaytimeRestrictions()) {
+        if (getApplyPlaytimeRestrictions()
+            != other.getApplyPlaytimeRestrictions()) return false;
+      }
+      if (!getPlaytimeDaysList()
+          .equals(other.getPlaytimeDaysList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTzOffset()) {
+        hash = (37 * hash) + TZ_OFFSET_FIELD_NUMBER;
+        hash = (53 * hash) + getTzOffset();
+      }
+      if (hasApplyPlaytimeRestrictions()) {
+        hash = (37 * hash) + APPLY_PLAYTIME_RESTRICTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getApplyPlaytimeRestrictions());
+      }
+      if (getPlaytimeDaysCount() > 0) {
+        hash = (37 * hash) + PLAYTIME_DAYS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlaytimeDaysList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ParentalPlaytimeRestrictions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ParentalPlaytimeRestrictions)
+        SteammessagesParentalSteamclient.ParentalPlaytimeRestrictionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesParentalSteamclient.internal_static_ParentalPlaytimeRestrictions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesParentalSteamclient.internal_static_ParentalPlaytimeRestrictions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.class, SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.Builder.class);
+      }
+
+      // Construct using SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPlaytimeDaysFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tzOffset_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        applyPlaytimeRestrictions_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (playtimeDaysBuilder_ == null) {
+          playtimeDays_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          playtimeDaysBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesParentalSteamclient.internal_static_ParentalPlaytimeRestrictions_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions getDefaultInstanceForType() {
+        return SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions build() {
+        SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions buildPartial() {
+        SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions result = new SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tzOffset_ = tzOffset_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.applyPlaytimeRestrictions_ = applyPlaytimeRestrictions_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (playtimeDaysBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            playtimeDays_ = java.util.Collections.unmodifiableList(playtimeDays_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.playtimeDays_ = playtimeDays_;
+        } else {
+          result.playtimeDays_ = playtimeDaysBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions) {
+          return mergeFrom((SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions other) {
+        if (other == SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.getDefaultInstance()) return this;
+        if (other.hasTzOffset()) {
+          setTzOffset(other.getTzOffset());
+        }
+        if (other.hasApplyPlaytimeRestrictions()) {
+          setApplyPlaytimeRestrictions(other.getApplyPlaytimeRestrictions());
+        }
+        if (playtimeDaysBuilder_ == null) {
+          if (!other.playtimeDays_.isEmpty()) {
+            if (playtimeDays_.isEmpty()) {
+              playtimeDays_ = other.playtimeDays_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensurePlaytimeDaysIsMutable();
+              playtimeDays_.addAll(other.playtimeDays_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.playtimeDays_.isEmpty()) {
+            if (playtimeDaysBuilder_.isEmpty()) {
+              playtimeDaysBuilder_.dispose();
+              playtimeDaysBuilder_ = null;
+              playtimeDays_ = other.playtimeDays_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              playtimeDaysBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPlaytimeDaysFieldBuilder() : null;
+            } else {
+              playtimeDaysBuilder_.addAllMessages(other.playtimeDays_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int tzOffset_ ;
+      /**
+       * <code>optional int32 tz_offset = 1 [(.description) = "Time zone offset to use to determine when days roll over"];</code>
+       * @return Whether the tzOffset field is set.
+       */
+      @java.lang.Override
+      public boolean hasTzOffset() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional int32 tz_offset = 1 [(.description) = "Time zone offset to use to determine when days roll over"];</code>
+       * @return The tzOffset.
+       */
+      @java.lang.Override
+      public int getTzOffset() {
+        return tzOffset_;
+      }
+      /**
+       * <code>optional int32 tz_offset = 1 [(.description) = "Time zone offset to use to determine when days roll over"];</code>
+       * @param value The tzOffset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTzOffset(int value) {
+        bitField0_ |= 0x00000001;
+        tzOffset_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 tz_offset = 1 [(.description) = "Time zone offset to use to determine when days roll over"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTzOffset() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tzOffset_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean applyPlaytimeRestrictions_ ;
+      /**
+       * <code>optional bool apply_playtime_restrictions = 2 [(.description) = "If true, apply the playtime restrictions described here"];</code>
+       * @return Whether the applyPlaytimeRestrictions field is set.
+       */
+      @java.lang.Override
+      public boolean hasApplyPlaytimeRestrictions() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool apply_playtime_restrictions = 2 [(.description) = "If true, apply the playtime restrictions described here"];</code>
+       * @return The applyPlaytimeRestrictions.
+       */
+      @java.lang.Override
+      public boolean getApplyPlaytimeRestrictions() {
+        return applyPlaytimeRestrictions_;
+      }
+      /**
+       * <code>optional bool apply_playtime_restrictions = 2 [(.description) = "If true, apply the playtime restrictions described here"];</code>
+       * @param value The applyPlaytimeRestrictions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplyPlaytimeRestrictions(boolean value) {
+        bitField0_ |= 0x00000002;
+        applyPlaytimeRestrictions_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool apply_playtime_restrictions = 2 [(.description) = "If true, apply the playtime restrictions described here"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApplyPlaytimeRestrictions() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        applyPlaytimeRestrictions_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<SteammessagesParentalSteamclient.ParentalPlaytimeDay> playtimeDays_ =
+        java.util.Collections.emptyList();
+      private void ensurePlaytimeDaysIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          playtimeDays_ = new java.util.ArrayList<SteammessagesParentalSteamclient.ParentalPlaytimeDay>(playtimeDays_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesParentalSteamclient.ParentalPlaytimeDay, SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder, SteammessagesParentalSteamclient.ParentalPlaytimeDayOrBuilder> playtimeDaysBuilder_;
+
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public java.util.List<SteammessagesParentalSteamclient.ParentalPlaytimeDay> getPlaytimeDaysList() {
+        if (playtimeDaysBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(playtimeDays_);
+        } else {
+          return playtimeDaysBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public int getPlaytimeDaysCount() {
+        if (playtimeDaysBuilder_ == null) {
+          return playtimeDays_.size();
+        } else {
+          return playtimeDaysBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public SteammessagesParentalSteamclient.ParentalPlaytimeDay getPlaytimeDays(int index) {
+        if (playtimeDaysBuilder_ == null) {
+          return playtimeDays_.get(index);
+        } else {
+          return playtimeDaysBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public Builder setPlaytimeDays(
+          int index, SteammessagesParentalSteamclient.ParentalPlaytimeDay value) {
+        if (playtimeDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlaytimeDaysIsMutable();
+          playtimeDays_.set(index, value);
+          onChanged();
+        } else {
+          playtimeDaysBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public Builder setPlaytimeDays(
+          int index, SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder builderForValue) {
+        if (playtimeDaysBuilder_ == null) {
+          ensurePlaytimeDaysIsMutable();
+          playtimeDays_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          playtimeDaysBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public Builder addPlaytimeDays(SteammessagesParentalSteamclient.ParentalPlaytimeDay value) {
+        if (playtimeDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlaytimeDaysIsMutable();
+          playtimeDays_.add(value);
+          onChanged();
+        } else {
+          playtimeDaysBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public Builder addPlaytimeDays(
+          int index, SteammessagesParentalSteamclient.ParentalPlaytimeDay value) {
+        if (playtimeDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlaytimeDaysIsMutable();
+          playtimeDays_.add(index, value);
+          onChanged();
+        } else {
+          playtimeDaysBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public Builder addPlaytimeDays(
+          SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder builderForValue) {
+        if (playtimeDaysBuilder_ == null) {
+          ensurePlaytimeDaysIsMutable();
+          playtimeDays_.add(builderForValue.build());
+          onChanged();
+        } else {
+          playtimeDaysBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public Builder addPlaytimeDays(
+          int index, SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder builderForValue) {
+        if (playtimeDaysBuilder_ == null) {
+          ensurePlaytimeDaysIsMutable();
+          playtimeDays_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          playtimeDaysBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public Builder addAllPlaytimeDays(
+          java.lang.Iterable<? extends SteammessagesParentalSteamclient.ParentalPlaytimeDay> values) {
+        if (playtimeDaysBuilder_ == null) {
+          ensurePlaytimeDaysIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, playtimeDays_);
+          onChanged();
+        } else {
+          playtimeDaysBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public Builder clearPlaytimeDays() {
+        if (playtimeDaysBuilder_ == null) {
+          playtimeDays_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          playtimeDaysBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public Builder removePlaytimeDays(int index) {
+        if (playtimeDaysBuilder_ == null) {
+          ensurePlaytimeDaysIsMutable();
+          playtimeDays_.remove(index);
+          onChanged();
+        } else {
+          playtimeDaysBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder getPlaytimeDaysBuilder(
+          int index) {
+        return getPlaytimeDaysFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public SteammessagesParentalSteamclient.ParentalPlaytimeDayOrBuilder getPlaytimeDaysOrBuilder(
+          int index) {
+        if (playtimeDaysBuilder_ == null) {
+          return playtimeDays_.get(index);  } else {
+          return playtimeDaysBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public java.util.List<? extends SteammessagesParentalSteamclient.ParentalPlaytimeDayOrBuilder> 
+           getPlaytimeDaysOrBuilderList() {
+        if (playtimeDaysBuilder_ != null) {
+          return playtimeDaysBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(playtimeDays_);
+        }
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder addPlaytimeDaysBuilder() {
+        return getPlaytimeDaysFieldBuilder().addBuilder(
+            SteammessagesParentalSteamclient.ParentalPlaytimeDay.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder addPlaytimeDaysBuilder(
+          int index) {
+        return getPlaytimeDaysFieldBuilder().addBuilder(
+            index, SteammessagesParentalSteamclient.ParentalPlaytimeDay.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ParentalPlaytimeDay playtime_days = 15 [(.description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];</code>
+       */
+      public java.util.List<SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder> 
+           getPlaytimeDaysBuilderList() {
+        return getPlaytimeDaysFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesParentalSteamclient.ParentalPlaytimeDay, SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder, SteammessagesParentalSteamclient.ParentalPlaytimeDayOrBuilder> 
+          getPlaytimeDaysFieldBuilder() {
+        if (playtimeDaysBuilder_ == null) {
+          playtimeDaysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesParentalSteamclient.ParentalPlaytimeDay, SteammessagesParentalSteamclient.ParentalPlaytimeDay.Builder, SteammessagesParentalSteamclient.ParentalPlaytimeDayOrBuilder>(
+                  playtimeDays_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          playtimeDays_ = null;
+        }
+        return playtimeDaysBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ParentalPlaytimeRestrictions)
+    }
+
+    // @@protoc_insertion_point(class_scope:ParentalPlaytimeRestrictions)
+    private static final SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions();
+    }
+
+    public static SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ParentalPlaytimeRestrictions>
+        PARSER = new com.google.protobuf.AbstractParser<ParentalPlaytimeRestrictions>() {
+      @java.lang.Override
+      public ParentalPlaytimeRestrictions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ParentalPlaytimeRestrictions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ParentalPlaytimeRestrictions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ParentalPlaytimeRestrictions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ParentalSettingsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:ParentalSettings)
       com.google.protobuf.MessageOrBuilder {
@@ -810,6 +2428,43 @@ public final class SteammessagesParentalSteamclient {
      * @return The isSiteLicenseLock.
      */
     boolean getIsSiteLicenseLock();
+
+    /**
+     * <code>optional uint32 temporary_enabled_features = 13;</code>
+     * @return Whether the temporaryEnabledFeatures field is set.
+     */
+    boolean hasTemporaryEnabledFeatures();
+    /**
+     * <code>optional uint32 temporary_enabled_features = 13;</code>
+     * @return The temporaryEnabledFeatures.
+     */
+    int getTemporaryEnabledFeatures();
+
+    /**
+     * <code>optional uint32 rtime_temporary_feature_expiration = 14;</code>
+     * @return Whether the rtimeTemporaryFeatureExpiration field is set.
+     */
+    boolean hasRtimeTemporaryFeatureExpiration();
+    /**
+     * <code>optional uint32 rtime_temporary_feature_expiration = 14;</code>
+     * @return The rtimeTemporaryFeatureExpiration.
+     */
+    int getRtimeTemporaryFeatureExpiration();
+
+    /**
+     * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+     * @return Whether the playtimeRestrictions field is set.
+     */
+    boolean hasPlaytimeRestrictions();
+    /**
+     * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+     * @return The playtimeRestrictions.
+     */
+    SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions getPlaytimeRestrictions();
+    /**
+     * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+     */
+    SteammessagesParentalSteamclient.ParentalPlaytimeRestrictionsOrBuilder getPlaytimeRestrictionsOrBuilder();
   }
   /**
    * Protobuf type {@code ParentalSettings}
@@ -931,6 +2586,29 @@ public final class SteammessagesParentalSteamclient {
             case 96: {
               bitField0_ |= 0x00000200;
               isSiteLicenseLock_ = input.readBool();
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00000400;
+              temporaryEnabledFeatures_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00000800;
+              rtimeTemporaryFeatureExpiration_ = input.readUInt32();
+              break;
+            }
+            case 122: {
+              SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.Builder subBuilder = null;
+              if (((bitField0_ & 0x00001000) != 0)) {
+                subBuilder = playtimeRestrictions_.toBuilder();
+              }
+              playtimeRestrictions_ = input.readMessage(SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(playtimeRestrictions_);
+                playtimeRestrictions_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00001000;
               break;
             }
             default: {
@@ -1300,6 +2978,70 @@ public final class SteammessagesParentalSteamclient {
       return isSiteLicenseLock_;
     }
 
+    public static final int TEMPORARY_ENABLED_FEATURES_FIELD_NUMBER = 13;
+    private int temporaryEnabledFeatures_;
+    /**
+     * <code>optional uint32 temporary_enabled_features = 13;</code>
+     * @return Whether the temporaryEnabledFeatures field is set.
+     */
+    @java.lang.Override
+    public boolean hasTemporaryEnabledFeatures() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional uint32 temporary_enabled_features = 13;</code>
+     * @return The temporaryEnabledFeatures.
+     */
+    @java.lang.Override
+    public int getTemporaryEnabledFeatures() {
+      return temporaryEnabledFeatures_;
+    }
+
+    public static final int RTIME_TEMPORARY_FEATURE_EXPIRATION_FIELD_NUMBER = 14;
+    private int rtimeTemporaryFeatureExpiration_;
+    /**
+     * <code>optional uint32 rtime_temporary_feature_expiration = 14;</code>
+     * @return Whether the rtimeTemporaryFeatureExpiration field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtimeTemporaryFeatureExpiration() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime_temporary_feature_expiration = 14;</code>
+     * @return The rtimeTemporaryFeatureExpiration.
+     */
+    @java.lang.Override
+    public int getRtimeTemporaryFeatureExpiration() {
+      return rtimeTemporaryFeatureExpiration_;
+    }
+
+    public static final int PLAYTIME_RESTRICTIONS_FIELD_NUMBER = 15;
+    private SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions playtimeRestrictions_;
+    /**
+     * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+     * @return Whether the playtimeRestrictions field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlaytimeRestrictions() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+     * @return The playtimeRestrictions.
+     */
+    @java.lang.Override
+    public SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions getPlaytimeRestrictions() {
+      return playtimeRestrictions_ == null ? SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.getDefaultInstance() : playtimeRestrictions_;
+    }
+    /**
+     * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+     */
+    @java.lang.Override
+    public SteammessagesParentalSteamclient.ParentalPlaytimeRestrictionsOrBuilder getPlaytimeRestrictionsOrBuilder() {
+      return playtimeRestrictions_ == null ? SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.getDefaultInstance() : playtimeRestrictions_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1349,6 +3091,15 @@ public final class SteammessagesParentalSteamclient {
       }
       if (((bitField0_ & 0x00000200) != 0)) {
         output.writeBool(12, isSiteLicenseLock_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeUInt32(13, temporaryEnabledFeatures_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeUInt32(14, rtimeTemporaryFeatureExpiration_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeMessage(15, getPlaytimeRestrictions());
       }
       unknownFields.writeTo(output);
     }
@@ -1404,6 +3155,18 @@ public final class SteammessagesParentalSteamclient {
       if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, isSiteLicenseLock_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, temporaryEnabledFeatures_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, rtimeTemporaryFeatureExpiration_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getPlaytimeRestrictions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1474,6 +3237,21 @@ public final class SteammessagesParentalSteamclient {
         if (getIsSiteLicenseLock()
             != other.getIsSiteLicenseLock()) return false;
       }
+      if (hasTemporaryEnabledFeatures() != other.hasTemporaryEnabledFeatures()) return false;
+      if (hasTemporaryEnabledFeatures()) {
+        if (getTemporaryEnabledFeatures()
+            != other.getTemporaryEnabledFeatures()) return false;
+      }
+      if (hasRtimeTemporaryFeatureExpiration() != other.hasRtimeTemporaryFeatureExpiration()) return false;
+      if (hasRtimeTemporaryFeatureExpiration()) {
+        if (getRtimeTemporaryFeatureExpiration()
+            != other.getRtimeTemporaryFeatureExpiration()) return false;
+      }
+      if (hasPlaytimeRestrictions() != other.hasPlaytimeRestrictions()) return false;
+      if (hasPlaytimeRestrictions()) {
+        if (!getPlaytimeRestrictions()
+            .equals(other.getPlaytimeRestrictions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1535,6 +3313,18 @@ public final class SteammessagesParentalSteamclient {
         hash = (37 * hash) + IS_SITE_LICENSE_LOCK_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsSiteLicenseLock());
+      }
+      if (hasTemporaryEnabledFeatures()) {
+        hash = (37 * hash) + TEMPORARY_ENABLED_FEATURES_FIELD_NUMBER;
+        hash = (53 * hash) + getTemporaryEnabledFeatures();
+      }
+      if (hasRtimeTemporaryFeatureExpiration()) {
+        hash = (37 * hash) + RTIME_TEMPORARY_FEATURE_EXPIRATION_FIELD_NUMBER;
+        hash = (53 * hash) + getRtimeTemporaryFeatureExpiration();
+      }
+      if (hasPlaytimeRestrictions()) {
+        hash = (37 * hash) + PLAYTIME_RESTRICTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlaytimeRestrictions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1666,6 +3456,7 @@ public final class SteammessagesParentalSteamclient {
                 .alwaysUseFieldBuilders) {
           getApplistBaseFieldBuilder();
           getApplistCustomFieldBuilder();
+          getPlaytimeRestrictionsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1703,6 +3494,16 @@ public final class SteammessagesParentalSteamclient {
         bitField0_ = (bitField0_ & ~0x00000400);
         isSiteLicenseLock_ = false;
         bitField0_ = (bitField0_ & ~0x00000800);
+        temporaryEnabledFeatures_ = 0;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        rtimeTemporaryFeatureExpiration_ = 0;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        if (playtimeRestrictionsBuilder_ == null) {
+          playtimeRestrictions_ = null;
+        } else {
+          playtimeRestrictionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -1788,6 +3589,22 @@ public final class SteammessagesParentalSteamclient {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.isSiteLicenseLock_ = isSiteLicenseLock_;
           to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.temporaryEnabledFeatures_ = temporaryEnabledFeatures_;
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.rtimeTemporaryFeatureExpiration_ = rtimeTemporaryFeatureExpiration_;
+          to_bitField0_ |= 0x00000800;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          if (playtimeRestrictionsBuilder_ == null) {
+            result.playtimeRestrictions_ = playtimeRestrictions_;
+          } else {
+            result.playtimeRestrictions_ = playtimeRestrictionsBuilder_.build();
+          }
+          to_bitField0_ |= 0x00001000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -1923,6 +3740,15 @@ public final class SteammessagesParentalSteamclient {
         }
         if (other.hasIsSiteLicenseLock()) {
           setIsSiteLicenseLock(other.getIsSiteLicenseLock());
+        }
+        if (other.hasTemporaryEnabledFeatures()) {
+          setTemporaryEnabledFeatures(other.getTemporaryEnabledFeatures());
+        }
+        if (other.hasRtimeTemporaryFeatureExpiration()) {
+          setRtimeTemporaryFeatureExpiration(other.getRtimeTemporaryFeatureExpiration());
+        }
+        if (other.hasPlaytimeRestrictions()) {
+          mergePlaytimeRestrictions(other.getPlaytimeRestrictions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2918,6 +4744,204 @@ public final class SteammessagesParentalSteamclient {
         isSiteLicenseLock_ = false;
         onChanged();
         return this;
+      }
+
+      private int temporaryEnabledFeatures_ ;
+      /**
+       * <code>optional uint32 temporary_enabled_features = 13;</code>
+       * @return Whether the temporaryEnabledFeatures field is set.
+       */
+      @java.lang.Override
+      public boolean hasTemporaryEnabledFeatures() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional uint32 temporary_enabled_features = 13;</code>
+       * @return The temporaryEnabledFeatures.
+       */
+      @java.lang.Override
+      public int getTemporaryEnabledFeatures() {
+        return temporaryEnabledFeatures_;
+      }
+      /**
+       * <code>optional uint32 temporary_enabled_features = 13;</code>
+       * @param value The temporaryEnabledFeatures to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemporaryEnabledFeatures(int value) {
+        bitField0_ |= 0x00001000;
+        temporaryEnabledFeatures_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 temporary_enabled_features = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTemporaryEnabledFeatures() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        temporaryEnabledFeatures_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rtimeTemporaryFeatureExpiration_ ;
+      /**
+       * <code>optional uint32 rtime_temporary_feature_expiration = 14;</code>
+       * @return Whether the rtimeTemporaryFeatureExpiration field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtimeTemporaryFeatureExpiration() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime_temporary_feature_expiration = 14;</code>
+       * @return The rtimeTemporaryFeatureExpiration.
+       */
+      @java.lang.Override
+      public int getRtimeTemporaryFeatureExpiration() {
+        return rtimeTemporaryFeatureExpiration_;
+      }
+      /**
+       * <code>optional uint32 rtime_temporary_feature_expiration = 14;</code>
+       * @param value The rtimeTemporaryFeatureExpiration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtimeTemporaryFeatureExpiration(int value) {
+        bitField0_ |= 0x00002000;
+        rtimeTemporaryFeatureExpiration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime_temporary_feature_expiration = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtimeTemporaryFeatureExpiration() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        rtimeTemporaryFeatureExpiration_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions playtimeRestrictions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions, SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.Builder, SteammessagesParentalSteamclient.ParentalPlaytimeRestrictionsOrBuilder> playtimeRestrictionsBuilder_;
+      /**
+       * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+       * @return Whether the playtimeRestrictions field is set.
+       */
+      public boolean hasPlaytimeRestrictions() {
+        return ((bitField0_ & 0x00004000) != 0);
+      }
+      /**
+       * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+       * @return The playtimeRestrictions.
+       */
+      public SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions getPlaytimeRestrictions() {
+        if (playtimeRestrictionsBuilder_ == null) {
+          return playtimeRestrictions_ == null ? SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.getDefaultInstance() : playtimeRestrictions_;
+        } else {
+          return playtimeRestrictionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+       */
+      public Builder setPlaytimeRestrictions(SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions value) {
+        if (playtimeRestrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          playtimeRestrictions_ = value;
+          onChanged();
+        } else {
+          playtimeRestrictionsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+       */
+      public Builder setPlaytimeRestrictions(
+          SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.Builder builderForValue) {
+        if (playtimeRestrictionsBuilder_ == null) {
+          playtimeRestrictions_ = builderForValue.build();
+          onChanged();
+        } else {
+          playtimeRestrictionsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+       */
+      public Builder mergePlaytimeRestrictions(SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions value) {
+        if (playtimeRestrictionsBuilder_ == null) {
+          if (((bitField0_ & 0x00004000) != 0) &&
+              playtimeRestrictions_ != null &&
+              playtimeRestrictions_ != SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.getDefaultInstance()) {
+            playtimeRestrictions_ =
+              SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.newBuilder(playtimeRestrictions_).mergeFrom(value).buildPartial();
+          } else {
+            playtimeRestrictions_ = value;
+          }
+          onChanged();
+        } else {
+          playtimeRestrictionsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+       */
+      public Builder clearPlaytimeRestrictions() {
+        if (playtimeRestrictionsBuilder_ == null) {
+          playtimeRestrictions_ = null;
+          onChanged();
+        } else {
+          playtimeRestrictionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00004000);
+        return this;
+      }
+      /**
+       * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+       */
+      public SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.Builder getPlaytimeRestrictionsBuilder() {
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return getPlaytimeRestrictionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+       */
+      public SteammessagesParentalSteamclient.ParentalPlaytimeRestrictionsOrBuilder getPlaytimeRestrictionsOrBuilder() {
+        if (playtimeRestrictionsBuilder_ != null) {
+          return playtimeRestrictionsBuilder_.getMessageOrBuilder();
+        } else {
+          return playtimeRestrictions_ == null ?
+              SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.getDefaultInstance() : playtimeRestrictions_;
+        }
+      }
+      /**
+       * <code>optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions, SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.Builder, SteammessagesParentalSteamclient.ParentalPlaytimeRestrictionsOrBuilder> 
+          getPlaytimeRestrictionsFieldBuilder() {
+        if (playtimeRestrictionsBuilder_ == null) {
+          playtimeRestrictionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions, SteammessagesParentalSteamclient.ParentalPlaytimeRestrictions.Builder, SteammessagesParentalSteamclient.ParentalPlaytimeRestrictionsOrBuilder>(
+                  getPlaytimeRestrictions(),
+                  getParentForChildren(),
+                  isClean());
+          playtimeRestrictions_ = null;
+        }
+        return playtimeRestrictionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15133,6 +17157,2493 @@ public final class SteammessagesParentalSteamclient {
 
   }
 
+  public interface CParental_RequestFeatureAccess_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CParental_RequestFeatureAccess_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 features = 1;</code>
+     * @return Whether the features field is set.
+     */
+    boolean hasFeatures();
+    /**
+     * <code>optional uint32 features = 1;</code>
+     * @return The features.
+     */
+    int getFeatures();
+
+    /**
+     * <code>optional fixed64 steamid = 10;</code>
+     * @return Whether the steamid field is set.
+     */
+    boolean hasSteamid();
+    /**
+     * <code>optional fixed64 steamid = 10;</code>
+     * @return The steamid.
+     */
+    long getSteamid();
+  }
+  /**
+   * Protobuf type {@code CParental_RequestFeatureAccess_Request}
+   */
+  public static final class CParental_RequestFeatureAccess_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CParental_RequestFeatureAccess_Request)
+      CParental_RequestFeatureAccess_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CParental_RequestFeatureAccess_Request.newBuilder() to construct.
+    private CParental_RequestFeatureAccess_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CParental_RequestFeatureAccess_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CParental_RequestFeatureAccess_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CParental_RequestFeatureAccess_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              features_ = input.readUInt32();
+              break;
+            }
+            case 81: {
+              bitField0_ |= 0x00000002;
+              steamid_ = input.readFixed64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesParentalSteamclient.internal_static_CParental_RequestFeatureAccess_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesParentalSteamclient.internal_static_CParental_RequestFeatureAccess_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request.class, SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FEATURES_FIELD_NUMBER = 1;
+    private int features_;
+    /**
+     * <code>optional uint32 features = 1;</code>
+     * @return Whether the features field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeatures() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 features = 1;</code>
+     * @return The features.
+     */
+    @java.lang.Override
+    public int getFeatures() {
+      return features_;
+    }
+
+    public static final int STEAMID_FIELD_NUMBER = 10;
+    private long steamid_;
+    /**
+     * <code>optional fixed64 steamid = 10;</code>
+     * @return Whether the steamid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSteamid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional fixed64 steamid = 10;</code>
+     * @return The steamid.
+     */
+    @java.lang.Override
+    public long getSteamid() {
+      return steamid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, features_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeFixed64(10, steamid_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, features_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(10, steamid_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request other = (SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request) obj;
+
+      if (hasFeatures() != other.hasFeatures()) return false;
+      if (hasFeatures()) {
+        if (getFeatures()
+            != other.getFeatures()) return false;
+      }
+      if (hasSteamid() != other.hasSteamid()) return false;
+      if (hasSteamid()) {
+        if (getSteamid()
+            != other.getSteamid()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFeatures()) {
+        hash = (37 * hash) + FEATURES_FIELD_NUMBER;
+        hash = (53 * hash) + getFeatures();
+      }
+      if (hasSteamid()) {
+        hash = (37 * hash) + STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSteamid());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CParental_RequestFeatureAccess_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CParental_RequestFeatureAccess_Request)
+        SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_RequestFeatureAccess_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_RequestFeatureAccess_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request.class, SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        features_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        steamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_RequestFeatureAccess_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request getDefaultInstanceForType() {
+        return SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request build() {
+        SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request buildPartial() {
+        SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request result = new SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.features_ = features_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.steamid_ = steamid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request) {
+          return mergeFrom((SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request other) {
+        if (other == SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request.getDefaultInstance()) return this;
+        if (other.hasFeatures()) {
+          setFeatures(other.getFeatures());
+        }
+        if (other.hasSteamid()) {
+          setSteamid(other.getSteamid());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int features_ ;
+      /**
+       * <code>optional uint32 features = 1;</code>
+       * @return Whether the features field is set.
+       */
+      @java.lang.Override
+      public boolean hasFeatures() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 features = 1;</code>
+       * @return The features.
+       */
+      @java.lang.Override
+      public int getFeatures() {
+        return features_;
+      }
+      /**
+       * <code>optional uint32 features = 1;</code>
+       * @param value The features to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeatures(int value) {
+        bitField0_ |= 0x00000001;
+        features_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 features = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeatures() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        features_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long steamid_ ;
+      /**
+       * <code>optional fixed64 steamid = 10;</code>
+       * @return Whether the steamid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSteamid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional fixed64 steamid = 10;</code>
+       * @return The steamid.
+       */
+      @java.lang.Override
+      public long getSteamid() {
+        return steamid_;
+      }
+      /**
+       * <code>optional fixed64 steamid = 10;</code>
+       * @param value The steamid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamid(long value) {
+        bitField0_ |= 0x00000002;
+        steamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 steamid = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        steamid_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CParental_RequestFeatureAccess_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CParental_RequestFeatureAccess_Request)
+    private static final SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request();
+    }
+
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CParental_RequestFeatureAccess_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CParental_RequestFeatureAccess_Request>() {
+      @java.lang.Override
+      public CParental_RequestFeatureAccess_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CParental_RequestFeatureAccess_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CParental_RequestFeatureAccess_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CParental_RequestFeatureAccess_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CParental_RequestFeatureAccess_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CParental_RequestFeatureAccess_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed64 requestid = 1;</code>
+     * @return Whether the requestid field is set.
+     */
+    boolean hasRequestid();
+    /**
+     * <code>optional fixed64 requestid = 1;</code>
+     * @return The requestid.
+     */
+    long getRequestid();
+  }
+  /**
+   * Protobuf type {@code CParental_RequestFeatureAccess_Response}
+   */
+  public static final class CParental_RequestFeatureAccess_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CParental_RequestFeatureAccess_Response)
+      CParental_RequestFeatureAccess_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CParental_RequestFeatureAccess_Response.newBuilder() to construct.
+    private CParental_RequestFeatureAccess_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CParental_RequestFeatureAccess_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CParental_RequestFeatureAccess_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CParental_RequestFeatureAccess_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              bitField0_ |= 0x00000001;
+              requestid_ = input.readFixed64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesParentalSteamclient.internal_static_CParental_RequestFeatureAccess_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesParentalSteamclient.internal_static_CParental_RequestFeatureAccess_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response.class, SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REQUESTID_FIELD_NUMBER = 1;
+    private long requestid_;
+    /**
+     * <code>optional fixed64 requestid = 1;</code>
+     * @return Whether the requestid field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequestid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed64 requestid = 1;</code>
+     * @return The requestid.
+     */
+    @java.lang.Override
+    public long getRequestid() {
+      return requestid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeFixed64(1, requestid_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(1, requestid_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response other = (SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response) obj;
+
+      if (hasRequestid() != other.hasRequestid()) return false;
+      if (hasRequestid()) {
+        if (getRequestid()
+            != other.getRequestid()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRequestid()) {
+        hash = (37 * hash) + REQUESTID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRequestid());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CParental_RequestFeatureAccess_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CParental_RequestFeatureAccess_Response)
+        SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_RequestFeatureAccess_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_RequestFeatureAccess_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response.class, SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        requestid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_RequestFeatureAccess_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response getDefaultInstanceForType() {
+        return SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response build() {
+        SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response buildPartial() {
+        SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response result = new SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestid_ = requestid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response) {
+          return mergeFrom((SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response other) {
+        if (other == SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response.getDefaultInstance()) return this;
+        if (other.hasRequestid()) {
+          setRequestid(other.getRequestid());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long requestid_ ;
+      /**
+       * <code>optional fixed64 requestid = 1;</code>
+       * @return Whether the requestid field is set.
+       */
+      @java.lang.Override
+      public boolean hasRequestid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional fixed64 requestid = 1;</code>
+       * @return The requestid.
+       */
+      @java.lang.Override
+      public long getRequestid() {
+        return requestid_;
+      }
+      /**
+       * <code>optional fixed64 requestid = 1;</code>
+       * @param value The requestid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestid(long value) {
+        bitField0_ |= 0x00000001;
+        requestid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 requestid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        requestid_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CParental_RequestFeatureAccess_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CParental_RequestFeatureAccess_Response)
+    private static final SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response();
+    }
+
+    public static SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CParental_RequestFeatureAccess_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CParental_RequestFeatureAccess_Response>() {
+      @java.lang.Override
+      public CParental_RequestFeatureAccess_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CParental_RequestFeatureAccess_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CParental_RequestFeatureAccess_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CParental_RequestFeatureAccess_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesParentalSteamclient.CParental_RequestFeatureAccess_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CParental_ApproveFeatureAccess_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CParental_ApproveFeatureAccess_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool approve = 1;</code>
+     * @return Whether the approve field is set.
+     */
+    boolean hasApprove();
+    /**
+     * <code>optional bool approve = 1;</code>
+     * @return The approve.
+     */
+    boolean getApprove();
+
+    /**
+     * <code>optional fixed64 requestid = 2;</code>
+     * @return Whether the requestid field is set.
+     */
+    boolean hasRequestid();
+    /**
+     * <code>optional fixed64 requestid = 2;</code>
+     * @return The requestid.
+     */
+    long getRequestid();
+
+    /**
+     * <code>optional uint32 features = 3;</code>
+     * @return Whether the features field is set.
+     */
+    boolean hasFeatures();
+    /**
+     * <code>optional uint32 features = 3;</code>
+     * @return The features.
+     */
+    int getFeatures();
+
+    /**
+     * <code>optional uint32 duration = 4;</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <code>optional uint32 duration = 4;</code>
+     * @return The duration.
+     */
+    int getDuration();
+
+    /**
+     * <code>optional fixed64 steamid = 10;</code>
+     * @return Whether the steamid field is set.
+     */
+    boolean hasSteamid();
+    /**
+     * <code>optional fixed64 steamid = 10;</code>
+     * @return The steamid.
+     */
+    long getSteamid();
+  }
+  /**
+   * Protobuf type {@code CParental_ApproveFeatureAccess_Request}
+   */
+  public static final class CParental_ApproveFeatureAccess_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CParental_ApproveFeatureAccess_Request)
+      CParental_ApproveFeatureAccess_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CParental_ApproveFeatureAccess_Request.newBuilder() to construct.
+    private CParental_ApproveFeatureAccess_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CParental_ApproveFeatureAccess_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CParental_ApproveFeatureAccess_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CParental_ApproveFeatureAccess_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              approve_ = input.readBool();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              requestid_ = input.readFixed64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              features_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              duration_ = input.readUInt32();
+              break;
+            }
+            case 81: {
+              bitField0_ |= 0x00000010;
+              steamid_ = input.readFixed64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesParentalSteamclient.internal_static_CParental_ApproveFeatureAccess_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesParentalSteamclient.internal_static_CParental_ApproveFeatureAccess_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request.class, SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int APPROVE_FIELD_NUMBER = 1;
+    private boolean approve_;
+    /**
+     * <code>optional bool approve = 1;</code>
+     * @return Whether the approve field is set.
+     */
+    @java.lang.Override
+    public boolean hasApprove() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool approve = 1;</code>
+     * @return The approve.
+     */
+    @java.lang.Override
+    public boolean getApprove() {
+      return approve_;
+    }
+
+    public static final int REQUESTID_FIELD_NUMBER = 2;
+    private long requestid_;
+    /**
+     * <code>optional fixed64 requestid = 2;</code>
+     * @return Whether the requestid field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequestid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional fixed64 requestid = 2;</code>
+     * @return The requestid.
+     */
+    @java.lang.Override
+    public long getRequestid() {
+      return requestid_;
+    }
+
+    public static final int FEATURES_FIELD_NUMBER = 3;
+    private int features_;
+    /**
+     * <code>optional uint32 features = 3;</code>
+     * @return Whether the features field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeatures() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 features = 3;</code>
+     * @return The features.
+     */
+    @java.lang.Override
+    public int getFeatures() {
+      return features_;
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 4;
+    private int duration_;
+    /**
+     * <code>optional uint32 duration = 4;</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 duration = 4;</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public int getDuration() {
+      return duration_;
+    }
+
+    public static final int STEAMID_FIELD_NUMBER = 10;
+    private long steamid_;
+    /**
+     * <code>optional fixed64 steamid = 10;</code>
+     * @return Whether the steamid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSteamid() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional fixed64 steamid = 10;</code>
+     * @return The steamid.
+     */
+    @java.lang.Override
+    public long getSteamid() {
+      return steamid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, approve_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeFixed64(2, requestid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, features_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(4, duration_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeFixed64(10, steamid_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, approve_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(2, requestid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, features_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, duration_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(10, steamid_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request other = (SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request) obj;
+
+      if (hasApprove() != other.hasApprove()) return false;
+      if (hasApprove()) {
+        if (getApprove()
+            != other.getApprove()) return false;
+      }
+      if (hasRequestid() != other.hasRequestid()) return false;
+      if (hasRequestid()) {
+        if (getRequestid()
+            != other.getRequestid()) return false;
+      }
+      if (hasFeatures() != other.hasFeatures()) return false;
+      if (hasFeatures()) {
+        if (getFeatures()
+            != other.getFeatures()) return false;
+      }
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (getDuration()
+            != other.getDuration()) return false;
+      }
+      if (hasSteamid() != other.hasSteamid()) return false;
+      if (hasSteamid()) {
+        if (getSteamid()
+            != other.getSteamid()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasApprove()) {
+        hash = (37 * hash) + APPROVE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getApprove());
+      }
+      if (hasRequestid()) {
+        hash = (37 * hash) + REQUESTID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRequestid());
+      }
+      if (hasFeatures()) {
+        hash = (37 * hash) + FEATURES_FIELD_NUMBER;
+        hash = (53 * hash) + getFeatures();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration();
+      }
+      if (hasSteamid()) {
+        hash = (37 * hash) + STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSteamid());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CParental_ApproveFeatureAccess_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CParental_ApproveFeatureAccess_Request)
+        SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_ApproveFeatureAccess_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_ApproveFeatureAccess_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request.class, SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        approve_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        requestid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        features_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        duration_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        steamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_ApproveFeatureAccess_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request getDefaultInstanceForType() {
+        return SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request build() {
+        SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request buildPartial() {
+        SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request result = new SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.approve_ = approve_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.requestid_ = requestid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.features_ = features_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.duration_ = duration_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.steamid_ = steamid_;
+          to_bitField0_ |= 0x00000010;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request) {
+          return mergeFrom((SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request other) {
+        if (other == SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request.getDefaultInstance()) return this;
+        if (other.hasApprove()) {
+          setApprove(other.getApprove());
+        }
+        if (other.hasRequestid()) {
+          setRequestid(other.getRequestid());
+        }
+        if (other.hasFeatures()) {
+          setFeatures(other.getFeatures());
+        }
+        if (other.hasDuration()) {
+          setDuration(other.getDuration());
+        }
+        if (other.hasSteamid()) {
+          setSteamid(other.getSteamid());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean approve_ ;
+      /**
+       * <code>optional bool approve = 1;</code>
+       * @return Whether the approve field is set.
+       */
+      @java.lang.Override
+      public boolean hasApprove() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional bool approve = 1;</code>
+       * @return The approve.
+       */
+      @java.lang.Override
+      public boolean getApprove() {
+        return approve_;
+      }
+      /**
+       * <code>optional bool approve = 1;</code>
+       * @param value The approve to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApprove(boolean value) {
+        bitField0_ |= 0x00000001;
+        approve_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool approve = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApprove() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        approve_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long requestid_ ;
+      /**
+       * <code>optional fixed64 requestid = 2;</code>
+       * @return Whether the requestid field is set.
+       */
+      @java.lang.Override
+      public boolean hasRequestid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional fixed64 requestid = 2;</code>
+       * @return The requestid.
+       */
+      @java.lang.Override
+      public long getRequestid() {
+        return requestid_;
+      }
+      /**
+       * <code>optional fixed64 requestid = 2;</code>
+       * @param value The requestid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestid(long value) {
+        bitField0_ |= 0x00000002;
+        requestid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 requestid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        requestid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int features_ ;
+      /**
+       * <code>optional uint32 features = 3;</code>
+       * @return Whether the features field is set.
+       */
+      @java.lang.Override
+      public boolean hasFeatures() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 features = 3;</code>
+       * @return The features.
+       */
+      @java.lang.Override
+      public int getFeatures() {
+        return features_;
+      }
+      /**
+       * <code>optional uint32 features = 3;</code>
+       * @param value The features to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeatures(int value) {
+        bitField0_ |= 0x00000004;
+        features_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 features = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeatures() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        features_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int duration_ ;
+      /**
+       * <code>optional uint32 duration = 4;</code>
+       * @return Whether the duration field is set.
+       */
+      @java.lang.Override
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 duration = 4;</code>
+       * @return The duration.
+       */
+      @java.lang.Override
+      public int getDuration() {
+        return duration_;
+      }
+      /**
+       * <code>optional uint32 duration = 4;</code>
+       * @param value The duration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDuration(int value) {
+        bitField0_ |= 0x00000008;
+        duration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 duration = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        duration_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long steamid_ ;
+      /**
+       * <code>optional fixed64 steamid = 10;</code>
+       * @return Whether the steamid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSteamid() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional fixed64 steamid = 10;</code>
+       * @return The steamid.
+       */
+      @java.lang.Override
+      public long getSteamid() {
+        return steamid_;
+      }
+      /**
+       * <code>optional fixed64 steamid = 10;</code>
+       * @param value The steamid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamid(long value) {
+        bitField0_ |= 0x00000010;
+        steamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 steamid = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        steamid_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CParental_ApproveFeatureAccess_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CParental_ApproveFeatureAccess_Request)
+    private static final SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request();
+    }
+
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CParental_ApproveFeatureAccess_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CParental_ApproveFeatureAccess_Request>() {
+      @java.lang.Override
+      public CParental_ApproveFeatureAccess_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CParental_ApproveFeatureAccess_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CParental_ApproveFeatureAccess_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CParental_ApproveFeatureAccess_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CParental_ApproveFeatureAccess_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CParental_ApproveFeatureAccess_Response)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CParental_ApproveFeatureAccess_Response}
+   */
+  public static final class CParental_ApproveFeatureAccess_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CParental_ApproveFeatureAccess_Response)
+      CParental_ApproveFeatureAccess_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CParental_ApproveFeatureAccess_Response.newBuilder() to construct.
+    private CParental_ApproveFeatureAccess_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CParental_ApproveFeatureAccess_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CParental_ApproveFeatureAccess_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CParental_ApproveFeatureAccess_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesParentalSteamclient.internal_static_CParental_ApproveFeatureAccess_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesParentalSteamclient.internal_static_CParental_ApproveFeatureAccess_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response.class, SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response other = (SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CParental_ApproveFeatureAccess_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CParental_ApproveFeatureAccess_Response)
+        SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_ApproveFeatureAccess_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_ApproveFeatureAccess_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response.class, SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesParentalSteamclient.internal_static_CParental_ApproveFeatureAccess_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response getDefaultInstanceForType() {
+        return SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response build() {
+        SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response buildPartial() {
+        SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response result = new SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response) {
+          return mergeFrom((SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response other) {
+        if (other == SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CParental_ApproveFeatureAccess_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CParental_ApproveFeatureAccess_Response)
+    private static final SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response();
+    }
+
+    public static SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CParental_ApproveFeatureAccess_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CParental_ApproveFeatureAccess_Response>() {
+      @java.lang.Override
+      public CParental_ApproveFeatureAccess_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CParental_ApproveFeatureAccess_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CParental_ApproveFeatureAccess_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CParental_ApproveFeatureAccess_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesParentalSteamclient.CParental_ApproveFeatureAccess_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CParental_ParentalSettingsChange_NotificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CParental_ParentalSettingsChange_Notification)
       com.google.protobuf.MessageOrBuilder {
@@ -17527,6 +22038,16 @@ public final class SteammessagesParentalSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ParentalApp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ParentalPlaytimeDay_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ParentalPlaytimeDay_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ParentalPlaytimeRestrictions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ParentalPlaytimeRestrictions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ParentalSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -17632,6 +22153,26 @@ public final class SteammessagesParentalSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CParental_DisableWithRecoveryCode_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CParental_RequestFeatureAccess_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CParental_RequestFeatureAccess_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CParental_RequestFeatureAccess_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CParental_RequestFeatureAccess_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CParental_ApproveFeatureAccess_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CParental_ApproveFeatureAccess_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CParental_ApproveFeatureAccess_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CParental_ApproveFeatureAccess_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CParental_ParentalSettingsChange_Notification_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -17656,123 +22197,160 @@ public final class SteammessagesParentalSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n.steam/steammessages_parental.steamclie" +
-      "nt.proto\0322steam/steammessages_unified_ba" +
-      "se.steamclient.proto\"0\n\013ParentalApp\022\r\n\005a" +
-      "ppid\030\001 \001(\r\022\022\n\nis_allowed\030\002 \001(\010\"\312\002\n\020Paren" +
-      "talSettings\022\017\n\007steamid\030\001 \001(\006\022\027\n\017applist_" +
-      "base_id\030\002 \001(\r\022 \n\030applist_base_descriptio" +
-      "n\030\003 \001(\t\022\"\n\014applist_base\030\004 \003(\0132\014.Parental" +
-      "App\022$\n\016applist_custom\030\005 \003(\0132\014.ParentalAp" +
-      "p\022\030\n\020passwordhashtype\030\006 \001(\r\022\014\n\004salt\030\007 \001(" +
-      "\014\022\024\n\014passwordhash\030\010 \001(\014\022\022\n\nis_enabled\030\t " +
-      "\001(\010\022\030\n\020enabled_features\030\n \001(\r\022\026\n\016recover" +
-      "y_email\030\013 \001(\t\022\034\n\024is_site_license_lock\030\014 " +
-      "\001(\010\"\231\001\n(CParental_EnableParentalSettings" +
-      "_Request\022\020\n\010password\030\001 \001(\t\022#\n\010settings\030\002" +
-      " \001(\0132\021.ParentalSettings\022\021\n\tsessionid\030\003 \001" +
-      "(\t\022\022\n\nenablecode\030\004 \001(\r\022\017\n\007steamid\030\n \001(\006\"" +
-      "+\n)CParental_EnableParentalSettings_Resp" +
-      "onse\"N\n)CParental_DisableParentalSetting" +
-      "s_Request\022\020\n\010password\030\001 \001(\t\022\017\n\007steamid\030\n" +
-      " \001(\006\",\n*CParental_DisableParentalSetting" +
-      "s_Response\"8\n%CParental_GetParentalSetti" +
-      "ngs_Request\022\017\n\007steamid\030\n \001(\006\"M\n&CParenta" +
-      "l_GetParentalSettings_Response\022#\n\010settin" +
-      "gs\030\001 \001(\0132\021.ParentalSettings\"?\n+CParental" +
-      "_GetSignedParentalSettings_Request\022\020\n\010pr" +
-      "iority\030\001 \001(\r\"^\n,CParental_GetSignedParen" +
-      "talSettings_Response\022\033\n\023serialized_setti" +
-      "ngs\030\001 \001(\014\022\021\n\tsignature\030\002 \001(\014\"\230\001\n%CParent" +
-      "al_SetParentalSettings_Request\022\020\n\010passwo" +
-      "rd\030\001 \001(\t\022#\n\010settings\030\002 \001(\0132\021.ParentalSet" +
-      "tings\022\024\n\014new_password\030\003 \001(\t\022\021\n\tsessionid" +
-      "\030\004 \001(\t\022\017\n\007steamid\030\n \001(\006\"(\n&CParental_Set" +
-      "ParentalSettings_Response\"7\n\037CParental_V" +
-      "alidateToken_Request\022\024\n\014unlock_token\030\001 \001" +
-      "(\t\"\"\n CParental_ValidateToken_Response\"g" +
-      "\n\"CParental_ValidatePassword_Request\022\020\n\010" +
-      "password\030\001 \001(\t\022\017\n\007session\030\002 \001(\t\022\036\n\026send_" +
-      "unlock_on_success\030\003 \001(\010\"4\n#CParental_Val" +
-      "idatePassword_Response\022\r\n\005token\030\001 \001(\t\"/\n" +
-      "\034CParental_LockClient_Request\022\017\n\007session" +
-      "\030\001 \001(\t\"\037\n\035CParental_LockClient_Response\"" +
-      "\'\n%CParental_RequestRecoveryCode_Request" +
-      "\"(\n&CParental_RequestRecoveryCode_Respon" +
-      "se\"S\n)CParental_DisableWithRecoveryCode_" +
-      "Request\022\025\n\rrecovery_code\030\001 \001(\r\022\017\n\007steami" +
-      "d\030\n \001(\006\",\n*CParental_DisableWithRecovery" +
-      "Code_Response\"\204\001\n-CParental_ParentalSett" +
-      "ingsChange_Notification\022\033\n\023serialized_se" +
-      "ttings\030\001 \001(\014\022\021\n\tsignature\030\002 \001(\014\022\020\n\010passw" +
-      "ord\030\003 \001(\t\022\021\n\tsessionid\030\004 \001(\t\"L\n%CParenta" +
-      "l_ParentalUnlock_Notification\022\020\n\010passwor" +
-      "d\030\001 \001(\t\022\021\n\tsessionid\030\002 \001(\t\"8\n#CParental_" +
-      "ParentalLock_Notification\022\021\n\tsessionid\030\001" +
-      " \001(\t2\322\016\n\010Parental\022\320\001\n\026EnableParentalSett" +
-      "ings\022).CParental_EnableParentalSettings_" +
-      "Request\032*.CParental_EnableParentalSettin" +
-      "gs_Response\"_\202\265\030[Enable parental setting" +
-      "s for the logged in account, optionally " +
-      "setting the current settings\022\253\001\n\027Disable" +
-      "ParentalSettings\022*.CParental_DisablePare" +
-      "ntalSettings_Request\032+.CParental_Disable" +
-      "ParentalSettings_Response\"7\202\265\0303Disable p" +
-      "arental settings for the logged in accou" +
-      "nt\022\247\001\n\023GetParentalSettings\022&.CParental_G" +
-      "etParentalSettings_Request\032\'.CParental_G" +
-      "etParentalSettings_Response\"?\202\265\030;Get the" +
-      " current parental settings for the logge" +
-      "d in account\022\350\001\n\031GetSignedParentalSettin" +
-      "gs\022,.CParental_GetSignedParentalSettings" +
-      "_Request\032-.CParental_GetSignedParentalSe" +
-      "ttings_Response\"n\202\265\030jGet the current par" +
-      "ental settings for the logged in account" +
-      " in a form that can by verified by the r" +
-      "eceiver\022\247\001\n\023SetParentalSettings\022&.CParen" +
-      "tal_SetParentalSettings_Request\032\'.CParen" +
-      "tal_SetParentalSettings_Response\"?\202\265\030;Se" +
-      "t the current parental settings for the " +
-      "logged in account\022\247\001\n\rValidateToken\022 .CP" +
-      "arental_ValidateToken_Request\032!.CParenta" +
-      "l_ValidateToken_Response\"Q\202\265\030MCheck if t" +
-      "he given parental unlock token is correc" +
-      "t for the logged in account\022\267\001\n\020Validate" +
-      "Password\022#.CParental_ValidatePassword_Re" +
-      "quest\032$.CParental_ValidatePassword_Respo" +
-      "nse\"X\202\265\030TValidate the plaintext password" +
-      " for the logged in account and return an" +
-      " unlock token\022\217\001\n\nLockClient\022\035.CParental" +
-      "_LockClient_Request\032\036.CParental_LockClie" +
-      "nt_Response\"B\202\265\030>Notify connected client" +
-      "s that a lock has occurred in a browser\022" +
-      "\303\001\n\023RequestRecoveryCode\022&.CParental_Requ" +
-      "estRecoveryCode_Request\032\'.CParental_Requ" +
-      "estRecoveryCode_Response\"[\202\265\030WRequest a " +
-      "recovery code be sent to the recovery em" +
-      "ail address for the specified account\022\252\001" +
-      "\n\027DisableWithRecoveryCode\022*.CParental_Di" +
-      "sableWithRecoveryCode_Request\032+.CParenta" +
-      "l_DisableWithRecoveryCode_Response\"6\202\265\0302" +
-      "Attempt a recovery unlock on the specifi" +
-      "ed account\032\035\202\265\030\031Parental settings servic" +
-      "e2\206\004\n\016ParentalClient\022\234\001\n\024NotifySettingsC" +
-      "hange\022..CParental_ParentalSettingsChange" +
-      "_Notification\032\013.NoResponse\"G\202\265\030CNotifica" +
-      "tion from server to client of a change i" +
-      "n parental settings\022\224\001\n\014NotifyUnlock\022&.C" +
-      "Parental_ParentalUnlock_Notification\032\013.N" +
-      "oResponse\"O\202\265\030KNotification from server " +
-      "to client that an unlock has occurred in" +
-      " a browser\022\215\001\n\nNotifyLock\022$.CParental_Pa" +
-      "rentalLock_Notification\032\013.NoResponse\"L\202\265" +
-      "\030HNotification from server to client tha" +
-      "t a lock has occurred in a browser\032.\202\265\030&" +
-      "Parental settings client notifications\300\265" +
-      "\030\002B\003\200\001\001"
+      "nt.proto\032\036steam/steammessages_base.proto" +
+      "\0322steam/steammessages_unified_base.steam" +
+      "client.proto\"0\n\013ParentalApp\022\r\n\005appid\030\001 \001" +
+      "(\r\022\022\n\nis_allowed\030\002 \001(\010\"\371\001\n\023ParentalPlayt" +
+      "imeDay\022\215\001\n\024allowed_time_windows\030\001 \001(\004Bo\202" +
+      "\265\030kA bitfield where each bit represents " +
+      "a thirty minute window into the day, wit" +
+      "h bit 0 being midnight-12:30AM\022R\n\025allowe" +
+      "d_daily_minutes\030\002 \001(\rB3\202\265\030/Total number " +
+      "of minutes of playtime for the day\"\346\002\n\034P" +
+      "arentalPlaytimeRestrictions\022O\n\ttz_offset" +
+      "\030\001 \001(\005B<\202\265\0308Time zone offset to use to d" +
+      "etermine when days roll over\022`\n\033apply_pl" +
+      "aytime_restrictions\030\002 \001(\010B;\202\265\0307If true, " +
+      "apply the playtime restrictions describe" +
+      "d here\022\222\001\n\rplaytime_days\030\017 \003(\0132\024.Parenta" +
+      "lPlaytimeDayBe\202\265\030aPlaytime restrictions " +
+      "for each day of the week. This will eith" +
+      "er be empty or will be 7 items long\"\330\003\n\020" +
+      "ParentalSettings\022\017\n\007steamid\030\001 \001(\006\022\027\n\017app" +
+      "list_base_id\030\002 \001(\r\022 \n\030applist_base_descr" +
+      "iption\030\003 \001(\t\022\"\n\014applist_base\030\004 \003(\0132\014.Par" +
+      "entalApp\022$\n\016applist_custom\030\005 \003(\0132\014.Paren" +
+      "talApp\022\030\n\020passwordhashtype\030\006 \001(\r\022\014\n\004salt" +
+      "\030\007 \001(\014\022\024\n\014passwordhash\030\010 \001(\014\022\022\n\nis_enabl" +
+      "ed\030\t \001(\010\022\030\n\020enabled_features\030\n \001(\r\022\026\n\016re" +
+      "covery_email\030\013 \001(\t\022\034\n\024is_site_license_lo" +
+      "ck\030\014 \001(\010\022\"\n\032temporary_enabled_features\030\r" +
+      " \001(\r\022*\n\"rtime_temporary_feature_expirati" +
+      "on\030\016 \001(\r\022<\n\025playtime_restrictions\030\017 \001(\0132" +
+      "\035.ParentalPlaytimeRestrictions\"\231\001\n(CPare" +
+      "ntal_EnableParentalSettings_Request\022\020\n\010p" +
+      "assword\030\001 \001(\t\022#\n\010settings\030\002 \001(\0132\021.Parent" +
+      "alSettings\022\021\n\tsessionid\030\003 \001(\t\022\022\n\nenablec" +
+      "ode\030\004 \001(\r\022\017\n\007steamid\030\n \001(\006\"+\n)CParental_" +
+      "EnableParentalSettings_Response\"N\n)CPare" +
+      "ntal_DisableParentalSettings_Request\022\020\n\010" +
+      "password\030\001 \001(\t\022\017\n\007steamid\030\n \001(\006\",\n*CPare" +
+      "ntal_DisableParentalSettings_Response\"8\n" +
+      "%CParental_GetParentalSettings_Request\022\017" +
+      "\n\007steamid\030\n \001(\006\"M\n&CParental_GetParental" +
+      "Settings_Response\022#\n\010settings\030\001 \001(\0132\021.Pa" +
+      "rentalSettings\"?\n+CParental_GetSignedPar" +
+      "entalSettings_Request\022\020\n\010priority\030\001 \001(\r\"" +
+      "^\n,CParental_GetSignedParentalSettings_R" +
+      "esponse\022\033\n\023serialized_settings\030\001 \001(\014\022\021\n\t" +
+      "signature\030\002 \001(\014\"\230\001\n%CParental_SetParenta" +
+      "lSettings_Request\022\020\n\010password\030\001 \001(\t\022#\n\010s" +
+      "ettings\030\002 \001(\0132\021.ParentalSettings\022\024\n\014new_" +
+      "password\030\003 \001(\t\022\021\n\tsessionid\030\004 \001(\t\022\017\n\007ste" +
+      "amid\030\n \001(\006\"(\n&CParental_SetParentalSetti" +
+      "ngs_Response\"7\n\037CParental_ValidateToken_" +
+      "Request\022\024\n\014unlock_token\030\001 \001(\t\"\"\n CParent" +
+      "al_ValidateToken_Response\"g\n\"CParental_V" +
+      "alidatePassword_Request\022\020\n\010password\030\001 \001(" +
+      "\t\022\017\n\007session\030\002 \001(\t\022\036\n\026send_unlock_on_suc" +
+      "cess\030\003 \001(\010\"4\n#CParental_ValidatePassword" +
+      "_Response\022\r\n\005token\030\001 \001(\t\"/\n\034CParental_Lo" +
+      "ckClient_Request\022\017\n\007session\030\001 \001(\t\"\037\n\035CPa" +
+      "rental_LockClient_Response\"\'\n%CParental_" +
+      "RequestRecoveryCode_Request\"(\n&CParental" +
+      "_RequestRecoveryCode_Response\"S\n)CParent" +
+      "al_DisableWithRecoveryCode_Request\022\025\n\rre" +
+      "covery_code\030\001 \001(\r\022\017\n\007steamid\030\n \001(\006\",\n*CP" +
+      "arental_DisableWithRecoveryCode_Response" +
+      "\"K\n&CParental_RequestFeatureAccess_Reque" +
+      "st\022\020\n\010features\030\001 \001(\r\022\017\n\007steamid\030\n \001(\006\"<\n" +
+      "\'CParental_RequestFeatureAccess_Response" +
+      "\022\021\n\trequestid\030\001 \001(\006\"\201\001\n&CParental_Approv" +
+      "eFeatureAccess_Request\022\017\n\007approve\030\001 \001(\010\022" +
+      "\021\n\trequestid\030\002 \001(\006\022\020\n\010features\030\003 \001(\r\022\020\n\010" +
+      "duration\030\004 \001(\r\022\017\n\007steamid\030\n \001(\006\")\n\'CPare" +
+      "ntal_ApproveFeatureAccess_Response\"\204\001\n-C" +
+      "Parental_ParentalSettingsChange_Notifica" +
+      "tion\022\033\n\023serialized_settings\030\001 \001(\014\022\021\n\tsig" +
+      "nature\030\002 \001(\014\022\020\n\010password\030\003 \001(\t\022\021\n\tsessio" +
+      "nid\030\004 \001(\t\"L\n%CParental_ParentalUnlock_No" +
+      "tification\022\020\n\010password\030\001 \001(\t\022\021\n\tsessioni" +
+      "d\030\002 \001(\t\"8\n#CParental_ParentalLock_Notifi" +
+      "cation\022\021\n\tsessionid\030\001 \001(\t2\263\021\n\010Parental\022\320" +
+      "\001\n\026EnableParentalSettings\022).CParental_En" +
+      "ableParentalSettings_Request\032*.CParental" +
+      "_EnableParentalSettings_Response\"_\202\265\030[En" +
+      "able parental settings for the logged in" +
+      " account, optionally setting the current" +
+      " settings\022\253\001\n\027DisableParentalSettings\022*." +
+      "CParental_DisableParentalSettings_Reques" +
+      "t\032+.CParental_DisableParentalSettings_Re" +
+      "sponse\"7\202\265\0303Disable parental settings fo" +
+      "r the logged in account\022\247\001\n\023GetParentalS" +
+      "ettings\022&.CParental_GetParentalSettings_" +
+      "Request\032\'.CParental_GetParentalSettings_" +
+      "Response\"?\202\265\030;Get the current parental s" +
+      "ettings for the logged in account\022\350\001\n\031Ge" +
+      "tSignedParentalSettings\022,.CParental_GetS" +
+      "ignedParentalSettings_Request\032-.CParenta" +
+      "l_GetSignedParentalSettings_Response\"n\202\265" +
+      "\030jGet the current parental settings for " +
+      "the logged in account in a form that can" +
+      " by verified by the receiver\022\247\001\n\023SetPare" +
+      "ntalSettings\022&.CParental_SetParentalSett" +
+      "ings_Request\032\'.CParental_SetParentalSett" +
+      "ings_Response\"?\202\265\030;Set the current paren" +
+      "tal settings for the logged in account\022\247" +
+      "\001\n\rValidateToken\022 .CParental_ValidateTok" +
+      "en_Request\032!.CParental_ValidateToken_Res" +
+      "ponse\"Q\202\265\030MCheck if the given parental u" +
+      "nlock token is correct for the logged in" +
+      " account\022\267\001\n\020ValidatePassword\022#.CParenta" +
+      "l_ValidatePassword_Request\032$.CParental_V" +
+      "alidatePassword_Response\"X\202\265\030TValidate t" +
+      "he plaintext password for the logged in " +
+      "account and return an unlock token\022\217\001\n\nL" +
+      "ockClient\022\035.CParental_LockClient_Request" +
+      "\032\036.CParental_LockClient_Response\"B\202\265\030>No" +
+      "tify connected clients that a lock has o" +
+      "ccurred in a browser\022\303\001\n\023RequestRecovery" +
+      "Code\022&.CParental_RequestRecoveryCode_Req" +
+      "uest\032\'.CParental_RequestRecoveryCode_Res" +
+      "ponse\"[\202\265\030WRequest a recovery code be se" +
+      "nt to the recovery email address for the" +
+      " specified account\022\252\001\n\027DisableWithRecove" +
+      "ryCode\022*.CParental_DisableWithRecoveryCo" +
+      "de_Request\032+.CParental_DisableWithRecove" +
+      "ryCode_Response\"6\202\265\0302Attempt a recovery " +
+      "unlock on the specified account\022\252\001\n\024Requ" +
+      "estFeatureAccess\022\'.CParental_RequestFeat" +
+      "ureAccess_Request\032(.CParental_RequestFea" +
+      "tureAccess_Response\"?\202\265\030;Request tempora" +
+      "ry access to a feature from a parent acc" +
+      "ount\022\261\001\n\024ApproveFeatureAccess\022\'.CParenta" +
+      "l_ApproveFeatureAccess_Request\032(.CParent" +
+      "al_ApproveFeatureAccess_Response\"F\202\265\030BAp" +
+      "prove or deny temporary access to a feat" +
+      "ure from a child account\032\035\202\265\030\031Parental s" +
+      "ettings service2\206\004\n\016ParentalClient\022\234\001\n\024N" +
+      "otifySettingsChange\022..CParental_Parental" +
+      "SettingsChange_Notification\032\013.NoResponse" +
+      "\"G\202\265\030CNotification from server to client" +
+      " of a change in parental settings\022\224\001\n\014No" +
+      "tifyUnlock\022&.CParental_ParentalUnlock_No" +
+      "tification\032\013.NoResponse\"O\202\265\030KNotificatio" +
+      "n from server to client that an unlock h" +
+      "as occurred in a browser\022\215\001\n\nNotifyLock\022" +
+      "$.CParental_ParentalLock_Notification\032\013." +
+      "NoResponse\"L\202\265\030HNotification from server" +
+      " to client that a lock has occurred in a" +
+      " browser\032.\202\265\030&Parental settings client n" +
+      "otifications\300\265\030\002B\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_ParentalApp_descriptor =
@@ -17781,157 +22359,195 @@ public final class SteammessagesParentalSteamclient {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ParentalApp_descriptor,
         new java.lang.String[] { "Appid", "IsAllowed", });
-    internal_static_ParentalSettings_descriptor =
+    internal_static_ParentalPlaytimeDay_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_ParentalPlaytimeDay_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ParentalPlaytimeDay_descriptor,
+        new java.lang.String[] { "AllowedTimeWindows", "AllowedDailyMinutes", });
+    internal_static_ParentalPlaytimeRestrictions_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_ParentalPlaytimeRestrictions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ParentalPlaytimeRestrictions_descriptor,
+        new java.lang.String[] { "TzOffset", "ApplyPlaytimeRestrictions", "PlaytimeDays", });
+    internal_static_ParentalSettings_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_ParentalSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ParentalSettings_descriptor,
-        new java.lang.String[] { "Steamid", "ApplistBaseId", "ApplistBaseDescription", "ApplistBase", "ApplistCustom", "Passwordhashtype", "Salt", "Passwordhash", "IsEnabled", "EnabledFeatures", "RecoveryEmail", "IsSiteLicenseLock", });
+        new java.lang.String[] { "Steamid", "ApplistBaseId", "ApplistBaseDescription", "ApplistBase", "ApplistCustom", "Passwordhashtype", "Salt", "Passwordhash", "IsEnabled", "EnabledFeatures", "RecoveryEmail", "IsSiteLicenseLock", "TemporaryEnabledFeatures", "RtimeTemporaryFeatureExpiration", "PlaytimeRestrictions", });
     internal_static_CParental_EnableParentalSettings_Request_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CParental_EnableParentalSettings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_EnableParentalSettings_Request_descriptor,
         new java.lang.String[] { "Password", "Settings", "Sessionid", "Enablecode", "Steamid", });
     internal_static_CParental_EnableParentalSettings_Response_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CParental_EnableParentalSettings_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_EnableParentalSettings_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CParental_DisableParentalSettings_Request_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CParental_DisableParentalSettings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_DisableParentalSettings_Request_descriptor,
         new java.lang.String[] { "Password", "Steamid", });
     internal_static_CParental_DisableParentalSettings_Response_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CParental_DisableParentalSettings_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_DisableParentalSettings_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CParental_GetParentalSettings_Request_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CParental_GetParentalSettings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_GetParentalSettings_Request_descriptor,
         new java.lang.String[] { "Steamid", });
     internal_static_CParental_GetParentalSettings_Response_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CParental_GetParentalSettings_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_GetParentalSettings_Response_descriptor,
         new java.lang.String[] { "Settings", });
     internal_static_CParental_GetSignedParentalSettings_Request_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CParental_GetSignedParentalSettings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_GetSignedParentalSettings_Request_descriptor,
         new java.lang.String[] { "Priority", });
     internal_static_CParental_GetSignedParentalSettings_Response_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CParental_GetSignedParentalSettings_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_GetSignedParentalSettings_Response_descriptor,
         new java.lang.String[] { "SerializedSettings", "Signature", });
     internal_static_CParental_SetParentalSettings_Request_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CParental_SetParentalSettings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_SetParentalSettings_Request_descriptor,
         new java.lang.String[] { "Password", "Settings", "NewPassword", "Sessionid", "Steamid", });
     internal_static_CParental_SetParentalSettings_Response_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CParental_SetParentalSettings_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_SetParentalSettings_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CParental_ValidateToken_Request_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CParental_ValidateToken_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_ValidateToken_Request_descriptor,
         new java.lang.String[] { "UnlockToken", });
     internal_static_CParental_ValidateToken_Response_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CParental_ValidateToken_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_ValidateToken_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CParental_ValidatePassword_Request_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CParental_ValidatePassword_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_ValidatePassword_Request_descriptor,
         new java.lang.String[] { "Password", "Session", "SendUnlockOnSuccess", });
     internal_static_CParental_ValidatePassword_Response_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CParental_ValidatePassword_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_ValidatePassword_Response_descriptor,
         new java.lang.String[] { "Token", });
     internal_static_CParental_LockClient_Request_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CParental_LockClient_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_LockClient_Request_descriptor,
         new java.lang.String[] { "Session", });
     internal_static_CParental_LockClient_Response_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_CParental_LockClient_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_LockClient_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CParental_RequestRecoveryCode_Request_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_CParental_RequestRecoveryCode_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_RequestRecoveryCode_Request_descriptor,
         new java.lang.String[] { });
     internal_static_CParental_RequestRecoveryCode_Response_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_CParental_RequestRecoveryCode_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_RequestRecoveryCode_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CParental_DisableWithRecoveryCode_Request_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_CParental_DisableWithRecoveryCode_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_DisableWithRecoveryCode_Request_descriptor,
         new java.lang.String[] { "RecoveryCode", "Steamid", });
     internal_static_CParental_DisableWithRecoveryCode_Response_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_CParental_DisableWithRecoveryCode_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_DisableWithRecoveryCode_Response_descriptor,
         new java.lang.String[] { });
+    internal_static_CParental_RequestFeatureAccess_Request_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_CParental_RequestFeatureAccess_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CParental_RequestFeatureAccess_Request_descriptor,
+        new java.lang.String[] { "Features", "Steamid", });
+    internal_static_CParental_RequestFeatureAccess_Response_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_CParental_RequestFeatureAccess_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CParental_RequestFeatureAccess_Response_descriptor,
+        new java.lang.String[] { "Requestid", });
+    internal_static_CParental_ApproveFeatureAccess_Request_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_CParental_ApproveFeatureAccess_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CParental_ApproveFeatureAccess_Request_descriptor,
+        new java.lang.String[] { "Approve", "Requestid", "Features", "Duration", "Steamid", });
+    internal_static_CParental_ApproveFeatureAccess_Response_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_CParental_ApproveFeatureAccess_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CParental_ApproveFeatureAccess_Response_descriptor,
+        new java.lang.String[] { });
     internal_static_CParental_ParentalSettingsChange_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_CParental_ParentalSettingsChange_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_ParentalSettingsChange_Notification_descriptor,
         new java.lang.String[] { "SerializedSettings", "Signature", "Password", "Sessionid", });
     internal_static_CParental_ParentalUnlock_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_CParental_ParentalUnlock_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_ParentalUnlock_Notification_descriptor,
         new java.lang.String[] { "Password", "Sessionid", });
     internal_static_CParental_ParentalLock_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_CParental_ParentalLock_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CParental_ParentalLock_Notification_descriptor,
         new java.lang.String[] { "Sessionid", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(SteammessagesUnifiedBaseSteamclient.description);
     registry.add(SteammessagesUnifiedBaseSteamclient.methodDescription);
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

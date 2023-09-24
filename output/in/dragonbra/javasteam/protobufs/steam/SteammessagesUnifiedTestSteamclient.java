@@ -3650,6 +3650,947 @@ public final class SteammessagesUnifiedTestSteamclient {
 
   }
 
+  public interface CMsgTest_NoBody_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgTest_NoBody_Request)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CMsgTest_NoBody_Request}
+   */
+  public static final class CMsgTest_NoBody_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgTest_NoBody_Request)
+      CMsgTest_NoBody_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgTest_NoBody_Request.newBuilder() to construct.
+    private CMsgTest_NoBody_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgTest_NoBody_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgTest_NoBody_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgTest_NoBody_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesUnifiedTestSteamclient.internal_static_CMsgTest_NoBody_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesUnifiedTestSteamclient.internal_static_CMsgTest_NoBody_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request.class, SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request other = (SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgTest_NoBody_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgTest_NoBody_Request)
+        SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesUnifiedTestSteamclient.internal_static_CMsgTest_NoBody_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesUnifiedTestSteamclient.internal_static_CMsgTest_NoBody_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request.class, SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesUnifiedTestSteamclient.internal_static_CMsgTest_NoBody_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request getDefaultInstanceForType() {
+        return SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request build() {
+        SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request buildPartial() {
+        SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request result = new SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request) {
+          return mergeFrom((SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request other) {
+        if (other == SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgTest_NoBody_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgTest_NoBody_Request)
+    private static final SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request();
+    }
+
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgTest_NoBody_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgTest_NoBody_Request>() {
+      @java.lang.Override
+      public CMsgTest_NoBody_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgTest_NoBody_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgTest_NoBody_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgTest_NoBody_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesUnifiedTestSteamclient.CMsgTest_NoBody_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgTest_CallClient_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgTest_CallClient_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 testvalue = 1;</code>
+     * @return Whether the testvalue field is set.
+     */
+    boolean hasTestvalue();
+    /**
+     * <code>optional int32 testvalue = 1;</code>
+     * @return The testvalue.
+     */
+    int getTestvalue();
+  }
+  /**
+   * Protobuf type {@code CMsgTest_CallClient_Response}
+   */
+  public static final class CMsgTest_CallClient_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgTest_CallClient_Response)
+      CMsgTest_CallClient_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgTest_CallClient_Response.newBuilder() to construct.
+    private CMsgTest_CallClient_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgTest_CallClient_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgTest_CallClient_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgTest_CallClient_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              testvalue_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesUnifiedTestSteamclient.internal_static_CMsgTest_CallClient_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesUnifiedTestSteamclient.internal_static_CMsgTest_CallClient_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response.class, SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TESTVALUE_FIELD_NUMBER = 1;
+    private int testvalue_;
+    /**
+     * <code>optional int32 testvalue = 1;</code>
+     * @return Whether the testvalue field is set.
+     */
+    @java.lang.Override
+    public boolean hasTestvalue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional int32 testvalue = 1;</code>
+     * @return The testvalue.
+     */
+    @java.lang.Override
+    public int getTestvalue() {
+      return testvalue_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, testvalue_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, testvalue_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response other = (SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response) obj;
+
+      if (hasTestvalue() != other.hasTestvalue()) return false;
+      if (hasTestvalue()) {
+        if (getTestvalue()
+            != other.getTestvalue()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTestvalue()) {
+        hash = (37 * hash) + TESTVALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getTestvalue();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgTest_CallClient_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgTest_CallClient_Response)
+        SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesUnifiedTestSteamclient.internal_static_CMsgTest_CallClient_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesUnifiedTestSteamclient.internal_static_CMsgTest_CallClient_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response.class, SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        testvalue_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesUnifiedTestSteamclient.internal_static_CMsgTest_CallClient_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response getDefaultInstanceForType() {
+        return SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response build() {
+        SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response buildPartial() {
+        SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response result = new SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.testvalue_ = testvalue_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response) {
+          return mergeFrom((SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response other) {
+        if (other == SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response.getDefaultInstance()) return this;
+        if (other.hasTestvalue()) {
+          setTestvalue(other.getTestvalue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int testvalue_ ;
+      /**
+       * <code>optional int32 testvalue = 1;</code>
+       * @return Whether the testvalue field is set.
+       */
+      @java.lang.Override
+      public boolean hasTestvalue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional int32 testvalue = 1;</code>
+       * @return The testvalue.
+       */
+      @java.lang.Override
+      public int getTestvalue() {
+        return testvalue_;
+      }
+      /**
+       * <code>optional int32 testvalue = 1;</code>
+       * @param value The testvalue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestvalue(int value) {
+        bitField0_ |= 0x00000001;
+        testvalue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 testvalue = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTestvalue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        testvalue_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgTest_CallClient_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgTest_CallClient_Response)
+    private static final SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response();
+    }
+
+    public static SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgTest_CallClient_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgTest_CallClient_Response>() {
+      @java.lang.Override
+      public CMsgTest_CallClient_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgTest_CallClient_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgTest_CallClient_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgTest_CallClient_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesUnifiedTestSteamclient.CMsgTest_CallClient_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgTest_MessageToClient_Request_descriptor;
   private static final 
@@ -3680,6 +4621,16 @@ public final class SteammessagesUnifiedTestSteamclient {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgTest_NotifyServer_Notification_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgTest_NoBody_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgTest_NoBody_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgTest_CallClient_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgTest_CallClient_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3690,36 +4641,43 @@ public final class SteammessagesUnifiedTestSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n2steam/steammessages_unified_test.steam" +
-      "client.proto\0322steam/steammessages_unifie" +
-      "d_base.steamclient.proto\"G\n CMsgTest_Mes" +
-      "sageToClient_Request\022#\n\tsome_text\030\001 \001(\tB" +
-      "\020\202\265\030\014Some string.\"H\n!CMsgTest_MessageToC" +
-      "lient_Response\022#\n\tsome_text\030\001 \001(\tB\020\202\265\030\014S" +
-      "ome string.\"I\n\"CMsgTest_NotifyClient_Not" +
-      "ification\022#\n\tsome_text\030\001 \001(\tB\020\202\265\030\014Some s" +
-      "tring.\"G\n CMsgTest_MessageToServer_Reque" +
-      "st\022#\n\tsome_text\030\001 \001(\tB\020\202\265\030\014Some string.\"" +
-      "H\n!CMsgTest_MessageToServer_Response\022#\n\t" +
-      "some_text\030\001 \001(\tB\020\202\265\030\014Some string.\"I\n\"CMs" +
-      "gTest_NotifyServer_Notification\022#\n\tsome_" +
-      "text\030\001 \001(\tB\020\202\265\030\014Some string.2\203\002\n\017TestSte" +
-      "amClient\022\201\001\n\017MessageToClient\022!.CMsgTest_" +
-      "MessageToClient_Request\032\".CMsgTest_Messa" +
-      "geToClient_Response\"\'\202\265\030#Some descriptio" +
-      "n - MessageToClient.\022f\n\014NotifyClient\022#.C" +
-      "MsgTest_NotifyClient_Notification\032\013.NoRe" +
-      "sponse\"$\202\265\030 Some description - NotifyCli" +
-      "ent.\032\004\300\265\030\0022\202\002\n\024TestServerFromClient\022\201\001\n\017" +
-      "MessageToServer\022!.CMsgTest_MessageToServ" +
-      "er_Request\032\".CMsgTest_MessageToServer_Re" +
-      "sponse\"\'\202\265\030#Some description - MessageTo" +
-      "Server.\022f\n\014NotifyServer\022#.CMsgTest_Notif" +
-      "yServer_Notification\032\013.NoResponse\"$\202\265\030 S" +
-      "ome description - NotifyServer.B\003\200\001\001"
+      "client.proto\032\036steam/steammessages_base.p" +
+      "roto\0322steam/steammessages_unified_base.s" +
+      "teamclient.proto\"G\n CMsgTest_MessageToCl" +
+      "ient_Request\022#\n\tsome_text\030\001 \001(\tB\020\202\265\030\014Som" +
+      "e string.\"H\n!CMsgTest_MessageToClient_Re" +
+      "sponse\022#\n\tsome_text\030\001 \001(\tB\020\202\265\030\014Some stri" +
+      "ng.\"I\n\"CMsgTest_NotifyClient_Notificatio" +
+      "n\022#\n\tsome_text\030\001 \001(\tB\020\202\265\030\014Some string.\"G" +
+      "\n CMsgTest_MessageToServer_Request\022#\n\tso" +
+      "me_text\030\001 \001(\tB\020\202\265\030\014Some string.\"H\n!CMsgT" +
+      "est_MessageToServer_Response\022#\n\tsome_tex" +
+      "t\030\001 \001(\tB\020\202\265\030\014Some string.\"I\n\"CMsgTest_No" +
+      "tifyServer_Notification\022#\n\tsome_text\030\001 \001" +
+      "(\tB\020\202\265\030\014Some string.\"\031\n\027CMsgTest_NoBody_" +
+      "Request\"1\n\034CMsgTest_CallClient_Response\022" +
+      "\021\n\ttestvalue\030\001 \001(\0052\203\002\n\017TestSteamClient\022\201" +
+      "\001\n\017MessageToClient\022!.CMsgTest_MessageToC" +
+      "lient_Request\032\".CMsgTest_MessageToClient" +
+      "_Response\"\'\202\265\030#Some description - Messag" +
+      "eToClient.\022f\n\014NotifyClient\022#.CMsgTest_No" +
+      "tifyClient_Notification\032\013.NoResponse\"$\202\265" +
+      "\030 Some description - NotifyClient.\032\004\300\265\030\002" +
+      "2\202\002\n\024TestServerFromClient\022\201\001\n\017MessageToS" +
+      "erver\022!.CMsgTest_MessageToServer_Request" +
+      "\032\".CMsgTest_MessageToServer_Response\"\'\202\265" +
+      "\030#Some description - MessageToServer.\022f\n" +
+      "\014NotifyServer\022#.CMsgTest_NotifyServer_No" +
+      "tification\032\013.NoResponse\"$\202\265\030 Some descri" +
+      "ption - NotifyServer.2^\n\025TestExternalPri" +
+      "vilege\022E\n\nCallClient\022\030.CMsgTest_NoBody_R" +
+      "equest\032\035.CMsgTest_CallClient_ResponseB\003\200" +
+      "\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CMsgTest_MessageToClient_Request_descriptor =
@@ -3758,6 +4716,18 @@ public final class SteammessagesUnifiedTestSteamclient {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgTest_NotifyServer_Notification_descriptor,
         new java.lang.String[] { "SomeText", });
+    internal_static_CMsgTest_NoBody_Request_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_CMsgTest_NoBody_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgTest_NoBody_Request_descriptor,
+        new java.lang.String[] { });
+    internal_static_CMsgTest_CallClient_Response_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_CMsgTest_CallClient_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgTest_CallClient_Response_descriptor,
+        new java.lang.String[] { "Testvalue", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(SteammessagesUnifiedBaseSteamclient.description);
@@ -3765,6 +4735,7 @@ public final class SteammessagesUnifiedTestSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

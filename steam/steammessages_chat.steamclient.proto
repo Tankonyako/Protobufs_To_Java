@@ -1,5 +1,6 @@
 syntax = "proto2";
 
+import "steam/steammessages_base.proto";
 import "steam/steammessages_unified_base.steamclient.proto";
 import "steam/steammessages_clientserver_friends.proto";
 

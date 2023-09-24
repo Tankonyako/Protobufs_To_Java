@@ -1,8 +1,17 @@
 syntax = "proto2";
 
+import "steam/steammessages_base.proto";
 import "steam/steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
+
+message CShader_GetShaderReportingCadence_Request {
+}
+
+message CShader_GetShaderReportingCadence_Response {
+	optional uint64 rereport_time_threshold = 1;
+	optional uint32 percent_to_rereport = 2;
+}
 
 message CShader_RegisterShader_Request {
 	message Shader {
@@ -54,6 +63,9 @@ message CShader_GetStaleBucket_Response {
 	optional uint64 bucketid = 1;
 	optional uint32 appid = 2;
 	optional uint64 manifestid = 3;
+	optional string gpu_desc = 4;
+	optional string driver_desc = 5;
+	optional bytes depot_encryption_key = 6;
 }
 
 message CShader_ReportExternalBuild_Request {
@@ -71,6 +83,10 @@ message CShader_ReportExternalBuild_Response {
 
 service Shader {
 	option (service_description) = "Shader methods";
+
+	rpc GetShaderReportingCadence (.CShader_GetShaderReportingCadence_Request) returns (.CShader_GetShaderReportingCadence_Response) {
+		option (method_description) = "Information about how often a client should re-report shader hits";
+	}
 
 	rpc RegisterShader (.CShader_RegisterShader_Request) returns (.CShader_RegisterShader_Response) {
 		option (method_description) = "Client just finished playing a game, detected new shader cache entries and is notifying us about them";

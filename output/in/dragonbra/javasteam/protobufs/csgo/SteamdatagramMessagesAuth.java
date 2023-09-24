@@ -154,17 +154,6 @@ public final class SteamdatagramMessagesAuth {
     long getLegacyGameserverSteamId();
 
     /**
-     * <code>optional fixed64 legacy_gameserver_net_id = 5;</code>
-     * @return Whether the legacyGameserverNetId field is set.
-     */
-    boolean hasLegacyGameserverNetId();
-    /**
-     * <code>optional fixed64 legacy_gameserver_net_id = 5;</code>
-     * @return The legacyGameserverNetId.
-     */
-    long getLegacyGameserverNetId();
-
-    /**
      * <code>optional fixed32 legacy_gameserver_pop_id = 9;</code>
      * @return Whether the legacyGameserverPopId field is set.
      */
@@ -269,11 +258,6 @@ public final class SteamdatagramMessagesAuth {
               legacyGameserverSteamId_ = input.readFixed64();
               break;
             }
-            case 41: {
-              bitField0_ |= 0x00000200;
-              legacyGameserverNetId_ = input.readFixed64();
-              break;
-            }
             case 56: {
               bitField0_ |= 0x00000020;
               appId_ = input.readUInt32();
@@ -289,7 +273,7 @@ public final class SteamdatagramMessagesAuth {
               break;
             }
             case 77: {
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000200;
               legacyGameserverPopId_ = input.readFixed32();
               break;
             }
@@ -304,12 +288,12 @@ public final class SteamdatagramMessagesAuth {
               break;
             }
             case 98: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00000400;
               legacyAuthorizedClientIdentityBinary_ = input.readBytes();
               break;
             }
             case 106: {
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00000800;
               legacyGameserverIdentityBinary_ = input.readBytes();
               break;
             }
@@ -1618,25 +1602,6 @@ public final class SteamdatagramMessagesAuth {
       return legacyGameserverSteamId_;
     }
 
-    public static final int LEGACY_GAMESERVER_NET_ID_FIELD_NUMBER = 5;
-    private long legacyGameserverNetId_;
-    /**
-     * <code>optional fixed64 legacy_gameserver_net_id = 5;</code>
-     * @return Whether the legacyGameserverNetId field is set.
-     */
-    @java.lang.Override
-    public boolean hasLegacyGameserverNetId() {
-      return ((bitField0_ & 0x00000200) != 0);
-    }
-    /**
-     * <code>optional fixed64 legacy_gameserver_net_id = 5;</code>
-     * @return The legacyGameserverNetId.
-     */
-    @java.lang.Override
-    public long getLegacyGameserverNetId() {
-      return legacyGameserverNetId_;
-    }
-
     public static final int LEGACY_GAMESERVER_POP_ID_FIELD_NUMBER = 9;
     private int legacyGameserverPopId_;
     /**
@@ -1645,7 +1610,7 @@ public final class SteamdatagramMessagesAuth {
      */
     @java.lang.Override
     public boolean hasLegacyGameserverPopId() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>optional fixed32 legacy_gameserver_pop_id = 9;</code>
@@ -1664,7 +1629,7 @@ public final class SteamdatagramMessagesAuth {
      */
     @java.lang.Override
     public boolean hasLegacyAuthorizedClientIdentityBinary() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <code>optional bytes legacy_authorized_client_identity_binary = 12;</code>
@@ -1683,7 +1648,7 @@ public final class SteamdatagramMessagesAuth {
      */
     @java.lang.Override
     public boolean hasLegacyGameserverIdentityBinary() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <code>optional bytes legacy_gameserver_identity_binary = 13;</code>
@@ -1720,16 +1685,13 @@ public final class SteamdatagramMessagesAuth {
       if (((bitField0_ & 0x00000100) != 0)) {
         output.writeFixed64(4, legacyGameserverSteamId_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
-        output.writeFixed64(5, legacyGameserverNetId_);
-      }
       if (((bitField0_ & 0x00000020) != 0)) {
         output.writeUInt32(7, appId_);
       }
       for (int i = 0; i < extraFields_.size(); i++) {
         output.writeMessage(8, extraFields_.get(i));
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeFixed32(9, legacyGameserverPopId_);
       }
       if (((bitField0_ & 0x00000040) != 0)) {
@@ -1738,10 +1700,10 @@ public final class SteamdatagramMessagesAuth {
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeBytes(11, gameserverAddress_);
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         output.writeBytes(12, legacyAuthorizedClientIdentityBinary_);
       }
-      if (((bitField0_ & 0x00001000) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         output.writeBytes(13, legacyGameserverIdentityBinary_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
@@ -1775,10 +1737,6 @@ public final class SteamdatagramMessagesAuth {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed64Size(4, legacyGameserverSteamId_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFixed64Size(5, legacyGameserverNetId_);
-      }
       if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, appId_);
@@ -1787,7 +1745,7 @@ public final class SteamdatagramMessagesAuth {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, extraFields_.get(i));
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(9, legacyGameserverPopId_);
       }
@@ -1799,11 +1757,11 @@ public final class SteamdatagramMessagesAuth {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(11, gameserverAddress_);
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(12, legacyAuthorizedClientIdentityBinary_);
       }
-      if (((bitField0_ & 0x00001000) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(13, legacyGameserverIdentityBinary_);
       }
@@ -1875,11 +1833,6 @@ public final class SteamdatagramMessagesAuth {
         if (getLegacyGameserverSteamId()
             != other.getLegacyGameserverSteamId()) return false;
       }
-      if (hasLegacyGameserverNetId() != other.hasLegacyGameserverNetId()) return false;
-      if (hasLegacyGameserverNetId()) {
-        if (getLegacyGameserverNetId()
-            != other.getLegacyGameserverNetId()) return false;
-      }
       if (hasLegacyGameserverPopId() != other.hasLegacyGameserverPopId()) return false;
       if (hasLegacyGameserverPopId()) {
         if (getLegacyGameserverPopId()
@@ -1947,11 +1900,6 @@ public final class SteamdatagramMessagesAuth {
         hash = (37 * hash) + LEGACY_GAMESERVER_STEAM_ID_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getLegacyGameserverSteamId());
-      }
-      if (hasLegacyGameserverNetId()) {
-        hash = (37 * hash) + LEGACY_GAMESERVER_NET_ID_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getLegacyGameserverNetId());
       }
       if (hasLegacyGameserverPopId()) {
         hash = (37 * hash) + LEGACY_GAMESERVER_POP_ID_FIELD_NUMBER;
@@ -2123,14 +2071,12 @@ public final class SteamdatagramMessagesAuth {
         bitField0_ = (bitField0_ & ~0x00000100);
         legacyGameserverSteamId_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000200);
-        legacyGameserverNetId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000400);
         legacyGameserverPopId_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         legacyAuthorizedClientIdentityBinary_ = com.google.protobuf.ByteString.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         legacyGameserverIdentityBinary_ = com.google.protobuf.ByteString.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -2205,19 +2151,15 @@ public final class SteamdatagramMessagesAuth {
           to_bitField0_ |= 0x00000100;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.legacyGameserverNetId_ = legacyGameserverNetId_;
+          result.legacyGameserverPopId_ = legacyGameserverPopId_;
           to_bitField0_ |= 0x00000200;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
-          result.legacyGameserverPopId_ = legacyGameserverPopId_;
           to_bitField0_ |= 0x00000400;
         }
+        result.legacyAuthorizedClientIdentityBinary_ = legacyAuthorizedClientIdentityBinary_;
         if (((from_bitField0_ & 0x00001000) != 0)) {
           to_bitField0_ |= 0x00000800;
-        }
-        result.legacyAuthorizedClientIdentityBinary_ = legacyAuthorizedClientIdentityBinary_;
-        if (((from_bitField0_ & 0x00002000) != 0)) {
-          to_bitField0_ |= 0x00001000;
         }
         result.legacyGameserverIdentityBinary_ = legacyGameserverIdentityBinary_;
         result.bitField0_ = to_bitField0_;
@@ -2325,9 +2267,6 @@ public final class SteamdatagramMessagesAuth {
         }
         if (other.hasLegacyGameserverSteamId()) {
           setLegacyGameserverSteamId(other.getLegacyGameserverSteamId());
-        }
-        if (other.hasLegacyGameserverNetId()) {
-          setLegacyGameserverNetId(other.getLegacyGameserverNetId());
         }
         if (other.hasLegacyGameserverPopId()) {
           setLegacyGameserverPopId(other.getLegacyGameserverPopId());
@@ -3052,45 +2991,6 @@ public final class SteamdatagramMessagesAuth {
         return this;
       }
 
-      private long legacyGameserverNetId_ ;
-      /**
-       * <code>optional fixed64 legacy_gameserver_net_id = 5;</code>
-       * @return Whether the legacyGameserverNetId field is set.
-       */
-      @java.lang.Override
-      public boolean hasLegacyGameserverNetId() {
-        return ((bitField0_ & 0x00000400) != 0);
-      }
-      /**
-       * <code>optional fixed64 legacy_gameserver_net_id = 5;</code>
-       * @return The legacyGameserverNetId.
-       */
-      @java.lang.Override
-      public long getLegacyGameserverNetId() {
-        return legacyGameserverNetId_;
-      }
-      /**
-       * <code>optional fixed64 legacy_gameserver_net_id = 5;</code>
-       * @param value The legacyGameserverNetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLegacyGameserverNetId(long value) {
-        bitField0_ |= 0x00000400;
-        legacyGameserverNetId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional fixed64 legacy_gameserver_net_id = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLegacyGameserverNetId() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        legacyGameserverNetId_ = 0L;
-        onChanged();
-        return this;
-      }
-
       private int legacyGameserverPopId_ ;
       /**
        * <code>optional fixed32 legacy_gameserver_pop_id = 9;</code>
@@ -3098,7 +2998,7 @@ public final class SteamdatagramMessagesAuth {
        */
       @java.lang.Override
       public boolean hasLegacyGameserverPopId() {
-        return ((bitField0_ & 0x00000800) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <code>optional fixed32 legacy_gameserver_pop_id = 9;</code>
@@ -3114,7 +3014,7 @@ public final class SteamdatagramMessagesAuth {
        * @return This builder for chaining.
        */
       public Builder setLegacyGameserverPopId(int value) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000400;
         legacyGameserverPopId_ = value;
         onChanged();
         return this;
@@ -3124,7 +3024,7 @@ public final class SteamdatagramMessagesAuth {
        * @return This builder for chaining.
        */
       public Builder clearLegacyGameserverPopId() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         legacyGameserverPopId_ = 0;
         onChanged();
         return this;
@@ -3137,7 +3037,7 @@ public final class SteamdatagramMessagesAuth {
        */
       @java.lang.Override
       public boolean hasLegacyAuthorizedClientIdentityBinary() {
-        return ((bitField0_ & 0x00001000) != 0);
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <code>optional bytes legacy_authorized_client_identity_binary = 12;</code>
@@ -3156,7 +3056,7 @@ public final class SteamdatagramMessagesAuth {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00001000;
+  bitField0_ |= 0x00000800;
         legacyAuthorizedClientIdentityBinary_ = value;
         onChanged();
         return this;
@@ -3166,7 +3066,7 @@ public final class SteamdatagramMessagesAuth {
        * @return This builder for chaining.
        */
       public Builder clearLegacyAuthorizedClientIdentityBinary() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         legacyAuthorizedClientIdentityBinary_ = getDefaultInstance().getLegacyAuthorizedClientIdentityBinary();
         onChanged();
         return this;
@@ -3179,7 +3079,7 @@ public final class SteamdatagramMessagesAuth {
        */
       @java.lang.Override
       public boolean hasLegacyGameserverIdentityBinary() {
-        return ((bitField0_ & 0x00002000) != 0);
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <code>optional bytes legacy_gameserver_identity_binary = 13;</code>
@@ -3198,7 +3098,7 @@ public final class SteamdatagramMessagesAuth {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00002000;
+  bitField0_ |= 0x00001000;
         legacyGameserverIdentityBinary_ = value;
         onChanged();
         return this;
@@ -3208,7 +3108,7 @@ public final class SteamdatagramMessagesAuth {
        * @return This builder for chaining.
        */
       public Builder clearLegacyGameserverIdentityBinary() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         legacyGameserverIdentityBinary_ = getDefaultInstance().getLegacyGameserverIdentityBinary();
         onChanged();
         return this;
@@ -7372,6 +7272,17 @@ public final class SteamdatagramMessagesAuth {
      * @return The routingSecret.
      */
     long getRoutingSecret();
+
+    /**
+     * <code>optional uint32 protocol_version = 5;</code>
+     * @return Whether the protocolVersion field is set.
+     */
+    boolean hasProtocolVersion();
+    /**
+     * <code>optional uint32 protocol_version = 5;</code>
+     * @return The protocolVersion.
+     */
+    int getProtocolVersion();
   }
   /**
    * Protobuf type {@code CMsgSteamDatagramHostedServerAddressPlaintext}
@@ -7438,6 +7349,11 @@ public final class SteamdatagramMessagesAuth {
             case 33: {
               bitField0_ |= 0x00000008;
               routingSecret_ = input.readFixed64();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              protocolVersion_ = input.readUInt32();
               break;
             }
             default: {
@@ -7549,6 +7465,25 @@ public final class SteamdatagramMessagesAuth {
       return routingSecret_;
     }
 
+    public static final int PROTOCOL_VERSION_FIELD_NUMBER = 5;
+    private int protocolVersion_;
+    /**
+     * <code>optional uint32 protocol_version = 5;</code>
+     * @return Whether the protocolVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasProtocolVersion() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint32 protocol_version = 5;</code>
+     * @return The protocolVersion.
+     */
+    @java.lang.Override
+    public int getProtocolVersion() {
+      return protocolVersion_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7575,6 +7510,9 @@ public final class SteamdatagramMessagesAuth {
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeFixed64(4, routingSecret_);
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt32(5, protocolVersion_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7599,6 +7537,10 @@ public final class SteamdatagramMessagesAuth {
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed64Size(4, routingSecret_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, protocolVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7635,6 +7577,11 @@ public final class SteamdatagramMessagesAuth {
         if (getRoutingSecret()
             != other.getRoutingSecret()) return false;
       }
+      if (hasProtocolVersion() != other.hasProtocolVersion()) return false;
+      if (hasProtocolVersion()) {
+        if (getProtocolVersion()
+            != other.getProtocolVersion()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7662,6 +7609,10 @@ public final class SteamdatagramMessagesAuth {
         hash = (37 * hash) + ROUTING_SECRET_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getRoutingSecret());
+      }
+      if (hasProtocolVersion()) {
+        hash = (37 * hash) + PROTOCOL_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getProtocolVersion();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7804,6 +7755,8 @@ public final class SteamdatagramMessagesAuth {
         bitField0_ = (bitField0_ & ~0x00000004);
         routingSecret_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000008);
+        protocolVersion_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -7847,6 +7800,10 @@ public final class SteamdatagramMessagesAuth {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.routingSecret_ = routingSecret_;
           to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.protocolVersion_ = protocolVersion_;
+          to_bitField0_ |= 0x00000010;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -7908,6 +7865,9 @@ public final class SteamdatagramMessagesAuth {
         }
         if (other.hasRoutingSecret()) {
           setRoutingSecret(other.getRoutingSecret());
+        }
+        if (other.hasProtocolVersion()) {
+          setProtocolVersion(other.getProtocolVersion());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8097,6 +8057,45 @@ public final class SteamdatagramMessagesAuth {
         onChanged();
         return this;
       }
+
+      private int protocolVersion_ ;
+      /**
+       * <code>optional uint32 protocol_version = 5;</code>
+       * @return Whether the protocolVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasProtocolVersion() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 protocol_version = 5;</code>
+       * @return The protocolVersion.
+       */
+      @java.lang.Override
+      public int getProtocolVersion() {
+        return protocolVersion_;
+      }
+      /**
+       * <code>optional uint32 protocol_version = 5;</code>
+       * @param value The protocolVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocolVersion(int value) {
+        bitField0_ |= 0x00000010;
+        protocolVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 protocol_version = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProtocolVersion() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        protocolVersion_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8196,7 +8195,7 @@ public final class SteamdatagramMessagesAuth {
     java.lang.String[] descriptorData = {
       "\n&csgo/steamdatagram_messages_auth.proto" +
       "\0321steam/steamnetworkingsockets_messages_" +
-      "certs.proto\"\361\004\n CMsgSteamDatagramRelayAu" +
+      "certs.proto\"\317\004\n CMsgSteamDatagramRelayAu" +
       "thTicket\022\023\n\013time_expiry\030\001 \001(\007\022)\n!authori" +
       "zed_client_identity_string\030\016 \001(\t\022\"\n\032game" +
       "server_identity_string\030\017 \001(\t\022\034\n\024authoriz" +
@@ -8206,31 +8205,31 @@ public final class SteamdatagramMessagesAuth {
       "tagramRelayAuthTicket.ExtraField\022\"\n\032lega" +
       "cy_authorized_steam_id\030\002 \001(\006\022\"\n\032legacy_g" +
       "ameserver_steam_id\030\004 \001(\006\022 \n\030legacy_games" +
-      "erver_net_id\030\005 \001(\006\022 \n\030legacy_gameserver_" +
-      "pop_id\030\t \001(\007\0220\n(legacy_authorized_client" +
-      "_identity_binary\030\014 \001(\014\022)\n!legacy_gameser" +
-      "ver_identity_binary\030\r \001(\014\032\\\n\nExtraField\022" +
-      "\014\n\004name\030\001 \001(\t\022\024\n\014string_value\030\002 \001(\t\022\023\n\013i" +
-      "nt64_value\030\003 \001(\022\022\025\n\rfixed64_value\030\005 \001(\006\"" +
-      "\254\001\n&CMsgSteamDatagramSignedRelayAuthTick" +
-      "et\022\033\n\023reserved_do_not_use\030\001 \001(\006\022\016\n\006ticke" +
-      "t\030\003 \001(\014\022\021\n\tsignature\030\004 \001(\014\022\016\n\006key_id\030\002 \001" +
-      "(\006\0222\n\005certs\030\005 \003(\0132#.CMsgSteamDatagramCer" +
-      "tificateSigned\"d\n(CMsgSteamDatagramCache" +
-      "dCredentialsForApp\022\023\n\013private_key\030\001 \001(\014\022" +
-      "\014\n\004cert\030\002 \001(\014\022\025\n\rrelay_tickets\030\003 \003(\014\"\307\001\n" +
-      "+CMsgSteamDatagramGameCoordinatorServerL" +
-      "ogin\022\026\n\016time_generated\030\001 \001(\r\022\r\n\005appid\030\002 " +
-      "\001(\r\022\017\n\007routing\030\003 \001(\014\022\017\n\007appdata\030\004 \001(\014\022\036\n" +
-      "\026legacy_identity_binary\030\005 \001(\014\022\027\n\017identit" +
-      "y_string\030\006 \001(\t\022\026\n\016dummy_steam_id\030c \001(\006\"\210" +
-      "\001\n1CMsgSteamDatagramSignedGameCoordinato" +
-      "rServerLogin\0221\n\004cert\030\001 \001(\0132#.CMsgSteamDa" +
-      "tagramCertificateSigned\022\r\n\005login\030\002 \001(\014\022\021" +
-      "\n\tsignature\030\003 \001(\014\"q\n-CMsgSteamDatagramHo" +
-      "stedServerAddressPlaintext\022\014\n\004ipv4\030\001 \001(\007" +
-      "\022\014\n\004ipv6\030\002 \001(\014\022\014\n\004port\030\003 \001(\r\022\026\n\016routing_" +
-      "secret\030\004 \001(\006B\005H\001\200\001\000"
+      "erver_pop_id\030\t \001(\007\0220\n(legacy_authorized_" +
+      "client_identity_binary\030\014 \001(\014\022)\n!legacy_g" +
+      "ameserver_identity_binary\030\r \001(\014\032\\\n\nExtra" +
+      "Field\022\014\n\004name\030\001 \001(\t\022\024\n\014string_value\030\002 \001(" +
+      "\t\022\023\n\013int64_value\030\003 \001(\022\022\025\n\rfixed64_value\030" +
+      "\005 \001(\006\"\254\001\n&CMsgSteamDatagramSignedRelayAu" +
+      "thTicket\022\033\n\023reserved_do_not_use\030\001 \001(\006\022\016\n" +
+      "\006ticket\030\003 \001(\014\022\021\n\tsignature\030\004 \001(\014\022\016\n\006key_" +
+      "id\030\002 \001(\006\0222\n\005certs\030\005 \003(\0132#.CMsgSteamDatag" +
+      "ramCertificateSigned\"d\n(CMsgSteamDatagra" +
+      "mCachedCredentialsForApp\022\023\n\013private_key\030" +
+      "\001 \001(\014\022\014\n\004cert\030\002 \001(\014\022\025\n\rrelay_tickets\030\003 \003" +
+      "(\014\"\307\001\n+CMsgSteamDatagramGameCoordinatorS" +
+      "erverLogin\022\026\n\016time_generated\030\001 \001(\r\022\r\n\005ap" +
+      "pid\030\002 \001(\r\022\017\n\007routing\030\003 \001(\014\022\017\n\007appdata\030\004 " +
+      "\001(\014\022\036\n\026legacy_identity_binary\030\005 \001(\014\022\027\n\017i" +
+      "dentity_string\030\006 \001(\t\022\026\n\016dummy_steam_id\030c" +
+      " \001(\006\"\210\001\n1CMsgSteamDatagramSignedGameCoor" +
+      "dinatorServerLogin\0221\n\004cert\030\001 \001(\0132#.CMsgS" +
+      "teamDatagramCertificateSigned\022\r\n\005login\030\002" +
+      " \001(\014\022\021\n\tsignature\030\003 \001(\014\"\213\001\n-CMsgSteamDat" +
+      "agramHostedServerAddressPlaintext\022\014\n\004ipv" +
+      "4\030\001 \001(\007\022\014\n\004ipv6\030\002 \001(\014\022\014\n\004port\030\003 \001(\r\022\026\n\016r" +
+      "outing_secret\030\004 \001(\006\022\030\n\020protocol_version\030" +
+      "\005 \001(\rB\005H\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8242,7 +8241,7 @@ public final class SteamdatagramMessagesAuth {
     internal_static_CMsgSteamDatagramRelayAuthTicket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramRelayAuthTicket_descriptor,
-        new java.lang.String[] { "TimeExpiry", "AuthorizedClientIdentityString", "GameserverIdentityString", "AuthorizedPublicIp", "GameserverAddress", "AppId", "VirtualPort", "ExtraFields", "LegacyAuthorizedSteamId", "LegacyGameserverSteamId", "LegacyGameserverNetId", "LegacyGameserverPopId", "LegacyAuthorizedClientIdentityBinary", "LegacyGameserverIdentityBinary", });
+        new java.lang.String[] { "TimeExpiry", "AuthorizedClientIdentityString", "GameserverIdentityString", "AuthorizedPublicIp", "GameserverAddress", "AppId", "VirtualPort", "ExtraFields", "LegacyAuthorizedSteamId", "LegacyGameserverSteamId", "LegacyGameserverPopId", "LegacyAuthorizedClientIdentityBinary", "LegacyGameserverIdentityBinary", });
     internal_static_CMsgSteamDatagramRelayAuthTicket_ExtraField_descriptor =
       internal_static_CMsgSteamDatagramRelayAuthTicket_descriptor.getNestedTypes().get(0);
     internal_static_CMsgSteamDatagramRelayAuthTicket_ExtraField_fieldAccessorTable = new
@@ -8278,7 +8277,7 @@ public final class SteamdatagramMessagesAuth {
     internal_static_CMsgSteamDatagramHostedServerAddressPlaintext_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramHostedServerAddressPlaintext_descriptor,
-        new java.lang.String[] { "Ipv4", "Ipv6", "Port", "RoutingSecret", });
+        new java.lang.String[] { "Ipv4", "Ipv6", "Port", "RoutingSecret", "ProtocolVersion", });
     SteamnetworkingsocketsMessagesCerts.getDescriptor();
   }
 

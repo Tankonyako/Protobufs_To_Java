@@ -11000,84 +11000,86 @@ public final class SteammessagesSiteLicenseSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n2steam/steammessages_site_license.steam" +
-      "client.proto\0322steam/steammessages_unifie" +
-      "d_base.steamclient.proto\"\215\001\n)CSiteManage" +
-      "rClient_IncomingClient_Request\022\027\n\017site_i" +
-      "nstanceid\030\001 \001(\006\022\026\n\016client_steamid\030\002 \001(\006\022" +
-      "\027\n\017client_local_ip\030\003 \001(\007\022\026\n\016connection_k" +
-      "ey\030\004 \001(\014\",\n*CSiteManagerClient_IncomingC" +
-      "lient_Response\"N\n,CSiteLicense_ClientSea" +
-      "tCheckout_Notification\022\r\n\005appid\030\001 \001(\r\022\017\n" +
-      "\007eresult\030\002 \001(\r\"\343\002\n/CSiteManagerClient_Tr" +
-      "ackedPayments_Notification\022\017\n\007site_id\030\001 " +
-      "\001(\006\022J\n\010payments\030\002 \003(\01328.CSiteManagerClie" +
-      "nt_TrackedPayments_Notification.Payment\032" +
-      "\322\001\n\007Payment\022\017\n\007transid\030\001 \001(\004\022\017\n\007steamid\030" +
-      "\002 \001(\004\022\016\n\006amount\030\003 \001(\003\022\021\n\tecurrency\030\004 \001(\r" +
-      "\022\024\n\014time_created\030\005 \001(\005\022\027\n\017purchase_statu" +
-      "s\030\006 \001(\005\022\024\n\014machine_name\030\007 \001(\t\022\024\n\014persona" +
-      "_name\030\010 \001(\t\022\023\n\013profile_url\030\t \001(\t\022\022\n\navat" +
-      "ar_url\030\n \001(\t\"r\n(CSiteLicense_InitiateAss" +
-      "ociation_Request\022\024\n\014site_steamid\030\001 \001(\006\022\027" +
-      "\n\017site_instanceid\030\002 \001(\006\022\027\n\017client_local_" +
-      "ip\030\003 \001(\007\"C\n)CSiteLicense_InitiateAssocia" +
-      "tion_Response\022\026\n\016connection_key\030\001 \001(\014\":\n" +
-      "$CSiteLicense_LCSAuthenticate_Request\022\022\n" +
-      "\ninstanceid\030\001 \001(\006\"z\n%CSiteLicense_LCSAut" +
-      "henticate_Response\022\017\n\007site_id\030\001 \001(\004\022\021\n\ts" +
-      "ite_name\030\002 \001(\t\022\023\n\013new_session\030\003 \001(\010\022\030\n\020n" +
-      "o_site_licenses\030\004 \001(\010\"t\n%CSiteLicense_LC" +
-      "SAssociateUser_Request\022\017\n\007steamid\030\001 \001(\006\022" +
-      "\020\n\010local_ip\030\002 \001(\007\022\022\n\ninstanceid\030\003 \001(\006\022\024\n" +
-      "\014machine_name\030\004 \001(\t\"(\n&CSiteLicense_LCSA" +
-      "ssociateUser_Response\"]\n\'CSiteLicense_Cl" +
-      "ientSeatCheckout_Request\022\017\n\007steamid\030\001 \001(" +
-      "\006\022\022\n\ninstanceid\030\002 \001(\006\022\r\n\005appid\030\003 \001(\r\"*\n(" +
-      "CSiteLicense_ClientSeatCheckout_Response" +
-      "\"b\n,CSiteLicense_ClientGetAvailableSeats" +
-      "_Request\022\017\n\007steamid\030\001 \001(\006\022\022\n\ninstanceid\030" +
-      "\002 \001(\006\022\r\n\005appid\030\003 \001(\r\"H\n-CSiteLicense_Cli" +
-      "entGetAvailableSeats_Response\022\027\n\017availab" +
-      "le_seats\030\001 \001(\r2\243\004\n\021SiteManagerClient\022\257\001\n" +
-      "\016IncomingClient\022*.CSiteManagerClient_Inc" +
-      "omingClient_Request\032+.CSiteManagerClient" +
-      "_IncomingClient_Response\"D\202\265\030@Rack infor" +
-      "ming site manager of new inbound client " +
-      "PSK connection\022\223\001\n\036ClientSeatCheckoutNot" +
-      "ification\022-.CSiteLicense_ClientSeatCheck" +
-      "out_Notification\032\013.NoResponse\"5\202\265\0301Notif" +
-      "y client directly about seat checkout re" +
-      "sult\022\232\001\n\033TrackedPaymentsNotification\0220.C" +
-      "SiteManagerClient_TrackedPayments_Notifi" +
-      "cation\032\013.NoResponse\"<\202\265\0308Rack informing " +
-      "site manager of existing tracked payment" +
-      "s\032)\202\265\030!Local site manager client service" +
-      "\300\265\030\0022\325\006\n\013SiteLicense\022\244\001\n\023InitiateAssocia" +
-      "tion\022).CSiteLicense_InitiateAssociation_" +
-      "Request\032*.CSiteLicense_InitiateAssociati" +
-      "on_Response\"6\202\265\0302Client is requesting co" +
-      "nnetion info for local site\022\206\001\n\017LCSAuthe" +
-      "nticate\022%.CSiteLicense_LCSAuthenticate_R" +
-      "equest\032&.CSiteLicense_LCSAuthenticate_Re" +
-      "sponse\"$\202\265\030 Local cafe server authentica" +
-      "tion\022\235\001\n\020LCSAssociateUser\022&.CSiteLicense" +
-      "_LCSAssociateUser_Request\032\'.CSiteLicense" +
-      "_LCSAssociateUser_Response\"8\202\265\0304Local ca" +
-      "fe server wants to grant user access to " +
-      "site\022\236\001\n\022ClientSeatCheckout\022(.CSiteLicen" +
-      "se_ClientSeatCheckout_Request\032).CSiteLic" +
-      "ense_ClientSeatCheckout_Response\"3\202\265\030/Cl" +
-      "ient is requesting use of a site license" +
-      " seat\022\272\001\n\027ClientGetAvailableSeats\022-.CSit" +
+      "client.proto\032\036steam/steammessages_base.p" +
+      "roto\0322steam/steammessages_unified_base.s" +
+      "teamclient.proto\"\215\001\n)CSiteManagerClient_" +
+      "IncomingClient_Request\022\027\n\017site_instancei" +
+      "d\030\001 \001(\006\022\026\n\016client_steamid\030\002 \001(\006\022\027\n\017clien" +
+      "t_local_ip\030\003 \001(\007\022\026\n\016connection_key\030\004 \001(\014" +
+      "\",\n*CSiteManagerClient_IncomingClient_Re" +
+      "sponse\"N\n,CSiteLicense_ClientSeatCheckou" +
+      "t_Notification\022\r\n\005appid\030\001 \001(\r\022\017\n\007eresult" +
+      "\030\002 \001(\r\"\343\002\n/CSiteManagerClient_TrackedPay" +
+      "ments_Notification\022\017\n\007site_id\030\001 \001(\006\022J\n\010p" +
+      "ayments\030\002 \003(\01328.CSiteManagerClient_Track" +
+      "edPayments_Notification.Payment\032\322\001\n\007Paym" +
+      "ent\022\017\n\007transid\030\001 \001(\004\022\017\n\007steamid\030\002 \001(\004\022\016\n" +
+      "\006amount\030\003 \001(\003\022\021\n\tecurrency\030\004 \001(\r\022\024\n\014time" +
+      "_created\030\005 \001(\005\022\027\n\017purchase_status\030\006 \001(\005\022" +
+      "\024\n\014machine_name\030\007 \001(\t\022\024\n\014persona_name\030\010 " +
+      "\001(\t\022\023\n\013profile_url\030\t \001(\t\022\022\n\navatar_url\030\n" +
+      " \001(\t\"r\n(CSiteLicense_InitiateAssociation" +
+      "_Request\022\024\n\014site_steamid\030\001 \001(\006\022\027\n\017site_i" +
+      "nstanceid\030\002 \001(\006\022\027\n\017client_local_ip\030\003 \001(\007" +
+      "\"C\n)CSiteLicense_InitiateAssociation_Res" +
+      "ponse\022\026\n\016connection_key\030\001 \001(\014\":\n$CSiteLi" +
+      "cense_LCSAuthenticate_Request\022\022\n\ninstanc" +
+      "eid\030\001 \001(\006\"z\n%CSiteLicense_LCSAuthenticat" +
+      "e_Response\022\017\n\007site_id\030\001 \001(\004\022\021\n\tsite_name" +
+      "\030\002 \001(\t\022\023\n\013new_session\030\003 \001(\010\022\030\n\020no_site_l" +
+      "icenses\030\004 \001(\010\"t\n%CSiteLicense_LCSAssocia" +
+      "teUser_Request\022\017\n\007steamid\030\001 \001(\006\022\020\n\010local" +
+      "_ip\030\002 \001(\007\022\022\n\ninstanceid\030\003 \001(\006\022\024\n\014machine" +
+      "_name\030\004 \001(\t\"(\n&CSiteLicense_LCSAssociate" +
+      "User_Response\"]\n\'CSiteLicense_ClientSeat" +
+      "Checkout_Request\022\017\n\007steamid\030\001 \001(\006\022\022\n\nins" +
+      "tanceid\030\002 \001(\006\022\r\n\005appid\030\003 \001(\r\"*\n(CSiteLic" +
+      "ense_ClientSeatCheckout_Response\"b\n,CSit" +
       "eLicense_ClientGetAvailableSeats_Request" +
-      "\032..CSiteLicense_ClientGetAvailableSeats_" +
-      "Response\"@\202\265\030<Client is requesting the n" +
-      "umber of currently available seats\032\030\202\265\030\024" +
-      "Site License serviceB\003\200\001\001"
+      "\022\017\n\007steamid\030\001 \001(\006\022\022\n\ninstanceid\030\002 \001(\006\022\r\n" +
+      "\005appid\030\003 \001(\r\"H\n-CSiteLicense_ClientGetAv" +
+      "ailableSeats_Response\022\027\n\017available_seats" +
+      "\030\001 \001(\r2\243\004\n\021SiteManagerClient\022\257\001\n\016Incomin" +
+      "gClient\022*.CSiteManagerClient_IncomingCli" +
+      "ent_Request\032+.CSiteManagerClient_Incomin" +
+      "gClient_Response\"D\202\265\030@Rack informing sit" +
+      "e manager of new inbound client PSK conn" +
+      "ection\022\223\001\n\036ClientSeatCheckoutNotificatio" +
+      "n\022-.CSiteLicense_ClientSeatCheckout_Noti" +
+      "fication\032\013.NoResponse\"5\202\265\0301Notify client" +
+      " directly about seat checkout result\022\232\001\n" +
+      "\033TrackedPaymentsNotification\0220.CSiteMana" +
+      "gerClient_TrackedPayments_Notification\032\013" +
+      ".NoResponse\"<\202\265\0308Rack informing site man" +
+      "ager of existing tracked payments\032)\202\265\030!L" +
+      "ocal site manager client service\300\265\030\0022\325\006\n" +
+      "\013SiteLicense\022\244\001\n\023InitiateAssociation\022).C" +
+      "SiteLicense_InitiateAssociation_Request\032" +
+      "*.CSiteLicense_InitiateAssociation_Respo" +
+      "nse\"6\202\265\0302Client is requesting connetion " +
+      "info for local site\022\206\001\n\017LCSAuthenticate\022" +
+      "%.CSiteLicense_LCSAuthenticate_Request\032&" +
+      ".CSiteLicense_LCSAuthenticate_Response\"$" +
+      "\202\265\030 Local cafe server authentication\022\235\001\n" +
+      "\020LCSAssociateUser\022&.CSiteLicense_LCSAsso" +
+      "ciateUser_Request\032\'.CSiteLicense_LCSAsso" +
+      "ciateUser_Response\"8\202\265\0304Local cafe serve" +
+      "r wants to grant user access to site\022\236\001\n" +
+      "\022ClientSeatCheckout\022(.CSiteLicense_Clien" +
+      "tSeatCheckout_Request\032).CSiteLicense_Cli" +
+      "entSeatCheckout_Response\"3\202\265\030/Client is " +
+      "requesting use of a site license seat\022\272\001" +
+      "\n\027ClientGetAvailableSeats\022-.CSiteLicense" +
+      "_ClientGetAvailableSeats_Request\032..CSite" +
+      "License_ClientGetAvailableSeats_Response" +
+      "\"@\202\265\030<Client is requesting the number of" +
+      " currently available seats\032\030\202\265\030\024Site Lic" +
+      "ense serviceB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CSiteManagerClient_IncomingClient_Request_descriptor =
@@ -11177,6 +11179,7 @@ public final class SteammessagesSiteLicenseSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

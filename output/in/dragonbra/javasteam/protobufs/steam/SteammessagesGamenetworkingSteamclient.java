@@ -667,17 +667,6 @@ public final class SteammessagesGamenetworkingSteamclient {
      * @return The fakePorts at the given index.
      */
     int getFakePorts(int index);
-
-    /**
-     * <code>optional uint32 renew_seconds = 3;</code>
-     * @return Whether the renewSeconds field is set.
-     */
-    boolean hasRenewSeconds();
-    /**
-     * <code>optional uint32 renew_seconds = 3;</code>
-     * @return The renewSeconds.
-     */
-    int getRenewSeconds();
   }
   /**
    * Protobuf type {@code CGameNetworking_AllocateFakeIP_Response}
@@ -750,11 +739,6 @@ public final class SteammessagesGamenetworkingSteamclient {
                 fakePorts_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000002;
-              renewSeconds_ = input.readUInt32();
               break;
             }
             default: {
@@ -839,25 +823,6 @@ public final class SteammessagesGamenetworkingSteamclient {
       return fakePorts_.getInt(index);
     }
 
-    public static final int RENEW_SECONDS_FIELD_NUMBER = 3;
-    private int renewSeconds_;
-    /**
-     * <code>optional uint32 renew_seconds = 3;</code>
-     * @return Whether the renewSeconds field is set.
-     */
-    @java.lang.Override
-    public boolean hasRenewSeconds() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional uint32 renew_seconds = 3;</code>
-     * @return The renewSeconds.
-     */
-    @java.lang.Override
-    public int getRenewSeconds() {
-      return renewSeconds_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -877,9 +842,6 @@ public final class SteammessagesGamenetworkingSteamclient {
       }
       for (int i = 0; i < fakePorts_.size(); i++) {
         output.writeUInt32(2, fakePorts_.getInt(i));
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeUInt32(3, renewSeconds_);
       }
       unknownFields.writeTo(output);
     }
@@ -903,10 +865,6 @@ public final class SteammessagesGamenetworkingSteamclient {
         size += dataSize;
         size += 1 * getFakePortsList().size();
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, renewSeconds_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -929,11 +887,6 @@ public final class SteammessagesGamenetworkingSteamclient {
       }
       if (!getFakePortsList()
           .equals(other.getFakePortsList())) return false;
-      if (hasRenewSeconds() != other.hasRenewSeconds()) return false;
-      if (hasRenewSeconds()) {
-        if (getRenewSeconds()
-            != other.getRenewSeconds()) return false;
-      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -952,10 +905,6 @@ public final class SteammessagesGamenetworkingSteamclient {
       if (getFakePortsCount() > 0) {
         hash = (37 * hash) + FAKE_PORTS_FIELD_NUMBER;
         hash = (53 * hash) + getFakePortsList().hashCode();
-      }
-      if (hasRenewSeconds()) {
-        hash = (37 * hash) + RENEW_SECONDS_FIELD_NUMBER;
-        hash = (53 * hash) + getRenewSeconds();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1094,8 +1043,6 @@ public final class SteammessagesGamenetworkingSteamclient {
         bitField0_ = (bitField0_ & ~0x00000001);
         fakePorts_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
-        renewSeconds_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -1133,10 +1080,6 @@ public final class SteammessagesGamenetworkingSteamclient {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.fakePorts_ = fakePorts_;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.renewSeconds_ = renewSeconds_;
-          to_bitField0_ |= 0x00000002;
-        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1198,9 +1141,6 @@ public final class SteammessagesGamenetworkingSteamclient {
             fakePorts_.addAll(other.fakePorts_);
           }
           onChanged();
-        }
-        if (other.hasRenewSeconds()) {
-          setRenewSeconds(other.getRenewSeconds());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1349,45 +1289,6 @@ public final class SteammessagesGamenetworkingSteamclient {
         onChanged();
         return this;
       }
-
-      private int renewSeconds_ ;
-      /**
-       * <code>optional uint32 renew_seconds = 3;</code>
-       * @return Whether the renewSeconds field is set.
-       */
-      @java.lang.Override
-      public boolean hasRenewSeconds() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>optional uint32 renew_seconds = 3;</code>
-       * @return The renewSeconds.
-       */
-      @java.lang.Override
-      public int getRenewSeconds() {
-        return renewSeconds_;
-      }
-      /**
-       * <code>optional uint32 renew_seconds = 3;</code>
-       * @param value The renewSeconds to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRenewSeconds(int value) {
-        bitField0_ |= 0x00000004;
-        renewSeconds_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 renew_seconds = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRenewSeconds() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        renewSeconds_ = 0;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1436,811 +1337,6 @@ public final class SteammessagesGamenetworkingSteamclient {
 
     @java.lang.Override
     public SteammessagesGamenetworkingSteamclient.CGameNetworking_AllocateFakeIP_Response getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CGameNetworking_RenewFakeIP_RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CGameNetworking_RenewFakeIP_Request)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional uint32 app_id = 1;</code>
-     * @return Whether the appId field is set.
-     */
-    boolean hasAppId();
-    /**
-     * <code>optional uint32 app_id = 1;</code>
-     * @return The appId.
-     */
-    int getAppId();
-
-    /**
-     * <code>optional fixed32 fake_ip = 2;</code>
-     * @return Whether the fakeIp field is set.
-     */
-    boolean hasFakeIp();
-    /**
-     * <code>optional fixed32 fake_ip = 2;</code>
-     * @return The fakeIp.
-     */
-    int getFakeIp();
-
-    /**
-     * <code>repeated uint32 fake_ports = 3;</code>
-     * @return A list containing the fakePorts.
-     */
-    java.util.List<java.lang.Integer> getFakePortsList();
-    /**
-     * <code>repeated uint32 fake_ports = 3;</code>
-     * @return The count of fakePorts.
-     */
-    int getFakePortsCount();
-    /**
-     * <code>repeated uint32 fake_ports = 3;</code>
-     * @param index The index of the element to return.
-     * @return The fakePorts at the given index.
-     */
-    int getFakePorts(int index);
-  }
-  /**
-   * Protobuf type {@code CGameNetworking_RenewFakeIP_Request}
-   */
-  public static final class CGameNetworking_RenewFakeIP_Request extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CGameNetworking_RenewFakeIP_Request)
-      CGameNetworking_RenewFakeIP_RequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CGameNetworking_RenewFakeIP_Request.newBuilder() to construct.
-    private CGameNetworking_RenewFakeIP_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CGameNetworking_RenewFakeIP_Request() {
-      fakePorts_ = emptyIntList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CGameNetworking_RenewFakeIP_Request();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CGameNetworking_RenewFakeIP_Request(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              bitField0_ |= 0x00000001;
-              appId_ = input.readUInt32();
-              break;
-            }
-            case 21: {
-              bitField0_ |= 0x00000002;
-              fakeIp_ = input.readFixed32();
-              break;
-            }
-            case 24: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                fakePorts_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              fakePorts_.addInt(input.readUInt32());
-              break;
-            }
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                fakePorts_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                fakePorts_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          fakePorts_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesGamenetworkingSteamclient.internal_static_CGameNetworking_RenewFakeIP_Request_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesGamenetworkingSteamclient.internal_static_CGameNetworking_RenewFakeIP_Request_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request.class, SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private int appId_;
-    /**
-     * <code>optional uint32 app_id = 1;</code>
-     * @return Whether the appId field is set.
-     */
-    @java.lang.Override
-    public boolean hasAppId() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional uint32 app_id = 1;</code>
-     * @return The appId.
-     */
-    @java.lang.Override
-    public int getAppId() {
-      return appId_;
-    }
-
-    public static final int FAKE_IP_FIELD_NUMBER = 2;
-    private int fakeIp_;
-    /**
-     * <code>optional fixed32 fake_ip = 2;</code>
-     * @return Whether the fakeIp field is set.
-     */
-    @java.lang.Override
-    public boolean hasFakeIp() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional fixed32 fake_ip = 2;</code>
-     * @return The fakeIp.
-     */
-    @java.lang.Override
-    public int getFakeIp() {
-      return fakeIp_;
-    }
-
-    public static final int FAKE_PORTS_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.IntList fakePorts_;
-    /**
-     * <code>repeated uint32 fake_ports = 3;</code>
-     * @return A list containing the fakePorts.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getFakePortsList() {
-      return fakePorts_;
-    }
-    /**
-     * <code>repeated uint32 fake_ports = 3;</code>
-     * @return The count of fakePorts.
-     */
-    public int getFakePortsCount() {
-      return fakePorts_.size();
-    }
-    /**
-     * <code>repeated uint32 fake_ports = 3;</code>
-     * @param index The index of the element to return.
-     * @return The fakePorts at the given index.
-     */
-    public int getFakePorts(int index) {
-      return fakePorts_.getInt(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeUInt32(1, appId_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeFixed32(2, fakeIp_);
-      }
-      for (int i = 0; i < fakePorts_.size(); i++) {
-        output.writeUInt32(3, fakePorts_.getInt(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, appId_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(2, fakeIp_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < fakePorts_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(fakePorts_.getInt(i));
-        }
-        size += dataSize;
-        size += 1 * getFakePortsList().size();
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request)) {
-        return super.equals(obj);
-      }
-      SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request other = (SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request) obj;
-
-      if (hasAppId() != other.hasAppId()) return false;
-      if (hasAppId()) {
-        if (getAppId()
-            != other.getAppId()) return false;
-      }
-      if (hasFakeIp() != other.hasFakeIp()) return false;
-      if (hasFakeIp()) {
-        if (getFakeIp()
-            != other.getFakeIp()) return false;
-      }
-      if (!getFakePortsList()
-          .equals(other.getFakePortsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasAppId()) {
-        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getAppId();
-      }
-      if (hasFakeIp()) {
-        hash = (37 * hash) + FAKE_IP_FIELD_NUMBER;
-        hash = (53 * hash) + getFakeIp();
-      }
-      if (getFakePortsCount() > 0) {
-        hash = (37 * hash) + FAKE_PORTS_FIELD_NUMBER;
-        hash = (53 * hash) + getFakePortsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CGameNetworking_RenewFakeIP_Request}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CGameNetworking_RenewFakeIP_Request)
-        SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_RequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesGamenetworkingSteamclient.internal_static_CGameNetworking_RenewFakeIP_Request_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesGamenetworkingSteamclient.internal_static_CGameNetworking_RenewFakeIP_Request_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request.class, SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request.Builder.class);
-      }
-
-      // Construct using SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        appId_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        fakeIp_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        fakePorts_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesGamenetworkingSteamclient.internal_static_CGameNetworking_RenewFakeIP_Request_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request getDefaultInstanceForType() {
-        return SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request build() {
-        SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request buildPartial() {
-        SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request result = new SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.appId_ = appId_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.fakeIp_ = fakeIp_;
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((bitField0_ & 0x00000004) != 0)) {
-          fakePorts_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.fakePorts_ = fakePorts_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request) {
-          return mergeFrom((SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request other) {
-        if (other == SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request.getDefaultInstance()) return this;
-        if (other.hasAppId()) {
-          setAppId(other.getAppId());
-        }
-        if (other.hasFakeIp()) {
-          setFakeIp(other.getFakeIp());
-        }
-        if (!other.fakePorts_.isEmpty()) {
-          if (fakePorts_.isEmpty()) {
-            fakePorts_ = other.fakePorts_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureFakePortsIsMutable();
-            fakePorts_.addAll(other.fakePorts_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private int appId_ ;
-      /**
-       * <code>optional uint32 app_id = 1;</code>
-       * @return Whether the appId field is set.
-       */
-      @java.lang.Override
-      public boolean hasAppId() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional uint32 app_id = 1;</code>
-       * @return The appId.
-       */
-      @java.lang.Override
-      public int getAppId() {
-        return appId_;
-      }
-      /**
-       * <code>optional uint32 app_id = 1;</code>
-       * @param value The appId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAppId(int value) {
-        bitField0_ |= 0x00000001;
-        appId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 app_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAppId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        appId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int fakeIp_ ;
-      /**
-       * <code>optional fixed32 fake_ip = 2;</code>
-       * @return Whether the fakeIp field is set.
-       */
-      @java.lang.Override
-      public boolean hasFakeIp() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional fixed32 fake_ip = 2;</code>
-       * @return The fakeIp.
-       */
-      @java.lang.Override
-      public int getFakeIp() {
-        return fakeIp_;
-      }
-      /**
-       * <code>optional fixed32 fake_ip = 2;</code>
-       * @param value The fakeIp to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFakeIp(int value) {
-        bitField0_ |= 0x00000002;
-        fakeIp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional fixed32 fake_ip = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFakeIp() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        fakeIp_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.IntList fakePorts_ = emptyIntList();
-      private void ensureFakePortsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          fakePorts_ = mutableCopy(fakePorts_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-      /**
-       * <code>repeated uint32 fake_ports = 3;</code>
-       * @return A list containing the fakePorts.
-       */
-      public java.util.List<java.lang.Integer>
-          getFakePortsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(fakePorts_) : fakePorts_;
-      }
-      /**
-       * <code>repeated uint32 fake_ports = 3;</code>
-       * @return The count of fakePorts.
-       */
-      public int getFakePortsCount() {
-        return fakePorts_.size();
-      }
-      /**
-       * <code>repeated uint32 fake_ports = 3;</code>
-       * @param index The index of the element to return.
-       * @return The fakePorts at the given index.
-       */
-      public int getFakePorts(int index) {
-        return fakePorts_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 fake_ports = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The fakePorts to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFakePorts(
-          int index, int value) {
-        ensureFakePortsIsMutable();
-        fakePorts_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 fake_ports = 3;</code>
-       * @param value The fakePorts to add.
-       * @return This builder for chaining.
-       */
-      public Builder addFakePorts(int value) {
-        ensureFakePortsIsMutable();
-        fakePorts_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 fake_ports = 3;</code>
-       * @param values The fakePorts to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllFakePorts(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureFakePortsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, fakePorts_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 fake_ports = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFakePorts() {
-        fakePorts_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CGameNetworking_RenewFakeIP_Request)
-    }
-
-    // @@protoc_insertion_point(class_scope:CGameNetworking_RenewFakeIP_Request)
-    private static final SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request();
-    }
-
-    public static SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CGameNetworking_RenewFakeIP_Request>
-        PARSER = new com.google.protobuf.AbstractParser<CGameNetworking_RenewFakeIP_Request>() {
-      @java.lang.Override
-      public CGameNetworking_RenewFakeIP_Request parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CGameNetworking_RenewFakeIP_Request(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CGameNetworking_RenewFakeIP_Request> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CGameNetworking_RenewFakeIP_Request> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesGamenetworkingSteamclient.CGameNetworking_RenewFakeIP_Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3062,11 +2158,6 @@ public final class SteammessagesGamenetworkingSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CGameNetworking_AllocateFakeIP_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CGameNetworking_RenewFakeIP_Request_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CGameNetworking_RenewFakeIP_Request_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CGameNetworking_ReleaseFakeIP_Notification_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3081,34 +2172,29 @@ public final class SteammessagesGamenetworkingSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n4steam/steammessages_gamenetworking.ste" +
-      "amclient.proto\0322steam/steammessages_unif" +
-      "ied_base.steamclient.proto\"P\n&CGameNetwo" +
-      "rking_AllocateFakeIP_Request\022\016\n\006app_id\030\001" +
-      " \001(\r\022\026\n\016num_fake_ports\030\002 \001(\r\"e\n\'CGameNet" +
-      "working_AllocateFakeIP_Response\022\017\n\007fake_" +
-      "ip\030\001 \001(\007\022\022\n\nfake_ports\030\002 \003(\r\022\025\n\rrenew_se" +
-      "conds\030\003 \001(\r\"Z\n#CGameNetworking_RenewFake" +
-      "IP_Request\022\016\n\006app_id\030\001 \001(\r\022\017\n\007fake_ip\030\002 " +
-      "\001(\007\022\022\n\nfake_ports\030\003 \003(\r\"a\n*CGameNetworki" +
-      "ng_ReleaseFakeIP_Notification\022\016\n\006app_id\030" +
-      "\001 \001(\r\022\017\n\007fake_ip\030\002 \001(\007\022\022\n\nfake_ports\030\003 \003" +
-      "(\r2\340\003\n\016GameNetworking\022\214\001\n\016AllocateFakeIP" +
-      "\022\'.CGameNetworking_AllocateFakeIP_Reques" +
-      "t\032(.CGameNetworking_AllocateFakeIP_Respo" +
-      "nse\"\'\202\265\030#Client is asking to lease a Fak" +
-      "eIP.\022\213\001\n\013RenewFakeIP\022$.CGameNetworking_R" +
-      "enewFakeIP_Request\032(.CGameNetworking_All" +
-      "ocateFakeIP_Response\",\202\265\030(Client is aski" +
-      "ng to reup a FakeIP lease.\022\206\001\n\023NotifyRel" +
-      "easeFakeIP\022+.CGameNetworking_ReleaseFake" +
-      "IP_Notification\032\013.NoResponse\"5\202\265\0301Client" +
-      " informs server it is done with the Fake" +
-      "IP.\032(\202\265\030$Services that support P2P netwo" +
-      "rkingB\003\200\001\001"
+      "amclient.proto\032\036steam/steammessages_base" +
+      ".proto\0322steam/steammessages_unified_base" +
+      ".steamclient.proto\"P\n&CGameNetworking_Al" +
+      "locateFakeIP_Request\022\016\n\006app_id\030\001 \001(\r\022\026\n\016" +
+      "num_fake_ports\030\002 \001(\r\"N\n\'CGameNetworking_" +
+      "AllocateFakeIP_Response\022\017\n\007fake_ip\030\001 \001(\007" +
+      "\022\022\n\nfake_ports\030\002 \003(\r\"a\n*CGameNetworking_" +
+      "ReleaseFakeIP_Notification\022\016\n\006app_id\030\001 \001" +
+      "(\r\022\017\n\007fake_ip\030\002 \001(\007\022\022\n\nfake_ports\030\003 \003(\r2" +
+      "\322\002\n\016GameNetworking\022\214\001\n\016AllocateFakeIP\022\'." +
+      "CGameNetworking_AllocateFakeIP_Request\032(" +
+      ".CGameNetworking_AllocateFakeIP_Response" +
+      "\"\'\202\265\030#Client is asking to lease a FakeIP" +
+      ".\022\206\001\n\023NotifyReleaseFakeIP\022+.CGameNetwork" +
+      "ing_ReleaseFakeIP_Notification\032\013.NoRespo" +
+      "nse\"5\202\265\0301Client informs server it is don" +
+      "e with the FakeIP.\032(\202\265\030$Services that su" +
+      "pport P2P networkingB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CGameNetworking_AllocateFakeIP_Request_descriptor =
@@ -3122,15 +2208,9 @@ public final class SteammessagesGamenetworkingSteamclient {
     internal_static_CGameNetworking_AllocateFakeIP_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CGameNetworking_AllocateFakeIP_Response_descriptor,
-        new java.lang.String[] { "FakeIp", "FakePorts", "RenewSeconds", });
-    internal_static_CGameNetworking_RenewFakeIP_Request_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_CGameNetworking_RenewFakeIP_Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CGameNetworking_RenewFakeIP_Request_descriptor,
-        new java.lang.String[] { "AppId", "FakeIp", "FakePorts", });
+        new java.lang.String[] { "FakeIp", "FakePorts", });
     internal_static_CGameNetworking_ReleaseFakeIP_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CGameNetworking_ReleaseFakeIP_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CGameNetworking_ReleaseFakeIP_Notification_descriptor,
@@ -3141,6 +2221,7 @@ public final class SteammessagesGamenetworkingSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

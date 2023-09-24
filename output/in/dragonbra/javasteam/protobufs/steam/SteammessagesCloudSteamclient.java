@@ -14,6 +14,1154 @@ public final class SteammessagesCloudSteamclient {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface CCloud_ClientLogUploadCheck_NotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCloud_ClientLogUploadCheck_Notification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 client_id = 1;</code>
+     * @return Whether the clientId field is set.
+     */
+    boolean hasClientId();
+    /**
+     * <code>optional uint64 client_id = 1;</code>
+     * @return The clientId.
+     */
+    long getClientId();
+  }
+  /**
+   * Protobuf type {@code CCloud_ClientLogUploadCheck_Notification}
+   */
+  public static final class CCloud_ClientLogUploadCheck_Notification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCloud_ClientLogUploadCheck_Notification)
+      CCloud_ClientLogUploadCheck_NotificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCloud_ClientLogUploadCheck_Notification.newBuilder() to construct.
+    private CCloud_ClientLogUploadCheck_Notification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCloud_ClientLogUploadCheck_Notification() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCloud_ClientLogUploadCheck_Notification();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCloud_ClientLogUploadCheck_Notification(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              clientId_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadCheck_Notification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadCheck_Notification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification.class, SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLIENT_ID_FIELD_NUMBER = 1;
+    private long clientId_;
+    /**
+     * <code>optional uint64 client_id = 1;</code>
+     * @return Whether the clientId field is set.
+     */
+    @java.lang.Override
+    public boolean hasClientId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 client_id = 1;</code>
+     * @return The clientId.
+     */
+    @java.lang.Override
+    public long getClientId() {
+      return clientId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, clientId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, clientId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification)) {
+        return super.equals(obj);
+      }
+      SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification other = (SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification) obj;
+
+      if (hasClientId() != other.hasClientId()) return false;
+      if (hasClientId()) {
+        if (getClientId()
+            != other.getClientId()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClientId()) {
+        hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getClientId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCloud_ClientLogUploadCheck_Notification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCloud_ClientLogUploadCheck_Notification)
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_NotificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadCheck_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadCheck_Notification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification.class, SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification.Builder.class);
+      }
+
+      // Construct using SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clientId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadCheck_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification getDefaultInstanceForType() {
+        return SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification build() {
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification buildPartial() {
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification result = new SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.clientId_ = clientId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification) {
+          return mergeFrom((SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification other) {
+        if (other == SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification.getDefaultInstance()) return this;
+        if (other.hasClientId()) {
+          setClientId(other.getClientId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long clientId_ ;
+      /**
+       * <code>optional uint64 client_id = 1;</code>
+       * @return Whether the clientId field is set.
+       */
+      @java.lang.Override
+      public boolean hasClientId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 client_id = 1;</code>
+       * @return The clientId.
+       */
+      @java.lang.Override
+      public long getClientId() {
+        return clientId_;
+      }
+      /**
+       * <code>optional uint64 client_id = 1;</code>
+       * @param value The clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientId(long value) {
+        bitField0_ |= 0x00000001;
+        clientId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 client_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        clientId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCloud_ClientLogUploadCheck_Notification)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCloud_ClientLogUploadCheck_Notification)
+    private static final SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification();
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCloud_ClientLogUploadCheck_Notification>
+        PARSER = new com.google.protobuf.AbstractParser<CCloud_ClientLogUploadCheck_Notification>() {
+      @java.lang.Override
+      public CCloud_ClientLogUploadCheck_Notification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCloud_ClientLogUploadCheck_Notification(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCloud_ClientLogUploadCheck_Notification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCloud_ClientLogUploadCheck_Notification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesCloudSteamclient.CCloud_ClientLogUploadCheck_Notification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CCloud_ClientLogUploadComplete_NotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCloud_ClientLogUploadComplete_Notification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 client_id = 1;</code>
+     * @return Whether the clientId field is set.
+     */
+    boolean hasClientId();
+    /**
+     * <code>optional uint64 client_id = 1;</code>
+     * @return The clientId.
+     */
+    long getClientId();
+
+    /**
+     * <code>optional uint64 request_id = 2;</code>
+     * @return Whether the requestId field is set.
+     */
+    boolean hasRequestId();
+    /**
+     * <code>optional uint64 request_id = 2;</code>
+     * @return The requestId.
+     */
+    long getRequestId();
+  }
+  /**
+   * Protobuf type {@code CCloud_ClientLogUploadComplete_Notification}
+   */
+  public static final class CCloud_ClientLogUploadComplete_Notification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCloud_ClientLogUploadComplete_Notification)
+      CCloud_ClientLogUploadComplete_NotificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCloud_ClientLogUploadComplete_Notification.newBuilder() to construct.
+    private CCloud_ClientLogUploadComplete_Notification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCloud_ClientLogUploadComplete_Notification() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCloud_ClientLogUploadComplete_Notification();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCloud_ClientLogUploadComplete_Notification(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              clientId_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              requestId_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadComplete_Notification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadComplete_Notification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification.class, SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLIENT_ID_FIELD_NUMBER = 1;
+    private long clientId_;
+    /**
+     * <code>optional uint64 client_id = 1;</code>
+     * @return Whether the clientId field is set.
+     */
+    @java.lang.Override
+    public boolean hasClientId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 client_id = 1;</code>
+     * @return The clientId.
+     */
+    @java.lang.Override
+    public long getClientId() {
+      return clientId_;
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 2;
+    private long requestId_;
+    /**
+     * <code>optional uint64 request_id = 2;</code>
+     * @return Whether the requestId field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequestId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 request_id = 2;</code>
+     * @return The requestId.
+     */
+    @java.lang.Override
+    public long getRequestId() {
+      return requestId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, clientId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(2, requestId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, clientId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, requestId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification)) {
+        return super.equals(obj);
+      }
+      SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification other = (SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification) obj;
+
+      if (hasClientId() != other.hasClientId()) return false;
+      if (hasClientId()) {
+        if (getClientId()
+            != other.getClientId()) return false;
+      }
+      if (hasRequestId() != other.hasRequestId()) return false;
+      if (hasRequestId()) {
+        if (getRequestId()
+            != other.getRequestId()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClientId()) {
+        hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getClientId());
+      }
+      if (hasRequestId()) {
+        hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRequestId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCloud_ClientLogUploadComplete_Notification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCloud_ClientLogUploadComplete_Notification)
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_NotificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadComplete_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadComplete_Notification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification.class, SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification.Builder.class);
+      }
+
+      // Construct using SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clientId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        requestId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadComplete_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification getDefaultInstanceForType() {
+        return SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification build() {
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification buildPartial() {
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification result = new SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.clientId_ = clientId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.requestId_ = requestId_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification) {
+          return mergeFrom((SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification other) {
+        if (other == SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification.getDefaultInstance()) return this;
+        if (other.hasClientId()) {
+          setClientId(other.getClientId());
+        }
+        if (other.hasRequestId()) {
+          setRequestId(other.getRequestId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long clientId_ ;
+      /**
+       * <code>optional uint64 client_id = 1;</code>
+       * @return Whether the clientId field is set.
+       */
+      @java.lang.Override
+      public boolean hasClientId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 client_id = 1;</code>
+       * @return The clientId.
+       */
+      @java.lang.Override
+      public long getClientId() {
+        return clientId_;
+      }
+      /**
+       * <code>optional uint64 client_id = 1;</code>
+       * @param value The clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientId(long value) {
+        bitField0_ |= 0x00000001;
+        clientId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 client_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        clientId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long requestId_ ;
+      /**
+       * <code>optional uint64 request_id = 2;</code>
+       * @return Whether the requestId field is set.
+       */
+      @java.lang.Override
+      public boolean hasRequestId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 request_id = 2;</code>
+       * @return The requestId.
+       */
+      @java.lang.Override
+      public long getRequestId() {
+        return requestId_;
+      }
+      /**
+       * <code>optional uint64 request_id = 2;</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestId(long value) {
+        bitField0_ |= 0x00000002;
+        requestId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 request_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        requestId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCloud_ClientLogUploadComplete_Notification)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCloud_ClientLogUploadComplete_Notification)
+    private static final SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification();
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCloud_ClientLogUploadComplete_Notification>
+        PARSER = new com.google.protobuf.AbstractParser<CCloud_ClientLogUploadComplete_Notification>() {
+      @java.lang.Override
+      public CCloud_ClientLogUploadComplete_Notification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCloud_ClientLogUploadComplete_Notification(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCloud_ClientLogUploadComplete_Notification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCloud_ClientLogUploadComplete_Notification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesCloudSteamclient.CCloud_ClientLogUploadComplete_Notification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CCloud_GetUploadServerInfo_RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCloud_GetUploadServerInfo_Request)
       com.google.protobuf.MessageOrBuilder {
@@ -19879,6 +21027,50 @@ public final class SteammessagesCloudSteamclient {
      * @return The ipv6Remote.
      */
     boolean getIpv6Remote();
+
+    /**
+     * <code>optional uint32 time_to_connect_ms = 13;</code>
+     * @return Whether the timeToConnectMs field is set.
+     */
+    boolean hasTimeToConnectMs();
+    /**
+     * <code>optional uint32 time_to_connect_ms = 13;</code>
+     * @return The timeToConnectMs.
+     */
+    int getTimeToConnectMs();
+
+    /**
+     * <code>optional uint32 time_to_send_req_ms = 14;</code>
+     * @return Whether the timeToSendReqMs field is set.
+     */
+    boolean hasTimeToSendReqMs();
+    /**
+     * <code>optional uint32 time_to_send_req_ms = 14;</code>
+     * @return The timeToSendReqMs.
+     */
+    int getTimeToSendReqMs();
+
+    /**
+     * <code>optional uint32 time_to_first_byte_ms = 15;</code>
+     * @return Whether the timeToFirstByteMs field is set.
+     */
+    boolean hasTimeToFirstByteMs();
+    /**
+     * <code>optional uint32 time_to_first_byte_ms = 15;</code>
+     * @return The timeToFirstByteMs.
+     */
+    int getTimeToFirstByteMs();
+
+    /**
+     * <code>optional uint32 time_to_last_byte_ms = 16;</code>
+     * @return Whether the timeToLastByteMs field is set.
+     */
+    boolean hasTimeToLastByteMs();
+    /**
+     * <code>optional uint32 time_to_last_byte_ms = 16;</code>
+     * @return The timeToLastByteMs.
+     */
+    int getTimeToLastByteMs();
   }
   /**
    * Protobuf type {@code CCloud_ExternalStorageTransferReport_Notification}
@@ -19988,6 +21180,26 @@ public final class SteammessagesCloudSteamclient {
             case 96: {
               bitField0_ |= 0x00000800;
               ipv6Remote_ = input.readBool();
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00001000;
+              timeToConnectMs_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00002000;
+              timeToSendReqMs_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00004000;
+              timeToFirstByteMs_ = input.readUInt32();
+              break;
+            }
+            case 128: {
+              bitField0_ |= 0x00008000;
+              timeToLastByteMs_ = input.readUInt32();
               break;
             }
             default: {
@@ -20309,6 +21521,82 @@ public final class SteammessagesCloudSteamclient {
       return ipv6Remote_;
     }
 
+    public static final int TIME_TO_CONNECT_MS_FIELD_NUMBER = 13;
+    private int timeToConnectMs_;
+    /**
+     * <code>optional uint32 time_to_connect_ms = 13;</code>
+     * @return Whether the timeToConnectMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeToConnectMs() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional uint32 time_to_connect_ms = 13;</code>
+     * @return The timeToConnectMs.
+     */
+    @java.lang.Override
+    public int getTimeToConnectMs() {
+      return timeToConnectMs_;
+    }
+
+    public static final int TIME_TO_SEND_REQ_MS_FIELD_NUMBER = 14;
+    private int timeToSendReqMs_;
+    /**
+     * <code>optional uint32 time_to_send_req_ms = 14;</code>
+     * @return Whether the timeToSendReqMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeToSendReqMs() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>optional uint32 time_to_send_req_ms = 14;</code>
+     * @return The timeToSendReqMs.
+     */
+    @java.lang.Override
+    public int getTimeToSendReqMs() {
+      return timeToSendReqMs_;
+    }
+
+    public static final int TIME_TO_FIRST_BYTE_MS_FIELD_NUMBER = 15;
+    private int timeToFirstByteMs_;
+    /**
+     * <code>optional uint32 time_to_first_byte_ms = 15;</code>
+     * @return Whether the timeToFirstByteMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeToFirstByteMs() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>optional uint32 time_to_first_byte_ms = 15;</code>
+     * @return The timeToFirstByteMs.
+     */
+    @java.lang.Override
+    public int getTimeToFirstByteMs() {
+      return timeToFirstByteMs_;
+    }
+
+    public static final int TIME_TO_LAST_BYTE_MS_FIELD_NUMBER = 16;
+    private int timeToLastByteMs_;
+    /**
+     * <code>optional uint32 time_to_last_byte_ms = 16;</code>
+     * @return Whether the timeToLastByteMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeToLastByteMs() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <code>optional uint32 time_to_last_byte_ms = 16;</code>
+     * @return The timeToLastByteMs.
+     */
+    @java.lang.Override
+    public int getTimeToLastByteMs() {
+      return timeToLastByteMs_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -20358,6 +21646,18 @@ public final class SteammessagesCloudSteamclient {
       }
       if (((bitField0_ & 0x00000800) != 0)) {
         output.writeBool(12, ipv6Remote_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeUInt32(13, timeToConnectMs_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        output.writeUInt32(14, timeToSendReqMs_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        output.writeUInt32(15, timeToFirstByteMs_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        output.writeUInt32(16, timeToLastByteMs_);
       }
       unknownFields.writeTo(output);
     }
@@ -20413,6 +21713,22 @@ public final class SteammessagesCloudSteamclient {
       if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, ipv6Remote_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, timeToConnectMs_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, timeToSendReqMs_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, timeToFirstByteMs_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(16, timeToLastByteMs_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -20489,6 +21805,26 @@ public final class SteammessagesCloudSteamclient {
         if (getIpv6Remote()
             != other.getIpv6Remote()) return false;
       }
+      if (hasTimeToConnectMs() != other.hasTimeToConnectMs()) return false;
+      if (hasTimeToConnectMs()) {
+        if (getTimeToConnectMs()
+            != other.getTimeToConnectMs()) return false;
+      }
+      if (hasTimeToSendReqMs() != other.hasTimeToSendReqMs()) return false;
+      if (hasTimeToSendReqMs()) {
+        if (getTimeToSendReqMs()
+            != other.getTimeToSendReqMs()) return false;
+      }
+      if (hasTimeToFirstByteMs() != other.hasTimeToFirstByteMs()) return false;
+      if (hasTimeToFirstByteMs()) {
+        if (getTimeToFirstByteMs()
+            != other.getTimeToFirstByteMs()) return false;
+      }
+      if (hasTimeToLastByteMs() != other.hasTimeToLastByteMs()) return false;
+      if (hasTimeToLastByteMs()) {
+        if (getTimeToLastByteMs()
+            != other.getTimeToLastByteMs()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -20554,6 +21890,22 @@ public final class SteammessagesCloudSteamclient {
         hash = (37 * hash) + IPV6_REMOTE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIpv6Remote());
+      }
+      if (hasTimeToConnectMs()) {
+        hash = (37 * hash) + TIME_TO_CONNECT_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeToConnectMs();
+      }
+      if (hasTimeToSendReqMs()) {
+        hash = (37 * hash) + TIME_TO_SEND_REQ_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeToSendReqMs();
+      }
+      if (hasTimeToFirstByteMs()) {
+        hash = (37 * hash) + TIME_TO_FIRST_BYTE_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeToFirstByteMs();
+      }
+      if (hasTimeToLastByteMs()) {
+        hash = (37 * hash) + TIME_TO_LAST_BYTE_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeToLastByteMs();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -20712,6 +22064,14 @@ public final class SteammessagesCloudSteamclient {
         bitField0_ = (bitField0_ & ~0x00000400);
         ipv6Remote_ = false;
         bitField0_ = (bitField0_ & ~0x00000800);
+        timeToConnectMs_ = 0;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        timeToSendReqMs_ = 0;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        timeToFirstByteMs_ = 0;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        timeToLastByteMs_ = 0;
+        bitField0_ = (bitField0_ & ~0x00008000);
         return this;
       }
 
@@ -20787,6 +22147,22 @@ public final class SteammessagesCloudSteamclient {
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.ipv6Remote_ = ipv6Remote_;
           to_bitField0_ |= 0x00000800;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.timeToConnectMs_ = timeToConnectMs_;
+          to_bitField0_ |= 0x00001000;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.timeToSendReqMs_ = timeToSendReqMs_;
+          to_bitField0_ |= 0x00002000;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.timeToFirstByteMs_ = timeToFirstByteMs_;
+          to_bitField0_ |= 0x00004000;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.timeToLastByteMs_ = timeToLastByteMs_;
+          to_bitField0_ |= 0x00008000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -20876,6 +22252,18 @@ public final class SteammessagesCloudSteamclient {
         }
         if (other.hasIpv6Remote()) {
           setIpv6Remote(other.getIpv6Remote());
+        }
+        if (other.hasTimeToConnectMs()) {
+          setTimeToConnectMs(other.getTimeToConnectMs());
+        }
+        if (other.hasTimeToSendReqMs()) {
+          setTimeToSendReqMs(other.getTimeToSendReqMs());
+        }
+        if (other.hasTimeToFirstByteMs()) {
+          setTimeToFirstByteMs(other.getTimeToFirstByteMs());
+        }
+        if (other.hasTimeToLastByteMs()) {
+          setTimeToLastByteMs(other.getTimeToLastByteMs());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -21464,6 +22852,162 @@ public final class SteammessagesCloudSteamclient {
         onChanged();
         return this;
       }
+
+      private int timeToConnectMs_ ;
+      /**
+       * <code>optional uint32 time_to_connect_ms = 13;</code>
+       * @return Whether the timeToConnectMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeToConnectMs() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional uint32 time_to_connect_ms = 13;</code>
+       * @return The timeToConnectMs.
+       */
+      @java.lang.Override
+      public int getTimeToConnectMs() {
+        return timeToConnectMs_;
+      }
+      /**
+       * <code>optional uint32 time_to_connect_ms = 13;</code>
+       * @param value The timeToConnectMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeToConnectMs(int value) {
+        bitField0_ |= 0x00001000;
+        timeToConnectMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 time_to_connect_ms = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeToConnectMs() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        timeToConnectMs_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int timeToSendReqMs_ ;
+      /**
+       * <code>optional uint32 time_to_send_req_ms = 14;</code>
+       * @return Whether the timeToSendReqMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeToSendReqMs() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional uint32 time_to_send_req_ms = 14;</code>
+       * @return The timeToSendReqMs.
+       */
+      @java.lang.Override
+      public int getTimeToSendReqMs() {
+        return timeToSendReqMs_;
+      }
+      /**
+       * <code>optional uint32 time_to_send_req_ms = 14;</code>
+       * @param value The timeToSendReqMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeToSendReqMs(int value) {
+        bitField0_ |= 0x00002000;
+        timeToSendReqMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 time_to_send_req_ms = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeToSendReqMs() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        timeToSendReqMs_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int timeToFirstByteMs_ ;
+      /**
+       * <code>optional uint32 time_to_first_byte_ms = 15;</code>
+       * @return Whether the timeToFirstByteMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeToFirstByteMs() {
+        return ((bitField0_ & 0x00004000) != 0);
+      }
+      /**
+       * <code>optional uint32 time_to_first_byte_ms = 15;</code>
+       * @return The timeToFirstByteMs.
+       */
+      @java.lang.Override
+      public int getTimeToFirstByteMs() {
+        return timeToFirstByteMs_;
+      }
+      /**
+       * <code>optional uint32 time_to_first_byte_ms = 15;</code>
+       * @param value The timeToFirstByteMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeToFirstByteMs(int value) {
+        bitField0_ |= 0x00004000;
+        timeToFirstByteMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 time_to_first_byte_ms = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeToFirstByteMs() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        timeToFirstByteMs_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int timeToLastByteMs_ ;
+      /**
+       * <code>optional uint32 time_to_last_byte_ms = 16;</code>
+       * @return Whether the timeToLastByteMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeToLastByteMs() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>optional uint32 time_to_last_byte_ms = 16;</code>
+       * @return The timeToLastByteMs.
+       */
+      @java.lang.Override
+      public int getTimeToLastByteMs() {
+        return timeToLastByteMs_;
+      }
+      /**
+       * <code>optional uint32 time_to_last_byte_ms = 16;</code>
+       * @param value The timeToLastByteMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeToLastByteMs(int value) {
+        bitField0_ |= 0x00008000;
+        timeToLastByteMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 time_to_last_byte_ms = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeToLastByteMs() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        timeToLastByteMs_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21609,6 +23153,17 @@ public final class SteammessagesCloudSteamclient {
      * @return The clientId.
      */
     long getClientId();
+
+    /**
+     * <code>optional uint64 app_build_id = 6 [(.description) = "Current local build of the app which made these changes"];</code>
+     * @return Whether the appBuildId field is set.
+     */
+    boolean hasAppBuildId();
+    /**
+     * <code>optional uint64 app_build_id = 6 [(.description) = "Current local build of the app which made these changes"];</code>
+     * @return The appBuildId.
+     */
+    long getAppBuildId();
   }
   /**
    * Protobuf type {@code CCloud_BeginAppUploadBatch_Request}
@@ -21691,6 +23246,11 @@ public final class SteammessagesCloudSteamclient {
             case 40: {
               bitField0_ |= 0x00000004;
               clientId_ = input.readUInt64();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000008;
+              appBuildId_ = input.readUInt64();
               break;
             }
             default: {
@@ -21888,6 +23448,25 @@ public final class SteammessagesCloudSteamclient {
       return clientId_;
     }
 
+    public static final int APP_BUILD_ID_FIELD_NUMBER = 6;
+    private long appBuildId_;
+    /**
+     * <code>optional uint64 app_build_id = 6 [(.description) = "Current local build of the app which made these changes"];</code>
+     * @return Whether the appBuildId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppBuildId() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint64 app_build_id = 6 [(.description) = "Current local build of the app which made these changes"];</code>
+     * @return The appBuildId.
+     */
+    @java.lang.Override
+    public long getAppBuildId() {
+      return appBuildId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21916,6 +23495,9 @@ public final class SteammessagesCloudSteamclient {
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeUInt64(5, clientId_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt64(6, appBuildId_);
       }
       unknownFields.writeTo(output);
     }
@@ -21953,6 +23535,10 @@ public final class SteammessagesCloudSteamclient {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(5, clientId_);
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, appBuildId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -21987,6 +23573,11 @@ public final class SteammessagesCloudSteamclient {
         if (getClientId()
             != other.getClientId()) return false;
       }
+      if (hasAppBuildId() != other.hasAppBuildId()) return false;
+      if (hasAppBuildId()) {
+        if (getAppBuildId()
+            != other.getAppBuildId()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -22018,6 +23609,11 @@ public final class SteammessagesCloudSteamclient {
         hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getClientId());
+      }
+      if (hasAppBuildId()) {
+        hash = (37 * hash) + APP_BUILD_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAppBuildId());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -22162,6 +23758,8 @@ public final class SteammessagesCloudSteamclient {
         bitField0_ = (bitField0_ & ~0x00000008);
         clientId_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000010);
+        appBuildId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -22211,6 +23809,10 @@ public final class SteammessagesCloudSteamclient {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.clientId_ = clientId_;
           to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.appBuildId_ = appBuildId_;
+          to_bitField0_ |= 0x00000008;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -22291,6 +23893,9 @@ public final class SteammessagesCloudSteamclient {
         }
         if (other.hasClientId()) {
           setClientId(other.getClientId());
+        }
+        if (other.hasAppBuildId()) {
+          setAppBuildId(other.getAppBuildId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -22698,6 +24303,45 @@ public final class SteammessagesCloudSteamclient {
       public Builder clearClientId() {
         bitField0_ = (bitField0_ & ~0x00000010);
         clientId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long appBuildId_ ;
+      /**
+       * <code>optional uint64 app_build_id = 6 [(.description) = "Current local build of the app which made these changes"];</code>
+       * @return Whether the appBuildId field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppBuildId() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint64 app_build_id = 6 [(.description) = "Current local build of the app which made these changes"];</code>
+       * @return The appBuildId.
+       */
+      @java.lang.Override
+      public long getAppBuildId() {
+        return appBuildId_;
+      }
+      /**
+       * <code>optional uint64 app_build_id = 6 [(.description) = "Current local build of the app which made these changes"];</code>
+       * @param value The appBuildId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppBuildId(long value) {
+        bitField0_ |= 0x00000020;
+        appBuildId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 app_build_id = 6 [(.description) = "Current local build of the app which made these changes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppBuildId() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        appBuildId_ = 0L;
         onChanged();
         return this;
       }
@@ -24095,6 +25739,1146 @@ public final class SteammessagesCloudSteamclient {
 
     @java.lang.Override
     public SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Notification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CCloud_CompleteAppUploadBatch_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCloud_CompleteAppUploadBatch_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 appid = 1 [(.description) = "App ID for this batch is for."];</code>
+     * @return Whether the appid field is set.
+     */
+    boolean hasAppid();
+    /**
+     * <code>optional uint32 appid = 1 [(.description) = "App ID for this batch is for."];</code>
+     * @return The appid.
+     */
+    int getAppid();
+
+    /**
+     * <code>optional uint64 batch_id = 2 [(.description) = "ID of this batch."];</code>
+     * @return Whether the batchId field is set.
+     */
+    boolean hasBatchId();
+    /**
+     * <code>optional uint64 batch_id = 2 [(.description) = "ID of this batch."];</code>
+     * @return The batchId.
+     */
+    long getBatchId();
+
+    /**
+     * <code>optional uint32 batch_eresult = 3 [(.description) = "result of this batch."];</code>
+     * @return Whether the batchEresult field is set.
+     */
+    boolean hasBatchEresult();
+    /**
+     * <code>optional uint32 batch_eresult = 3 [(.description) = "result of this batch."];</code>
+     * @return The batchEresult.
+     */
+    int getBatchEresult();
+  }
+  /**
+   * Protobuf type {@code CCloud_CompleteAppUploadBatch_Request}
+   */
+  public static final class CCloud_CompleteAppUploadBatch_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCloud_CompleteAppUploadBatch_Request)
+      CCloud_CompleteAppUploadBatch_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCloud_CompleteAppUploadBatch_Request.newBuilder() to construct.
+    private CCloud_CompleteAppUploadBatch_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCloud_CompleteAppUploadBatch_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCloud_CompleteAppUploadBatch_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCloud_CompleteAppUploadBatch_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              appid_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              batchId_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              batchEresult_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_CompleteAppUploadBatch_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_CompleteAppUploadBatch_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request.class, SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int APPID_FIELD_NUMBER = 1;
+    private int appid_;
+    /**
+     * <code>optional uint32 appid = 1 [(.description) = "App ID for this batch is for."];</code>
+     * @return Whether the appid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 appid = 1 [(.description) = "App ID for this batch is for."];</code>
+     * @return The appid.
+     */
+    @java.lang.Override
+    public int getAppid() {
+      return appid_;
+    }
+
+    public static final int BATCH_ID_FIELD_NUMBER = 2;
+    private long batchId_;
+    /**
+     * <code>optional uint64 batch_id = 2 [(.description) = "ID of this batch."];</code>
+     * @return Whether the batchId field is set.
+     */
+    @java.lang.Override
+    public boolean hasBatchId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 batch_id = 2 [(.description) = "ID of this batch."];</code>
+     * @return The batchId.
+     */
+    @java.lang.Override
+    public long getBatchId() {
+      return batchId_;
+    }
+
+    public static final int BATCH_ERESULT_FIELD_NUMBER = 3;
+    private int batchEresult_;
+    /**
+     * <code>optional uint32 batch_eresult = 3 [(.description) = "result of this batch."];</code>
+     * @return Whether the batchEresult field is set.
+     */
+    @java.lang.Override
+    public boolean hasBatchEresult() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 batch_eresult = 3 [(.description) = "result of this batch."];</code>
+     * @return The batchEresult.
+     */
+    @java.lang.Override
+    public int getBatchEresult() {
+      return batchEresult_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, appid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(2, batchId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, batchEresult_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, appid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, batchId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, batchEresult_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request other = (SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request) obj;
+
+      if (hasAppid() != other.hasAppid()) return false;
+      if (hasAppid()) {
+        if (getAppid()
+            != other.getAppid()) return false;
+      }
+      if (hasBatchId() != other.hasBatchId()) return false;
+      if (hasBatchId()) {
+        if (getBatchId()
+            != other.getBatchId()) return false;
+      }
+      if (hasBatchEresult() != other.hasBatchEresult()) return false;
+      if (hasBatchEresult()) {
+        if (getBatchEresult()
+            != other.getBatchEresult()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAppid()) {
+        hash = (37 * hash) + APPID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppid();
+      }
+      if (hasBatchId()) {
+        hash = (37 * hash) + BATCH_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getBatchId());
+      }
+      if (hasBatchEresult()) {
+        hash = (37 * hash) + BATCH_ERESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getBatchEresult();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCloud_CompleteAppUploadBatch_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCloud_CompleteAppUploadBatch_Request)
+        SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_CompleteAppUploadBatch_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_CompleteAppUploadBatch_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request.class, SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        appid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        batchId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        batchEresult_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_CompleteAppUploadBatch_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request getDefaultInstanceForType() {
+        return SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request build() {
+        SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request buildPartial() {
+        SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request result = new SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appid_ = appid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.batchId_ = batchId_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.batchEresult_ = batchEresult_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request) {
+          return mergeFrom((SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request other) {
+        if (other == SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request.getDefaultInstance()) return this;
+        if (other.hasAppid()) {
+          setAppid(other.getAppid());
+        }
+        if (other.hasBatchId()) {
+          setBatchId(other.getBatchId());
+        }
+        if (other.hasBatchEresult()) {
+          setBatchEresult(other.getBatchEresult());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int appid_ ;
+      /**
+       * <code>optional uint32 appid = 1 [(.description) = "App ID for this batch is for."];</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 1 [(.description) = "App ID for this batch is for."];</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+      /**
+       * <code>optional uint32 appid = 1 [(.description) = "App ID for this batch is for."];</code>
+       * @param value The appid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppid(int value) {
+        bitField0_ |= 0x00000001;
+        appid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 appid = 1 [(.description) = "App ID for this batch is for."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long batchId_ ;
+      /**
+       * <code>optional uint64 batch_id = 2 [(.description) = "ID of this batch."];</code>
+       * @return Whether the batchId field is set.
+       */
+      @java.lang.Override
+      public boolean hasBatchId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 batch_id = 2 [(.description) = "ID of this batch."];</code>
+       * @return The batchId.
+       */
+      @java.lang.Override
+      public long getBatchId() {
+        return batchId_;
+      }
+      /**
+       * <code>optional uint64 batch_id = 2 [(.description) = "ID of this batch."];</code>
+       * @param value The batchId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchId(long value) {
+        bitField0_ |= 0x00000002;
+        batchId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 batch_id = 2 [(.description) = "ID of this batch."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        batchId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int batchEresult_ ;
+      /**
+       * <code>optional uint32 batch_eresult = 3 [(.description) = "result of this batch."];</code>
+       * @return Whether the batchEresult field is set.
+       */
+      @java.lang.Override
+      public boolean hasBatchEresult() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 batch_eresult = 3 [(.description) = "result of this batch."];</code>
+       * @return The batchEresult.
+       */
+      @java.lang.Override
+      public int getBatchEresult() {
+        return batchEresult_;
+      }
+      /**
+       * <code>optional uint32 batch_eresult = 3 [(.description) = "result of this batch."];</code>
+       * @param value The batchEresult to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchEresult(int value) {
+        bitField0_ |= 0x00000004;
+        batchEresult_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 batch_eresult = 3 [(.description) = "result of this batch."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchEresult() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        batchEresult_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCloud_CompleteAppUploadBatch_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCloud_CompleteAppUploadBatch_Request)
+    private static final SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request();
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCloud_CompleteAppUploadBatch_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CCloud_CompleteAppUploadBatch_Request>() {
+      @java.lang.Override
+      public CCloud_CompleteAppUploadBatch_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCloud_CompleteAppUploadBatch_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCloud_CompleteAppUploadBatch_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCloud_CompleteAppUploadBatch_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CCloud_CompleteAppUploadBatch_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCloud_CompleteAppUploadBatch_Response)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CCloud_CompleteAppUploadBatch_Response}
+   */
+  public static final class CCloud_CompleteAppUploadBatch_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCloud_CompleteAppUploadBatch_Response)
+      CCloud_CompleteAppUploadBatch_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCloud_CompleteAppUploadBatch_Response.newBuilder() to construct.
+    private CCloud_CompleteAppUploadBatch_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCloud_CompleteAppUploadBatch_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCloud_CompleteAppUploadBatch_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCloud_CompleteAppUploadBatch_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_CompleteAppUploadBatch_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_CompleteAppUploadBatch_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response.class, SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response other = (SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCloud_CompleteAppUploadBatch_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCloud_CompleteAppUploadBatch_Response)
+        SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_CompleteAppUploadBatch_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_CompleteAppUploadBatch_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response.class, SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_CompleteAppUploadBatch_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response getDefaultInstanceForType() {
+        return SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response build() {
+        SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response buildPartial() {
+        SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response result = new SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response) {
+          return mergeFrom((SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response other) {
+        if (other == SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCloud_CompleteAppUploadBatch_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCloud_CompleteAppUploadBatch_Response)
+    private static final SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response();
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCloud_CompleteAppUploadBatch_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CCloud_CompleteAppUploadBatch_Response>() {
+      @java.lang.Override
+      public CCloud_CompleteAppUploadBatch_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCloud_CompleteAppUploadBatch_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCloud_CompleteAppUploadBatch_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCloud_CompleteAppUploadBatch_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesCloudSteamclient.CCloud_CompleteAppUploadBatch_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -40149,6 +42933,17 @@ public final class SteammessagesCloudSteamclient {
      */
     com.google.protobuf.ByteString
         getMachineNamesBytes(int index);
+
+    /**
+     * <code>optional uint64 app_buildid_hwm = 6 [(.description) = "highest app build ID which has uploaded data"];</code>
+     * @return Whether the appBuildidHwm field is set.
+     */
+    boolean hasAppBuildidHwm();
+    /**
+     * <code>optional uint64 app_buildid_hwm = 6 [(.description) = "highest app build ID which has uploaded data"];</code>
+     * @return The appBuildidHwm.
+     */
+    long getAppBuildidHwm();
   }
   /**
    * Protobuf type {@code CCloud_GetAppFileChangelist_Response}
@@ -40234,6 +43029,11 @@ public final class SteammessagesCloudSteamclient {
                 mutable_bitField0_ |= 0x00000010;
               }
               machineNames_.add(bs);
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000004;
+              appBuildidHwm_ = input.readUInt64();
               break;
             }
             default: {
@@ -40426,6 +43226,25 @@ public final class SteammessagesCloudSteamclient {
       return machineNames_.getByteString(index);
     }
 
+    public static final int APP_BUILDID_HWM_FIELD_NUMBER = 6;
+    private long appBuildidHwm_;
+    /**
+     * <code>optional uint64 app_buildid_hwm = 6 [(.description) = "highest app build ID which has uploaded data"];</code>
+     * @return Whether the appBuildidHwm field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppBuildidHwm() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint64 app_buildid_hwm = 6 [(.description) = "highest app build ID which has uploaded data"];</code>
+     * @return The appBuildidHwm.
+     */
+    @java.lang.Override
+    public long getAppBuildidHwm() {
+      return appBuildidHwm_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -40454,6 +43273,9 @@ public final class SteammessagesCloudSteamclient {
       }
       for (int i = 0; i < machineNames_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, machineNames_.getRaw(i));
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(6, appBuildidHwm_);
       }
       unknownFields.writeTo(output);
     }
@@ -40492,6 +43314,10 @@ public final class SteammessagesCloudSteamclient {
         size += dataSize;
         size += 1 * getMachineNamesList().size();
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, appBuildidHwm_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -40523,6 +43349,11 @@ public final class SteammessagesCloudSteamclient {
           .equals(other.getPathPrefixesList())) return false;
       if (!getMachineNamesList()
           .equals(other.getMachineNamesList())) return false;
+      if (hasAppBuildidHwm() != other.hasAppBuildidHwm()) return false;
+      if (hasAppBuildidHwm()) {
+        if (getAppBuildidHwm()
+            != other.getAppBuildidHwm()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -40555,6 +43386,11 @@ public final class SteammessagesCloudSteamclient {
       if (getMachineNamesCount() > 0) {
         hash = (37 * hash) + MACHINE_NAMES_FIELD_NUMBER;
         hash = (53 * hash) + getMachineNamesList().hashCode();
+      }
+      if (hasAppBuildidHwm()) {
+        hash = (37 * hash) + APP_BUILDID_HWM_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAppBuildidHwm());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -40704,6 +43540,8 @@ public final class SteammessagesCloudSteamclient {
         bitField0_ = (bitField0_ & ~0x00000008);
         machineNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
+        appBuildidHwm_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -40759,6 +43597,10 @@ public final class SteammessagesCloudSteamclient {
           bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.machineNames_ = machineNames_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.appBuildidHwm_ = appBuildidHwm_;
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -40859,6 +43701,9 @@ public final class SteammessagesCloudSteamclient {
             machineNames_.addAll(other.machineNames_);
           }
           onChanged();
+        }
+        if (other.hasAppBuildidHwm()) {
+          setAppBuildidHwm(other.getAppBuildidHwm());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -41422,6 +44267,45 @@ public final class SteammessagesCloudSteamclient {
   }
   ensureMachineNamesIsMutable();
         machineNames_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private long appBuildidHwm_ ;
+      /**
+       * <code>optional uint64 app_buildid_hwm = 6 [(.description) = "highest app build ID which has uploaded data"];</code>
+       * @return Whether the appBuildidHwm field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppBuildidHwm() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint64 app_buildid_hwm = 6 [(.description) = "highest app build ID which has uploaded data"];</code>
+       * @return The appBuildidHwm.
+       */
+      @java.lang.Override
+      public long getAppBuildidHwm() {
+        return appBuildidHwm_;
+      }
+      /**
+       * <code>optional uint64 app_buildid_hwm = 6 [(.description) = "highest app build ID which has uploaded data"];</code>
+       * @param value The appBuildidHwm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppBuildidHwm(long value) {
+        bitField0_ |= 0x00000020;
+        appBuildidHwm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 app_buildid_hwm = 6 [(.description) = "highest app build ID which has uploaded data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppBuildidHwm() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        appBuildidHwm_ = 0L;
         onChanged();
         return this;
       }
@@ -44754,12 +47638,12 @@ public final class SteammessagesCloudSteamclient {
     /**
      * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
      */
-    java.util.List<IclientObjects.CCloud_PendingRemoteOperation> 
+    java.util.List<SteammessagesClientObjects.CCloud_PendingRemoteOperation> 
         getPendingRemoteOperationsList();
     /**
      * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
      */
-    IclientObjects.CCloud_PendingRemoteOperation getPendingRemoteOperations(int index);
+    SteammessagesClientObjects.CCloud_PendingRemoteOperation getPendingRemoteOperations(int index);
     /**
      * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
      */
@@ -44767,12 +47651,12 @@ public final class SteammessagesCloudSteamclient {
     /**
      * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
      */
-    java.util.List<? extends IclientObjects.CCloud_PendingRemoteOperationOrBuilder> 
+    java.util.List<? extends SteammessagesClientObjects.CCloud_PendingRemoteOperationOrBuilder> 
         getPendingRemoteOperationsOrBuilderList();
     /**
      * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
      */
-    IclientObjects.CCloud_PendingRemoteOperationOrBuilder getPendingRemoteOperationsOrBuilder(
+    SteammessagesClientObjects.CCloud_PendingRemoteOperationOrBuilder getPendingRemoteOperationsOrBuilder(
         int index);
   }
   /**
@@ -44824,11 +47708,11 @@ public final class SteammessagesCloudSteamclient {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                pendingRemoteOperations_ = new java.util.ArrayList<IclientObjects.CCloud_PendingRemoteOperation>();
+                pendingRemoteOperations_ = new java.util.ArrayList<SteammessagesClientObjects.CCloud_PendingRemoteOperation>();
                 mutable_bitField0_ |= 0x00000001;
               }
               pendingRemoteOperations_.add(
-                  input.readMessage(IclientObjects.CCloud_PendingRemoteOperation.PARSER, extensionRegistry));
+                  input.readMessage(SteammessagesClientObjects.CCloud_PendingRemoteOperation.PARSER, extensionRegistry));
               break;
             }
             default: {
@@ -44867,19 +47751,19 @@ public final class SteammessagesCloudSteamclient {
     }
 
     public static final int PENDING_REMOTE_OPERATIONS_FIELD_NUMBER = 1;
-    private java.util.List<IclientObjects.CCloud_PendingRemoteOperation> pendingRemoteOperations_;
+    private java.util.List<SteammessagesClientObjects.CCloud_PendingRemoteOperation> pendingRemoteOperations_;
     /**
      * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
      */
     @java.lang.Override
-    public java.util.List<IclientObjects.CCloud_PendingRemoteOperation> getPendingRemoteOperationsList() {
+    public java.util.List<SteammessagesClientObjects.CCloud_PendingRemoteOperation> getPendingRemoteOperationsList() {
       return pendingRemoteOperations_;
     }
     /**
      * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends IclientObjects.CCloud_PendingRemoteOperationOrBuilder> 
+    public java.util.List<? extends SteammessagesClientObjects.CCloud_PendingRemoteOperationOrBuilder> 
         getPendingRemoteOperationsOrBuilderList() {
       return pendingRemoteOperations_;
     }
@@ -44894,14 +47778,14 @@ public final class SteammessagesCloudSteamclient {
      * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
      */
     @java.lang.Override
-    public IclientObjects.CCloud_PendingRemoteOperation getPendingRemoteOperations(int index) {
+    public SteammessagesClientObjects.CCloud_PendingRemoteOperation getPendingRemoteOperations(int index) {
       return pendingRemoteOperations_.get(index);
     }
     /**
      * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
      */
     @java.lang.Override
-    public IclientObjects.CCloud_PendingRemoteOperationOrBuilder getPendingRemoteOperationsOrBuilder(
+    public SteammessagesClientObjects.CCloud_PendingRemoteOperationOrBuilder getPendingRemoteOperationsOrBuilder(
         int index) {
       return pendingRemoteOperations_.get(index);
     }
@@ -45248,22 +48132,22 @@ public final class SteammessagesCloudSteamclient {
       }
       private int bitField0_;
 
-      private java.util.List<IclientObjects.CCloud_PendingRemoteOperation> pendingRemoteOperations_ =
+      private java.util.List<SteammessagesClientObjects.CCloud_PendingRemoteOperation> pendingRemoteOperations_ =
         java.util.Collections.emptyList();
       private void ensurePendingRemoteOperationsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          pendingRemoteOperations_ = new java.util.ArrayList<IclientObjects.CCloud_PendingRemoteOperation>(pendingRemoteOperations_);
+          pendingRemoteOperations_ = new java.util.ArrayList<SteammessagesClientObjects.CCloud_PendingRemoteOperation>(pendingRemoteOperations_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          IclientObjects.CCloud_PendingRemoteOperation, IclientObjects.CCloud_PendingRemoteOperation.Builder, IclientObjects.CCloud_PendingRemoteOperationOrBuilder> pendingRemoteOperationsBuilder_;
+          SteammessagesClientObjects.CCloud_PendingRemoteOperation, SteammessagesClientObjects.CCloud_PendingRemoteOperation.Builder, SteammessagesClientObjects.CCloud_PendingRemoteOperationOrBuilder> pendingRemoteOperationsBuilder_;
 
       /**
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
-      public java.util.List<IclientObjects.CCloud_PendingRemoteOperation> getPendingRemoteOperationsList() {
+      public java.util.List<SteammessagesClientObjects.CCloud_PendingRemoteOperation> getPendingRemoteOperationsList() {
         if (pendingRemoteOperationsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(pendingRemoteOperations_);
         } else {
@@ -45283,7 +48167,7 @@ public final class SteammessagesCloudSteamclient {
       /**
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
-      public IclientObjects.CCloud_PendingRemoteOperation getPendingRemoteOperations(int index) {
+      public SteammessagesClientObjects.CCloud_PendingRemoteOperation getPendingRemoteOperations(int index) {
         if (pendingRemoteOperationsBuilder_ == null) {
           return pendingRemoteOperations_.get(index);
         } else {
@@ -45294,7 +48178,7 @@ public final class SteammessagesCloudSteamclient {
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
       public Builder setPendingRemoteOperations(
-          int index, IclientObjects.CCloud_PendingRemoteOperation value) {
+          int index, SteammessagesClientObjects.CCloud_PendingRemoteOperation value) {
         if (pendingRemoteOperationsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -45311,7 +48195,7 @@ public final class SteammessagesCloudSteamclient {
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
       public Builder setPendingRemoteOperations(
-          int index, IclientObjects.CCloud_PendingRemoteOperation.Builder builderForValue) {
+          int index, SteammessagesClientObjects.CCloud_PendingRemoteOperation.Builder builderForValue) {
         if (pendingRemoteOperationsBuilder_ == null) {
           ensurePendingRemoteOperationsIsMutable();
           pendingRemoteOperations_.set(index, builderForValue.build());
@@ -45324,7 +48208,7 @@ public final class SteammessagesCloudSteamclient {
       /**
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
-      public Builder addPendingRemoteOperations(IclientObjects.CCloud_PendingRemoteOperation value) {
+      public Builder addPendingRemoteOperations(SteammessagesClientObjects.CCloud_PendingRemoteOperation value) {
         if (pendingRemoteOperationsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -45341,7 +48225,7 @@ public final class SteammessagesCloudSteamclient {
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
       public Builder addPendingRemoteOperations(
-          int index, IclientObjects.CCloud_PendingRemoteOperation value) {
+          int index, SteammessagesClientObjects.CCloud_PendingRemoteOperation value) {
         if (pendingRemoteOperationsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -45358,7 +48242,7 @@ public final class SteammessagesCloudSteamclient {
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
       public Builder addPendingRemoteOperations(
-          IclientObjects.CCloud_PendingRemoteOperation.Builder builderForValue) {
+          SteammessagesClientObjects.CCloud_PendingRemoteOperation.Builder builderForValue) {
         if (pendingRemoteOperationsBuilder_ == null) {
           ensurePendingRemoteOperationsIsMutable();
           pendingRemoteOperations_.add(builderForValue.build());
@@ -45372,7 +48256,7 @@ public final class SteammessagesCloudSteamclient {
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
       public Builder addPendingRemoteOperations(
-          int index, IclientObjects.CCloud_PendingRemoteOperation.Builder builderForValue) {
+          int index, SteammessagesClientObjects.CCloud_PendingRemoteOperation.Builder builderForValue) {
         if (pendingRemoteOperationsBuilder_ == null) {
           ensurePendingRemoteOperationsIsMutable();
           pendingRemoteOperations_.add(index, builderForValue.build());
@@ -45386,7 +48270,7 @@ public final class SteammessagesCloudSteamclient {
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
       public Builder addAllPendingRemoteOperations(
-          java.lang.Iterable<? extends IclientObjects.CCloud_PendingRemoteOperation> values) {
+          java.lang.Iterable<? extends SteammessagesClientObjects.CCloud_PendingRemoteOperation> values) {
         if (pendingRemoteOperationsBuilder_ == null) {
           ensurePendingRemoteOperationsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -45426,14 +48310,14 @@ public final class SteammessagesCloudSteamclient {
       /**
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
-      public IclientObjects.CCloud_PendingRemoteOperation.Builder getPendingRemoteOperationsBuilder(
+      public SteammessagesClientObjects.CCloud_PendingRemoteOperation.Builder getPendingRemoteOperationsBuilder(
           int index) {
         return getPendingRemoteOperationsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
-      public IclientObjects.CCloud_PendingRemoteOperationOrBuilder getPendingRemoteOperationsOrBuilder(
+      public SteammessagesClientObjects.CCloud_PendingRemoteOperationOrBuilder getPendingRemoteOperationsOrBuilder(
           int index) {
         if (pendingRemoteOperationsBuilder_ == null) {
           return pendingRemoteOperations_.get(index);  } else {
@@ -45443,7 +48327,7 @@ public final class SteammessagesCloudSteamclient {
       /**
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
-      public java.util.List<? extends IclientObjects.CCloud_PendingRemoteOperationOrBuilder> 
+      public java.util.List<? extends SteammessagesClientObjects.CCloud_PendingRemoteOperationOrBuilder> 
            getPendingRemoteOperationsOrBuilderList() {
         if (pendingRemoteOperationsBuilder_ != null) {
           return pendingRemoteOperationsBuilder_.getMessageOrBuilderList();
@@ -45454,31 +48338,31 @@ public final class SteammessagesCloudSteamclient {
       /**
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
-      public IclientObjects.CCloud_PendingRemoteOperation.Builder addPendingRemoteOperationsBuilder() {
+      public SteammessagesClientObjects.CCloud_PendingRemoteOperation.Builder addPendingRemoteOperationsBuilder() {
         return getPendingRemoteOperationsFieldBuilder().addBuilder(
-            IclientObjects.CCloud_PendingRemoteOperation.getDefaultInstance());
+            SteammessagesClientObjects.CCloud_PendingRemoteOperation.getDefaultInstance());
       }
       /**
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
-      public IclientObjects.CCloud_PendingRemoteOperation.Builder addPendingRemoteOperationsBuilder(
+      public SteammessagesClientObjects.CCloud_PendingRemoteOperation.Builder addPendingRemoteOperationsBuilder(
           int index) {
         return getPendingRemoteOperationsFieldBuilder().addBuilder(
-            index, IclientObjects.CCloud_PendingRemoteOperation.getDefaultInstance());
+            index, SteammessagesClientObjects.CCloud_PendingRemoteOperation.getDefaultInstance());
       }
       /**
        * <code>repeated .CCloud_PendingRemoteOperation pending_remote_operations = 1 [(.description) = "pending remote operations you should be aware of"];</code>
        */
-      public java.util.List<IclientObjects.CCloud_PendingRemoteOperation.Builder> 
+      public java.util.List<SteammessagesClientObjects.CCloud_PendingRemoteOperation.Builder> 
            getPendingRemoteOperationsBuilderList() {
         return getPendingRemoteOperationsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          IclientObjects.CCloud_PendingRemoteOperation, IclientObjects.CCloud_PendingRemoteOperation.Builder, IclientObjects.CCloud_PendingRemoteOperationOrBuilder> 
+          SteammessagesClientObjects.CCloud_PendingRemoteOperation, SteammessagesClientObjects.CCloud_PendingRemoteOperation.Builder, SteammessagesClientObjects.CCloud_PendingRemoteOperationOrBuilder> 
           getPendingRemoteOperationsFieldBuilder() {
         if (pendingRemoteOperationsBuilder_ == null) {
           pendingRemoteOperationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              IclientObjects.CCloud_PendingRemoteOperation, IclientObjects.CCloud_PendingRemoteOperation.Builder, IclientObjects.CCloud_PendingRemoteOperationOrBuilder>(
+              SteammessagesClientObjects.CCloud_PendingRemoteOperation, SteammessagesClientObjects.CCloud_PendingRemoteOperation.Builder, SteammessagesClientObjects.CCloud_PendingRemoteOperationOrBuilder>(
                   pendingRemoteOperations_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -45576,6 +48460,17 @@ public final class SteammessagesCloudSteamclient {
      * @return The uploadsCompleted.
      */
     boolean getUploadsCompleted();
+
+    /**
+     * <code>optional bool uploads_required = 4;</code>
+     * @return Whether the uploadsRequired field is set.
+     */
+    boolean hasUploadsRequired();
+    /**
+     * <code>optional bool uploads_required = 4;</code>
+     * @return The uploadsRequired.
+     */
+    boolean getUploadsRequired();
   }
   /**
    * Protobuf type {@code CCloud_AppExitSyncDone_Notification}
@@ -45636,6 +48531,11 @@ public final class SteammessagesCloudSteamclient {
             case 24: {
               bitField0_ |= 0x00000004;
               uploadsCompleted_ = input.readBool();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              uploadsRequired_ = input.readBool();
               break;
             }
             default: {
@@ -45728,6 +48628,25 @@ public final class SteammessagesCloudSteamclient {
       return uploadsCompleted_;
     }
 
+    public static final int UPLOADS_REQUIRED_FIELD_NUMBER = 4;
+    private boolean uploadsRequired_;
+    /**
+     * <code>optional bool uploads_required = 4;</code>
+     * @return Whether the uploadsRequired field is set.
+     */
+    @java.lang.Override
+    public boolean hasUploadsRequired() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional bool uploads_required = 4;</code>
+     * @return The uploadsRequired.
+     */
+    @java.lang.Override
+    public boolean getUploadsRequired() {
+      return uploadsRequired_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -45751,6 +48670,9 @@ public final class SteammessagesCloudSteamclient {
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeBool(3, uploadsCompleted_);
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBool(4, uploadsRequired_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -45771,6 +48693,10 @@ public final class SteammessagesCloudSteamclient {
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, uploadsCompleted_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, uploadsRequired_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -45802,6 +48728,11 @@ public final class SteammessagesCloudSteamclient {
         if (getUploadsCompleted()
             != other.getUploadsCompleted()) return false;
       }
+      if (hasUploadsRequired() != other.hasUploadsRequired()) return false;
+      if (hasUploadsRequired()) {
+        if (getUploadsRequired()
+            != other.getUploadsRequired()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -45826,6 +48757,11 @@ public final class SteammessagesCloudSteamclient {
         hash = (37 * hash) + UPLOADS_COMPLETED_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getUploadsCompleted());
+      }
+      if (hasUploadsRequired()) {
+        hash = (37 * hash) + UPLOADS_REQUIRED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUploadsRequired());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -45966,6 +48902,8 @@ public final class SteammessagesCloudSteamclient {
         bitField0_ = (bitField0_ & ~0x00000002);
         uploadsCompleted_ = false;
         bitField0_ = (bitField0_ & ~0x00000004);
+        uploadsRequired_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -46005,6 +48943,10 @@ public final class SteammessagesCloudSteamclient {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.uploadsCompleted_ = uploadsCompleted_;
           to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.uploadsRequired_ = uploadsRequired_;
+          to_bitField0_ |= 0x00000008;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -46063,6 +49005,9 @@ public final class SteammessagesCloudSteamclient {
         }
         if (other.hasUploadsCompleted()) {
           setUploadsCompleted(other.getUploadsCompleted());
+        }
+        if (other.hasUploadsRequired()) {
+          setUploadsRequired(other.getUploadsRequired());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -46210,6 +49155,45 @@ public final class SteammessagesCloudSteamclient {
         onChanged();
         return this;
       }
+
+      private boolean uploadsRequired_ ;
+      /**
+       * <code>optional bool uploads_required = 4;</code>
+       * @return Whether the uploadsRequired field is set.
+       */
+      @java.lang.Override
+      public boolean hasUploadsRequired() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool uploads_required = 4;</code>
+       * @return The uploadsRequired.
+       */
+      @java.lang.Override
+      public boolean getUploadsRequired() {
+        return uploadsRequired_;
+      }
+      /**
+       * <code>optional bool uploads_required = 4;</code>
+       * @param value The uploadsRequired to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadsRequired(boolean value) {
+        bitField0_ |= 0x00000008;
+        uploadsRequired_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool uploads_required = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUploadsRequired() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        uploadsRequired_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -46258,6 +49242,1351 @@ public final class SteammessagesCloudSteamclient {
 
     @java.lang.Override
     public SteammessagesCloudSteamclient.CCloud_AppExitSyncDone_Notification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CCloud_ClientGetAppQuotaUsage_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCloud_ClientGetAppQuotaUsage_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return Whether the appid field is set.
+     */
+    boolean hasAppid();
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return The appid.
+     */
+    int getAppid();
+  }
+  /**
+   * Protobuf type {@code CCloud_ClientGetAppQuotaUsage_Request}
+   */
+  public static final class CCloud_ClientGetAppQuotaUsage_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCloud_ClientGetAppQuotaUsage_Request)
+      CCloud_ClientGetAppQuotaUsage_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCloud_ClientGetAppQuotaUsage_Request.newBuilder() to construct.
+    private CCloud_ClientGetAppQuotaUsage_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCloud_ClientGetAppQuotaUsage_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCloud_ClientGetAppQuotaUsage_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCloud_ClientGetAppQuotaUsage_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              appid_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_ClientGetAppQuotaUsage_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_ClientGetAppQuotaUsage_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request.class, SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int APPID_FIELD_NUMBER = 1;
+    private int appid_;
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return Whether the appid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return The appid.
+     */
+    @java.lang.Override
+    public int getAppid() {
+      return appid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, appid_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, appid_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request other = (SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request) obj;
+
+      if (hasAppid() != other.hasAppid()) return false;
+      if (hasAppid()) {
+        if (getAppid()
+            != other.getAppid()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAppid()) {
+        hash = (37 * hash) + APPID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppid();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCloud_ClientGetAppQuotaUsage_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCloud_ClientGetAppQuotaUsage_Request)
+        SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientGetAppQuotaUsage_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientGetAppQuotaUsage_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request.class, SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        appid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientGetAppQuotaUsage_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request getDefaultInstanceForType() {
+        return SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request build() {
+        SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request buildPartial() {
+        SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request result = new SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appid_ = appid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request) {
+          return mergeFrom((SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request other) {
+        if (other == SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request.getDefaultInstance()) return this;
+        if (other.hasAppid()) {
+          setAppid(other.getAppid());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int appid_ ;
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @param value The appid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppid(int value) {
+        bitField0_ |= 0x00000001;
+        appid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appid_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCloud_ClientGetAppQuotaUsage_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCloud_ClientGetAppQuotaUsage_Request)
+    private static final SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request();
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCloud_ClientGetAppQuotaUsage_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CCloud_ClientGetAppQuotaUsage_Request>() {
+      @java.lang.Override
+      public CCloud_ClientGetAppQuotaUsage_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCloud_ClientGetAppQuotaUsage_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCloud_ClientGetAppQuotaUsage_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCloud_ClientGetAppQuotaUsage_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CCloud_ClientGetAppQuotaUsage_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCloud_ClientGetAppQuotaUsage_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 existing_files = 1;</code>
+     * @return Whether the existingFiles field is set.
+     */
+    boolean hasExistingFiles();
+    /**
+     * <code>optional uint32 existing_files = 1;</code>
+     * @return The existingFiles.
+     */
+    int getExistingFiles();
+
+    /**
+     * <code>optional uint64 existing_bytes = 2;</code>
+     * @return Whether the existingBytes field is set.
+     */
+    boolean hasExistingBytes();
+    /**
+     * <code>optional uint64 existing_bytes = 2;</code>
+     * @return The existingBytes.
+     */
+    long getExistingBytes();
+
+    /**
+     * <code>optional uint32 max_num_files = 3;</code>
+     * @return Whether the maxNumFiles field is set.
+     */
+    boolean hasMaxNumFiles();
+    /**
+     * <code>optional uint32 max_num_files = 3;</code>
+     * @return The maxNumFiles.
+     */
+    int getMaxNumFiles();
+
+    /**
+     * <code>optional uint64 max_num_bytes = 4;</code>
+     * @return Whether the maxNumBytes field is set.
+     */
+    boolean hasMaxNumBytes();
+    /**
+     * <code>optional uint64 max_num_bytes = 4;</code>
+     * @return The maxNumBytes.
+     */
+    long getMaxNumBytes();
+  }
+  /**
+   * Protobuf type {@code CCloud_ClientGetAppQuotaUsage_Response}
+   */
+  public static final class CCloud_ClientGetAppQuotaUsage_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCloud_ClientGetAppQuotaUsage_Response)
+      CCloud_ClientGetAppQuotaUsage_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCloud_ClientGetAppQuotaUsage_Response.newBuilder() to construct.
+    private CCloud_ClientGetAppQuotaUsage_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCloud_ClientGetAppQuotaUsage_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCloud_ClientGetAppQuotaUsage_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCloud_ClientGetAppQuotaUsage_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              existingFiles_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              existingBytes_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              maxNumFiles_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              maxNumBytes_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_ClientGetAppQuotaUsage_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_ClientGetAppQuotaUsage_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response.class, SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EXISTING_FILES_FIELD_NUMBER = 1;
+    private int existingFiles_;
+    /**
+     * <code>optional uint32 existing_files = 1;</code>
+     * @return Whether the existingFiles field is set.
+     */
+    @java.lang.Override
+    public boolean hasExistingFiles() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 existing_files = 1;</code>
+     * @return The existingFiles.
+     */
+    @java.lang.Override
+    public int getExistingFiles() {
+      return existingFiles_;
+    }
+
+    public static final int EXISTING_BYTES_FIELD_NUMBER = 2;
+    private long existingBytes_;
+    /**
+     * <code>optional uint64 existing_bytes = 2;</code>
+     * @return Whether the existingBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasExistingBytes() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 existing_bytes = 2;</code>
+     * @return The existingBytes.
+     */
+    @java.lang.Override
+    public long getExistingBytes() {
+      return existingBytes_;
+    }
+
+    public static final int MAX_NUM_FILES_FIELD_NUMBER = 3;
+    private int maxNumFiles_;
+    /**
+     * <code>optional uint32 max_num_files = 3;</code>
+     * @return Whether the maxNumFiles field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxNumFiles() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 max_num_files = 3;</code>
+     * @return The maxNumFiles.
+     */
+    @java.lang.Override
+    public int getMaxNumFiles() {
+      return maxNumFiles_;
+    }
+
+    public static final int MAX_NUM_BYTES_FIELD_NUMBER = 4;
+    private long maxNumBytes_;
+    /**
+     * <code>optional uint64 max_num_bytes = 4;</code>
+     * @return Whether the maxNumBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxNumBytes() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint64 max_num_bytes = 4;</code>
+     * @return The maxNumBytes.
+     */
+    @java.lang.Override
+    public long getMaxNumBytes() {
+      return maxNumBytes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, existingFiles_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(2, existingBytes_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, maxNumFiles_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt64(4, maxNumBytes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, existingFiles_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, existingBytes_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, maxNumFiles_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, maxNumBytes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response other = (SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response) obj;
+
+      if (hasExistingFiles() != other.hasExistingFiles()) return false;
+      if (hasExistingFiles()) {
+        if (getExistingFiles()
+            != other.getExistingFiles()) return false;
+      }
+      if (hasExistingBytes() != other.hasExistingBytes()) return false;
+      if (hasExistingBytes()) {
+        if (getExistingBytes()
+            != other.getExistingBytes()) return false;
+      }
+      if (hasMaxNumFiles() != other.hasMaxNumFiles()) return false;
+      if (hasMaxNumFiles()) {
+        if (getMaxNumFiles()
+            != other.getMaxNumFiles()) return false;
+      }
+      if (hasMaxNumBytes() != other.hasMaxNumBytes()) return false;
+      if (hasMaxNumBytes()) {
+        if (getMaxNumBytes()
+            != other.getMaxNumBytes()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasExistingFiles()) {
+        hash = (37 * hash) + EXISTING_FILES_FIELD_NUMBER;
+        hash = (53 * hash) + getExistingFiles();
+      }
+      if (hasExistingBytes()) {
+        hash = (37 * hash) + EXISTING_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getExistingBytes());
+      }
+      if (hasMaxNumFiles()) {
+        hash = (37 * hash) + MAX_NUM_FILES_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxNumFiles();
+      }
+      if (hasMaxNumBytes()) {
+        hash = (37 * hash) + MAX_NUM_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMaxNumBytes());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCloud_ClientGetAppQuotaUsage_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCloud_ClientGetAppQuotaUsage_Response)
+        SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientGetAppQuotaUsage_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientGetAppQuotaUsage_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response.class, SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        existingFiles_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        existingBytes_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        maxNumFiles_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        maxNumBytes_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientGetAppQuotaUsage_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response getDefaultInstanceForType() {
+        return SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response build() {
+        SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response buildPartial() {
+        SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response result = new SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.existingFiles_ = existingFiles_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.existingBytes_ = existingBytes_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.maxNumFiles_ = maxNumFiles_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.maxNumBytes_ = maxNumBytes_;
+          to_bitField0_ |= 0x00000008;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response) {
+          return mergeFrom((SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response other) {
+        if (other == SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response.getDefaultInstance()) return this;
+        if (other.hasExistingFiles()) {
+          setExistingFiles(other.getExistingFiles());
+        }
+        if (other.hasExistingBytes()) {
+          setExistingBytes(other.getExistingBytes());
+        }
+        if (other.hasMaxNumFiles()) {
+          setMaxNumFiles(other.getMaxNumFiles());
+        }
+        if (other.hasMaxNumBytes()) {
+          setMaxNumBytes(other.getMaxNumBytes());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int existingFiles_ ;
+      /**
+       * <code>optional uint32 existing_files = 1;</code>
+       * @return Whether the existingFiles field is set.
+       */
+      @java.lang.Override
+      public boolean hasExistingFiles() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 existing_files = 1;</code>
+       * @return The existingFiles.
+       */
+      @java.lang.Override
+      public int getExistingFiles() {
+        return existingFiles_;
+      }
+      /**
+       * <code>optional uint32 existing_files = 1;</code>
+       * @param value The existingFiles to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExistingFiles(int value) {
+        bitField0_ |= 0x00000001;
+        existingFiles_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 existing_files = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExistingFiles() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        existingFiles_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long existingBytes_ ;
+      /**
+       * <code>optional uint64 existing_bytes = 2;</code>
+       * @return Whether the existingBytes field is set.
+       */
+      @java.lang.Override
+      public boolean hasExistingBytes() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 existing_bytes = 2;</code>
+       * @return The existingBytes.
+       */
+      @java.lang.Override
+      public long getExistingBytes() {
+        return existingBytes_;
+      }
+      /**
+       * <code>optional uint64 existing_bytes = 2;</code>
+       * @param value The existingBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExistingBytes(long value) {
+        bitField0_ |= 0x00000002;
+        existingBytes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 existing_bytes = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExistingBytes() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        existingBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int maxNumFiles_ ;
+      /**
+       * <code>optional uint32 max_num_files = 3;</code>
+       * @return Whether the maxNumFiles field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxNumFiles() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 max_num_files = 3;</code>
+       * @return The maxNumFiles.
+       */
+      @java.lang.Override
+      public int getMaxNumFiles() {
+        return maxNumFiles_;
+      }
+      /**
+       * <code>optional uint32 max_num_files = 3;</code>
+       * @param value The maxNumFiles to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxNumFiles(int value) {
+        bitField0_ |= 0x00000004;
+        maxNumFiles_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 max_num_files = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxNumFiles() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        maxNumFiles_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long maxNumBytes_ ;
+      /**
+       * <code>optional uint64 max_num_bytes = 4;</code>
+       * @return Whether the maxNumBytes field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxNumBytes() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint64 max_num_bytes = 4;</code>
+       * @return The maxNumBytes.
+       */
+      @java.lang.Override
+      public long getMaxNumBytes() {
+        return maxNumBytes_;
+      }
+      /**
+       * <code>optional uint64 max_num_bytes = 4;</code>
+       * @param value The maxNumBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxNumBytes(long value) {
+        bitField0_ |= 0x00000008;
+        maxNumBytes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 max_num_bytes = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxNumBytes() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        maxNumBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCloud_ClientGetAppQuotaUsage_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCloud_ClientGetAppQuotaUsage_Response)
+    private static final SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response();
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCloud_ClientGetAppQuotaUsage_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CCloud_ClientGetAppQuotaUsage_Response>() {
+      @java.lang.Override
+      public CCloud_ClientGetAppQuotaUsage_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCloud_ClientGetAppQuotaUsage_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCloud_ClientGetAppQuotaUsage_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCloud_ClientGetAppQuotaUsage_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesCloudSteamclient.CCloud_ClientGetAppQuotaUsage_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -46886,6 +51215,540 @@ public final class SteammessagesCloudSteamclient {
 
   }
 
+  public interface CCloud_ClientLogUploadRequest_NotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCloud_ClientLogUploadRequest_Notification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 request_id = 1;</code>
+     * @return Whether the requestId field is set.
+     */
+    boolean hasRequestId();
+    /**
+     * <code>optional uint64 request_id = 1;</code>
+     * @return The requestId.
+     */
+    long getRequestId();
+  }
+  /**
+   * Protobuf type {@code CCloud_ClientLogUploadRequest_Notification}
+   */
+  public static final class CCloud_ClientLogUploadRequest_Notification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCloud_ClientLogUploadRequest_Notification)
+      CCloud_ClientLogUploadRequest_NotificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCloud_ClientLogUploadRequest_Notification.newBuilder() to construct.
+    private CCloud_ClientLogUploadRequest_Notification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCloud_ClientLogUploadRequest_Notification() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCloud_ClientLogUploadRequest_Notification();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCloud_ClientLogUploadRequest_Notification(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              requestId_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadRequest_Notification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadRequest_Notification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification.class, SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REQUEST_ID_FIELD_NUMBER = 1;
+    private long requestId_;
+    /**
+     * <code>optional uint64 request_id = 1;</code>
+     * @return Whether the requestId field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequestId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 request_id = 1;</code>
+     * @return The requestId.
+     */
+    @java.lang.Override
+    public long getRequestId() {
+      return requestId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, requestId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, requestId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification)) {
+        return super.equals(obj);
+      }
+      SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification other = (SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification) obj;
+
+      if (hasRequestId() != other.hasRequestId()) return false;
+      if (hasRequestId()) {
+        if (getRequestId()
+            != other.getRequestId()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRequestId()) {
+        hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRequestId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCloud_ClientLogUploadRequest_Notification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCloud_ClientLogUploadRequest_Notification)
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_NotificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadRequest_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadRequest_Notification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification.class, SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification.Builder.class);
+      }
+
+      // Construct using SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        requestId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesCloudSteamclient.internal_static_CCloud_ClientLogUploadRequest_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification getDefaultInstanceForType() {
+        return SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification build() {
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification buildPartial() {
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification result = new SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestId_ = requestId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification) {
+          return mergeFrom((SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification other) {
+        if (other == SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification.getDefaultInstance()) return this;
+        if (other.hasRequestId()) {
+          setRequestId(other.getRequestId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long requestId_ ;
+      /**
+       * <code>optional uint64 request_id = 1;</code>
+       * @return Whether the requestId field is set.
+       */
+      @java.lang.Override
+      public boolean hasRequestId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 request_id = 1;</code>
+       * @return The requestId.
+       */
+      @java.lang.Override
+      public long getRequestId() {
+        return requestId_;
+      }
+      /**
+       * <code>optional uint64 request_id = 1;</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestId(long value) {
+        bitField0_ |= 0x00000001;
+        requestId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 request_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        requestId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCloud_ClientLogUploadRequest_Notification)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCloud_ClientLogUploadRequest_Notification)
+    private static final SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification();
+    }
+
+    public static SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCloud_ClientLogUploadRequest_Notification>
+        PARSER = new com.google.protobuf.AbstractParser<CCloud_ClientLogUploadRequest_Notification>() {
+      @java.lang.Override
+      public CCloud_ClientLogUploadRequest_Notification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCloud_ClientLogUploadRequest_Notification(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCloud_ClientLogUploadRequest_Notification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCloud_ClientLogUploadRequest_Notification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesCloudSteamclient.CCloud_ClientLogUploadRequest_Notification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCloud_ClientLogUploadCheck_Notification_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCloud_ClientLogUploadCheck_Notification_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCloud_ClientLogUploadComplete_Notification_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCloud_ClientLogUploadComplete_Notification_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCloud_GetUploadServerInfo_Request_descriptor;
   private static final 
@@ -47017,6 +51880,16 @@ public final class SteammessagesCloudSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCloud_CompleteAppUploadBatch_Notification_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCloud_CompleteAppUploadBatch_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCloud_CompleteAppUploadBatch_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCloud_CompleteAppUploadBatch_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCloud_CompleteAppUploadBatch_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCloud_ClientBeginFileUpload_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -47142,10 +52015,25 @@ public final class SteammessagesCloudSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCloud_AppExitSyncDone_Notification_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCloud_ClientGetAppQuotaUsage_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCloud_ClientGetAppQuotaUsage_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCloud_ClientGetAppQuotaUsage_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCloud_ClientGetAppQuotaUsage_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCloud_AppCloudStateChange_Notification_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCloud_AppCloudStateChange_Notification_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCloud_ClientLogUploadRequest_Notification_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCloud_ClientLogUploadRequest_Notification_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -47156,454 +52044,512 @@ public final class SteammessagesCloudSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n+steam/steammessages_cloud.steamclient." +
-      "proto\0322steam/steammessages_unified_base." +
-      "steamclient.proto\032\021steam/enums.proto\032\033st" +
-      "eam/iclient_objects.proto\"d\n\"CCloud_GetU" +
-      "ploadServerInfo_Request\022>\n\005appid\030\001 \001(\rB/" +
-      "\202\265\030+App ID to which a file will be uploa" +
-      "ded to.\"9\n#CCloud_GetUploadServerInfo_Re" +
-      "sponse\022\022\n\nserver_url\030\001 \001(\t\"\215\007\n\036CCloud_Be" +
-      "ginHTTPUpload_Request\022?\n\005appid\030\001 \001(\rB0\202\265" +
-      "\030,App ID for which the file is being upl" +
-      "oaded.\0223\n\tfile_size\030\002 \001(\rB \202\265\030\034Original " +
-      "file size in bytes.\022=\n\010filename\030\003 \001(\tB+\202" +
-      "\265\030\'Name of the file to store in the clou" +
-      "d.\022V\n\010file_sha\030\004 \001(\tBD\202\265\030@Hex string (40" +
-      " digits) representing the SHA1 digest of" +
-      " the file.\022\\\n\tis_public\030\005 \001(\010BI\202\265\030ETrue " +
-      "if the file should be marked public on t" +
-      "he UFS, false otherwise.\022\227\001\n\021platforms_t" +
-      "o_sync\030\006 \003(\tB|\202\265\030xArray of string specif" +
-      "ying which platforms to sync; value valu" +
-      "es: all, Windows, MacOS, linux, Switch, " +
-      "iPhoneOS, Android.\022r\n\025request_headers_na" +
-      "mes\030\007 \003(\tBS\202\265\030ONames for headers you\'ll " +
-      "want to set on your upload request. May " +
-      "be left blank.\022\226\001\n\026request_headers_value" +
-      "s\030\010 \003(\tBv\202\265\030rValues for headers you\'ll w" +
-      "ant to set on your upload request. The n" +
-      "umber of names must equal the number of " +
-      "values.\022Y\n\017upload_batch_id\030\t \001(\004B@\202\265\030<ID" +
-      " of this batch returned by prior BeginAp" +
-      "pUploadBatch call.\"\230\004\n\037CCloud_BeginHTTPU" +
-      "pload_Response\022/\n\005ugcid\030\001 \001(\006B \202\265\030\034UGC I" +
-      "D of the uploaded file.\0220\n\ttimestamp\030\002 \001" +
-      "(\007B\035\202\265\030\031Server timestamp of file.\022X\n\010url" +
-      "_host\030\003 \001(\tBF\202\265\030BHost name of server to " +
-      "which file should be uploaded via HTTP P" +
-      "UT.\022O\n\010url_path\030\004 \001(\tB=\202\265\0309Relative path" +
-      " on server to which file should be uploa" +
-      "ded.\022>\n\tuse_https\030\005 \001(\010B+\202\265\030\'If true, us" +
-      "e https, otherwise use http.\022{\n\017request_" +
-      "headers\030\006 \003(\0132,.CCloud_BeginHTTPUpload_R" +
-      "esponse.HTTPHeadersB4\202\265\0300Name-value pair" +
-      "s to be sent in HTTP PUT request.\032*\n\013HTT" +
-      "PHeaders\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\255\004" +
-      "\n\037CCloud_CommitHTTPUpload_Request\022\244\001\n\022tr" +
-      "ansfer_succeeded\030\001 \001(\010B\207\001\202\265\030\202\001True if th" +
-      "e HTTP PUT to the upload URL succeeded (" +
-      "URL provided in response to Cloud.BeginH" +
-      "TTPUpload), false if a failure occurred." +
-      "\022x\n\005appid\030\002 \001(\rBi\202\265\030eApp ID for which th" +
-      "e file is being uploaded. Must match the" +
-      " app ID provided to Cloud.BeginHTTPUploa" +
-      "d.\022\225\001\n\010file_sha\030\003 \001(\tB\202\001\202\265\030~Hex string (" +
-      "40 digits) representing the SHA1 digest " +
-      "of the file. Must match the SHA1 digest " +
-      "provided to Cloud.BeginHTTPUpload.\022Q\n\010fi" +
-      "lename\030\004 \001(\tB?\202\265\030;Filename as specified " +
-      "in the Cloud.BeginHTTPUpload request.\"}\n" +
-      " CCloud_CommitHTTPUpload_Response\022Y\n\016fil" +
-      "e_committed\030\001 \001(\010BA\202\265\030=True if the file " +
-      "was successfully committed, false otherw" +
-      "ise.\"\265\002\n\035CCloud_BeginUGCUpload_Request\022." +
-      "\n\005appid\030\001 \001(\rB\037\202\265\030\033App ID this UGC belon" +
-      "gs to.\022*\n\tfile_size\030\002 \001(\rB\027\202\265\030\023File size" +
-      " in bytes.\022\'\n\010filename\030\003 \001(\tB\025\202\265\030\021Name o" +
-      "f the file.\022V\n\010file_sha\030\004 \001(\tBD\202\265\030@Hex s" +
-      "tring (40 digits) representing the SHA1 " +
-      "digest of the file.\0227\n\014content_type\030\005 \001(" +
-      "\tB!\202\265\030\035MIME content type of the file\"\240\005\n" +
-      "\036CCloud_BeginUGCUpload_Response\022\207\001\n\016stor" +
-      "age_system\030\001 \001(\0162\034.EPublishedFileStorage" +
-      "System:$k_EPublishedFileStorageSystemInv" +
-      "alidB+\202\265\030\'UGC Storage system chosen for " +
-      "this file\022/\n\005ugcid\030\002 \001(\006B \202\265\030\034UGC ID of " +
-      "the uploaded file.\0220\n\ttimestamp\030\003 \001(\007B\035\202" +
-      "\265\030\031Server timestamp of file.\022X\n\010url_host" +
-      "\030\004 \001(\tBF\202\265\030BHost name of server to which" +
-      " file should be uploaded via HTTP PUT.\022O" +
-      "\n\010url_path\030\005 \001(\tB=\202\265\0309Relative path on s" +
-      "erver to which file should be uploaded.\022" +
-      ">\n\tuse_https\030\006 \001(\010B+\202\265\030\'If true, use htt" +
-      "ps, otherwise use http.\022z\n\017request_heade" +
-      "rs\030\007 \003(\0132+.CCloud_BeginUGCUpload_Respons" +
+      "proto\032\036steam/steammessages_base.proto\0322s" +
+      "team/steammessages_unified_base.steamcli" +
+      "ent.proto\032\021steam/enums.proto\032(steam/stea" +
+      "mmessages_client_objects.proto\"=\n(CCloud" +
+      "_ClientLogUploadCheck_Notification\022\021\n\tcl" +
+      "ient_id\030\001 \001(\004\"T\n+CCloud_ClientLogUploadC" +
+      "omplete_Notification\022\021\n\tclient_id\030\001 \001(\004\022" +
+      "\022\n\nrequest_id\030\002 \001(\004\"d\n\"CCloud_GetUploadS" +
+      "erverInfo_Request\022>\n\005appid\030\001 \001(\rB/\202\265\030+Ap" +
+      "p ID to which a file will be uploaded to" +
+      ".\"9\n#CCloud_GetUploadServerInfo_Response" +
+      "\022\022\n\nserver_url\030\001 \001(\t\"\215\007\n\036CCloud_BeginHTT" +
+      "PUpload_Request\022?\n\005appid\030\001 \001(\rB0\202\265\030,App " +
+      "ID for which the file is being uploaded." +
+      "\0223\n\tfile_size\030\002 \001(\rB \202\265\030\034Original file s" +
+      "ize in bytes.\022=\n\010filename\030\003 \001(\tB+\202\265\030\'Nam" +
+      "e of the file to store in the cloud.\022V\n\010" +
+      "file_sha\030\004 \001(\tBD\202\265\030@Hex string (40 digit" +
+      "s) representing the SHA1 digest of the f" +
+      "ile.\022\\\n\tis_public\030\005 \001(\010BI\202\265\030ETrue if the" +
+      " file should be marked public on the UFS" +
+      ", false otherwise.\022\227\001\n\021platforms_to_sync" +
+      "\030\006 \003(\tB|\202\265\030xArray of string specifying w" +
+      "hich platforms to sync; value values: al" +
+      "l, Windows, MacOS, linux, Switch, iPhone" +
+      "OS, Android.\022r\n\025request_headers_names\030\007 " +
+      "\003(\tBS\202\265\030ONames for headers you\'ll want t" +
+      "o set on your upload request. May be lef" +
+      "t blank.\022\226\001\n\026request_headers_values\030\010 \003(" +
+      "\tBv\202\265\030rValues for headers you\'ll want to" +
+      " set on your upload request. The number " +
+      "of names must equal the number of values" +
+      ".\022Y\n\017upload_batch_id\030\t \001(\004B@\202\265\030<ID of th" +
+      "is batch returned by prior BeginAppUploa" +
+      "dBatch call.\"\230\004\n\037CCloud_BeginHTTPUpload_" +
+      "Response\022/\n\005ugcid\030\001 \001(\006B \202\265\030\034UGC ID of t" +
+      "he uploaded file.\0220\n\ttimestamp\030\002 \001(\007B\035\202\265" +
+      "\030\031Server timestamp of file.\022X\n\010url_host\030" +
+      "\003 \001(\tBF\202\265\030BHost name of server to which " +
+      "file should be uploaded via HTTP PUT.\022O\n" +
+      "\010url_path\030\004 \001(\tB=\202\265\0309Relative path on se" +
+      "rver to which file should be uploaded.\022>" +
+      "\n\tuse_https\030\005 \001(\010B+\202\265\030\'If true, use http" +
+      "s, otherwise use http.\022{\n\017request_header" +
+      "s\030\006 \003(\0132,.CCloud_BeginHTTPUpload_Respons" +
       "e.HTTPHeadersB4\202\265\0300Name-value pairs to b" +
       "e sent in HTTP PUT request.\032*\n\013HTTPHeade" +
-      "rs\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\360\002\n\036CClo" +
-      "ud_CommitUGCUpload_Request\022\243\001\n\022transfer_" +
-      "succeeded\030\001 \001(\010B\206\001\202\265\030\201\001True if the HTTP " +
-      "PUT to the upload URL succeeded (URL pro" +
-      "vided in response to Cloud.BeginUGCUploa" +
-      "d), false if a failure occurred.\022w\n\005appi" +
-      "d\030\002 \001(\rBh\202\265\030dApp ID for which the file i" +
-      "s being uploaded. Must match the app ID " +
-      "provided to Cloud.BeginUGCUpload.\022/\n\005ugc" +
-      "id\030\003 \001(\006B \202\265\030\034UGC ID of the uploaded fil" +
-      "e.\"|\n\037CCloud_CommitUGCUpload_Response\022Y\n" +
-      "\016file_committed\030\001 \001(\010BA\202\265\030=True if the f" +
-      "ile was successfully committed, false ot" +
-      "herwise.\"\214\001\n\035CCloud_GetFileDetails_Reque" +
-      "st\022;\n\005ugcid\030\001 \001(\004B,\202\265\030(ID of the Cloud f" +
-      "ile to get details for.\022.\n\005appid\030\002 \001(\rB\037" +
-      "\202\265\030\033App ID the file belongs to.\"\216\003\n\017CClo" +
-      "ud_UserFile\022\r\n\005appid\030\001 \001(\r\022\r\n\005ugcid\030\002 \001(" +
-      "\004\022\020\n\010filename\030\003 \001(\t\022\021\n\ttimestamp\030\004 \001(\004\022\021" +
-      "\n\tfile_size\030\005 \001(\r\022\013\n\003url\030\006 \001(\t\022\027\n\017steami" +
-      "d_creator\030\007 \001(\006\022\r\n\005flags\030\010 \001(\r\022\227\001\n\021platf" +
-      "orms_to_sync\030\t \003(\tB|\202\265\030xArray of string " +
-      "specifying which platforms to sync; valu" +
-      "e values: all, Windows, MacOS, linux, Sw" +
-      "itch, iPhoneOS, Android.\022V\n\010file_sha\030\n \001" +
-      "(\tBD\202\265\030@Hex string (40 digits) represent" +
-      "ing the SHA1 digest of the file.\"C\n\036CClo" +
-      "ud_GetFileDetails_Response\022!\n\007details\030\001 " +
-      "\001(\0132\020.CCloud_UserFile\"\351\003\n!CCloud_Enumera" +
-      "teUserFiles_Request\0224\n\005appid\030\001 \001(\rB%\202\265\030!" +
-      "App ID to enumerate the files of.\022\233\001\n\020ex" +
-      "tended_details\030\002 \001(\010B\200\001\202\265\030|(Optional) Ge" +
-      "t extended details back on the files fou" +
-      "nd. Defaults to only returned the app Id" +
-      " and UGC Id of the files found.\022|\n\005count" +
-      "\030\003 \001(\rBm\202\265\030i(Optional) Maximum number of" +
-      " results to return on this call. Default" +
-      "s to a maximum of 500 files returned.\022r\n" +
-      "\013start_index\030\004 \001(\rB]\202\265\030Y(Optional) Start" +
-      "ing index to begin enumeration at. Defau" +
-      "lts to the beginning of the list.\"Z\n\"CCl" +
-      "oud_EnumerateUserFiles_Response\022\037\n\005files" +
-      "\030\001 \003(\0132\020.CCloud_UserFile\022\023\n\013total_files\030" +
-      "\002 \001(\r\"\264\001\n\025CCloud_Delete_Request\022\020\n\010filen" +
-      "ame\030\001 \001(\t\022.\n\005appid\030\002 \001(\rB\037\202\265\030\033App ID the" +
-      " file belongs to.\022Y\n\017upload_batch_id\030\003 \001" +
-      "(\004B@\202\265\030<ID of this batch returned by pri" +
-      "or BeginAppUploadBatch call.\"\030\n\026CCloud_D" +
-      "elete_Response\"\'\n%CCloud_GetClientEncryp" +
-      "tionKey_Request\"n\n&CCloud_GetClientEncry" +
-      "ptionKey_Response\022\'\n\003key\030\001 \001(\014B\032\202\265\030\026AES-" +
-      "256 encryption key\022\033\n\003crc\030\002 \001(\005B\016\202\265\030\nCRC" +
-      " of key\"\252\001\n\035CCloud_CDNReport_Notificatio" +
-      "n\022\017\n\007steamid\030\001 \001(\006\022\013\n\003url\030\002 \001(\t\022\017\n\007succe" +
-      "ss\030\003 \001(\010\022\030\n\020http_status_code\030\004 \001(\r\022\026\n\016ex" +
-      "pected_bytes\030\005 \001(\004\022\026\n\016received_bytes\030\006 \001" +
-      "(\004\022\020\n\010duration\030\007 \001(\r\"\232\002\n1CCloud_External" +
-      "StorageTransferReport_Notification\022\014\n\004ho" +
-      "st\030\001 \001(\t\022\014\n\004path\030\002 \001(\t\022\021\n\tis_upload\030\003 \001(" +
-      "\010\022\017\n\007success\030\004 \001(\010\022\030\n\020http_status_code\030\005" +
-      " \001(\r\022\026\n\016bytes_expected\030\006 \001(\004\022\024\n\014bytes_ac" +
-      "tual\030\007 \001(\004\022\023\n\013duration_ms\030\010 \001(\r\022\016\n\006celli" +
-      "d\030\t \001(\r\022\017\n\007proxied\030\n \001(\010\022\022\n\nipv6_local\030\013" +
-      " \001(\010\022\023\n\013ipv6_remote\030\014 \001(\010\"\327\002\n\"CCloud_Beg" +
-      "inAppUploadBatch_Request\0220\n\005appid\030\001 \001(\rB" +
-      "!\202\265\030\035App ID for this batch is for.\022D\n\014ma" +
-      "chine_name\030\002 \001(\tB.\202\265\030*Client machine nam" +
-      "e (may be user\'s alias).\022G\n\017files_to_upl" +
-      "oad\030\003 \003(\tB.\202\265\030*Filenames of files to upl" +
-      "oad in this batch\022G\n\017files_to_delete\030\004 \003" +
-      "(\tB.\202\265\030*Filenames of files to delete in " +
-      "this batch\022\'\n\tclient_id\030\005 \001(\004B\024\202\265\030\020Clien" +
-      "t ID number\"\204\001\n#CCloud_BeginAppUploadBat" +
-      "ch_Response\022\'\n\010batch_id\030\001 \001(\004B\025\202\265\030\021ID of" +
-      " this batch.\0224\n\021app_change_number\030\004 \001(\004B" +
-      "\031\202\265\030\025New App Change Number\"\271\001\n*CCloud_Co" +
-      "mpleteAppUploadBatch_Notification\0220\n\005app" +
-      "id\030\001 \001(\rB!\202\265\030\035App ID for this batch is f" +
-      "or.\022\'\n\010batch_id\030\002 \001(\004B\025\202\265\030\021ID of this ba" +
-      "tch.\0220\n\rbatch_eresult\030\003 \001(\rB\031\202\265\030\025result " +
-      "of this batch.\"\222\006\n$CCloud_ClientBeginFil" +
-      "eUpload_Request\022?\n\005appid\030\001 \001(\rB0\202\265\030,App " +
-      "ID for which the file is being uploaded." +
-      "\022D\n\tfile_size\030\002 \001(\rB1\202\265\030-file size as tr" +
-      "ansmitted and stored in Cloud.\022N\n\rraw_fi" +
-      "le_size\030\003 \001(\rB7\202\265\0303file size before any " +
-      "compression and/or encryption.\022(\n\010file_s" +
-      "ha\030\004 \001(\014B\026\202\265\030\022SHA-1 of raw file.\022*\n\ntime" +
-      "_stamp\030\005 \001(\004B\026\202\265\030\022Timestamp of file.\022=\n\010" +
-      "filename\030\006 \001(\tB+\202\265\030\'Name of the file to " +
-      "store in the cloud.\022%\n\021platforms_to_sync" +
-      "\030\007 \001(\r:\n4294967295\022F\n\007cell_id\030\t \001(\rB5\202\265\030" +
-      "1Client\'s cell ID so we can pick storage" +
-      " location.\022Q\n\013can_encrypt\030\n \001(\010B<\202\265\0308if " +
-      "true, client can encrypt the file before" +
-      " uploading it\022f\n\016is_shared_file\030\013 \001(\010BN\202" +
-      "\265\030Jif true, this is going to be UGC or a" +
-      " screenshot or some other shared file\022$\n" +
-      "\020deprecated_realm\030\014 \001(\rB\n\202\265\030\006unused\022.\n\017u" +
-      "pload_batch_id\030\r \001(\004B\025\202\265\030\021ID of this bat" +
-      "ch.\"\361\006\n!ClientCloudFileUploadBlockDetail" +
-      "s\022X\n\010url_host\030\001 \001(\tBF\202\265\030BHost name of se" +
-      "rver to which file should be uploaded vi" +
-      "a HTTP PUT.\022O\n\010url_path\030\002 \001(\tB=\202\265\0309Relat" +
-      "ive path on server to which file should " +
-      "be uploaded.\022>\n\tuse_https\030\003 \001(\010B+\202\265\030\'If " +
-      "true, use https, otherwise use http.\022;\n\013" +
-      "http_method\030\004 \001(\005B&\202\265\030\"EHTTPMethod to us" +
-      "e for this block.\022}\n\017request_headers\030\005 \003" +
-      "(\0132..ClientCloudFileUploadBlockDetails.H" +
-      "TTPHeadersB4\202\265\0300Name-value pairs to be s" +
-      "ent in HTTP PUT request.\0228\n\014block_offset" +
-      "\030\006 \001(\004B\"\202\265\030\036offset of file block to uplo" +
-      "ad\022m\n\014block_length\030\007 \001(\rBW\202\265\030Slength of " +
-      "file block to upload - if zero, no part " +
-      "of the file is part of this block\022_\n\022exp" +
-      "licit_body_data\030\010 \001(\014BC\202\265\030?explicit body" +
-      " data to use, instead of file data, for " +
-      "this block\022o\n\017may_parallelize\030\t \001(\010BV\202\265\030" +
-      "Rif true, this request may be done in pa" +
-      "rallel with other similarly-marked reque" +
-      "sts\032*\n\013HTTPHeaders\022\014\n\004name\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t\"\355\001\n%CCloud_ClientBeginFileUpload" +
-      "_Response\022[\n\014encrypt_file\030\001 \001(\010BE\202\265\030AIf " +
-      "true, the file should be encrypted by th" +
-      "e client before upload\022g\n\016block_requests" +
-      "\030\002 \003(\0132\".ClientCloudFileUploadBlockDetai" +
-      "lsB+\202\265\030\'HTTP requests to make to perform" +
-      " upload\"\311\003\n%CCloud_ClientCommitFileUploa" +
-      "d_Request\022a\n\022transfer_succeeded\030\001 \001(\010BE\202" +
-      "\265\030ATrue if all block uploads succeeded, " +
-      "false if any of them failed.\022x\n\005appid\030\002 " +
-      "\001(\rBi\202\265\030eApp ID for which the file is be" +
-      "ing uploaded. Must match the app ID prov" +
-      "ided to Cloud.BeginFileUpload.\022p\n\010file_s" +
-      "ha\030\003 \001(\014B^\202\265\030ZSHA1 digest of the raw fil" +
-      "e. Must match the SHA1 digest provided t" +
-      "o Cloud.BeginFileUpload.\022Q\n\010filename\030\004 \001" +
-      "(\tB?\202\265\030;Filename as specified in the Clo" +
-      "ud.BeginFileUpload request.\"\203\001\n&CCloud_C" +
-      "lientCommitFileUpload_Response\022Y\n\016file_c" +
-      "ommitted\030\001 \001(\010BA\202\265\030=True if the file was" +
-      " successfully committed, false otherwise" +
-      ".\"\240\001\n!CCloud_ClientFileDownload_Request\022" +
-      ".\n\005appid\030\001 \001(\rB\037\202\265\030\033App ID the file is p" +
-      "art of.\022+\n\010filename\030\002 \001(\tB\031\202\265\030\025Filename " +
-      "of the file.\022\036\n\005realm\030\003 \001(\rB\017\202\265\030\013Steam R" +
-      "ealm\"\376\005\n\"CCloud_ClientFileDownload_Respo" +
-      "nse\0222\n\005appid\030\001 \001(\rB#\202\265\030\037Application the " +
-      "file belongs to\022G\n\tfile_size\030\002 \001(\rB4\202\265\0300" +
-      "file size as transmitted and stored in t" +
-      "he Cloud\022G\n\rraw_file_size\030\003 \001(\rB0\202\265\030,fil" +
-      "e size when decompressed and/or decrypte" +
-      "d\022!\n\010sha_file\030\004 \001(\014B\017\202\265\030\013SHA of file\022)\n\n" +
-      "time_stamp\030\005 \001(\004B\025\202\265\030\021Timestamp of file\022" +
-      "J\n\022is_explicit_delete\030\006 \001(\010B.\202\265\030*True if" +
-      " this is an explicitly deleted file\022/\n\010u" +
-      "rl_host\030\007 \001(\tB\035\202\265\030\031Host to GET the file " +
-      "from\022O\n\010url_path\030\010 \001(\tB=\202\265\0309Path on that" +
-      " host to use, including URL parameters i" +
-      "f any\0227\n\tuse_https\030\t \001(\010B$\202\265\030 If set, us" +
-      "e HTTPS, else use HTTP\022~\n\017request_header" +
-      "s\030\n \003(\0132/.CCloud_ClientFileDownload_Resp" +
-      "onse.HTTPHeadersB4\202\265\0300Name-value pairs t" +
-      "o be sent in HTTP GET request.\022\021\n\tencryp" +
-      "ted\030\013 \001(\010\032*\n\013HTTPHeaders\022\014\n\004name\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t\"\223\002\n\037CCloud_ClientDeleteFil" +
-      "e_Request\022>\n\005appid\030\001 \001(\rB/\202\265\030+App ID for" +
-      " which the file is being deleted.\022\'\n\010fil" +
-      "ename\030\002 \001(\tB\025\202\265\030\021Filename of file.\022W\n\022is" +
-      "_explicit_delete\030\003 \001(\010B;\202\265\0307If true, thi" +
-      "s is a \'delete\'; if false, it is a \'forg" +
-      "et\'\022.\n\017upload_batch_id\030\004 \001(\004B\025\202\265\030\021ID of " +
-      "this batch.\"\"\n CCloud_ClientDeleteFile_R" +
-      "esponse\"\340\001\n,CCloud_ClientConflictResolut" +
-      "ion_Notification\022>\n\005appid\030\001 \001(\rB/\202\265\030+App" +
-      " ID for which the conflict was resolved." +
-      "\022p\n\021chose_local_files\030\002 \001(\010BU\202\265\030QDid the" +
-      " user choose to keep the files local to " +
-      "the machine they are on right now?\"\"\n CC" +
-      "loud_EnumerateUserApps_Request\"\230\001\n!CClou" +
-      "d_EnumerateUserApps_Response\0225\n\004apps\030\001 \003" +
-      "(\0132\'.CCloud_EnumerateUserApps_Response.A" +
-      "pps\032<\n\004Apps\022\r\n\005appid\030\001 \001(\r\022\022\n\ntotalcount" +
-      "\030\002 \001(\005\022\021\n\ttotalsize\030\003 \001(\003\"\245\001\n#CCloud_Get" +
-      "AppFileChangelist_Request\022\031\n\005appid\030\001 \001(\r" +
-      "B\n\202\265\030\006App ID\022c\n\024synced_change_number\030\002 \001" +
-      "(\004BE\202\265\030AChange Number to which local mac" +
-      "hine was last successfully synced\"\233\004\n\022CC" +
-      "loud_AppFileInfo\022+\n\tfile_name\030\001 \001(\tB\030\202\265\030" +
-      "\024unqualified filename\022!\n\010sha_file\030\002 \001(\014B" +
-      "\017\202\265\030\013SHA of file\022=\n\ntime_stamp\030\003 \001(\004B)\202\265" +
-      "\030%server timestamp of last modification\022" +
-      "+\n\rraw_file_size\030\004 \001(\rB\024\202\265\030\020size of raw " +
-      "file\022~\n\rpersist_state\030\005 \001(\0162\032.ECloudStor" +
-      "agePersistState:$k_ECloudStoragePersistS" +
-      "tatePersistedB%\202\265\030!current persist state" +
-      " of the file\022:\n\021platforms_to_sync\030\006 \001(\rB" +
-      "\037\202\265\030\033ERemoteStoragePlatform bits\022G\n\021path" +
-      "_prefix_index\030\007 \001(\rB,\202\265\030(index into stri" +
-      "ng table of path prefixes\022D\n\022machine_nam" +
-      "e_index\030\010 \001(\rB(\202\265\030$what machine last mod" +
-      "ified this file\"\326\003\n$CCloud_GetAppFileCha" +
-      "ngelist_Response\022B\n\025current_change_numbe" +
-      "r\030\001 \001(\004B#\202\265\030\037Change Number current on se" +
-      "rver\022\211\001\n\005files\030\002 \003(\0132\023.CCloud_AppFileInf" +
-      "oBe\202\265\030aList of files; may be the full li" +
-      "st of extant/deleted files, or just a de" +
-      "lta from the client list\022j\n\ris_only_delt" +
-      "a\030\003 \001(\010BS\202\265\030OIf true, \'files\' omits any " +
-      "files that have not changed since client" +
-      "\'s change ID\0228\n\rpath_prefixes\030\004 \003(\tB!\202\265\030" +
-      "\035string table of path prefixes\0228\n\rmachin" +
-      "e_names\030\005 \003(\tB!\202\265\030\035string table of machi" +
-      "ne names\"x\n CCloud_AppSessionSuspend_Req" +
-      "uest\022\r\n\005appid\030\001 \001(\r\022\021\n\tclient_id\030\002 \001(\004\022\024" +
-      "\n\014machine_name\030\003 \001(\t\022\034\n\024cloud_sync_compl" +
-      "eted\030\004 \001(\010\"#\n!CCloud_AppSessionSuspend_R" +
-      "esponse\"C\n\037CCloud_AppSessionResume_Reque" +
-      "st\022\r\n\005appid\030\001 \001(\r\022\021\n\tclient_id\030\002 \001(\004\"\"\n " +
-      "CCloud_AppSessionResume_Response\"{\n\036CClo" +
-      "ud_AppLaunchIntent_Request\022\r\n\005appid\030\001 \001(" +
-      "\r\022\021\n\tclient_id\030\002 \001(\004\022\024\n\014machine_name\030\003 \001" +
-      "(\t\022!\n\031ignore_pending_operations\030\004 \001(\010\"\232\001" +
-      "\n\037CCloud_AppLaunchIntent_Response\022w\n\031pen" +
-      "ding_remote_operations\030\001 \003(\0132\036.CCloud_Pe" +
-      "ndingRemoteOperationB4\202\265\0300pending remote" +
-      " operations you should be aware of\"b\n#CC" +
-      "loud_AppExitSyncDone_Notification\022\r\n\005app" +
-      "id\030\001 \001(\r\022\021\n\tclient_id\030\002 \001(\004\022\031\n\021uploads_c" +
-      "ompleted\030\003 \001(\010\"\235\001\n\'CCloud_AppCloudStateC" +
-      "hange_Notification\022<\n\005appid\030\001 \001(\rB-\202\265\030)A" +
-      "pp which has had a change in cloud state" +
-      "\0224\n\021app_change_number\030\002 \001(\004B\031\202\265\030\025New App" +
-      " Change Number2\222\036\n\005Cloud\022\234\001\n\023GetUploadSe" +
-      "rverInfo\022#.CCloud_GetUploadServerInfo_Re" +
-      "quest\032$.CCloud_GetUploadServerInfo_Respo" +
-      "nse\":\202\265\0306Returns the URL of the proper c" +
-      "loud server for a user.\022\250\002\n\017BeginHTTPUpl" +
-      "oad\022\037.CCloud_BeginHTTPUpload_Request\032 .C" +
-      "Cloud_BeginHTTPUpload_Response\"\321\001\202\265\030\314\001Be" +
-      "gins the process of uploading a file to " +
-      "Steam external storage services. File sh" +
-      "ould be uploaded via HTTP PUT to the ret" +
-      "urned URL, after which the upload must b" +
-      "e finalized by a call to CommitHTTPUploa" +
-      "d.\022\255\001\n\020CommitHTTPUpload\022 .CCloud_CommitH" +
-      "TTPUpload_Request\032!.CCloud_CommitHTTPUpl" +
-      "oad_Response\"T\202\265\030PCommits a file upload " +
-      "initiated by BeginHTTPUpload and transfe" +
-      "rred via HTTP PUT.\022\245\002\n\016BeginUGCUpload\022\036." +
-      "CCloud_BeginUGCUpload_Request\032\037.CCloud_B" +
-      "eginUGCUpload_Response\"\321\001\202\265\030\314\001Begins the" +
-      " process of uploading a file to Steam ex" +
-      "ternal storage services. File should be " +
-      "uploaded via HTTP PUT to the returned UR" +
-      "L, after which the upload must be finali" +
-      "zed by a call to CommitHTTPUpload.\022\251\001\n\017C" +
-      "ommitUGCUpload\022\037.CCloud_CommitUGCUpload_" +
-      "Request\032 .CCloud_CommitUGCUpload_Respons" +
-      "e\"S\202\265\030OCommits a file upload initiated b" +
-      "y BeginUGCUpload and transferred via HTT" +
-      "P PUT.\022w\n\016GetFileDetails\022\036.CCloud_GetFil" +
-      "eDetails_Request\032\037.CCloud_GetFileDetails" +
-      "_Response\"$\202\265\030 Returns details on a Clou" +
-      "d file.\022\272\001\n\022EnumerateUserFiles\022\".CCloud_" +
-      "EnumerateUserFiles_Request\032#.CCloud_Enum" +
-      "erateUserFiles_Response\"[\202\265\030WEnumerates " +
-      "Cloud files for a user of a given app ID" +
-      ". Returns up to 500 files at a time.\022d\n\006" +
-      "Delete\022\026.CCloud_Delete_Request\032\027.CCloud_" +
-      "Delete_Response\")\202\265\030%Deletes a file from" +
-      " the user\'s cloud.\022\231\001\n\026GetClientEncrypti" +
-      "onKey\022&.CCloud_GetClientEncryptionKey_Re" +
-      "quest\032\'.CCloud_GetClientEncryptionKey_Re" +
-      "sponse\".\202\265\030*Gets the user\'s Cloud file e" +
-      "ncryption key.\022c\n\tCDNReport\022\036.CCloud_CDN" +
-      "Report_Notification\032\013.NoResponse\")\202\265\030%Re" +
-      "ports the result of a CDN transfer.\022\237\001\n\035" +
-      "ExternalStorageTransferReport\0222.CCloud_E" +
-      "xternalStorageTransferReport_Notificatio" +
-      "n\032\013.NoResponse\"=\202\265\0309Reports the result o" +
-      "f an external Cloud storage transfer.\022\253\001" +
-      "\n\023BeginAppUploadBatch\022#.CCloud_BeginAppU" +
-      "ploadBatch_Request\032$.CCloud_BeginAppUplo" +
-      "adBatch_Response\"I\202\265\030EIndicate a batch o" +
-      "f files that will be uploaded / deleted " +
-      "for an app.\022\243\001\n\026CompleteAppUploadBatch\022+" +
-      ".CCloud_CompleteAppUploadBatch_Notificat" +
-      "ion\032\013.NoResponse\"O\202\265\030KIndicate that the " +
-      "batch is complete or being stopped for s" +
-      "ome other reason.\022\210\001\n\025ClientBeginFileUpl" +
-      "oad\022%.CCloud_ClientBeginFileUpload_Reque" +
-      "st\032&.CCloud_ClientBeginFileUpload_Respon" +
-      "se\" \202\265\030\034Initiate an upload to Cloud.\022\232\001\n" +
-      "\026ClientCommitFileUpload\022&.CCloud_ClientC" +
-      "ommitFileUpload_Request\032\'.CCloud_ClientC" +
-      "ommitFileUpload_Response\"/\202\265\030+Commit the" +
-      " file upload or indicate failure.\022|\n\022Cli" +
-      "entFileDownload\022\".CCloud_ClientFileDownl" +
-      "oad_Request\032#.CCloud_ClientFileDownload_" +
-      "Response\"\035\202\265\030\031Initiate a file download.\022" +
-      "u\n\020ClientDeleteFile\022 .CCloud_ClientDelet" +
-      "eFile_Request\032!.CCloud_ClientDeleteFile_" +
-      "Response\"\034\202\265\030\030Delete or forget a file.\022\216" +
-      "\001\n\030ClientConflictResolution\022-.CCloud_Cli" +
-      "entConflictResolution_Notification\032\013.NoR" +
-      "esponse\"6\202\265\0302User has picked a resolutio" +
-      "n for a Cloud conflict.\022\217\001\n\021EnumerateUse" +
-      "rApps\022!.CCloud_EnumerateUserApps_Request" +
-      "\032\".CCloud_EnumerateUserApps_Response\"3\202\265" +
-      "\030/Enumerates apps stroing cloud files fo" +
-      "r a user.\022\264\001\n\024GetAppFileChangelist\022$.CCl" +
-      "oud_GetAppFileChangelist_Request\032%.CClou" +
-      "d_GetAppFileChangelist_Response\"O\202\265\030KGet",
-      " a list of Cloud file changes for an app" +
-      " given a starting Change Number.\022\201\001\n\021Sus" +
-      "pendAppSession\022!.CCloud_AppSessionSuspen" +
-      "d_Request\032\".CCloud_AppSessionSuspend_Res" +
-      "ponse\"%\202\265\030!An app session is being suspe" +
-      "nded\022|\n\020ResumeAppSession\022 .CCloud_AppSes" +
-      "sionResume_Request\032!.CCloud_AppSessionRe" +
-      "sume_Response\"#\202\265\030\037An app session is bei" +
-      "ng resumed\022\177\n\025SignalAppLaunchIntent\022\037.CC" +
-      "loud_AppLaunchIntent_Request\032 .CCloud_Ap" +
-      "pLaunchIntent_Response\"#\202\265\030\037Client inten" +
-      "ds to launch an app\022\202\001\n\025SignalAppExitSyn" +
-      "cDone\022$.CCloud_AppExitSyncDone_Notificat" +
-      "ion\032\013.NoResponse\"6\202\265\0302Client is done try" +
-      "ing to sync after a game session\032)\202\265\030%A " +
-      "service for Steam Cloud operations.2\301\001\n\013" +
-      "CloudClient\022}\n\024NotifyAppStateChange\022(.CC" +
-      "loud_AppCloudStateChange_Notification\032\013." +
-      "NoResponse\".\202\265\030*Cloud state for the give" +
-      "n app has changed.\0323\202\265\030+Client notificat" +
-      "ions for Steam cloud events\300\265\030\002B\003\200\001\001"
+      "rs\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\255\004\n\037CClo" +
+      "ud_CommitHTTPUpload_Request\022\244\001\n\022transfer" +
+      "_succeeded\030\001 \001(\010B\207\001\202\265\030\202\001True if the HTTP" +
+      " PUT to the upload URL succeeded (URL pr" +
+      "ovided in response to Cloud.BeginHTTPUpl" +
+      "oad), false if a failure occurred.\022x\n\005ap" +
+      "pid\030\002 \001(\rBi\202\265\030eApp ID for which the file" +
+      " is being uploaded. Must match the app I" +
+      "D provided to Cloud.BeginHTTPUpload.\022\225\001\n" +
+      "\010file_sha\030\003 \001(\tB\202\001\202\265\030~Hex string (40 dig" +
+      "its) representing the SHA1 digest of the" +
+      " file. Must match the SHA1 digest provid" +
+      "ed to Cloud.BeginHTTPUpload.\022Q\n\010filename" +
+      "\030\004 \001(\tB?\202\265\030;Filename as specified in the" +
+      " Cloud.BeginHTTPUpload request.\"}\n CClou" +
+      "d_CommitHTTPUpload_Response\022Y\n\016file_comm" +
+      "itted\030\001 \001(\010BA\202\265\030=True if the file was su" +
+      "ccessfully committed, false otherwise.\"\265" +
+      "\002\n\035CCloud_BeginUGCUpload_Request\022.\n\005appi" +
+      "d\030\001 \001(\rB\037\202\265\030\033App ID this UGC belongs to." +
+      "\022*\n\tfile_size\030\002 \001(\rB\027\202\265\030\023File size in by" +
+      "tes.\022\'\n\010filename\030\003 \001(\tB\025\202\265\030\021Name of the " +
+      "file.\022V\n\010file_sha\030\004 \001(\tBD\202\265\030@Hex string " +
+      "(40 digits) representing the SHA1 digest" +
+      " of the file.\0227\n\014content_type\030\005 \001(\tB!\202\265\030" +
+      "\035MIME content type of the file\"\240\005\n\036CClou" +
+      "d_BeginUGCUpload_Response\022\207\001\n\016storage_sy" +
+      "stem\030\001 \001(\0162\034.EPublishedFileStorageSystem" +
+      ":$k_EPublishedFileStorageSystemInvalidB+" +
+      "\202\265\030\'UGC Storage system chosen for this f" +
+      "ile\022/\n\005ugcid\030\002 \001(\006B \202\265\030\034UGC ID of the up" +
+      "loaded file.\0220\n\ttimestamp\030\003 \001(\007B\035\202\265\030\031Ser" +
+      "ver timestamp of file.\022X\n\010url_host\030\004 \001(\t" +
+      "BF\202\265\030BHost name of server to which file " +
+      "should be uploaded via HTTP PUT.\022O\n\010url_" +
+      "path\030\005 \001(\tB=\202\265\0309Relative path on server " +
+      "to which file should be uploaded.\022>\n\tuse" +
+      "_https\030\006 \001(\010B+\202\265\030\'If true, use https, ot" +
+      "herwise use http.\022z\n\017request_headers\030\007 \003" +
+      "(\0132+.CCloud_BeginUGCUpload_Response.HTTP" +
+      "HeadersB4\202\265\0300Name-value pairs to be sent" +
+      " in HTTP PUT request.\032*\n\013HTTPHeaders\022\014\n\004" +
+      "name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\360\002\n\036CCloud_Com" +
+      "mitUGCUpload_Request\022\243\001\n\022transfer_succee" +
+      "ded\030\001 \001(\010B\206\001\202\265\030\201\001True if the HTTP PUT to" +
+      " the upload URL succeeded (URL provided " +
+      "in response to Cloud.BeginUGCUpload), fa" +
+      "lse if a failure occurred.\022w\n\005appid\030\002 \001(" +
+      "\rBh\202\265\030dApp ID for which the file is bein" +
+      "g uploaded. Must match the app ID provid" +
+      "ed to Cloud.BeginUGCUpload.\022/\n\005ugcid\030\003 \001" +
+      "(\006B \202\265\030\034UGC ID of the uploaded file.\"|\n\037" +
+      "CCloud_CommitUGCUpload_Response\022Y\n\016file_" +
+      "committed\030\001 \001(\010BA\202\265\030=True if the file wa" +
+      "s successfully committed, false otherwis" +
+      "e.\"\214\001\n\035CCloud_GetFileDetails_Request\022;\n\005" +
+      "ugcid\030\001 \001(\004B,\202\265\030(ID of the Cloud file to" +
+      " get details for.\022.\n\005appid\030\002 \001(\rB\037\202\265\030\033Ap" +
+      "p ID the file belongs to.\"\216\003\n\017CCloud_Use" +
+      "rFile\022\r\n\005appid\030\001 \001(\r\022\r\n\005ugcid\030\002 \001(\004\022\020\n\010f" +
+      "ilename\030\003 \001(\t\022\021\n\ttimestamp\030\004 \001(\004\022\021\n\tfile" +
+      "_size\030\005 \001(\r\022\013\n\003url\030\006 \001(\t\022\027\n\017steamid_crea" +
+      "tor\030\007 \001(\006\022\r\n\005flags\030\010 \001(\r\022\227\001\n\021platforms_t" +
+      "o_sync\030\t \003(\tB|\202\265\030xArray of string specif" +
+      "ying which platforms to sync; value valu" +
+      "es: all, Windows, MacOS, linux, Switch, " +
+      "iPhoneOS, Android.\022V\n\010file_sha\030\n \001(\tBD\202\265" +
+      "\030@Hex string (40 digits) representing th" +
+      "e SHA1 digest of the file.\"C\n\036CCloud_Get" +
+      "FileDetails_Response\022!\n\007details\030\001 \001(\0132\020." +
+      "CCloud_UserFile\"\351\003\n!CCloud_EnumerateUser" +
+      "Files_Request\0224\n\005appid\030\001 \001(\rB%\202\265\030!App ID" +
+      " to enumerate the files of.\022\233\001\n\020extended" +
+      "_details\030\002 \001(\010B\200\001\202\265\030|(Optional) Get exte" +
+      "nded details back on the files found. De" +
+      "faults to only returned the app Id and U" +
+      "GC Id of the files found.\022|\n\005count\030\003 \001(\r" +
+      "Bm\202\265\030i(Optional) Maximum number of resul" +
+      "ts to return on this call. Defaults to a" +
+      " maximum of 500 files returned.\022r\n\013start" +
+      "_index\030\004 \001(\rB]\202\265\030Y(Optional) Starting in" +
+      "dex to begin enumeration at. Defaults to" +
+      " the beginning of the list.\"Z\n\"CCloud_En" +
+      "umerateUserFiles_Response\022\037\n\005files\030\001 \003(\013" +
+      "2\020.CCloud_UserFile\022\023\n\013total_files\030\002 \001(\r\"" +
+      "\264\001\n\025CCloud_Delete_Request\022\020\n\010filename\030\001 " +
+      "\001(\t\022.\n\005appid\030\002 \001(\rB\037\202\265\030\033App ID the file " +
+      "belongs to.\022Y\n\017upload_batch_id\030\003 \001(\004B@\202\265" +
+      "\030<ID of this batch returned by prior Beg" +
+      "inAppUploadBatch call.\"\030\n\026CCloud_Delete_" +
+      "Response\"\'\n%CCloud_GetClientEncryptionKe" +
+      "y_Request\"n\n&CCloud_GetClientEncryptionK" +
+      "ey_Response\022\'\n\003key\030\001 \001(\014B\032\202\265\030\026AES-256 en" +
+      "cryption key\022\033\n\003crc\030\002 \001(\005B\016\202\265\030\nCRC of ke" +
+      "y\"\252\001\n\035CCloud_CDNReport_Notification\022\017\n\007s" +
+      "teamid\030\001 \001(\006\022\013\n\003url\030\002 \001(\t\022\017\n\007success\030\003 \001" +
+      "(\010\022\030\n\020http_status_code\030\004 \001(\r\022\026\n\016expected" +
+      "_bytes\030\005 \001(\004\022\026\n\016received_bytes\030\006 \001(\004\022\020\n\010" +
+      "duration\030\007 \001(\r\"\220\003\n1CCloud_ExternalStorag" +
+      "eTransferReport_Notification\022\014\n\004host\030\001 \001" +
+      "(\t\022\014\n\004path\030\002 \001(\t\022\021\n\tis_upload\030\003 \001(\010\022\017\n\007s" +
+      "uccess\030\004 \001(\010\022\030\n\020http_status_code\030\005 \001(\r\022\026" +
+      "\n\016bytes_expected\030\006 \001(\004\022\024\n\014bytes_actual\030\007" +
+      " \001(\004\022\023\n\013duration_ms\030\010 \001(\r\022\016\n\006cellid\030\t \001(" +
+      "\r\022\017\n\007proxied\030\n \001(\010\022\022\n\nipv6_local\030\013 \001(\010\022\023" +
+      "\n\013ipv6_remote\030\014 \001(\010\022\032\n\022time_to_connect_m" +
+      "s\030\r \001(\r\022\033\n\023time_to_send_req_ms\030\016 \001(\r\022\035\n\025" +
+      "time_to_first_byte_ms\030\017 \001(\r\022\034\n\024time_to_l" +
+      "ast_byte_ms\030\020 \001(\r\"\252\003\n\"CCloud_BeginAppUpl" +
+      "oadBatch_Request\0220\n\005appid\030\001 \001(\rB!\202\265\030\035App" +
+      " ID for this batch is for.\022D\n\014machine_na" +
+      "me\030\002 \001(\tB.\202\265\030*Client machine name (may b" +
+      "e user\'s alias).\022G\n\017files_to_upload\030\003 \003(" +
+      "\tB.\202\265\030*Filenames of files to upload in t" +
+      "his batch\022G\n\017files_to_delete\030\004 \003(\tB.\202\265\030*" +
+      "Filenames of files to delete in this bat" +
+      "ch\022\'\n\tclient_id\030\005 \001(\004B\024\202\265\030\020Client ID num" +
+      "ber\022Q\n\014app_build_id\030\006 \001(\004B;\202\265\0307Current l" +
+      "ocal build of the app which made these c" +
+      "hanges\"\204\001\n#CCloud_BeginAppUploadBatch_Re" +
+      "sponse\022\'\n\010batch_id\030\001 \001(\004B\025\202\265\030\021ID of this" +
+      " batch.\0224\n\021app_change_number\030\004 \001(\004B\031\202\265\030\025" +
+      "New App Change Number\"\271\001\n*CCloud_Complet" +
+      "eAppUploadBatch_Notification\0220\n\005appid\030\001 " +
+      "\001(\rB!\202\265\030\035App ID for this batch is for.\022\'" +
+      "\n\010batch_id\030\002 \001(\004B\025\202\265\030\021ID of this batch.\022" +
+      "0\n\rbatch_eresult\030\003 \001(\rB\031\202\265\030\025result of th" +
+      "is batch.\"\264\001\n%CCloud_CompleteAppUploadBa" +
+      "tch_Request\0220\n\005appid\030\001 \001(\rB!\202\265\030\035App ID f" +
+      "or this batch is for.\022\'\n\010batch_id\030\002 \001(\004B" +
+      "\025\202\265\030\021ID of this batch.\0220\n\rbatch_eresult\030" +
+      "\003 \001(\rB\031\202\265\030\025result of this batch.\"(\n&CClo" +
+      "ud_CompleteAppUploadBatch_Response\"\222\006\n$C" +
+      "Cloud_ClientBeginFileUpload_Request\022?\n\005a" +
+      "ppid\030\001 \001(\rB0\202\265\030,App ID for which the fil" +
+      "e is being uploaded.\022D\n\tfile_size\030\002 \001(\rB" +
+      "1\202\265\030-file size as transmitted and stored" +
+      " in Cloud.\022N\n\rraw_file_size\030\003 \001(\rB7\202\265\0303f" +
+      "ile size before any compression and/or e" +
+      "ncryption.\022(\n\010file_sha\030\004 \001(\014B\026\202\265\030\022SHA-1 " +
+      "of raw file.\022*\n\ntime_stamp\030\005 \001(\004B\026\202\265\030\022Ti" +
+      "mestamp of file.\022=\n\010filename\030\006 \001(\tB+\202\265\030\'" +
+      "Name of the file to store in the cloud.\022" +
+      "%\n\021platforms_to_sync\030\007 \001(\r:\n4294967295\022F" +
+      "\n\007cell_id\030\t \001(\rB5\202\265\0301Client\'s cell ID so" +
+      " we can pick storage location.\022Q\n\013can_en" +
+      "crypt\030\n \001(\010B<\202\265\0308if true, client can enc" +
+      "rypt the file before uploading it\022f\n\016is_" +
+      "shared_file\030\013 \001(\010BN\202\265\030Jif true, this is " +
+      "going to be UGC or a screenshot or some " +
+      "other shared file\022$\n\020deprecated_realm\030\014 " +
+      "\001(\rB\n\202\265\030\006unused\022.\n\017upload_batch_id\030\r \001(\004" +
+      "B\025\202\265\030\021ID of this batch.\"\361\006\n!ClientCloudF" +
+      "ileUploadBlockDetails\022X\n\010url_host\030\001 \001(\tB" +
+      "F\202\265\030BHost name of server to which file s" +
+      "hould be uploaded via HTTP PUT.\022O\n\010url_p" +
+      "ath\030\002 \001(\tB=\202\265\0309Relative path on server t" +
+      "o which file should be uploaded.\022>\n\tuse_" +
+      "https\030\003 \001(\010B+\202\265\030\'If true, use https, oth" +
+      "erwise use http.\022;\n\013http_method\030\004 \001(\005B&\202" +
+      "\265\030\"EHTTPMethod to use for this block.\022}\n" +
+      "\017request_headers\030\005 \003(\0132..ClientCloudFile" +
+      "UploadBlockDetails.HTTPHeadersB4\202\265\0300Name" +
+      "-value pairs to be sent in HTTP PUT requ" +
+      "est.\0228\n\014block_offset\030\006 \001(\004B\"\202\265\030\036offset o" +
+      "f file block to upload\022m\n\014block_length\030\007" +
+      " \001(\rBW\202\265\030Slength of file block to upload" +
+      " - if zero, no part of the file is part " +
+      "of this block\022_\n\022explicit_body_data\030\010 \001(" +
+      "\014BC\202\265\030?explicit body data to use, instea" +
+      "d of file data, for this block\022o\n\017may_pa" +
+      "rallelize\030\t \001(\010BV\202\265\030Rif true, this reque" +
+      "st may be done in parallel with other si" +
+      "milarly-marked requests\032*\n\013HTTPHeaders\022\014" +
+      "\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\355\001\n%CCloud_C" +
+      "lientBeginFileUpload_Response\022[\n\014encrypt" +
+      "_file\030\001 \001(\010BE\202\265\030AIf true, the file shoul" +
+      "d be encrypted by the client before uplo" +
+      "ad\022g\n\016block_requests\030\002 \003(\0132\".ClientCloud" +
+      "FileUploadBlockDetailsB+\202\265\030\'HTTP request" +
+      "s to make to perform upload\"\311\003\n%CCloud_C" +
+      "lientCommitFileUpload_Request\022a\n\022transfe" +
+      "r_succeeded\030\001 \001(\010BE\202\265\030ATrue if all block" +
+      " uploads succeeded, false if any of them" +
+      " failed.\022x\n\005appid\030\002 \001(\rBi\202\265\030eApp ID for " +
+      "which the file is being uploaded. Must m" +
+      "atch the app ID provided to Cloud.BeginF" +
+      "ileUpload.\022p\n\010file_sha\030\003 \001(\014B^\202\265\030ZSHA1 d" +
+      "igest of the raw file. Must match the SH" +
+      "A1 digest provided to Cloud.BeginFileUpl" +
+      "oad.\022Q\n\010filename\030\004 \001(\tB?\202\265\030;Filename as " +
+      "specified in the Cloud.BeginFileUpload r" +
+      "equest.\"\203\001\n&CCloud_ClientCommitFileUploa" +
+      "d_Response\022Y\n\016file_committed\030\001 \001(\010BA\202\265\030=" +
+      "True if the file was successfully commit" +
+      "ted, false otherwise.\"\240\001\n!CCloud_ClientF" +
+      "ileDownload_Request\022.\n\005appid\030\001 \001(\rB\037\202\265\030\033" +
+      "App ID the file is part of.\022+\n\010filename\030" +
+      "\002 \001(\tB\031\202\265\030\025Filename of the file.\022\036\n\005real" +
+      "m\030\003 \001(\rB\017\202\265\030\013Steam Realm\"\376\005\n\"CCloud_Clie" +
+      "ntFileDownload_Response\0222\n\005appid\030\001 \001(\rB#" +
+      "\202\265\030\037Application the file belongs to\022G\n\tf" +
+      "ile_size\030\002 \001(\rB4\202\265\0300file size as transmi" +
+      "tted and stored in the Cloud\022G\n\rraw_file" +
+      "_size\030\003 \001(\rB0\202\265\030,file size when decompre" +
+      "ssed and/or decrypted\022!\n\010sha_file\030\004 \001(\014B" +
+      "\017\202\265\030\013SHA of file\022)\n\ntime_stamp\030\005 \001(\004B\025\202\265" +
+      "\030\021Timestamp of file\022J\n\022is_explicit_delet" +
+      "e\030\006 \001(\010B.\202\265\030*True if this is an explicit" +
+      "ly deleted file\022/\n\010url_host\030\007 \001(\tB\035\202\265\030\031H" +
+      "ost to GET the file from\022O\n\010url_path\030\010 \001" +
+      "(\tB=\202\265\0309Path on that host to use, includ" +
+      "ing URL parameters if any\0227\n\tuse_https\030\t" +
+      " \001(\010B$\202\265\030 If set, use HTTPS, else use HT" +
+      "TP\022~\n\017request_headers\030\n \003(\0132/.CCloud_Cli" +
+      "entFileDownload_Response.HTTPHeadersB4\202\265" +
+      "\0300Name-value pairs to be sent in HTTP GE" +
+      "T request.\022\021\n\tencrypted\030\013 \001(\010\032*\n\013HTTPHea" +
+      "ders\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\223\002\n\037CC" +
+      "loud_ClientDeleteFile_Request\022>\n\005appid\030\001" +
+      " \001(\rB/\202\265\030+App ID for which the file is b" +
+      "eing deleted.\022\'\n\010filename\030\002 \001(\tB\025\202\265\030\021Fil" +
+      "ename of file.\022W\n\022is_explicit_delete\030\003 \001" +
+      "(\010B;\202\265\0307If true, this is a \'delete\'; if " +
+      "false, it is a \'forget\'\022.\n\017upload_batch_" +
+      "id\030\004 \001(\004B\025\202\265\030\021ID of this batch.\"\"\n CClou" +
+      "d_ClientDeleteFile_Response\"\340\001\n,CCloud_C" +
+      "lientConflictResolution_Notification\022>\n\005" +
+      "appid\030\001 \001(\rB/\202\265\030+App ID for which the co" +
+      "nflict was resolved.\022p\n\021chose_local_file" +
+      "s\030\002 \001(\010BU\202\265\030QDid the user choose to keep" +
+      " the files local to the machine they are" +
+      " on right now?\"\"\n CCloud_EnumerateUserAp" +
+      "ps_Request\"\230\001\n!CCloud_EnumerateUserApps_" +
+      "Response\0225\n\004apps\030\001 \003(\0132\'.CCloud_Enumerat" +
+      "eUserApps_Response.Apps\032<\n\004Apps\022\r\n\005appid" +
+      "\030\001 \001(\r\022\022\n\ntotalcount\030\002 \001(\005\022\021\n\ttotalsize\030" +
+      "\003 \001(\003\"\245\001\n#CCloud_GetAppFileChangelist_Re" +
+      "quest\022\031\n\005appid\030\001 \001(\rB\n\202\265\030\006App ID\022c\n\024sync" +
+      "ed_change_number\030\002 \001(\004BE\202\265\030AChange Numbe" +
+      "r to which local machine was last succes" +
+      "sfully synced\"\233\004\n\022CCloud_AppFileInfo\022+\n\t" +
+      "file_name\030\001 \001(\tB\030\202\265\030\024unqualified filenam" +
+      "e\022!\n\010sha_file\030\002 \001(\014B\017\202\265\030\013SHA of file\022=\n\n" +
+      "time_stamp\030\003 \001(\004B)\202\265\030%server timestamp o" +
+      "f last modification\022+\n\rraw_file_size\030\004 \001" +
+      "(\rB\024\202\265\030\020size of raw file\022~\n\rpersist_stat" +
+      "e\030\005 \001(\0162\032.ECloudStoragePersistState:$k_E" +
+      "CloudStoragePersistStatePersistedB%\202\265\030!c" +
+      "urrent persist state of the file\022:\n\021plat" +
+      "forms_to_sync\030\006 \001(\rB\037\202\265\030\033ERemoteStorageP" +
+      "latform bits\022G\n\021path_prefix_index\030\007 \001(\rB" +
+      ",\202\265\030(index into string table of path pre" +
+      "fixes\022D\n\022machine_name_index\030\010 \001(\rB(\202\265\030$w" +
+      "hat machine last modified this file\"\241\004\n$" +
+      "CCloud_GetAppFileChangelist_Response\022B\n\025" +
+      "current_change_number\030\001 \001(\004B#\202\265\030\037Change " +
+      "Number current on server\022\211\001\n\005files\030\002 \003(\013" +
+      "2\023.CCloud_AppFileInfoBe\202\265\030aList of files" +
+      "; may be the full list of extant/deleted" +
+      " files, or just a delta from the client " +
+      "list\022j\n\ris_only_delta\030\003 \001(\010BS\202\265\030OIf true" +
+      ", \'files\' omits any files that have not " +
+      "changed since client\'s change ID\0228\n\rpath" +
+      "_prefixes\030\004 \003(\tB!\202\265\030\035string table of pat" +
+      "h prefixes\0228\n\rmachine_names\030\005 \003(\tB!\202\265\030\035s" +
+      "tring table of machine names\022I\n\017app_buil" +
+      "did_hwm\030\006 \001(\004B0\202\265\030,highest app build ID " +
+      "which has uploaded data\"x\n CCloud_AppSes" +
+      "sionSuspend_Request\022\r\n\005appid\030\001 \001(\r\022\021\n\tcl" +
+      "ient_id\030\002 \001(\004\022\024\n\014machine_name\030\003 \001(\t\022\034\n\024c" +
+      "loud_sync_completed\030\004 \001(\010\"#\n!CCloud_AppS" +
+      "essionSuspend_Response\"C\n\037CCloud_AppSess" +
+      "ionResume_Request\022\r\n\005appid\030\001 \001(\r\022\021\n\tclie" +
+      "nt_id\030\002 \001(\004\"\"\n CCloud_AppSessionResume_R" +
+      "esponse\"{\n\036CCloud_AppLaunchIntent_Reques" +
+      "t\022\r\n\005appid\030\001 \001(\r\022\021\n\tclient_id\030\002 \001(\004\022\024\n\014m" +
+      "achine_name\030\003 \001(\t\022!\n\031ignore_pending_oper" +
+      "ations\030\004 \001(\010\"\232\001\n\037CCloud_AppLaunchIntent_" +
+      "Response\022w\n\031pending_remote_operations\030\001 " +
+      "\003(\0132\036.CCloud_PendingRemoteOperationB4\202\265\030" +
+      "0pending remote operations you should be" +
+      " aware of\"|\n#CCloud_AppExitSyncDone_Noti" +
+      "fication\022\r\n\005appid\030\001 \001(\r\022\021\n\tclient_id\030\002 \001" +
+      "(\004\022\031\n\021uploads_completed\030\003 \001(\010\022\030\n\020uploads" +
+      "_required\030\004 \001(\010\"6\n%CCloud_ClientGetAppQu" +
+      "otaUsage_Request\022\r\n\005appid\030\001 \001(\r\"\206\001\n&CClo" +
+      "ud_ClientGetAppQuotaUsage_Response\022\026\n\016ex" +
+      "isting_files\030\001 \001(\r\022\026\n\016existing_bytes\030\002 \001" +
+      "(\004\022\025\n\rmax_num_files\030\003 \001(\r\022\025\n\rmax_num_byt" +
+      "es\030\004 \001(\004\"\235\001\n\'CCloud_AppCloudStateChange_" +
+      "Notification\022<\n\005appid\030\001 \001(\rB-\202\265\030)App whi" +
+      "ch has had a change in cloud state\0224\n\021ap" +
+      "p_change_number\030\002 \001(\004B\031\202\265\030\025New App Chang" +
+      "e Number\"@\n*CCloud_ClientLogUploadReques" +
+      "t_Notification\022\022\n\nrequest_id\030\001 \001(\0042\215#\n\005C" +
+      "loud\022\204\001\n\024ClientLogUploadCheck\022).CCloud_C" +
+      "lientLogUploadCheck_Notification\032\013.NoRes" +
+      "ponse\"4\202\265\0300Client checking for pending l" +
+      "og upload requests.\022\217\001\n\027ClientLogUploadC" +
+      "omplete\022,.CCloud_ClientLogUploadComplete" +
+      "_Notification\032\013.NoResponse\"9\202\265\0305Client i" +
+      "s flagging a log upload request as compl" +
+      "eted.\022\234\001\n\023GetUploadServerInfo\022#.CCloud_G" +
+      "etUploadServerInfo_Request\032$.CCloud_GetU" +
+      "ploadServerInfo_Response\":\202\265\0306Returns th" +
+      "e URL of the proper cloud server for a u" +
+      "ser.\022\250\002\n\017BeginHTTPUpload\022\037.CCloud_BeginH" +
+      "TTPUpload_Request\032 .CCloud_BeginHTTPUplo" +
+      "ad_Response\"\321\001\202\265\030\314\001Begins the process of" +
+      " uploading a file to Steam external stor" +
+      "age services. File should be uploaded vi" +
+      "a HTTP PUT to the returned URL, after wh" +
+      "ich the upload must be finalized by a ca" +
+      "ll to CommitHTTPUpload.\022\255\001\n\020CommitHTTPUp" +
+      "load\022 .CCloud_CommitHTTPUpload_Request\032!" +
+      ".CCloud_CommitHTTPUpload_Response\"T\202\265\030PC" +
+      "ommits a file upload initiated by BeginH" +
+      "TTPUpload and transferred via HTTP PUT.\022" +
+      "\245\002\n\016BeginUGCUpload\022\036.CCloud_BeginUGCUplo" +
+      "ad_Request\032\037.CCloud_BeginUGCUpload_Respo" +
+      "nse\"\321\001\202\265\030\314\001Begins the process of uploadi" +
+      "ng a file to Steam external storage serv" +
+      "ices. File should be uploaded via HTTP P" +
+      "UT to the returned URL, after which the " +
+      "upload must be finalized by a call to Co" +
+      "mmitHTTPUpload.\022\251\001\n\017CommitUGCUpload\022\037.CC" +
+      "loud_CommitUGCUpload_Request\032 .CCloud_Co" +
+      "mmitUGCUpload_Response\"S\202\265\030OCommits a fi" +
+      "le upload initiated by BeginUGCUpload an" +
+      "d transferred via HTTP PUT.\022w\n\016GetFileDe" +
+      "tails\022\036.CCloud_GetFileDetails_Request\032\037." +
+      "CCloud_GetFileDetails_Response\"$\202\265\030 Retu" +
+      "rns details on a Cloud file.\022\272\001\n\022Enumera" +
+      "teUserFiles\022\".CCloud_EnumerateUserFiles_" +
+      "Request\032#.CCloud_EnumerateUserFiles_Resp" +
+      "onse\"[\202\265\030WEnumerates Cloud files for a u" +
+      "ser of a given app ID. Returns up to 500" +
+      " files at a time.\022d\n\006Delete\022\026.CCloud_Del" +
+      "ete_Request\032\027.CCloud_Delete_Response\")\202\265" +
+      "\030%Deletes a file from the user\'s cloud.\022" +
+      "\231\001\n\026GetClientEncryptionKey\022&.CCloud_GetC" +
+      "lientEncryptionKey_Request\032\'.CCloud_GetC" +
+      "lientEncryptionKey_Response\".\202\265\030*Gets th" +
+      "e user\'s Cloud file encryption key.\022c\n\tC" +
+      "DNReport\022\036.CCloud_CDNReport_Notification" +
+      "\032\013.NoResponse\")\202\265\030%Reports the result of" +
+      " a CDN transfer.\022\237\001\n\035ExternalStorageTran" +
+      "sferReport\0222.CCloud_ExternalStorageTrans" +
+      "ferReport_Notification\032\013.NoResponse\"=\202\265\030" +
+      "9Reports the result of an external Cloud" +
+      " storage transfer.\022\253\001\n\023BeginAppUploadBat",
+      "ch\022#.CCloud_BeginAppUploadBatch_Request\032" +
+      "$.CCloud_BeginAppUploadBatch_Response\"I\202" +
+      "\265\030EIndicate a batch of files that will b" +
+      "e uploaded / deleted for an app.\022\243\001\n\026Com" +
+      "pleteAppUploadBatch\022+.CCloud_CompleteApp" +
+      "UploadBatch_Notification\032\013.NoResponse\"O\202" +
+      "\265\030KIndicate that the batch is complete o" +
+      "r being stopped for some other reason.\022\302" +
+      "\001\n\036CompleteAppUploadBatchBlocking\022&.CClo" +
+      "ud_CompleteAppUploadBatch_Request\032\'.CClo" +
+      "ud_CompleteAppUploadBatch_Response\"O\202\265\030K" +
+      "Indicate that the batch is complete or b" +
+      "eing stopped for some other reason.\022\210\001\n\025" +
+      "ClientBeginFileUpload\022%.CCloud_ClientBeg" +
+      "inFileUpload_Request\032&.CCloud_ClientBegi" +
+      "nFileUpload_Response\" \202\265\030\034Initiate an up" +
+      "load to Cloud.\022\232\001\n\026ClientCommitFileUploa" +
+      "d\022&.CCloud_ClientCommitFileUpload_Reques" +
+      "t\032\'.CCloud_ClientCommitFileUpload_Respon" +
+      "se\"/\202\265\030+Commit the file upload or indica" +
+      "te failure.\022|\n\022ClientFileDownload\022\".CClo" +
+      "ud_ClientFileDownload_Request\032#.CCloud_C" +
+      "lientFileDownload_Response\"\035\202\265\030\031Initiate" +
+      " a file download.\022u\n\020ClientDeleteFile\022 ." +
+      "CCloud_ClientDeleteFile_Request\032!.CCloud" +
+      "_ClientDeleteFile_Response\"\034\202\265\030\030Delete o" +
+      "r forget a file.\022\216\001\n\030ClientConflictResol" +
+      "ution\022-.CCloud_ClientConflictResolution_" +
+      "Notification\032\013.NoResponse\"6\202\265\0302User has " +
+      "picked a resolution for a Cloud conflict" +
+      ".\022\217\001\n\021EnumerateUserApps\022!.CCloud_Enumera" +
+      "teUserApps_Request\032\".CCloud_EnumerateUse" +
+      "rApps_Response\"3\202\265\030/Enumerates apps stro" +
+      "ing cloud files for a user.\022\264\001\n\024GetAppFi" +
+      "leChangelist\022$.CCloud_GetAppFileChangeli" +
+      "st_Request\032%.CCloud_GetAppFileChangelist" +
+      "_Response\"O\202\265\030KGet a list of Cloud file " +
+      "changes for an app given a starting Chan" +
+      "ge Number.\022\201\001\n\021SuspendAppSession\022!.CClou" +
+      "d_AppSessionSuspend_Request\032\".CCloud_App" +
+      "SessionSuspend_Response\"%\202\265\030!An app sess" +
+      "ion is being suspended\022|\n\020ResumeAppSessi" +
+      "on\022 .CCloud_AppSessionResume_Request\032!.C" +
+      "Cloud_AppSessionResume_Response\"#\202\265\030\037An " +
+      "app session is being resumed\022\177\n\025SignalAp" +
+      "pLaunchIntent\022\037.CCloud_AppLaunchIntent_R" +
+      "equest\032 .CCloud_AppLaunchIntent_Response" +
+      "\"#\202\265\030\037Client intends to launch an app\022\202\001" +
+      "\n\025SignalAppExitSyncDone\022$.CCloud_AppExit" +
+      "SyncDone_Notification\032\013.NoResponse\"6\202\265\0302" +
+      "Client is done trying to sync after a ga" +
+      "me session\022\232\001\n\026ClientGetAppQuotaUsage\022&." +
+      "CCloud_ClientGetAppQuotaUsage_Request\032\'." +
+      "CCloud_ClientGetAppQuotaUsage_Response\"/" +
+      "\202\265\030+Client is requesting quota usage for" +
+      " an app\032)\202\265\030%A service for Steam Cloud o" +
+      "perations.2\330\002\n\013CloudClient\022}\n\024NotifyAppS" +
+      "tateChange\022(.CCloud_AppCloudStateChange_" +
+      "Notification\032\013.NoResponse\".\202\265\030*Cloud sta" +
+      "te for the given app has changed.\022\224\001\n\026Cl" +
+      "ientLogUploadRequest\022+.CCloud_ClientLogU" +
+      "ploadRequest_Notification\032\013.NoResponse\"@" +
+      "\202\265\030<Server is requesting log file upload" +
+      "s from the given client.\0323\202\265\030+Client not" +
+      "ifications for Steam cloud events\300\265\030\002B\003\200" +
+      "\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
           Enums.getDescriptor(),
-          IclientObjects.getDescriptor(),
+          SteammessagesClientObjects.getDescriptor(),
         });
-    internal_static_CCloud_GetUploadServerInfo_Request_descriptor =
+    internal_static_CCloud_ClientLogUploadCheck_Notification_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_CCloud_ClientLogUploadCheck_Notification_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCloud_ClientLogUploadCheck_Notification_descriptor,
+        new java.lang.String[] { "ClientId", });
+    internal_static_CCloud_ClientLogUploadComplete_Notification_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_CCloud_ClientLogUploadComplete_Notification_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCloud_ClientLogUploadComplete_Notification_descriptor,
+        new java.lang.String[] { "ClientId", "RequestId", });
+    internal_static_CCloud_GetUploadServerInfo_Request_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CCloud_GetUploadServerInfo_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_GetUploadServerInfo_Request_descriptor,
         new java.lang.String[] { "Appid", });
     internal_static_CCloud_GetUploadServerInfo_Response_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CCloud_GetUploadServerInfo_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_GetUploadServerInfo_Response_descriptor,
         new java.lang.String[] { "ServerUrl", });
     internal_static_CCloud_BeginHTTPUpload_Request_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CCloud_BeginHTTPUpload_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_BeginHTTPUpload_Request_descriptor,
         new java.lang.String[] { "Appid", "FileSize", "Filename", "FileSha", "IsPublic", "PlatformsToSync", "RequestHeadersNames", "RequestHeadersValues", "UploadBatchId", });
     internal_static_CCloud_BeginHTTPUpload_Response_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CCloud_BeginHTTPUpload_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_BeginHTTPUpload_Response_descriptor,
@@ -47615,25 +52561,25 @@ public final class SteammessagesCloudSteamclient {
         internal_static_CCloud_BeginHTTPUpload_Response_HTTPHeaders_descriptor,
         new java.lang.String[] { "Name", "Value", });
     internal_static_CCloud_CommitHTTPUpload_Request_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CCloud_CommitHTTPUpload_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_CommitHTTPUpload_Request_descriptor,
         new java.lang.String[] { "TransferSucceeded", "Appid", "FileSha", "Filename", });
     internal_static_CCloud_CommitHTTPUpload_Response_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CCloud_CommitHTTPUpload_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_CommitHTTPUpload_Response_descriptor,
         new java.lang.String[] { "FileCommitted", });
     internal_static_CCloud_BeginUGCUpload_Request_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CCloud_BeginUGCUpload_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_BeginUGCUpload_Request_descriptor,
         new java.lang.String[] { "Appid", "FileSize", "Filename", "FileSha", "ContentType", });
     internal_static_CCloud_BeginUGCUpload_Response_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CCloud_BeginUGCUpload_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_BeginUGCUpload_Response_descriptor,
@@ -47645,109 +52591,121 @@ public final class SteammessagesCloudSteamclient {
         internal_static_CCloud_BeginUGCUpload_Response_HTTPHeaders_descriptor,
         new java.lang.String[] { "Name", "Value", });
     internal_static_CCloud_CommitUGCUpload_Request_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CCloud_CommitUGCUpload_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_CommitUGCUpload_Request_descriptor,
         new java.lang.String[] { "TransferSucceeded", "Appid", "Ugcid", });
     internal_static_CCloud_CommitUGCUpload_Response_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CCloud_CommitUGCUpload_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_CommitUGCUpload_Response_descriptor,
         new java.lang.String[] { "FileCommitted", });
     internal_static_CCloud_GetFileDetails_Request_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CCloud_GetFileDetails_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_GetFileDetails_Request_descriptor,
         new java.lang.String[] { "Ugcid", "Appid", });
     internal_static_CCloud_UserFile_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CCloud_UserFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_UserFile_descriptor,
         new java.lang.String[] { "Appid", "Ugcid", "Filename", "Timestamp", "FileSize", "Url", "SteamidCreator", "Flags", "PlatformsToSync", "FileSha", });
     internal_static_CCloud_GetFileDetails_Response_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CCloud_GetFileDetails_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_GetFileDetails_Response_descriptor,
         new java.lang.String[] { "Details", });
     internal_static_CCloud_EnumerateUserFiles_Request_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CCloud_EnumerateUserFiles_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_EnumerateUserFiles_Request_descriptor,
         new java.lang.String[] { "Appid", "ExtendedDetails", "Count", "StartIndex", });
     internal_static_CCloud_EnumerateUserFiles_Response_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CCloud_EnumerateUserFiles_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_EnumerateUserFiles_Response_descriptor,
         new java.lang.String[] { "Files", "TotalFiles", });
     internal_static_CCloud_Delete_Request_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CCloud_Delete_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_Delete_Request_descriptor,
         new java.lang.String[] { "Filename", "Appid", "UploadBatchId", });
     internal_static_CCloud_Delete_Response_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CCloud_Delete_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_Delete_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CCloud_GetClientEncryptionKey_Request_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_CCloud_GetClientEncryptionKey_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_GetClientEncryptionKey_Request_descriptor,
         new java.lang.String[] { });
     internal_static_CCloud_GetClientEncryptionKey_Response_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_CCloud_GetClientEncryptionKey_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_GetClientEncryptionKey_Response_descriptor,
         new java.lang.String[] { "Key", "Crc", });
     internal_static_CCloud_CDNReport_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_CCloud_CDNReport_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_CDNReport_Notification_descriptor,
         new java.lang.String[] { "Steamid", "Url", "Success", "HttpStatusCode", "ExpectedBytes", "ReceivedBytes", "Duration", });
     internal_static_CCloud_ExternalStorageTransferReport_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_CCloud_ExternalStorageTransferReport_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_ExternalStorageTransferReport_Notification_descriptor,
-        new java.lang.String[] { "Host", "Path", "IsUpload", "Success", "HttpStatusCode", "BytesExpected", "BytesActual", "DurationMs", "Cellid", "Proxied", "Ipv6Local", "Ipv6Remote", });
+        new java.lang.String[] { "Host", "Path", "IsUpload", "Success", "HttpStatusCode", "BytesExpected", "BytesActual", "DurationMs", "Cellid", "Proxied", "Ipv6Local", "Ipv6Remote", "TimeToConnectMs", "TimeToSendReqMs", "TimeToFirstByteMs", "TimeToLastByteMs", });
     internal_static_CCloud_BeginAppUploadBatch_Request_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_CCloud_BeginAppUploadBatch_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_BeginAppUploadBatch_Request_descriptor,
-        new java.lang.String[] { "Appid", "MachineName", "FilesToUpload", "FilesToDelete", "ClientId", });
+        new java.lang.String[] { "Appid", "MachineName", "FilesToUpload", "FilesToDelete", "ClientId", "AppBuildId", });
     internal_static_CCloud_BeginAppUploadBatch_Response_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_CCloud_BeginAppUploadBatch_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_BeginAppUploadBatch_Response_descriptor,
         new java.lang.String[] { "BatchId", "AppChangeNumber", });
     internal_static_CCloud_CompleteAppUploadBatch_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_CCloud_CompleteAppUploadBatch_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_CompleteAppUploadBatch_Notification_descriptor,
         new java.lang.String[] { "Appid", "BatchId", "BatchEresult", });
+    internal_static_CCloud_CompleteAppUploadBatch_Request_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_CCloud_CompleteAppUploadBatch_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCloud_CompleteAppUploadBatch_Request_descriptor,
+        new java.lang.String[] { "Appid", "BatchId", "BatchEresult", });
+    internal_static_CCloud_CompleteAppUploadBatch_Response_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_CCloud_CompleteAppUploadBatch_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCloud_CompleteAppUploadBatch_Response_descriptor,
+        new java.lang.String[] { });
     internal_static_CCloud_ClientBeginFileUpload_Request_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_CCloud_ClientBeginFileUpload_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_ClientBeginFileUpload_Request_descriptor,
         new java.lang.String[] { "Appid", "FileSize", "RawFileSize", "FileSha", "TimeStamp", "Filename", "PlatformsToSync", "CellId", "CanEncrypt", "IsSharedFile", "DeprecatedRealm", "UploadBatchId", });
     internal_static_ClientCloudFileUploadBlockDetails_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_ClientCloudFileUploadBlockDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ClientCloudFileUploadBlockDetails_descriptor,
@@ -47759,31 +52717,31 @@ public final class SteammessagesCloudSteamclient {
         internal_static_ClientCloudFileUploadBlockDetails_HTTPHeaders_descriptor,
         new java.lang.String[] { "Name", "Value", });
     internal_static_CCloud_ClientBeginFileUpload_Response_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_CCloud_ClientBeginFileUpload_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_ClientBeginFileUpload_Response_descriptor,
         new java.lang.String[] { "EncryptFile", "BlockRequests", });
     internal_static_CCloud_ClientCommitFileUpload_Request_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_CCloud_ClientCommitFileUpload_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_ClientCommitFileUpload_Request_descriptor,
         new java.lang.String[] { "TransferSucceeded", "Appid", "FileSha", "Filename", });
     internal_static_CCloud_ClientCommitFileUpload_Response_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_CCloud_ClientCommitFileUpload_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_ClientCommitFileUpload_Response_descriptor,
         new java.lang.String[] { "FileCommitted", });
     internal_static_CCloud_ClientFileDownload_Request_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_CCloud_ClientFileDownload_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_ClientFileDownload_Request_descriptor,
         new java.lang.String[] { "Appid", "Filename", "Realm", });
     internal_static_CCloud_ClientFileDownload_Response_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_CCloud_ClientFileDownload_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_ClientFileDownload_Response_descriptor,
@@ -47795,31 +52753,31 @@ public final class SteammessagesCloudSteamclient {
         internal_static_CCloud_ClientFileDownload_Response_HTTPHeaders_descriptor,
         new java.lang.String[] { "Name", "Value", });
     internal_static_CCloud_ClientDeleteFile_Request_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_CCloud_ClientDeleteFile_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_ClientDeleteFile_Request_descriptor,
         new java.lang.String[] { "Appid", "Filename", "IsExplicitDelete", "UploadBatchId", });
     internal_static_CCloud_ClientDeleteFile_Response_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_CCloud_ClientDeleteFile_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_ClientDeleteFile_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CCloud_ClientConflictResolution_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_CCloud_ClientConflictResolution_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_ClientConflictResolution_Notification_descriptor,
         new java.lang.String[] { "Appid", "ChoseLocalFiles", });
     internal_static_CCloud_EnumerateUserApps_Request_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_CCloud_EnumerateUserApps_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_EnumerateUserApps_Request_descriptor,
         new java.lang.String[] { });
     internal_static_CCloud_EnumerateUserApps_Response_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_CCloud_EnumerateUserApps_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_EnumerateUserApps_Response_descriptor,
@@ -47831,71 +52789,89 @@ public final class SteammessagesCloudSteamclient {
         internal_static_CCloud_EnumerateUserApps_Response_Apps_descriptor,
         new java.lang.String[] { "Appid", "Totalcount", "Totalsize", });
     internal_static_CCloud_GetAppFileChangelist_Request_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_CCloud_GetAppFileChangelist_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_GetAppFileChangelist_Request_descriptor,
         new java.lang.String[] { "Appid", "SyncedChangeNumber", });
     internal_static_CCloud_AppFileInfo_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_CCloud_AppFileInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_AppFileInfo_descriptor,
         new java.lang.String[] { "FileName", "ShaFile", "TimeStamp", "RawFileSize", "PersistState", "PlatformsToSync", "PathPrefixIndex", "MachineNameIndex", });
     internal_static_CCloud_GetAppFileChangelist_Response_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_CCloud_GetAppFileChangelist_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_GetAppFileChangelist_Response_descriptor,
-        new java.lang.String[] { "CurrentChangeNumber", "Files", "IsOnlyDelta", "PathPrefixes", "MachineNames", });
+        new java.lang.String[] { "CurrentChangeNumber", "Files", "IsOnlyDelta", "PathPrefixes", "MachineNames", "AppBuildidHwm", });
     internal_static_CCloud_AppSessionSuspend_Request_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_CCloud_AppSessionSuspend_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_AppSessionSuspend_Request_descriptor,
         new java.lang.String[] { "Appid", "ClientId", "MachineName", "CloudSyncCompleted", });
     internal_static_CCloud_AppSessionSuspend_Response_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_CCloud_AppSessionSuspend_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_AppSessionSuspend_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CCloud_AppSessionResume_Request_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_CCloud_AppSessionResume_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_AppSessionResume_Request_descriptor,
         new java.lang.String[] { "Appid", "ClientId", });
     internal_static_CCloud_AppSessionResume_Response_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_CCloud_AppSessionResume_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_AppSessionResume_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CCloud_AppLaunchIntent_Request_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_CCloud_AppLaunchIntent_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_AppLaunchIntent_Request_descriptor,
         new java.lang.String[] { "Appid", "ClientId", "MachineName", "IgnorePendingOperations", });
     internal_static_CCloud_AppLaunchIntent_Response_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_CCloud_AppLaunchIntent_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_AppLaunchIntent_Response_descriptor,
         new java.lang.String[] { "PendingRemoteOperations", });
     internal_static_CCloud_AppExitSyncDone_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_CCloud_AppExitSyncDone_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_AppExitSyncDone_Notification_descriptor,
-        new java.lang.String[] { "Appid", "ClientId", "UploadsCompleted", });
+        new java.lang.String[] { "Appid", "ClientId", "UploadsCompleted", "UploadsRequired", });
+    internal_static_CCloud_ClientGetAppQuotaUsage_Request_descriptor =
+      getDescriptor().getMessageTypes().get(50);
+    internal_static_CCloud_ClientGetAppQuotaUsage_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCloud_ClientGetAppQuotaUsage_Request_descriptor,
+        new java.lang.String[] { "Appid", });
+    internal_static_CCloud_ClientGetAppQuotaUsage_Response_descriptor =
+      getDescriptor().getMessageTypes().get(51);
+    internal_static_CCloud_ClientGetAppQuotaUsage_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCloud_ClientGetAppQuotaUsage_Response_descriptor,
+        new java.lang.String[] { "ExistingFiles", "ExistingBytes", "MaxNumFiles", "MaxNumBytes", });
     internal_static_CCloud_AppCloudStateChange_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_CCloud_AppCloudStateChange_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCloud_AppCloudStateChange_Notification_descriptor,
         new java.lang.String[] { "Appid", "AppChangeNumber", });
+    internal_static_CCloud_ClientLogUploadRequest_Notification_descriptor =
+      getDescriptor().getMessageTypes().get(53);
+    internal_static_CCloud_ClientLogUploadRequest_Notification_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCloud_ClientLogUploadRequest_Notification_descriptor,
+        new java.lang.String[] { "RequestId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(SteammessagesUnifiedBaseSteamclient.description);
@@ -47904,9 +52880,10 @@ public final class SteammessagesCloudSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
     Enums.getDescriptor();
-    IclientObjects.getDescriptor();
+    SteammessagesClientObjects.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

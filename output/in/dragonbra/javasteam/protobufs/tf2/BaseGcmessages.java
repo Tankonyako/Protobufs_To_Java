@@ -73120,260 +73120,260 @@ public final class BaseGcmessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031tf2/base_gcmessages.proto\032\031steam/steam" +
-      "messages.proto\"}\n\035CGCStorePurchaseInit_L" +
-      "ineItem\022\023\n\013item_def_id\030\001 \001(\r\022\020\n\010quantity" +
-      "\030\002 \001(\r\022\036\n\026cost_in_local_currency\030\003 \001(\r\022\025" +
-      "\n\rpurchase_type\030\004 \001(\r\"\202\001\n\027CMsgGCStorePur" +
-      "chaseInit\022\017\n\007country\030\001 \001(\t\022\020\n\010language\030\002" +
-      " \001(\005\022\020\n\010currency\030\003 \001(\005\0222\n\nline_items\030\004 \003" +
-      "(\0132\036.CGCStorePurchaseInit_LineItem\"A\n\037CM" +
-      "sgGCStorePurchaseInitResponse\022\016\n\006result\030" +
-      "\001 \001(\005\022\016\n\006txn_id\030\002 \001(\004\"&\n\023CMsgSystemBroad" +
-      "cast\022\017\n\007message\030\001 \001(\t\"\"\n\017CMsgClientHello" +
-      "\022\017\n\007version\030\001 \001(\r\"\"\n\017CMsgServerHello\022\017\n\007" +
-      "version\030\001 \001(\r\"Q\n\021CMsgClientWelcome\022\017\n\007ve" +
-      "rsion\030\001 \001(\r\022\021\n\tgame_data\030\002 \001(\014\022\030\n\020txn_co" +
-      "untry_code\030\003 \001(\t\"H\n\021CMsgServerWelcome\022\033\n" +
-      "\023min_allowed_version\030\001 \001(\r\022\026\n\016active_ver" +
-      "sion\030\002 \001(\r\"T\n\021CMsgClientGoodbye\022?\n\006reaso" +
-      "n\030\001 \001(\0162\020.GCGoodbyeReason:\035GCGoodbyeReas" +
-      "on_GC_GOING_DOWN\"T\n\021CMsgServerGoodbye\022?\n" +
-      "\006reason\030\001 \001(\0162\020.GCGoodbyeReason:\035GCGoodb" +
-      "yeReason_GC_GOING_DOWN\"\025\n\023CMsgServerAvai" +
-      "lable\"*\n\026CMsgLANServerAvailable\022\020\n\010lobby" +
-      "_id\030\001 \001(\006\"\346\007\n\030CSOEconGameAccountClient\022$" +
-      "\n\031additional_backpack_slots\030\001 \001(\r:\0010\022\034\n\r" +
-      "trial_account\030\002 \001(\010:\005false\022*\n\"need_to_ch" +
-      "oose_most_helpful_friend\030\004 \001(\010\022\027\n\017in_coa" +
-      "ches_list\030\005 \001(\010\022\034\n\024trade_ban_expiration\030" +
-      "\006 \001(\007\022\033\n\023duel_ban_expiration\030\007 \001(\007\022\033\n\020pr" +
-      "eview_item_def\030\010 \001(\r:\0010\022\035\n\016phone_verifie" +
-      "d\030\023 \001(\010:\005false\022\030\n\020skill_rating_6v6\030\024 \001(\r" +
-      "\022\030\n\020skill_rating_9v9\030\025 \001(\r\022!\n\022competitiv" +
-      "e_access\030\027 \001(\010:\005false\022)\n!matchmaking_ran" +
-      "ked_ban_expiration\030\022 \001(\r\0222\n*matchmaking_" +
-      "ranked_low_priority_expiration\030\030 \001(\r\022,\n$" +
-      "matchmaking_ranked_ban_last_duration\030\031 \001" +
-      "(\r\0225\n-matchmaking_ranked_low_priority_la" +
-      "st_duration\030\032 \001(\r\022)\n!matchmaking_casual_" +
-      "ban_expiration\030\033 \001(\r\0222\n*matchmaking_casu" +
-      "al_low_priority_expiration\030\034 \001(\r\022,\n$matc" +
-      "hmaking_casual_ban_last_duration\030\035 \001(\r\0225" +
-      "\n-matchmaking_casual_low_priority_last_d" +
-      "uration\030\036 \001(\r\022 \n\021phone_identifying\030\037 \001(\010" +
-      ":\005false\022+\n\034disable_party_quest_progress\030" +
-      "  \001(\010:\005false\022\034\n\024quest_reward_credits\030! \001" +
-      "(\r\022?\n7matchmaking_last_casual_excessive_" +
-      "reports_auto_ban_time\030\" \001(\r\022=\n5matchmaki" +
-      "ng_last_comp_excessive_reports_auto_ban_" +
-      "time\030# \001(\r\"r\n\030CSOItemCriteriaCondition\022\n" +
-      "\n\002op\030\001 \001(\005\022\r\n\005field\030\002 \001(\t\022\020\n\010required\030\003 " +
-      "\001(\010\022\023\n\013float_value\030\004 \001(\002\022\024\n\014string_value" +
-      "\030\005 \001(\t\"\250\002\n\017CSOItemCriteria\022\022\n\nitem_level" +
-      "\030\001 \001(\r\022\024\n\014item_quality\030\002 \001(\005\022\026\n\016item_lev" +
-      "el_set\030\003 \001(\010\022\030\n\020item_quality_set\030\004 \001(\010\022\031" +
-      "\n\021initial_inventory\030\005 \001(\r\022\030\n\020initial_qua" +
-      "ntity\030\006 \001(\r\022\033\n\023ignore_enabled_flag\030\010 \001(\010" +
-      "\022-\n\nconditions\030\t \003(\0132\031.CSOItemCriteriaCo" +
-      "ndition\022\023\n\013recent_only\030\n \001(\010\022\014\n\004tags\030\013 \001" +
-      "(\t\022\025\n\requip_regions\030\014 \001(\t\"\325\003\n\rCSOItemRec" +
-      "ipe\022\021\n\tdef_index\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\013\n\003" +
-      "n_a\030\003 \001(\t\022\023\n\013desc_inputs\030\004 \001(\t\022\024\n\014desc_o" +
-      "utputs\030\005 \001(\t\022\014\n\004di_a\030\006 \001(\t\022\014\n\004di_b\030\007 \001(\t" +
-      "\022\014\n\004di_c\030\010 \001(\t\022\014\n\004do_a\030\t \001(\t\022\014\n\004do_b\030\n \001" +
-      "(\t\022\014\n\004do_c\030\013 \001(\t\022\037\n\027requires_all_same_cl" +
-      "ass\030\014 \001(\010\022\036\n\026requires_all_same_slot\030\r \001(" +
-      "\010\022\036\n\026class_usage_for_output\030\016 \001(\005\022\035\n\025slo" +
-      "t_usage_for_output\030\017 \001(\005\022\026\n\016set_for_outp" +
-      "ut\030\020 \001(\005\022.\n\024input_items_criteria\030\024 \003(\0132\020" +
-      ".CSOItemCriteria\022/\n\025output_items_criteri" +
-      "a\030\025 \003(\0132\020.CSOItemCriteria\022\036\n\026input_item_" +
-      "dupe_counts\030\026 \003(\r\"M\n\025CMsgDevNewItemReque" +
-      "st\022\020\n\010receiver\030\001 \001(\006\022\"\n\010criteria\030\002 \001(\0132\020" +
-      ".CSOItemCriteria\"G\n\033CMsgDevDebugRollLoot" +
-      "Request\022\020\n\010receiver\030\001 \001(\006\022\026\n\016loot_list_n" +
-      "ame\030\002 \001(\t\"\221\001\n\037CMsgIncrementKillCountAttr" +
-      "ibute\022\027\n\017killer_steam_id\030\001 \001(\004\022\027\n\017victim" +
-      "_steam_id\030\002 \001(\004\022\017\n\007item_id\030\003 \001(\004\022\022\n\neven" +
-      "t_type\030\004 \001(\r\022\027\n\017increment_value\030\005 \001(\r\"Z\n" +
-      "(CMsgIncrementKillCountAttribute_Multipl" +
-      "e\022.\n\004msgs\030\001 \003(\0132 .CMsgIncrementKillCount" +
-      "Attribute\"w\n\036CMsgTrackUniquePlayerPairEv" +
-      "ent\022\027\n\017killer_steam_id\030\001 \001(\004\022\027\n\017victim_s" +
+      "\n\031tf2/base_gcmessages.proto\032\027tf2/steamme" +
+      "ssages.proto\"}\n\035CGCStorePurchaseInit_Lin" +
+      "eItem\022\023\n\013item_def_id\030\001 \001(\r\022\020\n\010quantity\030\002" +
+      " \001(\r\022\036\n\026cost_in_local_currency\030\003 \001(\r\022\025\n\r" +
+      "purchase_type\030\004 \001(\r\"\202\001\n\027CMsgGCStorePurch" +
+      "aseInit\022\017\n\007country\030\001 \001(\t\022\020\n\010language\030\002 \001" +
+      "(\005\022\020\n\010currency\030\003 \001(\005\0222\n\nline_items\030\004 \003(\013" +
+      "2\036.CGCStorePurchaseInit_LineItem\"A\n\037CMsg" +
+      "GCStorePurchaseInitResponse\022\016\n\006result\030\001 " +
+      "\001(\005\022\016\n\006txn_id\030\002 \001(\004\"&\n\023CMsgSystemBroadca" +
+      "st\022\017\n\007message\030\001 \001(\t\"\"\n\017CMsgClientHello\022\017" +
+      "\n\007version\030\001 \001(\r\"\"\n\017CMsgServerHello\022\017\n\007ve" +
+      "rsion\030\001 \001(\r\"Q\n\021CMsgClientWelcome\022\017\n\007vers" +
+      "ion\030\001 \001(\r\022\021\n\tgame_data\030\002 \001(\014\022\030\n\020txn_coun" +
+      "try_code\030\003 \001(\t\"H\n\021CMsgServerWelcome\022\033\n\023m" +
+      "in_allowed_version\030\001 \001(\r\022\026\n\016active_versi" +
+      "on\030\002 \001(\r\"T\n\021CMsgClientGoodbye\022?\n\006reason\030" +
+      "\001 \001(\0162\020.GCGoodbyeReason:\035GCGoodbyeReason" +
+      "_GC_GOING_DOWN\"T\n\021CMsgServerGoodbye\022?\n\006r" +
+      "eason\030\001 \001(\0162\020.GCGoodbyeReason:\035GCGoodbye" +
+      "Reason_GC_GOING_DOWN\"\025\n\023CMsgServerAvaila" +
+      "ble\"*\n\026CMsgLANServerAvailable\022\020\n\010lobby_i" +
+      "d\030\001 \001(\006\"\346\007\n\030CSOEconGameAccountClient\022$\n\031" +
+      "additional_backpack_slots\030\001 \001(\r:\0010\022\034\n\rtr" +
+      "ial_account\030\002 \001(\010:\005false\022*\n\"need_to_choo" +
+      "se_most_helpful_friend\030\004 \001(\010\022\027\n\017in_coach" +
+      "es_list\030\005 \001(\010\022\034\n\024trade_ban_expiration\030\006 " +
+      "\001(\007\022\033\n\023duel_ban_expiration\030\007 \001(\007\022\033\n\020prev" +
+      "iew_item_def\030\010 \001(\r:\0010\022\035\n\016phone_verified\030" +
+      "\023 \001(\010:\005false\022\030\n\020skill_rating_6v6\030\024 \001(\r\022\030" +
+      "\n\020skill_rating_9v9\030\025 \001(\r\022!\n\022competitive_" +
+      "access\030\027 \001(\010:\005false\022)\n!matchmaking_ranke" +
+      "d_ban_expiration\030\022 \001(\r\0222\n*matchmaking_ra" +
+      "nked_low_priority_expiration\030\030 \001(\r\022,\n$ma" +
+      "tchmaking_ranked_ban_last_duration\030\031 \001(\r" +
+      "\0225\n-matchmaking_ranked_low_priority_last" +
+      "_duration\030\032 \001(\r\022)\n!matchmaking_casual_ba" +
+      "n_expiration\030\033 \001(\r\0222\n*matchmaking_casual" +
+      "_low_priority_expiration\030\034 \001(\r\022,\n$matchm" +
+      "aking_casual_ban_last_duration\030\035 \001(\r\0225\n-" +
+      "matchmaking_casual_low_priority_last_dur" +
+      "ation\030\036 \001(\r\022 \n\021phone_identifying\030\037 \001(\010:\005" +
+      "false\022+\n\034disable_party_quest_progress\030  " +
+      "\001(\010:\005false\022\034\n\024quest_reward_credits\030! \001(\r" +
+      "\022?\n7matchmaking_last_casual_excessive_re" +
+      "ports_auto_ban_time\030\" \001(\r\022=\n5matchmaking" +
+      "_last_comp_excessive_reports_auto_ban_ti" +
+      "me\030# \001(\r\"r\n\030CSOItemCriteriaCondition\022\n\n\002" +
+      "op\030\001 \001(\005\022\r\n\005field\030\002 \001(\t\022\020\n\010required\030\003 \001(" +
+      "\010\022\023\n\013float_value\030\004 \001(\002\022\024\n\014string_value\030\005" +
+      " \001(\t\"\250\002\n\017CSOItemCriteria\022\022\n\nitem_level\030\001" +
+      " \001(\r\022\024\n\014item_quality\030\002 \001(\005\022\026\n\016item_level" +
+      "_set\030\003 \001(\010\022\030\n\020item_quality_set\030\004 \001(\010\022\031\n\021" +
+      "initial_inventory\030\005 \001(\r\022\030\n\020initial_quant" +
+      "ity\030\006 \001(\r\022\033\n\023ignore_enabled_flag\030\010 \001(\010\022-" +
+      "\n\nconditions\030\t \003(\0132\031.CSOItemCriteriaCond" +
+      "ition\022\023\n\013recent_only\030\n \001(\010\022\014\n\004tags\030\013 \001(\t" +
+      "\022\025\n\requip_regions\030\014 \001(\t\"\325\003\n\rCSOItemRecip" +
+      "e\022\021\n\tdef_index\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\013\n\003n_" +
+      "a\030\003 \001(\t\022\023\n\013desc_inputs\030\004 \001(\t\022\024\n\014desc_out" +
+      "puts\030\005 \001(\t\022\014\n\004di_a\030\006 \001(\t\022\014\n\004di_b\030\007 \001(\t\022\014" +
+      "\n\004di_c\030\010 \001(\t\022\014\n\004do_a\030\t \001(\t\022\014\n\004do_b\030\n \001(\t" +
+      "\022\014\n\004do_c\030\013 \001(\t\022\037\n\027requires_all_same_clas" +
+      "s\030\014 \001(\010\022\036\n\026requires_all_same_slot\030\r \001(\010\022" +
+      "\036\n\026class_usage_for_output\030\016 \001(\005\022\035\n\025slot_" +
+      "usage_for_output\030\017 \001(\005\022\026\n\016set_for_output" +
+      "\030\020 \001(\005\022.\n\024input_items_criteria\030\024 \003(\0132\020.C" +
+      "SOItemCriteria\022/\n\025output_items_criteria\030" +
+      "\025 \003(\0132\020.CSOItemCriteria\022\036\n\026input_item_du" +
+      "pe_counts\030\026 \003(\r\"M\n\025CMsgDevNewItemRequest" +
+      "\022\020\n\010receiver\030\001 \001(\006\022\"\n\010criteria\030\002 \001(\0132\020.C" +
+      "SOItemCriteria\"G\n\033CMsgDevDebugRollLootRe" +
+      "quest\022\020\n\010receiver\030\001 \001(\006\022\026\n\016loot_list_nam" +
+      "e\030\002 \001(\t\"\221\001\n\037CMsgIncrementKillCountAttrib" +
+      "ute\022\027\n\017killer_steam_id\030\001 \001(\004\022\027\n\017victim_s" +
       "team_id\030\002 \001(\004\022\017\n\007item_id\030\003 \001(\004\022\022\n\nevent_" +
-      "type\030\004 \001(\r\"j\n\035CMsgApplyStrangeCountTrans" +
-      "fer\022\024\n\014tool_item_id\030\001 \001(\004\022\030\n\020item_src_it" +
-      "em_id\030\002 \001(\004\022\031\n\021item_dest_item_id\030\003 \001(\004\"J" +
-      "\n\024CMsgApplyStrangePart\022\034\n\024strange_part_i" +
-      "tem_id\030\001 \001(\004\022\024\n\014item_item_id\030\002 \001(\004\"m\n\033CM" +
-      "sgApplyStrangeRestriction\022\034\n\024strange_par" +
-      "t_item_id\030\001 \001(\004\022\024\n\014item_item_id\030\002 \001(\004\022\032\n" +
-      "\022strange_attr_index\030\003 \001(\r\"M\n\024CMsgApplyUp" +
-      "gradeCard\022\034\n\024upgrade_card_item_id\030\001 \001(\004\022" +
-      "\027\n\017subject_item_id\030\002 \001(\004\"M\n\024CSOEconItemA" +
-      "ttribute\022\021\n\tdef_index\030\001 \001(\r\022\r\n\005value\030\002 \001" +
-      "(\r\022\023\n\013value_bytes\030\003 \001(\014\":\n\023CSOEconItemEq" +
-      "uipped\022\021\n\tnew_class\030\001 \001(\r\022\020\n\010new_slot\030\002 " +
-      "\001(\r\"\324\003\n\013CSOEconItem\022\n\n\002id\030\001 \001(\004\022\022\n\naccou" +
-      "nt_id\030\002 \001(\r\022\021\n\tinventory\030\003 \001(\r\022\021\n\tdef_in" +
-      "dex\030\004 \001(\r\022\020\n\010quantity\030\005 \001(\r\022\r\n\005level\030\006 \001" +
-      "(\r\022\017\n\007quality\030\007 \001(\r\022\020\n\005flags\030\010 \001(\r:\0010\022\016\n" +
-      "\006origin\030\t \001(\r\022\023\n\013custom_name\030\n \001(\t\022\023\n\013cu" +
-      "stom_desc\030\013 \001(\t\022(\n\tattribute\030\014 \003(\0132\025.CSO" +
-      "EconItemAttribute\022#\n\rinterior_item\030\r \001(\013" +
-      "2\014.CSOEconItem\022\025\n\006in_use\030\016 \001(\010:\005false\022\020\n" +
-      "\005style\030\017 \001(\r:\0010\022\026\n\013original_id\030\020 \001(\004:\0010\022" +
-      "\037\n\027contains_equipped_state\030\021 \001(\010\022,\n\016equi" +
-      "pped_state\030\022 \003(\0132\024.CSOEconItemEquipped\022\"" +
-      "\n\032contains_equipped_state_v2\030\023 \001(\010\"S\n\033CM" +
-      "sgAdjustItemEquippedState\022\017\n\007item_id\030\001 \001" +
-      "(\004\022\021\n\tnew_class\030\002 \001(\r\022\020\n\010new_slot\030\003 \001(\r\"" +
-      "\"\n\rCMsgSortItems\022\021\n\tsort_type\030\001 \001(\r\"^\n\020C" +
-      "SOEconClaimCode\022\022\n\naccount_id\030\001 \001(\r\022\021\n\tc" +
-      "ode_type\030\002 \001(\r\022\025\n\rtime_acquired\030\003 \001(\r\022\014\n" +
-      "\004code\030\004 \001(\t\"3\n\024CMsgStoreGetUserData\022\033\n\023p" +
-      "rice_sheet_version\030\001 \001(\007\"\224\002\n\034CMsgStoreGe" +
-      "tUserDataResponse\022\016\n\006result\030\001 \001(\005\022\020\n\010cur" +
-      "rency\030\002 \001(\005\022\017\n\007country\030\003 \001(\t\022\033\n\023price_sh" +
-      "eet_version\030\004 \001(\007\022\032\n\017experiment_data\030\005 \001" +
-      "(\004:\0010\022\031\n\021featured_item_idx\030\006 \001(\005\022#\n\025show" +
-      "_hat_descriptions\030\007 \001(\010:\004true\022\023\n\013price_s" +
-      "heet\030\010 \001(\014\022\034\n\021default_item_sort\030\t \001(\005:\0010" +
-      "\022\025\n\rpopular_items\030\n \003(\r\"r\n\024CMsgUpdateIte" +
-      "mSchema\022\022\n\nitems_game\030\001 \001(\014\022\033\n\023item_sche" +
-      "ma_version\030\002 \001(\007\022\026\n\016items_game_url\030\003 \001(\t" +
-      "\022\021\n\tsignature\030\004 \001(\014\"!\n\013CMsgGCError\022\022\n\ner" +
-      "ror_text\030\001 \001(\t\"\035\n\033CMsgRequestInventoryRe" +
-      "fresh\".\n\017CMsgConVarValue\022\014\n\004name\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t\"9\n\024CMsgReplicateConVars\022!\n" +
-      "\007convars\030\001 \003(\0132\020.CMsgConVarValue\"\261\001\n\013CMs" +
-      "gUseItem\022\017\n\007item_id\030\001 \001(\004\022\027\n\017target_stea" +
-      "m_id\030\002 \001(\006\022\037\n\027gift__potential_targets\030\003 " +
-      "\003(\r\022\030\n\020duel__class_lock\030\004 \001(\r\022\032\n\022initiat" +
-      "or_steam_id\030\005 \001(\006\022!\n\031itempack__ack_immed" +
-      "iately\030\006 \001(\010\"d\n\033CMsgReplayUploadedToYouT" +
-      "ube\022\023\n\013youtube_url\030\001 \001(\t\022\034\n\024youtube_acco" +
-      "unt_name\030\002 \001(\t\022\022\n\nsession_id\030\003 \001(\004\".\n\027CM" +
-      "sgConsumableExhausted\022\023\n\013item_def_id\030\001 \001" +
-      "(\005\"\267\001\n\024CMsgItemAcknowledged\022\022\n\naccount_i" +
-      "d\030\001 \001(\r\022\021\n\tinventory\030\002 \001(\r\022\021\n\tdef_index\030" +
-      "\003 \001(\r\022\017\n\007quality\030\004 \001(\r\022\016\n\006rarity\030\005 \001(\r\022\016" +
-      "\n\006origin\030\006 \001(\r\022\022\n\nis_strange\030\007 \001(\r\022\022\n\nis" +
-      "_unusual\030\010 \001(\r\022\014\n\004wear\030\t \001(\002\"b\n\031CMsgSetP" +
-      "resetItemPosition\022\020\n\010class_id\030\001 \001(\r\022\021\n\tp" +
-      "reset_id\030\002 \001(\r\022\017\n\007slot_id\030\003 \001(\r\022\017\n\007item_" +
-      "id\030\004 \001(\004\"\205\001\n\024CMsgSetItemPositions\022:\n\016ite" +
-      "m_positions\030\001 \003(\0132\".CMsgSetItemPositions" +
-      ".ItemPosition\0321\n\014ItemPosition\022\017\n\007item_id" +
-      "\030\001 \001(\004\022\020\n\010position\030\002 \001(\r\"t\n\031CSOEconItemP" +
-      "resetInstance\022\026\n\010class_id\030\002 \001(\rB\004\200\246\035\001\022\027\n" +
-      "\tpreset_id\030\003 \001(\rB\004\200\246\035\001\022\025\n\007slot_id\030\004 \001(\rB" +
-      "\004\200\246\035\001\022\017\n\007item_id\030\005 \001(\004\"?\n\030CMsgSelectPres" +
-      "etForClass\022\020\n\010class_id\030\001 \001(\r\022\021\n\tpreset_i" +
-      "d\030\002 \001(\r\"Z\n\030CSOClassPresetClientData\022\022\n\na" +
-      "ccount_id\030\001 \001(\r\022\020\n\010class_id\030\002 \001(\r\022\030\n\020act" +
-      "ive_preset_id\030\003 \001(\r\"\270\001\n\021CMsgGCReportAbus" +
-      "e\022\027\n\017target_steam_id\030\001 \001(\006\022\023\n\013descriptio" +
-      "n\030\004 \001(\t\022\013\n\003gid\030\005 \001(\004\022\022\n\nabuse_type\030\002 \001(\r" +
-      "\022\024\n\014content_type\030\003 \001(\r\022\035\n\025target_game_se" +
-      "rver_ip\030\006 \001(\007\022\037\n\027target_game_server_port" +
-      "\030\007 \001(\r\"[\n\031CMsgGCReportAbuseResponse\022\027\n\017t" +
-      "arget_steam_id\030\001 \001(\006\022\016\n\006result\030\002 \001(\r\022\025\n\r" +
-      "error_message\030\003 \001(\t\"f\n\032CMsgGCNameItemNot" +
-      "ification\022\026\n\016player_steamid\030\001 \001(\006\022\026\n\016ite" +
-      "m_def_index\030\002 \001(\r\022\030\n\020item_name_custom\030\003 " +
-      "\001(\t\"\266\001\n\037CMsgGCClientDisplayNotification\022" +
-      "+\n#notification_title_localization_key\030\001" +
-      " \001(\t\022*\n\"notification_body_localization_k" +
-      "ey\030\002 \001(\t\022\033\n\023body_substring_keys\030\003 \003(\t\022\035\n" +
-      "\025body_substring_values\030\004 \003(\t\"1\n\027CMsgGCSh" +
-      "owItemsPickedUp\022\026\n\016player_steamid\030\001 \001(\006\"" +
-      "Q\n\027CMsgUpdatePeriodicEvent\022\022\n\naccount_id" +
-      "\030\001 \001(\r\022\022\n\nevent_type\030\002 \001(\r\022\016\n\006amount\030\003 \001" +
-      "(\r\"|\n CMsgGCIncrementKillCountResponse\022\037" +
-      "\n\021killer_account_id\030\001 \001(\rB\004\200\246\035\001\022\021\n\tnum_k" +
-      "ills\030\002 \001(\r\022\020\n\010item_def\030\003 \001(\r\022\022\n\nlevel_ty" +
-      "pe\030\004 \001(\r\"K\n\027CMsgGCRemoveStrangePart\022\017\n\007i" +
-      "tem_id\030\001 \001(\004\022\037\n\027strange_part_score_type\030" +
-      "\002 \001(\r\"C\n\027CMsgGCRemoveUpgradeCard\022\017\n\007item" +
-      "_id\030\001 \001(\004\022\027\n\017attribute_index\030\002 \001(\r\";\n(CM" +
-      "sgGCRemoveCustomizationAttributeSimple\022\017" +
-      "\n\007item_id\030\001 \001(\004\"+\n\030CMsgGCResetStrangeSco" +
-      "res\022\017\n\007item_id\030\001 \001(\004\"A\n\'CMsgGCItemPrevie" +
-      "wItemBoughtNotification\022\026\n\016item_def_inde" +
-      "x\030\001 \001(\r\"+\n\031CMsgGCStorePurchaseCancel\022\016\n\006" +
-      "txn_id\030\001 \001(\004\"3\n!CMsgGCStorePurchaseCance" +
-      "lResponse\022\016\n\006result\030\001 \001(\r\"-\n\033CMsgGCStore" +
-      "PurchaseFinalize\022\016\n\006txn_id\030\001 \001(\004\"G\n#CMsg" +
-      "GCStorePurchaseFinalizeResponse\022\016\n\006resul" +
-      "t\030\001 \001(\r\022\020\n\010item_ids\030\002 \003(\004\"I\n\033CMsgGCBanne" +
-      "dWordListRequest\022\031\n\021ban_list_group_id\030\001 " +
-      "\001(\r\022\017\n\007word_id\030\002 \001(\r\"f\n\021CMsgGCGiftedItem" +
-      "s\022\027\n\017gifter_steam_id\030\001 \001(\004\022\031\n\021was_random" +
-      "_person\030\002 \001(\010\022\035\n\025recipient_account_ids\030\003" +
-      " \003(\r\"H\n\021CMsgGCCollectItem\022\032\n\022collection_" +
-      "item_id\030\001 \001(\004\022\027\n\017subject_item_id\030\002 \001(\004\"6" +
-      "\n\035CMsgGCClientMarketDataRequest\022\025\n\ruser_" +
-      "currency\030\001 \001(\r\"\210\001\n\033CMsgGCClientMarketDat" +
-      "aEntry\022\026\n\016item_def_index\030\001 \001(\r\022\024\n\014item_q" +
-      "uality\030\002 \001(\r\022\032\n\022item_sell_listings\030\003 \001(\r" +
-      "\022\037\n\027price_in_local_currency\030\004 \001(\r\"G\n\026CMs" +
-      "gGCClientMarketData\022-\n\007entries\030\001 \003(\0132\034.C" +
-      "MsgGCClientMarketDataEntry\"D\n\023CMsgApplyT" +
-      "oolToItem\022\024\n\014tool_item_id\030\001 \001(\004\022\027\n\017subje" +
-      "ct_item_id\030\002 \001(\004\"K\n\027CMsgApplyToolToBaseI" +
-      "tem\022\024\n\014tool_item_id\030\001 \001(\004\022\032\n\022baseitem_de" +
-      "f_index\030\002 \001(\r\"G\n\023CMsgRecipeComponent\022\027\n\017" +
-      "subject_item_id\030\001 \001(\004\022\027\n\017attribute_index" +
-      "\030\002 \001(\004\"o\n!CMsgFulfillDynamicRecipeCompon" +
-      "ent\022\024\n\014tool_item_id\030\001 \001(\004\0224\n\026consumption" +
-      "_components\030\002 \003(\0132\024.CMsgRecipeComponent\"" +
-      "B\n\037CMsgSetItemEffectVerticalOffset\022\017\n\007it" +
-      "em_id\030\001 \001(\004\022\016\n\006offset\030\002 \001(\002\"B\n\035CMsgSetHa" +
-      "tEffectUseHeadOrigin\022\017\n\007item_id\030\001 \001(\004\022\020\n" +
-      "\010use_head\030\002 \001(\010\"T\n\034CMsgDeliverGiftRespon" +
-      "seGiver\022\025\n\rresponse_code\030\001 \001(\r\022\035\n\025receiv" +
-      "er_account_name\030\002 \001(\t\"O\n CSOEconGameAcco" +
-      "untForGameServers\022+\n\034disable_party_quest" +
-      "_progress\030\006 \001(\010:\005false\"\355\002\n*CWorkshop_Pop" +
-      "ulateItemDescriptions_Request\022\r\n\005appid\030\001" +
-      " \001(\r\022\\\n\tlanguages\030\002 \003(\0132I.CWorkshop_Popu" +
-      "lateItemDescriptions_Request.ItemDescrip" +
-      "tionsLanguageBlock\032E\n\025SingleItemDescript" +
-      "ion\022\022\n\ngameitemid\030\001 \001(\r\022\030\n\020item_descript" +
-      "ion\030\002 \001(\t\032\212\001\n\035ItemDescriptionsLanguageBl" +
-      "ock\022\020\n\010language\030\001 \001(\t\022W\n\014descriptions\030\002 " +
-      "\003(\0132A.CWorkshop_PopulateItemDescriptions" +
-      "_Request.SingleItemDescription\"F\n!CWorks" +
-      "hop_GetContributors_Request\022\r\n\005appid\030\001 \001" +
-      "(\r\022\022\n\ngameitemid\030\002 \001(\r\":\n\"CWorkshop_GetC" +
-      "ontributors_Response\022\024\n\014contributors\030\001 \003" +
-      "(\006\"\325\003\n%CWorkshop_SetItemPaymentRules_Req" +
-      "uest\022\r\n\005appid\030\001 \001(\r\022\022\n\ngameitemid\030\002 \001(\r\022" +
-      "a\n\031associated_workshop_files\030\003 \003(\0132>.CWo" +
-      "rkshop_SetItemPaymentRules_Request.Works" +
-      "hopItemPaymentRule\022W\n\020partner_accounts\030\004" +
-      " \003(\0132=.CWorkshop_SetItemPaymentRules_Req" +
-      "uest.PartnerItemPaymentRule\032i\n\027WorkshopI" +
-      "temPaymentRule\022\030\n\020workshop_file_id\030\001 \001(\004" +
-      "\022\032\n\022revenue_percentage\030\002 \001(\002\022\030\n\020rule_des" +
-      "cription\030\003 \001(\t\032b\n\026PartnerItemPaymentRule" +
-      "\022\022\n\naccount_id\030\001 \001(\r\022\032\n\022revenue_percenta" +
-      "ge\030\002 \001(\002\022\030\n\020rule_description\030\003 \001(\t\"(\n&CW" +
-      "orkshop_SetItemPaymentRules_Response*\236\002\n" +
-      "\nEGCBaseMsg\022\032\n\025k_EMsgGCSystemMessage\020\241\037\022" +
-      "\035\n\030k_EMsgGCReplicateConVars\020\242\037\022\032\n\025k_EMsg" +
-      "GCConVarUpdated\020\243\037\022\034\n\027k_EMsgGCServerAvai" +
-      "lable\020\232#\022\"\n\035k_EMsgGCClientConnectToServe" +
-      "r\020\233#\022\033\n\026k_EMsgGCGameServerInfo\020\234#\022\022\n\rk_E" +
-      "MsgGCError\020\235#\022%\n k_EMsgGCReplay_Uploaded" +
-      "ToYouTube\020\236#\022\037\n\032k_EMsgGCLANServerAvailab" +
-      "le\020\237#*Y\n\027EGCBaseProtoObjectTypes\022\036\n\031k_EP" +
-      "rotoObjectPartyInvite\020\351\007\022\036\n\031k_EProtoObje" +
-      "ctLobbyInvite\020\352\007*T\n\017GCGoodbyeReason\022!\n\035G" +
-      "CGoodbyeReason_GC_GOING_DOWN\020\001\022\036\n\032GCGood" +
-      "byeReason_NO_SESSION\020\002B\005H\001\200\001\000"
+      "type\030\004 \001(\r\022\027\n\017increment_value\030\005 \001(\r\"Z\n(C" +
+      "MsgIncrementKillCountAttribute_Multiple\022" +
+      ".\n\004msgs\030\001 \003(\0132 .CMsgIncrementKillCountAt" +
+      "tribute\"w\n\036CMsgTrackUniquePlayerPairEven" +
+      "t\022\027\n\017killer_steam_id\030\001 \001(\004\022\027\n\017victim_ste" +
+      "am_id\030\002 \001(\004\022\017\n\007item_id\030\003 \001(\004\022\022\n\nevent_ty" +
+      "pe\030\004 \001(\r\"j\n\035CMsgApplyStrangeCountTransfe" +
+      "r\022\024\n\014tool_item_id\030\001 \001(\004\022\030\n\020item_src_item" +
+      "_id\030\002 \001(\004\022\031\n\021item_dest_item_id\030\003 \001(\004\"J\n\024" +
+      "CMsgApplyStrangePart\022\034\n\024strange_part_ite" +
+      "m_id\030\001 \001(\004\022\024\n\014item_item_id\030\002 \001(\004\"m\n\033CMsg" +
+      "ApplyStrangeRestriction\022\034\n\024strange_part_" +
+      "item_id\030\001 \001(\004\022\024\n\014item_item_id\030\002 \001(\004\022\032\n\022s" +
+      "trange_attr_index\030\003 \001(\r\"M\n\024CMsgApplyUpgr" +
+      "adeCard\022\034\n\024upgrade_card_item_id\030\001 \001(\004\022\027\n" +
+      "\017subject_item_id\030\002 \001(\004\"M\n\024CSOEconItemAtt" +
+      "ribute\022\021\n\tdef_index\030\001 \001(\r\022\r\n\005value\030\002 \001(\r" +
+      "\022\023\n\013value_bytes\030\003 \001(\014\":\n\023CSOEconItemEqui" +
+      "pped\022\021\n\tnew_class\030\001 \001(\r\022\020\n\010new_slot\030\002 \001(" +
+      "\r\"\324\003\n\013CSOEconItem\022\n\n\002id\030\001 \001(\004\022\022\n\naccount" +
+      "_id\030\002 \001(\r\022\021\n\tinventory\030\003 \001(\r\022\021\n\tdef_inde" +
+      "x\030\004 \001(\r\022\020\n\010quantity\030\005 \001(\r\022\r\n\005level\030\006 \001(\r" +
+      "\022\017\n\007quality\030\007 \001(\r\022\020\n\005flags\030\010 \001(\r:\0010\022\016\n\006o" +
+      "rigin\030\t \001(\r\022\023\n\013custom_name\030\n \001(\t\022\023\n\013cust" +
+      "om_desc\030\013 \001(\t\022(\n\tattribute\030\014 \003(\0132\025.CSOEc" +
+      "onItemAttribute\022#\n\rinterior_item\030\r \001(\0132\014" +
+      ".CSOEconItem\022\025\n\006in_use\030\016 \001(\010:\005false\022\020\n\005s" +
+      "tyle\030\017 \001(\r:\0010\022\026\n\013original_id\030\020 \001(\004:\0010\022\037\n" +
+      "\027contains_equipped_state\030\021 \001(\010\022,\n\016equipp" +
+      "ed_state\030\022 \003(\0132\024.CSOEconItemEquipped\022\"\n\032" +
+      "contains_equipped_state_v2\030\023 \001(\010\"S\n\033CMsg" +
+      "AdjustItemEquippedState\022\017\n\007item_id\030\001 \001(\004" +
+      "\022\021\n\tnew_class\030\002 \001(\r\022\020\n\010new_slot\030\003 \001(\r\"\"\n" +
+      "\rCMsgSortItems\022\021\n\tsort_type\030\001 \001(\r\"^\n\020CSO" +
+      "EconClaimCode\022\022\n\naccount_id\030\001 \001(\r\022\021\n\tcod" +
+      "e_type\030\002 \001(\r\022\025\n\rtime_acquired\030\003 \001(\r\022\014\n\004c" +
+      "ode\030\004 \001(\t\"3\n\024CMsgStoreGetUserData\022\033\n\023pri" +
+      "ce_sheet_version\030\001 \001(\007\"\224\002\n\034CMsgStoreGetU" +
+      "serDataResponse\022\016\n\006result\030\001 \001(\005\022\020\n\010curre" +
+      "ncy\030\002 \001(\005\022\017\n\007country\030\003 \001(\t\022\033\n\023price_shee" +
+      "t_version\030\004 \001(\007\022\032\n\017experiment_data\030\005 \001(\004" +
+      ":\0010\022\031\n\021featured_item_idx\030\006 \001(\005\022#\n\025show_h" +
+      "at_descriptions\030\007 \001(\010:\004true\022\023\n\013price_she" +
+      "et\030\010 \001(\014\022\034\n\021default_item_sort\030\t \001(\005:\0010\022\025" +
+      "\n\rpopular_items\030\n \003(\r\"r\n\024CMsgUpdateItemS" +
+      "chema\022\022\n\nitems_game\030\001 \001(\014\022\033\n\023item_schema" +
+      "_version\030\002 \001(\007\022\026\n\016items_game_url\030\003 \001(\t\022\021" +
+      "\n\tsignature\030\004 \001(\014\"!\n\013CMsgGCError\022\022\n\nerro" +
+      "r_text\030\001 \001(\t\"\035\n\033CMsgRequestInventoryRefr" +
+      "esh\".\n\017CMsgConVarValue\022\014\n\004name\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t\"9\n\024CMsgReplicateConVars\022!\n\007c" +
+      "onvars\030\001 \003(\0132\020.CMsgConVarValue\"\261\001\n\013CMsgU" +
+      "seItem\022\017\n\007item_id\030\001 \001(\004\022\027\n\017target_steam_" +
+      "id\030\002 \001(\006\022\037\n\027gift__potential_targets\030\003 \003(" +
+      "\r\022\030\n\020duel__class_lock\030\004 \001(\r\022\032\n\022initiator" +
+      "_steam_id\030\005 \001(\006\022!\n\031itempack__ack_immedia" +
+      "tely\030\006 \001(\010\"d\n\033CMsgReplayUploadedToYouTub" +
+      "e\022\023\n\013youtube_url\030\001 \001(\t\022\034\n\024youtube_accoun" +
+      "t_name\030\002 \001(\t\022\022\n\nsession_id\030\003 \001(\004\".\n\027CMsg" +
+      "ConsumableExhausted\022\023\n\013item_def_id\030\001 \001(\005" +
+      "\"\267\001\n\024CMsgItemAcknowledged\022\022\n\naccount_id\030" +
+      "\001 \001(\r\022\021\n\tinventory\030\002 \001(\r\022\021\n\tdef_index\030\003 " +
+      "\001(\r\022\017\n\007quality\030\004 \001(\r\022\016\n\006rarity\030\005 \001(\r\022\016\n\006" +
+      "origin\030\006 \001(\r\022\022\n\nis_strange\030\007 \001(\r\022\022\n\nis_u" +
+      "nusual\030\010 \001(\r\022\014\n\004wear\030\t \001(\002\"b\n\031CMsgSetPre" +
+      "setItemPosition\022\020\n\010class_id\030\001 \001(\r\022\021\n\tpre" +
+      "set_id\030\002 \001(\r\022\017\n\007slot_id\030\003 \001(\r\022\017\n\007item_id" +
+      "\030\004 \001(\004\"\205\001\n\024CMsgSetItemPositions\022:\n\016item_" +
+      "positions\030\001 \003(\0132\".CMsgSetItemPositions.I" +
+      "temPosition\0321\n\014ItemPosition\022\017\n\007item_id\030\001" +
+      " \001(\004\022\020\n\010position\030\002 \001(\r\"t\n\031CSOEconItemPre" +
+      "setInstance\022\026\n\010class_id\030\002 \001(\rB\004\200\246\035\001\022\027\n\tp" +
+      "reset_id\030\003 \001(\rB\004\200\246\035\001\022\025\n\007slot_id\030\004 \001(\rB\004\200" +
+      "\246\035\001\022\017\n\007item_id\030\005 \001(\004\"?\n\030CMsgSelectPreset" +
+      "ForClass\022\020\n\010class_id\030\001 \001(\r\022\021\n\tpreset_id\030" +
+      "\002 \001(\r\"Z\n\030CSOClassPresetClientData\022\022\n\nacc" +
+      "ount_id\030\001 \001(\r\022\020\n\010class_id\030\002 \001(\r\022\030\n\020activ" +
+      "e_preset_id\030\003 \001(\r\"\270\001\n\021CMsgGCReportAbuse\022" +
+      "\027\n\017target_steam_id\030\001 \001(\006\022\023\n\013description\030" +
+      "\004 \001(\t\022\013\n\003gid\030\005 \001(\004\022\022\n\nabuse_type\030\002 \001(\r\022\024" +
+      "\n\014content_type\030\003 \001(\r\022\035\n\025target_game_serv" +
+      "er_ip\030\006 \001(\007\022\037\n\027target_game_server_port\030\007" +
+      " \001(\r\"[\n\031CMsgGCReportAbuseResponse\022\027\n\017tar" +
+      "get_steam_id\030\001 \001(\006\022\016\n\006result\030\002 \001(\r\022\025\n\rer" +
+      "ror_message\030\003 \001(\t\"f\n\032CMsgGCNameItemNotif" +
+      "ication\022\026\n\016player_steamid\030\001 \001(\006\022\026\n\016item_" +
+      "def_index\030\002 \001(\r\022\030\n\020item_name_custom\030\003 \001(" +
+      "\t\"\266\001\n\037CMsgGCClientDisplayNotification\022+\n" +
+      "#notification_title_localization_key\030\001 \001" +
+      "(\t\022*\n\"notification_body_localization_key" +
+      "\030\002 \001(\t\022\033\n\023body_substring_keys\030\003 \003(\t\022\035\n\025b" +
+      "ody_substring_values\030\004 \003(\t\"1\n\027CMsgGCShow" +
+      "ItemsPickedUp\022\026\n\016player_steamid\030\001 \001(\006\"Q\n" +
+      "\027CMsgUpdatePeriodicEvent\022\022\n\naccount_id\030\001" +
+      " \001(\r\022\022\n\nevent_type\030\002 \001(\r\022\016\n\006amount\030\003 \001(\r" +
+      "\"|\n CMsgGCIncrementKillCountResponse\022\037\n\021" +
+      "killer_account_id\030\001 \001(\rB\004\200\246\035\001\022\021\n\tnum_kil" +
+      "ls\030\002 \001(\r\022\020\n\010item_def\030\003 \001(\r\022\022\n\nlevel_type" +
+      "\030\004 \001(\r\"K\n\027CMsgGCRemoveStrangePart\022\017\n\007ite" +
+      "m_id\030\001 \001(\004\022\037\n\027strange_part_score_type\030\002 " +
+      "\001(\r\"C\n\027CMsgGCRemoveUpgradeCard\022\017\n\007item_i" +
+      "d\030\001 \001(\004\022\027\n\017attribute_index\030\002 \001(\r\";\n(CMsg" +
+      "GCRemoveCustomizationAttributeSimple\022\017\n\007" +
+      "item_id\030\001 \001(\004\"+\n\030CMsgGCResetStrangeScore" +
+      "s\022\017\n\007item_id\030\001 \001(\004\"A\n\'CMsgGCItemPreviewI" +
+      "temBoughtNotification\022\026\n\016item_def_index\030" +
+      "\001 \001(\r\"+\n\031CMsgGCStorePurchaseCancel\022\016\n\006tx" +
+      "n_id\030\001 \001(\004\"3\n!CMsgGCStorePurchaseCancelR" +
+      "esponse\022\016\n\006result\030\001 \001(\r\"-\n\033CMsgGCStorePu" +
+      "rchaseFinalize\022\016\n\006txn_id\030\001 \001(\004\"G\n#CMsgGC" +
+      "StorePurchaseFinalizeResponse\022\016\n\006result\030" +
+      "\001 \001(\r\022\020\n\010item_ids\030\002 \003(\004\"I\n\033CMsgGCBannedW" +
+      "ordListRequest\022\031\n\021ban_list_group_id\030\001 \001(" +
+      "\r\022\017\n\007word_id\030\002 \001(\r\"f\n\021CMsgGCGiftedItems\022" +
+      "\027\n\017gifter_steam_id\030\001 \001(\004\022\031\n\021was_random_p" +
+      "erson\030\002 \001(\010\022\035\n\025recipient_account_ids\030\003 \003" +
+      "(\r\"H\n\021CMsgGCCollectItem\022\032\n\022collection_it" +
+      "em_id\030\001 \001(\004\022\027\n\017subject_item_id\030\002 \001(\004\"6\n\035" +
+      "CMsgGCClientMarketDataRequest\022\025\n\ruser_cu" +
+      "rrency\030\001 \001(\r\"\210\001\n\033CMsgGCClientMarketDataE" +
+      "ntry\022\026\n\016item_def_index\030\001 \001(\r\022\024\n\014item_qua" +
+      "lity\030\002 \001(\r\022\032\n\022item_sell_listings\030\003 \001(\r\022\037" +
+      "\n\027price_in_local_currency\030\004 \001(\r\"G\n\026CMsgG" +
+      "CClientMarketData\022-\n\007entries\030\001 \003(\0132\034.CMs" +
+      "gGCClientMarketDataEntry\"D\n\023CMsgApplyToo" +
+      "lToItem\022\024\n\014tool_item_id\030\001 \001(\004\022\027\n\017subject" +
+      "_item_id\030\002 \001(\004\"K\n\027CMsgApplyToolToBaseIte" +
+      "m\022\024\n\014tool_item_id\030\001 \001(\004\022\032\n\022baseitem_def_" +
+      "index\030\002 \001(\r\"G\n\023CMsgRecipeComponent\022\027\n\017su" +
+      "bject_item_id\030\001 \001(\004\022\027\n\017attribute_index\030\002" +
+      " \001(\004\"o\n!CMsgFulfillDynamicRecipeComponen" +
+      "t\022\024\n\014tool_item_id\030\001 \001(\004\0224\n\026consumption_c" +
+      "omponents\030\002 \003(\0132\024.CMsgRecipeComponent\"B\n" +
+      "\037CMsgSetItemEffectVerticalOffset\022\017\n\007item" +
+      "_id\030\001 \001(\004\022\016\n\006offset\030\002 \001(\002\"B\n\035CMsgSetHatE" +
+      "ffectUseHeadOrigin\022\017\n\007item_id\030\001 \001(\004\022\020\n\010u" +
+      "se_head\030\002 \001(\010\"T\n\034CMsgDeliverGiftResponse" +
+      "Giver\022\025\n\rresponse_code\030\001 \001(\r\022\035\n\025receiver" +
+      "_account_name\030\002 \001(\t\"O\n CSOEconGameAccoun" +
+      "tForGameServers\022+\n\034disable_party_quest_p" +
+      "rogress\030\006 \001(\010:\005false\"\355\002\n*CWorkshop_Popul" +
+      "ateItemDescriptions_Request\022\r\n\005appid\030\001 \001" +
+      "(\r\022\\\n\tlanguages\030\002 \003(\0132I.CWorkshop_Popula" +
+      "teItemDescriptions_Request.ItemDescripti" +
+      "onsLanguageBlock\032E\n\025SingleItemDescriptio" +
+      "n\022\022\n\ngameitemid\030\001 \001(\r\022\030\n\020item_descriptio" +
+      "n\030\002 \001(\t\032\212\001\n\035ItemDescriptionsLanguageBloc" +
+      "k\022\020\n\010language\030\001 \001(\t\022W\n\014descriptions\030\002 \003(" +
+      "\0132A.CWorkshop_PopulateItemDescriptions_R" +
+      "equest.SingleItemDescription\"F\n!CWorksho" +
+      "p_GetContributors_Request\022\r\n\005appid\030\001 \001(\r" +
+      "\022\022\n\ngameitemid\030\002 \001(\r\":\n\"CWorkshop_GetCon" +
+      "tributors_Response\022\024\n\014contributors\030\001 \003(\006" +
+      "\"\325\003\n%CWorkshop_SetItemPaymentRules_Reque" +
+      "st\022\r\n\005appid\030\001 \001(\r\022\022\n\ngameitemid\030\002 \001(\r\022a\n" +
+      "\031associated_workshop_files\030\003 \003(\0132>.CWork" +
+      "shop_SetItemPaymentRules_Request.Worksho" +
+      "pItemPaymentRule\022W\n\020partner_accounts\030\004 \003" +
+      "(\0132=.CWorkshop_SetItemPaymentRules_Reque" +
+      "st.PartnerItemPaymentRule\032i\n\027WorkshopIte" +
+      "mPaymentRule\022\030\n\020workshop_file_id\030\001 \001(\004\022\032" +
+      "\n\022revenue_percentage\030\002 \001(\002\022\030\n\020rule_descr" +
+      "iption\030\003 \001(\t\032b\n\026PartnerItemPaymentRule\022\022" +
+      "\n\naccount_id\030\001 \001(\r\022\032\n\022revenue_percentage" +
+      "\030\002 \001(\002\022\030\n\020rule_description\030\003 \001(\t\"(\n&CWor" +
+      "kshop_SetItemPaymentRules_Response*\236\002\n\nE" +
+      "GCBaseMsg\022\032\n\025k_EMsgGCSystemMessage\020\241\037\022\035\n" +
+      "\030k_EMsgGCReplicateConVars\020\242\037\022\032\n\025k_EMsgGC" +
+      "ConVarUpdated\020\243\037\022\034\n\027k_EMsgGCServerAvaila" +
+      "ble\020\232#\022\"\n\035k_EMsgGCClientConnectToServer\020" +
+      "\233#\022\033\n\026k_EMsgGCGameServerInfo\020\234#\022\022\n\rk_EMs" +
+      "gGCError\020\235#\022%\n k_EMsgGCReplay_UploadedTo" +
+      "YouTube\020\236#\022\037\n\032k_EMsgGCLANServerAvailable" +
+      "\020\237#*Y\n\027EGCBaseProtoObjectTypes\022\036\n\031k_EPro" +
+      "toObjectPartyInvite\020\351\007\022\036\n\031k_EProtoObject" +
+      "LobbyInvite\020\352\007*T\n\017GCGoodbyeReason\022!\n\035GCG" +
+      "oodbyeReason_GC_GOING_DOWN\020\001\022\036\n\032GCGoodby" +
+      "eReason_NO_SESSION\020\002B\005H\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

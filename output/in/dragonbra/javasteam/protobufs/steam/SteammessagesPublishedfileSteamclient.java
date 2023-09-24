@@ -278,6 +278,1048 @@ public final class SteammessagesPublishedfileSteamclient {
     // @@protoc_insertion_point(enum_scope:EPublishedFileForSaleStatus)
   }
 
+  public interface CPublishedFile_Vote_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_Vote_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 publishedfileid = 1;</code>
+     * @return Whether the publishedfileid field is set.
+     */
+    boolean hasPublishedfileid();
+    /**
+     * <code>optional uint64 publishedfileid = 1;</code>
+     * @return The publishedfileid.
+     */
+    long getPublishedfileid();
+
+    /**
+     * <code>optional bool vote_up = 2;</code>
+     * @return Whether the voteUp field is set.
+     */
+    boolean hasVoteUp();
+    /**
+     * <code>optional bool vote_up = 2;</code>
+     * @return The voteUp.
+     */
+    boolean getVoteUp();
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_Vote_Request}
+   */
+  public static final class CPublishedFile_Vote_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_Vote_Request)
+      CPublishedFile_Vote_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_Vote_Request.newBuilder() to construct.
+    private CPublishedFile_Vote_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_Vote_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_Vote_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_Vote_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              publishedfileid_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              voteUp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Vote_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Vote_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PUBLISHEDFILEID_FIELD_NUMBER = 1;
+    private long publishedfileid_;
+    /**
+     * <code>optional uint64 publishedfileid = 1;</code>
+     * @return Whether the publishedfileid field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublishedfileid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 publishedfileid = 1;</code>
+     * @return The publishedfileid.
+     */
+    @java.lang.Override
+    public long getPublishedfileid() {
+      return publishedfileid_;
+    }
+
+    public static final int VOTE_UP_FIELD_NUMBER = 2;
+    private boolean voteUp_;
+    /**
+     * <code>optional bool vote_up = 2;</code>
+     * @return Whether the voteUp field is set.
+     */
+    @java.lang.Override
+    public boolean hasVoteUp() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool vote_up = 2;</code>
+     * @return The voteUp.
+     */
+    @java.lang.Override
+    public boolean getVoteUp() {
+      return voteUp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, publishedfileid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, voteUp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, publishedfileid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, voteUp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request other = (SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request) obj;
+
+      if (hasPublishedfileid() != other.hasPublishedfileid()) return false;
+      if (hasPublishedfileid()) {
+        if (getPublishedfileid()
+            != other.getPublishedfileid()) return false;
+      }
+      if (hasVoteUp() != other.hasVoteUp()) return false;
+      if (hasVoteUp()) {
+        if (getVoteUp()
+            != other.getVoteUp()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPublishedfileid()) {
+        hash = (37 * hash) + PUBLISHEDFILEID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPublishedfileid());
+      }
+      if (hasVoteUp()) {
+        hash = (37 * hash) + VOTE_UP_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getVoteUp());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_Vote_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_Vote_Request)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Vote_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Vote_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        publishedfileid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        voteUp_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Vote_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request result = new SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publishedfileid_ = publishedfileid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.voteUp_ = voteUp_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request.getDefaultInstance()) return this;
+        if (other.hasPublishedfileid()) {
+          setPublishedfileid(other.getPublishedfileid());
+        }
+        if (other.hasVoteUp()) {
+          setVoteUp(other.getVoteUp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long publishedfileid_ ;
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @return Whether the publishedfileid field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublishedfileid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @return The publishedfileid.
+       */
+      @java.lang.Override
+      public long getPublishedfileid() {
+        return publishedfileid_;
+      }
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @param value The publishedfileid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublishedfileid(long value) {
+        bitField0_ |= 0x00000001;
+        publishedfileid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublishedfileid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publishedfileid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean voteUp_ ;
+      /**
+       * <code>optional bool vote_up = 2;</code>
+       * @return Whether the voteUp field is set.
+       */
+      @java.lang.Override
+      public boolean hasVoteUp() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool vote_up = 2;</code>
+       * @return The voteUp.
+       */
+      @java.lang.Override
+      public boolean getVoteUp() {
+        return voteUp_;
+      }
+      /**
+       * <code>optional bool vote_up = 2;</code>
+       * @param value The voteUp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoteUp(boolean value) {
+        bitField0_ |= 0x00000002;
+        voteUp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool vote_up = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoteUp() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        voteUp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_Vote_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_Vote_Request)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_Vote_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_Vote_Request>() {
+      @java.lang.Override
+      public CPublishedFile_Vote_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_Vote_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_Vote_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_Vote_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPublishedFile_Vote_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_Vote_Response)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_Vote_Response}
+   */
+  public static final class CPublishedFile_Vote_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_Vote_Response)
+      CPublishedFile_Vote_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_Vote_Response.newBuilder() to construct.
+    private CPublishedFile_Vote_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_Vote_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_Vote_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_Vote_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Vote_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Vote_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response other = (SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_Vote_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_Vote_Response)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Vote_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Vote_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Vote_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response result = new SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_Vote_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_Vote_Response)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_Vote_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_Vote_Response>() {
+      @java.lang.Override
+      public CPublishedFile_Vote_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_Vote_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_Vote_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_Vote_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_Vote_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CPublishedFile_Subscribe_RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CPublishedFile_Subscribe_Request)
       com.google.protobuf.MessageOrBuilder {
@@ -3801,6 +4843,2620 @@ public final class SteammessagesPublishedfileSteamclient {
 
     @java.lang.Override
     public SteammessagesPublishedfileSteamclient.CPublishedFile_CanSubscribe_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPublishedFile_GetSubSectionData_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_GetSubSectionData_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 publishedfileid = 1;</code>
+     * @return Whether the publishedfileid field is set.
+     */
+    boolean hasPublishedfileid();
+    /**
+     * <code>optional uint64 publishedfileid = 1;</code>
+     * @return The publishedfileid.
+     */
+    long getPublishedfileid();
+
+    /**
+     * <code>optional bool for_table_of_contents = 2;</code>
+     * @return Whether the forTableOfContents field is set.
+     */
+    boolean hasForTableOfContents();
+    /**
+     * <code>optional bool for_table_of_contents = 2;</code>
+     * @return The forTableOfContents.
+     */
+    boolean getForTableOfContents();
+
+    /**
+     * <code>optional uint64 specific_sectionid = 3;</code>
+     * @return Whether the specificSectionid field is set.
+     */
+    boolean hasSpecificSectionid();
+    /**
+     * <code>optional uint64 specific_sectionid = 3;</code>
+     * @return The specificSectionid.
+     */
+    long getSpecificSectionid();
+
+    /**
+     * <code>optional .EPublishedFileRevision desired_revision = 4 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
+     * @return Whether the desiredRevision field is set.
+     */
+    boolean hasDesiredRevision();
+    /**
+     * <code>optional .EPublishedFileRevision desired_revision = 4 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
+     * @return The desiredRevision.
+     */
+    SteammessagesPublishedfileSteamclient.EPublishedFileRevision getDesiredRevision();
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_GetSubSectionData_Request}
+   */
+  public static final class CPublishedFile_GetSubSectionData_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_GetSubSectionData_Request)
+      CPublishedFile_GetSubSectionData_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_GetSubSectionData_Request.newBuilder() to construct.
+    private CPublishedFile_GetSubSectionData_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_GetSubSectionData_Request() {
+      desiredRevision_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_GetSubSectionData_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_GetSubSectionData_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              publishedfileid_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              forTableOfContents_ = input.readBool();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              specificSectionid_ = input.readUInt64();
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              SteammessagesPublishedfileSteamclient.EPublishedFileRevision value = SteammessagesPublishedfileSteamclient.EPublishedFileRevision.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(4, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                desiredRevision_ = rawValue;
+              }
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetSubSectionData_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetSubSectionData_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PUBLISHEDFILEID_FIELD_NUMBER = 1;
+    private long publishedfileid_;
+    /**
+     * <code>optional uint64 publishedfileid = 1;</code>
+     * @return Whether the publishedfileid field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublishedfileid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 publishedfileid = 1;</code>
+     * @return The publishedfileid.
+     */
+    @java.lang.Override
+    public long getPublishedfileid() {
+      return publishedfileid_;
+    }
+
+    public static final int FOR_TABLE_OF_CONTENTS_FIELD_NUMBER = 2;
+    private boolean forTableOfContents_;
+    /**
+     * <code>optional bool for_table_of_contents = 2;</code>
+     * @return Whether the forTableOfContents field is set.
+     */
+    @java.lang.Override
+    public boolean hasForTableOfContents() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool for_table_of_contents = 2;</code>
+     * @return The forTableOfContents.
+     */
+    @java.lang.Override
+    public boolean getForTableOfContents() {
+      return forTableOfContents_;
+    }
+
+    public static final int SPECIFIC_SECTIONID_FIELD_NUMBER = 3;
+    private long specificSectionid_;
+    /**
+     * <code>optional uint64 specific_sectionid = 3;</code>
+     * @return Whether the specificSectionid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpecificSectionid() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint64 specific_sectionid = 3;</code>
+     * @return The specificSectionid.
+     */
+    @java.lang.Override
+    public long getSpecificSectionid() {
+      return specificSectionid_;
+    }
+
+    public static final int DESIRED_REVISION_FIELD_NUMBER = 4;
+    private int desiredRevision_;
+    /**
+     * <code>optional .EPublishedFileRevision desired_revision = 4 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
+     * @return Whether the desiredRevision field is set.
+     */
+    @java.lang.Override public boolean hasDesiredRevision() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .EPublishedFileRevision desired_revision = 4 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
+     * @return The desiredRevision.
+     */
+    @java.lang.Override public SteammessagesPublishedfileSteamclient.EPublishedFileRevision getDesiredRevision() {
+      @SuppressWarnings("deprecation")
+      SteammessagesPublishedfileSteamclient.EPublishedFileRevision result = SteammessagesPublishedfileSteamclient.EPublishedFileRevision.valueOf(desiredRevision_);
+      return result == null ? SteammessagesPublishedfileSteamclient.EPublishedFileRevision.k_EPublishedFileRevision_Default : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, publishedfileid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, forTableOfContents_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(3, specificSectionid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeEnum(4, desiredRevision_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, publishedfileid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, forTableOfContents_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, specificSectionid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, desiredRevision_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request other = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request) obj;
+
+      if (hasPublishedfileid() != other.hasPublishedfileid()) return false;
+      if (hasPublishedfileid()) {
+        if (getPublishedfileid()
+            != other.getPublishedfileid()) return false;
+      }
+      if (hasForTableOfContents() != other.hasForTableOfContents()) return false;
+      if (hasForTableOfContents()) {
+        if (getForTableOfContents()
+            != other.getForTableOfContents()) return false;
+      }
+      if (hasSpecificSectionid() != other.hasSpecificSectionid()) return false;
+      if (hasSpecificSectionid()) {
+        if (getSpecificSectionid()
+            != other.getSpecificSectionid()) return false;
+      }
+      if (hasDesiredRevision() != other.hasDesiredRevision()) return false;
+      if (hasDesiredRevision()) {
+        if (desiredRevision_ != other.desiredRevision_) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPublishedfileid()) {
+        hash = (37 * hash) + PUBLISHEDFILEID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPublishedfileid());
+      }
+      if (hasForTableOfContents()) {
+        hash = (37 * hash) + FOR_TABLE_OF_CONTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getForTableOfContents());
+      }
+      if (hasSpecificSectionid()) {
+        hash = (37 * hash) + SPECIFIC_SECTIONID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSpecificSectionid());
+      }
+      if (hasDesiredRevision()) {
+        hash = (37 * hash) + DESIRED_REVISION_FIELD_NUMBER;
+        hash = (53 * hash) + desiredRevision_;
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_GetSubSectionData_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_GetSubSectionData_Request)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetSubSectionData_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetSubSectionData_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        publishedfileid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        forTableOfContents_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        specificSectionid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        desiredRevision_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetSubSectionData_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request result = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publishedfileid_ = publishedfileid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.forTableOfContents_ = forTableOfContents_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.specificSectionid_ = specificSectionid_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.desiredRevision_ = desiredRevision_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request.getDefaultInstance()) return this;
+        if (other.hasPublishedfileid()) {
+          setPublishedfileid(other.getPublishedfileid());
+        }
+        if (other.hasForTableOfContents()) {
+          setForTableOfContents(other.getForTableOfContents());
+        }
+        if (other.hasSpecificSectionid()) {
+          setSpecificSectionid(other.getSpecificSectionid());
+        }
+        if (other.hasDesiredRevision()) {
+          setDesiredRevision(other.getDesiredRevision());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long publishedfileid_ ;
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @return Whether the publishedfileid field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublishedfileid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @return The publishedfileid.
+       */
+      @java.lang.Override
+      public long getPublishedfileid() {
+        return publishedfileid_;
+      }
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @param value The publishedfileid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublishedfileid(long value) {
+        bitField0_ |= 0x00000001;
+        publishedfileid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublishedfileid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publishedfileid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean forTableOfContents_ ;
+      /**
+       * <code>optional bool for_table_of_contents = 2;</code>
+       * @return Whether the forTableOfContents field is set.
+       */
+      @java.lang.Override
+      public boolean hasForTableOfContents() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool for_table_of_contents = 2;</code>
+       * @return The forTableOfContents.
+       */
+      @java.lang.Override
+      public boolean getForTableOfContents() {
+        return forTableOfContents_;
+      }
+      /**
+       * <code>optional bool for_table_of_contents = 2;</code>
+       * @param value The forTableOfContents to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForTableOfContents(boolean value) {
+        bitField0_ |= 0x00000002;
+        forTableOfContents_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool for_table_of_contents = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForTableOfContents() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        forTableOfContents_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long specificSectionid_ ;
+      /**
+       * <code>optional uint64 specific_sectionid = 3;</code>
+       * @return Whether the specificSectionid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSpecificSectionid() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint64 specific_sectionid = 3;</code>
+       * @return The specificSectionid.
+       */
+      @java.lang.Override
+      public long getSpecificSectionid() {
+        return specificSectionid_;
+      }
+      /**
+       * <code>optional uint64 specific_sectionid = 3;</code>
+       * @param value The specificSectionid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpecificSectionid(long value) {
+        bitField0_ |= 0x00000004;
+        specificSectionid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 specific_sectionid = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpecificSectionid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        specificSectionid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int desiredRevision_ = 0;
+      /**
+       * <code>optional .EPublishedFileRevision desired_revision = 4 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
+       * @return Whether the desiredRevision field is set.
+       */
+      @java.lang.Override public boolean hasDesiredRevision() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .EPublishedFileRevision desired_revision = 4 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
+       * @return The desiredRevision.
+       */
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.EPublishedFileRevision getDesiredRevision() {
+        @SuppressWarnings("deprecation")
+        SteammessagesPublishedfileSteamclient.EPublishedFileRevision result = SteammessagesPublishedfileSteamclient.EPublishedFileRevision.valueOf(desiredRevision_);
+        return result == null ? SteammessagesPublishedfileSteamclient.EPublishedFileRevision.k_EPublishedFileRevision_Default : result;
+      }
+      /**
+       * <code>optional .EPublishedFileRevision desired_revision = 4 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
+       * @param value The desiredRevision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDesiredRevision(SteammessagesPublishedfileSteamclient.EPublishedFileRevision value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        desiredRevision_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .EPublishedFileRevision desired_revision = 4 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDesiredRevision() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        desiredRevision_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_GetSubSectionData_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_GetSubSectionData_Request)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_GetSubSectionData_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_GetSubSectionData_Request>() {
+      @java.lang.Override
+      public CPublishedFile_GetSubSectionData_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_GetSubSectionData_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_GetSubSectionData_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_GetSubSectionData_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PublishedFileSubSectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PublishedFileSubSection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 sectionid = 1;</code>
+     * @return Whether the sectionid field is set.
+     */
+    boolean hasSectionid();
+    /**
+     * <code>optional uint64 sectionid = 1;</code>
+     * @return The sectionid.
+     */
+    long getSectionid();
+
+    /**
+     * <code>optional string title = 2;</code>
+     * @return Whether the title field is set.
+     */
+    boolean hasTitle();
+    /**
+     * <code>optional string title = 2;</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>optional string title = 2;</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>optional string description_text = 3;</code>
+     * @return Whether the descriptionText field is set.
+     */
+    boolean hasDescriptionText();
+    /**
+     * <code>optional string description_text = 3;</code>
+     * @return The descriptionText.
+     */
+    java.lang.String getDescriptionText();
+    /**
+     * <code>optional string description_text = 3;</code>
+     * @return The bytes for descriptionText.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionTextBytes();
+
+    /**
+     * <code>optional uint32 sort_order = 4;</code>
+     * @return Whether the sortOrder field is set.
+     */
+    boolean hasSortOrder();
+    /**
+     * <code>optional uint32 sort_order = 4;</code>
+     * @return The sortOrder.
+     */
+    int getSortOrder();
+  }
+  /**
+   * Protobuf type {@code PublishedFileSubSection}
+   */
+  public static final class PublishedFileSubSection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PublishedFileSubSection)
+      PublishedFileSubSectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PublishedFileSubSection.newBuilder() to construct.
+    private PublishedFileSubSection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PublishedFileSubSection() {
+      title_ = "";
+      descriptionText_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PublishedFileSubSection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PublishedFileSubSection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              sectionid_ = input.readUInt64();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              title_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              descriptionText_ = bs;
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              sortOrder_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_PublishedFileSubSection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_PublishedFileSubSection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.PublishedFileSubSection.class, SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SECTIONID_FIELD_NUMBER = 1;
+    private long sectionid_;
+    /**
+     * <code>optional uint64 sectionid = 1;</code>
+     * @return Whether the sectionid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSectionid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 sectionid = 1;</code>
+     * @return The sectionid.
+     */
+    @java.lang.Override
+    public long getSectionid() {
+      return sectionid_;
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object title_;
+    /**
+     * <code>optional string title = 2;</code>
+     * @return Whether the title field is set.
+     */
+    @java.lang.Override
+    public boolean hasTitle() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string title = 2;</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          title_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string title = 2;</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_TEXT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object descriptionText_;
+    /**
+     * <code>optional string description_text = 3;</code>
+     * @return Whether the descriptionText field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescriptionText() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string description_text = 3;</code>
+     * @return The descriptionText.
+     */
+    @java.lang.Override
+    public java.lang.String getDescriptionText() {
+      java.lang.Object ref = descriptionText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          descriptionText_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description_text = 3;</code>
+     * @return The bytes for descriptionText.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionTextBytes() {
+      java.lang.Object ref = descriptionText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        descriptionText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SORT_ORDER_FIELD_NUMBER = 4;
+    private int sortOrder_;
+    /**
+     * <code>optional uint32 sort_order = 4;</code>
+     * @return Whether the sortOrder field is set.
+     */
+    @java.lang.Override
+    public boolean hasSortOrder() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 sort_order = 4;</code>
+     * @return The sortOrder.
+     */
+    @java.lang.Override
+    public int getSortOrder() {
+      return sortOrder_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, sectionid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, descriptionText_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(4, sortOrder_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, sectionid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, descriptionText_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, sortOrder_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.PublishedFileSubSection)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.PublishedFileSubSection other = (SteammessagesPublishedfileSteamclient.PublishedFileSubSection) obj;
+
+      if (hasSectionid() != other.hasSectionid()) return false;
+      if (hasSectionid()) {
+        if (getSectionid()
+            != other.getSectionid()) return false;
+      }
+      if (hasTitle() != other.hasTitle()) return false;
+      if (hasTitle()) {
+        if (!getTitle()
+            .equals(other.getTitle())) return false;
+      }
+      if (hasDescriptionText() != other.hasDescriptionText()) return false;
+      if (hasDescriptionText()) {
+        if (!getDescriptionText()
+            .equals(other.getDescriptionText())) return false;
+      }
+      if (hasSortOrder() != other.hasSortOrder()) return false;
+      if (hasSortOrder()) {
+        if (getSortOrder()
+            != other.getSortOrder()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSectionid()) {
+        hash = (37 * hash) + SECTIONID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSectionid());
+      }
+      if (hasTitle()) {
+        hash = (37 * hash) + TITLE_FIELD_NUMBER;
+        hash = (53 * hash) + getTitle().hashCode();
+      }
+      if (hasDescriptionText()) {
+        hash = (37 * hash) + DESCRIPTION_TEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getDescriptionText().hashCode();
+      }
+      if (hasSortOrder()) {
+        hash = (37 * hash) + SORT_ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + getSortOrder();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.PublishedFileSubSection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PublishedFileSubSection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PublishedFileSubSection)
+        SteammessagesPublishedfileSteamclient.PublishedFileSubSectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_PublishedFileSubSection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_PublishedFileSubSection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.PublishedFileSubSection.class, SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.PublishedFileSubSection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        sectionid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        title_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        descriptionText_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        sortOrder_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_PublishedFileSubSection_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.PublishedFileSubSection getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.PublishedFileSubSection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.PublishedFileSubSection build() {
+        SteammessagesPublishedfileSteamclient.PublishedFileSubSection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.PublishedFileSubSection buildPartial() {
+        SteammessagesPublishedfileSteamclient.PublishedFileSubSection result = new SteammessagesPublishedfileSteamclient.PublishedFileSubSection(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sectionid_ = sectionid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.title_ = title_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.descriptionText_ = descriptionText_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.sortOrder_ = sortOrder_;
+          to_bitField0_ |= 0x00000008;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.PublishedFileSubSection) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.PublishedFileSubSection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.PublishedFileSubSection other) {
+        if (other == SteammessagesPublishedfileSteamclient.PublishedFileSubSection.getDefaultInstance()) return this;
+        if (other.hasSectionid()) {
+          setSectionid(other.getSectionid());
+        }
+        if (other.hasTitle()) {
+          bitField0_ |= 0x00000002;
+          title_ = other.title_;
+          onChanged();
+        }
+        if (other.hasDescriptionText()) {
+          bitField0_ |= 0x00000004;
+          descriptionText_ = other.descriptionText_;
+          onChanged();
+        }
+        if (other.hasSortOrder()) {
+          setSortOrder(other.getSortOrder());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.PublishedFileSubSection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.PublishedFileSubSection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long sectionid_ ;
+      /**
+       * <code>optional uint64 sectionid = 1;</code>
+       * @return Whether the sectionid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSectionid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 sectionid = 1;</code>
+       * @return The sectionid.
+       */
+      @java.lang.Override
+      public long getSectionid() {
+        return sectionid_;
+      }
+      /**
+       * <code>optional uint64 sectionid = 1;</code>
+       * @param value The sectionid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSectionid(long value) {
+        bitField0_ |= 0x00000001;
+        sectionid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 sectionid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSectionid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sectionid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>optional string title = 2;</code>
+       * @return Whether the title field is set.
+       */
+      public boolean hasTitle() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            title_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        title_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        title_ = getDefaultInstance().getTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        title_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object descriptionText_ = "";
+      /**
+       * <code>optional string description_text = 3;</code>
+       * @return Whether the descriptionText field is set.
+       */
+      public boolean hasDescriptionText() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string description_text = 3;</code>
+       * @return The descriptionText.
+       */
+      public java.lang.String getDescriptionText() {
+        java.lang.Object ref = descriptionText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            descriptionText_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description_text = 3;</code>
+       * @return The bytes for descriptionText.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionTextBytes() {
+        java.lang.Object ref = descriptionText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          descriptionText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description_text = 3;</code>
+       * @param value The descriptionText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        descriptionText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description_text = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescriptionText() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        descriptionText_ = getDefaultInstance().getDescriptionText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description_text = 3;</code>
+       * @param value The bytes for descriptionText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        descriptionText_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int sortOrder_ ;
+      /**
+       * <code>optional uint32 sort_order = 4;</code>
+       * @return Whether the sortOrder field is set.
+       */
+      @java.lang.Override
+      public boolean hasSortOrder() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 sort_order = 4;</code>
+       * @return The sortOrder.
+       */
+      @java.lang.Override
+      public int getSortOrder() {
+        return sortOrder_;
+      }
+      /**
+       * <code>optional uint32 sort_order = 4;</code>
+       * @param value The sortOrder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSortOrder(int value) {
+        bitField0_ |= 0x00000008;
+        sortOrder_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 sort_order = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSortOrder() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        sortOrder_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PublishedFileSubSection)
+    }
+
+    // @@protoc_insertion_point(class_scope:PublishedFileSubSection)
+    private static final SteammessagesPublishedfileSteamclient.PublishedFileSubSection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.PublishedFileSubSection();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.PublishedFileSubSection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PublishedFileSubSection>
+        PARSER = new com.google.protobuf.AbstractParser<PublishedFileSubSection>() {
+      @java.lang.Override
+      public PublishedFileSubSection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PublishedFileSubSection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PublishedFileSubSection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PublishedFileSubSection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.PublishedFileSubSection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPublishedFile_GetSubSectionData_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_GetSubSectionData_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+     */
+    java.util.List<SteammessagesPublishedfileSteamclient.PublishedFileSubSection> 
+        getSubSectionsList();
+    /**
+     * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+     */
+    SteammessagesPublishedfileSteamclient.PublishedFileSubSection getSubSections(int index);
+    /**
+     * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+     */
+    int getSubSectionsCount();
+    /**
+     * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+     */
+    java.util.List<? extends SteammessagesPublishedfileSteamclient.PublishedFileSubSectionOrBuilder> 
+        getSubSectionsOrBuilderList();
+    /**
+     * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+     */
+    SteammessagesPublishedfileSteamclient.PublishedFileSubSectionOrBuilder getSubSectionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_GetSubSectionData_Response}
+   */
+  public static final class CPublishedFile_GetSubSectionData_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_GetSubSectionData_Response)
+      CPublishedFile_GetSubSectionData_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_GetSubSectionData_Response.newBuilder() to construct.
+    private CPublishedFile_GetSubSectionData_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_GetSubSectionData_Response() {
+      subSections_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_GetSubSectionData_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_GetSubSectionData_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                subSections_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.PublishedFileSubSection>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              subSections_.add(
+                  input.readMessage(SteammessagesPublishedfileSteamclient.PublishedFileSubSection.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          subSections_ = java.util.Collections.unmodifiableList(subSections_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetSubSectionData_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetSubSectionData_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response.Builder.class);
+    }
+
+    public static final int SUB_SECTIONS_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesPublishedfileSteamclient.PublishedFileSubSection> subSections_;
+    /**
+     * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesPublishedfileSteamclient.PublishedFileSubSection> getSubSectionsList() {
+      return subSections_;
+    }
+    /**
+     * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesPublishedfileSteamclient.PublishedFileSubSectionOrBuilder> 
+        getSubSectionsOrBuilderList() {
+      return subSections_;
+    }
+    /**
+     * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+     */
+    @java.lang.Override
+    public int getSubSectionsCount() {
+      return subSections_.size();
+    }
+    /**
+     * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.PublishedFileSubSection getSubSections(int index) {
+      return subSections_.get(index);
+    }
+    /**
+     * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.PublishedFileSubSectionOrBuilder getSubSectionsOrBuilder(
+        int index) {
+      return subSections_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < subSections_.size(); i++) {
+        output.writeMessage(1, subSections_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < subSections_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, subSections_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response other = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response) obj;
+
+      if (!getSubSectionsList()
+          .equals(other.getSubSectionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSubSectionsCount() > 0) {
+        hash = (37 * hash) + SUB_SECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubSectionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_GetSubSectionData_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_GetSubSectionData_Response)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetSubSectionData_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetSubSectionData_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSubSectionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (subSectionsBuilder_ == null) {
+          subSections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          subSectionsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetSubSectionData_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response result = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response(this);
+        int from_bitField0_ = bitField0_;
+        if (subSectionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            subSections_ = java.util.Collections.unmodifiableList(subSections_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.subSections_ = subSections_;
+        } else {
+          result.subSections_ = subSectionsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response.getDefaultInstance()) return this;
+        if (subSectionsBuilder_ == null) {
+          if (!other.subSections_.isEmpty()) {
+            if (subSections_.isEmpty()) {
+              subSections_ = other.subSections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSubSectionsIsMutable();
+              subSections_.addAll(other.subSections_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.subSections_.isEmpty()) {
+            if (subSectionsBuilder_.isEmpty()) {
+              subSectionsBuilder_.dispose();
+              subSectionsBuilder_ = null;
+              subSections_ = other.subSections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              subSectionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSubSectionsFieldBuilder() : null;
+            } else {
+              subSectionsBuilder_.addAllMessages(other.subSections_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesPublishedfileSteamclient.PublishedFileSubSection> subSections_ =
+        java.util.Collections.emptyList();
+      private void ensureSubSectionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          subSections_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.PublishedFileSubSection>(subSections_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesPublishedfileSteamclient.PublishedFileSubSection, SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder, SteammessagesPublishedfileSteamclient.PublishedFileSubSectionOrBuilder> subSectionsBuilder_;
+
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public java.util.List<SteammessagesPublishedfileSteamclient.PublishedFileSubSection> getSubSectionsList() {
+        if (subSectionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(subSections_);
+        } else {
+          return subSectionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public int getSubSectionsCount() {
+        if (subSectionsBuilder_ == null) {
+          return subSections_.size();
+        } else {
+          return subSectionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.PublishedFileSubSection getSubSections(int index) {
+        if (subSectionsBuilder_ == null) {
+          return subSections_.get(index);
+        } else {
+          return subSectionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public Builder setSubSections(
+          int index, SteammessagesPublishedfileSteamclient.PublishedFileSubSection value) {
+        if (subSectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubSectionsIsMutable();
+          subSections_.set(index, value);
+          onChanged();
+        } else {
+          subSectionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public Builder setSubSections(
+          int index, SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder builderForValue) {
+        if (subSectionsBuilder_ == null) {
+          ensureSubSectionsIsMutable();
+          subSections_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          subSectionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public Builder addSubSections(SteammessagesPublishedfileSteamclient.PublishedFileSubSection value) {
+        if (subSectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubSectionsIsMutable();
+          subSections_.add(value);
+          onChanged();
+        } else {
+          subSectionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public Builder addSubSections(
+          int index, SteammessagesPublishedfileSteamclient.PublishedFileSubSection value) {
+        if (subSectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubSectionsIsMutable();
+          subSections_.add(index, value);
+          onChanged();
+        } else {
+          subSectionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public Builder addSubSections(
+          SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder builderForValue) {
+        if (subSectionsBuilder_ == null) {
+          ensureSubSectionsIsMutable();
+          subSections_.add(builderForValue.build());
+          onChanged();
+        } else {
+          subSectionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public Builder addSubSections(
+          int index, SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder builderForValue) {
+        if (subSectionsBuilder_ == null) {
+          ensureSubSectionsIsMutable();
+          subSections_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          subSectionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public Builder addAllSubSections(
+          java.lang.Iterable<? extends SteammessagesPublishedfileSteamclient.PublishedFileSubSection> values) {
+        if (subSectionsBuilder_ == null) {
+          ensureSubSectionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, subSections_);
+          onChanged();
+        } else {
+          subSectionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public Builder clearSubSections() {
+        if (subSectionsBuilder_ == null) {
+          subSections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          subSectionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public Builder removeSubSections(int index) {
+        if (subSectionsBuilder_ == null) {
+          ensureSubSectionsIsMutable();
+          subSections_.remove(index);
+          onChanged();
+        } else {
+          subSectionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder getSubSectionsBuilder(
+          int index) {
+        return getSubSectionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.PublishedFileSubSectionOrBuilder getSubSectionsOrBuilder(
+          int index) {
+        if (subSectionsBuilder_ == null) {
+          return subSections_.get(index);  } else {
+          return subSectionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public java.util.List<? extends SteammessagesPublishedfileSteamclient.PublishedFileSubSectionOrBuilder> 
+           getSubSectionsOrBuilderList() {
+        if (subSectionsBuilder_ != null) {
+          return subSectionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(subSections_);
+        }
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder addSubSectionsBuilder() {
+        return getSubSectionsFieldBuilder().addBuilder(
+            SteammessagesPublishedfileSteamclient.PublishedFileSubSection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder addSubSectionsBuilder(
+          int index) {
+        return getSubSectionsFieldBuilder().addBuilder(
+            index, SteammessagesPublishedfileSteamclient.PublishedFileSubSection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .PublishedFileSubSection sub_sections = 1;</code>
+       */
+      public java.util.List<SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder> 
+           getSubSectionsBuilderList() {
+        return getSubSectionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesPublishedfileSteamclient.PublishedFileSubSection, SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder, SteammessagesPublishedfileSteamclient.PublishedFileSubSectionOrBuilder> 
+          getSubSectionsFieldBuilder() {
+        if (subSectionsBuilder_ == null) {
+          subSectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesPublishedfileSteamclient.PublishedFileSubSection, SteammessagesPublishedfileSteamclient.PublishedFileSubSection.Builder, SteammessagesPublishedfileSteamclient.PublishedFileSubSectionOrBuilder>(
+                  subSections_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          subSections_ = null;
+        }
+        return subSectionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_GetSubSectionData_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_GetSubSectionData_Response)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_GetSubSectionData_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_GetSubSectionData_Response>() {
+      @java.lang.Override
+      public CPublishedFile_GetSubSectionData_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_GetSubSectionData_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_GetSubSectionData_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_GetSubSectionData_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_GetSubSectionData_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10412,6 +14068,23 @@ public final class SteammessagesPublishedfileSteamclient {
     boolean getMaybeInappropriateViolence();
 
     /**
+     * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+     * @return A list containing the contentDescriptorids.
+     */
+    java.util.List<EnumsProductinfo.EContentDescriptorID> getContentDescriptoridsList();
+    /**
+     * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+     * @return The count of contentDescriptorids.
+     */
+    int getContentDescriptoridsCount();
+    /**
+     * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+     * @param index The index of the element to return.
+     * @return The contentDescriptorids at the given index.
+     */
+    EnumsProductinfo.EContentDescriptorID getContentDescriptorids(int index);
+
+    /**
      * <code>optional uint64 revision_change_number = 67 [(.description) = "The change number for the specified revision."];</code>
      * @return Whether the revisionChangeNumber field is set.
      */
@@ -10483,7 +14156,18 @@ public final class SteammessagesPublishedfileSteamclient {
      * <code>optional .EBanContentCheckResult ban_text_check_result = 71 [default = k_EBanContentCheckResult_NotScanned];</code>
      * @return The banTextCheckResult.
      */
-    Enums.EBanContentCheckResult getBanTextCheckResult();
+    SteammessagesBase.EBanContentCheckResult getBanTextCheckResult();
+
+    /**
+     * <code>optional float search_score = 73 [(.description) = "Search score, admin only"];</code>
+     * @return Whether the searchScore field is set.
+     */
+    boolean hasSearchScore();
+    /**
+     * <code>optional float search_score = 73 [(.description) = "Search score, admin only"];</code>
+     * @return The searchScore.
+     */
+    float getSearchScore();
   }
   /**
    * Protobuf type {@code PublishedFileDetails}
@@ -10515,6 +14199,7 @@ public final class SteammessagesPublishedfileSteamclient {
       children_ = java.util.Collections.emptyList();
       kvtags_ = java.util.Collections.emptyList();
       metadata_ = "";
+      contentDescriptorids_ = java.util.Collections.emptyList();
       revision_ = 0;
       availableRevisions_ = java.util.Collections.emptyList();
       reactions_ = java.util.Collections.emptyList();
@@ -10951,9 +14636,9 @@ public final class SteammessagesPublishedfileSteamclient {
               if (value == null) {
                 unknownFields.mergeVarintField(69, rawValue);
               } else {
-                if (!((mutable_bitField2_ & 0x00000004) != 0)) {
+                if (!((mutable_bitField2_ & 0x00000008) != 0)) {
                   availableRevisions_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField2_ |= 0x00000004;
+                  mutable_bitField2_ |= 0x00000008;
                 }
                 availableRevisions_.add(rawValue);
               }
@@ -10969,9 +14654,9 @@ public final class SteammessagesPublishedfileSteamclient {
                 if (value == null) {
                   unknownFields.mergeVarintField(69, rawValue);
                 } else {
-                  if (!((mutable_bitField2_ & 0x00000004) != 0)) {
+                  if (!((mutable_bitField2_ & 0x00000008) != 0)) {
                     availableRevisions_ = new java.util.ArrayList<java.lang.Integer>();
-                    mutable_bitField2_ |= 0x00000004;
+                    mutable_bitField2_ |= 0x00000008;
                   }
                   availableRevisions_.add(rawValue);
                 }
@@ -10980,9 +14665,9 @@ public final class SteammessagesPublishedfileSteamclient {
               break;
             }
             case 562: {
-              if (!((mutable_bitField2_ & 0x00000008) != 0)) {
+              if (!((mutable_bitField2_ & 0x00000010) != 0)) {
                 reactions_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.PublishedFileDetails.Reaction>();
-                mutable_bitField2_ |= 0x00000008;
+                mutable_bitField2_ |= 0x00000010;
               }
               reactions_.add(
                   input.readMessage(SteammessagesPublishedfileSteamclient.PublishedFileDetails.Reaction.PARSER, extensionRegistry));
@@ -10991,13 +14676,53 @@ public final class SteammessagesPublishedfileSteamclient {
             case 568: {
               int rawValue = input.readEnum();
                 @SuppressWarnings("deprecation")
-              Enums.EBanContentCheckResult value = Enums.EBanContentCheckResult.valueOf(rawValue);
+              SteammessagesBase.EBanContentCheckResult value = SteammessagesBase.EBanContentCheckResult.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(71, rawValue);
               } else {
                 bitField1_ |= 0x40000000;
                 banTextCheckResult_ = rawValue;
               }
+              break;
+            }
+            case 576: {
+              int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+              EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(72, rawValue);
+              } else {
+                if (!((mutable_bitField2_ & 0x00000001) != 0)) {
+                  contentDescriptorids_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField2_ |= 0x00000001;
+                }
+                contentDescriptorids_.add(rawValue);
+              }
+              break;
+            }
+            case 578: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(72, rawValue);
+                } else {
+                  if (!((mutable_bitField2_ & 0x00000001) != 0)) {
+                    contentDescriptorids_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField2_ |= 0x00000001;
+                  }
+                  contentDescriptorids_.add(rawValue);
+                }
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 589: {
+              bitField1_ |= 0x80000000;
+              searchScore_ = input.readFloat();
               break;
             }
             default: {
@@ -11027,11 +14752,14 @@ public final class SteammessagesPublishedfileSteamclient {
         if (((mutable_bitField1_ & 0x00800000) != 0)) {
           kvtags_ = java.util.Collections.unmodifiableList(kvtags_);
         }
-        if (((mutable_bitField2_ & 0x00000004) != 0)) {
+        if (((mutable_bitField2_ & 0x00000008) != 0)) {
           availableRevisions_ = java.util.Collections.unmodifiableList(availableRevisions_);
         }
-        if (((mutable_bitField2_ & 0x00000008) != 0)) {
+        if (((mutable_bitField2_ & 0x00000010) != 0)) {
           reactions_ = java.util.Collections.unmodifiableList(reactions_);
+        }
+        if (((mutable_bitField2_ & 0x00000001) != 0)) {
+          contentDescriptorids_ = java.util.Collections.unmodifiableList(contentDescriptorids_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -19697,6 +23425,45 @@ public final class SteammessagesPublishedfileSteamclient {
       return maybeInappropriateViolence_;
     }
 
+    public static final int CONTENT_DESCRIPTORIDS_FIELD_NUMBER = 72;
+    private java.util.List<java.lang.Integer> contentDescriptorids_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, EnumsProductinfo.EContentDescriptorID> contentDescriptorids_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, EnumsProductinfo.EContentDescriptorID>() {
+              public EnumsProductinfo.EContentDescriptorID convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID result = EnumsProductinfo.EContentDescriptorID.valueOf(from);
+                return result == null ? EnumsProductinfo.EContentDescriptorID.k_EContentDescriptor_NudityOrSexualContent : result;
+              }
+            };
+    /**
+     * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+     * @return A list containing the contentDescriptorids.
+     */
+    @java.lang.Override
+    public java.util.List<EnumsProductinfo.EContentDescriptorID> getContentDescriptoridsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, EnumsProductinfo.EContentDescriptorID>(contentDescriptorids_, contentDescriptorids_converter_);
+    }
+    /**
+     * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+     * @return The count of contentDescriptorids.
+     */
+    @java.lang.Override
+    public int getContentDescriptoridsCount() {
+      return contentDescriptorids_.size();
+    }
+    /**
+     * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+     * @param index The index of the element to return.
+     * @return The contentDescriptorids at the given index.
+     */
+    @java.lang.Override
+    public EnumsProductinfo.EContentDescriptorID getContentDescriptorids(int index) {
+      return contentDescriptorids_converter_.convert(contentDescriptorids_.get(index));
+    }
+
     public static final int REVISION_CHANGE_NUMBER_FIELD_NUMBER = 67;
     private long revisionChangeNumber_;
     /**
@@ -19827,10 +23594,29 @@ public final class SteammessagesPublishedfileSteamclient {
      * <code>optional .EBanContentCheckResult ban_text_check_result = 71 [default = k_EBanContentCheckResult_NotScanned];</code>
      * @return The banTextCheckResult.
      */
-    @java.lang.Override public Enums.EBanContentCheckResult getBanTextCheckResult() {
+    @java.lang.Override public SteammessagesBase.EBanContentCheckResult getBanTextCheckResult() {
       @SuppressWarnings("deprecation")
-      Enums.EBanContentCheckResult result = Enums.EBanContentCheckResult.valueOf(banTextCheckResult_);
-      return result == null ? Enums.EBanContentCheckResult.k_EBanContentCheckResult_NotScanned : result;
+      SteammessagesBase.EBanContentCheckResult result = SteammessagesBase.EBanContentCheckResult.valueOf(banTextCheckResult_);
+      return result == null ? SteammessagesBase.EBanContentCheckResult.k_EBanContentCheckResult_NotScanned : result;
+    }
+
+    public static final int SEARCH_SCORE_FIELD_NUMBER = 73;
+    private float searchScore_;
+    /**
+     * <code>optional float search_score = 73 [(.description) = "Search score, admin only"];</code>
+     * @return Whether the searchScore field is set.
+     */
+    @java.lang.Override
+    public boolean hasSearchScore() {
+      return ((bitField1_ & 0x80000000) != 0);
+    }
+    /**
+     * <code>optional float search_score = 73 [(.description) = "Search score, admin only"];</code>
+     * @return The searchScore.
+     */
+    @java.lang.Override
+    public float getSearchScore() {
+      return searchScore_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -20053,6 +23839,12 @@ public final class SteammessagesPublishedfileSteamclient {
       }
       if (((bitField1_ & 0x40000000) != 0)) {
         output.writeEnum(71, banTextCheckResult_);
+      }
+      for (int i = 0; i < contentDescriptorids_.size(); i++) {
+        output.writeEnum(72, contentDescriptorids_.get(i));
+      }
+      if (((bitField1_ & 0x80000000) != 0)) {
+        output.writeFloat(73, searchScore_);
       }
       unknownFields.writeTo(output);
     }
@@ -20330,6 +24122,19 @@ public final class SteammessagesPublishedfileSteamclient {
       if (((bitField1_ & 0x40000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(71, banTextCheckResult_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < contentDescriptorids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(contentDescriptorids_.get(i));
+        }
+        size += dataSize;
+        size += 2 * contentDescriptorids_.size();
+      }
+      if (((bitField1_ & 0x80000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(73, searchScore_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -20654,6 +24459,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (getMaybeInappropriateViolence()
             != other.getMaybeInappropriateViolence()) return false;
       }
+      if (!contentDescriptorids_.equals(other.contentDescriptorids_)) return false;
       if (hasRevisionChangeNumber() != other.hasRevisionChangeNumber()) return false;
       if (hasRevisionChangeNumber()) {
         if (getRevisionChangeNumber()
@@ -20669,6 +24475,12 @@ public final class SteammessagesPublishedfileSteamclient {
       if (hasBanTextCheckResult() != other.hasBanTextCheckResult()) return false;
       if (hasBanTextCheckResult()) {
         if (banTextCheckResult_ != other.banTextCheckResult_) return false;
+      }
+      if (hasSearchScore() != other.hasSearchScore()) return false;
+      if (hasSearchScore()) {
+        if (java.lang.Float.floatToIntBits(getSearchScore())
+            != java.lang.Float.floatToIntBits(
+                other.getSearchScore())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -20956,6 +24768,10 @@ public final class SteammessagesPublishedfileSteamclient {
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getMaybeInappropriateViolence());
       }
+      if (getContentDescriptoridsCount() > 0) {
+        hash = (37 * hash) + CONTENT_DESCRIPTORIDS_FIELD_NUMBER;
+        hash = (53 * hash) + contentDescriptorids_.hashCode();
+      }
       if (hasRevisionChangeNumber()) {
         hash = (37 * hash) + REVISION_CHANGE_NUMBER_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -20976,6 +24792,11 @@ public final class SteammessagesPublishedfileSteamclient {
       if (hasBanTextCheckResult()) {
         hash = (37 * hash) + BAN_TEXT_CHECK_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + banTextCheckResult_;
+      }
+      if (hasSearchScore()) {
+        hash = (37 * hash) + SEARCH_SCORE_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getSearchScore());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -21274,20 +25095,24 @@ public final class SteammessagesPublishedfileSteamclient {
         bitField1_ = (bitField1_ & ~0x40000000);
         maybeInappropriateViolence_ = false;
         bitField1_ = (bitField1_ & ~0x80000000);
-        revisionChangeNumber_ = 0L;
+        contentDescriptorids_ = java.util.Collections.emptyList();
         bitField2_ = (bitField2_ & ~0x00000001);
-        revision_ = 0;
+        revisionChangeNumber_ = 0L;
         bitField2_ = (bitField2_ & ~0x00000002);
-        availableRevisions_ = java.util.Collections.emptyList();
+        revision_ = 0;
         bitField2_ = (bitField2_ & ~0x00000004);
+        availableRevisions_ = java.util.Collections.emptyList();
+        bitField2_ = (bitField2_ & ~0x00000008);
         if (reactionsBuilder_ == null) {
           reactions_ = java.util.Collections.emptyList();
-          bitField2_ = (bitField2_ & ~0x00000008);
+          bitField2_ = (bitField2_ & ~0x00000010);
         } else {
           reactionsBuilder_.clear();
         }
         banTextCheckResult_ = 0;
-        bitField2_ = (bitField2_ & ~0x00000010);
+        bitField2_ = (bitField2_ & ~0x00000020);
+        searchScore_ = 0F;
+        bitField2_ = (bitField2_ & ~0x00000040);
         return this;
       }
 
@@ -21607,32 +25432,41 @@ public final class SteammessagesPublishedfileSteamclient {
           result.maybeInappropriateViolence_ = maybeInappropriateViolence_;
           to_bitField1_ |= 0x08000000;
         }
-        if (((from_bitField2_ & 0x00000001) != 0)) {
+        if (((bitField2_ & 0x00000001) != 0)) {
+          contentDescriptorids_ = java.util.Collections.unmodifiableList(contentDescriptorids_);
+          bitField2_ = (bitField2_ & ~0x00000001);
+        }
+        result.contentDescriptorids_ = contentDescriptorids_;
+        if (((from_bitField2_ & 0x00000002) != 0)) {
           result.revisionChangeNumber_ = revisionChangeNumber_;
           to_bitField1_ |= 0x10000000;
         }
-        if (((from_bitField2_ & 0x00000002) != 0)) {
+        if (((from_bitField2_ & 0x00000004) != 0)) {
           to_bitField1_ |= 0x20000000;
         }
         result.revision_ = revision_;
-        if (((bitField2_ & 0x00000004) != 0)) {
+        if (((bitField2_ & 0x00000008) != 0)) {
           availableRevisions_ = java.util.Collections.unmodifiableList(availableRevisions_);
-          bitField2_ = (bitField2_ & ~0x00000004);
+          bitField2_ = (bitField2_ & ~0x00000008);
         }
         result.availableRevisions_ = availableRevisions_;
         if (reactionsBuilder_ == null) {
-          if (((bitField2_ & 0x00000008) != 0)) {
+          if (((bitField2_ & 0x00000010) != 0)) {
             reactions_ = java.util.Collections.unmodifiableList(reactions_);
-            bitField2_ = (bitField2_ & ~0x00000008);
+            bitField2_ = (bitField2_ & ~0x00000010);
           }
           result.reactions_ = reactions_;
         } else {
           result.reactions_ = reactionsBuilder_.build();
         }
-        if (((from_bitField2_ & 0x00000010) != 0)) {
+        if (((from_bitField2_ & 0x00000020) != 0)) {
           to_bitField1_ |= 0x40000000;
         }
         result.banTextCheckResult_ = banTextCheckResult_;
+        if (((from_bitField2_ & 0x00000040) != 0)) {
+          result.searchScore_ = searchScore_;
+          to_bitField1_ |= 0x80000000;
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -21993,6 +25827,16 @@ public final class SteammessagesPublishedfileSteamclient {
         if (other.hasMaybeInappropriateViolence()) {
           setMaybeInappropriateViolence(other.getMaybeInappropriateViolence());
         }
+        if (!other.contentDescriptorids_.isEmpty()) {
+          if (contentDescriptorids_.isEmpty()) {
+            contentDescriptorids_ = other.contentDescriptorids_;
+            bitField2_ = (bitField2_ & ~0x00000001);
+          } else {
+            ensureContentDescriptoridsIsMutable();
+            contentDescriptorids_.addAll(other.contentDescriptorids_);
+          }
+          onChanged();
+        }
         if (other.hasRevisionChangeNumber()) {
           setRevisionChangeNumber(other.getRevisionChangeNumber());
         }
@@ -22002,7 +25846,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (!other.availableRevisions_.isEmpty()) {
           if (availableRevisions_.isEmpty()) {
             availableRevisions_ = other.availableRevisions_;
-            bitField2_ = (bitField2_ & ~0x00000004);
+            bitField2_ = (bitField2_ & ~0x00000008);
           } else {
             ensureAvailableRevisionsIsMutable();
             availableRevisions_.addAll(other.availableRevisions_);
@@ -22013,7 +25857,7 @@ public final class SteammessagesPublishedfileSteamclient {
           if (!other.reactions_.isEmpty()) {
             if (reactions_.isEmpty()) {
               reactions_ = other.reactions_;
-              bitField2_ = (bitField2_ & ~0x00000008);
+              bitField2_ = (bitField2_ & ~0x00000010);
             } else {
               ensureReactionsIsMutable();
               reactions_.addAll(other.reactions_);
@@ -22026,7 +25870,7 @@ public final class SteammessagesPublishedfileSteamclient {
               reactionsBuilder_.dispose();
               reactionsBuilder_ = null;
               reactions_ = other.reactions_;
-              bitField2_ = (bitField2_ & ~0x00000008);
+              bitField2_ = (bitField2_ & ~0x00000010);
               reactionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getReactionsFieldBuilder() : null;
@@ -22037,6 +25881,9 @@ public final class SteammessagesPublishedfileSteamclient {
         }
         if (other.hasBanTextCheckResult()) {
           setBanTextCheckResult(other.getBanTextCheckResult());
+        }
+        if (other.hasSearchScore()) {
+          setSearchScore(other.getSearchScore());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -26198,6 +30045,92 @@ public final class SteammessagesPublishedfileSteamclient {
         return this;
       }
 
+      private java.util.List<java.lang.Integer> contentDescriptorids_ =
+        java.util.Collections.emptyList();
+      private void ensureContentDescriptoridsIsMutable() {
+        if (!((bitField2_ & 0x00000001) != 0)) {
+          contentDescriptorids_ = new java.util.ArrayList<java.lang.Integer>(contentDescriptorids_);
+          bitField2_ |= 0x00000001;
+        }
+      }
+      /**
+       * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+       * @return A list containing the contentDescriptorids.
+       */
+      public java.util.List<EnumsProductinfo.EContentDescriptorID> getContentDescriptoridsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, EnumsProductinfo.EContentDescriptorID>(contentDescriptorids_, contentDescriptorids_converter_);
+      }
+      /**
+       * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+       * @return The count of contentDescriptorids.
+       */
+      public int getContentDescriptoridsCount() {
+        return contentDescriptorids_.size();
+      }
+      /**
+       * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+       * @param index The index of the element to return.
+       * @return The contentDescriptorids at the given index.
+       */
+      public EnumsProductinfo.EContentDescriptorID getContentDescriptorids(int index) {
+        return contentDescriptorids_converter_.convert(contentDescriptorids_.get(index));
+      }
+      /**
+       * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+       * @param index The index to set the value at.
+       * @param value The contentDescriptorids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentDescriptorids(
+          int index, EnumsProductinfo.EContentDescriptorID value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContentDescriptoridsIsMutable();
+        contentDescriptorids_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+       * @param value The contentDescriptorids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContentDescriptorids(EnumsProductinfo.EContentDescriptorID value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContentDescriptoridsIsMutable();
+        contentDescriptorids_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+       * @param values The contentDescriptorids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllContentDescriptorids(
+          java.lang.Iterable<? extends EnumsProductinfo.EContentDescriptorID> values) {
+        ensureContentDescriptoridsIsMutable();
+        for (EnumsProductinfo.EContentDescriptorID value : values) {
+          contentDescriptorids_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID content_descriptorids = 72;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentDescriptorids() {
+        contentDescriptorids_ = java.util.Collections.emptyList();
+        bitField2_ = (bitField2_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
       private long revisionChangeNumber_ ;
       /**
        * <code>optional uint64 revision_change_number = 67 [(.description) = "The change number for the specified revision."];</code>
@@ -26205,7 +30138,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasRevisionChangeNumber() {
-        return ((bitField2_ & 0x00000001) != 0);
+        return ((bitField2_ & 0x00000002) != 0);
       }
       /**
        * <code>optional uint64 revision_change_number = 67 [(.description) = "The change number for the specified revision."];</code>
@@ -26221,7 +30154,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setRevisionChangeNumber(long value) {
-        bitField2_ |= 0x00000001;
+        bitField2_ |= 0x00000002;
         revisionChangeNumber_ = value;
         onChanged();
         return this;
@@ -26231,7 +30164,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearRevisionChangeNumber() {
-        bitField2_ = (bitField2_ & ~0x00000001);
+        bitField2_ = (bitField2_ & ~0x00000002);
         revisionChangeNumber_ = 0L;
         onChanged();
         return this;
@@ -26243,7 +30176,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return Whether the revision field is set.
        */
       @java.lang.Override public boolean hasRevision() {
-        return ((bitField2_ & 0x00000002) != 0);
+        return ((bitField2_ & 0x00000004) != 0);
       }
       /**
        * <code>optional .EPublishedFileRevision revision = 68 [default = k_EPublishedFileRevision_Default, (.description) = "The revision of the data returned, usually k_EPublishedFileRevision_Latest, but can be another revision/snapshot depending on the caller."];</code>
@@ -26264,7 +30197,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField2_ |= 0x00000002;
+        bitField2_ |= 0x00000004;
         revision_ = value.getNumber();
         onChanged();
         return this;
@@ -26274,7 +30207,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearRevision() {
-        bitField2_ = (bitField2_ & ~0x00000002);
+        bitField2_ = (bitField2_ & ~0x00000004);
         revision_ = 0;
         onChanged();
         return this;
@@ -26283,9 +30216,9 @@ public final class SteammessagesPublishedfileSteamclient {
       private java.util.List<java.lang.Integer> availableRevisions_ =
         java.util.Collections.emptyList();
       private void ensureAvailableRevisionsIsMutable() {
-        if (!((bitField2_ & 0x00000004) != 0)) {
+        if (!((bitField2_ & 0x00000008) != 0)) {
           availableRevisions_ = new java.util.ArrayList<java.lang.Integer>(availableRevisions_);
-          bitField2_ |= 0x00000004;
+          bitField2_ |= 0x00000008;
         }
       }
       /**
@@ -26361,7 +30294,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       public Builder clearAvailableRevisions() {
         availableRevisions_ = java.util.Collections.emptyList();
-        bitField2_ = (bitField2_ & ~0x00000004);
+        bitField2_ = (bitField2_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -26369,9 +30302,9 @@ public final class SteammessagesPublishedfileSteamclient {
       private java.util.List<SteammessagesPublishedfileSteamclient.PublishedFileDetails.Reaction> reactions_ =
         java.util.Collections.emptyList();
       private void ensureReactionsIsMutable() {
-        if (!((bitField2_ & 0x00000008) != 0)) {
+        if (!((bitField2_ & 0x00000010) != 0)) {
           reactions_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.PublishedFileDetails.Reaction>(reactions_);
-          bitField2_ |= 0x00000008;
+          bitField2_ |= 0x00000010;
          }
       }
 
@@ -26521,7 +30454,7 @@ public final class SteammessagesPublishedfileSteamclient {
       public Builder clearReactions() {
         if (reactionsBuilder_ == null) {
           reactions_ = java.util.Collections.emptyList();
-          bitField2_ = (bitField2_ & ~0x00000008);
+          bitField2_ = (bitField2_ & ~0x00000010);
           onChanged();
         } else {
           reactionsBuilder_.clear();
@@ -26598,7 +30531,7 @@ public final class SteammessagesPublishedfileSteamclient {
           reactionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               SteammessagesPublishedfileSteamclient.PublishedFileDetails.Reaction, SteammessagesPublishedfileSteamclient.PublishedFileDetails.Reaction.Builder, SteammessagesPublishedfileSteamclient.PublishedFileDetails.ReactionOrBuilder>(
                   reactions_,
-                  ((bitField2_ & 0x00000008) != 0),
+                  ((bitField2_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           reactions_ = null;
@@ -26612,28 +30545,28 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return Whether the banTextCheckResult field is set.
        */
       @java.lang.Override public boolean hasBanTextCheckResult() {
-        return ((bitField2_ & 0x00000010) != 0);
+        return ((bitField2_ & 0x00000020) != 0);
       }
       /**
        * <code>optional .EBanContentCheckResult ban_text_check_result = 71 [default = k_EBanContentCheckResult_NotScanned];</code>
        * @return The banTextCheckResult.
        */
       @java.lang.Override
-      public Enums.EBanContentCheckResult getBanTextCheckResult() {
+      public SteammessagesBase.EBanContentCheckResult getBanTextCheckResult() {
         @SuppressWarnings("deprecation")
-        Enums.EBanContentCheckResult result = Enums.EBanContentCheckResult.valueOf(banTextCheckResult_);
-        return result == null ? Enums.EBanContentCheckResult.k_EBanContentCheckResult_NotScanned : result;
+        SteammessagesBase.EBanContentCheckResult result = SteammessagesBase.EBanContentCheckResult.valueOf(banTextCheckResult_);
+        return result == null ? SteammessagesBase.EBanContentCheckResult.k_EBanContentCheckResult_NotScanned : result;
       }
       /**
        * <code>optional .EBanContentCheckResult ban_text_check_result = 71 [default = k_EBanContentCheckResult_NotScanned];</code>
        * @param value The banTextCheckResult to set.
        * @return This builder for chaining.
        */
-      public Builder setBanTextCheckResult(Enums.EBanContentCheckResult value) {
+      public Builder setBanTextCheckResult(SteammessagesBase.EBanContentCheckResult value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField2_ |= 0x00000010;
+        bitField2_ |= 0x00000020;
         banTextCheckResult_ = value.getNumber();
         onChanged();
         return this;
@@ -26643,8 +30576,47 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearBanTextCheckResult() {
-        bitField2_ = (bitField2_ & ~0x00000010);
+        bitField2_ = (bitField2_ & ~0x00000020);
         banTextCheckResult_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float searchScore_ ;
+      /**
+       * <code>optional float search_score = 73 [(.description) = "Search score, admin only"];</code>
+       * @return Whether the searchScore field is set.
+       */
+      @java.lang.Override
+      public boolean hasSearchScore() {
+        return ((bitField2_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional float search_score = 73 [(.description) = "Search score, admin only"];</code>
+       * @return The searchScore.
+       */
+      @java.lang.Override
+      public float getSearchScore() {
+        return searchScore_;
+      }
+      /**
+       * <code>optional float search_score = 73 [(.description) = "Search score, admin only"];</code>
+       * @param value The searchScore to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSearchScore(float value) {
+        bitField2_ |= 0x00000040;
+        searchScore_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float search_score = 73 [(.description) = "Search score, admin only"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSearchScore() {
+        bitField2_ = (bitField2_ & ~0x00000040);
+        searchScore_ = 0F;
         onChanged();
         return this;
       }
@@ -31145,6 +35117,17 @@ public final class SteammessagesPublishedfileSteamclient {
     int getAppid();
 
     /**
+     * <code>optional uint32 shortcutid = 3 [(.description) = "(Optional) Shortcut Id to retrieve published files from."];</code>
+     * @return Whether the shortcutid field is set.
+     */
+    boolean hasShortcutid();
+    /**
+     * <code>optional uint32 shortcutid = 3 [(.description) = "(Optional) Shortcut Id to retrieve published files from."];</code>
+     * @return The shortcutid.
+     */
+    int getShortcutid();
+
+    /**
      * <code>optional uint32 page = 4 [default = 1, (.description) = "(Optional) Starting page for results."];</code>
      * @return Whether the page field is set.
      */
@@ -31371,6 +35354,23 @@ public final class SteammessagesPublishedfileSteamclient {
         int index);
 
     /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @return A list containing the excludedContentDescriptors.
+     */
+    java.util.List<EnumsProductinfo.EContentDescriptorID> getExcludedContentDescriptorsList();
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @return The count of excludedContentDescriptors.
+     */
+    int getExcludedContentDescriptorsCount();
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @param index The index of the element to return.
+     * @return The excludedContentDescriptors at the given index.
+     */
+    EnumsProductinfo.EContentDescriptorID getExcludedContentDescriptors(int index);
+
+    /**
      * <code>optional bool totalonly = 17 [(.description) = "(Optional) If true, only return the total number of files that satisfy this query."];</code>
      * @return Whether the totalonly field is set.
      */
@@ -31534,6 +35534,17 @@ public final class SteammessagesPublishedfileSteamclient {
      * @return The desiredRevision.
      */
     SteammessagesPublishedfileSteamclient.EPublishedFileRevision getDesiredRevision();
+
+    /**
+     * <code>optional bool return_apps = 36 [(.description) = "Return list of apps the items belong to"];</code>
+     * @return Whether the returnApps field is set.
+     */
+    boolean hasReturnApps();
+    /**
+     * <code>optional bool return_apps = 36 [(.description) = "Return list of apps the items belong to"];</code>
+     * @return The returnApps.
+     */
+    boolean getReturnApps();
   }
   /**
    * Protobuf type {@code CPublishedFile_GetUserFiles_Request}
@@ -31557,6 +35568,7 @@ public final class SteammessagesPublishedfileSteamclient {
       requiredKvTags_ = java.util.Collections.emptyList();
       matchCloudFilename_ = "";
       taggroups_ = java.util.Collections.emptyList();
+      excludedContentDescriptors_ = java.util.Collections.emptyList();
       returnVoteData_ = true;
       returnKvTags_ = true;
       returnShortDescription_ = true;
@@ -31584,6 +35596,7 @@ public final class SteammessagesPublishedfileSteamclient {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -31604,148 +35617,153 @@ public final class SteammessagesPublishedfileSteamclient {
               appid_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 24: {
               bitField0_ |= 0x00000004;
+              shortcutid_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
               page_ = input.readUInt32();
               break;
             }
             case 40: {
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               numperpage_ = input.readUInt32();
               break;
             }
             case 50: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               type_ = bs;
               break;
             }
             case 58: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               sortmethod_ = bs;
               break;
             }
             case 72: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               privacy_ = input.readUInt32();
               break;
             }
             case 82: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 requiredtags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000100;
               }
               requiredtags_.add(bs);
               break;
             }
             case 90: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
                 excludedtags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000200;
               }
               excludedtags_.add(bs);
               break;
             }
             case 112: {
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               filetype_ = input.readUInt32();
               break;
             }
             case 120: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               creatorAppid_ = input.readUInt32();
               break;
             }
             case 130: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               matchCloudFilename_ = bs;
               break;
             }
             case 136: {
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00002000;
               totalonly_ = input.readBool();
               break;
             }
             case 144: {
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00004000;
               idsOnly_ = input.readBool();
               break;
             }
             case 152: {
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00008000;
               returnVoteData_ = input.readBool();
               break;
             }
             case 160: {
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00010000;
               returnTags_ = input.readBool();
               break;
             }
             case 168: {
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00020000;
               returnKvTags_ = input.readBool();
               break;
             }
             case 176: {
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00040000;
               returnPreviews_ = input.readBool();
               break;
             }
             case 184: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00080000;
               returnChildren_ = input.readBool();
               break;
             }
             case 192: {
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00100000;
               returnShortDescription_ = input.readBool();
               break;
             }
             case 200: {
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x04000000;
               startindexOverride_ = input.readUInt32();
               break;
             }
             case 208: {
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00200000;
               returnForSaleData_ = input.readBool();
               break;
             }
             case 216: {
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000800;
               cacheMaxAgeSeconds_ = input.readUInt32();
               break;
             }
             case 224: {
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00400000;
               returnMetadata_ = input.readBool();
               break;
             }
             case 232: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00001000;
               language_ = input.readInt32();
               break;
             }
             case 242: {
-              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
                 requiredKvTags_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.KVTag>();
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000400;
               }
               requiredKvTags_.add(
                   input.readMessage(SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.KVTag.PARSER, extensionRegistry));
               break;
             }
             case 248: {
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00800000;
               returnPlaytimeStats_ = input.readUInt32();
               break;
             }
             case 256: {
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x01000000;
               stripDescriptionBbcode_ = input.readBool();
               break;
             }
@@ -31756,23 +35774,63 @@ public final class SteammessagesPublishedfileSteamclient {
               if (value == null) {
                 unknownFields.mergeVarintField(33, rawValue);
               } else {
-                bitField0_ |= 0x04000000;
+                bitField0_ |= 0x08000000;
                 desiredRevision_ = rawValue;
               }
               break;
             }
             case 274: {
-              if (!((mutable_bitField0_ & 0x00008000) != 0)) {
+              if (!((mutable_bitField0_ & 0x00010000) != 0)) {
                 taggroups_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.TagGroup>();
-                mutable_bitField0_ |= 0x00008000;
+                mutable_bitField0_ |= 0x00010000;
               }
               taggroups_.add(
                   input.readMessage(SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.TagGroup.PARSER, extensionRegistry));
               break;
             }
             case 280: {
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x02000000;
               returnReactions_ = input.readBool();
+              break;
+            }
+            case 288: {
+              bitField0_ |= 0x10000000;
+              returnApps_ = input.readBool();
+              break;
+            }
+            case 296: {
+              int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+              EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(37, rawValue);
+              } else {
+                if (!((mutable_bitField0_ & 0x00020000) != 0)) {
+                  excludedContentDescriptors_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00020000;
+                }
+                excludedContentDescriptors_.add(rawValue);
+              }
+              break;
+            }
+            case 298: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(37, rawValue);
+                } else {
+                  if (!((mutable_bitField0_ & 0x00020000) != 0)) {
+                    excludedContentDescriptors_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField0_ |= 0x00020000;
+                  }
+                  excludedContentDescriptors_.add(rawValue);
+                }
+              }
+              input.popLimit(oldLimit);
               break;
             }
             default: {
@@ -31790,17 +35848,20 @@ public final class SteammessagesPublishedfileSteamclient {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) != 0)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           requiredtags_ = requiredtags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000100) != 0)) {
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
           excludedtags_ = excludedtags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000200) != 0)) {
+        if (((mutable_bitField0_ & 0x00000400) != 0)) {
           requiredKvTags_ = java.util.Collections.unmodifiableList(requiredKvTags_);
         }
-        if (((mutable_bitField0_ & 0x00008000) != 0)) {
+        if (((mutable_bitField0_ & 0x00010000) != 0)) {
           taggroups_ = java.util.Collections.unmodifiableList(taggroups_);
+        }
+        if (((mutable_bitField0_ & 0x00020000) != 0)) {
+          excludedContentDescriptors_ = java.util.Collections.unmodifiableList(excludedContentDescriptors_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -33283,6 +37344,25 @@ public final class SteammessagesPublishedfileSteamclient {
       return appid_;
     }
 
+    public static final int SHORTCUTID_FIELD_NUMBER = 3;
+    private int shortcutid_;
+    /**
+     * <code>optional uint32 shortcutid = 3 [(.description) = "(Optional) Shortcut Id to retrieve published files from."];</code>
+     * @return Whether the shortcutid field is set.
+     */
+    @java.lang.Override
+    public boolean hasShortcutid() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 shortcutid = 3 [(.description) = "(Optional) Shortcut Id to retrieve published files from."];</code>
+     * @return The shortcutid.
+     */
+    @java.lang.Override
+    public int getShortcutid() {
+      return shortcutid_;
+    }
+
     public static final int PAGE_FIELD_NUMBER = 4;
     private int page_;
     /**
@@ -33291,7 +37371,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasPage() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>optional uint32 page = 4 [default = 1, (.description) = "(Optional) Starting page for results."];</code>
@@ -33310,7 +37390,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasNumperpage() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>optional uint32 numperpage = 5 [default = 1, (.description) = "(Optional) The number of results, per page to return."];</code>
@@ -33329,7 +37409,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasType() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>optional string type = 6 [default = "myfiles", (.description) = "(Optional) Type of files to be returned."];</code>
@@ -33377,7 +37457,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasSortmethod() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>optional string sortmethod = 7 [default = "lastupdated", (.description) = "(Optional) Sorting method to use on returned values."];</code>
@@ -33425,7 +37505,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasPrivacy() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <code>optional uint32 privacy = 9 [(.description) = "(optional) Filter by privacy settings."];</code>
@@ -33554,7 +37634,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasFiletype() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>optional uint32 filetype = 14 [(.description) = "(Optional) File type to match files to."];</code>
@@ -33573,7 +37653,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasCreatorAppid() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>optional uint32 creator_appid = 15 [(.description) = "App Id of the app that published the files, only matched if specified."];</code>
@@ -33592,7 +37672,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasMatchCloudFilename() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <code>optional string match_cloud_filename = 16 [(.description) = "Match this cloud filename if specified."];</code>
@@ -33640,7 +37720,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasCacheMaxAgeSeconds() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <code>optional uint32 cache_max_age_seconds = 27 [default = 0, (.description) = "Allow stale data to be returned for the specified number of seconds."];</code>
@@ -33659,7 +37739,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasLanguage() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <code>optional int32 language = 29 [default = 0, (.description) = "Specifies the localized text to return. Defaults to English."];</code>
@@ -33710,6 +37790,45 @@ public final class SteammessagesPublishedfileSteamclient {
       return taggroups_.get(index);
     }
 
+    public static final int EXCLUDED_CONTENT_DESCRIPTORS_FIELD_NUMBER = 37;
+    private java.util.List<java.lang.Integer> excludedContentDescriptors_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, EnumsProductinfo.EContentDescriptorID> excludedContentDescriptors_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, EnumsProductinfo.EContentDescriptorID>() {
+              public EnumsProductinfo.EContentDescriptorID convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID result = EnumsProductinfo.EContentDescriptorID.valueOf(from);
+                return result == null ? EnumsProductinfo.EContentDescriptorID.k_EContentDescriptor_NudityOrSexualContent : result;
+              }
+            };
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @return A list containing the excludedContentDescriptors.
+     */
+    @java.lang.Override
+    public java.util.List<EnumsProductinfo.EContentDescriptorID> getExcludedContentDescriptorsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, EnumsProductinfo.EContentDescriptorID>(excludedContentDescriptors_, excludedContentDescriptors_converter_);
+    }
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @return The count of excludedContentDescriptors.
+     */
+    @java.lang.Override
+    public int getExcludedContentDescriptorsCount() {
+      return excludedContentDescriptors_.size();
+    }
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @param index The index of the element to return.
+     * @return The excludedContentDescriptors at the given index.
+     */
+    @java.lang.Override
+    public EnumsProductinfo.EContentDescriptorID getExcludedContentDescriptors(int index) {
+      return excludedContentDescriptors_converter_.convert(excludedContentDescriptors_.get(index));
+    }
+
     public static final int TOTALONLY_FIELD_NUMBER = 17;
     private boolean totalonly_;
     /**
@@ -33718,7 +37837,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasTotalonly() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <code>optional bool totalonly = 17 [(.description) = "(Optional) If true, only return the total number of files that satisfy this query."];</code>
@@ -33737,7 +37856,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasIdsOnly() {
-      return ((bitField0_ & 0x00002000) != 0);
+      return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <code>optional bool ids_only = 18 [(.description) = "(Optional) If true, only return the published file ids of files that satisfy this query."];</code>
@@ -33756,7 +37875,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnVoteData() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <code>optional bool return_vote_data = 19 [default = true, (.description) = "Return vote data"];</code>
@@ -33775,7 +37894,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnTags() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <code>optional bool return_tags = 20 [(.description) = "Return tags in the file details"];</code>
@@ -33794,7 +37913,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnKvTags() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <code>optional bool return_kv_tags = 21 [default = true, (.description) = "Return key-value tags in the file details"];</code>
@@ -33813,7 +37932,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnPreviews() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <code>optional bool return_previews = 22 [(.description) = "Return preview image and video details in the file details"];</code>
@@ -33832,7 +37951,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnChildren() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <code>optional bool return_children = 23 [(.description) = "Return child item ids in the file details"];</code>
@@ -33851,7 +37970,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnShortDescription() {
-      return ((bitField0_ & 0x00080000) != 0);
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <code>optional bool return_short_description = 24 [default = true, (.description) = "Populate the short_description field instead of file_description"];</code>
@@ -33870,7 +37989,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnForSaleData() {
-      return ((bitField0_ & 0x00100000) != 0);
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <code>optional bool return_for_sale_data = 26 [(.description) = "Return pricing information, if applicable"];</code>
@@ -33889,7 +38008,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnMetadata() {
-      return ((bitField0_ & 0x00200000) != 0);
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <code>optional bool return_metadata = 28 [default = false, (.description) = "Populate the metadata field"];</code>
@@ -33908,7 +38027,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnPlaytimeStats() {
-      return ((bitField0_ & 0x00400000) != 0);
+      return ((bitField0_ & 0x00800000) != 0);
     }
     /**
      * <code>optional uint32 return_playtime_stats = 31 [(.description) = "Return playtime stats for the specified number of days before today."];</code>
@@ -33927,7 +38046,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasStripDescriptionBbcode() {
-      return ((bitField0_ & 0x00800000) != 0);
+      return ((bitField0_ & 0x01000000) != 0);
     }
     /**
      * <code>optional bool strip_description_bbcode = 32 [(.description) = "Strips BBCode from descriptions."];</code>
@@ -33946,7 +38065,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnReactions() {
-      return ((bitField0_ & 0x01000000) != 0);
+      return ((bitField0_ & 0x02000000) != 0);
     }
     /**
      * <code>optional bool return_reactions = 35 [default = false, (.description) = "If true, then reactions to items will be returned."];</code>
@@ -33965,7 +38084,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasStartindexOverride() {
-      return ((bitField0_ & 0x02000000) != 0);
+      return ((bitField0_ & 0x04000000) != 0);
     }
     /**
      * <code>optional uint32 startindex_override = 25 [(.description) = "Backwards compatible for the client."];</code>
@@ -33983,7 +38102,7 @@ public final class SteammessagesPublishedfileSteamclient {
      * @return Whether the desiredRevision field is set.
      */
     @java.lang.Override public boolean hasDesiredRevision() {
-      return ((bitField0_ & 0x04000000) != 0);
+      return ((bitField0_ & 0x08000000) != 0);
     }
     /**
      * <code>optional .EPublishedFileRevision desired_revision = 33 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
@@ -33993,6 +38112,25 @@ public final class SteammessagesPublishedfileSteamclient {
       @SuppressWarnings("deprecation")
       SteammessagesPublishedfileSteamclient.EPublishedFileRevision result = SteammessagesPublishedfileSteamclient.EPublishedFileRevision.valueOf(desiredRevision_);
       return result == null ? SteammessagesPublishedfileSteamclient.EPublishedFileRevision.k_EPublishedFileRevision_Default : result;
+    }
+
+    public static final int RETURN_APPS_FIELD_NUMBER = 36;
+    private boolean returnApps_;
+    /**
+     * <code>optional bool return_apps = 36 [(.description) = "Return list of apps the items belong to"];</code>
+     * @return Whether the returnApps field is set.
+     */
+    @java.lang.Override
+    public boolean hasReturnApps() {
+      return ((bitField0_ & 0x10000000) != 0);
+    }
+    /**
+     * <code>optional bool return_apps = 36 [(.description) = "Return list of apps the items belong to"];</code>
+     * @return The returnApps.
+     */
+    @java.lang.Override
+    public boolean getReturnApps() {
+      return returnApps_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -34016,18 +38154,21 @@ public final class SteammessagesPublishedfileSteamclient {
         output.writeUInt32(2, appid_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeUInt32(4, page_);
+        output.writeUInt32(3, shortcutid_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeUInt32(5, numperpage_);
+        output.writeUInt32(4, page_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, type_);
+        output.writeUInt32(5, numperpage_);
       }
       if (((bitField0_ & 0x00000020) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sortmethod_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, type_);
       }
       if (((bitField0_ & 0x00000040) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sortmethod_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
         output.writeUInt32(9, privacy_);
       }
       for (int i = 0; i < requiredtags_.size(); i++) {
@@ -34036,71 +38177,77 @@ public final class SteammessagesPublishedfileSteamclient {
       for (int i = 0; i < excludedtags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, excludedtags_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         output.writeUInt32(14, filetype_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeUInt32(15, creatorAppid_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, matchCloudFilename_);
       }
-      if (((bitField0_ & 0x00001000) != 0)) {
+      if (((bitField0_ & 0x00002000) != 0)) {
         output.writeBool(17, totalonly_);
       }
-      if (((bitField0_ & 0x00002000) != 0)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         output.writeBool(18, idsOnly_);
       }
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00008000) != 0)) {
         output.writeBool(19, returnVoteData_);
       }
-      if (((bitField0_ & 0x00008000) != 0)) {
+      if (((bitField0_ & 0x00010000) != 0)) {
         output.writeBool(20, returnTags_);
       }
-      if (((bitField0_ & 0x00010000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         output.writeBool(21, returnKvTags_);
       }
-      if (((bitField0_ & 0x00020000) != 0)) {
+      if (((bitField0_ & 0x00040000) != 0)) {
         output.writeBool(22, returnPreviews_);
       }
-      if (((bitField0_ & 0x00040000) != 0)) {
+      if (((bitField0_ & 0x00080000) != 0)) {
         output.writeBool(23, returnChildren_);
       }
-      if (((bitField0_ & 0x00080000) != 0)) {
+      if (((bitField0_ & 0x00100000) != 0)) {
         output.writeBool(24, returnShortDescription_);
       }
-      if (((bitField0_ & 0x02000000) != 0)) {
+      if (((bitField0_ & 0x04000000) != 0)) {
         output.writeUInt32(25, startindexOverride_);
       }
-      if (((bitField0_ & 0x00100000) != 0)) {
+      if (((bitField0_ & 0x00200000) != 0)) {
         output.writeBool(26, returnForSaleData_);
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         output.writeUInt32(27, cacheMaxAgeSeconds_);
       }
-      if (((bitField0_ & 0x00200000) != 0)) {
+      if (((bitField0_ & 0x00400000) != 0)) {
         output.writeBool(28, returnMetadata_);
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00001000) != 0)) {
         output.writeInt32(29, language_);
       }
       for (int i = 0; i < requiredKvTags_.size(); i++) {
         output.writeMessage(30, requiredKvTags_.get(i));
       }
-      if (((bitField0_ & 0x00400000) != 0)) {
+      if (((bitField0_ & 0x00800000) != 0)) {
         output.writeUInt32(31, returnPlaytimeStats_);
       }
-      if (((bitField0_ & 0x00800000) != 0)) {
+      if (((bitField0_ & 0x01000000) != 0)) {
         output.writeBool(32, stripDescriptionBbcode_);
       }
-      if (((bitField0_ & 0x04000000) != 0)) {
+      if (((bitField0_ & 0x08000000) != 0)) {
         output.writeEnum(33, desiredRevision_);
       }
       for (int i = 0; i < taggroups_.size(); i++) {
         output.writeMessage(34, taggroups_.get(i));
       }
-      if (((bitField0_ & 0x01000000) != 0)) {
+      if (((bitField0_ & 0x02000000) != 0)) {
         output.writeBool(35, returnReactions_);
+      }
+      if (((bitField0_ & 0x10000000) != 0)) {
+        output.writeBool(36, returnApps_);
+      }
+      for (int i = 0; i < excludedContentDescriptors_.size(); i++) {
+        output.writeEnum(37, excludedContentDescriptors_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -34121,19 +38268,23 @@ public final class SteammessagesPublishedfileSteamclient {
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, page_);
+          .computeUInt32Size(3, shortcutid_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, numperpage_);
+          .computeUInt32Size(4, page_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, type_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, numperpage_);
       }
       if (((bitField0_ & 0x00000020) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sortmethod_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, type_);
       }
       if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sortmethod_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(9, privacy_);
       }
@@ -34153,66 +38304,66 @@ public final class SteammessagesPublishedfileSteamclient {
         size += dataSize;
         size += 1 * getExcludedtagsList().size();
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(14, filetype_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, creatorAppid_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, matchCloudFilename_);
-      }
-      if (((bitField0_ & 0x00001000) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(17, totalonly_);
       }
       if (((bitField0_ & 0x00002000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(18, idsOnly_);
+          .computeBoolSize(17, totalonly_);
       }
       if (((bitField0_ & 0x00004000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(19, returnVoteData_);
+          .computeBoolSize(18, idsOnly_);
       }
       if (((bitField0_ & 0x00008000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(20, returnTags_);
+          .computeBoolSize(19, returnVoteData_);
       }
       if (((bitField0_ & 0x00010000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(21, returnKvTags_);
+          .computeBoolSize(20, returnTags_);
       }
       if (((bitField0_ & 0x00020000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(22, returnPreviews_);
+          .computeBoolSize(21, returnKvTags_);
       }
       if (((bitField0_ & 0x00040000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(23, returnChildren_);
+          .computeBoolSize(22, returnPreviews_);
       }
       if (((bitField0_ & 0x00080000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(24, returnShortDescription_);
-      }
-      if (((bitField0_ & 0x02000000) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(25, startindexOverride_);
+          .computeBoolSize(23, returnChildren_);
       }
       if (((bitField0_ & 0x00100000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(26, returnForSaleData_);
+          .computeBoolSize(24, returnShortDescription_);
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x04000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(27, cacheMaxAgeSeconds_);
+          .computeUInt32Size(25, startindexOverride_);
       }
       if (((bitField0_ & 0x00200000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(28, returnMetadata_);
+          .computeBoolSize(26, returnForSaleData_);
       }
       if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(27, cacheMaxAgeSeconds_);
+      }
+      if (((bitField0_ & 0x00400000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(28, returnMetadata_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(29, language_);
       }
@@ -34220,15 +38371,15 @@ public final class SteammessagesPublishedfileSteamclient {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(30, requiredKvTags_.get(i));
       }
-      if (((bitField0_ & 0x00400000) != 0)) {
+      if (((bitField0_ & 0x00800000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(31, returnPlaytimeStats_);
       }
-      if (((bitField0_ & 0x00800000) != 0)) {
+      if (((bitField0_ & 0x01000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(32, stripDescriptionBbcode_);
       }
-      if (((bitField0_ & 0x04000000) != 0)) {
+      if (((bitField0_ & 0x08000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(33, desiredRevision_);
       }
@@ -34236,9 +38387,22 @@ public final class SteammessagesPublishedfileSteamclient {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(34, taggroups_.get(i));
       }
-      if (((bitField0_ & 0x01000000) != 0)) {
+      if (((bitField0_ & 0x02000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(35, returnReactions_);
+      }
+      if (((bitField0_ & 0x10000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(36, returnApps_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < excludedContentDescriptors_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(excludedContentDescriptors_.get(i));
+        }
+        size += dataSize;
+        size += 2 * excludedContentDescriptors_.size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -34264,6 +38428,11 @@ public final class SteammessagesPublishedfileSteamclient {
       if (hasAppid()) {
         if (getAppid()
             != other.getAppid()) return false;
+      }
+      if (hasShortcutid() != other.hasShortcutid()) return false;
+      if (hasShortcutid()) {
+        if (getShortcutid()
+            != other.getShortcutid()) return false;
       }
       if (hasPage() != other.hasPage()) return false;
       if (hasPage()) {
@@ -34323,6 +38492,7 @@ public final class SteammessagesPublishedfileSteamclient {
       }
       if (!getTaggroupsList()
           .equals(other.getTaggroupsList())) return false;
+      if (!excludedContentDescriptors_.equals(other.excludedContentDescriptors_)) return false;
       if (hasTotalonly() != other.hasTotalonly()) return false;
       if (hasTotalonly()) {
         if (getTotalonly()
@@ -34397,6 +38567,11 @@ public final class SteammessagesPublishedfileSteamclient {
       if (hasDesiredRevision()) {
         if (desiredRevision_ != other.desiredRevision_) return false;
       }
+      if (hasReturnApps() != other.hasReturnApps()) return false;
+      if (hasReturnApps()) {
+        if (getReturnApps()
+            != other.getReturnApps()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -34416,6 +38591,10 @@ public final class SteammessagesPublishedfileSteamclient {
       if (hasAppid()) {
         hash = (37 * hash) + APPID_FIELD_NUMBER;
         hash = (53 * hash) + getAppid();
+      }
+      if (hasShortcutid()) {
+        hash = (37 * hash) + SHORTCUTID_FIELD_NUMBER;
+        hash = (53 * hash) + getShortcutid();
       }
       if (hasPage()) {
         hash = (37 * hash) + PAGE_FIELD_NUMBER;
@@ -34472,6 +38651,10 @@ public final class SteammessagesPublishedfileSteamclient {
       if (getTaggroupsCount() > 0) {
         hash = (37 * hash) + TAGGROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getTaggroupsList().hashCode();
+      }
+      if (getExcludedContentDescriptorsCount() > 0) {
+        hash = (37 * hash) + EXCLUDED_CONTENT_DESCRIPTORS_FIELD_NUMBER;
+        hash = (53 * hash) + excludedContentDescriptors_.hashCode();
       }
       if (hasTotalonly()) {
         hash = (37 * hash) + TOTALONLY_FIELD_NUMBER;
@@ -34544,6 +38727,11 @@ public final class SteammessagesPublishedfileSteamclient {
       if (hasDesiredRevision()) {
         hash = (37 * hash) + DESIRED_REVISION_FIELD_NUMBER;
         hash = (53 * hash) + desiredRevision_;
+      }
+      if (hasReturnApps()) {
+        hash = (37 * hash) + RETURN_APPS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getReturnApps());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -34684,72 +38872,78 @@ public final class SteammessagesPublishedfileSteamclient {
         bitField0_ = (bitField0_ & ~0x00000001);
         appid_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        page_ = 1;
+        shortcutid_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
-        numperpage_ = 1;
+        page_ = 1;
         bitField0_ = (bitField0_ & ~0x00000008);
-        type_ = "myfiles";
+        numperpage_ = 1;
         bitField0_ = (bitField0_ & ~0x00000010);
-        sortmethod_ = "lastupdated";
+        type_ = "myfiles";
         bitField0_ = (bitField0_ & ~0x00000020);
-        privacy_ = 0;
+        sortmethod_ = "lastupdated";
         bitField0_ = (bitField0_ & ~0x00000040);
-        requiredtags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        privacy_ = 0;
         bitField0_ = (bitField0_ & ~0x00000080);
-        excludedtags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        requiredtags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000100);
+        excludedtags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
         if (requiredKvTagsBuilder_ == null) {
           requiredKvTags_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
           requiredKvTagsBuilder_.clear();
         }
         filetype_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000400);
-        creatorAppid_ = 0;
         bitField0_ = (bitField0_ & ~0x00000800);
-        matchCloudFilename_ = "";
+        creatorAppid_ = 0;
         bitField0_ = (bitField0_ & ~0x00001000);
-        cacheMaxAgeSeconds_ = 0;
+        matchCloudFilename_ = "";
         bitField0_ = (bitField0_ & ~0x00002000);
-        language_ = 0;
+        cacheMaxAgeSeconds_ = 0;
         bitField0_ = (bitField0_ & ~0x00004000);
+        language_ = 0;
+        bitField0_ = (bitField0_ & ~0x00008000);
         if (taggroupsBuilder_ == null) {
           taggroups_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00010000);
         } else {
           taggroupsBuilder_.clear();
         }
-        totalonly_ = false;
-        bitField0_ = (bitField0_ & ~0x00010000);
-        idsOnly_ = false;
+        excludedContentDescriptors_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00020000);
-        returnVoteData_ = true;
+        totalonly_ = false;
         bitField0_ = (bitField0_ & ~0x00040000);
-        returnTags_ = false;
+        idsOnly_ = false;
         bitField0_ = (bitField0_ & ~0x00080000);
-        returnKvTags_ = true;
+        returnVoteData_ = true;
         bitField0_ = (bitField0_ & ~0x00100000);
-        returnPreviews_ = false;
+        returnTags_ = false;
         bitField0_ = (bitField0_ & ~0x00200000);
-        returnChildren_ = false;
+        returnKvTags_ = true;
         bitField0_ = (bitField0_ & ~0x00400000);
-        returnShortDescription_ = true;
+        returnPreviews_ = false;
         bitField0_ = (bitField0_ & ~0x00800000);
-        returnForSaleData_ = false;
+        returnChildren_ = false;
         bitField0_ = (bitField0_ & ~0x01000000);
-        returnMetadata_ = false;
+        returnShortDescription_ = true;
         bitField0_ = (bitField0_ & ~0x02000000);
-        returnPlaytimeStats_ = 0;
+        returnForSaleData_ = false;
         bitField0_ = (bitField0_ & ~0x04000000);
-        stripDescriptionBbcode_ = false;
+        returnMetadata_ = false;
         bitField0_ = (bitField0_ & ~0x08000000);
-        returnReactions_ = false;
+        returnPlaytimeStats_ = 0;
         bitField0_ = (bitField0_ & ~0x10000000);
-        startindexOverride_ = 0;
+        stripDescriptionBbcode_ = false;
         bitField0_ = (bitField0_ & ~0x20000000);
-        desiredRevision_ = 0;
+        returnReactions_ = false;
         bitField0_ = (bitField0_ & ~0x40000000);
+        startindexOverride_ = 0;
+        bitField0_ = (bitField0_ & ~0x80000000);
+        desiredRevision_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000001);
+        returnApps_ = false;
+        bitField1_ = (bitField1_ & ~0x00000002);
         return this;
       }
 
@@ -34777,6 +38971,7 @@ public final class SteammessagesPublishedfileSteamclient {
       public SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request buildPartial() {
         SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request result = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.steamid_ = steamid_;
@@ -34787,133 +38982,146 @@ public final class SteammessagesPublishedfileSteamclient {
           to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.shortcutid_ = shortcutid_;
           to_bitField0_ |= 0x00000004;
         }
-        result.page_ = page_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.numperpage_ = numperpage_;
+        result.page_ = page_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.type_ = type_;
+        result.numperpage_ = numperpage_;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.sortmethod_ = sortmethod_;
+        result.type_ = type_;
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.privacy_ = privacy_;
           to_bitField0_ |= 0x00000040;
         }
-        if (((bitField0_ & 0x00000080) != 0)) {
+        result.sortmethod_ = sortmethod_;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.privacy_ = privacy_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((bitField0_ & 0x00000100) != 0)) {
           requiredtags_ = requiredtags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.requiredtags_ = requiredtags_;
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000200) != 0)) {
           excludedtags_ = excludedtags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000200);
         }
         result.excludedtags_ = excludedtags_;
         if (requiredKvTagsBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) != 0)) {
+          if (((bitField0_ & 0x00000400) != 0)) {
             requiredKvTags_ = java.util.Collections.unmodifiableList(requiredKvTags_);
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
           }
           result.requiredKvTags_ = requiredKvTags_;
         } else {
           result.requiredKvTags_ = requiredKvTagsBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.filetype_ = filetype_;
-          to_bitField0_ |= 0x00000080;
-        }
         if (((from_bitField0_ & 0x00000800) != 0)) {
-          result.creatorAppid_ = creatorAppid_;
+          result.filetype_ = filetype_;
           to_bitField0_ |= 0x00000100;
         }
         if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.creatorAppid_ = creatorAppid_;
           to_bitField0_ |= 0x00000200;
         }
-        result.matchCloudFilename_ = matchCloudFilename_;
         if (((from_bitField0_ & 0x00002000) != 0)) {
-          result.cacheMaxAgeSeconds_ = cacheMaxAgeSeconds_;
           to_bitField0_ |= 0x00000400;
         }
+        result.matchCloudFilename_ = matchCloudFilename_;
         if (((from_bitField0_ & 0x00004000) != 0)) {
-          result.language_ = language_;
+          result.cacheMaxAgeSeconds_ = cacheMaxAgeSeconds_;
           to_bitField0_ |= 0x00000800;
         }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.language_ = language_;
+          to_bitField0_ |= 0x00001000;
+        }
         if (taggroupsBuilder_ == null) {
-          if (((bitField0_ & 0x00008000) != 0)) {
+          if (((bitField0_ & 0x00010000) != 0)) {
             taggroups_ = java.util.Collections.unmodifiableList(taggroups_);
-            bitField0_ = (bitField0_ & ~0x00008000);
+            bitField0_ = (bitField0_ & ~0x00010000);
           }
           result.taggroups_ = taggroups_;
         } else {
           result.taggroups_ = taggroupsBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00010000) != 0)) {
-          result.totalonly_ = totalonly_;
-          to_bitField0_ |= 0x00001000;
+        if (((bitField0_ & 0x00020000) != 0)) {
+          excludedContentDescriptors_ = java.util.Collections.unmodifiableList(excludedContentDescriptors_);
+          bitField0_ = (bitField0_ & ~0x00020000);
         }
-        if (((from_bitField0_ & 0x00020000) != 0)) {
-          result.idsOnly_ = idsOnly_;
+        result.excludedContentDescriptors_ = excludedContentDescriptors_;
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.totalonly_ = totalonly_;
           to_bitField0_ |= 0x00002000;
         }
-        if (((from_bitField0_ & 0x00040000) != 0)) {
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.idsOnly_ = idsOnly_;
           to_bitField0_ |= 0x00004000;
         }
-        result.returnVoteData_ = returnVoteData_;
-        if (((from_bitField0_ & 0x00080000) != 0)) {
-          result.returnTags_ = returnTags_;
+        if (((from_bitField0_ & 0x00100000) != 0)) {
           to_bitField0_ |= 0x00008000;
         }
-        if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.returnVoteData_ = returnVoteData_;
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.returnTags_ = returnTags_;
           to_bitField0_ |= 0x00010000;
         }
-        result.returnKvTags_ = returnKvTags_;
-        if (((from_bitField0_ & 0x00200000) != 0)) {
-          result.returnPreviews_ = returnPreviews_;
+        if (((from_bitField0_ & 0x00400000) != 0)) {
           to_bitField0_ |= 0x00020000;
         }
-        if (((from_bitField0_ & 0x00400000) != 0)) {
-          result.returnChildren_ = returnChildren_;
+        result.returnKvTags_ = returnKvTags_;
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.returnPreviews_ = returnPreviews_;
           to_bitField0_ |= 0x00040000;
         }
-        if (((from_bitField0_ & 0x00800000) != 0)) {
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.returnChildren_ = returnChildren_;
           to_bitField0_ |= 0x00080000;
         }
-        result.returnShortDescription_ = returnShortDescription_;
-        if (((from_bitField0_ & 0x01000000) != 0)) {
-          result.returnForSaleData_ = returnForSaleData_;
+        if (((from_bitField0_ & 0x02000000) != 0)) {
           to_bitField0_ |= 0x00100000;
         }
-        if (((from_bitField0_ & 0x02000000) != 0)) {
-          result.returnMetadata_ = returnMetadata_;
+        result.returnShortDescription_ = returnShortDescription_;
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.returnForSaleData_ = returnForSaleData_;
           to_bitField0_ |= 0x00200000;
         }
-        if (((from_bitField0_ & 0x04000000) != 0)) {
-          result.returnPlaytimeStats_ = returnPlaytimeStats_;
+        if (((from_bitField0_ & 0x08000000) != 0)) {
+          result.returnMetadata_ = returnMetadata_;
           to_bitField0_ |= 0x00400000;
         }
-        if (((from_bitField0_ & 0x08000000) != 0)) {
-          result.stripDescriptionBbcode_ = stripDescriptionBbcode_;
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.returnPlaytimeStats_ = returnPlaytimeStats_;
           to_bitField0_ |= 0x00800000;
         }
-        if (((from_bitField0_ & 0x10000000) != 0)) {
-          result.returnReactions_ = returnReactions_;
+        if (((from_bitField0_ & 0x20000000) != 0)) {
+          result.stripDescriptionBbcode_ = stripDescriptionBbcode_;
           to_bitField0_ |= 0x01000000;
         }
-        if (((from_bitField0_ & 0x20000000) != 0)) {
-          result.startindexOverride_ = startindexOverride_;
+        if (((from_bitField0_ & 0x40000000) != 0)) {
+          result.returnReactions_ = returnReactions_;
           to_bitField0_ |= 0x02000000;
         }
-        if (((from_bitField0_ & 0x40000000) != 0)) {
+        if (((from_bitField0_ & 0x80000000) != 0)) {
+          result.startindexOverride_ = startindexOverride_;
           to_bitField0_ |= 0x04000000;
         }
+        if (((from_bitField1_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x08000000;
+        }
         result.desiredRevision_ = desiredRevision_;
+        if (((from_bitField1_ & 0x00000002) != 0)) {
+          result.returnApps_ = returnApps_;
+          to_bitField0_ |= 0x10000000;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -34969,6 +39177,9 @@ public final class SteammessagesPublishedfileSteamclient {
         if (other.hasAppid()) {
           setAppid(other.getAppid());
         }
+        if (other.hasShortcutid()) {
+          setShortcutid(other.getShortcutid());
+        }
         if (other.hasPage()) {
           setPage(other.getPage());
         }
@@ -34976,12 +39187,12 @@ public final class SteammessagesPublishedfileSteamclient {
           setNumperpage(other.getNumperpage());
         }
         if (other.hasType()) {
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
           type_ = other.type_;
           onChanged();
         }
         if (other.hasSortmethod()) {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
           sortmethod_ = other.sortmethod_;
           onChanged();
         }
@@ -34991,7 +39202,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (!other.requiredtags_.isEmpty()) {
           if (requiredtags_.isEmpty()) {
             requiredtags_ = other.requiredtags_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureRequiredtagsIsMutable();
             requiredtags_.addAll(other.requiredtags_);
@@ -35001,7 +39212,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (!other.excludedtags_.isEmpty()) {
           if (excludedtags_.isEmpty()) {
             excludedtags_ = other.excludedtags_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             ensureExcludedtagsIsMutable();
             excludedtags_.addAll(other.excludedtags_);
@@ -35012,7 +39223,7 @@ public final class SteammessagesPublishedfileSteamclient {
           if (!other.requiredKvTags_.isEmpty()) {
             if (requiredKvTags_.isEmpty()) {
               requiredKvTags_ = other.requiredKvTags_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000400);
             } else {
               ensureRequiredKvTagsIsMutable();
               requiredKvTags_.addAll(other.requiredKvTags_);
@@ -35025,7 +39236,7 @@ public final class SteammessagesPublishedfileSteamclient {
               requiredKvTagsBuilder_.dispose();
               requiredKvTagsBuilder_ = null;
               requiredKvTags_ = other.requiredKvTags_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000400);
               requiredKvTagsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRequiredKvTagsFieldBuilder() : null;
@@ -35041,7 +39252,7 @@ public final class SteammessagesPublishedfileSteamclient {
           setCreatorAppid(other.getCreatorAppid());
         }
         if (other.hasMatchCloudFilename()) {
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00002000;
           matchCloudFilename_ = other.matchCloudFilename_;
           onChanged();
         }
@@ -35055,7 +39266,7 @@ public final class SteammessagesPublishedfileSteamclient {
           if (!other.taggroups_.isEmpty()) {
             if (taggroups_.isEmpty()) {
               taggroups_ = other.taggroups_;
-              bitField0_ = (bitField0_ & ~0x00008000);
+              bitField0_ = (bitField0_ & ~0x00010000);
             } else {
               ensureTaggroupsIsMutable();
               taggroups_.addAll(other.taggroups_);
@@ -35068,7 +39279,7 @@ public final class SteammessagesPublishedfileSteamclient {
               taggroupsBuilder_.dispose();
               taggroupsBuilder_ = null;
               taggroups_ = other.taggroups_;
-              bitField0_ = (bitField0_ & ~0x00008000);
+              bitField0_ = (bitField0_ & ~0x00010000);
               taggroupsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getTaggroupsFieldBuilder() : null;
@@ -35076,6 +39287,16 @@ public final class SteammessagesPublishedfileSteamclient {
               taggroupsBuilder_.addAllMessages(other.taggroups_);
             }
           }
+        }
+        if (!other.excludedContentDescriptors_.isEmpty()) {
+          if (excludedContentDescriptors_.isEmpty()) {
+            excludedContentDescriptors_ = other.excludedContentDescriptors_;
+            bitField0_ = (bitField0_ & ~0x00020000);
+          } else {
+            ensureExcludedContentDescriptorsIsMutable();
+            excludedContentDescriptors_.addAll(other.excludedContentDescriptors_);
+          }
+          onChanged();
         }
         if (other.hasTotalonly()) {
           setTotalonly(other.getTotalonly());
@@ -35122,6 +39343,9 @@ public final class SteammessagesPublishedfileSteamclient {
         if (other.hasDesiredRevision()) {
           setDesiredRevision(other.getDesiredRevision());
         }
+        if (other.hasReturnApps()) {
+          setReturnApps(other.getReturnApps());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -35151,6 +39375,7 @@ public final class SteammessagesPublishedfileSteamclient {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private long steamid_ ;
       /**
@@ -35230,6 +39455,45 @@ public final class SteammessagesPublishedfileSteamclient {
         return this;
       }
 
+      private int shortcutid_ ;
+      /**
+       * <code>optional uint32 shortcutid = 3 [(.description) = "(Optional) Shortcut Id to retrieve published files from."];</code>
+       * @return Whether the shortcutid field is set.
+       */
+      @java.lang.Override
+      public boolean hasShortcutid() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 shortcutid = 3 [(.description) = "(Optional) Shortcut Id to retrieve published files from."];</code>
+       * @return The shortcutid.
+       */
+      @java.lang.Override
+      public int getShortcutid() {
+        return shortcutid_;
+      }
+      /**
+       * <code>optional uint32 shortcutid = 3 [(.description) = "(Optional) Shortcut Id to retrieve published files from."];</code>
+       * @param value The shortcutid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShortcutid(int value) {
+        bitField0_ |= 0x00000004;
+        shortcutid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 shortcutid = 3 [(.description) = "(Optional) Shortcut Id to retrieve published files from."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShortcutid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        shortcutid_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int page_ = 1;
       /**
        * <code>optional uint32 page = 4 [default = 1, (.description) = "(Optional) Starting page for results."];</code>
@@ -35237,7 +39501,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasPage() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>optional uint32 page = 4 [default = 1, (.description) = "(Optional) Starting page for results."];</code>
@@ -35253,7 +39517,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setPage(int value) {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         page_ = value;
         onChanged();
         return this;
@@ -35263,7 +39527,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearPage() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         page_ = 1;
         onChanged();
         return this;
@@ -35276,7 +39540,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasNumperpage() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>optional uint32 numperpage = 5 [default = 1, (.description) = "(Optional) The number of results, per page to return."];</code>
@@ -35292,7 +39556,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setNumperpage(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         numperpage_ = value;
         onChanged();
         return this;
@@ -35302,7 +39566,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearNumperpage() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         numperpage_ = 1;
         onChanged();
         return this;
@@ -35314,7 +39578,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return Whether the type field is set.
        */
       public boolean hasType() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>optional string type = 6 [default = "myfiles", (.description) = "(Optional) Type of files to be returned."];</code>
@@ -35361,7 +39625,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000020;
         type_ = value;
         onChanged();
         return this;
@@ -35371,7 +39635,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         type_ = getDefaultInstance().getType();
         onChanged();
         return this;
@@ -35386,7 +39650,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000020;
         type_ = value;
         onChanged();
         return this;
@@ -35398,7 +39662,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return Whether the sortmethod field is set.
        */
       public boolean hasSortmethod() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>optional string sortmethod = 7 [default = "lastupdated", (.description) = "(Optional) Sorting method to use on returned values."];</code>
@@ -35445,7 +39709,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000040;
         sortmethod_ = value;
         onChanged();
         return this;
@@ -35455,7 +39719,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearSortmethod() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         sortmethod_ = getDefaultInstance().getSortmethod();
         onChanged();
         return this;
@@ -35470,7 +39734,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000040;
         sortmethod_ = value;
         onChanged();
         return this;
@@ -35483,7 +39747,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasPrivacy() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <code>optional uint32 privacy = 9 [(.description) = "(optional) Filter by privacy settings."];</code>
@@ -35499,7 +39763,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setPrivacy(int value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         privacy_ = value;
         onChanged();
         return this;
@@ -35509,7 +39773,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearPrivacy() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         privacy_ = 0;
         onChanged();
         return this;
@@ -35517,9 +39781,9 @@ public final class SteammessagesPublishedfileSteamclient {
 
       private com.google.protobuf.LazyStringList requiredtags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureRequiredtagsIsMutable() {
-        if (!((bitField0_ & 0x00000080) != 0)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           requiredtags_ = new com.google.protobuf.LazyStringArrayList(requiredtags_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
          }
       }
       /**
@@ -35604,7 +39868,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       public Builder clearRequiredtags() {
         requiredtags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -35626,9 +39890,9 @@ public final class SteammessagesPublishedfileSteamclient {
 
       private com.google.protobuf.LazyStringList excludedtags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureExcludedtagsIsMutable() {
-        if (!((bitField0_ & 0x00000100) != 0)) {
+        if (!((bitField0_ & 0x00000200) != 0)) {
           excludedtags_ = new com.google.protobuf.LazyStringArrayList(excludedtags_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000200;
          }
       }
       /**
@@ -35713,7 +39977,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       public Builder clearExcludedtags() {
         excludedtags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
@@ -35736,9 +40000,9 @@ public final class SteammessagesPublishedfileSteamclient {
       private java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.KVTag> requiredKvTags_ =
         java.util.Collections.emptyList();
       private void ensureRequiredKvTagsIsMutable() {
-        if (!((bitField0_ & 0x00000200) != 0)) {
+        if (!((bitField0_ & 0x00000400) != 0)) {
           requiredKvTags_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.KVTag>(requiredKvTags_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000400;
          }
       }
 
@@ -35888,7 +40152,7 @@ public final class SteammessagesPublishedfileSteamclient {
       public Builder clearRequiredKvTags() {
         if (requiredKvTagsBuilder_ == null) {
           requiredKvTags_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
           onChanged();
         } else {
           requiredKvTagsBuilder_.clear();
@@ -35965,7 +40229,7 @@ public final class SteammessagesPublishedfileSteamclient {
           requiredKvTagsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.KVTag, SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.KVTag.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.KVTagOrBuilder>(
                   requiredKvTags_,
-                  ((bitField0_ & 0x00000200) != 0),
+                  ((bitField0_ & 0x00000400) != 0),
                   getParentForChildren(),
                   isClean());
           requiredKvTags_ = null;
@@ -35980,7 +40244,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasFiletype() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <code>optional uint32 filetype = 14 [(.description) = "(Optional) File type to match files to."];</code>
@@ -35996,7 +40260,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setFiletype(int value) {
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         filetype_ = value;
         onChanged();
         return this;
@@ -36006,7 +40270,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearFiletype() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         filetype_ = 0;
         onChanged();
         return this;
@@ -36019,7 +40283,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasCreatorAppid() {
-        return ((bitField0_ & 0x00000800) != 0);
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <code>optional uint32 creator_appid = 15 [(.description) = "App Id of the app that published the files, only matched if specified."];</code>
@@ -36035,7 +40299,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setCreatorAppid(int value) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         creatorAppid_ = value;
         onChanged();
         return this;
@@ -36045,7 +40309,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearCreatorAppid() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         creatorAppid_ = 0;
         onChanged();
         return this;
@@ -36057,7 +40321,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return Whether the matchCloudFilename field is set.
        */
       public boolean hasMatchCloudFilename() {
-        return ((bitField0_ & 0x00001000) != 0);
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <code>optional string match_cloud_filename = 16 [(.description) = "Match this cloud filename if specified."];</code>
@@ -36104,7 +40368,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00001000;
+  bitField0_ |= 0x00002000;
         matchCloudFilename_ = value;
         onChanged();
         return this;
@@ -36114,7 +40378,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearMatchCloudFilename() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         matchCloudFilename_ = getDefaultInstance().getMatchCloudFilename();
         onChanged();
         return this;
@@ -36129,7 +40393,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00001000;
+  bitField0_ |= 0x00002000;
         matchCloudFilename_ = value;
         onChanged();
         return this;
@@ -36142,7 +40406,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasCacheMaxAgeSeconds() {
-        return ((bitField0_ & 0x00002000) != 0);
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <code>optional uint32 cache_max_age_seconds = 27 [default = 0, (.description) = "Allow stale data to be returned for the specified number of seconds."];</code>
@@ -36158,7 +40422,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setCacheMaxAgeSeconds(int value) {
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         cacheMaxAgeSeconds_ = value;
         onChanged();
         return this;
@@ -36168,7 +40432,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearCacheMaxAgeSeconds() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         cacheMaxAgeSeconds_ = 0;
         onChanged();
         return this;
@@ -36181,7 +40445,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasLanguage() {
-        return ((bitField0_ & 0x00004000) != 0);
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
        * <code>optional int32 language = 29 [default = 0, (.description) = "Specifies the localized text to return. Defaults to English."];</code>
@@ -36197,7 +40461,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setLanguage(int value) {
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         language_ = value;
         onChanged();
         return this;
@@ -36207,7 +40471,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearLanguage() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         language_ = 0;
         onChanged();
         return this;
@@ -36216,9 +40480,9 @@ public final class SteammessagesPublishedfileSteamclient {
       private java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.TagGroup> taggroups_ =
         java.util.Collections.emptyList();
       private void ensureTaggroupsIsMutable() {
-        if (!((bitField0_ & 0x00008000) != 0)) {
+        if (!((bitField0_ & 0x00010000) != 0)) {
           taggroups_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.TagGroup>(taggroups_);
-          bitField0_ |= 0x00008000;
+          bitField0_ |= 0x00010000;
          }
       }
 
@@ -36368,7 +40632,7 @@ public final class SteammessagesPublishedfileSteamclient {
       public Builder clearTaggroups() {
         if (taggroupsBuilder_ == null) {
           taggroups_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00010000);
           onChanged();
         } else {
           taggroupsBuilder_.clear();
@@ -36445,12 +40709,98 @@ public final class SteammessagesPublishedfileSteamclient {
           taggroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.TagGroup, SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.TagGroup.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetUserFiles_Request.TagGroupOrBuilder>(
                   taggroups_,
-                  ((bitField0_ & 0x00008000) != 0),
+                  ((bitField0_ & 0x00010000) != 0),
                   getParentForChildren(),
                   isClean());
           taggroups_ = null;
         }
         return taggroupsBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> excludedContentDescriptors_ =
+        java.util.Collections.emptyList();
+      private void ensureExcludedContentDescriptorsIsMutable() {
+        if (!((bitField0_ & 0x00020000) != 0)) {
+          excludedContentDescriptors_ = new java.util.ArrayList<java.lang.Integer>(excludedContentDescriptors_);
+          bitField0_ |= 0x00020000;
+        }
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @return A list containing the excludedContentDescriptors.
+       */
+      public java.util.List<EnumsProductinfo.EContentDescriptorID> getExcludedContentDescriptorsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, EnumsProductinfo.EContentDescriptorID>(excludedContentDescriptors_, excludedContentDescriptors_converter_);
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @return The count of excludedContentDescriptors.
+       */
+      public int getExcludedContentDescriptorsCount() {
+        return excludedContentDescriptors_.size();
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @param index The index of the element to return.
+       * @return The excludedContentDescriptors at the given index.
+       */
+      public EnumsProductinfo.EContentDescriptorID getExcludedContentDescriptors(int index) {
+        return excludedContentDescriptors_converter_.convert(excludedContentDescriptors_.get(index));
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @param index The index to set the value at.
+       * @param value The excludedContentDescriptors to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExcludedContentDescriptors(
+          int index, EnumsProductinfo.EContentDescriptorID value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExcludedContentDescriptorsIsMutable();
+        excludedContentDescriptors_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @param value The excludedContentDescriptors to add.
+       * @return This builder for chaining.
+       */
+      public Builder addExcludedContentDescriptors(EnumsProductinfo.EContentDescriptorID value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExcludedContentDescriptorsIsMutable();
+        excludedContentDescriptors_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @param values The excludedContentDescriptors to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllExcludedContentDescriptors(
+          java.lang.Iterable<? extends EnumsProductinfo.EContentDescriptorID> values) {
+        ensureExcludedContentDescriptorsIsMutable();
+        for (EnumsProductinfo.EContentDescriptorID value : values) {
+          excludedContentDescriptors_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 37 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExcludedContentDescriptors() {
+        excludedContentDescriptors_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00020000);
+        onChanged();
+        return this;
       }
 
       private boolean totalonly_ ;
@@ -36460,7 +40810,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasTotalonly() {
-        return ((bitField0_ & 0x00010000) != 0);
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <code>optional bool totalonly = 17 [(.description) = "(Optional) If true, only return the total number of files that satisfy this query."];</code>
@@ -36476,7 +40826,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setTotalonly(boolean value) {
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00040000;
         totalonly_ = value;
         onChanged();
         return this;
@@ -36486,7 +40836,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearTotalonly() {
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         totalonly_ = false;
         onChanged();
         return this;
@@ -36499,7 +40849,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasIdsOnly() {
-        return ((bitField0_ & 0x00020000) != 0);
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <code>optional bool ids_only = 18 [(.description) = "(Optional) If true, only return the published file ids of files that satisfy this query."];</code>
@@ -36515,7 +40865,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setIdsOnly(boolean value) {
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00080000;
         idsOnly_ = value;
         onChanged();
         return this;
@@ -36525,7 +40875,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearIdsOnly() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         idsOnly_ = false;
         onChanged();
         return this;
@@ -36538,7 +40888,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnVoteData() {
-        return ((bitField0_ & 0x00040000) != 0);
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <code>optional bool return_vote_data = 19 [default = true, (.description) = "Return vote data"];</code>
@@ -36554,7 +40904,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnVoteData(boolean value) {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00100000;
         returnVoteData_ = value;
         onChanged();
         return this;
@@ -36564,7 +40914,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnVoteData() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         returnVoteData_ = true;
         onChanged();
         return this;
@@ -36577,7 +40927,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnTags() {
-        return ((bitField0_ & 0x00080000) != 0);
+        return ((bitField0_ & 0x00200000) != 0);
       }
       /**
        * <code>optional bool return_tags = 20 [(.description) = "Return tags in the file details"];</code>
@@ -36593,7 +40943,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnTags(boolean value) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00200000;
         returnTags_ = value;
         onChanged();
         return this;
@@ -36603,7 +40953,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnTags() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         returnTags_ = false;
         onChanged();
         return this;
@@ -36616,7 +40966,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnKvTags() {
-        return ((bitField0_ & 0x00100000) != 0);
+        return ((bitField0_ & 0x00400000) != 0);
       }
       /**
        * <code>optional bool return_kv_tags = 21 [default = true, (.description) = "Return key-value tags in the file details"];</code>
@@ -36632,7 +40982,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnKvTags(boolean value) {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00400000;
         returnKvTags_ = value;
         onChanged();
         return this;
@@ -36642,7 +40992,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnKvTags() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         returnKvTags_ = true;
         onChanged();
         return this;
@@ -36655,7 +41005,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnPreviews() {
-        return ((bitField0_ & 0x00200000) != 0);
+        return ((bitField0_ & 0x00800000) != 0);
       }
       /**
        * <code>optional bool return_previews = 22 [(.description) = "Return preview image and video details in the file details"];</code>
@@ -36671,7 +41021,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnPreviews(boolean value) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00800000;
         returnPreviews_ = value;
         onChanged();
         return this;
@@ -36681,7 +41031,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnPreviews() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         returnPreviews_ = false;
         onChanged();
         return this;
@@ -36694,7 +41044,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnChildren() {
-        return ((bitField0_ & 0x00400000) != 0);
+        return ((bitField0_ & 0x01000000) != 0);
       }
       /**
        * <code>optional bool return_children = 23 [(.description) = "Return child item ids in the file details"];</code>
@@ -36710,7 +41060,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnChildren(boolean value) {
-        bitField0_ |= 0x00400000;
+        bitField0_ |= 0x01000000;
         returnChildren_ = value;
         onChanged();
         return this;
@@ -36720,7 +41070,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnChildren() {
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         returnChildren_ = false;
         onChanged();
         return this;
@@ -36733,7 +41083,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnShortDescription() {
-        return ((bitField0_ & 0x00800000) != 0);
+        return ((bitField0_ & 0x02000000) != 0);
       }
       /**
        * <code>optional bool return_short_description = 24 [default = true, (.description) = "Populate the short_description field instead of file_description"];</code>
@@ -36749,7 +41099,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnShortDescription(boolean value) {
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x02000000;
         returnShortDescription_ = value;
         onChanged();
         return this;
@@ -36759,7 +41109,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnShortDescription() {
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x02000000);
         returnShortDescription_ = true;
         onChanged();
         return this;
@@ -36772,7 +41122,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnForSaleData() {
-        return ((bitField0_ & 0x01000000) != 0);
+        return ((bitField0_ & 0x04000000) != 0);
       }
       /**
        * <code>optional bool return_for_sale_data = 26 [(.description) = "Return pricing information, if applicable"];</code>
@@ -36788,7 +41138,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnForSaleData(boolean value) {
-        bitField0_ |= 0x01000000;
+        bitField0_ |= 0x04000000;
         returnForSaleData_ = value;
         onChanged();
         return this;
@@ -36798,7 +41148,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnForSaleData() {
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         returnForSaleData_ = false;
         onChanged();
         return this;
@@ -36811,7 +41161,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnMetadata() {
-        return ((bitField0_ & 0x02000000) != 0);
+        return ((bitField0_ & 0x08000000) != 0);
       }
       /**
        * <code>optional bool return_metadata = 28 [default = false, (.description) = "Populate the metadata field"];</code>
@@ -36827,7 +41177,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnMetadata(boolean value) {
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x08000000;
         returnMetadata_ = value;
         onChanged();
         return this;
@@ -36837,7 +41187,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnMetadata() {
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x08000000);
         returnMetadata_ = false;
         onChanged();
         return this;
@@ -36850,7 +41200,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnPlaytimeStats() {
-        return ((bitField0_ & 0x04000000) != 0);
+        return ((bitField0_ & 0x10000000) != 0);
       }
       /**
        * <code>optional uint32 return_playtime_stats = 31 [(.description) = "Return playtime stats for the specified number of days before today."];</code>
@@ -36866,7 +41216,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnPlaytimeStats(int value) {
-        bitField0_ |= 0x04000000;
+        bitField0_ |= 0x10000000;
         returnPlaytimeStats_ = value;
         onChanged();
         return this;
@@ -36876,7 +41226,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnPlaytimeStats() {
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField0_ = (bitField0_ & ~0x10000000);
         returnPlaytimeStats_ = 0;
         onChanged();
         return this;
@@ -36889,7 +41239,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasStripDescriptionBbcode() {
-        return ((bitField0_ & 0x08000000) != 0);
+        return ((bitField0_ & 0x20000000) != 0);
       }
       /**
        * <code>optional bool strip_description_bbcode = 32 [(.description) = "Strips BBCode from descriptions."];</code>
@@ -36905,7 +41255,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setStripDescriptionBbcode(boolean value) {
-        bitField0_ |= 0x08000000;
+        bitField0_ |= 0x20000000;
         stripDescriptionBbcode_ = value;
         onChanged();
         return this;
@@ -36915,7 +41265,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearStripDescriptionBbcode() {
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField0_ = (bitField0_ & ~0x20000000);
         stripDescriptionBbcode_ = false;
         onChanged();
         return this;
@@ -36928,7 +41278,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnReactions() {
-        return ((bitField0_ & 0x10000000) != 0);
+        return ((bitField0_ & 0x40000000) != 0);
       }
       /**
        * <code>optional bool return_reactions = 35 [default = false, (.description) = "If true, then reactions to items will be returned."];</code>
@@ -36944,7 +41294,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnReactions(boolean value) {
-        bitField0_ |= 0x10000000;
+        bitField0_ |= 0x40000000;
         returnReactions_ = value;
         onChanged();
         return this;
@@ -36954,7 +41304,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnReactions() {
-        bitField0_ = (bitField0_ & ~0x10000000);
+        bitField0_ = (bitField0_ & ~0x40000000);
         returnReactions_ = false;
         onChanged();
         return this;
@@ -36967,7 +41317,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasStartindexOverride() {
-        return ((bitField0_ & 0x20000000) != 0);
+        return ((bitField0_ & 0x80000000) != 0);
       }
       /**
        * <code>optional uint32 startindex_override = 25 [(.description) = "Backwards compatible for the client."];</code>
@@ -36983,7 +41333,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setStartindexOverride(int value) {
-        bitField0_ |= 0x20000000;
+        bitField0_ |= 0x80000000;
         startindexOverride_ = value;
         onChanged();
         return this;
@@ -36993,7 +41343,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearStartindexOverride() {
-        bitField0_ = (bitField0_ & ~0x20000000);
+        bitField0_ = (bitField0_ & ~0x80000000);
         startindexOverride_ = 0;
         onChanged();
         return this;
@@ -37005,7 +41355,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return Whether the desiredRevision field is set.
        */
       @java.lang.Override public boolean hasDesiredRevision() {
-        return ((bitField0_ & 0x40000000) != 0);
+        return ((bitField1_ & 0x00000001) != 0);
       }
       /**
        * <code>optional .EPublishedFileRevision desired_revision = 33 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
@@ -37026,7 +41376,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x40000000;
+        bitField1_ |= 0x00000001;
         desiredRevision_ = value.getNumber();
         onChanged();
         return this;
@@ -37036,8 +41386,47 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearDesiredRevision() {
-        bitField0_ = (bitField0_ & ~0x40000000);
+        bitField1_ = (bitField1_ & ~0x00000001);
         desiredRevision_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean returnApps_ ;
+      /**
+       * <code>optional bool return_apps = 36 [(.description) = "Return list of apps the items belong to"];</code>
+       * @return Whether the returnApps field is set.
+       */
+      @java.lang.Override
+      public boolean hasReturnApps() {
+        return ((bitField1_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool return_apps = 36 [(.description) = "Return list of apps the items belong to"];</code>
+       * @return The returnApps.
+       */
+      @java.lang.Override
+      public boolean getReturnApps() {
+        return returnApps_;
+      }
+      /**
+       * <code>optional bool return_apps = 36 [(.description) = "Return list of apps the items belong to"];</code>
+       * @param value The returnApps to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReturnApps(boolean value) {
+        bitField1_ |= 0x00000002;
+        returnApps_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool return_apps = 36 [(.description) = "Return list of apps the items belong to"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReturnApps() {
+        bitField1_ = (bitField1_ & ~0x00000002);
+        returnApps_ = false;
         onChanged();
         return this;
       }
@@ -41797,12 +46186,12 @@ public final class SteammessagesPublishedfileSteamclient {
     int getAppid();
 
     /**
-     * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like update."];</code>
+     * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like to update."];</code>
      * @return Whether the publishedfileid field is set.
      */
     boolean hasPublishedfileid();
     /**
-     * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like update."];</code>
+     * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like to update."];</code>
      * @return The publishedfileid.
      */
     long getPublishedfileid();
@@ -41910,6 +46299,17 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     com.google.protobuf.ByteString
         getPreviewFilenameBytes();
+
+    /**
+     * <code>optional bool spoiler_tag = 10 [(.description) = "(Optional) Whether this published file should have a spoiler tag attached to it."];</code>
+     * @return Whether the spoilerTag field is set.
+     */
+    boolean hasSpoilerTag();
+    /**
+     * <code>optional bool spoiler_tag = 10 [(.description) = "(Optional) Whether this published file should have a spoiler tag attached to it."];</code>
+     * @return The spoilerTag.
+     */
+    boolean getSpoilerTag();
 
     /**
      * <code>optional uint32 image_width = 15 [(.description) = "(Optional) If this is an image file, you can specify the image width."];</code>
@@ -42032,13 +46432,18 @@ public final class SteammessagesPublishedfileSteamclient {
               previewFilename_ = bs;
               break;
             }
-            case 120: {
+            case 80: {
               bitField0_ |= 0x00000080;
+              spoilerTag_ = input.readBool();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00000100;
               imageWidth_ = input.readUInt32();
               break;
             }
             case 128: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               imageHeight_ = input.readUInt32();
               break;
             }
@@ -42100,7 +46505,7 @@ public final class SteammessagesPublishedfileSteamclient {
     public static final int PUBLISHEDFILEID_FIELD_NUMBER = 2;
     private long publishedfileid_;
     /**
-     * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like update."];</code>
+     * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like to update."];</code>
      * @return Whether the publishedfileid field is set.
      */
     @java.lang.Override
@@ -42108,7 +46513,7 @@ public final class SteammessagesPublishedfileSteamclient {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like update."];</code>
+     * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like to update."];</code>
      * @return The publishedfileid.
      */
     @java.lang.Override
@@ -42362,6 +46767,25 @@ public final class SteammessagesPublishedfileSteamclient {
       }
     }
 
+    public static final int SPOILER_TAG_FIELD_NUMBER = 10;
+    private boolean spoilerTag_;
+    /**
+     * <code>optional bool spoiler_tag = 10 [(.description) = "(Optional) Whether this published file should have a spoiler tag attached to it."];</code>
+     * @return Whether the spoilerTag field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpoilerTag() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional bool spoiler_tag = 10 [(.description) = "(Optional) Whether this published file should have a spoiler tag attached to it."];</code>
+     * @return The spoilerTag.
+     */
+    @java.lang.Override
+    public boolean getSpoilerTag() {
+      return spoilerTag_;
+    }
+
     public static final int IMAGE_WIDTH_FIELD_NUMBER = 15;
     private int imageWidth_;
     /**
@@ -42370,7 +46794,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasImageWidth() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>optional uint32 image_width = 15 [(.description) = "(Optional) If this is an image file, you can specify the image width."];</code>
@@ -42389,7 +46813,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasImageHeight() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>optional uint32 image_height = 16 [(.description) = "(Optional) If this is an image file, you can specify the image height."];</code>
@@ -42439,9 +46863,12 @@ public final class SteammessagesPublishedfileSteamclient {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, previewFilename_);
       }
       if (((bitField0_ & 0x00000080) != 0)) {
-        output.writeUInt32(15, imageWidth_);
+        output.writeBool(10, spoilerTag_);
       }
       if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeUInt32(15, imageWidth_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeUInt32(16, imageHeight_);
       }
       unknownFields.writeTo(output);
@@ -42487,9 +46914,13 @@ public final class SteammessagesPublishedfileSteamclient {
       }
       if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, imageWidth_);
+          .computeBoolSize(10, spoilerTag_);
       }
       if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, imageWidth_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(16, imageHeight_);
       }
@@ -42545,6 +46976,11 @@ public final class SteammessagesPublishedfileSteamclient {
         if (!getPreviewFilename()
             .equals(other.getPreviewFilename())) return false;
       }
+      if (hasSpoilerTag() != other.hasSpoilerTag()) return false;
+      if (hasSpoilerTag()) {
+        if (getSpoilerTag()
+            != other.getSpoilerTag()) return false;
+      }
       if (hasImageWidth() != other.hasImageWidth()) return false;
       if (hasImageWidth()) {
         if (getImageWidth()
@@ -42598,6 +47034,11 @@ public final class SteammessagesPublishedfileSteamclient {
       if (hasPreviewFilename()) {
         hash = (37 * hash) + PREVIEW_FILENAME_FIELD_NUMBER;
         hash = (53 * hash) + getPreviewFilename().hashCode();
+      }
+      if (hasSpoilerTag()) {
+        hash = (37 * hash) + SPOILER_TAG_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSpoilerTag());
       }
       if (hasImageWidth()) {
         hash = (37 * hash) + IMAGE_WIDTH_FIELD_NUMBER;
@@ -42756,10 +47197,12 @@ public final class SteammessagesPublishedfileSteamclient {
         bitField0_ = (bitField0_ & ~0x00000040);
         previewFilename_ = "";
         bitField0_ = (bitField0_ & ~0x00000080);
-        imageWidth_ = 0;
+        spoilerTag_ = false;
         bitField0_ = (bitField0_ & ~0x00000100);
-        imageHeight_ = 0;
+        imageWidth_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
+        imageHeight_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -42822,12 +47265,16 @@ public final class SteammessagesPublishedfileSteamclient {
         }
         result.previewFilename_ = previewFilename_;
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.imageWidth_ = imageWidth_;
+          result.spoilerTag_ = spoilerTag_;
           to_bitField0_ |= 0x00000080;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.imageHeight_ = imageHeight_;
+          result.imageWidth_ = imageWidth_;
           to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.imageHeight_ = imageHeight_;
+          to_bitField0_ |= 0x00000200;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -42917,6 +47364,9 @@ public final class SteammessagesPublishedfileSteamclient {
           previewFilename_ = other.previewFilename_;
           onChanged();
         }
+        if (other.hasSpoilerTag()) {
+          setSpoilerTag(other.getSpoilerTag());
+        }
         if (other.hasImageWidth()) {
           setImageWidth(other.getImageWidth());
         }
@@ -42994,7 +47444,7 @@ public final class SteammessagesPublishedfileSteamclient {
 
       private long publishedfileid_ ;
       /**
-       * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like update."];</code>
+       * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like to update."];</code>
        * @return Whether the publishedfileid field is set.
        */
       @java.lang.Override
@@ -43002,7 +47452,7 @@ public final class SteammessagesPublishedfileSteamclient {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like update."];</code>
+       * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like to update."];</code>
        * @return The publishedfileid.
        */
       @java.lang.Override
@@ -43010,7 +47460,7 @@ public final class SteammessagesPublishedfileSteamclient {
         return publishedfileid_;
       }
       /**
-       * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like update."];</code>
+       * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like to update."];</code>
        * @param value The publishedfileid to set.
        * @return This builder for chaining.
        */
@@ -43021,7 +47471,7 @@ public final class SteammessagesPublishedfileSteamclient {
         return this;
       }
       /**
-       * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like update."];</code>
+       * <code>optional fixed64 publishedfileid = 2 [(.description) = "Published file id of the file we&#92;'d like to update."];</code>
        * @return This builder for chaining.
        */
       public Builder clearPublishedfileid() {
@@ -43515,6 +47965,45 @@ public final class SteammessagesPublishedfileSteamclient {
         return this;
       }
 
+      private boolean spoilerTag_ ;
+      /**
+       * <code>optional bool spoiler_tag = 10 [(.description) = "(Optional) Whether this published file should have a spoiler tag attached to it."];</code>
+       * @return Whether the spoilerTag field is set.
+       */
+      @java.lang.Override
+      public boolean hasSpoilerTag() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional bool spoiler_tag = 10 [(.description) = "(Optional) Whether this published file should have a spoiler tag attached to it."];</code>
+       * @return The spoilerTag.
+       */
+      @java.lang.Override
+      public boolean getSpoilerTag() {
+        return spoilerTag_;
+      }
+      /**
+       * <code>optional bool spoiler_tag = 10 [(.description) = "(Optional) Whether this published file should have a spoiler tag attached to it."];</code>
+       * @param value The spoilerTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpoilerTag(boolean value) {
+        bitField0_ |= 0x00000100;
+        spoilerTag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool spoiler_tag = 10 [(.description) = "(Optional) Whether this published file should have a spoiler tag attached to it."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpoilerTag() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        spoilerTag_ = false;
+        onChanged();
+        return this;
+      }
+
       private int imageWidth_ ;
       /**
        * <code>optional uint32 image_width = 15 [(.description) = "(Optional) If this is an image file, you can specify the image width."];</code>
@@ -43522,7 +48011,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasImageWidth() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>optional uint32 image_width = 15 [(.description) = "(Optional) If this is an image file, you can specify the image width."];</code>
@@ -43538,7 +48027,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setImageWidth(int value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         imageWidth_ = value;
         onChanged();
         return this;
@@ -43548,7 +48037,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearImageWidth() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         imageWidth_ = 0;
         onChanged();
         return this;
@@ -43561,7 +48050,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasImageHeight() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <code>optional uint32 image_height = 16 [(.description) = "(Optional) If this is an image file, you can specify the image height."];</code>
@@ -43577,7 +48066,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setImageHeight(int value) {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         imageHeight_ = value;
         onChanged();
         return this;
@@ -43587,7 +48076,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearImageHeight() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         imageHeight_ = 0;
         onChanged();
         return this;
@@ -44058,6 +48547,1047 @@ public final class SteammessagesPublishedfileSteamclient {
 
     @java.lang.Override
     public SteammessagesPublishedfileSteamclient.CPublishedFile_Update_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPublishedFile_Delete_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_Delete_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed64 publishedfileid = 1 [(.description) = "Published file id of the file we&#92;'d like to delete."];</code>
+     * @return Whether the publishedfileid field is set.
+     */
+    boolean hasPublishedfileid();
+    /**
+     * <code>optional fixed64 publishedfileid = 1 [(.description) = "Published file id of the file we&#92;'d like to delete."];</code>
+     * @return The publishedfileid.
+     */
+    long getPublishedfileid();
+
+    /**
+     * <code>optional uint32 appid = 5;</code>
+     * @return Whether the appid field is set.
+     */
+    boolean hasAppid();
+    /**
+     * <code>optional uint32 appid = 5;</code>
+     * @return The appid.
+     */
+    int getAppid();
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_Delete_Request}
+   */
+  public static final class CPublishedFile_Delete_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_Delete_Request)
+      CPublishedFile_Delete_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_Delete_Request.newBuilder() to construct.
+    private CPublishedFile_Delete_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_Delete_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_Delete_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_Delete_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              bitField0_ |= 0x00000001;
+              publishedfileid_ = input.readFixed64();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000002;
+              appid_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Delete_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Delete_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PUBLISHEDFILEID_FIELD_NUMBER = 1;
+    private long publishedfileid_;
+    /**
+     * <code>optional fixed64 publishedfileid = 1 [(.description) = "Published file id of the file we&#92;'d like to delete."];</code>
+     * @return Whether the publishedfileid field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublishedfileid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed64 publishedfileid = 1 [(.description) = "Published file id of the file we&#92;'d like to delete."];</code>
+     * @return The publishedfileid.
+     */
+    @java.lang.Override
+    public long getPublishedfileid() {
+      return publishedfileid_;
+    }
+
+    public static final int APPID_FIELD_NUMBER = 5;
+    private int appid_;
+    /**
+     * <code>optional uint32 appid = 5;</code>
+     * @return Whether the appid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 appid = 5;</code>
+     * @return The appid.
+     */
+    @java.lang.Override
+    public int getAppid() {
+      return appid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeFixed64(1, publishedfileid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(5, appid_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(1, publishedfileid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, appid_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request other = (SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request) obj;
+
+      if (hasPublishedfileid() != other.hasPublishedfileid()) return false;
+      if (hasPublishedfileid()) {
+        if (getPublishedfileid()
+            != other.getPublishedfileid()) return false;
+      }
+      if (hasAppid() != other.hasAppid()) return false;
+      if (hasAppid()) {
+        if (getAppid()
+            != other.getAppid()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPublishedfileid()) {
+        hash = (37 * hash) + PUBLISHEDFILEID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPublishedfileid());
+      }
+      if (hasAppid()) {
+        hash = (37 * hash) + APPID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppid();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_Delete_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_Delete_Request)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Delete_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Delete_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        publishedfileid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Delete_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request result = new SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publishedfileid_ = publishedfileid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appid_ = appid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request.getDefaultInstance()) return this;
+        if (other.hasPublishedfileid()) {
+          setPublishedfileid(other.getPublishedfileid());
+        }
+        if (other.hasAppid()) {
+          setAppid(other.getAppid());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long publishedfileid_ ;
+      /**
+       * <code>optional fixed64 publishedfileid = 1 [(.description) = "Published file id of the file we&#92;'d like to delete."];</code>
+       * @return Whether the publishedfileid field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublishedfileid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional fixed64 publishedfileid = 1 [(.description) = "Published file id of the file we&#92;'d like to delete."];</code>
+       * @return The publishedfileid.
+       */
+      @java.lang.Override
+      public long getPublishedfileid() {
+        return publishedfileid_;
+      }
+      /**
+       * <code>optional fixed64 publishedfileid = 1 [(.description) = "Published file id of the file we&#92;'d like to delete."];</code>
+       * @param value The publishedfileid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublishedfileid(long value) {
+        bitField0_ |= 0x00000001;
+        publishedfileid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 publishedfileid = 1 [(.description) = "Published file id of the file we&#92;'d like to delete."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublishedfileid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publishedfileid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int appid_ ;
+      /**
+       * <code>optional uint32 appid = 5;</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 5;</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+      /**
+       * <code>optional uint32 appid = 5;</code>
+       * @param value The appid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppid(int value) {
+        bitField0_ |= 0x00000002;
+        appid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 appid = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appid_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_Delete_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_Delete_Request)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_Delete_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_Delete_Request>() {
+      @java.lang.Override
+      public CPublishedFile_Delete_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_Delete_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_Delete_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_Delete_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPublishedFile_Delete_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_Delete_Response)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_Delete_Response}
+   */
+  public static final class CPublishedFile_Delete_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_Delete_Response)
+      CPublishedFile_Delete_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_Delete_Response.newBuilder() to construct.
+    private CPublishedFile_Delete_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_Delete_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_Delete_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_Delete_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Delete_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Delete_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response other = (SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_Delete_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_Delete_Response)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Delete_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Delete_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_Delete_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response result = new SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_Delete_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_Delete_Response)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_Delete_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_Delete_Response>() {
+      @java.lang.Override
+      public CPublishedFile_Delete_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_Delete_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_Delete_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_Delete_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_Delete_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -50211,6 +55741,53 @@ public final class SteammessagesPublishedfileSteamclient {
         int index);
 
     /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+     * @return Whether the dateRangeCreated field is set.
+     */
+    boolean hasDateRangeCreated();
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+     * @return The dateRangeCreated.
+     */
+    SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange getDateRangeCreated();
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+     */
+    SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder getDateRangeCreatedOrBuilder();
+
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+     * @return Whether the dateRangeUpdated field is set.
+     */
+    boolean hasDateRangeUpdated();
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+     * @return The dateRangeUpdated.
+     */
+    SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange getDateRangeUpdated();
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+     */
+    SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder getDateRangeUpdatedOrBuilder();
+
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @return A list containing the excludedContentDescriptors.
+     */
+    java.util.List<EnumsProductinfo.EContentDescriptorID> getExcludedContentDescriptorsList();
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @return The count of excludedContentDescriptors.
+     */
+    int getExcludedContentDescriptorsCount();
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @param index The index of the element to return.
+     * @return The excludedContentDescriptors at the given index.
+     */
+    EnumsProductinfo.EContentDescriptorID getExcludedContentDescriptors(int index);
+
+    /**
      * <code>optional bool totalonly = 16 [(.description) = "(Optional) If true, only return the total number of files that satisfy this query."];</code>
      * @return Whether the totalonly field is set.
      */
@@ -50398,6 +55975,7 @@ public final class SteammessagesPublishedfileSteamclient {
       searchText_ = "";
       requiredKvTags_ = java.util.Collections.emptyList();
       taggroups_ = java.util.Collections.emptyList();
+      excludedContentDescriptors_ = java.util.Collections.emptyList();
       desiredRevision_ = 0;
     }
 
@@ -50526,42 +56104,42 @@ public final class SteammessagesPublishedfileSteamclient {
               break;
             }
             case 128: {
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00010000;
               totalonly_ = input.readBool();
               break;
             }
             case 136: {
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00040000;
               returnVoteData_ = input.readBool();
               break;
             }
             case 144: {
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00080000;
               returnTags_ = input.readBool();
               break;
             }
             case 152: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00100000;
               returnKvTags_ = input.readBool();
               break;
             }
             case 160: {
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00200000;
               returnPreviews_ = input.readBool();
               break;
             }
             case 168: {
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00400000;
               returnChildren_ = input.readBool();
               break;
             }
             case 176: {
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00800000;
               returnShortDescription_ = input.readBool();
               break;
             }
             case 240: {
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x01000000;
               returnForSaleData_ = input.readBool();
               break;
             }
@@ -50571,7 +56149,7 @@ public final class SteammessagesPublishedfileSteamclient {
               break;
             }
             case 256: {
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x02000000;
               returnMetadata_ = input.readBool();
               break;
             }
@@ -50590,22 +56168,22 @@ public final class SteammessagesPublishedfileSteamclient {
               break;
             }
             case 280: {
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00020000;
               idsOnly_ = input.readBool();
               break;
             }
             case 288: {
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x04000000;
               returnPlaytimeStats_ = input.readUInt32();
               break;
             }
             case 296: {
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x08000000;
               returnDetails_ = input.readBool();
               break;
             }
             case 304: {
-              bitField0_ |= 0x04000000;
+              bitField0_ |= 0x10000000;
               stripDescriptionBbcode_ = input.readBool();
               break;
             }
@@ -50622,7 +56200,7 @@ public final class SteammessagesPublishedfileSteamclient {
               if (value == null) {
                 unknownFields.mergeVarintField(40, rawValue);
               } else {
-                bitField0_ |= 0x08000000;
+                bitField0_ |= 0x20000000;
                 desiredRevision_ = rawValue;
               }
               break;
@@ -50637,8 +56215,69 @@ public final class SteammessagesPublishedfileSteamclient {
               break;
             }
             case 344: {
-              bitField0_ |= 0x10000000;
+              bitField0_ |= 0x40000000;
               returnReactions_ = input.readBool();
+              break;
+            }
+            case 354: {
+              SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder subBuilder = null;
+              if (((bitField0_ & 0x00004000) != 0)) {
+                subBuilder = dateRangeCreated_.toBuilder();
+              }
+              dateRangeCreated_ = input.readMessage(SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dateRangeCreated_);
+                dateRangeCreated_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00004000;
+              break;
+            }
+            case 362: {
+              SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder subBuilder = null;
+              if (((bitField0_ & 0x00008000) != 0)) {
+                subBuilder = dateRangeUpdated_.toBuilder();
+              }
+              dateRangeUpdated_ = input.readMessage(SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dateRangeUpdated_);
+                dateRangeUpdated_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00008000;
+              break;
+            }
+            case 368: {
+              int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+              EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(46, rawValue);
+              } else {
+                if (!((mutable_bitField0_ & 0x00400000) != 0)) {
+                  excludedContentDescriptors_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00400000;
+                }
+                excludedContentDescriptors_.add(rawValue);
+              }
+              break;
+            }
+            case 370: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(46, rawValue);
+                } else {
+                  if (!((mutable_bitField0_ & 0x00400000) != 0)) {
+                    excludedContentDescriptors_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField0_ |= 0x00400000;
+                  }
+                  excludedContentDescriptors_.add(rawValue);
+                }
+              }
+              input.popLimit(oldLimit);
               break;
             }
             default: {
@@ -50673,6 +56312,9 @@ public final class SteammessagesPublishedfileSteamclient {
         }
         if (((mutable_bitField0_ & 0x00080000) != 0)) {
           taggroups_ = java.util.Collections.unmodifiableList(taggroups_);
+        }
+        if (((mutable_bitField0_ & 0x00400000) != 0)) {
+          excludedContentDescriptors_ = java.util.Collections.unmodifiableList(excludedContentDescriptors_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -52116,6 +57758,628 @@ public final class SteammessagesPublishedfileSteamclient {
 
     }
 
+    public interface DateRangeOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CPublishedFile_QueryFiles_Request.DateRange)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 timestamp_start = 1 [(.description) = "(Optional) Include items with the relevant date field after this value."];</code>
+       * @return Whether the timestampStart field is set.
+       */
+      boolean hasTimestampStart();
+      /**
+       * <code>optional uint32 timestamp_start = 1 [(.description) = "(Optional) Include items with the relevant date field after this value."];</code>
+       * @return The timestampStart.
+       */
+      int getTimestampStart();
+
+      /**
+       * <code>optional uint32 timestamp_end = 2 [(.description) = "(Optional) Include items with the relevant date field before this value."];</code>
+       * @return Whether the timestampEnd field is set.
+       */
+      boolean hasTimestampEnd();
+      /**
+       * <code>optional uint32 timestamp_end = 2 [(.description) = "(Optional) Include items with the relevant date field before this value."];</code>
+       * @return The timestampEnd.
+       */
+      int getTimestampEnd();
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_QueryFiles_Request.DateRange}
+     */
+    public static final class DateRange extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CPublishedFile_QueryFiles_Request.DateRange)
+        DateRangeOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DateRange.newBuilder() to construct.
+      private DateRange(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DateRange() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DateRange();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DateRange(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                bitField0_ |= 0x00000001;
+                timestampStart_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                timestampEnd_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_QueryFiles_Request_DateRange_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_QueryFiles_Request_DateRange_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.class, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int TIMESTAMP_START_FIELD_NUMBER = 1;
+      private int timestampStart_;
+      /**
+       * <code>optional uint32 timestamp_start = 1 [(.description) = "(Optional) Include items with the relevant date field after this value."];</code>
+       * @return Whether the timestampStart field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimestampStart() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 timestamp_start = 1 [(.description) = "(Optional) Include items with the relevant date field after this value."];</code>
+       * @return The timestampStart.
+       */
+      @java.lang.Override
+      public int getTimestampStart() {
+        return timestampStart_;
+      }
+
+      public static final int TIMESTAMP_END_FIELD_NUMBER = 2;
+      private int timestampEnd_;
+      /**
+       * <code>optional uint32 timestamp_end = 2 [(.description) = "(Optional) Include items with the relevant date field before this value."];</code>
+       * @return Whether the timestampEnd field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimestampEnd() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 timestamp_end = 2 [(.description) = "(Optional) Include items with the relevant date field before this value."];</code>
+       * @return The timestampEnd.
+       */
+      @java.lang.Override
+      public int getTimestampEnd() {
+        return timestampEnd_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeUInt32(1, timestampStart_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(2, timestampEnd_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, timestampStart_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, timestampEnd_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange)) {
+          return super.equals(obj);
+        }
+        SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange other = (SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange) obj;
+
+        if (hasTimestampStart() != other.hasTimestampStart()) return false;
+        if (hasTimestampStart()) {
+          if (getTimestampStart()
+              != other.getTimestampStart()) return false;
+        }
+        if (hasTimestampEnd() != other.hasTimestampEnd()) return false;
+        if (hasTimestampEnd()) {
+          if (getTimestampEnd()
+              != other.getTimestampEnd()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasTimestampStart()) {
+          hash = (37 * hash) + TIMESTAMP_START_FIELD_NUMBER;
+          hash = (53 * hash) + getTimestampStart();
+        }
+        if (hasTimestampEnd()) {
+          hash = (37 * hash) + TIMESTAMP_END_FIELD_NUMBER;
+          hash = (53 * hash) + getTimestampEnd();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CPublishedFile_QueryFiles_Request.DateRange}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CPublishedFile_QueryFiles_Request.DateRange)
+          SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_QueryFiles_Request_DateRange_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_QueryFiles_Request_DateRange_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.class, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder.class);
+        }
+
+        // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          timestampStart_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          timestampEnd_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_QueryFiles_Request_DateRange_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange getDefaultInstanceForType() {
+          return SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange build() {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange buildPartial() {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange result = new SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.timestampStart_ = timestampStart_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.timestampEnd_ = timestampEnd_;
+            to_bitField0_ |= 0x00000002;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange) {
+            return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange other) {
+          if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance()) return this;
+          if (other.hasTimestampStart()) {
+            setTimestampStart(other.getTimestampStart());
+          }
+          if (other.hasTimestampEnd()) {
+            setTimestampEnd(other.getTimestampEnd());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int timestampStart_ ;
+        /**
+         * <code>optional uint32 timestamp_start = 1 [(.description) = "(Optional) Include items with the relevant date field after this value."];</code>
+         * @return Whether the timestampStart field is set.
+         */
+        @java.lang.Override
+        public boolean hasTimestampStart() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional uint32 timestamp_start = 1 [(.description) = "(Optional) Include items with the relevant date field after this value."];</code>
+         * @return The timestampStart.
+         */
+        @java.lang.Override
+        public int getTimestampStart() {
+          return timestampStart_;
+        }
+        /**
+         * <code>optional uint32 timestamp_start = 1 [(.description) = "(Optional) Include items with the relevant date field after this value."];</code>
+         * @param value The timestampStart to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTimestampStart(int value) {
+          bitField0_ |= 0x00000001;
+          timestampStart_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 timestamp_start = 1 [(.description) = "(Optional) Include items with the relevant date field after this value."];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTimestampStart() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          timestampStart_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int timestampEnd_ ;
+        /**
+         * <code>optional uint32 timestamp_end = 2 [(.description) = "(Optional) Include items with the relevant date field before this value."];</code>
+         * @return Whether the timestampEnd field is set.
+         */
+        @java.lang.Override
+        public boolean hasTimestampEnd() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint32 timestamp_end = 2 [(.description) = "(Optional) Include items with the relevant date field before this value."];</code>
+         * @return The timestampEnd.
+         */
+        @java.lang.Override
+        public int getTimestampEnd() {
+          return timestampEnd_;
+        }
+        /**
+         * <code>optional uint32 timestamp_end = 2 [(.description) = "(Optional) Include items with the relevant date field before this value."];</code>
+         * @param value The timestampEnd to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTimestampEnd(int value) {
+          bitField0_ |= 0x00000002;
+          timestampEnd_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 timestamp_end = 2 [(.description) = "(Optional) Include items with the relevant date field before this value."];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTimestampEnd() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          timestampEnd_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CPublishedFile_QueryFiles_Request.DateRange)
+      }
+
+      // @@protoc_insertion_point(class_scope:CPublishedFile_QueryFiles_Request.DateRange)
+      private static final SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange();
+      }
+
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<DateRange>
+          PARSER = new com.google.protobuf.AbstractParser<DateRange>() {
+        @java.lang.Override
+        public DateRange parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DateRange(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<DateRange> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DateRange> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int bitField0_;
     public static final int QUERY_TYPE_FIELD_NUMBER = 1;
     private int queryType_;
@@ -52661,6 +58925,97 @@ public final class SteammessagesPublishedfileSteamclient {
       return taggroups_.get(index);
     }
 
+    public static final int DATE_RANGE_CREATED_FIELD_NUMBER = 44;
+    private SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange dateRangeCreated_;
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+     * @return Whether the dateRangeCreated field is set.
+     */
+    @java.lang.Override
+    public boolean hasDateRangeCreated() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+     * @return The dateRangeCreated.
+     */
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange getDateRangeCreated() {
+      return dateRangeCreated_ == null ? SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance() : dateRangeCreated_;
+    }
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+     */
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder getDateRangeCreatedOrBuilder() {
+      return dateRangeCreated_ == null ? SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance() : dateRangeCreated_;
+    }
+
+    public static final int DATE_RANGE_UPDATED_FIELD_NUMBER = 45;
+    private SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange dateRangeUpdated_;
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+     * @return Whether the dateRangeUpdated field is set.
+     */
+    @java.lang.Override
+    public boolean hasDateRangeUpdated() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+     * @return The dateRangeUpdated.
+     */
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange getDateRangeUpdated() {
+      return dateRangeUpdated_ == null ? SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance() : dateRangeUpdated_;
+    }
+    /**
+     * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+     */
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder getDateRangeUpdatedOrBuilder() {
+      return dateRangeUpdated_ == null ? SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance() : dateRangeUpdated_;
+    }
+
+    public static final int EXCLUDED_CONTENT_DESCRIPTORS_FIELD_NUMBER = 46;
+    private java.util.List<java.lang.Integer> excludedContentDescriptors_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, EnumsProductinfo.EContentDescriptorID> excludedContentDescriptors_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, EnumsProductinfo.EContentDescriptorID>() {
+              public EnumsProductinfo.EContentDescriptorID convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID result = EnumsProductinfo.EContentDescriptorID.valueOf(from);
+                return result == null ? EnumsProductinfo.EContentDescriptorID.k_EContentDescriptor_NudityOrSexualContent : result;
+              }
+            };
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @return A list containing the excludedContentDescriptors.
+     */
+    @java.lang.Override
+    public java.util.List<EnumsProductinfo.EContentDescriptorID> getExcludedContentDescriptorsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, EnumsProductinfo.EContentDescriptorID>(excludedContentDescriptors_, excludedContentDescriptors_converter_);
+    }
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @return The count of excludedContentDescriptors.
+     */
+    @java.lang.Override
+    public int getExcludedContentDescriptorsCount() {
+      return excludedContentDescriptors_.size();
+    }
+    /**
+     * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+     * @param index The index of the element to return.
+     * @return The excludedContentDescriptors at the given index.
+     */
+    @java.lang.Override
+    public EnumsProductinfo.EContentDescriptorID getExcludedContentDescriptors(int index) {
+      return excludedContentDescriptors_converter_.convert(excludedContentDescriptors_.get(index));
+    }
+
     public static final int TOTALONLY_FIELD_NUMBER = 16;
     private boolean totalonly_;
     /**
@@ -52669,7 +59024,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasTotalonly() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <code>optional bool totalonly = 16 [(.description) = "(Optional) If true, only return the total number of files that satisfy this query."];</code>
@@ -52688,7 +59043,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasIdsOnly() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <code>optional bool ids_only = 35 [(.description) = "(Optional) If true, only return the published file ids of files that satisfy this query."];</code>
@@ -52707,7 +59062,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnVoteData() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <code>optional bool return_vote_data = 17 [(.description) = "Return vote data"];</code>
@@ -52726,7 +59081,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnTags() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <code>optional bool return_tags = 18 [(.description) = "Return tags in the file details"];</code>
@@ -52745,7 +59100,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnKvTags() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <code>optional bool return_kv_tags = 19 [(.description) = "Return key-value tags in the file details"];</code>
@@ -52764,7 +59119,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnPreviews() {
-      return ((bitField0_ & 0x00080000) != 0);
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <code>optional bool return_previews = 20 [(.description) = "Return preview image and video details in the file details"];</code>
@@ -52783,7 +59138,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnChildren() {
-      return ((bitField0_ & 0x00100000) != 0);
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <code>optional bool return_children = 21 [(.description) = "Return child item ids in the file details"];</code>
@@ -52802,7 +59157,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnShortDescription() {
-      return ((bitField0_ & 0x00200000) != 0);
+      return ((bitField0_ & 0x00800000) != 0);
     }
     /**
      * <code>optional bool return_short_description = 22 [(.description) = "Populate the short_description field instead of file_description"];</code>
@@ -52821,7 +59176,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnForSaleData() {
-      return ((bitField0_ & 0x00400000) != 0);
+      return ((bitField0_ & 0x01000000) != 0);
     }
     /**
      * <code>optional bool return_for_sale_data = 30 [(.description) = "Return pricing information, if applicable"];</code>
@@ -52840,7 +59195,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnMetadata() {
-      return ((bitField0_ & 0x00800000) != 0);
+      return ((bitField0_ & 0x02000000) != 0);
     }
     /**
      * <code>optional bool return_metadata = 32 [default = false, (.description) = "Populate the metadata"];</code>
@@ -52859,7 +59214,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnPlaytimeStats() {
-      return ((bitField0_ & 0x01000000) != 0);
+      return ((bitField0_ & 0x04000000) != 0);
     }
     /**
      * <code>optional uint32 return_playtime_stats = 36 [(.description) = "Return playtime stats for the specified number of days before today."];</code>
@@ -52878,7 +59233,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnDetails() {
-      return ((bitField0_ & 0x02000000) != 0);
+      return ((bitField0_ & 0x08000000) != 0);
     }
     /**
      * <code>optional bool return_details = 37 [(.description) = "By default, if none of the other &#92;'return_*&#92;' fields are set, only some voting details are returned. Set this to true to return the default set of details."];</code>
@@ -52897,7 +59252,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasStripDescriptionBbcode() {
-      return ((bitField0_ & 0x04000000) != 0);
+      return ((bitField0_ & 0x10000000) != 0);
     }
     /**
      * <code>optional bool strip_description_bbcode = 38 [(.description) = "Strips BBCode from descriptions."];</code>
@@ -52915,7 +59270,7 @@ public final class SteammessagesPublishedfileSteamclient {
      * @return Whether the desiredRevision field is set.
      */
     @java.lang.Override public boolean hasDesiredRevision() {
-      return ((bitField0_ & 0x08000000) != 0);
+      return ((bitField0_ & 0x20000000) != 0);
     }
     /**
      * <code>optional .EPublishedFileRevision desired_revision = 40 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
@@ -52935,7 +59290,7 @@ public final class SteammessagesPublishedfileSteamclient {
      */
     @java.lang.Override
     public boolean hasReturnReactions() {
-      return ((bitField0_ & 0x10000000) != 0);
+      return ((bitField0_ & 0x40000000) != 0);
     }
     /**
      * <code>optional bool return_reactions = 43 [default = false, (.description) = "If true, then reactions to items will be returned."];</code>
@@ -53005,34 +59360,34 @@ public final class SteammessagesPublishedfileSteamclient {
       if (((bitField0_ & 0x00000800) != 0)) {
         output.writeBool(15, includeRecentVotesOnly_);
       }
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00010000) != 0)) {
         output.writeBool(16, totalonly_);
       }
-      if (((bitField0_ & 0x00010000) != 0)) {
+      if (((bitField0_ & 0x00040000) != 0)) {
         output.writeBool(17, returnVoteData_);
       }
-      if (((bitField0_ & 0x00020000) != 0)) {
+      if (((bitField0_ & 0x00080000) != 0)) {
         output.writeBool(18, returnTags_);
       }
-      if (((bitField0_ & 0x00040000) != 0)) {
+      if (((bitField0_ & 0x00100000) != 0)) {
         output.writeBool(19, returnKvTags_);
       }
-      if (((bitField0_ & 0x00080000) != 0)) {
+      if (((bitField0_ & 0x00200000) != 0)) {
         output.writeBool(20, returnPreviews_);
       }
-      if (((bitField0_ & 0x00100000) != 0)) {
+      if (((bitField0_ & 0x00400000) != 0)) {
         output.writeBool(21, returnChildren_);
       }
-      if (((bitField0_ & 0x00200000) != 0)) {
+      if (((bitField0_ & 0x00800000) != 0)) {
         output.writeBool(22, returnShortDescription_);
       }
-      if (((bitField0_ & 0x00400000) != 0)) {
+      if (((bitField0_ & 0x01000000) != 0)) {
         output.writeBool(30, returnForSaleData_);
       }
       if (((bitField0_ & 0x00001000) != 0)) {
         output.writeUInt32(31, cacheMaxAgeSeconds_);
       }
-      if (((bitField0_ & 0x00800000) != 0)) {
+      if (((bitField0_ & 0x02000000) != 0)) {
         output.writeBool(32, returnMetadata_);
       }
       if (((bitField0_ & 0x00002000) != 0)) {
@@ -53041,29 +59396,38 @@ public final class SteammessagesPublishedfileSteamclient {
       for (int i = 0; i < requiredKvTags_.size(); i++) {
         output.writeMessage(34, requiredKvTags_.get(i));
       }
-      if (((bitField0_ & 0x00008000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         output.writeBool(35, idsOnly_);
       }
-      if (((bitField0_ & 0x01000000) != 0)) {
+      if (((bitField0_ & 0x04000000) != 0)) {
         output.writeUInt32(36, returnPlaytimeStats_);
       }
-      if (((bitField0_ & 0x02000000) != 0)) {
+      if (((bitField0_ & 0x08000000) != 0)) {
         output.writeBool(37, returnDetails_);
       }
-      if (((bitField0_ & 0x04000000) != 0)) {
+      if (((bitField0_ & 0x10000000) != 0)) {
         output.writeBool(38, stripDescriptionBbcode_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 39, cursor_);
       }
-      if (((bitField0_ & 0x08000000) != 0)) {
+      if (((bitField0_ & 0x20000000) != 0)) {
         output.writeEnum(40, desiredRevision_);
       }
       for (int i = 0; i < taggroups_.size(); i++) {
         output.writeMessage(42, taggroups_.get(i));
       }
-      if (((bitField0_ & 0x10000000) != 0)) {
+      if (((bitField0_ & 0x40000000) != 0)) {
         output.writeBool(43, returnReactions_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        output.writeMessage(44, getDateRangeCreated());
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        output.writeMessage(45, getDateRangeUpdated());
+      }
+      for (int i = 0; i < excludedContentDescriptors_.size(); i++) {
+        output.writeEnum(46, excludedContentDescriptors_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -53149,35 +59513,35 @@ public final class SteammessagesPublishedfileSteamclient {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, includeRecentVotesOnly_);
       }
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00010000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(16, totalonly_);
       }
-      if (((bitField0_ & 0x00010000) != 0)) {
+      if (((bitField0_ & 0x00040000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(17, returnVoteData_);
       }
-      if (((bitField0_ & 0x00020000) != 0)) {
+      if (((bitField0_ & 0x00080000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(18, returnTags_);
       }
-      if (((bitField0_ & 0x00040000) != 0)) {
+      if (((bitField0_ & 0x00100000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(19, returnKvTags_);
       }
-      if (((bitField0_ & 0x00080000) != 0)) {
+      if (((bitField0_ & 0x00200000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(20, returnPreviews_);
       }
-      if (((bitField0_ & 0x00100000) != 0)) {
+      if (((bitField0_ & 0x00400000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(21, returnChildren_);
       }
-      if (((bitField0_ & 0x00200000) != 0)) {
+      if (((bitField0_ & 0x00800000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(22, returnShortDescription_);
       }
-      if (((bitField0_ & 0x00400000) != 0)) {
+      if (((bitField0_ & 0x01000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(30, returnForSaleData_);
       }
@@ -53185,7 +59549,7 @@ public final class SteammessagesPublishedfileSteamclient {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(31, cacheMaxAgeSeconds_);
       }
-      if (((bitField0_ & 0x00800000) != 0)) {
+      if (((bitField0_ & 0x02000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(32, returnMetadata_);
       }
@@ -53197,26 +59561,26 @@ public final class SteammessagesPublishedfileSteamclient {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(34, requiredKvTags_.get(i));
       }
-      if (((bitField0_ & 0x00008000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(35, idsOnly_);
       }
-      if (((bitField0_ & 0x01000000) != 0)) {
+      if (((bitField0_ & 0x04000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(36, returnPlaytimeStats_);
       }
-      if (((bitField0_ & 0x02000000) != 0)) {
+      if (((bitField0_ & 0x08000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(37, returnDetails_);
       }
-      if (((bitField0_ & 0x04000000) != 0)) {
+      if (((bitField0_ & 0x10000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(38, stripDescriptionBbcode_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, cursor_);
       }
-      if (((bitField0_ & 0x08000000) != 0)) {
+      if (((bitField0_ & 0x20000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(40, desiredRevision_);
       }
@@ -53224,9 +59588,26 @@ public final class SteammessagesPublishedfileSteamclient {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(42, taggroups_.get(i));
       }
-      if (((bitField0_ & 0x10000000) != 0)) {
+      if (((bitField0_ & 0x40000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(43, returnReactions_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(44, getDateRangeCreated());
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(45, getDateRangeUpdated());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < excludedContentDescriptors_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(excludedContentDescriptors_.get(i));
+        }
+        size += dataSize;
+        size += 2 * excludedContentDescriptors_.size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -53325,6 +59706,17 @@ public final class SteammessagesPublishedfileSteamclient {
           .equals(other.getRequiredKvTagsList())) return false;
       if (!getTaggroupsList()
           .equals(other.getTaggroupsList())) return false;
+      if (hasDateRangeCreated() != other.hasDateRangeCreated()) return false;
+      if (hasDateRangeCreated()) {
+        if (!getDateRangeCreated()
+            .equals(other.getDateRangeCreated())) return false;
+      }
+      if (hasDateRangeUpdated() != other.hasDateRangeUpdated()) return false;
+      if (hasDateRangeUpdated()) {
+        if (!getDateRangeUpdated()
+            .equals(other.getDateRangeUpdated())) return false;
+      }
+      if (!excludedContentDescriptors_.equals(other.excludedContentDescriptors_)) return false;
       if (hasTotalonly() != other.hasTotalonly()) return false;
       if (hasTotalonly()) {
         if (getTotalonly()
@@ -53492,6 +59884,18 @@ public final class SteammessagesPublishedfileSteamclient {
       if (getTaggroupsCount() > 0) {
         hash = (37 * hash) + TAGGROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getTaggroupsList().hashCode();
+      }
+      if (hasDateRangeCreated()) {
+        hash = (37 * hash) + DATE_RANGE_CREATED_FIELD_NUMBER;
+        hash = (53 * hash) + getDateRangeCreated().hashCode();
+      }
+      if (hasDateRangeUpdated()) {
+        hash = (37 * hash) + DATE_RANGE_UPDATED_FIELD_NUMBER;
+        hash = (53 * hash) + getDateRangeUpdated().hashCode();
+      }
+      if (getExcludedContentDescriptorsCount() > 0) {
+        hash = (37 * hash) + EXCLUDED_CONTENT_DESCRIPTORS_FIELD_NUMBER;
+        hash = (53 * hash) + excludedContentDescriptors_.hashCode();
       }
       if (hasTotalonly()) {
         hash = (37 * hash) + TOTALONLY_FIELD_NUMBER;
@@ -53696,6 +60100,8 @@ public final class SteammessagesPublishedfileSteamclient {
                 .alwaysUseFieldBuilders) {
           getRequiredKvTagsFieldBuilder();
           getTaggroupsFieldBuilder();
+          getDateRangeCreatedFieldBuilder();
+          getDateRangeUpdatedFieldBuilder();
         }
       }
       @java.lang.Override
@@ -53749,36 +60155,50 @@ public final class SteammessagesPublishedfileSteamclient {
         } else {
           taggroupsBuilder_.clear();
         }
-        totalonly_ = false;
+        if (dateRangeCreatedBuilder_ == null) {
+          dateRangeCreated_ = null;
+        } else {
+          dateRangeCreatedBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00100000);
-        idsOnly_ = false;
+        if (dateRangeUpdatedBuilder_ == null) {
+          dateRangeUpdated_ = null;
+        } else {
+          dateRangeUpdatedBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00200000);
-        returnVoteData_ = false;
+        excludedContentDescriptors_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00400000);
-        returnTags_ = false;
+        totalonly_ = false;
         bitField0_ = (bitField0_ & ~0x00800000);
-        returnKvTags_ = false;
+        idsOnly_ = false;
         bitField0_ = (bitField0_ & ~0x01000000);
-        returnPreviews_ = false;
+        returnVoteData_ = false;
         bitField0_ = (bitField0_ & ~0x02000000);
-        returnChildren_ = false;
+        returnTags_ = false;
         bitField0_ = (bitField0_ & ~0x04000000);
-        returnShortDescription_ = false;
+        returnKvTags_ = false;
         bitField0_ = (bitField0_ & ~0x08000000);
-        returnForSaleData_ = false;
+        returnPreviews_ = false;
         bitField0_ = (bitField0_ & ~0x10000000);
-        returnMetadata_ = false;
+        returnChildren_ = false;
         bitField0_ = (bitField0_ & ~0x20000000);
-        returnPlaytimeStats_ = 0;
+        returnShortDescription_ = false;
         bitField0_ = (bitField0_ & ~0x40000000);
-        returnDetails_ = false;
+        returnForSaleData_ = false;
         bitField0_ = (bitField0_ & ~0x80000000);
-        stripDescriptionBbcode_ = false;
+        returnMetadata_ = false;
         bitField1_ = (bitField1_ & ~0x00000001);
-        desiredRevision_ = 0;
+        returnPlaytimeStats_ = 0;
         bitField1_ = (bitField1_ & ~0x00000002);
-        returnReactions_ = false;
+        returnDetails_ = false;
         bitField1_ = (bitField1_ & ~0x00000004);
+        stripDescriptionBbcode_ = false;
+        bitField1_ = (bitField1_ & ~0x00000008);
+        desiredRevision_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000010);
+        returnReactions_ = false;
+        bitField1_ = (bitField1_ & ~0x00000020);
         return this;
       }
 
@@ -53903,64 +60323,85 @@ public final class SteammessagesPublishedfileSteamclient {
           result.taggroups_ = taggroupsBuilder_.build();
         }
         if (((from_bitField0_ & 0x00100000) != 0)) {
-          result.totalonly_ = totalonly_;
+          if (dateRangeCreatedBuilder_ == null) {
+            result.dateRangeCreated_ = dateRangeCreated_;
+          } else {
+            result.dateRangeCreated_ = dateRangeCreatedBuilder_.build();
+          }
           to_bitField0_ |= 0x00004000;
         }
         if (((from_bitField0_ & 0x00200000) != 0)) {
-          result.idsOnly_ = idsOnly_;
+          if (dateRangeUpdatedBuilder_ == null) {
+            result.dateRangeUpdated_ = dateRangeUpdated_;
+          } else {
+            result.dateRangeUpdated_ = dateRangeUpdatedBuilder_.build();
+          }
           to_bitField0_ |= 0x00008000;
         }
-        if (((from_bitField0_ & 0x00400000) != 0)) {
-          result.returnVoteData_ = returnVoteData_;
+        if (((bitField0_ & 0x00400000) != 0)) {
+          excludedContentDescriptors_ = java.util.Collections.unmodifiableList(excludedContentDescriptors_);
+          bitField0_ = (bitField0_ & ~0x00400000);
+        }
+        result.excludedContentDescriptors_ = excludedContentDescriptors_;
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.totalonly_ = totalonly_;
           to_bitField0_ |= 0x00010000;
         }
-        if (((from_bitField0_ & 0x00800000) != 0)) {
-          result.returnTags_ = returnTags_;
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.idsOnly_ = idsOnly_;
           to_bitField0_ |= 0x00020000;
         }
-        if (((from_bitField0_ & 0x01000000) != 0)) {
-          result.returnKvTags_ = returnKvTags_;
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.returnVoteData_ = returnVoteData_;
           to_bitField0_ |= 0x00040000;
         }
-        if (((from_bitField0_ & 0x02000000) != 0)) {
-          result.returnPreviews_ = returnPreviews_;
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.returnTags_ = returnTags_;
           to_bitField0_ |= 0x00080000;
         }
-        if (((from_bitField0_ & 0x04000000) != 0)) {
-          result.returnChildren_ = returnChildren_;
+        if (((from_bitField0_ & 0x08000000) != 0)) {
+          result.returnKvTags_ = returnKvTags_;
           to_bitField0_ |= 0x00100000;
         }
-        if (((from_bitField0_ & 0x08000000) != 0)) {
-          result.returnShortDescription_ = returnShortDescription_;
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.returnPreviews_ = returnPreviews_;
           to_bitField0_ |= 0x00200000;
         }
-        if (((from_bitField0_ & 0x10000000) != 0)) {
-          result.returnForSaleData_ = returnForSaleData_;
+        if (((from_bitField0_ & 0x20000000) != 0)) {
+          result.returnChildren_ = returnChildren_;
           to_bitField0_ |= 0x00400000;
         }
-        if (((from_bitField0_ & 0x20000000) != 0)) {
-          result.returnMetadata_ = returnMetadata_;
+        if (((from_bitField0_ & 0x40000000) != 0)) {
+          result.returnShortDescription_ = returnShortDescription_;
           to_bitField0_ |= 0x00800000;
         }
-        if (((from_bitField0_ & 0x40000000) != 0)) {
-          result.returnPlaytimeStats_ = returnPlaytimeStats_;
+        if (((from_bitField0_ & 0x80000000) != 0)) {
+          result.returnForSaleData_ = returnForSaleData_;
           to_bitField0_ |= 0x01000000;
         }
-        if (((from_bitField0_ & 0x80000000) != 0)) {
-          result.returnDetails_ = returnDetails_;
+        if (((from_bitField1_ & 0x00000001) != 0)) {
+          result.returnMetadata_ = returnMetadata_;
           to_bitField0_ |= 0x02000000;
         }
-        if (((from_bitField1_ & 0x00000001) != 0)) {
-          result.stripDescriptionBbcode_ = stripDescriptionBbcode_;
+        if (((from_bitField1_ & 0x00000002) != 0)) {
+          result.returnPlaytimeStats_ = returnPlaytimeStats_;
           to_bitField0_ |= 0x04000000;
         }
-        if (((from_bitField1_ & 0x00000002) != 0)) {
+        if (((from_bitField1_ & 0x00000004) != 0)) {
+          result.returnDetails_ = returnDetails_;
           to_bitField0_ |= 0x08000000;
         }
-        result.desiredRevision_ = desiredRevision_;
-        if (((from_bitField1_ & 0x00000004) != 0)) {
-          result.returnReactions_ = returnReactions_;
+        if (((from_bitField1_ & 0x00000008) != 0)) {
+          result.stripDescriptionBbcode_ = stripDescriptionBbcode_;
           to_bitField0_ |= 0x10000000;
+        }
+        if (((from_bitField1_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x20000000;
+        }
+        result.desiredRevision_ = desiredRevision_;
+        if (((from_bitField1_ & 0x00000020) != 0)) {
+          result.returnReactions_ = returnReactions_;
+          to_bitField0_ |= 0x40000000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -54148,6 +60589,22 @@ public final class SteammessagesPublishedfileSteamclient {
               taggroupsBuilder_.addAllMessages(other.taggroups_);
             }
           }
+        }
+        if (other.hasDateRangeCreated()) {
+          mergeDateRangeCreated(other.getDateRangeCreated());
+        }
+        if (other.hasDateRangeUpdated()) {
+          mergeDateRangeUpdated(other.getDateRangeUpdated());
+        }
+        if (!other.excludedContentDescriptors_.isEmpty()) {
+          if (excludedContentDescriptors_.isEmpty()) {
+            excludedContentDescriptors_ = other.excludedContentDescriptors_;
+            bitField0_ = (bitField0_ & ~0x00400000);
+          } else {
+            ensureExcludedContentDescriptorsIsMutable();
+            excludedContentDescriptors_.addAll(other.excludedContentDescriptors_);
+          }
+          onChanged();
         }
         if (other.hasTotalonly()) {
           setTotalonly(other.getTotalonly());
@@ -55777,6 +62234,332 @@ public final class SteammessagesPublishedfileSteamclient {
         return taggroupsBuilder_;
       }
 
+      private SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange dateRangeCreated_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder> dateRangeCreatedBuilder_;
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+       * @return Whether the dateRangeCreated field is set.
+       */
+      public boolean hasDateRangeCreated() {
+        return ((bitField0_ & 0x00100000) != 0);
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+       * @return The dateRangeCreated.
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange getDateRangeCreated() {
+        if (dateRangeCreatedBuilder_ == null) {
+          return dateRangeCreated_ == null ? SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance() : dateRangeCreated_;
+        } else {
+          return dateRangeCreatedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+       */
+      public Builder setDateRangeCreated(SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange value) {
+        if (dateRangeCreatedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dateRangeCreated_ = value;
+          onChanged();
+        } else {
+          dateRangeCreatedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00100000;
+        return this;
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+       */
+      public Builder setDateRangeCreated(
+          SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder builderForValue) {
+        if (dateRangeCreatedBuilder_ == null) {
+          dateRangeCreated_ = builderForValue.build();
+          onChanged();
+        } else {
+          dateRangeCreatedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00100000;
+        return this;
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+       */
+      public Builder mergeDateRangeCreated(SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange value) {
+        if (dateRangeCreatedBuilder_ == null) {
+          if (((bitField0_ & 0x00100000) != 0) &&
+              dateRangeCreated_ != null &&
+              dateRangeCreated_ != SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance()) {
+            dateRangeCreated_ =
+              SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.newBuilder(dateRangeCreated_).mergeFrom(value).buildPartial();
+          } else {
+            dateRangeCreated_ = value;
+          }
+          onChanged();
+        } else {
+          dateRangeCreatedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00100000;
+        return this;
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+       */
+      public Builder clearDateRangeCreated() {
+        if (dateRangeCreatedBuilder_ == null) {
+          dateRangeCreated_ = null;
+          onChanged();
+        } else {
+          dateRangeCreatedBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00100000);
+        return this;
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder getDateRangeCreatedBuilder() {
+        bitField0_ |= 0x00100000;
+        onChanged();
+        return getDateRangeCreatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder getDateRangeCreatedOrBuilder() {
+        if (dateRangeCreatedBuilder_ != null) {
+          return dateRangeCreatedBuilder_.getMessageOrBuilder();
+        } else {
+          return dateRangeCreated_ == null ?
+              SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance() : dateRangeCreated_;
+        }
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(.description) = "(Optional) Filter to items created within this range."];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder> 
+          getDateRangeCreatedFieldBuilder() {
+        if (dateRangeCreatedBuilder_ == null) {
+          dateRangeCreatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder>(
+                  getDateRangeCreated(),
+                  getParentForChildren(),
+                  isClean());
+          dateRangeCreated_ = null;
+        }
+        return dateRangeCreatedBuilder_;
+      }
+
+      private SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange dateRangeUpdated_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder> dateRangeUpdatedBuilder_;
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+       * @return Whether the dateRangeUpdated field is set.
+       */
+      public boolean hasDateRangeUpdated() {
+        return ((bitField0_ & 0x00200000) != 0);
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+       * @return The dateRangeUpdated.
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange getDateRangeUpdated() {
+        if (dateRangeUpdatedBuilder_ == null) {
+          return dateRangeUpdated_ == null ? SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance() : dateRangeUpdated_;
+        } else {
+          return dateRangeUpdatedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+       */
+      public Builder setDateRangeUpdated(SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange value) {
+        if (dateRangeUpdatedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dateRangeUpdated_ = value;
+          onChanged();
+        } else {
+          dateRangeUpdatedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00200000;
+        return this;
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+       */
+      public Builder setDateRangeUpdated(
+          SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder builderForValue) {
+        if (dateRangeUpdatedBuilder_ == null) {
+          dateRangeUpdated_ = builderForValue.build();
+          onChanged();
+        } else {
+          dateRangeUpdatedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00200000;
+        return this;
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+       */
+      public Builder mergeDateRangeUpdated(SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange value) {
+        if (dateRangeUpdatedBuilder_ == null) {
+          if (((bitField0_ & 0x00200000) != 0) &&
+              dateRangeUpdated_ != null &&
+              dateRangeUpdated_ != SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance()) {
+            dateRangeUpdated_ =
+              SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.newBuilder(dateRangeUpdated_).mergeFrom(value).buildPartial();
+          } else {
+            dateRangeUpdated_ = value;
+          }
+          onChanged();
+        } else {
+          dateRangeUpdatedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00200000;
+        return this;
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+       */
+      public Builder clearDateRangeUpdated() {
+        if (dateRangeUpdatedBuilder_ == null) {
+          dateRangeUpdated_ = null;
+          onChanged();
+        } else {
+          dateRangeUpdatedBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00200000);
+        return this;
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder getDateRangeUpdatedBuilder() {
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return getDateRangeUpdatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder getDateRangeUpdatedOrBuilder() {
+        if (dateRangeUpdatedBuilder_ != null) {
+          return dateRangeUpdatedBuilder_.getMessageOrBuilder();
+        } else {
+          return dateRangeUpdated_ == null ?
+              SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.getDefaultInstance() : dateRangeUpdated_;
+        }
+      }
+      /**
+       * <code>optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(.description) = "(Optional) Filter to items updated within this range."];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder> 
+          getDateRangeUpdatedFieldBuilder() {
+        if (dateRangeUpdatedBuilder_ == null) {
+          dateRangeUpdatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRange.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_QueryFiles_Request.DateRangeOrBuilder>(
+                  getDateRangeUpdated(),
+                  getParentForChildren(),
+                  isClean());
+          dateRangeUpdated_ = null;
+        }
+        return dateRangeUpdatedBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> excludedContentDescriptors_ =
+        java.util.Collections.emptyList();
+      private void ensureExcludedContentDescriptorsIsMutable() {
+        if (!((bitField0_ & 0x00400000) != 0)) {
+          excludedContentDescriptors_ = new java.util.ArrayList<java.lang.Integer>(excludedContentDescriptors_);
+          bitField0_ |= 0x00400000;
+        }
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @return A list containing the excludedContentDescriptors.
+       */
+      public java.util.List<EnumsProductinfo.EContentDescriptorID> getExcludedContentDescriptorsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, EnumsProductinfo.EContentDescriptorID>(excludedContentDescriptors_, excludedContentDescriptors_converter_);
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @return The count of excludedContentDescriptors.
+       */
+      public int getExcludedContentDescriptorsCount() {
+        return excludedContentDescriptors_.size();
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @param index The index of the element to return.
+       * @return The excludedContentDescriptors at the given index.
+       */
+      public EnumsProductinfo.EContentDescriptorID getExcludedContentDescriptors(int index) {
+        return excludedContentDescriptors_converter_.convert(excludedContentDescriptors_.get(index));
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @param index The index to set the value at.
+       * @param value The excludedContentDescriptors to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExcludedContentDescriptors(
+          int index, EnumsProductinfo.EContentDescriptorID value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExcludedContentDescriptorsIsMutable();
+        excludedContentDescriptors_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @param value The excludedContentDescriptors to add.
+       * @return This builder for chaining.
+       */
+      public Builder addExcludedContentDescriptors(EnumsProductinfo.EContentDescriptorID value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExcludedContentDescriptorsIsMutable();
+        excludedContentDescriptors_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @param values The excludedContentDescriptors to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllExcludedContentDescriptors(
+          java.lang.Iterable<? extends EnumsProductinfo.EContentDescriptorID> values) {
+        ensureExcludedContentDescriptorsIsMutable();
+        for (EnumsProductinfo.EContentDescriptorID value : values) {
+          excludedContentDescriptors_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID excluded_content_descriptors = 46 [(.description) = "(Optional) Filter out items that have these content descriptors."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExcludedContentDescriptors() {
+        excludedContentDescriptors_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00400000);
+        onChanged();
+        return this;
+      }
+
       private boolean totalonly_ ;
       /**
        * <code>optional bool totalonly = 16 [(.description) = "(Optional) If true, only return the total number of files that satisfy this query."];</code>
@@ -55784,7 +62567,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasTotalonly() {
-        return ((bitField0_ & 0x00100000) != 0);
+        return ((bitField0_ & 0x00800000) != 0);
       }
       /**
        * <code>optional bool totalonly = 16 [(.description) = "(Optional) If true, only return the total number of files that satisfy this query."];</code>
@@ -55800,7 +62583,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setTotalonly(boolean value) {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00800000;
         totalonly_ = value;
         onChanged();
         return this;
@@ -55810,7 +62593,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearTotalonly() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         totalonly_ = false;
         onChanged();
         return this;
@@ -55823,7 +62606,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasIdsOnly() {
-        return ((bitField0_ & 0x00200000) != 0);
+        return ((bitField0_ & 0x01000000) != 0);
       }
       /**
        * <code>optional bool ids_only = 35 [(.description) = "(Optional) If true, only return the published file ids of files that satisfy this query."];</code>
@@ -55839,7 +62622,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setIdsOnly(boolean value) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x01000000;
         idsOnly_ = value;
         onChanged();
         return this;
@@ -55849,7 +62632,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearIdsOnly() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         idsOnly_ = false;
         onChanged();
         return this;
@@ -55862,7 +62645,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnVoteData() {
-        return ((bitField0_ & 0x00400000) != 0);
+        return ((bitField0_ & 0x02000000) != 0);
       }
       /**
        * <code>optional bool return_vote_data = 17 [(.description) = "Return vote data"];</code>
@@ -55878,7 +62661,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnVoteData(boolean value) {
-        bitField0_ |= 0x00400000;
+        bitField0_ |= 0x02000000;
         returnVoteData_ = value;
         onChanged();
         return this;
@@ -55888,7 +62671,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnVoteData() {
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x02000000);
         returnVoteData_ = false;
         onChanged();
         return this;
@@ -55901,7 +62684,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnTags() {
-        return ((bitField0_ & 0x00800000) != 0);
+        return ((bitField0_ & 0x04000000) != 0);
       }
       /**
        * <code>optional bool return_tags = 18 [(.description) = "Return tags in the file details"];</code>
@@ -55917,7 +62700,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnTags(boolean value) {
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x04000000;
         returnTags_ = value;
         onChanged();
         return this;
@@ -55927,7 +62710,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnTags() {
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         returnTags_ = false;
         onChanged();
         return this;
@@ -55940,7 +62723,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnKvTags() {
-        return ((bitField0_ & 0x01000000) != 0);
+        return ((bitField0_ & 0x08000000) != 0);
       }
       /**
        * <code>optional bool return_kv_tags = 19 [(.description) = "Return key-value tags in the file details"];</code>
@@ -55956,7 +62739,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnKvTags(boolean value) {
-        bitField0_ |= 0x01000000;
+        bitField0_ |= 0x08000000;
         returnKvTags_ = value;
         onChanged();
         return this;
@@ -55966,7 +62749,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnKvTags() {
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x08000000);
         returnKvTags_ = false;
         onChanged();
         return this;
@@ -55979,7 +62762,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnPreviews() {
-        return ((bitField0_ & 0x02000000) != 0);
+        return ((bitField0_ & 0x10000000) != 0);
       }
       /**
        * <code>optional bool return_previews = 20 [(.description) = "Return preview image and video details in the file details"];</code>
@@ -55995,7 +62778,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnPreviews(boolean value) {
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x10000000;
         returnPreviews_ = value;
         onChanged();
         return this;
@@ -56005,7 +62788,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnPreviews() {
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x10000000);
         returnPreviews_ = false;
         onChanged();
         return this;
@@ -56018,7 +62801,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnChildren() {
-        return ((bitField0_ & 0x04000000) != 0);
+        return ((bitField0_ & 0x20000000) != 0);
       }
       /**
        * <code>optional bool return_children = 21 [(.description) = "Return child item ids in the file details"];</code>
@@ -56034,7 +62817,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnChildren(boolean value) {
-        bitField0_ |= 0x04000000;
+        bitField0_ |= 0x20000000;
         returnChildren_ = value;
         onChanged();
         return this;
@@ -56044,7 +62827,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnChildren() {
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField0_ = (bitField0_ & ~0x20000000);
         returnChildren_ = false;
         onChanged();
         return this;
@@ -56057,7 +62840,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnShortDescription() {
-        return ((bitField0_ & 0x08000000) != 0);
+        return ((bitField0_ & 0x40000000) != 0);
       }
       /**
        * <code>optional bool return_short_description = 22 [(.description) = "Populate the short_description field instead of file_description"];</code>
@@ -56073,7 +62856,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnShortDescription(boolean value) {
-        bitField0_ |= 0x08000000;
+        bitField0_ |= 0x40000000;
         returnShortDescription_ = value;
         onChanged();
         return this;
@@ -56083,7 +62866,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnShortDescription() {
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField0_ = (bitField0_ & ~0x40000000);
         returnShortDescription_ = false;
         onChanged();
         return this;
@@ -56096,7 +62879,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnForSaleData() {
-        return ((bitField0_ & 0x10000000) != 0);
+        return ((bitField0_ & 0x80000000) != 0);
       }
       /**
        * <code>optional bool return_for_sale_data = 30 [(.description) = "Return pricing information, if applicable"];</code>
@@ -56112,7 +62895,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnForSaleData(boolean value) {
-        bitField0_ |= 0x10000000;
+        bitField0_ |= 0x80000000;
         returnForSaleData_ = value;
         onChanged();
         return this;
@@ -56122,7 +62905,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnForSaleData() {
-        bitField0_ = (bitField0_ & ~0x10000000);
+        bitField0_ = (bitField0_ & ~0x80000000);
         returnForSaleData_ = false;
         onChanged();
         return this;
@@ -56135,7 +62918,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnMetadata() {
-        return ((bitField0_ & 0x20000000) != 0);
+        return ((bitField1_ & 0x00000001) != 0);
       }
       /**
        * <code>optional bool return_metadata = 32 [default = false, (.description) = "Populate the metadata"];</code>
@@ -56151,7 +62934,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnMetadata(boolean value) {
-        bitField0_ |= 0x20000000;
+        bitField1_ |= 0x00000001;
         returnMetadata_ = value;
         onChanged();
         return this;
@@ -56161,7 +62944,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnMetadata() {
-        bitField0_ = (bitField0_ & ~0x20000000);
+        bitField1_ = (bitField1_ & ~0x00000001);
         returnMetadata_ = false;
         onChanged();
         return this;
@@ -56174,7 +62957,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnPlaytimeStats() {
-        return ((bitField0_ & 0x40000000) != 0);
+        return ((bitField1_ & 0x00000002) != 0);
       }
       /**
        * <code>optional uint32 return_playtime_stats = 36 [(.description) = "Return playtime stats for the specified number of days before today."];</code>
@@ -56190,7 +62973,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnPlaytimeStats(int value) {
-        bitField0_ |= 0x40000000;
+        bitField1_ |= 0x00000002;
         returnPlaytimeStats_ = value;
         onChanged();
         return this;
@@ -56200,7 +62983,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnPlaytimeStats() {
-        bitField0_ = (bitField0_ & ~0x40000000);
+        bitField1_ = (bitField1_ & ~0x00000002);
         returnPlaytimeStats_ = 0;
         onChanged();
         return this;
@@ -56213,7 +62996,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnDetails() {
-        return ((bitField0_ & 0x80000000) != 0);
+        return ((bitField1_ & 0x00000004) != 0);
       }
       /**
        * <code>optional bool return_details = 37 [(.description) = "By default, if none of the other &#92;'return_*&#92;' fields are set, only some voting details are returned. Set this to true to return the default set of details."];</code>
@@ -56229,7 +63012,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnDetails(boolean value) {
-        bitField0_ |= 0x80000000;
+        bitField1_ |= 0x00000004;
         returnDetails_ = value;
         onChanged();
         return this;
@@ -56239,7 +63022,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnDetails() {
-        bitField0_ = (bitField0_ & ~0x80000000);
+        bitField1_ = (bitField1_ & ~0x00000004);
         returnDetails_ = false;
         onChanged();
         return this;
@@ -56252,7 +63035,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasStripDescriptionBbcode() {
-        return ((bitField1_ & 0x00000001) != 0);
+        return ((bitField1_ & 0x00000008) != 0);
       }
       /**
        * <code>optional bool strip_description_bbcode = 38 [(.description) = "Strips BBCode from descriptions."];</code>
@@ -56268,7 +63051,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setStripDescriptionBbcode(boolean value) {
-        bitField1_ |= 0x00000001;
+        bitField1_ |= 0x00000008;
         stripDescriptionBbcode_ = value;
         onChanged();
         return this;
@@ -56278,7 +63061,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearStripDescriptionBbcode() {
-        bitField1_ = (bitField1_ & ~0x00000001);
+        bitField1_ = (bitField1_ & ~0x00000008);
         stripDescriptionBbcode_ = false;
         onChanged();
         return this;
@@ -56290,7 +63073,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return Whether the desiredRevision field is set.
        */
       @java.lang.Override public boolean hasDesiredRevision() {
-        return ((bitField1_ & 0x00000002) != 0);
+        return ((bitField1_ & 0x00000010) != 0);
       }
       /**
        * <code>optional .EPublishedFileRevision desired_revision = 40 [default = k_EPublishedFileRevision_Default, (.description) = "Return the data for the specified revision."];</code>
@@ -56311,7 +63094,7 @@ public final class SteammessagesPublishedfileSteamclient {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField1_ |= 0x00000002;
+        bitField1_ |= 0x00000010;
         desiredRevision_ = value.getNumber();
         onChanged();
         return this;
@@ -56321,7 +63104,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearDesiredRevision() {
-        bitField1_ = (bitField1_ & ~0x00000002);
+        bitField1_ = (bitField1_ & ~0x00000010);
         desiredRevision_ = 0;
         onChanged();
         return this;
@@ -56334,7 +63117,7 @@ public final class SteammessagesPublishedfileSteamclient {
        */
       @java.lang.Override
       public boolean hasReturnReactions() {
-        return ((bitField1_ & 0x00000004) != 0);
+        return ((bitField1_ & 0x00000020) != 0);
       }
       /**
        * <code>optional bool return_reactions = 43 [default = false, (.description) = "If true, then reactions to items will be returned."];</code>
@@ -56350,7 +63133,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder setReturnReactions(boolean value) {
-        bitField1_ |= 0x00000004;
+        bitField1_ |= 0x00000020;
         returnReactions_ = value;
         onChanged();
         return this;
@@ -56360,7 +63143,7 @@ public final class SteammessagesPublishedfileSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearReturnReactions() {
-        bitField1_ = (bitField1_ & ~0x00000004);
+        bitField1_ = (bitField1_ & ~0x00000020);
         returnReactions_ = false;
         onChanged();
         return this;
@@ -61709,6 +68492,3122 @@ public final class SteammessagesPublishedfileSteamclient {
 
     @java.lang.Override
     public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationships_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPublishedFile_GetAppRelationshipsBatched_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_GetAppRelationshipsBatched_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated uint64 publishedfileids = 1;</code>
+     * @return A list containing the publishedfileids.
+     */
+    java.util.List<java.lang.Long> getPublishedfileidsList();
+    /**
+     * <code>repeated uint64 publishedfileids = 1;</code>
+     * @return The count of publishedfileids.
+     */
+    int getPublishedfileidsCount();
+    /**
+     * <code>repeated uint64 publishedfileids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The publishedfileids at the given index.
+     */
+    long getPublishedfileids(int index);
+
+    /**
+     * <code>optional uint32 filter_relationship = 2;</code>
+     * @return Whether the filterRelationship field is set.
+     */
+    boolean hasFilterRelationship();
+    /**
+     * <code>optional uint32 filter_relationship = 2;</code>
+     * @return The filterRelationship.
+     */
+    int getFilterRelationship();
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_GetAppRelationshipsBatched_Request}
+   */
+  public static final class CPublishedFile_GetAppRelationshipsBatched_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_GetAppRelationshipsBatched_Request)
+      CPublishedFile_GetAppRelationshipsBatched_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_GetAppRelationshipsBatched_Request.newBuilder() to construct.
+    private CPublishedFile_GetAppRelationshipsBatched_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_GetAppRelationshipsBatched_Request() {
+      publishedfileids_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_GetAppRelationshipsBatched_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_GetAppRelationshipsBatched_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                publishedfileids_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              publishedfileids_.addLong(input.readUInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                publishedfileids_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                publishedfileids_.addLong(input.readUInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              filterRelationship_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          publishedfileids_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PUBLISHEDFILEIDS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.LongList publishedfileids_;
+    /**
+     * <code>repeated uint64 publishedfileids = 1;</code>
+     * @return A list containing the publishedfileids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getPublishedfileidsList() {
+      return publishedfileids_;
+    }
+    /**
+     * <code>repeated uint64 publishedfileids = 1;</code>
+     * @return The count of publishedfileids.
+     */
+    public int getPublishedfileidsCount() {
+      return publishedfileids_.size();
+    }
+    /**
+     * <code>repeated uint64 publishedfileids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The publishedfileids at the given index.
+     */
+    public long getPublishedfileids(int index) {
+      return publishedfileids_.getLong(index);
+    }
+
+    public static final int FILTER_RELATIONSHIP_FIELD_NUMBER = 2;
+    private int filterRelationship_;
+    /**
+     * <code>optional uint32 filter_relationship = 2;</code>
+     * @return Whether the filterRelationship field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilterRelationship() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 filter_relationship = 2;</code>
+     * @return The filterRelationship.
+     */
+    @java.lang.Override
+    public int getFilterRelationship() {
+      return filterRelationship_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < publishedfileids_.size(); i++) {
+        output.writeUInt64(1, publishedfileids_.getLong(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(2, filterRelationship_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < publishedfileids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(publishedfileids_.getLong(i));
+        }
+        size += dataSize;
+        size += 1 * getPublishedfileidsList().size();
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, filterRelationship_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request other = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request) obj;
+
+      if (!getPublishedfileidsList()
+          .equals(other.getPublishedfileidsList())) return false;
+      if (hasFilterRelationship() != other.hasFilterRelationship()) return false;
+      if (hasFilterRelationship()) {
+        if (getFilterRelationship()
+            != other.getFilterRelationship()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPublishedfileidsCount() > 0) {
+        hash = (37 * hash) + PUBLISHEDFILEIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPublishedfileidsList().hashCode();
+      }
+      if (hasFilterRelationship()) {
+        hash = (37 * hash) + FILTER_RELATIONSHIP_FIELD_NUMBER;
+        hash = (53 * hash) + getFilterRelationship();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_GetAppRelationshipsBatched_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_GetAppRelationshipsBatched_Request)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        publishedfileids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        filterRelationship_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request result = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          publishedfileids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.publishedfileids_ = publishedfileids_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.filterRelationship_ = filterRelationship_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request.getDefaultInstance()) return this;
+        if (!other.publishedfileids_.isEmpty()) {
+          if (publishedfileids_.isEmpty()) {
+            publishedfileids_ = other.publishedfileids_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePublishedfileidsIsMutable();
+            publishedfileids_.addAll(other.publishedfileids_);
+          }
+          onChanged();
+        }
+        if (other.hasFilterRelationship()) {
+          setFilterRelationship(other.getFilterRelationship());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.LongList publishedfileids_ = emptyLongList();
+      private void ensurePublishedfileidsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          publishedfileids_ = mutableCopy(publishedfileids_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated uint64 publishedfileids = 1;</code>
+       * @return A list containing the publishedfileids.
+       */
+      public java.util.List<java.lang.Long>
+          getPublishedfileidsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(publishedfileids_) : publishedfileids_;
+      }
+      /**
+       * <code>repeated uint64 publishedfileids = 1;</code>
+       * @return The count of publishedfileids.
+       */
+      public int getPublishedfileidsCount() {
+        return publishedfileids_.size();
+      }
+      /**
+       * <code>repeated uint64 publishedfileids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The publishedfileids at the given index.
+       */
+      public long getPublishedfileids(int index) {
+        return publishedfileids_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 publishedfileids = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The publishedfileids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublishedfileids(
+          int index, long value) {
+        ensurePublishedfileidsIsMutable();
+        publishedfileids_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 publishedfileids = 1;</code>
+       * @param value The publishedfileids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPublishedfileids(long value) {
+        ensurePublishedfileidsIsMutable();
+        publishedfileids_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 publishedfileids = 1;</code>
+       * @param values The publishedfileids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPublishedfileids(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensurePublishedfileidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, publishedfileids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 publishedfileids = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublishedfileids() {
+        publishedfileids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private int filterRelationship_ ;
+      /**
+       * <code>optional uint32 filter_relationship = 2;</code>
+       * @return Whether the filterRelationship field is set.
+       */
+      @java.lang.Override
+      public boolean hasFilterRelationship() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 filter_relationship = 2;</code>
+       * @return The filterRelationship.
+       */
+      @java.lang.Override
+      public int getFilterRelationship() {
+        return filterRelationship_;
+      }
+      /**
+       * <code>optional uint32 filter_relationship = 2;</code>
+       * @param value The filterRelationship to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterRelationship(int value) {
+        bitField0_ |= 0x00000002;
+        filterRelationship_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 filter_relationship = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilterRelationship() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        filterRelationship_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_GetAppRelationshipsBatched_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_GetAppRelationshipsBatched_Request)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_GetAppRelationshipsBatched_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_GetAppRelationshipsBatched_Request>() {
+      @java.lang.Override
+      public CPublishedFile_GetAppRelationshipsBatched_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_GetAppRelationshipsBatched_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_GetAppRelationshipsBatched_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_GetAppRelationshipsBatched_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPublishedFile_GetAppRelationshipsBatched_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_GetAppRelationshipsBatched_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+     */
+    java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship> 
+        getRelationshipsList();
+    /**
+     * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+     */
+    SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship getRelationships(int index);
+    /**
+     * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+     */
+    int getRelationshipsCount();
+    /**
+     * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+     */
+    java.util.List<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationshipOrBuilder> 
+        getRelationshipsOrBuilderList();
+    /**
+     * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+     */
+    SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationshipOrBuilder getRelationshipsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_GetAppRelationshipsBatched_Response}
+   */
+  public static final class CPublishedFile_GetAppRelationshipsBatched_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_GetAppRelationshipsBatched_Response)
+      CPublishedFile_GetAppRelationshipsBatched_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_GetAppRelationshipsBatched_Response.newBuilder() to construct.
+    private CPublishedFile_GetAppRelationshipsBatched_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_GetAppRelationshipsBatched_Response() {
+      relationships_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_GetAppRelationshipsBatched_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_GetAppRelationshipsBatched_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                relationships_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              relationships_.add(
+                  input.readMessage(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          relationships_ = java.util.Collections.unmodifiableList(relationships_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.Builder.class);
+    }
+
+    public interface AppRelationshipOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return Whether the appid field is set.
+       */
+      boolean hasAppid();
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return The appid.
+       */
+      int getAppid();
+
+      /**
+       * <code>optional uint32 relationship = 2;</code>
+       * @return Whether the relationship field is set.
+       */
+      boolean hasRelationship();
+      /**
+       * <code>optional uint32 relationship = 2;</code>
+       * @return The relationship.
+       */
+      int getRelationship();
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship}
+     */
+    public static final class AppRelationship extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship)
+        AppRelationshipOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AppRelationship.newBuilder() to construct.
+      private AppRelationship(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AppRelationship() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AppRelationship();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AppRelationship(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                bitField0_ |= 0x00000001;
+                appid_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                relationship_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_AppRelationship_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_AppRelationship_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int APPID_FIELD_NUMBER = 1;
+      private int appid_;
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+
+      public static final int RELATIONSHIP_FIELD_NUMBER = 2;
+      private int relationship_;
+      /**
+       * <code>optional uint32 relationship = 2;</code>
+       * @return Whether the relationship field is set.
+       */
+      @java.lang.Override
+      public boolean hasRelationship() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 relationship = 2;</code>
+       * @return The relationship.
+       */
+      @java.lang.Override
+      public int getRelationship() {
+        return relationship_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeUInt32(1, appid_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(2, relationship_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, appid_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, relationship_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship)) {
+          return super.equals(obj);
+        }
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship other = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship) obj;
+
+        if (hasAppid() != other.hasAppid()) return false;
+        if (hasAppid()) {
+          if (getAppid()
+              != other.getAppid()) return false;
+        }
+        if (hasRelationship() != other.hasRelationship()) return false;
+        if (hasRelationship()) {
+          if (getRelationship()
+              != other.getRelationship()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasAppid()) {
+          hash = (37 * hash) + APPID_FIELD_NUMBER;
+          hash = (53 * hash) + getAppid();
+        }
+        if (hasRelationship()) {
+          hash = (37 * hash) + RELATIONSHIP_FIELD_NUMBER;
+          hash = (53 * hash) + getRelationship();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship)
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationshipOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_AppRelationship_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_AppRelationship_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder.class);
+        }
+
+        // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          appid_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          relationship_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_AppRelationship_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship getDefaultInstanceForType() {
+          return SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship build() {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship buildPartial() {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship result = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.appid_ = appid_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.relationship_ = relationship_;
+            to_bitField0_ |= 0x00000002;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship) {
+            return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship other) {
+          if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.getDefaultInstance()) return this;
+          if (other.hasAppid()) {
+            setAppid(other.getAppid());
+          }
+          if (other.hasRelationship()) {
+            setRelationship(other.getRelationship());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int appid_ ;
+        /**
+         * <code>optional uint32 appid = 1;</code>
+         * @return Whether the appid field is set.
+         */
+        @java.lang.Override
+        public boolean hasAppid() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional uint32 appid = 1;</code>
+         * @return The appid.
+         */
+        @java.lang.Override
+        public int getAppid() {
+          return appid_;
+        }
+        /**
+         * <code>optional uint32 appid = 1;</code>
+         * @param value The appid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAppid(int value) {
+          bitField0_ |= 0x00000001;
+          appid_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 appid = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAppid() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          appid_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int relationship_ ;
+        /**
+         * <code>optional uint32 relationship = 2;</code>
+         * @return Whether the relationship field is set.
+         */
+        @java.lang.Override
+        public boolean hasRelationship() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint32 relationship = 2;</code>
+         * @return The relationship.
+         */
+        @java.lang.Override
+        public int getRelationship() {
+          return relationship_;
+        }
+        /**
+         * <code>optional uint32 relationship = 2;</code>
+         * @param value The relationship to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRelationship(int value) {
+          bitField0_ |= 0x00000002;
+          relationship_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 relationship = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRelationship() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          relationship_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship)
+      }
+
+      // @@protoc_insertion_point(class_scope:CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship)
+      private static final SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship();
+      }
+
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<AppRelationship>
+          PARSER = new com.google.protobuf.AbstractParser<AppRelationship>() {
+        @java.lang.Override
+        public AppRelationship parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AppRelationship(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AppRelationship> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AppRelationship> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface PublishedFileAppRelationshipOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @return Whether the publishedfileid field is set.
+       */
+      boolean hasPublishedfileid();
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @return The publishedfileid.
+       */
+      long getPublishedfileid();
+
+      /**
+       * <code>optional uint32 result = 2;</code>
+       * @return Whether the result field is set.
+       */
+      boolean hasResult();
+      /**
+       * <code>optional uint32 result = 2;</code>
+       * @return The result.
+       */
+      int getResult();
+
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+       */
+      java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship> 
+          getAppRelationshipsList();
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+       */
+      SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship getAppRelationships(int index);
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+       */
+      int getAppRelationshipsCount();
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+       */
+      java.util.List<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationshipOrBuilder> 
+          getAppRelationshipsOrBuilderList();
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+       */
+      SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationshipOrBuilder getAppRelationshipsOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship}
+     */
+    public static final class PublishedFileAppRelationship extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship)
+        PublishedFileAppRelationshipOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use PublishedFileAppRelationship.newBuilder() to construct.
+      private PublishedFileAppRelationship(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private PublishedFileAppRelationship() {
+        appRelationships_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new PublishedFileAppRelationship();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private PublishedFileAppRelationship(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                bitField0_ |= 0x00000001;
+                publishedfileid_ = input.readUInt64();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                result_ = input.readUInt32();
+                break;
+              }
+              case 26: {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                  appRelationships_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship>();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                appRelationships_.add(
+                    input.readMessage(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.PARSER, extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000004) != 0)) {
+            appRelationships_ = java.util.Collections.unmodifiableList(appRelationships_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int PUBLISHEDFILEID_FIELD_NUMBER = 1;
+      private long publishedfileid_;
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @return Whether the publishedfileid field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublishedfileid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 publishedfileid = 1;</code>
+       * @return The publishedfileid.
+       */
+      @java.lang.Override
+      public long getPublishedfileid() {
+        return publishedfileid_;
+      }
+
+      public static final int RESULT_FIELD_NUMBER = 2;
+      private int result_;
+      /**
+       * <code>optional uint32 result = 2;</code>
+       * @return Whether the result field is set.
+       */
+      @java.lang.Override
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 result = 2;</code>
+       * @return The result.
+       */
+      @java.lang.Override
+      public int getResult() {
+        return result_;
+      }
+
+      public static final int APP_RELATIONSHIPS_FIELD_NUMBER = 3;
+      private java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship> appRelationships_;
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+       */
+      @java.lang.Override
+      public java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship> getAppRelationshipsList() {
+        return appRelationships_;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationshipOrBuilder> 
+          getAppRelationshipsOrBuilderList() {
+        return appRelationships_;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+       */
+      @java.lang.Override
+      public int getAppRelationshipsCount() {
+        return appRelationships_.size();
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+       */
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship getAppRelationships(int index) {
+        return appRelationships_.get(index);
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+       */
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationshipOrBuilder getAppRelationshipsOrBuilder(
+          int index) {
+        return appRelationships_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeUInt64(1, publishedfileid_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(2, result_);
+        }
+        for (int i = 0; i < appRelationships_.size(); i++) {
+          output.writeMessage(3, appRelationships_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(1, publishedfileid_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, result_);
+        }
+        for (int i = 0; i < appRelationships_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, appRelationships_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship)) {
+          return super.equals(obj);
+        }
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship other = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship) obj;
+
+        if (hasPublishedfileid() != other.hasPublishedfileid()) return false;
+        if (hasPublishedfileid()) {
+          if (getPublishedfileid()
+              != other.getPublishedfileid()) return false;
+        }
+        if (hasResult() != other.hasResult()) return false;
+        if (hasResult()) {
+          if (getResult()
+              != other.getResult()) return false;
+        }
+        if (!getAppRelationshipsList()
+            .equals(other.getAppRelationshipsList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasPublishedfileid()) {
+          hash = (37 * hash) + PUBLISHEDFILEID_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getPublishedfileid());
+        }
+        if (hasResult()) {
+          hash = (37 * hash) + RESULT_FIELD_NUMBER;
+          hash = (53 * hash) + getResult();
+        }
+        if (getAppRelationshipsCount() > 0) {
+          hash = (37 * hash) + APP_RELATIONSHIPS_FIELD_NUMBER;
+          hash = (53 * hash) + getAppRelationshipsList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship)
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationshipOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder.class);
+        }
+
+        // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getAppRelationshipsFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          publishedfileid_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          result_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          if (appRelationshipsBuilder_ == null) {
+            appRelationships_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            appRelationshipsBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship getDefaultInstanceForType() {
+          return SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship build() {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship buildPartial() {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship result = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.publishedfileid_ = publishedfileid_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.result_ = result_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (appRelationshipsBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) != 0)) {
+              appRelationships_ = java.util.Collections.unmodifiableList(appRelationships_);
+              bitField0_ = (bitField0_ & ~0x00000004);
+            }
+            result.appRelationships_ = appRelationships_;
+          } else {
+            result.appRelationships_ = appRelationshipsBuilder_.build();
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship) {
+            return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship other) {
+          if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.getDefaultInstance()) return this;
+          if (other.hasPublishedfileid()) {
+            setPublishedfileid(other.getPublishedfileid());
+          }
+          if (other.hasResult()) {
+            setResult(other.getResult());
+          }
+          if (appRelationshipsBuilder_ == null) {
+            if (!other.appRelationships_.isEmpty()) {
+              if (appRelationships_.isEmpty()) {
+                appRelationships_ = other.appRelationships_;
+                bitField0_ = (bitField0_ & ~0x00000004);
+              } else {
+                ensureAppRelationshipsIsMutable();
+                appRelationships_.addAll(other.appRelationships_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.appRelationships_.isEmpty()) {
+              if (appRelationshipsBuilder_.isEmpty()) {
+                appRelationshipsBuilder_.dispose();
+                appRelationshipsBuilder_ = null;
+                appRelationships_ = other.appRelationships_;
+                bitField0_ = (bitField0_ & ~0x00000004);
+                appRelationshipsBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getAppRelationshipsFieldBuilder() : null;
+              } else {
+                appRelationshipsBuilder_.addAllMessages(other.appRelationships_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private long publishedfileid_ ;
+        /**
+         * <code>optional uint64 publishedfileid = 1;</code>
+         * @return Whether the publishedfileid field is set.
+         */
+        @java.lang.Override
+        public boolean hasPublishedfileid() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional uint64 publishedfileid = 1;</code>
+         * @return The publishedfileid.
+         */
+        @java.lang.Override
+        public long getPublishedfileid() {
+          return publishedfileid_;
+        }
+        /**
+         * <code>optional uint64 publishedfileid = 1;</code>
+         * @param value The publishedfileid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPublishedfileid(long value) {
+          bitField0_ |= 0x00000001;
+          publishedfileid_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint64 publishedfileid = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPublishedfileid() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          publishedfileid_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private int result_ ;
+        /**
+         * <code>optional uint32 result = 2;</code>
+         * @return Whether the result field is set.
+         */
+        @java.lang.Override
+        public boolean hasResult() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint32 result = 2;</code>
+         * @return The result.
+         */
+        @java.lang.Override
+        public int getResult() {
+          return result_;
+        }
+        /**
+         * <code>optional uint32 result = 2;</code>
+         * @param value The result to set.
+         * @return This builder for chaining.
+         */
+        public Builder setResult(int value) {
+          bitField0_ |= 0x00000002;
+          result_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 result = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearResult() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          result_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship> appRelationships_ =
+          java.util.Collections.emptyList();
+        private void ensureAppRelationshipsIsMutable() {
+          if (!((bitField0_ & 0x00000004) != 0)) {
+            appRelationships_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship>(appRelationships_);
+            bitField0_ |= 0x00000004;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationshipOrBuilder> appRelationshipsBuilder_;
+
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship> getAppRelationshipsList() {
+          if (appRelationshipsBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(appRelationships_);
+          } else {
+            return appRelationshipsBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public int getAppRelationshipsCount() {
+          if (appRelationshipsBuilder_ == null) {
+            return appRelationships_.size();
+          } else {
+            return appRelationshipsBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship getAppRelationships(int index) {
+          if (appRelationshipsBuilder_ == null) {
+            return appRelationships_.get(index);
+          } else {
+            return appRelationshipsBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public Builder setAppRelationships(
+            int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship value) {
+          if (appRelationshipsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAppRelationshipsIsMutable();
+            appRelationships_.set(index, value);
+            onChanged();
+          } else {
+            appRelationshipsBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public Builder setAppRelationships(
+            int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder builderForValue) {
+          if (appRelationshipsBuilder_ == null) {
+            ensureAppRelationshipsIsMutable();
+            appRelationships_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            appRelationshipsBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public Builder addAppRelationships(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship value) {
+          if (appRelationshipsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAppRelationshipsIsMutable();
+            appRelationships_.add(value);
+            onChanged();
+          } else {
+            appRelationshipsBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public Builder addAppRelationships(
+            int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship value) {
+          if (appRelationshipsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAppRelationshipsIsMutable();
+            appRelationships_.add(index, value);
+            onChanged();
+          } else {
+            appRelationshipsBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public Builder addAppRelationships(
+            SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder builderForValue) {
+          if (appRelationshipsBuilder_ == null) {
+            ensureAppRelationshipsIsMutable();
+            appRelationships_.add(builderForValue.build());
+            onChanged();
+          } else {
+            appRelationshipsBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public Builder addAppRelationships(
+            int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder builderForValue) {
+          if (appRelationshipsBuilder_ == null) {
+            ensureAppRelationshipsIsMutable();
+            appRelationships_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            appRelationshipsBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public Builder addAllAppRelationships(
+            java.lang.Iterable<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship> values) {
+          if (appRelationshipsBuilder_ == null) {
+            ensureAppRelationshipsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, appRelationships_);
+            onChanged();
+          } else {
+            appRelationshipsBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public Builder clearAppRelationships() {
+          if (appRelationshipsBuilder_ == null) {
+            appRelationships_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);
+            onChanged();
+          } else {
+            appRelationshipsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public Builder removeAppRelationships(int index) {
+          if (appRelationshipsBuilder_ == null) {
+            ensureAppRelationshipsIsMutable();
+            appRelationships_.remove(index);
+            onChanged();
+          } else {
+            appRelationshipsBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder getAppRelationshipsBuilder(
+            int index) {
+          return getAppRelationshipsFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationshipOrBuilder getAppRelationshipsOrBuilder(
+            int index) {
+          if (appRelationshipsBuilder_ == null) {
+            return appRelationships_.get(index);  } else {
+            return appRelationshipsBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public java.util.List<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationshipOrBuilder> 
+             getAppRelationshipsOrBuilderList() {
+          if (appRelationshipsBuilder_ != null) {
+            return appRelationshipsBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(appRelationships_);
+          }
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder addAppRelationshipsBuilder() {
+          return getAppRelationshipsFieldBuilder().addBuilder(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder addAppRelationshipsBuilder(
+            int index) {
+          return getAppRelationshipsFieldBuilder().addBuilder(
+              index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;</code>
+         */
+        public java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder> 
+             getAppRelationshipsBuilderList() {
+          return getAppRelationshipsFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationshipOrBuilder> 
+            getAppRelationshipsFieldBuilder() {
+          if (appRelationshipsBuilder_ == null) {
+            appRelationshipsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationshipOrBuilder>(
+                    appRelationships_,
+                    ((bitField0_ & 0x00000004) != 0),
+                    getParentForChildren(),
+                    isClean());
+            appRelationships_ = null;
+          }
+          return appRelationshipsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship)
+      }
+
+      // @@protoc_insertion_point(class_scope:CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship)
+      private static final SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship();
+      }
+
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<PublishedFileAppRelationship>
+          PARSER = new com.google.protobuf.AbstractParser<PublishedFileAppRelationship>() {
+        @java.lang.Override
+        public PublishedFileAppRelationship parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new PublishedFileAppRelationship(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<PublishedFileAppRelationship> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<PublishedFileAppRelationship> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int RELATIONSHIPS_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship> relationships_;
+    /**
+     * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship> getRelationshipsList() {
+      return relationships_;
+    }
+    /**
+     * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationshipOrBuilder> 
+        getRelationshipsOrBuilderList() {
+      return relationships_;
+    }
+    /**
+     * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+     */
+    @java.lang.Override
+    public int getRelationshipsCount() {
+      return relationships_.size();
+    }
+    /**
+     * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship getRelationships(int index) {
+      return relationships_.get(index);
+    }
+    /**
+     * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationshipOrBuilder getRelationshipsOrBuilder(
+        int index) {
+      return relationships_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < relationships_.size(); i++) {
+        output.writeMessage(1, relationships_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < relationships_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, relationships_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response other = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response) obj;
+
+      if (!getRelationshipsList()
+          .equals(other.getRelationshipsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRelationshipsCount() > 0) {
+        hash = (37 * hash) + RELATIONSHIPS_FIELD_NUMBER;
+        hash = (53 * hash) + getRelationshipsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_GetAppRelationshipsBatched_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_GetAppRelationshipsBatched_Response)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRelationshipsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (relationshipsBuilder_ == null) {
+          relationships_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          relationshipsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response result = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response(this);
+        int from_bitField0_ = bitField0_;
+        if (relationshipsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            relationships_ = java.util.Collections.unmodifiableList(relationships_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.relationships_ = relationships_;
+        } else {
+          result.relationships_ = relationshipsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.getDefaultInstance()) return this;
+        if (relationshipsBuilder_ == null) {
+          if (!other.relationships_.isEmpty()) {
+            if (relationships_.isEmpty()) {
+              relationships_ = other.relationships_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRelationshipsIsMutable();
+              relationships_.addAll(other.relationships_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.relationships_.isEmpty()) {
+            if (relationshipsBuilder_.isEmpty()) {
+              relationshipsBuilder_.dispose();
+              relationshipsBuilder_ = null;
+              relationships_ = other.relationships_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              relationshipsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRelationshipsFieldBuilder() : null;
+            } else {
+              relationshipsBuilder_.addAllMessages(other.relationships_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship> relationships_ =
+        java.util.Collections.emptyList();
+      private void ensureRelationshipsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          relationships_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship>(relationships_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationshipOrBuilder> relationshipsBuilder_;
+
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship> getRelationshipsList() {
+        if (relationshipsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(relationships_);
+        } else {
+          return relationshipsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public int getRelationshipsCount() {
+        if (relationshipsBuilder_ == null) {
+          return relationships_.size();
+        } else {
+          return relationshipsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship getRelationships(int index) {
+        if (relationshipsBuilder_ == null) {
+          return relationships_.get(index);
+        } else {
+          return relationshipsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public Builder setRelationships(
+          int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship value) {
+        if (relationshipsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRelationshipsIsMutable();
+          relationships_.set(index, value);
+          onChanged();
+        } else {
+          relationshipsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public Builder setRelationships(
+          int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder builderForValue) {
+        if (relationshipsBuilder_ == null) {
+          ensureRelationshipsIsMutable();
+          relationships_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          relationshipsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public Builder addRelationships(SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship value) {
+        if (relationshipsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRelationshipsIsMutable();
+          relationships_.add(value);
+          onChanged();
+        } else {
+          relationshipsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public Builder addRelationships(
+          int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship value) {
+        if (relationshipsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRelationshipsIsMutable();
+          relationships_.add(index, value);
+          onChanged();
+        } else {
+          relationshipsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public Builder addRelationships(
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder builderForValue) {
+        if (relationshipsBuilder_ == null) {
+          ensureRelationshipsIsMutable();
+          relationships_.add(builderForValue.build());
+          onChanged();
+        } else {
+          relationshipsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public Builder addRelationships(
+          int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder builderForValue) {
+        if (relationshipsBuilder_ == null) {
+          ensureRelationshipsIsMutable();
+          relationships_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          relationshipsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public Builder addAllRelationships(
+          java.lang.Iterable<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship> values) {
+        if (relationshipsBuilder_ == null) {
+          ensureRelationshipsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, relationships_);
+          onChanged();
+        } else {
+          relationshipsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public Builder clearRelationships() {
+        if (relationshipsBuilder_ == null) {
+          relationships_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          relationshipsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public Builder removeRelationships(int index) {
+        if (relationshipsBuilder_ == null) {
+          ensureRelationshipsIsMutable();
+          relationships_.remove(index);
+          onChanged();
+        } else {
+          relationshipsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder getRelationshipsBuilder(
+          int index) {
+        return getRelationshipsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationshipOrBuilder getRelationshipsOrBuilder(
+          int index) {
+        if (relationshipsBuilder_ == null) {
+          return relationships_.get(index);  } else {
+          return relationshipsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public java.util.List<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationshipOrBuilder> 
+           getRelationshipsOrBuilderList() {
+        if (relationshipsBuilder_ != null) {
+          return relationshipsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(relationships_);
+        }
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder addRelationshipsBuilder() {
+        return getRelationshipsFieldBuilder().addBuilder(
+            SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder addRelationshipsBuilder(
+          int index) {
+        return getRelationshipsFieldBuilder().addBuilder(
+            index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;</code>
+       */
+      public java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder> 
+           getRelationshipsBuilderList() {
+        return getRelationshipsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationshipOrBuilder> 
+          getRelationshipsFieldBuilder() {
+        if (relationshipsBuilder_ == null) {
+          relationshipsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationshipOrBuilder>(
+                  relationships_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          relationships_ = null;
+        }
+        return relationshipsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_GetAppRelationshipsBatched_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_GetAppRelationshipsBatched_Response)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_GetAppRelationshipsBatched_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_GetAppRelationshipsBatched_Response>() {
+      @java.lang.Override
+      public CPublishedFile_GetAppRelationshipsBatched_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_GetAppRelationshipsBatched_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_GetAppRelationshipsBatched_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_GetAppRelationshipsBatched_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_GetAppRelationshipsBatched_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -73482,6 +83381,3632 @@ public final class SteammessagesPublishedfileSteamclient {
 
   }
 
+  public interface CPublishedFile_GetContentDescriptors_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_GetContentDescriptors_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed64 publishedfileid = 1;</code>
+     * @return Whether the publishedfileid field is set.
+     */
+    boolean hasPublishedfileid();
+    /**
+     * <code>optional fixed64 publishedfileid = 1;</code>
+     * @return The publishedfileid.
+     */
+    long getPublishedfileid();
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_GetContentDescriptors_Request}
+   */
+  public static final class CPublishedFile_GetContentDescriptors_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_GetContentDescriptors_Request)
+      CPublishedFile_GetContentDescriptors_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_GetContentDescriptors_Request.newBuilder() to construct.
+    private CPublishedFile_GetContentDescriptors_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_GetContentDescriptors_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_GetContentDescriptors_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_GetContentDescriptors_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              bitField0_ |= 0x00000001;
+              publishedfileid_ = input.readFixed64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PUBLISHEDFILEID_FIELD_NUMBER = 1;
+    private long publishedfileid_;
+    /**
+     * <code>optional fixed64 publishedfileid = 1;</code>
+     * @return Whether the publishedfileid field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublishedfileid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed64 publishedfileid = 1;</code>
+     * @return The publishedfileid.
+     */
+    @java.lang.Override
+    public long getPublishedfileid() {
+      return publishedfileid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeFixed64(1, publishedfileid_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(1, publishedfileid_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request other = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request) obj;
+
+      if (hasPublishedfileid() != other.hasPublishedfileid()) return false;
+      if (hasPublishedfileid()) {
+        if (getPublishedfileid()
+            != other.getPublishedfileid()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPublishedfileid()) {
+        hash = (37 * hash) + PUBLISHEDFILEID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPublishedfileid());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_GetContentDescriptors_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_GetContentDescriptors_Request)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        publishedfileid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request result = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publishedfileid_ = publishedfileid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request.getDefaultInstance()) return this;
+        if (other.hasPublishedfileid()) {
+          setPublishedfileid(other.getPublishedfileid());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long publishedfileid_ ;
+      /**
+       * <code>optional fixed64 publishedfileid = 1;</code>
+       * @return Whether the publishedfileid field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublishedfileid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional fixed64 publishedfileid = 1;</code>
+       * @return The publishedfileid.
+       */
+      @java.lang.Override
+      public long getPublishedfileid() {
+        return publishedfileid_;
+      }
+      /**
+       * <code>optional fixed64 publishedfileid = 1;</code>
+       * @param value The publishedfileid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublishedfileid(long value) {
+        bitField0_ |= 0x00000001;
+        publishedfileid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 publishedfileid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublishedfileid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publishedfileid_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_GetContentDescriptors_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_GetContentDescriptors_Request)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_GetContentDescriptors_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_GetContentDescriptors_Request>() {
+      @java.lang.Override
+      public CPublishedFile_GetContentDescriptors_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_GetContentDescriptors_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_GetContentDescriptors_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_GetContentDescriptors_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPublishedFile_GetContentDescriptors_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_GetContentDescriptors_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+     */
+    java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor> 
+        getContentDescriptorsList();
+    /**
+     * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+     */
+    SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor getContentDescriptors(int index);
+    /**
+     * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+     */
+    int getContentDescriptorsCount();
+    /**
+     * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+     */
+    java.util.List<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptorOrBuilder> 
+        getContentDescriptorsOrBuilderList();
+    /**
+     * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+     */
+    SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptorOrBuilder getContentDescriptorsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_GetContentDescriptors_Response}
+   */
+  public static final class CPublishedFile_GetContentDescriptors_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_GetContentDescriptors_Response)
+      CPublishedFile_GetContentDescriptors_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_GetContentDescriptors_Response.newBuilder() to construct.
+    private CPublishedFile_GetContentDescriptors_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_GetContentDescriptors_Response() {
+      contentDescriptors_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_GetContentDescriptors_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_GetContentDescriptors_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                contentDescriptors_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              contentDescriptors_.add(
+                  input.readMessage(SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          contentDescriptors_ = java.util.Collections.unmodifiableList(contentDescriptors_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.Builder.class);
+    }
+
+    public interface ContentDescriptorOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CPublishedFile_GetContentDescriptors_Response.ContentDescriptor)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_NudityOrSexualContent];</code>
+       * @return Whether the descriptorid field is set.
+       */
+      boolean hasDescriptorid();
+      /**
+       * <code>optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_NudityOrSexualContent];</code>
+       * @return The descriptorid.
+       */
+      EnumsProductinfo.EContentDescriptorID getDescriptorid();
+
+      /**
+       * <code>optional uint32 accountid = 2;</code>
+       * @return Whether the accountid field is set.
+       */
+      boolean hasAccountid();
+      /**
+       * <code>optional uint32 accountid = 2;</code>
+       * @return The accountid.
+       */
+      int getAccountid();
+
+      /**
+       * <code>optional uint32 timestamp = 3;</code>
+       * @return Whether the timestamp field is set.
+       */
+      boolean hasTimestamp();
+      /**
+       * <code>optional uint32 timestamp = 3;</code>
+       * @return The timestamp.
+       */
+      int getTimestamp();
+
+      /**
+       * <code>optional bool moderator_set = 4;</code>
+       * @return Whether the moderatorSet field is set.
+       */
+      boolean hasModeratorSet();
+      /**
+       * <code>optional bool moderator_set = 4;</code>
+       * @return The moderatorSet.
+       */
+      boolean getModeratorSet();
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_GetContentDescriptors_Response.ContentDescriptor}
+     */
+    public static final class ContentDescriptor extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CPublishedFile_GetContentDescriptors_Response.ContentDescriptor)
+        ContentDescriptorOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ContentDescriptor.newBuilder() to construct.
+      private ContentDescriptor(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ContentDescriptor() {
+        descriptorid_ = 1;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ContentDescriptor();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ContentDescriptor(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int rawValue = input.readEnum();
+                  @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(1, rawValue);
+                } else {
+                  bitField0_ |= 0x00000001;
+                  descriptorid_ = rawValue;
+                }
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                accountid_ = input.readUInt32();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                timestamp_ = input.readUInt32();
+                break;
+              }
+              case 32: {
+                bitField0_ |= 0x00000008;
+                moderatorSet_ = input.readBool();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Response_ContentDescriptor_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Response_ContentDescriptor_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int DESCRIPTORID_FIELD_NUMBER = 1;
+      private int descriptorid_;
+      /**
+       * <code>optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_NudityOrSexualContent];</code>
+       * @return Whether the descriptorid field is set.
+       */
+      @java.lang.Override public boolean hasDescriptorid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_NudityOrSexualContent];</code>
+       * @return The descriptorid.
+       */
+      @java.lang.Override public EnumsProductinfo.EContentDescriptorID getDescriptorid() {
+        @SuppressWarnings("deprecation")
+        EnumsProductinfo.EContentDescriptorID result = EnumsProductinfo.EContentDescriptorID.valueOf(descriptorid_);
+        return result == null ? EnumsProductinfo.EContentDescriptorID.k_EContentDescriptor_NudityOrSexualContent : result;
+      }
+
+      public static final int ACCOUNTID_FIELD_NUMBER = 2;
+      private int accountid_;
+      /**
+       * <code>optional uint32 accountid = 2;</code>
+       * @return Whether the accountid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAccountid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 accountid = 2;</code>
+       * @return The accountid.
+       */
+      @java.lang.Override
+      public int getAccountid() {
+        return accountid_;
+      }
+
+      public static final int TIMESTAMP_FIELD_NUMBER = 3;
+      private int timestamp_;
+      /**
+       * <code>optional uint32 timestamp = 3;</code>
+       * @return Whether the timestamp field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimestamp() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 timestamp = 3;</code>
+       * @return The timestamp.
+       */
+      @java.lang.Override
+      public int getTimestamp() {
+        return timestamp_;
+      }
+
+      public static final int MODERATOR_SET_FIELD_NUMBER = 4;
+      private boolean moderatorSet_;
+      /**
+       * <code>optional bool moderator_set = 4;</code>
+       * @return Whether the moderatorSet field is set.
+       */
+      @java.lang.Override
+      public boolean hasModeratorSet() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool moderator_set = 4;</code>
+       * @return The moderatorSet.
+       */
+      @java.lang.Override
+      public boolean getModeratorSet() {
+        return moderatorSet_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeEnum(1, descriptorid_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(2, accountid_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeUInt32(3, timestamp_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          output.writeBool(4, moderatorSet_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, descriptorid_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, accountid_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, timestamp_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, moderatorSet_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor)) {
+          return super.equals(obj);
+        }
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor other = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor) obj;
+
+        if (hasDescriptorid() != other.hasDescriptorid()) return false;
+        if (hasDescriptorid()) {
+          if (descriptorid_ != other.descriptorid_) return false;
+        }
+        if (hasAccountid() != other.hasAccountid()) return false;
+        if (hasAccountid()) {
+          if (getAccountid()
+              != other.getAccountid()) return false;
+        }
+        if (hasTimestamp() != other.hasTimestamp()) return false;
+        if (hasTimestamp()) {
+          if (getTimestamp()
+              != other.getTimestamp()) return false;
+        }
+        if (hasModeratorSet() != other.hasModeratorSet()) return false;
+        if (hasModeratorSet()) {
+          if (getModeratorSet()
+              != other.getModeratorSet()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasDescriptorid()) {
+          hash = (37 * hash) + DESCRIPTORID_FIELD_NUMBER;
+          hash = (53 * hash) + descriptorid_;
+        }
+        if (hasAccountid()) {
+          hash = (37 * hash) + ACCOUNTID_FIELD_NUMBER;
+          hash = (53 * hash) + getAccountid();
+        }
+        if (hasTimestamp()) {
+          hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+          hash = (53 * hash) + getTimestamp();
+        }
+        if (hasModeratorSet()) {
+          hash = (37 * hash) + MODERATOR_SET_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getModeratorSet());
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CPublishedFile_GetContentDescriptors_Response.ContentDescriptor}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CPublishedFile_GetContentDescriptors_Response.ContentDescriptor)
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptorOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Response_ContentDescriptor_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Response_ContentDescriptor_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder.class);
+        }
+
+        // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          descriptorid_ = 1;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          accountid_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          timestamp_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          moderatorSet_ = false;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Response_ContentDescriptor_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor getDefaultInstanceForType() {
+          return SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor build() {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor buildPartial() {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor result = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.descriptorid_ = descriptorid_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.accountid_ = accountid_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.timestamp_ = timestamp_;
+            to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.moderatorSet_ = moderatorSet_;
+            to_bitField0_ |= 0x00000008;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor) {
+            return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor other) {
+          if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.getDefaultInstance()) return this;
+          if (other.hasDescriptorid()) {
+            setDescriptorid(other.getDescriptorid());
+          }
+          if (other.hasAccountid()) {
+            setAccountid(other.getAccountid());
+          }
+          if (other.hasTimestamp()) {
+            setTimestamp(other.getTimestamp());
+          }
+          if (other.hasModeratorSet()) {
+            setModeratorSet(other.getModeratorSet());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int descriptorid_ = 1;
+        /**
+         * <code>optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_NudityOrSexualContent];</code>
+         * @return Whether the descriptorid field is set.
+         */
+        @java.lang.Override public boolean hasDescriptorid() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_NudityOrSexualContent];</code>
+         * @return The descriptorid.
+         */
+        @java.lang.Override
+        public EnumsProductinfo.EContentDescriptorID getDescriptorid() {
+          @SuppressWarnings("deprecation")
+          EnumsProductinfo.EContentDescriptorID result = EnumsProductinfo.EContentDescriptorID.valueOf(descriptorid_);
+          return result == null ? EnumsProductinfo.EContentDescriptorID.k_EContentDescriptor_NudityOrSexualContent : result;
+        }
+        /**
+         * <code>optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_NudityOrSexualContent];</code>
+         * @param value The descriptorid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDescriptorid(EnumsProductinfo.EContentDescriptorID value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          descriptorid_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_NudityOrSexualContent];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDescriptorid() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          descriptorid_ = 1;
+          onChanged();
+          return this;
+        }
+
+        private int accountid_ ;
+        /**
+         * <code>optional uint32 accountid = 2;</code>
+         * @return Whether the accountid field is set.
+         */
+        @java.lang.Override
+        public boolean hasAccountid() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint32 accountid = 2;</code>
+         * @return The accountid.
+         */
+        @java.lang.Override
+        public int getAccountid() {
+          return accountid_;
+        }
+        /**
+         * <code>optional uint32 accountid = 2;</code>
+         * @param value The accountid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAccountid(int value) {
+          bitField0_ |= 0x00000002;
+          accountid_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 accountid = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAccountid() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          accountid_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int timestamp_ ;
+        /**
+         * <code>optional uint32 timestamp = 3;</code>
+         * @return Whether the timestamp field is set.
+         */
+        @java.lang.Override
+        public boolean hasTimestamp() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>optional uint32 timestamp = 3;</code>
+         * @return The timestamp.
+         */
+        @java.lang.Override
+        public int getTimestamp() {
+          return timestamp_;
+        }
+        /**
+         * <code>optional uint32 timestamp = 3;</code>
+         * @param value The timestamp to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTimestamp(int value) {
+          bitField0_ |= 0x00000004;
+          timestamp_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 timestamp = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTimestamp() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          timestamp_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private boolean moderatorSet_ ;
+        /**
+         * <code>optional bool moderator_set = 4;</code>
+         * @return Whether the moderatorSet field is set.
+         */
+        @java.lang.Override
+        public boolean hasModeratorSet() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <code>optional bool moderator_set = 4;</code>
+         * @return The moderatorSet.
+         */
+        @java.lang.Override
+        public boolean getModeratorSet() {
+          return moderatorSet_;
+        }
+        /**
+         * <code>optional bool moderator_set = 4;</code>
+         * @param value The moderatorSet to set.
+         * @return This builder for chaining.
+         */
+        public Builder setModeratorSet(boolean value) {
+          bitField0_ |= 0x00000008;
+          moderatorSet_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool moderator_set = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearModeratorSet() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          moderatorSet_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CPublishedFile_GetContentDescriptors_Response.ContentDescriptor)
+      }
+
+      // @@protoc_insertion_point(class_scope:CPublishedFile_GetContentDescriptors_Response.ContentDescriptor)
+      private static final SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor();
+      }
+
+      public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ContentDescriptor>
+          PARSER = new com.google.protobuf.AbstractParser<ContentDescriptor>() {
+        @java.lang.Override
+        public ContentDescriptor parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ContentDescriptor(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ContentDescriptor> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ContentDescriptor> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int CONTENT_DESCRIPTORS_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor> contentDescriptors_;
+    /**
+     * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor> getContentDescriptorsList() {
+      return contentDescriptors_;
+    }
+    /**
+     * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptorOrBuilder> 
+        getContentDescriptorsOrBuilderList() {
+      return contentDescriptors_;
+    }
+    /**
+     * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+     */
+    @java.lang.Override
+    public int getContentDescriptorsCount() {
+      return contentDescriptors_.size();
+    }
+    /**
+     * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor getContentDescriptors(int index) {
+      return contentDescriptors_.get(index);
+    }
+    /**
+     * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptorOrBuilder getContentDescriptorsOrBuilder(
+        int index) {
+      return contentDescriptors_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < contentDescriptors_.size(); i++) {
+        output.writeMessage(1, contentDescriptors_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < contentDescriptors_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, contentDescriptors_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response other = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response) obj;
+
+      if (!getContentDescriptorsList()
+          .equals(other.getContentDescriptorsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContentDescriptorsCount() > 0) {
+        hash = (37 * hash) + CONTENT_DESCRIPTORS_FIELD_NUMBER;
+        hash = (53 * hash) + getContentDescriptorsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_GetContentDescriptors_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_GetContentDescriptors_Response)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContentDescriptorsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (contentDescriptorsBuilder_ == null) {
+          contentDescriptors_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          contentDescriptorsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_GetContentDescriptors_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response result = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response(this);
+        int from_bitField0_ = bitField0_;
+        if (contentDescriptorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            contentDescriptors_ = java.util.Collections.unmodifiableList(contentDescriptors_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.contentDescriptors_ = contentDescriptors_;
+        } else {
+          result.contentDescriptors_ = contentDescriptorsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.getDefaultInstance()) return this;
+        if (contentDescriptorsBuilder_ == null) {
+          if (!other.contentDescriptors_.isEmpty()) {
+            if (contentDescriptors_.isEmpty()) {
+              contentDescriptors_ = other.contentDescriptors_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureContentDescriptorsIsMutable();
+              contentDescriptors_.addAll(other.contentDescriptors_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contentDescriptors_.isEmpty()) {
+            if (contentDescriptorsBuilder_.isEmpty()) {
+              contentDescriptorsBuilder_.dispose();
+              contentDescriptorsBuilder_ = null;
+              contentDescriptors_ = other.contentDescriptors_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              contentDescriptorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContentDescriptorsFieldBuilder() : null;
+            } else {
+              contentDescriptorsBuilder_.addAllMessages(other.contentDescriptors_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor> contentDescriptors_ =
+        java.util.Collections.emptyList();
+      private void ensureContentDescriptorsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          contentDescriptors_ = new java.util.ArrayList<SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor>(contentDescriptors_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptorOrBuilder> contentDescriptorsBuilder_;
+
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor> getContentDescriptorsList() {
+        if (contentDescriptorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contentDescriptors_);
+        } else {
+          return contentDescriptorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public int getContentDescriptorsCount() {
+        if (contentDescriptorsBuilder_ == null) {
+          return contentDescriptors_.size();
+        } else {
+          return contentDescriptorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor getContentDescriptors(int index) {
+        if (contentDescriptorsBuilder_ == null) {
+          return contentDescriptors_.get(index);
+        } else {
+          return contentDescriptorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public Builder setContentDescriptors(
+          int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor value) {
+        if (contentDescriptorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentDescriptorsIsMutable();
+          contentDescriptors_.set(index, value);
+          onChanged();
+        } else {
+          contentDescriptorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public Builder setContentDescriptors(
+          int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder builderForValue) {
+        if (contentDescriptorsBuilder_ == null) {
+          ensureContentDescriptorsIsMutable();
+          contentDescriptors_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentDescriptorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public Builder addContentDescriptors(SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor value) {
+        if (contentDescriptorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentDescriptorsIsMutable();
+          contentDescriptors_.add(value);
+          onChanged();
+        } else {
+          contentDescriptorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public Builder addContentDescriptors(
+          int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor value) {
+        if (contentDescriptorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentDescriptorsIsMutable();
+          contentDescriptors_.add(index, value);
+          onChanged();
+        } else {
+          contentDescriptorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public Builder addContentDescriptors(
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder builderForValue) {
+        if (contentDescriptorsBuilder_ == null) {
+          ensureContentDescriptorsIsMutable();
+          contentDescriptors_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contentDescriptorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public Builder addContentDescriptors(
+          int index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder builderForValue) {
+        if (contentDescriptorsBuilder_ == null) {
+          ensureContentDescriptorsIsMutable();
+          contentDescriptors_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentDescriptorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public Builder addAllContentDescriptors(
+          java.lang.Iterable<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor> values) {
+        if (contentDescriptorsBuilder_ == null) {
+          ensureContentDescriptorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contentDescriptors_);
+          onChanged();
+        } else {
+          contentDescriptorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public Builder clearContentDescriptors() {
+        if (contentDescriptorsBuilder_ == null) {
+          contentDescriptors_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          contentDescriptorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public Builder removeContentDescriptors(int index) {
+        if (contentDescriptorsBuilder_ == null) {
+          ensureContentDescriptorsIsMutable();
+          contentDescriptors_.remove(index);
+          onChanged();
+        } else {
+          contentDescriptorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder getContentDescriptorsBuilder(
+          int index) {
+        return getContentDescriptorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptorOrBuilder getContentDescriptorsOrBuilder(
+          int index) {
+        if (contentDescriptorsBuilder_ == null) {
+          return contentDescriptors_.get(index);  } else {
+          return contentDescriptorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public java.util.List<? extends SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptorOrBuilder> 
+           getContentDescriptorsOrBuilderList() {
+        if (contentDescriptorsBuilder_ != null) {
+          return contentDescriptorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contentDescriptors_);
+        }
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder addContentDescriptorsBuilder() {
+        return getContentDescriptorsFieldBuilder().addBuilder(
+            SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder addContentDescriptorsBuilder(
+          int index) {
+        return getContentDescriptorsFieldBuilder().addBuilder(
+            index, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;</code>
+       */
+      public java.util.List<SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder> 
+           getContentDescriptorsBuilderList() {
+        return getContentDescriptorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptorOrBuilder> 
+          getContentDescriptorsFieldBuilder() {
+        if (contentDescriptorsBuilder_ == null) {
+          contentDescriptorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor.Builder, SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response.ContentDescriptorOrBuilder>(
+                  contentDescriptors_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contentDescriptors_ = null;
+        }
+        return contentDescriptorsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_GetContentDescriptors_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_GetContentDescriptors_Response)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_GetContentDescriptors_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_GetContentDescriptors_Response>() {
+      @java.lang.Override
+      public CPublishedFile_GetContentDescriptors_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_GetContentDescriptors_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_GetContentDescriptors_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_GetContentDescriptors_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_GetContentDescriptors_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPublishedFile_UpdateContentDescriptors_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_UpdateContentDescriptors_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed64 publishedfileid = 1;</code>
+     * @return Whether the publishedfileid field is set.
+     */
+    boolean hasPublishedfileid();
+    /**
+     * <code>optional fixed64 publishedfileid = 1;</code>
+     * @return The publishedfileid.
+     */
+    long getPublishedfileid();
+
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+     * @return A list containing the descriptorsToAdd.
+     */
+    java.util.List<EnumsProductinfo.EContentDescriptorID> getDescriptorsToAddList();
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+     * @return The count of descriptorsToAdd.
+     */
+    int getDescriptorsToAddCount();
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+     * @param index The index of the element to return.
+     * @return The descriptorsToAdd at the given index.
+     */
+    EnumsProductinfo.EContentDescriptorID getDescriptorsToAdd(int index);
+
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+     * @return A list containing the descriptorsToRemove.
+     */
+    java.util.List<EnumsProductinfo.EContentDescriptorID> getDescriptorsToRemoveList();
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+     * @return The count of descriptorsToRemove.
+     */
+    int getDescriptorsToRemoveCount();
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+     * @param index The index of the element to return.
+     * @return The descriptorsToRemove at the given index.
+     */
+    EnumsProductinfo.EContentDescriptorID getDescriptorsToRemove(int index);
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_UpdateContentDescriptors_Request}
+   */
+  public static final class CPublishedFile_UpdateContentDescriptors_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_UpdateContentDescriptors_Request)
+      CPublishedFile_UpdateContentDescriptors_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_UpdateContentDescriptors_Request.newBuilder() to construct.
+    private CPublishedFile_UpdateContentDescriptors_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_UpdateContentDescriptors_Request() {
+      descriptorsToAdd_ = java.util.Collections.emptyList();
+      descriptorsToRemove_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_UpdateContentDescriptors_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_UpdateContentDescriptors_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              bitField0_ |= 0x00000001;
+              publishedfileid_ = input.readFixed64();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+              EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  descriptorsToAdd_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                descriptorsToAdd_.add(rawValue);
+              }
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(2, rawValue);
+                } else {
+                  if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                    descriptorsToAdd_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField0_ |= 0x00000002;
+                  }
+                  descriptorsToAdd_.add(rawValue);
+                }
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              @SuppressWarnings("deprecation")
+              EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                  descriptorsToRemove_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                descriptorsToRemove_.add(rawValue);
+              }
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID value = EnumsProductinfo.EContentDescriptorID.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(3, rawValue);
+                } else {
+                  if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                    descriptorsToRemove_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField0_ |= 0x00000004;
+                  }
+                  descriptorsToRemove_.add(rawValue);
+                }
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          descriptorsToAdd_ = java.util.Collections.unmodifiableList(descriptorsToAdd_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          descriptorsToRemove_ = java.util.Collections.unmodifiableList(descriptorsToRemove_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_UpdateContentDescriptors_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_UpdateContentDescriptors_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PUBLISHEDFILEID_FIELD_NUMBER = 1;
+    private long publishedfileid_;
+    /**
+     * <code>optional fixed64 publishedfileid = 1;</code>
+     * @return Whether the publishedfileid field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublishedfileid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed64 publishedfileid = 1;</code>
+     * @return The publishedfileid.
+     */
+    @java.lang.Override
+    public long getPublishedfileid() {
+      return publishedfileid_;
+    }
+
+    public static final int DESCRIPTORS_TO_ADD_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> descriptorsToAdd_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, EnumsProductinfo.EContentDescriptorID> descriptorsToAdd_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, EnumsProductinfo.EContentDescriptorID>() {
+              public EnumsProductinfo.EContentDescriptorID convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID result = EnumsProductinfo.EContentDescriptorID.valueOf(from);
+                return result == null ? EnumsProductinfo.EContentDescriptorID.k_EContentDescriptor_NudityOrSexualContent : result;
+              }
+            };
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+     * @return A list containing the descriptorsToAdd.
+     */
+    @java.lang.Override
+    public java.util.List<EnumsProductinfo.EContentDescriptorID> getDescriptorsToAddList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, EnumsProductinfo.EContentDescriptorID>(descriptorsToAdd_, descriptorsToAdd_converter_);
+    }
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+     * @return The count of descriptorsToAdd.
+     */
+    @java.lang.Override
+    public int getDescriptorsToAddCount() {
+      return descriptorsToAdd_.size();
+    }
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+     * @param index The index of the element to return.
+     * @return The descriptorsToAdd at the given index.
+     */
+    @java.lang.Override
+    public EnumsProductinfo.EContentDescriptorID getDescriptorsToAdd(int index) {
+      return descriptorsToAdd_converter_.convert(descriptorsToAdd_.get(index));
+    }
+
+    public static final int DESCRIPTORS_TO_REMOVE_FIELD_NUMBER = 3;
+    private java.util.List<java.lang.Integer> descriptorsToRemove_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, EnumsProductinfo.EContentDescriptorID> descriptorsToRemove_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, EnumsProductinfo.EContentDescriptorID>() {
+              public EnumsProductinfo.EContentDescriptorID convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                EnumsProductinfo.EContentDescriptorID result = EnumsProductinfo.EContentDescriptorID.valueOf(from);
+                return result == null ? EnumsProductinfo.EContentDescriptorID.k_EContentDescriptor_NudityOrSexualContent : result;
+              }
+            };
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+     * @return A list containing the descriptorsToRemove.
+     */
+    @java.lang.Override
+    public java.util.List<EnumsProductinfo.EContentDescriptorID> getDescriptorsToRemoveList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, EnumsProductinfo.EContentDescriptorID>(descriptorsToRemove_, descriptorsToRemove_converter_);
+    }
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+     * @return The count of descriptorsToRemove.
+     */
+    @java.lang.Override
+    public int getDescriptorsToRemoveCount() {
+      return descriptorsToRemove_.size();
+    }
+    /**
+     * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+     * @param index The index of the element to return.
+     * @return The descriptorsToRemove at the given index.
+     */
+    @java.lang.Override
+    public EnumsProductinfo.EContentDescriptorID getDescriptorsToRemove(int index) {
+      return descriptorsToRemove_converter_.convert(descriptorsToRemove_.get(index));
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeFixed64(1, publishedfileid_);
+      }
+      for (int i = 0; i < descriptorsToAdd_.size(); i++) {
+        output.writeEnum(2, descriptorsToAdd_.get(i));
+      }
+      for (int i = 0; i < descriptorsToRemove_.size(); i++) {
+        output.writeEnum(3, descriptorsToRemove_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(1, publishedfileid_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < descriptorsToAdd_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(descriptorsToAdd_.get(i));
+        }
+        size += dataSize;
+        size += 1 * descriptorsToAdd_.size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < descriptorsToRemove_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(descriptorsToRemove_.get(i));
+        }
+        size += dataSize;
+        size += 1 * descriptorsToRemove_.size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request other = (SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request) obj;
+
+      if (hasPublishedfileid() != other.hasPublishedfileid()) return false;
+      if (hasPublishedfileid()) {
+        if (getPublishedfileid()
+            != other.getPublishedfileid()) return false;
+      }
+      if (!descriptorsToAdd_.equals(other.descriptorsToAdd_)) return false;
+      if (!descriptorsToRemove_.equals(other.descriptorsToRemove_)) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPublishedfileid()) {
+        hash = (37 * hash) + PUBLISHEDFILEID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPublishedfileid());
+      }
+      if (getDescriptorsToAddCount() > 0) {
+        hash = (37 * hash) + DESCRIPTORS_TO_ADD_FIELD_NUMBER;
+        hash = (53 * hash) + descriptorsToAdd_.hashCode();
+      }
+      if (getDescriptorsToRemoveCount() > 0) {
+        hash = (37 * hash) + DESCRIPTORS_TO_REMOVE_FIELD_NUMBER;
+        hash = (53 * hash) + descriptorsToRemove_.hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_UpdateContentDescriptors_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_UpdateContentDescriptors_Request)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_UpdateContentDescriptors_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_UpdateContentDescriptors_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request.class, SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        publishedfileid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        descriptorsToAdd_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        descriptorsToRemove_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_UpdateContentDescriptors_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request result = new SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publishedfileid_ = publishedfileid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          descriptorsToAdd_ = java.util.Collections.unmodifiableList(descriptorsToAdd_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.descriptorsToAdd_ = descriptorsToAdd_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          descriptorsToRemove_ = java.util.Collections.unmodifiableList(descriptorsToRemove_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.descriptorsToRemove_ = descriptorsToRemove_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request.getDefaultInstance()) return this;
+        if (other.hasPublishedfileid()) {
+          setPublishedfileid(other.getPublishedfileid());
+        }
+        if (!other.descriptorsToAdd_.isEmpty()) {
+          if (descriptorsToAdd_.isEmpty()) {
+            descriptorsToAdd_ = other.descriptorsToAdd_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureDescriptorsToAddIsMutable();
+            descriptorsToAdd_.addAll(other.descriptorsToAdd_);
+          }
+          onChanged();
+        }
+        if (!other.descriptorsToRemove_.isEmpty()) {
+          if (descriptorsToRemove_.isEmpty()) {
+            descriptorsToRemove_ = other.descriptorsToRemove_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureDescriptorsToRemoveIsMutable();
+            descriptorsToRemove_.addAll(other.descriptorsToRemove_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long publishedfileid_ ;
+      /**
+       * <code>optional fixed64 publishedfileid = 1;</code>
+       * @return Whether the publishedfileid field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublishedfileid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional fixed64 publishedfileid = 1;</code>
+       * @return The publishedfileid.
+       */
+      @java.lang.Override
+      public long getPublishedfileid() {
+        return publishedfileid_;
+      }
+      /**
+       * <code>optional fixed64 publishedfileid = 1;</code>
+       * @param value The publishedfileid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublishedfileid(long value) {
+        bitField0_ |= 0x00000001;
+        publishedfileid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 publishedfileid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublishedfileid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publishedfileid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> descriptorsToAdd_ =
+        java.util.Collections.emptyList();
+      private void ensureDescriptorsToAddIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          descriptorsToAdd_ = new java.util.ArrayList<java.lang.Integer>(descriptorsToAdd_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+       * @return A list containing the descriptorsToAdd.
+       */
+      public java.util.List<EnumsProductinfo.EContentDescriptorID> getDescriptorsToAddList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, EnumsProductinfo.EContentDescriptorID>(descriptorsToAdd_, descriptorsToAdd_converter_);
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+       * @return The count of descriptorsToAdd.
+       */
+      public int getDescriptorsToAddCount() {
+        return descriptorsToAdd_.size();
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+       * @param index The index of the element to return.
+       * @return The descriptorsToAdd at the given index.
+       */
+      public EnumsProductinfo.EContentDescriptorID getDescriptorsToAdd(int index) {
+        return descriptorsToAdd_converter_.convert(descriptorsToAdd_.get(index));
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The descriptorsToAdd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptorsToAdd(
+          int index, EnumsProductinfo.EContentDescriptorID value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDescriptorsToAddIsMutable();
+        descriptorsToAdd_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+       * @param value The descriptorsToAdd to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDescriptorsToAdd(EnumsProductinfo.EContentDescriptorID value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDescriptorsToAddIsMutable();
+        descriptorsToAdd_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+       * @param values The descriptorsToAdd to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDescriptorsToAdd(
+          java.lang.Iterable<? extends EnumsProductinfo.EContentDescriptorID> values) {
+        ensureDescriptorsToAddIsMutable();
+        for (EnumsProductinfo.EContentDescriptorID value : values) {
+          descriptorsToAdd_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_add = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescriptorsToAdd() {
+        descriptorsToAdd_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> descriptorsToRemove_ =
+        java.util.Collections.emptyList();
+      private void ensureDescriptorsToRemoveIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          descriptorsToRemove_ = new java.util.ArrayList<java.lang.Integer>(descriptorsToRemove_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+       * @return A list containing the descriptorsToRemove.
+       */
+      public java.util.List<EnumsProductinfo.EContentDescriptorID> getDescriptorsToRemoveList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, EnumsProductinfo.EContentDescriptorID>(descriptorsToRemove_, descriptorsToRemove_converter_);
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+       * @return The count of descriptorsToRemove.
+       */
+      public int getDescriptorsToRemoveCount() {
+        return descriptorsToRemove_.size();
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+       * @param index The index of the element to return.
+       * @return The descriptorsToRemove at the given index.
+       */
+      public EnumsProductinfo.EContentDescriptorID getDescriptorsToRemove(int index) {
+        return descriptorsToRemove_converter_.convert(descriptorsToRemove_.get(index));
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The descriptorsToRemove to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptorsToRemove(
+          int index, EnumsProductinfo.EContentDescriptorID value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDescriptorsToRemoveIsMutable();
+        descriptorsToRemove_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+       * @param value The descriptorsToRemove to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDescriptorsToRemove(EnumsProductinfo.EContentDescriptorID value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDescriptorsToRemoveIsMutable();
+        descriptorsToRemove_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+       * @param values The descriptorsToRemove to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDescriptorsToRemove(
+          java.lang.Iterable<? extends EnumsProductinfo.EContentDescriptorID> values) {
+        ensureDescriptorsToRemoveIsMutable();
+        for (EnumsProductinfo.EContentDescriptorID value : values) {
+          descriptorsToRemove_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .EContentDescriptorID descriptors_to_remove = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescriptorsToRemove() {
+        descriptorsToRemove_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_UpdateContentDescriptors_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_UpdateContentDescriptors_Request)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_UpdateContentDescriptors_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_UpdateContentDescriptors_Request>() {
+      @java.lang.Override
+      public CPublishedFile_UpdateContentDescriptors_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_UpdateContentDescriptors_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_UpdateContentDescriptors_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_UpdateContentDescriptors_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPublishedFile_UpdateContentDescriptors_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPublishedFile_UpdateContentDescriptors_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 timestamp_updated = 1;</code>
+     * @return Whether the timestampUpdated field is set.
+     */
+    boolean hasTimestampUpdated();
+    /**
+     * <code>optional uint32 timestamp_updated = 1;</code>
+     * @return The timestampUpdated.
+     */
+    int getTimestampUpdated();
+  }
+  /**
+   * Protobuf type {@code CPublishedFile_UpdateContentDescriptors_Response}
+   */
+  public static final class CPublishedFile_UpdateContentDescriptors_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPublishedFile_UpdateContentDescriptors_Response)
+      CPublishedFile_UpdateContentDescriptors_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPublishedFile_UpdateContentDescriptors_Response.newBuilder() to construct.
+    private CPublishedFile_UpdateContentDescriptors_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPublishedFile_UpdateContentDescriptors_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPublishedFile_UpdateContentDescriptors_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPublishedFile_UpdateContentDescriptors_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              timestampUpdated_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_UpdateContentDescriptors_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_UpdateContentDescriptors_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TIMESTAMP_UPDATED_FIELD_NUMBER = 1;
+    private int timestampUpdated_;
+    /**
+     * <code>optional uint32 timestamp_updated = 1;</code>
+     * @return Whether the timestampUpdated field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimestampUpdated() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 timestamp_updated = 1;</code>
+     * @return The timestampUpdated.
+     */
+    @java.lang.Override
+    public int getTimestampUpdated() {
+      return timestampUpdated_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, timestampUpdated_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, timestampUpdated_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response other = (SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response) obj;
+
+      if (hasTimestampUpdated() != other.hasTimestampUpdated()) return false;
+      if (hasTimestampUpdated()) {
+        if (getTimestampUpdated()
+            != other.getTimestampUpdated()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTimestampUpdated()) {
+        hash = (37 * hash) + TIMESTAMP_UPDATED_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestampUpdated();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPublishedFile_UpdateContentDescriptors_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPublishedFile_UpdateContentDescriptors_Response)
+        SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_UpdateContentDescriptors_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_UpdateContentDescriptors_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response.class, SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        timestampUpdated_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesPublishedfileSteamclient.internal_static_CPublishedFile_UpdateContentDescriptors_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response getDefaultInstanceForType() {
+        return SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response build() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response buildPartial() {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response result = new SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.timestampUpdated_ = timestampUpdated_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response) {
+          return mergeFrom((SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response other) {
+        if (other == SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response.getDefaultInstance()) return this;
+        if (other.hasTimestampUpdated()) {
+          setTimestampUpdated(other.getTimestampUpdated());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int timestampUpdated_ ;
+      /**
+       * <code>optional uint32 timestamp_updated = 1;</code>
+       * @return Whether the timestampUpdated field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimestampUpdated() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 timestamp_updated = 1;</code>
+       * @return The timestampUpdated.
+       */
+      @java.lang.Override
+      public int getTimestampUpdated() {
+        return timestampUpdated_;
+      }
+      /**
+       * <code>optional uint32 timestamp_updated = 1;</code>
+       * @param value The timestampUpdated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestampUpdated(int value) {
+        bitField0_ |= 0x00000001;
+        timestampUpdated_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 timestamp_updated = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestampUpdated() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        timestampUpdated_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPublishedFile_UpdateContentDescriptors_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPublishedFile_UpdateContentDescriptors_Response)
+    private static final SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response();
+    }
+
+    public static SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPublishedFile_UpdateContentDescriptors_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CPublishedFile_UpdateContentDescriptors_Response>() {
+      @java.lang.Override
+      public CPublishedFile_UpdateContentDescriptors_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPublishedFile_UpdateContentDescriptors_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPublishedFile_UpdateContentDescriptors_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPublishedFile_UpdateContentDescriptors_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesPublishedfileSteamclient.CPublishedFile_UpdateContentDescriptors_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CPublishedFile_FileSubscribed_NotificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CPublishedFile_FileSubscribed_Notification)
       com.google.protobuf.MessageOrBuilder {
@@ -76954,6 +90479,16 @@ public final class SteammessagesPublishedfileSteamclient {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_Vote_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_Vote_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_Vote_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_Vote_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CPublishedFile_Subscribe_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -76983,6 +90518,21 @@ public final class SteammessagesPublishedfileSteamclient {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CPublishedFile_CanSubscribe_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_GetSubSectionData_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_GetSubSectionData_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PublishedFileSubSection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PublishedFileSubSection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_GetSubSectionData_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_GetSubSectionData_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CPublishedFile_Publish_Request_descriptor;
   private static final 
@@ -77119,6 +90669,16 @@ public final class SteammessagesPublishedfileSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CPublishedFile_Update_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_Delete_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_Delete_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_Delete_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_Delete_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CPublishedFile_GetChangeHistoryEntry_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -77169,6 +90729,11 @@ public final class SteammessagesPublishedfileSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CPublishedFile_QueryFiles_Request_TagGroup_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_QueryFiles_Request_DateRange_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_QueryFiles_Request_DateRange_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CPublishedFile_QueryFiles_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -77208,6 +90773,26 @@ public final class SteammessagesPublishedfileSteamclient {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CPublishedFile_GetAppRelationships_Response_AppRelationship_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_GetAppRelationshipsBatched_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_AppRelationship_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_AppRelationship_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CPublishedFile_StartPlaytimeTracking_Request_descriptor;
   private static final 
@@ -77304,6 +90889,31 @@ public final class SteammessagesPublishedfileSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CPublishedFile_GetItemChanges_Response_WorkshopItemInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_GetContentDescriptors_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_GetContentDescriptors_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_GetContentDescriptors_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_GetContentDescriptors_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_GetContentDescriptors_Response_ContentDescriptor_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_GetContentDescriptors_Response_ContentDescriptor_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_UpdateContentDescriptors_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_UpdateContentDescriptors_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPublishedFile_UpdateContentDescriptors_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPublishedFile_UpdateContentDescriptors_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CPublishedFile_FileSubscribed_Notification_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -77333,705 +90943,843 @@ public final class SteammessagesPublishedfileSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n3steam/steammessages_publishedfile.stea" +
-      "mclient.proto\0322steam/steammessages_unifi" +
-      "ed_base.steamclient.proto\032\021steam/enums.p" +
-      "roto\"t\n CPublishedFile_Subscribe_Request" +
-      "\022\027\n\017publishedfileid\030\001 \001(\004\022\021\n\tlist_type\030\002" +
-      " \001(\r\022\r\n\005appid\030\003 \001(\005\022\025\n\rnotify_client\030\004 \001" +
-      "(\010\"#\n!CPublishedFile_Subscribe_Response\"" +
-      "v\n\"CPublishedFile_Unsubscribe_Request\022\027\n" +
-      "\017publishedfileid\030\001 \001(\004\022\021\n\tlist_type\030\002 \001(" +
-      "\r\022\r\n\005appid\030\003 \001(\005\022\025\n\rnotify_client\030\004 \001(\010\"" +
-      "%\n#CPublishedFile_Unsubscribe_Response\">" +
-      "\n#CPublishedFile_CanSubscribe_Request\022\027\n" +
-      "\017publishedfileid\030\001 \001(\004\"=\n$CPublishedFile" +
-      "_CanSubscribe_Response\022\025\n\rcan_subscribe\030" +
-      "\001 \001(\010\"\314\n\n\036CPublishedFile_Publish_Request" +
-      "\022<\n\005appid\030\001 \001(\rB-\202\265\030)App Id this file is" +
-      " being published FROM.\022C\n\016consumer_appid" +
-      "\030\002 \001(\rB+\202\265\030\'App Id this file is being pu" +
-      "blished TO.\022K\n\rcloudfilename\030\003 \001(\tB4\202\265\0300" +
-      "Name of the file to publish in the user\'" +
-      "s cloud.\022[\n\025preview_cloudfilename\030\004 \001(\tB" +
-      "<\202\265\0308Name of the file to use as the publ" +
-      "ished file\'s preview.\0225\n\005title\030\005 \001(\tB&\202\265" +
-      "\030\"Text title for the published file.\022F\n\020" +
-      "file_description\030\006 \001(\tB,\202\265\030(Text descrip" +
-      "tion for the published file.\022L\n\tfile_typ" +
-      "e\030\007 \001(\rB9\202\265\0305(EWorkshopFileType) Type of" +
-      " Workshop file to publish.\022I\n\026consumer_s" +
-      "hortcut_name\030\010 \001(\tB)\202\265\030%Shortcut name fo" +
-      "r the published file.\022I\n\020youtube_usernam" +
-      "e\030\t \001(\tB/\202\265\030+(Optional) User\'s YouTube a" +
-      "ccount username.\022\\\n\017youtube_videoid\030\n \001(" +
-      "\tBC\202\265\030?(Optional) Video Id of a YouTube " +
-      "video for this published file.\022\201\001\n\nvisib" +
-      "ility\030\013 \001(\rBm\202\265\030i(ERemoteStoragePublishe" +
-      "dFileVisibility) Visibility of the publi" +
-      "shed file (private, friends, public, etc" +
-      ".)\022k\n\014redirect_uri\030\014 \001(\tBU\202\265\030Q(Optional)" +
-      " If supplied, the resulting published fi" +
-      "le\'s Id is appended to the URI.\022D\n\004tags\030" +
-      "\r \003(\tB6\202\265\0302Array of text tags to apply t" +
-      "o the published file.\022Y\n\017collection_type" +
-      "\030\016 \001(\tB@\202\265\030<(Optional) Type of collectio" +
-      "n the published file represents.\022M\n\tgame" +
-      "_type\030\017 \001(\tB:\202\265\0306(Optional) Type of game" +
-      " the published file represents.\022[\n\003url\030\020" +
-      " \001(\tBN\202\265\030J(Optional) If this represents " +
-      "a game, this is the URL to that game\'s p" +
-      "age.\"P\n\037CPublishedFile_Publish_Response\022" +
-      "\027\n\017publishedfileid\030\001 \001(\004\022\024\n\014redirect_uri" +
-      "\030\002 \001(\t\"\215\n\n!CPublishedFile_GetDetails_Req" +
-      "uest\022P\n\020publishedfileids\030\001 \003(\006B6\202\265\0302Set " +
-      "of published file Ids to retrieve detail" +
-      "s for.\022Q\n\013includetags\030\002 \001(\010B<\202\265\0308If true" +
-      ", return tag information in the returned" +
-      " details.\022c\n\031includeadditionalpreviews\030\003" +
-      " \001(\010B@\202\265\030<If true, return preview inform" +
-      "ation in the returned details.\022N\n\017includ" +
-      "echildren\030\004 \001(\010B5\202\265\0301If true, return chi" +
-      "ldren in the returned details.\022R\n\rinclud" +
-      "ekvtags\030\005 \001(\010B;\202\265\0307If true, return key v" +
-      "alue tags in the returned details.\022L\n\014in" +
-      "cludevotes\030\006 \001(\010B6\202\265\0302If true, return vo" +
-      "te data in the returned details.\022c\n\021shor" +
-      "t_description\030\010 \001(\010BH\202\265\030DIf true, return" +
-      " a short description instead of the full" +
-      " description.\022L\n\022includeforsaledata\030\n \001(" +
-      "\010B0\202\265\030,If true, return pricing data, if " +
-      "applicable.\022B\n\017includemetadata\030\013 \001(\010B)\202\265" +
-      "\030%If true, populate the metadata field.\022" +
-      "U\n\010language\030\014 \001(\005:\0010B@\202\265\030<Specifies the " +
-      "localized text to return. Defaults to En" +
-      "glish.\022g\n\025return_playtime_stats\030\r \001(\rBH\202" +
-      "\265\030DReturn playtime stats for the specifi" +
-      "ed number of days before today.\022\r\n\005appid" +
-      "\030\016 \001(\r\022F\n\030strip_description_bbcode\030\017 \001(\010" +
-      "B$\202\265\030 Strips BBCode from descriptions.\022\204" +
-      "\001\n\020desired_revision\030\020 \001(\0162\027.EPublishedFi" +
-      "leRevision: k_EPublishedFileRevision_Def" +
-      "aultB/\202\265\030+Return the data for the specif" +
-      "ied revision.\022W\n\020includereactions\030\021 \001(\010:" +
-      "\005falseB6\202\265\0302If true, then reactions to i" +
-      "tems will be returned.\"\362\030\n\024PublishedFile" +
-      "Details\022\016\n\006result\030\001 \001(\r\022\027\n\017publishedfile" +
-      "id\030\002 \001(\004\022\017\n\007creator\030\003 \001(\006\022\025\n\rcreator_app" +
-      "id\030\004 \001(\r\022\026\n\016consumer_appid\030\005 \001(\r\022\033\n\023cons" +
-      "umer_shortcutid\030\006 \001(\r\022\020\n\010filename\030\007 \001(\t\022" +
-      "\021\n\tfile_size\030\010 \001(\004\022\031\n\021preview_file_size\030" +
-      "\t \001(\004\022\020\n\010file_url\030\n \001(\t\022\023\n\013preview_url\030\013" +
-      " \001(\t\022\026\n\016youtubevideoid\030\014 \001(\t\022\013\n\003url\030\r \001(" +
-      "\t\022\025\n\rhcontent_file\030\016 \001(\006\022\030\n\020hcontent_pre" +
-      "view\030\017 \001(\006\022\r\n\005title\030\020 \001(\t\022\030\n\020file_descri" +
-      "ption\030\021 \001(\t\022\031\n\021short_description\030\022 \001(\t\022\024" +
-      "\n\014time_created\030\023 \001(\r\022\024\n\014time_updated\030\024 \001" +
-      "(\r\022\022\n\nvisibility\030\025 \001(\r\022\r\n\005flags\030\026 \001(\r\022\025\n" +
-      "\rworkshop_file\030\027 \001(\010\022\031\n\021workshop_accepte" +
-      "d\030\030 \001(\010\022\032\n\022show_subscribe_all\030\031 \001(\010\022\036\n\026n" +
-      "um_comments_developer\030\032 \001(\005\022\033\n\023num_comme" +
-      "nts_public\030\033 \001(\005\022\016\n\006banned\030\034 \001(\010\022\022\n\nban_" +
-      "reason\030\035 \001(\t\022\016\n\006banner\030\036 \001(\006\022\026\n\016can_be_d" +
-      "eleted\030\037 \001(\010\022\024\n\014incompatible\030  \001(\010\022\020\n\010ap" +
-      "p_name\030! \001(\t\022\021\n\tfile_type\030\" \001(\r\022\025\n\rcan_s" +
-      "ubscribe\030# \001(\010\022\025\n\rsubscriptions\030$ \001(\r\022\021\n" +
-      "\tfavorited\030% \001(\r\022\021\n\tfollowers\030& \001(\r\022\036\n\026l" +
-      "ifetime_subscriptions\030\' \001(\r\022\032\n\022lifetime_" +
-      "favorited\030( \001(\r\022\032\n\022lifetime_followers\030) " +
-      "\001(\r\022\031\n\021lifetime_playtime\030> \001(\004\022\"\n\032lifeti" +
-      "me_playtime_sessions\030? \001(\004\022\r\n\005views\030* \001(" +
-      "\r\022\023\n\013image_width\030+ \001(\r\022\024\n\014image_height\030," +
-      " \001(\r\022\021\n\timage_url\030- \001(\t\022\023\n\013spoiler_tag\030." +
-      " \001(\010\022\022\n\nshortcutid\030/ \001(\r\022\024\n\014shortcutname" +
-      "\0300 \001(\t\022\024\n\014num_children\0301 \001(\r\022\023\n\013num_repo" +
-      "rts\0302 \001(\r\022/\n\010previews\0303 \003(\0132\035.PublishedF" +
-      "ileDetails.Preview\022\'\n\004tags\0304 \003(\0132\031.Publi" +
-      "shedFileDetails.Tag\022-\n\010children\0305 \003(\0132\033." +
-      "PublishedFileDetails.Child\022+\n\006kvtags\0306 \003" +
-      "(\0132\033.PublishedFileDetails.KVTag\0221\n\tvote_" +
-      "data\0307 \001(\0132\036.PublishedFileDetails.VoteDa" +
-      "ta\022;\n\016playtime_stats\030@ \001(\0132#.PublishedFi" +
-      "leDetails.PlaytimeStats\022r\n\017time_subscrib" +
-      "ed\0308 \001(\rBY\202\265\030UOnly valid in PublishedFil" +
-      "e.GetUserFiles and not normal PublishedF" +
-      "ile.GetDetail calls\022a\n\rfor_sale_data\0309 \001" +
-      "(\0132!.PublishedFileDetails.ForSaleDataB\'\202" +
-      "\265\030#Pricing information, if applicable.\0227" +
-      "\n\010metadata\030: \001(\tB%\202\265\030!Metadata associate" +
-      "d with the item\022C\n\010language\030= \001(\005:\0010B.\202\265" +
-      "\030*The language of the title and descript" +
-      "ion.\022\037\n\027maybe_inappropriate_sex\030A \001(\010\022$\n" +
-      "\034maybe_inappropriate_violence\030B \001(\010\022Q\n\026r" +
-      "evision_change_number\030C \001(\004B1\202\265\030-The cha" +
-      "nge number for the specified revision.\022\334" +
-      "\001\n\010revision\030D \001(\0162\027.EPublishedFileRevisi" +
-      "on: k_EPublishedFileRevision_DefaultB\216\001\202" +
-      "\265\030\211\001The revision of the data returned, u" +
-      "sually k_EPublishedFileRevision_Latest, " +
-      "but can be another revision/snapshot dep" +
-      "ending on the caller.\022M\n\023available_revis" +
-      "ions\030E \003(\0162\027.EPublishedFileRevisionB\027\202\265\030" +
-      "\023Available revisions\022M\n\treactions\030F \003(\0132" +
-      "\036.PublishedFileDetails.ReactionB\032\202\265\030\026Rea" +
-      "ctions to this item\022[\n\025ban_text_check_re" +
-      "sult\030G \001(\0162\027.EBanContentCheckResult:#k_E" +
-      "BanContentCheckResult_NotScanned\032;\n\003Tag\022" +
-      "\013\n\003tag\030\001 \001(\t\022\021\n\tadminonly\030\002 \001(\010\022\024\n\014displ" +
-      "ay_name\030\003 \001(\t\032\246\001\n\007Preview\022\021\n\tpreviewid\030\001" +
-      " \001(\004\022\021\n\tsortorder\030\002 \001(\r\022\013\n\003url\030\003 \001(\t\022\014\n\004" +
-      "size\030\004 \001(\r\022\020\n\010filename\030\005 \001(\t\022\026\n\016youtubev" +
-      "ideoid\030\006 \001(\t\022\024\n\014preview_type\030\007 \001(\r\022\032\n\022ex" +
-      "ternal_reference\030\010 \001(\t\032F\n\005Child\022\027\n\017publi" +
-      "shedfileid\030\001 \001(\004\022\021\n\tsortorder\030\002 \001(\r\022\021\n\tf" +
-      "ile_type\030\003 \001(\r\032#\n\005KVTag\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t\032?\n\010VoteData\022\r\n\005score\030\001 \001(\002\022\020" +
-      "\n\010votes_up\030\002 \001(\r\022\022\n\nvotes_down\030\003 \001(\r\032\334\001\n" +
-      "\013ForSaleData\022\023\n\013is_for_sale\030\001 \001(\010\022\026\n\016pri" +
-      "ce_category\030\002 \001(\r\022A\n\007estatus\030\003 \001(\0162\034.EPu" +
-      "blishedFileForSaleStatus:\022k_PFFSS_NotFor" +
-      "Sale\022\034\n\024price_category_floor\030\004 \001(\r\022\"\n\032pr" +
-      "ice_is_pay_what_you_want\030\005 \001(\010\022\033\n\023discou" +
-      "nt_percentage\030\006 \001(\r\032?\n\rPlaytimeStats\022\030\n\020" +
-      "playtime_seconds\030\001 \001(\004\022\024\n\014num_sessions\030\002" +
-      " \001(\004\032-\n\010Reaction\022\022\n\nreactionid\030\001 \001(\r\022\r\n\005" +
-      "count\030\002 \001(\r\"Y\n\"CPublishedFile_GetDetails" +
-      "_Response\0223\n\024publishedfiledetails\030\001 \003(\0132" +
-      "\025.PublishedFileDetails\"\341\002\n\"CPublishedFil" +
-      "e_GetItemInfo_Request\022\r\n\005appid\030\001 \001(\r\022\031\n\021" +
-      "last_time_updated\030\002 \001(\r\022H\n\016workshop_item" +
-      "s\030\003 \003(\01320.CPublishedFile_GetItemInfo_Req" +
-      "uest.WorkshopItem\032\306\001\n\014WorkshopItem\022\031\n\021pu" +
-      "blished_file_id\030\001 \001(\006\022\024\n\014time_updated\030\002 " +
-      "\001(\r\022\204\001\n\020desired_revision\030\003 \001(\0162\027.EPublis" +
+      "mclient.proto\032\036steam/steammessages_base." +
+      "proto\0322steam/steammessages_unified_base." +
+      "steamclient.proto\032\035steam/enums_productin" +
+      "fo.proto\"G\n\033CPublishedFile_Vote_Request\022" +
+      "\027\n\017publishedfileid\030\001 \001(\004\022\017\n\007vote_up\030\002 \001(" +
+      "\010\"\036\n\034CPublishedFile_Vote_Response\"t\n CPu" +
+      "blishedFile_Subscribe_Request\022\027\n\017publish" +
+      "edfileid\030\001 \001(\004\022\021\n\tlist_type\030\002 \001(\r\022\r\n\005app" +
+      "id\030\003 \001(\005\022\025\n\rnotify_client\030\004 \001(\010\"#\n!CPubl" +
+      "ishedFile_Subscribe_Response\"v\n\"CPublish" +
+      "edFile_Unsubscribe_Request\022\027\n\017publishedf" +
+      "ileid\030\001 \001(\004\022\021\n\tlist_type\030\002 \001(\r\022\r\n\005appid\030" +
+      "\003 \001(\005\022\025\n\rnotify_client\030\004 \001(\010\"%\n#CPublish" +
+      "edFile_Unsubscribe_Response\">\n#CPublishe" +
+      "dFile_CanSubscribe_Request\022\027\n\017publishedf" +
+      "ileid\030\001 \001(\004\"=\n$CPublishedFile_CanSubscri" +
+      "be_Response\022\025\n\rcan_subscribe\030\001 \001(\010\"\205\002\n(C" +
+      "PublishedFile_GetSubSectionData_Request\022" +
+      "\027\n\017publishedfileid\030\001 \001(\004\022\035\n\025for_table_of" +
+      "_contents\030\002 \001(\010\022\032\n\022specific_sectionid\030\003 " +
+      "\001(\004\022\204\001\n\020desired_revision\030\004 \001(\0162\027.EPublis" +
       "hedFileRevision: k_EPublishedFileRevisio" +
       "n_DefaultB/\202\265\030+Return the data for the s" +
-      "pecified revision.\"\211\002\n#CPublishedFile_Ge" +
-      "tItemInfo_Response\022\023\n\013update_time\030\001 \001(\r\022" +
-      "M\n\016workshop_items\030\002 \003(\01325.CPublishedFile" +
-      "_GetItemInfo_Response.WorkshopItemInfo\022\025" +
-      "\n\rprivate_items\030\003 \003(\006\032g\n\020WorkshopItemInf" +
-      "o\022\031\n\021published_file_id\030\001 \001(\006\022\024\n\014time_upd" +
-      "ated\030\002 \001(\r\022\023\n\013manifest_id\030\003 \001(\006\022\r\n\005flags" +
-      "\030\004 \001(\r\"\216\026\n#CPublishedFile_GetUserFiles_R" +
-      "equest\022J\n\007steamid\030\001 \001(\006B9\202\265\0305Steam ID of" +
-      " the user whose files are being requeste" +
-      "d.\022F\n\005appid\030\002 \001(\rB7\202\265\0303App Id of the app" +
-      " that the files were published to.\022:\n\004pa" +
-      "ge\030\004 \001(\r:\0011B)\202\265\030%(Optional) Starting pag" +
-      "e for results.\022P\n\nnumperpage\030\005 \001(\r:\0011B9\202" +
-      "\265\0305(Optional) The number of results, per" +
-      " page to return.\022C\n\004type\030\006 \001(\t:\007myfilesB" +
-      ",\202\265\030((Optional) Type of files to be retu" +
-      "rned.\022Y\n\nsortmethod\030\007 \001(\t:\013lastupdatedB8" +
-      "\202\265\0304(Optional) Sorting method to use on " +
-      "returned values.\022;\n\007privacy\030\t \001(\rB*\202\265\030&(" +
-      "optional) Filter by privacy settings.\022h\n" +
-      "\014requiredtags\030\n \003(\tBR\202\265\030N(Optional) Tags" +
-      " that must be present on a published fil" +
-      "e to satisfy the query.\022l\n\014excludedtags\030" +
-      "\013 \003(\tBV\202\265\030R(Optional) Tags that must NOT" +
-      " be present on a published file to satis" +
-      "fy the query.\022n\n\020required_kv_tags\030\036 \003(\0132" +
-      "*.CPublishedFile_GetUserFiles_Request.KV" +
-      "TagB(\202\265\030$Required key-value tags to matc" +
-      "h on.\022=\n\010filetype\030\016 \001(\rB+\202\265\030\'(Optional) " +
-      "File type to match files to.\022a\n\rcreator_" +
-      "appid\030\017 \001(\rBJ\202\265\030FApp Id of the app that " +
-      "published the files, only matched if spe" +
-      "cified.\022I\n\024match_cloud_filename\030\020 \001(\tB+\202" +
-      "\265\030\'Match this cloud filename if specifie" +
-      "d.\022j\n\025cache_max_age_seconds\030\033 \001(\r:\0010BH\202\265" +
-      "\030DAllow stale data to be returned for th" +
-      "e specified number of seconds.\022U\n\010langua" +
-      "ge\030\035 \001(\005:\0010B@\202\265\030<Specifies the localized" +
-      " text to return. Defaults to English.\022\243\001" +
-      "\n\ttaggroups\030\" \003(\0132-.CPublishedFile_GetUs" +
-      "erFiles_Request.TagGroupBa\202\265\030](Optional)" +
-      " At least one of the tags must be presen" +
-      "t on a published file to satisfy the que" +
-      "ry.\022i\n\ttotalonly\030\021 \001(\010BV\202\265\030R(Optional) I" +
-      "f true, only return the total number of " +
-      "files that satisfy this query.\022n\n\010ids_on" +
-      "ly\030\022 \001(\010B\\\202\265\030X(Optional) If true, only r" +
-      "eturn the published file ids of files th" +
-      "at satisfy this query.\0224\n\020return_vote_da" +
-      "ta\030\023 \001(\010:\004trueB\024\202\265\030\020Return vote data\0228\n\013" +
-      "return_tags\030\024 \001(\010B#\202\265\030\037Return tags in th" +
-      "e file details\022K\n\016return_kv_tags\030\025 \001(\010:\004" +
-      "trueB-\202\265\030)Return key-value tags in the f" +
-      "ile details\022W\n\017return_previews\030\026 \001(\010B>\202\265" +
-      "\030:Return preview image and video details" +
-      " in the file details\022F\n\017return_children\030" +
-      "\027 \001(\010B-\202\265\030)Return child item ids in the " +
-      "file details\022l\n\030return_short_description" +
-      "\030\030 \001(\010:\004trueBD\202\265\030@Populate the short_des" +
-      "cription field instead of file_descripti" +
-      "on\022K\n\024return_for_sale_data\030\032 \001(\010B-\202\265\030)Re" +
-      "turn pricing information, if applicable\022" +
-      "?\n\017return_metadata\030\034 \001(\010:\005falseB\037\202\265\030\033Pop" +
-      "ulate the metadata field\022g\n\025return_playt" +
-      "ime_stats\030\037 \001(\rBH\202\265\030DReturn playtime sta" +
-      "ts for the specified number of days befo" +
-      "re today.\022F\n\030strip_description_bbcode\030  " +
-      "\001(\010B$\202\265\030 Strips BBCode from descriptions" +
-      ".\022W\n\020return_reactions\030# \001(\010:\005falseB6\202\265\0302" +
-      "If true, then reactions to items will be" +
-      " returned.\022E\n\023startindex_override\030\031 \001(\rB" +
-      "(\202\265\030$Backwards compatible for the client" +
-      ".\022\204\001\n\020desired_revision\030! \001(\0162\027.EPublishe" +
-      "dFileRevision: k_EPublishedFileRevision_" +
-      "DefaultB/\202\265\030+Return the data for the spe" +
-      "cified revision.\032#\n\005KVTag\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t\032\030\n\010TagGroup\022\014\n\004tags\030\001 \003(\t\"" +
-      "\200\002\n$CPublishedFile_GetUserFiles_Response" +
-      "\022\r\n\005total\030\001 \001(\r\022\022\n\nstartindex\030\002 \001(\r\0223\n\024p" +
-      "ublishedfiledetails\030\003 \003(\0132\025.PublishedFil" +
-      "eDetails\0227\n\004apps\030\004 \003(\0132).CPublishedFile_" +
-      "GetUserFiles_Response.App\032G\n\003App\022\r\n\005appi" +
-      "d\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\022\n\nshortcutid\030\003 \001(" +
-      "\r\022\017\n\007private\030\004 \001(\010\"\232\002\n1CPublishedFile_Ar" +
-      "eFilesInSubscriptionList_Request\022\r\n\005appi" +
-      "d\030\001 \001(\r\022\030\n\020publishedfileids\030\002 \003(\006\022&\n\010lis" +
-      "ttype\030\003 \001(\rB\024\202\265\030\020See EUCMListType\022<\n\010fil" +
-      "etype\030\004 \001(\rB*\202\265\030&See EPublishedFileInfoM" +
-      "atchingFileType\022V\n\020workshopfiletype\030\005 \001(" +
-      "\rB<\202\265\0308See EWorkshopFileType.  If specif" +
-      "ied, overrides filetype\"\262\001\n2CPublishedFi" +
-      "le_AreFilesInSubscriptionList_Response\022I" +
-      "\n\005files\030\001 \003(\0132:.CPublishedFile_AreFilesI" +
-      "nSubscriptionList_Response.InList\0321\n\006InL" +
-      "ist\022\027\n\017publishedfileid\030\001 \001(\006\022\016\n\006inlist\030\002" +
-      " \001(\010\"\221\006\n\035CPublishedFile_Update_Request\0229" +
-      "\n\005appid\030\001 \001(\rB*\202\265\030&App Id this published" +
-      " file belongs to.\022L\n\017publishedfileid\030\002 \001" +
-      "(\006B3\202\265\030/Published file id of the file we" +
-      "\'d like update.\022:\n\005title\030\003 \001(\tB+\202\265\030\'(Opt" +
-      "ional) Title of the published file.\022K\n\020f" +
-      "ile_description\030\004 \001(\tB1\202\265\030-(Optional) De" +
-      "scription of the published file.\022D\n\nvisi" +
-      "bility\030\005 \001(\rB0\202\265\030,(Optional) Visibility " +
-      "of the published file.\022@\n\004tags\030\006 \003(\tB2\202\265" +
-      "\030.(Optional) Set of tags for the publish" +
-      "ed file.\022A\n\010filename\030\007 \001(\tB/\202\265\030+(Optiona" +
-      "l) Filename for the published file.\022Q\n\020p" +
-      "review_filename\030\010 \001(\tB7\202\265\0303(Optional) Pr" +
-      "eview filename for the published file.\022^" +
-      "\n\013image_width\030\017 \001(\rBI\202\265\030E(Optional) If t" +
-      "his is an image file, you can specify th" +
-      "e image width.\022`\n\014image_height\030\020 \001(\rBJ\202\265" +
-      "\030F(Optional) If this is an image file, y" +
-      "ou can specify the image height.\" \n\036CPub" +
-      "lishedFile_Update_Response\"\270\001\n,CPublishe" +
-      "dFile_GetChangeHistoryEntry_Request\022c\n\017p" +
-      "ublishedfileid\030\001 \001(\006BJ\202\265\030FPublished file" +
-      " id of the file we\'d like to get the cha" +
-      "nge history for.\022\021\n\ttimestamp\030\002 \001(\r\022\020\n\010l" +
-      "anguage\030\003 \001(\005\"]\n-CPublishedFile_GetChang" +
-      "eHistoryEntry_Response\022\032\n\022change_descrip" +
-      "tion\030\001 \001(\t\022\020\n\010language\030\002 \001(\005\"\236\002\n\'CPublis" +
-      "hedFile_GetChangeHistory_Request\022c\n\017publ" +
-      "ishedfileid\030\001 \001(\006BJ\202\265\030FPublished file id" +
-      " of the file we\'d like to get the change" +
-      " history for.\022@\n\ntotal_only\030\002 \001(\010B,\202\265\030(R" +
-      "eturn the total number of changes only.\022" +
-      "\022\n\nstartindex\030\003 \001(\r\022\r\n\005count\030\004 \001(\r\022)\n\010la" +
-      "nguage\030\005 \001(\005:\0010B\024\202\265\030\020Desired language\"\315\001" +
-      "\n(CPublishedFile_GetChangeHistory_Respon" +
-      "se\022D\n\007changes\030\001 \003(\01323.CPublishedFile_Get" +
-      "ChangeHistory_Response.ChangeLog\022\r\n\005tota" +
-      "l\030\002 \001(\r\032L\n\tChangeLog\022\021\n\ttimestamp\030\001 \001(\r\022" +
-      "\032\n\022change_description\030\002 \001(\t\022\020\n\010language\030" +
-      "\003 \001(\005\"\321\005\n)CPublishedFile_RefreshVotingQu" +
-      "eue_Request\022\r\n\005appid\030\001 \001(\r\022B\n\022matching_f" +
-      "ile_type\030\002 \001(\rB&\202\265\030\"EPublishedFileInfoMa" +
-      "tchingFileType\022l\n\004tags\030\003 \003(\tB^\202\265\030ZInclud" +
-      "e files that have all the tags or any of" +
-      " the tags if match_all_tags is set to fa" +
-      "lse.\022\225\001\n\016match_all_tags\030\004 \001(\010:\004trueBw\202\265\030" +
-      "sIf true, then files must have all the t" +
-      "ags specified.  If false, then must have" +
-      " at least one of the tags specified.\022I\n\r" +
-      "excluded_tags\030\005 \003(\tB2\202\265\030.Exclude any fil" +
-      "es that have any of these tags.\022j\n\022desir" +
-      "ed_queue_size\030\006 \001(\rBN\202\265\030JDesired number " +
-      "of items in the voting queue.  May be cl" +
-      "amped by the server\022\223\001\n\020desired_revision" +
-      "\030\010 \001(\0162\027.EPublishedFileRevision: k_EPubl" +
-      "ishedFileRevision_DefaultB>\202\265\030:Filter to" +
-      " items that have data for the specified " +
-      "revision.\",\n*CPublishedFile_RefreshVotin" +
-      "gQueue_Response\"\266\033\n!CPublishedFile_Query" +
-      "Files_Request\022L\n\nquery_type\030\001 \001(\rB8\202\265\0304e" +
-      "numeration EPublishedFileQueryType in cl" +
-      "ientenums.h\022\036\n\004page\030\002 \001(\rB\020\202\265\030\014Current p" +
-      "age\022\350\001\n\006cursor\030\' \001(\tB\327\001\202\265\030\322\001Cursor to pa" +
-      "ginate through the results (set to \'*\' f" +
-      "or the first request).  Prefer this over" +
-      " using the page parameter, as it will al" +
-      "low you to do deep pagination.  When use" +
-      "d, the page parameter will be ignored.\022P" +
-      "\n\nnumperpage\030\003 \001(\r:\0011B9\202\265\0305(Optional) Th" +
-      "e number of results, per page to return." +
-      "\0225\n\rcreator_appid\030\004 \001(\rB\036\202\265\030\032App that cr" +
-      "eated the files\022.\n\005appid\030\005 \001(\rB\037\202\265\030\033App " +
-      "that consumes the files\022N\n\014requiredtags\030" +
-      "\006 \003(\tB8\202\265\0304Tags to match on. See match_a" +
-      "ll_tags parameter below\022l\n\014excludedtags\030" +
-      "\007 \003(\tBV\202\265\030R(Optional) Tags that must NOT" +
-      " be present on a published file to satis" +
-      "fy the query.\022\212\001\n\016match_all_tags\030\010 \001(\010:\004" +
-      "trueBl\202\265\030hIf true, then items must have " +
-      "all the tags specified, otherwise they m" +
-      "ust have at least one of the tags.\022Q\n\016re" +
-      "quired_flags\030\t \003(\tB9\202\265\0305Required flags t" +
-      "hat must be set on any returned items\022K\n" +
-      "\romitted_flags\030\n \003(\tB4\202\265\0300Flags that mus" +
-      "t not be set on any returned items\022I\n\013se" +
-      "arch_text\030\013 \001(\tB4\202\265\0300Text to match in th" +
-      "e item\'s title or description\0228\n\010filetyp" +
-      "e\030\014 \001(\rB&\202\265\030\"EPublishedFileInfoMatchingF" +
-      "ileType\022P\n\025child_publishedfileid\030\r \001(\006B1" +
-      "\202\265\030-Find all items that reference the gi" +
-      "ven item.\022\202\001\n\004days\030\016 \001(\rBt\202\265\030pIf query_t" +
-      "ype is k_PublishedFileQueryType_RankedBy" +
-      "Trend, then this is the number of days t" +
-      "o get votes for [1,7].\022\260\001\n\031include_recen" +
-      "t_votes_only\030\017 \001(\010B\214\001\202\265\030\207\001If query_type " +
-      "is k_PublishedFileQueryType_RankedByTren" +
-      "d, then limit result set just to items t" +
-      "hat have votes within the day range give" +
-      "n\022j\n\025cache_max_age_seconds\030\037 \001(\r:\0010BH\202\265\030" +
-      "DAllow stale data to be returned for the" +
-      " specified number of seconds.\022`\n\010languag" +
-      "e\030! \001(\005:\0010BK\202\265\030GLanguage to search in an" +
-      "d also what gets returned. Defaults to E" +
-      "nglish.\022l\n\020required_kv_tags\030\" \003(\0132(.CPub" +
-      "lishedFile_QueryFiles_Request.KVTagB(\202\265\030" +
-      "$Required key-value tags to match on.\022\241\001" +
-      "\n\ttaggroups\030* \003(\0132+.CPublishedFile_Query" +
-      "Files_Request.TagGroupBa\202\265\030](Optional) A" +
-      "t least one of the tags must be present " +
-      "on a published file to satisfy the query" +
-      ".\022i\n\ttotalonly\030\020 \001(\010BV\202\265\030R(Optional) If " +
-      "true, only return the total number of fi" +
-      "les that satisfy this query.\022n\n\010ids_only" +
-      "\030# \001(\010B\\\202\265\030X(Optional) If true, only ret" +
-      "urn the published file ids of files that" +
-      " satisfy this query.\022.\n\020return_vote_data" +
-      "\030\021 \001(\010B\024\202\265\030\020Return vote data\0228\n\013return_t" +
-      "ags\030\022 \001(\010B#\202\265\030\037Return tags in the file d" +
-      "etails\022E\n\016return_kv_tags\030\023 \001(\010B-\202\265\030)Retu" +
-      "rn key-value tags in the file details\022W\n" +
-      "\017return_previews\030\024 \001(\010B>\202\265\030:Return previ" +
-      "ew image and video details in the file d" +
-      "etails\022F\n\017return_children\030\025 \001(\010B-\202\265\030)Ret" +
-      "urn child item ids in the file details\022f" +
-      "\n\030return_short_description\030\026 \001(\010BD\202\265\030@Po" +
-      "pulate the short_description field inste" +
-      "ad of file_description\022K\n\024return_for_sal" +
-      "e_data\030\036 \001(\010B-\202\265\030)Return pricing informa" +
-      "tion, if applicable\0229\n\017return_metadata\030 " +
-      " \001(\010:\005falseB\031\202\265\030\025Populate the metadata\022g",
-      "\n\025return_playtime_stats\030$ \001(\rBH\202\265\030DRetur" +
-      "n playtime stats for the specified numbe" +
-      "r of days before today.\022\267\001\n\016return_detai" +
-      "ls\030% \001(\010B\236\001\202\265\030\231\001By default, if none of t" +
-      "he other \'return_*\' fields are set, only" +
-      " some voting details are returned. Set t" +
-      "his to true to return the default set of" +
-      " details.\022F\n\030strip_description_bbcode\030& " +
-      "\001(\010B$\202\265\030 Strips BBCode from descriptions" +
-      ".\022\204\001\n\020desired_revision\030( \001(\0162\027.EPublishe" +
-      "dFileRevision: k_EPublishedFileRevision_" +
-      "DefaultB/\202\265\030+Return the data for the spe" +
-      "cified revision.\022W\n\020return_reactions\030+ \001" +
-      "(\010:\005falseB6\202\265\0302If true, then reactions t" +
-      "o items will be returned.\032#\n\005KVTag\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\032\030\n\010TagGroup\022\014\n\004ta" +
-      "gs\030\001 \003(\t\"\205\003\n\"CPublishedFile_QueryFiles_R" +
-      "esponse\022T\n\005total\030\001 \001(\rBE\202\265\030ANumber of ma" +
-      "tches found, not necessarily number of i" +
-      "tems returned\022\215\001\n\024publishedfiledetails\030\002" +
-      " \003(\0132\025.PublishedFileDetailsBX\202\265\030TEach fi" +
-      "le details will be populated, depending " +
-      "on what return values were requested.\022y\n" +
-      "\013next_cursor\030\003 \001(\tBd\202\265\030`If a paging curs" +
-      "or was used, then this will be the next " +
-      "cursor to use for paging through results" +
-      "\"i\n)CPublishedFile_AddAppRelationship_Re" +
-      "quest\022\027\n\017publishedfileid\030\001 \001(\004\022\r\n\005appid\030" +
-      "\002 \001(\r\022\024\n\014relationship\030\003 \001(\r\",\n*CPublishe" +
-      "dFile_AddAppRelationship_Response\"l\n,CPu" +
-      "blishedFile_RemoveAppRelationship_Reques" +
-      "t\022\027\n\017publishedfileid\030\001 \001(\004\022\r\n\005appid\030\002 \001(" +
-      "\r\022\024\n\014relationship\030\003 \001(\r\"/\n-CPublishedFil" +
-      "e_RemoveAppRelationship_Response\"E\n*CPub" +
-      "lishedFile_GetAppRelationships_Request\022\027" +
-      "\n\017publishedfileid\030\001 \001(\004\"\276\001\n+CPublishedFi" +
-      "le_GetAppRelationships_Response\022W\n\021app_r" +
-      "elationships\030\003 \003(\0132<.CPublishedFile_GetA" +
-      "ppRelationships_Response.AppRelationship" +
-      "\0326\n\017AppRelationship\022\r\n\005appid\030\001 \001(\r\022\024\n\014re" +
-      "lationship\030\002 \001(\r\"W\n,CPublishedFile_Start" +
+      "pecified revision.\"i\n\027PublishedFileSubSe" +
+      "ction\022\021\n\tsectionid\030\001 \001(\004\022\r\n\005title\030\002 \001(\t\022" +
+      "\030\n\020description_text\030\003 \001(\t\022\022\n\nsort_order\030" +
+      "\004 \001(\r\"[\n)CPublishedFile_GetSubSectionDat" +
+      "a_Response\022.\n\014sub_sections\030\001 \003(\0132\030.Publi" +
+      "shedFileSubSection\"\314\n\n\036CPublishedFile_Pu" +
+      "blish_Request\022<\n\005appid\030\001 \001(\rB-\202\265\030)App Id" +
+      " this file is being published FROM.\022C\n\016c" +
+      "onsumer_appid\030\002 \001(\rB+\202\265\030\'App Id this fil" +
+      "e is being published TO.\022K\n\rcloudfilenam" +
+      "e\030\003 \001(\tB4\202\265\0300Name of the file to publish" +
+      " in the user\'s cloud.\022[\n\025preview_cloudfi" +
+      "lename\030\004 \001(\tB<\202\265\0308Name of the file to us" +
+      "e as the published file\'s preview.\0225\n\005ti" +
+      "tle\030\005 \001(\tB&\202\265\030\"Text title for the publis" +
+      "hed file.\022F\n\020file_description\030\006 \001(\tB,\202\265\030" +
+      "(Text description for the published file" +
+      ".\022L\n\tfile_type\030\007 \001(\rB9\202\265\0305(EWorkshopFile" +
+      "Type) Type of Workshop file to publish.\022" +
+      "I\n\026consumer_shortcut_name\030\010 \001(\tB)\202\265\030%Sho" +
+      "rtcut name for the published file.\022I\n\020yo" +
+      "utube_username\030\t \001(\tB/\202\265\030+(Optional) Use" +
+      "r\'s YouTube account username.\022\\\n\017youtube" +
+      "_videoid\030\n \001(\tBC\202\265\030?(Optional) Video Id " +
+      "of a YouTube video for this published fi" +
+      "le.\022\201\001\n\nvisibility\030\013 \001(\rBm\202\265\030i(ERemoteSt" +
+      "oragePublishedFileVisibility) Visibility" +
+      " of the published file (private, friends" +
+      ", public, etc.)\022k\n\014redirect_uri\030\014 \001(\tBU\202" +
+      "\265\030Q(Optional) If supplied, the resulting" +
+      " published file\'s Id is appended to the " +
+      "URI.\022D\n\004tags\030\r \003(\tB6\202\265\0302Array of text ta" +
+      "gs to apply to the published file.\022Y\n\017co" +
+      "llection_type\030\016 \001(\tB@\202\265\030<(Optional) Type" +
+      " of collection the published file repres" +
+      "ents.\022M\n\tgame_type\030\017 \001(\tB:\202\265\0306(Optional)" +
+      " Type of game the published file represe" +
+      "nts.\022[\n\003url\030\020 \001(\tBN\202\265\030J(Optional) If thi" +
+      "s represents a game, this is the URL to " +
+      "that game\'s page.\"P\n\037CPublishedFile_Publ" +
+      "ish_Response\022\027\n\017publishedfileid\030\001 \001(\004\022\024\n" +
+      "\014redirect_uri\030\002 \001(\t\"\215\n\n!CPublishedFile_G" +
+      "etDetails_Request\022P\n\020publishedfileids\030\001 " +
+      "\003(\006B6\202\265\0302Set of published file Ids to re" +
+      "trieve details for.\022Q\n\013includetags\030\002 \001(\010" +
+      "B<\202\265\0308If true, return tag information in" +
+      " the returned details.\022c\n\031includeadditio" +
+      "nalpreviews\030\003 \001(\010B@\202\265\030<If true, return p" +
+      "review information in the returned detai" +
+      "ls.\022N\n\017includechildren\030\004 \001(\010B5\202\265\0301If tru" +
+      "e, return children in the returned detai" +
+      "ls.\022R\n\rincludekvtags\030\005 \001(\010B;\202\265\0307If true," +
+      " return key value tags in the returned d" +
+      "etails.\022L\n\014includevotes\030\006 \001(\010B6\202\265\0302If tr" +
+      "ue, return vote data in the returned det" +
+      "ails.\022c\n\021short_description\030\010 \001(\010BH\202\265\030DIf" +
+      " true, return a short description instea" +
+      "d of the full description.\022L\n\022includefor" +
+      "saledata\030\n \001(\010B0\202\265\030,If true, return pric" +
+      "ing data, if applicable.\022B\n\017includemetad" +
+      "ata\030\013 \001(\010B)\202\265\030%If true, populate the met" +
+      "adata field.\022U\n\010language\030\014 \001(\005:\0010B@\202\265\030<S" +
+      "pecifies the localized text to return. D" +
+      "efaults to English.\022g\n\025return_playtime_s" +
+      "tats\030\r \001(\rBH\202\265\030DReturn playtime stats fo" +
+      "r the specified number of days before to" +
+      "day.\022\r\n\005appid\030\016 \001(\r\022F\n\030strip_description" +
+      "_bbcode\030\017 \001(\010B$\202\265\030 Strips BBCode from de" +
+      "scriptions.\022\204\001\n\020desired_revision\030\020 \001(\0162\027" +
+      ".EPublishedFileRevision: k_EPublishedFil" +
+      "eRevision_DefaultB/\202\265\030+Return the data f" +
+      "or the specified revision.\022W\n\020includerea" +
+      "ctions\030\021 \001(\010:\005falseB6\202\265\0302If true, then r" +
+      "eactions to items will be returned.\"\334\031\n\024" +
+      "PublishedFileDetails\022\016\n\006result\030\001 \001(\r\022\027\n\017" +
+      "publishedfileid\030\002 \001(\004\022\017\n\007creator\030\003 \001(\006\022\025" +
+      "\n\rcreator_appid\030\004 \001(\r\022\026\n\016consumer_appid\030" +
+      "\005 \001(\r\022\033\n\023consumer_shortcutid\030\006 \001(\r\022\020\n\010fi" +
+      "lename\030\007 \001(\t\022\021\n\tfile_size\030\010 \001(\004\022\031\n\021previ" +
+      "ew_file_size\030\t \001(\004\022\020\n\010file_url\030\n \001(\t\022\023\n\013" +
+      "preview_url\030\013 \001(\t\022\026\n\016youtubevideoid\030\014 \001(" +
+      "\t\022\013\n\003url\030\r \001(\t\022\025\n\rhcontent_file\030\016 \001(\006\022\030\n" +
+      "\020hcontent_preview\030\017 \001(\006\022\r\n\005title\030\020 \001(\t\022\030" +
+      "\n\020file_description\030\021 \001(\t\022\031\n\021short_descri" +
+      "ption\030\022 \001(\t\022\024\n\014time_created\030\023 \001(\r\022\024\n\014tim" +
+      "e_updated\030\024 \001(\r\022\022\n\nvisibility\030\025 \001(\r\022\r\n\005f" +
+      "lags\030\026 \001(\r\022\025\n\rworkshop_file\030\027 \001(\010\022\031\n\021wor" +
+      "kshop_accepted\030\030 \001(\010\022\032\n\022show_subscribe_a" +
+      "ll\030\031 \001(\010\022\036\n\026num_comments_developer\030\032 \001(\005" +
+      "\022\033\n\023num_comments_public\030\033 \001(\005\022\016\n\006banned\030" +
+      "\034 \001(\010\022\022\n\nban_reason\030\035 \001(\t\022\016\n\006banner\030\036 \001(" +
+      "\006\022\026\n\016can_be_deleted\030\037 \001(\010\022\024\n\014incompatibl" +
+      "e\030  \001(\010\022\020\n\010app_name\030! \001(\t\022\021\n\tfile_type\030\"" +
+      " \001(\r\022\025\n\rcan_subscribe\030# \001(\010\022\025\n\rsubscript" +
+      "ions\030$ \001(\r\022\021\n\tfavorited\030% \001(\r\022\021\n\tfollowe" +
+      "rs\030& \001(\r\022\036\n\026lifetime_subscriptions\030\' \001(\r" +
+      "\022\032\n\022lifetime_favorited\030( \001(\r\022\032\n\022lifetime" +
+      "_followers\030) \001(\r\022\031\n\021lifetime_playtime\030> " +
+      "\001(\004\022\"\n\032lifetime_playtime_sessions\030? \001(\004\022" +
+      "\r\n\005views\030* \001(\r\022\023\n\013image_width\030+ \001(\r\022\024\n\014i" +
+      "mage_height\030, \001(\r\022\021\n\timage_url\030- \001(\t\022\023\n\013" +
+      "spoiler_tag\030. \001(\010\022\022\n\nshortcutid\030/ \001(\r\022\024\n" +
+      "\014shortcutname\0300 \001(\t\022\024\n\014num_children\0301 \001(" +
+      "\r\022\023\n\013num_reports\0302 \001(\r\022/\n\010previews\0303 \003(\013" +
+      "2\035.PublishedFileDetails.Preview\022\'\n\004tags\030" +
+      "4 \003(\0132\031.PublishedFileDetails.Tag\022-\n\010chil" +
+      "dren\0305 \003(\0132\033.PublishedFileDetails.Child\022" +
+      "+\n\006kvtags\0306 \003(\0132\033.PublishedFileDetails.K" +
+      "VTag\0221\n\tvote_data\0307 \001(\0132\036.PublishedFileD" +
+      "etails.VoteData\022;\n\016playtime_stats\030@ \001(\0132" +
+      "#.PublishedFileDetails.PlaytimeStats\022r\n\017" +
+      "time_subscribed\0308 \001(\rBY\202\265\030UOnly valid in" +
+      " PublishedFile.GetUserFiles and not norm" +
+      "al PublishedFile.GetDetail calls\022a\n\rfor_" +
+      "sale_data\0309 \001(\0132!.PublishedFileDetails.F" +
+      "orSaleDataB\'\202\265\030#Pricing information, if " +
+      "applicable.\0227\n\010metadata\030: \001(\tB%\202\265\030!Metad" +
+      "ata associated with the item\022C\n\010language" +
+      "\030= \001(\005:\0010B.\202\265\030*The language of the title" +
+      " and description.\022\037\n\027maybe_inappropriate" +
+      "_sex\030A \001(\010\022$\n\034maybe_inappropriate_violen" +
+      "ce\030B \001(\010\0224\n\025content_descriptorids\030H \003(\0162" +
+      "\025.EContentDescriptorID\022Q\n\026revision_chang" +
+      "e_number\030C \001(\004B1\202\265\030-The change number fo" +
+      "r the specified revision.\022\334\001\n\010revision\030D" +
+      " \001(\0162\027.EPublishedFileRevision: k_EPublis" +
+      "hedFileRevision_DefaultB\216\001\202\265\030\211\001The revis" +
+      "ion of the data returned, usually k_EPub" +
+      "lishedFileRevision_Latest, but can be an" +
+      "other revision/snapshot depending on the" +
+      " caller.\022M\n\023available_revisions\030E \003(\0162\027." +
+      "EPublishedFileRevisionB\027\202\265\030\023Available re" +
+      "visions\022M\n\treactions\030F \003(\0132\036.PublishedFi" +
+      "leDetails.ReactionB\032\202\265\030\026Reactions to thi" +
+      "s item\022[\n\025ban_text_check_result\030G \001(\0162\027." +
+      "EBanContentCheckResult:#k_EBanContentChe" +
+      "ckResult_NotScanned\0222\n\014search_score\030I \001(" +
+      "\002B\034\202\265\030\030Search score, admin only\032;\n\003Tag\022\013" +
+      "\n\003tag\030\001 \001(\t\022\021\n\tadminonly\030\002 \001(\010\022\024\n\014displa" +
+      "y_name\030\003 \001(\t\032\246\001\n\007Preview\022\021\n\tpreviewid\030\001 " +
+      "\001(\004\022\021\n\tsortorder\030\002 \001(\r\022\013\n\003url\030\003 \001(\t\022\014\n\004s" +
+      "ize\030\004 \001(\r\022\020\n\010filename\030\005 \001(\t\022\026\n\016youtubevi" +
+      "deoid\030\006 \001(\t\022\024\n\014preview_type\030\007 \001(\r\022\032\n\022ext" +
+      "ernal_reference\030\010 \001(\t\032F\n\005Child\022\027\n\017publis" +
+      "hedfileid\030\001 \001(\004\022\021\n\tsortorder\030\002 \001(\r\022\021\n\tfi" +
+      "le_type\030\003 \001(\r\032#\n\005KVTag\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t\032?\n\010VoteData\022\r\n\005score\030\001 \001(\002\022\020\n" +
+      "\010votes_up\030\002 \001(\r\022\022\n\nvotes_down\030\003 \001(\r\032\334\001\n\013" +
+      "ForSaleData\022\023\n\013is_for_sale\030\001 \001(\010\022\026\n\016pric" +
+      "e_category\030\002 \001(\r\022A\n\007estatus\030\003 \001(\0162\034.EPub" +
+      "lishedFileForSaleStatus:\022k_PFFSS_NotForS" +
+      "ale\022\034\n\024price_category_floor\030\004 \001(\r\022\"\n\032pri" +
+      "ce_is_pay_what_you_want\030\005 \001(\010\022\033\n\023discoun" +
+      "t_percentage\030\006 \001(\r\032?\n\rPlaytimeStats\022\030\n\020p" +
+      "laytime_seconds\030\001 \001(\004\022\024\n\014num_sessions\030\002 " +
+      "\001(\004\032-\n\010Reaction\022\022\n\nreactionid\030\001 \001(\r\022\r\n\005c" +
+      "ount\030\002 \001(\r\"Y\n\"CPublishedFile_GetDetails_" +
+      "Response\0223\n\024publishedfiledetails\030\001 \003(\0132\025" +
+      ".PublishedFileDetails\"\341\002\n\"CPublishedFile" +
+      "_GetItemInfo_Request\022\r\n\005appid\030\001 \001(\r\022\031\n\021l" +
+      "ast_time_updated\030\002 \001(\r\022H\n\016workshop_items" +
+      "\030\003 \003(\01320.CPublishedFile_GetItemInfo_Requ" +
+      "est.WorkshopItem\032\306\001\n\014WorkshopItem\022\031\n\021pub" +
+      "lished_file_id\030\001 \001(\006\022\024\n\014time_updated\030\002 \001" +
+      "(\r\022\204\001\n\020desired_revision\030\003 \001(\0162\027.EPublish" +
+      "edFileRevision: k_EPublishedFileRevision" +
+      "_DefaultB/\202\265\030+Return the data for the sp" +
+      "ecified revision.\"\211\002\n#CPublishedFile_Get" +
+      "ItemInfo_Response\022\023\n\013update_time\030\001 \001(\r\022M" +
+      "\n\016workshop_items\030\002 \003(\01325.CPublishedFile_" +
+      "GetItemInfo_Response.WorkshopItemInfo\022\025\n" +
+      "\rprivate_items\030\003 \003(\006\032g\n\020WorkshopItemInfo" +
+      "\022\031\n\021published_file_id\030\001 \001(\006\022\024\n\014time_upda" +
+      "ted\030\002 \001(\r\022\023\n\013manifest_id\030\003 \001(\006\022\r\n\005flags\030" +
+      "\004 \001(\r\"\246\030\n#CPublishedFile_GetUserFiles_Re" +
+      "quest\022J\n\007steamid\030\001 \001(\006B9\202\265\0305Steam ID of " +
+      "the user whose files are being requested" +
+      ".\022F\n\005appid\030\002 \001(\rB7\202\265\0303App Id of the app " +
+      "that the files were published to.\022P\n\nsho" +
+      "rtcutid\030\003 \001(\rB<\202\265\0308(Optional) Shortcut I" +
+      "d to retrieve published files from.\022:\n\004p" +
+      "age\030\004 \001(\r:\0011B)\202\265\030%(Optional) Starting pa" +
+      "ge for results.\022P\n\nnumperpage\030\005 \001(\r:\0011B9" +
+      "\202\265\0305(Optional) The number of results, pe" +
+      "r page to return.\022C\n\004type\030\006 \001(\t:\007myfiles" +
+      "B,\202\265\030((Optional) Type of files to be ret" +
+      "urned.\022Y\n\nsortmethod\030\007 \001(\t:\013lastupdatedB" +
+      "8\202\265\0304(Optional) Sorting method to use on" +
+      " returned values.\022;\n\007privacy\030\t \001(\rB*\202\265\030&" +
+      "(optional) Filter by privacy settings.\022h" +
+      "\n\014requiredtags\030\n \003(\tBR\202\265\030N(Optional) Tag" +
+      "s that must be present on a published fi" +
+      "le to satisfy the query.\022l\n\014excludedtags" +
+      "\030\013 \003(\tBV\202\265\030R(Optional) Tags that must NO" +
+      "T be present on a published file to sati" +
+      "sfy the query.\022n\n\020required_kv_tags\030\036 \003(\013" +
+      "2*.CPublishedFile_GetUserFiles_Request.K" +
+      "VTagB(\202\265\030$Required key-value tags to mat" +
+      "ch on.\022=\n\010filetype\030\016 \001(\rB+\202\265\030\'(Optional)" +
+      " File type to match files to.\022a\n\rcreator" +
+      "_appid\030\017 \001(\rBJ\202\265\030FApp Id of the app that" +
+      " published the files, only matched if sp" +
+      "ecified.\022I\n\024match_cloud_filename\030\020 \001(\tB+" +
+      "\202\265\030\'Match this cloud filename if specifi" +
+      "ed.\022j\n\025cache_max_age_seconds\030\033 \001(\r:\0010BH\202" +
+      "\265\030DAllow stale data to be returned for t" +
+      "he specified number of seconds.\022U\n\010langu" +
+      "age\030\035 \001(\005:\0010B@\202\265\030<Specifies the localize" +
+      "d text to return. Defaults to English.\022\243" +
+      "\001\n\ttaggroups\030\" \003(\0132-.CPublishedFile_GetU" +
+      "serFiles_Request.TagGroupBa\202\265\030](Optional" +
+      ") At least one of the tags must be prese" +
+      "nt on a published file to satisfy the qu" +
+      "ery.\022\201\001\n\034excluded_content_descriptors\030% " +
+      "\003(\0162\025.EContentDescriptorIDBD\202\265\030@(Optiona" +
+      "l) Filter out items that have these cont" +
+      "ent descriptors.\022i\n\ttotalonly\030\021 \001(\010BV\202\265\030" +
+      "R(Optional) If true, only return the tot" +
+      "al number of files that satisfy this que" +
+      "ry.\022n\n\010ids_only\030\022 \001(\010B\\\202\265\030X(Optional) If" +
+      " true, only return the published file id" +
+      "s of files that satisfy this query.\0224\n\020r" +
+      "eturn_vote_data\030\023 \001(\010:\004trueB\024\202\265\030\020Return " +
+      "vote data\0228\n\013return_tags\030\024 \001(\010B#\202\265\030\037Retu" +
+      "rn tags in the file details\022K\n\016return_kv" +
+      "_tags\030\025 \001(\010:\004trueB-\202\265\030)Return key-value " +
+      "tags in the file details\022W\n\017return_previ" +
+      "ews\030\026 \001(\010B>\202\265\030:Return preview image and " +
+      "video details in the file details\022F\n\017ret" +
+      "urn_children\030\027 \001(\010B-\202\265\030)Return child ite" +
+      "m ids in the file details\022l\n\030return_shor" +
+      "t_description\030\030 \001(\010:\004trueBD\202\265\030@Populate " +
+      "the short_description field instead of f" +
+      "ile_description\022K\n\024return_for_sale_data\030" +
+      "\032 \001(\010B-\202\265\030)Return pricing information, i" +
+      "f applicable\022?\n\017return_metadata\030\034 \001(\010:\005f" +
+      "alseB\037\202\265\030\033Populate the metadata field\022g\n" +
+      "\025return_playtime_stats\030\037 \001(\rBH\202\265\030DReturn" +
+      " playtime stats for the specified number" +
+      " of days before today.\022F\n\030strip_descript" +
+      "ion_bbcode\030  \001(\010B$\202\265\030 Strips BBCode from" +
+      " descriptions.\022W\n\020return_reactions\030# \001(\010" +
+      ":\005falseB6\202\265\0302If true, then reactions to " +
+      "items will be returned.\022E\n\023startindex_ov" +
+      "erride\030\031 \001(\rB(\202\265\030$Backwards compatible f" +
+      "or the client.\022\204\001\n\020desired_revision\030! \001(" +
+      "\0162\027.EPublishedFileRevision: k_EPublished" +
+      "FileRevision_DefaultB/\202\265\030+Return the dat" +
+      "a for the specified revision.\022@\n\013return_" +
+      "apps\030$ \001(\010B+\202\265\030\'Return list of apps the " +
+      "items belong to\032#\n\005KVTag\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t\032\030\n\010TagGroup\022\014\n\004tags\030\001 \003(\t\"\200" +
+      "\002\n$CPublishedFile_GetUserFiles_Response\022" +
+      "\r\n\005total\030\001 \001(\r\022\022\n\nstartindex\030\002 \001(\r\0223\n\024pu" +
+      "blishedfiledetails\030\003 \003(\0132\025.PublishedFile" +
+      "Details\0227\n\004apps\030\004 \003(\0132).CPublishedFile_G" +
+      "etUserFiles_Response.App\032G\n\003App\022\r\n\005appid" +
+      "\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\022\n\nshortcutid\030\003 \001(\r" +
+      "\022\017\n\007private\030\004 \001(\010\"\232\002\n1CPublishedFile_Are" +
+      "FilesInSubscriptionList_Request\022\r\n\005appid" +
+      "\030\001 \001(\r\022\030\n\020publishedfileids\030\002 \003(\006\022&\n\010list" +
+      "type\030\003 \001(\rB\024\202\265\030\020See EUCMListType\022<\n\010file" +
+      "type\030\004 \001(\rB*\202\265\030&See EPublishedFileInfoMa" +
+      "tchingFileType\022V\n\020workshopfiletype\030\005 \001(\r" +
+      "B<\202\265\0308See EWorkshopFileType.  If specifi" +
+      "ed, overrides filetype\"\262\001\n2CPublishedFil" +
+      "e_AreFilesInSubscriptionList_Response\022I\n" +
+      "\005files\030\001 \003(\0132:.CPublishedFile_AreFilesIn" +
+      "SubscriptionList_Response.InList\0321\n\006InLi" +
+      "st\022\027\n\017publishedfileid\030\001 \001(\006\022\016\n\006inlist\030\002 " +
+      "\001(\010\"\377\006\n\035CPublishedFile_Update_Request\0229\n" +
+      "\005appid\030\001 \001(\rB*\202\265\030&App Id this published " +
+      "file belongs to.\022O\n\017publishedfileid\030\002 \001(" +
+      "\006B6\202\265\0302Published file id of the file we\'" +
+      "d like to update.\022:\n\005title\030\003 \001(\tB+\202\265\030\'(O" +
+      "ptional) Title of the published file.\022K\n" +
+      "\020file_description\030\004 \001(\tB1\202\265\030-(Optional) " +
+      "Description of the published file.\022D\n\nvi" +
+      "sibility\030\005 \001(\rB0\202\265\030,(Optional) Visibilit" +
+      "y of the published file.\022@\n\004tags\030\006 \003(\tB2" +
+      "\202\265\030.(Optional) Set of tags for the publi" +
+      "shed file.\022A\n\010filename\030\007 \001(\tB/\202\265\030+(Optio" +
+      "nal) Filename for the published file.\022Q\n" +
+      "\020preview_filename\030\010 \001(\tB7\202\265\0303(Optional) " +
+      "Preview filename for the published file." +
+      "\022i\n\013spoiler_tag\030\n \001(\010BT\202\265\030P(Optional) Wh" +
+      "ether this published file should have a " +
+      "spoiler tag attached to it.\022^\n\013image_wid" +
+      "th\030\017 \001(\rBI\202\265\030E(Optional) If this is an i" +
+      "mage file, you can specify the image wid" +
+      "th.\022`\n\014image_height\030\020 \001(\rBJ\202\265\030F(Optional" +
+      ") If this is an image file, you can spec" +
+      "ify the image height.\" \n\036CPublishedFile_" +
+      "Update_Response\"\177\n\035CPublishedFile_Delete" +
+      "_Request\022O\n\017publishedfileid\030\001 \001(\006B6\202\265\0302P" +
+      "ublished file id of the file we\'d like t" +
+      "o delete.\022\r\n\005appid\030\005 \001(\r\" \n\036CPublishedFi" +
+      "le_Delete_Response\"\270\001\n,CPublishedFile_Ge" +
+      "tChangeHistoryEntry_Request\022c\n\017published" +
+      "fileid\030\001 \001(\006BJ\202\265\030FPublished file id of t" +
+      "he file we\'d like to get the change hist" +
+      "ory for.\022\021\n\ttimestamp\030\002 \001(\r\022\020\n\010language\030" +
+      "\003 \001(\005\"]\n-CPublishedFile_GetChangeHistory" +
+      "Entry_Response\022\032\n\022change_description\030\001 \001" +
+      "(\t\022\020\n\010language\030\002 \001(\005\"\236\002\n\'CPublishedFile_" +
+      "GetChangeHistory_Request\022c\n\017publishedfil" +
+      "eid\030\001 \001(\006BJ\202\265\030FPublished file id of the " +
+      "file we\'d like to get the change history" +
+      " for.\022@\n\ntotal_only\030\002 \001(\010B,\202\265\030(Return th" +
+      "e total number of changes only.\022\022\n\nstart" +
+      "index\030\003 \001(\r\022\r\n\005count\030\004 \001(\r\022)\n\010language\030\005" +
+      " \001(\005:\0010B\024\202\265\030\020Desired language\"\315\001\n(CPubli" +
+      "shedFile_GetChangeHistory_Response\022D\n\007ch" +
+      "anges\030\001 \003(\01323.CPublishedFile_GetChangeHi" +
+      "story_Response.ChangeLog\022\r\n\005total\030\002 \001(\r\032" +
+      "L\n\tChangeLog\022\021\n\ttimestamp\030\001 \001(\r\022\032\n\022chang" +
+      "e_description\030\002 \001(\t\022\020\n\010language\030\003 \001(\005\"\321\005" +
+      "\n)CPublishedFile_RefreshVotingQueue_Requ" +
+      "est\022\r\n\005appid\030\001 \001(\r\022B\n\022matching_file_type" +
+      "\030\002 \001(\rB&\202\265\030\"EPublishedFileInfoMatchingFi" +
+      "leType\022l\n\004tags\030\003 \003(\tB^\202\265\030ZInclude files " +
+      "that have all the tags or any of the tag" +
+      "s if match_all_tags is set to false.\022\225\001\n" +
+      "\016match_all_tags\030\004 \001(\010:\004trueBw\202\265\030sIf true" +
+      ", then files must have all the tags spec" +
+      "ified.  If false, then must have at leas" +
+      "t one of the tags specified.\022I\n\rexcluded" +
+      "_tags\030\005 \003(\tB2\202\265\030.Exclude any files that " +
+      "have any of these tags.\022j\n\022desired_queue" +
+      "_size\030\006 \001(\rBN\202\265\030JDesired number of items" +
+      " in the voting queue.  May be clamped by" +
+      " the server\022\223\001\n\020desired_revision\030\010 \001(\0162\027" +
+      ".EPublishedFileRevision: k_EPublishedFil" +
+      "eRevision_DefaultB>\202\265\030:Filter to items t" +
+      "hat have data for the specified revision" +
+      ".\",\n*CPublishedFile_RefreshVotingQueue_R" +
+      "esponse\"\237 \n!CPublishedFile_QueryFiles_Re" +
+      "quest\022L\n\nquery_type\030\001 \001(\rB8\202\265\0304enumerati" +
+      "on EPublishedFileQueryType in clientenum" +
+      "s.h\022\036\n\004page\030\002 \001(\rB\020\202\265\030\014Current page\022\350\001\n\006" +
+      "cursor\030\' \001(\tB\327\001\202\265\030\322\001Cursor to paginate t" +
+      "hrough the results (set to \'*\' for the f" +
+      "irst request).  Prefer this over using t" +
+      "he page parameter, as it will allow you " +
+      "to do deep pagination.  When used, the p" +
+      "age parameter will be ignored.\022P\n\nnumper" +
+      "page\030\003 \001(\r:\0011B9\202\265\0305(Optional) The number" +
+      " of results, per page to return.\0225\n\rcrea" +
+      "tor_appid\030\004 \001(\rB\036\202\265\030\032App that created th" +
+      "e files\022.\n\005appid\030\005 \001(\rB\037\202\265\030\033App that con" +
+      "sumes the files\022N\n\014requiredtags\030\006 \003(\tB8\202" +
+      "\265\0304Tags to match on. See match_all_tags " +
+      "parameter below\022l\n\014excludedtags\030\007 \003(\tBV\202" +
+      "\265\030R(Optional) Tags that must NOT be pres" +
+      "ent on a published file to satisfy the q" +
+      "uery.\022\212\001\n\016match_all_tags\030\010 \001(\010:\004trueBl\202\265" +
+      "\030hIf true, then items must have all the " +
+      "tags specified, otherwise they must have" +
+      " at least one of the tags.\022Q\n\016required_f" +
+      "lags\030\t \003(\tB9\202\265\0305Required flags that must" +
+      " be set on any returned items\022K\n\romitted" +
+      "_flags\030\n \003(\tB4\202\265\0300Flags that must not be" +
+      " set on any returned items\022I\n\013search_tex" +
+      "t\030\013 \001(\tB4\202\265\0300Text to match in the item\'s" +
+      " title or description\0228\n\010filetype\030\014 \001(\rB" +
+      "&\202\265\030\"EPublishedFileInfoMatchingFileType\022" +
+      "P\n\025child_publishedfileid\030\r \001(\006B1\202\265\030-Find" +
+      " all items that reference the given item" +
+      ".\022\202\001\n\004days\030\016 \001(\rBt\202\265\030pIf query_type is k" +
+      "_PublishedFileQueryType_RankedByTrend, t" +
+      "hen this is the number of days to get vo" +
+      "tes for [1,7].\022\260\001\n\031include_recent_votes_" +
+      "only\030\017 \001(\010B\214\001\202\265\030\207\001If query_type is k_Pub" +
+      "lishedFileQueryType_RankedByTrend, then " +
+      "limit result set just to items that have" +
+      " votes within the day range given\022j\n\025cac",
+      "he_max_age_seconds\030\037 \001(\r:\0010BH\202\265\030DAllow s" +
+      "tale data to be returned for the specifi" +
+      "ed number of seconds.\022`\n\010language\030! \001(\005:" +
+      "\0010BK\202\265\030GLanguage to search in and also w" +
+      "hat gets returned. Defaults to English.\022" +
+      "l\n\020required_kv_tags\030\" \003(\0132(.CPublishedFi" +
+      "le_QueryFiles_Request.KVTagB(\202\265\030$Require" +
+      "d key-value tags to match on.\022\241\001\n\ttaggro" +
+      "ups\030* \003(\0132+.CPublishedFile_QueryFiles_Re" +
+      "quest.TagGroupBa\202\265\030](Optional) At least " +
+      "one of the tags must be present on a pub" +
+      "lished file to satisfy the query.\022\203\001\n\022da" +
+      "te_range_created\030, \001(\0132,.CPublishedFile_" +
+      "QueryFiles_Request.DateRangeB9\202\265\0305(Optio" +
+      "nal) Filter to items created within this" +
+      " range.\022\203\001\n\022date_range_updated\030- \001(\0132,.C" +
+      "PublishedFile_QueryFiles_Request.DateRan" +
+      "geB9\202\265\0305(Optional) Filter to items updat" +
+      "ed within this range.\022\201\001\n\034excluded_conte" +
+      "nt_descriptors\030. \003(\0162\025.EContentDescripto" +
+      "rIDBD\202\265\030@(Optional) Filter out items tha" +
+      "t have these content descriptors.\022i\n\ttot" +
+      "alonly\030\020 \001(\010BV\202\265\030R(Optional) If true, on" +
+      "ly return the total number of files that" +
+      " satisfy this query.\022n\n\010ids_only\030# \001(\010B\\" +
+      "\202\265\030X(Optional) If true, only return the " +
+      "published file ids of files that satisfy" +
+      " this query.\022.\n\020return_vote_data\030\021 \001(\010B\024" +
+      "\202\265\030\020Return vote data\0228\n\013return_tags\030\022 \001(" +
+      "\010B#\202\265\030\037Return tags in the file details\022E" +
+      "\n\016return_kv_tags\030\023 \001(\010B-\202\265\030)Return key-v" +
+      "alue tags in the file details\022W\n\017return_" +
+      "previews\030\024 \001(\010B>\202\265\030:Return preview image" +
+      " and video details in the file details\022F" +
+      "\n\017return_children\030\025 \001(\010B-\202\265\030)Return chil" +
+      "d item ids in the file details\022f\n\030return" +
+      "_short_description\030\026 \001(\010BD\202\265\030@Populate t" +
+      "he short_description field instead of fi" +
+      "le_description\022K\n\024return_for_sale_data\030\036" +
+      " \001(\010B-\202\265\030)Return pricing information, if" +
+      " applicable\0229\n\017return_metadata\030  \001(\010:\005fa" +
+      "lseB\031\202\265\030\025Populate the metadata\022g\n\025return" +
+      "_playtime_stats\030$ \001(\rBH\202\265\030DReturn playti" +
+      "me stats for the specified number of day" +
+      "s before today.\022\267\001\n\016return_details\030% \001(\010" +
+      "B\236\001\202\265\030\231\001By default, if none of the other" +
+      " \'return_*\' fields are set, only some vo" +
+      "ting details are returned. Set this to t" +
+      "rue to return the default set of details" +
+      ".\022F\n\030strip_description_bbcode\030& \001(\010B$\202\265\030" +
+      " Strips BBCode from descriptions.\022\204\001\n\020de" +
+      "sired_revision\030( \001(\0162\027.EPublishedFileRev" +
+      "ision: k_EPublishedFileRevision_DefaultB" +
+      "/\202\265\030+Return the data for the specified r" +
+      "evision.\022W\n\020return_reactions\030+ \001(\010:\005fals" +
+      "eB6\202\265\0302If true, then reactions to items " +
+      "will be returned.\032#\n\005KVTag\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t\032\030\n\010TagGroup\022\014\n\004tags\030\001 \003(\t" +
+      "\032\326\001\n\tDateRange\022d\n\017timestamp_start\030\001 \001(\rB" +
+      "K\202\265\030G(Optional) Include items with the r" +
+      "elevant date field after this value.\022c\n\r" +
+      "timestamp_end\030\002 \001(\rBL\202\265\030H(Optional) Incl" +
+      "ude items with the relevant date field b" +
+      "efore this value.\"\205\003\n\"CPublishedFile_Que" +
+      "ryFiles_Response\022T\n\005total\030\001 \001(\rBE\202\265\030ANum" +
+      "ber of matches found, not necessarily nu" +
+      "mber of items returned\022\215\001\n\024publishedfile" +
+      "details\030\002 \003(\0132\025.PublishedFileDetailsBX\202\265" +
+      "\030TEach file details will be populated, d" +
+      "epending on what return values were requ" +
+      "ested.\022y\n\013next_cursor\030\003 \001(\tBd\202\265\030`If a pa" +
+      "ging cursor was used, then this will be " +
+      "the next cursor to use for paging throug" +
+      "h results\"i\n)CPublishedFile_AddAppRelati" +
+      "onship_Request\022\027\n\017publishedfileid\030\001 \001(\004\022" +
+      "\r\n\005appid\030\002 \001(\r\022\024\n\014relationship\030\003 \001(\r\",\n*" +
+      "CPublishedFile_AddAppRelationship_Respon" +
+      "se\"l\n,CPublishedFile_RemoveAppRelationsh" +
+      "ip_Request\022\027\n\017publishedfileid\030\001 \001(\004\022\r\n\005a" +
+      "ppid\030\002 \001(\r\022\024\n\014relationship\030\003 \001(\r\"/\n-CPub" +
+      "lishedFile_RemoveAppRelationship_Respons" +
+      "e\"E\n*CPublishedFile_GetAppRelationships_" +
+      "Request\022\027\n\017publishedfileid\030\001 \001(\004\"\276\001\n+CPu" +
+      "blishedFile_GetAppRelationships_Response" +
+      "\022W\n\021app_relationships\030\003 \003(\0132<.CPublished" +
+      "File_GetAppRelationships_Response.AppRel" +
+      "ationship\0326\n\017AppRelationship\022\r\n\005appid\030\001 " +
+      "\001(\r\022\024\n\014relationship\030\002 \001(\r\"j\n1CPublishedF" +
+      "ile_GetAppRelationshipsBatched_Request\022\030" +
+      "\n\020publishedfileids\030\001 \003(\004\022\033\n\023filter_relat" +
+      "ionship\030\002 \001(\r\"\377\002\n2CPublishedFile_GetAppR" +
+      "elationshipsBatched_Response\022g\n\rrelation" +
+      "ships\030\001 \003(\0132P.CPublishedFile_GetAppRelat" +
+      "ionshipsBatched_Response.PublishedFileAp" +
+      "pRelationship\0326\n\017AppRelationship\022\r\n\005appi" +
+      "d\030\001 \001(\r\022\024\n\014relationship\030\002 \001(\r\032\247\001\n\034Publis" +
+      "hedFileAppRelationship\022\027\n\017publishedfilei" +
+      "d\030\001 \001(\004\022\016\n\006result\030\002 \001(\r\022^\n\021app_relations" +
+      "hips\030\003 \003(\0132C.CPublishedFile_GetAppRelati" +
+      "onshipsBatched_Response.AppRelationship\"" +
+      "W\n,CPublishedFile_StartPlaytimeTracking_" +
+      "Request\022\r\n\005appid\030\001 \001(\r\022\030\n\020publishedfilei" +
+      "ds\030\002 \003(\004\"/\n-CPublishedFile_StartPlaytime" +
+      "Tracking_Response\"V\n+CPublishedFile_Stop" +
       "PlaytimeTracking_Request\022\r\n\005appid\030\001 \001(\r\022" +
-      "\030\n\020publishedfileids\030\002 \003(\004\"/\n-CPublishedF" +
-      "ile_StartPlaytimeTracking_Response\"V\n+CP" +
-      "ublishedFile_StopPlaytimeTracking_Reques" +
-      "t\022\r\n\005appid\030\001 \001(\r\022\030\n\020publishedfileids\030\002 \003" +
-      "(\004\".\n,CPublishedFile_StopPlaytimeTrackin" +
-      "g_Response\"J\n9CPublishedFile_StopPlaytim" +
-      "eTrackingForAllAppItems_Request\022\r\n\005appid" +
-      "\030\001 \001(\r\"<\n:CPublishedFile_StopPlaytimeTra" +
-      "ckingForAllAppItems_Response\"\201\002\n6CPublis" +
-      "hedFile_SetPlaytimeForControllerConfigs_" +
-      "Request\022\r\n\005appid\030\001 \001(\r\022n\n\027controller_con" +
-      "fig_usage\030\002 \003(\0132M.CPublishedFile_SetPlay" +
-      "timeForControllerConfigs_Request.Control" +
-      "lerConfigUsage\032H\n\025ControllerConfigUsage\022" +
-      "\027\n\017publishedfileid\030\001 \001(\004\022\026\n\016seconds_acti" +
-      "ve\030\002 \001(\002\"9\n7CPublishedFile_SetPlaytimeFo" +
-      "rControllerConfigs_Response\"Y\n\037CPublishe" +
-      "dFile_AddChild_Request\022\027\n\017publishedfilei" +
-      "d\030\001 \001(\004\022\035\n\025child_publishedfileid\030\002 \001(\004\"\"" +
-      "\n CPublishedFile_AddChild_Response\"\\\n\"CP" +
-      "ublishedFile_RemoveChild_Request\022\027\n\017publ" +
-      "ishedfileid\030\001 \001(\004\022\035\n\025child_publishedfile" +
-      "id\030\002 \001(\004\"%\n#CPublishedFile_RemoveChild_R" +
-      "esponse\"E\n)CPublishedFile_GetUserVoteSum" +
-      "mary_Request\022\030\n\020publishedfileids\030\001 \003(\006\"\332" +
-      "\001\n*CPublishedFile_GetUserVoteSummary_Res" +
-      "ponse\022J\n\tsummaries\030\001 \003(\01327.CPublishedFil" +
-      "e_GetUserVoteSummary_Response.VoteSummar" +
-      "y\032`\n\013VoteSummary\022\027\n\017publishedfileid\030\001 \001(" +
-      "\006\022\020\n\010vote_for\030\002 \001(\010\022\024\n\014vote_against\030\003 \001(" +
-      "\010\022\020\n\010reported\030\004 \001(\010\"h\n%CPublishedFile_Ge" +
-      "tItemChanges_Request\022\r\n\005appid\030\001 \001(\r\022\031\n\021l" +
-      "ast_time_updated\030\002 \001(\r\022\025\n\rnum_items_max\030" +
-      "\003 \001(\r\"\351\001\n&CPublishedFile_GetItemChanges_" +
-      "Response\022\023\n\013update_time\030\001 \001(\r\022P\n\016worksho" +
-      "p_items\030\002 \003(\01328.CPublishedFile_GetItemCh" +
-      "anges_Response.WorkshopItemInfo\032X\n\020Works" +
-      "hopItemInfo\022\031\n\021published_file_id\030\001 \001(\006\022\024" +
-      "\n\014time_updated\030\002 \001(\r\022\023\n\013manifest_id\030\003 \001(" +
-      "\006\"\257\005\n*CPublishedFile_FileSubscribed_Noti" +
-      "fication\022@\n\021published_file_id\030\001 \001(\006B%\202\265\030" +
-      "!PublishedFileID_t for the content\022\016\n\006ap" +
-      "p_id\030\002 \001(\r\022:\n\rfile_hcontent\030\003 \001(\006B#\202\265\030\037U" +
-      "GC file handle or manifest GID\022\021\n\tfile_s" +
-      "ize\030\004 \001(\r\022\030\n\020rtime_subscribed\030\005 \001(\r\022N\n\020i" +
-      "s_depot_content\030\006 \001(\010B4\202\265\0300True if works" +
-      "hop item is delivered via Steampipe\0224\n\rr" +
-      "time_updated\030\007 \001(\rB\035\202\265\030\031Last time conten" +
-      "t updated\022\202\001\n\trevisions\030\010 \003(\01328.CPublish" +
-      "edFile_FileSubscribed_Notification.Revis" +
-      "ionDataB5\202\265\0301Data for each of the revisi" +
-      "ons that this item has\032\272\001\n\014RevisionData\022" +
-      "K\n\010revision\030\001 \001(\0162\027.EPublishedFileRevisi" +
-      "on: k_EPublishedFileRevision_Default\022\'\n\r" +
-      "file_hcontent\030\002 \001(\006B\020\202\265\030\014Manifest GID\0224\n" +
-      "\rrtime_updated\030\003 \001(\rB\035\202\265\030\031Last time cont" +
-      "ent updated\"\200\001\n,CPublishedFile_FileUnsub" +
-      "scribed_Notification\022@\n\021published_file_i" +
-      "d\030\001 \001(\006B%\202\265\030!PublishedFileID_t for the c" +
-      "ontent\022\016\n\006app_id\030\002 \001(\r\"\202\001\n.CPublishedFil" +
-      "e_FileDeleted_Client_Notification\022@\n\021pub" +
-      "lished_file_id\030\001 \001(\006B%\202\265\030!PublishedFileI" +
-      "D_t for the content\022\016\n\006app_id\030\002 \001(\r*\253\002\n\026" +
-      "EPublishedFileRevision\022$\n k_EPublishedFi" +
-      "leRevision_Default\020\000\022#\n\037k_EPublishedFile" +
-      "Revision_Latest\020\001\022-\n)k_EPublishedFileRev" +
-      "ision_ApprovedSnapshot\020\002\0223\n/k_EPublished" +
-      "FileRevision_ApprovedSnapshot_China\020\003\022-\n" +
-      ")k_EPublishedFileRevision_RejectedSnapsh" +
-      "ot\020\004\0223\n/k_EPublishedFileRevision_Rejecte" +
-      "dSnapshot_China\020\005*\310\001\n\033EPublishedFileForS" +
-      "aleStatus\022\026\n\022k_PFFSS_NotForSale\020\000\022\033\n\027k_P" +
-      "FFSS_PendingApproval\020\001\022\033\n\027k_PFFSS_Approv" +
-      "edForSale\020\002\022\033\n\027k_PFFSS_RejectedForSale\020\003" +
-      "\022\033\n\027k_PFFSS_NoLongerForSale\020\004\022\035\n\031k_PFFSS" +
-      "_TentativeApproval\020\0052\353\037\n\rPublishedFile\022\201" +
-      "\001\n\tSubscribe\022!.CPublishedFile_Subscribe_" +
-      "Request\032\".CPublishedFile_Subscribe_Respo" +
-      "nse\"-\202\265\030)Subscribes the user to the publ" +
-      "ished file\022\213\001\n\013Unsubscribe\022#.CPublishedF" +
-      "ile_Unsubscribe_Request\032$.CPublishedFile" +
-      "_Unsubscribe_Response\"1\202\265\030-Unsubscribes " +
-      "the user from the published file\022\226\001\n\014Can" +
-      "Subscribe\022$.CPublishedFile_CanSubscribe_" +
-      "Request\032%.CPublishedFile_CanSubscribe_Re" +
-      "sponse\"9\202\265\0305Check if the user can subscr" +
-      "ibe to the published file\022\200\001\n\007Publish\022\037." +
-      "CPublishedFile_Publish_Request\032 .CPublis" +
-      "hedFile_Publish_Response\"2\202\265\030.Publishes " +
-      "a clouded user file to the Workshop.\022\220\001\n" +
-      "\nGetDetails\022\".CPublishedFile_GetDetails_" +
-      "Request\032#.CPublishedFile_GetDetails_Resp" +
-      "onse\"9\202\265\0305Retrieves information about a " +
-      "set of published files.\022\223\001\n\013GetItemInfo\022" +
-      "#.CPublishedFile_GetItemInfo_Request\032$.C" +
-      "PublishedFile_GetItemInfo_Response\"9\202\265\0305" +
-      "Retrieves information about a set of pub" +
-      "lished files.\022\205\001\n\014GetUserFiles\022$.CPublis" +
-      "hedFile_GetUserFiles_Request\032%.CPublishe" +
-      "dFile_GetUserFiles_Response\"(\202\265\030$Retriev" +
-      "es files published by a user.\022\325\001\n\032AreFil" +
-      "esInSubscriptionList\0222.CPublishedFile_Ar" +
-      "eFilesInSubscriptionList_Request\0323.CPubl" +
-      "ishedFile_AreFilesInSubscriptionList_Res" +
-      "ponse\"N\202\265\030JDetermines which files in the" +
-      " given list are in a user\'s subscription" +
-      " list\022z\n\006Update\022\036.CPublishedFile_Update_" +
-      "Request\032\037.CPublishedFile_Update_Response" +
-      "\"/\202\265\030+Updates information about a publis" +
-      "hed file.\022\300\001\n\025GetChangeHistoryEntry\022-.CP" +
-      "ublishedFile_GetChangeHistoryEntry_Reque" +
-      "st\032..CPublishedFile_GetChangeHistoryEntr" +
-      "y_Response\"H\202\265\030DReturns data on a specif" +
-      "ic change history entry for a published " +
-      "file\022\244\001\n\020GetChangeHistory\022(.CPublishedFi" +
-      "le_GetChangeHistory_Request\032).CPublished" +
-      "File_GetChangeHistory_Response\";\202\265\0307Retu" +
-      "rns data on the change history for a pub" +
-      "lished file\022\230\001\n\022RefreshVotingQueue\022*.CPu" +
-      "blishedFile_RefreshVotingQueue_Request\032+" +
-      ".CPublishedFile_RefreshVotingQueue_Respo" +
-      "nse\")\202\265\030%Refresh the voting queue for th" +
-      "e user\022\206\001\n\nQueryFiles\022\".CPublishedFile_Q" +
-      "ueryFiles_Request\032#.CPublishedFile_Query" +
-      "Files_Response\"/\202\265\030+Performs a search qu" +
-      "ery for published files\022\263\001\n\022AddAppRelati" +
-      "onship\022*.CPublishedFile_AddAppRelationsh" +
-      "ip_Request\032+.CPublishedFile_AddAppRelati" +
-      "onship_Response\"D\202\265\030@Adds a relationship" +
-      " between the published file and the give" +
-      "n app\022\276\001\n\025RemoveAppRelationship\022-.CPubli" +
-      "shedFile_RemoveAppRelationship_Request\032." +
-      ".CPublishedFile_RemoveAppRelationship_Re" +
-      "sponse\"F\202\265\030BRemove a relationship betwee" +
-      "n the published file and the given app\022\263" +
-      "\001\n\023GetAppRelationships\022+.CPublishedFile_" +
-      "GetAppRelationships_Request\032,.CPublished" +
-      "File_GetAppRelationships_Response\"A\202\265\030=R" +
-      "eturns the list of app relationships for" +
-      " this published file\022\263\001\n\025StartPlaytimeTr" +
-      "acking\022-.CPublishedFile_StartPlaytimeTra" +
-      "cking_Request\032..CPublishedFile_StartPlay" +
-      "timeTracking_Response\";\202\265\0307Start usage t" +
-      "racking for a given set of published fil" +
-      "es\022\260\001\n\024StopPlaytimeTracking\022,.CPublished" +
-      "File_StopPlaytimeTracking_Request\032-.CPub" +
-      "lishedFile_StopPlaytimeTracking_Response" +
-      "\";\202\265\0307Stops usage tracking for a given s" +
-      "et of published files\022\355\001\n\"StopPlaytimeTr" +
-      "ackingForAllAppItems\022:.CPublishedFile_St" +
-      "opPlaytimeTrackingForAllAppItems_Request" +
-      "\032;.CPublishedFile_StopPlaytimeTrackingFo" +
-      "rAllAppItems_Response\"N\202\265\030JStops usage t" +
-      "racking for all items currently tracked " +
-      "for the specified app\022\230\002\n\037SetPlaytimeFor" +
-      "ControllerConfigs\0227.CPublishedFile_SetPl" +
-      "aytimeForControllerConfigs_Request\0328.CPu" +
-      "blishedFile_SetPlaytimeForControllerConf" +
-      "igs_Response\"\201\001\202\265\030}Stops usage tracking " +
-      "all controller configs for the given app" +
-      " and set the usage time for the for the " +
-      "given controller configs\022\217\001\n\010AddChild\022 ." +
-      "CPublishedFile_AddChild_Request\032!.CPubli" +
-      "shedFile_AddChild_Response\">\202\265\030:Adds a p" +
-      "arent->child relationship between the gi" +
-      "ven items.\022\231\001\n\013RemoveChild\022#.CPublishedF" +
-      "ile_RemoveChild_Request\032$.CPublishedFile" +
-      "_RemoveChild_Response\"?\202\265\030;Removes paren" +
-      "t->child relationship between the given " +
-      "items.\022\210\001\n\022GetUserVoteSummary\022*.CPublish" +
-      "edFile_GetUserVoteSummary_Request\032+.CPub" +
-      "lishedFile_GetUserVoteSummary_Response\"\031" +
-      "\202\265\030\025Get user vote summary\022\221\001\n\016GetItemCha" +
-      "nges\022&.CPublishedFile_GetItemChanges_Req" +
-      "uest\032\'.CPublishedFile_GetItemChanges_Res" +
-      "ponse\".\202\265\030*Get list of updated items sin" +
-      "ce given date\032+\202\265\030\'A service to access p" +
-      "ublished file data2\215\004\n\023PublishedFileClie" +
-      "nt\022\223\001\n\024NotifyFileSubscribed\022+.CPublished" +
-      "File_FileSubscribed_Notification\032\013.NoRes" +
-      "ponse\"A\202\265\030=Notification from the server " +
-      "when a user subscribes to a file\022\233\001\n\026Not" +
-      "ifyFileUnsubscribed\022-.CPublishedFile_Fil" +
-      "eUnsubscribed_Notification\032\013.NoResponse\"" +
-      "E\202\265\030ANotification from the server when a" +
-      " user unsubscribes from a file\022\224\001\n\021Notif" +
-      "yFileDeleted\022/.CPublishedFile_FileDelete" +
-      "d_Client_Notification\032\013.NoResponse\"A\202\265\030=" +
-      "Notification from the server when a publ" +
-      "ished file is deleted\032+\202\265\030#Published fil" +
-      "e client notifications\300\265\030\002B\003\200\001\001"
+      "\030\n\020publishedfileids\030\002 \003(\004\".\n,CPublishedF" +
+      "ile_StopPlaytimeTracking_Response\"J\n9CPu" +
+      "blishedFile_StopPlaytimeTrackingForAllAp" +
+      "pItems_Request\022\r\n\005appid\030\001 \001(\r\"<\n:CPublis" +
+      "hedFile_StopPlaytimeTrackingForAllAppIte" +
+      "ms_Response\"\201\002\n6CPublishedFile_SetPlayti" +
+      "meForControllerConfigs_Request\022\r\n\005appid\030" +
+      "\001 \001(\r\022n\n\027controller_config_usage\030\002 \003(\0132M" +
+      ".CPublishedFile_SetPlaytimeForController" +
+      "Configs_Request.ControllerConfigUsage\032H\n" +
+      "\025ControllerConfigUsage\022\027\n\017publishedfilei" +
+      "d\030\001 \001(\004\022\026\n\016seconds_active\030\002 \001(\002\"9\n7CPubl" +
+      "ishedFile_SetPlaytimeForControllerConfig" +
+      "s_Response\"Y\n\037CPublishedFile_AddChild_Re" +
+      "quest\022\027\n\017publishedfileid\030\001 \001(\004\022\035\n\025child_" +
+      "publishedfileid\030\002 \001(\004\"\"\n CPublishedFile_" +
+      "AddChild_Response\"\\\n\"CPublishedFile_Remo" +
+      "veChild_Request\022\027\n\017publishedfileid\030\001 \001(\004" +
+      "\022\035\n\025child_publishedfileid\030\002 \001(\004\"%\n#CPubl" +
+      "ishedFile_RemoveChild_Response\"E\n)CPubli" +
+      "shedFile_GetUserVoteSummary_Request\022\030\n\020p" +
+      "ublishedfileids\030\001 \003(\006\"\332\001\n*CPublishedFile" +
+      "_GetUserVoteSummary_Response\022J\n\tsummarie" +
+      "s\030\001 \003(\01327.CPublishedFile_GetUserVoteSumm" +
+      "ary_Response.VoteSummary\032`\n\013VoteSummary\022" +
+      "\027\n\017publishedfileid\030\001 \001(\006\022\020\n\010vote_for\030\002 \001" +
+      "(\010\022\024\n\014vote_against\030\003 \001(\010\022\020\n\010reported\030\004 \001" +
+      "(\010\"h\n%CPublishedFile_GetItemChanges_Requ" +
+      "est\022\r\n\005appid\030\001 \001(\r\022\031\n\021last_time_updated\030" +
+      "\002 \001(\r\022\025\n\rnum_items_max\030\003 \001(\r\"\351\001\n&CPublis" +
+      "hedFile_GetItemChanges_Response\022\023\n\013updat" +
+      "e_time\030\001 \001(\r\022P\n\016workshop_items\030\002 \003(\01328.C" +
+      "PublishedFile_GetItemChanges_Response.Wo" +
+      "rkshopItemInfo\032X\n\020WorkshopItemInfo\022\031\n\021pu" +
+      "blished_file_id\030\001 \001(\006\022\024\n\014time_updated\030\002 " +
+      "\001(\r\022\023\n\013manifest_id\030\003 \001(\006\"G\n,CPublishedFi" +
+      "le_GetContentDescriptors_Request\022\027\n\017publ" +
+      "ishedfileid\030\001 \001(\006\"\272\002\n-CPublishedFile_Get" +
+      "ContentDescriptors_Response\022]\n\023content_d" +
+      "escriptors\030\001 \003(\0132@.CPublishedFile_GetCon" +
+      "tentDescriptors_Response.ContentDescript" +
+      "or\032\251\001\n\021ContentDescriptor\022W\n\014descriptorid" +
+      "\030\001 \001(\0162\025.EContentDescriptorID:*k_EConten" +
+      "tDescriptor_NudityOrSexualContent\022\021\n\tacc" +
+      "ountid\030\002 \001(\r\022\021\n\ttimestamp\030\003 \001(\r\022\025\n\rmoder" +
+      "ator_set\030\004 \001(\010\"\263\001\n/CPublishedFile_Update" +
+      "ContentDescriptors_Request\022\027\n\017publishedf" +
+      "ileid\030\001 \001(\006\0221\n\022descriptors_to_add\030\002 \003(\0162" +
+      "\025.EContentDescriptorID\0224\n\025descriptors_to" +
+      "_remove\030\003 \003(\0162\025.EContentDescriptorID\"M\n0" +
+      "CPublishedFile_UpdateContentDescriptors_" +
+      "Response\022\031\n\021timestamp_updated\030\001 \001(\r\"\257\005\n*" +
+      "CPublishedFile_FileSubscribed_Notificati" +
+      "on\022@\n\021published_file_id\030\001 \001(\006B%\202\265\030!Publi" +
+      "shedFileID_t for the content\022\016\n\006app_id\030\002" +
+      " \001(\r\022:\n\rfile_hcontent\030\003 \001(\006B#\202\265\030\037UGC fil" +
+      "e handle or manifest GID\022\021\n\tfile_size\030\004 " +
+      "\001(\r\022\030\n\020rtime_subscribed\030\005 \001(\r\022N\n\020is_depo" +
+      "t_content\030\006 \001(\010B4\202\265\0300True if workshop it" +
+      "em is delivered via Steampipe\0224\n\rrtime_u" +
+      "pdated\030\007 \001(\rB\035\202\265\030\031Last time content upda" +
+      "ted\022\202\001\n\trevisions\030\010 \003(\01328.CPublishedFile" +
+      "_FileSubscribed_Notification.RevisionDat" +
+      "aB5\202\265\0301Data for each of the revisions th" +
+      "at this item has\032\272\001\n\014RevisionData\022K\n\010rev" +
+      "ision\030\001 \001(\0162\027.EPublishedFileRevision: k_" +
+      "EPublishedFileRevision_Default\022\'\n\rfile_h" +
+      "content\030\002 \001(\006B\020\202\265\030\014Manifest GID\0224\n\rrtime" +
+      "_updated\030\003 \001(\rB\035\202\265\030\031Last time content up" +
+      "dated\"\200\001\n,CPublishedFile_FileUnsubscribe" +
+      "d_Notification\022@\n\021published_file_id\030\001 \001(" +
+      "\006B%\202\265\030!PublishedFileID_t for the content" +
+      "\022\016\n\006app_id\030\002 \001(\r\"\202\001\n.CPublishedFile_File" +
+      "Deleted_Client_Notification\022@\n\021published" +
+      "_file_id\030\001 \001(\006B%\202\265\030!PublishedFileID_t fo" +
+      "r the content\022\016\n\006app_id\030\002 \001(\r*\253\002\n\026EPubli" +
+      "shedFileRevision\022$\n k_EPublishedFileRevi" +
+      "sion_Default\020\000\022#\n\037k_EPublishedFileRevisi" +
+      "on_Latest\020\001\022-\n)k_EPublishedFileRevision_" +
+      "ApprovedSnapshot\020\002\0223\n/k_EPublishedFileRe" +
+      "vision_ApprovedSnapshot_China\020\003\022-\n)k_EPu" +
+      "blishedFileRevision_RejectedSnapshot\020\004\0223" +
+      "\n/k_EPublishedFileRevision_RejectedSnaps" +
+      "hot_China\020\005*\310\001\n\033EPublishedFileForSaleSta" +
+      "tus\022\026\n\022k_PFFSS_NotForSale\020\000\022\033\n\027k_PFFSS_P" +
+      "endingApproval\020\001\022\033\n\027k_PFFSS_ApprovedForS" +
+      "ale\020\002\022\033\n\027k_PFFSS_RejectedForSale\020\003\022\033\n\027k_" +
+      "PFFSS_NoLongerForSale\020\004\022\035\n\031k_PFFSS_Tenta" +
+      "tiveApproval\020\0052\257)\n\rPublishedFile\022g\n\004Vote" +
+      "\022\034.CPublishedFile_Vote_Request\032\035.CPublis" +
+      "hedFile_Vote_Response\"\"\202\265\030\036User wants to" +
+      " vote on the item\022\201\001\n\tSubscribe\022!.CPubli" +
+      "shedFile_Subscribe_Request\032\".CPublishedF" +
+      "ile_Subscribe_Response\"-\202\265\030)Subscribes t" +
+      "he user to the published file\022\213\001\n\013Unsubs" +
+      "cribe\022#.CPublishedFile_Unsubscribe_Reque" +
+      "st\032$.CPublishedFile_Unsubscribe_Response" +
+      "\"1\202\265\030-Unsubscribes the user from the pub" +
+      "lished file\022\226\001\n\014CanSubscribe\022$.CPublishe" +
+      "dFile_CanSubscribe_Request\032%.CPublishedF" +
+      "ile_CanSubscribe_Response\"9\202\265\0305Check if " +
+      "the user can subscribe to the published " +
+      "file\022\270\001\n\021GetSubSectionData\022).CPublishedF" +
+      "ile_GetSubSectionData_Request\032*.CPublish" +
+      "edFile_GetSubSectionData_Response\"L\202\265\030HG" +
+      "et sub section data (for table of conten" +
+      "ts, a specific section, or all)\022\200\001\n\007Publ" +
+      "ish\022\037.CPublishedFile_Publish_Request\032 .C" +
+      "PublishedFile_Publish_Response\"2\202\265\030.Publ" +
+      "ishes a clouded user file to the Worksho" +
+      "p.\022\220\001\n\nGetDetails\022\".CPublishedFile_GetDe" +
+      "tails_Request\032#.CPublishedFile_GetDetail" +
+      "s_Response\"9\202\265\0305Retrieves information ab" +
+      "out a set of published files.\022\223\001\n\013GetIte" +
+      "mInfo\022#.CPublishedFile_GetItemInfo_Reque" +
+      "st\032$.CPublishedFile_GetItemInfo_Response" +
+      "\"9\202\265\0305Retrieves information about a set " +
+      "of published files.\022\205\001\n\014GetUserFiles\022$.C" +
+      "PublishedFile_GetUserFiles_Request\032%.CPu" +
+      "blishedFile_GetUserFiles_Response\"(\202\265\030$R" +
+      "etrieves files published by a user.\022\327\001\n\020" +
+      "GetUserFileCount\022$.CPublishedFile_GetUse" +
+      "rFiles_Request\032%.CPublishedFile_GetUserF" +
+      "iles_Response\"v\202\265\030rRetrieves a count of " +
+      "files published by a user. Uses the same" +
+      " messages as GetUserFiles but totalonly " +
+      "must be true.\022\325\001\n\032AreFilesInSubscription" +
+      "List\0222.CPublishedFile_AreFilesInSubscrip" +
+      "tionList_Request\0323.CPublishedFile_AreFil" +
+      "esInSubscriptionList_Response\"N\202\265\030JDeter" +
+      "mines which files in the given list are " +
+      "in a user\'s subscription list\022z\n\006Update\022" +
+      "\036.CPublishedFile_Update_Request\032\037.CPubli" +
+      "shedFile_Update_Response\"/\202\265\030+Updates in" +
+      "formation about a published file.\022h\n\006Del" +
+      "ete\022\036.CPublishedFile_Delete_Request\032\037.CP" +
+      "ublishedFile_Delete_Response\"\035\202\265\030\031Delete" +
+      "s a published file.\022\300\001\n\025GetChangeHistory" +
+      "Entry\022-.CPublishedFile_GetChangeHistoryE" +
+      "ntry_Request\032..CPublishedFile_GetChangeH" +
+      "istoryEntry_Response\"H\202\265\030DReturns data o" +
+      "n a specific change history entry for a " +
+      "published file\022\244\001\n\020GetChangeHistory\022(.CP" +
+      "ublishedFile_GetChangeHistory_Request\032)." +
+      "CPublishedFile_GetChangeHistory_Response" +
+      "\";\202\265\0307Returns data on the change history" +
+      " for a published file\022\230\001\n\022RefreshVotingQ" +
+      "ueue\022*.CPublishedFile_RefreshVotingQueue" +
+      "_Request\032+.CPublishedFile_RefreshVotingQ" +
+      "ueue_Response\")\202\265\030%Refresh the voting qu" +
+      "eue for the user\022\206\001\n\nQueryFiles\022\".CPubli" +
+      "shedFile_QueryFiles_Request\032#.CPublished" +
+      "File_QueryFiles_Response\"/\202\265\030+Performs a" +
+      " search query for published files\022\263\001\n\022Ad" +
+      "dAppRelationship\022*.CPublishedFile_AddApp" +
+      "Relationship_Request\032+.CPublishedFile_Ad" +
+      "dAppRelationship_Response\"D\202\265\030@Adds a re" +
+      "lationship between the published file an" +
+      "d the given app\022\276\001\n\025RemoveAppRelationshi" +
+      "p\022-.CPublishedFile_RemoveAppRelationship" +
+      "_Request\032..CPublishedFile_RemoveAppRelat" +
+      "ionship_Response\"F\202\265\030BRemove a relations" +
+      "hip between the published file and the g" +
+      "iven app\022\263\001\n\023GetAppRelationships\022+.CPubl" +
+      "ishedFile_GetAppRelationships_Request\032,." +
+      "CPublishedFile_GetAppRelationships_Respo" +
+      "nse\"A\202\265\030=Returns the list of app relatio" +
+      "nships for this published file\022\313\001\n\032GetAp" +
+      "pRelationshipsBatched\0222.CPublishedFile_G" +
+      "etAppRelationshipsBatched_Request\0323.CPub" +
+      "lishedFile_GetAppRelationshipsBatched_Re" +
+      "sponse\"D\202\265\030@Returns the list of app rela" +
+      "tionships for set of published files\022\263\001\n" +
+      "\025StartPlaytimeTracking\022-.CPublishedFile_" +
+      "StartPlaytimeTracking_Request\032..CPublish" +
+      "edFile_StartPlaytimeTracking_Response\";\202" +
+      "\265\0307Start usage tracking for a given set " +
+      "of published files\022\260\001\n\024StopPlaytimeTrack" +
+      "ing\022,.CPublishedFile_StopPlaytimeTrackin" +
+      "g_Request\032-.CPublishedFile_StopPlaytimeT" +
+      "racking_Response\";\202\265\0307Stops usage tracki" +
+      "ng for a given set of published files\022\355\001" +
+      "\n\"StopPlaytimeTrackingForAllAppItems\022:.C" +
+      "PublishedFile_StopPlaytimeTrackingForAll" +
+      "AppItems_Request\032;.CPublishedFile_StopPl" +
+      "aytimeTrackingForAllAppItems_Response\"N\202" +
+      "\265\030JStops usage tracking for all items cu" +
+      "rrently tracked for the specified app\022\230\002" +
+      "\n\037SetPlaytimeForControllerConfigs\0227.CPub" +
+      "lishedFile_SetPlaytimeForControllerConfi" +
+      "gs_Request\0328.CPublishedFile_SetPlaytimeF" +
+      "orControllerConfigs_Response\"\201\001\202\265\030}Stops" +
+      " usage tracking all controller configs f" +
+      "or the given app and set the usage time " +
+      "for the for the given controller configs" +
+      "\022\217\001\n\010AddChild\022 .CPublishedFile_AddChild_" +
+      "Request\032!.CPublishedFile_AddChild_Respon" +
+      "se\">\202\265\030:Adds a parent->child relationshi" +
+      "p between the given items.\022\231\001\n\013RemoveChi" +
+      "ld\022#.CPublishedFile_RemoveChild_Request\032" +
+      "$.CPublishedFile_RemoveChild_Response\"?\202" +
+      "\265\030;Removes parent->child relationship be" +
+      "tween the given items.\022\210\001\n\022GetUserVoteSu" +
+      "mmary\022*.CPublishedFile_GetUserVoteSummar" +
+      "y_Request\032+.CPublishedFile_GetUserVoteSu" +
+      "mmary_Response\"\031\202\265\030\025Get user vote summar" +
+      "y\022\221\001\n\016GetItemChanges\022&.CPublishedFile_Ge" +
+      "tItemChanges_Request\032\'.CPublishedFile_Ge" +
+      "tItemChanges_Response\".\202\265\030*Get list of u" +
+      "pdated items since given date\022\322\001\n\025GetCon" +
+      "tentDescriptors\022-.CPublishedFile_GetCont" +
+      "entDescriptors_Request\032..CPublishedFile_" +
+      "GetContentDescriptors_Response\"Z\202\265\030VRetu" +
+      "rns more detailed information about the " +
+      "content descriptors for the published fi" +
+      "le\022\266\001\n\030UpdateContentDescriptors\0220.CPubli" +
+      "shedFile_UpdateContentDescriptors_Reques" +
+      "t\0321.CPublishedFile_UpdateContentDescript" +
+      "ors_Response\"5\202\265\0301Updates content descri" +
+      "ptors on the published file\032+\202\265\030\'A servi" +
+      "ce to access published file data2\215\004\n\023Pub" +
+      "lishedFileClient\022\223\001\n\024NotifyFileSubscribe" +
+      "d\022+.CPublishedFile_FileSubscribed_Notifi" +
+      "cation\032\013.NoResponse\"A\202\265\030=Notification fr" +
+      "om the server when a user subscribes to " +
+      "a file\022\233\001\n\026NotifyFileUnsubscribed\022-.CPub" +
+      "lishedFile_FileUnsubscribed_Notification" +
+      "\032\013.NoResponse\"E\202\265\030ANotification from the" +
+      " server when a user unsubscribes from a " +
+      "file\022\224\001\n\021NotifyFileDeleted\022/.CPublishedF" +
+      "ile_FileDeleted_Client_Notification\032\013.No" +
+      "Response\"A\202\265\030=Notification from the serv" +
+      "er when a published file is deleted\032+\202\265\030" +
+      "#Published file client notifications\300\265\030\002" +
+      "B\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
-          Enums.getDescriptor(),
+          EnumsProductinfo.getDescriptor(),
         });
-    internal_static_CPublishedFile_Subscribe_Request_descriptor =
+    internal_static_CPublishedFile_Vote_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_CPublishedFile_Vote_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_Vote_Request_descriptor,
+        new java.lang.String[] { "Publishedfileid", "VoteUp", });
+    internal_static_CPublishedFile_Vote_Response_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_CPublishedFile_Vote_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_Vote_Response_descriptor,
+        new java.lang.String[] { });
+    internal_static_CPublishedFile_Subscribe_Request_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CPublishedFile_Subscribe_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_Subscribe_Request_descriptor,
         new java.lang.String[] { "Publishedfileid", "ListType", "Appid", "NotifyClient", });
     internal_static_CPublishedFile_Subscribe_Response_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CPublishedFile_Subscribe_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_Subscribe_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_Unsubscribe_Request_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CPublishedFile_Unsubscribe_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_Unsubscribe_Request_descriptor,
         new java.lang.String[] { "Publishedfileid", "ListType", "Appid", "NotifyClient", });
     internal_static_CPublishedFile_Unsubscribe_Response_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CPublishedFile_Unsubscribe_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_Unsubscribe_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_CanSubscribe_Request_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CPublishedFile_CanSubscribe_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_CanSubscribe_Request_descriptor,
         new java.lang.String[] { "Publishedfileid", });
     internal_static_CPublishedFile_CanSubscribe_Response_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CPublishedFile_CanSubscribe_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_CanSubscribe_Response_descriptor,
         new java.lang.String[] { "CanSubscribe", });
+    internal_static_CPublishedFile_GetSubSectionData_Request_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_CPublishedFile_GetSubSectionData_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_GetSubSectionData_Request_descriptor,
+        new java.lang.String[] { "Publishedfileid", "ForTableOfContents", "SpecificSectionid", "DesiredRevision", });
+    internal_static_PublishedFileSubSection_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_PublishedFileSubSection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PublishedFileSubSection_descriptor,
+        new java.lang.String[] { "Sectionid", "Title", "DescriptionText", "SortOrder", });
+    internal_static_CPublishedFile_GetSubSectionData_Response_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_CPublishedFile_GetSubSectionData_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_GetSubSectionData_Response_descriptor,
+        new java.lang.String[] { "SubSections", });
     internal_static_CPublishedFile_Publish_Request_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CPublishedFile_Publish_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_Publish_Request_descriptor,
         new java.lang.String[] { "Appid", "ConsumerAppid", "Cloudfilename", "PreviewCloudfilename", "Title", "FileDescription", "FileType", "ConsumerShortcutName", "YoutubeUsername", "YoutubeVideoid", "Visibility", "RedirectUri", "Tags", "CollectionType", "GameType", "Url", });
     internal_static_CPublishedFile_Publish_Response_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CPublishedFile_Publish_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_Publish_Response_descriptor,
         new java.lang.String[] { "Publishedfileid", "RedirectUri", });
     internal_static_CPublishedFile_GetDetails_Request_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CPublishedFile_GetDetails_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetDetails_Request_descriptor,
         new java.lang.String[] { "Publishedfileids", "Includetags", "Includeadditionalpreviews", "Includechildren", "Includekvtags", "Includevotes", "ShortDescription", "Includeforsaledata", "Includemetadata", "Language", "ReturnPlaytimeStats", "Appid", "StripDescriptionBbcode", "DesiredRevision", "Includereactions", });
     internal_static_PublishedFileDetails_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_PublishedFileDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PublishedFileDetails_descriptor,
-        new java.lang.String[] { "Result", "Publishedfileid", "Creator", "CreatorAppid", "ConsumerAppid", "ConsumerShortcutid", "Filename", "FileSize", "PreviewFileSize", "FileUrl", "PreviewUrl", "Youtubevideoid", "Url", "HcontentFile", "HcontentPreview", "Title", "FileDescription", "ShortDescription", "TimeCreated", "TimeUpdated", "Visibility", "Flags", "WorkshopFile", "WorkshopAccepted", "ShowSubscribeAll", "NumCommentsDeveloper", "NumCommentsPublic", "Banned", "BanReason", "Banner", "CanBeDeleted", "Incompatible", "AppName", "FileType", "CanSubscribe", "Subscriptions", "Favorited", "Followers", "LifetimeSubscriptions", "LifetimeFavorited", "LifetimeFollowers", "LifetimePlaytime", "LifetimePlaytimeSessions", "Views", "ImageWidth", "ImageHeight", "ImageUrl", "SpoilerTag", "Shortcutid", "Shortcutname", "NumChildren", "NumReports", "Previews", "Tags", "Children", "Kvtags", "VoteData", "PlaytimeStats", "TimeSubscribed", "ForSaleData", "Metadata", "Language", "MaybeInappropriateSex", "MaybeInappropriateViolence", "RevisionChangeNumber", "Revision", "AvailableRevisions", "Reactions", "BanTextCheckResult", });
+        new java.lang.String[] { "Result", "Publishedfileid", "Creator", "CreatorAppid", "ConsumerAppid", "ConsumerShortcutid", "Filename", "FileSize", "PreviewFileSize", "FileUrl", "PreviewUrl", "Youtubevideoid", "Url", "HcontentFile", "HcontentPreview", "Title", "FileDescription", "ShortDescription", "TimeCreated", "TimeUpdated", "Visibility", "Flags", "WorkshopFile", "WorkshopAccepted", "ShowSubscribeAll", "NumCommentsDeveloper", "NumCommentsPublic", "Banned", "BanReason", "Banner", "CanBeDeleted", "Incompatible", "AppName", "FileType", "CanSubscribe", "Subscriptions", "Favorited", "Followers", "LifetimeSubscriptions", "LifetimeFavorited", "LifetimeFollowers", "LifetimePlaytime", "LifetimePlaytimeSessions", "Views", "ImageWidth", "ImageHeight", "ImageUrl", "SpoilerTag", "Shortcutid", "Shortcutname", "NumChildren", "NumReports", "Previews", "Tags", "Children", "Kvtags", "VoteData", "PlaytimeStats", "TimeSubscribed", "ForSaleData", "Metadata", "Language", "MaybeInappropriateSex", "MaybeInappropriateViolence", "ContentDescriptorids", "RevisionChangeNumber", "Revision", "AvailableRevisions", "Reactions", "BanTextCheckResult", "SearchScore", });
     internal_static_PublishedFileDetails_Tag_descriptor =
       internal_static_PublishedFileDetails_descriptor.getNestedTypes().get(0);
     internal_static_PublishedFileDetails_Tag_fieldAccessorTable = new
@@ -78081,13 +91829,13 @@ public final class SteammessagesPublishedfileSteamclient {
         internal_static_PublishedFileDetails_Reaction_descriptor,
         new java.lang.String[] { "Reactionid", "Count", });
     internal_static_CPublishedFile_GetDetails_Response_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CPublishedFile_GetDetails_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetDetails_Response_descriptor,
         new java.lang.String[] { "Publishedfiledetails", });
     internal_static_CPublishedFile_GetItemInfo_Request_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CPublishedFile_GetItemInfo_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetItemInfo_Request_descriptor,
@@ -78099,7 +91847,7 @@ public final class SteammessagesPublishedfileSteamclient {
         internal_static_CPublishedFile_GetItemInfo_Request_WorkshopItem_descriptor,
         new java.lang.String[] { "PublishedFileId", "TimeUpdated", "DesiredRevision", });
     internal_static_CPublishedFile_GetItemInfo_Response_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CPublishedFile_GetItemInfo_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetItemInfo_Response_descriptor,
@@ -78111,11 +91859,11 @@ public final class SteammessagesPublishedfileSteamclient {
         internal_static_CPublishedFile_GetItemInfo_Response_WorkshopItemInfo_descriptor,
         new java.lang.String[] { "PublishedFileId", "TimeUpdated", "ManifestId", "Flags", });
     internal_static_CPublishedFile_GetUserFiles_Request_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CPublishedFile_GetUserFiles_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetUserFiles_Request_descriptor,
-        new java.lang.String[] { "Steamid", "Appid", "Page", "Numperpage", "Type", "Sortmethod", "Privacy", "Requiredtags", "Excludedtags", "RequiredKvTags", "Filetype", "CreatorAppid", "MatchCloudFilename", "CacheMaxAgeSeconds", "Language", "Taggroups", "Totalonly", "IdsOnly", "ReturnVoteData", "ReturnTags", "ReturnKvTags", "ReturnPreviews", "ReturnChildren", "ReturnShortDescription", "ReturnForSaleData", "ReturnMetadata", "ReturnPlaytimeStats", "StripDescriptionBbcode", "ReturnReactions", "StartindexOverride", "DesiredRevision", });
+        new java.lang.String[] { "Steamid", "Appid", "Shortcutid", "Page", "Numperpage", "Type", "Sortmethod", "Privacy", "Requiredtags", "Excludedtags", "RequiredKvTags", "Filetype", "CreatorAppid", "MatchCloudFilename", "CacheMaxAgeSeconds", "Language", "Taggroups", "ExcludedContentDescriptors", "Totalonly", "IdsOnly", "ReturnVoteData", "ReturnTags", "ReturnKvTags", "ReturnPreviews", "ReturnChildren", "ReturnShortDescription", "ReturnForSaleData", "ReturnMetadata", "ReturnPlaytimeStats", "StripDescriptionBbcode", "ReturnReactions", "StartindexOverride", "DesiredRevision", "ReturnApps", });
     internal_static_CPublishedFile_GetUserFiles_Request_KVTag_descriptor =
       internal_static_CPublishedFile_GetUserFiles_Request_descriptor.getNestedTypes().get(0);
     internal_static_CPublishedFile_GetUserFiles_Request_KVTag_fieldAccessorTable = new
@@ -78129,7 +91877,7 @@ public final class SteammessagesPublishedfileSteamclient {
         internal_static_CPublishedFile_GetUserFiles_Request_TagGroup_descriptor,
         new java.lang.String[] { "Tags", });
     internal_static_CPublishedFile_GetUserFiles_Response_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_CPublishedFile_GetUserFiles_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetUserFiles_Response_descriptor,
@@ -78141,13 +91889,13 @@ public final class SteammessagesPublishedfileSteamclient {
         internal_static_CPublishedFile_GetUserFiles_Response_App_descriptor,
         new java.lang.String[] { "Appid", "Name", "Shortcutid", "Private", });
     internal_static_CPublishedFile_AreFilesInSubscriptionList_Request_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_CPublishedFile_AreFilesInSubscriptionList_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_AreFilesInSubscriptionList_Request_descriptor,
         new java.lang.String[] { "Appid", "Publishedfileids", "Listtype", "Filetype", "Workshopfiletype", });
     internal_static_CPublishedFile_AreFilesInSubscriptionList_Response_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_CPublishedFile_AreFilesInSubscriptionList_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_AreFilesInSubscriptionList_Response_descriptor,
@@ -78159,37 +91907,49 @@ public final class SteammessagesPublishedfileSteamclient {
         internal_static_CPublishedFile_AreFilesInSubscriptionList_Response_InList_descriptor,
         new java.lang.String[] { "Publishedfileid", "Inlist", });
     internal_static_CPublishedFile_Update_Request_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_CPublishedFile_Update_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_Update_Request_descriptor,
-        new java.lang.String[] { "Appid", "Publishedfileid", "Title", "FileDescription", "Visibility", "Tags", "Filename", "PreviewFilename", "ImageWidth", "ImageHeight", });
+        new java.lang.String[] { "Appid", "Publishedfileid", "Title", "FileDescription", "Visibility", "Tags", "Filename", "PreviewFilename", "SpoilerTag", "ImageWidth", "ImageHeight", });
     internal_static_CPublishedFile_Update_Response_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_CPublishedFile_Update_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_Update_Response_descriptor,
         new java.lang.String[] { });
+    internal_static_CPublishedFile_Delete_Request_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_CPublishedFile_Delete_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_Delete_Request_descriptor,
+        new java.lang.String[] { "Publishedfileid", "Appid", });
+    internal_static_CPublishedFile_Delete_Response_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_CPublishedFile_Delete_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_Delete_Response_descriptor,
+        new java.lang.String[] { });
     internal_static_CPublishedFile_GetChangeHistoryEntry_Request_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_CPublishedFile_GetChangeHistoryEntry_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetChangeHistoryEntry_Request_descriptor,
         new java.lang.String[] { "Publishedfileid", "Timestamp", "Language", });
     internal_static_CPublishedFile_GetChangeHistoryEntry_Response_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_CPublishedFile_GetChangeHistoryEntry_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetChangeHistoryEntry_Response_descriptor,
         new java.lang.String[] { "ChangeDescription", "Language", });
     internal_static_CPublishedFile_GetChangeHistory_Request_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_CPublishedFile_GetChangeHistory_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetChangeHistory_Request_descriptor,
         new java.lang.String[] { "Publishedfileid", "TotalOnly", "Startindex", "Count", "Language", });
     internal_static_CPublishedFile_GetChangeHistory_Response_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_CPublishedFile_GetChangeHistory_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetChangeHistory_Response_descriptor,
@@ -78201,23 +91961,23 @@ public final class SteammessagesPublishedfileSteamclient {
         internal_static_CPublishedFile_GetChangeHistory_Response_ChangeLog_descriptor,
         new java.lang.String[] { "Timestamp", "ChangeDescription", "Language", });
     internal_static_CPublishedFile_RefreshVotingQueue_Request_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_CPublishedFile_RefreshVotingQueue_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_RefreshVotingQueue_Request_descriptor,
         new java.lang.String[] { "Appid", "MatchingFileType", "Tags", "MatchAllTags", "ExcludedTags", "DesiredQueueSize", "DesiredRevision", });
     internal_static_CPublishedFile_RefreshVotingQueue_Response_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_CPublishedFile_RefreshVotingQueue_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_RefreshVotingQueue_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_QueryFiles_Request_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_CPublishedFile_QueryFiles_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_QueryFiles_Request_descriptor,
-        new java.lang.String[] { "QueryType", "Page", "Cursor", "Numperpage", "CreatorAppid", "Appid", "Requiredtags", "Excludedtags", "MatchAllTags", "RequiredFlags", "OmittedFlags", "SearchText", "Filetype", "ChildPublishedfileid", "Days", "IncludeRecentVotesOnly", "CacheMaxAgeSeconds", "Language", "RequiredKvTags", "Taggroups", "Totalonly", "IdsOnly", "ReturnVoteData", "ReturnTags", "ReturnKvTags", "ReturnPreviews", "ReturnChildren", "ReturnShortDescription", "ReturnForSaleData", "ReturnMetadata", "ReturnPlaytimeStats", "ReturnDetails", "StripDescriptionBbcode", "DesiredRevision", "ReturnReactions", });
+        new java.lang.String[] { "QueryType", "Page", "Cursor", "Numperpage", "CreatorAppid", "Appid", "Requiredtags", "Excludedtags", "MatchAllTags", "RequiredFlags", "OmittedFlags", "SearchText", "Filetype", "ChildPublishedfileid", "Days", "IncludeRecentVotesOnly", "CacheMaxAgeSeconds", "Language", "RequiredKvTags", "Taggroups", "DateRangeCreated", "DateRangeUpdated", "ExcludedContentDescriptors", "Totalonly", "IdsOnly", "ReturnVoteData", "ReturnTags", "ReturnKvTags", "ReturnPreviews", "ReturnChildren", "ReturnShortDescription", "ReturnForSaleData", "ReturnMetadata", "ReturnPlaytimeStats", "ReturnDetails", "StripDescriptionBbcode", "DesiredRevision", "ReturnReactions", });
     internal_static_CPublishedFile_QueryFiles_Request_KVTag_descriptor =
       internal_static_CPublishedFile_QueryFiles_Request_descriptor.getNestedTypes().get(0);
     internal_static_CPublishedFile_QueryFiles_Request_KVTag_fieldAccessorTable = new
@@ -78230,44 +91990,50 @@ public final class SteammessagesPublishedfileSteamclient {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_QueryFiles_Request_TagGroup_descriptor,
         new java.lang.String[] { "Tags", });
+    internal_static_CPublishedFile_QueryFiles_Request_DateRange_descriptor =
+      internal_static_CPublishedFile_QueryFiles_Request_descriptor.getNestedTypes().get(2);
+    internal_static_CPublishedFile_QueryFiles_Request_DateRange_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_QueryFiles_Request_DateRange_descriptor,
+        new java.lang.String[] { "TimestampStart", "TimestampEnd", });
     internal_static_CPublishedFile_QueryFiles_Response_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_CPublishedFile_QueryFiles_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_QueryFiles_Response_descriptor,
         new java.lang.String[] { "Total", "Publishedfiledetails", "NextCursor", });
     internal_static_CPublishedFile_AddAppRelationship_Request_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_CPublishedFile_AddAppRelationship_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_AddAppRelationship_Request_descriptor,
         new java.lang.String[] { "Publishedfileid", "Appid", "Relationship", });
     internal_static_CPublishedFile_AddAppRelationship_Response_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_CPublishedFile_AddAppRelationship_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_AddAppRelationship_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_RemoveAppRelationship_Request_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_CPublishedFile_RemoveAppRelationship_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_RemoveAppRelationship_Request_descriptor,
         new java.lang.String[] { "Publishedfileid", "Appid", "Relationship", });
     internal_static_CPublishedFile_RemoveAppRelationship_Response_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_CPublishedFile_RemoveAppRelationship_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_RemoveAppRelationship_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_GetAppRelationships_Request_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_CPublishedFile_GetAppRelationships_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetAppRelationships_Request_descriptor,
         new java.lang.String[] { "Publishedfileid", });
     internal_static_CPublishedFile_GetAppRelationships_Response_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_CPublishedFile_GetAppRelationships_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetAppRelationships_Response_descriptor,
@@ -78278,44 +92044,68 @@ public final class SteammessagesPublishedfileSteamclient {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetAppRelationships_Response_AppRelationship_descriptor,
         new java.lang.String[] { "Appid", "Relationship", });
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Request_descriptor =
+      getDescriptor().getMessageTypes().get(40);
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_GetAppRelationshipsBatched_Request_descriptor,
+        new java.lang.String[] { "Publishedfileids", "FilterRelationship", });
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_descriptor =
+      getDescriptor().getMessageTypes().get(41);
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_descriptor,
+        new java.lang.String[] { "Relationships", });
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_AppRelationship_descriptor =
+      internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_descriptor.getNestedTypes().get(0);
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_AppRelationship_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_AppRelationship_descriptor,
+        new java.lang.String[] { "Appid", "Relationship", });
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship_descriptor =
+      internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_descriptor.getNestedTypes().get(1);
+    internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship_descriptor,
+        new java.lang.String[] { "Publishedfileid", "Result", "AppRelationships", });
     internal_static_CPublishedFile_StartPlaytimeTracking_Request_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_CPublishedFile_StartPlaytimeTracking_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_StartPlaytimeTracking_Request_descriptor,
         new java.lang.String[] { "Appid", "Publishedfileids", });
     internal_static_CPublishedFile_StartPlaytimeTracking_Response_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_CPublishedFile_StartPlaytimeTracking_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_StartPlaytimeTracking_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_StopPlaytimeTracking_Request_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_CPublishedFile_StopPlaytimeTracking_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_StopPlaytimeTracking_Request_descriptor,
         new java.lang.String[] { "Appid", "Publishedfileids", });
     internal_static_CPublishedFile_StopPlaytimeTracking_Response_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_CPublishedFile_StopPlaytimeTracking_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_StopPlaytimeTracking_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request_descriptor,
         new java.lang.String[] { "Appid", });
     internal_static_CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_SetPlaytimeForControllerConfigs_Request_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_CPublishedFile_SetPlaytimeForControllerConfigs_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_SetPlaytimeForControllerConfigs_Request_descriptor,
@@ -78327,43 +92117,43 @@ public final class SteammessagesPublishedfileSteamclient {
         internal_static_CPublishedFile_SetPlaytimeForControllerConfigs_Request_ControllerConfigUsage_descriptor,
         new java.lang.String[] { "Publishedfileid", "SecondsActive", });
     internal_static_CPublishedFile_SetPlaytimeForControllerConfigs_Response_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_CPublishedFile_SetPlaytimeForControllerConfigs_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_SetPlaytimeForControllerConfigs_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_AddChild_Request_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_CPublishedFile_AddChild_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_AddChild_Request_descriptor,
         new java.lang.String[] { "Publishedfileid", "ChildPublishedfileid", });
     internal_static_CPublishedFile_AddChild_Response_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_CPublishedFile_AddChild_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_AddChild_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_RemoveChild_Request_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_CPublishedFile_RemoveChild_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_RemoveChild_Request_descriptor,
         new java.lang.String[] { "Publishedfileid", "ChildPublishedfileid", });
     internal_static_CPublishedFile_RemoveChild_Response_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_CPublishedFile_RemoveChild_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_RemoveChild_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CPublishedFile_GetUserVoteSummary_Request_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_CPublishedFile_GetUserVoteSummary_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetUserVoteSummary_Request_descriptor,
         new java.lang.String[] { "Publishedfileids", });
     internal_static_CPublishedFile_GetUserVoteSummary_Response_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_CPublishedFile_GetUserVoteSummary_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetUserVoteSummary_Response_descriptor,
@@ -78375,13 +92165,13 @@ public final class SteammessagesPublishedfileSteamclient {
         internal_static_CPublishedFile_GetUserVoteSummary_Response_VoteSummary_descriptor,
         new java.lang.String[] { "Publishedfileid", "VoteFor", "VoteAgainst", "Reported", });
     internal_static_CPublishedFile_GetItemChanges_Request_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_CPublishedFile_GetItemChanges_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetItemChanges_Request_descriptor,
         new java.lang.String[] { "Appid", "LastTimeUpdated", "NumItemsMax", });
     internal_static_CPublishedFile_GetItemChanges_Response_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_CPublishedFile_GetItemChanges_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetItemChanges_Response_descriptor,
@@ -78392,8 +92182,38 @@ public final class SteammessagesPublishedfileSteamclient {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_GetItemChanges_Response_WorkshopItemInfo_descriptor,
         new java.lang.String[] { "PublishedFileId", "TimeUpdated", "ManifestId", });
+    internal_static_CPublishedFile_GetContentDescriptors_Request_descriptor =
+      getDescriptor().getMessageTypes().get(58);
+    internal_static_CPublishedFile_GetContentDescriptors_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_GetContentDescriptors_Request_descriptor,
+        new java.lang.String[] { "Publishedfileid", });
+    internal_static_CPublishedFile_GetContentDescriptors_Response_descriptor =
+      getDescriptor().getMessageTypes().get(59);
+    internal_static_CPublishedFile_GetContentDescriptors_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_GetContentDescriptors_Response_descriptor,
+        new java.lang.String[] { "ContentDescriptors", });
+    internal_static_CPublishedFile_GetContentDescriptors_Response_ContentDescriptor_descriptor =
+      internal_static_CPublishedFile_GetContentDescriptors_Response_descriptor.getNestedTypes().get(0);
+    internal_static_CPublishedFile_GetContentDescriptors_Response_ContentDescriptor_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_GetContentDescriptors_Response_ContentDescriptor_descriptor,
+        new java.lang.String[] { "Descriptorid", "Accountid", "Timestamp", "ModeratorSet", });
+    internal_static_CPublishedFile_UpdateContentDescriptors_Request_descriptor =
+      getDescriptor().getMessageTypes().get(60);
+    internal_static_CPublishedFile_UpdateContentDescriptors_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_UpdateContentDescriptors_Request_descriptor,
+        new java.lang.String[] { "Publishedfileid", "DescriptorsToAdd", "DescriptorsToRemove", });
+    internal_static_CPublishedFile_UpdateContentDescriptors_Response_descriptor =
+      getDescriptor().getMessageTypes().get(61);
+    internal_static_CPublishedFile_UpdateContentDescriptors_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPublishedFile_UpdateContentDescriptors_Response_descriptor,
+        new java.lang.String[] { "TimestampUpdated", });
     internal_static_CPublishedFile_FileSubscribed_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_CPublishedFile_FileSubscribed_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_FileSubscribed_Notification_descriptor,
@@ -78405,13 +92225,13 @@ public final class SteammessagesPublishedfileSteamclient {
         internal_static_CPublishedFile_FileSubscribed_Notification_RevisionData_descriptor,
         new java.lang.String[] { "Revision", "FileHcontent", "RtimeUpdated", });
     internal_static_CPublishedFile_FileUnsubscribed_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_CPublishedFile_FileUnsubscribed_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_FileUnsubscribed_Notification_descriptor,
         new java.lang.String[] { "PublishedFileId", "AppId", });
     internal_static_CPublishedFile_FileDeleted_Client_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_CPublishedFile_FileDeleted_Client_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPublishedFile_FileDeleted_Client_Notification_descriptor,
@@ -78424,8 +92244,9 @@ public final class SteammessagesPublishedfileSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
-    Enums.getDescriptor();
+    EnumsProductinfo.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

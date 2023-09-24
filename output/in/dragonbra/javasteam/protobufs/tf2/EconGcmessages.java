@@ -23640,254 +23640,254 @@ public final class EconGcmessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031tf2/econ_gcmessages.proto\032\031steam/steam" +
-      "messages.proto\"E\n\022CMsgApplyAutograph\022\031\n\021" +
-      "autograph_item_id\030\001 \001(\004\022\024\n\014item_item_id\030" +
-      "\002 \001(\004\"\360\001\n$CMsgEconPlayerStrangeCountAdju" +
-      "stment\022\022\n\naccount_id\030\001 \001(\r\022`\n\031strange_co" +
-      "unt_adjustments\030\002 \003(\0132=.CMsgEconPlayerSt" +
-      "rangeCountAdjustment.CStrangeCountAdjust" +
-      "ment\032R\n\027CStrangeCountAdjustment\022\022\n\nevent" +
-      "_type\030\001 \001(\r\022\017\n\007item_id\030\002 \001(\004\022\022\n\nadjustme" +
-      "nt\030\003 \001(\r\"=\n)CMsgRequestItemPurgatory_Fin" +
-      "alizePurchase\022\020\n\010item_ids\030\001 \003(\004\"C\n1CMsgR" +
-      "equestItemPurgatory_FinalizePurchaseResp" +
-      "onse\022\016\n\006result\030\001 \001(\r\":\n\'CMsgRequestItemP" +
-      "urgatory_RefundPurchase\022\017\n\007item_id\030\001 \001(\004" +
-      "\"A\n/CMsgRequestItemPurgatory_RefundPurch" +
-      "aseResponse\022\016\n\006result\030\001 \001(\r\"(\n\024CMsgCraft" +
-      "ingResponse\022\020\n\010item_ids\030\001 \003(\004\"@\n\033CMsgGCR" +
-      "equestStoreSalesData\022\017\n\007version\030\001 \001(\r\022\020\n" +
-      "\010currency\030\002 \001(\r\"\271\001\n#CMsgGCRequestStoreSa" +
-      "lesDataResponse\022>\n\nsale_price\030\001 \003(\0132*.CM" +
-      "sgGCRequestStoreSalesDataResponse.Price\022" +
-      "\017\n\007version\030\002 \001(\r\022\027\n\017expiration_time\030\003 \001(" +
-      "\r\032(\n\005Price\022\020\n\010item_def\030\001 \001(\r\022\r\n\005price\030\002 " +
-      "\001(\r\"W\n+CMsgGCRequestStoreSalesDataUpToDa" +
-      "teResponse\022\017\n\007version\030\001 \001(\r\022\027\n\017expiratio" +
-      "n_time\030\002 \001(\r\"\027\n\025CMsgGCToGCPingRequest\"\030\n" +
-      "\026CMsgGCToGCPingResponse\"4\n\036CMsgGCToGCGet" +
-      "UserSessionServer\022\022\n\naccount_id\030\001 \001(\r\"A\n" +
-      "&CMsgGCToGCGetUserSessionServerResponse\022" +
-      "\027\n\017server_steam_id\030\001 \001(\006\"L\n\036CMsgGCToGCGe" +
-      "tUserServerMembers\022\022\n\naccount_id\030\001 \001(\r\022\026" +
-      "\n\016max_spectators\030\002 \001(\r\"C\n&CMsgGCToGCGetU" +
-      "serServerMembersResponse\022\031\n\021member_accou" +
-      "nt_id\030\001 \003(\r\"8\n\036CMsgLookupMultipleAccount" +
-      "Names\022\026\n\naccountids\030\001 \003(\rB\002\020\001\"\232\001\n&CMsgLo" +
-      "okupMultipleAccountNamesResponse\022A\n\010acco" +
-      "unts\030\001 \003(\0132/.CMsgLookupMultipleAccountNa" +
-      "mesResponse.Account\032-\n\007Account\022\021\n\taccoun" +
-      "tid\030\001 \001(\r\022\017\n\007persona\030\002 \001(\t\"Q\n$CMsgGCToGC" +
-      "GrantSelfMadeItemToAccount\022\026\n\016item_def_i" +
-      "ndex\030\001 \001(\r\022\021\n\taccountid\030\002 \001(\r\"X\n\032CMsgGCT" +
-      "oGCThankedByNewUser\022\032\n\022new_user_accounti" +
-      "d\030\001 \001(\r\022\036\n\026thanked_user_accountid\030\002 \001(\r\"" +
-      "M\n\032CMsgGCShuffleCrateContents\022\025\n\rcrate_i" +
-      "tem_id\030\001 \001(\004\022\030\n\020user_code_string\030\002 \001(\t\"s" +
-      "\n\035CMsgGCQuestObjective_Progress\022\020\n\010quest" +
-      "_id\030\001 \001(\004\022\032\n\022quest_attrib_index\030\002 \001(\r\022\r\n" +
-      "\005delta\030\003 \001(\r\022\025\n\rowner_steamid\030\004 \001(\006\"\245\001\n!" +
-      "CMsgGCQuestObjective_PointsChange\022\020\n\010que" +
-      "st_id\030\001 \001(\004\022\025\n\rowner_steamid\030\004 \001(\006\022!\n\022up" +
-      "date_base_points\030\005 \001(\010:\005false\022\020\n\010points_" +
-      "0\030\006 \001(\r\022\020\n\010points_1\030\007 \001(\r\022\020\n\010points_2\030\010 " +
-      "\001(\r\"/\n\033CMsgGCQuestComplete_Request\022\020\n\010qu" +
-      "est_id\030\001 \001(\004\"\026\n\024CMsgGCQuestCompleted\";\n\'" +
-      "CMsgGCQuestObjective_RequestLoanerItems\022" +
-      "\020\n\010quest_id\030\001 \001(\004\",\n*CMsgGCQuestObjectiv" +
-      "e_RequestLoanerResponse\"-\n\032CMsgCraftColl" +
-      "ectionUpgrade\022\017\n\007item_id\030\001 \003(\004\">\n\032CMsgCr" +
-      "aftHalloweenOffering\022\017\n\007tool_id\030\001 \001(\004\022\017\n" +
-      "\007item_id\030\002 \003(\004\"<\n\030CMsgCraftCommonStatClo" +
-      "ck\022\017\n\007tool_id\030\001 \001(\004\022\017\n\007item_id\030\002 \003(\004\".\n\032" +
-      "CMsgGCQuestDiscard_Request\022\020\n\010quest_id\030\001" +
-      " \001(\004*\313/\n\nEGCItemMsg\022\021\n\014k_EMsgGCBase\020\350\007\022\"" +
-      "\n\035k_EMsgGCSetSingleItemPosition\020\351\007\022\022\n\rk_" +
-      "EMsgGCCraft\020\352\007\022\032\n\025k_EMsgGCCraftResponse\020" +
-      "\353\007\022\023\n\016k_EMsgGCDelete\020\354\007\022$\n\037k_EMsgGCVerif" +
-      "yCacheSubscription\020\355\007\022\025\n\020k_EMsgGCNameIte" +
-      "m\020\356\007\022\030\n\023k_EMsgGCUnlockCrate\020\357\007\022 \n\033k_EMsg" +
-      "GCUnlockCrateResponse\020\360\007\022\026\n\021k_EMsgGCPain" +
-      "tItem\020\361\007\022\036\n\031k_EMsgGCPaintItemResponse\020\362\007" +
-      "\022\"\n\035k_EMsgGCGoldenWrenchBroadcast\020\363\007\022\030\n\023" +
-      "k_EMsgGCMOTDRequest\020\364\007\022 \n\033k_EMsgGCMOTDRe" +
-      "questResponse\020\365\007\022\031\n\024k_EMsgGCNameBaseItem" +
-      "\020\373\007\022!\n\034k_EMsgGCNameBaseItemResponse\020\374\007\022(" +
-      "\n#k_EMsgGCRemoveSocketItem_DEPRECATED\020\375\007" +
-      "\0220\n+k_EMsgGCRemoveSocketItemResponse_DEP" +
-      "RECATED\020\376\007\022!\n\034k_EMsgGCCustomizeItemTextu" +
-      "re\020\377\007\022)\n$k_EMsgGCCustomizeItemTextureRes" +
-      "ponse\020\200\010\022\033\n\026k_EMsgGCUseItemRequest\020\201\010\022\034\n" +
-      "\027k_EMsgGCUseItemResponse\020\202\010\022%\n k_EMsgGCR" +
-      "espawnPostLoadoutChange\020\205\010\022\033\n\026k_EMsgGCRe" +
-      "moveItemName\020\206\010\022\034\n\027k_EMsgGCRemoveItemPai" +
-      "nt\020\207\010\022\031\n\024k_EMsgGCGiftWrapItem\020\210\010\022!\n\034k_EM" +
-      "sgGCGiftWrapItemResponse\020\211\010\022\030\n\023k_EMsgGCD" +
-      "eliverGift\020\212\010\022(\n#k_EMsgGCDeliverGiftResp" +
-      "onseReceiver\020\214\010\022\036\n\031k_EMsgGCUnwrapGiftReq" +
-      "uest\020\215\010\022\037\n\032k_EMsgGCUnwrapGiftResponse\020\216\010" +
-      "\022\031\n\024k_EMsgGCSetItemStyle\020\217\010\022\036\n\031k_EMsgGCU" +
-      "sedClaimCodeItem\020\220\010\022\026\n\021k_EMsgGCSortItems" +
-      "\020\221\010\022*\n%k_EMsgGC_RevolvingLootList_DEPREC" +
-      "ATED\020\222\010\022\032\n\025k_EMsgGCLookupAccount\020\223\010\022\"\n\035k" +
-      "_EMsgGCLookupAccountResponse\020\224\010\022\036\n\031k_EMs" +
-      "gGCLookupAccountName\020\225\010\022&\n!k_EMsgGCLooku" +
-      "pAccountNameResponse\020\226\010\022\035\n\030k_EMsgGCUpdat" +
-      "eItemSchema\020\231\010\022$\n\037k_EMsgGCRequestInvento" +
-      "ryRefresh\020\232\010\022 \n\033k_EMsgGCRemoveCustomText" +
-      "ure\020\233\010\022(\n#k_EMsgGCRemoveCustomTextureRes" +
-      "ponse\020\234\010\022\035\n\030k_EMsgGCRemoveMakersMark\020\235\010\022" +
-      "%\n k_EMsgGCRemoveMakersMarkResponse\020\236\010\022#" +
-      "\n\036k_EMsgGCRemoveUniqueCraftIndex\020\237\010\022+\n&k" +
-      "_EMsgGCRemoveUniqueCraftIndexResponse\020\240\010" +
-      "\022\033\n\026k_EMsgGCSaxxyBroadcast\020\241\010\022!\n\034k_EMsgG" +
-      "CBackpackSortFinished\020\242\010\022$\n\037k_EMsgGCAdju" +
-      "stItemEquippedState\020\243\010\022\030\n\023k_EMsgGCCollec" +
-      "tItem\020\245\010\022\035\n\030k_EMsgGCItemAcknowledged\020\246\010\022" +
-      ")\n$k_EMsgGCPresets_SelectPresetForClass\020" +
-      "\247\010\022$\n\037k_EMsgGCPresets_SetItemPosition\020\250\010" +
-      "\022\031\n\024k_EMsgGC_ReportAbuse\020\251\010\022!\n\034k_EMsgGC_" +
-      "ReportAbuseResponse\020\252\010\022.\n)k_EMsgGCPreset" +
-      "s_SelectPresetForClassReply\020\253\010\022!\n\034k_EMsg" +
-      "GCNameItemNotification\020\254\010\022&\n!k_EMsgGCCli" +
-      "entDisplayNotification\020\255\010\022\035\n\030k_EMsgGCApp" +
-      "lyStrangePart\020\256\010\022)\n$k_EMsgGC_IncrementKi" +
-      "llCountAttribute\020\257\010\022(\n#k_EMsgGC_Incremen" +
-      "tKillCountResponse\020\260\010\022\036\n\031k_EMsgGCRemoveS" +
-      "trangePart\020\261\010\022\037\n\032k_EMsgGCResetStrangeSco" +
-      "res\020\262\010\022\030\n\023k_EMsgGCGiftedItems\020\263\010\022\035\n\030k_EM" +
-      "sgGCApplyUpgradeCard\020\265\010\022\036\n\031k_EMsgGCRemov" +
-      "eUpgradeCard\020\266\010\022$\n\037k_EMsgGCApplyStrangeR" +
-      "estriction\020\267\010\022$\n\037k_EMsgGCClientRequestMa" +
-      "rketData\020\270\010\022,\n\'k_EMsgGCClientRequestMark" +
-      "etDataResponse\020\271\010\022\030\n\023k_EMsgGCApplyXifier" +
-      "\020\272\010\022 \n\033k_EMsgGCApplyXifierResponse\020\273\010\022(\n" +
-      "#k_EMsgGC_TrackUniquePlayerPairEvent\020\274\010\022" +
-      "*\n%k_EMsgGCFulfillDynamicRecipeComponent" +
-      "\020\275\010\0222\n-k_EMsgGCFulfillDynamicRecipeCompo" +
-      "nentResponse\020\276\010\022(\n#k_EMsgGCSetItemEffect" +
-      "VerticalOffset\020\277\010\022&\n!k_EMsgGCSetHatEffec" +
-      "tUseHeadOrigin\020\300\010\022\037\n\032k_EMsgGCItemEaterRe" +
-      "charger\020\301\010\022\'\n\"k_EMsgGCItemEaterRecharger" +
-      "Response\020\302\010\022 \n\033k_EMsgGCApplyBaseItemXifi" +
-      "er\020\303\010\022%\n k_EMsgGCApplyClassTransmogrifie" +
-      "r\020\304\010\022(\n#k_EMsgGCApplyHalloweenSpellbookP" +
-      "age\020\305\010\022\035\n\030k_EMsgGCRemoveKillStreak\020\306\010\022%\n" +
-      " k_EMsgGCRemoveKillStreakResponse\020\307\010\022$\n\037" +
-      "k_EMsgGCTFSpecificItemBroadcast\020\310\010\0222\n-k_" +
-      "EMsgGC_IncrementKillCountAttribute_Multi" +
-      "ple\020\311\010\022%\n k_EMsgGCDeliverGiftResponseGiv" +
-      "er\020\312\010\022\035\n\030k_EMsgGCSetItemPositions\020\314\010\022\'\n\"" +
-      "k_EMsgGCLookupMultipleAccountNames\020\315\010\022/\n" +
-      "*k_EMsgGCLookupMultipleAccountNamesRespo" +
-      "nse\020\316\010\022\030\n\023k_EMsgGCTradingBase\020\334\013\022)\n$k_EM" +
-      "sgGCTrading_InitiateTradeRequest\020\335\013\022*\n%k" +
-      "_EMsgGCTrading_InitiateTradeResponse\020\336\013\022" +
-      "!\n\034k_EMsgGCTrading_StartSession\020\337\013\022\"\n\035k_" +
-      "EMsgGCTrading_SessionClosed\020\345\013\022\"\n\035k_EMsg" +
-      "GCTrading_CancelSession\020\346\013\0221\n,k_EMsgGCTr" +
-      "ading_InitiateTradeRequestResponse\020\352\013\022)\n" +
-      "$k_EMsgGCServerBrowser_FavoriteServer\020\301\014" +
-      "\022*\n%k_EMsgGCServerBrowser_BlacklistServe" +
-      "r\020\302\014\022\036\n\031k_EMsgGCServerRentalsBase\020\244\r\022#\n\036" +
-      "k_EMsgGCItemPreviewCheckStatus\020\245\r\022&\n!k_E" +
-      "MsgGCItemPreviewStatusResponse\020\246\r\022\037\n\032k_E" +
-      "MsgGCItemPreviewRequest\020\247\r\022\'\n\"k_EMsgGCIt" +
-      "emPreviewRequestResponse\020\250\r\022\036\n\031k_EMsgGCI" +
-      "temPreviewExpire\020\251\r\022*\n%k_EMsgGCItemPrevi" +
-      "ewExpireNotification\020\252\r\022.\n)k_EMsgGCItemP" +
-      "reviewItemBoughtNotification\020\254\r\022\037\n\032k_EMs" +
-      "gGCDev_NewItemRequest\020\321\017\022\'\n\"k_EMsgGCDev_" +
-      "NewItemRequestResponse\020\322\017\022%\n k_EMsgGCDev" +
-      "_DebugRollLootRequest\020\323\017\022\035\n\030k_EMsgGCStor" +
-      "eGetUserData\020\304\023\022%\n k_EMsgGCStoreGetUserD" +
-      "ataResponse\020\305\023\022)\n$k_EMsgGCStorePurchaseI" +
-      "nit_DEPRECATED\020\306\023\0221\n,k_EMsgGCStorePurcha" +
-      "seInitResponse_DEPRECATED\020\307\023\022\"\n\035k_EMsgGC" +
-      "StorePurchaseFinalize\020\320\023\022*\n%k_EMsgGCStor" +
-      "ePurchaseFinalizeResponse\020\321\023\022 \n\033k_EMsgGC" +
-      "StorePurchaseCancel\020\322\023\022(\n#k_EMsgGCStoreP" +
-      "urchaseCancelResponse\020\323\023\022\"\n\035k_EMsgGCStor" +
-      "ePurchaseQueryTxn\020\314\023\022*\n%k_EMsgGCStorePur" +
-      "chaseQueryTxnResponse\020\315\023\022\036\n\031k_EMsgGCStor" +
-      "ePurchaseInit\020\316\023\022&\n!k_EMsgGCStorePurchas" +
-      "eInitResponse\020\317\023\022\036\n\031k_EMsgGCToGCDirtySDO" +
-      "Cache\020\324\023\022&\n!k_EMsgGCToGCDirtyMultipleSDO" +
-      "Cache\020\325\023\022\"\n\035k_EMsgGCToGCUpdateSQLKeyValu" +
-      "e\020\326\023\022(\n#k_EMsgGCToGCBroadcastConsoleComm" +
-      "and\020\331\023\022!\n\034k_EMsgGCServerVersionUpdated\020\332" +
-      "\023\022\033\n\026k_EMsgGCApplyAutograph\020\333\023\022%\n k_EMsg" +
-      "GCToGCWebAPIAccountChanged\020\334\023\022!\n\034k_EMsgG" +
-      "CRequestAnnouncements\020\335\023\022)\n$k_EMsgGCRequ" +
-      "estAnnouncementsResponse\020\336\023\022%\n k_EMsgGCR" +
-      "equestPassportItemGrant\020\337\023\022!\n\034k_EMsgGCCl" +
-      "ientVersionUpdated\020\340\023\022+\n&k_EMsgGCItemPur" +
-      "gatory_FinalizePurchase\020\343\023\0223\n.k_EMsgGCIt" +
-      "emPurgatory_FinalizePurchaseResponse\020\344\023\022" +
-      ")\n$k_EMsgGCItemPurgatory_RefundPurchase\020" +
-      "\345\023\0221\n,k_EMsgGCItemPurgatory_RefundPurcha" +
-      "seResponse\020\346\023\022.\n)k_EMsgGCToGCPlayerStran" +
-      "geCountAdjustments\020\347\023\022\"\n\035k_EMsgGCRequest" +
-      "StoreSalesData\020\350\023\022*\n%k_EMsgGCRequestStor" +
-      "eSalesDataResponse\020\351\023\0222\n-k_EMsgGCRequest" +
-      "StoreSalesDataUpToDateResponse\020\352\023\022\034\n\027k_E" +
-      "MsgGCToGCPingRequest\020\353\023\022\035\n\030k_EMsgGCToGCP" +
-      "ingResponse\020\354\023\022%\n k_EMsgGCToGCGetUserSes" +
-      "sionServer\020\355\023\022-\n(k_EMsgGCToGCGetUserSess" +
-      "ionServerResponse\020\356\023\022%\n k_EMsgGCToGCGetU" +
-      "serServerMembers\020\357\023\022-\n(k_EMsgGCToGCGetUs" +
-      "erServerMembersResponse\020\360\023\022+\n&k_EMsgGCTo" +
-      "GCGrantSelfMadeItemToAccount\020\373\023\022!\n\034k_EMs" +
-      "gGCToGCThankedByNewUser\020\374\023\022!\n\034k_EMsgGCSh" +
-      "uffleCrateContents\020\375\023\022$\n\037k_EMsgGCQuestOb" +
-      "jective_Progress\020\376\023\022\033\n\026k_EMsgGCQuestComp" +
-      "leted\020\377\023\022\033\n\026k_EMsgGCApplyDuckToken\020\200\024\022(\n" +
-      "#k_EMsgGCQuestObjective_PointsChange\020\202\024\022" +
-      ".\n)k_EMsgGCQuestObjective_RequestLoanerI" +
-      "tems\020\204\024\0221\n,k_EMsgGCQuestObjective_Reques" +
-      "tLoanerResponse\020\205\024\022&\n!k_EMsgGCApplyStran" +
-      "geCountTransfer\020\206\024\022#\n\036k_EMsgGCCraftColle" +
-      "ctionUpgrade\020\207\024\022#\n\036k_EMsgGCCraftHallowee" +
-      "nOffering\020\210\024\022!\n\034k_EMsgGCQuestDiscard_Req" +
-      "uest\020\211\024\022\033\n\026k_EMsgGCRemoveGiftedBy\020\212\024\022#\n\036" +
-      "k_EMsgGCRemoveGiftedByResponse\020\213\024\022\035\n\030k_E" +
-      "MsgGCRemoveFestivizer\020\214\024\022%\n k_EMsgGCRemo" +
-      "veFestivizerResponse\020\215\024\022!\n\034k_EMsgGCCraft" +
-      "CommonStatClock\020\216\024*\233\002\n\016EGCMsgResponse\022\026\n" +
-      "\022k_EGCMsgResponseOK\020\000\022\032\n\026k_EGCMsgRespons" +
-      "eDenied\020\001\022\037\n\033k_EGCMsgResponseServerError" +
-      "\020\002\022\033\n\027k_EGCMsgResponseTimeout\020\003\022\033\n\027k_EGC" +
-      "MsgResponseInvalid\020\004\022\033\n\027k_EGCMsgResponse" +
-      "NoMatch\020\005\022 \n\034k_EGCMsgResponseUnknownErro" +
-      "r\020\006\022\037\n\033k_EGCMsgResponseNotLoggedOn\020\007\022\032\n\026" +
-      "k_EGCMsgFailedToCreate\020\010*\221\002\n\014EUnlockStyl" +
-      "e\022\033\n\027k_UnlockStyle_Succeeded\020\000\022\037\n\033k_Unlo" +
-      "ckStyle_Failed_PreReq\020\001\022#\n\037k_UnlockStyle" +
-      "_Failed_CantAfford\020\002\022#\n\037k_UnlockStyle_Fa" +
-      "iled_CantCommit\020\003\022&\n\"k_UnlockStyle_Faile" +
-      "d_CantLockCache\020\004\022)\n%k_UnlockStyle_Faile" +
-      "d_CantAffordAttrib\020\005\022&\n\"k_UnlockStyle_Fa" +
-      "iled_CantAffordGem\020\006*\363\002\n\037EItemPurgatoryR" +
-      "esponse_Finalize\022.\n*k_ItemPurgatoryRespo" +
-      "nse_Finalize_Succeeded\020\000\0226\n2k_ItemPurgat" +
-      "oryResponse_Finalize_Failed_Incomplete\020\001" +
-      "\022?\n;k_ItemPurgatoryResponse_Finalize_Fai" +
-      "led_ItemsNotInPurgatory\020\002\022=\n9k_ItemPurga" +
-      "toryResponse_Finalize_Failed_CouldNotFin" +
-      "dItems\020\003\0225\n1k_ItemPurgatoryResponse_Fina" +
-      "lize_Failed_NoSOCache\020\004\0221\n-k_ItemPurgato" +
-      "ryResponse_Finalize_BackpackFull\020\005*\347\002\n\035E" +
-      "ItemPurgatoryResponse_Refund\022,\n(k_ItemPu" +
-      "rgatoryResponse_Refund_Succeeded\020\000\022<\n8k_" +
-      "ItemPurgatoryResponse_Refund_Failed_Item" +
-      "NotInPurgatory\020\001\022:\n6k_ItemPurgatoryRespo" +
-      "nse_Refund_Failed_CouldNotFindItem\020\002\0223\n/" +
-      "k_ItemPurgatoryResponse_Refund_Failed_No" +
-      "SOCache\020\003\0222\n.k_ItemPurgatoryResponse_Ref" +
-      "und_Failed_NoDetail\020\004\0225\n1k_ItemPurgatory" +
-      "Response_Refund_Failed_NexonWebAPI\020\005B\005H\001" +
-      "\200\001\000"
+      "\n\031tf2/econ_gcmessages.proto\032\027tf2/steamme" +
+      "ssages.proto\"E\n\022CMsgApplyAutograph\022\031\n\021au" +
+      "tograph_item_id\030\001 \001(\004\022\024\n\014item_item_id\030\002 " +
+      "\001(\004\"\360\001\n$CMsgEconPlayerStrangeCountAdjust" +
+      "ment\022\022\n\naccount_id\030\001 \001(\r\022`\n\031strange_coun" +
+      "t_adjustments\030\002 \003(\0132=.CMsgEconPlayerStra" +
+      "ngeCountAdjustment.CStrangeCountAdjustme" +
+      "nt\032R\n\027CStrangeCountAdjustment\022\022\n\nevent_t" +
+      "ype\030\001 \001(\r\022\017\n\007item_id\030\002 \001(\004\022\022\n\nadjustment" +
+      "\030\003 \001(\r\"=\n)CMsgRequestItemPurgatory_Final" +
+      "izePurchase\022\020\n\010item_ids\030\001 \003(\004\"C\n1CMsgReq" +
+      "uestItemPurgatory_FinalizePurchaseRespon" +
+      "se\022\016\n\006result\030\001 \001(\r\":\n\'CMsgRequestItemPur" +
+      "gatory_RefundPurchase\022\017\n\007item_id\030\001 \001(\004\"A" +
+      "\n/CMsgRequestItemPurgatory_RefundPurchas" +
+      "eResponse\022\016\n\006result\030\001 \001(\r\"(\n\024CMsgCraftin" +
+      "gResponse\022\020\n\010item_ids\030\001 \003(\004\"@\n\033CMsgGCReq" +
+      "uestStoreSalesData\022\017\n\007version\030\001 \001(\r\022\020\n\010c" +
+      "urrency\030\002 \001(\r\"\271\001\n#CMsgGCRequestStoreSale" +
+      "sDataResponse\022>\n\nsale_price\030\001 \003(\0132*.CMsg" +
+      "GCRequestStoreSalesDataResponse.Price\022\017\n" +
+      "\007version\030\002 \001(\r\022\027\n\017expiration_time\030\003 \001(\r\032" +
+      "(\n\005Price\022\020\n\010item_def\030\001 \001(\r\022\r\n\005price\030\002 \001(" +
+      "\r\"W\n+CMsgGCRequestStoreSalesDataUpToDate" +
+      "Response\022\017\n\007version\030\001 \001(\r\022\027\n\017expiration_" +
+      "time\030\002 \001(\r\"\027\n\025CMsgGCToGCPingRequest\"\030\n\026C" +
+      "MsgGCToGCPingResponse\"4\n\036CMsgGCToGCGetUs" +
+      "erSessionServer\022\022\n\naccount_id\030\001 \001(\r\"A\n&C" +
+      "MsgGCToGCGetUserSessionServerResponse\022\027\n" +
+      "\017server_steam_id\030\001 \001(\006\"L\n\036CMsgGCToGCGetU" +
+      "serServerMembers\022\022\n\naccount_id\030\001 \001(\r\022\026\n\016" +
+      "max_spectators\030\002 \001(\r\"C\n&CMsgGCToGCGetUse" +
+      "rServerMembersResponse\022\031\n\021member_account" +
+      "_id\030\001 \003(\r\"8\n\036CMsgLookupMultipleAccountNa" +
+      "mes\022\026\n\naccountids\030\001 \003(\rB\002\020\001\"\232\001\n&CMsgLook" +
+      "upMultipleAccountNamesResponse\022A\n\010accoun" +
+      "ts\030\001 \003(\0132/.CMsgLookupMultipleAccountName" +
+      "sResponse.Account\032-\n\007Account\022\021\n\taccounti" +
+      "d\030\001 \001(\r\022\017\n\007persona\030\002 \001(\t\"Q\n$CMsgGCToGCGr" +
+      "antSelfMadeItemToAccount\022\026\n\016item_def_ind" +
+      "ex\030\001 \001(\r\022\021\n\taccountid\030\002 \001(\r\"X\n\032CMsgGCToG" +
+      "CThankedByNewUser\022\032\n\022new_user_accountid\030" +
+      "\001 \001(\r\022\036\n\026thanked_user_accountid\030\002 \001(\r\"M\n" +
+      "\032CMsgGCShuffleCrateContents\022\025\n\rcrate_ite" +
+      "m_id\030\001 \001(\004\022\030\n\020user_code_string\030\002 \001(\t\"s\n\035" +
+      "CMsgGCQuestObjective_Progress\022\020\n\010quest_i" +
+      "d\030\001 \001(\004\022\032\n\022quest_attrib_index\030\002 \001(\r\022\r\n\005d" +
+      "elta\030\003 \001(\r\022\025\n\rowner_steamid\030\004 \001(\006\"\245\001\n!CM" +
+      "sgGCQuestObjective_PointsChange\022\020\n\010quest" +
+      "_id\030\001 \001(\004\022\025\n\rowner_steamid\030\004 \001(\006\022!\n\022upda" +
+      "te_base_points\030\005 \001(\010:\005false\022\020\n\010points_0\030" +
+      "\006 \001(\r\022\020\n\010points_1\030\007 \001(\r\022\020\n\010points_2\030\010 \001(" +
+      "\r\"/\n\033CMsgGCQuestComplete_Request\022\020\n\010ques" +
+      "t_id\030\001 \001(\004\"\026\n\024CMsgGCQuestCompleted\";\n\'CM" +
+      "sgGCQuestObjective_RequestLoanerItems\022\020\n" +
+      "\010quest_id\030\001 \001(\004\",\n*CMsgGCQuestObjective_" +
+      "RequestLoanerResponse\"-\n\032CMsgCraftCollec" +
+      "tionUpgrade\022\017\n\007item_id\030\001 \003(\004\">\n\032CMsgCraf" +
+      "tHalloweenOffering\022\017\n\007tool_id\030\001 \001(\004\022\017\n\007i" +
+      "tem_id\030\002 \003(\004\"<\n\030CMsgCraftCommonStatClock" +
+      "\022\017\n\007tool_id\030\001 \001(\004\022\017\n\007item_id\030\002 \003(\004\".\n\032CM" +
+      "sgGCQuestDiscard_Request\022\020\n\010quest_id\030\001 \001" +
+      "(\004*\313/\n\nEGCItemMsg\022\021\n\014k_EMsgGCBase\020\350\007\022\"\n\035" +
+      "k_EMsgGCSetSingleItemPosition\020\351\007\022\022\n\rk_EM" +
+      "sgGCCraft\020\352\007\022\032\n\025k_EMsgGCCraftResponse\020\353\007" +
+      "\022\023\n\016k_EMsgGCDelete\020\354\007\022$\n\037k_EMsgGCVerifyC" +
+      "acheSubscription\020\355\007\022\025\n\020k_EMsgGCNameItem\020" +
+      "\356\007\022\030\n\023k_EMsgGCUnlockCrate\020\357\007\022 \n\033k_EMsgGC" +
+      "UnlockCrateResponse\020\360\007\022\026\n\021k_EMsgGCPaintI" +
+      "tem\020\361\007\022\036\n\031k_EMsgGCPaintItemResponse\020\362\007\022\"" +
+      "\n\035k_EMsgGCGoldenWrenchBroadcast\020\363\007\022\030\n\023k_" +
+      "EMsgGCMOTDRequest\020\364\007\022 \n\033k_EMsgGCMOTDRequ" +
+      "estResponse\020\365\007\022\031\n\024k_EMsgGCNameBaseItem\020\373" +
+      "\007\022!\n\034k_EMsgGCNameBaseItemResponse\020\374\007\022(\n#" +
+      "k_EMsgGCRemoveSocketItem_DEPRECATED\020\375\007\0220" +
+      "\n+k_EMsgGCRemoveSocketItemResponse_DEPRE" +
+      "CATED\020\376\007\022!\n\034k_EMsgGCCustomizeItemTexture" +
+      "\020\377\007\022)\n$k_EMsgGCCustomizeItemTextureRespo" +
+      "nse\020\200\010\022\033\n\026k_EMsgGCUseItemRequest\020\201\010\022\034\n\027k" +
+      "_EMsgGCUseItemResponse\020\202\010\022%\n k_EMsgGCRes" +
+      "pawnPostLoadoutChange\020\205\010\022\033\n\026k_EMsgGCRemo" +
+      "veItemName\020\206\010\022\034\n\027k_EMsgGCRemoveItemPaint" +
+      "\020\207\010\022\031\n\024k_EMsgGCGiftWrapItem\020\210\010\022!\n\034k_EMsg" +
+      "GCGiftWrapItemResponse\020\211\010\022\030\n\023k_EMsgGCDel" +
+      "iverGift\020\212\010\022(\n#k_EMsgGCDeliverGiftRespon" +
+      "seReceiver\020\214\010\022\036\n\031k_EMsgGCUnwrapGiftReque" +
+      "st\020\215\010\022\037\n\032k_EMsgGCUnwrapGiftResponse\020\216\010\022\031" +
+      "\n\024k_EMsgGCSetItemStyle\020\217\010\022\036\n\031k_EMsgGCUse" +
+      "dClaimCodeItem\020\220\010\022\026\n\021k_EMsgGCSortItems\020\221" +
+      "\010\022*\n%k_EMsgGC_RevolvingLootList_DEPRECAT" +
+      "ED\020\222\010\022\032\n\025k_EMsgGCLookupAccount\020\223\010\022\"\n\035k_E" +
+      "MsgGCLookupAccountResponse\020\224\010\022\036\n\031k_EMsgG" +
+      "CLookupAccountName\020\225\010\022&\n!k_EMsgGCLookupA" +
+      "ccountNameResponse\020\226\010\022\035\n\030k_EMsgGCUpdateI" +
+      "temSchema\020\231\010\022$\n\037k_EMsgGCRequestInventory" +
+      "Refresh\020\232\010\022 \n\033k_EMsgGCRemoveCustomTextur" +
+      "e\020\233\010\022(\n#k_EMsgGCRemoveCustomTextureRespo" +
+      "nse\020\234\010\022\035\n\030k_EMsgGCRemoveMakersMark\020\235\010\022%\n" +
+      " k_EMsgGCRemoveMakersMarkResponse\020\236\010\022#\n\036" +
+      "k_EMsgGCRemoveUniqueCraftIndex\020\237\010\022+\n&k_E" +
+      "MsgGCRemoveUniqueCraftIndexResponse\020\240\010\022\033" +
+      "\n\026k_EMsgGCSaxxyBroadcast\020\241\010\022!\n\034k_EMsgGCB" +
+      "ackpackSortFinished\020\242\010\022$\n\037k_EMsgGCAdjust" +
+      "ItemEquippedState\020\243\010\022\030\n\023k_EMsgGCCollectI" +
+      "tem\020\245\010\022\035\n\030k_EMsgGCItemAcknowledged\020\246\010\022)\n" +
+      "$k_EMsgGCPresets_SelectPresetForClass\020\247\010" +
+      "\022$\n\037k_EMsgGCPresets_SetItemPosition\020\250\010\022\031" +
+      "\n\024k_EMsgGC_ReportAbuse\020\251\010\022!\n\034k_EMsgGC_Re" +
+      "portAbuseResponse\020\252\010\022.\n)k_EMsgGCPresets_" +
+      "SelectPresetForClassReply\020\253\010\022!\n\034k_EMsgGC" +
+      "NameItemNotification\020\254\010\022&\n!k_EMsgGCClien" +
+      "tDisplayNotification\020\255\010\022\035\n\030k_EMsgGCApply" +
+      "StrangePart\020\256\010\022)\n$k_EMsgGC_IncrementKill" +
+      "CountAttribute\020\257\010\022(\n#k_EMsgGC_IncrementK" +
+      "illCountResponse\020\260\010\022\036\n\031k_EMsgGCRemoveStr" +
+      "angePart\020\261\010\022\037\n\032k_EMsgGCResetStrangeScore" +
+      "s\020\262\010\022\030\n\023k_EMsgGCGiftedItems\020\263\010\022\035\n\030k_EMsg" +
+      "GCApplyUpgradeCard\020\265\010\022\036\n\031k_EMsgGCRemoveU" +
+      "pgradeCard\020\266\010\022$\n\037k_EMsgGCApplyStrangeRes" +
+      "triction\020\267\010\022$\n\037k_EMsgGCClientRequestMark" +
+      "etData\020\270\010\022,\n\'k_EMsgGCClientRequestMarket" +
+      "DataResponse\020\271\010\022\030\n\023k_EMsgGCApplyXifier\020\272" +
+      "\010\022 \n\033k_EMsgGCApplyXifierResponse\020\273\010\022(\n#k" +
+      "_EMsgGC_TrackUniquePlayerPairEvent\020\274\010\022*\n" +
+      "%k_EMsgGCFulfillDynamicRecipeComponent\020\275" +
+      "\010\0222\n-k_EMsgGCFulfillDynamicRecipeCompone" +
+      "ntResponse\020\276\010\022(\n#k_EMsgGCSetItemEffectVe" +
+      "rticalOffset\020\277\010\022&\n!k_EMsgGCSetHatEffectU" +
+      "seHeadOrigin\020\300\010\022\037\n\032k_EMsgGCItemEaterRech" +
+      "arger\020\301\010\022\'\n\"k_EMsgGCItemEaterRechargerRe" +
+      "sponse\020\302\010\022 \n\033k_EMsgGCApplyBaseItemXifier" +
+      "\020\303\010\022%\n k_EMsgGCApplyClassTransmogrifier\020" +
+      "\304\010\022(\n#k_EMsgGCApplyHalloweenSpellbookPag" +
+      "e\020\305\010\022\035\n\030k_EMsgGCRemoveKillStreak\020\306\010\022%\n k" +
+      "_EMsgGCRemoveKillStreakResponse\020\307\010\022$\n\037k_" +
+      "EMsgGCTFSpecificItemBroadcast\020\310\010\0222\n-k_EM" +
+      "sgGC_IncrementKillCountAttribute_Multipl" +
+      "e\020\311\010\022%\n k_EMsgGCDeliverGiftResponseGiver" +
+      "\020\312\010\022\035\n\030k_EMsgGCSetItemPositions\020\314\010\022\'\n\"k_" +
+      "EMsgGCLookupMultipleAccountNames\020\315\010\022/\n*k" +
+      "_EMsgGCLookupMultipleAccountNamesRespons" +
+      "e\020\316\010\022\030\n\023k_EMsgGCTradingBase\020\334\013\022)\n$k_EMsg" +
+      "GCTrading_InitiateTradeRequest\020\335\013\022*\n%k_E" +
+      "MsgGCTrading_InitiateTradeResponse\020\336\013\022!\n" +
+      "\034k_EMsgGCTrading_StartSession\020\337\013\022\"\n\035k_EM" +
+      "sgGCTrading_SessionClosed\020\345\013\022\"\n\035k_EMsgGC" +
+      "Trading_CancelSession\020\346\013\0221\n,k_EMsgGCTrad" +
+      "ing_InitiateTradeRequestResponse\020\352\013\022)\n$k" +
+      "_EMsgGCServerBrowser_FavoriteServer\020\301\014\022*" +
+      "\n%k_EMsgGCServerBrowser_BlacklistServer\020" +
+      "\302\014\022\036\n\031k_EMsgGCServerRentalsBase\020\244\r\022#\n\036k_" +
+      "EMsgGCItemPreviewCheckStatus\020\245\r\022&\n!k_EMs" +
+      "gGCItemPreviewStatusResponse\020\246\r\022\037\n\032k_EMs" +
+      "gGCItemPreviewRequest\020\247\r\022\'\n\"k_EMsgGCItem" +
+      "PreviewRequestResponse\020\250\r\022\036\n\031k_EMsgGCIte" +
+      "mPreviewExpire\020\251\r\022*\n%k_EMsgGCItemPreview" +
+      "ExpireNotification\020\252\r\022.\n)k_EMsgGCItemPre" +
+      "viewItemBoughtNotification\020\254\r\022\037\n\032k_EMsgG" +
+      "CDev_NewItemRequest\020\321\017\022\'\n\"k_EMsgGCDev_Ne" +
+      "wItemRequestResponse\020\322\017\022%\n k_EMsgGCDev_D" +
+      "ebugRollLootRequest\020\323\017\022\035\n\030k_EMsgGCStoreG" +
+      "etUserData\020\304\023\022%\n k_EMsgGCStoreGetUserDat" +
+      "aResponse\020\305\023\022)\n$k_EMsgGCStorePurchaseIni" +
+      "t_DEPRECATED\020\306\023\0221\n,k_EMsgGCStorePurchase" +
+      "InitResponse_DEPRECATED\020\307\023\022\"\n\035k_EMsgGCSt" +
+      "orePurchaseFinalize\020\320\023\022*\n%k_EMsgGCStoreP" +
+      "urchaseFinalizeResponse\020\321\023\022 \n\033k_EMsgGCSt" +
+      "orePurchaseCancel\020\322\023\022(\n#k_EMsgGCStorePur" +
+      "chaseCancelResponse\020\323\023\022\"\n\035k_EMsgGCStoreP" +
+      "urchaseQueryTxn\020\314\023\022*\n%k_EMsgGCStorePurch" +
+      "aseQueryTxnResponse\020\315\023\022\036\n\031k_EMsgGCStoreP" +
+      "urchaseInit\020\316\023\022&\n!k_EMsgGCStorePurchaseI" +
+      "nitResponse\020\317\023\022\036\n\031k_EMsgGCToGCDirtySDOCa" +
+      "che\020\324\023\022&\n!k_EMsgGCToGCDirtyMultipleSDOCa" +
+      "che\020\325\023\022\"\n\035k_EMsgGCToGCUpdateSQLKeyValue\020" +
+      "\326\023\022(\n#k_EMsgGCToGCBroadcastConsoleComman" +
+      "d\020\331\023\022!\n\034k_EMsgGCServerVersionUpdated\020\332\023\022" +
+      "\033\n\026k_EMsgGCApplyAutograph\020\333\023\022%\n k_EMsgGC" +
+      "ToGCWebAPIAccountChanged\020\334\023\022!\n\034k_EMsgGCR" +
+      "equestAnnouncements\020\335\023\022)\n$k_EMsgGCReques" +
+      "tAnnouncementsResponse\020\336\023\022%\n k_EMsgGCReq" +
+      "uestPassportItemGrant\020\337\023\022!\n\034k_EMsgGCClie" +
+      "ntVersionUpdated\020\340\023\022+\n&k_EMsgGCItemPurga" +
+      "tory_FinalizePurchase\020\343\023\0223\n.k_EMsgGCItem" +
+      "Purgatory_FinalizePurchaseResponse\020\344\023\022)\n" +
+      "$k_EMsgGCItemPurgatory_RefundPurchase\020\345\023" +
+      "\0221\n,k_EMsgGCItemPurgatory_RefundPurchase" +
+      "Response\020\346\023\022.\n)k_EMsgGCToGCPlayerStrange" +
+      "CountAdjustments\020\347\023\022\"\n\035k_EMsgGCRequestSt" +
+      "oreSalesData\020\350\023\022*\n%k_EMsgGCRequestStoreS" +
+      "alesDataResponse\020\351\023\0222\n-k_EMsgGCRequestSt" +
+      "oreSalesDataUpToDateResponse\020\352\023\022\034\n\027k_EMs" +
+      "gGCToGCPingRequest\020\353\023\022\035\n\030k_EMsgGCToGCPin" +
+      "gResponse\020\354\023\022%\n k_EMsgGCToGCGetUserSessi" +
+      "onServer\020\355\023\022-\n(k_EMsgGCToGCGetUserSessio" +
+      "nServerResponse\020\356\023\022%\n k_EMsgGCToGCGetUse" +
+      "rServerMembers\020\357\023\022-\n(k_EMsgGCToGCGetUser" +
+      "ServerMembersResponse\020\360\023\022+\n&k_EMsgGCToGC" +
+      "GrantSelfMadeItemToAccount\020\373\023\022!\n\034k_EMsgG" +
+      "CToGCThankedByNewUser\020\374\023\022!\n\034k_EMsgGCShuf" +
+      "fleCrateContents\020\375\023\022$\n\037k_EMsgGCQuestObje" +
+      "ctive_Progress\020\376\023\022\033\n\026k_EMsgGCQuestComple" +
+      "ted\020\377\023\022\033\n\026k_EMsgGCApplyDuckToken\020\200\024\022(\n#k" +
+      "_EMsgGCQuestObjective_PointsChange\020\202\024\022.\n" +
+      ")k_EMsgGCQuestObjective_RequestLoanerIte" +
+      "ms\020\204\024\0221\n,k_EMsgGCQuestObjective_RequestL" +
+      "oanerResponse\020\205\024\022&\n!k_EMsgGCApplyStrange" +
+      "CountTransfer\020\206\024\022#\n\036k_EMsgGCCraftCollect" +
+      "ionUpgrade\020\207\024\022#\n\036k_EMsgGCCraftHalloweenO" +
+      "ffering\020\210\024\022!\n\034k_EMsgGCQuestDiscard_Reque" +
+      "st\020\211\024\022\033\n\026k_EMsgGCRemoveGiftedBy\020\212\024\022#\n\036k_" +
+      "EMsgGCRemoveGiftedByResponse\020\213\024\022\035\n\030k_EMs" +
+      "gGCRemoveFestivizer\020\214\024\022%\n k_EMsgGCRemove" +
+      "FestivizerResponse\020\215\024\022!\n\034k_EMsgGCCraftCo" +
+      "mmonStatClock\020\216\024*\233\002\n\016EGCMsgResponse\022\026\n\022k" +
+      "_EGCMsgResponseOK\020\000\022\032\n\026k_EGCMsgResponseD" +
+      "enied\020\001\022\037\n\033k_EGCMsgResponseServerError\020\002" +
+      "\022\033\n\027k_EGCMsgResponseTimeout\020\003\022\033\n\027k_EGCMs" +
+      "gResponseInvalid\020\004\022\033\n\027k_EGCMsgResponseNo" +
+      "Match\020\005\022 \n\034k_EGCMsgResponseUnknownError\020" +
+      "\006\022\037\n\033k_EGCMsgResponseNotLoggedOn\020\007\022\032\n\026k_" +
+      "EGCMsgFailedToCreate\020\010*\221\002\n\014EUnlockStyle\022" +
+      "\033\n\027k_UnlockStyle_Succeeded\020\000\022\037\n\033k_Unlock" +
+      "Style_Failed_PreReq\020\001\022#\n\037k_UnlockStyle_F" +
+      "ailed_CantAfford\020\002\022#\n\037k_UnlockStyle_Fail" +
+      "ed_CantCommit\020\003\022&\n\"k_UnlockStyle_Failed_" +
+      "CantLockCache\020\004\022)\n%k_UnlockStyle_Failed_" +
+      "CantAffordAttrib\020\005\022&\n\"k_UnlockStyle_Fail" +
+      "ed_CantAffordGem\020\006*\363\002\n\037EItemPurgatoryRes" +
+      "ponse_Finalize\022.\n*k_ItemPurgatoryRespons" +
+      "e_Finalize_Succeeded\020\000\0226\n2k_ItemPurgator" +
+      "yResponse_Finalize_Failed_Incomplete\020\001\022?" +
+      "\n;k_ItemPurgatoryResponse_Finalize_Faile" +
+      "d_ItemsNotInPurgatory\020\002\022=\n9k_ItemPurgato" +
+      "ryResponse_Finalize_Failed_CouldNotFindI" +
+      "tems\020\003\0225\n1k_ItemPurgatoryResponse_Finali" +
+      "ze_Failed_NoSOCache\020\004\0221\n-k_ItemPurgatory" +
+      "Response_Finalize_BackpackFull\020\005*\347\002\n\035EIt" +
+      "emPurgatoryResponse_Refund\022,\n(k_ItemPurg" +
+      "atoryResponse_Refund_Succeeded\020\000\022<\n8k_It" +
+      "emPurgatoryResponse_Refund_Failed_ItemNo" +
+      "tInPurgatory\020\001\022:\n6k_ItemPurgatoryRespons" +
+      "e_Refund_Failed_CouldNotFindItem\020\002\0223\n/k_" +
+      "ItemPurgatoryResponse_Refund_Failed_NoSO" +
+      "Cache\020\003\0222\n.k_ItemPurgatoryResponse_Refun" +
+      "d_Failed_NoDetail\020\004\0225\n1k_ItemPurgatoryRe" +
+      "sponse_Refund_Failed_NexonWebAPI\020\005B\005H\001\200\001" +
+      "\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

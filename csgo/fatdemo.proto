@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-import "csgo/netmessages.proto";
+import "csgo/networkbasetypes.proto";
 
 enum EHitGroup {
 	EHG_Generic = 0;
@@ -76,7 +76,7 @@ message MLWeaponState {
 
 message MLPlayerState {
 	optional int32 account_id = 1;
-	optional int32 user_id = 2;
+	optional int32 player_slot = 2 [default = -1];
 	optional int32 entindex = 3;
 	optional string name = 4;
 	optional string clan = 5;

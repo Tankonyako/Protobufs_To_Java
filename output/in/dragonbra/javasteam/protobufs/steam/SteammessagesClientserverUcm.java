@@ -8887,6 +8887,51 @@ public final class SteammessagesClientserverUcm {
      * @return The removeAllKvtags.
      */
     boolean getRemoveAllKvtags();
+
+    /**
+     * <code>repeated int32 content_descriptors_to_add = 29;</code>
+     * @return A list containing the contentDescriptorsToAdd.
+     */
+    java.util.List<java.lang.Integer> getContentDescriptorsToAddList();
+    /**
+     * <code>repeated int32 content_descriptors_to_add = 29;</code>
+     * @return The count of contentDescriptorsToAdd.
+     */
+    int getContentDescriptorsToAddCount();
+    /**
+     * <code>repeated int32 content_descriptors_to_add = 29;</code>
+     * @param index The index of the element to return.
+     * @return The contentDescriptorsToAdd at the given index.
+     */
+    int getContentDescriptorsToAdd(int index);
+
+    /**
+     * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+     * @return A list containing the contentDescriptorsToRemove.
+     */
+    java.util.List<java.lang.Integer> getContentDescriptorsToRemoveList();
+    /**
+     * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+     * @return The count of contentDescriptorsToRemove.
+     */
+    int getContentDescriptorsToRemoveCount();
+    /**
+     * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+     * @param index The index of the element to return.
+     * @return The contentDescriptorsToRemove at the given index.
+     */
+    int getContentDescriptorsToRemove(int index);
+
+    /**
+     * <code>optional bool allow_admin_tags = 31 [default = false];</code>
+     * @return Whether the allowAdminTags field is set.
+     */
+    boolean hasAllowAdminTags();
+    /**
+     * <code>optional bool allow_admin_tags = 31 [default = false];</code>
+     * @return The allowAdminTags.
+     */
+    boolean getAllowAdminTags();
   }
   /**
    * Protobuf type {@code CMsgClientUCMUpdatePublishedFile}
@@ -8913,6 +8958,8 @@ public final class SteammessagesClientserverUcm {
       kvtags_ = java.util.Collections.emptyList();
       previews_ = java.util.Collections.emptyList();
       previewsToRemove_ = emptyIntList();
+      contentDescriptorsToAdd_ = emptyIntList();
+      contentDescriptorsToRemove_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -9125,6 +9172,53 @@ public final class SteammessagesClientserverUcm {
               removeAllKvtags_ = input.readBool();
               break;
             }
+            case 232: {
+              if (!((mutable_bitField0_ & 0x10000000) != 0)) {
+                contentDescriptorsToAdd_ = newIntList();
+                mutable_bitField0_ |= 0x10000000;
+              }
+              contentDescriptorsToAdd_.addInt(input.readInt32());
+              break;
+            }
+            case 234: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x10000000) != 0) && input.getBytesUntilLimit() > 0) {
+                contentDescriptorsToAdd_ = newIntList();
+                mutable_bitField0_ |= 0x10000000;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                contentDescriptorsToAdd_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 240: {
+              if (!((mutable_bitField0_ & 0x20000000) != 0)) {
+                contentDescriptorsToRemove_ = newIntList();
+                mutable_bitField0_ |= 0x20000000;
+              }
+              contentDescriptorsToRemove_.addInt(input.readInt32());
+              break;
+            }
+            case 242: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x20000000) != 0) && input.getBytesUntilLimit() > 0) {
+                contentDescriptorsToRemove_ = newIntList();
+                mutable_bitField0_ |= 0x20000000;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                contentDescriptorsToRemove_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 248: {
+              bitField0_ |= 0x00800000;
+              allowAdminTags_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9154,6 +9248,12 @@ public final class SteammessagesClientserverUcm {
         }
         if (((mutable_bitField0_ & 0x02000000) != 0)) {
           previewsToRemove_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x10000000) != 0)) {
+          contentDescriptorsToAdd_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x20000000) != 0)) {
+          contentDescriptorsToRemove_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -11947,6 +12047,79 @@ public final class SteammessagesClientserverUcm {
       return removeAllKvtags_;
     }
 
+    public static final int CONTENT_DESCRIPTORS_TO_ADD_FIELD_NUMBER = 29;
+    private com.google.protobuf.Internal.IntList contentDescriptorsToAdd_;
+    /**
+     * <code>repeated int32 content_descriptors_to_add = 29;</code>
+     * @return A list containing the contentDescriptorsToAdd.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getContentDescriptorsToAddList() {
+      return contentDescriptorsToAdd_;
+    }
+    /**
+     * <code>repeated int32 content_descriptors_to_add = 29;</code>
+     * @return The count of contentDescriptorsToAdd.
+     */
+    public int getContentDescriptorsToAddCount() {
+      return contentDescriptorsToAdd_.size();
+    }
+    /**
+     * <code>repeated int32 content_descriptors_to_add = 29;</code>
+     * @param index The index of the element to return.
+     * @return The contentDescriptorsToAdd at the given index.
+     */
+    public int getContentDescriptorsToAdd(int index) {
+      return contentDescriptorsToAdd_.getInt(index);
+    }
+
+    public static final int CONTENT_DESCRIPTORS_TO_REMOVE_FIELD_NUMBER = 30;
+    private com.google.protobuf.Internal.IntList contentDescriptorsToRemove_;
+    /**
+     * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+     * @return A list containing the contentDescriptorsToRemove.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getContentDescriptorsToRemoveList() {
+      return contentDescriptorsToRemove_;
+    }
+    /**
+     * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+     * @return The count of contentDescriptorsToRemove.
+     */
+    public int getContentDescriptorsToRemoveCount() {
+      return contentDescriptorsToRemove_.size();
+    }
+    /**
+     * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+     * @param index The index of the element to return.
+     * @return The contentDescriptorsToRemove at the given index.
+     */
+    public int getContentDescriptorsToRemove(int index) {
+      return contentDescriptorsToRemove_.getInt(index);
+    }
+
+    public static final int ALLOW_ADMIN_TAGS_FIELD_NUMBER = 31;
+    private boolean allowAdminTags_;
+    /**
+     * <code>optional bool allow_admin_tags = 31 [default = false];</code>
+     * @return Whether the allowAdminTags field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllowAdminTags() {
+      return ((bitField0_ & 0x00800000) != 0);
+    }
+    /**
+     * <code>optional bool allow_admin_tags = 31 [default = false];</code>
+     * @return The allowAdminTags.
+     */
+    @java.lang.Override
+    public boolean getAllowAdminTags() {
+      return allowAdminTags_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12044,6 +12217,15 @@ public final class SteammessagesClientserverUcm {
       }
       if (((bitField0_ & 0x00400000) != 0)) {
         output.writeBool(28, removeAllKvtags_);
+      }
+      for (int i = 0; i < contentDescriptorsToAdd_.size(); i++) {
+        output.writeInt32(29, contentDescriptorsToAdd_.getInt(i));
+      }
+      for (int i = 0; i < contentDescriptorsToRemove_.size(); i++) {
+        output.writeInt32(30, contentDescriptorsToRemove_.getInt(i));
+      }
+      if (((bitField0_ & 0x00800000) != 0)) {
+        output.writeBool(31, allowAdminTags_);
       }
       unknownFields.writeTo(output);
     }
@@ -12171,6 +12353,28 @@ public final class SteammessagesClientserverUcm {
       if (((bitField0_ & 0x00400000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(28, removeAllKvtags_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < contentDescriptorsToAdd_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(contentDescriptorsToAdd_.getInt(i));
+        }
+        size += dataSize;
+        size += 2 * getContentDescriptorsToAddList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < contentDescriptorsToRemove_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(contentDescriptorsToRemove_.getInt(i));
+        }
+        size += dataSize;
+        size += 2 * getContentDescriptorsToRemoveList().size();
+      }
+      if (((bitField0_ & 0x00800000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(31, allowAdminTags_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12312,6 +12516,15 @@ public final class SteammessagesClientserverUcm {
         if (getRemoveAllKvtags()
             != other.getRemoveAllKvtags()) return false;
       }
+      if (!getContentDescriptorsToAddList()
+          .equals(other.getContentDescriptorsToAddList())) return false;
+      if (!getContentDescriptorsToRemoveList()
+          .equals(other.getContentDescriptorsToRemoveList())) return false;
+      if (hasAllowAdminTags() != other.hasAllowAdminTags()) return false;
+      if (hasAllowAdminTags()) {
+        if (getAllowAdminTags()
+            != other.getAllowAdminTags()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12447,6 +12660,19 @@ public final class SteammessagesClientserverUcm {
         hash = (37 * hash) + REMOVE_ALL_KVTAGS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getRemoveAllKvtags());
+      }
+      if (getContentDescriptorsToAddCount() > 0) {
+        hash = (37 * hash) + CONTENT_DESCRIPTORS_TO_ADD_FIELD_NUMBER;
+        hash = (53 * hash) + getContentDescriptorsToAddList().hashCode();
+      }
+      if (getContentDescriptorsToRemoveCount() > 0) {
+        hash = (37 * hash) + CONTENT_DESCRIPTORS_TO_REMOVE_FIELD_NUMBER;
+        hash = (53 * hash) + getContentDescriptorsToRemoveList().hashCode();
+      }
+      if (hasAllowAdminTags()) {
+        hash = (37 * hash) + ALLOW_ADMIN_TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getAllowAdminTags());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12647,6 +12873,12 @@ public final class SteammessagesClientserverUcm {
         bitField0_ = (bitField0_ & ~0x04000000);
         removeAllKvtags_ = false;
         bitField0_ = (bitField0_ & ~0x08000000);
+        contentDescriptorsToAdd_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x10000000);
+        contentDescriptorsToRemove_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x20000000);
+        allowAdminTags_ = false;
+        bitField0_ = (bitField0_ & ~0x40000000);
         return this;
       }
 
@@ -12799,6 +13031,20 @@ public final class SteammessagesClientserverUcm {
         if (((from_bitField0_ & 0x08000000) != 0)) {
           result.removeAllKvtags_ = removeAllKvtags_;
           to_bitField0_ |= 0x00400000;
+        }
+        if (((bitField0_ & 0x10000000) != 0)) {
+          contentDescriptorsToAdd_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x10000000);
+        }
+        result.contentDescriptorsToAdd_ = contentDescriptorsToAdd_;
+        if (((bitField0_ & 0x20000000) != 0)) {
+          contentDescriptorsToRemove_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x20000000);
+        }
+        result.contentDescriptorsToRemove_ = contentDescriptorsToRemove_;
+        if (((from_bitField0_ & 0x40000000) != 0)) {
+          result.allowAdminTags_ = allowAdminTags_;
+          to_bitField0_ |= 0x00800000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -13013,6 +13259,29 @@ public final class SteammessagesClientserverUcm {
         }
         if (other.hasRemoveAllKvtags()) {
           setRemoveAllKvtags(other.getRemoveAllKvtags());
+        }
+        if (!other.contentDescriptorsToAdd_.isEmpty()) {
+          if (contentDescriptorsToAdd_.isEmpty()) {
+            contentDescriptorsToAdd_ = other.contentDescriptorsToAdd_;
+            bitField0_ = (bitField0_ & ~0x10000000);
+          } else {
+            ensureContentDescriptorsToAddIsMutable();
+            contentDescriptorsToAdd_.addAll(other.contentDescriptorsToAdd_);
+          }
+          onChanged();
+        }
+        if (!other.contentDescriptorsToRemove_.isEmpty()) {
+          if (contentDescriptorsToRemove_.isEmpty()) {
+            contentDescriptorsToRemove_ = other.contentDescriptorsToRemove_;
+            bitField0_ = (bitField0_ & ~0x20000000);
+          } else {
+            ensureContentDescriptorsToRemoveIsMutable();
+            contentDescriptorsToRemove_.addAll(other.contentDescriptorsToRemove_);
+          }
+          onChanged();
+        }
+        if (other.hasAllowAdminTags()) {
+          setAllowAdminTags(other.getAllowAdminTags());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15029,6 +15298,203 @@ public final class SteammessagesClientserverUcm {
       public Builder clearRemoveAllKvtags() {
         bitField0_ = (bitField0_ & ~0x08000000);
         removeAllKvtags_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList contentDescriptorsToAdd_ = emptyIntList();
+      private void ensureContentDescriptorsToAddIsMutable() {
+        if (!((bitField0_ & 0x10000000) != 0)) {
+          contentDescriptorsToAdd_ = mutableCopy(contentDescriptorsToAdd_);
+          bitField0_ |= 0x10000000;
+         }
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_add = 29;</code>
+       * @return A list containing the contentDescriptorsToAdd.
+       */
+      public java.util.List<java.lang.Integer>
+          getContentDescriptorsToAddList() {
+        return ((bitField0_ & 0x10000000) != 0) ?
+                 java.util.Collections.unmodifiableList(contentDescriptorsToAdd_) : contentDescriptorsToAdd_;
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_add = 29;</code>
+       * @return The count of contentDescriptorsToAdd.
+       */
+      public int getContentDescriptorsToAddCount() {
+        return contentDescriptorsToAdd_.size();
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_add = 29;</code>
+       * @param index The index of the element to return.
+       * @return The contentDescriptorsToAdd at the given index.
+       */
+      public int getContentDescriptorsToAdd(int index) {
+        return contentDescriptorsToAdd_.getInt(index);
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_add = 29;</code>
+       * @param index The index to set the value at.
+       * @param value The contentDescriptorsToAdd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentDescriptorsToAdd(
+          int index, int value) {
+        ensureContentDescriptorsToAddIsMutable();
+        contentDescriptorsToAdd_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_add = 29;</code>
+       * @param value The contentDescriptorsToAdd to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContentDescriptorsToAdd(int value) {
+        ensureContentDescriptorsToAddIsMutable();
+        contentDescriptorsToAdd_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_add = 29;</code>
+       * @param values The contentDescriptorsToAdd to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllContentDescriptorsToAdd(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureContentDescriptorsToAddIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contentDescriptorsToAdd_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_add = 29;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentDescriptorsToAdd() {
+        contentDescriptorsToAdd_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x10000000);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList contentDescriptorsToRemove_ = emptyIntList();
+      private void ensureContentDescriptorsToRemoveIsMutable() {
+        if (!((bitField0_ & 0x20000000) != 0)) {
+          contentDescriptorsToRemove_ = mutableCopy(contentDescriptorsToRemove_);
+          bitField0_ |= 0x20000000;
+         }
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+       * @return A list containing the contentDescriptorsToRemove.
+       */
+      public java.util.List<java.lang.Integer>
+          getContentDescriptorsToRemoveList() {
+        return ((bitField0_ & 0x20000000) != 0) ?
+                 java.util.Collections.unmodifiableList(contentDescriptorsToRemove_) : contentDescriptorsToRemove_;
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+       * @return The count of contentDescriptorsToRemove.
+       */
+      public int getContentDescriptorsToRemoveCount() {
+        return contentDescriptorsToRemove_.size();
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+       * @param index The index of the element to return.
+       * @return The contentDescriptorsToRemove at the given index.
+       */
+      public int getContentDescriptorsToRemove(int index) {
+        return contentDescriptorsToRemove_.getInt(index);
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+       * @param index The index to set the value at.
+       * @param value The contentDescriptorsToRemove to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentDescriptorsToRemove(
+          int index, int value) {
+        ensureContentDescriptorsToRemoveIsMutable();
+        contentDescriptorsToRemove_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+       * @param value The contentDescriptorsToRemove to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContentDescriptorsToRemove(int value) {
+        ensureContentDescriptorsToRemoveIsMutable();
+        contentDescriptorsToRemove_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+       * @param values The contentDescriptorsToRemove to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllContentDescriptorsToRemove(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureContentDescriptorsToRemoveIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contentDescriptorsToRemove_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 content_descriptors_to_remove = 30;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentDescriptorsToRemove() {
+        contentDescriptorsToRemove_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x20000000);
+        onChanged();
+        return this;
+      }
+
+      private boolean allowAdminTags_ ;
+      /**
+       * <code>optional bool allow_admin_tags = 31 [default = false];</code>
+       * @return Whether the allowAdminTags field is set.
+       */
+      @java.lang.Override
+      public boolean hasAllowAdminTags() {
+        return ((bitField0_ & 0x40000000) != 0);
+      }
+      /**
+       * <code>optional bool allow_admin_tags = 31 [default = false];</code>
+       * @return The allowAdminTags.
+       */
+      @java.lang.Override
+      public boolean getAllowAdminTags() {
+        return allowAdminTags_;
+      }
+      /**
+       * <code>optional bool allow_admin_tags = 31 [default = false];</code>
+       * @param value The allowAdminTags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowAdminTags(boolean value) {
+        bitField0_ |= 0x40000000;
+        allowAdminTags_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool allow_admin_tags = 31 [default = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowAdminTags() {
+        bitField0_ = (bitField0_ & ~0x40000000);
+        allowAdminTags_ = false;
         onChanged();
         return this;
       }
@@ -27522,7 +27988,7 @@ public final class SteammessagesClientserverUcm {
       "e\022\022\n\007eresult\030\001 \001(\005:\0012\022/\n\021published_file_" +
       "id\030\002 \001(\006:\02418446744073709551615\0228\n)needs_" +
       "workshop_legal_agreement_acceptance\030\003 \001(" +
-      "\010:\005false\"\267\007\n CMsgClientUCMUpdatePublishe" +
+      "\010:\005false\"\243\010\n CMsgClientUCMUpdatePublishe" +
       "dFile\022\016\n\006app_id\030\001 \001(\r\022\031\n\021published_file_" +
       "id\030\002 \001(\006\022\021\n\tfile_name\030\003 \001(\t\022\031\n\021preview_f" +
       "ile_name\030\004 \001(\t\022\r\n\005title\030\005 \001(\t\022\023\n\013descrip" +
@@ -27541,60 +28007,63 @@ public final class SteammessagesClientserverUcm {
       "\01323.CMsgClientUCMUpdatePublishedFile.Add" +
       "itionalPreview\022\032\n\022previews_to_remove\030\032 \003" +
       "(\005\022\031\n\021clear_in_progress\030\033 \001(\010\022\031\n\021remove_" +
-      "all_kvtags\030\034 \001(\010\032)\n\013KeyValueTag\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t\032\214\001\n\021AdditionalPrevie" +
-      "w\022\032\n\022original_file_name\030\001 \001(\t\022\032\n\022interna" +
-      "l_file_name\030\002 \001(\t\022\017\n\007videoid\030\003 \001(\t\022\024\n\014pr" +
-      "eview_type\030\004 \001(\r\022\030\n\014update_index\030\005 \001(\005:\002" +
-      "-1\"x\n(CMsgClientUCMUpdatePublishedFileRe" +
-      "sponse\022\022\n\007eresult\030\001 \001(\005:\0012\0228\n)needs_work" +
-      "shop_legal_agreement_acceptance\030\002 \001(\010:\005f" +
-      "alse\"M\n CMsgClientUCMDeletePublishedFile" +
-      "\022\031\n\021published_file_id\030\001 \001(\006\022\016\n\006app_id\030\002 " +
-      "\001(\r\">\n(CMsgClientUCMDeletePublishedFileR" +
-      "esponse\022\022\n\007eresult\030\001 \001(\005:\0012\"\214\001\n4CMsgClie" +
+      "all_kvtags\030\034 \001(\010\022\"\n\032content_descriptors_" +
+      "to_add\030\035 \003(\005\022%\n\035content_descriptors_to_r" +
+      "emove\030\036 \003(\005\022\037\n\020allow_admin_tags\030\037 \001(\010:\005f" +
+      "alse\032)\n\013KeyValueTag\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t\032\214\001\n\021AdditionalPreview\022\032\n\022origina" +
+      "l_file_name\030\001 \001(\t\022\032\n\022internal_file_name\030" +
+      "\002 \001(\t\022\017\n\007videoid\030\003 \001(\t\022\024\n\014preview_type\030\004" +
+      " \001(\r\022\030\n\014update_index\030\005 \001(\005:\002-1\"x\n(CMsgCl" +
+      "ientUCMUpdatePublishedFileResponse\022\022\n\007er" +
+      "esult\030\001 \001(\005:\0012\0228\n)needs_workshop_legal_a" +
+      "greement_acceptance\030\002 \001(\010:\005false\"M\n CMsg" +
+      "ClientUCMDeletePublishedFile\022\031\n\021publishe" +
+      "d_file_id\030\001 \001(\006\022\016\n\006app_id\030\002 \001(\r\">\n(CMsgC" +
+      "lientUCMDeletePublishedFileResponse\022\022\n\007e" +
+      "result\030\001 \001(\005:\0012\"\214\001\n4CMsgClientUCMEnumera" +
+      "teUserSubscribedFilesWithUpdates\022\016\n\006app_" +
+      "id\030\001 \001(\r\022\023\n\013start_index\030\002 \001(\r\022\022\n\nstart_t" +
+      "ime\030\003 \001(\007\022\033\n\020desired_revision\030\004 \001(\r:\0010\"\221" +
+      "\003\n<CMsgClientUCMEnumerateUserSubscribedF" +
+      "ilesWithUpdatesResponse\022\022\n\007eresult\030\001 \001(\005" +
+      ":\0012\022g\n\020subscribed_files\030\002 \003(\0132M.CMsgClie" +
       "ntUCMEnumerateUserSubscribedFilesWithUpd" +
-      "ates\022\016\n\006app_id\030\001 \001(\r\022\023\n\013start_index\030\002 \001(" +
-      "\r\022\022\n\nstart_time\030\003 \001(\007\022\033\n\020desired_revisio" +
-      "n\030\004 \001(\r:\0010\"\221\003\n<CMsgClientUCMEnumerateUse" +
-      "rSubscribedFilesWithUpdatesResponse\022\022\n\007e" +
-      "result\030\001 \001(\005:\0012\022g\n\020subscribed_files\030\002 \003(" +
-      "\0132M.CMsgClientUCMEnumerateUserSubscribed" +
-      "FilesWithUpdatesResponse.PublishedFileId" +
-      "\022\025\n\rtotal_results\030\003 \001(\r\032\274\001\n\017PublishedFil" +
-      "eId\022\031\n\021published_file_id\030\001 \001(\006\022\035\n\022rtime3" +
-      "2_subscribed\030\002 \001(\007:\0010\022\r\n\005appid\030\003 \001(\r\022\025\n\r" +
-      "file_hcontent\030\004 \001(\006\022\021\n\tfile_size\030\005 \001(\r\022\034" +
-      "\n\024rtime32_last_updated\030\006 \001(\007\022\030\n\020is_depot" +
-      "_content\030\007 \001(\010\"\265\001\n!CMsgClientUCMPublishe" +
-      "dFileUpdated\022\031\n\021published_file_id\030\001 \001(\006\022" +
-      "\016\n\006app_id\030\002 \001(\r\022\024\n\014time_updated\030\003 \001(\r\022\020\n" +
-      "\010hcontent\030\004 \001(\006\022\021\n\tfile_size\030\005 \001(\007\022\030\n\020is" +
-      "_depot_content\030\006 \001(\010\022\020\n\010revision\030\007 \001(\r\"k" +
-      "\n$CMsgClientWorkshopItemChangesRequest\022\016" +
-      "\n\006app_id\030\001 \001(\r\022\031\n\021last_time_updated\030\002 \001(" +
-      "\r\022\030\n\020num_items_needed\030\003 \001(\r\"\373\001\n%CMsgClie" +
-      "ntWorkshopItemChangesResponse\022\022\n\007eresult" +
-      "\030\001 \001(\005:\0012\022\023\n\013update_time\030\002 \001(\r\022O\n\016worksh" +
-      "op_items\030\005 \003(\01327.CMsgClientWorkshopItemC" +
-      "hangesResponse.WorkshopItemInfo\032X\n\020Works" +
-      "hopItemInfo\022\031\n\021published_file_id\030\001 \001(\006\022\024" +
-      "\n\014time_updated\030\002 \001(\r\022\023\n\013manifest_id\030\003 \001(" +
-      "\006\"d\n\'CMsgClientUCMSetUserPublishedFileAc" +
-      "tion\022\031\n\021published_file_id\030\001 \001(\006\022\016\n\006app_i" +
-      "d\030\002 \001(\r\022\016\n\006action\030\003 \001(\005\"E\n/CMsgClientUCM" +
-      "SetUserPublishedFileActionResponse\022\022\n\007er" +
-      "esult\030\001 \001(\005:\0012\"g\n0CMsgClientUCMEnumerate" +
-      "PublishedFilesByUserAction\022\016\n\006app_id\030\001 \001" +
-      "(\r\022\023\n\013start_index\030\002 \001(\r\022\016\n\006action\030\003 \001(\005\"" +
-      "\224\002\n8CMsgClientUCMEnumeratePublishedFiles" +
-      "ByUserActionResponse\022\022\n\007eresult\030\001 \001(\005:\0012" +
-      "\022b\n\017published_files\030\002 \003(\0132I.CMsgClientUC" +
-      "MEnumeratePublishedFilesByUserActionResp" +
-      "onse.PublishedFileId\022\025\n\rtotal_results\030\003 " +
-      "\001(\r\032I\n\017PublishedFileId\022\031\n\021published_file" +
-      "_id\030\001 \001(\006\022\033\n\020rtime_time_stamp\030\002 \001(\007:\0010\"\036" +
-      "\n\034CMsgClientScreenshotsChangedB\005H\001\200\001\000"
+      "atesResponse.PublishedFileId\022\025\n\rtotal_re" +
+      "sults\030\003 \001(\r\032\274\001\n\017PublishedFileId\022\031\n\021publi" +
+      "shed_file_id\030\001 \001(\006\022\035\n\022rtime32_subscribed" +
+      "\030\002 \001(\007:\0010\022\r\n\005appid\030\003 \001(\r\022\025\n\rfile_hconten" +
+      "t\030\004 \001(\006\022\021\n\tfile_size\030\005 \001(\r\022\034\n\024rtime32_la" +
+      "st_updated\030\006 \001(\007\022\030\n\020is_depot_content\030\007 \001" +
+      "(\010\"\265\001\n!CMsgClientUCMPublishedFileUpdated" +
+      "\022\031\n\021published_file_id\030\001 \001(\006\022\016\n\006app_id\030\002 " +
+      "\001(\r\022\024\n\014time_updated\030\003 \001(\r\022\020\n\010hcontent\030\004 " +
+      "\001(\006\022\021\n\tfile_size\030\005 \001(\007\022\030\n\020is_depot_conte" +
+      "nt\030\006 \001(\010\022\020\n\010revision\030\007 \001(\r\"k\n$CMsgClient" +
+      "WorkshopItemChangesRequest\022\016\n\006app_id\030\001 \001" +
+      "(\r\022\031\n\021last_time_updated\030\002 \001(\r\022\030\n\020num_ite" +
+      "ms_needed\030\003 \001(\r\"\373\001\n%CMsgClientWorkshopIt" +
+      "emChangesResponse\022\022\n\007eresult\030\001 \001(\005:\0012\022\023\n" +
+      "\013update_time\030\002 \001(\r\022O\n\016workshop_items\030\005 \003" +
+      "(\01327.CMsgClientWorkshopItemChangesRespon" +
+      "se.WorkshopItemInfo\032X\n\020WorkshopItemInfo\022" +
+      "\031\n\021published_file_id\030\001 \001(\006\022\024\n\014time_updat" +
+      "ed\030\002 \001(\r\022\023\n\013manifest_id\030\003 \001(\006\"d\n\'CMsgCli" +
+      "entUCMSetUserPublishedFileAction\022\031\n\021publ" +
+      "ished_file_id\030\001 \001(\006\022\016\n\006app_id\030\002 \001(\r\022\016\n\006a" +
+      "ction\030\003 \001(\005\"E\n/CMsgClientUCMSetUserPubli" +
+      "shedFileActionResponse\022\022\n\007eresult\030\001 \001(\005:" +
+      "\0012\"g\n0CMsgClientUCMEnumeratePublishedFil" +
+      "esByUserAction\022\016\n\006app_id\030\001 \001(\r\022\023\n\013start_" +
+      "index\030\002 \001(\r\022\016\n\006action\030\003 \001(\005\"\224\002\n8CMsgClie" +
+      "ntUCMEnumeratePublishedFilesByUserAction" +
+      "Response\022\022\n\007eresult\030\001 \001(\005:\0012\022b\n\017publishe" +
+      "d_files\030\002 \003(\0132I.CMsgClientUCMEnumeratePu" +
+      "blishedFilesByUserActionResponse.Publish" +
+      "edFileId\022\025\n\rtotal_results\030\003 \001(\r\032I\n\017Publi" +
+      "shedFileId\022\031\n\021published_file_id\030\001 \001(\006\022\033\n" +
+      "\020rtime_time_stamp\030\002 \001(\007:\0010\"\036\n\034CMsgClient" +
+      "ScreenshotsChangedB\005H\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27648,7 +28117,7 @@ public final class SteammessagesClientserverUcm {
     internal_static_CMsgClientUCMUpdatePublishedFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgClientUCMUpdatePublishedFile_descriptor,
-        new java.lang.String[] { "AppId", "PublishedFileId", "FileName", "PreviewFileName", "Title", "Description", "Tags", "Visibility", "UpdateFile", "UpdatePreviewFile", "UpdateTitle", "UpdateDescription", "UpdateTags", "UpdateVisibility", "ChangeDescription", "UpdateUrl", "Url", "UpdateContentManifest", "ContentManifest", "Metadata", "UpdateMetadata", "Language", "RemovedKvtags", "Kvtags", "Previews", "PreviewsToRemove", "ClearInProgress", "RemoveAllKvtags", });
+        new java.lang.String[] { "AppId", "PublishedFileId", "FileName", "PreviewFileName", "Title", "Description", "Tags", "Visibility", "UpdateFile", "UpdatePreviewFile", "UpdateTitle", "UpdateDescription", "UpdateTags", "UpdateVisibility", "ChangeDescription", "UpdateUrl", "Url", "UpdateContentManifest", "ContentManifest", "Metadata", "UpdateMetadata", "Language", "RemovedKvtags", "Kvtags", "Previews", "PreviewsToRemove", "ClearInProgress", "RemoveAllKvtags", "ContentDescriptorsToAdd", "ContentDescriptorsToRemove", "AllowAdminTags", });
     internal_static_CMsgClientUCMUpdatePublishedFile_KeyValueTag_descriptor =
       internal_static_CMsgClientUCMUpdatePublishedFile_descriptor.getNestedTypes().get(0);
     internal_static_CMsgClientUCMUpdatePublishedFile_KeyValueTag_fieldAccessorTable = new

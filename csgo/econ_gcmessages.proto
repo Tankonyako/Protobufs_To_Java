@@ -1,9 +1,6 @@
 syntax = "proto2";
 
-import "steam/steammessages.proto";
-
-option optimize_for = SPEED;
-option cc_generic_services = false;
+import "csgo/steammessages.proto";
 
 enum EGCItemMsg {
 	k_EMsgGCBase = 1000;
@@ -142,7 +139,6 @@ enum EGCItemMsg {
 	k_EMsgGCToGCIsTrustedServerResponse = 2520;
 	k_EMsgGCToGCBroadcastConsoleCommand = 2521;
 	k_EMsgGCServerVersionUpdated = 2522;
-	k_EMsgGCApplyAutograph = 2523;
 	k_EMsgGCToGCWebAPIAccountChanged = 2524;
 	k_EMsgGCRequestAnnouncements = 2525;
 	k_EMsgGCRequestAnnouncementsResponse = 2526;
@@ -150,6 +146,7 @@ enum EGCItemMsg {
 	k_EMsgGCClientVersionUpdated = 2528;
 	k_EMsgGCAdjustItemEquippedStateMulti = 2529;
 	k_EMsgGCRecurringSubscriptionStatus = 2530;
+	k_EMsgGCAdjustEquipSlots = 2531;
 }
 
 enum EGCMsgResponse {
@@ -224,5 +221,9 @@ message CMsgGCUserTrackTimePlayedConsecutively {
 message CMsgGCItemCustomizationNotification {
 	repeated uint64 item_id = 1;
 	optional uint32 request = 2;
+}
+
+message CAttribute_String {
+	optional string value = 1;
 }
 

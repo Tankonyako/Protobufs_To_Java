@@ -1,8 +1,5 @@
 syntax = "proto2";
 
-option optimize_for = SPEED;
-option cc_generic_services = false;
-
 enum EGCSystemMsg {
 	k_EGCMsgInvalid = 0;
 	k_EGCMsgMulti = 1;

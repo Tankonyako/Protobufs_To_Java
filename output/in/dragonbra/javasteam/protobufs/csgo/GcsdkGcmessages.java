@@ -40129,6 +40129,3788 @@ public final class GcsdkGcmessages {
 
   }
 
+  public interface CMsgSerializedSOCacheOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgSerializedSOCache)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 file_version = 1;</code>
+     * @return Whether the fileVersion field is set.
+     */
+    boolean hasFileVersion();
+    /**
+     * <code>optional uint32 file_version = 1;</code>
+     * @return The fileVersion.
+     */
+    int getFileVersion();
+
+    /**
+     * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+     */
+    java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache> 
+        getCachesList();
+    /**
+     * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+     */
+    GcsdkGcmessages.CMsgSerializedSOCache.Cache getCaches(int index);
+    /**
+     * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+     */
+    int getCachesCount();
+    /**
+     * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+     */
+    java.util.List<? extends GcsdkGcmessages.CMsgSerializedSOCache.CacheOrBuilder> 
+        getCachesOrBuilderList();
+    /**
+     * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+     */
+    GcsdkGcmessages.CMsgSerializedSOCache.CacheOrBuilder getCachesOrBuilder(
+        int index);
+
+    /**
+     * <code>optional uint32 gc_socache_file_version = 3;</code>
+     * @return Whether the gcSocacheFileVersion field is set.
+     */
+    boolean hasGcSocacheFileVersion();
+    /**
+     * <code>optional uint32 gc_socache_file_version = 3;</code>
+     * @return The gcSocacheFileVersion.
+     */
+    int getGcSocacheFileVersion();
+  }
+  /**
+   * Protobuf type {@code CMsgSerializedSOCache}
+   */
+  public static final class CMsgSerializedSOCache extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgSerializedSOCache)
+      CMsgSerializedSOCacheOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgSerializedSOCache.newBuilder() to construct.
+    private CMsgSerializedSOCache(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgSerializedSOCache() {
+      caches_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgSerializedSOCache();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgSerializedSOCache(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              fileVersion_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                caches_ = new java.util.ArrayList<GcsdkGcmessages.CMsgSerializedSOCache.Cache>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              caches_.add(
+                  input.readMessage(GcsdkGcmessages.CMsgSerializedSOCache.Cache.PARSER, extensionRegistry));
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              gcSocacheFileVersion_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          caches_ = java.util.Collections.unmodifiableList(caches_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              GcsdkGcmessages.CMsgSerializedSOCache.class, GcsdkGcmessages.CMsgSerializedSOCache.Builder.class);
+    }
+
+    public interface TypeCacheOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CMsgSerializedSOCache.TypeCache)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 type = 1;</code>
+       * @return Whether the type field is set.
+       */
+      boolean hasType();
+      /**
+       * <code>optional uint32 type = 1;</code>
+       * @return The type.
+       */
+      int getType();
+
+      /**
+       * <code>repeated bytes objects = 2;</code>
+       * @return A list containing the objects.
+       */
+      java.util.List<com.google.protobuf.ByteString> getObjectsList();
+      /**
+       * <code>repeated bytes objects = 2;</code>
+       * @return The count of objects.
+       */
+      int getObjectsCount();
+      /**
+       * <code>repeated bytes objects = 2;</code>
+       * @param index The index of the element to return.
+       * @return The objects at the given index.
+       */
+      com.google.protobuf.ByteString getObjects(int index);
+
+      /**
+       * <code>optional uint32 service_id = 3;</code>
+       * @return Whether the serviceId field is set.
+       */
+      boolean hasServiceId();
+      /**
+       * <code>optional uint32 service_id = 3;</code>
+       * @return The serviceId.
+       */
+      int getServiceId();
+    }
+    /**
+     * Protobuf type {@code CMsgSerializedSOCache.TypeCache}
+     */
+    public static final class TypeCache extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CMsgSerializedSOCache.TypeCache)
+        TypeCacheOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use TypeCache.newBuilder() to construct.
+      private TypeCache(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private TypeCache() {
+        objects_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new TypeCache();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private TypeCache(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                bitField0_ |= 0x00000001;
+                type_ = input.readUInt32();
+                break;
+              }
+              case 18: {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  objects_ = new java.util.ArrayList<com.google.protobuf.ByteString>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                objects_.add(input.readBytes());
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000002;
+                serviceId_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000002) != 0)) {
+            objects_ = java.util.Collections.unmodifiableList(objects_); // C
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_TypeCache_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_TypeCache_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.class, GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int TYPE_FIELD_NUMBER = 1;
+      private int type_;
+      /**
+       * <code>optional uint32 type = 1;</code>
+       * @return Whether the type field is set.
+       */
+      @java.lang.Override
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 type = 1;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public int getType() {
+        return type_;
+      }
+
+      public static final int OBJECTS_FIELD_NUMBER = 2;
+      private java.util.List<com.google.protobuf.ByteString> objects_;
+      /**
+       * <code>repeated bytes objects = 2;</code>
+       * @return A list containing the objects.
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.ByteString>
+          getObjectsList() {
+        return objects_;
+      }
+      /**
+       * <code>repeated bytes objects = 2;</code>
+       * @return The count of objects.
+       */
+      public int getObjectsCount() {
+        return objects_.size();
+      }
+      /**
+       * <code>repeated bytes objects = 2;</code>
+       * @param index The index of the element to return.
+       * @return The objects at the given index.
+       */
+      public com.google.protobuf.ByteString getObjects(int index) {
+        return objects_.get(index);
+      }
+
+      public static final int SERVICE_ID_FIELD_NUMBER = 3;
+      private int serviceId_;
+      /**
+       * <code>optional uint32 service_id = 3;</code>
+       * @return Whether the serviceId field is set.
+       */
+      @java.lang.Override
+      public boolean hasServiceId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 service_id = 3;</code>
+       * @return The serviceId.
+       */
+      @java.lang.Override
+      public int getServiceId() {
+        return serviceId_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeUInt32(1, type_);
+        }
+        for (int i = 0; i < objects_.size(); i++) {
+          output.writeBytes(2, objects_.get(i));
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(3, serviceId_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, type_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < objects_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeBytesSizeNoTag(objects_.get(i));
+          }
+          size += dataSize;
+          size += 1 * getObjectsList().size();
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, serviceId_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof GcsdkGcmessages.CMsgSerializedSOCache.TypeCache)) {
+          return super.equals(obj);
+        }
+        GcsdkGcmessages.CMsgSerializedSOCache.TypeCache other = (GcsdkGcmessages.CMsgSerializedSOCache.TypeCache) obj;
+
+        if (hasType() != other.hasType()) return false;
+        if (hasType()) {
+          if (getType()
+              != other.getType()) return false;
+        }
+        if (!getObjectsList()
+            .equals(other.getObjectsList())) return false;
+        if (hasServiceId() != other.hasServiceId()) return false;
+        if (hasServiceId()) {
+          if (getServiceId()
+              != other.getServiceId()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasType()) {
+          hash = (37 * hash) + TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + getType();
+        }
+        if (getObjectsCount() > 0) {
+          hash = (37 * hash) + OBJECTS_FIELD_NUMBER;
+          hash = (53 * hash) + getObjectsList().hashCode();
+        }
+        if (hasServiceId()) {
+          hash = (37 * hash) + SERVICE_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getServiceId();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(GcsdkGcmessages.CMsgSerializedSOCache.TypeCache prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CMsgSerializedSOCache.TypeCache}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CMsgSerializedSOCache.TypeCache)
+          GcsdkGcmessages.CMsgSerializedSOCache.TypeCacheOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_TypeCache_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_TypeCache_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.class, GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder.class);
+        }
+
+        // Construct using GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          type_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          objects_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          serviceId_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_TypeCache_descriptor;
+        }
+
+        @java.lang.Override
+        public GcsdkGcmessages.CMsgSerializedSOCache.TypeCache getDefaultInstanceForType() {
+          return GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public GcsdkGcmessages.CMsgSerializedSOCache.TypeCache build() {
+          GcsdkGcmessages.CMsgSerializedSOCache.TypeCache result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public GcsdkGcmessages.CMsgSerializedSOCache.TypeCache buildPartial() {
+          GcsdkGcmessages.CMsgSerializedSOCache.TypeCache result = new GcsdkGcmessages.CMsgSerializedSOCache.TypeCache(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.type_ = type_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            objects_ = java.util.Collections.unmodifiableList(objects_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.objects_ = objects_;
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.serviceId_ = serviceId_;
+            to_bitField0_ |= 0x00000002;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof GcsdkGcmessages.CMsgSerializedSOCache.TypeCache) {
+            return mergeFrom((GcsdkGcmessages.CMsgSerializedSOCache.TypeCache)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(GcsdkGcmessages.CMsgSerializedSOCache.TypeCache other) {
+          if (other == GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.getDefaultInstance()) return this;
+          if (other.hasType()) {
+            setType(other.getType());
+          }
+          if (!other.objects_.isEmpty()) {
+            if (objects_.isEmpty()) {
+              objects_ = other.objects_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureObjectsIsMutable();
+              objects_.addAll(other.objects_);
+            }
+            onChanged();
+          }
+          if (other.hasServiceId()) {
+            setServiceId(other.getServiceId());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          GcsdkGcmessages.CMsgSerializedSOCache.TypeCache parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (GcsdkGcmessages.CMsgSerializedSOCache.TypeCache) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int type_ ;
+        /**
+         * <code>optional uint32 type = 1;</code>
+         * @return Whether the type field is set.
+         */
+        @java.lang.Override
+        public boolean hasType() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional uint32 type = 1;</code>
+         * @return The type.
+         */
+        @java.lang.Override
+        public int getType() {
+          return type_;
+        }
+        /**
+         * <code>optional uint32 type = 1;</code>
+         * @param value The type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setType(int value) {
+          bitField0_ |= 0x00000001;
+          type_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 type = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearType() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          type_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<com.google.protobuf.ByteString> objects_ = java.util.Collections.emptyList();
+        private void ensureObjectsIsMutable() {
+          if (!((bitField0_ & 0x00000002) != 0)) {
+            objects_ = new java.util.ArrayList<com.google.protobuf.ByteString>(objects_);
+            bitField0_ |= 0x00000002;
+           }
+        }
+        /**
+         * <code>repeated bytes objects = 2;</code>
+         * @return A list containing the objects.
+         */
+        public java.util.List<com.google.protobuf.ByteString>
+            getObjectsList() {
+          return ((bitField0_ & 0x00000002) != 0) ?
+                   java.util.Collections.unmodifiableList(objects_) : objects_;
+        }
+        /**
+         * <code>repeated bytes objects = 2;</code>
+         * @return The count of objects.
+         */
+        public int getObjectsCount() {
+          return objects_.size();
+        }
+        /**
+         * <code>repeated bytes objects = 2;</code>
+         * @param index The index of the element to return.
+         * @return The objects at the given index.
+         */
+        public com.google.protobuf.ByteString getObjects(int index) {
+          return objects_.get(index);
+        }
+        /**
+         * <code>repeated bytes objects = 2;</code>
+         * @param index The index to set the value at.
+         * @param value The objects to set.
+         * @return This builder for chaining.
+         */
+        public Builder setObjects(
+            int index, com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureObjectsIsMutable();
+          objects_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated bytes objects = 2;</code>
+         * @param value The objects to add.
+         * @return This builder for chaining.
+         */
+        public Builder addObjects(com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureObjectsIsMutable();
+          objects_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated bytes objects = 2;</code>
+         * @param values The objects to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllObjects(
+            java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+          ensureObjectsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, objects_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated bytes objects = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearObjects() {
+          objects_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+
+        private int serviceId_ ;
+        /**
+         * <code>optional uint32 service_id = 3;</code>
+         * @return Whether the serviceId field is set.
+         */
+        @java.lang.Override
+        public boolean hasServiceId() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>optional uint32 service_id = 3;</code>
+         * @return The serviceId.
+         */
+        @java.lang.Override
+        public int getServiceId() {
+          return serviceId_;
+        }
+        /**
+         * <code>optional uint32 service_id = 3;</code>
+         * @param value The serviceId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setServiceId(int value) {
+          bitField0_ |= 0x00000004;
+          serviceId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 service_id = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearServiceId() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          serviceId_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CMsgSerializedSOCache.TypeCache)
+      }
+
+      // @@protoc_insertion_point(class_scope:CMsgSerializedSOCache.TypeCache)
+      private static final GcsdkGcmessages.CMsgSerializedSOCache.TypeCache DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new GcsdkGcmessages.CMsgSerializedSOCache.TypeCache();
+      }
+
+      public static GcsdkGcmessages.CMsgSerializedSOCache.TypeCache getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<TypeCache>
+          PARSER = new com.google.protobuf.AbstractParser<TypeCache>() {
+        @java.lang.Override
+        public TypeCache parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new TypeCache(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<TypeCache> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<TypeCache> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public GcsdkGcmessages.CMsgSerializedSOCache.TypeCache getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface CacheOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CMsgSerializedSOCache.Cache)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 type = 1;</code>
+       * @return Whether the type field is set.
+       */
+      boolean hasType();
+      /**
+       * <code>optional uint32 type = 1;</code>
+       * @return The type.
+       */
+      int getType();
+
+      /**
+       * <code>optional uint64 id = 2;</code>
+       * @return Whether the id field is set.
+       */
+      boolean hasId();
+      /**
+       * <code>optional uint64 id = 2;</code>
+       * @return The id.
+       */
+      long getId();
+
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+       */
+      java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version> 
+          getVersionsList();
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+       */
+      GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version getVersions(int index);
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+       */
+      int getVersionsCount();
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+       */
+      java.util.List<? extends GcsdkGcmessages.CMsgSerializedSOCache.Cache.VersionOrBuilder> 
+          getVersionsOrBuilderList();
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+       */
+      GcsdkGcmessages.CMsgSerializedSOCache.Cache.VersionOrBuilder getVersionsOrBuilder(
+          int index);
+
+      /**
+       * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+       */
+      java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.TypeCache> 
+          getTypeCachesList();
+      /**
+       * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+       */
+      GcsdkGcmessages.CMsgSerializedSOCache.TypeCache getTypeCaches(int index);
+      /**
+       * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+       */
+      int getTypeCachesCount();
+      /**
+       * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+       */
+      java.util.List<? extends GcsdkGcmessages.CMsgSerializedSOCache.TypeCacheOrBuilder> 
+          getTypeCachesOrBuilderList();
+      /**
+       * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+       */
+      GcsdkGcmessages.CMsgSerializedSOCache.TypeCacheOrBuilder getTypeCachesOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code CMsgSerializedSOCache.Cache}
+     */
+    public static final class Cache extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CMsgSerializedSOCache.Cache)
+        CacheOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Cache.newBuilder() to construct.
+      private Cache(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Cache() {
+        versions_ = java.util.Collections.emptyList();
+        typeCaches_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Cache();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Cache(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                bitField0_ |= 0x00000001;
+                type_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                id_ = input.readUInt64();
+                break;
+              }
+              case 26: {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                  versions_ = new java.util.ArrayList<GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version>();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                versions_.add(
+                    input.readMessage(GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.PARSER, extensionRegistry));
+                break;
+              }
+              case 34: {
+                if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                  typeCaches_ = new java.util.ArrayList<GcsdkGcmessages.CMsgSerializedSOCache.TypeCache>();
+                  mutable_bitField0_ |= 0x00000008;
+                }
+                typeCaches_.add(
+                    input.readMessage(GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.PARSER, extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000004) != 0)) {
+            versions_ = java.util.Collections.unmodifiableList(versions_);
+          }
+          if (((mutable_bitField0_ & 0x00000008) != 0)) {
+            typeCaches_ = java.util.Collections.unmodifiableList(typeCaches_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_Cache_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_Cache_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                GcsdkGcmessages.CMsgSerializedSOCache.Cache.class, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder.class);
+      }
+
+      public interface VersionOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:CMsgSerializedSOCache.Cache.Version)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional uint32 service = 1;</code>
+         * @return Whether the service field is set.
+         */
+        boolean hasService();
+        /**
+         * <code>optional uint32 service = 1;</code>
+         * @return The service.
+         */
+        int getService();
+
+        /**
+         * <code>optional uint64 version = 2;</code>
+         * @return Whether the version field is set.
+         */
+        boolean hasVersion();
+        /**
+         * <code>optional uint64 version = 2;</code>
+         * @return The version.
+         */
+        long getVersion();
+      }
+      /**
+       * Protobuf type {@code CMsgSerializedSOCache.Cache.Version}
+       */
+      public static final class Version extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:CMsgSerializedSOCache.Cache.Version)
+          VersionOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use Version.newBuilder() to construct.
+        private Version(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private Version() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Version();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private Version(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  bitField0_ |= 0x00000001;
+                  service_ = input.readUInt32();
+                  break;
+                }
+                case 16: {
+                  bitField0_ |= 0x00000002;
+                  version_ = input.readUInt64();
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_Cache_Version_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_Cache_Version_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.class, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int SERVICE_FIELD_NUMBER = 1;
+        private int service_;
+        /**
+         * <code>optional uint32 service = 1;</code>
+         * @return Whether the service field is set.
+         */
+        @java.lang.Override
+        public boolean hasService() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional uint32 service = 1;</code>
+         * @return The service.
+         */
+        @java.lang.Override
+        public int getService() {
+          return service_;
+        }
+
+        public static final int VERSION_FIELD_NUMBER = 2;
+        private long version_;
+        /**
+         * <code>optional uint64 version = 2;</code>
+         * @return Whether the version field is set.
+         */
+        @java.lang.Override
+        public boolean hasVersion() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint64 version = 2;</code>
+         * @return The version.
+         */
+        @java.lang.Override
+        public long getVersion() {
+          return version_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            output.writeUInt32(1, service_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            output.writeUInt64(2, version_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(1, service_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt64Size(2, version_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version)) {
+            return super.equals(obj);
+          }
+          GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version other = (GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version) obj;
+
+          if (hasService() != other.hasService()) return false;
+          if (hasService()) {
+            if (getService()
+                != other.getService()) return false;
+          }
+          if (hasVersion() != other.hasVersion()) return false;
+          if (hasVersion()) {
+            if (getVersion()
+                != other.getVersion()) return false;
+          }
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasService()) {
+            hash = (37 * hash) + SERVICE_FIELD_NUMBER;
+            hash = (53 * hash) + getService();
+          }
+          if (hasVersion()) {
+            hash = (37 * hash) + VERSION_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                getVersion());
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code CMsgSerializedSOCache.Cache.Version}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:CMsgSerializedSOCache.Cache.Version)
+            GcsdkGcmessages.CMsgSerializedSOCache.Cache.VersionOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_Cache_Version_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_Cache_Version_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.class, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder.class);
+          }
+
+          // Construct using GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            service_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            version_ = 0L;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_Cache_Version_descriptor;
+          }
+
+          @java.lang.Override
+          public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version getDefaultInstanceForType() {
+            return GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version build() {
+            GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version buildPartial() {
+            GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version result = new GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.service_ = service_;
+              to_bitField0_ |= 0x00000001;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.version_ = version_;
+              to_bitField0_ |= 0x00000002;
+            }
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version) {
+              return mergeFrom((GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version other) {
+            if (other == GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.getDefaultInstance()) return this;
+            if (other.hasService()) {
+              setService(other.getService());
+            }
+            if (other.hasVersion()) {
+              setVersion(other.getVersion());
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private int service_ ;
+          /**
+           * <code>optional uint32 service = 1;</code>
+           * @return Whether the service field is set.
+           */
+          @java.lang.Override
+          public boolean hasService() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <code>optional uint32 service = 1;</code>
+           * @return The service.
+           */
+          @java.lang.Override
+          public int getService() {
+            return service_;
+          }
+          /**
+           * <code>optional uint32 service = 1;</code>
+           * @param value The service to set.
+           * @return This builder for chaining.
+           */
+          public Builder setService(int value) {
+            bitField0_ |= 0x00000001;
+            service_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 service = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearService() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            service_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private long version_ ;
+          /**
+           * <code>optional uint64 version = 2;</code>
+           * @return Whether the version field is set.
+           */
+          @java.lang.Override
+          public boolean hasVersion() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <code>optional uint64 version = 2;</code>
+           * @return The version.
+           */
+          @java.lang.Override
+          public long getVersion() {
+            return version_;
+          }
+          /**
+           * <code>optional uint64 version = 2;</code>
+           * @param value The version to set.
+           * @return This builder for chaining.
+           */
+          public Builder setVersion(long value) {
+            bitField0_ |= 0x00000002;
+            version_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint64 version = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearVersion() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            version_ = 0L;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:CMsgSerializedSOCache.Cache.Version)
+        }
+
+        // @@protoc_insertion_point(class_scope:CMsgSerializedSOCache.Cache.Version)
+        private static final GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version();
+        }
+
+        public static GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<Version>
+            PARSER = new com.google.protobuf.AbstractParser<Version>() {
+          @java.lang.Override
+          public Version parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Version(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<Version> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Version> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      private int bitField0_;
+      public static final int TYPE_FIELD_NUMBER = 1;
+      private int type_;
+      /**
+       * <code>optional uint32 type = 1;</code>
+       * @return Whether the type field is set.
+       */
+      @java.lang.Override
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 type = 1;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public int getType() {
+        return type_;
+      }
+
+      public static final int ID_FIELD_NUMBER = 2;
+      private long id_;
+      /**
+       * <code>optional uint64 id = 2;</code>
+       * @return Whether the id field is set.
+       */
+      @java.lang.Override
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 id = 2;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+
+      public static final int VERSIONS_FIELD_NUMBER = 3;
+      private java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version> versions_;
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+       */
+      @java.lang.Override
+      public java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version> getVersionsList() {
+        return versions_;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends GcsdkGcmessages.CMsgSerializedSOCache.Cache.VersionOrBuilder> 
+          getVersionsOrBuilderList() {
+        return versions_;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+       */
+      @java.lang.Override
+      public int getVersionsCount() {
+        return versions_.size();
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+       */
+      @java.lang.Override
+      public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version getVersions(int index) {
+        return versions_.get(index);
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+       */
+      @java.lang.Override
+      public GcsdkGcmessages.CMsgSerializedSOCache.Cache.VersionOrBuilder getVersionsOrBuilder(
+          int index) {
+        return versions_.get(index);
+      }
+
+      public static final int TYPE_CACHES_FIELD_NUMBER = 4;
+      private java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.TypeCache> typeCaches_;
+      /**
+       * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+       */
+      @java.lang.Override
+      public java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.TypeCache> getTypeCachesList() {
+        return typeCaches_;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends GcsdkGcmessages.CMsgSerializedSOCache.TypeCacheOrBuilder> 
+          getTypeCachesOrBuilderList() {
+        return typeCaches_;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+       */
+      @java.lang.Override
+      public int getTypeCachesCount() {
+        return typeCaches_.size();
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+       */
+      @java.lang.Override
+      public GcsdkGcmessages.CMsgSerializedSOCache.TypeCache getTypeCaches(int index) {
+        return typeCaches_.get(index);
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+       */
+      @java.lang.Override
+      public GcsdkGcmessages.CMsgSerializedSOCache.TypeCacheOrBuilder getTypeCachesOrBuilder(
+          int index) {
+        return typeCaches_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeUInt32(1, type_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt64(2, id_);
+        }
+        for (int i = 0; i < versions_.size(); i++) {
+          output.writeMessage(3, versions_.get(i));
+        }
+        for (int i = 0; i < typeCaches_.size(); i++) {
+          output.writeMessage(4, typeCaches_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, type_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(2, id_);
+        }
+        for (int i = 0; i < versions_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, versions_.get(i));
+        }
+        for (int i = 0; i < typeCaches_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, typeCaches_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof GcsdkGcmessages.CMsgSerializedSOCache.Cache)) {
+          return super.equals(obj);
+        }
+        GcsdkGcmessages.CMsgSerializedSOCache.Cache other = (GcsdkGcmessages.CMsgSerializedSOCache.Cache) obj;
+
+        if (hasType() != other.hasType()) return false;
+        if (hasType()) {
+          if (getType()
+              != other.getType()) return false;
+        }
+        if (hasId() != other.hasId()) return false;
+        if (hasId()) {
+          if (getId()
+              != other.getId()) return false;
+        }
+        if (!getVersionsList()
+            .equals(other.getVersionsList())) return false;
+        if (!getTypeCachesList()
+            .equals(other.getTypeCachesList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasType()) {
+          hash = (37 * hash) + TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + getType();
+        }
+        if (hasId()) {
+          hash = (37 * hash) + ID_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getId());
+        }
+        if (getVersionsCount() > 0) {
+          hash = (37 * hash) + VERSIONS_FIELD_NUMBER;
+          hash = (53 * hash) + getVersionsList().hashCode();
+        }
+        if (getTypeCachesCount() > 0) {
+          hash = (37 * hash) + TYPE_CACHES_FIELD_NUMBER;
+          hash = (53 * hash) + getTypeCachesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(GcsdkGcmessages.CMsgSerializedSOCache.Cache prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CMsgSerializedSOCache.Cache}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CMsgSerializedSOCache.Cache)
+          GcsdkGcmessages.CMsgSerializedSOCache.CacheOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_Cache_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_Cache_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  GcsdkGcmessages.CMsgSerializedSOCache.Cache.class, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder.class);
+        }
+
+        // Construct using GcsdkGcmessages.CMsgSerializedSOCache.Cache.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getVersionsFieldBuilder();
+            getTypeCachesFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          type_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          id_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          if (versionsBuilder_ == null) {
+            versions_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            versionsBuilder_.clear();
+          }
+          if (typeCachesBuilder_ == null) {
+            typeCaches_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            typeCachesBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_Cache_descriptor;
+        }
+
+        @java.lang.Override
+        public GcsdkGcmessages.CMsgSerializedSOCache.Cache getDefaultInstanceForType() {
+          return GcsdkGcmessages.CMsgSerializedSOCache.Cache.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public GcsdkGcmessages.CMsgSerializedSOCache.Cache build() {
+          GcsdkGcmessages.CMsgSerializedSOCache.Cache result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public GcsdkGcmessages.CMsgSerializedSOCache.Cache buildPartial() {
+          GcsdkGcmessages.CMsgSerializedSOCache.Cache result = new GcsdkGcmessages.CMsgSerializedSOCache.Cache(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.type_ = type_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.id_ = id_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (versionsBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) != 0)) {
+              versions_ = java.util.Collections.unmodifiableList(versions_);
+              bitField0_ = (bitField0_ & ~0x00000004);
+            }
+            result.versions_ = versions_;
+          } else {
+            result.versions_ = versionsBuilder_.build();
+          }
+          if (typeCachesBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) != 0)) {
+              typeCaches_ = java.util.Collections.unmodifiableList(typeCaches_);
+              bitField0_ = (bitField0_ & ~0x00000008);
+            }
+            result.typeCaches_ = typeCaches_;
+          } else {
+            result.typeCaches_ = typeCachesBuilder_.build();
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof GcsdkGcmessages.CMsgSerializedSOCache.Cache) {
+            return mergeFrom((GcsdkGcmessages.CMsgSerializedSOCache.Cache)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(GcsdkGcmessages.CMsgSerializedSOCache.Cache other) {
+          if (other == GcsdkGcmessages.CMsgSerializedSOCache.Cache.getDefaultInstance()) return this;
+          if (other.hasType()) {
+            setType(other.getType());
+          }
+          if (other.hasId()) {
+            setId(other.getId());
+          }
+          if (versionsBuilder_ == null) {
+            if (!other.versions_.isEmpty()) {
+              if (versions_.isEmpty()) {
+                versions_ = other.versions_;
+                bitField0_ = (bitField0_ & ~0x00000004);
+              } else {
+                ensureVersionsIsMutable();
+                versions_.addAll(other.versions_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.versions_.isEmpty()) {
+              if (versionsBuilder_.isEmpty()) {
+                versionsBuilder_.dispose();
+                versionsBuilder_ = null;
+                versions_ = other.versions_;
+                bitField0_ = (bitField0_ & ~0x00000004);
+                versionsBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getVersionsFieldBuilder() : null;
+              } else {
+                versionsBuilder_.addAllMessages(other.versions_);
+              }
+            }
+          }
+          if (typeCachesBuilder_ == null) {
+            if (!other.typeCaches_.isEmpty()) {
+              if (typeCaches_.isEmpty()) {
+                typeCaches_ = other.typeCaches_;
+                bitField0_ = (bitField0_ & ~0x00000008);
+              } else {
+                ensureTypeCachesIsMutable();
+                typeCaches_.addAll(other.typeCaches_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.typeCaches_.isEmpty()) {
+              if (typeCachesBuilder_.isEmpty()) {
+                typeCachesBuilder_.dispose();
+                typeCachesBuilder_ = null;
+                typeCaches_ = other.typeCaches_;
+                bitField0_ = (bitField0_ & ~0x00000008);
+                typeCachesBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getTypeCachesFieldBuilder() : null;
+              } else {
+                typeCachesBuilder_.addAllMessages(other.typeCaches_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          GcsdkGcmessages.CMsgSerializedSOCache.Cache parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (GcsdkGcmessages.CMsgSerializedSOCache.Cache) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int type_ ;
+        /**
+         * <code>optional uint32 type = 1;</code>
+         * @return Whether the type field is set.
+         */
+        @java.lang.Override
+        public boolean hasType() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional uint32 type = 1;</code>
+         * @return The type.
+         */
+        @java.lang.Override
+        public int getType() {
+          return type_;
+        }
+        /**
+         * <code>optional uint32 type = 1;</code>
+         * @param value The type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setType(int value) {
+          bitField0_ |= 0x00000001;
+          type_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 type = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearType() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          type_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private long id_ ;
+        /**
+         * <code>optional uint64 id = 2;</code>
+         * @return Whether the id field is set.
+         */
+        @java.lang.Override
+        public boolean hasId() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint64 id = 2;</code>
+         * @return The id.
+         */
+        @java.lang.Override
+        public long getId() {
+          return id_;
+        }
+        /**
+         * <code>optional uint64 id = 2;</code>
+         * @param value The id to set.
+         * @return This builder for chaining.
+         */
+        public Builder setId(long value) {
+          bitField0_ |= 0x00000002;
+          id_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint64 id = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearId() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          id_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version> versions_ =
+          java.util.Collections.emptyList();
+        private void ensureVersionsIsMutable() {
+          if (!((bitField0_ & 0x00000004) != 0)) {
+            versions_ = new java.util.ArrayList<GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version>(versions_);
+            bitField0_ |= 0x00000004;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder, GcsdkGcmessages.CMsgSerializedSOCache.Cache.VersionOrBuilder> versionsBuilder_;
+
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version> getVersionsList() {
+          if (versionsBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(versions_);
+          } else {
+            return versionsBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public int getVersionsCount() {
+          if (versionsBuilder_ == null) {
+            return versions_.size();
+          } else {
+            return versionsBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version getVersions(int index) {
+          if (versionsBuilder_ == null) {
+            return versions_.get(index);
+          } else {
+            return versionsBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public Builder setVersions(
+            int index, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version value) {
+          if (versionsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureVersionsIsMutable();
+            versions_.set(index, value);
+            onChanged();
+          } else {
+            versionsBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public Builder setVersions(
+            int index, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder builderForValue) {
+          if (versionsBuilder_ == null) {
+            ensureVersionsIsMutable();
+            versions_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            versionsBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public Builder addVersions(GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version value) {
+          if (versionsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureVersionsIsMutable();
+            versions_.add(value);
+            onChanged();
+          } else {
+            versionsBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public Builder addVersions(
+            int index, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version value) {
+          if (versionsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureVersionsIsMutable();
+            versions_.add(index, value);
+            onChanged();
+          } else {
+            versionsBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public Builder addVersions(
+            GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder builderForValue) {
+          if (versionsBuilder_ == null) {
+            ensureVersionsIsMutable();
+            versions_.add(builderForValue.build());
+            onChanged();
+          } else {
+            versionsBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public Builder addVersions(
+            int index, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder builderForValue) {
+          if (versionsBuilder_ == null) {
+            ensureVersionsIsMutable();
+            versions_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            versionsBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public Builder addAllVersions(
+            java.lang.Iterable<? extends GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version> values) {
+          if (versionsBuilder_ == null) {
+            ensureVersionsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, versions_);
+            onChanged();
+          } else {
+            versionsBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public Builder clearVersions() {
+          if (versionsBuilder_ == null) {
+            versions_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);
+            onChanged();
+          } else {
+            versionsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public Builder removeVersions(int index) {
+          if (versionsBuilder_ == null) {
+            ensureVersionsIsMutable();
+            versions_.remove(index);
+            onChanged();
+          } else {
+            versionsBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder getVersionsBuilder(
+            int index) {
+          return getVersionsFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public GcsdkGcmessages.CMsgSerializedSOCache.Cache.VersionOrBuilder getVersionsOrBuilder(
+            int index) {
+          if (versionsBuilder_ == null) {
+            return versions_.get(index);  } else {
+            return versionsBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public java.util.List<? extends GcsdkGcmessages.CMsgSerializedSOCache.Cache.VersionOrBuilder> 
+             getVersionsOrBuilderList() {
+          if (versionsBuilder_ != null) {
+            return versionsBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(versions_);
+          }
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder addVersionsBuilder() {
+          return getVersionsFieldBuilder().addBuilder(
+              GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder addVersionsBuilder(
+            int index) {
+          return getVersionsFieldBuilder().addBuilder(
+              index, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.Cache.Version versions = 3;</code>
+         */
+        public java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder> 
+             getVersionsBuilderList() {
+          return getVersionsFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder, GcsdkGcmessages.CMsgSerializedSOCache.Cache.VersionOrBuilder> 
+            getVersionsFieldBuilder() {
+          if (versionsBuilder_ == null) {
+            versionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Version.Builder, GcsdkGcmessages.CMsgSerializedSOCache.Cache.VersionOrBuilder>(
+                    versions_,
+                    ((bitField0_ & 0x00000004) != 0),
+                    getParentForChildren(),
+                    isClean());
+            versions_ = null;
+          }
+          return versionsBuilder_;
+        }
+
+        private java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.TypeCache> typeCaches_ =
+          java.util.Collections.emptyList();
+        private void ensureTypeCachesIsMutable() {
+          if (!((bitField0_ & 0x00000008) != 0)) {
+            typeCaches_ = new java.util.ArrayList<GcsdkGcmessages.CMsgSerializedSOCache.TypeCache>(typeCaches_);
+            bitField0_ |= 0x00000008;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            GcsdkGcmessages.CMsgSerializedSOCache.TypeCache, GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder, GcsdkGcmessages.CMsgSerializedSOCache.TypeCacheOrBuilder> typeCachesBuilder_;
+
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.TypeCache> getTypeCachesList() {
+          if (typeCachesBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(typeCaches_);
+          } else {
+            return typeCachesBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public int getTypeCachesCount() {
+          if (typeCachesBuilder_ == null) {
+            return typeCaches_.size();
+          } else {
+            return typeCachesBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public GcsdkGcmessages.CMsgSerializedSOCache.TypeCache getTypeCaches(int index) {
+          if (typeCachesBuilder_ == null) {
+            return typeCaches_.get(index);
+          } else {
+            return typeCachesBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public Builder setTypeCaches(
+            int index, GcsdkGcmessages.CMsgSerializedSOCache.TypeCache value) {
+          if (typeCachesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureTypeCachesIsMutable();
+            typeCaches_.set(index, value);
+            onChanged();
+          } else {
+            typeCachesBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public Builder setTypeCaches(
+            int index, GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder builderForValue) {
+          if (typeCachesBuilder_ == null) {
+            ensureTypeCachesIsMutable();
+            typeCaches_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            typeCachesBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public Builder addTypeCaches(GcsdkGcmessages.CMsgSerializedSOCache.TypeCache value) {
+          if (typeCachesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureTypeCachesIsMutable();
+            typeCaches_.add(value);
+            onChanged();
+          } else {
+            typeCachesBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public Builder addTypeCaches(
+            int index, GcsdkGcmessages.CMsgSerializedSOCache.TypeCache value) {
+          if (typeCachesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureTypeCachesIsMutable();
+            typeCaches_.add(index, value);
+            onChanged();
+          } else {
+            typeCachesBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public Builder addTypeCaches(
+            GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder builderForValue) {
+          if (typeCachesBuilder_ == null) {
+            ensureTypeCachesIsMutable();
+            typeCaches_.add(builderForValue.build());
+            onChanged();
+          } else {
+            typeCachesBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public Builder addTypeCaches(
+            int index, GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder builderForValue) {
+          if (typeCachesBuilder_ == null) {
+            ensureTypeCachesIsMutable();
+            typeCaches_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            typeCachesBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public Builder addAllTypeCaches(
+            java.lang.Iterable<? extends GcsdkGcmessages.CMsgSerializedSOCache.TypeCache> values) {
+          if (typeCachesBuilder_ == null) {
+            ensureTypeCachesIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, typeCaches_);
+            onChanged();
+          } else {
+            typeCachesBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public Builder clearTypeCaches() {
+          if (typeCachesBuilder_ == null) {
+            typeCaches_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000008);
+            onChanged();
+          } else {
+            typeCachesBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public Builder removeTypeCaches(int index) {
+          if (typeCachesBuilder_ == null) {
+            ensureTypeCachesIsMutable();
+            typeCaches_.remove(index);
+            onChanged();
+          } else {
+            typeCachesBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder getTypeCachesBuilder(
+            int index) {
+          return getTypeCachesFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public GcsdkGcmessages.CMsgSerializedSOCache.TypeCacheOrBuilder getTypeCachesOrBuilder(
+            int index) {
+          if (typeCachesBuilder_ == null) {
+            return typeCaches_.get(index);  } else {
+            return typeCachesBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public java.util.List<? extends GcsdkGcmessages.CMsgSerializedSOCache.TypeCacheOrBuilder> 
+             getTypeCachesOrBuilderList() {
+          if (typeCachesBuilder_ != null) {
+            return typeCachesBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(typeCaches_);
+          }
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder addTypeCachesBuilder() {
+          return getTypeCachesFieldBuilder().addBuilder(
+              GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder addTypeCachesBuilder(
+            int index) {
+          return getTypeCachesFieldBuilder().addBuilder(
+              index, GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CMsgSerializedSOCache.TypeCache type_caches = 4;</code>
+         */
+        public java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder> 
+             getTypeCachesBuilderList() {
+          return getTypeCachesFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            GcsdkGcmessages.CMsgSerializedSOCache.TypeCache, GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder, GcsdkGcmessages.CMsgSerializedSOCache.TypeCacheOrBuilder> 
+            getTypeCachesFieldBuilder() {
+          if (typeCachesBuilder_ == null) {
+            typeCachesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                GcsdkGcmessages.CMsgSerializedSOCache.TypeCache, GcsdkGcmessages.CMsgSerializedSOCache.TypeCache.Builder, GcsdkGcmessages.CMsgSerializedSOCache.TypeCacheOrBuilder>(
+                    typeCaches_,
+                    ((bitField0_ & 0x00000008) != 0),
+                    getParentForChildren(),
+                    isClean());
+            typeCaches_ = null;
+          }
+          return typeCachesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CMsgSerializedSOCache.Cache)
+      }
+
+      // @@protoc_insertion_point(class_scope:CMsgSerializedSOCache.Cache)
+      private static final GcsdkGcmessages.CMsgSerializedSOCache.Cache DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new GcsdkGcmessages.CMsgSerializedSOCache.Cache();
+      }
+
+      public static GcsdkGcmessages.CMsgSerializedSOCache.Cache getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Cache>
+          PARSER = new com.google.protobuf.AbstractParser<Cache>() {
+        @java.lang.Override
+        public Cache parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Cache(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Cache> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Cache> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public GcsdkGcmessages.CMsgSerializedSOCache.Cache getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int FILE_VERSION_FIELD_NUMBER = 1;
+    private int fileVersion_;
+    /**
+     * <code>optional uint32 file_version = 1;</code>
+     * @return Whether the fileVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasFileVersion() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 file_version = 1;</code>
+     * @return The fileVersion.
+     */
+    @java.lang.Override
+    public int getFileVersion() {
+      return fileVersion_;
+    }
+
+    public static final int CACHES_FIELD_NUMBER = 2;
+    private java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache> caches_;
+    /**
+     * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache> getCachesList() {
+      return caches_;
+    }
+    /**
+     * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends GcsdkGcmessages.CMsgSerializedSOCache.CacheOrBuilder> 
+        getCachesOrBuilderList() {
+      return caches_;
+    }
+    /**
+     * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+     */
+    @java.lang.Override
+    public int getCachesCount() {
+      return caches_.size();
+    }
+    /**
+     * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+     */
+    @java.lang.Override
+    public GcsdkGcmessages.CMsgSerializedSOCache.Cache getCaches(int index) {
+      return caches_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+     */
+    @java.lang.Override
+    public GcsdkGcmessages.CMsgSerializedSOCache.CacheOrBuilder getCachesOrBuilder(
+        int index) {
+      return caches_.get(index);
+    }
+
+    public static final int GC_SOCACHE_FILE_VERSION_FIELD_NUMBER = 3;
+    private int gcSocacheFileVersion_;
+    /**
+     * <code>optional uint32 gc_socache_file_version = 3;</code>
+     * @return Whether the gcSocacheFileVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasGcSocacheFileVersion() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 gc_socache_file_version = 3;</code>
+     * @return The gcSocacheFileVersion.
+     */
+    @java.lang.Override
+    public int getGcSocacheFileVersion() {
+      return gcSocacheFileVersion_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, fileVersion_);
+      }
+      for (int i = 0; i < caches_.size(); i++) {
+        output.writeMessage(2, caches_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(3, gcSocacheFileVersion_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, fileVersion_);
+      }
+      for (int i = 0; i < caches_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, caches_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, gcSocacheFileVersion_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof GcsdkGcmessages.CMsgSerializedSOCache)) {
+        return super.equals(obj);
+      }
+      GcsdkGcmessages.CMsgSerializedSOCache other = (GcsdkGcmessages.CMsgSerializedSOCache) obj;
+
+      if (hasFileVersion() != other.hasFileVersion()) return false;
+      if (hasFileVersion()) {
+        if (getFileVersion()
+            != other.getFileVersion()) return false;
+      }
+      if (!getCachesList()
+          .equals(other.getCachesList())) return false;
+      if (hasGcSocacheFileVersion() != other.hasGcSocacheFileVersion()) return false;
+      if (hasGcSocacheFileVersion()) {
+        if (getGcSocacheFileVersion()
+            != other.getGcSocacheFileVersion()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFileVersion()) {
+        hash = (37 * hash) + FILE_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getFileVersion();
+      }
+      if (getCachesCount() > 0) {
+        hash = (37 * hash) + CACHES_FIELD_NUMBER;
+        hash = (53 * hash) + getCachesList().hashCode();
+      }
+      if (hasGcSocacheFileVersion()) {
+        hash = (37 * hash) + GC_SOCACHE_FILE_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getGcSocacheFileVersion();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static GcsdkGcmessages.CMsgSerializedSOCache parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(GcsdkGcmessages.CMsgSerializedSOCache prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgSerializedSOCache}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgSerializedSOCache)
+        GcsdkGcmessages.CMsgSerializedSOCacheOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                GcsdkGcmessages.CMsgSerializedSOCache.class, GcsdkGcmessages.CMsgSerializedSOCache.Builder.class);
+      }
+
+      // Construct using GcsdkGcmessages.CMsgSerializedSOCache.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCachesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        fileVersion_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (cachesBuilder_ == null) {
+          caches_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          cachesBuilder_.clear();
+        }
+        gcSocacheFileVersion_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return GcsdkGcmessages.internal_static_CMsgSerializedSOCache_descriptor;
+      }
+
+      @java.lang.Override
+      public GcsdkGcmessages.CMsgSerializedSOCache getDefaultInstanceForType() {
+        return GcsdkGcmessages.CMsgSerializedSOCache.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public GcsdkGcmessages.CMsgSerializedSOCache build() {
+        GcsdkGcmessages.CMsgSerializedSOCache result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public GcsdkGcmessages.CMsgSerializedSOCache buildPartial() {
+        GcsdkGcmessages.CMsgSerializedSOCache result = new GcsdkGcmessages.CMsgSerializedSOCache(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fileVersion_ = fileVersion_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (cachesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            caches_ = java.util.Collections.unmodifiableList(caches_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.caches_ = caches_;
+        } else {
+          result.caches_ = cachesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gcSocacheFileVersion_ = gcSocacheFileVersion_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof GcsdkGcmessages.CMsgSerializedSOCache) {
+          return mergeFrom((GcsdkGcmessages.CMsgSerializedSOCache)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(GcsdkGcmessages.CMsgSerializedSOCache other) {
+        if (other == GcsdkGcmessages.CMsgSerializedSOCache.getDefaultInstance()) return this;
+        if (other.hasFileVersion()) {
+          setFileVersion(other.getFileVersion());
+        }
+        if (cachesBuilder_ == null) {
+          if (!other.caches_.isEmpty()) {
+            if (caches_.isEmpty()) {
+              caches_ = other.caches_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureCachesIsMutable();
+              caches_.addAll(other.caches_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.caches_.isEmpty()) {
+            if (cachesBuilder_.isEmpty()) {
+              cachesBuilder_.dispose();
+              cachesBuilder_ = null;
+              caches_ = other.caches_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              cachesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCachesFieldBuilder() : null;
+            } else {
+              cachesBuilder_.addAllMessages(other.caches_);
+            }
+          }
+        }
+        if (other.hasGcSocacheFileVersion()) {
+          setGcSocacheFileVersion(other.getGcSocacheFileVersion());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        GcsdkGcmessages.CMsgSerializedSOCache parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (GcsdkGcmessages.CMsgSerializedSOCache) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int fileVersion_ ;
+      /**
+       * <code>optional uint32 file_version = 1;</code>
+       * @return Whether the fileVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasFileVersion() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 file_version = 1;</code>
+       * @return The fileVersion.
+       */
+      @java.lang.Override
+      public int getFileVersion() {
+        return fileVersion_;
+      }
+      /**
+       * <code>optional uint32 file_version = 1;</code>
+       * @param value The fileVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileVersion(int value) {
+        bitField0_ |= 0x00000001;
+        fileVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 file_version = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileVersion() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fileVersion_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache> caches_ =
+        java.util.Collections.emptyList();
+      private void ensureCachesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          caches_ = new java.util.ArrayList<GcsdkGcmessages.CMsgSerializedSOCache.Cache>(caches_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          GcsdkGcmessages.CMsgSerializedSOCache.Cache, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder, GcsdkGcmessages.CMsgSerializedSOCache.CacheOrBuilder> cachesBuilder_;
+
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache> getCachesList() {
+        if (cachesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(caches_);
+        } else {
+          return cachesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public int getCachesCount() {
+        if (cachesBuilder_ == null) {
+          return caches_.size();
+        } else {
+          return cachesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public GcsdkGcmessages.CMsgSerializedSOCache.Cache getCaches(int index) {
+        if (cachesBuilder_ == null) {
+          return caches_.get(index);
+        } else {
+          return cachesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public Builder setCaches(
+          int index, GcsdkGcmessages.CMsgSerializedSOCache.Cache value) {
+        if (cachesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCachesIsMutable();
+          caches_.set(index, value);
+          onChanged();
+        } else {
+          cachesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public Builder setCaches(
+          int index, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder builderForValue) {
+        if (cachesBuilder_ == null) {
+          ensureCachesIsMutable();
+          caches_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          cachesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public Builder addCaches(GcsdkGcmessages.CMsgSerializedSOCache.Cache value) {
+        if (cachesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCachesIsMutable();
+          caches_.add(value);
+          onChanged();
+        } else {
+          cachesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public Builder addCaches(
+          int index, GcsdkGcmessages.CMsgSerializedSOCache.Cache value) {
+        if (cachesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCachesIsMutable();
+          caches_.add(index, value);
+          onChanged();
+        } else {
+          cachesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public Builder addCaches(
+          GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder builderForValue) {
+        if (cachesBuilder_ == null) {
+          ensureCachesIsMutable();
+          caches_.add(builderForValue.build());
+          onChanged();
+        } else {
+          cachesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public Builder addCaches(
+          int index, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder builderForValue) {
+        if (cachesBuilder_ == null) {
+          ensureCachesIsMutable();
+          caches_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          cachesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public Builder addAllCaches(
+          java.lang.Iterable<? extends GcsdkGcmessages.CMsgSerializedSOCache.Cache> values) {
+        if (cachesBuilder_ == null) {
+          ensureCachesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, caches_);
+          onChanged();
+        } else {
+          cachesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public Builder clearCaches() {
+        if (cachesBuilder_ == null) {
+          caches_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          cachesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public Builder removeCaches(int index) {
+        if (cachesBuilder_ == null) {
+          ensureCachesIsMutable();
+          caches_.remove(index);
+          onChanged();
+        } else {
+          cachesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder getCachesBuilder(
+          int index) {
+        return getCachesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public GcsdkGcmessages.CMsgSerializedSOCache.CacheOrBuilder getCachesOrBuilder(
+          int index) {
+        if (cachesBuilder_ == null) {
+          return caches_.get(index);  } else {
+          return cachesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public java.util.List<? extends GcsdkGcmessages.CMsgSerializedSOCache.CacheOrBuilder> 
+           getCachesOrBuilderList() {
+        if (cachesBuilder_ != null) {
+          return cachesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(caches_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder addCachesBuilder() {
+        return getCachesFieldBuilder().addBuilder(
+            GcsdkGcmessages.CMsgSerializedSOCache.Cache.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder addCachesBuilder(
+          int index) {
+        return getCachesFieldBuilder().addBuilder(
+            index, GcsdkGcmessages.CMsgSerializedSOCache.Cache.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgSerializedSOCache.Cache caches = 2;</code>
+       */
+      public java.util.List<GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder> 
+           getCachesBuilderList() {
+        return getCachesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          GcsdkGcmessages.CMsgSerializedSOCache.Cache, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder, GcsdkGcmessages.CMsgSerializedSOCache.CacheOrBuilder> 
+          getCachesFieldBuilder() {
+        if (cachesBuilder_ == null) {
+          cachesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              GcsdkGcmessages.CMsgSerializedSOCache.Cache, GcsdkGcmessages.CMsgSerializedSOCache.Cache.Builder, GcsdkGcmessages.CMsgSerializedSOCache.CacheOrBuilder>(
+                  caches_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          caches_ = null;
+        }
+        return cachesBuilder_;
+      }
+
+      private int gcSocacheFileVersion_ ;
+      /**
+       * <code>optional uint32 gc_socache_file_version = 3;</code>
+       * @return Whether the gcSocacheFileVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasGcSocacheFileVersion() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 gc_socache_file_version = 3;</code>
+       * @return The gcSocacheFileVersion.
+       */
+      @java.lang.Override
+      public int getGcSocacheFileVersion() {
+        return gcSocacheFileVersion_;
+      }
+      /**
+       * <code>optional uint32 gc_socache_file_version = 3;</code>
+       * @param value The gcSocacheFileVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGcSocacheFileVersion(int value) {
+        bitField0_ |= 0x00000004;
+        gcSocacheFileVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 gc_socache_file_version = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGcSocacheFileVersion() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gcSocacheFileVersion_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgSerializedSOCache)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgSerializedSOCache)
+    private static final GcsdkGcmessages.CMsgSerializedSOCache DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new GcsdkGcmessages.CMsgSerializedSOCache();
+    }
+
+    public static GcsdkGcmessages.CMsgSerializedSOCache getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgSerializedSOCache>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgSerializedSOCache>() {
+      @java.lang.Override
+      public CMsgSerializedSOCache parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgSerializedSOCache(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgSerializedSOCache> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgSerializedSOCache> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public GcsdkGcmessages.CMsgSerializedSOCache getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgSOIDOwner_descriptor;
   private static final 
@@ -40359,6 +44141,26 @@ public final class GcsdkGcmessages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CProductInfo_SetRichPresenceLocalization_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgSerializedSOCache_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgSerializedSOCache_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgSerializedSOCache_TypeCache_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgSerializedSOCache_TypeCache_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgSerializedSOCache_Cache_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgSerializedSOCache_Cache_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgSerializedSOCache_Cache_Version_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgSerializedSOCache_Cache_Version_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -40368,150 +44170,160 @@ public final class GcsdkGcmessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033csgo/gcsdk_gcmessages.proto\032\031steam/ste" +
-      "ammessages.proto\")\n\rCMsgSOIDOwner\022\014\n\004typ" +
-      "e\030\001 \001(\r\022\n\n\002id\030\002 \001(\004\"o\n\022CMsgSOSingleObjec" +
-      "t\022\017\n\007type_id\030\002 \001(\005\022\023\n\013object_data\030\003 \001(\014\022" +
-      "\017\n\007version\030\004 \001(\006\022\"\n\nowner_soid\030\005 \001(\0132\016.C" +
-      "MsgSOIDOwner\"\315\001\n\025CMsgSOMultipleObjects\022=" +
-      "\n\020objects_modified\030\002 \003(\0132#.CMsgSOMultipl" +
-      "eObjects.SingleObject\022\017\n\007version\030\003 \001(\006\022\"" +
-      "\n\nowner_soid\030\006 \001(\0132\016.CMsgSOIDOwner\032@\n\014Si" +
-      "ngleObject\022\017\n\007type_id\030\001 \001(\005\022\023\n\013object_da" +
-      "ta\030\002 \001(\014:\n\200\246\035\200\002\210\246\035\200\010\"\274\001\n\025CMsgSOCacheSubs" +
-      "cribed\0226\n\007objects\030\002 \003(\0132%.CMsgSOCacheSub" +
-      "scribed.SubscribedType\022\017\n\007version\030\003 \001(\006\022" +
-      "\"\n\nowner_soid\030\004 \001(\0132\016.CMsgSOIDOwner\0326\n\016S" +
-      "ubscribedType\022\017\n\007type_id\030\001 \001(\005\022\023\n\013object" +
-      "_data\030\002 \003(\014\"=\n\027CMsgSOCacheUnsubscribed\022\"" +
-      "\n\nowner_soid\030\002 \001(\0132\016.CMsgSOIDOwner\"S\n\034CM" +
-      "sgSOCacheSubscriptionCheck\022\017\n\007version\030\002 " +
-      "\001(\006\022\"\n\nowner_soid\030\003 \001(\0132\016.CMsgSOIDOwner\"" +
-      "D\n\036CMsgSOCacheSubscriptionRefresh\022\"\n\nown" +
-      "er_soid\030\002 \001(\0132\016.CMsgSOIDOwner\"%\n\022CMsgSOC" +
-      "acheVersion\022\017\n\007version\030\001 \001(\006\"\250\003\n\022CMsgAcc" +
-      "ountDetails\022\r\n\005valid\030\001 \001(\010\022\024\n\014account_na" +
-      "me\030\002 \001(\t\022\026\n\016public_profile\030\004 \001(\010\022\030\n\020publ" +
-      "ic_inventory\030\005 \001(\010\022\022\n\nvac_banned\030\006 \001(\010\022\022" +
-      "\n\ncyber_cafe\030\007 \001(\010\022\026\n\016school_account\030\010 \001" +
-      "(\010\022\032\n\022free_trial_account\030\t \001(\010\022\022\n\nsubscr" +
-      "ibed\030\n \001(\010\022\024\n\014low_violence\030\013 \001(\010\022\017\n\007limi" +
-      "ted\030\014 \001(\010\022\017\n\007trusted\030\r \001(\010\022\017\n\007package\030\016 " +
-      "\001(\r\022\023\n\013time_cached\030\017 \001(\007\022\026\n\016account_lock" +
-      "ed\030\020 \001(\010\022\030\n\020community_banned\030\021 \001(\010\022\024\n\014tr" +
-      "ade_banned\030\022 \001(\010\022%\n\035eligible_for_communi" +
-      "ty_market\030\023 \001(\010\"_\n\026CMsgGCMultiplexMessag" +
-      "e\022\017\n\007msgtype\030\001 \001(\r\022\017\n\007payload\030\002 \001(\014\022\020\n\010s" +
-      "teamids\030\003 \003(\006\022\021\n\treplytogc\030\004 \001(\010\"2\n\037CMsg" +
-      "GCMultiplexMessage_Response\022\017\n\007msgtype\030\001" +
-      " \001(\r\"9\n\023CGCToGCMsgMasterAck\022\021\n\tdir_index" +
-      "\030\001 \001(\r\022\017\n\007gc_type\030\002 \001(\r\"2\n\034CGCToGCMsgMas" +
-      "terAck_Response\022\022\n\007eresult\030\001 \001(\005:\0012\"!\n\037C" +
-      "GCToGCMsgMasterStartupComplete\"X\n\020CGCToG" +
-      "CMsgRouted\022\020\n\010msg_type\030\001 \001(\r\022\021\n\tsender_i" +
-      "d\030\002 \001(\006\022\023\n\013net_message\030\003 \001(\014\022\n\n\002ip\030\004 \001(\r" +
-      "\">\n\025CGCToGCMsgRoutedReply\022\020\n\010msg_type\030\001 " +
-      "\001(\r\022\023\n\013net_message\030\002 \001(\014\"4\n\025CMsgGCUpdate" +
-      "SessionIP\022\017\n\007steamid\030\001 \001(\006\022\n\n\002ip\030\002 \001(\007\")" +
-      "\n\026CMsgGCRequestSessionIP\022\017\n\007steamid\030\001 \001(" +
-      "\006\",\n\036CMsgGCRequestSessionIPResponse\022\n\n\002i" +
-      "p\030\001 \001(\007\"G\n\026CMsgSOCacheHaveVersion\022\034\n\004soi" +
-      "d\030\001 \001(\0132\016.CMsgSOIDOwner\022\017\n\007version\030\002 \001(\006" +
-      "\"\230\002\n\017CMsgClientHello\022\017\n\007version\030\001 \001(\r\0226\n" +
-      "\025socache_have_versions\030\002 \003(\0132\027.CMsgSOCac" +
-      "heHaveVersion\022\033\n\023client_session_need\030\003 \001" +
-      "(\r\022\027\n\017client_launcher\030\004 \001(\r\022\025\n\rpartner_s" +
-      "rcid\030\005 \001(\r\022\031\n\021partner_accountid\030\006 \001(\r\022\034\n" +
-      "\024partner_accountflags\030\007 \001(\r\022\036\n\026partner_a" +
-      "ccountbalance\030\010 \001(\r\022\026\n\016steam_launcher\030\t " +
-      "\001(\r\"\372\001\n\017CMsgServerHello\022\017\n\007version\030\001 \001(\r" +
-      "\0226\n\025socache_have_versions\030\002 \003(\0132\027.CMsgSO" +
-      "CacheHaveVersion\022\"\n\032legacy_client_sessio" +
-      "n_need\030\003 \001(\r\022\027\n\017client_launcher\030\004 \001(\r\022$\n" +
-      "\034legacy_steamdatagram_routing\030\006 \001(\014\022\036\n\026r" +
-      "equired_internal_addr\030\007 \001(\r\022\033\n\023steamdata" +
-      "gram_login\030\010 \001(\014\"\264\003\n\021CMsgClientWelcome\022\017" +
-      "\n\007version\030\001 \001(\r\022\021\n\tgame_data\030\002 \001(\014\022;\n\033ou" +
-      "tofdate_subscribed_caches\030\003 \003(\0132\026.CMsgSO" +
-      "CacheSubscribed\022A\n\032uptodate_subscribed_c" +
-      "aches\030\004 \003(\0132\035.CMsgSOCacheSubscriptionChe" +
-      "ck\022-\n\010location\030\005 \001(\0132\033.CMsgClientWelcome" +
-      ".Location\022\022\n\ngame_data2\030\006 \001(\014\022$\n\034rtime32" +
-      "_gc_welcome_timestamp\030\007 \001(\r\022\020\n\010currency\030" +
-      "\010 \001(\r\022\017\n\007balance\030\t \001(\r\022\023\n\013balance_url\030\n " +
-      "\001(\t\022\030\n\020txn_country_code\030\013 \001(\t\032@\n\010Locatio" +
-      "n\022\020\n\010latitude\030\001 \001(\002\022\021\n\tlongitude\030\002 \001(\002\022\017" +
-      "\n\007country\030\003 \001(\t\"\345\001\n\024CMsgConnectionStatus" +
-      "\022D\n\006status\030\001 \001(\0162\023.GCConnectionStatus:\037G" +
-      "CConnectionStatus_HAVE_SESSION\022\033\n\023client" +
-      "_session_need\030\002 \001(\r\022\026\n\016queue_position\030\003 " +
-      "\001(\005\022\022\n\nqueue_size\030\004 \001(\005\022\024\n\014wait_seconds\030" +
-      "\005 \001(\005\022(\n estimated_wait_seconds_remainin" +
-      "g\030\006 \001(\005\"\206\003\n*CWorkshop_PopulateItemDescri" +
-      "ptions_Request\022\r\n\005appid\030\001 \001(\r\022\\\n\tlanguag" +
-      "es\030\002 \003(\0132I.CWorkshop_PopulateItemDescrip" +
-      "tions_Request.ItemDescriptionsLanguageBl" +
-      "ock\032^\n\025SingleItemDescription\022\022\n\ngameitem" +
-      "id\030\001 \001(\r\022\030\n\020item_description\030\002 \001(\t\022\027\n\017on" +
-      "e_per_account\030\003 \001(\010\032\212\001\n\035ItemDescriptions" +
-      "LanguageBlock\022\020\n\010language\030\001 \001(\t\022W\n\014descr" +
-      "iptions\030\002 \003(\0132A.CWorkshop_PopulateItemDe" +
-      "scriptions_Request.SingleItemDescription" +
-      "\"F\n!CWorkshop_GetContributors_Request\022\r\n" +
-      "\005appid\030\001 \001(\r\022\022\n\ngameitemid\030\002 \001(\r\":\n\"CWor" +
-      "kshop_GetContributors_Response\022\024\n\014contri" +
-      "butors\030\001 \003(\006\"\365\005\n%CWorkshop_SetItemPaymen" +
-      "tRules_Request\022\r\n\005appid\030\001 \001(\r\022\022\n\ngameite" +
-      "mid\030\002 \001(\r\022a\n\031associated_workshop_files\030\003" +
-      " \003(\0132>.CWorkshop_SetItemPaymentRules_Req" +
-      "uest.WorkshopItemPaymentRule\022W\n\020partner_" +
-      "accounts\030\004 \003(\0132=.CWorkshop_SetItemPaymen" +
-      "tRules_Request.PartnerItemPaymentRule\022\025\n" +
-      "\rvalidate_only\030\005 \001(\010\022(\n make_workshop_fi" +
-      "les_subscribable\030\006 \001(\010\022v\n,associated_wor" +
-      "kshop_file_for_direct_payments\030\007 \001(\0132@.C" +
-      "Workshop_SetItemPaymentRules_Request.Wor" +
-      "kshopDirectPaymentRule\032\177\n\027WorkshopItemPa" +
-      "ymentRule\022\030\n\020workshop_file_id\030\001 \001(\004\022\032\n\022r" +
-      "evenue_percentage\030\002 \001(\002\022\030\n\020rule_descript" +
-      "ion\030\003 \001(\t\022\024\n\trule_type\030\004 \001(\r:\0011\032O\n\031Works" +
-      "hopDirectPaymentRule\022\030\n\020workshop_file_id" +
-      "\030\001 \001(\004\022\030\n\020rule_description\030\002 \001(\t\032b\n\026Part" +
-      "nerItemPaymentRule\022\022\n\naccount_id\030\001 \001(\r\022\032" +
-      "\n\022revenue_percentage\030\002 \001(\002\022\030\n\020rule_descr" +
-      "iption\030\003 \001(\t\"(\n&CWorkshop_SetItemPayment" +
-      "Rules_Response\"M\n%CGameServers_Aggregati" +
-      "onQuery_Request\022\016\n\006filter\030\001 \001(\t\022\024\n\014group" +
-      "_fields\030\003 \003(\t\"\222\002\n&CGameServers_Aggregati" +
-      "onQuery_Response\022=\n\006groups\030\001 \003(\0132-.CGame" +
-      "Servers_AggregationQuery_Response.Group\032" +
-      "\250\001\n\005Group\022\024\n\014group_values\030\001 \003(\t\022\025\n\rserve" +
-      "rs_empty\030\002 \001(\r\022\024\n\014servers_full\030\003 \001(\r\022\025\n\r" +
-      "servers_total\030\004 \001(\r\022\026\n\016players_humans\030\005 " +
-      "\001(\r\022\024\n\014players_bots\030\006 \001(\r\022\027\n\017player_capa" +
-      "city\030\007 \001(\r\"\207\001\n#CWorkshop_AddSpecialPayme" +
-      "nt_Request\022\r\n\005appid\030\001 \001(\r\022\022\n\ngameitemid\030" +
-      "\002 \001(\r\022\014\n\004date\030\003 \001(\t\022\026\n\016payment_us_usd\030\004 " +
-      "\001(\004\022\027\n\017payment_row_usd\030\005 \001(\004\"&\n$CWorksho" +
-      "p_AddSpecialPayment_Response\"\275\002\n0CProduc" +
-      "tInfo_SetRichPresenceLocalization_Reques" +
-      "t\022\r\n\005appid\030\001 \001(\r\022T\n\tlanguages\030\002 \003(\0132A.CP" +
-      "roductInfo_SetRichPresenceLocalization_R" +
-      "equest.LanguageSection\022\017\n\007steamid\030\003 \001(\004\032" +
-      "%\n\005Token\022\r\n\005token\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\032l" +
-      "\n\017LanguageSection\022\020\n\010language\030\001 \001(\t\022G\n\006t" +
-      "okens\030\002 \003(\01327.CProductInfo_SetRichPresen" +
-      "ceLocalization_Request.Token\"3\n1CProduct" +
-      "Info_SetRichPresenceLocalization_Respons" +
-      "e*\204\001\n\024GCClientLauncherType\022 \n\034GCClientLa" +
-      "uncherType_DEFAULT\020\000\022%\n!GCClientLauncher" +
-      "Type_PERFECTWORLD\020\001\022#\n\037GCClientLauncherT" +
-      "ype_STEAMCHINA\020\002*\325\001\n\022GCConnectionStatus\022" +
-      "#\n\037GCConnectionStatus_HAVE_SESSION\020\000\022$\n " +
-      "GCConnectionStatus_GC_GOING_DOWN\020\001\022!\n\035GC" +
-      "ConnectionStatus_NO_SESSION\020\002\0220\n,GCConne" +
-      "ctionStatus_NO_SESSION_IN_LOGON_QUEUE\020\003\022" +
-      "\037\n\033GCConnectionStatus_NO_STEAM\020\004B\005H\001\200\001\000"
+      "\n\033csgo/gcsdk_gcmessages.proto\032\030csgo/stea" +
+      "mmessages.proto\")\n\rCMsgSOIDOwner\022\014\n\004type" +
+      "\030\001 \001(\r\022\n\n\002id\030\002 \001(\004\"o\n\022CMsgSOSingleObject" +
+      "\022\017\n\007type_id\030\002 \001(\005\022\023\n\013object_data\030\003 \001(\014\022\017" +
+      "\n\007version\030\004 \001(\006\022\"\n\nowner_soid\030\005 \001(\0132\016.CM" +
+      "sgSOIDOwner\"\315\001\n\025CMsgSOMultipleObjects\022=\n" +
+      "\020objects_modified\030\002 \003(\0132#.CMsgSOMultiple" +
+      "Objects.SingleObject\022\017\n\007version\030\003 \001(\006\022\"\n" +
+      "\nowner_soid\030\006 \001(\0132\016.CMsgSOIDOwner\032@\n\014Sin" +
+      "gleObject\022\017\n\007type_id\030\001 \001(\005\022\023\n\013object_dat" +
+      "a\030\002 \001(\014:\n\200\246\035\200\002\210\246\035\200\010\"\274\001\n\025CMsgSOCacheSubsc" +
+      "ribed\0226\n\007objects\030\002 \003(\0132%.CMsgSOCacheSubs" +
+      "cribed.SubscribedType\022\017\n\007version\030\003 \001(\006\022\"" +
+      "\n\nowner_soid\030\004 \001(\0132\016.CMsgSOIDOwner\0326\n\016Su" +
+      "bscribedType\022\017\n\007type_id\030\001 \001(\005\022\023\n\013object_" +
+      "data\030\002 \003(\014\"=\n\027CMsgSOCacheUnsubscribed\022\"\n" +
+      "\nowner_soid\030\002 \001(\0132\016.CMsgSOIDOwner\"S\n\034CMs" +
+      "gSOCacheSubscriptionCheck\022\017\n\007version\030\002 \001" +
+      "(\006\022\"\n\nowner_soid\030\003 \001(\0132\016.CMsgSOIDOwner\"D" +
+      "\n\036CMsgSOCacheSubscriptionRefresh\022\"\n\nowne" +
+      "r_soid\030\002 \001(\0132\016.CMsgSOIDOwner\"%\n\022CMsgSOCa" +
+      "cheVersion\022\017\n\007version\030\001 \001(\006\"\250\003\n\022CMsgAcco" +
+      "untDetails\022\r\n\005valid\030\001 \001(\010\022\024\n\014account_nam" +
+      "e\030\002 \001(\t\022\026\n\016public_profile\030\004 \001(\010\022\030\n\020publi" +
+      "c_inventory\030\005 \001(\010\022\022\n\nvac_banned\030\006 \001(\010\022\022\n" +
+      "\ncyber_cafe\030\007 \001(\010\022\026\n\016school_account\030\010 \001(" +
+      "\010\022\032\n\022free_trial_account\030\t \001(\010\022\022\n\nsubscri" +
+      "bed\030\n \001(\010\022\024\n\014low_violence\030\013 \001(\010\022\017\n\007limit" +
+      "ed\030\014 \001(\010\022\017\n\007trusted\030\r \001(\010\022\017\n\007package\030\016 \001" +
+      "(\r\022\023\n\013time_cached\030\017 \001(\007\022\026\n\016account_locke" +
+      "d\030\020 \001(\010\022\030\n\020community_banned\030\021 \001(\010\022\024\n\014tra" +
+      "de_banned\030\022 \001(\010\022%\n\035eligible_for_communit" +
+      "y_market\030\023 \001(\010\"_\n\026CMsgGCMultiplexMessage" +
+      "\022\017\n\007msgtype\030\001 \001(\r\022\017\n\007payload\030\002 \001(\014\022\020\n\010st" +
+      "eamids\030\003 \003(\006\022\021\n\treplytogc\030\004 \001(\010\"2\n\037CMsgG" +
+      "CMultiplexMessage_Response\022\017\n\007msgtype\030\001 " +
+      "\001(\r\"9\n\023CGCToGCMsgMasterAck\022\021\n\tdir_index\030" +
+      "\001 \001(\r\022\017\n\007gc_type\030\002 \001(\r\"2\n\034CGCToGCMsgMast" +
+      "erAck_Response\022\022\n\007eresult\030\001 \001(\005:\0012\"!\n\037CG" +
+      "CToGCMsgMasterStartupComplete\"X\n\020CGCToGC" +
+      "MsgRouted\022\020\n\010msg_type\030\001 \001(\r\022\021\n\tsender_id" +
+      "\030\002 \001(\006\022\023\n\013net_message\030\003 \001(\014\022\n\n\002ip\030\004 \001(\r\"" +
+      ">\n\025CGCToGCMsgRoutedReply\022\020\n\010msg_type\030\001 \001" +
+      "(\r\022\023\n\013net_message\030\002 \001(\014\"4\n\025CMsgGCUpdateS" +
+      "essionIP\022\017\n\007steamid\030\001 \001(\006\022\n\n\002ip\030\002 \001(\007\")\n" +
+      "\026CMsgGCRequestSessionIP\022\017\n\007steamid\030\001 \001(\006" +
+      "\",\n\036CMsgGCRequestSessionIPResponse\022\n\n\002ip" +
+      "\030\001 \001(\007\"G\n\026CMsgSOCacheHaveVersion\022\034\n\004soid" +
+      "\030\001 \001(\0132\016.CMsgSOIDOwner\022\017\n\007version\030\002 \001(\006\"" +
+      "\230\002\n\017CMsgClientHello\022\017\n\007version\030\001 \001(\r\0226\n\025" +
+      "socache_have_versions\030\002 \003(\0132\027.CMsgSOCach" +
+      "eHaveVersion\022\033\n\023client_session_need\030\003 \001(" +
+      "\r\022\027\n\017client_launcher\030\004 \001(\r\022\025\n\rpartner_sr" +
+      "cid\030\005 \001(\r\022\031\n\021partner_accountid\030\006 \001(\r\022\034\n\024" +
+      "partner_accountflags\030\007 \001(\r\022\036\n\026partner_ac" +
+      "countbalance\030\010 \001(\r\022\026\n\016steam_launcher\030\t \001" +
+      "(\r\"\372\001\n\017CMsgServerHello\022\017\n\007version\030\001 \001(\r\022" +
+      "6\n\025socache_have_versions\030\002 \003(\0132\027.CMsgSOC" +
+      "acheHaveVersion\022\"\n\032legacy_client_session" +
+      "_need\030\003 \001(\r\022\027\n\017client_launcher\030\004 \001(\r\022$\n\034" +
+      "legacy_steamdatagram_routing\030\006 \001(\014\022\036\n\026re" +
+      "quired_internal_addr\030\007 \001(\r\022\033\n\023steamdatag" +
+      "ram_login\030\010 \001(\014\"\264\003\n\021CMsgClientWelcome\022\017\n" +
+      "\007version\030\001 \001(\r\022\021\n\tgame_data\030\002 \001(\014\022;\n\033out" +
+      "ofdate_subscribed_caches\030\003 \003(\0132\026.CMsgSOC" +
+      "acheSubscribed\022A\n\032uptodate_subscribed_ca" +
+      "ches\030\004 \003(\0132\035.CMsgSOCacheSubscriptionChec" +
+      "k\022-\n\010location\030\005 \001(\0132\033.CMsgClientWelcome." +
+      "Location\022\022\n\ngame_data2\030\006 \001(\014\022$\n\034rtime32_" +
+      "gc_welcome_timestamp\030\007 \001(\r\022\020\n\010currency\030\010" +
+      " \001(\r\022\017\n\007balance\030\t \001(\r\022\023\n\013balance_url\030\n \001" +
+      "(\t\022\030\n\020txn_country_code\030\013 \001(\t\032@\n\010Location" +
+      "\022\020\n\010latitude\030\001 \001(\002\022\021\n\tlongitude\030\002 \001(\002\022\017\n" +
+      "\007country\030\003 \001(\t\"\345\001\n\024CMsgConnectionStatus\022" +
+      "D\n\006status\030\001 \001(\0162\023.GCConnectionStatus:\037GC" +
+      "ConnectionStatus_HAVE_SESSION\022\033\n\023client_" +
+      "session_need\030\002 \001(\r\022\026\n\016queue_position\030\003 \001" +
+      "(\005\022\022\n\nqueue_size\030\004 \001(\005\022\024\n\014wait_seconds\030\005" +
+      " \001(\005\022(\n estimated_wait_seconds_remaining" +
+      "\030\006 \001(\005\"\206\003\n*CWorkshop_PopulateItemDescrip" +
+      "tions_Request\022\r\n\005appid\030\001 \001(\r\022\\\n\tlanguage" +
+      "s\030\002 \003(\0132I.CWorkshop_PopulateItemDescript" +
+      "ions_Request.ItemDescriptionsLanguageBlo" +
+      "ck\032^\n\025SingleItemDescription\022\022\n\ngameitemi" +
+      "d\030\001 \001(\r\022\030\n\020item_description\030\002 \001(\t\022\027\n\017one" +
+      "_per_account\030\003 \001(\010\032\212\001\n\035ItemDescriptionsL" +
+      "anguageBlock\022\020\n\010language\030\001 \001(\t\022W\n\014descri" +
+      "ptions\030\002 \003(\0132A.CWorkshop_PopulateItemDes" +
+      "criptions_Request.SingleItemDescription\"" +
+      "F\n!CWorkshop_GetContributors_Request\022\r\n\005" +
+      "appid\030\001 \001(\r\022\022\n\ngameitemid\030\002 \001(\r\":\n\"CWork" +
+      "shop_GetContributors_Response\022\024\n\014contrib" +
+      "utors\030\001 \003(\006\"\365\005\n%CWorkshop_SetItemPayment" +
+      "Rules_Request\022\r\n\005appid\030\001 \001(\r\022\022\n\ngameitem" +
+      "id\030\002 \001(\r\022a\n\031associated_workshop_files\030\003 " +
+      "\003(\0132>.CWorkshop_SetItemPaymentRules_Requ" +
+      "est.WorkshopItemPaymentRule\022W\n\020partner_a" +
+      "ccounts\030\004 \003(\0132=.CWorkshop_SetItemPayment" +
+      "Rules_Request.PartnerItemPaymentRule\022\025\n\r" +
+      "validate_only\030\005 \001(\010\022(\n make_workshop_fil" +
+      "es_subscribable\030\006 \001(\010\022v\n,associated_work" +
+      "shop_file_for_direct_payments\030\007 \001(\0132@.CW" +
+      "orkshop_SetItemPaymentRules_Request.Work" +
+      "shopDirectPaymentRule\032\177\n\027WorkshopItemPay" +
+      "mentRule\022\030\n\020workshop_file_id\030\001 \001(\004\022\032\n\022re" +
+      "venue_percentage\030\002 \001(\002\022\030\n\020rule_descripti" +
+      "on\030\003 \001(\t\022\024\n\trule_type\030\004 \001(\r:\0011\032O\n\031Worksh" +
+      "opDirectPaymentRule\022\030\n\020workshop_file_id\030" +
+      "\001 \001(\004\022\030\n\020rule_description\030\002 \001(\t\032b\n\026Partn" +
+      "erItemPaymentRule\022\022\n\naccount_id\030\001 \001(\r\022\032\n" +
+      "\022revenue_percentage\030\002 \001(\002\022\030\n\020rule_descri" +
+      "ption\030\003 \001(\t\"(\n&CWorkshop_SetItemPaymentR" +
+      "ules_Response\"M\n%CGameServers_Aggregatio" +
+      "nQuery_Request\022\016\n\006filter\030\001 \001(\t\022\024\n\014group_" +
+      "fields\030\003 \003(\t\"\222\002\n&CGameServers_Aggregatio" +
+      "nQuery_Response\022=\n\006groups\030\001 \003(\0132-.CGameS" +
+      "ervers_AggregationQuery_Response.Group\032\250" +
+      "\001\n\005Group\022\024\n\014group_values\030\001 \003(\t\022\025\n\rserver" +
+      "s_empty\030\002 \001(\r\022\024\n\014servers_full\030\003 \001(\r\022\025\n\rs" +
+      "ervers_total\030\004 \001(\r\022\026\n\016players_humans\030\005 \001" +
+      "(\r\022\024\n\014players_bots\030\006 \001(\r\022\027\n\017player_capac" +
+      "ity\030\007 \001(\r\"\207\001\n#CWorkshop_AddSpecialPaymen" +
+      "t_Request\022\r\n\005appid\030\001 \001(\r\022\022\n\ngameitemid\030\002" +
+      " \001(\r\022\014\n\004date\030\003 \001(\t\022\026\n\016payment_us_usd\030\004 \001" +
+      "(\004\022\027\n\017payment_row_usd\030\005 \001(\004\"&\n$CWorkshop" +
+      "_AddSpecialPayment_Response\"\275\002\n0CProduct" +
+      "Info_SetRichPresenceLocalization_Request" +
+      "\022\r\n\005appid\030\001 \001(\r\022T\n\tlanguages\030\002 \003(\0132A.CPr" +
+      "oductInfo_SetRichPresenceLocalization_Re" +
+      "quest.LanguageSection\022\017\n\007steamid\030\003 \001(\004\032%" +
+      "\n\005Token\022\r\n\005token\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\032l\n" +
+      "\017LanguageSection\022\020\n\010language\030\001 \001(\t\022G\n\006to" +
+      "kens\030\002 \003(\01327.CProductInfo_SetRichPresenc" +
+      "eLocalization_Request.Token\"3\n1CProductI" +
+      "nfo_SetRichPresenceLocalization_Response" +
+      "\"\374\002\n\025CMsgSerializedSOCache\022\024\n\014file_versi" +
+      "on\030\001 \001(\r\022,\n\006caches\030\002 \003(\0132\034.CMsgSerialize" +
+      "dSOCache.Cache\022\037\n\027gc_socache_file_versio" +
+      "n\030\003 \001(\r\032>\n\tTypeCache\022\014\n\004type\030\001 \001(\r\022\017\n\007ob" +
+      "jects\030\002 \003(\014\022\022\n\nservice_id\030\003 \001(\r\032\275\001\n\005Cach" +
+      "e\022\014\n\004type\030\001 \001(\r\022\n\n\002id\030\002 \001(\004\0226\n\010versions\030" +
+      "\003 \003(\0132$.CMsgSerializedSOCache.Cache.Vers" +
+      "ion\0225\n\013type_caches\030\004 \003(\0132 .CMsgSerialize" +
+      "dSOCache.TypeCache\032+\n\007Version\022\017\n\007service" +
+      "\030\001 \001(\r\022\017\n\007version\030\002 \001(\004*\204\001\n\024GCClientLaun" +
+      "cherType\022 \n\034GCClientLauncherType_DEFAULT" +
+      "\020\000\022%\n!GCClientLauncherType_PERFECTWORLD\020" +
+      "\001\022#\n\037GCClientLauncherType_STEAMCHINA\020\002*\325" +
+      "\001\n\022GCConnectionStatus\022#\n\037GCConnectionSta" +
+      "tus_HAVE_SESSION\020\000\022$\n GCConnectionStatus" +
+      "_GC_GOING_DOWN\020\001\022!\n\035GCConnectionStatus_N" +
+      "O_SESSION\020\002\0220\n,GCConnectionStatus_NO_SES" +
+      "SION_IN_LOGON_QUEUE\020\003\022\037\n\033GCConnectionSta" +
+      "tus_NO_STEAM\020\004"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -40794,6 +44606,30 @@ public final class GcsdkGcmessages {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CProductInfo_SetRichPresenceLocalization_Response_descriptor,
         new java.lang.String[] { });
+    internal_static_CMsgSerializedSOCache_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_CMsgSerializedSOCache_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgSerializedSOCache_descriptor,
+        new java.lang.String[] { "FileVersion", "Caches", "GcSocacheFileVersion", });
+    internal_static_CMsgSerializedSOCache_TypeCache_descriptor =
+      internal_static_CMsgSerializedSOCache_descriptor.getNestedTypes().get(0);
+    internal_static_CMsgSerializedSOCache_TypeCache_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgSerializedSOCache_TypeCache_descriptor,
+        new java.lang.String[] { "Type", "Objects", "ServiceId", });
+    internal_static_CMsgSerializedSOCache_Cache_descriptor =
+      internal_static_CMsgSerializedSOCache_descriptor.getNestedTypes().get(1);
+    internal_static_CMsgSerializedSOCache_Cache_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgSerializedSOCache_Cache_descriptor,
+        new java.lang.String[] { "Type", "Id", "Versions", "TypeCaches", });
+    internal_static_CMsgSerializedSOCache_Cache_Version_descriptor =
+      internal_static_CMsgSerializedSOCache_Cache_descriptor.getNestedTypes().get(0);
+    internal_static_CMsgSerializedSOCache_Cache_Version_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgSerializedSOCache_Cache_Version_descriptor,
+        new java.lang.String[] { "Service", "Version", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(Steammessages.msgpoolHardLimit);

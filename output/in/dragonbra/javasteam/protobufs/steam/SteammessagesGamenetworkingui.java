@@ -5535,6 +5535,2421 @@ public final class SteammessagesGamenetworkingui {
 
   }
 
+  public interface CGameNetworkingUI_ConnectionSummaryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CGameNetworkingUI_ConnectionSummary)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 transport_kind = 1;</code>
+     * @return Whether the transportKind field is set.
+     */
+    boolean hasTransportKind();
+    /**
+     * <code>optional uint32 transport_kind = 1;</code>
+     * @return The transportKind.
+     */
+    int getTransportKind();
+
+    /**
+     * <code>optional uint32 connection_state = 8;</code>
+     * @return Whether the connectionState field is set.
+     */
+    boolean hasConnectionState();
+    /**
+     * <code>optional uint32 connection_state = 8;</code>
+     * @return The connectionState.
+     */
+    int getConnectionState();
+
+    /**
+     * <code>optional string sdrpop_local = 2;</code>
+     * @return Whether the sdrpopLocal field is set.
+     */
+    boolean hasSdrpopLocal();
+    /**
+     * <code>optional string sdrpop_local = 2;</code>
+     * @return The sdrpopLocal.
+     */
+    java.lang.String getSdrpopLocal();
+    /**
+     * <code>optional string sdrpop_local = 2;</code>
+     * @return The bytes for sdrpopLocal.
+     */
+    com.google.protobuf.ByteString
+        getSdrpopLocalBytes();
+
+    /**
+     * <code>optional string sdrpop_remote = 3;</code>
+     * @return Whether the sdrpopRemote field is set.
+     */
+    boolean hasSdrpopRemote();
+    /**
+     * <code>optional string sdrpop_remote = 3;</code>
+     * @return The sdrpopRemote.
+     */
+    java.lang.String getSdrpopRemote();
+    /**
+     * <code>optional string sdrpop_remote = 3;</code>
+     * @return The bytes for sdrpopRemote.
+     */
+    com.google.protobuf.ByteString
+        getSdrpopRemoteBytes();
+
+    /**
+     * <code>optional uint32 ping_ms = 4;</code>
+     * @return Whether the pingMs field is set.
+     */
+    boolean hasPingMs();
+    /**
+     * <code>optional uint32 ping_ms = 4;</code>
+     * @return The pingMs.
+     */
+    int getPingMs();
+
+    /**
+     * <code>optional float packet_loss = 5;</code>
+     * @return Whether the packetLoss field is set.
+     */
+    boolean hasPacketLoss();
+    /**
+     * <code>optional float packet_loss = 5;</code>
+     * @return The packetLoss.
+     */
+    float getPacketLoss();
+
+    /**
+     * <code>optional uint32 ping_default_internet_route = 6;</code>
+     * @return Whether the pingDefaultInternetRoute field is set.
+     */
+    boolean hasPingDefaultInternetRoute();
+    /**
+     * <code>optional uint32 ping_default_internet_route = 6;</code>
+     * @return The pingDefaultInternetRoute.
+     */
+    int getPingDefaultInternetRoute();
+
+    /**
+     * <code>optional bool ip_was_shared = 7;</code>
+     * @return Whether the ipWasShared field is set.
+     */
+    boolean hasIpWasShared();
+    /**
+     * <code>optional bool ip_was_shared = 7;</code>
+     * @return The ipWasShared.
+     */
+    boolean getIpWasShared();
+  }
+  /**
+   * Protobuf type {@code CGameNetworkingUI_ConnectionSummary}
+   */
+  public static final class CGameNetworkingUI_ConnectionSummary extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CGameNetworkingUI_ConnectionSummary)
+      CGameNetworkingUI_ConnectionSummaryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CGameNetworkingUI_ConnectionSummary.newBuilder() to construct.
+    private CGameNetworkingUI_ConnectionSummary(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CGameNetworkingUI_ConnectionSummary() {
+      sdrpopLocal_ = "";
+      sdrpopRemote_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CGameNetworkingUI_ConnectionSummary();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CGameNetworkingUI_ConnectionSummary(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              transportKind_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              sdrpopLocal_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              sdrpopRemote_ = bs;
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000010;
+              pingMs_ = input.readUInt32();
+              break;
+            }
+            case 45: {
+              bitField0_ |= 0x00000020;
+              packetLoss_ = input.readFloat();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000040;
+              pingDefaultInternetRoute_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000080;
+              ipWasShared_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000002;
+              connectionState_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesGamenetworkingui.internal_static_CGameNetworkingUI_ConnectionSummary_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesGamenetworkingui.internal_static_CGameNetworkingUI_ConnectionSummary_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.class, SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TRANSPORT_KIND_FIELD_NUMBER = 1;
+    private int transportKind_;
+    /**
+     * <code>optional uint32 transport_kind = 1;</code>
+     * @return Whether the transportKind field is set.
+     */
+    @java.lang.Override
+    public boolean hasTransportKind() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 transport_kind = 1;</code>
+     * @return The transportKind.
+     */
+    @java.lang.Override
+    public int getTransportKind() {
+      return transportKind_;
+    }
+
+    public static final int CONNECTION_STATE_FIELD_NUMBER = 8;
+    private int connectionState_;
+    /**
+     * <code>optional uint32 connection_state = 8;</code>
+     * @return Whether the connectionState field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectionState() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 connection_state = 8;</code>
+     * @return The connectionState.
+     */
+    @java.lang.Override
+    public int getConnectionState() {
+      return connectionState_;
+    }
+
+    public static final int SDRPOP_LOCAL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object sdrpopLocal_;
+    /**
+     * <code>optional string sdrpop_local = 2;</code>
+     * @return Whether the sdrpopLocal field is set.
+     */
+    @java.lang.Override
+    public boolean hasSdrpopLocal() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string sdrpop_local = 2;</code>
+     * @return The sdrpopLocal.
+     */
+    @java.lang.Override
+    public java.lang.String getSdrpopLocal() {
+      java.lang.Object ref = sdrpopLocal_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          sdrpopLocal_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string sdrpop_local = 2;</code>
+     * @return The bytes for sdrpopLocal.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSdrpopLocalBytes() {
+      java.lang.Object ref = sdrpopLocal_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sdrpopLocal_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SDRPOP_REMOTE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object sdrpopRemote_;
+    /**
+     * <code>optional string sdrpop_remote = 3;</code>
+     * @return Whether the sdrpopRemote field is set.
+     */
+    @java.lang.Override
+    public boolean hasSdrpopRemote() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string sdrpop_remote = 3;</code>
+     * @return The sdrpopRemote.
+     */
+    @java.lang.Override
+    public java.lang.String getSdrpopRemote() {
+      java.lang.Object ref = sdrpopRemote_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          sdrpopRemote_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string sdrpop_remote = 3;</code>
+     * @return The bytes for sdrpopRemote.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSdrpopRemoteBytes() {
+      java.lang.Object ref = sdrpopRemote_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sdrpopRemote_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PING_MS_FIELD_NUMBER = 4;
+    private int pingMs_;
+    /**
+     * <code>optional uint32 ping_ms = 4;</code>
+     * @return Whether the pingMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasPingMs() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint32 ping_ms = 4;</code>
+     * @return The pingMs.
+     */
+    @java.lang.Override
+    public int getPingMs() {
+      return pingMs_;
+    }
+
+    public static final int PACKET_LOSS_FIELD_NUMBER = 5;
+    private float packetLoss_;
+    /**
+     * <code>optional float packet_loss = 5;</code>
+     * @return Whether the packetLoss field is set.
+     */
+    @java.lang.Override
+    public boolean hasPacketLoss() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional float packet_loss = 5;</code>
+     * @return The packetLoss.
+     */
+    @java.lang.Override
+    public float getPacketLoss() {
+      return packetLoss_;
+    }
+
+    public static final int PING_DEFAULT_INTERNET_ROUTE_FIELD_NUMBER = 6;
+    private int pingDefaultInternetRoute_;
+    /**
+     * <code>optional uint32 ping_default_internet_route = 6;</code>
+     * @return Whether the pingDefaultInternetRoute field is set.
+     */
+    @java.lang.Override
+    public boolean hasPingDefaultInternetRoute() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional uint32 ping_default_internet_route = 6;</code>
+     * @return The pingDefaultInternetRoute.
+     */
+    @java.lang.Override
+    public int getPingDefaultInternetRoute() {
+      return pingDefaultInternetRoute_;
+    }
+
+    public static final int IP_WAS_SHARED_FIELD_NUMBER = 7;
+    private boolean ipWasShared_;
+    /**
+     * <code>optional bool ip_was_shared = 7;</code>
+     * @return Whether the ipWasShared field is set.
+     */
+    @java.lang.Override
+    public boolean hasIpWasShared() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional bool ip_was_shared = 7;</code>
+     * @return The ipWasShared.
+     */
+    @java.lang.Override
+    public boolean getIpWasShared() {
+      return ipWasShared_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, transportKind_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sdrpopLocal_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sdrpopRemote_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt32(4, pingMs_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeFloat(5, packetLoss_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeUInt32(6, pingDefaultInternetRoute_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeBool(7, ipWasShared_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(8, connectionState_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, transportKind_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sdrpopLocal_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sdrpopRemote_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, pingMs_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(5, packetLoss_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, pingDefaultInternetRoute_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, ipWasShared_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, connectionState_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary)) {
+        return super.equals(obj);
+      }
+      SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary other = (SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary) obj;
+
+      if (hasTransportKind() != other.hasTransportKind()) return false;
+      if (hasTransportKind()) {
+        if (getTransportKind()
+            != other.getTransportKind()) return false;
+      }
+      if (hasConnectionState() != other.hasConnectionState()) return false;
+      if (hasConnectionState()) {
+        if (getConnectionState()
+            != other.getConnectionState()) return false;
+      }
+      if (hasSdrpopLocal() != other.hasSdrpopLocal()) return false;
+      if (hasSdrpopLocal()) {
+        if (!getSdrpopLocal()
+            .equals(other.getSdrpopLocal())) return false;
+      }
+      if (hasSdrpopRemote() != other.hasSdrpopRemote()) return false;
+      if (hasSdrpopRemote()) {
+        if (!getSdrpopRemote()
+            .equals(other.getSdrpopRemote())) return false;
+      }
+      if (hasPingMs() != other.hasPingMs()) return false;
+      if (hasPingMs()) {
+        if (getPingMs()
+            != other.getPingMs()) return false;
+      }
+      if (hasPacketLoss() != other.hasPacketLoss()) return false;
+      if (hasPacketLoss()) {
+        if (java.lang.Float.floatToIntBits(getPacketLoss())
+            != java.lang.Float.floatToIntBits(
+                other.getPacketLoss())) return false;
+      }
+      if (hasPingDefaultInternetRoute() != other.hasPingDefaultInternetRoute()) return false;
+      if (hasPingDefaultInternetRoute()) {
+        if (getPingDefaultInternetRoute()
+            != other.getPingDefaultInternetRoute()) return false;
+      }
+      if (hasIpWasShared() != other.hasIpWasShared()) return false;
+      if (hasIpWasShared()) {
+        if (getIpWasShared()
+            != other.getIpWasShared()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTransportKind()) {
+        hash = (37 * hash) + TRANSPORT_KIND_FIELD_NUMBER;
+        hash = (53 * hash) + getTransportKind();
+      }
+      if (hasConnectionState()) {
+        hash = (37 * hash) + CONNECTION_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectionState();
+      }
+      if (hasSdrpopLocal()) {
+        hash = (37 * hash) + SDRPOP_LOCAL_FIELD_NUMBER;
+        hash = (53 * hash) + getSdrpopLocal().hashCode();
+      }
+      if (hasSdrpopRemote()) {
+        hash = (37 * hash) + SDRPOP_REMOTE_FIELD_NUMBER;
+        hash = (53 * hash) + getSdrpopRemote().hashCode();
+      }
+      if (hasPingMs()) {
+        hash = (37 * hash) + PING_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getPingMs();
+      }
+      if (hasPacketLoss()) {
+        hash = (37 * hash) + PACKET_LOSS_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getPacketLoss());
+      }
+      if (hasPingDefaultInternetRoute()) {
+        hash = (37 * hash) + PING_DEFAULT_INTERNET_ROUTE_FIELD_NUMBER;
+        hash = (53 * hash) + getPingDefaultInternetRoute();
+      }
+      if (hasIpWasShared()) {
+        hash = (37 * hash) + IP_WAS_SHARED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpWasShared());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CGameNetworkingUI_ConnectionSummary}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CGameNetworkingUI_ConnectionSummary)
+        SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummaryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGamenetworkingui.internal_static_CGameNetworkingUI_ConnectionSummary_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGamenetworkingui.internal_static_CGameNetworkingUI_ConnectionSummary_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.class, SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.Builder.class);
+      }
+
+      // Construct using SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        transportKind_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        connectionState_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sdrpopLocal_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        sdrpopRemote_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        pingMs_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        packetLoss_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        pingDefaultInternetRoute_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        ipWasShared_ = false;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesGamenetworkingui.internal_static_CGameNetworkingUI_ConnectionSummary_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary getDefaultInstanceForType() {
+        return SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary build() {
+        SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary buildPartial() {
+        SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary result = new SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.transportKind_ = transportKind_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.connectionState_ = connectionState_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.sdrpopLocal_ = sdrpopLocal_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.sdrpopRemote_ = sdrpopRemote_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.pingMs_ = pingMs_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.packetLoss_ = packetLoss_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.pingDefaultInternetRoute_ = pingDefaultInternetRoute_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.ipWasShared_ = ipWasShared_;
+          to_bitField0_ |= 0x00000080;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary) {
+          return mergeFrom((SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary other) {
+        if (other == SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.getDefaultInstance()) return this;
+        if (other.hasTransportKind()) {
+          setTransportKind(other.getTransportKind());
+        }
+        if (other.hasConnectionState()) {
+          setConnectionState(other.getConnectionState());
+        }
+        if (other.hasSdrpopLocal()) {
+          bitField0_ |= 0x00000004;
+          sdrpopLocal_ = other.sdrpopLocal_;
+          onChanged();
+        }
+        if (other.hasSdrpopRemote()) {
+          bitField0_ |= 0x00000008;
+          sdrpopRemote_ = other.sdrpopRemote_;
+          onChanged();
+        }
+        if (other.hasPingMs()) {
+          setPingMs(other.getPingMs());
+        }
+        if (other.hasPacketLoss()) {
+          setPacketLoss(other.getPacketLoss());
+        }
+        if (other.hasPingDefaultInternetRoute()) {
+          setPingDefaultInternetRoute(other.getPingDefaultInternetRoute());
+        }
+        if (other.hasIpWasShared()) {
+          setIpWasShared(other.getIpWasShared());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int transportKind_ ;
+      /**
+       * <code>optional uint32 transport_kind = 1;</code>
+       * @return Whether the transportKind field is set.
+       */
+      @java.lang.Override
+      public boolean hasTransportKind() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 transport_kind = 1;</code>
+       * @return The transportKind.
+       */
+      @java.lang.Override
+      public int getTransportKind() {
+        return transportKind_;
+      }
+      /**
+       * <code>optional uint32 transport_kind = 1;</code>
+       * @param value The transportKind to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransportKind(int value) {
+        bitField0_ |= 0x00000001;
+        transportKind_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 transport_kind = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransportKind() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        transportKind_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int connectionState_ ;
+      /**
+       * <code>optional uint32 connection_state = 8;</code>
+       * @return Whether the connectionState field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectionState() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 connection_state = 8;</code>
+       * @return The connectionState.
+       */
+      @java.lang.Override
+      public int getConnectionState() {
+        return connectionState_;
+      }
+      /**
+       * <code>optional uint32 connection_state = 8;</code>
+       * @param value The connectionState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionState(int value) {
+        bitField0_ |= 0x00000002;
+        connectionState_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 connection_state = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionState() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        connectionState_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sdrpopLocal_ = "";
+      /**
+       * <code>optional string sdrpop_local = 2;</code>
+       * @return Whether the sdrpopLocal field is set.
+       */
+      public boolean hasSdrpopLocal() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string sdrpop_local = 2;</code>
+       * @return The sdrpopLocal.
+       */
+      public java.lang.String getSdrpopLocal() {
+        java.lang.Object ref = sdrpopLocal_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            sdrpopLocal_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string sdrpop_local = 2;</code>
+       * @return The bytes for sdrpopLocal.
+       */
+      public com.google.protobuf.ByteString
+          getSdrpopLocalBytes() {
+        java.lang.Object ref = sdrpopLocal_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sdrpopLocal_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string sdrpop_local = 2;</code>
+       * @param value The sdrpopLocal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdrpopLocal(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        sdrpopLocal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sdrpop_local = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSdrpopLocal() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        sdrpopLocal_ = getDefaultInstance().getSdrpopLocal();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sdrpop_local = 2;</code>
+       * @param value The bytes for sdrpopLocal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdrpopLocalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        sdrpopLocal_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sdrpopRemote_ = "";
+      /**
+       * <code>optional string sdrpop_remote = 3;</code>
+       * @return Whether the sdrpopRemote field is set.
+       */
+      public boolean hasSdrpopRemote() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string sdrpop_remote = 3;</code>
+       * @return The sdrpopRemote.
+       */
+      public java.lang.String getSdrpopRemote() {
+        java.lang.Object ref = sdrpopRemote_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            sdrpopRemote_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string sdrpop_remote = 3;</code>
+       * @return The bytes for sdrpopRemote.
+       */
+      public com.google.protobuf.ByteString
+          getSdrpopRemoteBytes() {
+        java.lang.Object ref = sdrpopRemote_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sdrpopRemote_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string sdrpop_remote = 3;</code>
+       * @param value The sdrpopRemote to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdrpopRemote(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        sdrpopRemote_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sdrpop_remote = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSdrpopRemote() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        sdrpopRemote_ = getDefaultInstance().getSdrpopRemote();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sdrpop_remote = 3;</code>
+       * @param value The bytes for sdrpopRemote to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdrpopRemoteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        sdrpopRemote_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int pingMs_ ;
+      /**
+       * <code>optional uint32 ping_ms = 4;</code>
+       * @return Whether the pingMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasPingMs() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 ping_ms = 4;</code>
+       * @return The pingMs.
+       */
+      @java.lang.Override
+      public int getPingMs() {
+        return pingMs_;
+      }
+      /**
+       * <code>optional uint32 ping_ms = 4;</code>
+       * @param value The pingMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPingMs(int value) {
+        bitField0_ |= 0x00000010;
+        pingMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ping_ms = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPingMs() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        pingMs_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float packetLoss_ ;
+      /**
+       * <code>optional float packet_loss = 5;</code>
+       * @return Whether the packetLoss field is set.
+       */
+      @java.lang.Override
+      public boolean hasPacketLoss() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional float packet_loss = 5;</code>
+       * @return The packetLoss.
+       */
+      @java.lang.Override
+      public float getPacketLoss() {
+        return packetLoss_;
+      }
+      /**
+       * <code>optional float packet_loss = 5;</code>
+       * @param value The packetLoss to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPacketLoss(float value) {
+        bitField0_ |= 0x00000020;
+        packetLoss_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float packet_loss = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPacketLoss() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        packetLoss_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int pingDefaultInternetRoute_ ;
+      /**
+       * <code>optional uint32 ping_default_internet_route = 6;</code>
+       * @return Whether the pingDefaultInternetRoute field is set.
+       */
+      @java.lang.Override
+      public boolean hasPingDefaultInternetRoute() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional uint32 ping_default_internet_route = 6;</code>
+       * @return The pingDefaultInternetRoute.
+       */
+      @java.lang.Override
+      public int getPingDefaultInternetRoute() {
+        return pingDefaultInternetRoute_;
+      }
+      /**
+       * <code>optional uint32 ping_default_internet_route = 6;</code>
+       * @param value The pingDefaultInternetRoute to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPingDefaultInternetRoute(int value) {
+        bitField0_ |= 0x00000040;
+        pingDefaultInternetRoute_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ping_default_internet_route = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPingDefaultInternetRoute() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        pingDefaultInternetRoute_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean ipWasShared_ ;
+      /**
+       * <code>optional bool ip_was_shared = 7;</code>
+       * @return Whether the ipWasShared field is set.
+       */
+      @java.lang.Override
+      public boolean hasIpWasShared() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional bool ip_was_shared = 7;</code>
+       * @return The ipWasShared.
+       */
+      @java.lang.Override
+      public boolean getIpWasShared() {
+        return ipWasShared_;
+      }
+      /**
+       * <code>optional bool ip_was_shared = 7;</code>
+       * @param value The ipWasShared to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpWasShared(boolean value) {
+        bitField0_ |= 0x00000080;
+        ipWasShared_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool ip_was_shared = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIpWasShared() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        ipWasShared_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CGameNetworkingUI_ConnectionSummary)
+    }
+
+    // @@protoc_insertion_point(class_scope:CGameNetworkingUI_ConnectionSummary)
+    private static final SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary();
+    }
+
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CGameNetworkingUI_ConnectionSummary>
+        PARSER = new com.google.protobuf.AbstractParser<CGameNetworkingUI_ConnectionSummary>() {
+      @java.lang.Override
+      public CGameNetworkingUI_ConnectionSummary parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CGameNetworkingUI_ConnectionSummary(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CGameNetworkingUI_ConnectionSummary> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CGameNetworkingUI_ConnectionSummary> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CGameNetworkingUI_AppSummaryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CGameNetworkingUI_AppSummary)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return Whether the appid field is set.
+     */
+    boolean hasAppid();
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return The appid.
+     */
+    int getAppid();
+
+    /**
+     * <code>optional bool ip_was_shared_with_friend = 10;</code>
+     * @return Whether the ipWasSharedWithFriend field is set.
+     */
+    boolean hasIpWasSharedWithFriend();
+    /**
+     * <code>optional bool ip_was_shared_with_friend = 10;</code>
+     * @return The ipWasSharedWithFriend.
+     */
+    boolean getIpWasSharedWithFriend();
+
+    /**
+     * <code>optional bool ip_was_shared_with_nonfriend = 11;</code>
+     * @return Whether the ipWasSharedWithNonfriend field is set.
+     */
+    boolean hasIpWasSharedWithNonfriend();
+    /**
+     * <code>optional bool ip_was_shared_with_nonfriend = 11;</code>
+     * @return The ipWasSharedWithNonfriend.
+     */
+    boolean getIpWasSharedWithNonfriend();
+
+    /**
+     * <code>optional uint32 active_connections = 20;</code>
+     * @return Whether the activeConnections field is set.
+     */
+    boolean hasActiveConnections();
+    /**
+     * <code>optional uint32 active_connections = 20;</code>
+     * @return The activeConnections.
+     */
+    int getActiveConnections();
+
+    /**
+     * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+     * @return Whether the mainCxn field is set.
+     */
+    boolean hasMainCxn();
+    /**
+     * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+     * @return The mainCxn.
+     */
+    SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary getMainCxn();
+    /**
+     * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+     */
+    SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummaryOrBuilder getMainCxnOrBuilder();
+  }
+  /**
+   * Protobuf type {@code CGameNetworkingUI_AppSummary}
+   */
+  public static final class CGameNetworkingUI_AppSummary extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CGameNetworkingUI_AppSummary)
+      CGameNetworkingUI_AppSummaryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CGameNetworkingUI_AppSummary.newBuilder() to construct.
+    private CGameNetworkingUI_AppSummary(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CGameNetworkingUI_AppSummary() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CGameNetworkingUI_AppSummary();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CGameNetworkingUI_AppSummary(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              appid_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000002;
+              ipWasSharedWithFriend_ = input.readBool();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000004;
+              ipWasSharedWithNonfriend_ = input.readBool();
+              break;
+            }
+            case 160: {
+              bitField0_ |= 0x00000008;
+              activeConnections_ = input.readUInt32();
+              break;
+            }
+            case 242: {
+              SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) != 0)) {
+                subBuilder = mainCxn_.toBuilder();
+              }
+              mainCxn_ = input.readMessage(SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mainCxn_);
+                mainCxn_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesGamenetworkingui.internal_static_CGameNetworkingUI_AppSummary_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesGamenetworkingui.internal_static_CGameNetworkingUI_AppSummary_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary.class, SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int APPID_FIELD_NUMBER = 1;
+    private int appid_;
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return Whether the appid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 appid = 1;</code>
+     * @return The appid.
+     */
+    @java.lang.Override
+    public int getAppid() {
+      return appid_;
+    }
+
+    public static final int IP_WAS_SHARED_WITH_FRIEND_FIELD_NUMBER = 10;
+    private boolean ipWasSharedWithFriend_;
+    /**
+     * <code>optional bool ip_was_shared_with_friend = 10;</code>
+     * @return Whether the ipWasSharedWithFriend field is set.
+     */
+    @java.lang.Override
+    public boolean hasIpWasSharedWithFriend() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool ip_was_shared_with_friend = 10;</code>
+     * @return The ipWasSharedWithFriend.
+     */
+    @java.lang.Override
+    public boolean getIpWasSharedWithFriend() {
+      return ipWasSharedWithFriend_;
+    }
+
+    public static final int IP_WAS_SHARED_WITH_NONFRIEND_FIELD_NUMBER = 11;
+    private boolean ipWasSharedWithNonfriend_;
+    /**
+     * <code>optional bool ip_was_shared_with_nonfriend = 11;</code>
+     * @return Whether the ipWasSharedWithNonfriend field is set.
+     */
+    @java.lang.Override
+    public boolean hasIpWasSharedWithNonfriend() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool ip_was_shared_with_nonfriend = 11;</code>
+     * @return The ipWasSharedWithNonfriend.
+     */
+    @java.lang.Override
+    public boolean getIpWasSharedWithNonfriend() {
+      return ipWasSharedWithNonfriend_;
+    }
+
+    public static final int ACTIVE_CONNECTIONS_FIELD_NUMBER = 20;
+    private int activeConnections_;
+    /**
+     * <code>optional uint32 active_connections = 20;</code>
+     * @return Whether the activeConnections field is set.
+     */
+    @java.lang.Override
+    public boolean hasActiveConnections() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 active_connections = 20;</code>
+     * @return The activeConnections.
+     */
+    @java.lang.Override
+    public int getActiveConnections() {
+      return activeConnections_;
+    }
+
+    public static final int MAIN_CXN_FIELD_NUMBER = 30;
+    private SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary mainCxn_;
+    /**
+     * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+     * @return Whether the mainCxn field is set.
+     */
+    @java.lang.Override
+    public boolean hasMainCxn() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+     * @return The mainCxn.
+     */
+    @java.lang.Override
+    public SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary getMainCxn() {
+      return mainCxn_ == null ? SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.getDefaultInstance() : mainCxn_;
+    }
+    /**
+     * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummaryOrBuilder getMainCxnOrBuilder() {
+      return mainCxn_ == null ? SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.getDefaultInstance() : mainCxn_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, appid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(10, ipWasSharedWithFriend_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(11, ipWasSharedWithNonfriend_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(20, activeConnections_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeMessage(30, getMainCxn());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, appid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, ipWasSharedWithFriend_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, ipWasSharedWithNonfriend_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(20, activeConnections_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(30, getMainCxn());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary)) {
+        return super.equals(obj);
+      }
+      SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary other = (SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary) obj;
+
+      if (hasAppid() != other.hasAppid()) return false;
+      if (hasAppid()) {
+        if (getAppid()
+            != other.getAppid()) return false;
+      }
+      if (hasIpWasSharedWithFriend() != other.hasIpWasSharedWithFriend()) return false;
+      if (hasIpWasSharedWithFriend()) {
+        if (getIpWasSharedWithFriend()
+            != other.getIpWasSharedWithFriend()) return false;
+      }
+      if (hasIpWasSharedWithNonfriend() != other.hasIpWasSharedWithNonfriend()) return false;
+      if (hasIpWasSharedWithNonfriend()) {
+        if (getIpWasSharedWithNonfriend()
+            != other.getIpWasSharedWithNonfriend()) return false;
+      }
+      if (hasActiveConnections() != other.hasActiveConnections()) return false;
+      if (hasActiveConnections()) {
+        if (getActiveConnections()
+            != other.getActiveConnections()) return false;
+      }
+      if (hasMainCxn() != other.hasMainCxn()) return false;
+      if (hasMainCxn()) {
+        if (!getMainCxn()
+            .equals(other.getMainCxn())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAppid()) {
+        hash = (37 * hash) + APPID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppid();
+      }
+      if (hasIpWasSharedWithFriend()) {
+        hash = (37 * hash) + IP_WAS_SHARED_WITH_FRIEND_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpWasSharedWithFriend());
+      }
+      if (hasIpWasSharedWithNonfriend()) {
+        hash = (37 * hash) + IP_WAS_SHARED_WITH_NONFRIEND_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIpWasSharedWithNonfriend());
+      }
+      if (hasActiveConnections()) {
+        hash = (37 * hash) + ACTIVE_CONNECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getActiveConnections();
+      }
+      if (hasMainCxn()) {
+        hash = (37 * hash) + MAIN_CXN_FIELD_NUMBER;
+        hash = (53 * hash) + getMainCxn().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CGameNetworkingUI_AppSummary}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CGameNetworkingUI_AppSummary)
+        SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummaryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGamenetworkingui.internal_static_CGameNetworkingUI_AppSummary_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGamenetworkingui.internal_static_CGameNetworkingUI_AppSummary_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary.class, SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary.Builder.class);
+      }
+
+      // Construct using SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMainCxnFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        appid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ipWasSharedWithFriend_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ipWasSharedWithNonfriend_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        activeConnections_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (mainCxnBuilder_ == null) {
+          mainCxn_ = null;
+        } else {
+          mainCxnBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesGamenetworkingui.internal_static_CGameNetworkingUI_AppSummary_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary getDefaultInstanceForType() {
+        return SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary build() {
+        SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary buildPartial() {
+        SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary result = new SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appid_ = appid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ipWasSharedWithFriend_ = ipWasSharedWithFriend_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ipWasSharedWithNonfriend_ = ipWasSharedWithNonfriend_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.activeConnections_ = activeConnections_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          if (mainCxnBuilder_ == null) {
+            result.mainCxn_ = mainCxn_;
+          } else {
+            result.mainCxn_ = mainCxnBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000010;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary) {
+          return mergeFrom((SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary other) {
+        if (other == SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary.getDefaultInstance()) return this;
+        if (other.hasAppid()) {
+          setAppid(other.getAppid());
+        }
+        if (other.hasIpWasSharedWithFriend()) {
+          setIpWasSharedWithFriend(other.getIpWasSharedWithFriend());
+        }
+        if (other.hasIpWasSharedWithNonfriend()) {
+          setIpWasSharedWithNonfriend(other.getIpWasSharedWithNonfriend());
+        }
+        if (other.hasActiveConnections()) {
+          setActiveConnections(other.getActiveConnections());
+        }
+        if (other.hasMainCxn()) {
+          mergeMainCxn(other.getMainCxn());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int appid_ ;
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @param value The appid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppid(int value) {
+        bitField0_ |= 0x00000001;
+        appid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 appid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean ipWasSharedWithFriend_ ;
+      /**
+       * <code>optional bool ip_was_shared_with_friend = 10;</code>
+       * @return Whether the ipWasSharedWithFriend field is set.
+       */
+      @java.lang.Override
+      public boolean hasIpWasSharedWithFriend() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool ip_was_shared_with_friend = 10;</code>
+       * @return The ipWasSharedWithFriend.
+       */
+      @java.lang.Override
+      public boolean getIpWasSharedWithFriend() {
+        return ipWasSharedWithFriend_;
+      }
+      /**
+       * <code>optional bool ip_was_shared_with_friend = 10;</code>
+       * @param value The ipWasSharedWithFriend to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpWasSharedWithFriend(boolean value) {
+        bitField0_ |= 0x00000002;
+        ipWasSharedWithFriend_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool ip_was_shared_with_friend = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIpWasSharedWithFriend() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ipWasSharedWithFriend_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean ipWasSharedWithNonfriend_ ;
+      /**
+       * <code>optional bool ip_was_shared_with_nonfriend = 11;</code>
+       * @return Whether the ipWasSharedWithNonfriend field is set.
+       */
+      @java.lang.Override
+      public boolean hasIpWasSharedWithNonfriend() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool ip_was_shared_with_nonfriend = 11;</code>
+       * @return The ipWasSharedWithNonfriend.
+       */
+      @java.lang.Override
+      public boolean getIpWasSharedWithNonfriend() {
+        return ipWasSharedWithNonfriend_;
+      }
+      /**
+       * <code>optional bool ip_was_shared_with_nonfriend = 11;</code>
+       * @param value The ipWasSharedWithNonfriend to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpWasSharedWithNonfriend(boolean value) {
+        bitField0_ |= 0x00000004;
+        ipWasSharedWithNonfriend_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool ip_was_shared_with_nonfriend = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIpWasSharedWithNonfriend() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        ipWasSharedWithNonfriend_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int activeConnections_ ;
+      /**
+       * <code>optional uint32 active_connections = 20;</code>
+       * @return Whether the activeConnections field is set.
+       */
+      @java.lang.Override
+      public boolean hasActiveConnections() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 active_connections = 20;</code>
+       * @return The activeConnections.
+       */
+      @java.lang.Override
+      public int getActiveConnections() {
+        return activeConnections_;
+      }
+      /**
+       * <code>optional uint32 active_connections = 20;</code>
+       * @param value The activeConnections to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActiveConnections(int value) {
+        bitField0_ |= 0x00000008;
+        activeConnections_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 active_connections = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActiveConnections() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        activeConnections_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary mainCxn_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary, SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.Builder, SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummaryOrBuilder> mainCxnBuilder_;
+      /**
+       * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+       * @return Whether the mainCxn field is set.
+       */
+      public boolean hasMainCxn() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+       * @return The mainCxn.
+       */
+      public SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary getMainCxn() {
+        if (mainCxnBuilder_ == null) {
+          return mainCxn_ == null ? SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.getDefaultInstance() : mainCxn_;
+        } else {
+          return mainCxnBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+       */
+      public Builder setMainCxn(SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary value) {
+        if (mainCxnBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mainCxn_ = value;
+          onChanged();
+        } else {
+          mainCxnBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+       */
+      public Builder setMainCxn(
+          SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.Builder builderForValue) {
+        if (mainCxnBuilder_ == null) {
+          mainCxn_ = builderForValue.build();
+          onChanged();
+        } else {
+          mainCxnBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+       */
+      public Builder mergeMainCxn(SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary value) {
+        if (mainCxnBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+              mainCxn_ != null &&
+              mainCxn_ != SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.getDefaultInstance()) {
+            mainCxn_ =
+              SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.newBuilder(mainCxn_).mergeFrom(value).buildPartial();
+          } else {
+            mainCxn_ = value;
+          }
+          onChanged();
+        } else {
+          mainCxnBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+       */
+      public Builder clearMainCxn() {
+        if (mainCxnBuilder_ == null) {
+          mainCxn_ = null;
+          onChanged();
+        } else {
+          mainCxnBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+       */
+      public SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.Builder getMainCxnBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getMainCxnFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+       */
+      public SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummaryOrBuilder getMainCxnOrBuilder() {
+        if (mainCxnBuilder_ != null) {
+          return mainCxnBuilder_.getMessageOrBuilder();
+        } else {
+          return mainCxn_ == null ?
+              SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.getDefaultInstance() : mainCxn_;
+        }
+      }
+      /**
+       * <code>optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary, SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.Builder, SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummaryOrBuilder> 
+          getMainCxnFieldBuilder() {
+        if (mainCxnBuilder_ == null) {
+          mainCxnBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary, SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummary.Builder, SteammessagesGamenetworkingui.CGameNetworkingUI_ConnectionSummaryOrBuilder>(
+                  getMainCxn(),
+                  getParentForChildren(),
+                  isClean());
+          mainCxn_ = null;
+        }
+        return mainCxnBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CGameNetworkingUI_AppSummary)
+    }
+
+    // @@protoc_insertion_point(class_scope:CGameNetworkingUI_AppSummary)
+    private static final SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary();
+    }
+
+    public static SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CGameNetworkingUI_AppSummary>
+        PARSER = new com.google.protobuf.AbstractParser<CGameNetworkingUI_AppSummary>() {
+      @java.lang.Override
+      public CGameNetworkingUI_AppSummary parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CGameNetworkingUI_AppSummary(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CGameNetworkingUI_AppSummary> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CGameNetworkingUI_AppSummary> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesGamenetworkingui.CGameNetworkingUI_AppSummary getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CGameNetworkingUI_GlobalState_descriptor;
   private static final 
@@ -5550,6 +7965,16 @@ public final class SteammessagesGamenetworkingui {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CGameNetworkingUI_Message_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CGameNetworkingUI_ConnectionSummary_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CGameNetworkingUI_ConnectionSummary_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CGameNetworkingUI_AppSummary_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CGameNetworkingUI_AppSummary_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5589,7 +8014,18 @@ public final class SteammessagesGamenetworkingui {
       "neous_time\030* \001(\004\022*\n\"front_quality_remote" +
       "_lifetime_time\030+ \001(\004\"Y\n\031CGameNetworkingU" +
       "I_Message\022<\n\020connection_state\030\001 \003(\0132\".CG" +
-      "ameNetworkingUI_ConnectionStateB\005H\001\200\001\001"
+      "ameNetworkingUI_ConnectionState\"\346\001\n#CGam" +
+      "eNetworkingUI_ConnectionSummary\022\026\n\016trans" +
+      "port_kind\030\001 \001(\r\022\030\n\020connection_state\030\010 \001(" +
+      "\r\022\024\n\014sdrpop_local\030\002 \001(\t\022\025\n\rsdrpop_remote" +
+      "\030\003 \001(\t\022\017\n\007ping_ms\030\004 \001(\r\022\023\n\013packet_loss\030\005" +
+      " \001(\002\022#\n\033ping_default_internet_route\030\006 \001(" +
+      "\r\022\025\n\rip_was_shared\030\007 \001(\010\"\312\001\n\034CGameNetwor" +
+      "kingUI_AppSummary\022\r\n\005appid\030\001 \001(\r\022!\n\031ip_w" +
+      "as_shared_with_friend\030\n \001(\010\022$\n\034ip_was_sh" +
+      "ared_with_nonfriend\030\013 \001(\010\022\032\n\022active_conn" +
+      "ections\030\024 \001(\r\0226\n\010main_cxn\030\036 \001(\0132$.CGameN" +
+      "etworkingUI_ConnectionSummaryB\005H\001\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5615,6 +8051,18 @@ public final class SteammessagesGamenetworkingui {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CGameNetworkingUI_Message_descriptor,
         new java.lang.String[] { "ConnectionState", });
+    internal_static_CGameNetworkingUI_ConnectionSummary_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_CGameNetworkingUI_ConnectionSummary_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CGameNetworkingUI_ConnectionSummary_descriptor,
+        new java.lang.String[] { "TransportKind", "ConnectionState", "SdrpopLocal", "SdrpopRemote", "PingMs", "PacketLoss", "PingDefaultInternetRoute", "IpWasShared", });
+    internal_static_CGameNetworkingUI_AppSummary_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_CGameNetworkingUI_AppSummary_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CGameNetworkingUI_AppSummary_descriptor,
+        new java.lang.String[] { "Appid", "IpWasSharedWithFriend", "IpWasSharedWithNonfriend", "ActiveConnections", "MainCxn", });
     SteamnetworkingsocketsMessages.getDescriptor();
     SteamdatagramMessagesSdr.getDescriptor();
   }

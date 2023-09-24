@@ -1760,40 +1760,42 @@ public final class SteammessagesMarketSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n,steam/steammessages_market.steamclient" +
-      ".proto\0322steam/steammessages_unified_base" +
-      ".steamclient.proto\"n\n(CEconMarket_IsMark" +
-      "etplaceAllowed_Request\022B\n\twebcookie\030\001 \001(" +
-      "\tB/\202\265\030+The user\'s Steam Guard machine au" +
-      "th cookie.\"\365\005\n)CEconMarket_IsMarketplace" +
-      "Allowed_Response\022I\n\007allowed\030\001 \001(\010B8\202\265\0304W" +
-      "hether or not the user is allowed to use" +
-      " the market\022K\n\006reason\030\002 \001(\rB;\202\265\0307The rea" +
-      "son the user can\'t use the market, if ap" +
-      "plicable\022P\n\017allowed_at_time\030\003 \001(\rB7\202\265\0303T" +
-      "he time the user will be allowed to use " +
-      "the market\022\204\001\n\030steamguard_required_days\030" +
-      "\004 \001(\rBb\202\265\030^The number of days any user i" +
-      "s required to have had Steam Guard befor" +
-      "e they can use the market\022W\n\017forms_reque" +
-      "sted\030\007 \001(\010B>\202\265\030:Whether or not we\'ve req" +
-      "uested the user fill out tax forms\022h\n\032fo" +
-      "rms_require_verification\030\010 \001(\010BD\202\265\030@True" +
-      " if we\'ve received forms but they requir" +
-      "e verification first\022\223\001\n\030new_device_cool" +
-      "down_days\030\t \001(\rBq\202\265\030mThe number of days " +
-      "after initial device authorization a use" +
-      "r must wait before using the market on t" +
-      "hat device2\356\001\n\nEconMarket\022\270\001\n\024IsMarketpl" +
-      "aceAllowed\022).CEconMarket_IsMarketplaceAl" +
-      "lowed_Request\032*.CEconMarket_IsMarketplac" +
-      "eAllowed_Response\"I\202\265\030EChecks whether or" +
-      " not the authed account is allowed to us" +
-      "e the market\032%\202\265\030!A service to use marke" +
-      "t functionsB\003\200\001\001"
+      ".proto\032\036steam/steammessages_base.proto\0322" +
+      "steam/steammessages_unified_base.steamcl" +
+      "ient.proto\"n\n(CEconMarket_IsMarketplaceA" +
+      "llowed_Request\022B\n\twebcookie\030\001 \001(\tB/\202\265\030+T" +
+      "he user\'s Steam Guard machine auth cooki" +
+      "e.\"\365\005\n)CEconMarket_IsMarketplaceAllowed_" +
+      "Response\022I\n\007allowed\030\001 \001(\010B8\202\265\0304Whether o" +
+      "r not the user is allowed to use the mar" +
+      "ket\022K\n\006reason\030\002 \001(\rB;\202\265\0307The reason the " +
+      "user can\'t use the market, if applicable" +
+      "\022P\n\017allowed_at_time\030\003 \001(\rB7\202\265\0303The time " +
+      "the user will be allowed to use the mark" +
+      "et\022\204\001\n\030steamguard_required_days\030\004 \001(\rBb\202" +
+      "\265\030^The number of days any user is requir" +
+      "ed to have had Steam Guard before they c" +
+      "an use the market\022W\n\017forms_requested\030\007 \001" +
+      "(\010B>\202\265\030:Whether or not we\'ve requested t" +
+      "he user fill out tax forms\022h\n\032forms_requ" +
+      "ire_verification\030\010 \001(\010BD\202\265\030@True if we\'v" +
+      "e received forms but they require verifi" +
+      "cation first\022\223\001\n\030new_device_cooldown_day" +
+      "s\030\t \001(\rBq\202\265\030mThe number of days after in" +
+      "itial device authorization a user must w" +
+      "ait before using the market on that devi" +
+      "ce2\356\001\n\nEconMarket\022\270\001\n\024IsMarketplaceAllow" +
+      "ed\022).CEconMarket_IsMarketplaceAllowed_Re" +
+      "quest\032*.CEconMarket_IsMarketplaceAllowed" +
+      "_Response\"I\202\265\030EChecks whether or not the" +
+      " authed account is allowed to use the ma" +
+      "rket\032%\202\265\030!A service to use market functi" +
+      "onsB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CEconMarket_IsMarketplaceAllowed_Request_descriptor =
@@ -1815,6 +1817,7 @@ public final class SteammessagesMarketSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

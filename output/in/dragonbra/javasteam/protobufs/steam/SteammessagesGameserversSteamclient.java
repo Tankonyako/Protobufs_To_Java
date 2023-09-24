@@ -7123,6 +7123,9923 @@ public final class SteammessagesGameserversSteamclient {
 
   }
 
+  public interface CGameServers_QueryByFakeIP_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CGameServers_QueryByFakeIP_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 fake_ip = 1 [(.description) = "FakeIP of server to query."];</code>
+     * @return Whether the fakeIp field is set.
+     */
+    boolean hasFakeIp();
+    /**
+     * <code>optional uint32 fake_ip = 1 [(.description) = "FakeIP of server to query."];</code>
+     * @return The fakeIp.
+     */
+    int getFakeIp();
+
+    /**
+     * <code>optional uint32 fake_port = 2 [(.description) = "Fake port of server to query."];</code>
+     * @return Whether the fakePort field is set.
+     */
+    boolean hasFakePort();
+    /**
+     * <code>optional uint32 fake_port = 2 [(.description) = "Fake port of server to query."];</code>
+     * @return The fakePort.
+     */
+    int getFakePort();
+
+    /**
+     * <code>optional uint32 app_id = 3 [(.description) = "AppID to use.  Each AppID has its own FakeIP address."];</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <code>optional uint32 app_id = 3 [(.description) = "AppID to use.  Each AppID has its own FakeIP address."];</code>
+     * @return The appId.
+     */
+    int getAppId();
+
+    /**
+     * <code>optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 4 [default = Query_Invalid, (.description) = "What type of query?"];</code>
+     * @return Whether the queryType field is set.
+     */
+    boolean hasQueryType();
+    /**
+     * <code>optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 4 [default = Query_Invalid, (.description) = "What type of query?"];</code>
+     * @return The queryType.
+     */
+    SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType getQueryType();
+  }
+  /**
+   * Protobuf type {@code CGameServers_QueryByFakeIP_Request}
+   */
+  public static final class CGameServers_QueryByFakeIP_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CGameServers_QueryByFakeIP_Request)
+      CGameServers_QueryByFakeIP_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CGameServers_QueryByFakeIP_Request.newBuilder() to construct.
+    private CGameServers_QueryByFakeIP_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CGameServers_QueryByFakeIP_Request() {
+      queryType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CGameServers_QueryByFakeIP_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CGameServers_QueryByFakeIP_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              fakeIp_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              fakePort_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              appId_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType value = SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(4, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                queryType_ = rawValue;
+              }
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesGameserversSteamclient.internal_static_CGameServers_QueryByFakeIP_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesGameserversSteamclient.internal_static_CGameServers_QueryByFakeIP_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.class, SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code CGameServers_QueryByFakeIP_Request.EQueryType}
+     */
+    public enum EQueryType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>Query_Invalid = 0;</code>
+       */
+      Query_Invalid(0),
+      /**
+       * <code>Query_Ping = 1;</code>
+       */
+      Query_Ping(1),
+      /**
+       * <code>Query_Players = 2;</code>
+       */
+      Query_Players(2),
+      /**
+       * <code>Query_Rules = 3;</code>
+       */
+      Query_Rules(3),
+      ;
+
+      /**
+       * <code>Query_Invalid = 0;</code>
+       */
+      public static final int Query_Invalid_VALUE = 0;
+      /**
+       * <code>Query_Ping = 1;</code>
+       */
+      public static final int Query_Ping_VALUE = 1;
+      /**
+       * <code>Query_Players = 2;</code>
+       */
+      public static final int Query_Players_VALUE = 2;
+      /**
+       * <code>Query_Rules = 3;</code>
+       */
+      public static final int Query_Rules_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EQueryType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static EQueryType forNumber(int value) {
+        switch (value) {
+          case 0: return Query_Invalid;
+          case 1: return Query_Ping;
+          case 2: return Query_Players;
+          case 3: return Query_Rules;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<EQueryType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          EQueryType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<EQueryType>() {
+              public EQueryType findValueByNumber(int number) {
+                return EQueryType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final EQueryType[] VALUES = values();
+
+      public static EQueryType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private EQueryType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:CGameServers_QueryByFakeIP_Request.EQueryType)
+    }
+
+    private int bitField0_;
+    public static final int FAKE_IP_FIELD_NUMBER = 1;
+    private int fakeIp_;
+    /**
+     * <code>optional uint32 fake_ip = 1 [(.description) = "FakeIP of server to query."];</code>
+     * @return Whether the fakeIp field is set.
+     */
+    @java.lang.Override
+    public boolean hasFakeIp() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 fake_ip = 1 [(.description) = "FakeIP of server to query."];</code>
+     * @return The fakeIp.
+     */
+    @java.lang.Override
+    public int getFakeIp() {
+      return fakeIp_;
+    }
+
+    public static final int FAKE_PORT_FIELD_NUMBER = 2;
+    private int fakePort_;
+    /**
+     * <code>optional uint32 fake_port = 2 [(.description) = "Fake port of server to query."];</code>
+     * @return Whether the fakePort field is set.
+     */
+    @java.lang.Override
+    public boolean hasFakePort() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 fake_port = 2 [(.description) = "Fake port of server to query."];</code>
+     * @return The fakePort.
+     */
+    @java.lang.Override
+    public int getFakePort() {
+      return fakePort_;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 3;
+    private int appId_;
+    /**
+     * <code>optional uint32 app_id = 3 [(.description) = "AppID to use.  Each AppID has its own FakeIP address."];</code>
+     * @return Whether the appId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 app_id = 3 [(.description) = "AppID to use.  Each AppID has its own FakeIP address."];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public int getAppId() {
+      return appId_;
+    }
+
+    public static final int QUERY_TYPE_FIELD_NUMBER = 4;
+    private int queryType_;
+    /**
+     * <code>optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 4 [default = Query_Invalid, (.description) = "What type of query?"];</code>
+     * @return Whether the queryType field is set.
+     */
+    @java.lang.Override public boolean hasQueryType() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 4 [default = Query_Invalid, (.description) = "What type of query?"];</code>
+     * @return The queryType.
+     */
+    @java.lang.Override public SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType getQueryType() {
+      @SuppressWarnings("deprecation")
+      SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType result = SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType.valueOf(queryType_);
+      return result == null ? SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType.Query_Invalid : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, fakeIp_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, fakePort_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, appId_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeEnum(4, queryType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, fakeIp_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, fakePort_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, appId_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, queryType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request other = (SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request) obj;
+
+      if (hasFakeIp() != other.hasFakeIp()) return false;
+      if (hasFakeIp()) {
+        if (getFakeIp()
+            != other.getFakeIp()) return false;
+      }
+      if (hasFakePort() != other.hasFakePort()) return false;
+      if (hasFakePort()) {
+        if (getFakePort()
+            != other.getFakePort()) return false;
+      }
+      if (hasAppId() != other.hasAppId()) return false;
+      if (hasAppId()) {
+        if (getAppId()
+            != other.getAppId()) return false;
+      }
+      if (hasQueryType() != other.hasQueryType()) return false;
+      if (hasQueryType()) {
+        if (queryType_ != other.queryType_) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFakeIp()) {
+        hash = (37 * hash) + FAKE_IP_FIELD_NUMBER;
+        hash = (53 * hash) + getFakeIp();
+      }
+      if (hasFakePort()) {
+        hash = (37 * hash) + FAKE_PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getFakePort();
+      }
+      if (hasAppId()) {
+        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppId();
+      }
+      if (hasQueryType()) {
+        hash = (37 * hash) + QUERY_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + queryType_;
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CGameServers_QueryByFakeIP_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CGameServers_QueryByFakeIP_Request)
+        SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGameserversSteamclient.internal_static_CGameServers_QueryByFakeIP_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGameserversSteamclient.internal_static_CGameServers_QueryByFakeIP_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.class, SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        fakeIp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fakePort_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        queryType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesGameserversSteamclient.internal_static_CGameServers_QueryByFakeIP_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request getDefaultInstanceForType() {
+        return SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request build() {
+        SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request buildPartial() {
+        SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request result = new SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fakeIp_ = fakeIp_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fakePort_ = fakePort_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.appId_ = appId_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.queryType_ = queryType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request) {
+          return mergeFrom((SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request other) {
+        if (other == SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.getDefaultInstance()) return this;
+        if (other.hasFakeIp()) {
+          setFakeIp(other.getFakeIp());
+        }
+        if (other.hasFakePort()) {
+          setFakePort(other.getFakePort());
+        }
+        if (other.hasAppId()) {
+          setAppId(other.getAppId());
+        }
+        if (other.hasQueryType()) {
+          setQueryType(other.getQueryType());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int fakeIp_ ;
+      /**
+       * <code>optional uint32 fake_ip = 1 [(.description) = "FakeIP of server to query."];</code>
+       * @return Whether the fakeIp field is set.
+       */
+      @java.lang.Override
+      public boolean hasFakeIp() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 fake_ip = 1 [(.description) = "FakeIP of server to query."];</code>
+       * @return The fakeIp.
+       */
+      @java.lang.Override
+      public int getFakeIp() {
+        return fakeIp_;
+      }
+      /**
+       * <code>optional uint32 fake_ip = 1 [(.description) = "FakeIP of server to query."];</code>
+       * @param value The fakeIp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFakeIp(int value) {
+        bitField0_ |= 0x00000001;
+        fakeIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 fake_ip = 1 [(.description) = "FakeIP of server to query."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFakeIp() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fakeIp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int fakePort_ ;
+      /**
+       * <code>optional uint32 fake_port = 2 [(.description) = "Fake port of server to query."];</code>
+       * @return Whether the fakePort field is set.
+       */
+      @java.lang.Override
+      public boolean hasFakePort() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 fake_port = 2 [(.description) = "Fake port of server to query."];</code>
+       * @return The fakePort.
+       */
+      @java.lang.Override
+      public int getFakePort() {
+        return fakePort_;
+      }
+      /**
+       * <code>optional uint32 fake_port = 2 [(.description) = "Fake port of server to query."];</code>
+       * @param value The fakePort to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFakePort(int value) {
+        bitField0_ |= 0x00000002;
+        fakePort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 fake_port = 2 [(.description) = "Fake port of server to query."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFakePort() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fakePort_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int appId_ ;
+      /**
+       * <code>optional uint32 app_id = 3 [(.description) = "AppID to use.  Each AppID has its own FakeIP address."];</code>
+       * @return Whether the appId field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppId() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 app_id = 3 [(.description) = "AppID to use.  Each AppID has its own FakeIP address."];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public int getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>optional uint32 app_id = 3 [(.description) = "AppID to use.  Each AppID has its own FakeIP address."];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(int value) {
+        bitField0_ |= 0x00000004;
+        appId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 app_id = 3 [(.description) = "AppID to use.  Each AppID has its own FakeIP address."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        appId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int queryType_ = 0;
+      /**
+       * <code>optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 4 [default = Query_Invalid, (.description) = "What type of query?"];</code>
+       * @return Whether the queryType field is set.
+       */
+      @java.lang.Override public boolean hasQueryType() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 4 [default = Query_Invalid, (.description) = "What type of query?"];</code>
+       * @return The queryType.
+       */
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType getQueryType() {
+        @SuppressWarnings("deprecation")
+        SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType result = SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType.valueOf(queryType_);
+        return result == null ? SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType.Query_Invalid : result;
+      }
+      /**
+       * <code>optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 4 [default = Query_Invalid, (.description) = "What type of query?"];</code>
+       * @param value The queryType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryType(SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request.EQueryType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        queryType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 4 [default = Query_Invalid, (.description) = "What type of query?"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        queryType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CGameServers_QueryByFakeIP_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CGameServers_QueryByFakeIP_Request)
+    private static final SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request();
+    }
+
+    public static SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CGameServers_QueryByFakeIP_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CGameServers_QueryByFakeIP_Request>() {
+      @java.lang.Override
+      public CGameServers_QueryByFakeIP_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CGameServers_QueryByFakeIP_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CGameServers_QueryByFakeIP_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CGameServers_QueryByFakeIP_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CGameServers_QueryByFakeIP_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgGameServerPingQueryDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgGameServerPingQueryData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .CMsgIPAddress server_ip = 1;</code>
+     * @return Whether the serverIp field is set.
+     */
+    boolean hasServerIp();
+    /**
+     * <code>optional .CMsgIPAddress server_ip = 1;</code>
+     * @return The serverIp.
+     */
+    SteammessagesBase.CMsgIPAddress getServerIp();
+    /**
+     * <code>optional .CMsgIPAddress server_ip = 1;</code>
+     */
+    SteammessagesBase.CMsgIPAddressOrBuilder getServerIpOrBuilder();
+
+    /**
+     * <code>optional uint32 query_port = 2;</code>
+     * @return Whether the queryPort field is set.
+     */
+    boolean hasQueryPort();
+    /**
+     * <code>optional uint32 query_port = 2;</code>
+     * @return The queryPort.
+     */
+    int getQueryPort();
+
+    /**
+     * <code>optional uint32 game_port = 3;</code>
+     * @return Whether the gamePort field is set.
+     */
+    boolean hasGamePort();
+    /**
+     * <code>optional uint32 game_port = 3;</code>
+     * @return The gamePort.
+     */
+    int getGamePort();
+
+    /**
+     * <code>optional uint32 spectator_port = 4;</code>
+     * @return Whether the spectatorPort field is set.
+     */
+    boolean hasSpectatorPort();
+    /**
+     * <code>optional uint32 spectator_port = 4;</code>
+     * @return The spectatorPort.
+     */
+    int getSpectatorPort();
+
+    /**
+     * <code>optional string spectator_server_name = 5;</code>
+     * @return Whether the spectatorServerName field is set.
+     */
+    boolean hasSpectatorServerName();
+    /**
+     * <code>optional string spectator_server_name = 5;</code>
+     * @return The spectatorServerName.
+     */
+    java.lang.String getSpectatorServerName();
+    /**
+     * <code>optional string spectator_server_name = 5;</code>
+     * @return The bytes for spectatorServerName.
+     */
+    com.google.protobuf.ByteString
+        getSpectatorServerNameBytes();
+
+    /**
+     * <code>optional string server_name = 6;</code>
+     * @return Whether the serverName field is set.
+     */
+    boolean hasServerName();
+    /**
+     * <code>optional string server_name = 6;</code>
+     * @return The serverName.
+     */
+    java.lang.String getServerName();
+    /**
+     * <code>optional string server_name = 6;</code>
+     * @return The bytes for serverName.
+     */
+    com.google.protobuf.ByteString
+        getServerNameBytes();
+
+    /**
+     * <code>optional fixed64 steamid = 7;</code>
+     * @return Whether the steamid field is set.
+     */
+    boolean hasSteamid();
+    /**
+     * <code>optional fixed64 steamid = 7;</code>
+     * @return The steamid.
+     */
+    long getSteamid();
+
+    /**
+     * <code>optional uint32 app_id = 8;</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <code>optional uint32 app_id = 8;</code>
+     * @return The appId.
+     */
+    int getAppId();
+
+    /**
+     * <code>optional string gamedir = 9;</code>
+     * @return Whether the gamedir field is set.
+     */
+    boolean hasGamedir();
+    /**
+     * <code>optional string gamedir = 9;</code>
+     * @return The gamedir.
+     */
+    java.lang.String getGamedir();
+    /**
+     * <code>optional string gamedir = 9;</code>
+     * @return The bytes for gamedir.
+     */
+    com.google.protobuf.ByteString
+        getGamedirBytes();
+
+    /**
+     * <code>optional string map = 10;</code>
+     * @return Whether the map field is set.
+     */
+    boolean hasMap();
+    /**
+     * <code>optional string map = 10;</code>
+     * @return The map.
+     */
+    java.lang.String getMap();
+    /**
+     * <code>optional string map = 10;</code>
+     * @return The bytes for map.
+     */
+    com.google.protobuf.ByteString
+        getMapBytes();
+
+    /**
+     * <code>optional string game_description = 11;</code>
+     * @return Whether the gameDescription field is set.
+     */
+    boolean hasGameDescription();
+    /**
+     * <code>optional string game_description = 11;</code>
+     * @return The gameDescription.
+     */
+    java.lang.String getGameDescription();
+    /**
+     * <code>optional string game_description = 11;</code>
+     * @return The bytes for gameDescription.
+     */
+    com.google.protobuf.ByteString
+        getGameDescriptionBytes();
+
+    /**
+     * <code>optional string gametype = 12;</code>
+     * @return Whether the gametype field is set.
+     */
+    boolean hasGametype();
+    /**
+     * <code>optional string gametype = 12;</code>
+     * @return The gametype.
+     */
+    java.lang.String getGametype();
+    /**
+     * <code>optional string gametype = 12;</code>
+     * @return The bytes for gametype.
+     */
+    com.google.protobuf.ByteString
+        getGametypeBytes();
+
+    /**
+     * <code>optional uint32 num_players = 13;</code>
+     * @return Whether the numPlayers field is set.
+     */
+    boolean hasNumPlayers();
+    /**
+     * <code>optional uint32 num_players = 13;</code>
+     * @return The numPlayers.
+     */
+    int getNumPlayers();
+
+    /**
+     * <code>optional uint32 max_players = 14;</code>
+     * @return Whether the maxPlayers field is set.
+     */
+    boolean hasMaxPlayers();
+    /**
+     * <code>optional uint32 max_players = 14;</code>
+     * @return The maxPlayers.
+     */
+    int getMaxPlayers();
+
+    /**
+     * <code>optional uint32 num_bots = 15;</code>
+     * @return Whether the numBots field is set.
+     */
+    boolean hasNumBots();
+    /**
+     * <code>optional uint32 num_bots = 15;</code>
+     * @return The numBots.
+     */
+    int getNumBots();
+
+    /**
+     * <code>optional bool password = 16;</code>
+     * @return Whether the password field is set.
+     */
+    boolean hasPassword();
+    /**
+     * <code>optional bool password = 16;</code>
+     * @return The password.
+     */
+    boolean getPassword();
+
+    /**
+     * <code>optional bool secure = 17;</code>
+     * @return Whether the secure field is set.
+     */
+    boolean hasSecure();
+    /**
+     * <code>optional bool secure = 17;</code>
+     * @return The secure.
+     */
+    boolean getSecure();
+
+    /**
+     * <code>optional bool dedicated = 18;</code>
+     * @return Whether the dedicated field is set.
+     */
+    boolean hasDedicated();
+    /**
+     * <code>optional bool dedicated = 18;</code>
+     * @return The dedicated.
+     */
+    boolean getDedicated();
+
+    /**
+     * <code>optional string version = 19;</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <code>optional string version = 19;</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <code>optional string version = 19;</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+
+    /**
+     * <code>optional fixed32 sdr_popid = 20;</code>
+     * @return Whether the sdrPopid field is set.
+     */
+    boolean hasSdrPopid();
+    /**
+     * <code>optional fixed32 sdr_popid = 20;</code>
+     * @return The sdrPopid.
+     */
+    int getSdrPopid();
+
+    /**
+     * <code>optional string sdr_location_string = 21;</code>
+     * @return Whether the sdrLocationString field is set.
+     */
+    boolean hasSdrLocationString();
+    /**
+     * <code>optional string sdr_location_string = 21;</code>
+     * @return The sdrLocationString.
+     */
+    java.lang.String getSdrLocationString();
+    /**
+     * <code>optional string sdr_location_string = 21;</code>
+     * @return The bytes for sdrLocationString.
+     */
+    com.google.protobuf.ByteString
+        getSdrLocationStringBytes();
+  }
+  /**
+   * Protobuf type {@code CMsgGameServerPingQueryData}
+   */
+  public static final class CMsgGameServerPingQueryData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgGameServerPingQueryData)
+      CMsgGameServerPingQueryDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgGameServerPingQueryData.newBuilder() to construct.
+    private CMsgGameServerPingQueryData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgGameServerPingQueryData() {
+      spectatorServerName_ = "";
+      serverName_ = "";
+      gamedir_ = "";
+      map_ = "";
+      gameDescription_ = "";
+      gametype_ = "";
+      version_ = "";
+      sdrLocationString_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgGameServerPingQueryData();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgGameServerPingQueryData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              SteammessagesBase.CMsgIPAddress.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = serverIp_.toBuilder();
+              }
+              serverIp_ = input.readMessage(SteammessagesBase.CMsgIPAddress.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(serverIp_);
+                serverIp_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              queryPort_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              gamePort_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              spectatorPort_ = input.readUInt32();
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              spectatorServerName_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              serverName_ = bs;
+              break;
+            }
+            case 57: {
+              bitField0_ |= 0x00000040;
+              steamid_ = input.readFixed64();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              appId_ = input.readUInt32();
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000100;
+              gamedir_ = bs;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000200;
+              map_ = bs;
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              gameDescription_ = bs;
+              break;
+            }
+            case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000800;
+              gametype_ = bs;
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00001000;
+              numPlayers_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00002000;
+              maxPlayers_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00004000;
+              numBots_ = input.readUInt32();
+              break;
+            }
+            case 128: {
+              bitField0_ |= 0x00008000;
+              password_ = input.readBool();
+              break;
+            }
+            case 136: {
+              bitField0_ |= 0x00010000;
+              secure_ = input.readBool();
+              break;
+            }
+            case 144: {
+              bitField0_ |= 0x00020000;
+              dedicated_ = input.readBool();
+              break;
+            }
+            case 154: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00040000;
+              version_ = bs;
+              break;
+            }
+            case 165: {
+              bitField0_ |= 0x00080000;
+              sdrPopid_ = input.readFixed32();
+              break;
+            }
+            case 170: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00100000;
+              sdrLocationString_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPingQueryData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPingQueryData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.class, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SERVER_IP_FIELD_NUMBER = 1;
+    private SteammessagesBase.CMsgIPAddress serverIp_;
+    /**
+     * <code>optional .CMsgIPAddress server_ip = 1;</code>
+     * @return Whether the serverIp field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerIp() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .CMsgIPAddress server_ip = 1;</code>
+     * @return The serverIp.
+     */
+    @java.lang.Override
+    public SteammessagesBase.CMsgIPAddress getServerIp() {
+      return serverIp_ == null ? SteammessagesBase.CMsgIPAddress.getDefaultInstance() : serverIp_;
+    }
+    /**
+     * <code>optional .CMsgIPAddress server_ip = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.CMsgIPAddressOrBuilder getServerIpOrBuilder() {
+      return serverIp_ == null ? SteammessagesBase.CMsgIPAddress.getDefaultInstance() : serverIp_;
+    }
+
+    public static final int QUERY_PORT_FIELD_NUMBER = 2;
+    private int queryPort_;
+    /**
+     * <code>optional uint32 query_port = 2;</code>
+     * @return Whether the queryPort field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryPort() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 query_port = 2;</code>
+     * @return The queryPort.
+     */
+    @java.lang.Override
+    public int getQueryPort() {
+      return queryPort_;
+    }
+
+    public static final int GAME_PORT_FIELD_NUMBER = 3;
+    private int gamePort_;
+    /**
+     * <code>optional uint32 game_port = 3;</code>
+     * @return Whether the gamePort field is set.
+     */
+    @java.lang.Override
+    public boolean hasGamePort() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 game_port = 3;</code>
+     * @return The gamePort.
+     */
+    @java.lang.Override
+    public int getGamePort() {
+      return gamePort_;
+    }
+
+    public static final int SPECTATOR_PORT_FIELD_NUMBER = 4;
+    private int spectatorPort_;
+    /**
+     * <code>optional uint32 spectator_port = 4;</code>
+     * @return Whether the spectatorPort field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpectatorPort() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 spectator_port = 4;</code>
+     * @return The spectatorPort.
+     */
+    @java.lang.Override
+    public int getSpectatorPort() {
+      return spectatorPort_;
+    }
+
+    public static final int SPECTATOR_SERVER_NAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object spectatorServerName_;
+    /**
+     * <code>optional string spectator_server_name = 5;</code>
+     * @return Whether the spectatorServerName field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpectatorServerName() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string spectator_server_name = 5;</code>
+     * @return The spectatorServerName.
+     */
+    @java.lang.Override
+    public java.lang.String getSpectatorServerName() {
+      java.lang.Object ref = spectatorServerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          spectatorServerName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string spectator_server_name = 5;</code>
+     * @return The bytes for spectatorServerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSpectatorServerNameBytes() {
+      java.lang.Object ref = spectatorServerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        spectatorServerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVER_NAME_FIELD_NUMBER = 6;
+    private volatile java.lang.Object serverName_;
+    /**
+     * <code>optional string server_name = 6;</code>
+     * @return Whether the serverName field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerName() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional string server_name = 6;</code>
+     * @return The serverName.
+     */
+    @java.lang.Override
+    public java.lang.String getServerName() {
+      java.lang.Object ref = serverName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          serverName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string server_name = 6;</code>
+     * @return The bytes for serverName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServerNameBytes() {
+      java.lang.Object ref = serverName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serverName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STEAMID_FIELD_NUMBER = 7;
+    private long steamid_;
+    /**
+     * <code>optional fixed64 steamid = 7;</code>
+     * @return Whether the steamid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSteamid() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional fixed64 steamid = 7;</code>
+     * @return The steamid.
+     */
+    @java.lang.Override
+    public long getSteamid() {
+      return steamid_;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 8;
+    private int appId_;
+    /**
+     * <code>optional uint32 app_id = 8;</code>
+     * @return Whether the appId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 app_id = 8;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public int getAppId() {
+      return appId_;
+    }
+
+    public static final int GAMEDIR_FIELD_NUMBER = 9;
+    private volatile java.lang.Object gamedir_;
+    /**
+     * <code>optional string gamedir = 9;</code>
+     * @return Whether the gamedir field is set.
+     */
+    @java.lang.Override
+    public boolean hasGamedir() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional string gamedir = 9;</code>
+     * @return The gamedir.
+     */
+    @java.lang.Override
+    public java.lang.String getGamedir() {
+      java.lang.Object ref = gamedir_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          gamedir_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string gamedir = 9;</code>
+     * @return The bytes for gamedir.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGamedirBytes() {
+      java.lang.Object ref = gamedir_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gamedir_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAP_FIELD_NUMBER = 10;
+    private volatile java.lang.Object map_;
+    /**
+     * <code>optional string map = 10;</code>
+     * @return Whether the map field is set.
+     */
+    @java.lang.Override
+    public boolean hasMap() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional string map = 10;</code>
+     * @return The map.
+     */
+    @java.lang.Override
+    public java.lang.String getMap() {
+      java.lang.Object ref = map_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          map_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string map = 10;</code>
+     * @return The bytes for map.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMapBytes() {
+      java.lang.Object ref = map_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        map_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GAME_DESCRIPTION_FIELD_NUMBER = 11;
+    private volatile java.lang.Object gameDescription_;
+    /**
+     * <code>optional string game_description = 11;</code>
+     * @return Whether the gameDescription field is set.
+     */
+    @java.lang.Override
+    public boolean hasGameDescription() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional string game_description = 11;</code>
+     * @return The gameDescription.
+     */
+    @java.lang.Override
+    public java.lang.String getGameDescription() {
+      java.lang.Object ref = gameDescription_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          gameDescription_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string game_description = 11;</code>
+     * @return The bytes for gameDescription.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGameDescriptionBytes() {
+      java.lang.Object ref = gameDescription_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gameDescription_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GAMETYPE_FIELD_NUMBER = 12;
+    private volatile java.lang.Object gametype_;
+    /**
+     * <code>optional string gametype = 12;</code>
+     * @return Whether the gametype field is set.
+     */
+    @java.lang.Override
+    public boolean hasGametype() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional string gametype = 12;</code>
+     * @return The gametype.
+     */
+    @java.lang.Override
+    public java.lang.String getGametype() {
+      java.lang.Object ref = gametype_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          gametype_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string gametype = 12;</code>
+     * @return The bytes for gametype.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGametypeBytes() {
+      java.lang.Object ref = gametype_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gametype_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUM_PLAYERS_FIELD_NUMBER = 13;
+    private int numPlayers_;
+    /**
+     * <code>optional uint32 num_players = 13;</code>
+     * @return Whether the numPlayers field is set.
+     */
+    @java.lang.Override
+    public boolean hasNumPlayers() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional uint32 num_players = 13;</code>
+     * @return The numPlayers.
+     */
+    @java.lang.Override
+    public int getNumPlayers() {
+      return numPlayers_;
+    }
+
+    public static final int MAX_PLAYERS_FIELD_NUMBER = 14;
+    private int maxPlayers_;
+    /**
+     * <code>optional uint32 max_players = 14;</code>
+     * @return Whether the maxPlayers field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxPlayers() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>optional uint32 max_players = 14;</code>
+     * @return The maxPlayers.
+     */
+    @java.lang.Override
+    public int getMaxPlayers() {
+      return maxPlayers_;
+    }
+
+    public static final int NUM_BOTS_FIELD_NUMBER = 15;
+    private int numBots_;
+    /**
+     * <code>optional uint32 num_bots = 15;</code>
+     * @return Whether the numBots field is set.
+     */
+    @java.lang.Override
+    public boolean hasNumBots() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>optional uint32 num_bots = 15;</code>
+     * @return The numBots.
+     */
+    @java.lang.Override
+    public int getNumBots() {
+      return numBots_;
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 16;
+    private boolean password_;
+    /**
+     * <code>optional bool password = 16;</code>
+     * @return Whether the password field is set.
+     */
+    @java.lang.Override
+    public boolean hasPassword() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <code>optional bool password = 16;</code>
+     * @return The password.
+     */
+    @java.lang.Override
+    public boolean getPassword() {
+      return password_;
+    }
+
+    public static final int SECURE_FIELD_NUMBER = 17;
+    private boolean secure_;
+    /**
+     * <code>optional bool secure = 17;</code>
+     * @return Whether the secure field is set.
+     */
+    @java.lang.Override
+    public boolean hasSecure() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <code>optional bool secure = 17;</code>
+     * @return The secure.
+     */
+    @java.lang.Override
+    public boolean getSecure() {
+      return secure_;
+    }
+
+    public static final int DEDICATED_FIELD_NUMBER = 18;
+    private boolean dedicated_;
+    /**
+     * <code>optional bool dedicated = 18;</code>
+     * @return Whether the dedicated field is set.
+     */
+    @java.lang.Override
+    public boolean hasDedicated() {
+      return ((bitField0_ & 0x00020000) != 0);
+    }
+    /**
+     * <code>optional bool dedicated = 18;</code>
+     * @return The dedicated.
+     */
+    @java.lang.Override
+    public boolean getDedicated() {
+      return dedicated_;
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 19;
+    private volatile java.lang.Object version_;
+    /**
+     * <code>optional string version = 19;</code>
+     * @return Whether the version field is set.
+     */
+    @java.lang.Override
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <code>optional string version = 19;</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          version_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string version = 19;</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SDR_POPID_FIELD_NUMBER = 20;
+    private int sdrPopid_;
+    /**
+     * <code>optional fixed32 sdr_popid = 20;</code>
+     * @return Whether the sdrPopid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSdrPopid() {
+      return ((bitField0_ & 0x00080000) != 0);
+    }
+    /**
+     * <code>optional fixed32 sdr_popid = 20;</code>
+     * @return The sdrPopid.
+     */
+    @java.lang.Override
+    public int getSdrPopid() {
+      return sdrPopid_;
+    }
+
+    public static final int SDR_LOCATION_STRING_FIELD_NUMBER = 21;
+    private volatile java.lang.Object sdrLocationString_;
+    /**
+     * <code>optional string sdr_location_string = 21;</code>
+     * @return Whether the sdrLocationString field is set.
+     */
+    @java.lang.Override
+    public boolean hasSdrLocationString() {
+      return ((bitField0_ & 0x00100000) != 0);
+    }
+    /**
+     * <code>optional string sdr_location_string = 21;</code>
+     * @return The sdrLocationString.
+     */
+    @java.lang.Override
+    public java.lang.String getSdrLocationString() {
+      java.lang.Object ref = sdrLocationString_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          sdrLocationString_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string sdr_location_string = 21;</code>
+     * @return The bytes for sdrLocationString.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSdrLocationStringBytes() {
+      java.lang.Object ref = sdrLocationString_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sdrLocationString_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getServerIp());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, queryPort_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, gamePort_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(4, spectatorPort_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, spectatorServerName_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, serverName_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeFixed64(7, steamid_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(8, appId_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, gamedir_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, map_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, gameDescription_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, gametype_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeUInt32(13, numPlayers_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        output.writeUInt32(14, maxPlayers_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        output.writeUInt32(15, numBots_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        output.writeBool(16, password_);
+      }
+      if (((bitField0_ & 0x00010000) != 0)) {
+        output.writeBool(17, secure_);
+      }
+      if (((bitField0_ & 0x00020000) != 0)) {
+        output.writeBool(18, dedicated_);
+      }
+      if (((bitField0_ & 0x00040000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, version_);
+      }
+      if (((bitField0_ & 0x00080000) != 0)) {
+        output.writeFixed32(20, sdrPopid_);
+      }
+      if (((bitField0_ & 0x00100000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, sdrLocationString_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getServerIp());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, queryPort_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, gamePort_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, spectatorPort_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, spectatorServerName_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, serverName_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(7, steamid_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, appId_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, gamedir_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, map_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, gameDescription_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, gametype_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, numPlayers_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, maxPlayers_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, numBots_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(16, password_);
+      }
+      if (((bitField0_ & 0x00010000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(17, secure_);
+      }
+      if (((bitField0_ & 0x00020000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(18, dedicated_);
+      }
+      if (((bitField0_ & 0x00040000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, version_);
+      }
+      if (((bitField0_ & 0x00080000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(20, sdrPopid_);
+      }
+      if (((bitField0_ & 0x00100000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, sdrLocationString_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData)) {
+        return super.equals(obj);
+      }
+      SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData other = (SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData) obj;
+
+      if (hasServerIp() != other.hasServerIp()) return false;
+      if (hasServerIp()) {
+        if (!getServerIp()
+            .equals(other.getServerIp())) return false;
+      }
+      if (hasQueryPort() != other.hasQueryPort()) return false;
+      if (hasQueryPort()) {
+        if (getQueryPort()
+            != other.getQueryPort()) return false;
+      }
+      if (hasGamePort() != other.hasGamePort()) return false;
+      if (hasGamePort()) {
+        if (getGamePort()
+            != other.getGamePort()) return false;
+      }
+      if (hasSpectatorPort() != other.hasSpectatorPort()) return false;
+      if (hasSpectatorPort()) {
+        if (getSpectatorPort()
+            != other.getSpectatorPort()) return false;
+      }
+      if (hasSpectatorServerName() != other.hasSpectatorServerName()) return false;
+      if (hasSpectatorServerName()) {
+        if (!getSpectatorServerName()
+            .equals(other.getSpectatorServerName())) return false;
+      }
+      if (hasServerName() != other.hasServerName()) return false;
+      if (hasServerName()) {
+        if (!getServerName()
+            .equals(other.getServerName())) return false;
+      }
+      if (hasSteamid() != other.hasSteamid()) return false;
+      if (hasSteamid()) {
+        if (getSteamid()
+            != other.getSteamid()) return false;
+      }
+      if (hasAppId() != other.hasAppId()) return false;
+      if (hasAppId()) {
+        if (getAppId()
+            != other.getAppId()) return false;
+      }
+      if (hasGamedir() != other.hasGamedir()) return false;
+      if (hasGamedir()) {
+        if (!getGamedir()
+            .equals(other.getGamedir())) return false;
+      }
+      if (hasMap() != other.hasMap()) return false;
+      if (hasMap()) {
+        if (!getMap()
+            .equals(other.getMap())) return false;
+      }
+      if (hasGameDescription() != other.hasGameDescription()) return false;
+      if (hasGameDescription()) {
+        if (!getGameDescription()
+            .equals(other.getGameDescription())) return false;
+      }
+      if (hasGametype() != other.hasGametype()) return false;
+      if (hasGametype()) {
+        if (!getGametype()
+            .equals(other.getGametype())) return false;
+      }
+      if (hasNumPlayers() != other.hasNumPlayers()) return false;
+      if (hasNumPlayers()) {
+        if (getNumPlayers()
+            != other.getNumPlayers()) return false;
+      }
+      if (hasMaxPlayers() != other.hasMaxPlayers()) return false;
+      if (hasMaxPlayers()) {
+        if (getMaxPlayers()
+            != other.getMaxPlayers()) return false;
+      }
+      if (hasNumBots() != other.hasNumBots()) return false;
+      if (hasNumBots()) {
+        if (getNumBots()
+            != other.getNumBots()) return false;
+      }
+      if (hasPassword() != other.hasPassword()) return false;
+      if (hasPassword()) {
+        if (getPassword()
+            != other.getPassword()) return false;
+      }
+      if (hasSecure() != other.hasSecure()) return false;
+      if (hasSecure()) {
+        if (getSecure()
+            != other.getSecure()) return false;
+      }
+      if (hasDedicated() != other.hasDedicated()) return false;
+      if (hasDedicated()) {
+        if (getDedicated()
+            != other.getDedicated()) return false;
+      }
+      if (hasVersion() != other.hasVersion()) return false;
+      if (hasVersion()) {
+        if (!getVersion()
+            .equals(other.getVersion())) return false;
+      }
+      if (hasSdrPopid() != other.hasSdrPopid()) return false;
+      if (hasSdrPopid()) {
+        if (getSdrPopid()
+            != other.getSdrPopid()) return false;
+      }
+      if (hasSdrLocationString() != other.hasSdrLocationString()) return false;
+      if (hasSdrLocationString()) {
+        if (!getSdrLocationString()
+            .equals(other.getSdrLocationString())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasServerIp()) {
+        hash = (37 * hash) + SERVER_IP_FIELD_NUMBER;
+        hash = (53 * hash) + getServerIp().hashCode();
+      }
+      if (hasQueryPort()) {
+        hash = (37 * hash) + QUERY_PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryPort();
+      }
+      if (hasGamePort()) {
+        hash = (37 * hash) + GAME_PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getGamePort();
+      }
+      if (hasSpectatorPort()) {
+        hash = (37 * hash) + SPECTATOR_PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getSpectatorPort();
+      }
+      if (hasSpectatorServerName()) {
+        hash = (37 * hash) + SPECTATOR_SERVER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getSpectatorServerName().hashCode();
+      }
+      if (hasServerName()) {
+        hash = (37 * hash) + SERVER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getServerName().hashCode();
+      }
+      if (hasSteamid()) {
+        hash = (37 * hash) + STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSteamid());
+      }
+      if (hasAppId()) {
+        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppId();
+      }
+      if (hasGamedir()) {
+        hash = (37 * hash) + GAMEDIR_FIELD_NUMBER;
+        hash = (53 * hash) + getGamedir().hashCode();
+      }
+      if (hasMap()) {
+        hash = (37 * hash) + MAP_FIELD_NUMBER;
+        hash = (53 * hash) + getMap().hashCode();
+      }
+      if (hasGameDescription()) {
+        hash = (37 * hash) + GAME_DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getGameDescription().hashCode();
+      }
+      if (hasGametype()) {
+        hash = (37 * hash) + GAMETYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getGametype().hashCode();
+      }
+      if (hasNumPlayers()) {
+        hash = (37 * hash) + NUM_PLAYERS_FIELD_NUMBER;
+        hash = (53 * hash) + getNumPlayers();
+      }
+      if (hasMaxPlayers()) {
+        hash = (37 * hash) + MAX_PLAYERS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxPlayers();
+      }
+      if (hasNumBots()) {
+        hash = (37 * hash) + NUM_BOTS_FIELD_NUMBER;
+        hash = (53 * hash) + getNumBots();
+      }
+      if (hasPassword()) {
+        hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPassword());
+      }
+      if (hasSecure()) {
+        hash = (37 * hash) + SECURE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSecure());
+      }
+      if (hasDedicated()) {
+        hash = (37 * hash) + DEDICATED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getDedicated());
+      }
+      if (hasVersion()) {
+        hash = (37 * hash) + VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getVersion().hashCode();
+      }
+      if (hasSdrPopid()) {
+        hash = (37 * hash) + SDR_POPID_FIELD_NUMBER;
+        hash = (53 * hash) + getSdrPopid();
+      }
+      if (hasSdrLocationString()) {
+        hash = (37 * hash) + SDR_LOCATION_STRING_FIELD_NUMBER;
+        hash = (53 * hash) + getSdrLocationString().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgGameServerPingQueryData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgGameServerPingQueryData)
+        SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPingQueryData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPingQueryData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.class, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder.class);
+      }
+
+      // Construct using SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getServerIpFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (serverIpBuilder_ == null) {
+          serverIp_ = null;
+        } else {
+          serverIpBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        queryPort_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        gamePort_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        spectatorPort_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        spectatorServerName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        serverName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        steamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        appId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        gamedir_ = "";
+        bitField0_ = (bitField0_ & ~0x00000100);
+        map_ = "";
+        bitField0_ = (bitField0_ & ~0x00000200);
+        gameDescription_ = "";
+        bitField0_ = (bitField0_ & ~0x00000400);
+        gametype_ = "";
+        bitField0_ = (bitField0_ & ~0x00000800);
+        numPlayers_ = 0;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        maxPlayers_ = 0;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        numBots_ = 0;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        password_ = false;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        secure_ = false;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        dedicated_ = false;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        version_ = "";
+        bitField0_ = (bitField0_ & ~0x00040000);
+        sdrPopid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        sdrLocationString_ = "";
+        bitField0_ = (bitField0_ & ~0x00100000);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPingQueryData_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData getDefaultInstanceForType() {
+        return SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData build() {
+        SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData buildPartial() {
+        SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData result = new SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (serverIpBuilder_ == null) {
+            result.serverIp_ = serverIp_;
+          } else {
+            result.serverIp_ = serverIpBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.queryPort_ = queryPort_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gamePort_ = gamePort_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.spectatorPort_ = spectatorPort_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.spectatorServerName_ = spectatorServerName_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.serverName_ = serverName_;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.steamid_ = steamid_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.appId_ = appId_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.gamedir_ = gamedir_;
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.map_ = map_;
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.gameDescription_ = gameDescription_;
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.gametype_ = gametype_;
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.numPlayers_ = numPlayers_;
+          to_bitField0_ |= 0x00001000;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.maxPlayers_ = maxPlayers_;
+          to_bitField0_ |= 0x00002000;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.numBots_ = numBots_;
+          to_bitField0_ |= 0x00004000;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.password_ = password_;
+          to_bitField0_ |= 0x00008000;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.secure_ = secure_;
+          to_bitField0_ |= 0x00010000;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.dedicated_ = dedicated_;
+          to_bitField0_ |= 0x00020000;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        result.version_ = version_;
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.sdrPopid_ = sdrPopid_;
+          to_bitField0_ |= 0x00080000;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          to_bitField0_ |= 0x00100000;
+        }
+        result.sdrLocationString_ = sdrLocationString_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData) {
+          return mergeFrom((SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData other) {
+        if (other == SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance()) return this;
+        if (other.hasServerIp()) {
+          mergeServerIp(other.getServerIp());
+        }
+        if (other.hasQueryPort()) {
+          setQueryPort(other.getQueryPort());
+        }
+        if (other.hasGamePort()) {
+          setGamePort(other.getGamePort());
+        }
+        if (other.hasSpectatorPort()) {
+          setSpectatorPort(other.getSpectatorPort());
+        }
+        if (other.hasSpectatorServerName()) {
+          bitField0_ |= 0x00000010;
+          spectatorServerName_ = other.spectatorServerName_;
+          onChanged();
+        }
+        if (other.hasServerName()) {
+          bitField0_ |= 0x00000020;
+          serverName_ = other.serverName_;
+          onChanged();
+        }
+        if (other.hasSteamid()) {
+          setSteamid(other.getSteamid());
+        }
+        if (other.hasAppId()) {
+          setAppId(other.getAppId());
+        }
+        if (other.hasGamedir()) {
+          bitField0_ |= 0x00000100;
+          gamedir_ = other.gamedir_;
+          onChanged();
+        }
+        if (other.hasMap()) {
+          bitField0_ |= 0x00000200;
+          map_ = other.map_;
+          onChanged();
+        }
+        if (other.hasGameDescription()) {
+          bitField0_ |= 0x00000400;
+          gameDescription_ = other.gameDescription_;
+          onChanged();
+        }
+        if (other.hasGametype()) {
+          bitField0_ |= 0x00000800;
+          gametype_ = other.gametype_;
+          onChanged();
+        }
+        if (other.hasNumPlayers()) {
+          setNumPlayers(other.getNumPlayers());
+        }
+        if (other.hasMaxPlayers()) {
+          setMaxPlayers(other.getMaxPlayers());
+        }
+        if (other.hasNumBots()) {
+          setNumBots(other.getNumBots());
+        }
+        if (other.hasPassword()) {
+          setPassword(other.getPassword());
+        }
+        if (other.hasSecure()) {
+          setSecure(other.getSecure());
+        }
+        if (other.hasDedicated()) {
+          setDedicated(other.getDedicated());
+        }
+        if (other.hasVersion()) {
+          bitField0_ |= 0x00040000;
+          version_ = other.version_;
+          onChanged();
+        }
+        if (other.hasSdrPopid()) {
+          setSdrPopid(other.getSdrPopid());
+        }
+        if (other.hasSdrLocationString()) {
+          bitField0_ |= 0x00100000;
+          sdrLocationString_ = other.sdrLocationString_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private SteammessagesBase.CMsgIPAddress serverIp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesBase.CMsgIPAddress, SteammessagesBase.CMsgIPAddress.Builder, SteammessagesBase.CMsgIPAddressOrBuilder> serverIpBuilder_;
+      /**
+       * <code>optional .CMsgIPAddress server_ip = 1;</code>
+       * @return Whether the serverIp field is set.
+       */
+      public boolean hasServerIp() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .CMsgIPAddress server_ip = 1;</code>
+       * @return The serverIp.
+       */
+      public SteammessagesBase.CMsgIPAddress getServerIp() {
+        if (serverIpBuilder_ == null) {
+          return serverIp_ == null ? SteammessagesBase.CMsgIPAddress.getDefaultInstance() : serverIp_;
+        } else {
+          return serverIpBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgIPAddress server_ip = 1;</code>
+       */
+      public Builder setServerIp(SteammessagesBase.CMsgIPAddress value) {
+        if (serverIpBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          serverIp_ = value;
+          onChanged();
+        } else {
+          serverIpBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPAddress server_ip = 1;</code>
+       */
+      public Builder setServerIp(
+          SteammessagesBase.CMsgIPAddress.Builder builderForValue) {
+        if (serverIpBuilder_ == null) {
+          serverIp_ = builderForValue.build();
+          onChanged();
+        } else {
+          serverIpBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPAddress server_ip = 1;</code>
+       */
+      public Builder mergeServerIp(SteammessagesBase.CMsgIPAddress value) {
+        if (serverIpBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              serverIp_ != null &&
+              serverIp_ != SteammessagesBase.CMsgIPAddress.getDefaultInstance()) {
+            serverIp_ =
+              SteammessagesBase.CMsgIPAddress.newBuilder(serverIp_).mergeFrom(value).buildPartial();
+          } else {
+            serverIp_ = value;
+          }
+          onChanged();
+        } else {
+          serverIpBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPAddress server_ip = 1;</code>
+       */
+      public Builder clearServerIp() {
+        if (serverIpBuilder_ == null) {
+          serverIp_ = null;
+          onChanged();
+        } else {
+          serverIpBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPAddress server_ip = 1;</code>
+       */
+      public SteammessagesBase.CMsgIPAddress.Builder getServerIpBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getServerIpFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgIPAddress server_ip = 1;</code>
+       */
+      public SteammessagesBase.CMsgIPAddressOrBuilder getServerIpOrBuilder() {
+        if (serverIpBuilder_ != null) {
+          return serverIpBuilder_.getMessageOrBuilder();
+        } else {
+          return serverIp_ == null ?
+              SteammessagesBase.CMsgIPAddress.getDefaultInstance() : serverIp_;
+        }
+      }
+      /**
+       * <code>optional .CMsgIPAddress server_ip = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesBase.CMsgIPAddress, SteammessagesBase.CMsgIPAddress.Builder, SteammessagesBase.CMsgIPAddressOrBuilder> 
+          getServerIpFieldBuilder() {
+        if (serverIpBuilder_ == null) {
+          serverIpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesBase.CMsgIPAddress, SteammessagesBase.CMsgIPAddress.Builder, SteammessagesBase.CMsgIPAddressOrBuilder>(
+                  getServerIp(),
+                  getParentForChildren(),
+                  isClean());
+          serverIp_ = null;
+        }
+        return serverIpBuilder_;
+      }
+
+      private int queryPort_ ;
+      /**
+       * <code>optional uint32 query_port = 2;</code>
+       * @return Whether the queryPort field is set.
+       */
+      @java.lang.Override
+      public boolean hasQueryPort() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 query_port = 2;</code>
+       * @return The queryPort.
+       */
+      @java.lang.Override
+      public int getQueryPort() {
+        return queryPort_;
+      }
+      /**
+       * <code>optional uint32 query_port = 2;</code>
+       * @param value The queryPort to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryPort(int value) {
+        bitField0_ |= 0x00000002;
+        queryPort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 query_port = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryPort() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        queryPort_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int gamePort_ ;
+      /**
+       * <code>optional uint32 game_port = 3;</code>
+       * @return Whether the gamePort field is set.
+       */
+      @java.lang.Override
+      public boolean hasGamePort() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 game_port = 3;</code>
+       * @return The gamePort.
+       */
+      @java.lang.Override
+      public int getGamePort() {
+        return gamePort_;
+      }
+      /**
+       * <code>optional uint32 game_port = 3;</code>
+       * @param value The gamePort to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGamePort(int value) {
+        bitField0_ |= 0x00000004;
+        gamePort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 game_port = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGamePort() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gamePort_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int spectatorPort_ ;
+      /**
+       * <code>optional uint32 spectator_port = 4;</code>
+       * @return Whether the spectatorPort field is set.
+       */
+      @java.lang.Override
+      public boolean hasSpectatorPort() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 spectator_port = 4;</code>
+       * @return The spectatorPort.
+       */
+      @java.lang.Override
+      public int getSpectatorPort() {
+        return spectatorPort_;
+      }
+      /**
+       * <code>optional uint32 spectator_port = 4;</code>
+       * @param value The spectatorPort to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpectatorPort(int value) {
+        bitField0_ |= 0x00000008;
+        spectatorPort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 spectator_port = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpectatorPort() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        spectatorPort_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object spectatorServerName_ = "";
+      /**
+       * <code>optional string spectator_server_name = 5;</code>
+       * @return Whether the spectatorServerName field is set.
+       */
+      public boolean hasSpectatorServerName() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string spectator_server_name = 5;</code>
+       * @return The spectatorServerName.
+       */
+      public java.lang.String getSpectatorServerName() {
+        java.lang.Object ref = spectatorServerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            spectatorServerName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string spectator_server_name = 5;</code>
+       * @return The bytes for spectatorServerName.
+       */
+      public com.google.protobuf.ByteString
+          getSpectatorServerNameBytes() {
+        java.lang.Object ref = spectatorServerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          spectatorServerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string spectator_server_name = 5;</code>
+       * @param value The spectatorServerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpectatorServerName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        spectatorServerName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string spectator_server_name = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpectatorServerName() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        spectatorServerName_ = getDefaultInstance().getSpectatorServerName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string spectator_server_name = 5;</code>
+       * @param value The bytes for spectatorServerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpectatorServerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        spectatorServerName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serverName_ = "";
+      /**
+       * <code>optional string server_name = 6;</code>
+       * @return Whether the serverName field is set.
+       */
+      public boolean hasServerName() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string server_name = 6;</code>
+       * @return The serverName.
+       */
+      public java.lang.String getServerName() {
+        java.lang.Object ref = serverName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            serverName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string server_name = 6;</code>
+       * @return The bytes for serverName.
+       */
+      public com.google.protobuf.ByteString
+          getServerNameBytes() {
+        java.lang.Object ref = serverName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serverName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string server_name = 6;</code>
+       * @param value The serverName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        serverName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string server_name = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerName() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        serverName_ = getDefaultInstance().getServerName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string server_name = 6;</code>
+       * @param value The bytes for serverName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        serverName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long steamid_ ;
+      /**
+       * <code>optional fixed64 steamid = 7;</code>
+       * @return Whether the steamid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSteamid() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional fixed64 steamid = 7;</code>
+       * @return The steamid.
+       */
+      @java.lang.Override
+      public long getSteamid() {
+        return steamid_;
+      }
+      /**
+       * <code>optional fixed64 steamid = 7;</code>
+       * @param value The steamid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamid(long value) {
+        bitField0_ |= 0x00000040;
+        steamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 steamid = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        steamid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int appId_ ;
+      /**
+       * <code>optional uint32 app_id = 8;</code>
+       * @return Whether the appId field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppId() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 app_id = 8;</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public int getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>optional uint32 app_id = 8;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(int value) {
+        bitField0_ |= 0x00000080;
+        appId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 app_id = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        appId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object gamedir_ = "";
+      /**
+       * <code>optional string gamedir = 9;</code>
+       * @return Whether the gamedir field is set.
+       */
+      public boolean hasGamedir() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional string gamedir = 9;</code>
+       * @return The gamedir.
+       */
+      public java.lang.String getGamedir() {
+        java.lang.Object ref = gamedir_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            gamedir_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string gamedir = 9;</code>
+       * @return The bytes for gamedir.
+       */
+      public com.google.protobuf.ByteString
+          getGamedirBytes() {
+        java.lang.Object ref = gamedir_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gamedir_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string gamedir = 9;</code>
+       * @param value The gamedir to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGamedir(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        gamedir_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string gamedir = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGamedir() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        gamedir_ = getDefaultInstance().getGamedir();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string gamedir = 9;</code>
+       * @param value The bytes for gamedir to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGamedirBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        gamedir_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object map_ = "";
+      /**
+       * <code>optional string map = 10;</code>
+       * @return Whether the map field is set.
+       */
+      public boolean hasMap() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional string map = 10;</code>
+       * @return The map.
+       */
+      public java.lang.String getMap() {
+        java.lang.Object ref = map_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            map_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string map = 10;</code>
+       * @return The bytes for map.
+       */
+      public com.google.protobuf.ByteString
+          getMapBytes() {
+        java.lang.Object ref = map_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          map_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string map = 10;</code>
+       * @param value The map to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMap(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        map_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string map = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMap() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        map_ = getDefaultInstance().getMap();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string map = 10;</code>
+       * @param value The bytes for map to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMapBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        map_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object gameDescription_ = "";
+      /**
+       * <code>optional string game_description = 11;</code>
+       * @return Whether the gameDescription field is set.
+       */
+      public boolean hasGameDescription() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional string game_description = 11;</code>
+       * @return The gameDescription.
+       */
+      public java.lang.String getGameDescription() {
+        java.lang.Object ref = gameDescription_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            gameDescription_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string game_description = 11;</code>
+       * @return The bytes for gameDescription.
+       */
+      public com.google.protobuf.ByteString
+          getGameDescriptionBytes() {
+        java.lang.Object ref = gameDescription_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gameDescription_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string game_description = 11;</code>
+       * @param value The gameDescription to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGameDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        gameDescription_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string game_description = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGameDescription() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        gameDescription_ = getDefaultInstance().getGameDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string game_description = 11;</code>
+       * @param value The bytes for gameDescription to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGameDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        gameDescription_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object gametype_ = "";
+      /**
+       * <code>optional string gametype = 12;</code>
+       * @return Whether the gametype field is set.
+       */
+      public boolean hasGametype() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional string gametype = 12;</code>
+       * @return The gametype.
+       */
+      public java.lang.String getGametype() {
+        java.lang.Object ref = gametype_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            gametype_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string gametype = 12;</code>
+       * @return The bytes for gametype.
+       */
+      public com.google.protobuf.ByteString
+          getGametypeBytes() {
+        java.lang.Object ref = gametype_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gametype_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string gametype = 12;</code>
+       * @param value The gametype to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGametype(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        gametype_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string gametype = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGametype() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        gametype_ = getDefaultInstance().getGametype();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string gametype = 12;</code>
+       * @param value The bytes for gametype to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGametypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        gametype_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int numPlayers_ ;
+      /**
+       * <code>optional uint32 num_players = 13;</code>
+       * @return Whether the numPlayers field is set.
+       */
+      @java.lang.Override
+      public boolean hasNumPlayers() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional uint32 num_players = 13;</code>
+       * @return The numPlayers.
+       */
+      @java.lang.Override
+      public int getNumPlayers() {
+        return numPlayers_;
+      }
+      /**
+       * <code>optional uint32 num_players = 13;</code>
+       * @param value The numPlayers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumPlayers(int value) {
+        bitField0_ |= 0x00001000;
+        numPlayers_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 num_players = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumPlayers() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        numPlayers_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int maxPlayers_ ;
+      /**
+       * <code>optional uint32 max_players = 14;</code>
+       * @return Whether the maxPlayers field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxPlayers() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional uint32 max_players = 14;</code>
+       * @return The maxPlayers.
+       */
+      @java.lang.Override
+      public int getMaxPlayers() {
+        return maxPlayers_;
+      }
+      /**
+       * <code>optional uint32 max_players = 14;</code>
+       * @param value The maxPlayers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPlayers(int value) {
+        bitField0_ |= 0x00002000;
+        maxPlayers_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 max_players = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPlayers() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        maxPlayers_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int numBots_ ;
+      /**
+       * <code>optional uint32 num_bots = 15;</code>
+       * @return Whether the numBots field is set.
+       */
+      @java.lang.Override
+      public boolean hasNumBots() {
+        return ((bitField0_ & 0x00004000) != 0);
+      }
+      /**
+       * <code>optional uint32 num_bots = 15;</code>
+       * @return The numBots.
+       */
+      @java.lang.Override
+      public int getNumBots() {
+        return numBots_;
+      }
+      /**
+       * <code>optional uint32 num_bots = 15;</code>
+       * @param value The numBots to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumBots(int value) {
+        bitField0_ |= 0x00004000;
+        numBots_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 num_bots = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumBots() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        numBots_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean password_ ;
+      /**
+       * <code>optional bool password = 16;</code>
+       * @return Whether the password field is set.
+       */
+      @java.lang.Override
+      public boolean hasPassword() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>optional bool password = 16;</code>
+       * @return The password.
+       */
+      @java.lang.Override
+      public boolean getPassword() {
+        return password_;
+      }
+      /**
+       * <code>optional bool password = 16;</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassword(boolean value) {
+        bitField0_ |= 0x00008000;
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool password = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPassword() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        password_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean secure_ ;
+      /**
+       * <code>optional bool secure = 17;</code>
+       * @return Whether the secure field is set.
+       */
+      @java.lang.Override
+      public boolean hasSecure() {
+        return ((bitField0_ & 0x00010000) != 0);
+      }
+      /**
+       * <code>optional bool secure = 17;</code>
+       * @return The secure.
+       */
+      @java.lang.Override
+      public boolean getSecure() {
+        return secure_;
+      }
+      /**
+       * <code>optional bool secure = 17;</code>
+       * @param value The secure to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecure(boolean value) {
+        bitField0_ |= 0x00010000;
+        secure_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool secure = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecure() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        secure_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean dedicated_ ;
+      /**
+       * <code>optional bool dedicated = 18;</code>
+       * @return Whether the dedicated field is set.
+       */
+      @java.lang.Override
+      public boolean hasDedicated() {
+        return ((bitField0_ & 0x00020000) != 0);
+      }
+      /**
+       * <code>optional bool dedicated = 18;</code>
+       * @return The dedicated.
+       */
+      @java.lang.Override
+      public boolean getDedicated() {
+        return dedicated_;
+      }
+      /**
+       * <code>optional bool dedicated = 18;</code>
+       * @param value The dedicated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDedicated(boolean value) {
+        bitField0_ |= 0x00020000;
+        dedicated_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool dedicated = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDedicated() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        dedicated_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <code>optional string version = 19;</code>
+       * @return Whether the version field is set.
+       */
+      public boolean hasVersion() {
+        return ((bitField0_ & 0x00040000) != 0);
+      }
+      /**
+       * <code>optional string version = 19;</code>
+       * @return The version.
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            version_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string version = 19;</code>
+       * @return The bytes for version.
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string version = 19;</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00040000;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string version = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string version = 19;</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00040000;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int sdrPopid_ ;
+      /**
+       * <code>optional fixed32 sdr_popid = 20;</code>
+       * @return Whether the sdrPopid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSdrPopid() {
+        return ((bitField0_ & 0x00080000) != 0);
+      }
+      /**
+       * <code>optional fixed32 sdr_popid = 20;</code>
+       * @return The sdrPopid.
+       */
+      @java.lang.Override
+      public int getSdrPopid() {
+        return sdrPopid_;
+      }
+      /**
+       * <code>optional fixed32 sdr_popid = 20;</code>
+       * @param value The sdrPopid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdrPopid(int value) {
+        bitField0_ |= 0x00080000;
+        sdrPopid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 sdr_popid = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSdrPopid() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        sdrPopid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sdrLocationString_ = "";
+      /**
+       * <code>optional string sdr_location_string = 21;</code>
+       * @return Whether the sdrLocationString field is set.
+       */
+      public boolean hasSdrLocationString() {
+        return ((bitField0_ & 0x00100000) != 0);
+      }
+      /**
+       * <code>optional string sdr_location_string = 21;</code>
+       * @return The sdrLocationString.
+       */
+      public java.lang.String getSdrLocationString() {
+        java.lang.Object ref = sdrLocationString_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            sdrLocationString_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string sdr_location_string = 21;</code>
+       * @return The bytes for sdrLocationString.
+       */
+      public com.google.protobuf.ByteString
+          getSdrLocationStringBytes() {
+        java.lang.Object ref = sdrLocationString_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sdrLocationString_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string sdr_location_string = 21;</code>
+       * @param value The sdrLocationString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdrLocationString(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00100000;
+        sdrLocationString_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sdr_location_string = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSdrLocationString() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        sdrLocationString_ = getDefaultInstance().getSdrLocationString();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sdr_location_string = 21;</code>
+       * @param value The bytes for sdrLocationString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdrLocationStringBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00100000;
+        sdrLocationString_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgGameServerPingQueryData)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgGameServerPingQueryData)
+    private static final SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData();
+    }
+
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgGameServerPingQueryData>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgGameServerPingQueryData>() {
+      @java.lang.Override
+      public CMsgGameServerPingQueryData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgGameServerPingQueryData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgGameServerPingQueryData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgGameServerPingQueryData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgGameServerPlayersQueryDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgGameServerPlayersQueryData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+     */
+    java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player> 
+        getPlayersList();
+    /**
+     * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player getPlayers(int index);
+    /**
+     * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+     */
+    int getPlayersCount();
+    /**
+     * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+     */
+    java.util.List<? extends SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PlayerOrBuilder> 
+        getPlayersOrBuilderList();
+    /**
+     * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PlayerOrBuilder getPlayersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CMsgGameServerPlayersQueryData}
+   */
+  public static final class CMsgGameServerPlayersQueryData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgGameServerPlayersQueryData)
+      CMsgGameServerPlayersQueryDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgGameServerPlayersQueryData.newBuilder() to construct.
+    private CMsgGameServerPlayersQueryData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgGameServerPlayersQueryData() {
+      players_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgGameServerPlayersQueryData();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgGameServerPlayersQueryData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                players_ = new java.util.ArrayList<SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              players_.add(
+                  input.readMessage(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          players_ = java.util.Collections.unmodifiableList(players_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPlayersQueryData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPlayersQueryData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.class, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder.class);
+    }
+
+    public interface PlayerOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CMsgGameServerPlayersQueryData.Player)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string name = 1;</code>
+       * @return Whether the name field is set.
+       */
+      boolean hasName();
+      /**
+       * <code>optional string name = 1;</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <code>optional string name = 1;</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>optional uint32 score = 2;</code>
+       * @return Whether the score field is set.
+       */
+      boolean hasScore();
+      /**
+       * <code>optional uint32 score = 2;</code>
+       * @return The score.
+       */
+      int getScore();
+
+      /**
+       * <code>optional uint32 time_played = 3;</code>
+       * @return Whether the timePlayed field is set.
+       */
+      boolean hasTimePlayed();
+      /**
+       * <code>optional uint32 time_played = 3;</code>
+       * @return The timePlayed.
+       */
+      int getTimePlayed();
+    }
+    /**
+     * Protobuf type {@code CMsgGameServerPlayersQueryData.Player}
+     */
+    public static final class Player extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CMsgGameServerPlayersQueryData.Player)
+        PlayerOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Player.newBuilder() to construct.
+      private Player(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Player() {
+        name_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Player();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Player(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                name_ = bs;
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                score_ = input.readUInt32();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                timePlayed_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPlayersQueryData_Player_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPlayersQueryData_Player_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.class, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>optional string name = 1;</code>
+       * @return Whether the name field is set.
+       */
+      @java.lang.Override
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int SCORE_FIELD_NUMBER = 2;
+      private int score_;
+      /**
+       * <code>optional uint32 score = 2;</code>
+       * @return Whether the score field is set.
+       */
+      @java.lang.Override
+      public boolean hasScore() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 score = 2;</code>
+       * @return The score.
+       */
+      @java.lang.Override
+      public int getScore() {
+        return score_;
+      }
+
+      public static final int TIME_PLAYED_FIELD_NUMBER = 3;
+      private int timePlayed_;
+      /**
+       * <code>optional uint32 time_played = 3;</code>
+       * @return Whether the timePlayed field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimePlayed() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 time_played = 3;</code>
+       * @return The timePlayed.
+       */
+      @java.lang.Override
+      public int getTimePlayed() {
+        return timePlayed_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(2, score_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeUInt32(3, timePlayed_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, score_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, timePlayed_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player)) {
+          return super.equals(obj);
+        }
+        SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player other = (SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player) obj;
+
+        if (hasName() != other.hasName()) return false;
+        if (hasName()) {
+          if (!getName()
+              .equals(other.getName())) return false;
+        }
+        if (hasScore() != other.hasScore()) return false;
+        if (hasScore()) {
+          if (getScore()
+              != other.getScore()) return false;
+        }
+        if (hasTimePlayed() != other.hasTimePlayed()) return false;
+        if (hasTimePlayed()) {
+          if (getTimePlayed()
+              != other.getTimePlayed()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasName()) {
+          hash = (37 * hash) + NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getName().hashCode();
+        }
+        if (hasScore()) {
+          hash = (37 * hash) + SCORE_FIELD_NUMBER;
+          hash = (53 * hash) + getScore();
+        }
+        if (hasTimePlayed()) {
+          hash = (37 * hash) + TIME_PLAYED_FIELD_NUMBER;
+          hash = (53 * hash) + getTimePlayed();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CMsgGameServerPlayersQueryData.Player}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CMsgGameServerPlayersQueryData.Player)
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PlayerOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPlayersQueryData_Player_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPlayersQueryData_Player_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.class, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder.class);
+        }
+
+        // Construct using SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          score_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          timePlayed_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPlayersQueryData_Player_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player getDefaultInstanceForType() {
+          return SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player build() {
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player buildPartial() {
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player result = new SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.name_ = name_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.score_ = score_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.timePlayed_ = timePlayed_;
+            to_bitField0_ |= 0x00000004;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player) {
+            return mergeFrom((SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player other) {
+          if (other == SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.getDefaultInstance()) return this;
+          if (other.hasName()) {
+            bitField0_ |= 0x00000001;
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasScore()) {
+            setScore(other.getScore());
+          }
+          if (other.hasTimePlayed()) {
+            setTimePlayed(other.getTimePlayed());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>optional string name = 1;</code>
+         * @return Whether the name field is set.
+         */
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int score_ ;
+        /**
+         * <code>optional uint32 score = 2;</code>
+         * @return Whether the score field is set.
+         */
+        @java.lang.Override
+        public boolean hasScore() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint32 score = 2;</code>
+         * @return The score.
+         */
+        @java.lang.Override
+        public int getScore() {
+          return score_;
+        }
+        /**
+         * <code>optional uint32 score = 2;</code>
+         * @param value The score to set.
+         * @return This builder for chaining.
+         */
+        public Builder setScore(int value) {
+          bitField0_ |= 0x00000002;
+          score_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 score = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearScore() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          score_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int timePlayed_ ;
+        /**
+         * <code>optional uint32 time_played = 3;</code>
+         * @return Whether the timePlayed field is set.
+         */
+        @java.lang.Override
+        public boolean hasTimePlayed() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>optional uint32 time_played = 3;</code>
+         * @return The timePlayed.
+         */
+        @java.lang.Override
+        public int getTimePlayed() {
+          return timePlayed_;
+        }
+        /**
+         * <code>optional uint32 time_played = 3;</code>
+         * @param value The timePlayed to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTimePlayed(int value) {
+          bitField0_ |= 0x00000004;
+          timePlayed_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 time_played = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTimePlayed() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          timePlayed_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CMsgGameServerPlayersQueryData.Player)
+      }
+
+      // @@protoc_insertion_point(class_scope:CMsgGameServerPlayersQueryData.Player)
+      private static final SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player();
+      }
+
+      public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Player>
+          PARSER = new com.google.protobuf.AbstractParser<Player>() {
+        @java.lang.Override
+        public Player parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Player(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Player> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Player> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int PLAYERS_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player> players_;
+    /**
+     * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player> getPlayersList() {
+      return players_;
+    }
+    /**
+     * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PlayerOrBuilder> 
+        getPlayersOrBuilderList() {
+      return players_;
+    }
+    /**
+     * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+     */
+    @java.lang.Override
+    public int getPlayersCount() {
+      return players_.size();
+    }
+    /**
+     * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player getPlayers(int index) {
+      return players_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PlayerOrBuilder getPlayersOrBuilder(
+        int index) {
+      return players_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < players_.size(); i++) {
+        output.writeMessage(1, players_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < players_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, players_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData)) {
+        return super.equals(obj);
+      }
+      SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData other = (SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData) obj;
+
+      if (!getPlayersList()
+          .equals(other.getPlayersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPlayersCount() > 0) {
+        hash = (37 * hash) + PLAYERS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayersList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgGameServerPlayersQueryData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgGameServerPlayersQueryData)
+        SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPlayersQueryData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPlayersQueryData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.class, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder.class);
+      }
+
+      // Construct using SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPlayersFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (playersBuilder_ == null) {
+          players_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          playersBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerPlayersQueryData_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData getDefaultInstanceForType() {
+        return SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData build() {
+        SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData buildPartial() {
+        SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData result = new SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData(this);
+        int from_bitField0_ = bitField0_;
+        if (playersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            players_ = java.util.Collections.unmodifiableList(players_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.players_ = players_;
+        } else {
+          result.players_ = playersBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData) {
+          return mergeFrom((SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData other) {
+        if (other == SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance()) return this;
+        if (playersBuilder_ == null) {
+          if (!other.players_.isEmpty()) {
+            if (players_.isEmpty()) {
+              players_ = other.players_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePlayersIsMutable();
+              players_.addAll(other.players_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.players_.isEmpty()) {
+            if (playersBuilder_.isEmpty()) {
+              playersBuilder_.dispose();
+              playersBuilder_ = null;
+              players_ = other.players_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              playersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPlayersFieldBuilder() : null;
+            } else {
+              playersBuilder_.addAllMessages(other.players_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player> players_ =
+        java.util.Collections.emptyList();
+      private void ensurePlayersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          players_ = new java.util.ArrayList<SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player>(players_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PlayerOrBuilder> playersBuilder_;
+
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player> getPlayersList() {
+        if (playersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(players_);
+        } else {
+          return playersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public int getPlayersCount() {
+        if (playersBuilder_ == null) {
+          return players_.size();
+        } else {
+          return playersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player getPlayers(int index) {
+        if (playersBuilder_ == null) {
+          return players_.get(index);
+        } else {
+          return playersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public Builder setPlayers(
+          int index, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player value) {
+        if (playersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlayersIsMutable();
+          players_.set(index, value);
+          onChanged();
+        } else {
+          playersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public Builder setPlayers(
+          int index, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder builderForValue) {
+        if (playersBuilder_ == null) {
+          ensurePlayersIsMutable();
+          players_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          playersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public Builder addPlayers(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player value) {
+        if (playersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlayersIsMutable();
+          players_.add(value);
+          onChanged();
+        } else {
+          playersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public Builder addPlayers(
+          int index, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player value) {
+        if (playersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlayersIsMutable();
+          players_.add(index, value);
+          onChanged();
+        } else {
+          playersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public Builder addPlayers(
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder builderForValue) {
+        if (playersBuilder_ == null) {
+          ensurePlayersIsMutable();
+          players_.add(builderForValue.build());
+          onChanged();
+        } else {
+          playersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public Builder addPlayers(
+          int index, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder builderForValue) {
+        if (playersBuilder_ == null) {
+          ensurePlayersIsMutable();
+          players_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          playersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public Builder addAllPlayers(
+          java.lang.Iterable<? extends SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player> values) {
+        if (playersBuilder_ == null) {
+          ensurePlayersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, players_);
+          onChanged();
+        } else {
+          playersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public Builder clearPlayers() {
+        if (playersBuilder_ == null) {
+          players_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          playersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public Builder removePlayers(int index) {
+        if (playersBuilder_ == null) {
+          ensurePlayersIsMutable();
+          players_.remove(index);
+          onChanged();
+        } else {
+          playersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder getPlayersBuilder(
+          int index) {
+        return getPlayersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PlayerOrBuilder getPlayersOrBuilder(
+          int index) {
+        if (playersBuilder_ == null) {
+          return players_.get(index);  } else {
+          return playersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public java.util.List<? extends SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PlayerOrBuilder> 
+           getPlayersOrBuilderList() {
+        if (playersBuilder_ != null) {
+          return playersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(players_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder addPlayersBuilder() {
+        return getPlayersFieldBuilder().addBuilder(
+            SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder addPlayersBuilder(
+          int index) {
+        return getPlayersFieldBuilder().addBuilder(
+            index, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgGameServerPlayersQueryData.Player players = 1;</code>
+       */
+      public java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder> 
+           getPlayersBuilderList() {
+        return getPlayersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PlayerOrBuilder> 
+          getPlayersFieldBuilder() {
+        if (playersBuilder_ == null) {
+          playersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Player.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PlayerOrBuilder>(
+                  players_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          players_ = null;
+        }
+        return playersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgGameServerPlayersQueryData)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgGameServerPlayersQueryData)
+    private static final SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData();
+    }
+
+    public static SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgGameServerPlayersQueryData>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgGameServerPlayersQueryData>() {
+      @java.lang.Override
+      public CMsgGameServerPlayersQueryData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgGameServerPlayersQueryData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgGameServerPlayersQueryData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgGameServerPlayersQueryData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgGameServerRulesQueryDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgGameServerRulesQueryData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+     */
+    java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule> 
+        getRulesList();
+    /**
+     * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule getRules(int index);
+    /**
+     * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+     */
+    int getRulesCount();
+    /**
+     * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+     */
+    java.util.List<? extends SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.RuleOrBuilder> 
+        getRulesOrBuilderList();
+    /**
+     * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.RuleOrBuilder getRulesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CMsgGameServerRulesQueryData}
+   */
+  public static final class CMsgGameServerRulesQueryData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgGameServerRulesQueryData)
+      CMsgGameServerRulesQueryDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgGameServerRulesQueryData.newBuilder() to construct.
+    private CMsgGameServerRulesQueryData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgGameServerRulesQueryData() {
+      rules_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgGameServerRulesQueryData();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgGameServerRulesQueryData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                rules_ = new java.util.ArrayList<SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              rules_.add(
+                  input.readMessage(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          rules_ = java.util.Collections.unmodifiableList(rules_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerRulesQueryData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerRulesQueryData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.class, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder.class);
+    }
+
+    public interface RuleOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CMsgGameServerRulesQueryData.Rule)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string rule = 1;</code>
+       * @return Whether the rule field is set.
+       */
+      boolean hasRule();
+      /**
+       * <code>optional string rule = 1;</code>
+       * @return The rule.
+       */
+      java.lang.String getRule();
+      /**
+       * <code>optional string rule = 1;</code>
+       * @return The bytes for rule.
+       */
+      com.google.protobuf.ByteString
+          getRuleBytes();
+
+      /**
+       * <code>optional string value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      boolean hasValue();
+      /**
+       * <code>optional string value = 2;</code>
+       * @return The value.
+       */
+      java.lang.String getValue();
+      /**
+       * <code>optional string value = 2;</code>
+       * @return The bytes for value.
+       */
+      com.google.protobuf.ByteString
+          getValueBytes();
+    }
+    /**
+     * Protobuf type {@code CMsgGameServerRulesQueryData.Rule}
+     */
+    public static final class Rule extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CMsgGameServerRulesQueryData.Rule)
+        RuleOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Rule.newBuilder() to construct.
+      private Rule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Rule() {
+        rule_ = "";
+        value_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Rule();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Rule(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                rule_ = bs;
+                break;
+              }
+              case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000002;
+                value_ = bs;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerRulesQueryData_Rule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerRulesQueryData_Rule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.class, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int RULE_FIELD_NUMBER = 1;
+      private volatile java.lang.Object rule_;
+      /**
+       * <code>optional string rule = 1;</code>
+       * @return Whether the rule field is set.
+       */
+      @java.lang.Override
+      public boolean hasRule() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string rule = 1;</code>
+       * @return The rule.
+       */
+      @java.lang.Override
+      public java.lang.String getRule() {
+        java.lang.Object ref = rule_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            rule_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string rule = 1;</code>
+       * @return The bytes for rule.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRuleBytes() {
+        java.lang.Object ref = rule_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rule_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int VALUE_FIELD_NUMBER = 2;
+      private volatile java.lang.Object value_;
+      /**
+       * <code>optional string value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @return The bytes for value.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rule_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rule_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule)) {
+          return super.equals(obj);
+        }
+        SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule other = (SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule) obj;
+
+        if (hasRule() != other.hasRule()) return false;
+        if (hasRule()) {
+          if (!getRule()
+              .equals(other.getRule())) return false;
+        }
+        if (hasValue() != other.hasValue()) return false;
+        if (hasValue()) {
+          if (!getValue()
+              .equals(other.getValue())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasRule()) {
+          hash = (37 * hash) + RULE_FIELD_NUMBER;
+          hash = (53 * hash) + getRule().hashCode();
+        }
+        if (hasValue()) {
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValue().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CMsgGameServerRulesQueryData.Rule}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CMsgGameServerRulesQueryData.Rule)
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.RuleOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerRulesQueryData_Rule_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerRulesQueryData_Rule_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.class, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder.class);
+        }
+
+        // Construct using SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          rule_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          value_ = "";
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerRulesQueryData_Rule_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule getDefaultInstanceForType() {
+          return SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule build() {
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule buildPartial() {
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule result = new SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.rule_ = rule_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.value_ = value_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule) {
+            return mergeFrom((SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule other) {
+          if (other == SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.getDefaultInstance()) return this;
+          if (other.hasRule()) {
+            bitField0_ |= 0x00000001;
+            rule_ = other.rule_;
+            onChanged();
+          }
+          if (other.hasValue()) {
+            bitField0_ |= 0x00000002;
+            value_ = other.value_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object rule_ = "";
+        /**
+         * <code>optional string rule = 1;</code>
+         * @return Whether the rule field is set.
+         */
+        public boolean hasRule() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string rule = 1;</code>
+         * @return The rule.
+         */
+        public java.lang.String getRule() {
+          java.lang.Object ref = rule_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              rule_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string rule = 1;</code>
+         * @return The bytes for rule.
+         */
+        public com.google.protobuf.ByteString
+            getRuleBytes() {
+          java.lang.Object ref = rule_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            rule_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string rule = 1;</code>
+         * @param value The rule to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRule(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          rule_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string rule = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRule() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          rule_ = getDefaultInstance().getRule();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string rule = 1;</code>
+         * @param value The bytes for rule to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRuleBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          rule_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object value_ = "";
+        /**
+         * <code>optional string value = 2;</code>
+         * @return Whether the value field is set.
+         */
+        public boolean hasValue() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional string value = 2;</code>
+         * @return The value.
+         */
+        public java.lang.String getValue() {
+          java.lang.Object ref = value_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              value_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string value = 2;</code>
+         * @return The bytes for value.
+         */
+        public com.google.protobuf.ByteString
+            getValueBytes() {
+          java.lang.Object ref = value_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            value_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string value = 2;</code>
+         * @param value The value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValue(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string value = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValue() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          value_ = getDefaultInstance().getValue();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string value = 2;</code>
+         * @param value The bytes for value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValueBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CMsgGameServerRulesQueryData.Rule)
+      }
+
+      // @@protoc_insertion_point(class_scope:CMsgGameServerRulesQueryData.Rule)
+      private static final SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule();
+      }
+
+      public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Rule>
+          PARSER = new com.google.protobuf.AbstractParser<Rule>() {
+        @java.lang.Override
+        public Rule parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Rule(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Rule> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Rule> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int RULES_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule> rules_;
+    /**
+     * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule> getRulesList() {
+      return rules_;
+    }
+    /**
+     * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.RuleOrBuilder> 
+        getRulesOrBuilderList() {
+      return rules_;
+    }
+    /**
+     * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+     */
+    @java.lang.Override
+    public int getRulesCount() {
+      return rules_.size();
+    }
+    /**
+     * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule getRules(int index) {
+      return rules_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.RuleOrBuilder getRulesOrBuilder(
+        int index) {
+      return rules_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rules_.size(); i++) {
+        output.writeMessage(1, rules_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rules_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rules_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData)) {
+        return super.equals(obj);
+      }
+      SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData other = (SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData) obj;
+
+      if (!getRulesList()
+          .equals(other.getRulesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRulesCount() > 0) {
+        hash = (37 * hash) + RULES_FIELD_NUMBER;
+        hash = (53 * hash) + getRulesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgGameServerRulesQueryData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgGameServerRulesQueryData)
+        SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerRulesQueryData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerRulesQueryData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.class, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder.class);
+      }
+
+      // Construct using SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRulesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (rulesBuilder_ == null) {
+          rules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          rulesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesGameserversSteamclient.internal_static_CMsgGameServerRulesQueryData_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData getDefaultInstanceForType() {
+        return SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData build() {
+        SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData buildPartial() {
+        SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData result = new SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData(this);
+        int from_bitField0_ = bitField0_;
+        if (rulesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            rules_ = java.util.Collections.unmodifiableList(rules_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rules_ = rules_;
+        } else {
+          result.rules_ = rulesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData) {
+          return mergeFrom((SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData other) {
+        if (other == SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance()) return this;
+        if (rulesBuilder_ == null) {
+          if (!other.rules_.isEmpty()) {
+            if (rules_.isEmpty()) {
+              rules_ = other.rules_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRulesIsMutable();
+              rules_.addAll(other.rules_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rules_.isEmpty()) {
+            if (rulesBuilder_.isEmpty()) {
+              rulesBuilder_.dispose();
+              rulesBuilder_ = null;
+              rules_ = other.rules_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rulesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRulesFieldBuilder() : null;
+            } else {
+              rulesBuilder_.addAllMessages(other.rules_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule> rules_ =
+        java.util.Collections.emptyList();
+      private void ensureRulesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rules_ = new java.util.ArrayList<SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule>(rules_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.RuleOrBuilder> rulesBuilder_;
+
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule> getRulesList() {
+        if (rulesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rules_);
+        } else {
+          return rulesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public int getRulesCount() {
+        if (rulesBuilder_ == null) {
+          return rules_.size();
+        } else {
+          return rulesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule getRules(int index) {
+        if (rulesBuilder_ == null) {
+          return rules_.get(index);
+        } else {
+          return rulesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public Builder setRules(
+          int index, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule value) {
+        if (rulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRulesIsMutable();
+          rules_.set(index, value);
+          onChanged();
+        } else {
+          rulesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public Builder setRules(
+          int index, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder builderForValue) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rulesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public Builder addRules(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule value) {
+        if (rulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRulesIsMutable();
+          rules_.add(value);
+          onChanged();
+        } else {
+          rulesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public Builder addRules(
+          int index, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule value) {
+        if (rulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRulesIsMutable();
+          rules_.add(index, value);
+          onChanged();
+        } else {
+          rulesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public Builder addRules(
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder builderForValue) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rulesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public Builder addRules(
+          int index, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder builderForValue) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rulesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public Builder addAllRules(
+          java.lang.Iterable<? extends SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule> values) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rules_);
+          onChanged();
+        } else {
+          rulesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public Builder clearRules() {
+        if (rulesBuilder_ == null) {
+          rules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rulesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public Builder removeRules(int index) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.remove(index);
+          onChanged();
+        } else {
+          rulesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder getRulesBuilder(
+          int index) {
+        return getRulesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.RuleOrBuilder getRulesOrBuilder(
+          int index) {
+        if (rulesBuilder_ == null) {
+          return rules_.get(index);  } else {
+          return rulesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public java.util.List<? extends SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.RuleOrBuilder> 
+           getRulesOrBuilderList() {
+        if (rulesBuilder_ != null) {
+          return rulesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rules_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder addRulesBuilder() {
+        return getRulesFieldBuilder().addBuilder(
+            SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder addRulesBuilder(
+          int index) {
+        return getRulesFieldBuilder().addBuilder(
+            index, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgGameServerRulesQueryData.Rule rules = 1;</code>
+       */
+      public java.util.List<SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder> 
+           getRulesBuilderList() {
+        return getRulesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.RuleOrBuilder> 
+          getRulesFieldBuilder() {
+        if (rulesBuilder_ == null) {
+          rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Rule.Builder, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.RuleOrBuilder>(
+                  rules_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rules_ = null;
+        }
+        return rulesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgGameServerRulesQueryData)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgGameServerRulesQueryData)
+    private static final SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData();
+    }
+
+    public static SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgGameServerRulesQueryData>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgGameServerRulesQueryData>() {
+      @java.lang.Override
+      public CMsgGameServerRulesQueryData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgGameServerRulesQueryData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgGameServerRulesQueryData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgGameServerRulesQueryData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CGameServers_GameServerQuery_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CGameServers_GameServerQuery_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     * @return Whether the pingData field is set.
+     */
+    boolean hasPingData();
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     * @return The pingData.
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData getPingData();
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder getPingDataOrBuilder();
+
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     * @return Whether the playersData field is set.
+     */
+    boolean hasPlayersData();
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     * @return The playersData.
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData getPlayersData();
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder getPlayersDataOrBuilder();
+
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     * @return Whether the rulesData field is set.
+     */
+    boolean hasRulesData();
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     * @return The rulesData.
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData getRulesData();
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder getRulesDataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code CGameServers_GameServerQuery_Response}
+   */
+  public static final class CGameServers_GameServerQuery_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CGameServers_GameServerQuery_Response)
+      CGameServers_GameServerQuery_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CGameServers_GameServerQuery_Response.newBuilder() to construct.
+    private CGameServers_GameServerQuery_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CGameServers_GameServerQuery_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CGameServers_GameServerQuery_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CGameServers_GameServerQuery_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = pingData_.toBuilder();
+              }
+              pingData_ = input.readMessage(SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pingData_);
+                pingData_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = playersData_.toBuilder();
+              }
+              playersData_ = input.readMessage(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(playersData_);
+                playersData_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) != 0)) {
+                subBuilder = rulesData_.toBuilder();
+              }
+              rulesData_ = input.readMessage(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rulesData_);
+                rulesData_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesGameserversSteamclient.internal_static_CGameServers_GameServerQuery_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesGameserversSteamclient.internal_static_CGameServers_GameServerQuery_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response.class, SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PING_DATA_FIELD_NUMBER = 1;
+    private SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData pingData_;
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     * @return Whether the pingData field is set.
+     */
+    @java.lang.Override
+    public boolean hasPingData() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     * @return The pingData.
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData getPingData() {
+      return pingData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance() : pingData_;
+    }
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder getPingDataOrBuilder() {
+      return pingData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance() : pingData_;
+    }
+
+    public static final int PLAYERS_DATA_FIELD_NUMBER = 2;
+    private SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData playersData_;
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     * @return Whether the playersData field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlayersData() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     * @return The playersData.
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData getPlayersData() {
+      return playersData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance() : playersData_;
+    }
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder getPlayersDataOrBuilder() {
+      return playersData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance() : playersData_;
+    }
+
+    public static final int RULES_DATA_FIELD_NUMBER = 3;
+    private SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData rulesData_;
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     * @return Whether the rulesData field is set.
+     */
+    @java.lang.Override
+    public boolean hasRulesData() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     * @return The rulesData.
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData getRulesData() {
+      return rulesData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance() : rulesData_;
+    }
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder getRulesDataOrBuilder() {
+      return rulesData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance() : rulesData_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getPingData());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getPlayersData());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getRulesData());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPingData());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPlayersData());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRulesData());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response other = (SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response) obj;
+
+      if (hasPingData() != other.hasPingData()) return false;
+      if (hasPingData()) {
+        if (!getPingData()
+            .equals(other.getPingData())) return false;
+      }
+      if (hasPlayersData() != other.hasPlayersData()) return false;
+      if (hasPlayersData()) {
+        if (!getPlayersData()
+            .equals(other.getPlayersData())) return false;
+      }
+      if (hasRulesData() != other.hasRulesData()) return false;
+      if (hasRulesData()) {
+        if (!getRulesData()
+            .equals(other.getRulesData())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPingData()) {
+        hash = (37 * hash) + PING_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getPingData().hashCode();
+      }
+      if (hasPlayersData()) {
+        hash = (37 * hash) + PLAYERS_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayersData().hashCode();
+      }
+      if (hasRulesData()) {
+        hash = (37 * hash) + RULES_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getRulesData().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CGameServers_GameServerQuery_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CGameServers_GameServerQuery_Response)
+        SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGameserversSteamclient.internal_static_CGameServers_GameServerQuery_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGameserversSteamclient.internal_static_CGameServers_GameServerQuery_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response.class, SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPingDataFieldBuilder();
+          getPlayersDataFieldBuilder();
+          getRulesDataFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (pingDataBuilder_ == null) {
+          pingData_ = null;
+        } else {
+          pingDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (playersDataBuilder_ == null) {
+          playersData_ = null;
+        } else {
+          playersDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (rulesDataBuilder_ == null) {
+          rulesData_ = null;
+        } else {
+          rulesDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesGameserversSteamclient.internal_static_CGameServers_GameServerQuery_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response getDefaultInstanceForType() {
+        return SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response build() {
+        SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response buildPartial() {
+        SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response result = new SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (pingDataBuilder_ == null) {
+            result.pingData_ = pingData_;
+          } else {
+            result.pingData_ = pingDataBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (playersDataBuilder_ == null) {
+            result.playersData_ = playersData_;
+          } else {
+            result.playersData_ = playersDataBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          if (rulesDataBuilder_ == null) {
+            result.rulesData_ = rulesData_;
+          } else {
+            result.rulesData_ = rulesDataBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response) {
+          return mergeFrom((SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response other) {
+        if (other == SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response.getDefaultInstance()) return this;
+        if (other.hasPingData()) {
+          mergePingData(other.getPingData());
+        }
+        if (other.hasPlayersData()) {
+          mergePlayersData(other.getPlayersData());
+        }
+        if (other.hasRulesData()) {
+          mergeRulesData(other.getRulesData());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData pingData_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder> pingDataBuilder_;
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       * @return Whether the pingData field is set.
+       */
+      public boolean hasPingData() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       * @return The pingData.
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData getPingData() {
+        if (pingDataBuilder_ == null) {
+          return pingData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance() : pingData_;
+        } else {
+          return pingDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public Builder setPingData(SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData value) {
+        if (pingDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pingData_ = value;
+          onChanged();
+        } else {
+          pingDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public Builder setPingData(
+          SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder builderForValue) {
+        if (pingDataBuilder_ == null) {
+          pingData_ = builderForValue.build();
+          onChanged();
+        } else {
+          pingDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public Builder mergePingData(SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData value) {
+        if (pingDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              pingData_ != null &&
+              pingData_ != SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance()) {
+            pingData_ =
+              SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.newBuilder(pingData_).mergeFrom(value).buildPartial();
+          } else {
+            pingData_ = value;
+          }
+          onChanged();
+        } else {
+          pingDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public Builder clearPingData() {
+        if (pingDataBuilder_ == null) {
+          pingData_ = null;
+          onChanged();
+        } else {
+          pingDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder getPingDataBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPingDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder getPingDataOrBuilder() {
+        if (pingDataBuilder_ != null) {
+          return pingDataBuilder_.getMessageOrBuilder();
+        } else {
+          return pingData_ == null ?
+              SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance() : pingData_;
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder> 
+          getPingDataFieldBuilder() {
+        if (pingDataBuilder_ == null) {
+          pingDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder>(
+                  getPingData(),
+                  getParentForChildren(),
+                  isClean());
+          pingData_ = null;
+        }
+        return pingDataBuilder_;
+      }
+
+      private SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData playersData_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder> playersDataBuilder_;
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       * @return Whether the playersData field is set.
+       */
+      public boolean hasPlayersData() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       * @return The playersData.
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData getPlayersData() {
+        if (playersDataBuilder_ == null) {
+          return playersData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance() : playersData_;
+        } else {
+          return playersDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public Builder setPlayersData(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData value) {
+        if (playersDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          playersData_ = value;
+          onChanged();
+        } else {
+          playersDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public Builder setPlayersData(
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder builderForValue) {
+        if (playersDataBuilder_ == null) {
+          playersData_ = builderForValue.build();
+          onChanged();
+        } else {
+          playersDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public Builder mergePlayersData(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData value) {
+        if (playersDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              playersData_ != null &&
+              playersData_ != SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance()) {
+            playersData_ =
+              SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.newBuilder(playersData_).mergeFrom(value).buildPartial();
+          } else {
+            playersData_ = value;
+          }
+          onChanged();
+        } else {
+          playersDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public Builder clearPlayersData() {
+        if (playersDataBuilder_ == null) {
+          playersData_ = null;
+          onChanged();
+        } else {
+          playersDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder getPlayersDataBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPlayersDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder getPlayersDataOrBuilder() {
+        if (playersDataBuilder_ != null) {
+          return playersDataBuilder_.getMessageOrBuilder();
+        } else {
+          return playersData_ == null ?
+              SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance() : playersData_;
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder> 
+          getPlayersDataFieldBuilder() {
+        if (playersDataBuilder_ == null) {
+          playersDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder>(
+                  getPlayersData(),
+                  getParentForChildren(),
+                  isClean());
+          playersData_ = null;
+        }
+        return playersDataBuilder_;
+      }
+
+      private SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData rulesData_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder> rulesDataBuilder_;
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       * @return Whether the rulesData field is set.
+       */
+      public boolean hasRulesData() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       * @return The rulesData.
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData getRulesData() {
+        if (rulesDataBuilder_ == null) {
+          return rulesData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance() : rulesData_;
+        } else {
+          return rulesDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public Builder setRulesData(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData value) {
+        if (rulesDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rulesData_ = value;
+          onChanged();
+        } else {
+          rulesDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public Builder setRulesData(
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder builderForValue) {
+        if (rulesDataBuilder_ == null) {
+          rulesData_ = builderForValue.build();
+          onChanged();
+        } else {
+          rulesDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public Builder mergeRulesData(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData value) {
+        if (rulesDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+              rulesData_ != null &&
+              rulesData_ != SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance()) {
+            rulesData_ =
+              SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.newBuilder(rulesData_).mergeFrom(value).buildPartial();
+          } else {
+            rulesData_ = value;
+          }
+          onChanged();
+        } else {
+          rulesDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public Builder clearRulesData() {
+        if (rulesDataBuilder_ == null) {
+          rulesData_ = null;
+          onChanged();
+        } else {
+          rulesDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder getRulesDataBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getRulesDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder getRulesDataOrBuilder() {
+        if (rulesDataBuilder_ != null) {
+          return rulesDataBuilder_.getMessageOrBuilder();
+        } else {
+          return rulesData_ == null ?
+              SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance() : rulesData_;
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder> 
+          getRulesDataFieldBuilder() {
+        if (rulesDataBuilder_ == null) {
+          rulesDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder>(
+                  getRulesData(),
+                  getParentForChildren(),
+                  isClean());
+          rulesData_ = null;
+        }
+        return rulesDataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CGameServers_GameServerQuery_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CGameServers_GameServerQuery_Response)
+    private static final SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response();
+    }
+
+    public static SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CGameServers_GameServerQuery_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CGameServers_GameServerQuery_Response>() {
+      @java.lang.Override
+      public CGameServers_GameServerQuery_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CGameServers_GameServerQuery_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CGameServers_GameServerQuery_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CGameServers_GameServerQuery_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CGameServers_GameServerQuery_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GameServerClient_QueryServerData_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GameServerClient_QueryServerData_Request)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code GameServerClient_QueryServerData_Request}
+   */
+  public static final class GameServerClient_QueryServerData_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GameServerClient_QueryServerData_Request)
+      GameServerClient_QueryServerData_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GameServerClient_QueryServerData_Request.newBuilder() to construct.
+    private GameServerClient_QueryServerData_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GameServerClient_QueryServerData_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GameServerClient_QueryServerData_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GameServerClient_QueryServerData_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesGameserversSteamclient.internal_static_GameServerClient_QueryServerData_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesGameserversSteamclient.internal_static_GameServerClient_QueryServerData_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request.class, SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request other = (SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GameServerClient_QueryServerData_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GameServerClient_QueryServerData_Request)
+        SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGameserversSteamclient.internal_static_GameServerClient_QueryServerData_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGameserversSteamclient.internal_static_GameServerClient_QueryServerData_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request.class, SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesGameserversSteamclient.internal_static_GameServerClient_QueryServerData_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request getDefaultInstanceForType() {
+        return SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request build() {
+        SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request buildPartial() {
+        SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request result = new SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request) {
+          return mergeFrom((SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request other) {
+        if (other == SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GameServerClient_QueryServerData_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:GameServerClient_QueryServerData_Request)
+    private static final SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request();
+    }
+
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<GameServerClient_QueryServerData_Request>
+        PARSER = new com.google.protobuf.AbstractParser<GameServerClient_QueryServerData_Request>() {
+      @java.lang.Override
+      public GameServerClient_QueryServerData_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GameServerClient_QueryServerData_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GameServerClient_QueryServerData_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GameServerClient_QueryServerData_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GameServerClient_QueryServerData_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GameServerClient_QueryServerData_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     * @return Whether the pingData field is set.
+     */
+    boolean hasPingData();
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     * @return The pingData.
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData getPingData();
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder getPingDataOrBuilder();
+
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     * @return Whether the playersData field is set.
+     */
+    boolean hasPlayersData();
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     * @return The playersData.
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData getPlayersData();
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder getPlayersDataOrBuilder();
+
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     * @return Whether the rulesData field is set.
+     */
+    boolean hasRulesData();
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     * @return The rulesData.
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData getRulesData();
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     */
+    SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder getRulesDataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code GameServerClient_QueryServerData_Response}
+   */
+  public static final class GameServerClient_QueryServerData_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GameServerClient_QueryServerData_Response)
+      GameServerClient_QueryServerData_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GameServerClient_QueryServerData_Response.newBuilder() to construct.
+    private GameServerClient_QueryServerData_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GameServerClient_QueryServerData_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GameServerClient_QueryServerData_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GameServerClient_QueryServerData_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = pingData_.toBuilder();
+              }
+              pingData_ = input.readMessage(SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pingData_);
+                pingData_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = playersData_.toBuilder();
+              }
+              playersData_ = input.readMessage(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(playersData_);
+                playersData_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) != 0)) {
+                subBuilder = rulesData_.toBuilder();
+              }
+              rulesData_ = input.readMessage(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rulesData_);
+                rulesData_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesGameserversSteamclient.internal_static_GameServerClient_QueryServerData_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesGameserversSteamclient.internal_static_GameServerClient_QueryServerData_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response.class, SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PING_DATA_FIELD_NUMBER = 1;
+    private SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData pingData_;
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     * @return Whether the pingData field is set.
+     */
+    @java.lang.Override
+    public boolean hasPingData() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     * @return The pingData.
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData getPingData() {
+      return pingData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance() : pingData_;
+    }
+    /**
+     * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder getPingDataOrBuilder() {
+      return pingData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance() : pingData_;
+    }
+
+    public static final int PLAYERS_DATA_FIELD_NUMBER = 2;
+    private SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData playersData_;
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     * @return Whether the playersData field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlayersData() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     * @return The playersData.
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData getPlayersData() {
+      return playersData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance() : playersData_;
+    }
+    /**
+     * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder getPlayersDataOrBuilder() {
+      return playersData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance() : playersData_;
+    }
+
+    public static final int RULES_DATA_FIELD_NUMBER = 3;
+    private SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData rulesData_;
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     * @return Whether the rulesData field is set.
+     */
+    @java.lang.Override
+    public boolean hasRulesData() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     * @return The rulesData.
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData getRulesData() {
+      return rulesData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance() : rulesData_;
+    }
+    /**
+     * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+     */
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder getRulesDataOrBuilder() {
+      return rulesData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance() : rulesData_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getPingData());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getPlayersData());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getRulesData());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPingData());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPlayersData());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRulesData());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response other = (SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response) obj;
+
+      if (hasPingData() != other.hasPingData()) return false;
+      if (hasPingData()) {
+        if (!getPingData()
+            .equals(other.getPingData())) return false;
+      }
+      if (hasPlayersData() != other.hasPlayersData()) return false;
+      if (hasPlayersData()) {
+        if (!getPlayersData()
+            .equals(other.getPlayersData())) return false;
+      }
+      if (hasRulesData() != other.hasRulesData()) return false;
+      if (hasRulesData()) {
+        if (!getRulesData()
+            .equals(other.getRulesData())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPingData()) {
+        hash = (37 * hash) + PING_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getPingData().hashCode();
+      }
+      if (hasPlayersData()) {
+        hash = (37 * hash) + PLAYERS_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayersData().hashCode();
+      }
+      if (hasRulesData()) {
+        hash = (37 * hash) + RULES_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getRulesData().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GameServerClient_QueryServerData_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GameServerClient_QueryServerData_Response)
+        SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesGameserversSteamclient.internal_static_GameServerClient_QueryServerData_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesGameserversSteamclient.internal_static_GameServerClient_QueryServerData_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response.class, SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPingDataFieldBuilder();
+          getPlayersDataFieldBuilder();
+          getRulesDataFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (pingDataBuilder_ == null) {
+          pingData_ = null;
+        } else {
+          pingDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (playersDataBuilder_ == null) {
+          playersData_ = null;
+        } else {
+          playersDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (rulesDataBuilder_ == null) {
+          rulesData_ = null;
+        } else {
+          rulesDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesGameserversSteamclient.internal_static_GameServerClient_QueryServerData_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response getDefaultInstanceForType() {
+        return SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response build() {
+        SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response buildPartial() {
+        SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response result = new SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (pingDataBuilder_ == null) {
+            result.pingData_ = pingData_;
+          } else {
+            result.pingData_ = pingDataBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (playersDataBuilder_ == null) {
+            result.playersData_ = playersData_;
+          } else {
+            result.playersData_ = playersDataBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          if (rulesDataBuilder_ == null) {
+            result.rulesData_ = rulesData_;
+          } else {
+            result.rulesData_ = rulesDataBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response) {
+          return mergeFrom((SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response other) {
+        if (other == SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response.getDefaultInstance()) return this;
+        if (other.hasPingData()) {
+          mergePingData(other.getPingData());
+        }
+        if (other.hasPlayersData()) {
+          mergePlayersData(other.getPlayersData());
+        }
+        if (other.hasRulesData()) {
+          mergeRulesData(other.getRulesData());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData pingData_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder> pingDataBuilder_;
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       * @return Whether the pingData field is set.
+       */
+      public boolean hasPingData() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       * @return The pingData.
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData getPingData() {
+        if (pingDataBuilder_ == null) {
+          return pingData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance() : pingData_;
+        } else {
+          return pingDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public Builder setPingData(SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData value) {
+        if (pingDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pingData_ = value;
+          onChanged();
+        } else {
+          pingDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public Builder setPingData(
+          SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder builderForValue) {
+        if (pingDataBuilder_ == null) {
+          pingData_ = builderForValue.build();
+          onChanged();
+        } else {
+          pingDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public Builder mergePingData(SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData value) {
+        if (pingDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              pingData_ != null &&
+              pingData_ != SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance()) {
+            pingData_ =
+              SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.newBuilder(pingData_).mergeFrom(value).buildPartial();
+          } else {
+            pingData_ = value;
+          }
+          onChanged();
+        } else {
+          pingDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public Builder clearPingData() {
+        if (pingDataBuilder_ == null) {
+          pingData_ = null;
+          onChanged();
+        } else {
+          pingDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder getPingDataBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPingDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder getPingDataOrBuilder() {
+        if (pingDataBuilder_ != null) {
+          return pingDataBuilder_.getMessageOrBuilder();
+        } else {
+          return pingData_ == null ?
+              SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.getDefaultInstance() : pingData_;
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerPingQueryData ping_data = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder> 
+          getPingDataFieldBuilder() {
+        if (pingDataBuilder_ == null) {
+          pingDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPingQueryDataOrBuilder>(
+                  getPingData(),
+                  getParentForChildren(),
+                  isClean());
+          pingData_ = null;
+        }
+        return pingDataBuilder_;
+      }
+
+      private SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData playersData_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder> playersDataBuilder_;
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       * @return Whether the playersData field is set.
+       */
+      public boolean hasPlayersData() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       * @return The playersData.
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData getPlayersData() {
+        if (playersDataBuilder_ == null) {
+          return playersData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance() : playersData_;
+        } else {
+          return playersDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public Builder setPlayersData(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData value) {
+        if (playersDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          playersData_ = value;
+          onChanged();
+        } else {
+          playersDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public Builder setPlayersData(
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder builderForValue) {
+        if (playersDataBuilder_ == null) {
+          playersData_ = builderForValue.build();
+          onChanged();
+        } else {
+          playersDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public Builder mergePlayersData(SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData value) {
+        if (playersDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              playersData_ != null &&
+              playersData_ != SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance()) {
+            playersData_ =
+              SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.newBuilder(playersData_).mergeFrom(value).buildPartial();
+          } else {
+            playersData_ = value;
+          }
+          onChanged();
+        } else {
+          playersDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public Builder clearPlayersData() {
+        if (playersDataBuilder_ == null) {
+          playersData_ = null;
+          onChanged();
+        } else {
+          playersDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder getPlayersDataBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPlayersDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder getPlayersDataOrBuilder() {
+        if (playersDataBuilder_ != null) {
+          return playersDataBuilder_.getMessageOrBuilder();
+        } else {
+          return playersData_ == null ?
+              SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.getDefaultInstance() : playersData_;
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerPlayersQueryData players_data = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder> 
+          getPlayersDataFieldBuilder() {
+        if (playersDataBuilder_ == null) {
+          playersDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerPlayersQueryDataOrBuilder>(
+                  getPlayersData(),
+                  getParentForChildren(),
+                  isClean());
+          playersData_ = null;
+        }
+        return playersDataBuilder_;
+      }
+
+      private SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData rulesData_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder> rulesDataBuilder_;
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       * @return Whether the rulesData field is set.
+       */
+      public boolean hasRulesData() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       * @return The rulesData.
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData getRulesData() {
+        if (rulesDataBuilder_ == null) {
+          return rulesData_ == null ? SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance() : rulesData_;
+        } else {
+          return rulesDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public Builder setRulesData(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData value) {
+        if (rulesDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rulesData_ = value;
+          onChanged();
+        } else {
+          rulesDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public Builder setRulesData(
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder builderForValue) {
+        if (rulesDataBuilder_ == null) {
+          rulesData_ = builderForValue.build();
+          onChanged();
+        } else {
+          rulesDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public Builder mergeRulesData(SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData value) {
+        if (rulesDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+              rulesData_ != null &&
+              rulesData_ != SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance()) {
+            rulesData_ =
+              SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.newBuilder(rulesData_).mergeFrom(value).buildPartial();
+          } else {
+            rulesData_ = value;
+          }
+          onChanged();
+        } else {
+          rulesDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public Builder clearRulesData() {
+        if (rulesDataBuilder_ == null) {
+          rulesData_ = null;
+          onChanged();
+        } else {
+          rulesDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder getRulesDataBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getRulesDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      public SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder getRulesDataOrBuilder() {
+        if (rulesDataBuilder_ != null) {
+          return rulesDataBuilder_.getMessageOrBuilder();
+        } else {
+          return rulesData_ == null ?
+              SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.getDefaultInstance() : rulesData_;
+        }
+      }
+      /**
+       * <code>optional .CMsgGameServerRulesQueryData rules_data = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder> 
+          getRulesDataFieldBuilder() {
+        if (rulesDataBuilder_ == null) {
+          rulesDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryData.Builder, SteammessagesGameserversSteamclient.CMsgGameServerRulesQueryDataOrBuilder>(
+                  getRulesData(),
+                  getParentForChildren(),
+                  isClean());
+          rulesData_ = null;
+        }
+        return rulesDataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GameServerClient_QueryServerData_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:GameServerClient_QueryServerData_Response)
+    private static final SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response();
+    }
+
+    public static SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<GameServerClient_QueryServerData_Response>
+        PARSER = new com.google.protobuf.AbstractParser<GameServerClient_QueryServerData_Response>() {
+      @java.lang.Override
+      public GameServerClient_QueryServerData_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GameServerClient_QueryServerData_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GameServerClient_QueryServerData_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GameServerClient_QueryServerData_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesGameserversSteamclient.GameServerClient_QueryServerData_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CGameServers_GetServerList_Request_descriptor;
   private static final 
@@ -7158,6 +17075,51 @@ public final class SteammessagesGameserversSteamclient {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CGameServers_GetServerIPsBySteamID_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CGameServers_QueryByFakeIP_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CGameServers_QueryByFakeIP_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgGameServerPingQueryData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgGameServerPingQueryData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgGameServerPlayersQueryData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgGameServerPlayersQueryData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgGameServerPlayersQueryData_Player_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgGameServerPlayersQueryData_Player_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgGameServerRulesQueryData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgGameServerRulesQueryData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgGameServerRulesQueryData_Rule_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgGameServerRulesQueryData_Rule_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CGameServers_GameServerQuery_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CGameServers_GameServerQuery_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GameServerClient_QueryServerData_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GameServerClient_QueryServerData_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GameServerClient_QueryServerData_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GameServerClient_QueryServerData_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7168,49 +17130,101 @@ public final class SteammessagesGameserversSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n1steam/steammessages_gameservers.steamc" +
-      "lient.proto\0322steam/steammessages_unified" +
-      "_base.steamclient.proto\"\237\001\n\"CGameServers" +
-      "_GetServerList_Request\022(\n\006filter\030\001 \001(\tB\030" +
-      "\202\265\030\024Query filter string.\022O\n\005limit\030\002 \001(\r:" +
-      "\003100B;\202\265\0307The maximum number of servers " +
-      "to return in the response\"\340\003\n#CGameServe" +
-      "rs_GetServerList_Response\022e\n\007servers\030\001 \003" +
-      "(\0132+.CGameServers_GetServerList_Response" +
-      ".ServerB\'\202\265\030#List of servers matching th" +
-      "e filter\032\321\002\n\006Server\0220\n\004addr\030\001 \001(\tB\"\202\265\030\036T" +
-      "he server\'s IP and query port\022\020\n\010gamepor" +
-      "t\030\002 \001(\r\022\020\n\010specport\030\003 \001(\r\022\017\n\007steamid\030\004 \001" +
-      "(\006\022\014\n\004name\030\005 \001(\t\022\r\n\005appid\030\006 \001(\r\022\017\n\007gamed" +
-      "ir\030\007 \001(\t\022\017\n\007version\030\010 \001(\t\022\017\n\007product\030\t \001" +
-      "(\t\022\016\n\006region\030\n \001(\005\022\017\n\007players\030\013 \001(\005\022\023\n\013m" +
-      "ax_players\030\014 \001(\005\022\014\n\004bots\030\r \001(\005\022\013\n\003map\030\016 " +
-      "\001(\t\022\016\n\006secure\030\017 \001(\010\022\021\n\tdedicated\030\020 \001(\010\022\n" +
-      "\n\002os\030\021 \001(\t\022\020\n\010gametype\030\022 \001(\t\"@\n*CGameSer" +
-      "vers_GetServerSteamIDsByIP_Request\022\022\n\nse" +
-      "rver_ips\030\001 \003(\t\"\220\001\n%CGameServers_IPsWithS" +
-      "teamIDs_Response\022>\n\007servers\030\001 \003(\0132-.CGam" +
-      "eServers_IPsWithSteamIDs_Response.Server" +
-      "\032\'\n\006Server\022\014\n\004addr\030\001 \001(\t\022\017\n\007steamid\030\002 \001(" +
-      "\006\"E\n*CGameServers_GetServerIPsBySteamID_" +
-      "Request\022\027\n\017server_steamids\030\001 \003(\0062\253\004\n\013Gam" +
-      "eServers\022\214\001\n\rGetServerList\022#.CGameServer" +
-      "s_GetServerList_Request\032$.CGameServers_G" +
-      "etServerList_Response\"0\202\265\030,Gets a list o" +
-      "f servers given a filter string\022\244\001\n\025GetS" +
-      "erverSteamIDsByIP\022+.CGameServers_GetServ" +
-      "erSteamIDsByIP_Request\032&.CGameServers_IP" +
-      "sWithSteamIDs_Response\"6\202\265\0302Gets a list " +
-      "of server SteamIDs given a list of IPs\022\255" +
-      "\001\n\025GetServerIPsBySteamID\022+.CGameServers_" +
-      "GetServerIPsBySteamID_Request\032&.CGameSer" +
-      "vers_IPsWithSteamIDs_Response\"?\202\265\030;Gets " +
-      "a list of server IP addresses given a li" +
-      "st of SteamIDs\0326\202\265\0302A service for search" +
-      "ing and managing game servers.B\003\200\001\001"
+      "lient.proto\032\036steam/steammessages_base.pr" +
+      "oto\0322steam/steammessages_unified_base.st" +
+      "eamclient.proto\"\237\001\n\"CGameServers_GetServ" +
+      "erList_Request\022(\n\006filter\030\001 \001(\tB\030\202\265\030\024Quer" +
+      "y filter string.\022O\n\005limit\030\002 \001(\r:\003100B;\202\265" +
+      "\0307The maximum number of servers to retur" +
+      "n in the response\"\340\003\n#CGameServers_GetSe" +
+      "rverList_Response\022e\n\007servers\030\001 \003(\0132+.CGa" +
+      "meServers_GetServerList_Response.ServerB" +
+      "\'\202\265\030#List of servers matching the filter" +
+      "\032\321\002\n\006Server\0220\n\004addr\030\001 \001(\tB\"\202\265\030\036The serve" +
+      "r\'s IP and query port\022\020\n\010gameport\030\002 \001(\r\022" +
+      "\020\n\010specport\030\003 \001(\r\022\017\n\007steamid\030\004 \001(\006\022\014\n\004na" +
+      "me\030\005 \001(\t\022\r\n\005appid\030\006 \001(\r\022\017\n\007gamedir\030\007 \001(\t" +
+      "\022\017\n\007version\030\010 \001(\t\022\017\n\007product\030\t \001(\t\022\016\n\006re" +
+      "gion\030\n \001(\005\022\017\n\007players\030\013 \001(\005\022\023\n\013max_playe" +
+      "rs\030\014 \001(\005\022\014\n\004bots\030\r \001(\005\022\013\n\003map\030\016 \001(\t\022\016\n\006s" +
+      "ecure\030\017 \001(\010\022\021\n\tdedicated\030\020 \001(\010\022\n\n\002os\030\021 \001" +
+      "(\t\022\020\n\010gametype\030\022 \001(\t\"@\n*CGameServers_Get" +
+      "ServerSteamIDsByIP_Request\022\022\n\nserver_ips" +
+      "\030\001 \003(\t\"\220\001\n%CGameServers_IPsWithSteamIDs_" +
+      "Response\022>\n\007servers\030\001 \003(\0132-.CGameServers" +
+      "_IPsWithSteamIDs_Response.Server\032\'\n\006Serv" +
+      "er\022\014\n\004addr\030\001 \001(\t\022\017\n\007steamid\030\002 \001(\006\"E\n*CGa" +
+      "meServers_GetServerIPsBySteamID_Request\022" +
+      "\027\n\017server_steamids\030\001 \003(\006\"\227\003\n\"CGameServer" +
+      "s_QueryByFakeIP_Request\022/\n\007fake_ip\030\001 \001(\r" +
+      "B\036\202\265\030\032FakeIP of server to query.\0224\n\tfake" +
+      "_port\030\002 \001(\rB!\202\265\030\035Fake port of server to " +
+      "query.\022I\n\006app_id\030\003 \001(\rB9\202\265\0305AppID to use" +
+      ".  Each AppID has its own FakeIP address" +
+      ".\022j\n\nquery_type\030\004 \001(\0162..CGameServers_Que" +
+      "ryByFakeIP_Request.EQueryType:\rQuery_Inv" +
+      "alidB\027\202\265\030\023What type of query?\"S\n\nEQueryT" +
+      "ype\022\021\n\rQuery_Invalid\020\000\022\016\n\nQuery_Ping\020\001\022\021" +
+      "\n\rQuery_Players\020\002\022\017\n\013Query_Rules\020\003\"\320\003\n\033C" +
+      "MsgGameServerPingQueryData\022!\n\tserver_ip\030" +
+      "\001 \001(\0132\016.CMsgIPAddress\022\022\n\nquery_port\030\002 \001(" +
+      "\r\022\021\n\tgame_port\030\003 \001(\r\022\026\n\016spectator_port\030\004" +
+      " \001(\r\022\035\n\025spectator_server_name\030\005 \001(\t\022\023\n\013s" +
+      "erver_name\030\006 \001(\t\022\017\n\007steamid\030\007 \001(\006\022\016\n\006app" +
+      "_id\030\010 \001(\r\022\017\n\007gamedir\030\t \001(\t\022\013\n\003map\030\n \001(\t\022" +
+      "\030\n\020game_description\030\013 \001(\t\022\020\n\010gametype\030\014 " +
+      "\001(\t\022\023\n\013num_players\030\r \001(\r\022\023\n\013max_players\030" +
+      "\016 \001(\r\022\020\n\010num_bots\030\017 \001(\r\022\020\n\010password\030\020 \001(" +
+      "\010\022\016\n\006secure\030\021 \001(\010\022\021\n\tdedicated\030\022 \001(\010\022\017\n\007" +
+      "version\030\023 \001(\t\022\021\n\tsdr_popid\030\024 \001(\007\022\033\n\023sdr_" +
+      "location_string\030\025 \001(\t\"\225\001\n\036CMsgGameServer" +
+      "PlayersQueryData\0227\n\007players\030\001 \003(\0132&.CMsg" +
+      "GameServerPlayersQueryData.Player\032:\n\006Pla" +
+      "yer\022\014\n\004name\030\001 \001(\t\022\r\n\005score\030\002 \001(\r\022\023\n\013time" +
+      "_played\030\003 \001(\r\"v\n\034CMsgGameServerRulesQuer" +
+      "yData\0221\n\005rules\030\001 \003(\0132\".CMsgGameServerRul" +
+      "esQueryData.Rule\032#\n\004Rule\022\014\n\004rule\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t\"\302\001\n%CGameServers_GameServe" +
+      "rQuery_Response\022/\n\tping_data\030\001 \001(\0132\034.CMs" +
+      "gGameServerPingQueryData\0225\n\014players_data" +
+      "\030\002 \001(\0132\037.CMsgGameServerPlayersQueryData\022" +
+      "1\n\nrules_data\030\003 \001(\0132\035.CMsgGameServerRule" +
+      "sQueryData\"*\n(GameServerClient_QueryServ" +
+      "erData_Request\"\306\001\n)GameServerClient_Quer" +
+      "yServerData_Response\022/\n\tping_data\030\001 \001(\0132" +
+      "\034.CMsgGameServerPingQueryData\0225\n\014players" +
+      "_data\030\002 \001(\0132\037.CMsgGameServerPlayersQuery" +
+      "Data\0221\n\nrules_data\030\003 \001(\0132\035.CMsgGameServe" +
+      "rRulesQueryData2\276\005\n\013GameServers\022\214\001\n\rGetS" +
+      "erverList\022#.CGameServers_GetServerList_R" +
+      "equest\032$.CGameServers_GetServerList_Resp" +
+      "onse\"0\202\265\030,Gets a list of servers given a" +
+      " filter string\022\244\001\n\025GetServerSteamIDsByIP" +
+      "\022+.CGameServers_GetServerSteamIDsByIP_Re" +
+      "quest\032&.CGameServers_IPsWithSteamIDs_Res" +
+      "ponse\"6\202\265\0302Gets a list of server SteamID" +
+      "s given a list of IPs\022\255\001\n\025GetServerIPsBy" +
+      "SteamID\022+.CGameServers_GetServerIPsBySte" +
+      "amID_Request\032&.CGameServers_IPsWithSteam" +
+      "IDs_Response\"?\202\265\030;Gets a list of server " +
+      "IP addresses given a list of SteamIDs\022\220\001" +
+      "\n\rQueryByFakeIP\022#.CGameServers_QueryByFa" +
+      "keIP_Request\032&.CGameServers_GameServerQu" +
+      "ery_Response\"2\202\265\030.Perform a query on a s" +
+      "pecific server by FakeIP\0326\202\265\0302A service " +
+      "for searching and managing game servers." +
+      "2\351\001\n\020GameServerClient\022\227\001\n\017QueryServerDat" +
+      "a\022).GameServerClient_QueryServerData_Req" +
+      "uest\032*.GameServerClient_QueryServerData_" +
+      "Response\"-\202\265\030)Steam is asking a gameserv" +
+      "er for its data\032;\202\265\0303Service methods exp" +
+      "osed by GameServer Steam clients\300\265\030\002B\003\200\001" +
+      "\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CGameServers_GetServerList_Request_descriptor =
@@ -7255,13 +17269,69 @@ public final class SteammessagesGameserversSteamclient {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CGameServers_GetServerIPsBySteamID_Request_descriptor,
         new java.lang.String[] { "ServerSteamids", });
+    internal_static_CGameServers_QueryByFakeIP_Request_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_CGameServers_QueryByFakeIP_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CGameServers_QueryByFakeIP_Request_descriptor,
+        new java.lang.String[] { "FakeIp", "FakePort", "AppId", "QueryType", });
+    internal_static_CMsgGameServerPingQueryData_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_CMsgGameServerPingQueryData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgGameServerPingQueryData_descriptor,
+        new java.lang.String[] { "ServerIp", "QueryPort", "GamePort", "SpectatorPort", "SpectatorServerName", "ServerName", "Steamid", "AppId", "Gamedir", "Map", "GameDescription", "Gametype", "NumPlayers", "MaxPlayers", "NumBots", "Password", "Secure", "Dedicated", "Version", "SdrPopid", "SdrLocationString", });
+    internal_static_CMsgGameServerPlayersQueryData_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_CMsgGameServerPlayersQueryData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgGameServerPlayersQueryData_descriptor,
+        new java.lang.String[] { "Players", });
+    internal_static_CMsgGameServerPlayersQueryData_Player_descriptor =
+      internal_static_CMsgGameServerPlayersQueryData_descriptor.getNestedTypes().get(0);
+    internal_static_CMsgGameServerPlayersQueryData_Player_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgGameServerPlayersQueryData_Player_descriptor,
+        new java.lang.String[] { "Name", "Score", "TimePlayed", });
+    internal_static_CMsgGameServerRulesQueryData_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_CMsgGameServerRulesQueryData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgGameServerRulesQueryData_descriptor,
+        new java.lang.String[] { "Rules", });
+    internal_static_CMsgGameServerRulesQueryData_Rule_descriptor =
+      internal_static_CMsgGameServerRulesQueryData_descriptor.getNestedTypes().get(0);
+    internal_static_CMsgGameServerRulesQueryData_Rule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgGameServerRulesQueryData_Rule_descriptor,
+        new java.lang.String[] { "Rule", "Value", });
+    internal_static_CGameServers_GameServerQuery_Response_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_CGameServers_GameServerQuery_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CGameServers_GameServerQuery_Response_descriptor,
+        new java.lang.String[] { "PingData", "PlayersData", "RulesData", });
+    internal_static_GameServerClient_QueryServerData_Request_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_GameServerClient_QueryServerData_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GameServerClient_QueryServerData_Request_descriptor,
+        new java.lang.String[] { });
+    internal_static_GameServerClient_QueryServerData_Response_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_GameServerClient_QueryServerData_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GameServerClient_QueryServerData_Response_descriptor,
+        new java.lang.String[] { "PingData", "PlayersData", "RulesData", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(SteammessagesUnifiedBaseSteamclient.description);
     registry.add(SteammessagesUnifiedBaseSteamclient.methodDescription);
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
+    registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

@@ -75,6 +75,10 @@ public final class SteammessagesBroadcastSteamclient {
      * <code>k_EBroadcastWatchLocation_SteamTV_Web = 13;</code>
      */
     k_EBroadcastWatchLocation_SteamTV_Web(13),
+    /**
+     * <code>k_EBroadcastWatchLocation_DesktopUI_Overlay = 14;</code>
+     */
+    k_EBroadcastWatchLocation_DesktopUI_Overlay(14),
     ;
 
     /**
@@ -133,6 +137,10 @@ public final class SteammessagesBroadcastSteamclient {
      * <code>k_EBroadcastWatchLocation_SteamTV_Web = 13;</code>
      */
     public static final int k_EBroadcastWatchLocation_SteamTV_Web_VALUE = 13;
+    /**
+     * <code>k_EBroadcastWatchLocation_DesktopUI_Overlay = 14;</code>
+     */
+    public static final int k_EBroadcastWatchLocation_DesktopUI_Overlay_VALUE = 14;
 
 
     public final int getNumber() {
@@ -169,6 +177,7 @@ public final class SteammessagesBroadcastSteamclient {
         case 11: return k_EBroadcastWatchLocation_DeveloperPage;
         case 12: return k_EBroadcastWatchLocation_Chat_Friends;
         case 13: return k_EBroadcastWatchLocation_SteamTV_Web;
+        case 14: return k_EBroadcastWatchLocation_DesktopUI_Overlay;
         default: return null;
       }
     }
@@ -28144,12 +28153,12 @@ public final class SteammessagesBroadcastSteamclient {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional fixed64 steam_id = 1;</code>
+       * <code>optional fixed64 steam_id = 1 [(.allow_field_named_steam_id) = true];</code>
        * @return Whether the steamId field is set.
        */
       boolean hasSteamId();
       /**
-       * <code>optional fixed64 steam_id = 1;</code>
+       * <code>optional fixed64 steam_id = 1 [(.allow_field_named_steam_id) = true];</code>
        * @return The steamId.
        */
       long getSteamId();
@@ -28265,7 +28274,7 @@ public final class SteammessagesBroadcastSteamclient {
       public static final int STEAM_ID_FIELD_NUMBER = 1;
       private long steamId_;
       /**
-       * <code>optional fixed64 steam_id = 1;</code>
+       * <code>optional fixed64 steam_id = 1 [(.allow_field_named_steam_id) = true];</code>
        * @return Whether the steamId field is set.
        */
       @java.lang.Override
@@ -28273,7 +28282,7 @@ public final class SteammessagesBroadcastSteamclient {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional fixed64 steam_id = 1;</code>
+       * <code>optional fixed64 steam_id = 1 [(.allow_field_named_steam_id) = true];</code>
        * @return The steamId.
        */
       @java.lang.Override
@@ -28672,7 +28681,7 @@ public final class SteammessagesBroadcastSteamclient {
 
         private long steamId_ ;
         /**
-         * <code>optional fixed64 steam_id = 1;</code>
+         * <code>optional fixed64 steam_id = 1 [(.allow_field_named_steam_id) = true];</code>
          * @return Whether the steamId field is set.
          */
         @java.lang.Override
@@ -28680,7 +28689,7 @@ public final class SteammessagesBroadcastSteamclient {
           return ((bitField0_ & 0x00000001) != 0);
         }
         /**
-         * <code>optional fixed64 steam_id = 1;</code>
+         * <code>optional fixed64 steam_id = 1 [(.allow_field_named_steam_id) = true];</code>
          * @return The steamId.
          */
         @java.lang.Override
@@ -28688,7 +28697,7 @@ public final class SteammessagesBroadcastSteamclient {
           return steamId_;
         }
         /**
-         * <code>optional fixed64 steam_id = 1;</code>
+         * <code>optional fixed64 steam_id = 1 [(.allow_field_named_steam_id) = true];</code>
          * @param value The steamId to set.
          * @return This builder for chaining.
          */
@@ -28699,7 +28708,7 @@ public final class SteammessagesBroadcastSteamclient {
           return this;
         }
         /**
-         * <code>optional fixed64 steam_id = 1;</code>
+         * <code>optional fixed64 steam_id = 1 [(.allow_field_named_steam_id) = true];</code>
          * @return This builder for chaining.
          */
         public Builder clearSteamId() {
@@ -35531,6 +35540,34 @@ public final class SteammessagesBroadcastSteamclient {
      * @return The enableReplay.
      */
     boolean getEnableReplay();
+
+    /**
+     * <code>optional bool is_partner_chat_only = 11 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+     * @return Whether the isPartnerChatOnly field is set.
+     */
+    boolean hasIsPartnerChatOnly();
+    /**
+     * <code>optional bool is_partner_chat_only = 11 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+     * @return The isPartnerChatOnly.
+     */
+    boolean getIsPartnerChatOnly();
+
+    /**
+     * <code>optional string wordban_list = 12;</code>
+     * @return Whether the wordbanList field is set.
+     */
+    boolean hasWordbanList();
+    /**
+     * <code>optional string wordban_list = 12;</code>
+     * @return The wordbanList.
+     */
+    java.lang.String getWordbanList();
+    /**
+     * <code>optional string wordban_list = 12;</code>
+     * @return The bytes for wordbanList.
+     */
+    com.google.protobuf.ByteString
+        getWordbanListBytes();
   }
   /**
    * Protobuf type {@code CBroadcast_SetRTMPInfo_Request}
@@ -35546,6 +35583,7 @@ public final class SteammessagesBroadcastSteamclient {
     }
     private CBroadcast_SetRTMPInfo_Request() {
       broadcastChatPermission_ = 0;
+      wordbanList_ = "";
     }
 
     @java.lang.Override
@@ -35634,6 +35672,17 @@ public final class SteammessagesBroadcastSteamclient {
             case 80: {
               bitField0_ |= 0x00000200;
               enableReplay_ = input.readBool();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000400;
+              isPartnerChatOnly_ = input.readBool();
+              break;
+            }
+            case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000800;
+              wordbanList_ = bs;
               break;
             }
             default: {
@@ -35859,6 +35908,73 @@ public final class SteammessagesBroadcastSteamclient {
       return enableReplay_;
     }
 
+    public static final int IS_PARTNER_CHAT_ONLY_FIELD_NUMBER = 11;
+    private boolean isPartnerChatOnly_;
+    /**
+     * <code>optional bool is_partner_chat_only = 11 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+     * @return Whether the isPartnerChatOnly field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsPartnerChatOnly() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional bool is_partner_chat_only = 11 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+     * @return The isPartnerChatOnly.
+     */
+    @java.lang.Override
+    public boolean getIsPartnerChatOnly() {
+      return isPartnerChatOnly_;
+    }
+
+    public static final int WORDBAN_LIST_FIELD_NUMBER = 12;
+    private volatile java.lang.Object wordbanList_;
+    /**
+     * <code>optional string wordban_list = 12;</code>
+     * @return Whether the wordbanList field is set.
+     */
+    @java.lang.Override
+    public boolean hasWordbanList() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional string wordban_list = 12;</code>
+     * @return The wordbanList.
+     */
+    @java.lang.Override
+    public java.lang.String getWordbanList() {
+      java.lang.Object ref = wordbanList_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          wordbanList_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string wordban_list = 12;</code>
+     * @return The bytes for wordbanList.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWordbanListBytes() {
+      java.lang.Object ref = wordbanList_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        wordbanList_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -35902,6 +36018,12 @@ public final class SteammessagesBroadcastSteamclient {
       }
       if (((bitField0_ & 0x00000200) != 0)) {
         output.writeBool(10, enableReplay_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeBool(11, isPartnerChatOnly_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, wordbanList_);
       }
       unknownFields.writeTo(output);
     }
@@ -35951,6 +36073,13 @@ public final class SteammessagesBroadcastSteamclient {
       if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, enableReplay_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, isPartnerChatOnly_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, wordbanList_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -36016,6 +36145,16 @@ public final class SteammessagesBroadcastSteamclient {
         if (getEnableReplay()
             != other.getEnableReplay()) return false;
       }
+      if (hasIsPartnerChatOnly() != other.hasIsPartnerChatOnly()) return false;
+      if (hasIsPartnerChatOnly()) {
+        if (getIsPartnerChatOnly()
+            != other.getIsPartnerChatOnly()) return false;
+      }
+      if (hasWordbanList() != other.hasWordbanList()) return false;
+      if (hasWordbanList()) {
+        if (!getWordbanList()
+            .equals(other.getWordbanList())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -36069,6 +36208,15 @@ public final class SteammessagesBroadcastSteamclient {
         hash = (37 * hash) + ENABLE_REPLAY_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getEnableReplay());
+      }
+      if (hasIsPartnerChatOnly()) {
+        hash = (37 * hash) + IS_PARTNER_CHAT_ONLY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsPartnerChatOnly());
+      }
+      if (hasWordbanList()) {
+        hash = (37 * hash) + WORDBAN_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getWordbanList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -36223,6 +36371,10 @@ public final class SteammessagesBroadcastSteamclient {
         bitField0_ = (bitField0_ & ~0x00000100);
         enableReplay_ = false;
         bitField0_ = (bitField0_ & ~0x00000200);
+        isPartnerChatOnly_ = false;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        wordbanList_ = "";
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -36291,6 +36443,14 @@ public final class SteammessagesBroadcastSteamclient {
           result.enableReplay_ = enableReplay_;
           to_bitField0_ |= 0x00000200;
         }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.isPartnerChatOnly_ = isPartnerChatOnly_;
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.wordbanList_ = wordbanList_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -36369,6 +36529,14 @@ public final class SteammessagesBroadcastSteamclient {
         }
         if (other.hasEnableReplay()) {
           setEnableReplay(other.getEnableReplay());
+        }
+        if (other.hasIsPartnerChatOnly()) {
+          setIsPartnerChatOnly(other.getIsPartnerChatOnly());
+        }
+        if (other.hasWordbanList()) {
+          bitField0_ |= 0x00000800;
+          wordbanList_ = other.wordbanList_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -36790,6 +36958,129 @@ public final class SteammessagesBroadcastSteamclient {
       public Builder clearEnableReplay() {
         bitField0_ = (bitField0_ & ~0x00000200);
         enableReplay_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isPartnerChatOnly_ ;
+      /**
+       * <code>optional bool is_partner_chat_only = 11 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+       * @return Whether the isPartnerChatOnly field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsPartnerChatOnly() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional bool is_partner_chat_only = 11 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+       * @return The isPartnerChatOnly.
+       */
+      @java.lang.Override
+      public boolean getIsPartnerChatOnly() {
+        return isPartnerChatOnly_;
+      }
+      /**
+       * <code>optional bool is_partner_chat_only = 11 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+       * @param value The isPartnerChatOnly to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPartnerChatOnly(boolean value) {
+        bitField0_ |= 0x00000400;
+        isPartnerChatOnly_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_partner_chat_only = 11 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPartnerChatOnly() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        isPartnerChatOnly_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object wordbanList_ = "";
+      /**
+       * <code>optional string wordban_list = 12;</code>
+       * @return Whether the wordbanList field is set.
+       */
+      public boolean hasWordbanList() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional string wordban_list = 12;</code>
+       * @return The wordbanList.
+       */
+      public java.lang.String getWordbanList() {
+        java.lang.Object ref = wordbanList_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            wordbanList_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string wordban_list = 12;</code>
+       * @return The bytes for wordbanList.
+       */
+      public com.google.protobuf.ByteString
+          getWordbanListBytes() {
+        java.lang.Object ref = wordbanList_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          wordbanList_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string wordban_list = 12;</code>
+       * @param value The wordbanList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWordbanList(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        wordbanList_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string wordban_list = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWordbanList() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        wordbanList_ = getDefaultInstance().getWordbanList();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string wordban_list = 12;</code>
+       * @param value The bytes for wordbanList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWordbanListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        wordbanList_ = value;
         onChanged();
         return this;
       }
@@ -38023,6 +38314,34 @@ public final class SteammessagesBroadcastSteamclient {
      * @return The enableReplay.
      */
     boolean getEnableReplay();
+
+    /**
+     * <code>optional bool is_partner_chat_only = 12 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+     * @return Whether the isPartnerChatOnly field is set.
+     */
+    boolean hasIsPartnerChatOnly();
+    /**
+     * <code>optional bool is_partner_chat_only = 12 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+     * @return The isPartnerChatOnly.
+     */
+    boolean getIsPartnerChatOnly();
+
+    /**
+     * <code>optional string wordban_list = 13;</code>
+     * @return Whether the wordbanList field is set.
+     */
+    boolean hasWordbanList();
+    /**
+     * <code>optional string wordban_list = 13;</code>
+     * @return The wordbanList.
+     */
+    java.lang.String getWordbanList();
+    /**
+     * <code>optional string wordban_list = 13;</code>
+     * @return The bytes for wordbanList.
+     */
+    com.google.protobuf.ByteString
+        getWordbanListBytes();
   }
   /**
    * Protobuf type {@code CBroadcast_GetRTMPInfo_Response}
@@ -38040,6 +38359,7 @@ public final class SteammessagesBroadcastSteamclient {
       rtmpHost_ = "";
       rtmpToken_ = "";
       broadcastChatPermission_ = 0;
+      wordbanList_ = "";
     }
 
     @java.lang.Override
@@ -38135,6 +38455,17 @@ public final class SteammessagesBroadcastSteamclient {
             case 88: {
               bitField0_ |= 0x00000400;
               enableReplay_ = input.readBool();
+              break;
+            }
+            case 96: {
+              bitField0_ |= 0x00000800;
+              isPartnerChatOnly_ = input.readBool();
+              break;
+            }
+            case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00001000;
+              wordbanList_ = bs;
               break;
             }
             default: {
@@ -38437,6 +38768,73 @@ public final class SteammessagesBroadcastSteamclient {
       return enableReplay_;
     }
 
+    public static final int IS_PARTNER_CHAT_ONLY_FIELD_NUMBER = 12;
+    private boolean isPartnerChatOnly_;
+    /**
+     * <code>optional bool is_partner_chat_only = 12 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+     * @return Whether the isPartnerChatOnly field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsPartnerChatOnly() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional bool is_partner_chat_only = 12 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+     * @return The isPartnerChatOnly.
+     */
+    @java.lang.Override
+    public boolean getIsPartnerChatOnly() {
+      return isPartnerChatOnly_;
+    }
+
+    public static final int WORDBAN_LIST_FIELD_NUMBER = 13;
+    private volatile java.lang.Object wordbanList_;
+    /**
+     * <code>optional string wordban_list = 13;</code>
+     * @return Whether the wordbanList field is set.
+     */
+    @java.lang.Override
+    public boolean hasWordbanList() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional string wordban_list = 13;</code>
+     * @return The wordbanList.
+     */
+    @java.lang.Override
+    public java.lang.String getWordbanList() {
+      java.lang.Object ref = wordbanList_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          wordbanList_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string wordban_list = 13;</code>
+     * @return The bytes for wordbanList.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWordbanListBytes() {
+      java.lang.Object ref = wordbanList_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        wordbanList_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -38483,6 +38881,12 @@ public final class SteammessagesBroadcastSteamclient {
       }
       if (((bitField0_ & 0x00000400) != 0)) {
         output.writeBool(11, enableReplay_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeBool(12, isPartnerChatOnly_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, wordbanList_);
       }
       unknownFields.writeTo(output);
     }
@@ -38534,6 +38938,13 @@ public final class SteammessagesBroadcastSteamclient {
       if (((bitField0_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, enableReplay_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, isPartnerChatOnly_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, wordbanList_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -38604,6 +39015,16 @@ public final class SteammessagesBroadcastSteamclient {
         if (getEnableReplay()
             != other.getEnableReplay()) return false;
       }
+      if (hasIsPartnerChatOnly() != other.hasIsPartnerChatOnly()) return false;
+      if (hasIsPartnerChatOnly()) {
+        if (getIsPartnerChatOnly()
+            != other.getIsPartnerChatOnly()) return false;
+      }
+      if (hasWordbanList() != other.hasWordbanList()) return false;
+      if (hasWordbanList()) {
+        if (!getWordbanList()
+            .equals(other.getWordbanList())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -38660,6 +39081,15 @@ public final class SteammessagesBroadcastSteamclient {
         hash = (37 * hash) + ENABLE_REPLAY_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getEnableReplay());
+      }
+      if (hasIsPartnerChatOnly()) {
+        hash = (37 * hash) + IS_PARTNER_CHAT_ONLY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsPartnerChatOnly());
+      }
+      if (hasWordbanList()) {
+        hash = (37 * hash) + WORDBAN_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getWordbanList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -38816,6 +39246,10 @@ public final class SteammessagesBroadcastSteamclient {
         bitField0_ = (bitField0_ & ~0x00000200);
         enableReplay_ = false;
         bitField0_ = (bitField0_ & ~0x00000400);
+        isPartnerChatOnly_ = false;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        wordbanList_ = "";
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -38888,6 +39322,14 @@ public final class SteammessagesBroadcastSteamclient {
           result.enableReplay_ = enableReplay_;
           to_bitField0_ |= 0x00000400;
         }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.isPartnerChatOnly_ = isPartnerChatOnly_;
+          to_bitField0_ |= 0x00000800;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.wordbanList_ = wordbanList_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -38973,6 +39415,14 @@ public final class SteammessagesBroadcastSteamclient {
         }
         if (other.hasEnableReplay()) {
           setEnableReplay(other.getEnableReplay());
+        }
+        if (other.hasIsPartnerChatOnly()) {
+          setIsPartnerChatOnly(other.getIsPartnerChatOnly());
+        }
+        if (other.hasWordbanList()) {
+          bitField0_ |= 0x00001000;
+          wordbanList_ = other.wordbanList_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -39523,6 +39973,129 @@ public final class SteammessagesBroadcastSteamclient {
       public Builder clearEnableReplay() {
         bitField0_ = (bitField0_ & ~0x00000400);
         enableReplay_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isPartnerChatOnly_ ;
+      /**
+       * <code>optional bool is_partner_chat_only = 12 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+       * @return Whether the isPartnerChatOnly field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsPartnerChatOnly() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional bool is_partner_chat_only = 12 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+       * @return The isPartnerChatOnly.
+       */
+      @java.lang.Override
+      public boolean getIsPartnerChatOnly() {
+        return isPartnerChatOnly_;
+      }
+      /**
+       * <code>optional bool is_partner_chat_only = 12 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+       * @param value The isPartnerChatOnly to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPartnerChatOnly(boolean value) {
+        bitField0_ |= 0x00000800;
+        isPartnerChatOnly_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_partner_chat_only = 12 [(.description) = "When true, then only steamwork partner can create chat messages."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPartnerChatOnly() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        isPartnerChatOnly_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object wordbanList_ = "";
+      /**
+       * <code>optional string wordban_list = 13;</code>
+       * @return Whether the wordbanList field is set.
+       */
+      public boolean hasWordbanList() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional string wordban_list = 13;</code>
+       * @return The wordbanList.
+       */
+      public java.lang.String getWordbanList() {
+        java.lang.Object ref = wordbanList_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            wordbanList_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string wordban_list = 13;</code>
+       * @return The bytes for wordbanList.
+       */
+      public com.google.protobuf.ByteString
+          getWordbanListBytes() {
+        java.lang.Object ref = wordbanList_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          wordbanList_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string wordban_list = 13;</code>
+       * @param value The wordbanList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWordbanList(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        wordbanList_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string wordban_list = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWordbanList() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        wordbanList_ = getDefaultInstance().getWordbanList();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string wordban_list = 13;</code>
+       * @param value The bytes for wordbanList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWordbanListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        wordbanList_ = value;
         onChanged();
         return this;
       }
@@ -67918,201 +68491,205 @@ public final class SteammessagesBroadcastSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n/steam/steammessages_broadcast.steamcli" +
-      "ent.proto\0322steam/steammessages_unified_b" +
-      "ase.steamclient.proto\"\361\001\n(CBroadcast_Beg" +
-      "inBroadcastSession_Request\022\022\n\npermission" +
-      "\030\001 \001(\005\022\016\n\006gameid\030\002 \001(\004\022\032\n\022client_instanc" +
-      "e_id\030\003 \001(\004\022\r\n\005title\030\004 \001(\t\022\016\n\006cellid\030\005 \001(" +
-      "\r\022\022\n\nrtmp_token\030\006 \001(\004\022\030\n\020thumbnail_uploa" +
-      "d\030\007 \001(\010\022\023\n\013client_beta\030\010 \001(\t\022\r\n\005sysid\030\t " +
-      "\001(\r\022\024\n\014allow_webrtc\030\n \001(\010\"\234\003\n)CBroadcast" +
-      "_BeginBroadcastSession_Response\022\024\n\014broad" +
-      "cast_id\030\001 \001(\006\022P\n\030thumbnail_upload_addres" +
-      "s\030\002 \001(\tB.\202\265\030*Http address to upload the " +
-      "thumbnail data.\022e\n\026thumbnail_upload_toke" +
-      "n\030\003 \001(\tBE\202\265\030Atoken to authorize as broad" +
-      "caster to upload content to the relay.\022K" +
-      "\n\032thumbnail_interval_seconds\030\004 \001(\rB\'\202\265\030#" +
-      "how many seconds between thumbnails\022S\n\032h" +
-      "eartbeat_interval_seconds\030\005 \001(\rB/\202\265\030+how" +
-      " many seconds between session heartbeats" +
-      "\">\n&CBroadcast_EndBroadcastSession_Reque" +
-      "st\022\024\n\014broadcast_id\030\001 \001(\006\")\n\'CBroadcast_E" +
-      "ndBroadcastSession_Response\"\210\002\n\'CBroadca" +
-      "st_StartBroadcastUpload_Request\022\024\n\014broad" +
-      "cast_id\030\001 \001(\006\022\016\n\006cellid\030\002 \001(\r\022\017\n\007as_rtmp" +
-      "\030\003 \001(\010\022\025\n\rdelay_seconds\030\004 \001(\r\022R\n\nrtmp_to" +
-      "ken\030\005 \001(\004:\0010B;\202\265\0307Only set during RTMP u" +
-      "ploads; secret key from the user.\022\031\n\021upl" +
-      "oad_ip_address\030\006 \001(\r\022\021\n\tis_replay\030\007 \001(\010\022" +
-      "\r\n\005sysid\030\010 \001(\r\"\242\001\n(CBroadcast_StartBroad" +
-      "castUpload_Response\022\024\n\014upload_token\030\001 \001(" +
-      "\t\022\026\n\016upload_address\030\002 \001(\t\022\033\n\023broadcast_u" +
-      "pload_id\030\003 \001(\006\022\025\n\renable_replay\030\006 \001(\010\022\024\n" +
-      "\014http_address\030\007 \001(\t\"g\n1CBroadcast_Notify" +
-      "BroadcastUploadStop_Notification\022\033\n\023broa" +
-      "dcast_upload_id\030\001 \001(\006\022\025\n\rupload_result\030\002" +
-      " \001(\r\"\211\003\n!CBroadcast_WatchBroadcast_Reque" +
+      "ent.proto\032\036steam/steammessages_base.prot" +
+      "o\0322steam/steammessages_unified_base.stea" +
+      "mclient.proto\"\361\001\n(CBroadcast_BeginBroadc" +
+      "astSession_Request\022\022\n\npermission\030\001 \001(\005\022\016" +
+      "\n\006gameid\030\002 \001(\004\022\032\n\022client_instance_id\030\003 \001" +
+      "(\004\022\r\n\005title\030\004 \001(\t\022\016\n\006cellid\030\005 \001(\r\022\022\n\nrtm" +
+      "p_token\030\006 \001(\004\022\030\n\020thumbnail_upload\030\007 \001(\010\022" +
+      "\023\n\013client_beta\030\010 \001(\t\022\r\n\005sysid\030\t \001(\r\022\024\n\014a" +
+      "llow_webrtc\030\n \001(\010\"\234\003\n)CBroadcast_BeginBr" +
+      "oadcastSession_Response\022\024\n\014broadcast_id\030" +
+      "\001 \001(\006\022P\n\030thumbnail_upload_address\030\002 \001(\tB" +
+      ".\202\265\030*Http address to upload the thumbnai" +
+      "l data.\022e\n\026thumbnail_upload_token\030\003 \001(\tB" +
+      "E\202\265\030Atoken to authorize as broadcaster t" +
+      "o upload content to the relay.\022K\n\032thumbn" +
+      "ail_interval_seconds\030\004 \001(\rB\'\202\265\030#how many" +
+      " seconds between thumbnails\022S\n\032heartbeat" +
+      "_interval_seconds\030\005 \001(\rB/\202\265\030+how many se" +
+      "conds between session heartbeats\">\n&CBro" +
+      "adcast_EndBroadcastSession_Request\022\024\n\014br" +
+      "oadcast_id\030\001 \001(\006\")\n\'CBroadcast_EndBroadc" +
+      "astSession_Response\"\210\002\n\'CBroadcast_Start" +
+      "BroadcastUpload_Request\022\024\n\014broadcast_id\030" +
+      "\001 \001(\006\022\016\n\006cellid\030\002 \001(\r\022\017\n\007as_rtmp\030\003 \001(\010\022\025" +
+      "\n\rdelay_seconds\030\004 \001(\r\022R\n\nrtmp_token\030\005 \001(" +
+      "\004:\0010B;\202\265\0307Only set during RTMP uploads; " +
+      "secret key from the user.\022\031\n\021upload_ip_a" +
+      "ddress\030\006 \001(\r\022\021\n\tis_replay\030\007 \001(\010\022\r\n\005sysid" +
+      "\030\010 \001(\r\"\242\001\n(CBroadcast_StartBroadcastUplo" +
+      "ad_Response\022\024\n\014upload_token\030\001 \001(\t\022\026\n\016upl" +
+      "oad_address\030\002 \001(\t\022\033\n\023broadcast_upload_id" +
+      "\030\003 \001(\006\022\025\n\renable_replay\030\006 \001(\010\022\024\n\014http_ad" +
+      "dress\030\007 \001(\t\"g\n1CBroadcast_NotifyBroadcas" +
+      "tUploadStop_Notification\022\033\n\023broadcast_up" +
+      "load_id\030\001 \001(\006\022\025\n\rupload_result\030\002 \001(\r\"\211\003\n" +
+      "!CBroadcast_WatchBroadcast_Request\022)\n\007st" +
+      "eamid\030\001 \001(\006B\030\202\265\030\024broadcaster steamID.\022X\n" +
+      "\025existing_broadcast_id\030\002 \001(\006B9\202\265\0305broadc" +
+      "ast session ID (optional, rejoin if spec" +
+      "ified).\022b\n\014viewer_token\030\003 \001(\006BL\202\265\030Hviewe" +
+      "r token received from last WatchRequest " +
+      "call, from browser storage.\022\023\n\013client_ce" +
+      "ll\030\005 \001(\r\022S\n\016watch_location\030\006 \001(\0162\030.EBroa" +
+      "dcastWatchLocation:!k_EBroadcastWatchLoc" +
+      "ation_Invalid\022\021\n\tis_webrtc\030\007 \001(\010\"\372\007\n\"CBr" +
+      "oadcast_WatchBroadcast_Response\022[\n\010respo" +
+      "nse\030\001 \001(\01622.CBroadcast_WatchBroadcast_Re" +
+      "sponse.EWatchResponse:\025k_EWatchResponseR" +
+      "eady\022\017\n\007mpd_url\030\002 \001(\t\022\024\n\014broadcast_id\030\003 " +
+      "\001(\006\022\016\n\006gameid\030\004 \001(\004\022\r\n\005title\030\005 \001(\t\022\023\n\013nu" +
+      "m_viewers\030\006 \001(\r\022\022\n\npermission\030\007 \001(\005\022\017\n\007i" +
+      "s_rtmp\030\010 \001(\010\022\025\n\rseconds_delay\030\t \001(\005\022\024\n\014v" +
+      "iewer_token\030\n \001(\006\022\033\n\023hls_m3u8_master_url" +
+      "\030\013 \001(\t\022\032\n\022heartbeat_interval\030\014 \001(\005\022\025\n\rth" +
+      "umbnail_url\030\r \001(\t\022\021\n\tis_webrtc\030\016 \001(\010\022\031\n\021" +
+      "webrtc_session_id\030\017 \001(\006\022\030\n\020webrtc_offer_" +
+      "sdp\030\020 \001(\t\022\032\n\022webrtc_turn_server\030\021 \001(\t\022\021\n" +
+      "\tis_replay\030\022 \001(\010\022\020\n\010duration\030\023 \001(\005\022\037\n\027cd" +
+      "n_auth_url_parameters\030\024 \001(\t\"\317\003\n\016EWatchRe" +
+      "sponse\022\031\n\025k_EWatchResponseReady\020\001\022 \n\034k_E" +
+      "WatchResponseNotAvailable\020\002\022&\n\"k_EWatchR" +
+      "esponseWaitingForApproval\020\003\022#\n\037k_EWatchR" +
+      "esponseWaitingForStart\020\004\022\"\n\036k_EWatchResp" +
+      "onseInvalidSession\020\005\022%\n!k_EWatchResponse" +
+      "TooManyBroadcasts\020\006\022\'\n#k_EWatchResponseW" +
+      "aitingForReconnect\020\007\022&\n\"k_EWatchResponse" +
+      "SystemNotSupported\020\010\022\"\n\036k_EWatchResponse" +
+      "UserRestricted\020\t\022#\n\037k_EWatchResponseClie" +
+      "ntOutOfDate\020\n\022%\n!k_EWatchResponsePoorUpl" +
+      "oadQuality\020\013\022\'\n#k_EWatchResponseMissingS" +
+      "ubscription\020\014\"\256\002\n*CBroadcast_HeartbeatBr" +
+      "oadcast_Notification\022)\n\007steamid\030\001 \001(\006B\030\202" +
+      "\265\030\024broadcaster steamID.\022/\n\014broadcast_id\030" +
+      "\002 \001(\006B\031\202\265\030\025broadcast session ID.\022b\n\014view" +
+      "er_token\030\003 \001(\006BL\202\265\030Hviewer token receive" +
+      "d from last WatchRequest call, from brow" +
+      "ser storage.\022@\n\016representation\030\004 \001(\rB(\202\265" +
+      "\030$video stream representation watching\"\357" +
+      "\001\n-CBroadcast_StopWatchingBroadcast_Noti" +
+      "fication\022)\n\007steamid\030\001 \001(\006B\030\202\265\030\024broadcast" +
+      "er steamID.\022/\n\014broadcast_id\030\002 \001(\006B\031\202\265\030\025b" +
+      "roadcast session ID.\022b\n\014viewer_token\030\003 \001" +
+      "(\006BL\202\265\030Hviewer token received from last " +
+      "WatchRequest call, from browser storage." +
+      "\"\260\001\n%CBroadcast_GetBroadcastStatus_Reque" +
       "st\022)\n\007steamid\030\001 \001(\006B\030\202\265\030\024broadcaster ste" +
-      "amID.\022X\n\025existing_broadcast_id\030\002 \001(\006B9\202\265" +
-      "\0305broadcast session ID (optional, rejoin" +
-      " if specified).\022b\n\014viewer_token\030\003 \001(\006BL\202" +
-      "\265\030Hviewer token received from last Watch" +
-      "Request call, from browser storage.\022\023\n\013c" +
-      "lient_cell\030\005 \001(\r\022S\n\016watch_location\030\006 \001(\016" +
-      "2\030.EBroadcastWatchLocation:!k_EBroadcast" +
-      "WatchLocation_Invalid\022\021\n\tis_webrtc\030\007 \001(\010" +
-      "\"\372\007\n\"CBroadcast_WatchBroadcast_Response\022" +
-      "[\n\010response\030\001 \001(\01622.CBroadcast_WatchBroa" +
-      "dcast_Response.EWatchResponse:\025k_EWatchR" +
-      "esponseReady\022\017\n\007mpd_url\030\002 \001(\t\022\024\n\014broadca" +
-      "st_id\030\003 \001(\006\022\016\n\006gameid\030\004 \001(\004\022\r\n\005title\030\005 \001" +
-      "(\t\022\023\n\013num_viewers\030\006 \001(\r\022\022\n\npermission\030\007 " +
-      "\001(\005\022\017\n\007is_rtmp\030\010 \001(\010\022\025\n\rseconds_delay\030\t " +
-      "\001(\005\022\024\n\014viewer_token\030\n \001(\006\022\033\n\023hls_m3u8_ma" +
-      "ster_url\030\013 \001(\t\022\032\n\022heartbeat_interval\030\014 \001" +
-      "(\005\022\025\n\rthumbnail_url\030\r \001(\t\022\021\n\tis_webrtc\030\016" +
-      " \001(\010\022\031\n\021webrtc_session_id\030\017 \001(\006\022\030\n\020webrt" +
-      "c_offer_sdp\030\020 \001(\t\022\032\n\022webrtc_turn_server\030" +
-      "\021 \001(\t\022\021\n\tis_replay\030\022 \001(\010\022\020\n\010duration\030\023 \001" +
-      "(\005\022\037\n\027cdn_auth_url_parameters\030\024 \001(\t\"\317\003\n\016" +
-      "EWatchResponse\022\031\n\025k_EWatchResponseReady\020" +
-      "\001\022 \n\034k_EWatchResponseNotAvailable\020\002\022&\n\"k" +
-      "_EWatchResponseWaitingForApproval\020\003\022#\n\037k" +
-      "_EWatchResponseWaitingForStart\020\004\022\"\n\036k_EW" +
-      "atchResponseInvalidSession\020\005\022%\n!k_EWatch" +
-      "ResponseTooManyBroadcasts\020\006\022\'\n#k_EWatchR" +
-      "esponseWaitingForReconnect\020\007\022&\n\"k_EWatch" +
-      "ResponseSystemNotSupported\020\010\022\"\n\036k_EWatch" +
-      "ResponseUserRestricted\020\t\022#\n\037k_EWatchResp" +
-      "onseClientOutOfDate\020\n\022%\n!k_EWatchRespons" +
-      "ePoorUploadQuality\020\013\022\'\n#k_EWatchResponse" +
-      "MissingSubscription\020\014\"\256\002\n*CBroadcast_Hea" +
-      "rtbeatBroadcast_Notification\022)\n\007steamid\030" +
-      "\001 \001(\006B\030\202\265\030\024broadcaster steamID.\022/\n\014broad" +
-      "cast_id\030\002 \001(\006B\031\202\265\030\025broadcast session ID." +
-      "\022b\n\014viewer_token\030\003 \001(\006BL\202\265\030Hviewer token" +
-      " received from last WatchRequest call, f" +
-      "rom browser storage.\022@\n\016representation\030\004" +
-      " \001(\rB(\202\265\030$video stream representation wa" +
-      "tching\"\357\001\n-CBroadcast_StopWatchingBroadc" +
-      "ast_Notification\022)\n\007steamid\030\001 \001(\006B\030\202\265\030\024b" +
-      "roadcaster steamID.\022/\n\014broadcast_id\030\002 \001(" +
-      "\006B\031\202\265\030\025broadcast session ID.\022b\n\014viewer_t" +
-      "oken\030\003 \001(\006BL\202\265\030Hviewer token received fr" +
-      "om last WatchRequest call, from browser " +
-      "storage.\"\260\001\n%CBroadcast_GetBroadcastStat" +
-      "us_Request\022)\n\007steamid\030\001 \001(\006B\030\202\265\030\024broadca" +
-      "ster steamID.\022\\\n\014broadcast_id\030\002 \001(\006BF\202\265\030" +
-      "Bbroadcast session ID to proof that user" +
-      " is allowed to see details.\"\321\002\n&CBroadca" +
-      "st_GetBroadcastStatus_Response\022\016\n\006gameid" +
-      "\030\001 \001(\004\022\r\n\005title\030\002 \001(\t\022\023\n\013num_viewers\030\003 \001" +
-      "(\r\022\022\n\npermission\030\004 \001(\005\022\017\n\007is_rtmp\030\005 \001(\010\022" +
-      "\025\n\rseconds_delay\030\006 \001(\005\022\024\n\014is_publisher\030\007" +
-      " \001(\010\022\025\n\rthumbnail_url\030\010 \001(\t\022\027\n\017update_in" +
-      "terval\030\t \001(\005\022\024\n\014is_uploading\030\n \001(\010\022\020\n\010du" +
-      "ration\030\013 \001(\r\022\021\n\tis_replay\030\014 \001(\010\022\030\n\020is_ca" +
-      "pturing_vod\030\r \001(\010\022\034\n\024is_store_whiteliste" +
-      "d\030\016 \001(\010\"Q\n(CBroadcast_GetBroadcastThumbn" +
-      "ail_Request\022\017\n\007steamid\030\001 \001(\006\022\024\n\014broadcas" +
-      "t_id\030\002 \001(\006\"\202\001\n)CBroadcast_GetBroadcastTh" +
-      "umbnail_Response\022\025\n\rthumbnail_url\030\001 \001(\t\022" +
-      "\027\n\017update_interval\030\002 \001(\005\022\023\n\013num_viewers\030" +
-      "\003 \001(\005\022\020\n\010duration\030\004 \001(\005\"R\n$CBroadcast_In" +
-      "viteToBroadcast_Request\022\017\n\007steamid\030\001 \001(\006" +
-      "\022\031\n\021approval_response\030\002 \001(\010\"8\n%CBroadcas" +
-      "t_InviteToBroadcast_Response\022\017\n\007success\030" +
-      "\001 \001(\010\"|\n-CBroadcast_SendBroadcastStateTo" +
-      "Server_Request\022\022\n\npermission\030\001 \001(\005\022\016\n\006ga" +
-      "meid\030\002 \001(\004\022\r\n\005title\030\003 \001(\t\022\030\n\020game_data_c" +
-      "onfig\030\004 \001(\t\"0\n.CBroadcast_SendBroadcastS" +
-      "tateToServer_Response\"O\n7CBroadcast_Noti" +
-      "fyBroadcastSessionHeartbeat_Notification" +
-      "\022\024\n\014broadcast_id\030\001 \001(\006\"x\n\'CBroadcast_Get" +
-      "BroadcastChatInfo_Request\022\017\n\007steamid\030\001 \001" +
-      "(\006\022\024\n\014broadcast_id\030\002 \001(\006\022\021\n\tclient_ip\030\003 " +
-      "\001(\r\022\023\n\013client_cell\030\004 \001(\r\"o\n(CBroadcast_G" +
-      "etBroadcastChatInfo_Response\022\017\n\007chat_id\030" +
-      "\001 \001(\006\022\031\n\021view_url_template\030\003 \001(\t\022\027\n\017flai" +
-      "r_group_ids\030\004 \003(\r\"\352\001\n\"CBroadcast_PostCha" +
-      "tMessage_Request\022\017\n\007chat_id\030\001 \001(\006\022\017\n\007mes" +
-      "sage\030\002 \001(\t\022\023\n\013instance_id\030\003 \001(\r\022V\n\010langu" +
-      "age\030\004 \001(\r:\0010BA\202\265\030=ELanguage of the user " +
-      "posting the message, default is english\022" +
-      "5\n\014country_code\030\005 \001(\tB\037\202\265\030\033The two lette" +
-      "r country code\"{\n#CBroadcast_PostChatMes" +
-      "sage_Response\022\024\n\014persona_name\030\001 \001(\t\022\017\n\007i" +
-      "n_game\030\002 \001(\010\022\016\n\006result\030\003 \001(\005\022\035\n\025cooldown" +
-      "_time_seconds\030\004 \001(\005\"K\n)CBroadcast_Update" +
-      "ChatMessageFlair_Request\022\017\n\007chat_id\030\001 \001(" +
-      "\006\022\r\n\005flair\030\002 \001(\t\"\\\n*CBroadcast_UpdateCha" +
-      "tMessageFlair_Response\022\016\n\006result\030\001 \001(\005\022\017" +
-      "\n\007chat_id\030\002 \001(\006\022\r\n\005flair\030\003 \001(\t\"`\n(CBroad" +
-      "cast_MuteBroadcastChatUser_Request\022\017\n\007ch" +
-      "at_id\030\001 \001(\006\022\024\n\014user_steamid\030\002 \001(\006\022\r\n\005mut" +
-      "ed\030\003 \001(\010\"+\n)CBroadcast_MuteBroadcastChat" +
-      "User_Response\"N\n%CBroadcast_RemoveUserCh" +
-      "atText_Request\022\017\n\007chat_id\030\001 \001(\006\022\024\n\014user_" +
-      "steamid\030\002 \001(\006\"(\n&CBroadcast_RemoveUserCh" +
-      "atText_Response\"U\n,CBroadcast_GetBroadca" +
-      "stChatUserNames_Request\022\017\n\007chat_id\030\001 \001(\006" +
-      "\022\024\n\014user_steamid\030\002 \003(\006\"\264\001\n-CBroadcast_Ge" +
-      "tBroadcastChatUserNames_Response\022Q\n\rpers" +
-      "ona_names\030\001 \003(\0132:.CBroadcast_GetBroadcas" +
-      "tChatUserNames_Response.PersonaName\0320\n\013P" +
-      "ersonaName\022\020\n\010steam_id\030\001 \001(\006\022\017\n\007persona\030" +
-      "\002 \001(\t\"\231\001\n!CBroadcast_StartBuildClip_Requ" +
-      "est\022\017\n\007steamid\030\001 \001(\006\022\034\n\024broadcast_sessio" +
-      "n_id\030\002 \001(\006\022\025\n\rfirst_segment\030\003 \001(\005\022\024\n\014num" +
-      "_segments\030\004 \001(\005\022\030\n\020clip_description\030\005 \001(" +
-      "\t\"?\n\"CBroadcast_StartBuildClip_Response\022" +
-      "\031\n\021broadcast_clip_id\030\001 \001(\006\"B\n%CBroadcast" +
-      "_GetBuildClipStatus_Request\022\031\n\021broadcast" +
-      "_clip_id\030\001 \001(\006\"(\n&CBroadcast_GetBuildCli" +
-      "pStatus_Response\"\302\001\n!CBroadcast_SetClipD" +
-      "etails_Request\022&\n\021broadcast_clip_id\030\001 \001(" +
-      "\004B\013\202\265\030\007Clip ID\022.\n\nstart_time\030\002 \001(\rB\032\202\265\030\026" +
-      "start time of the clip\022*\n\010end_time\030\003 \001(\r" +
-      "B\030\202\265\030\024end time of the clip\022\031\n\021video_desc" +
-      "ription\030\004 \001(\t\"$\n\"CBroadcast_SetClipDetai" +
-      "ls_Response\"h\n!CBroadcast_GetClipDetails" +
-      "_Request\022C\n\021broadcast_clip_id\030\001 \001(\004B(\202\265\030" +
-      "$List of clip IDs we want details for\"\317\004" +
-      "\n\"CBroadcast_GetClipDetails_Response\0220\n\021" +
-      "broadcast_clip_id\030\001 \001(\004B\025\202\265\030\021broadcast c" +
-      "lip ID\022.\n\010video_id\030\002 \001(\004B\034\202\265\030\030matching u" +
-      "nique video ID\022,\n\nchannel_id\030\003 \001(\004B\030\202\265\030\024" +
-      "Broadcast Channel ID\0220\n\006app_id\030\004 \001(\rB \202\265" +
-      "\030\034App ID stream is tagged with\022<\n\025accoun" +
-      "tid_broadcaster\030\005 \001(\rB\035\202\265\030\031Account ID of" +
-      " broadcaster\0229\n\023accountid_clipmaker\030\006 \001(" +
-      "\rB\034\202\265\030\030Account ID of clip-maker\022E\n\021video" +
-      "_description\030\007 \001(\tB*\202\265\030&Short name or de" +
-      "scription of this clip\022;\n\nstart_time\030\010 \001" +
-      "(\rB\'\202\265\030#Wall time clip was broadcasted l" +
-      "ive\0226\n\023length_milliseconds\030\t \001(\rB\031\202\265\030\025le" +
-      "ngth of video in MS\0222\n\016thumbnail_path\030\n " +
-      "\001(\tB\032\202\265\030\026Path for thumbnail URL\"\303\004\n\036CBro" +
-      "adcast_SetRTMPInfo_Request\022\034\n\024broadcast_" +
-      "permission\030\001 \001(\005\022\024\n\014update_token\030\002 \001(\010\022\027" +
-      "\n\017broadcast_delay\030\003 \001(\005\022\016\n\006app_id\030\004 \001(\r\022" +
-      "\027\n\017required_app_id\030\005 \001(\r\022\234\001\n\031broadcast_c" +
-      "hat_permission\030\006 \001(\0162\031.EBroadcastChatPer" +
-      "mission: k_EBroadcastChatPermissionPubli" +
-      "cB<\202\265\0308Who is permitted to send a chat m" +
-      "essage during broadcast\022N\n\020broadcast_buf" +
-      "fer\030\007 \001(\005B4\202\265\0300Previous seconds we keep " +
-      "of the stream available\022>\n\007steamid\030\010 \001(\006" +
-      "B-\202\265\030)broadcaster steamID if not logged-" +
-      "in user\022C\n\017chat_rate_limit\030\t \001(\rB*\202\265\030&Se" +
-      "conds required between chat messages\0227\n\r" +
-      "enable_replay\030\n \001(\010B \202\265\030\034Enable replay o" +
-      "f last upload\"!\n\037CBroadcast_SetRTMPInfo_" +
+      "amID.\022\\\n\014broadcast_id\030\002 \001(\006BF\202\265\030Bbroadca" +
+      "st session ID to proof that user is allo" +
+      "wed to see details.\"\321\002\n&CBroadcast_GetBr" +
+      "oadcastStatus_Response\022\016\n\006gameid\030\001 \001(\004\022\r" +
+      "\n\005title\030\002 \001(\t\022\023\n\013num_viewers\030\003 \001(\r\022\022\n\npe" +
+      "rmission\030\004 \001(\005\022\017\n\007is_rtmp\030\005 \001(\010\022\025\n\rsecon" +
+      "ds_delay\030\006 \001(\005\022\024\n\014is_publisher\030\007 \001(\010\022\025\n\r" +
+      "thumbnail_url\030\010 \001(\t\022\027\n\017update_interval\030\t" +
+      " \001(\005\022\024\n\014is_uploading\030\n \001(\010\022\020\n\010duration\030\013" +
+      " \001(\r\022\021\n\tis_replay\030\014 \001(\010\022\030\n\020is_capturing_" +
+      "vod\030\r \001(\010\022\034\n\024is_store_whitelisted\030\016 \001(\010\"" +
+      "Q\n(CBroadcast_GetBroadcastThumbnail_Requ" +
+      "est\022\017\n\007steamid\030\001 \001(\006\022\024\n\014broadcast_id\030\002 \001" +
+      "(\006\"\202\001\n)CBroadcast_GetBroadcastThumbnail_" +
+      "Response\022\025\n\rthumbnail_url\030\001 \001(\t\022\027\n\017updat" +
+      "e_interval\030\002 \001(\005\022\023\n\013num_viewers\030\003 \001(\005\022\020\n" +
+      "\010duration\030\004 \001(\005\"R\n$CBroadcast_InviteToBr" +
+      "oadcast_Request\022\017\n\007steamid\030\001 \001(\006\022\031\n\021appr" +
+      "oval_response\030\002 \001(\010\"8\n%CBroadcast_Invite" +
+      "ToBroadcast_Response\022\017\n\007success\030\001 \001(\010\"|\n" +
+      "-CBroadcast_SendBroadcastStateToServer_R" +
+      "equest\022\022\n\npermission\030\001 \001(\005\022\016\n\006gameid\030\002 \001" +
+      "(\004\022\r\n\005title\030\003 \001(\t\022\030\n\020game_data_config\030\004 " +
+      "\001(\t\"0\n.CBroadcast_SendBroadcastStateToSe" +
+      "rver_Response\"O\n7CBroadcast_NotifyBroadc" +
+      "astSessionHeartbeat_Notification\022\024\n\014broa" +
+      "dcast_id\030\001 \001(\006\"x\n\'CBroadcast_GetBroadcas" +
+      "tChatInfo_Request\022\017\n\007steamid\030\001 \001(\006\022\024\n\014br" +
+      "oadcast_id\030\002 \001(\006\022\021\n\tclient_ip\030\003 \001(\r\022\023\n\013c" +
+      "lient_cell\030\004 \001(\r\"o\n(CBroadcast_GetBroadc" +
+      "astChatInfo_Response\022\017\n\007chat_id\030\001 \001(\006\022\031\n" +
+      "\021view_url_template\030\003 \001(\t\022\027\n\017flair_group_" +
+      "ids\030\004 \003(\r\"\352\001\n\"CBroadcast_PostChatMessage" +
+      "_Request\022\017\n\007chat_id\030\001 \001(\006\022\017\n\007message\030\002 \001" +
+      "(\t\022\023\n\013instance_id\030\003 \001(\r\022V\n\010language\030\004 \001(" +
+      "\r:\0010BA\202\265\030=ELanguage of the user posting " +
+      "the message, default is english\0225\n\014count" +
+      "ry_code\030\005 \001(\tB\037\202\265\030\033The two letter countr" +
+      "y code\"{\n#CBroadcast_PostChatMessage_Res" +
+      "ponse\022\024\n\014persona_name\030\001 \001(\t\022\017\n\007in_game\030\002" +
+      " \001(\010\022\016\n\006result\030\003 \001(\005\022\035\n\025cooldown_time_se" +
+      "conds\030\004 \001(\005\"K\n)CBroadcast_UpdateChatMess" +
+      "ageFlair_Request\022\017\n\007chat_id\030\001 \001(\006\022\r\n\005fla" +
+      "ir\030\002 \001(\t\"\\\n*CBroadcast_UpdateChatMessage" +
+      "Flair_Response\022\016\n\006result\030\001 \001(\005\022\017\n\007chat_i" +
+      "d\030\002 \001(\006\022\r\n\005flair\030\003 \001(\t\"`\n(CBroadcast_Mut" +
+      "eBroadcastChatUser_Request\022\017\n\007chat_id\030\001 " +
+      "\001(\006\022\024\n\014user_steamid\030\002 \001(\006\022\r\n\005muted\030\003 \001(\010" +
+      "\"+\n)CBroadcast_MuteBroadcastChatUser_Res" +
+      "ponse\"N\n%CBroadcast_RemoveUserChatText_R" +
+      "equest\022\017\n\007chat_id\030\001 \001(\006\022\024\n\014user_steamid\030" +
+      "\002 \001(\006\"(\n&CBroadcast_RemoveUserChatText_R" +
+      "esponse\"U\n,CBroadcast_GetBroadcastChatUs" +
+      "erNames_Request\022\017\n\007chat_id\030\001 \001(\006\022\024\n\014user" +
+      "_steamid\030\002 \003(\006\"\272\001\n-CBroadcast_GetBroadca" +
+      "stChatUserNames_Response\022Q\n\rpersona_name" +
+      "s\030\001 \003(\0132:.CBroadcast_GetBroadcastChatUse" +
+      "rNames_Response.PersonaName\0326\n\013PersonaNa" +
+      "me\022\026\n\010steam_id\030\001 \001(\006B\004\300\266\030\001\022\017\n\007persona\030\002 " +
+      "\001(\t\"\231\001\n!CBroadcast_StartBuildClip_Reques" +
+      "t\022\017\n\007steamid\030\001 \001(\006\022\034\n\024broadcast_session_" +
+      "id\030\002 \001(\006\022\025\n\rfirst_segment\030\003 \001(\005\022\024\n\014num_s" +
+      "egments\030\004 \001(\005\022\030\n\020clip_description\030\005 \001(\t\"" +
+      "?\n\"CBroadcast_StartBuildClip_Response\022\031\n" +
+      "\021broadcast_clip_id\030\001 \001(\006\"B\n%CBroadcast_G" +
+      "etBuildClipStatus_Request\022\031\n\021broadcast_c" +
+      "lip_id\030\001 \001(\006\"(\n&CBroadcast_GetBuildClipS" +
+      "tatus_Response\"\302\001\n!CBroadcast_SetClipDet" +
+      "ails_Request\022&\n\021broadcast_clip_id\030\001 \001(\004B" +
+      "\013\202\265\030\007Clip ID\022.\n\nstart_time\030\002 \001(\rB\032\202\265\030\026st" +
+      "art time of the clip\022*\n\010end_time\030\003 \001(\rB\030" +
+      "\202\265\030\024end time of the clip\022\031\n\021video_descri" +
+      "ption\030\004 \001(\t\"$\n\"CBroadcast_SetClipDetails" +
+      "_Response\"h\n!CBroadcast_GetClipDetails_R" +
+      "equest\022C\n\021broadcast_clip_id\030\001 \001(\004B(\202\265\030$L" +
+      "ist of clip IDs we want details for\"\317\004\n\"" +
+      "CBroadcast_GetClipDetails_Response\0220\n\021br" +
+      "oadcast_clip_id\030\001 \001(\004B\025\202\265\030\021broadcast cli" +
+      "p ID\022.\n\010video_id\030\002 \001(\004B\034\202\265\030\030matching uni" +
+      "que video ID\022,\n\nchannel_id\030\003 \001(\004B\030\202\265\030\024Br" +
+      "oadcast Channel ID\0220\n\006app_id\030\004 \001(\rB \202\265\030\034" +
+      "App ID stream is tagged with\022<\n\025accounti" +
+      "d_broadcaster\030\005 \001(\rB\035\202\265\030\031Account ID of b" +
+      "roadcaster\0229\n\023accountid_clipmaker\030\006 \001(\rB" +
+      "\034\202\265\030\030Account ID of clip-maker\022E\n\021video_d" +
+      "escription\030\007 \001(\tB*\202\265\030&Short name or desc" +
+      "ription of this clip\022;\n\nstart_time\030\010 \001(\r" +
+      "B\'\202\265\030#Wall time clip was broadcasted liv" +
+      "e\0226\n\023length_milliseconds\030\t \001(\rB\031\202\265\030\025leng" +
+      "th of video in MS\0222\n\016thumbnail_path\030\n \001(" +
+      "\tB\032\202\265\030\026Path for thumbnail URL\"\275\005\n\036CBroad" +
+      "cast_SetRTMPInfo_Request\022\034\n\024broadcast_pe" +
+      "rmission\030\001 \001(\005\022\024\n\014update_token\030\002 \001(\010\022\027\n\017" +
+      "broadcast_delay\030\003 \001(\005\022\016\n\006app_id\030\004 \001(\r\022\027\n" +
+      "\017required_app_id\030\005 \001(\r\022\234\001\n\031broadcast_cha" +
+      "t_permission\030\006 \001(\0162\031.EBroadcastChatPermi" +
+      "ssion: k_EBroadcastChatPermissionPublicB" +
+      "<\202\265\0308Who is permitted to send a chat mes" +
+      "sage during broadcast\022N\n\020broadcast_buffe" +
+      "r\030\007 \001(\005B4\202\265\0300Previous seconds we keep of" +
+      " the stream available\022>\n\007steamid\030\010 \001(\006B-" +
+      "\202\265\030)broadcaster steamID if not logged-in" +
+      " user\022C\n\017chat_rate_limit\030\t \001(\rB*\202\265\030&Seco" +
+      "nds required between chat messages\0227\n\ren" +
+      "able_replay\030\n \001(\010B \202\265\030\034Enable replay of " +
+      "last upload\022b\n\024is_partner_chat_only\030\013 \001(" +
+      "\010BD\202\265\030@When true, then only steamwork pa" +
+      "rtner can create chat messages.\022\024\n\014wordb" +
+      "an_list\030\014 \001(\t\"!\n\037CBroadcast_SetRTMPInfo_" +
       "Response\"l\n\036CBroadcast_GetRTMPInfo_Reque" +
       "st\022\n\n\002ip\030\001 \001(\r\022>\n\007steamid\030\002 \001(\006B-\202\265\030)bro" +
-      "adcaster steamID if not logged-in user\"\260" +
-      "\004\n\037CBroadcast_GetRTMPInfo_Response\022\034\n\024br" +
+      "adcaster steamID if not logged-in user\"\252" +
+      "\005\n\037CBroadcast_GetRTMPInfo_Response\022\034\n\024br" +
       "oadcast_permission\030\001 \001(\005\022\021\n\trtmp_host\030\002 " +
       "\001(\t\022\022\n\nrtmp_token\030\003 \001(\t\022\027\n\017broadcast_del" +
       "ay\030\004 \001(\005\022\016\n\006app_id\030\005 \001(\r\022\027\n\017required_app" +
@@ -68126,358 +68703,363 @@ public final class SteammessagesBroadcastSteamclient {
       "hat_rate_limit\030\n \001(\rB*\202\265\030&Seconds requir" +
       "ed between chat messages\0227\n\renable_repla" +
       "y\030\013 \001(\010B \202\265\030\034Enable replay of last uploa" +
-      "d\"a\n,CBroadcast_WebRTCHaveTURNServer_Not" +
-      "ification\022\034\n\024broadcast_session_id\030\001 \001(\006\022" +
-      "\023\n\013turn_server\030\002 \001(\t\"\232\001\n$CBroadcast_WebR" +
-      "TCStartResult_Request\022\031\n\021webrtc_session_" +
-      "id\030\001 \001(\006\022\017\n\007started\030\002 \001(\010\022\r\n\005offer\030\003 \001(\t" +
-      "\022\024\n\014resolution_x\030\004 \001(\r\022\024\n\014resolution_y\030\005" +
-      " \001(\r\022\013\n\003fps\030\006 \001(\r\"\'\n%CBroadcast_WebRTCSt" +
-      "artResult_Response\"=\n CBroadcast_WebRTCS" +
-      "topped_Request\022\031\n\021webrtc_session_id\030\001 \001(" +
-      "\006\"#\n!CBroadcast_WebRTCStopped_Response\"l" +
-      "\n\"CBroadcast_WebRTCSetAnswer_Request\022\033\n\023" +
-      "broadcaster_steamid\030\001 \001(\006\022\031\n\021webrtc_sess" +
-      "ion_id\030\002 \001(\006\022\016\n\006answer\030\003 \001(\t\"%\n#CBroadca" +
-      "st_WebRTCSetAnswer_Response\";\n)CBroadcas" +
-      "t_WebRTCLookupTURNServer_Request\022\016\n\006cell" +
-      "id\030\001 \001(\r\"A\n*CBroadcast_WebRTCLookupTURNS" +
-      "erver_Response\022\023\n\013turn_server\030\001 \001(\t\"Z\n\033C" +
-      "Broadcast_WebRTC_Candidate\022\017\n\007sdp_mid\030\001 " +
-      "\001(\t\022\027\n\017sdp_mline_index\030\002 \001(\005\022\021\n\tcandidat" +
-      "e\030\003 \001(\t\"w\n)CBroadcast_WebRTCAddHostCandi" +
-      "date_Request\022\031\n\021webrtc_session_id\030\001 \001(\006\022" +
-      "/\n\tcandidate\030\002 \001(\0132\034.CBroadcast_WebRTC_C" +
-      "andidate\",\n*CBroadcast_WebRTCAddHostCand" +
-      "idate_Response\"\226\001\n+CBroadcast_WebRTCAddV" +
-      "iewerCandidate_Request\022\033\n\023broadcaster_st" +
-      "eamid\030\001 \001(\006\022\031\n\021webrtc_session_id\030\002 \001(\006\022/" +
-      "\n\tcandidate\030\003 \001(\0132\034.CBroadcast_WebRTC_Ca" +
-      "ndidate\".\n,CBroadcast_WebRTCAddViewerCan" +
-      "didate_Response\"\202\001\n*CBroadcast_WebRTCGet" +
-      "HostCandidates_Request\022\033\n\023broadcaster_st" +
-      "eamid\030\001 \001(\006\022\031\n\021webrtc_session_id\030\002 \001(\006\022\034" +
-      "\n\024candidate_generation\030\003 \001(\r\"}\n+CBroadca" +
-      "st_WebRTCGetHostCandidates_Response\022\034\n\024c" +
-      "andidate_generation\030\001 \001(\r\0220\n\ncandidates\030" +
-      "\002 \003(\0132\034.CBroadcast_WebRTC_Candidate\"\244\003\n*" +
-      "CBroadcast_GetBroadcastUploadStats_Reque" +
-      "st\022:\n\trow_limit\030\001 \001(\r:\003100B\"\202\265\030\036How many" +
-      " at maximum to return.\022%\n\nstart_time\030\002 \001" +
-      "(\r:\0010B\016\202\265\030\nStart time\022P\n\tupload_id\030\003 \001(\004" +
-      "B=\202\265\0309Optional relay upload ID - not com" +
-      "patible with session_id\022i\n\007steamid\030\004 \001(\006" +
-      "BX\202\265\030TOptional the steamid whose stats y" +
-      "ou want, otherwise the user logged in - " +
-      "admin only\022V\n\nsession_id\030\005 \001(\004BB\202\265\030>Opti" +
-      "onal broadcast session ID - not compatia" +
-      "ble with upload_id\"\211\t\n+CBroadcast_GetBro" +
-      "adcastUploadStats_Response\022N\n\014upload_sta" +
-      "ts\030\001 \003(\01328.CBroadcast_GetBroadcastUpload" +
-      "Stats_Response.UploadStats\032\211\010\n\013UploadSta" +
-      "ts\022\033\n\rupload_result\030\001 \001(\rB\004\202\265\030\000\0227\n\014time_" +
-      "stopped\030\002 \001(\rB!\202\265\030\035time broadcast upload" +
-      " stopped\0226\n\020seconds_uploaded\030\003 \001(\rB\034\202\265\030\030" +
-      "seconds of vido uploaded\022/\n\013max_viewers\030" +
-      "\004 \001(\rB\032\202\265\030\026max concurrent viewers\022.\n\014res" +
-      "olution_x\030\005 \001(\rB\030\202\265\030\024horizontal resultio" +
-      "n\022,\n\014resolution_y\030\006 \001(\rB\026\202\265\030\022vertical re" +
-      "sultion\022\033\n\ravg_bandwidth\030\007 \001(\rB\004\202\265\030\000\022;\n\013" +
-      "total_bytes\030\010 \001(\004B&\202\265\030\"total byte upload" +
-      "ed by broadcaster\022$\n\006app_id\030\t \001(\rB\024\202\265\030\020g" +
-      "ame broadcasted\022;\n\024total_unique_viewers\030" +
-      "\n \001(\rB\035\202\265\030\031total unique viewers seen\022Q\n\025" +
-      "total_seconds_watched\030\013 \001(\004B2\202\265\030.total n" +
-      "umber of seconds watched by all viewers\022" +
-      "7\n\014time_started\030\014 \001(\rB!\202\265\030\035time broadcas" +
-      "t upload started\0220\n\tupload_id\030\r \001(\004B\035\202\265\030" +
-      "\031broadcast relay upload id\0223\n\rlocal_addr" +
-      "ess\030\016 \001(\tB\034\202\265\030\030upload to server address\022" +
-      "6\n\016remote_address\030\017 \001(\tB\036\202\265\030\032upload from" +
-      " client address\0220\n\021frames_per_second\030\020 \001" +
-      "(\rB\025\202\265\030\021frames per second\022?\n\023num_represe" +
-      "ntations\030\021 \001(\rB\"\202\265\030\036number of video repr" +
-      "esetations\022\037\n\010app_name\030\022 \001(\tB\r\202\265\030\tgame n" +
-      "ame\0223\n\tis_replay\030\023 \001(\010B \202\265\030\034replay of pr" +
-      "evious recording\022,\n\nsession_id\030\024 \001(\004B\030\202\265" +
-      "\030\024broadcast session id\"\275\001\n*CBroadcast_Ge" +
-      "tBroadcastViewerStats_Request\0220\n\tupload_" +
-      "id\030\001 \001(\004B\035\202\265\030\031Get stats for this stream\022" +
-      "]\n\007steamid\030\002 \001(\006BL\202\265\030HOptional: The stea" +
-      "mid of the broadcast whose details you a" +
-      "re requesting.\"\230\003\n+CBroadcast_GetBroadca" +
-      "stViewerStats_Response\022N\n\014viewer_stats\030\001" +
-      " \003(\01328.CBroadcast_GetBroadcastViewerStat" +
-      "s_Response.ViewerStats\022P\n\rcountry_stats\030" +
-      "\002 \003(\01329.CBroadcast_GetBroadcastViewerSta" +
-      "ts_Response.CountryStats\032c\n\013ViewerStats\022" +
-      " \n\004time\030\001 \001(\rB\022\202\265\030\016time of record\0222\n\013num" +
-      "_viewers\030\002 \001(\rB\035\202\265\030\031current number of vi" +
-      "ewers\032b\n\014CountryStats\022&\n\014country_code\030\001 " +
-      "\001(\tB\020\202\265\030\014country code\022*\n\013num_viewers\030\002 \001" +
-      "(\rB\025\202\265\030\021number of viewers\"\370\001\n,CBroadcast" +
-      "_BroadcastViewerState_Notification\022\017\n\007st" +
-      "eamid\030\001 \001(\006\022a\n\005state\030\002 \001(\0162:.CBroadcast_" +
-      "BroadcastViewerState_Notification.EViewe" +
-      "rState:\026k_EViewerNeedsApproval\"T\n\014EViewe" +
-      "rState\022\032\n\026k_EViewerNeedsApproval\020\001\022\025\n\021k_" +
-      "EViewerWatching\020\002\022\021\n\rk_EViewerLeft\020\003\"F\n." +
-      "CBroadcast_WaitingBroadcastViewer_Notifi" +
-      "cation\022\024\n\014broadcast_id\030\001 \001(\006\"\215\002\n.CBroadc" +
-      "ast_BroadcastUploadStarted_Notification\022" +
-      "\024\n\014broadcast_id\030\001 \001(\006\022\024\n\014upload_token\030\002 " +
-      "\001(\t\022\026\n\016upload_address\030\003 \001(\t\022\024\n\014http_addr" +
-      "ess\030\004 \001(\t\022\033\n\023broadcast_upload_id\030\005 \001(\006\022S" +
-      "\n\032heartbeat_interval_seconds\030\006 \001(\rB/\202\265\030+" +
-      "how many seconds between session heartbe" +
-      "ats\022\017\n\007is_rtmp\030\007 \001(\010\"\225\001\n+CBroadcast_Stop" +
-      "BroadcastUpload_Notification\022\024\n\014broadcas" +
-      "t_id\030\001 \001(\006\022\032\n\022broadcast_relay_id\030\002 \001(\006\022\025" +
-      "\n\rupload_result\030\003 \001(\r\022\035\n\025too_many_poor_u" +
-      "ploads\030\004 \001(\010\"=\n%CBroadcast_SessionClosed" +
-      "_Notification\022\024\n\014broadcast_id\030\001 \001(\006\"L\n-C" +
+      "d\022b\n\024is_partner_chat_only\030\014 \001(\010BD\202\265\030@Whe" +
+      "n true, then only steamwork partner can " +
+      "create chat messages.\022\024\n\014wordban_list\030\r " +
+      "\001(\t\"a\n,CBroadcast_WebRTCHaveTURNServer_N" +
+      "otification\022\034\n\024broadcast_session_id\030\001 \001(" +
+      "\006\022\023\n\013turn_server\030\002 \001(\t\"\232\001\n$CBroadcast_We" +
+      "bRTCStartResult_Request\022\031\n\021webrtc_sessio" +
+      "n_id\030\001 \001(\006\022\017\n\007started\030\002 \001(\010\022\r\n\005offer\030\003 \001" +
+      "(\t\022\024\n\014resolution_x\030\004 \001(\r\022\024\n\014resolution_y" +
+      "\030\005 \001(\r\022\013\n\003fps\030\006 \001(\r\"\'\n%CBroadcast_WebRTC" +
+      "StartResult_Response\"=\n CBroadcast_WebRT" +
+      "CStopped_Request\022\031\n\021webrtc_session_id\030\001 " +
+      "\001(\006\"#\n!CBroadcast_WebRTCStopped_Response" +
+      "\"l\n\"CBroadcast_WebRTCSetAnswer_Request\022\033" +
+      "\n\023broadcaster_steamid\030\001 \001(\006\022\031\n\021webrtc_se" +
+      "ssion_id\030\002 \001(\006\022\016\n\006answer\030\003 \001(\t\"%\n#CBroad" +
+      "cast_WebRTCSetAnswer_Response\";\n)CBroadc" +
+      "ast_WebRTCLookupTURNServer_Request\022\016\n\006ce" +
+      "llid\030\001 \001(\r\"A\n*CBroadcast_WebRTCLookupTUR" +
+      "NServer_Response\022\023\n\013turn_server\030\001 \001(\t\"Z\n" +
+      "\033CBroadcast_WebRTC_Candidate\022\017\n\007sdp_mid\030" +
+      "\001 \001(\t\022\027\n\017sdp_mline_index\030\002 \001(\005\022\021\n\tcandid" +
+      "ate\030\003 \001(\t\"w\n)CBroadcast_WebRTCAddHostCan" +
+      "didate_Request\022\031\n\021webrtc_session_id\030\001 \001(" +
+      "\006\022/\n\tcandidate\030\002 \001(\0132\034.CBroadcast_WebRTC" +
+      "_Candidate\",\n*CBroadcast_WebRTCAddHostCa" +
+      "ndidate_Response\"\226\001\n+CBroadcast_WebRTCAd" +
+      "dViewerCandidate_Request\022\033\n\023broadcaster_" +
+      "steamid\030\001 \001(\006\022\031\n\021webrtc_session_id\030\002 \001(\006" +
+      "\022/\n\tcandidate\030\003 \001(\0132\034.CBroadcast_WebRTC_" +
+      "Candidate\".\n,CBroadcast_WebRTCAddViewerC" +
+      "andidate_Response\"\202\001\n*CBroadcast_WebRTCG" +
+      "etHostCandidates_Request\022\033\n\023broadcaster_" +
+      "steamid\030\001 \001(\006\022\031\n\021webrtc_session_id\030\002 \001(\006" +
+      "\022\034\n\024candidate_generation\030\003 \001(\r\"}\n+CBroad" +
+      "cast_WebRTCGetHostCandidates_Response\022\034\n" +
+      "\024candidate_generation\030\001 \001(\r\0220\n\ncandidate" +
+      "s\030\002 \003(\0132\034.CBroadcast_WebRTC_Candidate\"\244\003" +
+      "\n*CBroadcast_GetBroadcastUploadStats_Req" +
+      "uest\022:\n\trow_limit\030\001 \001(\r:\003100B\"\202\265\030\036How ma" +
+      "ny at maximum to return.\022%\n\nstart_time\030\002" +
+      " \001(\r:\0010B\016\202\265\030\nStart time\022P\n\tupload_id\030\003 \001" +
+      "(\004B=\202\265\0309Optional relay upload ID - not c" +
+      "ompatible with session_id\022i\n\007steamid\030\004 \001" +
+      "(\006BX\202\265\030TOptional the steamid whose stats" +
+      " you want, otherwise the user logged in " +
+      "- admin only\022V\n\nsession_id\030\005 \001(\004BB\202\265\030>Op" +
+      "tional broadcast session ID - not compat" +
+      "iable with upload_id\"\211\t\n+CBroadcast_GetB" +
+      "roadcastUploadStats_Response\022N\n\014upload_s" +
+      "tats\030\001 \003(\01328.CBroadcast_GetBroadcastUplo" +
+      "adStats_Response.UploadStats\032\211\010\n\013UploadS" +
+      "tats\022\033\n\rupload_result\030\001 \001(\rB\004\202\265\030\000\0227\n\014tim" +
+      "e_stopped\030\002 \001(\rB!\202\265\030\035time broadcast uplo" +
+      "ad stopped\0226\n\020seconds_uploaded\030\003 \001(\rB\034\202\265" +
+      "\030\030seconds of vido uploaded\022/\n\013max_viewer" +
+      "s\030\004 \001(\rB\032\202\265\030\026max concurrent viewers\022.\n\014r" +
+      "esolution_x\030\005 \001(\rB\030\202\265\030\024horizontal result" +
+      "ion\022,\n\014resolution_y\030\006 \001(\rB\026\202\265\030\022vertical " +
+      "resultion\022\033\n\ravg_bandwidth\030\007 \001(\rB\004\202\265\030\000\022;" +
+      "\n\013total_bytes\030\010 \001(\004B&\202\265\030\"total byte uplo" +
+      "aded by broadcaster\022$\n\006app_id\030\t \001(\rB\024\202\265\030" +
+      "\020game broadcasted\022;\n\024total_unique_viewer" +
+      "s\030\n \001(\rB\035\202\265\030\031total unique viewers seen\022Q" +
+      "\n\025total_seconds_watched\030\013 \001(\004B2\202\265\030.total" +
+      " number of seconds watched by all viewer" +
+      "s\0227\n\014time_started\030\014 \001(\rB!\202\265\030\035time broadc" +
+      "ast upload started\0220\n\tupload_id\030\r \001(\004B\035\202" +
+      "\265\030\031broadcast relay upload id\0223\n\rlocal_ad" +
+      "dress\030\016 \001(\tB\034\202\265\030\030upload to server addres" +
+      "s\0226\n\016remote_address\030\017 \001(\tB\036\202\265\030\032upload fr" +
+      "om client address\0220\n\021frames_per_second\030\020" +
+      " \001(\rB\025\202\265\030\021frames per second\022?\n\023num_repre" +
+      "sentations\030\021 \001(\rB\"\202\265\030\036number of video re" +
+      "presetations\022\037\n\010app_name\030\022 \001(\tB\r\202\265\030\tgame" +
+      " name\0223\n\tis_replay\030\023 \001(\010B \202\265\030\034replay of " +
+      "previous recording\022,\n\nsession_id\030\024 \001(\004B\030" +
+      "\202\265\030\024broadcast session id\"\275\001\n*CBroadcast_" +
+      "GetBroadcastViewerStats_Request\0220\n\tuploa" +
+      "d_id\030\001 \001(\004B\035\202\265\030\031Get stats for this strea" +
+      "m\022]\n\007steamid\030\002 \001(\006BL\202\265\030HOptional: The st" +
+      "eamid of the broadcast whose details you" +
+      " are requesting.\"\230\003\n+CBroadcast_GetBroad" +
+      "castViewerStats_Response\022N\n\014viewer_stats" +
+      "\030\001 \003(\01328.CBroadcast_GetBroadcastViewerSt" +
+      "ats_Response.ViewerStats\022P\n\rcountry_stat" +
+      "s\030\002 \003(\01329.CBroadcast_GetBroadcastViewerS" +
+      "tats_Response.CountryStats\032c\n\013ViewerStat" +
+      "s\022 \n\004time\030\001 \001(\rB\022\202\265\030\016time of record\0222\n\013n" +
+      "um_viewers\030\002 \001(\rB\035\202\265\030\031current number of " +
+      "viewers\032b\n\014CountryStats\022&\n\014country_code\030" +
+      "\001 \001(\tB\020\202\265\030\014country code\022*\n\013num_viewers\030\002" +
+      " \001(\rB\025\202\265\030\021number of viewers\"\370\001\n,CBroadca" +
+      "st_BroadcastViewerState_Notification\022\017\n\007" +
+      "steamid\030\001 \001(\006\022a\n\005state\030\002 \001(\0162:.CBroadcas" +
+      "t_BroadcastViewerState_Notification.EVie" +
+      "werState:\026k_EViewerNeedsApproval\"T\n\014EVie" +
+      "werState\022\032\n\026k_EViewerNeedsApproval\020\001\022\025\n\021" +
+      "k_EViewerWatching\020\002\022\021\n\rk_EViewerLeft\020\003\"F" +
+      "\n.CBroadcast_WaitingBroadcastViewer_Noti" +
+      "fication\022\024\n\014broadcast_id\030\001 \001(\006\"\215\002\n.CBroa" +
+      "dcast_BroadcastUploadStarted_Notificatio" +
+      "n\022\024\n\014broadcast_id\030\001 \001(\006\022\024\n\014upload_token\030" +
+      "\002 \001(\t\022\026\n\016upload_address\030\003 \001(\t\022\024\n\014http_ad" +
+      "dress\030\004 \001(\t\022\033\n\023broadcast_upload_id\030\005 \001(\006" +
+      "\022S\n\032heartbeat_interval_seconds\030\006 \001(\rB/\202\265" +
+      "\030+how many seconds between session heart" +
+      "beats\022\017\n\007is_rtmp\030\007 \001(\010\"\225\001\n+CBroadcast_St" +
+      "opBroadcastUpload_Notification\022\024\n\014broadc" +
+      "ast_id\030\001 \001(\006\022\032\n\022broadcast_relay_id\030\002 \001(\006" +
+      "\022\025\n\rupload_result\030\003 \001(\r\022\035\n\025too_many_poor" +
+      "_uploads\030\004 \001(\010\"=\n%CBroadcast_SessionClos" +
+      "ed_Notification\022\024\n\014broadcast_id\030\001 \001(\006\"L\n" +
+      "-CBroadcast_ViewerBroadcastInvite_Notifi" +
+      "cation\022\033\n\023broadcaster_steamid\030\001 \001(\006\"T\n\'C" +
+      "Broadcast_BroadcastStatus_Notification\022\024" +
+      "\n\014broadcast_id\030\001 \001(\006\022\023\n\013num_viewers\030\002 \001(" +
+      "\005\"\216\001\n,CBroadcast_BroadcastChannelLive_No" +
+      "tification\022\034\n\024broadcast_channel_id\030\001 \001(\006" +
+      "\022\036\n\026broadcast_channel_name\030\002 \001(\t\022 \n\030broa" +
+      "dcast_channel_avatar\030\003 \001(\t\"\301\001\n,CBroadcas" +
+      "t_SendThumbnailToRelay_Notification\022\036\n\026t" +
+      "humbnail_upload_token\030\001 \001(\t\022&\n\036thumbnail" +
+      "_broadcast_session_id\030\002 \001(\006\022\026\n\016thumbnail" +
+      "_data\030\003 \001(\014\022\027\n\017thumbnail_width\030\004 \001(\r\022\030\n\020" +
+      "thumbnail_height\030\005 \001(\r\"L\n,CBroadcast_Web" +
+      "RTCNeedTURNServer_Notification\022\034\n\024broadc" +
+      "ast_session_id\030\001 \001(\006\"\214\001\n#CBroadcast_WebR" +
+      "TCStart_Notification\022\034\n\024broadcast_sessio" +
+      "n_id\030\001 \001(\006\022\031\n\021webrtc_session_id\030\002 \001(\006\022\026\n" +
+      "\016viewer_steamid\030\003 \001(\006\022\024\n\014viewer_token\030\004 " +
+      "\001(\006\"r\n\'CBroadcast_WebRTCSetAnswer_Notifi" +
+      "cation\022\034\n\024broadcast_session_id\030\001 \001(\006\022\031\n\021" +
+      "webrtc_session_id\030\002 \001(\006\022\016\n\006answer\030\003 \001(\t\"" +
+      "\234\001\n0CBroadcast_WebRTCAddViewerCandidate_" +
+      "Notification\022\034\n\024broadcast_session_id\030\001 \001" +
+      "(\006\022\031\n\021webrtc_session_id\030\002 \001(\006\022/\n\tcandida" +
+      "te\030\003 \001(\0132\034.CBroadcast_WebRTC_Candidate*\246" +
+      "\005\n\027EBroadcastWatchLocation\022%\n!k_EBroadca" +
+      "stWatchLocation_Invalid\020\000\022)\n%k_EBroadcas" +
+      "tWatchLocation_SteamTV_Tab\020\001\0220\n,k_EBroad" +
+      "castWatchLocation_SteamTV_WatchParty\020\002\022&" +
+      "\n\"k_EBroadcastWatchLocation_Chat_Tab\020\003\022-" +
+      "\n)k_EBroadcastWatchLocation_Chat_WatchPa" +
+      "rty\020\004\022+\n\'k_EBroadcastWatchLocation_Commu" +
+      "nityPage\020\005\022*\n&k_EBroadcastWatchLocation_" +
+      "StoreAppPage\020\006\022$\n k_EBroadcastWatchLocat" +
+      "ion_InGame\020\007\022(\n$k_EBroadcastWatchLocatio" +
+      "n_BigPicture\020\010\022\'\n#k_EBroadcastWatchLocat" +
+      "ion_SalesPage\020\t\022)\n%k_EBroadcastWatchLoca" +
+      "tion_CuratorPage\020\n\022+\n\'k_EBroadcastWatchL" +
+      "ocation_DeveloperPage\020\013\022*\n&k_EBroadcastW" +
+      "atchLocation_Chat_Friends\020\014\022)\n%k_EBroadc" +
+      "astWatchLocation_SteamTV_Web\020\r\022/\n+k_EBro" +
+      "adcastWatchLocation_DesktopUI_Overlay\020\016*" +
+      "g\n\030EBroadcastChatPermission\022$\n k_EBroadc" +
+      "astChatPermissionPublic\020\000\022%\n!k_EBroadcas" +
+      "tChatPermissionOwnsApp\020\0012\206+\n\tBroadcast\022\355" +
+      "\001\n\025BeginBroadcastSession\022).CBroadcast_Be" +
+      "ginBroadcastSession_Request\032*.CBroadcast" +
+      "_BeginBroadcastSession_Response\"}\202\265\030yReq" +
+      "uest from client to directory to begin a" +
+      " broadcast session. No data being sent t" +
+      "o relay; just available for broadcast.\022\272" +
+      "\001\n\023EndBroadcastSession\022\'.CBroadcast_EndB" +
+      "roadcastSession_Request\032(.CBroadcast_End" +
+      "BroadcastSession_Response\"P\202\265\030LRequest f" +
+      "rom client to stop a broadcast session. " +
+      "Any uploads will terminate.\022\254\001\n\024StartBro" +
+      "adcastUpload\022(.CBroadcast_StartBroadcast" +
+      "Upload_Request\032).CBroadcast_StartBroadca" +
+      "stUpload_Response\"?\202\265\030;Request from clie" +
+      "nt to begin sending video for a broadcas" +
+      "t.\022\231\001\n\031NotifyBroadcastUploadStop\0222.CBroa" +
+      "dcast_NotifyBroadcastUploadStop_Notifica" +
+      "tion\032\013.NoResponse\";\202\265\0307Tells directory t" +
+      "hat client stopped uploading broadcast\022\207" +
+      "\001\n\016WatchBroadcast\022\".CBroadcast_WatchBroa" +
+      "dcast_Request\032#.CBroadcast_WatchBroadcas" +
+      "t_Response\",\202\265\030(Request from viewer to w" +
+      "atch a broadcast\022\201\001\n\022HeartbeatBroadcast\022" +
+      "+.CBroadcast_HeartbeatBroadcast_Notifica" +
+      "tion\032\013.NoResponse\"1\202\265\030-Notify directory " +
+      "that user is still watching.\022\301\001\n\025StopWat" +
+      "chingBroadcast\022..CBroadcast_StopWatching" +
+      "Broadcast_Notification\032\013.NoResponse\"k\202\265\030" +
+      "gRequest to immediately stop watching a ",
+      "broadcast. Optional Method, if not calle" +
+      "d, viewer will time out.\022\226\001\n\022GetBroadcas" +
+      "tStatus\022&.CBroadcast_GetBroadcastStatus_" +
+      "Request\032\'.CBroadcast_GetBroadcastStatus_" +
+      "Response\"/\202\265\030+Request from viewer about " +
+      "broadcast details\022\227\001\n\025GetBroadcastThumbn" +
+      "ail\022).CBroadcast_GetBroadcastThumbnail_R" +
+      "equest\032*.CBroadcast_GetBroadcastThumbnai" +
+      "l_Response\"\'\202\265\030#Request thumbnail URL fo" +
+      "r broadcast\022\242\001\n\021InviteToBroadcast\022%.CBro" +
+      "adcast_InviteToBroadcast_Request\032&.CBroa" +
+      "dcast_InviteToBroadcast_Response\">\202\265\030:In" +
+      "vites another steam user to watch the ca" +
+      "ller\'s broadcast\022\310\001\n\032SendBroadcastStateT" +
+      "oServer\022..CBroadcast_SendBroadcastStateT" +
+      "oServer_Request\032/.CBroadcast_SendBroadca" +
+      "stStateToServer_Response\"I\202\265\030ESends user" +
+      "s current broadcast state (permissions, " +
+      "game) to the server\022\242\001\n\037NotifyBroadcastS" +
+      "essionHeartbeat\0228.CBroadcast_NotifyBroad" +
+      "castSessionHeartbeat_Notification\032\013.NoRe" +
+      "sponse\"8\202\265\0304Tells directory broadcast se" +
+      "ssion is still available\022\224\001\n\024GetBroadcas" +
+      "tChatInfo\022(.CBroadcast_GetBroadcastChatI" +
+      "nfo_Request\032).CBroadcast_GetBroadcastCha" +
+      "tInfo_Response\"\'\202\265\030#Gets chat room info " +
+      "for a broadcast\022\212\001\n\017PostChatMessage\022#.CB" +
+      "roadcast_PostChatMessage_Request\032$.CBroa" +
+      "dcast_PostChatMessage_Response\",\202\265\030(Post" +
+      " chat message to specified chat room\022\253\001\n" +
+      "\026UpdateChatMessageFlair\022*.CBroadcast_Upd" +
+      "ateChatMessageFlair_Request\032+.CBroadcast" +
+      "_UpdateChatMessageFlair_Response\"8\202\265\0304Up" +
+      "date chat message flair in the specified" +
+      " chat room\022\226\001\n\025MuteBroadcastChatUser\022).C" +
+      "Broadcast_MuteBroadcastChatUser_Request\032" +
+      "*.CBroadcast_MuteBroadcastChatUser_Respo" +
+      "nse\"&\202\265\030\"Mute a user in your broadcast c" +
+      "hat\022\224\001\n\022RemoveUserChatText\022&.CBroadcast_" +
+      "RemoveUserChatText_Request\032\'.CBroadcast_" +
+      "RemoveUserChatText_Response\"-\202\265\030)Tell al" +
+      "l viewers to remove user chat text\022\243\001\n\031G" +
+      "etBroadcastChatUserNames\022-.CBroadcast_Ge" +
+      "tBroadcastChatUserNames_Request\032..CBroad" +
+      "cast_GetBroadcastChatUserNames_Response\"" +
+      "\'\202\265\030#Get names for list of users in chat" +
+      "\022~\n\016StartBuildClip\022\".CBroadcast_StartBui" +
+      "ldClip_Request\032#.CBroadcast_StartBuildCl" +
+      "ip_Response\"#\202\265\030\037Start building a broadc" +
+      "ast clip\022\212\001\n\022GetBuildClipStatus\022&.CBroad" +
+      "cast_GetBuildClipStatus_Request\032\'.CBroad" +
+      "cast_GetBuildClipStatus_Response\"#\202\265\030\037St" +
+      "art building a broadcast clip\022w\n\016SetClip" +
+      "Details\022\".CBroadcast_SetClipDetails_Requ" +
+      "est\032#.CBroadcast_SetClipDetails_Response" +
+      "\"\034\202\265\030\030Updates a broadcast clip\022~\n\016GetCli" +
+      "pDetails\022\".CBroadcast_GetClipDetails_Req" +
+      "uest\032#.CBroadcast_GetClipDetails_Respons" +
+      "e\"#\202\265\030\037Get details for Broadcast Clips\022n" +
+      "\n\013SetRTMPInfo\022\037.CBroadcast_SetRTMPInfo_R" +
+      "equest\032 .CBroadcast_SetRTMPInfo_Response" +
+      "\"\034\202\265\030\030Sets RTMP broadcast info\022n\n\013GetRTM" +
+      "PInfo\022\037.CBroadcast_GetRTMPInfo_Request\032 " +
+      ".CBroadcast_GetRTMPInfo_Response\"\034\202\265\030\030Ge" +
+      "ts RTMP broadcast info\022\236\001\n\032NotifyWebRTCH" +
+      "aveTURNServer\022-.CBroadcast_WebRTCHaveTUR" +
+      "NServer_Notification\032\013.NoResponse\"D\202\265\030@N" +
+      "otification from client to server with t" +
+      "he client\'s TURN server\022\254\001\n\021WebRTCStartR" +
+      "esult\022%.CBroadcast_WebRTCStartResult_Req" +
+      "uest\032&.CBroadcast_WebRTCStartResult_Resp" +
+      "onse\"H\202\265\030DNotify the server that a WebRT" +
+      "C session has been created by the host\022\240" +
+      "\001\n\rWebRTCStopped\022!.CBroadcast_WebRTCStop" +
+      "ped_Request\032\".CBroadcast_WebRTCStopped_R" +
+      "esponse\"H\202\265\030DNotify the server that a We" +
+      "bRTC session has been stopped by the hos" +
+      "t\022\250\001\n\017WebRTCSetAnswer\022#.CBroadcast_WebRT" +
+      "CSetAnswer_Request\032$.CBroadcast_WebRTCSe" +
+      "tAnswer_Response\"J\202\265\030FNotify the server " +
+      "that a WebRTC session has been created b" +
+      "y the viewer\022\242\001\n\026WebRTCLookupTURNServer\022" +
+      "*.CBroadcast_WebRTCLookupTURNServer_Requ" +
+      "est\032+.CBroadcast_WebRTCLookupTURNServer_" +
+      "Response\"/\202\265\030+Lookup the best TURN serve" +
+      "r for this client\022\261\001\n\026WebRTCAddHostCandi" +
+      "date\022*.CBroadcast_WebRTCAddHostCandidate" +
+      "_Request\032+.CBroadcast_WebRTCAddHostCandi" +
+      "date_Response\">\202\265\030:Add an ICE candidate " +
+      "for the host side of a WebRTC session\022\271\001" +
+      "\n\030WebRTCAddViewerCandidate\022,.CBroadcast_" +
+      "WebRTCAddViewerCandidate_Request\032-.CBroa" +
+      "dcast_WebRTCAddViewerCandidate_Response\"" +
+      "@\202\265\030<Add an ICE candidate for the viewer" +
+      " side of a WebRTC session\022\266\001\n\027WebRTCGetH" +
+      "ostCandidates\022+.CBroadcast_WebRTCGetHost" +
+      "Candidates_Request\032,.CBroadcast_WebRTCGe" +
+      "tHostCandidates_Response\"@\202\265\030<Get the IC" +
+      "E candidates for the host side of a WebR" +
+      "TC session\022\236\001\n\027GetBroadcastUploadStats\022+" +
+      ".CBroadcast_GetBroadcastUploadStats_Requ" +
+      "est\032,.CBroadcast_GetBroadcastUploadStats" +
+      "_Response\"(\202\265\030$Gets broadcast upload sta" +
+      "ts for user\022\237\001\n\027GetBroadcastViewerStats\022" +
+      "+.CBroadcast_GetBroadcastViewerStats_Req" +
+      "uest\032,.CBroadcast_GetBroadcastViewerStat" +
+      "s_Response\")\202\265\030%Gets viewer stats for gi" +
+      "ven broadcast\032*\202\265\030&Methods for Steam bro" +
+      "adcast operations2\304\021\n\017BroadcastClient\022\241\001" +
+      "\n\032NotifyBroadcastViewerState\022-.CBroadcas" +
+      "t_BroadcastViewerState_Notification\032\013.No" +
+      "Response\"G\202\265\030CNotification from server t" +
+      "o client that a viewers state has change" +
+      "d\022\275\001\n\034NotifyWaitingBroadcastViewer\022/.CBr" +
+      "oadcast_WaitingBroadcastViewer_Notificat" +
+      "ion\032\013.NoResponse\"_\202\265\030[Notification from " +
+      "server to client one or more users is wa" +
+      "iting for user to start broadcast\022\247\001\n\034No" +
+      "tifyBroadcastUploadStarted\022/.CBroadcast_" +
+      "BroadcastUploadStarted_Notification\032\013.No" +
+      "Response\"I\202\265\030ENotification from server t" +
+      "o client with information about a broadc" +
+      "ast\022\326\001\n\031NotifyStopBroadcastUpload\022,.CBro" +
+      "adcast_StopBroadcastUpload_Notification\032" +
+      "\013.NoResponse\"~\202\265\030zNotification from serv" +
+      "er to client telling it to stop uploadin" +
+      "g when the last viewer has disconnected " +
+      "from their broadcast\022\265\001\n\023NotifySessionCl" +
+      "osed\022&.CBroadcast_SessionClosed_Notifica" +
+      "tion\032\013.NoResponse\"i\202\265\030eNotification from" +
+      " server to client telling it a session h" +
+      "as been closed unexpectedly by the direc" +
+      "tory\022\303\001\n\033NotifyViewerBroadcastInvite\022..C" +
       "Broadcast_ViewerBroadcastInvite_Notifica" +
-      "tion\022\033\n\023broadcaster_steamid\030\001 \001(\006\"T\n\'CBr" +
-      "oadcast_BroadcastStatus_Notification\022\024\n\014" +
-      "broadcast_id\030\001 \001(\006\022\023\n\013num_viewers\030\002 \001(\005\"" +
-      "\216\001\n,CBroadcast_BroadcastChannelLive_Noti" +
-      "fication\022\034\n\024broadcast_channel_id\030\001 \001(\006\022\036" +
-      "\n\026broadcast_channel_name\030\002 \001(\t\022 \n\030broadc" +
-      "ast_channel_avatar\030\003 \001(\t\"\301\001\n,CBroadcast_" +
-      "SendThumbnailToRelay_Notification\022\036\n\026thu" +
-      "mbnail_upload_token\030\001 \001(\t\022&\n\036thumbnail_b" +
-      "roadcast_session_id\030\002 \001(\006\022\026\n\016thumbnail_d" +
-      "ata\030\003 \001(\014\022\027\n\017thumbnail_width\030\004 \001(\r\022\030\n\020th" +
-      "umbnail_height\030\005 \001(\r\"L\n,CBroadcast_WebRT" +
-      "CNeedTURNServer_Notification\022\034\n\024broadcas" +
-      "t_session_id\030\001 \001(\006\"\214\001\n#CBroadcast_WebRTC" +
-      "Start_Notification\022\034\n\024broadcast_session_" +
-      "id\030\001 \001(\006\022\031\n\021webrtc_session_id\030\002 \001(\006\022\026\n\016v" +
-      "iewer_steamid\030\003 \001(\006\022\024\n\014viewer_token\030\004 \001(" +
-      "\006\"r\n\'CBroadcast_WebRTCSetAnswer_Notifica" +
-      "tion\022\034\n\024broadcast_session_id\030\001 \001(\006\022\031\n\021we" +
-      "brtc_session_id\030\002 \001(\006\022\016\n\006answer\030\003 \001(\t\"\234\001" +
-      "\n0CBroadcast_WebRTCAddViewerCandidate_No" +
-      "tification\022\034\n\024broadcast_session_id\030\001 \001(\006" +
-      "\022\031\n\021webrtc_session_id\030\002 \001(\006\022/\n\tcandidate" +
-      "\030\003 \001(\0132\034.CBroadcast_WebRTC_Candidate*\365\004\n" +
-      "\027EBroadcastWatchLocation\022%\n!k_EBroadcast" +
-      "WatchLocation_Invalid\020\000\022)\n%k_EBroadcastW" +
-      "atchLocation_SteamTV_Tab\020\001\0220\n,k_EBroadca" +
-      "stWatchLocation_SteamTV_WatchParty\020\002\022&\n\"" +
-      "k_EBroadcastWatchLocation_Chat_Tab\020\003\022-\n)" +
-      "k_EBroadcastWatchLocation_Chat_WatchPart" +
-      "y\020\004\022+\n\'k_EBroadcastWatchLocation_Communi" +
-      "tyPage\020\005\022*\n&k_EBroadcastWatchLocation_St" +
-      "oreAppPage\020\006\022$\n k_EBroadcastWatchLocatio" +
-      "n_InGame\020\007\022(\n$k_EBroadcastWatchLocation_" +
-      "BigPicture\020\010\022\'\n#k_EBroadcastWatchLocatio" +
-      "n_SalesPage\020\t\022)\n%k_EBroadcastWatchLocati" +
-      "on_CuratorPage\020\n\022+\n\'k_EBroadcastWatchLoc" +
-      "ation_DeveloperPage\020\013\022*\n&k_EBroadcastWat" +
-      "chLocation_Chat_Friends\020\014\022)\n%k_EBroadcas" +
-      "tWatchLocation_SteamTV_Web\020\r*g\n\030EBroadca" +
-      "stChatPermission\022$\n k_EBroadcastChatPerm" +
-      "issionPublic\020\000\022%\n!k_EBroadcastChatPermis" +
-      "sionOwnsApp\020\0012\206+\n\tBroadcast\022\355\001\n\025BeginBro" +
-      "adcastSession\022).CBroadcast_BeginBroadcas" +
-      "tSession_Request\032*.CBroadcast_BeginBroad" +
-      "castSession_Response\"}\202\265\030yRequest from c" +
-      "lient to directory to begin a broadcast " +
-      "session. No data being sent to relay; ju" +
-      "st available for broadcast.\022\272\001\n\023EndBroad" +
-      "castSession\022\'.CBroadcast_EndBroadcastSes" +
-      "sion_Request\032(.CBroadcast_EndBroadcastSe" +
-      "ssion_Response\"P\202\265\030LRequest from client " +
-      "to stop a broadcast session. Any uploads" +
-      " will terminate.\022\254\001\n\024StartBroadcastUploa" +
-      "d\022(.CBroadcast_StartBroadcastUpload_Requ" +
-      "est\032).CBroadcast_StartBroadcastUpload_Re" +
-      "sponse\"?\202\265\030;Request from client to begin" +
-      " sending video for a broadcast.\022\231\001\n\031Noti" +
-      "fyBroadcastUploadStop\0222.CBroadcast_Notif" +
-      "yBroadcastUploadStop_Notification\032\013.NoRe" +
-      "sponse\";\202\265\0307Tells directory that client " +
-      "stopped uploading broadcast\022\207\001\n\016WatchBro" +
-      "adcast\022\".CBroadcast_WatchBroadcast_Reque" +
-      "st\032#.CBroadcast_WatchBroadcast_Response\"" +
-      ",\202\265\030(Request from viewer to watch a broa" +
-      "dcast\022\201\001\n\022HeartbeatBroadcast\022+.CBroadcas" +
-      "t_HeartbeatBroadcast_Notification\032\013.NoRe" +
-      "sponse\"1\202\265\030-Notify directory that user i" +
-      "s still watching.\022\301\001\n\025StopWatchingBroadc" +
-      "ast\022..CBroadcast_StopWatchingBroadcast_N" +
-      "otification\032\013.NoResponse\"k\202\265\030gRequest to" +
-      " immediately stop watching a broadcast. " +
-      "Optional Method, if not called, viewer w" +
-      "ill time out.\022\226\001\n\022GetBroadcastStatus\022&.C" +
-      "Broadcast_GetBroadcastStatus_Request\032\'.C" +
-      "Broadcast_GetBroadcastStatus_Response\"/\202" +
-      "\265\030+Request from viewer about broadcast d" +
-      "etails\022\227\001\n\025GetBroadcastThumbnail\022).CBroa" +
-      "dcast_GetBroadcastThumbnail_Request\032*.CB" +
-      "roadcast_GetBroadcastThumbnail_Response\"",
-      "\'\202\265\030#Request thumbnail URL for broadcast" +
-      "\022\242\001\n\021InviteToBroadcast\022%.CBroadcast_Invi" +
-      "teToBroadcast_Request\032&.CBroadcast_Invit" +
-      "eToBroadcast_Response\">\202\265\030:Invites anoth" +
-      "er steam user to watch the caller\'s broa" +
-      "dcast\022\310\001\n\032SendBroadcastStateToServer\022..C" +
-      "Broadcast_SendBroadcastStateToServer_Req" +
-      "uest\032/.CBroadcast_SendBroadcastStateToSe" +
-      "rver_Response\"I\202\265\030ESends users current b" +
-      "roadcast state (permissions, game) to th" +
-      "e server\022\242\001\n\037NotifyBroadcastSessionHeart" +
-      "beat\0228.CBroadcast_NotifyBroadcastSession" +
-      "Heartbeat_Notification\032\013.NoResponse\"8\202\265\030" +
-      "4Tells directory broadcast session is st" +
-      "ill available\022\224\001\n\024GetBroadcastChatInfo\022(" +
-      ".CBroadcast_GetBroadcastChatInfo_Request" +
-      "\032).CBroadcast_GetBroadcastChatInfo_Respo" +
-      "nse\"\'\202\265\030#Gets chat room info for a broad" +
-      "cast\022\212\001\n\017PostChatMessage\022#.CBroadcast_Po" +
-      "stChatMessage_Request\032$.CBroadcast_PostC" +
-      "hatMessage_Response\",\202\265\030(Post chat messa" +
-      "ge to specified chat room\022\253\001\n\026UpdateChat" +
-      "MessageFlair\022*.CBroadcast_UpdateChatMess" +
-      "ageFlair_Request\032+.CBroadcast_UpdateChat" +
-      "MessageFlair_Response\"8\202\265\0304Update chat m" +
-      "essage flair in the specified chat room\022" +
-      "\226\001\n\025MuteBroadcastChatUser\022).CBroadcast_M" +
-      "uteBroadcastChatUser_Request\032*.CBroadcas" +
-      "t_MuteBroadcastChatUser_Response\"&\202\265\030\"Mu" +
-      "te a user in your broadcast chat\022\224\001\n\022Rem" +
-      "oveUserChatText\022&.CBroadcast_RemoveUserC" +
-      "hatText_Request\032\'.CBroadcast_RemoveUserC" +
-      "hatText_Response\"-\202\265\030)Tell all viewers t" +
-      "o remove user chat text\022\243\001\n\031GetBroadcast" +
-      "ChatUserNames\022-.CBroadcast_GetBroadcastC" +
-      "hatUserNames_Request\032..CBroadcast_GetBro" +
-      "adcastChatUserNames_Response\"\'\202\265\030#Get na" +
-      "mes for list of users in chat\022~\n\016StartBu" +
-      "ildClip\022\".CBroadcast_StartBuildClip_Requ" +
-      "est\032#.CBroadcast_StartBuildClip_Response" +
-      "\"#\202\265\030\037Start building a broadcast clip\022\212\001" +
-      "\n\022GetBuildClipStatus\022&.CBroadcast_GetBui" +
-      "ldClipStatus_Request\032\'.CBroadcast_GetBui" +
-      "ldClipStatus_Response\"#\202\265\030\037Start buildin" +
-      "g a broadcast clip\022w\n\016SetClipDetails\022\".C" +
-      "Broadcast_SetClipDetails_Request\032#.CBroa" +
-      "dcast_SetClipDetails_Response\"\034\202\265\030\030Updat" +
-      "es a broadcast clip\022~\n\016GetClipDetails\022\"." +
-      "CBroadcast_GetClipDetails_Request\032#.CBro" +
-      "adcast_GetClipDetails_Response\"#\202\265\030\037Get " +
-      "details for Broadcast Clips\022n\n\013SetRTMPIn" +
-      "fo\022\037.CBroadcast_SetRTMPInfo_Request\032 .CB" +
-      "roadcast_SetRTMPInfo_Response\"\034\202\265\030\030Sets " +
-      "RTMP broadcast info\022n\n\013GetRTMPInfo\022\037.CBr" +
-      "oadcast_GetRTMPInfo_Request\032 .CBroadcast" +
-      "_GetRTMPInfo_Response\"\034\202\265\030\030Gets RTMP bro" +
-      "adcast info\022\236\001\n\032NotifyWebRTCHaveTURNServ" +
-      "er\022-.CBroadcast_WebRTCHaveTURNServer_Not" +
-      "ification\032\013.NoResponse\"D\202\265\030@Notification" +
-      " from client to server with the client\'s" +
-      " TURN server\022\254\001\n\021WebRTCStartResult\022%.CBr" +
-      "oadcast_WebRTCStartResult_Request\032&.CBro" +
-      "adcast_WebRTCStartResult_Response\"H\202\265\030DN" +
-      "otify the server that a WebRTC session h" +
-      "as been created by the host\022\240\001\n\rWebRTCSt" +
-      "opped\022!.CBroadcast_WebRTCStopped_Request" +
-      "\032\".CBroadcast_WebRTCStopped_Response\"H\202\265" +
-      "\030DNotify the server that a WebRTC sessio" +
-      "n has been stopped by the host\022\250\001\n\017WebRT" +
-      "CSetAnswer\022#.CBroadcast_WebRTCSetAnswer_" +
-      "Request\032$.CBroadcast_WebRTCSetAnswer_Res" +
-      "ponse\"J\202\265\030FNotify the server that a WebR" +
-      "TC session has been created by the viewe" +
-      "r\022\242\001\n\026WebRTCLookupTURNServer\022*.CBroadcas" +
-      "t_WebRTCLookupTURNServer_Request\032+.CBroa" +
-      "dcast_WebRTCLookupTURNServer_Response\"/\202" +
-      "\265\030+Lookup the best TURN server for this " +
-      "client\022\261\001\n\026WebRTCAddHostCandidate\022*.CBro" +
-      "adcast_WebRTCAddHostCandidate_Request\032+." +
-      "CBroadcast_WebRTCAddHostCandidate_Respon" +
-      "se\">\202\265\030:Add an ICE candidate for the hos" +
-      "t side of a WebRTC session\022\271\001\n\030WebRTCAdd" +
-      "ViewerCandidate\022,.CBroadcast_WebRTCAddVi" +
-      "ewerCandidate_Request\032-.CBroadcast_WebRT" +
-      "CAddViewerCandidate_Response\"@\202\265\030<Add an" +
-      " ICE candidate for the viewer side of a " +
-      "WebRTC session\022\266\001\n\027WebRTCGetHostCandidat" +
-      "es\022+.CBroadcast_WebRTCGetHostCandidates_" +
-      "Request\032,.CBroadcast_WebRTCGetHostCandid" +
-      "ates_Response\"@\202\265\030<Get the ICE candidate" +
-      "s for the host side of a WebRTC session\022" +
-      "\236\001\n\027GetBroadcastUploadStats\022+.CBroadcast" +
-      "_GetBroadcastUploadStats_Request\032,.CBroa" +
-      "dcast_GetBroadcastUploadStats_Response\"(" +
-      "\202\265\030$Gets broadcast upload stats for user" +
-      "\022\237\001\n\027GetBroadcastViewerStats\022+.CBroadcas" +
-      "t_GetBroadcastViewerStats_Request\032,.CBro" +
-      "adcast_GetBroadcastViewerStats_Response\"" +
-      ")\202\265\030%Gets viewer stats for given broadca" +
-      "st\032*\202\265\030&Methods for Steam broadcast oper" +
-      "ations2\304\021\n\017BroadcastClient\022\241\001\n\032NotifyBro" +
-      "adcastViewerState\022-.CBroadcast_Broadcast" +
-      "ViewerState_Notification\032\013.NoResponse\"G\202" +
-      "\265\030CNotification from server to client th" +
-      "at a viewers state has changed\022\275\001\n\034Notif" +
-      "yWaitingBroadcastViewer\022/.CBroadcast_Wai" +
-      "tingBroadcastViewer_Notification\032\013.NoRes" +
-      "ponse\"_\202\265\030[Notification from server to c" +
-      "lient one or more users is waiting for u" +
-      "ser to start broadcast\022\247\001\n\034NotifyBroadca" +
-      "stUploadStarted\022/.CBroadcast_BroadcastUp" +
-      "loadStarted_Notification\032\013.NoResponse\"I\202" +
-      "\265\030ENotification from server to client wi" +
-      "th information about a broadcast\022\326\001\n\031Not" +
-      "ifyStopBroadcastUpload\022,.CBroadcast_Stop" +
-      "BroadcastUpload_Notification\032\013.NoRespons" +
-      "e\"~\202\265\030zNotification from server to clien" +
-      "t telling it to stop uploading when the " +
-      "last viewer has disconnected from their " +
-      "broadcast\022\265\001\n\023NotifySessionClosed\022&.CBro" +
-      "adcast_SessionClosed_Notification\032\013.NoRe" +
-      "sponse\"i\202\265\030eNotification from server to " +
-      "client telling it a session has been clo" +
-      "sed unexpectedly by the directory\022\303\001\n\033No" +
-      "tifyViewerBroadcastInvite\022..CBroadcast_V" +
-      "iewerBroadcastInvite_Notification\032\013.NoRe" +
-      "sponse\"g\202\265\030cNotification from server to " +
-      "client that a broadcaster is inviting a " +
-      "viewer to watch their broadcast\022\225\001\n\025Noti" +
-      "fyBroadcastStatus\022(.CBroadcast_Broadcast" +
-      "Status_Notification\032\013.NoResponse\"E\202\265\030ANo" +
-      "tification from server to client about c" +
-      "urrent broadcast status\022\237\001\n\032NotifyBroadc" +
-      "astChannelLive\022-.CBroadcast_BroadcastCha" +
-      "nnelLive_Notification\032\013.NoResponse\"E\202\265\030A" +
-      "Notification from server to client about" +
-      " current broadcast status\022p\n\024SendThumbna" +
-      "ilToRelay\022-.CBroadcast_SendThumbnailToRe" +
-      "lay_Notification\032\013.NoResponse\"\034\202\265\030\030Send " +
-      "thumbnails to relay\022\247\001\n\032NotifyWebRTCNeed" +
-      "TURNServer\022-.CBroadcast_WebRTCNeedTURNSe" +
-      "rver_Notification\032\013.NoResponse\"M\202\265\030INoti" +
-      "fication from server to client that it n" +
-      "eeds the client\'s TURN server\022\224\001\n\021Notify" +
-      "WebRTCStart\022$.CBroadcast_WebRTCStart_Not" +
-      "ification\032\013.NoResponse\"L\202\265\030HNotification" +
-      " from server to client that it should st" +
-      "art a WebRTC session\022\237\001\n\025NotifyWebRTCSet" +
-      "Answer\022(.CBroadcast_WebRTCSetAnswer_Noti" +
-      "fication\032\013.NoResponse\"O\202\265\030KNotification " +
-      "from server to client about the broadcas" +
-      "t viewer WebRTC answer\022\266\001\n\036NotifyWebRTCA" +
-      "ddViewerCandidate\0221.CBroadcast_WebRTCAdd" +
-      "ViewerCandidate_Notification\032\013.NoRespons" +
-      "e\"T\202\265\030PNotification from server to clien" +
-      "t about a broadcast viewer WebRTC ICE ca" +
-      "ndidate\032\004\300\265\030\002B\003\200\001\001"
+      "tion\032\013.NoResponse\"g\202\265\030cNotification from" +
+      " server to client that a broadcaster is " +
+      "inviting a viewer to watch their broadca" +
+      "st\022\225\001\n\025NotifyBroadcastStatus\022(.CBroadcas" +
+      "t_BroadcastStatus_Notification\032\013.NoRespo" +
+      "nse\"E\202\265\030ANotification from server to cli" +
+      "ent about current broadcast status\022\237\001\n\032N" +
+      "otifyBroadcastChannelLive\022-.CBroadcast_B" +
+      "roadcastChannelLive_Notification\032\013.NoRes" +
+      "ponse\"E\202\265\030ANotification from server to c" +
+      "lient about current broadcast status\022p\n\024" +
+      "SendThumbnailToRelay\022-.CBroadcast_SendTh" +
+      "umbnailToRelay_Notification\032\013.NoResponse" +
+      "\"\034\202\265\030\030Send thumbnails to relay\022\247\001\n\032Notif" +
+      "yWebRTCNeedTURNServer\022-.CBroadcast_WebRT" +
+      "CNeedTURNServer_Notification\032\013.NoRespons" +
+      "e\"M\202\265\030INotification from server to clien" +
+      "t that it needs the client\'s TURN server" +
+      "\022\224\001\n\021NotifyWebRTCStart\022$.CBroadcast_WebR" +
+      "TCStart_Notification\032\013.NoResponse\"L\202\265\030HN" +
+      "otification from server to client that i" +
+      "t should start a WebRTC session\022\237\001\n\025Noti" +
+      "fyWebRTCSetAnswer\022(.CBroadcast_WebRTCSet" +
+      "Answer_Notification\032\013.NoResponse\"O\202\265\030KNo" +
+      "tification from server to client about t" +
+      "he broadcast viewer WebRTC answer\022\266\001\n\036No" +
+      "tifyWebRTCAddViewerCandidate\0221.CBroadcas" +
+      "t_WebRTCAddViewerCandidate_Notification\032" +
+      "\013.NoResponse\"T\202\265\030PNotification from serv" +
+      "er to client about a broadcast viewer We" +
+      "bRTC ICE candidate\032\004\300\265\030\002B\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CBroadcast_BeginBroadcastSession_Request_descriptor =
@@ -68731,7 +69313,7 @@ public final class SteammessagesBroadcastSteamclient {
     internal_static_CBroadcast_SetRTMPInfo_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CBroadcast_SetRTMPInfo_Request_descriptor,
-        new java.lang.String[] { "BroadcastPermission", "UpdateToken", "BroadcastDelay", "AppId", "RequiredAppId", "BroadcastChatPermission", "BroadcastBuffer", "Steamid", "ChatRateLimit", "EnableReplay", });
+        new java.lang.String[] { "BroadcastPermission", "UpdateToken", "BroadcastDelay", "AppId", "RequiredAppId", "BroadcastChatPermission", "BroadcastBuffer", "Steamid", "ChatRateLimit", "EnableReplay", "IsPartnerChatOnly", "WordbanList", });
     internal_static_CBroadcast_SetRTMPInfo_Response_descriptor =
       getDescriptor().getMessageTypes().get(41);
     internal_static_CBroadcast_SetRTMPInfo_Response_fieldAccessorTable = new
@@ -68749,7 +69331,7 @@ public final class SteammessagesBroadcastSteamclient {
     internal_static_CBroadcast_GetRTMPInfo_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CBroadcast_GetRTMPInfo_Response_descriptor,
-        new java.lang.String[] { "BroadcastPermission", "RtmpHost", "RtmpToken", "BroadcastDelay", "AppId", "RequiredAppId", "BroadcastChatPermission", "BroadcastBuffer", "Steamid", "ChatRateLimit", "EnableReplay", });
+        new java.lang.String[] { "BroadcastPermission", "RtmpHost", "RtmpToken", "BroadcastDelay", "AppId", "RequiredAppId", "BroadcastChatPermission", "BroadcastBuffer", "Steamid", "ChatRateLimit", "EnableReplay", "IsPartnerChatOnly", "WordbanList", });
     internal_static_CBroadcast_WebRTCHaveTURNServer_Notification_descriptor =
       getDescriptor().getMessageTypes().get(44);
     internal_static_CBroadcast_WebRTCHaveTURNServer_Notification_fieldAccessorTable = new
@@ -68968,12 +69550,14 @@ public final class SteammessagesBroadcastSteamclient {
         new java.lang.String[] { "BroadcastSessionId", "WebrtcSessionId", "Candidate", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(SteammessagesBase.allowFieldNamedSteamId);
     registry.add(SteammessagesUnifiedBaseSteamclient.description);
     registry.add(SteammessagesUnifiedBaseSteamclient.methodDescription);
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

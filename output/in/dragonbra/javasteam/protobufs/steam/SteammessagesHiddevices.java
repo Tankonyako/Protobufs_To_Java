@@ -438,26 +438,26 @@ public final class SteammessagesHiddevices {
     int getSessionId();
 
     /**
-     * <code>optional uint32 eControllerType = 17 [default = 0];</code>
-     * @return Whether the eControllerType field is set.
+     * <code>optional uint32 eControllerType_OBSOLETE = 17 [default = 0];</code>
+     * @return Whether the eControllerTypeOBSOLETE field is set.
      */
-    boolean hasEControllerType();
+    boolean hasEControllerTypeOBSOLETE();
     /**
-     * <code>optional uint32 eControllerType = 17 [default = 0];</code>
-     * @return The eControllerType.
+     * <code>optional uint32 eControllerType_OBSOLETE = 17 [default = 0];</code>
+     * @return The eControllerTypeOBSOLETE.
      */
-    int getEControllerType();
+    int getEControllerTypeOBSOLETE();
 
     /**
-     * <code>optional bool is_xinput_device = 18 [default = false];</code>
-     * @return Whether the isXinputDevice field is set.
+     * <code>optional bool is_xinput_device_OBSOLETE = 18 [default = false];</code>
+     * @return Whether the isXinputDeviceOBSOLETE field is set.
      */
-    boolean hasIsXinputDevice();
+    boolean hasIsXinputDeviceOBSOLETE();
     /**
-     * <code>optional bool is_xinput_device = 18 [default = false];</code>
-     * @return The isXinputDevice.
+     * <code>optional bool is_xinput_device_OBSOLETE = 18 [default = false];</code>
+     * @return The isXinputDeviceOBSOLETE.
      */
-    boolean getIsXinputDevice();
+    boolean getIsXinputDeviceOBSOLETE();
 
     /**
      * <code>optional uint32 session_remote_play_together_appid = 19;</code>
@@ -469,6 +469,17 @@ public final class SteammessagesHiddevices {
      * @return The sessionRemotePlayTogetherAppid.
      */
     int getSessionRemotePlayTogetherAppid();
+
+    /**
+     * <code>optional bool is_steamvr_device = 20 [default = false];</code>
+     * @return Whether the isSteamvrDevice field is set.
+     */
+    boolean hasIsSteamvrDevice();
+    /**
+     * <code>optional bool is_steamvr_device = 20 [default = false];</code>
+     * @return The isSteamvrDevice.
+     */
+    boolean getIsSteamvrDevice();
   }
   /**
    * Protobuf type {@code CHIDDeviceInfo}
@@ -616,17 +627,22 @@ public final class SteammessagesHiddevices {
             }
             case 136: {
               bitField0_ |= 0x00010000;
-              eControllerType_ = input.readUInt32();
+              eControllerTypeOBSOLETE_ = input.readUInt32();
               break;
             }
             case 144: {
               bitField0_ |= 0x00020000;
-              isXinputDevice_ = input.readBool();
+              isXinputDeviceOBSOLETE_ = input.readBool();
               break;
             }
             case 152: {
               bitField0_ |= 0x00040000;
               sessionRemotePlayTogetherAppid_ = input.readUInt32();
+              break;
+            }
+            case 160: {
+              bitField0_ |= 0x00080000;
+              isSteamvrDevice_ = input.readBool();
               break;
             }
             default: {
@@ -1082,42 +1098,42 @@ public final class SteammessagesHiddevices {
       return sessionId_;
     }
 
-    public static final int ECONTROLLERTYPE_FIELD_NUMBER = 17;
-    private int eControllerType_;
+    public static final int ECONTROLLERTYPE_OBSOLETE_FIELD_NUMBER = 17;
+    private int eControllerTypeOBSOLETE_;
     /**
-     * <code>optional uint32 eControllerType = 17 [default = 0];</code>
-     * @return Whether the eControllerType field is set.
+     * <code>optional uint32 eControllerType_OBSOLETE = 17 [default = 0];</code>
+     * @return Whether the eControllerTypeOBSOLETE field is set.
      */
     @java.lang.Override
-    public boolean hasEControllerType() {
+    public boolean hasEControllerTypeOBSOLETE() {
       return ((bitField0_ & 0x00010000) != 0);
     }
     /**
-     * <code>optional uint32 eControllerType = 17 [default = 0];</code>
-     * @return The eControllerType.
+     * <code>optional uint32 eControllerType_OBSOLETE = 17 [default = 0];</code>
+     * @return The eControllerTypeOBSOLETE.
      */
     @java.lang.Override
-    public int getEControllerType() {
-      return eControllerType_;
+    public int getEControllerTypeOBSOLETE() {
+      return eControllerTypeOBSOLETE_;
     }
 
-    public static final int IS_XINPUT_DEVICE_FIELD_NUMBER = 18;
-    private boolean isXinputDevice_;
+    public static final int IS_XINPUT_DEVICE_OBSOLETE_FIELD_NUMBER = 18;
+    private boolean isXinputDeviceOBSOLETE_;
     /**
-     * <code>optional bool is_xinput_device = 18 [default = false];</code>
-     * @return Whether the isXinputDevice field is set.
+     * <code>optional bool is_xinput_device_OBSOLETE = 18 [default = false];</code>
+     * @return Whether the isXinputDeviceOBSOLETE field is set.
      */
     @java.lang.Override
-    public boolean hasIsXinputDevice() {
+    public boolean hasIsXinputDeviceOBSOLETE() {
       return ((bitField0_ & 0x00020000) != 0);
     }
     /**
-     * <code>optional bool is_xinput_device = 18 [default = false];</code>
-     * @return The isXinputDevice.
+     * <code>optional bool is_xinput_device_OBSOLETE = 18 [default = false];</code>
+     * @return The isXinputDeviceOBSOLETE.
      */
     @java.lang.Override
-    public boolean getIsXinputDevice() {
-      return isXinputDevice_;
+    public boolean getIsXinputDeviceOBSOLETE() {
+      return isXinputDeviceOBSOLETE_;
     }
 
     public static final int SESSION_REMOTE_PLAY_TOGETHER_APPID_FIELD_NUMBER = 19;
@@ -1137,6 +1153,25 @@ public final class SteammessagesHiddevices {
     @java.lang.Override
     public int getSessionRemotePlayTogetherAppid() {
       return sessionRemotePlayTogetherAppid_;
+    }
+
+    public static final int IS_STEAMVR_DEVICE_FIELD_NUMBER = 20;
+    private boolean isSteamvrDevice_;
+    /**
+     * <code>optional bool is_steamvr_device = 20 [default = false];</code>
+     * @return Whether the isSteamvrDevice field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsSteamvrDevice() {
+      return ((bitField0_ & 0x00080000) != 0);
+    }
+    /**
+     * <code>optional bool is_steamvr_device = 20 [default = false];</code>
+     * @return The isSteamvrDevice.
+     */
+    @java.lang.Override
+    public boolean getIsSteamvrDevice() {
+      return isSteamvrDevice_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1202,13 +1237,16 @@ public final class SteammessagesHiddevices {
         output.writeUInt32(16, sessionId_);
       }
       if (((bitField0_ & 0x00010000) != 0)) {
-        output.writeUInt32(17, eControllerType_);
+        output.writeUInt32(17, eControllerTypeOBSOLETE_);
       }
       if (((bitField0_ & 0x00020000) != 0)) {
-        output.writeBool(18, isXinputDevice_);
+        output.writeBool(18, isXinputDeviceOBSOLETE_);
       }
       if (((bitField0_ & 0x00040000) != 0)) {
         output.writeUInt32(19, sessionRemotePlayTogetherAppid_);
+      }
+      if (((bitField0_ & 0x00080000) != 0)) {
+        output.writeBool(20, isSteamvrDevice_);
       }
       unknownFields.writeTo(output);
     }
@@ -1281,15 +1319,19 @@ public final class SteammessagesHiddevices {
       }
       if (((bitField0_ & 0x00010000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(17, eControllerType_);
+          .computeUInt32Size(17, eControllerTypeOBSOLETE_);
       }
       if (((bitField0_ & 0x00020000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(18, isXinputDevice_);
+          .computeBoolSize(18, isXinputDeviceOBSOLETE_);
       }
       if (((bitField0_ & 0x00040000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(19, sessionRemotePlayTogetherAppid_);
+      }
+      if (((bitField0_ & 0x00080000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(20, isSteamvrDevice_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1385,20 +1427,25 @@ public final class SteammessagesHiddevices {
         if (getSessionId()
             != other.getSessionId()) return false;
       }
-      if (hasEControllerType() != other.hasEControllerType()) return false;
-      if (hasEControllerType()) {
-        if (getEControllerType()
-            != other.getEControllerType()) return false;
+      if (hasEControllerTypeOBSOLETE() != other.hasEControllerTypeOBSOLETE()) return false;
+      if (hasEControllerTypeOBSOLETE()) {
+        if (getEControllerTypeOBSOLETE()
+            != other.getEControllerTypeOBSOLETE()) return false;
       }
-      if (hasIsXinputDevice() != other.hasIsXinputDevice()) return false;
-      if (hasIsXinputDevice()) {
-        if (getIsXinputDevice()
-            != other.getIsXinputDevice()) return false;
+      if (hasIsXinputDeviceOBSOLETE() != other.hasIsXinputDeviceOBSOLETE()) return false;
+      if (hasIsXinputDeviceOBSOLETE()) {
+        if (getIsXinputDeviceOBSOLETE()
+            != other.getIsXinputDeviceOBSOLETE()) return false;
       }
       if (hasSessionRemotePlayTogetherAppid() != other.hasSessionRemotePlayTogetherAppid()) return false;
       if (hasSessionRemotePlayTogetherAppid()) {
         if (getSessionRemotePlayTogetherAppid()
             != other.getSessionRemotePlayTogetherAppid()) return false;
+      }
+      if (hasIsSteamvrDevice() != other.hasIsSteamvrDevice()) return false;
+      if (hasIsSteamvrDevice()) {
+        if (getIsSteamvrDevice()
+            != other.getIsSteamvrDevice()) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -1477,18 +1524,23 @@ public final class SteammessagesHiddevices {
         hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
         hash = (53 * hash) + getSessionId();
       }
-      if (hasEControllerType()) {
-        hash = (37 * hash) + ECONTROLLERTYPE_FIELD_NUMBER;
-        hash = (53 * hash) + getEControllerType();
+      if (hasEControllerTypeOBSOLETE()) {
+        hash = (37 * hash) + ECONTROLLERTYPE_OBSOLETE_FIELD_NUMBER;
+        hash = (53 * hash) + getEControllerTypeOBSOLETE();
       }
-      if (hasIsXinputDevice()) {
-        hash = (37 * hash) + IS_XINPUT_DEVICE_FIELD_NUMBER;
+      if (hasIsXinputDeviceOBSOLETE()) {
+        hash = (37 * hash) + IS_XINPUT_DEVICE_OBSOLETE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getIsXinputDevice());
+            getIsXinputDeviceOBSOLETE());
       }
       if (hasSessionRemotePlayTogetherAppid()) {
         hash = (37 * hash) + SESSION_REMOTE_PLAY_TOGETHER_APPID_FIELD_NUMBER;
         hash = (53 * hash) + getSessionRemotePlayTogetherAppid();
+      }
+      if (hasIsSteamvrDevice()) {
+        hash = (37 * hash) + IS_STEAMVR_DEVICE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsSteamvrDevice());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1655,12 +1707,14 @@ public final class SteammessagesHiddevices {
         bitField0_ = (bitField0_ & ~0x00004000);
         sessionId_ = 0;
         bitField0_ = (bitField0_ & ~0x00008000);
-        eControllerType_ = 0;
+        eControllerTypeOBSOLETE_ = 0;
         bitField0_ = (bitField0_ & ~0x00010000);
-        isXinputDevice_ = false;
+        isXinputDeviceOBSOLETE_ = false;
         bitField0_ = (bitField0_ & ~0x00020000);
         sessionRemotePlayTogetherAppid_ = 0;
         bitField0_ = (bitField0_ & ~0x00040000);
+        isSteamvrDevice_ = false;
+        bitField0_ = (bitField0_ & ~0x00080000);
         return this;
       }
 
@@ -1754,16 +1808,20 @@ public final class SteammessagesHiddevices {
           to_bitField0_ |= 0x00008000;
         }
         if (((from_bitField0_ & 0x00010000) != 0)) {
-          result.eControllerType_ = eControllerType_;
+          result.eControllerTypeOBSOLETE_ = eControllerTypeOBSOLETE_;
           to_bitField0_ |= 0x00010000;
         }
         if (((from_bitField0_ & 0x00020000) != 0)) {
-          result.isXinputDevice_ = isXinputDevice_;
+          result.isXinputDeviceOBSOLETE_ = isXinputDeviceOBSOLETE_;
           to_bitField0_ |= 0x00020000;
         }
         if (((from_bitField0_ & 0x00040000) != 0)) {
           result.sessionRemotePlayTogetherAppid_ = sessionRemotePlayTogetherAppid_;
           to_bitField0_ |= 0x00040000;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.isSteamvrDevice_ = isSteamvrDevice_;
+          to_bitField0_ |= 0x00080000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -1870,14 +1928,17 @@ public final class SteammessagesHiddevices {
         if (other.hasSessionId()) {
           setSessionId(other.getSessionId());
         }
-        if (other.hasEControllerType()) {
-          setEControllerType(other.getEControllerType());
+        if (other.hasEControllerTypeOBSOLETE()) {
+          setEControllerTypeOBSOLETE(other.getEControllerTypeOBSOLETE());
         }
-        if (other.hasIsXinputDevice()) {
-          setIsXinputDevice(other.getIsXinputDevice());
+        if (other.hasIsXinputDeviceOBSOLETE()) {
+          setIsXinputDeviceOBSOLETE(other.getIsXinputDeviceOBSOLETE());
         }
         if (other.hasSessionRemotePlayTogetherAppid()) {
           setSessionRemotePlayTogetherAppid(other.getSessionRemotePlayTogetherAppid());
+        }
+        if (other.hasIsSteamvrDevice()) {
+          setIsSteamvrDevice(other.getIsSteamvrDevice());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2717,80 +2778,80 @@ public final class SteammessagesHiddevices {
         return this;
       }
 
-      private int eControllerType_ ;
+      private int eControllerTypeOBSOLETE_ ;
       /**
-       * <code>optional uint32 eControllerType = 17 [default = 0];</code>
-       * @return Whether the eControllerType field is set.
+       * <code>optional uint32 eControllerType_OBSOLETE = 17 [default = 0];</code>
+       * @return Whether the eControllerTypeOBSOLETE field is set.
        */
       @java.lang.Override
-      public boolean hasEControllerType() {
+      public boolean hasEControllerTypeOBSOLETE() {
         return ((bitField0_ & 0x00010000) != 0);
       }
       /**
-       * <code>optional uint32 eControllerType = 17 [default = 0];</code>
-       * @return The eControllerType.
+       * <code>optional uint32 eControllerType_OBSOLETE = 17 [default = 0];</code>
+       * @return The eControllerTypeOBSOLETE.
        */
       @java.lang.Override
-      public int getEControllerType() {
-        return eControllerType_;
+      public int getEControllerTypeOBSOLETE() {
+        return eControllerTypeOBSOLETE_;
       }
       /**
-       * <code>optional uint32 eControllerType = 17 [default = 0];</code>
-       * @param value The eControllerType to set.
+       * <code>optional uint32 eControllerType_OBSOLETE = 17 [default = 0];</code>
+       * @param value The eControllerTypeOBSOLETE to set.
        * @return This builder for chaining.
        */
-      public Builder setEControllerType(int value) {
+      public Builder setEControllerTypeOBSOLETE(int value) {
         bitField0_ |= 0x00010000;
-        eControllerType_ = value;
+        eControllerTypeOBSOLETE_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 eControllerType = 17 [default = 0];</code>
+       * <code>optional uint32 eControllerType_OBSOLETE = 17 [default = 0];</code>
        * @return This builder for chaining.
        */
-      public Builder clearEControllerType() {
+      public Builder clearEControllerTypeOBSOLETE() {
         bitField0_ = (bitField0_ & ~0x00010000);
-        eControllerType_ = 0;
+        eControllerTypeOBSOLETE_ = 0;
         onChanged();
         return this;
       }
 
-      private boolean isXinputDevice_ ;
+      private boolean isXinputDeviceOBSOLETE_ ;
       /**
-       * <code>optional bool is_xinput_device = 18 [default = false];</code>
-       * @return Whether the isXinputDevice field is set.
+       * <code>optional bool is_xinput_device_OBSOLETE = 18 [default = false];</code>
+       * @return Whether the isXinputDeviceOBSOLETE field is set.
        */
       @java.lang.Override
-      public boolean hasIsXinputDevice() {
+      public boolean hasIsXinputDeviceOBSOLETE() {
         return ((bitField0_ & 0x00020000) != 0);
       }
       /**
-       * <code>optional bool is_xinput_device = 18 [default = false];</code>
-       * @return The isXinputDevice.
+       * <code>optional bool is_xinput_device_OBSOLETE = 18 [default = false];</code>
+       * @return The isXinputDeviceOBSOLETE.
        */
       @java.lang.Override
-      public boolean getIsXinputDevice() {
-        return isXinputDevice_;
+      public boolean getIsXinputDeviceOBSOLETE() {
+        return isXinputDeviceOBSOLETE_;
       }
       /**
-       * <code>optional bool is_xinput_device = 18 [default = false];</code>
-       * @param value The isXinputDevice to set.
+       * <code>optional bool is_xinput_device_OBSOLETE = 18 [default = false];</code>
+       * @param value The isXinputDeviceOBSOLETE to set.
        * @return This builder for chaining.
        */
-      public Builder setIsXinputDevice(boolean value) {
+      public Builder setIsXinputDeviceOBSOLETE(boolean value) {
         bitField0_ |= 0x00020000;
-        isXinputDevice_ = value;
+        isXinputDeviceOBSOLETE_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bool is_xinput_device = 18 [default = false];</code>
+       * <code>optional bool is_xinput_device_OBSOLETE = 18 [default = false];</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsXinputDevice() {
+      public Builder clearIsXinputDeviceOBSOLETE() {
         bitField0_ = (bitField0_ & ~0x00020000);
-        isXinputDevice_ = false;
+        isXinputDeviceOBSOLETE_ = false;
         onChanged();
         return this;
       }
@@ -2830,6 +2891,45 @@ public final class SteammessagesHiddevices {
       public Builder clearSessionRemotePlayTogetherAppid() {
         bitField0_ = (bitField0_ & ~0x00040000);
         sessionRemotePlayTogetherAppid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isSteamvrDevice_ ;
+      /**
+       * <code>optional bool is_steamvr_device = 20 [default = false];</code>
+       * @return Whether the isSteamvrDevice field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsSteamvrDevice() {
+        return ((bitField0_ & 0x00080000) != 0);
+      }
+      /**
+       * <code>optional bool is_steamvr_device = 20 [default = false];</code>
+       * @return The isSteamvrDevice.
+       */
+      @java.lang.Override
+      public boolean getIsSteamvrDevice() {
+        return isSteamvrDevice_;
+      }
+      /**
+       * <code>optional bool is_steamvr_device = 20 [default = false];</code>
+       * @param value The isSteamvrDevice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsSteamvrDevice(boolean value) {
+        bitField0_ |= 0x00080000;
+        isSteamvrDevice_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_steamvr_device = 20 [default = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsSteamvrDevice() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        isSteamvrDevice_ = false;
         onChanged();
         return this;
       }
@@ -20265,7 +20365,7 @@ public final class SteammessagesHiddevices {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n$steam/steammessages_hiddevices.proto\"\206" +
+      "\n$steam/steammessages_hiddevices.proto\"\272" +
       "\004\n\016CHIDDeviceInfo\022=\n\010location\030\001 \001(\0162\023.EH" +
       "IDDeviceLocation:\026k_EDeviceLocationLocal" +
       "\022\014\n\004path\030\002 \001(\t\022\021\n\tvendor_id\030\003 \001(\r\022\022\n\npro" +
@@ -20276,79 +20376,80 @@ public final class SteammessagesHiddevices {
       "e_number\030\013 \001(\005:\002-1\022\022\n\006ostype\030\014 \001(\005:\002-1\022\032" +
       "\n\022is_generic_gamepad\030\r \001(\010\022\033\n\023is_generic" +
       "_joystick\030\016 \001(\010\022\021\n\tcaps_bits\030\017 \001(\r\022\022\n\nse" +
-      "ssion_id\030\020 \001(\r\022\032\n\017eControllerType\030\021 \001(\r:" +
-      "\0010\022\037\n\020is_xinput_device\030\022 \001(\010:\005false\022*\n\"s" +
-      "ession_remote_play_together_appid\030\023 \001(\r\"" +
-      "w\n\025CHIDDeviceInputReport\022\023\n\013full_report\030" +
-      "\001 \001(\014\022\024\n\014delta_report\030\002 \001(\014\022\031\n\021delta_rep" +
-      "ort_size\030\003 \001(\r\022\030\n\020delta_report_crc\030\004 \001(\r" +
-      "\"\342\014\n\023CHIDMessageToRemote\022\022\n\nrequest_id\030\001" +
-      " \001(\r\0226\n\013device_open\030\002 \001(\0132\037.CHIDMessageT" +
-      "oRemote.DeviceOpenH\000\0228\n\014device_close\030\003 \001" +
-      "(\0132 .CHIDMessageToRemote.DeviceCloseH\000\0228" +
-      "\n\014device_write\030\004 \001(\0132 .CHIDMessageToRemo" +
-      "te.DeviceWriteH\000\0226\n\013device_read\030\005 \001(\0132\037." +
-      "CHIDMessageToRemote.DeviceReadH\000\022R\n\032devi" +
-      "ce_send_feature_report\030\006 \001(\0132,.CHIDMessa" +
-      "geToRemote.DeviceSendFeatureReportH\000\022P\n\031" +
-      "device_get_feature_report\030\007 \001(\0132+.CHIDMe" +
-      "ssageToRemote.DeviceGetFeatureReportH\000\022N" +
-      "\n\030device_get_vendor_string\030\010 \001(\0132*.CHIDM" +
-      "essageToRemote.DeviceGetVendorStringH\000\022P" +
-      "\n\031device_get_product_string\030\t \001(\0132+.CHID" +
-      "MessageToRemote.DeviceGetProductStringH\000" +
-      "\022[\n\037device_get_serial_number_string\030\n \001(" +
-      "\01320.CHIDMessageToRemote.DeviceGetSerialN" +
-      "umberStringH\000\022R\n\032device_start_input_repo" +
-      "rts\030\013 \001(\0132,.CHIDMessageToRemote.DeviceSt" +
-      "artInputReportsH\000\022R\n\032device_request_full" +
-      "_report\030\014 \001(\0132,.CHIDMessageToRemote.Devi" +
-      "ceRequestFullReportH\000\022B\n\021device_disconne" +
-      "ct\030\r \001(\0132%.CHIDMessageToRemote.DeviceDis" +
-      "connectH\000\032+\n\nDeviceOpen\022\035\n\004info\030\001 \001(\0132\017." +
-      "CHIDDeviceInfo\032\035\n\013DeviceClose\022\016\n\006device\030" +
-      "\001 \001(\r\032+\n\013DeviceWrite\022\016\n\006device\030\001 \001(\r\022\014\n\004" +
-      "data\030\002 \001(\014\032@\n\nDeviceRead\022\016\n\006device\030\001 \001(\r" +
-      "\022\016\n\006length\030\002 \001(\r\022\022\n\ntimeout_ms\030\003 \001(\005\0327\n\027" +
-      "DeviceSendFeatureReport\022\016\n\006device\030\001 \001(\r\022" +
-      "\014\n\004data\030\002 \001(\014\032O\n\026DeviceGetFeatureReport\022" +
-      "\016\n\006device\030\001 \001(\r\022\025\n\rreport_number\030\002 \001(\014\022\016" +
-      "\n\006length\030\003 \001(\r\032\'\n\025DeviceGetVendorString\022" +
-      "\016\n\006device\030\001 \001(\r\032(\n\026DeviceGetProductStrin" +
-      "g\022\016\n\006device\030\001 \001(\r\032-\n\033DeviceGetSerialNumb" +
-      "erString\022\016\n\006device\030\001 \001(\r\0329\n\027DeviceStartI" +
-      "nputReports\022\016\n\006device\030\001 \001(\r\022\016\n\006length\030\002 " +
-      "\001(\r\032)\n\027DeviceRequestFullReport\022\016\n\006device" +
-      "\030\001 \001(\r\032\211\001\n\020DeviceDisconnect\022\016\n\006device\030\001 " +
-      "\001(\r\022W\n\020disconnectMethod\030\002 \001(\0162\033.EHIDDevi" +
-      "ceDisconnectMethod: k_EDeviceDisconnectM" +
-      "ethodUnknown\022\014\n\004data\030\003 \001(\014B\t\n\007command\"\313\005" +
-      "\n\025CHIDMessageFromRemote\022E\n\022update_device" +
-      "_list\030\001 \001(\0132\'.CHIDMessageFromRemote.Upda" +
-      "teDeviceListH\000\022:\n\010response\030\002 \001(\0132&.CHIDM" +
-      "essageFromRemote.RequestResponseH\000\022<\n\007re" +
-      "ports\030\003 \001(\0132).CHIDMessageFromRemote.Devi" +
-      "ceInputReportsH\000\022:\n\014close_device\030\004 \001(\0132\"" +
-      ".CHIDMessageFromRemote.CloseDeviceH\000\022C\n\021" +
-      "close_all_devices\030\005 \001(\0132&.CHIDMessageFro" +
-      "mRemote.CloseAllDevicesH\000\0324\n\020UpdateDevic" +
-      "eList\022 \n\007devices\030\001 \003(\0132\017.CHIDDeviceInfo\032" +
-      "C\n\017RequestResponse\022\022\n\nrequest_id\030\001 \001(\r\022\016" +
-      "\n\006result\030\002 \001(\005\022\014\n\004data\030\003 \001(\014\032\267\001\n\022DeviceI" +
-      "nputReports\022S\n\016device_reports\030\001 \003(\0132;.CH" +
-      "IDMessageFromRemote.DeviceInputReports.D" +
-      "eviceInputReport\032L\n\021DeviceInputReport\022\016\n" +
-      "\006device\030\001 \001(\r\022\'\n\007reports\030\002 \003(\0132\026.CHIDDev" +
-      "iceInputReport\032\035\n\013CloseDevice\022\016\n\006device\030" +
-      "\001 \001(\r\032\021\n\017CloseAllDevicesB\t\n\007command*g\n\022E" +
-      "HIDDeviceLocation\022\032\n\026k_EDeviceLocationLo" +
-      "cal\020\000\022\033\n\027k_EDeviceLocationRemote\020\002\022\030\n\024k_" +
-      "EDeviceLocationAny\020\003*\301\001\n\032EHIDDeviceDisco" +
-      "nnectMethod\022$\n k_EDeviceDisconnectMethod" +
-      "Unknown\020\000\022&\n\"k_EDeviceDisconnectMethodBl" +
-      "uetooth\020\001\022*\n&k_EDeviceDisconnectMethodFe" +
-      "atureReport\020\002\022)\n%k_EDeviceDisconnectMeth" +
-      "odOutputReport\020\003B\005H\001\200\001\000"
+      "ssion_id\030\020 \001(\r\022#\n\030eControllerType_OBSOLE" +
+      "TE\030\021 \001(\r:\0010\022(\n\031is_xinput_device_OBSOLETE" +
+      "\030\022 \001(\010:\005false\022*\n\"session_remote_play_tog" +
+      "ether_appid\030\023 \001(\r\022 \n\021is_steamvr_device\030\024" +
+      " \001(\010:\005false\"w\n\025CHIDDeviceInputReport\022\023\n\013" +
+      "full_report\030\001 \001(\014\022\024\n\014delta_report\030\002 \001(\014\022" +
+      "\031\n\021delta_report_size\030\003 \001(\r\022\030\n\020delta_repo" +
+      "rt_crc\030\004 \001(\r\"\342\014\n\023CHIDMessageToRemote\022\022\n\n" +
+      "request_id\030\001 \001(\r\0226\n\013device_open\030\002 \001(\0132\037." +
+      "CHIDMessageToRemote.DeviceOpenH\000\0228\n\014devi" +
+      "ce_close\030\003 \001(\0132 .CHIDMessageToRemote.Dev" +
+      "iceCloseH\000\0228\n\014device_write\030\004 \001(\0132 .CHIDM" +
+      "essageToRemote.DeviceWriteH\000\0226\n\013device_r" +
+      "ead\030\005 \001(\0132\037.CHIDMessageToRemote.DeviceRe" +
+      "adH\000\022R\n\032device_send_feature_report\030\006 \001(\013" +
+      "2,.CHIDMessageToRemote.DeviceSendFeature" +
+      "ReportH\000\022P\n\031device_get_feature_report\030\007 " +
+      "\001(\0132+.CHIDMessageToRemote.DeviceGetFeatu" +
+      "reReportH\000\022N\n\030device_get_vendor_string\030\010" +
+      " \001(\0132*.CHIDMessageToRemote.DeviceGetVend" +
+      "orStringH\000\022P\n\031device_get_product_string\030" +
+      "\t \001(\0132+.CHIDMessageToRemote.DeviceGetPro" +
+      "ductStringH\000\022[\n\037device_get_serial_number" +
+      "_string\030\n \001(\01320.CHIDMessageToRemote.Devi" +
+      "ceGetSerialNumberStringH\000\022R\n\032device_star" +
+      "t_input_reports\030\013 \001(\0132,.CHIDMessageToRem" +
+      "ote.DeviceStartInputReportsH\000\022R\n\032device_" +
+      "request_full_report\030\014 \001(\0132,.CHIDMessageT" +
+      "oRemote.DeviceRequestFullReportH\000\022B\n\021dev" +
+      "ice_disconnect\030\r \001(\0132%.CHIDMessageToRemo" +
+      "te.DeviceDisconnectH\000\032+\n\nDeviceOpen\022\035\n\004i" +
+      "nfo\030\001 \001(\0132\017.CHIDDeviceInfo\032\035\n\013DeviceClos" +
+      "e\022\016\n\006device\030\001 \001(\r\032+\n\013DeviceWrite\022\016\n\006devi" +
+      "ce\030\001 \001(\r\022\014\n\004data\030\002 \001(\014\032@\n\nDeviceRead\022\016\n\006" +
+      "device\030\001 \001(\r\022\016\n\006length\030\002 \001(\r\022\022\n\ntimeout_" +
+      "ms\030\003 \001(\005\0327\n\027DeviceSendFeatureReport\022\016\n\006d" +
+      "evice\030\001 \001(\r\022\014\n\004data\030\002 \001(\014\032O\n\026DeviceGetFe" +
+      "atureReport\022\016\n\006device\030\001 \001(\r\022\025\n\rreport_nu" +
+      "mber\030\002 \001(\014\022\016\n\006length\030\003 \001(\r\032\'\n\025DeviceGetV" +
+      "endorString\022\016\n\006device\030\001 \001(\r\032(\n\026DeviceGet" +
+      "ProductString\022\016\n\006device\030\001 \001(\r\032-\n\033DeviceG" +
+      "etSerialNumberString\022\016\n\006device\030\001 \001(\r\0329\n\027" +
+      "DeviceStartInputReports\022\016\n\006device\030\001 \001(\r\022" +
+      "\016\n\006length\030\002 \001(\r\032)\n\027DeviceRequestFullRepo" +
+      "rt\022\016\n\006device\030\001 \001(\r\032\211\001\n\020DeviceDisconnect\022" +
+      "\016\n\006device\030\001 \001(\r\022W\n\020disconnectMethod\030\002 \001(" +
+      "\0162\033.EHIDDeviceDisconnectMethod: k_EDevic" +
+      "eDisconnectMethodUnknown\022\014\n\004data\030\003 \001(\014B\t" +
+      "\n\007command\"\313\005\n\025CHIDMessageFromRemote\022E\n\022u" +
+      "pdate_device_list\030\001 \001(\0132\'.CHIDMessageFro" +
+      "mRemote.UpdateDeviceListH\000\022:\n\010response\030\002" +
+      " \001(\0132&.CHIDMessageFromRemote.RequestResp" +
+      "onseH\000\022<\n\007reports\030\003 \001(\0132).CHIDMessageFro" +
+      "mRemote.DeviceInputReportsH\000\022:\n\014close_de" +
+      "vice\030\004 \001(\0132\".CHIDMessageFromRemote.Close" +
+      "DeviceH\000\022C\n\021close_all_devices\030\005 \001(\0132&.CH" +
+      "IDMessageFromRemote.CloseAllDevicesH\000\0324\n" +
+      "\020UpdateDeviceList\022 \n\007devices\030\001 \003(\0132\017.CHI" +
+      "DDeviceInfo\032C\n\017RequestResponse\022\022\n\nreques" +
+      "t_id\030\001 \001(\r\022\016\n\006result\030\002 \001(\005\022\014\n\004data\030\003 \001(\014" +
+      "\032\267\001\n\022DeviceInputReports\022S\n\016device_report" +
+      "s\030\001 \003(\0132;.CHIDMessageFromRemote.DeviceIn" +
+      "putReports.DeviceInputReport\032L\n\021DeviceIn" +
+      "putReport\022\016\n\006device\030\001 \001(\r\022\'\n\007reports\030\002 \003" +
+      "(\0132\026.CHIDDeviceInputReport\032\035\n\013CloseDevic" +
+      "e\022\016\n\006device\030\001 \001(\r\032\021\n\017CloseAllDevicesB\t\n\007" +
+      "command*g\n\022EHIDDeviceLocation\022\032\n\026k_EDevi" +
+      "ceLocationLocal\020\000\022\033\n\027k_EDeviceLocationRe" +
+      "mote\020\002\022\030\n\024k_EDeviceLocationAny\020\003*\301\001\n\032EHI" +
+      "DDeviceDisconnectMethod\022$\n k_EDeviceDisc" +
+      "onnectMethodUnknown\020\000\022&\n\"k_EDeviceDiscon" +
+      "nectMethodBluetooth\020\001\022*\n&k_EDeviceDiscon" +
+      "nectMethodFeatureReport\020\002\022)\n%k_EDeviceDi" +
+      "sconnectMethodOutputReport\020\003B\005H\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20359,7 +20460,7 @@ public final class SteammessagesHiddevices {
     internal_static_CHIDDeviceInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CHIDDeviceInfo_descriptor,
-        new java.lang.String[] { "Location", "Path", "VendorId", "ProductId", "SerialNumber", "ReleaseNumber", "ManufacturerString", "ProductString", "UsagePage", "Usage", "InterfaceNumber", "Ostype", "IsGenericGamepad", "IsGenericJoystick", "CapsBits", "SessionId", "EControllerType", "IsXinputDevice", "SessionRemotePlayTogetherAppid", });
+        new java.lang.String[] { "Location", "Path", "VendorId", "ProductId", "SerialNumber", "ReleaseNumber", "ManufacturerString", "ProductString", "UsagePage", "Usage", "InterfaceNumber", "Ostype", "IsGenericGamepad", "IsGenericJoystick", "CapsBits", "SessionId", "EControllerTypeOBSOLETE", "IsXinputDeviceOBSOLETE", "SessionRemotePlayTogetherAppid", "IsSteamvrDevice", });
     internal_static_CHIDDeviceInputReport_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CHIDDeviceInputReport_fieldAccessorTable = new

@@ -17065,197 +17065,199 @@ public final class SteammessagesGamenotificationsSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n7steam/steammessages_gamenotifications." +
-      "steamclient.proto\0322steam/steammessages_u" +
-      "nified_base.steamclient.proto\"\340\002\n\033CGameN" +
-      "otifications_Variable\022\246\001\n\003key\030\001 \001(\tB\230\001\202\265" +
-      "\030\223\001The name of the variable in the local" +
-      "ized text -- anywhere that %variablename" +
-      "% is found within the text it will be su" +
-      "bstituded with the given value\022\227\001\n\005value" +
-      "\030\002 \001(\tB\207\001\202\265\030\202\001The value of the variable " +
-      "to substitute in the localized text in p" +
-      "lace of the given variable.  Can itself " +
-      "be a localization token.\"\205\003\n CGameNotifi" +
-      "cations_LocalizedText\022H\n\005token\030\001 \001(\tB9\202\265" +
-      "\0305A localization token that maps to the " +
-      "desired string.\022\215\001\n\tvariables\030\002 \003(\0132\034.CG" +
-      "ameNotifications_VariableB\\\202\265\030XA list of" +
-      " variables values to substitute in any v" +
-      "ariables found in the localized string.\022" +
-      "\206\001\n\rrendered_text\030\003 \001(\tBo\202\265\030kText render" +
-      "ed in the requested language, complete w" +
-      "ith variable substitutions, if a languag" +
-      "e was specified.\"\225\004\n\035CGameNotifications_" +
-      "UserStatus\0221\n\007steamid\030\001 \001(\006B \202\265\030\034The spe" +
-      "cific user\'s steamid.\022\244\001\n\005state\030\002 \001(\tB\224\001" +
-      "\202\265\030\217\001The user\'s state.  ready -- the use" +
-      "r is ready to play.  waiting -- The game" +
-      " is waiting on an action from the user. " +
-      "completed, the game is over.\022\204\001\n\005title\030\003" +
-      " \001(\0132!.CGameNotifications_LocalizedTextB" +
-      "R\202\265\030NTitle of the session to display to " +
-      "this user in their list of active sessio" +
-      "ns.\022\222\001\n\007message\030\004 \001(\0132!.CGameNotificatio" +
-      "ns_LocalizedTextB^\202\265\030ZSubtitle of the se" +
-      "ssion to display to this user user withi" +
-      "n their list of active sessions.\"\223\005\n(CGa" +
-      "meNotifications_CreateSession_Request\0227\n" +
-      "\005appid\030\001 \001(\rB(\202\265\030$The appid to create th" +
-      "e session for.\022\177\n\007context\030\002 \001(\004Bn\202\265\030jGam" +
-      "e-specified context value the game can u" +
-      "sed to associate the session with some o" +
-      "bject on their backend.\022\203\001\n\005title\030\003 \001(\0132" +
-      "!.CGameNotifications_LocalizedTextBQ\202\265\030M" +
-      "The title of the session to be displayed" +
-      " within each user\'s list of sessions.\022a\n" +
-      "\005users\030\004 \003(\0132\036.CGameNotifications_UserSt" +
-      "atusB2\202\265\030.The initial state of all users" +
-      " in the session.\022\303\001\n\007steamid\030\005 \001(\006B\261\001\202\265\030" +
-      "\254\001(Optional) steamid to make the request" +
-      " on behalf of -- if specified, the user " +
-      "must be in the session and all users bei" +
-      "ng added to the session must be friends " +
-      "with the user.\"i\n)CGameNotifications_Cre" +
-      "ateSession_Response\022<\n\tsessionid\030\001 \001(\004B)" +
-      "\202\265\030%The sessionid of the created session" +
-      ".\"\217\002\n(CGameNotifications_DeleteSession_R" +
-      "equest\022/\n\tsessionid\030\001 \001(\004B\034\202\265\030\030The sessi" +
-      "onid to delete.\0226\n\005appid\030\002 \001(\rB\'\202\265\030#The " +
-      "appid of the session to delete.\022z\n\007steam" +
-      "id\030\003 \001(\006Bi\202\265\030e(Optional) steamid to make" +
-      " the request on behalf of -- if specifie" +
-      "d, the user must be in the session.\"+\n)C" +
+      "steamclient.proto\032\036steam/steammessages_b" +
+      "ase.proto\0322steam/steammessages_unified_b" +
+      "ase.steamclient.proto\"\340\002\n\033CGameNotificat" +
+      "ions_Variable\022\246\001\n\003key\030\001 \001(\tB\230\001\202\265\030\223\001The n" +
+      "ame of the variable in the localized tex" +
+      "t -- anywhere that %variablename% is fou" +
+      "nd within the text it will be substitude" +
+      "d with the given value\022\227\001\n\005value\030\002 \001(\tB\207" +
+      "\001\202\265\030\202\001The value of the variable to subst" +
+      "itute in the localized text in place of " +
+      "the given variable.  Can itself be a loc" +
+      "alization token.\"\205\003\n CGameNotifications_" +
+      "LocalizedText\022H\n\005token\030\001 \001(\tB9\202\265\0305A loca" +
+      "lization token that maps to the desired " +
+      "string.\022\215\001\n\tvariables\030\002 \003(\0132\034.CGameNotif" +
+      "ications_VariableB\\\202\265\030XA list of variabl" +
+      "es values to substitute in any variables" +
+      " found in the localized string.\022\206\001\n\rrend" +
+      "ered_text\030\003 \001(\tBo\202\265\030kText rendered in th" +
+      "e requested language, complete with vari" +
+      "able substitutions, if a language was sp" +
+      "ecified.\"\225\004\n\035CGameNotifications_UserStat" +
+      "us\0221\n\007steamid\030\001 \001(\006B \202\265\030\034The specific us" +
+      "er\'s steamid.\022\244\001\n\005state\030\002 \001(\tB\224\001\202\265\030\217\001The" +
+      " user\'s state.  ready -- the user is rea" +
+      "dy to play.  waiting -- The game is wait" +
+      "ing on an action from the user. complete" +
+      "d, the game is over.\022\204\001\n\005title\030\003 \001(\0132!.C" +
+      "GameNotifications_LocalizedTextBR\202\265\030NTit" +
+      "le of the session to display to this use" +
+      "r in their list of active sessions.\022\222\001\n\007" +
+      "message\030\004 \001(\0132!.CGameNotifications_Local" +
+      "izedTextB^\202\265\030ZSubtitle of the session to" +
+      " display to this user user within their " +
+      "list of active sessions.\"\223\005\n(CGameNotifi" +
+      "cations_CreateSession_Request\0227\n\005appid\030\001" +
+      " \001(\rB(\202\265\030$The appid to create the sessio" +
+      "n for.\022\177\n\007context\030\002 \001(\004Bn\202\265\030jGame-specif" +
+      "ied context value the game can used to a" +
+      "ssociate the session with some object on" +
+      " their backend.\022\203\001\n\005title\030\003 \001(\0132!.CGameN" +
+      "otifications_LocalizedTextBQ\202\265\030MThe titl" +
+      "e of the session to be displayed within " +
+      "each user\'s list of sessions.\022a\n\005users\030\004" +
+      " \003(\0132\036.CGameNotifications_UserStatusB2\202\265" +
+      "\030.The initial state of all users in the " +
+      "session.\022\303\001\n\007steamid\030\005 \001(\006B\261\001\202\265\030\254\001(Optio" +
+      "nal) steamid to make the request on beha" +
+      "lf of -- if specified, the user must be " +
+      "in the session and all users being added" +
+      " to the session must be friends with the" +
+      " user.\"i\n)CGameNotifications_CreateSessi" +
+      "on_Response\022<\n\tsessionid\030\001 \001(\004B)\202\265\030%The " +
+      "sessionid of the created session.\"\217\002\n(CG" +
+      "ameNotifications_DeleteSession_Request\022/" +
+      "\n\tsessionid\030\001 \001(\004B\034\202\265\030\030The sessionid to " +
+      "delete.\0226\n\005appid\030\002 \001(\rB\'\202\265\030#The appid of" +
+      " the session to delete.\022z\n\007steamid\030\003 \001(\006" +
+      "Bi\202\265\030e(Optional) steamid to make the req" +
+      "uest on behalf of -- if specified, the u" +
+      "ser must be in the session.\"+\n)CGameNoti" +
+      "fications_DeleteSession_Response\"\275\005\n(CGa" +
+      "meNotifications_UpdateSession_Request\022/\n" +
+      "\tsessionid\030\001 \001(\004B\034\202\265\030\030The sessionid to u" +
+      "pdate.\0226\n\005appid\030\002 \001(\rB\'\202\265\030#The appid of " +
+      "the session to update.\022\220\001\n\005title\030\003 \001(\0132!" +
+      ".CGameNotifications_LocalizedTextB^\202\265\030Z(" +
+      "Optional) The new title of the session. " +
+      " If not specified, the title will not be" +
+      " changed.\022\316\001\n\005users\030\004 \003(\0132\036.CGameNotific" +
+      "ations_UserStatusB\236\001\202\265\030\231\001(Optional) A li" +
+      "st of users whose state will be updated " +
+      "to reflect the given state. If the users" +
+      " are not already in the session, they wi" +
+      "ll be added to it.\022\303\001\n\007steamid\030\006 \001(\006B\261\001\202" +
+      "\265\030\254\001(Optional) steamid to make the reque" +
+      "st on behalf of -- if specified, the use" +
+      "r must be in the session and all users b" +
+      "eing added to the session must be friend" +
+      "s with the user.\"+\n)CGameNotifications_U" +
+      "pdateSession_Response\"\241\004\n,CGameNotificat" +
+      "ions_EnumerateSessions_Request\022~\n\005appid\030" +
+      "\001 \001(\rBo\202\265\030kThe sessionid to request deta" +
+      "ils for. Optional. If not specified, all" +
+      " the user\'s sessions will be returned.\022\216" +
+      "\001\n\031include_all_user_messages\030\003 \001(\010Bk\202\265\030g" +
+      "(Optional) Boolean determining whether t" +
+      "he message for all users should be inclu" +
+      "ded. Defaults to false.\022\233\001\n\031include_auth" +
+      "_user_message\030\004 \001(\010Bx\202\265\030t(Optional) Bool" +
+      "ean determining whether the message for " +
+      "the authenticated user should be include" +
+      "d. Defaults to false.\022B\n\010language\030\005 \001(\tB" +
+      "0\202\265\030,(Optional) Language to localize the" +
+      " text in.\"\303\004\n\032CGameNotifications_Session" +
+      "\0226\n\tsessionid\030\001 \001(\004B#\202\265\030\037The sessionid f" +
+      "or this session.\022-\n\005appid\030\002 \001(\004B\036\202\265\030\032The" +
+      " appid for the session.\022\177\n\007context\030\003 \001(\004" +
+      "Bn\202\265\030jGame-specified context value the g" +
+      "ame can used to associate the session wi" +
+      "th some object on their backend.\022X\n\005titl" +
+      "e\030\004 \001(\0132!.CGameNotifications_LocalizedTe" +
+      "xtB&\202\265\030\"The current title for the sessio" +
+      "n.\022;\n\014time_created\030\005 \001(\rB%\202\265\030!The time t" +
+      "he session was created.\022@\n\014time_updated\030" +
+      "\006 \001(\rB*\202\265\030&The last time the session was" +
+      " updated.\022d\n\013user_status\030\007 \003(\0132\036.CGameNo" +
+      "tifications_UserStatusB/\202\265\030+The status o" +
+      "f all the users in the session.\"\202\001\n-CGam" +
+      "eNotifications_EnumerateSessions_Respons" +
+      "e\022Q\n\010sessions\030\001 \003(\0132\033.CGameNotifications" +
+      "_SessionB\"\202\265\030\036A list of the user\'s sessi" +
+      "ons.\"\326\003\n,CGameNotifications_GetSessionDe" +
+      "tails_Request\022P\n\010sessions\030\001 \003(\0132>.CGameN" +
+      "otifications_GetSessionDetails_Request.R" +
+      "equestedSession\022.\n\005appid\030\002 \001(\rB\037\202\265\030\033The " +
+      "appid for the sessions.\0227\n\010language\030\003 \001(" +
+      "\tB%\202\265\030!Language to localize the text in." +
+      "\032\352\001\n\020RequestedSession\0228\n\tsessionid\030\001 \001(\004" +
+      "B%\202\265\030!The sessionid to get details for.\022" +
+      "\233\001\n\031include_auth_user_message\030\003 \001(\010Bx\202\265\030" +
+      "t(Optional) Boolean determining whether " +
+      "the message for the authenticated user s" +
+      "hould be included. Defaults to false.\"\177\n" +
+      "-CGameNotifications_GetSessionDetails_Re" +
+      "sponse\022N\n\010sessions\030\001 \003(\0132\033.CGameNotifica" +
+      "tions_SessionB\037\202\265\030\033The details of the se" +
+      "ssion.\"\250\001\n\030GameNotificationSettings\0227\n\005a" +
+      "ppid\030\001 \001(\rB(\202\265\030$The appid to create the " +
+      "session for.\022S\n\023allow_notifications\030\002 \001(" +
+      "\010B6\202\265\0302Whether the user allows notificat" +
+      "ion for this app.\"v\n5CGameNotifications_" +
+      "UpdateNotificationSettings_Request\022=\n\032ga" +
+      "me_notification_settings\030\001 \003(\0132\031.GameNot" +
+      "ificationSettings\"8\n6CGameNotifications_" +
+      "UpdateNotificationSettings_Response\"\306\001\n8" +
+      "CGameNotifications_OnNotificationsReques" +
+      "ted_Notification\022N\n\007steamid\030\001 \001(\006B=\202\265\0309s" +
+      "teamid of the user who notifications wer" +
+      "e requested for.\022:\n\005appid\030\002 \001(\rB+\202\265\030\'The" +
+      " appid that requested notifications.\"\276\003\n" +
+      "3CGameNotifications_OnUserStatusChanged_" +
+      "Notification\022>\n\007steamid\030\001 \001(\006B-\202\265\030)steam" +
+      "id of the user whose status changed.\022X\n\t" +
+      "sessionid\030\002 \001(\004BE\202\265\030AThe sessionid of th" +
+      "e session where the user\'s status was ch" +
+      "anged.\022L\n\005appid\030\003 \001(\rB=\202\265\0309The appid of " +
+      "the session where the user\'s status chan" +
+      "ged.\022V\n\006status\030\004 \001(\0132\036.CGameNotification" +
+      "s_UserStatusB&\202\265\030\"(Optional) New status " +
+      "of the user.\022G\n\007removed\030\005 \001(\010B6\202\265\0302(Opti" +
+      "onal) User has been removed from the ses" +
+      "sion.2\246\010\n\021GameNotifications\022\215\001\n\021UserCrea" +
+      "teSession\022).CGameNotifications_CreateSes" +
+      "sion_Request\032*.CGameNotifications_Create" +
+      "Session_Response\"!\202\265\030\035Creates an async g" +
+      "ame session\022\215\001\n\021UserDeleteSession\022).CGam" +
+      "eNotifications_DeleteSession_Request\032*.C" +
       "GameNotifications_DeleteSession_Response" +
-      "\"\275\005\n(CGameNotifications_UpdateSession_Re" +
-      "quest\022/\n\tsessionid\030\001 \001(\004B\034\202\265\030\030The sessio" +
-      "nid to update.\0226\n\005appid\030\002 \001(\rB\'\202\265\030#The a" +
-      "ppid of the session to update.\022\220\001\n\005title" +
-      "\030\003 \001(\0132!.CGameNotifications_LocalizedTex" +
-      "tB^\202\265\030Z(Optional) The new title of the s" +
-      "ession.  If not specified, the title wil" +
-      "l not be changed.\022\316\001\n\005users\030\004 \003(\0132\036.CGam" +
-      "eNotifications_UserStatusB\236\001\202\265\030\231\001(Option" +
-      "al) A list of users whose state will be " +
-      "updated to reflect the given state. If t" +
-      "he users are not already in the session," +
-      " they will be added to it.\022\303\001\n\007steamid\030\006" +
-      " \001(\006B\261\001\202\265\030\254\001(Optional) steamid to make t" +
-      "he request on behalf of -- if specified," +
-      " the user must be in the session and all" +
-      " users being added to the session must b" +
-      "e friends with the user.\"+\n)CGameNotific" +
-      "ations_UpdateSession_Response\"\241\004\n,CGameN" +
-      "otifications_EnumerateSessions_Request\022~" +
-      "\n\005appid\030\001 \001(\rBo\202\265\030kThe sessionid to requ" +
-      "est details for. Optional. If not specif" +
-      "ied, all the user\'s sessions will be ret" +
-      "urned.\022\216\001\n\031include_all_user_messages\030\003 \001" +
-      "(\010Bk\202\265\030g(Optional) Boolean determining w" +
-      "hether the message for all users should " +
-      "be included. Defaults to false.\022\233\001\n\031incl" +
-      "ude_auth_user_message\030\004 \001(\010Bx\202\265\030t(Option" +
-      "al) Boolean determining whether the mess" +
-      "age for the authenticated user should be" +
-      " included. Defaults to false.\022B\n\010languag" +
-      "e\030\005 \001(\tB0\202\265\030,(Optional) Language to loca" +
-      "lize the text in.\"\303\004\n\032CGameNotifications" +
-      "_Session\0226\n\tsessionid\030\001 \001(\004B#\202\265\030\037The ses" +
-      "sionid for this session.\022-\n\005appid\030\002 \001(\004B" +
-      "\036\202\265\030\032The appid for the session.\022\177\n\007conte" +
-      "xt\030\003 \001(\004Bn\202\265\030jGame-specified context val" +
-      "ue the game can used to associate the se" +
-      "ssion with some object on their backend." +
-      "\022X\n\005title\030\004 \001(\0132!.CGameNotifications_Loc" +
-      "alizedTextB&\202\265\030\"The current title for th" +
-      "e session.\022;\n\014time_created\030\005 \001(\rB%\202\265\030!Th" +
-      "e time the session was created.\022@\n\014time_" +
-      "updated\030\006 \001(\rB*\202\265\030&The last time the ses" +
-      "sion was updated.\022d\n\013user_status\030\007 \003(\0132\036" +
-      ".CGameNotifications_UserStatusB/\202\265\030+The " +
-      "status of all the users in the session.\"" +
-      "\202\001\n-CGameNotifications_EnumerateSessions" +
-      "_Response\022Q\n\010sessions\030\001 \003(\0132\033.CGameNotif" +
-      "ications_SessionB\"\202\265\030\036A list of the user" +
-      "\'s sessions.\"\326\003\n,CGameNotifications_GetS" +
-      "essionDetails_Request\022P\n\010sessions\030\001 \003(\0132" +
-      ">.CGameNotifications_GetSessionDetails_R" +
-      "equest.RequestedSession\022.\n\005appid\030\002 \001(\rB\037" +
-      "\202\265\030\033The appid for the sessions.\0227\n\010langu" +
-      "age\030\003 \001(\tB%\202\265\030!Language to localize the " +
-      "text in.\032\352\001\n\020RequestedSession\0228\n\tsession" +
-      "id\030\001 \001(\004B%\202\265\030!The sessionid to get detai" +
-      "ls for.\022\233\001\n\031include_auth_user_message\030\003 " +
-      "\001(\010Bx\202\265\030t(Optional) Boolean determining " +
-      "whether the message for the authenticate" +
-      "d user should be included. Defaults to f" +
-      "alse.\"\177\n-CGameNotifications_GetSessionDe" +
-      "tails_Response\022N\n\010sessions\030\001 \003(\0132\033.CGame" +
-      "Notifications_SessionB\037\202\265\030\033The details o" +
-      "f the session.\"\250\001\n\030GameNotificationSetti" +
-      "ngs\0227\n\005appid\030\001 \001(\rB(\202\265\030$The appid to cre" +
-      "ate the session for.\022S\n\023allow_notificati" +
-      "ons\030\002 \001(\010B6\202\265\0302Whether the user allows n" +
-      "otification for this app.\"v\n5CGameNotifi" +
-      "cations_UpdateNotificationSettings_Reque" +
-      "st\022=\n\032game_notification_settings\030\001 \003(\0132\031" +
-      ".GameNotificationSettings\"8\n6CGameNotifi" +
-      "cations_UpdateNotificationSettings_Respo" +
-      "nse\"\306\001\n8CGameNotifications_OnNotificatio" +
-      "nsRequested_Notification\022N\n\007steamid\030\001 \001(" +
-      "\006B=\202\265\0309steamid of the user who notificat" +
-      "ions were requested for.\022:\n\005appid\030\002 \001(\rB" +
-      "+\202\265\030\'The appid that requested notificati" +
-      "ons.\"\276\003\n3CGameNotifications_OnUserStatus" +
-      "Changed_Notification\022>\n\007steamid\030\001 \001(\006B-\202" +
-      "\265\030)steamid of the user whose status chan" +
-      "ged.\022X\n\tsessionid\030\002 \001(\004BE\202\265\030AThe session" +
-      "id of the session where the user\'s statu" +
-      "s was changed.\022L\n\005appid\030\003 \001(\rB=\202\265\0309The a" +
-      "ppid of the session where the user\'s sta" +
-      "tus changed.\022V\n\006status\030\004 \001(\0132\036.CGameNoti" +
-      "fications_UserStatusB&\202\265\030\"(Optional) New" +
-      " status of the user.\022G\n\007removed\030\005 \001(\010B6\202" +
-      "\265\0302(Optional) User has been removed from" +
-      " the session.2\246\010\n\021GameNotifications\022\215\001\n\021" +
-      "UserCreateSession\022).CGameNotifications_C" +
-      "reateSession_Request\032*.CGameNotification" +
-      "s_CreateSession_Response\"!\202\265\030\035Creates an" +
-      " async game session\022\215\001\n\021UserDeleteSessio" +
-      "n\022).CGameNotifications_DeleteSession_Req" +
-      "uest\032*.CGameNotifications_DeleteSession_" +
-      "Response\"!\202\265\030\035Deletes an async game sess" +
-      "ion\022\215\001\n\021UserUpdateSession\022).CGameNotific" +
-      "ations_UpdateSession_Request\032*.CGameNoti" +
-      "fications_UpdateSession_Response\"!\202\265\030\035Up" +
-      "dates an async game session\022\224\001\n\021Enumerat" +
-      "eSessions\022-.CGameNotifications_Enumerate" +
-      "Sessions_Request\032..CGameNotifications_En" +
-      "umerateSessions_Response\" \202\265\030\034Enumerates" +
-      " a user\'s sessions\022\236\001\n\021GetSessionDetails" +
-      "\022-.CGameNotifications_GetSessionDetails_" +
-      "Request\032..CGameNotifications_GetSessionD" +
-      "etails_Response\"*\202\265\030&Get the details for" +
-      " a specific session\022\326\001\n\032UpdateNotificati" +
-      "onSettings\0226.CGameNotifications_UpdateNo" +
-      "tificationSettings_Request\0327.CGameNotifi" +
-      "cations_UpdateNotificationSettings_Respo" +
-      "nse\"G\202\265\030CUpdates whether a user allows g" +
-      "ame notifications for a specific app\032P\202\265" +
-      "\030LA service for functions related to the" +
-      " asyncronous game notification server.2\337" +
-      "\002\n\027GameNotificationsClient\022\225\001\n\030OnNotific" +
-      "ationsRequested\0229.CGameNotifications_OnN" +
-      "otificationsRequested_Notification\032\013.NoR" +
-      "esponse\"1\202\265\030-Requests that the user opt " +
-      "into notifications\022\215\001\n\023OnUserStatusChang" +
-      "ed\0224.CGameNotifications_OnUserStatusChan" +
-      "ged_Notification\032\013.NoResponse\"3\202\265\030/Notif" +
-      "ication that the user\'s status has chang" +
-      "ed\032\034\202\265\030\024Client notifications\300\265\030\002B\003\200\001\001"
+      "\"!\202\265\030\035Deletes an async game session\022\215\001\n\021" +
+      "UserUpdateSession\022).CGameNotifications_U" +
+      "pdateSession_Request\032*.CGameNotification" +
+      "s_UpdateSession_Response\"!\202\265\030\035Updates an" +
+      " async game session\022\224\001\n\021EnumerateSession" +
+      "s\022-.CGameNotifications_EnumerateSessions" +
+      "_Request\032..CGameNotifications_EnumerateS" +
+      "essions_Response\" \202\265\030\034Enumerates a user\'" +
+      "s sessions\022\236\001\n\021GetSessionDetails\022-.CGame" +
+      "Notifications_GetSessionDetails_Request\032" +
+      "..CGameNotifications_GetSessionDetails_R" +
+      "esponse\"*\202\265\030&Get the details for a speci" +
+      "fic session\022\326\001\n\032UpdateNotificationSettin" +
+      "gs\0226.CGameNotifications_UpdateNotificati" +
+      "onSettings_Request\0327.CGameNotifications_" +
+      "UpdateNotificationSettings_Response\"G\202\265\030" +
+      "CUpdates whether a user allows game noti" +
+      "fications for a specific app\032P\202\265\030LA serv" +
+      "ice for functions related to the asyncro" +
+      "nous game notification server.2\337\002\n\027GameN" +
+      "otificationsClient\022\225\001\n\030OnNotificationsRe" +
+      "quested\0229.CGameNotifications_OnNotificat" +
+      "ionsRequested_Notification\032\013.NoResponse\"" +
+      "1\202\265\030-Requests that the user opt into not" +
+      "ifications\022\215\001\n\023OnUserStatusChanged\0224.CGa" +
+      "meNotifications_OnUserStatusChanged_Noti" +
+      "fication\032\013.NoResponse\"3\202\265\030/Notification " +
+      "that the user\'s status has changed\032\034\202\265\030\024" +
+      "Client notifications\300\265\030\002B\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CGameNotifications_Variable_descriptor =
@@ -17386,6 +17388,7 @@ public final class SteammessagesGamenotificationsSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

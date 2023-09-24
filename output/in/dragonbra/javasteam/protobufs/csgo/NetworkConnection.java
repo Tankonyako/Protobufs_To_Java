@@ -221,7 +221,7 @@ public final class NetworkConnection {
      */
     NETWORK_DISCONNECT_BAD_SERVER_PASSWORD(49),
     /**
-     * <code>NETWORK_DISCONNECT_DIRECT_CONNECT_RESERVATION = 50 [(.network_connection_token) = "#GameUI_Disconnect_DirectConnectReservation"];</code>
+     * <code>NETWORK_DISCONNECT_DIRECT_CONNECT_RESERVATION = 50;</code>
      */
     NETWORK_DISCONNECT_DIRECT_CONNECT_RESERVATION(50),
     /**
@@ -233,33 +233,265 @@ public final class NetworkConnection {
      */
     NETWORK_DISCONNECT_NO_PEER_GROUP_HANDLERS(52),
     /**
-     * <code>NETWORK_DISCONNECT_RECONNECTION = 53 [(.network_connection_token) = "#GameUI_Disconnect_Reconnection"];</code>
+     * <code>NETWORK_DISCONNECT_RECONNECTION = 53;</code>
      */
     NETWORK_DISCONNECT_RECONNECTION(53),
     /**
-     * <code>NETWORK_DISCONNECT_CONNECTION_CLOSING = 54 [(.network_connection_token) = "#GameUI_Disconnect_ConnectionClosing"];</code>
+     * <code>NETWORK_DISCONNECT_LOOPSHUTDOWN = 54 [(.network_connection_token) = "#GameUI_Disconnect_LoopShutdown"];</code>
      */
-    NETWORK_DISCONNECT_CONNECTION_CLOSING(54),
+    NETWORK_DISCONNECT_LOOPSHUTDOWN(54),
     /**
-     * <code>NETWORK_DISCONNECT_NO_GOTV_RELAYS_AVAILABLE = 55 [(.network_connection_token) = "#GameUI_Disconnect_NoGOTVRelaysAvailable"];</code>
+     * <code>NETWORK_DISCONNECT_LOOPDEACTIVATE = 55 [(.network_connection_token) = "#GameUI_Disconnect_LoopDeactivate"];</code>
      */
-    NETWORK_DISCONNECT_NO_GOTV_RELAYS_AVAILABLE(55),
+    NETWORK_DISCONNECT_LOOPDEACTIVATE(55),
     /**
-     * <code>NETWORK_DISCONNECT_SESSION_MIGRATED = 56 [(.network_connection_token) = "#GameUI_Disconnect_SessionMigrated"];</code>
+     * <code>NETWORK_DISCONNECT_HOST_ENDGAME = 56 [(.network_connection_token) = "#GameUI_Disconnect_Host_EndGame"];</code>
      */
-    NETWORK_DISCONNECT_SESSION_MIGRATED(56),
+    NETWORK_DISCONNECT_HOST_ENDGAME(56),
     /**
-     * <code>NETWORK_DISCONNECT_VERYLARGETRANSFEROVERFLOW = 57 [(.network_connection_token) = "#GameUI_Disconnect_VeryLargeTransferOverflow"];</code>
+     * <code>NETWORK_DISCONNECT_LOOP_LEVELLOAD_ACTIVATE = 57 [(.network_connection_token) = "#GameUI_Disconnect_LoopLevelLoadActivate"];</code>
      */
-    NETWORK_DISCONNECT_VERYLARGETRANSFEROVERFLOW(57),
+    NETWORK_DISCONNECT_LOOP_LEVELLOAD_ACTIVATE(57),
     /**
-     * <code>NETWORK_DISCONNECT_SENDNETOVERFLOW = 58 [(.network_connection_token) = "#GameUI_Disconnect_SendNetOverflow"];</code>
+     * <code>NETWORK_DISCONNECT_CREATE_SERVER_FAILED = 58 [(.network_connection_token) = "#GameUI_Disconnect_CreateServerFailed"];</code>
      */
-    NETWORK_DISCONNECT_SENDNETOVERFLOW(58),
+    NETWORK_DISCONNECT_CREATE_SERVER_FAILED(58),
     /**
-     * <code>NETWORK_DISCONNECT_PLAYER_REMOVED_FROM_HOST_SESSION = 59 [(.network_connection_token) = "#GameUI_Disconnect_PlayerRemovedFromHostSession"];</code>
+     * <code>NETWORK_DISCONNECT_EXITING = 59 [(.network_connection_token) = "#GameUI_Disconnect_ExitingEngine"];</code>
      */
-    NETWORK_DISCONNECT_PLAYER_REMOVED_FROM_HOST_SESSION(59),
+    NETWORK_DISCONNECT_EXITING(59),
+    /**
+     * <code>NETWORK_DISCONNECT_REQUEST_HOSTSTATE_IDLE = 60 [(.network_connection_token) = "#GameUI_Disconnect_Request_HSIdle"];</code>
+     */
+    NETWORK_DISCONNECT_REQUEST_HOSTSTATE_IDLE(60),
+    /**
+     * <code>NETWORK_DISCONNECT_REQUEST_HOSTSTATE_HLTVRELAY = 61 [(.network_connection_token) = "#GameUI_Disconnect_Request_HLTVRelay"];</code>
+     */
+    NETWORK_DISCONNECT_REQUEST_HOSTSTATE_HLTVRELAY(61),
+    /**
+     * <code>NETWORK_DISCONNECT_CLIENT_CONSISTENCY_FAIL = 62 [(.network_connection_token) = "#GameUI_ClientConsistencyFail"];</code>
+     */
+    NETWORK_DISCONNECT_CLIENT_CONSISTENCY_FAIL(62),
+    /**
+     * <code>NETWORK_DISCONNECT_CLIENT_UNABLE_TO_CRC_MAP = 63 [(.network_connection_token) = "#GameUI_ClientUnableToCRCMap"];</code>
+     */
+    NETWORK_DISCONNECT_CLIENT_UNABLE_TO_CRC_MAP(63),
+    /**
+     * <code>NETWORK_DISCONNECT_CLIENT_NO_MAP = 64 [(.network_connection_token) = "#GameUI_ClientNoMap"];</code>
+     */
+    NETWORK_DISCONNECT_CLIENT_NO_MAP(64),
+    /**
+     * <code>NETWORK_DISCONNECT_CLIENT_DIFFERENT_MAP = 65 [(.network_connection_token) = "#GameUI_ClientDifferentMap"];</code>
+     */
+    NETWORK_DISCONNECT_CLIENT_DIFFERENT_MAP(65),
+    /**
+     * <code>NETWORK_DISCONNECT_SERVER_REQUIRES_STEAM = 66 [(.network_connection_token) = "#GameUI_ServerRequireSteams"];</code>
+     */
+    NETWORK_DISCONNECT_SERVER_REQUIRES_STEAM(66),
+    /**
+     * <code>NETWORK_DISCONNECT_STEAM_DENY_MISC = 67 [(.network_connection_token) = "#GameUI_Disconnect_SteamDeny_Misc"];</code>
+     */
+    NETWORK_DISCONNECT_STEAM_DENY_MISC(67),
+    /**
+     * <code>NETWORK_DISCONNECT_STEAM_DENY_BAD_ANTI_CHEAT = 68 [(.network_connection_token) = "#GameUI_Disconnect_SteamDeny_BadAntiCheat"];</code>
+     */
+    NETWORK_DISCONNECT_STEAM_DENY_BAD_ANTI_CHEAT(68),
+    /**
+     * <code>NETWORK_DISCONNECT_SERVER_SHUTDOWN = 69 [(.network_connection_token) = "#GameUI_Disconnect_ServerShutdown"];</code>
+     */
+    NETWORK_DISCONNECT_SERVER_SHUTDOWN(69),
+    /**
+     * <code>NETWORK_DISCONNECT_REPLAY_INCOMPATIBLE = 71 [(.network_connection_token) = "#GameUI_Disconnect_ReplayIncompatible"];</code>
+     */
+    NETWORK_DISCONNECT_REPLAY_INCOMPATIBLE(71),
+    /**
+     * <code>NETWORK_DISCONNECT_CONNECT_REQUEST_TIMEDOUT = 72 [(.network_connection_token) = "#GameUI_Disconnect_ConnectionTimedout"];</code>
+     */
+    NETWORK_DISCONNECT_CONNECT_REQUEST_TIMEDOUT(72),
+    /**
+     * <code>NETWORK_DISCONNECT_SERVER_INCOMPATIBLE = 73 [(.network_connection_token) = "#GameUI_Disconnect_ServerIncompatible"];</code>
+     */
+    NETWORK_DISCONNECT_SERVER_INCOMPATIBLE(73),
+    /**
+     * <code>NETWORK_DISCONNECT_LOCALPROBLEM_MANYRELAYS = 74 [(.network_connection_token) = "#GameUI_Disconnect_LocalProblem_ManyRelays"];</code>
+     */
+    NETWORK_DISCONNECT_LOCALPROBLEM_MANYRELAYS(74),
+    /**
+     * <code>NETWORK_DISCONNECT_LOCALPROBLEM_HOSTEDSERVERPRIMARYRELAY = 75 [(.network_connection_token) = "#GameUI_Disconnect_LocalProblem_HostedServerPrimaryRelay"];</code>
+     */
+    NETWORK_DISCONNECT_LOCALPROBLEM_HOSTEDSERVERPRIMARYRELAY(75),
+    /**
+     * <code>NETWORK_DISCONNECT_LOCALPROBLEM_NETWORKCONFIG = 76 [(.network_connection_token) = "#GameUI_Disconnect_LocalProblem_NetworkConfig"];</code>
+     */
+    NETWORK_DISCONNECT_LOCALPROBLEM_NETWORKCONFIG(76),
+    /**
+     * <code>NETWORK_DISCONNECT_LOCALPROBLEM_OTHER = 77 [(.network_connection_token) = "#GameUI_Disconnect_LocalProblem_Other"];</code>
+     */
+    NETWORK_DISCONNECT_LOCALPROBLEM_OTHER(77),
+    /**
+     * <code>NETWORK_DISCONNECT_REMOTE_TIMEOUT = 79 [(.network_connection_token) = "#GameUI_Disconnect_RemoteProblem_Timeout"];</code>
+     */
+    NETWORK_DISCONNECT_REMOTE_TIMEOUT(79),
+    /**
+     * <code>NETWORK_DISCONNECT_REMOTE_TIMEOUT_CONNECTING = 80 [(.network_connection_token) = "#GameUI_Disconnect_RemoteProblem_TimeoutConnecting"];</code>
+     */
+    NETWORK_DISCONNECT_REMOTE_TIMEOUT_CONNECTING(80),
+    /**
+     * <code>NETWORK_DISCONNECT_REMOTE_OTHER = 81 [(.network_connection_token) = "#GameUI_Disconnect_RemoteProblem_Other"];</code>
+     */
+    NETWORK_DISCONNECT_REMOTE_OTHER(81),
+    /**
+     * <code>NETWORK_DISCONNECT_REMOTE_BADCRYPT = 82 [(.network_connection_token) = "#GameUI_Disconnect_RemoteProblem_BadCrypt"];</code>
+     */
+    NETWORK_DISCONNECT_REMOTE_BADCRYPT(82),
+    /**
+     * <code>NETWORK_DISCONNECT_REMOTE_CERTNOTTRUSTED = 83 [(.network_connection_token) = "#GameUI_Disconnect_RemoteProblem_BadCert"];</code>
+     */
+    NETWORK_DISCONNECT_REMOTE_CERTNOTTRUSTED(83),
+    /**
+     * <code>NETWORK_DISCONNECT_UNUSUAL = 84 [(.network_connection_token) = "#GameUI_Disconnect_Unusual"];</code>
+     */
+    NETWORK_DISCONNECT_UNUSUAL(84),
+    /**
+     * <code>NETWORK_DISCONNECT_INTERNAL_ERROR = 85 [(.network_connection_token) = "#GameUI_Disconnect_InternalError"];</code>
+     */
+    NETWORK_DISCONNECT_INTERNAL_ERROR(85),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_BADCHALLENGE = 128 [(.network_connection_token) = "#GameUI_ServerRejectBadChallenge"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_BADCHALLENGE(128),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_NOLOBBY = 129 [(.network_connection_token) = "#GameUI_ServerNoLobby"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_NOLOBBY(129),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_BACKGROUND_MAP = 130 [(.network_connection_token) = "#Valve_Reject_Background_Map"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_BACKGROUND_MAP(130),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_SINGLE_PLAYER = 131 [(.network_connection_token) = "#Valve_Reject_Single_Player"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_SINGLE_PLAYER(131),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_HIDDEN_GAME = 132 [(.network_connection_token) = "#Valve_Reject_Hidden_Game"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_HIDDEN_GAME(132),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_LANRESTRICT = 133 [(.network_connection_token) = "#GameUI_ServerRejectLANRestrict"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_LANRESTRICT(133),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_BADPASSWORD = 134 [(.network_connection_token) = "#GameUI_ServerRejectBadPassword"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_BADPASSWORD(134),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_SERVERFULL = 135 [(.network_connection_token) = "#GameUI_ServerRejectServerFull"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_SERVERFULL(135),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_INVALIDRESERVATION = 136 [(.network_connection_token) = "#GameUI_ServerRejectInvalidReservation"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_INVALIDRESERVATION(136),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_FAILEDCHANNEL = 137 [(.network_connection_token) = "#GameUI_ServerRejectFailedChannel"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_FAILEDCHANNEL(137),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_CONNECT_FROM_LOBBY = 138 [(.network_connection_token) = "#Valve_Reject_Connect_From_Lobby"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_CONNECT_FROM_LOBBY(138),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_RESERVED_FOR_LOBBY = 139 [(.network_connection_token) = "#Valve_Reject_Reserved_For_Lobby"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_RESERVED_FOR_LOBBY(139),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_INVALIDKEYLENGTH = 140 [(.network_connection_token) = "#GameUI_ServerReject_InvalidKeyLength"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_INVALIDKEYLENGTH(140),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_OLDPROTOCOL = 141 [(.network_connection_token) = "#GameUI_ServerRejectOldProtocol"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_OLDPROTOCOL(141),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_NEWPROTOCOL = 142 [(.network_connection_token) = "#GameUI_ServerRejectNewProtocol"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_NEWPROTOCOL(142),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_INVALIDCONNECTION = 143 [(.network_connection_token) = "#GameUI_ServerRejectInvalidConnection"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_INVALIDCONNECTION(143),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_INVALIDCERTLEN = 144 [(.network_connection_token) = "#GameUI_ServerRejectInvalidCertLen"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_INVALIDCERTLEN(144),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_INVALIDSTEAMCERTLEN = 145 [(.network_connection_token) = "#GameUI_ServerRejectInvalidSteamCertLen"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_INVALIDSTEAMCERTLEN(145),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_STEAM = 146 [(.network_connection_token) = "#GameUI_ServerRejectSteam"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_STEAM(146),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_SERVERAUTHDISABLED = 147 [(.network_connection_token) = "#GameUI_ServerAuthDisabled"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_SERVERAUTHDISABLED(147),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_SERVERCDKEYAUTHINVALID = 148 [(.network_connection_token) = "#GameUI_ServerCDKeyAuthInvalid"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_SERVERCDKEYAUTHINVALID(148),
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_BANNED = 149 [(.network_connection_token) = "#GameUI_ServerRejectBanned"];</code>
+     */
+    NETWORK_DISCONNECT_REJECT_BANNED(149),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_TEAMKILLING = 150 [(.network_connection_token) = "#Player_DisconnectReason_TeamKilling"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_TEAMKILLING(150),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_TK_START = 151 [(.network_connection_token) = "#Player_DisconnectReason_TK_Start"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_TK_START(151),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_UNTRUSTEDACCOUNT = 152 [(.network_connection_token) = "#Player_DisconnectReason_UntrustedAccount"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_UNTRUSTEDACCOUNT(152),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_CONVICTEDACCOUNT = 153 [(.network_connection_token) = "#Player_DisconnectReason_ConvictedAccount"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_CONVICTEDACCOUNT(153),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_COMPETITIVECOOLDOWN = 154 [(.network_connection_token) = "#Player_DisconnectReason_CompetitiveCooldown"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_COMPETITIVECOOLDOWN(154),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_TEAMHURTING = 155 [(.network_connection_token) = "#Player_DisconnectReason_TeamHurting"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_TEAMHURTING(155),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_HOSTAGEKILLING = 156 [(.network_connection_token) = "#Player_DisconnectReason_HostageKilling"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_HOSTAGEKILLING(156),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_VOTEDOFF = 157 [(.network_connection_token) = "#Player_DisconnectReason_VotedOff"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_VOTEDOFF(157),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_IDLE = 158 [(.network_connection_token) = "#Player_DisconnectReason_Idle"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_IDLE(158),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_SUICIDE = 159 [(.network_connection_token) = "#Player_DisconnectReason_Suicide"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_SUICIDE(159),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_NOSTEAMLOGIN = 160 [(.network_connection_token) = "#Player_DisconnectReason_NoSteamLogin"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_NOSTEAMLOGIN(160),
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_NOSTEAMTICKET = 161 [(.network_connection_token) = "#Player_DisconnectReason_NoSteamTicket"];</code>
+     */
+    NETWORK_DISCONNECT_KICKED_NOSTEAMTICKET(161),
     ;
 
     /**
@@ -463,7 +695,7 @@ public final class NetworkConnection {
      */
     public static final int NETWORK_DISCONNECT_BAD_SERVER_PASSWORD_VALUE = 49;
     /**
-     * <code>NETWORK_DISCONNECT_DIRECT_CONNECT_RESERVATION = 50 [(.network_connection_token) = "#GameUI_Disconnect_DirectConnectReservation"];</code>
+     * <code>NETWORK_DISCONNECT_DIRECT_CONNECT_RESERVATION = 50;</code>
      */
     public static final int NETWORK_DISCONNECT_DIRECT_CONNECT_RESERVATION_VALUE = 50;
     /**
@@ -475,33 +707,265 @@ public final class NetworkConnection {
      */
     public static final int NETWORK_DISCONNECT_NO_PEER_GROUP_HANDLERS_VALUE = 52;
     /**
-     * <code>NETWORK_DISCONNECT_RECONNECTION = 53 [(.network_connection_token) = "#GameUI_Disconnect_Reconnection"];</code>
+     * <code>NETWORK_DISCONNECT_RECONNECTION = 53;</code>
      */
     public static final int NETWORK_DISCONNECT_RECONNECTION_VALUE = 53;
     /**
-     * <code>NETWORK_DISCONNECT_CONNECTION_CLOSING = 54 [(.network_connection_token) = "#GameUI_Disconnect_ConnectionClosing"];</code>
+     * <code>NETWORK_DISCONNECT_LOOPSHUTDOWN = 54 [(.network_connection_token) = "#GameUI_Disconnect_LoopShutdown"];</code>
      */
-    public static final int NETWORK_DISCONNECT_CONNECTION_CLOSING_VALUE = 54;
+    public static final int NETWORK_DISCONNECT_LOOPSHUTDOWN_VALUE = 54;
     /**
-     * <code>NETWORK_DISCONNECT_NO_GOTV_RELAYS_AVAILABLE = 55 [(.network_connection_token) = "#GameUI_Disconnect_NoGOTVRelaysAvailable"];</code>
+     * <code>NETWORK_DISCONNECT_LOOPDEACTIVATE = 55 [(.network_connection_token) = "#GameUI_Disconnect_LoopDeactivate"];</code>
      */
-    public static final int NETWORK_DISCONNECT_NO_GOTV_RELAYS_AVAILABLE_VALUE = 55;
+    public static final int NETWORK_DISCONNECT_LOOPDEACTIVATE_VALUE = 55;
     /**
-     * <code>NETWORK_DISCONNECT_SESSION_MIGRATED = 56 [(.network_connection_token) = "#GameUI_Disconnect_SessionMigrated"];</code>
+     * <code>NETWORK_DISCONNECT_HOST_ENDGAME = 56 [(.network_connection_token) = "#GameUI_Disconnect_Host_EndGame"];</code>
      */
-    public static final int NETWORK_DISCONNECT_SESSION_MIGRATED_VALUE = 56;
+    public static final int NETWORK_DISCONNECT_HOST_ENDGAME_VALUE = 56;
     /**
-     * <code>NETWORK_DISCONNECT_VERYLARGETRANSFEROVERFLOW = 57 [(.network_connection_token) = "#GameUI_Disconnect_VeryLargeTransferOverflow"];</code>
+     * <code>NETWORK_DISCONNECT_LOOP_LEVELLOAD_ACTIVATE = 57 [(.network_connection_token) = "#GameUI_Disconnect_LoopLevelLoadActivate"];</code>
      */
-    public static final int NETWORK_DISCONNECT_VERYLARGETRANSFEROVERFLOW_VALUE = 57;
+    public static final int NETWORK_DISCONNECT_LOOP_LEVELLOAD_ACTIVATE_VALUE = 57;
     /**
-     * <code>NETWORK_DISCONNECT_SENDNETOVERFLOW = 58 [(.network_connection_token) = "#GameUI_Disconnect_SendNetOverflow"];</code>
+     * <code>NETWORK_DISCONNECT_CREATE_SERVER_FAILED = 58 [(.network_connection_token) = "#GameUI_Disconnect_CreateServerFailed"];</code>
      */
-    public static final int NETWORK_DISCONNECT_SENDNETOVERFLOW_VALUE = 58;
+    public static final int NETWORK_DISCONNECT_CREATE_SERVER_FAILED_VALUE = 58;
     /**
-     * <code>NETWORK_DISCONNECT_PLAYER_REMOVED_FROM_HOST_SESSION = 59 [(.network_connection_token) = "#GameUI_Disconnect_PlayerRemovedFromHostSession"];</code>
+     * <code>NETWORK_DISCONNECT_EXITING = 59 [(.network_connection_token) = "#GameUI_Disconnect_ExitingEngine"];</code>
      */
-    public static final int NETWORK_DISCONNECT_PLAYER_REMOVED_FROM_HOST_SESSION_VALUE = 59;
+    public static final int NETWORK_DISCONNECT_EXITING_VALUE = 59;
+    /**
+     * <code>NETWORK_DISCONNECT_REQUEST_HOSTSTATE_IDLE = 60 [(.network_connection_token) = "#GameUI_Disconnect_Request_HSIdle"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REQUEST_HOSTSTATE_IDLE_VALUE = 60;
+    /**
+     * <code>NETWORK_DISCONNECT_REQUEST_HOSTSTATE_HLTVRELAY = 61 [(.network_connection_token) = "#GameUI_Disconnect_Request_HLTVRelay"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REQUEST_HOSTSTATE_HLTVRELAY_VALUE = 61;
+    /**
+     * <code>NETWORK_DISCONNECT_CLIENT_CONSISTENCY_FAIL = 62 [(.network_connection_token) = "#GameUI_ClientConsistencyFail"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_CLIENT_CONSISTENCY_FAIL_VALUE = 62;
+    /**
+     * <code>NETWORK_DISCONNECT_CLIENT_UNABLE_TO_CRC_MAP = 63 [(.network_connection_token) = "#GameUI_ClientUnableToCRCMap"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_CLIENT_UNABLE_TO_CRC_MAP_VALUE = 63;
+    /**
+     * <code>NETWORK_DISCONNECT_CLIENT_NO_MAP = 64 [(.network_connection_token) = "#GameUI_ClientNoMap"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_CLIENT_NO_MAP_VALUE = 64;
+    /**
+     * <code>NETWORK_DISCONNECT_CLIENT_DIFFERENT_MAP = 65 [(.network_connection_token) = "#GameUI_ClientDifferentMap"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_CLIENT_DIFFERENT_MAP_VALUE = 65;
+    /**
+     * <code>NETWORK_DISCONNECT_SERVER_REQUIRES_STEAM = 66 [(.network_connection_token) = "#GameUI_ServerRequireSteams"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_SERVER_REQUIRES_STEAM_VALUE = 66;
+    /**
+     * <code>NETWORK_DISCONNECT_STEAM_DENY_MISC = 67 [(.network_connection_token) = "#GameUI_Disconnect_SteamDeny_Misc"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_STEAM_DENY_MISC_VALUE = 67;
+    /**
+     * <code>NETWORK_DISCONNECT_STEAM_DENY_BAD_ANTI_CHEAT = 68 [(.network_connection_token) = "#GameUI_Disconnect_SteamDeny_BadAntiCheat"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_STEAM_DENY_BAD_ANTI_CHEAT_VALUE = 68;
+    /**
+     * <code>NETWORK_DISCONNECT_SERVER_SHUTDOWN = 69 [(.network_connection_token) = "#GameUI_Disconnect_ServerShutdown"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_SERVER_SHUTDOWN_VALUE = 69;
+    /**
+     * <code>NETWORK_DISCONNECT_REPLAY_INCOMPATIBLE = 71 [(.network_connection_token) = "#GameUI_Disconnect_ReplayIncompatible"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REPLAY_INCOMPATIBLE_VALUE = 71;
+    /**
+     * <code>NETWORK_DISCONNECT_CONNECT_REQUEST_TIMEDOUT = 72 [(.network_connection_token) = "#GameUI_Disconnect_ConnectionTimedout"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_CONNECT_REQUEST_TIMEDOUT_VALUE = 72;
+    /**
+     * <code>NETWORK_DISCONNECT_SERVER_INCOMPATIBLE = 73 [(.network_connection_token) = "#GameUI_Disconnect_ServerIncompatible"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_SERVER_INCOMPATIBLE_VALUE = 73;
+    /**
+     * <code>NETWORK_DISCONNECT_LOCALPROBLEM_MANYRELAYS = 74 [(.network_connection_token) = "#GameUI_Disconnect_LocalProblem_ManyRelays"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_LOCALPROBLEM_MANYRELAYS_VALUE = 74;
+    /**
+     * <code>NETWORK_DISCONNECT_LOCALPROBLEM_HOSTEDSERVERPRIMARYRELAY = 75 [(.network_connection_token) = "#GameUI_Disconnect_LocalProblem_HostedServerPrimaryRelay"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_LOCALPROBLEM_HOSTEDSERVERPRIMARYRELAY_VALUE = 75;
+    /**
+     * <code>NETWORK_DISCONNECT_LOCALPROBLEM_NETWORKCONFIG = 76 [(.network_connection_token) = "#GameUI_Disconnect_LocalProblem_NetworkConfig"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_LOCALPROBLEM_NETWORKCONFIG_VALUE = 76;
+    /**
+     * <code>NETWORK_DISCONNECT_LOCALPROBLEM_OTHER = 77 [(.network_connection_token) = "#GameUI_Disconnect_LocalProblem_Other"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_LOCALPROBLEM_OTHER_VALUE = 77;
+    /**
+     * <code>NETWORK_DISCONNECT_REMOTE_TIMEOUT = 79 [(.network_connection_token) = "#GameUI_Disconnect_RemoteProblem_Timeout"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REMOTE_TIMEOUT_VALUE = 79;
+    /**
+     * <code>NETWORK_DISCONNECT_REMOTE_TIMEOUT_CONNECTING = 80 [(.network_connection_token) = "#GameUI_Disconnect_RemoteProblem_TimeoutConnecting"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REMOTE_TIMEOUT_CONNECTING_VALUE = 80;
+    /**
+     * <code>NETWORK_DISCONNECT_REMOTE_OTHER = 81 [(.network_connection_token) = "#GameUI_Disconnect_RemoteProblem_Other"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REMOTE_OTHER_VALUE = 81;
+    /**
+     * <code>NETWORK_DISCONNECT_REMOTE_BADCRYPT = 82 [(.network_connection_token) = "#GameUI_Disconnect_RemoteProblem_BadCrypt"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REMOTE_BADCRYPT_VALUE = 82;
+    /**
+     * <code>NETWORK_DISCONNECT_REMOTE_CERTNOTTRUSTED = 83 [(.network_connection_token) = "#GameUI_Disconnect_RemoteProblem_BadCert"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REMOTE_CERTNOTTRUSTED_VALUE = 83;
+    /**
+     * <code>NETWORK_DISCONNECT_UNUSUAL = 84 [(.network_connection_token) = "#GameUI_Disconnect_Unusual"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_UNUSUAL_VALUE = 84;
+    /**
+     * <code>NETWORK_DISCONNECT_INTERNAL_ERROR = 85 [(.network_connection_token) = "#GameUI_Disconnect_InternalError"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_INTERNAL_ERROR_VALUE = 85;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_BADCHALLENGE = 128 [(.network_connection_token) = "#GameUI_ServerRejectBadChallenge"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_BADCHALLENGE_VALUE = 128;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_NOLOBBY = 129 [(.network_connection_token) = "#GameUI_ServerNoLobby"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_NOLOBBY_VALUE = 129;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_BACKGROUND_MAP = 130 [(.network_connection_token) = "#Valve_Reject_Background_Map"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_BACKGROUND_MAP_VALUE = 130;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_SINGLE_PLAYER = 131 [(.network_connection_token) = "#Valve_Reject_Single_Player"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_SINGLE_PLAYER_VALUE = 131;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_HIDDEN_GAME = 132 [(.network_connection_token) = "#Valve_Reject_Hidden_Game"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_HIDDEN_GAME_VALUE = 132;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_LANRESTRICT = 133 [(.network_connection_token) = "#GameUI_ServerRejectLANRestrict"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_LANRESTRICT_VALUE = 133;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_BADPASSWORD = 134 [(.network_connection_token) = "#GameUI_ServerRejectBadPassword"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_BADPASSWORD_VALUE = 134;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_SERVERFULL = 135 [(.network_connection_token) = "#GameUI_ServerRejectServerFull"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_SERVERFULL_VALUE = 135;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_INVALIDRESERVATION = 136 [(.network_connection_token) = "#GameUI_ServerRejectInvalidReservation"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_INVALIDRESERVATION_VALUE = 136;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_FAILEDCHANNEL = 137 [(.network_connection_token) = "#GameUI_ServerRejectFailedChannel"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_FAILEDCHANNEL_VALUE = 137;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_CONNECT_FROM_LOBBY = 138 [(.network_connection_token) = "#Valve_Reject_Connect_From_Lobby"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_CONNECT_FROM_LOBBY_VALUE = 138;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_RESERVED_FOR_LOBBY = 139 [(.network_connection_token) = "#Valve_Reject_Reserved_For_Lobby"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_RESERVED_FOR_LOBBY_VALUE = 139;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_INVALIDKEYLENGTH = 140 [(.network_connection_token) = "#GameUI_ServerReject_InvalidKeyLength"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_INVALIDKEYLENGTH_VALUE = 140;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_OLDPROTOCOL = 141 [(.network_connection_token) = "#GameUI_ServerRejectOldProtocol"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_OLDPROTOCOL_VALUE = 141;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_NEWPROTOCOL = 142 [(.network_connection_token) = "#GameUI_ServerRejectNewProtocol"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_NEWPROTOCOL_VALUE = 142;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_INVALIDCONNECTION = 143 [(.network_connection_token) = "#GameUI_ServerRejectInvalidConnection"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_INVALIDCONNECTION_VALUE = 143;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_INVALIDCERTLEN = 144 [(.network_connection_token) = "#GameUI_ServerRejectInvalidCertLen"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_INVALIDCERTLEN_VALUE = 144;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_INVALIDSTEAMCERTLEN = 145 [(.network_connection_token) = "#GameUI_ServerRejectInvalidSteamCertLen"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_INVALIDSTEAMCERTLEN_VALUE = 145;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_STEAM = 146 [(.network_connection_token) = "#GameUI_ServerRejectSteam"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_STEAM_VALUE = 146;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_SERVERAUTHDISABLED = 147 [(.network_connection_token) = "#GameUI_ServerAuthDisabled"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_SERVERAUTHDISABLED_VALUE = 147;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_SERVERCDKEYAUTHINVALID = 148 [(.network_connection_token) = "#GameUI_ServerCDKeyAuthInvalid"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_SERVERCDKEYAUTHINVALID_VALUE = 148;
+    /**
+     * <code>NETWORK_DISCONNECT_REJECT_BANNED = 149 [(.network_connection_token) = "#GameUI_ServerRejectBanned"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_REJECT_BANNED_VALUE = 149;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_TEAMKILLING = 150 [(.network_connection_token) = "#Player_DisconnectReason_TeamKilling"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_TEAMKILLING_VALUE = 150;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_TK_START = 151 [(.network_connection_token) = "#Player_DisconnectReason_TK_Start"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_TK_START_VALUE = 151;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_UNTRUSTEDACCOUNT = 152 [(.network_connection_token) = "#Player_DisconnectReason_UntrustedAccount"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_UNTRUSTEDACCOUNT_VALUE = 152;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_CONVICTEDACCOUNT = 153 [(.network_connection_token) = "#Player_DisconnectReason_ConvictedAccount"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_CONVICTEDACCOUNT_VALUE = 153;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_COMPETITIVECOOLDOWN = 154 [(.network_connection_token) = "#Player_DisconnectReason_CompetitiveCooldown"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_COMPETITIVECOOLDOWN_VALUE = 154;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_TEAMHURTING = 155 [(.network_connection_token) = "#Player_DisconnectReason_TeamHurting"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_TEAMHURTING_VALUE = 155;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_HOSTAGEKILLING = 156 [(.network_connection_token) = "#Player_DisconnectReason_HostageKilling"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_HOSTAGEKILLING_VALUE = 156;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_VOTEDOFF = 157 [(.network_connection_token) = "#Player_DisconnectReason_VotedOff"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_VOTEDOFF_VALUE = 157;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_IDLE = 158 [(.network_connection_token) = "#Player_DisconnectReason_Idle"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_IDLE_VALUE = 158;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_SUICIDE = 159 [(.network_connection_token) = "#Player_DisconnectReason_Suicide"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_SUICIDE_VALUE = 159;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_NOSTEAMLOGIN = 160 [(.network_connection_token) = "#Player_DisconnectReason_NoSteamLogin"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_NOSTEAMLOGIN_VALUE = 160;
+    /**
+     * <code>NETWORK_DISCONNECT_KICKED_NOSTEAMTICKET = 161 [(.network_connection_token) = "#Player_DisconnectReason_NoSteamTicket"];</code>
+     */
+    public static final int NETWORK_DISCONNECT_KICKED_NOSTEAMTICKET_VALUE = 161;
 
 
     public final int getNumber() {
@@ -578,12 +1042,70 @@ public final class NetworkConnection {
         case 51: return NETWORK_DISCONNECT_CONNECTION_FAILURE;
         case 52: return NETWORK_DISCONNECT_NO_PEER_GROUP_HANDLERS;
         case 53: return NETWORK_DISCONNECT_RECONNECTION;
-        case 54: return NETWORK_DISCONNECT_CONNECTION_CLOSING;
-        case 55: return NETWORK_DISCONNECT_NO_GOTV_RELAYS_AVAILABLE;
-        case 56: return NETWORK_DISCONNECT_SESSION_MIGRATED;
-        case 57: return NETWORK_DISCONNECT_VERYLARGETRANSFEROVERFLOW;
-        case 58: return NETWORK_DISCONNECT_SENDNETOVERFLOW;
-        case 59: return NETWORK_DISCONNECT_PLAYER_REMOVED_FROM_HOST_SESSION;
+        case 54: return NETWORK_DISCONNECT_LOOPSHUTDOWN;
+        case 55: return NETWORK_DISCONNECT_LOOPDEACTIVATE;
+        case 56: return NETWORK_DISCONNECT_HOST_ENDGAME;
+        case 57: return NETWORK_DISCONNECT_LOOP_LEVELLOAD_ACTIVATE;
+        case 58: return NETWORK_DISCONNECT_CREATE_SERVER_FAILED;
+        case 59: return NETWORK_DISCONNECT_EXITING;
+        case 60: return NETWORK_DISCONNECT_REQUEST_HOSTSTATE_IDLE;
+        case 61: return NETWORK_DISCONNECT_REQUEST_HOSTSTATE_HLTVRELAY;
+        case 62: return NETWORK_DISCONNECT_CLIENT_CONSISTENCY_FAIL;
+        case 63: return NETWORK_DISCONNECT_CLIENT_UNABLE_TO_CRC_MAP;
+        case 64: return NETWORK_DISCONNECT_CLIENT_NO_MAP;
+        case 65: return NETWORK_DISCONNECT_CLIENT_DIFFERENT_MAP;
+        case 66: return NETWORK_DISCONNECT_SERVER_REQUIRES_STEAM;
+        case 67: return NETWORK_DISCONNECT_STEAM_DENY_MISC;
+        case 68: return NETWORK_DISCONNECT_STEAM_DENY_BAD_ANTI_CHEAT;
+        case 69: return NETWORK_DISCONNECT_SERVER_SHUTDOWN;
+        case 71: return NETWORK_DISCONNECT_REPLAY_INCOMPATIBLE;
+        case 72: return NETWORK_DISCONNECT_CONNECT_REQUEST_TIMEDOUT;
+        case 73: return NETWORK_DISCONNECT_SERVER_INCOMPATIBLE;
+        case 74: return NETWORK_DISCONNECT_LOCALPROBLEM_MANYRELAYS;
+        case 75: return NETWORK_DISCONNECT_LOCALPROBLEM_HOSTEDSERVERPRIMARYRELAY;
+        case 76: return NETWORK_DISCONNECT_LOCALPROBLEM_NETWORKCONFIG;
+        case 77: return NETWORK_DISCONNECT_LOCALPROBLEM_OTHER;
+        case 79: return NETWORK_DISCONNECT_REMOTE_TIMEOUT;
+        case 80: return NETWORK_DISCONNECT_REMOTE_TIMEOUT_CONNECTING;
+        case 81: return NETWORK_DISCONNECT_REMOTE_OTHER;
+        case 82: return NETWORK_DISCONNECT_REMOTE_BADCRYPT;
+        case 83: return NETWORK_DISCONNECT_REMOTE_CERTNOTTRUSTED;
+        case 84: return NETWORK_DISCONNECT_UNUSUAL;
+        case 85: return NETWORK_DISCONNECT_INTERNAL_ERROR;
+        case 128: return NETWORK_DISCONNECT_REJECT_BADCHALLENGE;
+        case 129: return NETWORK_DISCONNECT_REJECT_NOLOBBY;
+        case 130: return NETWORK_DISCONNECT_REJECT_BACKGROUND_MAP;
+        case 131: return NETWORK_DISCONNECT_REJECT_SINGLE_PLAYER;
+        case 132: return NETWORK_DISCONNECT_REJECT_HIDDEN_GAME;
+        case 133: return NETWORK_DISCONNECT_REJECT_LANRESTRICT;
+        case 134: return NETWORK_DISCONNECT_REJECT_BADPASSWORD;
+        case 135: return NETWORK_DISCONNECT_REJECT_SERVERFULL;
+        case 136: return NETWORK_DISCONNECT_REJECT_INVALIDRESERVATION;
+        case 137: return NETWORK_DISCONNECT_REJECT_FAILEDCHANNEL;
+        case 138: return NETWORK_DISCONNECT_REJECT_CONNECT_FROM_LOBBY;
+        case 139: return NETWORK_DISCONNECT_REJECT_RESERVED_FOR_LOBBY;
+        case 140: return NETWORK_DISCONNECT_REJECT_INVALIDKEYLENGTH;
+        case 141: return NETWORK_DISCONNECT_REJECT_OLDPROTOCOL;
+        case 142: return NETWORK_DISCONNECT_REJECT_NEWPROTOCOL;
+        case 143: return NETWORK_DISCONNECT_REJECT_INVALIDCONNECTION;
+        case 144: return NETWORK_DISCONNECT_REJECT_INVALIDCERTLEN;
+        case 145: return NETWORK_DISCONNECT_REJECT_INVALIDSTEAMCERTLEN;
+        case 146: return NETWORK_DISCONNECT_REJECT_STEAM;
+        case 147: return NETWORK_DISCONNECT_REJECT_SERVERAUTHDISABLED;
+        case 148: return NETWORK_DISCONNECT_REJECT_SERVERCDKEYAUTHINVALID;
+        case 149: return NETWORK_DISCONNECT_REJECT_BANNED;
+        case 150: return NETWORK_DISCONNECT_KICKED_TEAMKILLING;
+        case 151: return NETWORK_DISCONNECT_KICKED_TK_START;
+        case 152: return NETWORK_DISCONNECT_KICKED_UNTRUSTEDACCOUNT;
+        case 153: return NETWORK_DISCONNECT_KICKED_CONVICTEDACCOUNT;
+        case 154: return NETWORK_DISCONNECT_KICKED_COMPETITIVECOOLDOWN;
+        case 155: return NETWORK_DISCONNECT_KICKED_TEAMHURTING;
+        case 156: return NETWORK_DISCONNECT_KICKED_HOSTAGEKILLING;
+        case 157: return NETWORK_DISCONNECT_KICKED_VOTEDOFF;
+        case 158: return NETWORK_DISCONNECT_KICKED_IDLE;
+        case 159: return NETWORK_DISCONNECT_KICKED_SUICIDE;
+        case 160: return NETWORK_DISCONNECT_KICKED_NOSTEAMLOGIN;
+        case 161: return NETWORK_DISCONNECT_KICKED_NOSTEAMTICKET;
         default: return null;
       }
     }
@@ -654,7 +1176,7 @@ public final class NetworkConnection {
   static {
     java.lang.String[] descriptorData = {
       "\n\035csgo/network_connection.proto\032 google/" +
-      "protobuf/descriptor.proto*\214%\n\033ENetworkDi" +
+      "protobuf/descriptor.proto*\316J\n\033ENetworkDi" +
       "sconnectionReason\022\036\n\032NETWORK_DISCONNECT_" +
       "INVALID\020\000\022\037\n\033NETWORK_DISCONNECT_SHUTDOWN" +
       "\020\001\022F\n%NETWORK_DISCONNECT_DISCONNECT_BY_U" +
@@ -750,32 +1272,152 @@ public final class NetworkConnection {
       "T_INVALID_MESSAGE_ERROR\0200\032*\242\324\030&#GameUI_D" +
       "isconnect_InvalidMessageError\022T\n&NETWORK" +
       "_DISCONNECT_BAD_SERVER_PASSWORD\0201\032(\242\324\030$#" +
-      "GameUI_Disconnect_BadServerPassword\022b\n-N" +
+      "GameUI_Disconnect_BadServerPassword\0221\n-N" +
       "ETWORK_DISCONNECT_DIRECT_CONNECT_RESERVA" +
-      "TION\0202\032/\242\324\030+#GameUI_Disconnect_DirectCon" +
-      "nectReservation\022S\n%NETWORK_DISCONNECT_CO" +
-      "NNECTION_FAILURE\0203\032(\242\324\030$#GameUI_Disconne" +
-      "ct_ConnectionFailure\022Y\n)NETWORK_DISCONNE" +
-      "CT_NO_PEER_GROUP_HANDLERS\0204\032*\242\324\030&#GameUI" +
-      "_Disconnect_NoPeerGroupHandlers\022H\n\037NETWO" +
-      "RK_DISCONNECT_RECONNECTION\0205\032#\242\324\030\037#GameU" +
-      "I_Disconnect_Reconnection\022S\n%NETWORK_DIS" +
-      "CONNECT_CONNECTION_CLOSING\0206\032(\242\324\030$#GameU" +
-      "I_Disconnect_ConnectionClosing\022]\n+NETWOR" +
-      "K_DISCONNECT_NO_GOTV_RELAYS_AVAILABLE\0207\032" +
-      ",\242\324\030(#GameUI_Disconnect_NoGOTVRelaysAvai" +
-      "lable\022O\n#NETWORK_DISCONNECT_SESSION_MIGR" +
-      "ATED\0208\032&\242\324\030\"#GameUI_Disconnect_SessionMi" +
-      "grated\022b\n,NETWORK_DISCONNECT_VERYLARGETR" +
-      "ANSFEROVERFLOW\0209\0320\242\324\030,#GameUI_Disconnect" +
-      "_VeryLargeTransferOverflow\022N\n\"NETWORK_DI" +
-      "SCONNECT_SENDNETOVERFLOW\020:\032&\242\324\030\"#GameUI_" +
-      "Disconnect_SendNetOverflow\022l\n3NETWORK_DI" +
-      "SCONNECT_PLAYER_REMOVED_FROM_HOST_SESSIO" +
-      "N\020;\0323\242\324\030/#GameUI_Disconnect_PlayerRemove" +
-      "dFromHostSession:E\n\030network_connection_t" +
-      "oken\022!.google.protobuf.EnumValueOptions\030" +
-      "\304\212\003 \001(\tB\003\200\001\000"
+      "TION\0202\022S\n%NETWORK_DISCONNECT_CONNECTION_" +
+      "FAILURE\0203\032(\242\324\030$#GameUI_Disconnect_Connec" +
+      "tionFailure\022Y\n)NETWORK_DISCONNECT_NO_PEE" +
+      "R_GROUP_HANDLERS\0204\032*\242\324\030&#GameUI_Disconne" +
+      "ct_NoPeerGroupHandlers\022#\n\037NETWORK_DISCON" +
+      "NECT_RECONNECTION\0205\022H\n\037NETWORK_DISCONNEC" +
+      "T_LOOPSHUTDOWN\0206\032#\242\324\030\037#GameUI_Disconnect" +
+      "_LoopShutdown\022L\n!NETWORK_DISCONNECT_LOOP" +
+      "DEACTIVATE\0207\032%\242\324\030!#GameUI_Disconnect_Loo" +
+      "pDeactivate\022H\n\037NETWORK_DISCONNECT_HOST_E" +
+      "NDGAME\0208\032#\242\324\030\037#GameUI_Disconnect_Host_En" +
+      "dGame\022\\\n*NETWORK_DISCONNECT_LOOP_LEVELLO" +
+      "AD_ACTIVATE\0209\032,\242\324\030(#GameUI_Disconnect_Lo" +
+      "opLevelLoadActivate\022V\n\'NETWORK_DISCONNEC" +
+      "T_CREATE_SERVER_FAILED\020:\032)\242\324\030%#GameUI_Di" +
+      "sconnect_CreateServerFailed\022D\n\032NETWORK_D" +
+      "ISCONNECT_EXITING\020;\032$\242\324\030 #GameUI_Disconn" +
+      "ect_ExitingEngine\022T\n)NETWORK_DISCONNECT_" +
+      "REQUEST_HOSTSTATE_IDLE\020<\032%\242\324\030!#GameUI_Di" +
+      "sconnect_Request_HSIdle\022\\\n.NETWORK_DISCO" +
+      "NNECT_REQUEST_HOSTSTATE_HLTVRELAY\020=\032(\242\324\030" +
+      "$#GameUI_Disconnect_Request_HLTVRelay\022Q\n" +
+      "*NETWORK_DISCONNECT_CLIENT_CONSISTENCY_F" +
+      "AIL\020>\032!\242\324\030\035#GameUI_ClientConsistencyFail" +
+      "\022Q\n+NETWORK_DISCONNECT_CLIENT_UNABLE_TO_" +
+      "CRC_MAP\020?\032 \242\324\030\034#GameUI_ClientUnableToCRC" +
+      "Map\022=\n NETWORK_DISCONNECT_CLIENT_NO_MAP\020" +
+      "@\032\027\242\324\030\023#GameUI_ClientNoMap\022K\n\'NETWORK_DI" +
+      "SCONNECT_CLIENT_DIFFERENT_MAP\020A\032\036\242\324\030\032#Ga" +
+      "meUI_ClientDifferentMap\022M\n(NETWORK_DISCO" +
+      "NNECT_SERVER_REQUIRES_STEAM\020B\032\037\242\324\030\033#Game" +
+      "UI_ServerRequireSteams\022M\n\"NETWORK_DISCON" +
+      "NECT_STEAM_DENY_MISC\020C\032%\242\324\030!#GameUI_Disc" +
+      "onnect_SteamDeny_Misc\022_\n,NETWORK_DISCONN" +
+      "ECT_STEAM_DENY_BAD_ANTI_CHEAT\020D\032-\242\324\030)#Ga" +
+      "meUI_Disconnect_SteamDeny_BadAntiCheat\022M" +
+      "\n\"NETWORK_DISCONNECT_SERVER_SHUTDOWN\020E\032%" +
+      "\242\324\030!#GameUI_Disconnect_ServerShutdown\022U\n" +
+      "&NETWORK_DISCONNECT_REPLAY_INCOMPATIBLE\020" +
+      "G\032)\242\324\030%#GameUI_Disconnect_ReplayIncompat" +
+      "ible\022Z\n+NETWORK_DISCONNECT_CONNECT_REQUE" +
+      "ST_TIMEDOUT\020H\032)\242\324\030%#GameUI_Disconnect_Co" +
+      "nnectionTimedout\022U\n&NETWORK_DISCONNECT_S" +
+      "ERVER_INCOMPATIBLE\020I\032)\242\324\030%#GameUI_Discon" +
+      "nect_ServerIncompatible\022^\n*NETWORK_DISCO" +
+      "NNECT_LOCALPROBLEM_MANYRELAYS\020J\032.\242\324\030*#Ga" +
+      "meUI_Disconnect_LocalProblem_ManyRelays\022" +
+      "z\n8NETWORK_DISCONNECT_LOCALPROBLEM_HOSTE" +
+      "DSERVERPRIMARYRELAY\020K\032<\242\324\0308#GameUI_Disco" +
+      "nnect_LocalProblem_HostedServerPrimaryRe" +
+      "lay\022d\n-NETWORK_DISCONNECT_LOCALPROBLEM_N" +
+      "ETWORKCONFIG\020L\0321\242\324\030-#GameUI_Disconnect_L" +
+      "ocalProblem_NetworkConfig\022T\n%NETWORK_DIS" +
+      "CONNECT_LOCALPROBLEM_OTHER\020M\032)\242\324\030%#GameU" +
+      "I_Disconnect_LocalProblem_Other\022S\n!NETWO" +
+      "RK_DISCONNECT_REMOTE_TIMEOUT\020O\032,\242\324\030(#Gam" +
+      "eUI_Disconnect_RemoteProblem_Timeout\022h\n," +
+      "NETWORK_DISCONNECT_REMOTE_TIMEOUT_CONNEC" +
+      "TING\020P\0326\242\324\0302#GameUI_Disconnect_RemotePro" +
+      "blem_TimeoutConnecting\022O\n\037NETWORK_DISCON" +
+      "NECT_REMOTE_OTHER\020Q\032*\242\324\030&#GameUI_Disconn" +
+      "ect_RemoteProblem_Other\022U\n\"NETWORK_DISCO" +
+      "NNECT_REMOTE_BADCRYPT\020R\032-\242\324\030)#GameUI_Dis" +
+      "connect_RemoteProblem_BadCrypt\022Z\n(NETWOR" +
+      "K_DISCONNECT_REMOTE_CERTNOTTRUSTED\020S\032,\242\324" +
+      "\030(#GameUI_Disconnect_RemoteProblem_BadCe" +
+      "rt\022>\n\032NETWORK_DISCONNECT_UNUSUAL\020T\032\036\242\324\030\032" +
+      "#GameUI_Disconnect_Unusual\022K\n!NETWORK_DI" +
+      "SCONNECT_INTERNAL_ERROR\020U\032$\242\324\030 #GameUI_D" +
+      "isconnect_InternalError\022Q\n&NETWORK_DISCO" +
+      "NNECT_REJECT_BADCHALLENGE\020\200\001\032$\242\324\030 #GameU" +
+      "I_ServerRejectBadChallenge\022A\n!NETWORK_DI" +
+      "SCONNECT_REJECT_NOLOBBY\020\201\001\032\031\242\324\030\025#GameUI_" +
+      "ServerNoLobby\022O\n(NETWORK_DISCONNECT_REJE" +
+      "CT_BACKGROUND_MAP\020\202\001\032 \242\324\030\034#Valve_Reject_" +
+      "Background_Map\022M\n\'NETWORK_DISCONNECT_REJ" +
+      "ECT_SINGLE_PLAYER\020\203\001\032\037\242\324\030\033#Valve_Reject_" +
+      "Single_Player\022I\n%NETWORK_DISCONNECT_REJE" +
+      "CT_HIDDEN_GAME\020\204\001\032\035\242\324\030\031#Valve_Reject_Hid" +
+      "den_Game\022O\n%NETWORK_DISCONNECT_REJECT_LA" +
+      "NRESTRICT\020\205\001\032#\242\324\030\037#GameUI_ServerRejectLA" +
+      "NRestrict\022O\n%NETWORK_DISCONNECT_REJECT_B" +
+      "ADPASSWORD\020\206\001\032#\242\324\030\037#GameUI_ServerRejectB" +
+      "adPassword\022M\n$NETWORK_DISCONNECT_REJECT_" +
+      "SERVERFULL\020\207\001\032\"\242\324\030\036#GameUI_ServerRejectS" +
+      "erverFull\022]\n,NETWORK_DISCONNECT_REJECT_I" +
+      "NVALIDRESERVATION\020\210\001\032*\242\324\030&#GameUI_Server" +
+      "RejectInvalidReservation\022S\n\'NETWORK_DISC" +
+      "ONNECT_REJECT_FAILEDCHANNEL\020\211\001\032%\242\324\030!#Gam" +
+      "eUI_ServerRejectFailedChannel\022W\n,NETWORK" +
+      "_DISCONNECT_REJECT_CONNECT_FROM_LOBBY\020\212\001" +
+      "\032$\242\324\030 #Valve_Reject_Connect_From_Lobby\022W" +
+      "\n,NETWORK_DISCONNECT_REJECT_RESERVED_FOR" +
+      "_LOBBY\020\213\001\032$\242\324\030 #Valve_Reject_Reserved_Fo" +
+      "r_Lobby\022Z\n*NETWORK_DISCONNECT_REJECT_INV" +
+      "ALIDKEYLENGTH\020\214\001\032)\242\324\030%#GameUI_ServerReje" +
+      "ct_InvalidKeyLength\022O\n%NETWORK_DISCONNEC" +
+      "T_REJECT_OLDPROTOCOL\020\215\001\032#\242\324\030\037#GameUI_Ser" +
+      "verRejectOldProtocol\022O\n%NETWORK_DISCONNE" +
+      "CT_REJECT_NEWPROTOCOL\020\216\001\032#\242\324\030\037#GameUI_Se" +
+      "rverRejectNewProtocol\022[\n+NETWORK_DISCONN" +
+      "ECT_REJECT_INVALIDCONNECTION\020\217\001\032)\242\324\030%#Ga" +
+      "meUI_ServerRejectInvalidConnection\022U\n(NE" +
+      "TWORK_DISCONNECT_REJECT_INVALIDCERTLEN\020\220" +
+      "\001\032&\242\324\030\"#GameUI_ServerRejectInvalidCertLe" +
+      "n\022_\n-NETWORK_DISCONNECT_REJECT_INVALIDST" +
+      "EAMCERTLEN\020\221\001\032+\242\324\030\'#GameUI_ServerRejectI" +
+      "nvalidSteamCertLen\022C\n\037NETWORK_DISCONNECT" +
+      "_REJECT_STEAM\020\222\001\032\035\242\324\030\031#GameUI_ServerReje" +
+      "ctSteam\022Q\n,NETWORK_DISCONNECT_REJECT_SER" +
+      "VERAUTHDISABLED\020\223\001\032\036\242\324\030\032#GameUI_ServerAu" +
+      "thDisabled\022Y\n0NETWORK_DISCONNECT_REJECT_" +
+      "SERVERCDKEYAUTHINVALID\020\224\001\032\"\242\324\030\036#GameUI_S" +
+      "erverCDKeyAuthInvalid\022E\n NETWORK_DISCONN" +
+      "ECT_REJECT_BANNED\020\225\001\032\036\242\324\030\032#GameUI_Server" +
+      "RejectBanned\022T\n%NETWORK_DISCONNECT_KICKE" +
+      "D_TEAMKILLING\020\226\001\032(\242\324\030$#Player_Disconnect" +
+      "Reason_TeamKilling\022N\n\"NETWORK_DISCONNECT" +
+      "_KICKED_TK_START\020\227\001\032%\242\324\030!#Player_Disconn" +
+      "ectReason_TK_Start\022^\n*NETWORK_DISCONNECT" +
+      "_KICKED_UNTRUSTEDACCOUNT\020\230\001\032-\242\324\030)#Player" +
+      "_DisconnectReason_UntrustedAccount\022^\n*NE" +
+      "TWORK_DISCONNECT_KICKED_CONVICTEDACCOUNT" +
+      "\020\231\001\032-\242\324\030)#Player_DisconnectReason_Convic" +
+      "tedAccount\022d\n-NETWORK_DISCONNECT_KICKED_" +
+      "COMPETITIVECOOLDOWN\020\232\001\0320\242\324\030,#Player_Disc" +
+      "onnectReason_CompetitiveCooldown\022T\n%NETW" +
+      "ORK_DISCONNECT_KICKED_TEAMHURTING\020\233\001\032(\242\324" +
+      "\030$#Player_DisconnectReason_TeamHurting\022Z" +
+      "\n(NETWORK_DISCONNECT_KICKED_HOSTAGEKILLI" +
+      "NG\020\234\001\032+\242\324\030\'#Player_DisconnectReason_Host" +
+      "ageKilling\022N\n\"NETWORK_DISCONNECT_KICKED_" +
+      "VOTEDOFF\020\235\001\032%\242\324\030!#Player_DisconnectReaso" +
+      "n_VotedOff\022F\n\036NETWORK_DISCONNECT_KICKED_" +
+      "IDLE\020\236\001\032!\242\324\030\035#Player_DisconnectReason_Id" +
+      "le\022L\n!NETWORK_DISCONNECT_KICKED_SUICIDE\020" +
+      "\237\001\032$\242\324\030 #Player_DisconnectReason_Suicide" +
+      "\022V\n&NETWORK_DISCONNECT_KICKED_NOSTEAMLOG" +
+      "IN\020\240\001\032)\242\324\030%#Player_DisconnectReason_NoSt" +
+      "eamLogin\022X\n\'NETWORK_DISCONNECT_KICKED_NO" +
+      "STEAMTICKET\020\241\001\032*\242\324\030&#Player_DisconnectRe" +
+      "ason_NoSteamTicket:E\n\030network_connection" +
+      "_token\022!.google.protobuf.EnumValueOption" +
+      "s\030\304\212\003 \001(\t"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -15397,138 +15397,140 @@ public final class SteammessagesFriendmessagesSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n4steam/steammessages_friendmessages.ste" +
-      "amclient.proto\0322steam/steammessages_unif" +
-      "ied_base.steamclient.proto\"\361\005\n)CFriendMe" +
-      "ssages_GetRecentMessages_Request\022\020\n\010stea" +
-      "mid1\030\001 \001(\006\022\020\n\010steamid2\030\002 \001(\006\022L\n\005count\030\003 " +
-      "\001(\rB=\202\265\0309If non-zero, cap the number of " +
-      "recent messages to return.\022s\n\030most_recen" +
-      "t_conversation\030\004 \001(\010BQ\202\265\030MGrab the block" +
-      " of chat from the most recent conversati" +
-      "on (a ~5 minute period)\022\251\001\n\022rtime32_star" +
-      "t_time\030\005 \001(\007B\214\001\202\265\030\207\001If non-zero, return " +
-      "only messages with timestamps greater or" +
-      " equal to this. If zero, we only return " +
-      "messages from a recent time cutoff.\022E\n\rb" +
-      "bcode_format\030\006 \001(\010B.\202\265\030*Return the resul" +
-      "ts with bbcode formatting.\022\204\001\n\rstart_ord" +
-      "inal\030\007 \001(\rBm\202\265\030iCombined with start time" +
-      ", only messages after this ordinal are r" +
-      "eturned (dedupes messages in same second" +
-      ")\022M\n\ttime_last\030\010 \001(\rB:\202\265\0306if present/non" +
-      "-zero, return only messages before this." +
-      "\022\024\n\014ordinal_last\030\t \001(\r\"\202\004\n*CFriendMessag" +
-      "es_GetRecentMessages_Response\022~\n\010message" +
-      "s\030\001 \003(\01329.CFriendMessages_GetRecentMessa" +
-      "ges_Response.FriendMessageB1\202\265\030-Array of" +
-      " messages, returned newest to oldest.\022\026\n" +
-      "\016more_available\030\004 \001(\010\032\273\002\n\rFriendMessage\022" +
-      "\021\n\taccountid\030\001 \001(\r\022\021\n\ttimestamp\030\002 \001(\r\022\017\n" +
-      "\007message\030\003 \001(\t\022\017\n\007ordinal\030\004 \001(\r\022\\\n\treact" +
-      "ions\030\005 \003(\0132I.CFriendMessages_GetRecentMe" +
-      "ssages_Response.FriendMessage.MessageRea" +
-      "ction\032\203\001\n\017MessageReaction\022L\n\rreaction_ty" +
-      "pe\030\001 \001(\0162\025.EMessageReactionType:\036k_EMess" +
-      "ageReactionType_Invalid\022\020\n\010reaction\030\002 \001(" +
-      "\t\022\020\n\010reactors\030\003 \003(\r\"\337\002\n1CFriendsMessages" +
-      "_GetActiveMessageSessions_Request\022\177\n\021las" +
-      "tmessage_since\030\001 \001(\rBd\202\265\030`return only se" +
-      "ssion information where a chat message h" +
-      "as been sent since this time (for pollin" +
-      "g)\022\250\001\n\033only_sessions_with_messages\030\002 \001(\010" +
-      "B\202\001\202\265\030~If non-zero, return only message " +
-      "sessions that have messages since our me" +
-      "ssage cutoff. If zero, we return all act" +
-      "ive sessions.\"\374\002\n2CFriendsMessages_GetAc" +
-      "tiveMessageSessions_Response\022b\n\020message_" +
-      "sessions\030\001 \003(\0132H.CFriendsMessages_GetAct" +
-      "iveMessageSessions_Response.FriendMessag" +
-      "eSession\022i\n\ttimestamp\030\002 \001(\rBV\202\265\030RThis sh" +
-      "ould be passed in the next request as la" +
-      "stmessage_since to poll for updates\032w\n\024F" +
-      "riendMessageSession\022\030\n\020accountid_friend\030" +
-      "\001 \001(\r\022\024\n\014last_message\030\002 \001(\r\022\021\n\tlast_view" +
-      "\030\003 \001(\r\022\034\n\024unread_message_count\030\004 \001(\r\"\302\001\n" +
-      "#CFriendMessages_SendMessage_Request\022\017\n\007" +
-      "steamid\030\001 \001(\006\022\027\n\017chat_entry_type\030\002 \001(\005\022\017" +
-      "\n\007message\030\003 \001(\t\022\027\n\017contains_bbcode\030\004 \001(\010" +
-      "\022\026\n\016echo_to_sender\030\005 \001(\010\022\024\n\014low_priority" +
-      "\030\006 \001(\010\022\031\n\021client_message_id\030\010 \001(\t\"\214\001\n$CF" +
-      "riendMessages_SendMessage_Response\022\030\n\020mo" +
-      "dified_message\030\001 \001(\t\022\030\n\020server_timestamp" +
-      "\030\002 \001(\r\022\017\n\007ordinal\030\003 \001(\r\022\037\n\027message_witho" +
-      "ut_bb_code\030\004 \001(\t\"U\n\'CFriendMessages_AckM" +
-      "essage_Notification\022\027\n\017steamid_partner\030\001" +
-      " \001(\006\022\021\n\ttimestamp\030\002 \001(\r\"<\n)CFriendMessag" +
-      "es_IsInFriendsUIBeta_Request\022\017\n\007steamid\030" +
-      "\001 \001(\006\"e\n*CFriendMessages_IsInFriendsUIBe" +
-      "ta_Response\022\033\n\023online_in_friendsui\030\001 \001(\010" +
-      "\022\032\n\022has_used_friendsui\030\002 \001(\010\"\333\001\n-CFriend" +
-      "Messages_UpdateMessageReaction_Request\022\017" +
-      "\n\007steamid\030\001 \001(\006\022\030\n\020server_timestamp\030\002 \001(" +
-      "\r\022\017\n\007ordinal\030\003 \001(\r\022L\n\rreaction_type\030\004 \001(" +
-      "\0162\025.EMessageReactionType:\036k_EMessageReac" +
-      "tionType_Invalid\022\020\n\010reaction\030\005 \001(\t\022\016\n\006is" +
-      "_add\030\006 \001(\010\"B\n.CFriendMessages_UpdateMess" +
-      "ageReaction_Response\022\020\n\010reactors\030\001 \003(\r\"\206" +
-      "\002\n,CFriendMessages_IncomingMessage_Notif" +
-      "ication\022\026\n\016steamid_friend\030\001 \001(\006\022\027\n\017chat_" +
-      "entry_type\030\002 \001(\005\022\034\n\024from_limited_account" +
-      "\030\003 \001(\010\022\017\n\007message\030\004 \001(\t\022 \n\030rtime32_serve" +
-      "r_timestamp\030\005 \001(\007\022\017\n\007ordinal\030\006 \001(\r\022\022\n\nlo" +
-      "cal_echo\030\007 \001(\010\022\031\n\021message_no_bbcode\030\010 \001(" +
-      "\t\022\024\n\014low_priority\030\t \001(\010\"\362\001\n,CFriendMessa" +
-      "ges_MessageReaction_Notification\022\026\n\016stea" +
-      "mid_friend\030\001 \001(\006\022\030\n\020server_timestamp\030\002 \001" +
-      "(\r\022\017\n\007ordinal\030\003 \001(\r\022\017\n\007reactor\030\004 \001(\006\022L\n\r" +
-      "reaction_type\030\005 \001(\0162\025.EMessageReactionTy" +
-      "pe:\036k_EMessageReactionType_Invalid\022\020\n\010re" +
-      "action\030\006 \001(\t\022\016\n\006is_add\030\007 \001(\010*\203\001\n\024EMessag" +
-      "eReactionType\022\"\n\036k_EMessageReactionType_" +
-      "Invalid\020\000\022#\n\037k_EMessageReactionType_Emot" +
-      "icon\020\001\022\"\n\036k_EMessageReactionType_Sticker" +
-      "\020\0022\275\010\n\016FriendMessages\022\245\001\n\021GetRecentMessa" +
-      "ges\022*.CFriendMessages_GetRecentMessages_" +
-      "Request\032+.CFriendMessages_GetRecentMessa" +
-      "ges_Response\"7\202\265\0303Get a log of recent ch" +
-      "at messages between two users\022\300\001\n\030GetAct" +
-      "iveMessageSessions\0222.CFriendsMessages_Ge" +
-      "tActiveMessageSessions_Request\0323.CFriend" +
-      "sMessages_GetActiveMessageSessions_Respo" +
-      "nse\";\202\265\0307Get information about recent of" +
-      "fline messages and chats\022\177\n\013SendMessage\022" +
-      "$.CFriendMessages_SendMessage_Request\032%." +
-      "CFriendMessages_SendMessage_Response\"#\202\265" +
-      "\030\037Send a chat message to a friend\022\214\001\n\nAc" +
-      "kMessage\022(.CFriendMessages_AckMessage_No" +
-      "tification\032\013.NoResponse\"G\202\265\030CAcknowledge" +
-      " that we have seen the most recent messa" +
-      "ge from a friend\022\233\001\n\021IsInFriendsUIBeta\022*" +
-      ".CFriendMessages_IsInFriendsUIBeta_Reque" +
-      "st\032+.CFriendMessages_IsInFriendsUIBeta_R" +
-      "esponse\"-\202\265\030)See if a friend is in the f" +
-      "riendsui beta.\022\256\001\n\025UpdateMessageReaction" +
-      "\022..CFriendMessages_UpdateMessageReaction" +
-      "_Request\032/.CFriendMessages_UpdateMessage" +
-      "Reaction_Response\"4\202\265\0300Adds/removes a re" +
-      "action to/from a friend message\032a\202\265\030]A s" +
-      "ervice for relaying and logging friend m" +
-      "essages (user-to-user chats and offline " +
-      "messaging)2\230\003\n\024FriendMessagesClient\022r\n\017I" +
-      "ncomingMessage\022-.CFriendMessages_Incomin" +
-      "gMessage_Notification\032\013.NoResponse\"#\202\265\030\037" +
-      "New chat message from a friend.\022\215\001\n\024Noti" +
-      "fyAckMessageEcho\022(.CFriendMessages_AckMe" +
-      "ssage_Notification\032\013.NoResponse\">\202\265\030:A s" +
-      "ession acked an unread message, echo to " +
-      "other sessions.\022v\n\017MessageReaction\022-.CFr" +
-      "iendMessages_MessageReaction_Notificatio" +
-      "n\032\013.NoResponse\"\'\202\265\030#New message reaction" +
-      " from a friend.\032\004\300\265\030\002B\003\200\001\001"
+      "amclient.proto\032\036steam/steammessages_base" +
+      ".proto\0322steam/steammessages_unified_base" +
+      ".steamclient.proto\"\361\005\n)CFriendMessages_G" +
+      "etRecentMessages_Request\022\020\n\010steamid1\030\001 \001" +
+      "(\006\022\020\n\010steamid2\030\002 \001(\006\022L\n\005count\030\003 \001(\rB=\202\265\030" +
+      "9If non-zero, cap the number of recent m" +
+      "essages to return.\022s\n\030most_recent_conver" +
+      "sation\030\004 \001(\010BQ\202\265\030MGrab the block of chat" +
+      " from the most recent conversation (a ~5" +
+      " minute period)\022\251\001\n\022rtime32_start_time\030\005" +
+      " \001(\007B\214\001\202\265\030\207\001If non-zero, return only mes" +
+      "sages with timestamps greater or equal t" +
+      "o this. If zero, we only return messages" +
+      " from a recent time cutoff.\022E\n\rbbcode_fo" +
+      "rmat\030\006 \001(\010B.\202\265\030*Return the results with " +
+      "bbcode formatting.\022\204\001\n\rstart_ordinal\030\007 \001" +
+      "(\rBm\202\265\030iCombined with start time, only m" +
+      "essages after this ordinal are returned " +
+      "(dedupes messages in same second)\022M\n\ttim" +
+      "e_last\030\010 \001(\rB:\202\265\0306if present/non-zero, r" +
+      "eturn only messages before this.\022\024\n\014ordi" +
+      "nal_last\030\t \001(\r\"\202\004\n*CFriendMessages_GetRe" +
+      "centMessages_Response\022~\n\010messages\030\001 \003(\0132" +
+      "9.CFriendMessages_GetRecentMessages_Resp" +
+      "onse.FriendMessageB1\202\265\030-Array of message" +
+      "s, returned newest to oldest.\022\026\n\016more_av" +
+      "ailable\030\004 \001(\010\032\273\002\n\rFriendMessage\022\021\n\taccou" +
+      "ntid\030\001 \001(\r\022\021\n\ttimestamp\030\002 \001(\r\022\017\n\007message" +
+      "\030\003 \001(\t\022\017\n\007ordinal\030\004 \001(\r\022\\\n\treactions\030\005 \003" +
+      "(\0132I.CFriendMessages_GetRecentMessages_R" +
+      "esponse.FriendMessage.MessageReaction\032\203\001" +
+      "\n\017MessageReaction\022L\n\rreaction_type\030\001 \001(\016" +
+      "2\025.EMessageReactionType:\036k_EMessageReact" +
+      "ionType_Invalid\022\020\n\010reaction\030\002 \001(\t\022\020\n\010rea" +
+      "ctors\030\003 \003(\r\"\337\002\n1CFriendsMessages_GetActi" +
+      "veMessageSessions_Request\022\177\n\021lastmessage" +
+      "_since\030\001 \001(\rBd\202\265\030`return only session in" +
+      "formation where a chat message has been " +
+      "sent since this time (for polling)\022\250\001\n\033o" +
+      "nly_sessions_with_messages\030\002 \001(\010B\202\001\202\265\030~I" +
+      "f non-zero, return only message sessions" +
+      " that have messages since our message cu" +
+      "toff. If zero, we return all active sess" +
+      "ions.\"\374\002\n2CFriendsMessages_GetActiveMess" +
+      "ageSessions_Response\022b\n\020message_sessions" +
+      "\030\001 \003(\0132H.CFriendsMessages_GetActiveMessa" +
+      "geSessions_Response.FriendMessageSession" +
+      "\022i\n\ttimestamp\030\002 \001(\rBV\202\265\030RThis should be " +
+      "passed in the next request as lastmessag" +
+      "e_since to poll for updates\032w\n\024FriendMes" +
+      "sageSession\022\030\n\020accountid_friend\030\001 \001(\r\022\024\n" +
+      "\014last_message\030\002 \001(\r\022\021\n\tlast_view\030\003 \001(\r\022\034" +
+      "\n\024unread_message_count\030\004 \001(\r\"\302\001\n#CFriend" +
+      "Messages_SendMessage_Request\022\017\n\007steamid\030" +
+      "\001 \001(\006\022\027\n\017chat_entry_type\030\002 \001(\005\022\017\n\007messag" +
+      "e\030\003 \001(\t\022\027\n\017contains_bbcode\030\004 \001(\010\022\026\n\016echo" +
+      "_to_sender\030\005 \001(\010\022\024\n\014low_priority\030\006 \001(\010\022\031" +
+      "\n\021client_message_id\030\010 \001(\t\"\214\001\n$CFriendMes" +
+      "sages_SendMessage_Response\022\030\n\020modified_m" +
+      "essage\030\001 \001(\t\022\030\n\020server_timestamp\030\002 \001(\r\022\017" +
+      "\n\007ordinal\030\003 \001(\r\022\037\n\027message_without_bb_co" +
+      "de\030\004 \001(\t\"U\n\'CFriendMessages_AckMessage_N" +
+      "otification\022\027\n\017steamid_partner\030\001 \001(\006\022\021\n\t" +
+      "timestamp\030\002 \001(\r\"<\n)CFriendMessages_IsInF" +
+      "riendsUIBeta_Request\022\017\n\007steamid\030\001 \001(\006\"e\n" +
+      "*CFriendMessages_IsInFriendsUIBeta_Respo" +
+      "nse\022\033\n\023online_in_friendsui\030\001 \001(\010\022\032\n\022has_" +
+      "used_friendsui\030\002 \001(\010\"\333\001\n-CFriendMessages" +
+      "_UpdateMessageReaction_Request\022\017\n\007steami" +
+      "d\030\001 \001(\006\022\030\n\020server_timestamp\030\002 \001(\r\022\017\n\007ord" +
+      "inal\030\003 \001(\r\022L\n\rreaction_type\030\004 \001(\0162\025.EMes" +
+      "sageReactionType:\036k_EMessageReactionType" +
+      "_Invalid\022\020\n\010reaction\030\005 \001(\t\022\016\n\006is_add\030\006 \001" +
+      "(\010\"B\n.CFriendMessages_UpdateMessageReact" +
+      "ion_Response\022\020\n\010reactors\030\001 \003(\r\"\206\002\n,CFrie" +
+      "ndMessages_IncomingMessage_Notification\022" +
+      "\026\n\016steamid_friend\030\001 \001(\006\022\027\n\017chat_entry_ty" +
+      "pe\030\002 \001(\005\022\034\n\024from_limited_account\030\003 \001(\010\022\017" +
+      "\n\007message\030\004 \001(\t\022 \n\030rtime32_server_timest" +
+      "amp\030\005 \001(\007\022\017\n\007ordinal\030\006 \001(\r\022\022\n\nlocal_echo" +
+      "\030\007 \001(\010\022\031\n\021message_no_bbcode\030\010 \001(\t\022\024\n\014low" +
+      "_priority\030\t \001(\010\"\362\001\n,CFriendMessages_Mess" +
+      "ageReaction_Notification\022\026\n\016steamid_frie" +
+      "nd\030\001 \001(\006\022\030\n\020server_timestamp\030\002 \001(\r\022\017\n\007or" +
+      "dinal\030\003 \001(\r\022\017\n\007reactor\030\004 \001(\006\022L\n\rreaction" +
+      "_type\030\005 \001(\0162\025.EMessageReactionType:\036k_EM" +
+      "essageReactionType_Invalid\022\020\n\010reaction\030\006" +
+      " \001(\t\022\016\n\006is_add\030\007 \001(\010*\203\001\n\024EMessageReactio" +
+      "nType\022\"\n\036k_EMessageReactionType_Invalid\020" +
+      "\000\022#\n\037k_EMessageReactionType_Emoticon\020\001\022\"" +
+      "\n\036k_EMessageReactionType_Sticker\020\0022\275\010\n\016F" +
+      "riendMessages\022\245\001\n\021GetRecentMessages\022*.CF" +
+      "riendMessages_GetRecentMessages_Request\032" +
+      "+.CFriendMessages_GetRecentMessages_Resp" +
+      "onse\"7\202\265\0303Get a log of recent chat messa" +
+      "ges between two users\022\300\001\n\030GetActiveMessa" +
+      "geSessions\0222.CFriendsMessages_GetActiveM" +
+      "essageSessions_Request\0323.CFriendsMessage" +
+      "s_GetActiveMessageSessions_Response\";\202\265\030" +
+      "7Get information about recent offline me" +
+      "ssages and chats\022\177\n\013SendMessage\022$.CFrien" +
+      "dMessages_SendMessage_Request\032%.CFriendM" +
+      "essages_SendMessage_Response\"#\202\265\030\037Send a" +
+      " chat message to a friend\022\214\001\n\nAckMessage" +
+      "\022(.CFriendMessages_AckMessage_Notificati" +
+      "on\032\013.NoResponse\"G\202\265\030CAcknowledge that we" +
+      " have seen the most recent message from " +
+      "a friend\022\233\001\n\021IsInFriendsUIBeta\022*.CFriend" +
+      "Messages_IsInFriendsUIBeta_Request\032+.CFr" +
+      "iendMessages_IsInFriendsUIBeta_Response\"" +
+      "-\202\265\030)See if a friend is in the friendsui" +
+      " beta.\022\256\001\n\025UpdateMessageReaction\022..CFrie" +
+      "ndMessages_UpdateMessageReaction_Request" +
+      "\032/.CFriendMessages_UpdateMessageReaction" +
+      "_Response\"4\202\265\0300Adds/removes a reaction t" +
+      "o/from a friend message\032a\202\265\030]A service f" +
+      "or relaying and logging friend messages " +
+      "(user-to-user chats and offline messagin" +
+      "g)2\230\003\n\024FriendMessagesClient\022r\n\017IncomingM" +
+      "essage\022-.CFriendMessages_IncomingMessage" +
+      "_Notification\032\013.NoResponse\"#\202\265\030\037New chat" +
+      " message from a friend.\022\215\001\n\024NotifyAckMes" +
+      "sageEcho\022(.CFriendMessages_AckMessage_No" +
+      "tification\032\013.NoResponse\">\202\265\030:A session a" +
+      "cked an unread message, echo to other se" +
+      "ssions.\022v\n\017MessageReaction\022-.CFriendMess" +
+      "ages_MessageReaction_Notification\032\013.NoRe" +
+      "sponse\"\'\202\265\030#New message reaction from a " +
+      "friend.\032\004\300\265\030\002B\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CFriendMessages_GetRecentMessages_Request_descriptor =
@@ -15635,6 +15637,7 @@ public final class SteammessagesFriendmessagesSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

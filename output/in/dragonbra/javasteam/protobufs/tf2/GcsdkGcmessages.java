@@ -23541,83 +23541,83 @@ public final class GcsdkGcmessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032tf2/gcsdk_gcmessages.proto\032\031steam/stea" +
-      "mmessages.proto\")\n\rCMsgSOIDOwner\022\014\n\004type" +
-      "\030\001 \001(\r\022\n\n\002id\030\002 \001(\004\"\222\001\n\022CMsgSOSingleObjec" +
-      "t\022\r\n\005owner\030\001 \001(\006\022\017\n\007type_id\030\002 \001(\005\022\023\n\013obj" +
-      "ect_data\030\003 \001(\014\022\017\n\007version\030\004 \001(\006\022\"\n\nowner" +
-      "_soid\030\005 \001(\0132\016.CMsgSOIDOwner\022\022\n\nservice_i" +
-      "d\030\006 \001(\r\"\333\001\n\025CMsgSOMultipleObjects\022\r\n\005own" +
-      "er\030\001 \001(\006\0224\n\007objects\030\002 \003(\0132#.CMsgSOMultip" +
-      "leObjects.SingleObject\022\017\n\007version\030\003 \001(\006\022" +
-      "\"\n\nowner_soid\030\006 \001(\0132\016.CMsgSOIDOwner\022\022\n\ns" +
-      "ervice_id\030\007 \001(\r\0324\n\014SingleObject\022\017\n\007type_" +
-      "id\030\001 \001(\005\022\023\n\013object_data\030\002 \001(\014\"\213\002\n\025CMsgSO" +
-      "CacheSubscribed\022\r\n\005owner\030\001 \001(\006\0226\n\007object" +
-      "s\030\002 \003(\0132%.CMsgSOCacheSubscribed.Subscrib" +
-      "edType\022\017\n\007version\030\003 \001(\006\022\"\n\nowner_soid\030\004 " +
-      "\001(\0132\016.CMsgSOIDOwner\022\022\n\nservice_id\030\005 \001(\r\022" +
-      "\024\n\014service_list\030\006 \003(\r\022\024\n\014sync_version\030\007 " +
-      "\001(\006\0326\n\016SubscribedType\022\017\n\007type_id\030\001 \001(\005\022\023" +
-      "\n\013object_data\030\002 \003(\014\"\224\001\n\035CMsgSOCacheSubsc" +
-      "ribedUpToDate\022\017\n\007version\030\001 \001(\006\022\"\n\nowner_" +
-      "soid\030\002 \001(\0132\016.CMsgSOIDOwner\022\022\n\nservice_id" +
-      "\030\003 \001(\r\022\024\n\014service_list\030\004 \003(\r\022\024\n\014sync_ver" +
-      "sion\030\005 \001(\006\"(\n\027CMsgSOCacheUnsubscribed\022\r\n" +
-      "\005owner\030\001 \001(\006\"\242\001\n\034CMsgSOCacheSubscription" +
-      "Check\022\r\n\005owner\030\001 \001(\006\022\017\n\007version\030\002 \001(\006\022\"\n" +
-      "\nowner_soid\030\003 \001(\0132\016.CMsgSOIDOwner\022\022\n\nser" +
-      "vice_id\030\004 \001(\r\022\024\n\014service_list\030\005 \003(\r\022\024\n\014s" +
-      "ync_version\030\006 \001(\006\"S\n\036CMsgSOCacheSubscrip" +
-      "tionRefresh\022\r\n\005owner\030\001 \001(\006\022\"\n\nowner_soid" +
-      "\030\002 \001(\0132\016.CMsgSOIDOwner\"%\n\022CMsgSOCacheVer" +
-      "sion\022\017\n\007version\030\001 \001(\006\"L\n\026CMsgGCMultiplex" +
-      "Message\022\017\n\007msgtype\030\001 \001(\r\022\017\n\007payload\030\002 \001(" +
-      "\014\022\020\n\010steamids\030\003 \003(\006\"l\n\023CGCToGCMsgMasterA" +
-      "ck\022\021\n\tdir_index\030\001 \001(\r\022\024\n\014machine_name\030\003 " +
-      "\001(\t\022\024\n\014process_name\030\004 \001(\t\022\026\n\016type_instan" +
-      "ces\030\005 \003(\r\"2\n\034CGCToGCMsgMasterAck_Respons" +
-      "e\022\022\n\007eresult\030\001 \001(\005:\0012\"\216\001\n\037CGCToGCMsgMast" +
-      "erStartupComplete\0228\n\007gc_info\030\001 \003(\0132\'.CGC" +
-      "ToGCMsgMasterStartupComplete.GCInfo\0321\n\006G" +
-      "CInfo\022\021\n\tdir_index\030\001 \001(\r\022\024\n\014machine_name" +
-      "\030\002 \001(\t\"L\n\020CGCToGCMsgRouted\022\020\n\010msg_type\030\001" +
-      " \001(\r\022\021\n\tsender_id\030\002 \001(\006\022\023\n\013net_message\030\003" +
-      " \001(\014\">\n\025CGCToGCMsgRoutedReply\022\020\n\010msg_typ" +
-      "e\030\001 \001(\r\022\023\n\013net_message\030\002 \001(\014\"\225\001\n\034CMsgGCU" +
-      "pdateSubGCSessionInfo\0229\n\007updates\030\001 \003(\0132(" +
-      ".CMsgGCUpdateSubGCSessionInfo.CMsgUpdate" +
-      "\032:\n\nCMsgUpdate\022\017\n\007steamid\030\001 \001(\006\022\n\n\002ip\030\002 " +
-      "\001(\007\022\017\n\007trusted\030\003 \001(\010\"0\n\035CMsgGCRequestSub" +
-      "GCSessionInfo\022\017\n\007steamid\030\001 \001(\006\"D\n%CMsgGC" +
-      "RequestSubGCSessionInfoResponse\022\n\n\002ip\030\001 " +
-      "\001(\007\022\017\n\007trusted\030\002 \001(\010\"6\n#CMsgGCToGCIncrem" +
-      "entRecruitmentLevel\022\017\n\007steamid\030\001 \001(\006\"[\n\026" +
-      "CMsgSOCacheHaveVersion\022\034\n\004soid\030\001 \001(\0132\016.C" +
-      "MsgSOIDOwner\022\017\n\007version\030\002 \001(\006\022\022\n\nservice" +
-      "_id\030\003 \001(\r\"\345\001\n\024CMsgConnectionStatus\022D\n\006st" +
-      "atus\030\001 \001(\0162\023.GCConnectionStatus:\037GCConne" +
-      "ctionStatus_HAVE_SESSION\022\033\n\023client_sessi" +
-      "on_need\030\002 \001(\r\022\026\n\016queue_position\030\003 \001(\005\022\022\n" +
-      "\nqueue_size\030\004 \001(\005\022\024\n\014wait_seconds\030\005 \001(\005\022" +
-      "(\n estimated_wait_seconds_remaining\030\006 \001(" +
-      "\005\"\332\001\n\032CMsgGCToGCSOCacheSubscribe\022\022\n\nsubs" +
-      "criber\030\001 \001(\006\022\024\n\014subscribe_to\030\002 \001(\006\022\024\n\014sy" +
-      "nc_version\030\003 \001(\006\022C\n\rhave_versions\030\004 \003(\0132" +
-      ",.CMsgGCToGCSOCacheSubscribe.CMsgHaveVer" +
-      "sions\0327\n\020CMsgHaveVersions\022\022\n\nservice_id\030" +
-      "\001 \001(\r\022\017\n\007version\030\002 \001(\004\"L\n\034CMsgGCToGCSOCa" +
-      "cheUnsubscribe\022\022\n\nsubscriber\030\001 \001(\006\022\030\n\020un" +
-      "subscribe_from\030\002 \001(\006\"\022\n\020CMsgGCClientPing" +
-      "*T\n\022PartnerAccountType\022\020\n\014PARTNER_NONE\020\000" +
-      "\022\031\n\025PARTNER_PERFECT_WORLD\020\001\022\021\n\rPARTNER_N" +
-      "EXON\020\002*\367\001\n\022GCConnectionStatus\022#\n\037GCConne" +
-      "ctionStatus_HAVE_SESSION\020\000\022$\n GCConnecti" +
-      "onStatus_GC_GOING_DOWN\020\001\022!\n\035GCConnection" +
-      "Status_NO_SESSION\020\002\0220\n,GCConnectionStatu" +
-      "s_NO_SESSION_IN_LOGON_QUEUE\020\003\022\037\n\033GCConne" +
-      "ctionStatus_NO_STEAM\020\004\022 \n\034GCConnectionSt" +
-      "atus_SUSPENDED\020\005B\005H\001\200\001\000"
+      "\n\032tf2/gcsdk_gcmessages.proto\032\027tf2/steamm" +
+      "essages.proto\")\n\rCMsgSOIDOwner\022\014\n\004type\030\001" +
+      " \001(\r\022\n\n\002id\030\002 \001(\004\"\222\001\n\022CMsgSOSingleObject\022" +
+      "\r\n\005owner\030\001 \001(\006\022\017\n\007type_id\030\002 \001(\005\022\023\n\013objec" +
+      "t_data\030\003 \001(\014\022\017\n\007version\030\004 \001(\006\022\"\n\nowner_s" +
+      "oid\030\005 \001(\0132\016.CMsgSOIDOwner\022\022\n\nservice_id\030" +
+      "\006 \001(\r\"\333\001\n\025CMsgSOMultipleObjects\022\r\n\005owner" +
+      "\030\001 \001(\006\0224\n\007objects\030\002 \003(\0132#.CMsgSOMultiple" +
+      "Objects.SingleObject\022\017\n\007version\030\003 \001(\006\022\"\n" +
+      "\nowner_soid\030\006 \001(\0132\016.CMsgSOIDOwner\022\022\n\nser" +
+      "vice_id\030\007 \001(\r\0324\n\014SingleObject\022\017\n\007type_id" +
+      "\030\001 \001(\005\022\023\n\013object_data\030\002 \001(\014\"\213\002\n\025CMsgSOCa" +
+      "cheSubscribed\022\r\n\005owner\030\001 \001(\006\0226\n\007objects\030" +
+      "\002 \003(\0132%.CMsgSOCacheSubscribed.Subscribed" +
+      "Type\022\017\n\007version\030\003 \001(\006\022\"\n\nowner_soid\030\004 \001(" +
+      "\0132\016.CMsgSOIDOwner\022\022\n\nservice_id\030\005 \001(\r\022\024\n" +
+      "\014service_list\030\006 \003(\r\022\024\n\014sync_version\030\007 \001(" +
+      "\006\0326\n\016SubscribedType\022\017\n\007type_id\030\001 \001(\005\022\023\n\013" +
+      "object_data\030\002 \003(\014\"\224\001\n\035CMsgSOCacheSubscri" +
+      "bedUpToDate\022\017\n\007version\030\001 \001(\006\022\"\n\nowner_so" +
+      "id\030\002 \001(\0132\016.CMsgSOIDOwner\022\022\n\nservice_id\030\003" +
+      " \001(\r\022\024\n\014service_list\030\004 \003(\r\022\024\n\014sync_versi" +
+      "on\030\005 \001(\006\"(\n\027CMsgSOCacheUnsubscribed\022\r\n\005o" +
+      "wner\030\001 \001(\006\"\242\001\n\034CMsgSOCacheSubscriptionCh" +
+      "eck\022\r\n\005owner\030\001 \001(\006\022\017\n\007version\030\002 \001(\006\022\"\n\no" +
+      "wner_soid\030\003 \001(\0132\016.CMsgSOIDOwner\022\022\n\nservi" +
+      "ce_id\030\004 \001(\r\022\024\n\014service_list\030\005 \003(\r\022\024\n\014syn" +
+      "c_version\030\006 \001(\006\"S\n\036CMsgSOCacheSubscripti" +
+      "onRefresh\022\r\n\005owner\030\001 \001(\006\022\"\n\nowner_soid\030\002" +
+      " \001(\0132\016.CMsgSOIDOwner\"%\n\022CMsgSOCacheVersi" +
+      "on\022\017\n\007version\030\001 \001(\006\"L\n\026CMsgGCMultiplexMe" +
+      "ssage\022\017\n\007msgtype\030\001 \001(\r\022\017\n\007payload\030\002 \001(\014\022" +
+      "\020\n\010steamids\030\003 \003(\006\"l\n\023CGCToGCMsgMasterAck" +
+      "\022\021\n\tdir_index\030\001 \001(\r\022\024\n\014machine_name\030\003 \001(" +
+      "\t\022\024\n\014process_name\030\004 \001(\t\022\026\n\016type_instance" +
+      "s\030\005 \003(\r\"2\n\034CGCToGCMsgMasterAck_Response\022" +
+      "\022\n\007eresult\030\001 \001(\005:\0012\"\216\001\n\037CGCToGCMsgMaster" +
+      "StartupComplete\0228\n\007gc_info\030\001 \003(\0132\'.CGCTo" +
+      "GCMsgMasterStartupComplete.GCInfo\0321\n\006GCI" +
+      "nfo\022\021\n\tdir_index\030\001 \001(\r\022\024\n\014machine_name\030\002" +
+      " \001(\t\"L\n\020CGCToGCMsgRouted\022\020\n\010msg_type\030\001 \001" +
+      "(\r\022\021\n\tsender_id\030\002 \001(\006\022\023\n\013net_message\030\003 \001" +
+      "(\014\">\n\025CGCToGCMsgRoutedReply\022\020\n\010msg_type\030" +
+      "\001 \001(\r\022\023\n\013net_message\030\002 \001(\014\"\225\001\n\034CMsgGCUpd" +
+      "ateSubGCSessionInfo\0229\n\007updates\030\001 \003(\0132(.C" +
+      "MsgGCUpdateSubGCSessionInfo.CMsgUpdate\032:" +
+      "\n\nCMsgUpdate\022\017\n\007steamid\030\001 \001(\006\022\n\n\002ip\030\002 \001(" +
+      "\007\022\017\n\007trusted\030\003 \001(\010\"0\n\035CMsgGCRequestSubGC" +
+      "SessionInfo\022\017\n\007steamid\030\001 \001(\006\"D\n%CMsgGCRe" +
+      "questSubGCSessionInfoResponse\022\n\n\002ip\030\001 \001(" +
+      "\007\022\017\n\007trusted\030\002 \001(\010\"6\n#CMsgGCToGCIncremen" +
+      "tRecruitmentLevel\022\017\n\007steamid\030\001 \001(\006\"[\n\026CM" +
+      "sgSOCacheHaveVersion\022\034\n\004soid\030\001 \001(\0132\016.CMs" +
+      "gSOIDOwner\022\017\n\007version\030\002 \001(\006\022\022\n\nservice_i" +
+      "d\030\003 \001(\r\"\345\001\n\024CMsgConnectionStatus\022D\n\006stat" +
+      "us\030\001 \001(\0162\023.GCConnectionStatus:\037GCConnect" +
+      "ionStatus_HAVE_SESSION\022\033\n\023client_session" +
+      "_need\030\002 \001(\r\022\026\n\016queue_position\030\003 \001(\005\022\022\n\nq" +
+      "ueue_size\030\004 \001(\005\022\024\n\014wait_seconds\030\005 \001(\005\022(\n" +
+      " estimated_wait_seconds_remaining\030\006 \001(\005\"" +
+      "\332\001\n\032CMsgGCToGCSOCacheSubscribe\022\022\n\nsubscr" +
+      "iber\030\001 \001(\006\022\024\n\014subscribe_to\030\002 \001(\006\022\024\n\014sync" +
+      "_version\030\003 \001(\006\022C\n\rhave_versions\030\004 \003(\0132,." +
+      "CMsgGCToGCSOCacheSubscribe.CMsgHaveVersi" +
+      "ons\0327\n\020CMsgHaveVersions\022\022\n\nservice_id\030\001 " +
+      "\001(\r\022\017\n\007version\030\002 \001(\004\"L\n\034CMsgGCToGCSOCach" +
+      "eUnsubscribe\022\022\n\nsubscriber\030\001 \001(\006\022\030\n\020unsu" +
+      "bscribe_from\030\002 \001(\006\"\022\n\020CMsgGCClientPing*T" +
+      "\n\022PartnerAccountType\022\020\n\014PARTNER_NONE\020\000\022\031" +
+      "\n\025PARTNER_PERFECT_WORLD\020\001\022\021\n\rPARTNER_NEX" +
+      "ON\020\002*\367\001\n\022GCConnectionStatus\022#\n\037GCConnect" +
+      "ionStatus_HAVE_SESSION\020\000\022$\n GCConnection" +
+      "Status_GC_GOING_DOWN\020\001\022!\n\035GCConnectionSt" +
+      "atus_NO_SESSION\020\002\0220\n,GCConnectionStatus_" +
+      "NO_SESSION_IN_LOGON_QUEUE\020\003\022\037\n\033GCConnect" +
+      "ionStatus_NO_STEAM\020\004\022 \n\034GCConnectionStat" +
+      "us_SUSPENDED\020\005B\005H\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

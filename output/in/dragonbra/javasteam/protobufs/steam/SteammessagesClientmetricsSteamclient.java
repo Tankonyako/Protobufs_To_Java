@@ -6076,6 +6076,17 @@ public final class SteammessagesClientmetricsSteamclient {
      */
     SteammessagesClientmetricsSteamclient.CClientMetrics_SteamPipeWorkStats_OperationOrBuilder getOperationsOrBuilder(
         int index);
+
+    /**
+     * <code>optional uint32 hardware_type = 5;</code>
+     * @return Whether the hardwareType field is set.
+     */
+    boolean hasHardwareType();
+    /**
+     * <code>optional uint32 hardware_type = 5;</code>
+     * @return The hardwareType.
+     */
+    int getHardwareType();
   }
   /**
    * Protobuf type {@code CClientMetrics_SteamPipeWorkStats_Notification}
@@ -6154,6 +6165,11 @@ public final class SteammessagesClientmetricsSteamclient {
               }
               operations_.add(
                   input.readMessage(SteammessagesClientmetricsSteamclient.CClientMetrics_SteamPipeWorkStats_Operation.PARSER, extensionRegistry));
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000008;
+              hardwareType_ = input.readUInt32();
               break;
             }
             default: {
@@ -6289,6 +6305,25 @@ public final class SteammessagesClientmetricsSteamclient {
       return operations_.get(index);
     }
 
+    public static final int HARDWARE_TYPE_FIELD_NUMBER = 5;
+    private int hardwareType_;
+    /**
+     * <code>optional uint32 hardware_type = 5;</code>
+     * @return Whether the hardwareType field is set.
+     */
+    @java.lang.Override
+    public boolean hasHardwareType() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 hardware_type = 5;</code>
+     * @return The hardwareType.
+     */
+    @java.lang.Override
+    public int getHardwareType() {
+      return hardwareType_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6315,6 +6350,9 @@ public final class SteammessagesClientmetricsSteamclient {
       for (int i = 0; i < operations_.size(); i++) {
         output.writeMessage(4, operations_.get(i));
       }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(5, hardwareType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6339,6 +6377,10 @@ public final class SteammessagesClientmetricsSteamclient {
       for (int i = 0; i < operations_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, operations_.get(i));
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, hardwareType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6371,6 +6413,11 @@ public final class SteammessagesClientmetricsSteamclient {
       }
       if (!getOperationsList()
           .equals(other.getOperationsList())) return false;
+      if (hasHardwareType() != other.hasHardwareType()) return false;
+      if (hasHardwareType()) {
+        if (getHardwareType()
+            != other.getHardwareType()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6397,6 +6444,10 @@ public final class SteammessagesClientmetricsSteamclient {
       if (getOperationsCount() > 0) {
         hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOperationsList().hashCode();
+      }
+      if (hasHardwareType()) {
+        hash = (37 * hash) + HARDWARE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getHardwareType();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6544,6 +6595,8 @@ public final class SteammessagesClientmetricsSteamclient {
         } else {
           operationsBuilder_.clear();
         }
+        hardwareType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -6592,6 +6645,10 @@ public final class SteammessagesClientmetricsSteamclient {
           result.operations_ = operations_;
         } else {
           result.operations_ = operationsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.hardwareType_ = hardwareType_;
+          to_bitField0_ |= 0x00000008;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -6676,6 +6733,9 @@ public final class SteammessagesClientmetricsSteamclient {
               operationsBuilder_.addAllMessages(other.operations_);
             }
           }
+        }
+        if (other.hasHardwareType()) {
+          setHardwareType(other.getHardwareType());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7067,6 +7127,45 @@ public final class SteammessagesClientmetricsSteamclient {
         }
         return operationsBuilder_;
       }
+
+      private int hardwareType_ ;
+      /**
+       * <code>optional uint32 hardware_type = 5;</code>
+       * @return Whether the hardwareType field is set.
+       */
+      @java.lang.Override
+      public boolean hasHardwareType() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 hardware_type = 5;</code>
+       * @return The hardwareType.
+       */
+      @java.lang.Override
+      public int getHardwareType() {
+        return hardwareType_;
+      }
+      /**
+       * <code>optional uint32 hardware_type = 5;</code>
+       * @param value The hardwareType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHardwareType(int value) {
+        bitField0_ |= 0x00000010;
+        hardwareType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 hardware_type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHardwareType() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        hardwareType_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7115,6 +7214,4025 @@ public final class SteammessagesClientmetricsSteamclient {
 
     @java.lang.Override
     public SteammessagesClientmetricsSteamclient.CClientMetrics_SteamPipeWorkStats_Notification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CClientMetrics_ReportReactUsage_NotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CClientMetrics_ReportReactUsage_Notification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string product = 1;</code>
+     * @return Whether the product field is set.
+     */
+    boolean hasProduct();
+    /**
+     * <code>optional string product = 1;</code>
+     * @return The product.
+     */
+    java.lang.String getProduct();
+    /**
+     * <code>optional string product = 1;</code>
+     * @return The bytes for product.
+     */
+    com.google.protobuf.ByteString
+        getProductBytes();
+
+    /**
+     * <code>optional string version = 2;</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <code>optional string version = 2;</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <code>optional string version = 2;</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+     */
+    java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData> 
+        getRoutesList();
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+     */
+    SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData getRoutes(int index);
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+     */
+    int getRoutesCount();
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+     */
+    java.util.List<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteDataOrBuilder> 
+        getRoutesOrBuilderList();
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+     */
+    SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteDataOrBuilder getRoutesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+     */
+    java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData> 
+        getComponentsList();
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+     */
+    SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData getComponents(int index);
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+     */
+    int getComponentsCount();
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+     */
+    java.util.List<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentDataOrBuilder> 
+        getComponentsOrBuilderList();
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+     */
+    SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentDataOrBuilder getComponentsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+     */
+    java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData> 
+        getActionsList();
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+     */
+    SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData getActions(int index);
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+     */
+    int getActionsCount();
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+     */
+    java.util.List<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionDataOrBuilder> 
+        getActionsOrBuilderList();
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+     */
+    SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionDataOrBuilder getActionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CClientMetrics_ReportReactUsage_Notification}
+   */
+  public static final class CClientMetrics_ReportReactUsage_Notification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CClientMetrics_ReportReactUsage_Notification)
+      CClientMetrics_ReportReactUsage_NotificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CClientMetrics_ReportReactUsage_Notification.newBuilder() to construct.
+    private CClientMetrics_ReportReactUsage_Notification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CClientMetrics_ReportReactUsage_Notification() {
+      product_ = "";
+      version_ = "";
+      routes_ = java.util.Collections.emptyList();
+      components_ = java.util.Collections.emptyList();
+      actions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CClientMetrics_ReportReactUsage_Notification();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CClientMetrics_ReportReactUsage_Notification(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              product_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              version_ = bs;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                routes_ = new java.util.ArrayList<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              routes_.add(
+                  input.readMessage(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.PARSER, extensionRegistry));
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                components_ = new java.util.ArrayList<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              components_.add(
+                  input.readMessage(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.PARSER, extensionRegistry));
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                actions_ = new java.util.ArrayList<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              actions_.add(
+                  input.readMessage(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          routes_ = java.util.Collections.unmodifiableList(routes_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          components_ = java.util.Collections.unmodifiableList(components_);
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          actions_ = java.util.Collections.unmodifiableList(actions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.class, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.Builder.class);
+    }
+
+    public interface RouteDataOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CClientMetrics_ReportReactUsage_Notification.RouteData)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string route = 1;</code>
+       * @return Whether the route field is set.
+       */
+      boolean hasRoute();
+      /**
+       * <code>optional string route = 1;</code>
+       * @return The route.
+       */
+      java.lang.String getRoute();
+      /**
+       * <code>optional string route = 1;</code>
+       * @return The bytes for route.
+       */
+      com.google.protobuf.ByteString
+          getRouteBytes();
+
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return Whether the count field is set.
+       */
+      boolean hasCount();
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return The count.
+       */
+      int getCount();
+    }
+    /**
+     * Protobuf type {@code CClientMetrics_ReportReactUsage_Notification.RouteData}
+     */
+    public static final class RouteData extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CClientMetrics_ReportReactUsage_Notification.RouteData)
+        RouteDataOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use RouteData.newBuilder() to construct.
+      private RouteData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private RouteData() {
+        route_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RouteData();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private RouteData(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                route_ = bs;
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                count_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_RouteData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_RouteData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.class, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int ROUTE_FIELD_NUMBER = 1;
+      private volatile java.lang.Object route_;
+      /**
+       * <code>optional string route = 1;</code>
+       * @return Whether the route field is set.
+       */
+      @java.lang.Override
+      public boolean hasRoute() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string route = 1;</code>
+       * @return The route.
+       */
+      @java.lang.Override
+      public java.lang.String getRoute() {
+        java.lang.Object ref = route_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            route_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string route = 1;</code>
+       * @return The bytes for route.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRouteBytes() {
+        java.lang.Object ref = route_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          route_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int COUNT_FIELD_NUMBER = 2;
+      private int count_;
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return Whether the count field is set.
+       */
+      @java.lang.Override
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public int getCount() {
+        return count_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, route_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(2, count_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, route_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, count_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData)) {
+          return super.equals(obj);
+        }
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData other = (SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData) obj;
+
+        if (hasRoute() != other.hasRoute()) return false;
+        if (hasRoute()) {
+          if (!getRoute()
+              .equals(other.getRoute())) return false;
+        }
+        if (hasCount() != other.hasCount()) return false;
+        if (hasCount()) {
+          if (getCount()
+              != other.getCount()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasRoute()) {
+          hash = (37 * hash) + ROUTE_FIELD_NUMBER;
+          hash = (53 * hash) + getRoute().hashCode();
+        }
+        if (hasCount()) {
+          hash = (37 * hash) + COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getCount();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CClientMetrics_ReportReactUsage_Notification.RouteData}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CClientMetrics_ReportReactUsage_Notification.RouteData)
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteDataOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_RouteData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_RouteData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.class, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder.class);
+        }
+
+        // Construct using SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          route_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          count_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_RouteData_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData getDefaultInstanceForType() {
+          return SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData build() {
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData buildPartial() {
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData result = new SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.route_ = route_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.count_ = count_;
+            to_bitField0_ |= 0x00000002;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData) {
+            return mergeFrom((SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData other) {
+          if (other == SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.getDefaultInstance()) return this;
+          if (other.hasRoute()) {
+            bitField0_ |= 0x00000001;
+            route_ = other.route_;
+            onChanged();
+          }
+          if (other.hasCount()) {
+            setCount(other.getCount());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object route_ = "";
+        /**
+         * <code>optional string route = 1;</code>
+         * @return Whether the route field is set.
+         */
+        public boolean hasRoute() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string route = 1;</code>
+         * @return The route.
+         */
+        public java.lang.String getRoute() {
+          java.lang.Object ref = route_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              route_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string route = 1;</code>
+         * @return The bytes for route.
+         */
+        public com.google.protobuf.ByteString
+            getRouteBytes() {
+          java.lang.Object ref = route_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            route_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string route = 1;</code>
+         * @param value The route to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRoute(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          route_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string route = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRoute() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          route_ = getDefaultInstance().getRoute();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string route = 1;</code>
+         * @param value The bytes for route to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRouteBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          route_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int count_ ;
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @return Whether the count field is set.
+         */
+        @java.lang.Override
+        public boolean hasCount() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @return The count.
+         */
+        @java.lang.Override
+        public int getCount() {
+          return count_;
+        }
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @param value The count to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCount(int value) {
+          bitField0_ |= 0x00000002;
+          count_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCount() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          count_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CClientMetrics_ReportReactUsage_Notification.RouteData)
+      }
+
+      // @@protoc_insertion_point(class_scope:CClientMetrics_ReportReactUsage_Notification.RouteData)
+      private static final SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData();
+      }
+
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<RouteData>
+          PARSER = new com.google.protobuf.AbstractParser<RouteData>() {
+        @java.lang.Override
+        public RouteData parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RouteData(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<RouteData> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RouteData> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ComponentDataOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CClientMetrics_ReportReactUsage_Notification.ComponentData)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string component = 1;</code>
+       * @return Whether the component field is set.
+       */
+      boolean hasComponent();
+      /**
+       * <code>optional string component = 1;</code>
+       * @return The component.
+       */
+      java.lang.String getComponent();
+      /**
+       * <code>optional string component = 1;</code>
+       * @return The bytes for component.
+       */
+      com.google.protobuf.ByteString
+          getComponentBytes();
+
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return Whether the count field is set.
+       */
+      boolean hasCount();
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return The count.
+       */
+      int getCount();
+    }
+    /**
+     * Protobuf type {@code CClientMetrics_ReportReactUsage_Notification.ComponentData}
+     */
+    public static final class ComponentData extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CClientMetrics_ReportReactUsage_Notification.ComponentData)
+        ComponentDataOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ComponentData.newBuilder() to construct.
+      private ComponentData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ComponentData() {
+        component_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ComponentData();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ComponentData(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                component_ = bs;
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                count_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_ComponentData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_ComponentData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.class, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int COMPONENT_FIELD_NUMBER = 1;
+      private volatile java.lang.Object component_;
+      /**
+       * <code>optional string component = 1;</code>
+       * @return Whether the component field is set.
+       */
+      @java.lang.Override
+      public boolean hasComponent() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string component = 1;</code>
+       * @return The component.
+       */
+      @java.lang.Override
+      public java.lang.String getComponent() {
+        java.lang.Object ref = component_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            component_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string component = 1;</code>
+       * @return The bytes for component.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentBytes() {
+        java.lang.Object ref = component_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          component_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int COUNT_FIELD_NUMBER = 2;
+      private int count_;
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return Whether the count field is set.
+       */
+      @java.lang.Override
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public int getCount() {
+        return count_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, component_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(2, count_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, component_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, count_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData)) {
+          return super.equals(obj);
+        }
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData other = (SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData) obj;
+
+        if (hasComponent() != other.hasComponent()) return false;
+        if (hasComponent()) {
+          if (!getComponent()
+              .equals(other.getComponent())) return false;
+        }
+        if (hasCount() != other.hasCount()) return false;
+        if (hasCount()) {
+          if (getCount()
+              != other.getCount()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasComponent()) {
+          hash = (37 * hash) + COMPONENT_FIELD_NUMBER;
+          hash = (53 * hash) + getComponent().hashCode();
+        }
+        if (hasCount()) {
+          hash = (37 * hash) + COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getCount();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CClientMetrics_ReportReactUsage_Notification.ComponentData}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CClientMetrics_ReportReactUsage_Notification.ComponentData)
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentDataOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_ComponentData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_ComponentData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.class, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder.class);
+        }
+
+        // Construct using SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          component_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          count_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_ComponentData_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData getDefaultInstanceForType() {
+          return SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData build() {
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData buildPartial() {
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData result = new SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.component_ = component_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.count_ = count_;
+            to_bitField0_ |= 0x00000002;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData) {
+            return mergeFrom((SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData other) {
+          if (other == SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.getDefaultInstance()) return this;
+          if (other.hasComponent()) {
+            bitField0_ |= 0x00000001;
+            component_ = other.component_;
+            onChanged();
+          }
+          if (other.hasCount()) {
+            setCount(other.getCount());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object component_ = "";
+        /**
+         * <code>optional string component = 1;</code>
+         * @return Whether the component field is set.
+         */
+        public boolean hasComponent() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string component = 1;</code>
+         * @return The component.
+         */
+        public java.lang.String getComponent() {
+          java.lang.Object ref = component_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              component_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string component = 1;</code>
+         * @return The bytes for component.
+         */
+        public com.google.protobuf.ByteString
+            getComponentBytes() {
+          java.lang.Object ref = component_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            component_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string component = 1;</code>
+         * @param value The component to set.
+         * @return This builder for chaining.
+         */
+        public Builder setComponent(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          component_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string component = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearComponent() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          component_ = getDefaultInstance().getComponent();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string component = 1;</code>
+         * @param value The bytes for component to set.
+         * @return This builder for chaining.
+         */
+        public Builder setComponentBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          component_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int count_ ;
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @return Whether the count field is set.
+         */
+        @java.lang.Override
+        public boolean hasCount() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @return The count.
+         */
+        @java.lang.Override
+        public int getCount() {
+          return count_;
+        }
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @param value The count to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCount(int value) {
+          bitField0_ |= 0x00000002;
+          count_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCount() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          count_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CClientMetrics_ReportReactUsage_Notification.ComponentData)
+      }
+
+      // @@protoc_insertion_point(class_scope:CClientMetrics_ReportReactUsage_Notification.ComponentData)
+      private static final SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData();
+      }
+
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ComponentData>
+          PARSER = new com.google.protobuf.AbstractParser<ComponentData>() {
+        @java.lang.Override
+        public ComponentData parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ComponentData(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ComponentData> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ComponentData> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ActionDataOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CClientMetrics_ReportReactUsage_Notification.ActionData)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string action = 1;</code>
+       * @return Whether the action field is set.
+       */
+      boolean hasAction();
+      /**
+       * <code>optional string action = 1;</code>
+       * @return The action.
+       */
+      java.lang.String getAction();
+      /**
+       * <code>optional string action = 1;</code>
+       * @return The bytes for action.
+       */
+      com.google.protobuf.ByteString
+          getActionBytes();
+
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return Whether the count field is set.
+       */
+      boolean hasCount();
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return The count.
+       */
+      int getCount();
+    }
+    /**
+     * Protobuf type {@code CClientMetrics_ReportReactUsage_Notification.ActionData}
+     */
+    public static final class ActionData extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CClientMetrics_ReportReactUsage_Notification.ActionData)
+        ActionDataOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ActionData.newBuilder() to construct.
+      private ActionData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ActionData() {
+        action_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ActionData();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ActionData(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                action_ = bs;
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                count_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_ActionData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_ActionData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.class, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int ACTION_FIELD_NUMBER = 1;
+      private volatile java.lang.Object action_;
+      /**
+       * <code>optional string action = 1;</code>
+       * @return Whether the action field is set.
+       */
+      @java.lang.Override
+      public boolean hasAction() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string action = 1;</code>
+       * @return The action.
+       */
+      @java.lang.Override
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            action_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string action = 1;</code>
+       * @return The bytes for action.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int COUNT_FIELD_NUMBER = 2;
+      private int count_;
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return Whether the count field is set.
+       */
+      @java.lang.Override
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 count = 2;</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public int getCount() {
+        return count_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, action_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(2, count_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, action_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, count_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData)) {
+          return super.equals(obj);
+        }
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData other = (SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData) obj;
+
+        if (hasAction() != other.hasAction()) return false;
+        if (hasAction()) {
+          if (!getAction()
+              .equals(other.getAction())) return false;
+        }
+        if (hasCount() != other.hasCount()) return false;
+        if (hasCount()) {
+          if (getCount()
+              != other.getCount()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasAction()) {
+          hash = (37 * hash) + ACTION_FIELD_NUMBER;
+          hash = (53 * hash) + getAction().hashCode();
+        }
+        if (hasCount()) {
+          hash = (37 * hash) + COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getCount();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CClientMetrics_ReportReactUsage_Notification.ActionData}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CClientMetrics_ReportReactUsage_Notification.ActionData)
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionDataOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_ActionData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_ActionData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.class, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder.class);
+        }
+
+        // Construct using SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          action_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          count_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_ActionData_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData getDefaultInstanceForType() {
+          return SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData build() {
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData buildPartial() {
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData result = new SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.action_ = action_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.count_ = count_;
+            to_bitField0_ |= 0x00000002;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData) {
+            return mergeFrom((SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData other) {
+          if (other == SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.getDefaultInstance()) return this;
+          if (other.hasAction()) {
+            bitField0_ |= 0x00000001;
+            action_ = other.action_;
+            onChanged();
+          }
+          if (other.hasCount()) {
+            setCount(other.getCount());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object action_ = "";
+        /**
+         * <code>optional string action = 1;</code>
+         * @return Whether the action field is set.
+         */
+        public boolean hasAction() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string action = 1;</code>
+         * @return The action.
+         */
+        public java.lang.String getAction() {
+          java.lang.Object ref = action_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              action_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string action = 1;</code>
+         * @return The bytes for action.
+         */
+        public com.google.protobuf.ByteString
+            getActionBytes() {
+          java.lang.Object ref = action_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            action_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string action = 1;</code>
+         * @param value The action to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAction(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          action_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string action = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAction() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          action_ = getDefaultInstance().getAction();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string action = 1;</code>
+         * @param value The bytes for action to set.
+         * @return This builder for chaining.
+         */
+        public Builder setActionBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          action_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int count_ ;
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @return Whether the count field is set.
+         */
+        @java.lang.Override
+        public boolean hasCount() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @return The count.
+         */
+        @java.lang.Override
+        public int getCount() {
+          return count_;
+        }
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @param value The count to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCount(int value) {
+          bitField0_ |= 0x00000002;
+          count_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 count = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCount() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          count_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CClientMetrics_ReportReactUsage_Notification.ActionData)
+      }
+
+      // @@protoc_insertion_point(class_scope:CClientMetrics_ReportReactUsage_Notification.ActionData)
+      private static final SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData();
+      }
+
+      public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ActionData>
+          PARSER = new com.google.protobuf.AbstractParser<ActionData>() {
+        @java.lang.Override
+        public ActionData parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ActionData(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ActionData> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ActionData> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int PRODUCT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object product_;
+    /**
+     * <code>optional string product = 1;</code>
+     * @return Whether the product field is set.
+     */
+    @java.lang.Override
+    public boolean hasProduct() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string product = 1;</code>
+     * @return The product.
+     */
+    @java.lang.Override
+    public java.lang.String getProduct() {
+      java.lang.Object ref = product_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          product_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string product = 1;</code>
+     * @return The bytes for product.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProductBytes() {
+      java.lang.Object ref = product_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        product_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object version_;
+    /**
+     * <code>optional string version = 2;</code>
+     * @return Whether the version field is set.
+     */
+    @java.lang.Override
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string version = 2;</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          version_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string version = 2;</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROUTES_FIELD_NUMBER = 3;
+    private java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData> routes_;
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData> getRoutesList() {
+      return routes_;
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteDataOrBuilder> 
+        getRoutesOrBuilderList() {
+      return routes_;
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+     */
+    @java.lang.Override
+    public int getRoutesCount() {
+      return routes_.size();
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+     */
+    @java.lang.Override
+    public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData getRoutes(int index) {
+      return routes_.get(index);
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+     */
+    @java.lang.Override
+    public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteDataOrBuilder getRoutesOrBuilder(
+        int index) {
+      return routes_.get(index);
+    }
+
+    public static final int COMPONENTS_FIELD_NUMBER = 4;
+    private java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData> components_;
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData> getComponentsList() {
+      return components_;
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentDataOrBuilder> 
+        getComponentsOrBuilderList() {
+      return components_;
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+     */
+    @java.lang.Override
+    public int getComponentsCount() {
+      return components_.size();
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+     */
+    @java.lang.Override
+    public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData getComponents(int index) {
+      return components_.get(index);
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+     */
+    @java.lang.Override
+    public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentDataOrBuilder getComponentsOrBuilder(
+        int index) {
+      return components_.get(index);
+    }
+
+    public static final int ACTIONS_FIELD_NUMBER = 5;
+    private java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData> actions_;
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData> getActionsList() {
+      return actions_;
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionDataOrBuilder> 
+        getActionsOrBuilderList() {
+      return actions_;
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+     */
+    @java.lang.Override
+    public int getActionsCount() {
+      return actions_.size();
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+     */
+    @java.lang.Override
+    public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData getActions(int index) {
+      return actions_.get(index);
+    }
+    /**
+     * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+     */
+    @java.lang.Override
+    public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionDataOrBuilder getActionsOrBuilder(
+        int index) {
+      return actions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, product_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
+      }
+      for (int i = 0; i < routes_.size(); i++) {
+        output.writeMessage(3, routes_.get(i));
+      }
+      for (int i = 0; i < components_.size(); i++) {
+        output.writeMessage(4, components_.get(i));
+      }
+      for (int i = 0; i < actions_.size(); i++) {
+        output.writeMessage(5, actions_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, product_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
+      }
+      for (int i = 0; i < routes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, routes_.get(i));
+      }
+      for (int i = 0; i < components_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, components_.get(i));
+      }
+      for (int i = 0; i < actions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, actions_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification)) {
+        return super.equals(obj);
+      }
+      SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification other = (SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification) obj;
+
+      if (hasProduct() != other.hasProduct()) return false;
+      if (hasProduct()) {
+        if (!getProduct()
+            .equals(other.getProduct())) return false;
+      }
+      if (hasVersion() != other.hasVersion()) return false;
+      if (hasVersion()) {
+        if (!getVersion()
+            .equals(other.getVersion())) return false;
+      }
+      if (!getRoutesList()
+          .equals(other.getRoutesList())) return false;
+      if (!getComponentsList()
+          .equals(other.getComponentsList())) return false;
+      if (!getActionsList()
+          .equals(other.getActionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasProduct()) {
+        hash = (37 * hash) + PRODUCT_FIELD_NUMBER;
+        hash = (53 * hash) + getProduct().hashCode();
+      }
+      if (hasVersion()) {
+        hash = (37 * hash) + VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getVersion().hashCode();
+      }
+      if (getRoutesCount() > 0) {
+        hash = (37 * hash) + ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getRoutesList().hashCode();
+      }
+      if (getComponentsCount() > 0) {
+        hash = (37 * hash) + COMPONENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getComponentsList().hashCode();
+      }
+      if (getActionsCount() > 0) {
+        hash = (37 * hash) + ACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getActionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CClientMetrics_ReportReactUsage_Notification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CClientMetrics_ReportReactUsage_Notification)
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_NotificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.class, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.Builder.class);
+      }
+
+      // Construct using SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRoutesFieldBuilder();
+          getComponentsFieldBuilder();
+          getActionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        product_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        version_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (routesBuilder_ == null) {
+          routes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          routesBuilder_.clear();
+        }
+        if (componentsBuilder_ == null) {
+          components_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          componentsBuilder_.clear();
+        }
+        if (actionsBuilder_ == null) {
+          actions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          actionsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportReactUsage_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification getDefaultInstanceForType() {
+        return SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification build() {
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification buildPartial() {
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification result = new SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.product_ = product_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.version_ = version_;
+        if (routesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            routes_ = java.util.Collections.unmodifiableList(routes_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.routes_ = routes_;
+        } else {
+          result.routes_ = routesBuilder_.build();
+        }
+        if (componentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            components_ = java.util.Collections.unmodifiableList(components_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.components_ = components_;
+        } else {
+          result.components_ = componentsBuilder_.build();
+        }
+        if (actionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            actions_ = java.util.Collections.unmodifiableList(actions_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.actions_ = actions_;
+        } else {
+          result.actions_ = actionsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification) {
+          return mergeFrom((SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification other) {
+        if (other == SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.getDefaultInstance()) return this;
+        if (other.hasProduct()) {
+          bitField0_ |= 0x00000001;
+          product_ = other.product_;
+          onChanged();
+        }
+        if (other.hasVersion()) {
+          bitField0_ |= 0x00000002;
+          version_ = other.version_;
+          onChanged();
+        }
+        if (routesBuilder_ == null) {
+          if (!other.routes_.isEmpty()) {
+            if (routes_.isEmpty()) {
+              routes_ = other.routes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureRoutesIsMutable();
+              routes_.addAll(other.routes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.routes_.isEmpty()) {
+            if (routesBuilder_.isEmpty()) {
+              routesBuilder_.dispose();
+              routesBuilder_ = null;
+              routes_ = other.routes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              routesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRoutesFieldBuilder() : null;
+            } else {
+              routesBuilder_.addAllMessages(other.routes_);
+            }
+          }
+        }
+        if (componentsBuilder_ == null) {
+          if (!other.components_.isEmpty()) {
+            if (components_.isEmpty()) {
+              components_ = other.components_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureComponentsIsMutable();
+              components_.addAll(other.components_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.components_.isEmpty()) {
+            if (componentsBuilder_.isEmpty()) {
+              componentsBuilder_.dispose();
+              componentsBuilder_ = null;
+              components_ = other.components_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              componentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getComponentsFieldBuilder() : null;
+            } else {
+              componentsBuilder_.addAllMessages(other.components_);
+            }
+          }
+        }
+        if (actionsBuilder_ == null) {
+          if (!other.actions_.isEmpty()) {
+            if (actions_.isEmpty()) {
+              actions_ = other.actions_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureActionsIsMutable();
+              actions_.addAll(other.actions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.actions_.isEmpty()) {
+            if (actionsBuilder_.isEmpty()) {
+              actionsBuilder_.dispose();
+              actionsBuilder_ = null;
+              actions_ = other.actions_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              actionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getActionsFieldBuilder() : null;
+            } else {
+              actionsBuilder_.addAllMessages(other.actions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object product_ = "";
+      /**
+       * <code>optional string product = 1;</code>
+       * @return Whether the product field is set.
+       */
+      public boolean hasProduct() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string product = 1;</code>
+       * @return The product.
+       */
+      public java.lang.String getProduct() {
+        java.lang.Object ref = product_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            product_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string product = 1;</code>
+       * @return The bytes for product.
+       */
+      public com.google.protobuf.ByteString
+          getProductBytes() {
+        java.lang.Object ref = product_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          product_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string product = 1;</code>
+       * @param value The product to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProduct(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        product_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string product = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProduct() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        product_ = getDefaultInstance().getProduct();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string product = 1;</code>
+       * @param value The bytes for product to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        product_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <code>optional string version = 2;</code>
+       * @return Whether the version field is set.
+       */
+      public boolean hasVersion() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string version = 2;</code>
+       * @return The version.
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            version_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string version = 2;</code>
+       * @return The bytes for version.
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string version = 2;</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string version = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string version = 2;</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        version_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData> routes_ =
+        java.util.Collections.emptyList();
+      private void ensureRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          routes_ = new java.util.ArrayList<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData>(routes_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteDataOrBuilder> routesBuilder_;
+
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData> getRoutesList() {
+        if (routesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(routes_);
+        } else {
+          return routesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public int getRoutesCount() {
+        if (routesBuilder_ == null) {
+          return routes_.size();
+        } else {
+          return routesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData getRoutes(int index) {
+        if (routesBuilder_ == null) {
+          return routes_.get(index);
+        } else {
+          return routesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public Builder setRoutes(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData value) {
+        if (routesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoutesIsMutable();
+          routes_.set(index, value);
+          onChanged();
+        } else {
+          routesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public Builder setRoutes(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder builderForValue) {
+        if (routesBuilder_ == null) {
+          ensureRoutesIsMutable();
+          routes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          routesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public Builder addRoutes(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData value) {
+        if (routesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoutesIsMutable();
+          routes_.add(value);
+          onChanged();
+        } else {
+          routesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public Builder addRoutes(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData value) {
+        if (routesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoutesIsMutable();
+          routes_.add(index, value);
+          onChanged();
+        } else {
+          routesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public Builder addRoutes(
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder builderForValue) {
+        if (routesBuilder_ == null) {
+          ensureRoutesIsMutable();
+          routes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          routesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public Builder addRoutes(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder builderForValue) {
+        if (routesBuilder_ == null) {
+          ensureRoutesIsMutable();
+          routes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          routesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public Builder addAllRoutes(
+          java.lang.Iterable<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData> values) {
+        if (routesBuilder_ == null) {
+          ensureRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, routes_);
+          onChanged();
+        } else {
+          routesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public Builder clearRoutes() {
+        if (routesBuilder_ == null) {
+          routes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          routesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public Builder removeRoutes(int index) {
+        if (routesBuilder_ == null) {
+          ensureRoutesIsMutable();
+          routes_.remove(index);
+          onChanged();
+        } else {
+          routesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder getRoutesBuilder(
+          int index) {
+        return getRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteDataOrBuilder getRoutesOrBuilder(
+          int index) {
+        if (routesBuilder_ == null) {
+          return routes_.get(index);  } else {
+          return routesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public java.util.List<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteDataOrBuilder> 
+           getRoutesOrBuilderList() {
+        if (routesBuilder_ != null) {
+          return routesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(routes_);
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder addRoutesBuilder() {
+        return getRoutesFieldBuilder().addBuilder(
+            SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder addRoutesBuilder(
+          int index) {
+        return getRoutesFieldBuilder().addBuilder(
+            index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.RouteData routes = 3;</code>
+       */
+      public java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder> 
+           getRoutesBuilderList() {
+        return getRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteDataOrBuilder> 
+          getRoutesFieldBuilder() {
+        if (routesBuilder_ == null) {
+          routesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteData.Builder, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.RouteDataOrBuilder>(
+                  routes_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          routes_ = null;
+        }
+        return routesBuilder_;
+      }
+
+      private java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData> components_ =
+        java.util.Collections.emptyList();
+      private void ensureComponentsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          components_ = new java.util.ArrayList<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData>(components_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentDataOrBuilder> componentsBuilder_;
+
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData> getComponentsList() {
+        if (componentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(components_);
+        } else {
+          return componentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public int getComponentsCount() {
+        if (componentsBuilder_ == null) {
+          return components_.size();
+        } else {
+          return componentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData getComponents(int index) {
+        if (componentsBuilder_ == null) {
+          return components_.get(index);
+        } else {
+          return componentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public Builder setComponents(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData value) {
+        if (componentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureComponentsIsMutable();
+          components_.set(index, value);
+          onChanged();
+        } else {
+          componentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public Builder setComponents(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder builderForValue) {
+        if (componentsBuilder_ == null) {
+          ensureComponentsIsMutable();
+          components_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          componentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public Builder addComponents(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData value) {
+        if (componentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureComponentsIsMutable();
+          components_.add(value);
+          onChanged();
+        } else {
+          componentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public Builder addComponents(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData value) {
+        if (componentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureComponentsIsMutable();
+          components_.add(index, value);
+          onChanged();
+        } else {
+          componentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public Builder addComponents(
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder builderForValue) {
+        if (componentsBuilder_ == null) {
+          ensureComponentsIsMutable();
+          components_.add(builderForValue.build());
+          onChanged();
+        } else {
+          componentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public Builder addComponents(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder builderForValue) {
+        if (componentsBuilder_ == null) {
+          ensureComponentsIsMutable();
+          components_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          componentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public Builder addAllComponents(
+          java.lang.Iterable<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData> values) {
+        if (componentsBuilder_ == null) {
+          ensureComponentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, components_);
+          onChanged();
+        } else {
+          componentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public Builder clearComponents() {
+        if (componentsBuilder_ == null) {
+          components_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          componentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public Builder removeComponents(int index) {
+        if (componentsBuilder_ == null) {
+          ensureComponentsIsMutable();
+          components_.remove(index);
+          onChanged();
+        } else {
+          componentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder getComponentsBuilder(
+          int index) {
+        return getComponentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentDataOrBuilder getComponentsOrBuilder(
+          int index) {
+        if (componentsBuilder_ == null) {
+          return components_.get(index);  } else {
+          return componentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public java.util.List<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentDataOrBuilder> 
+           getComponentsOrBuilderList() {
+        if (componentsBuilder_ != null) {
+          return componentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(components_);
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder addComponentsBuilder() {
+        return getComponentsFieldBuilder().addBuilder(
+            SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder addComponentsBuilder(
+          int index) {
+        return getComponentsFieldBuilder().addBuilder(
+            index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ComponentData components = 4;</code>
+       */
+      public java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder> 
+           getComponentsBuilderList() {
+        return getComponentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentDataOrBuilder> 
+          getComponentsFieldBuilder() {
+        if (componentsBuilder_ == null) {
+          componentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentData.Builder, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ComponentDataOrBuilder>(
+                  components_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          components_ = null;
+        }
+        return componentsBuilder_;
+      }
+
+      private java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData> actions_ =
+        java.util.Collections.emptyList();
+      private void ensureActionsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          actions_ = new java.util.ArrayList<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData>(actions_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionDataOrBuilder> actionsBuilder_;
+
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData> getActionsList() {
+        if (actionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(actions_);
+        } else {
+          return actionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public int getActionsCount() {
+        if (actionsBuilder_ == null) {
+          return actions_.size();
+        } else {
+          return actionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData getActions(int index) {
+        if (actionsBuilder_ == null) {
+          return actions_.get(index);
+        } else {
+          return actionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public Builder setActions(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData value) {
+        if (actionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActionsIsMutable();
+          actions_.set(index, value);
+          onChanged();
+        } else {
+          actionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public Builder setActions(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder builderForValue) {
+        if (actionsBuilder_ == null) {
+          ensureActionsIsMutable();
+          actions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          actionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public Builder addActions(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData value) {
+        if (actionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActionsIsMutable();
+          actions_.add(value);
+          onChanged();
+        } else {
+          actionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public Builder addActions(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData value) {
+        if (actionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActionsIsMutable();
+          actions_.add(index, value);
+          onChanged();
+        } else {
+          actionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public Builder addActions(
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder builderForValue) {
+        if (actionsBuilder_ == null) {
+          ensureActionsIsMutable();
+          actions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          actionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public Builder addActions(
+          int index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder builderForValue) {
+        if (actionsBuilder_ == null) {
+          ensureActionsIsMutable();
+          actions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          actionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public Builder addAllActions(
+          java.lang.Iterable<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData> values) {
+        if (actionsBuilder_ == null) {
+          ensureActionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, actions_);
+          onChanged();
+        } else {
+          actionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public Builder clearActions() {
+        if (actionsBuilder_ == null) {
+          actions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          actionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public Builder removeActions(int index) {
+        if (actionsBuilder_ == null) {
+          ensureActionsIsMutable();
+          actions_.remove(index);
+          onChanged();
+        } else {
+          actionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder getActionsBuilder(
+          int index) {
+        return getActionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionDataOrBuilder getActionsOrBuilder(
+          int index) {
+        if (actionsBuilder_ == null) {
+          return actions_.get(index);  } else {
+          return actionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public java.util.List<? extends SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionDataOrBuilder> 
+           getActionsOrBuilderList() {
+        if (actionsBuilder_ != null) {
+          return actionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(actions_);
+        }
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder addActionsBuilder() {
+        return getActionsFieldBuilder().addBuilder(
+            SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder addActionsBuilder(
+          int index) {
+        return getActionsFieldBuilder().addBuilder(
+            index, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CClientMetrics_ReportReactUsage_Notification.ActionData actions = 5;</code>
+       */
+      public java.util.List<SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder> 
+           getActionsBuilderList() {
+        return getActionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionDataOrBuilder> 
+          getActionsFieldBuilder() {
+        if (actionsBuilder_ == null) {
+          actionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionData.Builder, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification.ActionDataOrBuilder>(
+                  actions_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          actions_ = null;
+        }
+        return actionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CClientMetrics_ReportReactUsage_Notification)
+    }
+
+    // @@protoc_insertion_point(class_scope:CClientMetrics_ReportReactUsage_Notification)
+    private static final SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification();
+    }
+
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CClientMetrics_ReportReactUsage_Notification>
+        PARSER = new com.google.protobuf.AbstractParser<CClientMetrics_ReportReactUsage_Notification>() {
+      @java.lang.Override
+      public CClientMetrics_ReportReactUsage_Notification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CClientMetrics_ReportReactUsage_Notification(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CClientMetrics_ReportReactUsage_Notification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CClientMetrics_ReportReactUsage_Notification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportReactUsage_Notification getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10036,6 +14154,61 @@ public final class SteammessagesClientmetricsSteamclient {
        * @return The proxied.
        */
       boolean getProxied();
+
+      /**
+       * <code>optional bool used_http2 = 8;</code>
+       * @return Whether the usedHttp2 field is set.
+       */
+      boolean hasUsedHttp2();
+      /**
+       * <code>optional bool used_http2 = 8;</code>
+       * @return The usedHttp2.
+       */
+      boolean getUsedHttp2();
+
+      /**
+       * <code>optional uint32 cache_hits = 9;</code>
+       * @return Whether the cacheHits field is set.
+       */
+      boolean hasCacheHits();
+      /**
+       * <code>optional uint32 cache_hits = 9;</code>
+       * @return The cacheHits.
+       */
+      int getCacheHits();
+
+      /**
+       * <code>optional uint32 cache_misses = 10;</code>
+       * @return Whether the cacheMisses field is set.
+       */
+      boolean hasCacheMisses();
+      /**
+       * <code>optional uint32 cache_misses = 10;</code>
+       * @return The cacheMisses.
+       */
+      int getCacheMisses();
+
+      /**
+       * <code>optional uint64 hit_bytes = 11;</code>
+       * @return Whether the hitBytes field is set.
+       */
+      boolean hasHitBytes();
+      /**
+       * <code>optional uint64 hit_bytes = 11;</code>
+       * @return The hitBytes.
+       */
+      long getHitBytes();
+
+      /**
+       * <code>optional uint64 miss_bytes = 12;</code>
+       * @return Whether the missBytes field is set.
+       */
+      boolean hasMissBytes();
+      /**
+       * <code>optional uint64 miss_bytes = 12;</code>
+       * @return The missBytes.
+       */
+      long getMissBytes();
     }
     /**
      * Protobuf type {@code CClientMetrics_DownloadRates_Notification.StatsInfo}
@@ -10118,6 +14291,31 @@ public final class SteammessagesClientmetricsSteamclient {
               case 56: {
                 bitField0_ |= 0x00000040;
                 proxied_ = input.readBool();
+                break;
+              }
+              case 64: {
+                bitField0_ |= 0x00000080;
+                usedHttp2_ = input.readBool();
+                break;
+              }
+              case 72: {
+                bitField0_ |= 0x00000100;
+                cacheHits_ = input.readUInt32();
+                break;
+              }
+              case 80: {
+                bitField0_ |= 0x00000200;
+                cacheMisses_ = input.readUInt32();
+                break;
+              }
+              case 88: {
+                bitField0_ |= 0x00000400;
+                hitBytes_ = input.readUInt64();
+                break;
+              }
+              case 96: {
+                bitField0_ |= 0x00000800;
+                missBytes_ = input.readUInt64();
                 break;
               }
               default: {
@@ -10315,6 +14513,101 @@ public final class SteammessagesClientmetricsSteamclient {
         return proxied_;
       }
 
+      public static final int USED_HTTP2_FIELD_NUMBER = 8;
+      private boolean usedHttp2_;
+      /**
+       * <code>optional bool used_http2 = 8;</code>
+       * @return Whether the usedHttp2 field is set.
+       */
+      @java.lang.Override
+      public boolean hasUsedHttp2() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional bool used_http2 = 8;</code>
+       * @return The usedHttp2.
+       */
+      @java.lang.Override
+      public boolean getUsedHttp2() {
+        return usedHttp2_;
+      }
+
+      public static final int CACHE_HITS_FIELD_NUMBER = 9;
+      private int cacheHits_;
+      /**
+       * <code>optional uint32 cache_hits = 9;</code>
+       * @return Whether the cacheHits field is set.
+       */
+      @java.lang.Override
+      public boolean hasCacheHits() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint32 cache_hits = 9;</code>
+       * @return The cacheHits.
+       */
+      @java.lang.Override
+      public int getCacheHits() {
+        return cacheHits_;
+      }
+
+      public static final int CACHE_MISSES_FIELD_NUMBER = 10;
+      private int cacheMisses_;
+      /**
+       * <code>optional uint32 cache_misses = 10;</code>
+       * @return Whether the cacheMisses field is set.
+       */
+      @java.lang.Override
+      public boolean hasCacheMisses() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional uint32 cache_misses = 10;</code>
+       * @return The cacheMisses.
+       */
+      @java.lang.Override
+      public int getCacheMisses() {
+        return cacheMisses_;
+      }
+
+      public static final int HIT_BYTES_FIELD_NUMBER = 11;
+      private long hitBytes_;
+      /**
+       * <code>optional uint64 hit_bytes = 11;</code>
+       * @return Whether the hitBytes field is set.
+       */
+      @java.lang.Override
+      public boolean hasHitBytes() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional uint64 hit_bytes = 11;</code>
+       * @return The hitBytes.
+       */
+      @java.lang.Override
+      public long getHitBytes() {
+        return hitBytes_;
+      }
+
+      public static final int MISS_BYTES_FIELD_NUMBER = 12;
+      private long missBytes_;
+      /**
+       * <code>optional uint64 miss_bytes = 12;</code>
+       * @return Whether the missBytes field is set.
+       */
+      @java.lang.Override
+      public boolean hasMissBytes() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional uint64 miss_bytes = 12;</code>
+       * @return The missBytes.
+       */
+      @java.lang.Override
+      public long getMissBytes() {
+        return missBytes_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -10349,6 +14642,21 @@ public final class SteammessagesClientmetricsSteamclient {
         }
         if (((bitField0_ & 0x00000040) != 0)) {
           output.writeBool(7, proxied_);
+        }
+        if (((bitField0_ & 0x00000080) != 0)) {
+          output.writeBool(8, usedHttp2_);
+        }
+        if (((bitField0_ & 0x00000100) != 0)) {
+          output.writeUInt32(9, cacheHits_);
+        }
+        if (((bitField0_ & 0x00000200) != 0)) {
+          output.writeUInt32(10, cacheMisses_);
+        }
+        if (((bitField0_ & 0x00000400) != 0)) {
+          output.writeUInt64(11, hitBytes_);
+        }
+        if (((bitField0_ & 0x00000800) != 0)) {
+          output.writeUInt64(12, missBytes_);
         }
         unknownFields.writeTo(output);
       }
@@ -10385,6 +14693,26 @@ public final class SteammessagesClientmetricsSteamclient {
         if (((bitField0_ & 0x00000040) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(7, proxied_);
+        }
+        if (((bitField0_ & 0x00000080) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(8, usedHttp2_);
+        }
+        if (((bitField0_ & 0x00000100) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(9, cacheHits_);
+        }
+        if (((bitField0_ & 0x00000200) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(10, cacheMisses_);
+        }
+        if (((bitField0_ & 0x00000400) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(11, hitBytes_);
+        }
+        if (((bitField0_ & 0x00000800) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(12, missBytes_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -10436,6 +14764,31 @@ public final class SteammessagesClientmetricsSteamclient {
           if (getProxied()
               != other.getProxied()) return false;
         }
+        if (hasUsedHttp2() != other.hasUsedHttp2()) return false;
+        if (hasUsedHttp2()) {
+          if (getUsedHttp2()
+              != other.getUsedHttp2()) return false;
+        }
+        if (hasCacheHits() != other.hasCacheHits()) return false;
+        if (hasCacheHits()) {
+          if (getCacheHits()
+              != other.getCacheHits()) return false;
+        }
+        if (hasCacheMisses() != other.hasCacheMisses()) return false;
+        if (hasCacheMisses()) {
+          if (getCacheMisses()
+              != other.getCacheMisses()) return false;
+        }
+        if (hasHitBytes() != other.hasHitBytes()) return false;
+        if (hasHitBytes()) {
+          if (getHitBytes()
+              != other.getHitBytes()) return false;
+        }
+        if (hasMissBytes() != other.hasMissBytes()) return false;
+        if (hasMissBytes()) {
+          if (getMissBytes()
+              != other.getMissBytes()) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -10478,6 +14831,29 @@ public final class SteammessagesClientmetricsSteamclient {
           hash = (37 * hash) + PROXIED_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getProxied());
+        }
+        if (hasUsedHttp2()) {
+          hash = (37 * hash) + USED_HTTP2_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getUsedHttp2());
+        }
+        if (hasCacheHits()) {
+          hash = (37 * hash) + CACHE_HITS_FIELD_NUMBER;
+          hash = (53 * hash) + getCacheHits();
+        }
+        if (hasCacheMisses()) {
+          hash = (37 * hash) + CACHE_MISSES_FIELD_NUMBER;
+          hash = (53 * hash) + getCacheMisses();
+        }
+        if (hasHitBytes()) {
+          hash = (37 * hash) + HIT_BYTES_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getHitBytes());
+        }
+        if (hasMissBytes()) {
+          hash = (37 * hash) + MISS_BYTES_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getMissBytes());
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -10626,6 +15002,16 @@ public final class SteammessagesClientmetricsSteamclient {
           bitField0_ = (bitField0_ & ~0x00000020);
           proxied_ = false;
           bitField0_ = (bitField0_ & ~0x00000040);
+          usedHttp2_ = false;
+          bitField0_ = (bitField0_ & ~0x00000080);
+          cacheHits_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000100);
+          cacheMisses_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000200);
+          hitBytes_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00000400);
+          missBytes_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00000800);
           return this;
         }
 
@@ -10681,6 +15067,26 @@ public final class SteammessagesClientmetricsSteamclient {
           if (((from_bitField0_ & 0x00000040) != 0)) {
             result.proxied_ = proxied_;
             to_bitField0_ |= 0x00000040;
+          }
+          if (((from_bitField0_ & 0x00000080) != 0)) {
+            result.usedHttp2_ = usedHttp2_;
+            to_bitField0_ |= 0x00000080;
+          }
+          if (((from_bitField0_ & 0x00000100) != 0)) {
+            result.cacheHits_ = cacheHits_;
+            to_bitField0_ |= 0x00000100;
+          }
+          if (((from_bitField0_ & 0x00000200) != 0)) {
+            result.cacheMisses_ = cacheMisses_;
+            to_bitField0_ |= 0x00000200;
+          }
+          if (((from_bitField0_ & 0x00000400) != 0)) {
+            result.hitBytes_ = hitBytes_;
+            to_bitField0_ |= 0x00000400;
+          }
+          if (((from_bitField0_ & 0x00000800) != 0)) {
+            result.missBytes_ = missBytes_;
+            to_bitField0_ |= 0x00000800;
           }
           result.bitField0_ = to_bitField0_;
           onBuilt();
@@ -10753,6 +15159,21 @@ public final class SteammessagesClientmetricsSteamclient {
           }
           if (other.hasProxied()) {
             setProxied(other.getProxied());
+          }
+          if (other.hasUsedHttp2()) {
+            setUsedHttp2(other.getUsedHttp2());
+          }
+          if (other.hasCacheHits()) {
+            setCacheHits(other.getCacheHits());
+          }
+          if (other.hasCacheMisses()) {
+            setCacheMisses(other.getCacheMisses());
+          }
+          if (other.hasHitBytes()) {
+            setHitBytes(other.getHitBytes());
+          }
+          if (other.hasMissBytes()) {
+            setMissBytes(other.getMissBytes());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -11098,6 +15519,201 @@ public final class SteammessagesClientmetricsSteamclient {
         public Builder clearProxied() {
           bitField0_ = (bitField0_ & ~0x00000040);
           proxied_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean usedHttp2_ ;
+        /**
+         * <code>optional bool used_http2 = 8;</code>
+         * @return Whether the usedHttp2 field is set.
+         */
+        @java.lang.Override
+        public boolean hasUsedHttp2() {
+          return ((bitField0_ & 0x00000080) != 0);
+        }
+        /**
+         * <code>optional bool used_http2 = 8;</code>
+         * @return The usedHttp2.
+         */
+        @java.lang.Override
+        public boolean getUsedHttp2() {
+          return usedHttp2_;
+        }
+        /**
+         * <code>optional bool used_http2 = 8;</code>
+         * @param value The usedHttp2 to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUsedHttp2(boolean value) {
+          bitField0_ |= 0x00000080;
+          usedHttp2_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool used_http2 = 8;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUsedHttp2() {
+          bitField0_ = (bitField0_ & ~0x00000080);
+          usedHttp2_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int cacheHits_ ;
+        /**
+         * <code>optional uint32 cache_hits = 9;</code>
+         * @return Whether the cacheHits field is set.
+         */
+        @java.lang.Override
+        public boolean hasCacheHits() {
+          return ((bitField0_ & 0x00000100) != 0);
+        }
+        /**
+         * <code>optional uint32 cache_hits = 9;</code>
+         * @return The cacheHits.
+         */
+        @java.lang.Override
+        public int getCacheHits() {
+          return cacheHits_;
+        }
+        /**
+         * <code>optional uint32 cache_hits = 9;</code>
+         * @param value The cacheHits to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCacheHits(int value) {
+          bitField0_ |= 0x00000100;
+          cacheHits_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 cache_hits = 9;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCacheHits() {
+          bitField0_ = (bitField0_ & ~0x00000100);
+          cacheHits_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int cacheMisses_ ;
+        /**
+         * <code>optional uint32 cache_misses = 10;</code>
+         * @return Whether the cacheMisses field is set.
+         */
+        @java.lang.Override
+        public boolean hasCacheMisses() {
+          return ((bitField0_ & 0x00000200) != 0);
+        }
+        /**
+         * <code>optional uint32 cache_misses = 10;</code>
+         * @return The cacheMisses.
+         */
+        @java.lang.Override
+        public int getCacheMisses() {
+          return cacheMisses_;
+        }
+        /**
+         * <code>optional uint32 cache_misses = 10;</code>
+         * @param value The cacheMisses to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCacheMisses(int value) {
+          bitField0_ |= 0x00000200;
+          cacheMisses_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 cache_misses = 10;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCacheMisses() {
+          bitField0_ = (bitField0_ & ~0x00000200);
+          cacheMisses_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private long hitBytes_ ;
+        /**
+         * <code>optional uint64 hit_bytes = 11;</code>
+         * @return Whether the hitBytes field is set.
+         */
+        @java.lang.Override
+        public boolean hasHitBytes() {
+          return ((bitField0_ & 0x00000400) != 0);
+        }
+        /**
+         * <code>optional uint64 hit_bytes = 11;</code>
+         * @return The hitBytes.
+         */
+        @java.lang.Override
+        public long getHitBytes() {
+          return hitBytes_;
+        }
+        /**
+         * <code>optional uint64 hit_bytes = 11;</code>
+         * @param value The hitBytes to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHitBytes(long value) {
+          bitField0_ |= 0x00000400;
+          hitBytes_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint64 hit_bytes = 11;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHitBytes() {
+          bitField0_ = (bitField0_ & ~0x00000400);
+          hitBytes_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long missBytes_ ;
+        /**
+         * <code>optional uint64 miss_bytes = 12;</code>
+         * @return Whether the missBytes field is set.
+         */
+        @java.lang.Override
+        public boolean hasMissBytes() {
+          return ((bitField0_ & 0x00000800) != 0);
+        }
+        /**
+         * <code>optional uint64 miss_bytes = 12;</code>
+         * @return The missBytes.
+         */
+        @java.lang.Override
+        public long getMissBytes() {
+          return missBytes_;
+        }
+        /**
+         * <code>optional uint64 miss_bytes = 12;</code>
+         * @param value The missBytes to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMissBytes(long value) {
+          bitField0_ |= 0x00000800;
+          missBytes_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint64 miss_bytes = 12;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMissBytes() {
+          bitField0_ = (bitField0_ & ~0x00000800);
+          missBytes_ = 0L;
           onChanged();
           return this;
         }
@@ -13640,6 +18256,17 @@ public final class SteammessagesClientmetricsSteamclient {
      * @return The hardwareType.
      */
     int getHardwareType();
+
+    /**
+     * <code>optional uint32 files_managed = 21;</code>
+     * @return Whether the filesManaged field is set.
+     */
+    boolean hasFilesManaged();
+    /**
+     * <code>optional uint32 files_managed = 21;</code>
+     * @return The filesManaged.
+     */
+    int getFilesManaged();
   }
   /**
    * Protobuf type {@code CClientMetrics_CloudAppSyncStats_Notification}
@@ -13785,6 +18412,11 @@ public final class SteammessagesClientmetricsSteamclient {
             case 160: {
               bitField0_ |= 0x00080000;
               hardwareType_ = input.readUInt32();
+              break;
+            }
+            case 168: {
+              bitField0_ |= 0x00100000;
+              filesManaged_ = input.readUInt32();
               break;
             }
             default: {
@@ -14200,6 +18832,25 @@ public final class SteammessagesClientmetricsSteamclient {
       return hardwareType_;
     }
 
+    public static final int FILES_MANAGED_FIELD_NUMBER = 21;
+    private int filesManaged_;
+    /**
+     * <code>optional uint32 files_managed = 21;</code>
+     * @return Whether the filesManaged field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilesManaged() {
+      return ((bitField0_ & 0x00100000) != 0);
+    }
+    /**
+     * <code>optional uint32 files_managed = 21;</code>
+     * @return The filesManaged.
+     */
+    @java.lang.Override
+    public int getFilesManaged() {
+      return filesManaged_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14273,6 +18924,9 @@ public final class SteammessagesClientmetricsSteamclient {
       }
       if (((bitField0_ & 0x00080000) != 0)) {
         output.writeUInt32(20, hardwareType_);
+      }
+      if (((bitField0_ & 0x00100000) != 0)) {
+        output.writeUInt32(21, filesManaged_);
       }
       unknownFields.writeTo(output);
     }
@@ -14362,6 +19016,10 @@ public final class SteammessagesClientmetricsSteamclient {
       if (((bitField0_ & 0x00080000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(20, hardwareType_);
+      }
+      if (((bitField0_ & 0x00100000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(21, filesManaged_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14478,6 +19136,11 @@ public final class SteammessagesClientmetricsSteamclient {
         if (getHardwareType()
             != other.getHardwareType()) return false;
       }
+      if (hasFilesManaged() != other.hasFilesManaged()) return false;
+      if (hasFilesManaged()) {
+        if (getFilesManaged()
+            != other.getFilesManaged()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14582,6 +19245,10 @@ public final class SteammessagesClientmetricsSteamclient {
       if (hasHardwareType()) {
         hash = (37 * hash) + HARDWARE_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getHardwareType();
+      }
+      if (hasFilesManaged()) {
+        hash = (37 * hash) + FILES_MANAGED_FIELD_NUMBER;
+        hash = (53 * hash) + getFilesManaged();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -14756,6 +19423,8 @@ public final class SteammessagesClientmetricsSteamclient {
         bitField0_ = (bitField0_ & ~0x00040000);
         hardwareType_ = 0;
         bitField0_ = (bitField0_ & ~0x00080000);
+        filesManaged_ = 0;
+        bitField0_ = (bitField0_ & ~0x00100000);
         return this;
       }
 
@@ -14863,6 +19532,10 @@ public final class SteammessagesClientmetricsSteamclient {
         if (((from_bitField0_ & 0x00080000) != 0)) {
           result.hardwareType_ = hardwareType_;
           to_bitField0_ |= 0x00080000;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.filesManaged_ = filesManaged_;
+          to_bitField0_ |= 0x00100000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -14972,6 +19645,9 @@ public final class SteammessagesClientmetricsSteamclient {
         }
         if (other.hasHardwareType()) {
           setHardwareType(other.getHardwareType());
+        }
+        if (other.hasFilesManaged()) {
+          setFilesManaged(other.getFilesManaged());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15782,6 +20458,45 @@ public final class SteammessagesClientmetricsSteamclient {
         onChanged();
         return this;
       }
+
+      private int filesManaged_ ;
+      /**
+       * <code>optional uint32 files_managed = 21;</code>
+       * @return Whether the filesManaged field is set.
+       */
+      @java.lang.Override
+      public boolean hasFilesManaged() {
+        return ((bitField0_ & 0x00100000) != 0);
+      }
+      /**
+       * <code>optional uint32 files_managed = 21;</code>
+       * @return The filesManaged.
+       */
+      @java.lang.Override
+      public int getFilesManaged() {
+        return filesManaged_;
+      }
+      /**
+       * <code>optional uint32 files_managed = 21;</code>
+       * @param value The filesManaged to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilesManaged(int value) {
+        bitField0_ |= 0x00100000;
+        filesManaged_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 files_managed = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilesManaged() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        filesManaged_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16566,6 +21281,1446 @@ public final class SteammessagesClientmetricsSteamclient {
 
   }
 
+  public interface CClientMetrics_ReportClientArgs_NotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CClientMetrics_ReportClientArgs_Notification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string client_args = 1;</code>
+     * @return A list containing the clientArgs.
+     */
+    java.util.List<java.lang.String>
+        getClientArgsList();
+    /**
+     * <code>repeated string client_args = 1;</code>
+     * @return The count of clientArgs.
+     */
+    int getClientArgsCount();
+    /**
+     * <code>repeated string client_args = 1;</code>
+     * @param index The index of the element to return.
+     * @return The clientArgs at the given index.
+     */
+    java.lang.String getClientArgs(int index);
+    /**
+     * <code>repeated string client_args = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the clientArgs at the given index.
+     */
+    com.google.protobuf.ByteString
+        getClientArgsBytes(int index);
+
+    /**
+     * <code>optional bool gpu_webview_regkey_disabled = 2;</code>
+     * @return Whether the gpuWebviewRegkeyDisabled field is set.
+     */
+    boolean hasGpuWebviewRegkeyDisabled();
+    /**
+     * <code>optional bool gpu_webview_regkey_disabled = 2;</code>
+     * @return The gpuWebviewRegkeyDisabled.
+     */
+    boolean getGpuWebviewRegkeyDisabled();
+
+    /**
+     * <code>optional bool suppress_gpu_chrome = 3;</code>
+     * @return Whether the suppressGpuChrome field is set.
+     */
+    boolean hasSuppressGpuChrome();
+    /**
+     * <code>optional bool suppress_gpu_chrome = 3;</code>
+     * @return The suppressGpuChrome.
+     */
+    boolean getSuppressGpuChrome();
+
+    /**
+     * <code>optional bool browser_not_supported = 4;</code>
+     * @return Whether the browserNotSupported field is set.
+     */
+    boolean hasBrowserNotSupported();
+    /**
+     * <code>optional bool browser_not_supported = 4;</code>
+     * @return The browserNotSupported.
+     */
+    boolean getBrowserNotSupported();
+
+    /**
+     * <code>optional bool hw_accel_video_regkey_disabled = 5;</code>
+     * @return Whether the hwAccelVideoRegkeyDisabled field is set.
+     */
+    boolean hasHwAccelVideoRegkeyDisabled();
+    /**
+     * <code>optional bool hw_accel_video_regkey_disabled = 5;</code>
+     * @return The hwAccelVideoRegkeyDisabled.
+     */
+    boolean getHwAccelVideoRegkeyDisabled();
+
+    /**
+     * <code>optional bool mini_mode_enabled = 6;</code>
+     * @return Whether the miniModeEnabled field is set.
+     */
+    boolean hasMiniModeEnabled();
+    /**
+     * <code>optional bool mini_mode_enabled = 6;</code>
+     * @return The miniModeEnabled.
+     */
+    boolean getMiniModeEnabled();
+
+    /**
+     * <code>optional bool fps_counter_enabled = 7;</code>
+     * @return Whether the fpsCounterEnabled field is set.
+     */
+    boolean hasFpsCounterEnabled();
+    /**
+     * <code>optional bool fps_counter_enabled = 7;</code>
+     * @return The fpsCounterEnabled.
+     */
+    boolean getFpsCounterEnabled();
+
+    /**
+     * <code>optional bool library_low_bandwidth_mode_enabled = 8;</code>
+     * @return Whether the libraryLowBandwidthModeEnabled field is set.
+     */
+    boolean hasLibraryLowBandwidthModeEnabled();
+    /**
+     * <code>optional bool library_low_bandwidth_mode_enabled = 8;</code>
+     * @return The libraryLowBandwidthModeEnabled.
+     */
+    boolean getLibraryLowBandwidthModeEnabled();
+
+    /**
+     * <code>optional bool library_low_perf_mode_enabled = 9;</code>
+     * @return Whether the libraryLowPerfModeEnabled field is set.
+     */
+    boolean hasLibraryLowPerfModeEnabled();
+    /**
+     * <code>optional bool library_low_perf_mode_enabled = 9;</code>
+     * @return The libraryLowPerfModeEnabled.
+     */
+    boolean getLibraryLowPerfModeEnabled();
+  }
+  /**
+   * Protobuf type {@code CClientMetrics_ReportClientArgs_Notification}
+   */
+  public static final class CClientMetrics_ReportClientArgs_Notification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CClientMetrics_ReportClientArgs_Notification)
+      CClientMetrics_ReportClientArgs_NotificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CClientMetrics_ReportClientArgs_Notification.newBuilder() to construct.
+    private CClientMetrics_ReportClientArgs_Notification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CClientMetrics_ReportClientArgs_Notification() {
+      clientArgs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CClientMetrics_ReportClientArgs_Notification();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CClientMetrics_ReportClientArgs_Notification(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                clientArgs_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              clientArgs_.add(bs);
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              gpuWebviewRegkeyDisabled_ = input.readBool();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              suppressGpuChrome_ = input.readBool();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000004;
+              browserNotSupported_ = input.readBool();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000008;
+              hwAccelVideoRegkeyDisabled_ = input.readBool();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000010;
+              miniModeEnabled_ = input.readBool();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000020;
+              fpsCounterEnabled_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000040;
+              libraryLowBandwidthModeEnabled_ = input.readBool();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000080;
+              libraryLowPerfModeEnabled_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          clientArgs_ = clientArgs_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportClientArgs_Notification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportClientArgs_Notification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification.class, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLIENT_ARGS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList clientArgs_;
+    /**
+     * <code>repeated string client_args = 1;</code>
+     * @return A list containing the clientArgs.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getClientArgsList() {
+      return clientArgs_;
+    }
+    /**
+     * <code>repeated string client_args = 1;</code>
+     * @return The count of clientArgs.
+     */
+    public int getClientArgsCount() {
+      return clientArgs_.size();
+    }
+    /**
+     * <code>repeated string client_args = 1;</code>
+     * @param index The index of the element to return.
+     * @return The clientArgs at the given index.
+     */
+    public java.lang.String getClientArgs(int index) {
+      return clientArgs_.get(index);
+    }
+    /**
+     * <code>repeated string client_args = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the clientArgs at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getClientArgsBytes(int index) {
+      return clientArgs_.getByteString(index);
+    }
+
+    public static final int GPU_WEBVIEW_REGKEY_DISABLED_FIELD_NUMBER = 2;
+    private boolean gpuWebviewRegkeyDisabled_;
+    /**
+     * <code>optional bool gpu_webview_regkey_disabled = 2;</code>
+     * @return Whether the gpuWebviewRegkeyDisabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpuWebviewRegkeyDisabled() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool gpu_webview_regkey_disabled = 2;</code>
+     * @return The gpuWebviewRegkeyDisabled.
+     */
+    @java.lang.Override
+    public boolean getGpuWebviewRegkeyDisabled() {
+      return gpuWebviewRegkeyDisabled_;
+    }
+
+    public static final int SUPPRESS_GPU_CHROME_FIELD_NUMBER = 3;
+    private boolean suppressGpuChrome_;
+    /**
+     * <code>optional bool suppress_gpu_chrome = 3;</code>
+     * @return Whether the suppressGpuChrome field is set.
+     */
+    @java.lang.Override
+    public boolean hasSuppressGpuChrome() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool suppress_gpu_chrome = 3;</code>
+     * @return The suppressGpuChrome.
+     */
+    @java.lang.Override
+    public boolean getSuppressGpuChrome() {
+      return suppressGpuChrome_;
+    }
+
+    public static final int BROWSER_NOT_SUPPORTED_FIELD_NUMBER = 4;
+    private boolean browserNotSupported_;
+    /**
+     * <code>optional bool browser_not_supported = 4;</code>
+     * @return Whether the browserNotSupported field is set.
+     */
+    @java.lang.Override
+    public boolean hasBrowserNotSupported() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool browser_not_supported = 4;</code>
+     * @return The browserNotSupported.
+     */
+    @java.lang.Override
+    public boolean getBrowserNotSupported() {
+      return browserNotSupported_;
+    }
+
+    public static final int HW_ACCEL_VIDEO_REGKEY_DISABLED_FIELD_NUMBER = 5;
+    private boolean hwAccelVideoRegkeyDisabled_;
+    /**
+     * <code>optional bool hw_accel_video_regkey_disabled = 5;</code>
+     * @return Whether the hwAccelVideoRegkeyDisabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasHwAccelVideoRegkeyDisabled() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional bool hw_accel_video_regkey_disabled = 5;</code>
+     * @return The hwAccelVideoRegkeyDisabled.
+     */
+    @java.lang.Override
+    public boolean getHwAccelVideoRegkeyDisabled() {
+      return hwAccelVideoRegkeyDisabled_;
+    }
+
+    public static final int MINI_MODE_ENABLED_FIELD_NUMBER = 6;
+    private boolean miniModeEnabled_;
+    /**
+     * <code>optional bool mini_mode_enabled = 6;</code>
+     * @return Whether the miniModeEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasMiniModeEnabled() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional bool mini_mode_enabled = 6;</code>
+     * @return The miniModeEnabled.
+     */
+    @java.lang.Override
+    public boolean getMiniModeEnabled() {
+      return miniModeEnabled_;
+    }
+
+    public static final int FPS_COUNTER_ENABLED_FIELD_NUMBER = 7;
+    private boolean fpsCounterEnabled_;
+    /**
+     * <code>optional bool fps_counter_enabled = 7;</code>
+     * @return Whether the fpsCounterEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasFpsCounterEnabled() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional bool fps_counter_enabled = 7;</code>
+     * @return The fpsCounterEnabled.
+     */
+    @java.lang.Override
+    public boolean getFpsCounterEnabled() {
+      return fpsCounterEnabled_;
+    }
+
+    public static final int LIBRARY_LOW_BANDWIDTH_MODE_ENABLED_FIELD_NUMBER = 8;
+    private boolean libraryLowBandwidthModeEnabled_;
+    /**
+     * <code>optional bool library_low_bandwidth_mode_enabled = 8;</code>
+     * @return Whether the libraryLowBandwidthModeEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasLibraryLowBandwidthModeEnabled() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional bool library_low_bandwidth_mode_enabled = 8;</code>
+     * @return The libraryLowBandwidthModeEnabled.
+     */
+    @java.lang.Override
+    public boolean getLibraryLowBandwidthModeEnabled() {
+      return libraryLowBandwidthModeEnabled_;
+    }
+
+    public static final int LIBRARY_LOW_PERF_MODE_ENABLED_FIELD_NUMBER = 9;
+    private boolean libraryLowPerfModeEnabled_;
+    /**
+     * <code>optional bool library_low_perf_mode_enabled = 9;</code>
+     * @return Whether the libraryLowPerfModeEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasLibraryLowPerfModeEnabled() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional bool library_low_perf_mode_enabled = 9;</code>
+     * @return The libraryLowPerfModeEnabled.
+     */
+    @java.lang.Override
+    public boolean getLibraryLowPerfModeEnabled() {
+      return libraryLowPerfModeEnabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < clientArgs_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clientArgs_.getRaw(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(2, gpuWebviewRegkeyDisabled_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(3, suppressGpuChrome_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(4, browserNotSupported_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBool(5, hwAccelVideoRegkeyDisabled_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeBool(6, miniModeEnabled_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeBool(7, fpsCounterEnabled_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeBool(8, libraryLowBandwidthModeEnabled_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeBool(9, libraryLowPerfModeEnabled_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < clientArgs_.size(); i++) {
+          dataSize += computeStringSizeNoTag(clientArgs_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getClientArgsList().size();
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, gpuWebviewRegkeyDisabled_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, suppressGpuChrome_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, browserNotSupported_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, hwAccelVideoRegkeyDisabled_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, miniModeEnabled_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, fpsCounterEnabled_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, libraryLowBandwidthModeEnabled_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, libraryLowPerfModeEnabled_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification)) {
+        return super.equals(obj);
+      }
+      SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification other = (SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification) obj;
+
+      if (!getClientArgsList()
+          .equals(other.getClientArgsList())) return false;
+      if (hasGpuWebviewRegkeyDisabled() != other.hasGpuWebviewRegkeyDisabled()) return false;
+      if (hasGpuWebviewRegkeyDisabled()) {
+        if (getGpuWebviewRegkeyDisabled()
+            != other.getGpuWebviewRegkeyDisabled()) return false;
+      }
+      if (hasSuppressGpuChrome() != other.hasSuppressGpuChrome()) return false;
+      if (hasSuppressGpuChrome()) {
+        if (getSuppressGpuChrome()
+            != other.getSuppressGpuChrome()) return false;
+      }
+      if (hasBrowserNotSupported() != other.hasBrowserNotSupported()) return false;
+      if (hasBrowserNotSupported()) {
+        if (getBrowserNotSupported()
+            != other.getBrowserNotSupported()) return false;
+      }
+      if (hasHwAccelVideoRegkeyDisabled() != other.hasHwAccelVideoRegkeyDisabled()) return false;
+      if (hasHwAccelVideoRegkeyDisabled()) {
+        if (getHwAccelVideoRegkeyDisabled()
+            != other.getHwAccelVideoRegkeyDisabled()) return false;
+      }
+      if (hasMiniModeEnabled() != other.hasMiniModeEnabled()) return false;
+      if (hasMiniModeEnabled()) {
+        if (getMiniModeEnabled()
+            != other.getMiniModeEnabled()) return false;
+      }
+      if (hasFpsCounterEnabled() != other.hasFpsCounterEnabled()) return false;
+      if (hasFpsCounterEnabled()) {
+        if (getFpsCounterEnabled()
+            != other.getFpsCounterEnabled()) return false;
+      }
+      if (hasLibraryLowBandwidthModeEnabled() != other.hasLibraryLowBandwidthModeEnabled()) return false;
+      if (hasLibraryLowBandwidthModeEnabled()) {
+        if (getLibraryLowBandwidthModeEnabled()
+            != other.getLibraryLowBandwidthModeEnabled()) return false;
+      }
+      if (hasLibraryLowPerfModeEnabled() != other.hasLibraryLowPerfModeEnabled()) return false;
+      if (hasLibraryLowPerfModeEnabled()) {
+        if (getLibraryLowPerfModeEnabled()
+            != other.getLibraryLowPerfModeEnabled()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getClientArgsCount() > 0) {
+        hash = (37 * hash) + CLIENT_ARGS_FIELD_NUMBER;
+        hash = (53 * hash) + getClientArgsList().hashCode();
+      }
+      if (hasGpuWebviewRegkeyDisabled()) {
+        hash = (37 * hash) + GPU_WEBVIEW_REGKEY_DISABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getGpuWebviewRegkeyDisabled());
+      }
+      if (hasSuppressGpuChrome()) {
+        hash = (37 * hash) + SUPPRESS_GPU_CHROME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSuppressGpuChrome());
+      }
+      if (hasBrowserNotSupported()) {
+        hash = (37 * hash) + BROWSER_NOT_SUPPORTED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getBrowserNotSupported());
+      }
+      if (hasHwAccelVideoRegkeyDisabled()) {
+        hash = (37 * hash) + HW_ACCEL_VIDEO_REGKEY_DISABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHwAccelVideoRegkeyDisabled());
+      }
+      if (hasMiniModeEnabled()) {
+        hash = (37 * hash) + MINI_MODE_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getMiniModeEnabled());
+      }
+      if (hasFpsCounterEnabled()) {
+        hash = (37 * hash) + FPS_COUNTER_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getFpsCounterEnabled());
+      }
+      if (hasLibraryLowBandwidthModeEnabled()) {
+        hash = (37 * hash) + LIBRARY_LOW_BANDWIDTH_MODE_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getLibraryLowBandwidthModeEnabled());
+      }
+      if (hasLibraryLowPerfModeEnabled()) {
+        hash = (37 * hash) + LIBRARY_LOW_PERF_MODE_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getLibraryLowPerfModeEnabled());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CClientMetrics_ReportClientArgs_Notification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CClientMetrics_ReportClientArgs_Notification)
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_NotificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportClientArgs_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportClientArgs_Notification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification.class, SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification.Builder.class);
+      }
+
+      // Construct using SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clientArgs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gpuWebviewRegkeyDisabled_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        suppressGpuChrome_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        browserNotSupported_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        hwAccelVideoRegkeyDisabled_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        miniModeEnabled_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        fpsCounterEnabled_ = false;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        libraryLowBandwidthModeEnabled_ = false;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        libraryLowPerfModeEnabled_ = false;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesClientmetricsSteamclient.internal_static_CClientMetrics_ReportClientArgs_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification getDefaultInstanceForType() {
+        return SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification build() {
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification buildPartial() {
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification result = new SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          clientArgs_ = clientArgs_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.clientArgs_ = clientArgs_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.gpuWebviewRegkeyDisabled_ = gpuWebviewRegkeyDisabled_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.suppressGpuChrome_ = suppressGpuChrome_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.browserNotSupported_ = browserNotSupported_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.hwAccelVideoRegkeyDisabled_ = hwAccelVideoRegkeyDisabled_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.miniModeEnabled_ = miniModeEnabled_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.fpsCounterEnabled_ = fpsCounterEnabled_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.libraryLowBandwidthModeEnabled_ = libraryLowBandwidthModeEnabled_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.libraryLowPerfModeEnabled_ = libraryLowPerfModeEnabled_;
+          to_bitField0_ |= 0x00000080;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification) {
+          return mergeFrom((SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification other) {
+        if (other == SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification.getDefaultInstance()) return this;
+        if (!other.clientArgs_.isEmpty()) {
+          if (clientArgs_.isEmpty()) {
+            clientArgs_ = other.clientArgs_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureClientArgsIsMutable();
+            clientArgs_.addAll(other.clientArgs_);
+          }
+          onChanged();
+        }
+        if (other.hasGpuWebviewRegkeyDisabled()) {
+          setGpuWebviewRegkeyDisabled(other.getGpuWebviewRegkeyDisabled());
+        }
+        if (other.hasSuppressGpuChrome()) {
+          setSuppressGpuChrome(other.getSuppressGpuChrome());
+        }
+        if (other.hasBrowserNotSupported()) {
+          setBrowserNotSupported(other.getBrowserNotSupported());
+        }
+        if (other.hasHwAccelVideoRegkeyDisabled()) {
+          setHwAccelVideoRegkeyDisabled(other.getHwAccelVideoRegkeyDisabled());
+        }
+        if (other.hasMiniModeEnabled()) {
+          setMiniModeEnabled(other.getMiniModeEnabled());
+        }
+        if (other.hasFpsCounterEnabled()) {
+          setFpsCounterEnabled(other.getFpsCounterEnabled());
+        }
+        if (other.hasLibraryLowBandwidthModeEnabled()) {
+          setLibraryLowBandwidthModeEnabled(other.getLibraryLowBandwidthModeEnabled());
+        }
+        if (other.hasLibraryLowPerfModeEnabled()) {
+          setLibraryLowPerfModeEnabled(other.getLibraryLowPerfModeEnabled());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList clientArgs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureClientArgsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          clientArgs_ = new com.google.protobuf.LazyStringArrayList(clientArgs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string client_args = 1;</code>
+       * @return A list containing the clientArgs.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getClientArgsList() {
+        return clientArgs_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string client_args = 1;</code>
+       * @return The count of clientArgs.
+       */
+      public int getClientArgsCount() {
+        return clientArgs_.size();
+      }
+      /**
+       * <code>repeated string client_args = 1;</code>
+       * @param index The index of the element to return.
+       * @return The clientArgs at the given index.
+       */
+      public java.lang.String getClientArgs(int index) {
+        return clientArgs_.get(index);
+      }
+      /**
+       * <code>repeated string client_args = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the clientArgs at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getClientArgsBytes(int index) {
+        return clientArgs_.getByteString(index);
+      }
+      /**
+       * <code>repeated string client_args = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The clientArgs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientArgs(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureClientArgsIsMutable();
+        clientArgs_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string client_args = 1;</code>
+       * @param value The clientArgs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addClientArgs(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureClientArgsIsMutable();
+        clientArgs_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string client_args = 1;</code>
+       * @param values The clientArgs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllClientArgs(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureClientArgsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, clientArgs_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string client_args = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientArgs() {
+        clientArgs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string client_args = 1;</code>
+       * @param value The bytes of the clientArgs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addClientArgsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureClientArgsIsMutable();
+        clientArgs_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean gpuWebviewRegkeyDisabled_ ;
+      /**
+       * <code>optional bool gpu_webview_regkey_disabled = 2;</code>
+       * @return Whether the gpuWebviewRegkeyDisabled field is set.
+       */
+      @java.lang.Override
+      public boolean hasGpuWebviewRegkeyDisabled() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool gpu_webview_regkey_disabled = 2;</code>
+       * @return The gpuWebviewRegkeyDisabled.
+       */
+      @java.lang.Override
+      public boolean getGpuWebviewRegkeyDisabled() {
+        return gpuWebviewRegkeyDisabled_;
+      }
+      /**
+       * <code>optional bool gpu_webview_regkey_disabled = 2;</code>
+       * @param value The gpuWebviewRegkeyDisabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGpuWebviewRegkeyDisabled(boolean value) {
+        bitField0_ |= 0x00000002;
+        gpuWebviewRegkeyDisabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool gpu_webview_regkey_disabled = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGpuWebviewRegkeyDisabled() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        gpuWebviewRegkeyDisabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean suppressGpuChrome_ ;
+      /**
+       * <code>optional bool suppress_gpu_chrome = 3;</code>
+       * @return Whether the suppressGpuChrome field is set.
+       */
+      @java.lang.Override
+      public boolean hasSuppressGpuChrome() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool suppress_gpu_chrome = 3;</code>
+       * @return The suppressGpuChrome.
+       */
+      @java.lang.Override
+      public boolean getSuppressGpuChrome() {
+        return suppressGpuChrome_;
+      }
+      /**
+       * <code>optional bool suppress_gpu_chrome = 3;</code>
+       * @param value The suppressGpuChrome to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuppressGpuChrome(boolean value) {
+        bitField0_ |= 0x00000004;
+        suppressGpuChrome_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool suppress_gpu_chrome = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuppressGpuChrome() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        suppressGpuChrome_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean browserNotSupported_ ;
+      /**
+       * <code>optional bool browser_not_supported = 4;</code>
+       * @return Whether the browserNotSupported field is set.
+       */
+      @java.lang.Override
+      public boolean hasBrowserNotSupported() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool browser_not_supported = 4;</code>
+       * @return The browserNotSupported.
+       */
+      @java.lang.Override
+      public boolean getBrowserNotSupported() {
+        return browserNotSupported_;
+      }
+      /**
+       * <code>optional bool browser_not_supported = 4;</code>
+       * @param value The browserNotSupported to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrowserNotSupported(boolean value) {
+        bitField0_ |= 0x00000008;
+        browserNotSupported_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool browser_not_supported = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBrowserNotSupported() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        browserNotSupported_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean hwAccelVideoRegkeyDisabled_ ;
+      /**
+       * <code>optional bool hw_accel_video_regkey_disabled = 5;</code>
+       * @return Whether the hwAccelVideoRegkeyDisabled field is set.
+       */
+      @java.lang.Override
+      public boolean hasHwAccelVideoRegkeyDisabled() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional bool hw_accel_video_regkey_disabled = 5;</code>
+       * @return The hwAccelVideoRegkeyDisabled.
+       */
+      @java.lang.Override
+      public boolean getHwAccelVideoRegkeyDisabled() {
+        return hwAccelVideoRegkeyDisabled_;
+      }
+      /**
+       * <code>optional bool hw_accel_video_regkey_disabled = 5;</code>
+       * @param value The hwAccelVideoRegkeyDisabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHwAccelVideoRegkeyDisabled(boolean value) {
+        bitField0_ |= 0x00000010;
+        hwAccelVideoRegkeyDisabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool hw_accel_video_regkey_disabled = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHwAccelVideoRegkeyDisabled() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        hwAccelVideoRegkeyDisabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean miniModeEnabled_ ;
+      /**
+       * <code>optional bool mini_mode_enabled = 6;</code>
+       * @return Whether the miniModeEnabled field is set.
+       */
+      @java.lang.Override
+      public boolean hasMiniModeEnabled() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional bool mini_mode_enabled = 6;</code>
+       * @return The miniModeEnabled.
+       */
+      @java.lang.Override
+      public boolean getMiniModeEnabled() {
+        return miniModeEnabled_;
+      }
+      /**
+       * <code>optional bool mini_mode_enabled = 6;</code>
+       * @param value The miniModeEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMiniModeEnabled(boolean value) {
+        bitField0_ |= 0x00000020;
+        miniModeEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool mini_mode_enabled = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMiniModeEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        miniModeEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean fpsCounterEnabled_ ;
+      /**
+       * <code>optional bool fps_counter_enabled = 7;</code>
+       * @return Whether the fpsCounterEnabled field is set.
+       */
+      @java.lang.Override
+      public boolean hasFpsCounterEnabled() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional bool fps_counter_enabled = 7;</code>
+       * @return The fpsCounterEnabled.
+       */
+      @java.lang.Override
+      public boolean getFpsCounterEnabled() {
+        return fpsCounterEnabled_;
+      }
+      /**
+       * <code>optional bool fps_counter_enabled = 7;</code>
+       * @param value The fpsCounterEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFpsCounterEnabled(boolean value) {
+        bitField0_ |= 0x00000040;
+        fpsCounterEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool fps_counter_enabled = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFpsCounterEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        fpsCounterEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean libraryLowBandwidthModeEnabled_ ;
+      /**
+       * <code>optional bool library_low_bandwidth_mode_enabled = 8;</code>
+       * @return Whether the libraryLowBandwidthModeEnabled field is set.
+       */
+      @java.lang.Override
+      public boolean hasLibraryLowBandwidthModeEnabled() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional bool library_low_bandwidth_mode_enabled = 8;</code>
+       * @return The libraryLowBandwidthModeEnabled.
+       */
+      @java.lang.Override
+      public boolean getLibraryLowBandwidthModeEnabled() {
+        return libraryLowBandwidthModeEnabled_;
+      }
+      /**
+       * <code>optional bool library_low_bandwidth_mode_enabled = 8;</code>
+       * @param value The libraryLowBandwidthModeEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLibraryLowBandwidthModeEnabled(boolean value) {
+        bitField0_ |= 0x00000080;
+        libraryLowBandwidthModeEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool library_low_bandwidth_mode_enabled = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLibraryLowBandwidthModeEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        libraryLowBandwidthModeEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean libraryLowPerfModeEnabled_ ;
+      /**
+       * <code>optional bool library_low_perf_mode_enabled = 9;</code>
+       * @return Whether the libraryLowPerfModeEnabled field is set.
+       */
+      @java.lang.Override
+      public boolean hasLibraryLowPerfModeEnabled() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional bool library_low_perf_mode_enabled = 9;</code>
+       * @return The libraryLowPerfModeEnabled.
+       */
+      @java.lang.Override
+      public boolean getLibraryLowPerfModeEnabled() {
+        return libraryLowPerfModeEnabled_;
+      }
+      /**
+       * <code>optional bool library_low_perf_mode_enabled = 9;</code>
+       * @param value The libraryLowPerfModeEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLibraryLowPerfModeEnabled(boolean value) {
+        bitField0_ |= 0x00000100;
+        libraryLowPerfModeEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool library_low_perf_mode_enabled = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLibraryLowPerfModeEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        libraryLowPerfModeEnabled_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CClientMetrics_ReportClientArgs_Notification)
+    }
+
+    // @@protoc_insertion_point(class_scope:CClientMetrics_ReportClientArgs_Notification)
+    private static final SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification();
+    }
+
+    public static SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CClientMetrics_ReportClientArgs_Notification>
+        PARSER = new com.google.protobuf.AbstractParser<CClientMetrics_ReportClientArgs_Notification>() {
+      @java.lang.Override
+      public CClientMetrics_ReportClientArgs_Notification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CClientMetrics_ReportClientArgs_Notification(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CClientMetrics_ReportClientArgs_Notification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CClientMetrics_ReportClientArgs_Notification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesClientmetricsSteamclient.CClientMetrics_ReportClientArgs_Notification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CClientMetrics_AppInterfaceCreation_descriptor;
   private static final 
@@ -16601,6 +22756,26 @@ public final class SteammessagesClientmetricsSteamclient {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CClientMetrics_SteamPipeWorkStats_Notification_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CClientMetrics_ReportReactUsage_Notification_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CClientMetrics_ReportReactUsage_Notification_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CClientMetrics_ReportReactUsage_Notification_RouteData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CClientMetrics_ReportReactUsage_Notification_RouteData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CClientMetrics_ReportReactUsage_Notification_ComponentData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CClientMetrics_ReportReactUsage_Notification_ComponentData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CClientMetrics_ReportReactUsage_Notification_ActionData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CClientMetrics_ReportReactUsage_Notification_ActionData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CClientMetrics_ReportClientError_Notification_descriptor;
   private static final 
@@ -16641,6 +22816,11 @@ public final class SteammessagesClientmetricsSteamclient {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CClientMetrics_ContentDownloadResponse_Counts_Notification_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CClientMetrics_ReportClientArgs_Notification_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CClientMetrics_ReportClientArgs_Notification_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -16651,113 +22831,142 @@ public final class SteammessagesClientmetricsSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n3steam/steammessages_clientmetrics.stea" +
-      "mclient.proto\0322steam/steammessages_unifi" +
-      "ed_base.steamclient.proto\032\031steam/clientm" +
-      "etrics.proto\"\\\n#CClientMetrics_AppInterf" +
-      "aceCreation\022\023\n\013raw_version\030\001 \001(\t\022 \n\030requ" +
-      "ested_interface_type\030\002 \001(\t\"j\n\'CClientMet" +
-      "rics_AppInterfaceMethodCounts\022\026\n\016interfa" +
-      "ce_name\030\001 \001(\t\022\023\n\013method_name\030\002 \001(\t\022\022\n\nca" +
-      "ll_count\030\003 \001(\r\"\344\001\n-CClientMetrics_AppInt" +
-      "erfaceStats_Notification\022\017\n\007game_id\030\001 \001(" +
-      "\004\022@\n\022interfaces_created\030\002 \003(\0132$.CClientM" +
-      "etrics_AppInterfaceCreation\022@\n\016methods_c" +
-      "alled\030\003 \003(\0132(.CClientMetrics_AppInterfac" +
-      "eMethodCounts\022\036\n\026session_length_seconds\030" +
-      "\004 \001(\r\"]\n&CClientMetrics_IPv6Connectivity" +
-      "_Result\022\027\n\017protocol_tested\030\001 \001(\r\022\032\n\022conn" +
-      "ectivity_state\030\002 \001(\r\"\230\001\n,CClientMetrics_" +
-      "IPv6Connectivity_Notification\022\017\n\007cell_id" +
-      "\030\001 \001(\r\0228\n\007results\030\002 \003(\0132\'.CClientMetrics" +
-      "_IPv6Connectivity_Result\022\035\n\025private_ip_i" +
-      "s_rfc6598\030\003 \001(\010\"\373\001\n+CClientMetrics_Steam" +
-      "PipeWorkStats_Operation\022I\n\004type\030\001 \001(\0162\030." +
-      "ESteamPipeOperationType:!k_ESteamPipeOpe" +
-      "rationType_Invalid\022\017\n\007num_ops\030\002 \001(\r\022\021\n\tn" +
-      "um_bytes\030\003 \001(\004\022\024\n\014busy_time_ms\030\004 \001(\004\022\024\n\014" +
-      "idle_time_ms\030\005 \001(\004\022\027\n\017sum_run_time_ms\030\006 " +
-      "\001(\004\022\030\n\020sum_wait_time_ms\030\007 \001(\004\"\336\001\n.CClien" +
-      "tMetrics_SteamPipeWorkStats_Notification" +
-      "\022\r\n\005appid\030\001 \001(\r\022\017\n\007depotid\030\002 \001(\r\022J\n\twork" +
-      "_type\030\003 \001(\0162\023.ESteamPipeWorkType:\"k_ESte" +
-      "amPipeClientWorkType_Invalid\022@\n\noperatio" +
-      "ns\030\004 \003(\0132,.CClientMetrics_SteamPipeWorkS" +
-      "tats_Operation\"\324\001\n-CClientMetrics_Report" +
-      "ClientError_Notification\022\017\n\007product\030\001 \001(" +
-      "\t\022\017\n\007version\030\002 \001(\t\022D\n\006errors\030\003 \003(\01324.CCl" +
-      "ientMetrics_ReportClientError_Notificati" +
-      "on.Error\032;\n\005Error\022\022\n\nidentifier\030\001 \001(\t\022\017\n" +
-      "\007message\030\002 \001(\t\022\r\n\005count\030\003 \001(\r\"g\n+CClient" +
-      "Metrics_ClientBootstrap_Notification\0228\n\007" +
-      "summary\030\001 \001(\0132\'.CClientMetrics_ClientBoo" +
-      "tstrap_Summary\"\254\002\n)CClientMetrics_Downlo" +
-      "adRates_Notification\022\017\n\007cell_id\030\001 \001(\r\022C\n" +
-      "\005stats\030\002 \003(\01324.CClientMetrics_DownloadRa" +
-      "tes_Notification.StatsInfo\022\027\n\017throttling" +
-      "_kbps\030\003 \001(\r\032\217\001\n\tStatsInfo\022\023\n\013source_type" +
-      "\030\001 \001(\r\022\021\n\tsource_id\030\002 \001(\r\022\r\n\005bytes\030\003 \001(\004" +
-      "\022\021\n\thost_name\030\004 \001(\t\022\024\n\014microseconds\030\005 \001(" +
-      "\004\022\021\n\tused_ipv6\030\006 \001(\010\022\017\n\007proxied\030\007 \001(\010\"\240\002" +
-      "\n-CClientMetrics_ContentValidation_Notif" +
-      "ication\022\031\n\021validation_result\030\001 \001(\005\022\016\n\006ap" +
-      "p_id\030\002 \001(\r\022\024\n\014staged_files\030\003 \001(\010\022\026\n\016user" +
-      "_initiated\030\004 \001(\010\022\021\n\tearly_out\030\005 \001(\010\022\026\n\016c" +
-      "hunks_scanned\030\006 \001(\r\022\026\n\016chunks_corrupt\030\007 " +
-      "\001(\r\022\025\n\rbytes_scanned\030\010 \001(\004\022\033\n\023chunk_byte" +
-      "s_corrupt\030\t \001(\004\022\037\n\027total_file_size_corru" +
-      "pt\030\n \001(\004\"\311\004\n-CClientMetrics_CloudAppSync" +
-      "Stats_Notification\022\016\n\006app_id\030\001 \001(\r\022\025\n\rpl" +
-      "atform_type\030\002 \001(\r\022\017\n\007preload\030\003 \001(\010\022\033\n\023bl" +
-      "ocking_app_launch\030\004 \001(\010\022\026\n\016files_uploade" +
-      "d\030\005 \001(\r\022\030\n\020files_downloaded\030\006 \001(\r\022\025\n\rfil" +
-      "es_deleted\030\007 \001(\r\022\026\n\016bytes_uploaded\030\010 \001(\004" +
-      "\022\030\n\020bytes_downloaded\030\t \001(\004\022\026\n\016microsec_t" +
-      "otal\030\n \001(\004\022\034\n\024microsec_init_caches\030\013 \001(\004" +
-      "\022\037\n\027microsec_validate_state\030\014 \001(\004\022\032\n\022mic" +
-      "rosec_ac_launch\030\r \001(\004\022#\n\033microsec_ac_pre" +
-      "p_user_files\030\016 \001(\004\022\030\n\020microsec_ac_exit\030\017" +
-      " \001(\004\022 \n\030microsec_build_sync_list\030\020 \001(\004\022\035" +
-      "\n\025microsec_delete_files\030\021 \001(\004\022\037\n\027microse" +
-      "c_download_files\030\022 \001(\004\022\035\n\025microsec_uploa" +
-      "d_files\030\023 \001(\004\022\025\n\rhardware_type\030\024 \001(\r\"\212\001\n" +
-      ":CClientMetrics_ContentDownloadResponse_" +
-      "Counts_Notification\022\017\n\007cell_id\030\001 \001(\r\022;\n\004" +
-      "data\030\002 \001(\0132-.CClientMetrics_ContentDownl" +
-      "oadResponse_Hosts*q\n\022ESteamPipeWorkType\022" +
-      "&\n\"k_ESteamPipeClientWorkType_Invalid\020\000\022" +
-      "3\n/k_ESteamPipeClientWorkType_StageFromC" +
-      "hunkStores\020\001*\273\001\n\027ESteamPipeOperationType" +
-      "\022%\n!k_ESteamPipeOperationType_Invalid\020\000\022" +
-      "(\n$k_ESteamPipeOperationType_DecryptCPU\020" +
-      "\001\022&\n\"k_ESteamPipeOperationType_DiskRead\020" +
-      "\002\022\'\n#k_ESteamPipeOperationType_DiskWrite" +
-      "\020\0032\356\006\n\rClientMetrics\022\\\n\035ClientAppInterfa" +
-      "ceStatsReport\022..CClientMetrics_AppInterf" +
-      "aceStats_Notification\032\013.NoResponse\022Z\n\034Cl" +
-      "ientIPv6ConnectivityReport\022-.CClientMetr" +
-      "ics_IPv6Connectivity_Notification\032\013.NoRe" +
-      "sponse\022X\n\030SteamPipeWorkStatsReport\022/.CCl" +
-      "ientMetrics_SteamPipeWorkStats_Notificat" +
-      "ion\032\013.NoResponse\022P\n\021ReportClientError\022.." +
-      "CClientMetrics_ReportClientError_Notific" +
-      "ation\032\013.NoResponse\022R\n\025ClientBootstrapRep" +
-      "ort\022,.CClientMetrics_ClientBootstrap_Not" +
-      "ification\032\013.NoResponse\022T\n\031ClientDownload" +
-      "RatesReport\022*.CClientMetrics_DownloadRat" +
-      "es_Notification\032\013.NoResponse\022\\\n\035ClientCo" +
-      "ntentValidationReport\022..CClientMetrics_C" +
-      "ontentValidation_Notification\032\013.NoRespon" +
-      "se\022V\n\027ClientCloudAppSyncStats\022..CClientM" +
-      "etrics_CloudAppSyncStats_Notification\032\013." +
-      "NoResponse\022l\n ClientDownloadResponseCode" +
-      "Counts\022;.CClientMetrics_ContentDownloadR" +
-      "esponse_Counts_Notification\032\013.NoResponse" +
-      "\032)\202\265\030%A service for client-reported metr" +
-      "icsB\003\200\001\001"
+      "mclient.proto\032\036steam/steammessages_base." +
+      "proto\0322steam/steammessages_unified_base." +
+      "steamclient.proto\032\031steam/clientmetrics.p" +
+      "roto\"\\\n#CClientMetrics_AppInterfaceCreat" +
+      "ion\022\023\n\013raw_version\030\001 \001(\t\022 \n\030requested_in" +
+      "terface_type\030\002 \001(\t\"j\n\'CClientMetrics_App" +
+      "InterfaceMethodCounts\022\026\n\016interface_name\030" +
+      "\001 \001(\t\022\023\n\013method_name\030\002 \001(\t\022\022\n\ncall_count" +
+      "\030\003 \001(\r\"\344\001\n-CClientMetrics_AppInterfaceSt" +
+      "ats_Notification\022\017\n\007game_id\030\001 \001(\004\022@\n\022int" +
+      "erfaces_created\030\002 \003(\0132$.CClientMetrics_A" +
+      "ppInterfaceCreation\022@\n\016methods_called\030\003 " +
+      "\003(\0132(.CClientMetrics_AppInterfaceMethodC" +
+      "ounts\022\036\n\026session_length_seconds\030\004 \001(\r\"]\n" +
+      "&CClientMetrics_IPv6Connectivity_Result\022" +
+      "\027\n\017protocol_tested\030\001 \001(\r\022\032\n\022connectivity" +
+      "_state\030\002 \001(\r\"\230\001\n,CClientMetrics_IPv6Conn" +
+      "ectivity_Notification\022\017\n\007cell_id\030\001 \001(\r\0228" +
+      "\n\007results\030\002 \003(\0132\'.CClientMetrics_IPv6Con" +
+      "nectivity_Result\022\035\n\025private_ip_is_rfc659" +
+      "8\030\003 \001(\010\"\373\001\n+CClientMetrics_SteamPipeWork" +
+      "Stats_Operation\022I\n\004type\030\001 \001(\0162\030.ESteamPi" +
+      "peOperationType:!k_ESteamPipeOperationTy" +
+      "pe_Invalid\022\017\n\007num_ops\030\002 \001(\r\022\021\n\tnum_bytes" +
+      "\030\003 \001(\004\022\024\n\014busy_time_ms\030\004 \001(\004\022\024\n\014idle_tim" +
+      "e_ms\030\005 \001(\004\022\027\n\017sum_run_time_ms\030\006 \001(\004\022\030\n\020s" +
+      "um_wait_time_ms\030\007 \001(\004\"\365\001\n.CClientMetrics" +
+      "_SteamPipeWorkStats_Notification\022\r\n\005appi" +
+      "d\030\001 \001(\r\022\017\n\007depotid\030\002 \001(\r\022J\n\twork_type\030\003 " +
+      "\001(\0162\023.ESteamPipeWorkType:\"k_ESteamPipeCl" +
+      "ientWorkType_Invalid\022@\n\noperations\030\004 \003(\013" +
+      "2,.CClientMetrics_SteamPipeWorkStats_Ope" +
+      "ration\022\025\n\rhardware_type\030\005 \001(\r\"\300\003\n,CClien" +
+      "tMetrics_ReportReactUsage_Notification\022\017" +
+      "\n\007product\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\022G\n\006rout" +
+      "es\030\003 \003(\01327.CClientMetrics_ReportReactUsa" +
+      "ge_Notification.RouteData\022O\n\ncomponents\030" +
+      "\004 \003(\0132;.CClientMetrics_ReportReactUsage_" +
+      "Notification.ComponentData\022I\n\007actions\030\005 " +
+      "\003(\01328.CClientMetrics_ReportReactUsage_No" +
+      "tification.ActionData\032)\n\tRouteData\022\r\n\005ro" +
+      "ute\030\001 \001(\t\022\r\n\005count\030\002 \001(\r\0321\n\rComponentDat" +
+      "a\022\021\n\tcomponent\030\001 \001(\t\022\r\n\005count\030\002 \001(\r\032+\n\nA" +
+      "ctionData\022\016\n\006action\030\001 \001(\t\022\r\n\005count\030\002 \001(\r" +
+      "\"\324\001\n-CClientMetrics_ReportClientError_No" +
+      "tification\022\017\n\007product\030\001 \001(\t\022\017\n\007version\030\002" +
+      " \001(\t\022D\n\006errors\030\003 \003(\01324.CClientMetrics_Re" +
+      "portClientError_Notification.Error\032;\n\005Er" +
+      "ror\022\022\n\nidentifier\030\001 \001(\t\022\017\n\007message\030\002 \001(\t" +
+      "\022\r\n\005count\030\003 \001(\r\"g\n+CClientMetrics_Client" +
+      "Bootstrap_Notification\0228\n\007summary\030\001 \001(\0132" +
+      "\'.CClientMetrics_ClientBootstrap_Summary" +
+      "\"\221\003\n)CClientMetrics_DownloadRates_Notifi" +
+      "cation\022\017\n\007cell_id\030\001 \001(\r\022C\n\005stats\030\002 \003(\01324" +
+      ".CClientMetrics_DownloadRates_Notificati" +
+      "on.StatsInfo\022\027\n\017throttling_kbps\030\003 \001(\r\032\364\001" +
+      "\n\tStatsInfo\022\023\n\013source_type\030\001 \001(\r\022\021\n\tsour" +
+      "ce_id\030\002 \001(\r\022\r\n\005bytes\030\003 \001(\004\022\021\n\thost_name\030" +
+      "\004 \001(\t\022\024\n\014microseconds\030\005 \001(\004\022\021\n\tused_ipv6" +
+      "\030\006 \001(\010\022\017\n\007proxied\030\007 \001(\010\022\022\n\nused_http2\030\010 " +
+      "\001(\010\022\022\n\ncache_hits\030\t \001(\r\022\024\n\014cache_misses\030" +
+      "\n \001(\r\022\021\n\thit_bytes\030\013 \001(\004\022\022\n\nmiss_bytes\030\014" +
+      " \001(\004\"\240\002\n-CClientMetrics_ContentValidatio" +
+      "n_Notification\022\031\n\021validation_result\030\001 \001(" +
+      "\005\022\016\n\006app_id\030\002 \001(\r\022\024\n\014staged_files\030\003 \001(\010\022" +
+      "\026\n\016user_initiated\030\004 \001(\010\022\021\n\tearly_out\030\005 \001" +
+      "(\010\022\026\n\016chunks_scanned\030\006 \001(\r\022\026\n\016chunks_cor" +
+      "rupt\030\007 \001(\r\022\025\n\rbytes_scanned\030\010 \001(\004\022\033\n\023chu" +
+      "nk_bytes_corrupt\030\t \001(\004\022\037\n\027total_file_siz" +
+      "e_corrupt\030\n \001(\004\"\340\004\n-CClientMetrics_Cloud" +
+      "AppSyncStats_Notification\022\016\n\006app_id\030\001 \001(" +
+      "\r\022\025\n\rplatform_type\030\002 \001(\r\022\017\n\007preload\030\003 \001(" +
+      "\010\022\033\n\023blocking_app_launch\030\004 \001(\010\022\026\n\016files_" +
+      "uploaded\030\005 \001(\r\022\030\n\020files_downloaded\030\006 \001(\r" +
+      "\022\025\n\rfiles_deleted\030\007 \001(\r\022\026\n\016bytes_uploade" +
+      "d\030\010 \001(\004\022\030\n\020bytes_downloaded\030\t \001(\004\022\026\n\016mic" +
+      "rosec_total\030\n \001(\004\022\034\n\024microsec_init_cache" +
+      "s\030\013 \001(\004\022\037\n\027microsec_validate_state\030\014 \001(\004" +
+      "\022\032\n\022microsec_ac_launch\030\r \001(\004\022#\n\033microsec" +
+      "_ac_prep_user_files\030\016 \001(\004\022\030\n\020microsec_ac" +
+      "_exit\030\017 \001(\004\022 \n\030microsec_build_sync_list\030" +
+      "\020 \001(\004\022\035\n\025microsec_delete_files\030\021 \001(\004\022\037\n\027" +
+      "microsec_download_files\030\022 \001(\004\022\035\n\025microse" +
+      "c_upload_files\030\023 \001(\004\022\025\n\rhardware_type\030\024 " +
+      "\001(\r\022\025\n\rfiles_managed\030\025 \001(\r\"\212\001\n:CClientMe" +
+      "trics_ContentDownloadResponse_Counts_Not" +
+      "ification\022\017\n\007cell_id\030\001 \001(\r\022;\n\004data\030\002 \001(\013" +
+      "2-.CClientMetrics_ContentDownloadRespons" +
+      "e_Hosts\"\327\002\n,CClientMetrics_ReportClientA" +
+      "rgs_Notification\022\023\n\013client_args\030\001 \003(\t\022#\n" +
+      "\033gpu_webview_regkey_disabled\030\002 \001(\010\022\033\n\023su" +
+      "ppress_gpu_chrome\030\003 \001(\010\022\035\n\025browser_not_s" +
+      "upported\030\004 \001(\010\022&\n\036hw_accel_video_regkey_" +
+      "disabled\030\005 \001(\010\022\031\n\021mini_mode_enabled\030\006 \001(" +
+      "\010\022\033\n\023fps_counter_enabled\030\007 \001(\010\022*\n\"librar" +
+      "y_low_bandwidth_mode_enabled\030\010 \001(\010\022%\n\035li" +
+      "brary_low_perf_mode_enabled\030\t \001(\010*q\n\022ESt" +
+      "eamPipeWorkType\022&\n\"k_ESteamPipeClientWor" +
+      "kType_Invalid\020\000\0223\n/k_ESteamPipeClientWor" +
+      "kType_StageFromChunkStores\020\001*\273\001\n\027ESteamP" +
+      "ipeOperationType\022%\n!k_ESteamPipeOperatio" +
+      "nType_Invalid\020\000\022(\n$k_ESteamPipeOperation" +
+      "Type_DecryptCPU\020\001\022&\n\"k_ESteamPipeOperati" +
+      "onType_DiskRead\020\002\022\'\n#k_ESteamPipeOperati" +
+      "onType_DiskWrite\020\0032\216\010\n\rClientMetrics\022\\\n\035" +
+      "ClientAppInterfaceStatsReport\022..CClientM" +
+      "etrics_AppInterfaceStats_Notification\032\013." +
+      "NoResponse\022Z\n\034ClientIPv6ConnectivityRepo" +
+      "rt\022-.CClientMetrics_IPv6Connectivity_Not" +
+      "ification\032\013.NoResponse\022X\n\030SteamPipeWorkS" +
+      "tatsReport\022/.CClientMetrics_SteamPipeWor" +
+      "kStats_Notification\032\013.NoResponse\022N\n\020Repo" +
+      "rtReactUsage\022-.CClientMetrics_ReportReac" +
+      "tUsage_Notification\032\013.NoResponse\022P\n\021Repo" +
+      "rtClientError\022..CClientMetrics_ReportCli" +
+      "entError_Notification\032\013.NoResponse\022R\n\025Cl" +
+      "ientBootstrapReport\022,.CClientMetrics_Cli" +
+      "entBootstrap_Notification\032\013.NoResponse\022T" +
+      "\n\031ClientDownloadRatesReport\022*.CClientMet" +
+      "rics_DownloadRates_Notification\032\013.NoResp" +
+      "onse\022\\\n\035ClientContentValidationReport\022.." +
+      "CClientMetrics_ContentValidation_Notific" +
+      "ation\032\013.NoResponse\022V\n\027ClientCloudAppSync" +
+      "Stats\022..CClientMetrics_CloudAppSyncStats" +
+      "_Notification\032\013.NoResponse\022l\n ClientDown" +
+      "loadResponseCodeCounts\022;.CClientMetrics_" +
+      "ContentDownloadResponse_Counts_Notificat" +
+      "ion\032\013.NoResponse\022N\n\020ReportClientArgs\022-.C" +
+      "ClientMetrics_ReportClientArgs_Notificat" +
+      "ion\032\013.NoResponse\032)\202\265\030%A service for clie" +
+      "nt-reported metricsB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
           Clientmetrics.getDescriptor(),
         });
@@ -16802,9 +23011,33 @@ public final class SteammessagesClientmetricsSteamclient {
     internal_static_CClientMetrics_SteamPipeWorkStats_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClientMetrics_SteamPipeWorkStats_Notification_descriptor,
-        new java.lang.String[] { "Appid", "Depotid", "WorkType", "Operations", });
-    internal_static_CClientMetrics_ReportClientError_Notification_descriptor =
+        new java.lang.String[] { "Appid", "Depotid", "WorkType", "Operations", "HardwareType", });
+    internal_static_CClientMetrics_ReportReactUsage_Notification_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_CClientMetrics_ReportReactUsage_Notification_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CClientMetrics_ReportReactUsage_Notification_descriptor,
+        new java.lang.String[] { "Product", "Version", "Routes", "Components", "Actions", });
+    internal_static_CClientMetrics_ReportReactUsage_Notification_RouteData_descriptor =
+      internal_static_CClientMetrics_ReportReactUsage_Notification_descriptor.getNestedTypes().get(0);
+    internal_static_CClientMetrics_ReportReactUsage_Notification_RouteData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CClientMetrics_ReportReactUsage_Notification_RouteData_descriptor,
+        new java.lang.String[] { "Route", "Count", });
+    internal_static_CClientMetrics_ReportReactUsage_Notification_ComponentData_descriptor =
+      internal_static_CClientMetrics_ReportReactUsage_Notification_descriptor.getNestedTypes().get(1);
+    internal_static_CClientMetrics_ReportReactUsage_Notification_ComponentData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CClientMetrics_ReportReactUsage_Notification_ComponentData_descriptor,
+        new java.lang.String[] { "Component", "Count", });
+    internal_static_CClientMetrics_ReportReactUsage_Notification_ActionData_descriptor =
+      internal_static_CClientMetrics_ReportReactUsage_Notification_descriptor.getNestedTypes().get(2);
+    internal_static_CClientMetrics_ReportReactUsage_Notification_ActionData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CClientMetrics_ReportReactUsage_Notification_ActionData_descriptor,
+        new java.lang.String[] { "Action", "Count", });
+    internal_static_CClientMetrics_ReportClientError_Notification_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CClientMetrics_ReportClientError_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClientMetrics_ReportClientError_Notification_descriptor,
@@ -16816,13 +23049,13 @@ public final class SteammessagesClientmetricsSteamclient {
         internal_static_CClientMetrics_ReportClientError_Notification_Error_descriptor,
         new java.lang.String[] { "Identifier", "Message", "Count", });
     internal_static_CClientMetrics_ClientBootstrap_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CClientMetrics_ClientBootstrap_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClientMetrics_ClientBootstrap_Notification_descriptor,
         new java.lang.String[] { "Summary", });
     internal_static_CClientMetrics_DownloadRates_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CClientMetrics_DownloadRates_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClientMetrics_DownloadRates_Notification_descriptor,
@@ -16832,30 +23065,37 @@ public final class SteammessagesClientmetricsSteamclient {
     internal_static_CClientMetrics_DownloadRates_Notification_StatsInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClientMetrics_DownloadRates_Notification_StatsInfo_descriptor,
-        new java.lang.String[] { "SourceType", "SourceId", "Bytes", "HostName", "Microseconds", "UsedIpv6", "Proxied", });
+        new java.lang.String[] { "SourceType", "SourceId", "Bytes", "HostName", "Microseconds", "UsedIpv6", "Proxied", "UsedHttp2", "CacheHits", "CacheMisses", "HitBytes", "MissBytes", });
     internal_static_CClientMetrics_ContentValidation_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CClientMetrics_ContentValidation_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClientMetrics_ContentValidation_Notification_descriptor,
         new java.lang.String[] { "ValidationResult", "AppId", "StagedFiles", "UserInitiated", "EarlyOut", "ChunksScanned", "ChunksCorrupt", "BytesScanned", "ChunkBytesCorrupt", "TotalFileSizeCorrupt", });
     internal_static_CClientMetrics_CloudAppSyncStats_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CClientMetrics_CloudAppSyncStats_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClientMetrics_CloudAppSyncStats_Notification_descriptor,
-        new java.lang.String[] { "AppId", "PlatformType", "Preload", "BlockingAppLaunch", "FilesUploaded", "FilesDownloaded", "FilesDeleted", "BytesUploaded", "BytesDownloaded", "MicrosecTotal", "MicrosecInitCaches", "MicrosecValidateState", "MicrosecAcLaunch", "MicrosecAcPrepUserFiles", "MicrosecAcExit", "MicrosecBuildSyncList", "MicrosecDeleteFiles", "MicrosecDownloadFiles", "MicrosecUploadFiles", "HardwareType", });
+        new java.lang.String[] { "AppId", "PlatformType", "Preload", "BlockingAppLaunch", "FilesUploaded", "FilesDownloaded", "FilesDeleted", "BytesUploaded", "BytesDownloaded", "MicrosecTotal", "MicrosecInitCaches", "MicrosecValidateState", "MicrosecAcLaunch", "MicrosecAcPrepUserFiles", "MicrosecAcExit", "MicrosecBuildSyncList", "MicrosecDeleteFiles", "MicrosecDownloadFiles", "MicrosecUploadFiles", "HardwareType", "FilesManaged", });
     internal_static_CClientMetrics_ContentDownloadResponse_Counts_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CClientMetrics_ContentDownloadResponse_Counts_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClientMetrics_ContentDownloadResponse_Counts_Notification_descriptor,
         new java.lang.String[] { "CellId", "Data", });
+    internal_static_CClientMetrics_ReportClientArgs_Notification_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_CClientMetrics_ReportClientArgs_Notification_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CClientMetrics_ReportClientArgs_Notification_descriptor,
+        new java.lang.String[] { "ClientArgs", "GpuWebviewRegkeyDisabled", "SuppressGpuChrome", "BrowserNotSupported", "HwAccelVideoRegkeyDisabled", "MiniModeEnabled", "FpsCounterEnabled", "LibraryLowBandwidthModeEnabled", "LibraryLowPerfModeEnabled", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
     Clientmetrics.getDescriptor();
   }

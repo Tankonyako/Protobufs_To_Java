@@ -108,6 +108,17 @@ public final class SteammessagesClientserverGameservers {
     int getGameQueryPort();
 
     /**
+     * <code>optional uint32 game_port_local = 10;</code>
+     * @return Whether the gamePortLocal field is set.
+     */
+    boolean hasGamePortLocal();
+    /**
+     * <code>optional uint32 game_port_local = 10;</code>
+     * @return The gamePortLocal.
+     */
+    int getGamePortLocal();
+
+    /**
      * <code>optional bytes sdr_logon = 8;</code>
      * @return Whether the sdrLogon field is set.
      */
@@ -216,13 +227,18 @@ public final class SteammessagesClientserverGameservers {
               break;
             }
             case 66: {
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               sdrLogon_ = input.readBytes();
               break;
             }
             case 77: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               fakeIp_ = input.readFixed32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000080;
+              gamePortLocal_ = input.readUInt32();
               break;
             }
             default: {
@@ -449,6 +465,25 @@ public final class SteammessagesClientserverGameservers {
       return gameQueryPort_;
     }
 
+    public static final int GAME_PORT_LOCAL_FIELD_NUMBER = 10;
+    private int gamePortLocal_;
+    /**
+     * <code>optional uint32 game_port_local = 10;</code>
+     * @return Whether the gamePortLocal field is set.
+     */
+    @java.lang.Override
+    public boolean hasGamePortLocal() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 game_port_local = 10;</code>
+     * @return The gamePortLocal.
+     */
+    @java.lang.Override
+    public int getGamePortLocal() {
+      return gamePortLocal_;
+    }
+
     public static final int SDR_LOGON_FIELD_NUMBER = 8;
     private com.google.protobuf.ByteString sdrLogon_;
     /**
@@ -457,7 +492,7 @@ public final class SteammessagesClientserverGameservers {
      */
     @java.lang.Override
     public boolean hasSdrLogon() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>optional bytes sdr_logon = 8;</code>
@@ -476,7 +511,7 @@ public final class SteammessagesClientserverGameservers {
      */
     @java.lang.Override
     public boolean hasFakeIp() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>optional fixed32 fake_ip = 9;</code>
@@ -522,11 +557,14 @@ public final class SteammessagesClientserverGameservers {
       if (((bitField0_ & 0x00000040) != 0)) {
         output.writeUInt32(7, gameQueryPort_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         output.writeBytes(8, sdrLogon_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeFixed32(9, fakeIp_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(10, gamePortLocal_);
       }
       unknownFields.writeTo(output);
     }
@@ -563,13 +601,17 @@ public final class SteammessagesClientserverGameservers {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, gameQueryPort_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(8, sdrLogon_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(9, fakeIp_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, gamePortLocal_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -621,6 +663,11 @@ public final class SteammessagesClientserverGameservers {
         if (getGameQueryPort()
             != other.getGameQueryPort()) return false;
       }
+      if (hasGamePortLocal() != other.hasGamePortLocal()) return false;
+      if (hasGamePortLocal()) {
+        if (getGamePortLocal()
+            != other.getGamePortLocal()) return false;
+      }
       if (hasSdrLogon() != other.hasSdrLogon()) return false;
       if (hasSdrLogon()) {
         if (!getSdrLogon()
@@ -669,6 +716,10 @@ public final class SteammessagesClientserverGameservers {
       if (hasGameQueryPort()) {
         hash = (37 * hash) + GAME_QUERY_PORT_FIELD_NUMBER;
         hash = (53 * hash) + getGameQueryPort();
+      }
+      if (hasGamePortLocal()) {
+        hash = (37 * hash) + GAME_PORT_LOCAL_FIELD_NUMBER;
+        hash = (53 * hash) + getGamePortLocal();
       }
       if (hasSdrLogon()) {
         hash = (37 * hash) + SDR_LOGON_FIELD_NUMBER;
@@ -825,10 +876,12 @@ public final class SteammessagesClientserverGameservers {
         bitField0_ = (bitField0_ & ~0x00000020);
         gameQueryPort_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
-        sdrLogon_ = com.google.protobuf.ByteString.EMPTY;
+        gamePortLocal_ = 0;
         bitField0_ = (bitField0_ & ~0x00000080);
-        fakeIp_ = 0;
+        sdrLogon_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000100);
+        fakeIp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -886,12 +939,16 @@ public final class SteammessagesClientserverGameservers {
           to_bitField0_ |= 0x00000040;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.gamePortLocal_ = gamePortLocal_;
           to_bitField0_ |= 0x00000080;
         }
-        result.sdrLogon_ = sdrLogon_;
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.fakeIp_ = fakeIp_;
           to_bitField0_ |= 0x00000100;
+        }
+        result.sdrLogon_ = sdrLogon_;
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.fakeIp_ = fakeIp_;
+          to_bitField0_ |= 0x00000200;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -966,6 +1023,9 @@ public final class SteammessagesClientserverGameservers {
         }
         if (other.hasGameQueryPort()) {
           setGameQueryPort(other.getGameQueryPort());
+        }
+        if (other.hasGamePortLocal()) {
+          setGamePortLocal(other.getGamePortLocal());
         }
         if (other.hasSdrLogon()) {
           setSdrLogon(other.getSdrLogon());
@@ -1366,6 +1426,45 @@ public final class SteammessagesClientserverGameservers {
         return this;
       }
 
+      private int gamePortLocal_ ;
+      /**
+       * <code>optional uint32 game_port_local = 10;</code>
+       * @return Whether the gamePortLocal field is set.
+       */
+      @java.lang.Override
+      public boolean hasGamePortLocal() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 game_port_local = 10;</code>
+       * @return The gamePortLocal.
+       */
+      @java.lang.Override
+      public int getGamePortLocal() {
+        return gamePortLocal_;
+      }
+      /**
+       * <code>optional uint32 game_port_local = 10;</code>
+       * @param value The gamePortLocal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGamePortLocal(int value) {
+        bitField0_ |= 0x00000080;
+        gamePortLocal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 game_port_local = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGamePortLocal() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        gamePortLocal_ = 0;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.ByteString sdrLogon_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes sdr_logon = 8;</code>
@@ -1373,7 +1472,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasSdrLogon() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <code>optional bytes sdr_logon = 8;</code>
@@ -1392,7 +1491,7 @@ public final class SteammessagesClientserverGameservers {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000100;
         sdrLogon_ = value;
         onChanged();
         return this;
@@ -1402,7 +1501,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder clearSdrLogon() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         sdrLogon_ = getDefaultInstance().getSdrLogon();
         onChanged();
         return this;
@@ -1415,7 +1514,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasFakeIp() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>optional fixed32 fake_ip = 9;</code>
@@ -1431,7 +1530,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder setFakeIp(int value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         fakeIp_ = value;
         onChanged();
         return this;
@@ -1441,7 +1540,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder clearFakeIp() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         fakeIp_ = 0;
         onChanged();
         return this;
@@ -5224,17 +5323,6 @@ public final class SteammessagesClientserverGameservers {
     int getRevision();
 
     /**
-     * <code>optional fixed64 steam_id_gs = 1;</code>
-     * @return Whether the steamIdGs field is set.
-     */
-    boolean hasSteamIdGs();
-    /**
-     * <code>optional fixed64 steam_id_gs = 1;</code>
-     * @return The steamIdGs.
-     */
-    long getSteamIdGs();
-
-    /**
      * <code>optional uint32 query_port = 3;</code>
      * @return Whether the queryPort field is set.
      */
@@ -5328,6 +5416,23 @@ public final class SteammessagesClientserverGameservers {
      * @return The fakeIp.
      */
     int getFakeIp();
+
+    /**
+     * <code>optional string sdr_ping_location = 30;</code>
+     * @return Whether the sdrPingLocation field is set.
+     */
+    boolean hasSdrPingLocation();
+    /**
+     * <code>optional string sdr_ping_location = 30;</code>
+     * @return The sdrPingLocation.
+     */
+    java.lang.String getSdrPingLocation();
+    /**
+     * <code>optional string sdr_ping_location = 30;</code>
+     * @return The bytes for sdrPingLocation.
+     */
+    com.google.protobuf.ByteString
+        getSdrPingLocationBytes();
 
     /**
      * <code>optional uint32 app_id = 6;</code>
@@ -5571,6 +5676,7 @@ public final class SteammessagesClientserverGameservers {
       serverName_ = "";
       gameDescription_ = "";
       spectatorServerName_ = "";
+      sdrPingLocation_ = "";
       gamedir_ = "";
       version_ = "";
       product_ = "";
@@ -5613,23 +5719,18 @@ public final class SteammessagesClientserverGameservers {
             case 0:
               done = true;
               break;
-            case 9: {
-              bitField0_ |= 0x00000002;
-              steamIdGs_ = input.readFixed64();
-              break;
-            }
             case 24: {
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               queryPort_ = input.readUInt32();
               break;
             }
             case 32: {
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               gamePort_ = input.readUInt32();
               break;
             }
             case 40: {
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               spectatorPort_ = input.readUInt32();
               break;
             }
@@ -5722,7 +5823,7 @@ public final class SteammessagesClientserverGameservers {
             }
             case 178: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               serverName_ = bs;
               break;
             }
@@ -5733,19 +5834,25 @@ public final class SteammessagesClientserverGameservers {
             }
             case 218: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000040;
               spectatorServerName_ = bs;
               break;
             }
             case 229: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000080;
               fakeIp_ = input.readFixed32();
               break;
             }
             case 234: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               gameDescription_ = bs;
+              break;
+            }
+            case 242: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000100;
+              sdrPingLocation_ = bs;
               break;
             }
             default: {
@@ -6327,25 +6434,6 @@ public final class SteammessagesClientserverGameservers {
       return revision_;
     }
 
-    public static final int STEAM_ID_GS_FIELD_NUMBER = 1;
-    private long steamIdGs_;
-    /**
-     * <code>optional fixed64 steam_id_gs = 1;</code>
-     * @return Whether the steamIdGs field is set.
-     */
-    @java.lang.Override
-    public boolean hasSteamIdGs() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional fixed64 steam_id_gs = 1;</code>
-     * @return The steamIdGs.
-     */
-    @java.lang.Override
-    public long getSteamIdGs() {
-      return steamIdGs_;
-    }
-
     public static final int QUERY_PORT_FIELD_NUMBER = 3;
     private int queryPort_;
     /**
@@ -6354,7 +6442,7 @@ public final class SteammessagesClientserverGameservers {
      */
     @java.lang.Override
     public boolean hasQueryPort() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>optional uint32 query_port = 3;</code>
@@ -6373,7 +6461,7 @@ public final class SteammessagesClientserverGameservers {
      */
     @java.lang.Override
     public boolean hasGamePort() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>optional uint32 game_port = 4;</code>
@@ -6392,7 +6480,7 @@ public final class SteammessagesClientserverGameservers {
      */
     @java.lang.Override
     public boolean hasSpectatorPort() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>optional uint32 spectator_port = 5;</code>
@@ -6411,7 +6499,7 @@ public final class SteammessagesClientserverGameservers {
      */
     @java.lang.Override
     public boolean hasServerName() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>optional string server_name = 22;</code>
@@ -6459,7 +6547,7 @@ public final class SteammessagesClientserverGameservers {
      */
     @java.lang.Override
     public boolean hasGameDescription() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>optional string game_description = 29;</code>
@@ -6507,7 +6595,7 @@ public final class SteammessagesClientserverGameservers {
      */
     @java.lang.Override
     public boolean hasSpectatorServerName() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>optional string spectator_server_name = 27;</code>
@@ -6555,7 +6643,7 @@ public final class SteammessagesClientserverGameservers {
      */
     @java.lang.Override
     public boolean hasFakeIp() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <code>optional fixed32 fake_ip = 28;</code>
@@ -6564,6 +6652,54 @@ public final class SteammessagesClientserverGameservers {
     @java.lang.Override
     public int getFakeIp() {
       return fakeIp_;
+    }
+
+    public static final int SDR_PING_LOCATION_FIELD_NUMBER = 30;
+    private volatile java.lang.Object sdrPingLocation_;
+    /**
+     * <code>optional string sdr_ping_location = 30;</code>
+     * @return Whether the sdrPingLocation field is set.
+     */
+    @java.lang.Override
+    public boolean hasSdrPingLocation() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional string sdr_ping_location = 30;</code>
+     * @return The sdrPingLocation.
+     */
+    @java.lang.Override
+    public java.lang.String getSdrPingLocation() {
+      java.lang.Object ref = sdrPingLocation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          sdrPingLocation_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string sdr_ping_location = 30;</code>
+     * @return The bytes for sdrPingLocation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSdrPingLocationBytes() {
+      java.lang.Object ref = sdrPingLocation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sdrPingLocation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int APP_ID_FIELD_NUMBER = 6;
@@ -7119,15 +7255,12 @@ public final class SteammessagesClientserverGameservers {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeFixed64(1, steamIdGs_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeUInt32(3, queryPort_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeUInt32(4, gamePort_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeUInt32(5, spectatorPort_);
       }
       if (((bitField0_ & 0x00000200) != 0)) {
@@ -7175,20 +7308,23 @@ public final class SteammessagesClientserverGameservers {
       if (((bitField0_ & 0x00400000) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 21, map_);
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 22, serverName_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeUInt32(24, revision_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 27, spectatorServerName_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         output.writeFixed32(28, fakeIp_);
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 29, gameDescription_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 30, sdrPingLocation_);
       }
       unknownFields.writeTo(output);
     }
@@ -7201,17 +7337,13 @@ public final class SteammessagesClientserverGameservers {
       size = 0;
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed64Size(1, steamIdGs_);
+          .computeUInt32Size(3, queryPort_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, queryPort_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, gamePort_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(5, spectatorPort_);
       }
@@ -7267,22 +7399,25 @@ public final class SteammessagesClientserverGameservers {
       if (((bitField0_ & 0x00400000) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, map_);
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, serverName_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(24, revision_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, spectatorServerName_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(28, fakeIp_);
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(29, gameDescription_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, sdrPingLocation_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7303,11 +7438,6 @@ public final class SteammessagesClientserverGameservers {
       if (hasRevision()) {
         if (getRevision()
             != other.getRevision()) return false;
-      }
-      if (hasSteamIdGs() != other.hasSteamIdGs()) return false;
-      if (hasSteamIdGs()) {
-        if (getSteamIdGs()
-            != other.getSteamIdGs()) return false;
       }
       if (hasQueryPort() != other.hasQueryPort()) return false;
       if (hasQueryPort()) {
@@ -7343,6 +7473,11 @@ public final class SteammessagesClientserverGameservers {
       if (hasFakeIp()) {
         if (getFakeIp()
             != other.getFakeIp()) return false;
+      }
+      if (hasSdrPingLocation() != other.hasSdrPingLocation()) return false;
+      if (hasSdrPingLocation()) {
+        if (!getSdrPingLocation()
+            .equals(other.getSdrPingLocation())) return false;
       }
       if (hasAppId() != other.hasAppId()) return false;
       if (hasAppId()) {
@@ -7431,11 +7566,6 @@ public final class SteammessagesClientserverGameservers {
         hash = (37 * hash) + REVISION_FIELD_NUMBER;
         hash = (53 * hash) + getRevision();
       }
-      if (hasSteamIdGs()) {
-        hash = (37 * hash) + STEAM_ID_GS_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getSteamIdGs());
-      }
       if (hasQueryPort()) {
         hash = (37 * hash) + QUERY_PORT_FIELD_NUMBER;
         hash = (53 * hash) + getQueryPort();
@@ -7463,6 +7593,10 @@ public final class SteammessagesClientserverGameservers {
       if (hasFakeIp()) {
         hash = (37 * hash) + FAKE_IP_FIELD_NUMBER;
         hash = (53 * hash) + getFakeIp();
+      }
+      if (hasSdrPingLocation()) {
+        hash = (37 * hash) + SDR_PING_LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSdrPingLocation().hashCode();
       }
       if (hasAppId()) {
         hash = (37 * hash) + APP_ID_FIELD_NUMBER;
@@ -7663,21 +7797,21 @@ public final class SteammessagesClientserverGameservers {
         super.clear();
         revision_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        steamIdGs_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
         queryPort_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         gamePort_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         spectatorPort_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         serverName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         gameDescription_ = "";
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         spectatorServerName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         fakeIp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        sdrPingLocation_ = "";
         bitField0_ = (bitField0_ & ~0x00000100);
         appId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
@@ -7746,37 +7880,37 @@ public final class SteammessagesClientserverGameservers {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.steamIdGs_ = steamIdGs_;
+          result.queryPort_ = queryPort_;
           to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.queryPort_ = queryPort_;
+          result.gamePort_ = gamePort_;
           to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.gamePort_ = gamePort_;
+          result.spectatorPort_ = spectatorPort_;
           to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.spectatorPort_ = spectatorPort_;
           to_bitField0_ |= 0x00000010;
         }
+        result.serverName_ = serverName_;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.serverName_ = serverName_;
+        result.gameDescription_ = gameDescription_;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.gameDescription_ = gameDescription_;
+        result.spectatorServerName_ = spectatorServerName_;
         if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.fakeIp_ = fakeIp_;
           to_bitField0_ |= 0x00000080;
         }
-        result.spectatorServerName_ = spectatorServerName_;
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.fakeIp_ = fakeIp_;
           to_bitField0_ |= 0x00000100;
         }
+        result.sdrPingLocation_ = sdrPingLocation_;
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.appId_ = appId_;
           to_bitField0_ |= 0x00000200;
@@ -7894,9 +8028,6 @@ public final class SteammessagesClientserverGameservers {
         if (other.hasRevision()) {
           setRevision(other.getRevision());
         }
-        if (other.hasSteamIdGs()) {
-          setSteamIdGs(other.getSteamIdGs());
-        }
         if (other.hasQueryPort()) {
           setQueryPort(other.getQueryPort());
         }
@@ -7907,22 +8038,27 @@ public final class SteammessagesClientserverGameservers {
           setSpectatorPort(other.getSpectatorPort());
         }
         if (other.hasServerName()) {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           serverName_ = other.serverName_;
           onChanged();
         }
         if (other.hasGameDescription()) {
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
           gameDescription_ = other.gameDescription_;
           onChanged();
         }
         if (other.hasSpectatorServerName()) {
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
           spectatorServerName_ = other.spectatorServerName_;
           onChanged();
         }
         if (other.hasFakeIp()) {
           setFakeIp(other.getFakeIp());
+        }
+        if (other.hasSdrPingLocation()) {
+          bitField0_ |= 0x00000100;
+          sdrPingLocation_ = other.sdrPingLocation_;
+          onChanged();
         }
         if (other.hasAppId()) {
           setAppId(other.getAppId());
@@ -8077,45 +8213,6 @@ public final class SteammessagesClientserverGameservers {
         return this;
       }
 
-      private long steamIdGs_ ;
-      /**
-       * <code>optional fixed64 steam_id_gs = 1;</code>
-       * @return Whether the steamIdGs field is set.
-       */
-      @java.lang.Override
-      public boolean hasSteamIdGs() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional fixed64 steam_id_gs = 1;</code>
-       * @return The steamIdGs.
-       */
-      @java.lang.Override
-      public long getSteamIdGs() {
-        return steamIdGs_;
-      }
-      /**
-       * <code>optional fixed64 steam_id_gs = 1;</code>
-       * @param value The steamIdGs to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSteamIdGs(long value) {
-        bitField0_ |= 0x00000002;
-        steamIdGs_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional fixed64 steam_id_gs = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSteamIdGs() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        steamIdGs_ = 0L;
-        onChanged();
-        return this;
-      }
-
       private int queryPort_ ;
       /**
        * <code>optional uint32 query_port = 3;</code>
@@ -8123,7 +8220,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasQueryPort() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>optional uint32 query_port = 3;</code>
@@ -8139,7 +8236,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder setQueryPort(int value) {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         queryPort_ = value;
         onChanged();
         return this;
@@ -8149,7 +8246,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder clearQueryPort() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         queryPort_ = 0;
         onChanged();
         return this;
@@ -8162,7 +8259,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasGamePort() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>optional uint32 game_port = 4;</code>
@@ -8178,7 +8275,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder setGamePort(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         gamePort_ = value;
         onChanged();
         return this;
@@ -8188,7 +8285,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder clearGamePort() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         gamePort_ = 0;
         onChanged();
         return this;
@@ -8201,7 +8298,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasSpectatorPort() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>optional uint32 spectator_port = 5;</code>
@@ -8217,7 +8314,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder setSpectatorPort(int value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         spectatorPort_ = value;
         onChanged();
         return this;
@@ -8227,7 +8324,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder clearSpectatorPort() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         spectatorPort_ = 0;
         onChanged();
         return this;
@@ -8239,7 +8336,7 @@ public final class SteammessagesClientserverGameservers {
        * @return Whether the serverName field is set.
        */
       public boolean hasServerName() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>optional string server_name = 22;</code>
@@ -8286,7 +8383,7 @@ public final class SteammessagesClientserverGameservers {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000010;
         serverName_ = value;
         onChanged();
         return this;
@@ -8296,7 +8393,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder clearServerName() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         serverName_ = getDefaultInstance().getServerName();
         onChanged();
         return this;
@@ -8311,7 +8408,7 @@ public final class SteammessagesClientserverGameservers {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000010;
         serverName_ = value;
         onChanged();
         return this;
@@ -8323,7 +8420,7 @@ public final class SteammessagesClientserverGameservers {
        * @return Whether the gameDescription field is set.
        */
       public boolean hasGameDescription() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>optional string game_description = 29;</code>
@@ -8370,7 +8467,7 @@ public final class SteammessagesClientserverGameservers {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000040;
+  bitField0_ |= 0x00000020;
         gameDescription_ = value;
         onChanged();
         return this;
@@ -8380,7 +8477,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder clearGameDescription() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         gameDescription_ = getDefaultInstance().getGameDescription();
         onChanged();
         return this;
@@ -8395,7 +8492,7 @@ public final class SteammessagesClientserverGameservers {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000040;
+  bitField0_ |= 0x00000020;
         gameDescription_ = value;
         onChanged();
         return this;
@@ -8407,7 +8504,7 @@ public final class SteammessagesClientserverGameservers {
        * @return Whether the spectatorServerName field is set.
        */
       public boolean hasSpectatorServerName() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>optional string spectator_server_name = 27;</code>
@@ -8454,7 +8551,7 @@ public final class SteammessagesClientserverGameservers {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000040;
         spectatorServerName_ = value;
         onChanged();
         return this;
@@ -8464,7 +8561,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder clearSpectatorServerName() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         spectatorServerName_ = getDefaultInstance().getSpectatorServerName();
         onChanged();
         return this;
@@ -8479,7 +8576,7 @@ public final class SteammessagesClientserverGameservers {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000040;
         spectatorServerName_ = value;
         onChanged();
         return this;
@@ -8492,7 +8589,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasFakeIp() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <code>optional fixed32 fake_ip = 28;</code>
@@ -8508,7 +8605,7 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder setFakeIp(int value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000080;
         fakeIp_ = value;
         onChanged();
         return this;
@@ -8518,8 +8615,92 @@ public final class SteammessagesClientserverGameservers {
        * @return This builder for chaining.
        */
       public Builder clearFakeIp() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         fakeIp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sdrPingLocation_ = "";
+      /**
+       * <code>optional string sdr_ping_location = 30;</code>
+       * @return Whether the sdrPingLocation field is set.
+       */
+      public boolean hasSdrPingLocation() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional string sdr_ping_location = 30;</code>
+       * @return The sdrPingLocation.
+       */
+      public java.lang.String getSdrPingLocation() {
+        java.lang.Object ref = sdrPingLocation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            sdrPingLocation_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string sdr_ping_location = 30;</code>
+       * @return The bytes for sdrPingLocation.
+       */
+      public com.google.protobuf.ByteString
+          getSdrPingLocationBytes() {
+        java.lang.Object ref = sdrPingLocation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sdrPingLocation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string sdr_ping_location = 30;</code>
+       * @param value The sdrPingLocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdrPingLocation(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        sdrPingLocation_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sdr_ping_location = 30;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSdrPingLocation() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        sdrPingLocation_ = getDefaultInstance().getSdrPingLocation();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sdr_ping_location = 30;</code>
+       * @param value The bytes for sdrPingLocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdrPingLocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        sdrPingLocation_ = value;
         onChanged();
         return this;
       }
@@ -11760,6 +11941,23 @@ public final class SteammessagesClientserverGameservers {
       int getSdrPopid();
 
       /**
+       * <code>optional string sdr_ping_location = 32;</code>
+       * @return Whether the sdrPingLocation field is set.
+       */
+      boolean hasSdrPingLocation();
+      /**
+       * <code>optional string sdr_ping_location = 32;</code>
+       * @return The sdrPingLocation.
+       */
+      java.lang.String getSdrPingLocation();
+      /**
+       * <code>optional string sdr_ping_location = 32;</code>
+       * @return The bytes for sdrPingLocation.
+       */
+      com.google.protobuf.ByteString
+          getSdrPingLocationBytes();
+
+      /**
        * <code>optional uint32 flags = 11;</code>
        * @return Whether the flags field is set.
        */
@@ -12023,6 +12221,7 @@ public final class SteammessagesClientserverGameservers {
         super(builder);
       }
       private Server() {
+        sdrPingLocation_ = "";
         gamedirStr_ = "";
         mapStr_ = "";
         nameStr_ = "";
@@ -12117,105 +12316,111 @@ public final class SteammessagesClientserverGameservers {
                 break;
               }
               case 88: {
-                bitField0_ |= 0x00000200;
+                bitField0_ |= 0x00000400;
                 flags_ = input.readUInt32();
                 break;
               }
               case 96: {
-                bitField0_ |= 0x00000400;
+                bitField0_ |= 0x00000800;
                 appId_ = input.readUInt32();
                 break;
               }
               case 104: {
-                bitField0_ |= 0x00000800;
+                bitField0_ |= 0x00001000;
                 maxPlayers_ = input.readUInt32();
                 break;
               }
               case 112: {
-                bitField0_ |= 0x00001000;
+                bitField0_ |= 0x00002000;
                 bots_ = input.readUInt32();
                 break;
               }
               case 120: {
-                bitField0_ |= 0x00002000;
+                bitField0_ |= 0x00004000;
                 spectatorPort_ = input.readUInt32();
                 break;
               }
               case 130: {
                 com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00004000;
+                bitField0_ |= 0x00008000;
                 gamedirStr_ = bs;
                 break;
               }
               case 136: {
-                bitField0_ |= 0x00008000;
+                bitField0_ |= 0x00010000;
                 gamedirStrindex_ = input.readUInt32();
                 break;
               }
               case 146: {
                 com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00010000;
+                bitField0_ |= 0x00020000;
                 mapStr_ = bs;
                 break;
               }
               case 152: {
-                bitField0_ |= 0x00020000;
+                bitField0_ |= 0x00040000;
                 mapStrindex_ = input.readUInt32();
                 break;
               }
               case 162: {
                 com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00040000;
+                bitField0_ |= 0x00080000;
                 nameStr_ = bs;
                 break;
               }
               case 168: {
-                bitField0_ |= 0x00080000;
+                bitField0_ |= 0x00100000;
                 nameStrindex_ = input.readUInt32();
                 break;
               }
               case 178: {
                 com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00100000;
+                bitField0_ |= 0x00200000;
                 gameDescriptionStr_ = bs;
                 break;
               }
               case 184: {
-                bitField0_ |= 0x00200000;
+                bitField0_ |= 0x00400000;
                 gameDescriptionStrindex_ = input.readUInt32();
                 break;
               }
               case 194: {
                 com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00400000;
+                bitField0_ |= 0x00800000;
                 versionStr_ = bs;
                 break;
               }
               case 200: {
-                bitField0_ |= 0x00800000;
+                bitField0_ |= 0x01000000;
                 versionStrindex_ = input.readUInt32();
                 break;
               }
               case 210: {
                 com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x01000000;
+                bitField0_ |= 0x02000000;
                 gametypeStr_ = bs;
                 break;
               }
               case 216: {
-                bitField0_ |= 0x02000000;
+                bitField0_ |= 0x04000000;
                 gametypeStrindex_ = input.readUInt32();
                 break;
               }
               case 242: {
                 com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x04000000;
+                bitField0_ |= 0x08000000;
                 spectatorNameStr_ = bs;
                 break;
               }
               case 248: {
-                bitField0_ |= 0x08000000;
+                bitField0_ |= 0x10000000;
                 spectatorNameStrindex_ = input.readUInt32();
+                break;
+              }
+              case 258: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000200;
+                sdrPingLocation_ = bs;
                 break;
               }
               default: {
@@ -12429,6 +12634,54 @@ public final class SteammessagesClientserverGameservers {
         return sdrPopid_;
       }
 
+      public static final int SDR_PING_LOCATION_FIELD_NUMBER = 32;
+      private volatile java.lang.Object sdrPingLocation_;
+      /**
+       * <code>optional string sdr_ping_location = 32;</code>
+       * @return Whether the sdrPingLocation field is set.
+       */
+      @java.lang.Override
+      public boolean hasSdrPingLocation() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional string sdr_ping_location = 32;</code>
+       * @return The sdrPingLocation.
+       */
+      @java.lang.Override
+      public java.lang.String getSdrPingLocation() {
+        java.lang.Object ref = sdrPingLocation_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            sdrPingLocation_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string sdr_ping_location = 32;</code>
+       * @return The bytes for sdrPingLocation.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSdrPingLocationBytes() {
+        java.lang.Object ref = sdrPingLocation_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sdrPingLocation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       public static final int FLAGS_FIELD_NUMBER = 11;
       private int flags_;
       /**
@@ -12437,7 +12690,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasFlags() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <code>optional uint32 flags = 11;</code>
@@ -12456,7 +12709,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasAppId() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <code>optional uint32 app_id = 12;</code>
@@ -12475,7 +12728,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasMaxPlayers() {
-        return ((bitField0_ & 0x00000800) != 0);
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <code>optional uint32 max_players = 13;</code>
@@ -12494,7 +12747,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasBots() {
-        return ((bitField0_ & 0x00001000) != 0);
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <code>optional uint32 bots = 14;</code>
@@ -12513,7 +12766,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasSpectatorPort() {
-        return ((bitField0_ & 0x00002000) != 0);
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <code>optional uint32 spectator_port = 15;</code>
@@ -12532,7 +12785,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasGamedirStr() {
-        return ((bitField0_ & 0x00004000) != 0);
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
        * <code>optional string gamedir_str = 16;</code>
@@ -12580,7 +12833,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasGamedirStrindex() {
-        return ((bitField0_ & 0x00008000) != 0);
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <code>optional uint32 gamedir_strindex = 17;</code>
@@ -12599,7 +12852,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasMapStr() {
-        return ((bitField0_ & 0x00010000) != 0);
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
        * <code>optional string map_str = 18;</code>
@@ -12647,7 +12900,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasMapStrindex() {
-        return ((bitField0_ & 0x00020000) != 0);
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <code>optional uint32 map_strindex = 19;</code>
@@ -12666,7 +12919,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasNameStr() {
-        return ((bitField0_ & 0x00040000) != 0);
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <code>optional string name_str = 20;</code>
@@ -12714,7 +12967,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasNameStrindex() {
-        return ((bitField0_ & 0x00080000) != 0);
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <code>optional uint32 name_strindex = 21;</code>
@@ -12733,7 +12986,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasGameDescriptionStr() {
-        return ((bitField0_ & 0x00100000) != 0);
+        return ((bitField0_ & 0x00200000) != 0);
       }
       /**
        * <code>optional string game_description_str = 22;</code>
@@ -12781,7 +13034,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasGameDescriptionStrindex() {
-        return ((bitField0_ & 0x00200000) != 0);
+        return ((bitField0_ & 0x00400000) != 0);
       }
       /**
        * <code>optional uint32 game_description_strindex = 23;</code>
@@ -12800,7 +13053,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasVersionStr() {
-        return ((bitField0_ & 0x00400000) != 0);
+        return ((bitField0_ & 0x00800000) != 0);
       }
       /**
        * <code>optional string version_str = 24;</code>
@@ -12848,7 +13101,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasVersionStrindex() {
-        return ((bitField0_ & 0x00800000) != 0);
+        return ((bitField0_ & 0x01000000) != 0);
       }
       /**
        * <code>optional uint32 version_strindex = 25;</code>
@@ -12867,7 +13120,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasGametypeStr() {
-        return ((bitField0_ & 0x01000000) != 0);
+        return ((bitField0_ & 0x02000000) != 0);
       }
       /**
        * <code>optional string gametype_str = 26;</code>
@@ -12915,7 +13168,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasGametypeStrindex() {
-        return ((bitField0_ & 0x02000000) != 0);
+        return ((bitField0_ & 0x04000000) != 0);
       }
       /**
        * <code>optional uint32 gametype_strindex = 27;</code>
@@ -12934,7 +13187,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasSpectatorNameStr() {
-        return ((bitField0_ & 0x04000000) != 0);
+        return ((bitField0_ & 0x08000000) != 0);
       }
       /**
        * <code>optional string spectator_name_str = 30;</code>
@@ -12982,7 +13235,7 @@ public final class SteammessagesClientserverGameservers {
        */
       @java.lang.Override
       public boolean hasSpectatorNameStrindex() {
-        return ((bitField0_ & 0x08000000) != 0);
+        return ((bitField0_ & 0x10000000) != 0);
       }
       /**
        * <code>optional uint32 spectator_name_strindex = 31;</code>
@@ -13034,62 +13287,65 @@ public final class SteammessagesClientserverGameservers {
         if (((bitField0_ & 0x00000100) != 0)) {
           output.writeFixed32(10, sdrPopid_);
         }
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           output.writeUInt32(11, flags_);
         }
-        if (((bitField0_ & 0x00000400) != 0)) {
+        if (((bitField0_ & 0x00000800) != 0)) {
           output.writeUInt32(12, appId_);
         }
-        if (((bitField0_ & 0x00000800) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           output.writeUInt32(13, maxPlayers_);
         }
-        if (((bitField0_ & 0x00001000) != 0)) {
+        if (((bitField0_ & 0x00002000) != 0)) {
           output.writeUInt32(14, bots_);
         }
-        if (((bitField0_ & 0x00002000) != 0)) {
+        if (((bitField0_ & 0x00004000) != 0)) {
           output.writeUInt32(15, spectatorPort_);
         }
-        if (((bitField0_ & 0x00004000) != 0)) {
+        if (((bitField0_ & 0x00008000) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 16, gamedirStr_);
         }
-        if (((bitField0_ & 0x00008000) != 0)) {
+        if (((bitField0_ & 0x00010000) != 0)) {
           output.writeUInt32(17, gamedirStrindex_);
         }
-        if (((bitField0_ & 0x00010000) != 0)) {
+        if (((bitField0_ & 0x00020000) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 18, mapStr_);
         }
-        if (((bitField0_ & 0x00020000) != 0)) {
+        if (((bitField0_ & 0x00040000) != 0)) {
           output.writeUInt32(19, mapStrindex_);
         }
-        if (((bitField0_ & 0x00040000) != 0)) {
+        if (((bitField0_ & 0x00080000) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 20, nameStr_);
         }
-        if (((bitField0_ & 0x00080000) != 0)) {
+        if (((bitField0_ & 0x00100000) != 0)) {
           output.writeUInt32(21, nameStrindex_);
         }
-        if (((bitField0_ & 0x00100000) != 0)) {
+        if (((bitField0_ & 0x00200000) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 22, gameDescriptionStr_);
         }
-        if (((bitField0_ & 0x00200000) != 0)) {
+        if (((bitField0_ & 0x00400000) != 0)) {
           output.writeUInt32(23, gameDescriptionStrindex_);
         }
-        if (((bitField0_ & 0x00400000) != 0)) {
+        if (((bitField0_ & 0x00800000) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 24, versionStr_);
         }
-        if (((bitField0_ & 0x00800000) != 0)) {
+        if (((bitField0_ & 0x01000000) != 0)) {
           output.writeUInt32(25, versionStrindex_);
         }
-        if (((bitField0_ & 0x01000000) != 0)) {
+        if (((bitField0_ & 0x02000000) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 26, gametypeStr_);
         }
-        if (((bitField0_ & 0x02000000) != 0)) {
+        if (((bitField0_ & 0x04000000) != 0)) {
           output.writeUInt32(27, gametypeStrindex_);
         }
-        if (((bitField0_ & 0x04000000) != 0)) {
+        if (((bitField0_ & 0x08000000) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 30, spectatorNameStr_);
         }
-        if (((bitField0_ & 0x08000000) != 0)) {
+        if (((bitField0_ & 0x10000000) != 0)) {
           output.writeUInt32(31, spectatorNameStrindex_);
+        }
+        if (((bitField0_ & 0x00000200) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 32, sdrPingLocation_);
         }
         unknownFields.writeTo(output);
       }
@@ -13136,74 +13392,77 @@ public final class SteammessagesClientserverGameservers {
           size += com.google.protobuf.CodedOutputStream
             .computeFixed32Size(10, sdrPopid_);
         }
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(11, flags_);
         }
-        if (((bitField0_ & 0x00000400) != 0)) {
+        if (((bitField0_ & 0x00000800) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(12, appId_);
         }
-        if (((bitField0_ & 0x00000800) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(13, maxPlayers_);
         }
-        if (((bitField0_ & 0x00001000) != 0)) {
+        if (((bitField0_ & 0x00002000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(14, bots_);
         }
-        if (((bitField0_ & 0x00002000) != 0)) {
+        if (((bitField0_ & 0x00004000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(15, spectatorPort_);
         }
-        if (((bitField0_ & 0x00004000) != 0)) {
+        if (((bitField0_ & 0x00008000) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, gamedirStr_);
         }
-        if (((bitField0_ & 0x00008000) != 0)) {
+        if (((bitField0_ & 0x00010000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(17, gamedirStrindex_);
         }
-        if (((bitField0_ & 0x00010000) != 0)) {
+        if (((bitField0_ & 0x00020000) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, mapStr_);
         }
-        if (((bitField0_ & 0x00020000) != 0)) {
+        if (((bitField0_ & 0x00040000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(19, mapStrindex_);
         }
-        if (((bitField0_ & 0x00040000) != 0)) {
+        if (((bitField0_ & 0x00080000) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, nameStr_);
         }
-        if (((bitField0_ & 0x00080000) != 0)) {
+        if (((bitField0_ & 0x00100000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(21, nameStrindex_);
         }
-        if (((bitField0_ & 0x00100000) != 0)) {
+        if (((bitField0_ & 0x00200000) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, gameDescriptionStr_);
         }
-        if (((bitField0_ & 0x00200000) != 0)) {
+        if (((bitField0_ & 0x00400000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(23, gameDescriptionStrindex_);
         }
-        if (((bitField0_ & 0x00400000) != 0)) {
+        if (((bitField0_ & 0x00800000) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, versionStr_);
         }
-        if (((bitField0_ & 0x00800000) != 0)) {
+        if (((bitField0_ & 0x01000000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(25, versionStrindex_);
         }
-        if (((bitField0_ & 0x01000000) != 0)) {
+        if (((bitField0_ & 0x02000000) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, gametypeStr_);
         }
-        if (((bitField0_ & 0x02000000) != 0)) {
+        if (((bitField0_ & 0x04000000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(27, gametypeStrindex_);
         }
-        if (((bitField0_ & 0x04000000) != 0)) {
+        if (((bitField0_ & 0x08000000) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, spectatorNameStr_);
         }
-        if (((bitField0_ & 0x08000000) != 0)) {
+        if (((bitField0_ & 0x10000000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(31, spectatorNameStrindex_);
+        }
+        if (((bitField0_ & 0x00000200) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, sdrPingLocation_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -13264,6 +13523,11 @@ public final class SteammessagesClientserverGameservers {
         if (hasSdrPopid()) {
           if (getSdrPopid()
               != other.getSdrPopid()) return false;
+        }
+        if (hasSdrPingLocation() != other.hasSdrPingLocation()) return false;
+        if (hasSdrPingLocation()) {
+          if (!getSdrPingLocation()
+              .equals(other.getSdrPingLocation())) return false;
         }
         if (hasFlags() != other.hasFlags()) return false;
         if (hasFlags()) {
@@ -13407,6 +13671,10 @@ public final class SteammessagesClientserverGameservers {
         if (hasSdrPopid()) {
           hash = (37 * hash) + SDR_POPID_FIELD_NUMBER;
           hash = (53 * hash) + getSdrPopid();
+        }
+        if (hasSdrPingLocation()) {
+          hash = (37 * hash) + SDR_PING_LOCATION_FIELD_NUMBER;
+          hash = (53 * hash) + getSdrPingLocation().hashCode();
         }
         if (hasFlags()) {
           hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -13640,44 +13908,46 @@ public final class SteammessagesClientserverGameservers {
           bitField0_ = (bitField0_ & ~0x00000080);
           sdrPopid_ = 0;
           bitField0_ = (bitField0_ & ~0x00000100);
-          flags_ = 0;
+          sdrPingLocation_ = "";
           bitField0_ = (bitField0_ & ~0x00000200);
-          appId_ = 0;
+          flags_ = 0;
           bitField0_ = (bitField0_ & ~0x00000400);
-          maxPlayers_ = 0;
+          appId_ = 0;
           bitField0_ = (bitField0_ & ~0x00000800);
-          bots_ = 0;
+          maxPlayers_ = 0;
           bitField0_ = (bitField0_ & ~0x00001000);
-          spectatorPort_ = 0;
+          bots_ = 0;
           bitField0_ = (bitField0_ & ~0x00002000);
-          gamedirStr_ = "";
+          spectatorPort_ = 0;
           bitField0_ = (bitField0_ & ~0x00004000);
-          gamedirStrindex_ = 0;
+          gamedirStr_ = "";
           bitField0_ = (bitField0_ & ~0x00008000);
-          mapStr_ = "";
+          gamedirStrindex_ = 0;
           bitField0_ = (bitField0_ & ~0x00010000);
-          mapStrindex_ = 0;
+          mapStr_ = "";
           bitField0_ = (bitField0_ & ~0x00020000);
-          nameStr_ = "";
+          mapStrindex_ = 0;
           bitField0_ = (bitField0_ & ~0x00040000);
-          nameStrindex_ = 0;
+          nameStr_ = "";
           bitField0_ = (bitField0_ & ~0x00080000);
-          gameDescriptionStr_ = "";
+          nameStrindex_ = 0;
           bitField0_ = (bitField0_ & ~0x00100000);
-          gameDescriptionStrindex_ = 0;
+          gameDescriptionStr_ = "";
           bitField0_ = (bitField0_ & ~0x00200000);
-          versionStr_ = "";
+          gameDescriptionStrindex_ = 0;
           bitField0_ = (bitField0_ & ~0x00400000);
-          versionStrindex_ = 0;
+          versionStr_ = "";
           bitField0_ = (bitField0_ & ~0x00800000);
-          gametypeStr_ = "";
+          versionStrindex_ = 0;
           bitField0_ = (bitField0_ & ~0x01000000);
-          gametypeStrindex_ = 0;
+          gametypeStr_ = "";
           bitField0_ = (bitField0_ & ~0x02000000);
-          spectatorNameStr_ = "";
+          gametypeStrindex_ = 0;
           bitField0_ = (bitField0_ & ~0x04000000);
-          spectatorNameStrindex_ = 0;
+          spectatorNameStr_ = "";
           bitField0_ = (bitField0_ & ~0x08000000);
+          spectatorNameStrindex_ = 0;
+          bitField0_ = (bitField0_ & ~0x10000000);
           return this;
         }
 
@@ -13747,80 +14017,84 @@ public final class SteammessagesClientserverGameservers {
             to_bitField0_ |= 0x00000100;
           }
           if (((from_bitField0_ & 0x00000200) != 0)) {
-            result.flags_ = flags_;
             to_bitField0_ |= 0x00000200;
           }
+          result.sdrPingLocation_ = sdrPingLocation_;
           if (((from_bitField0_ & 0x00000400) != 0)) {
-            result.appId_ = appId_;
+            result.flags_ = flags_;
             to_bitField0_ |= 0x00000400;
           }
           if (((from_bitField0_ & 0x00000800) != 0)) {
-            result.maxPlayers_ = maxPlayers_;
+            result.appId_ = appId_;
             to_bitField0_ |= 0x00000800;
           }
           if (((from_bitField0_ & 0x00001000) != 0)) {
-            result.bots_ = bots_;
+            result.maxPlayers_ = maxPlayers_;
             to_bitField0_ |= 0x00001000;
           }
           if (((from_bitField0_ & 0x00002000) != 0)) {
-            result.spectatorPort_ = spectatorPort_;
+            result.bots_ = bots_;
             to_bitField0_ |= 0x00002000;
           }
           if (((from_bitField0_ & 0x00004000) != 0)) {
+            result.spectatorPort_ = spectatorPort_;
             to_bitField0_ |= 0x00004000;
           }
-          result.gamedirStr_ = gamedirStr_;
           if (((from_bitField0_ & 0x00008000) != 0)) {
-            result.gamedirStrindex_ = gamedirStrindex_;
             to_bitField0_ |= 0x00008000;
           }
+          result.gamedirStr_ = gamedirStr_;
           if (((from_bitField0_ & 0x00010000) != 0)) {
+            result.gamedirStrindex_ = gamedirStrindex_;
             to_bitField0_ |= 0x00010000;
           }
-          result.mapStr_ = mapStr_;
           if (((from_bitField0_ & 0x00020000) != 0)) {
-            result.mapStrindex_ = mapStrindex_;
             to_bitField0_ |= 0x00020000;
           }
+          result.mapStr_ = mapStr_;
           if (((from_bitField0_ & 0x00040000) != 0)) {
+            result.mapStrindex_ = mapStrindex_;
             to_bitField0_ |= 0x00040000;
           }
-          result.nameStr_ = nameStr_;
           if (((from_bitField0_ & 0x00080000) != 0)) {
-            result.nameStrindex_ = nameStrindex_;
             to_bitField0_ |= 0x00080000;
           }
+          result.nameStr_ = nameStr_;
           if (((from_bitField0_ & 0x00100000) != 0)) {
+            result.nameStrindex_ = nameStrindex_;
             to_bitField0_ |= 0x00100000;
           }
-          result.gameDescriptionStr_ = gameDescriptionStr_;
           if (((from_bitField0_ & 0x00200000) != 0)) {
-            result.gameDescriptionStrindex_ = gameDescriptionStrindex_;
             to_bitField0_ |= 0x00200000;
           }
+          result.gameDescriptionStr_ = gameDescriptionStr_;
           if (((from_bitField0_ & 0x00400000) != 0)) {
+            result.gameDescriptionStrindex_ = gameDescriptionStrindex_;
             to_bitField0_ |= 0x00400000;
           }
-          result.versionStr_ = versionStr_;
           if (((from_bitField0_ & 0x00800000) != 0)) {
-            result.versionStrindex_ = versionStrindex_;
             to_bitField0_ |= 0x00800000;
           }
+          result.versionStr_ = versionStr_;
           if (((from_bitField0_ & 0x01000000) != 0)) {
+            result.versionStrindex_ = versionStrindex_;
             to_bitField0_ |= 0x01000000;
           }
-          result.gametypeStr_ = gametypeStr_;
           if (((from_bitField0_ & 0x02000000) != 0)) {
-            result.gametypeStrindex_ = gametypeStrindex_;
             to_bitField0_ |= 0x02000000;
           }
+          result.gametypeStr_ = gametypeStr_;
           if (((from_bitField0_ & 0x04000000) != 0)) {
+            result.gametypeStrindex_ = gametypeStrindex_;
             to_bitField0_ |= 0x04000000;
           }
-          result.spectatorNameStr_ = spectatorNameStr_;
           if (((from_bitField0_ & 0x08000000) != 0)) {
-            result.spectatorNameStrindex_ = spectatorNameStrindex_;
             to_bitField0_ |= 0x08000000;
+          }
+          result.spectatorNameStr_ = spectatorNameStr_;
+          if (((from_bitField0_ & 0x10000000) != 0)) {
+            result.spectatorNameStrindex_ = spectatorNameStrindex_;
+            to_bitField0_ |= 0x10000000;
           }
           result.bitField0_ = to_bitField0_;
           onBuilt();
@@ -13898,6 +14172,11 @@ public final class SteammessagesClientserverGameservers {
           if (other.hasSdrPopid()) {
             setSdrPopid(other.getSdrPopid());
           }
+          if (other.hasSdrPingLocation()) {
+            bitField0_ |= 0x00000200;
+            sdrPingLocation_ = other.sdrPingLocation_;
+            onChanged();
+          }
           if (other.hasFlags()) {
             setFlags(other.getFlags());
           }
@@ -13914,7 +14193,7 @@ public final class SteammessagesClientserverGameservers {
             setSpectatorPort(other.getSpectatorPort());
           }
           if (other.hasGamedirStr()) {
-            bitField0_ |= 0x00004000;
+            bitField0_ |= 0x00008000;
             gamedirStr_ = other.gamedirStr_;
             onChanged();
           }
@@ -13922,7 +14201,7 @@ public final class SteammessagesClientserverGameservers {
             setGamedirStrindex(other.getGamedirStrindex());
           }
           if (other.hasMapStr()) {
-            bitField0_ |= 0x00010000;
+            bitField0_ |= 0x00020000;
             mapStr_ = other.mapStr_;
             onChanged();
           }
@@ -13930,7 +14209,7 @@ public final class SteammessagesClientserverGameservers {
             setMapStrindex(other.getMapStrindex());
           }
           if (other.hasNameStr()) {
-            bitField0_ |= 0x00040000;
+            bitField0_ |= 0x00080000;
             nameStr_ = other.nameStr_;
             onChanged();
           }
@@ -13938,7 +14217,7 @@ public final class SteammessagesClientserverGameservers {
             setNameStrindex(other.getNameStrindex());
           }
           if (other.hasGameDescriptionStr()) {
-            bitField0_ |= 0x00100000;
+            bitField0_ |= 0x00200000;
             gameDescriptionStr_ = other.gameDescriptionStr_;
             onChanged();
           }
@@ -13946,7 +14225,7 @@ public final class SteammessagesClientserverGameservers {
             setGameDescriptionStrindex(other.getGameDescriptionStrindex());
           }
           if (other.hasVersionStr()) {
-            bitField0_ |= 0x00400000;
+            bitField0_ |= 0x00800000;
             versionStr_ = other.versionStr_;
             onChanged();
           }
@@ -13954,7 +14233,7 @@ public final class SteammessagesClientserverGameservers {
             setVersionStrindex(other.getVersionStrindex());
           }
           if (other.hasGametypeStr()) {
-            bitField0_ |= 0x01000000;
+            bitField0_ |= 0x02000000;
             gametypeStr_ = other.gametypeStr_;
             onChanged();
           }
@@ -13962,7 +14241,7 @@ public final class SteammessagesClientserverGameservers {
             setGametypeStrindex(other.getGametypeStrindex());
           }
           if (other.hasSpectatorNameStr()) {
-            bitField0_ |= 0x04000000;
+            bitField0_ |= 0x08000000;
             spectatorNameStr_ = other.spectatorNameStr_;
             onChanged();
           }
@@ -14431,6 +14710,90 @@ public final class SteammessagesClientserverGameservers {
           return this;
         }
 
+        private java.lang.Object sdrPingLocation_ = "";
+        /**
+         * <code>optional string sdr_ping_location = 32;</code>
+         * @return Whether the sdrPingLocation field is set.
+         */
+        public boolean hasSdrPingLocation() {
+          return ((bitField0_ & 0x00000200) != 0);
+        }
+        /**
+         * <code>optional string sdr_ping_location = 32;</code>
+         * @return The sdrPingLocation.
+         */
+        public java.lang.String getSdrPingLocation() {
+          java.lang.Object ref = sdrPingLocation_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              sdrPingLocation_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string sdr_ping_location = 32;</code>
+         * @return The bytes for sdrPingLocation.
+         */
+        public com.google.protobuf.ByteString
+            getSdrPingLocationBytes() {
+          java.lang.Object ref = sdrPingLocation_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            sdrPingLocation_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string sdr_ping_location = 32;</code>
+         * @param value The sdrPingLocation to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSdrPingLocation(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+          sdrPingLocation_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string sdr_ping_location = 32;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSdrPingLocation() {
+          bitField0_ = (bitField0_ & ~0x00000200);
+          sdrPingLocation_ = getDefaultInstance().getSdrPingLocation();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string sdr_ping_location = 32;</code>
+         * @param value The bytes for sdrPingLocation to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSdrPingLocationBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+          sdrPingLocation_ = value;
+          onChanged();
+          return this;
+        }
+
         private int flags_ ;
         /**
          * <code>optional uint32 flags = 11;</code>
@@ -14438,7 +14801,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasFlags() {
-          return ((bitField0_ & 0x00000200) != 0);
+          return ((bitField0_ & 0x00000400) != 0);
         }
         /**
          * <code>optional uint32 flags = 11;</code>
@@ -14454,7 +14817,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setFlags(int value) {
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000400;
           flags_ = value;
           onChanged();
           return this;
@@ -14464,7 +14827,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearFlags() {
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
           flags_ = 0;
           onChanged();
           return this;
@@ -14477,7 +14840,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasAppId() {
-          return ((bitField0_ & 0x00000400) != 0);
+          return ((bitField0_ & 0x00000800) != 0);
         }
         /**
          * <code>optional uint32 app_id = 12;</code>
@@ -14493,7 +14856,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setAppId(int value) {
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000800;
           appId_ = value;
           onChanged();
           return this;
@@ -14503,7 +14866,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearAppId() {
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000800);
           appId_ = 0;
           onChanged();
           return this;
@@ -14516,7 +14879,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasMaxPlayers() {
-          return ((bitField0_ & 0x00000800) != 0);
+          return ((bitField0_ & 0x00001000) != 0);
         }
         /**
          * <code>optional uint32 max_players = 13;</code>
@@ -14532,7 +14895,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setMaxPlayers(int value) {
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00001000;
           maxPlayers_ = value;
           onChanged();
           return this;
@@ -14542,7 +14905,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearMaxPlayers() {
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00001000);
           maxPlayers_ = 0;
           onChanged();
           return this;
@@ -14555,7 +14918,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasBots() {
-          return ((bitField0_ & 0x00001000) != 0);
+          return ((bitField0_ & 0x00002000) != 0);
         }
         /**
          * <code>optional uint32 bots = 14;</code>
@@ -14571,7 +14934,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setBots(int value) {
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00002000;
           bots_ = value;
           onChanged();
           return this;
@@ -14581,7 +14944,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearBots() {
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00002000);
           bots_ = 0;
           onChanged();
           return this;
@@ -14594,7 +14957,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasSpectatorPort() {
-          return ((bitField0_ & 0x00002000) != 0);
+          return ((bitField0_ & 0x00004000) != 0);
         }
         /**
          * <code>optional uint32 spectator_port = 15;</code>
@@ -14610,7 +14973,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setSpectatorPort(int value) {
-          bitField0_ |= 0x00002000;
+          bitField0_ |= 0x00004000;
           spectatorPort_ = value;
           onChanged();
           return this;
@@ -14620,7 +14983,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearSpectatorPort() {
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00004000);
           spectatorPort_ = 0;
           onChanged();
           return this;
@@ -14632,7 +14995,7 @@ public final class SteammessagesClientserverGameservers {
          * @return Whether the gamedirStr field is set.
          */
         public boolean hasGamedirStr() {
-          return ((bitField0_ & 0x00004000) != 0);
+          return ((bitField0_ & 0x00008000) != 0);
         }
         /**
          * <code>optional string gamedir_str = 16;</code>
@@ -14679,7 +15042,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00004000;
+  bitField0_ |= 0x00008000;
           gamedirStr_ = value;
           onChanged();
           return this;
@@ -14689,7 +15052,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearGamedirStr() {
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00008000);
           gamedirStr_ = getDefaultInstance().getGamedirStr();
           onChanged();
           return this;
@@ -14704,7 +15067,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00004000;
+  bitField0_ |= 0x00008000;
           gamedirStr_ = value;
           onChanged();
           return this;
@@ -14717,7 +15080,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasGamedirStrindex() {
-          return ((bitField0_ & 0x00008000) != 0);
+          return ((bitField0_ & 0x00010000) != 0);
         }
         /**
          * <code>optional uint32 gamedir_strindex = 17;</code>
@@ -14733,7 +15096,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setGamedirStrindex(int value) {
-          bitField0_ |= 0x00008000;
+          bitField0_ |= 0x00010000;
           gamedirStrindex_ = value;
           onChanged();
           return this;
@@ -14743,7 +15106,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearGamedirStrindex() {
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00010000);
           gamedirStrindex_ = 0;
           onChanged();
           return this;
@@ -14755,7 +15118,7 @@ public final class SteammessagesClientserverGameservers {
          * @return Whether the mapStr field is set.
          */
         public boolean hasMapStr() {
-          return ((bitField0_ & 0x00010000) != 0);
+          return ((bitField0_ & 0x00020000) != 0);
         }
         /**
          * <code>optional string map_str = 18;</code>
@@ -14802,7 +15165,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00010000;
+  bitField0_ |= 0x00020000;
           mapStr_ = value;
           onChanged();
           return this;
@@ -14812,7 +15175,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearMapStr() {
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00020000);
           mapStr_ = getDefaultInstance().getMapStr();
           onChanged();
           return this;
@@ -14827,7 +15190,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00010000;
+  bitField0_ |= 0x00020000;
           mapStr_ = value;
           onChanged();
           return this;
@@ -14840,7 +15203,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasMapStrindex() {
-          return ((bitField0_ & 0x00020000) != 0);
+          return ((bitField0_ & 0x00040000) != 0);
         }
         /**
          * <code>optional uint32 map_strindex = 19;</code>
@@ -14856,7 +15219,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setMapStrindex(int value) {
-          bitField0_ |= 0x00020000;
+          bitField0_ |= 0x00040000;
           mapStrindex_ = value;
           onChanged();
           return this;
@@ -14866,7 +15229,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearMapStrindex() {
-          bitField0_ = (bitField0_ & ~0x00020000);
+          bitField0_ = (bitField0_ & ~0x00040000);
           mapStrindex_ = 0;
           onChanged();
           return this;
@@ -14878,7 +15241,7 @@ public final class SteammessagesClientserverGameservers {
          * @return Whether the nameStr field is set.
          */
         public boolean hasNameStr() {
-          return ((bitField0_ & 0x00040000) != 0);
+          return ((bitField0_ & 0x00080000) != 0);
         }
         /**
          * <code>optional string name_str = 20;</code>
@@ -14925,7 +15288,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00040000;
+  bitField0_ |= 0x00080000;
           nameStr_ = value;
           onChanged();
           return this;
@@ -14935,7 +15298,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearNameStr() {
-          bitField0_ = (bitField0_ & ~0x00040000);
+          bitField0_ = (bitField0_ & ~0x00080000);
           nameStr_ = getDefaultInstance().getNameStr();
           onChanged();
           return this;
@@ -14950,7 +15313,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00040000;
+  bitField0_ |= 0x00080000;
           nameStr_ = value;
           onChanged();
           return this;
@@ -14963,7 +15326,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasNameStrindex() {
-          return ((bitField0_ & 0x00080000) != 0);
+          return ((bitField0_ & 0x00100000) != 0);
         }
         /**
          * <code>optional uint32 name_strindex = 21;</code>
@@ -14979,7 +15342,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setNameStrindex(int value) {
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00100000;
           nameStrindex_ = value;
           onChanged();
           return this;
@@ -14989,7 +15352,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearNameStrindex() {
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ = (bitField0_ & ~0x00100000);
           nameStrindex_ = 0;
           onChanged();
           return this;
@@ -15001,7 +15364,7 @@ public final class SteammessagesClientserverGameservers {
          * @return Whether the gameDescriptionStr field is set.
          */
         public boolean hasGameDescriptionStr() {
-          return ((bitField0_ & 0x00100000) != 0);
+          return ((bitField0_ & 0x00200000) != 0);
         }
         /**
          * <code>optional string game_description_str = 22;</code>
@@ -15048,7 +15411,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00100000;
+  bitField0_ |= 0x00200000;
           gameDescriptionStr_ = value;
           onChanged();
           return this;
@@ -15058,7 +15421,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearGameDescriptionStr() {
-          bitField0_ = (bitField0_ & ~0x00100000);
+          bitField0_ = (bitField0_ & ~0x00200000);
           gameDescriptionStr_ = getDefaultInstance().getGameDescriptionStr();
           onChanged();
           return this;
@@ -15073,7 +15436,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00100000;
+  bitField0_ |= 0x00200000;
           gameDescriptionStr_ = value;
           onChanged();
           return this;
@@ -15086,7 +15449,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasGameDescriptionStrindex() {
-          return ((bitField0_ & 0x00200000) != 0);
+          return ((bitField0_ & 0x00400000) != 0);
         }
         /**
          * <code>optional uint32 game_description_strindex = 23;</code>
@@ -15102,7 +15465,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setGameDescriptionStrindex(int value) {
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00400000;
           gameDescriptionStrindex_ = value;
           onChanged();
           return this;
@@ -15112,7 +15475,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearGameDescriptionStrindex() {
-          bitField0_ = (bitField0_ & ~0x00200000);
+          bitField0_ = (bitField0_ & ~0x00400000);
           gameDescriptionStrindex_ = 0;
           onChanged();
           return this;
@@ -15124,7 +15487,7 @@ public final class SteammessagesClientserverGameservers {
          * @return Whether the versionStr field is set.
          */
         public boolean hasVersionStr() {
-          return ((bitField0_ & 0x00400000) != 0);
+          return ((bitField0_ & 0x00800000) != 0);
         }
         /**
          * <code>optional string version_str = 24;</code>
@@ -15171,7 +15534,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00400000;
+  bitField0_ |= 0x00800000;
           versionStr_ = value;
           onChanged();
           return this;
@@ -15181,7 +15544,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearVersionStr() {
-          bitField0_ = (bitField0_ & ~0x00400000);
+          bitField0_ = (bitField0_ & ~0x00800000);
           versionStr_ = getDefaultInstance().getVersionStr();
           onChanged();
           return this;
@@ -15196,7 +15559,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00400000;
+  bitField0_ |= 0x00800000;
           versionStr_ = value;
           onChanged();
           return this;
@@ -15209,7 +15572,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasVersionStrindex() {
-          return ((bitField0_ & 0x00800000) != 0);
+          return ((bitField0_ & 0x01000000) != 0);
         }
         /**
          * <code>optional uint32 version_strindex = 25;</code>
@@ -15225,7 +15588,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setVersionStrindex(int value) {
-          bitField0_ |= 0x00800000;
+          bitField0_ |= 0x01000000;
           versionStrindex_ = value;
           onChanged();
           return this;
@@ -15235,7 +15598,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearVersionStrindex() {
-          bitField0_ = (bitField0_ & ~0x00800000);
+          bitField0_ = (bitField0_ & ~0x01000000);
           versionStrindex_ = 0;
           onChanged();
           return this;
@@ -15247,7 +15610,7 @@ public final class SteammessagesClientserverGameservers {
          * @return Whether the gametypeStr field is set.
          */
         public boolean hasGametypeStr() {
-          return ((bitField0_ & 0x01000000) != 0);
+          return ((bitField0_ & 0x02000000) != 0);
         }
         /**
          * <code>optional string gametype_str = 26;</code>
@@ -15294,7 +15657,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x01000000;
+  bitField0_ |= 0x02000000;
           gametypeStr_ = value;
           onChanged();
           return this;
@@ -15304,7 +15667,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearGametypeStr() {
-          bitField0_ = (bitField0_ & ~0x01000000);
+          bitField0_ = (bitField0_ & ~0x02000000);
           gametypeStr_ = getDefaultInstance().getGametypeStr();
           onChanged();
           return this;
@@ -15319,7 +15682,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x01000000;
+  bitField0_ |= 0x02000000;
           gametypeStr_ = value;
           onChanged();
           return this;
@@ -15332,7 +15695,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasGametypeStrindex() {
-          return ((bitField0_ & 0x02000000) != 0);
+          return ((bitField0_ & 0x04000000) != 0);
         }
         /**
          * <code>optional uint32 gametype_strindex = 27;</code>
@@ -15348,7 +15711,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setGametypeStrindex(int value) {
-          bitField0_ |= 0x02000000;
+          bitField0_ |= 0x04000000;
           gametypeStrindex_ = value;
           onChanged();
           return this;
@@ -15358,7 +15721,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearGametypeStrindex() {
-          bitField0_ = (bitField0_ & ~0x02000000);
+          bitField0_ = (bitField0_ & ~0x04000000);
           gametypeStrindex_ = 0;
           onChanged();
           return this;
@@ -15370,7 +15733,7 @@ public final class SteammessagesClientserverGameservers {
          * @return Whether the spectatorNameStr field is set.
          */
         public boolean hasSpectatorNameStr() {
-          return ((bitField0_ & 0x04000000) != 0);
+          return ((bitField0_ & 0x08000000) != 0);
         }
         /**
          * <code>optional string spectator_name_str = 30;</code>
@@ -15417,7 +15780,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x04000000;
+  bitField0_ |= 0x08000000;
           spectatorNameStr_ = value;
           onChanged();
           return this;
@@ -15427,7 +15790,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearSpectatorNameStr() {
-          bitField0_ = (bitField0_ & ~0x04000000);
+          bitField0_ = (bitField0_ & ~0x08000000);
           spectatorNameStr_ = getDefaultInstance().getSpectatorNameStr();
           onChanged();
           return this;
@@ -15442,7 +15805,7 @@ public final class SteammessagesClientserverGameservers {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x04000000;
+  bitField0_ |= 0x08000000;
           spectatorNameStr_ = value;
           onChanged();
           return this;
@@ -15455,7 +15818,7 @@ public final class SteammessagesClientserverGameservers {
          */
         @java.lang.Override
         public boolean hasSpectatorNameStrindex() {
-          return ((bitField0_ & 0x08000000) != 0);
+          return ((bitField0_ & 0x10000000) != 0);
         }
         /**
          * <code>optional uint32 spectator_name_strindex = 31;</code>
@@ -15471,7 +15834,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder setSpectatorNameStrindex(int value) {
-          bitField0_ |= 0x08000000;
+          bitField0_ |= 0x10000000;
           spectatorNameStrindex_ = value;
           onChanged();
           return this;
@@ -15481,7 +15844,7 @@ public final class SteammessagesClientserverGameservers {
          * @return This builder for chaining.
          */
         public Builder clearSpectatorNameStrindex() {
-          bitField0_ = (bitField0_ & ~0x08000000);
+          bitField0_ = (bitField0_ & ~0x10000000);
           spectatorNameStrindex_ = 0;
           onChanged();
           return this;
@@ -20327,75 +20690,76 @@ public final class SteammessagesClientserverGameservers {
     java.lang.String[] descriptorData = {
       "\n2steam/steammessages_clientserver_games" +
       "ervers.proto\032\036steam/steammessages_base.p" +
-      "roto\"\324\001\n\020CMsgGSServerType\022\025\n\rapp_id_serv" +
+      "roto\"\355\001\n\020CMsgGSServerType\022\025\n\rapp_id_serv" +
       "ed\030\001 \001(\r\022\r\n\005flags\030\002 \001(\r\022\"\n\032deprecated_ga" +
       "me_ip_address\030\003 \001(\r\022\021\n\tgame_port\030\004 \001(\r\022\020" +
       "\n\010game_dir\030\005 \001(\t\022\024\n\014game_version\030\006 \001(\t\022\027" +
-      "\n\017game_query_port\030\007 \001(\r\022\021\n\tsdr_logon\030\010 \001" +
-      "(\014\022\017\n\007fake_ip\030\t \001(\007\"&\n\021CMsgGSStatusReply" +
-      "\022\021\n\tis_secure\030\001 \001(\010\"\251\001\n\020CMsgGSPlayerList" +
-      "\022)\n\007players\030\001 \003(\0132\030.CMsgGSPlayerList.Pla" +
-      "yer\032j\n\006Player\022\020\n\010steam_id\030\001 \001(\004\022\034\n\024depre" +
-      "cated_public_ip\030\002 \001(\r\022\r\n\005token\030\003 \001(\014\022!\n\t" +
-      "public_ip\030\004 \001(\0132\016.CMsgIPAddress\"u\n\021CMsgG" +
-      "SUserPlaying\022\020\n\010steam_id\030\001 \001(\006\022\034\n\024deprec" +
-      "ated_public_ip\030\002 \001(\r\022\r\n\005token\030\003 \001(\014\022!\n\tp" +
-      "ublic_ip\030\004 \001(\0132\016.CMsgIPAddress\"*\n\026CMsgGS" +
-      "DisconnectNotice\022\020\n\010steam_id\030\001 \001(\006\"\221\004\n\022C" +
-      "MsgGameServerData\022\020\n\010revision\030\030 \001(\r\022\023\n\013s" +
-      "team_id_gs\030\001 \001(\006\022\022\n\nquery_port\030\003 \001(\r\022\021\n\t" +
-      "game_port\030\004 \001(\r\022\026\n\016spectator_port\030\005 \001(\r\022" +
-      "\023\n\013server_name\030\026 \001(\t\022\030\n\020game_description" +
-      "\030\035 \001(\t\022\035\n\025spectator_server_name\030\033 \001(\t\022\017\n" +
-      "\007fake_ip\030\034 \001(\007\022\016\n\006app_id\030\006 \001(\r\022\017\n\007gamedi" +
-      "r\030\007 \001(\t\022\017\n\007version\030\010 \001(\t\022\017\n\007product\030\t \001(" +
-      "\t\022\016\n\006region\030\n \001(\t\022+\n\007players\030\013 \003(\0132\032.CMs" +
-      "gGameServerData.Player\022\023\n\013max_players\030\014 " +
-      "\001(\r\022\021\n\tbot_count\030\r \001(\r\022\020\n\010password\030\016 \001(\010" +
-      "\022\016\n\006secure\030\017 \001(\010\022\021\n\tdedicated\030\020 \001(\010\022\n\n\002o" +
-      "s\030\021 \001(\t\022\021\n\tgame_data\030\022 \001(\t\022\021\n\tgame_type\030" +
-      "\024 \001(\t\022\013\n\003map\030\025 \001(\t\032\032\n\006Player\022\020\n\010steam_id" +
-      "\030\001 \001(\006\"M\n\024CMsgGameServerRemove\022\032\n\022legacy" +
-      "_steam_id_gs\030\001 \001(\006\022\031\n\021legacy_query_port\030" +
-      "\003 \001(\r\"\202\001\n\030CMsgClientGMSServerQuery\022\016\n\006ap" +
-      "p_id\030\001 \001(\r\022\027\n\017geo_location_ip\030\002 \001(\r\022\023\n\013r" +
-      "egion_code\030\003 \001(\r\022\023\n\013filter_text\030\004 \001(\t\022\023\n" +
-      "\013max_servers\030\005 \001(\r\"\212\007\n CMsgGMSClientServ" +
-      "erQueryResponse\0229\n\007servers\030\001 \003(\0132(.CMsgG" +
-      "MSClientServerQueryResponse.Server\022\r\n\005er" +
-      "ror\030\002 \001(\t\022E\n\023default_server_data\030\003 \001(\0132(" +
-      ".CMsgGMSClientServerQueryResponse.Server" +
-      "\022\026\n\016server_strings\030\004 \003(\t\032\205\005\n\006Server\022\034\n\024d" +
-      "eprecated_server_ip\030\001 \001(\r\022\022\n\nquery_port\030" +
-      "\002 \001(\r\022\024\n\014auth_players\030\003 \001(\r\022!\n\tserver_ip" +
-      "\030\004 \001(\0132\016.CMsgIPAddress\022\020\n\010steam_id\030\006 \001(\006" +
-      "\022\020\n\010revision\030\007 \001(\r\022\017\n\007players\030\010 \001(\r\022\021\n\tg" +
-      "ame_port\030\t \001(\r\022\021\n\tsdr_popid\030\n \001(\007\022\r\n\005fla" +
-      "gs\030\013 \001(\r\022\016\n\006app_id\030\014 \001(\r\022\023\n\013max_players\030" +
-      "\r \001(\r\022\014\n\004bots\030\016 \001(\r\022\026\n\016spectator_port\030\017 " +
-      "\001(\r\022\023\n\013gamedir_str\030\020 \001(\t\022\030\n\020gamedir_stri" +
-      "ndex\030\021 \001(\r\022\017\n\007map_str\030\022 \001(\t\022\024\n\014map_strin" +
-      "dex\030\023 \001(\r\022\020\n\010name_str\030\024 \001(\t\022\025\n\rname_stri" +
-      "ndex\030\025 \001(\r\022\034\n\024game_description_str\030\026 \001(\t" +
-      "\022!\n\031game_description_strindex\030\027 \001(\r\022\023\n\013v" +
-      "ersion_str\030\030 \001(\t\022\030\n\020version_strindex\030\031 \001" +
-      "(\r\022\024\n\014gametype_str\030\032 \001(\t\022\031\n\021gametype_str" +
-      "index\030\033 \001(\r\022\032\n\022spectator_name_str\030\036 \001(\t\022" +
-      "\037\n\027spectator_name_strindex\030\037 \001(\r\"5\n\006EFla" +
-      "gs\022\027\n\023k_EFlag_HasPassword\020\001\022\022\n\016k_EFlag_S" +
-      "ecure\020\002\"O\n\027CMsgGameServerOutOfDate\022\023\n\013st" +
-      "eam_id_gs\030\001 \001(\006\022\016\n\006reject\030\002 \001(\010\022\017\n\007messa" +
-      "ge\030\003 \001(\t\"0\n\027CMsgGSAssociateWithClan\022\025\n\rs" +
-      "team_id_clan\030\001 \001(\006\"L\n\037CMsgGSAssociateWit" +
-      "hClanResponse\022\025\n\rsteam_id_clan\030\001 \001(\006\022\022\n\007" +
-      "eresult\030\002 \001(\r:\0012\"A\n#CMsgGSComputeNewPlay" +
-      "erCompatibility\022\032\n\022steam_id_candidate\030\001 " +
-      "\001(\006\"\317\001\n+CMsgGSComputeNewPlayerCompatibil" +
-      "ityResponse\022\032\n\022steam_id_candidate\030\001 \001(\006\022" +
-      "\022\n\007eresult\030\002 \001(\r:\0012\022\026\n\016is_clan_member\030\003 " +
-      "\001(\010\022\030\n\020ct_dont_like_you\030\004 \001(\005\022\030\n\020ct_you_" +
-      "dont_like\030\005 \001(\005\022$\n\034ct_clanmembers_dont_l" +
-      "ike_you\030\006 \001(\005B\005H\001\200\001\000"
+      "\n\017game_query_port\030\007 \001(\r\022\027\n\017game_port_loc" +
+      "al\030\n \001(\r\022\021\n\tsdr_logon\030\010 \001(\014\022\017\n\007fake_ip\030\t" +
+      " \001(\007\"&\n\021CMsgGSStatusReply\022\021\n\tis_secure\030\001" +
+      " \001(\010\"\251\001\n\020CMsgGSPlayerList\022)\n\007players\030\001 \003" +
+      "(\0132\030.CMsgGSPlayerList.Player\032j\n\006Player\022\020" +
+      "\n\010steam_id\030\001 \001(\004\022\034\n\024deprecated_public_ip" +
+      "\030\002 \001(\r\022\r\n\005token\030\003 \001(\014\022!\n\tpublic_ip\030\004 \001(\013" +
+      "2\016.CMsgIPAddress\"u\n\021CMsgGSUserPlaying\022\020\n" +
+      "\010steam_id\030\001 \001(\006\022\034\n\024deprecated_public_ip\030" +
+      "\002 \001(\r\022\r\n\005token\030\003 \001(\014\022!\n\tpublic_ip\030\004 \001(\0132" +
+      "\016.CMsgIPAddress\"*\n\026CMsgGSDisconnectNotic" +
+      "e\022\020\n\010steam_id\030\001 \001(\006\"\227\004\n\022CMsgGameServerDa" +
+      "ta\022\020\n\010revision\030\030 \001(\r\022\022\n\nquery_port\030\003 \001(\r" +
+      "\022\021\n\tgame_port\030\004 \001(\r\022\026\n\016spectator_port\030\005 " +
+      "\001(\r\022\023\n\013server_name\030\026 \001(\t\022\030\n\020game_descrip" +
+      "tion\030\035 \001(\t\022\035\n\025spectator_server_name\030\033 \001(" +
+      "\t\022\017\n\007fake_ip\030\034 \001(\007\022\031\n\021sdr_ping_location\030" +
+      "\036 \001(\t\022\016\n\006app_id\030\006 \001(\r\022\017\n\007gamedir\030\007 \001(\t\022\017" +
+      "\n\007version\030\010 \001(\t\022\017\n\007product\030\t \001(\t\022\016\n\006regi" +
+      "on\030\n \001(\t\022+\n\007players\030\013 \003(\0132\032.CMsgGameServ" +
+      "erData.Player\022\023\n\013max_players\030\014 \001(\r\022\021\n\tbo" +
+      "t_count\030\r \001(\r\022\020\n\010password\030\016 \001(\010\022\016\n\006secur" +
+      "e\030\017 \001(\010\022\021\n\tdedicated\030\020 \001(\010\022\n\n\002os\030\021 \001(\t\022\021" +
+      "\n\tgame_data\030\022 \001(\t\022\021\n\tgame_type\030\024 \001(\t\022\013\n\003" +
+      "map\030\025 \001(\t\032\032\n\006Player\022\020\n\010steam_id\030\001 \001(\006\"M\n" +
+      "\024CMsgGameServerRemove\022\032\n\022legacy_steam_id" +
+      "_gs\030\001 \001(\006\022\031\n\021legacy_query_port\030\003 \001(\r\"\202\001\n" +
+      "\030CMsgClientGMSServerQuery\022\016\n\006app_id\030\001 \001(" +
+      "\r\022\027\n\017geo_location_ip\030\002 \001(\r\022\023\n\013region_cod" +
+      "e\030\003 \001(\r\022\023\n\013filter_text\030\004 \001(\t\022\023\n\013max_serv" +
+      "ers\030\005 \001(\r\"\245\007\n CMsgGMSClientServerQueryRe" +
+      "sponse\0229\n\007servers\030\001 \003(\0132(.CMsgGMSClientS" +
+      "erverQueryResponse.Server\022\r\n\005error\030\002 \001(\t" +
+      "\022E\n\023default_server_data\030\003 \001(\0132(.CMsgGMSC" +
+      "lientServerQueryResponse.Server\022\026\n\016serve" +
+      "r_strings\030\004 \003(\t\032\240\005\n\006Server\022\034\n\024deprecated" +
+      "_server_ip\030\001 \001(\r\022\022\n\nquery_port\030\002 \001(\r\022\024\n\014" +
+      "auth_players\030\003 \001(\r\022!\n\tserver_ip\030\004 \001(\0132\016." +
+      "CMsgIPAddress\022\020\n\010steam_id\030\006 \001(\006\022\020\n\010revis" +
+      "ion\030\007 \001(\r\022\017\n\007players\030\010 \001(\r\022\021\n\tgame_port\030" +
+      "\t \001(\r\022\021\n\tsdr_popid\030\n \001(\007\022\031\n\021sdr_ping_loc" +
+      "ation\030  \001(\t\022\r\n\005flags\030\013 \001(\r\022\016\n\006app_id\030\014 \001" +
+      "(\r\022\023\n\013max_players\030\r \001(\r\022\014\n\004bots\030\016 \001(\r\022\026\n" +
+      "\016spectator_port\030\017 \001(\r\022\023\n\013gamedir_str\030\020 \001" +
+      "(\t\022\030\n\020gamedir_strindex\030\021 \001(\r\022\017\n\007map_str\030" +
+      "\022 \001(\t\022\024\n\014map_strindex\030\023 \001(\r\022\020\n\010name_str\030" +
+      "\024 \001(\t\022\025\n\rname_strindex\030\025 \001(\r\022\034\n\024game_des" +
+      "cription_str\030\026 \001(\t\022!\n\031game_description_s" +
+      "trindex\030\027 \001(\r\022\023\n\013version_str\030\030 \001(\t\022\030\n\020ve" +
+      "rsion_strindex\030\031 \001(\r\022\024\n\014gametype_str\030\032 \001" +
+      "(\t\022\031\n\021gametype_strindex\030\033 \001(\r\022\032\n\022spectat" +
+      "or_name_str\030\036 \001(\t\022\037\n\027spectator_name_stri" +
+      "ndex\030\037 \001(\r\"5\n\006EFlags\022\027\n\023k_EFlag_HasPassw" +
+      "ord\020\001\022\022\n\016k_EFlag_Secure\020\002\"O\n\027CMsgGameSer" +
+      "verOutOfDate\022\023\n\013steam_id_gs\030\001 \001(\006\022\016\n\006rej" +
+      "ect\030\002 \001(\010\022\017\n\007message\030\003 \001(\t\"0\n\027CMsgGSAsso" +
+      "ciateWithClan\022\025\n\rsteam_id_clan\030\001 \001(\006\"L\n\037" +
+      "CMsgGSAssociateWithClanResponse\022\025\n\rsteam" +
+      "_id_clan\030\001 \001(\006\022\022\n\007eresult\030\002 \001(\r:\0012\"A\n#CM" +
+      "sgGSComputeNewPlayerCompatibility\022\032\n\022ste" +
+      "am_id_candidate\030\001 \001(\006\"\317\001\n+CMsgGSComputeN" +
+      "ewPlayerCompatibilityResponse\022\032\n\022steam_i" +
+      "d_candidate\030\001 \001(\006\022\022\n\007eresult\030\002 \001(\r:\0012\022\026\n" +
+      "\016is_clan_member\030\003 \001(\010\022\030\n\020ct_dont_like_yo" +
+      "u\030\004 \001(\005\022\030\n\020ct_you_dont_like\030\005 \001(\005\022$\n\034ct_" +
+      "clanmembers_dont_like_you\030\006 \001(\005B\005H\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20407,7 +20771,7 @@ public final class SteammessagesClientserverGameservers {
     internal_static_CMsgGSServerType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgGSServerType_descriptor,
-        new java.lang.String[] { "AppIdServed", "Flags", "DeprecatedGameIpAddress", "GamePort", "GameDir", "GameVersion", "GameQueryPort", "SdrLogon", "FakeIp", });
+        new java.lang.String[] { "AppIdServed", "Flags", "DeprecatedGameIpAddress", "GamePort", "GameDir", "GameVersion", "GameQueryPort", "GamePortLocal", "SdrLogon", "FakeIp", });
     internal_static_CMsgGSStatusReply_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CMsgGSStatusReply_fieldAccessorTable = new
@@ -20443,7 +20807,7 @@ public final class SteammessagesClientserverGameservers {
     internal_static_CMsgGameServerData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgGameServerData_descriptor,
-        new java.lang.String[] { "Revision", "SteamIdGs", "QueryPort", "GamePort", "SpectatorPort", "ServerName", "GameDescription", "SpectatorServerName", "FakeIp", "AppId", "Gamedir", "Version", "Product", "Region", "Players", "MaxPlayers", "BotCount", "Password", "Secure", "Dedicated", "Os", "GameData", "GameType", "Map", });
+        new java.lang.String[] { "Revision", "QueryPort", "GamePort", "SpectatorPort", "ServerName", "GameDescription", "SpectatorServerName", "FakeIp", "SdrPingLocation", "AppId", "Gamedir", "Version", "Product", "Region", "Players", "MaxPlayers", "BotCount", "Password", "Secure", "Dedicated", "Os", "GameData", "GameType", "Map", });
     internal_static_CMsgGameServerData_Player_descriptor =
       internal_static_CMsgGameServerData_descriptor.getNestedTypes().get(0);
     internal_static_CMsgGameServerData_Player_fieldAccessorTable = new
@@ -20473,7 +20837,7 @@ public final class SteammessagesClientserverGameservers {
     internal_static_CMsgGMSClientServerQueryResponse_Server_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgGMSClientServerQueryResponse_Server_descriptor,
-        new java.lang.String[] { "DeprecatedServerIp", "QueryPort", "AuthPlayers", "ServerIp", "SteamId", "Revision", "Players", "GamePort", "SdrPopid", "Flags", "AppId", "MaxPlayers", "Bots", "SpectatorPort", "GamedirStr", "GamedirStrindex", "MapStr", "MapStrindex", "NameStr", "NameStrindex", "GameDescriptionStr", "GameDescriptionStrindex", "VersionStr", "VersionStrindex", "GametypeStr", "GametypeStrindex", "SpectatorNameStr", "SpectatorNameStrindex", });
+        new java.lang.String[] { "DeprecatedServerIp", "QueryPort", "AuthPlayers", "ServerIp", "SteamId", "Revision", "Players", "GamePort", "SdrPopid", "SdrPingLocation", "Flags", "AppId", "MaxPlayers", "Bots", "SpectatorPort", "GamedirStr", "GamedirStrindex", "MapStr", "MapStrindex", "NameStr", "NameStrindex", "GameDescriptionStr", "GameDescriptionStrindex", "VersionStr", "VersionStrindex", "GametypeStr", "GametypeStrindex", "SpectatorNameStr", "SpectatorNameStrindex", });
     internal_static_CMsgGameServerOutOfDate_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_CMsgGameServerOutOfDate_fieldAccessorTable = new

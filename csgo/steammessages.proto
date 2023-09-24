@@ -2,9 +2,6 @@ syntax = "proto2";
 
 import "google/protobuf/descriptor.proto";
 
-option optimize_for = SPEED;
-option cc_generic_services = false;
-
 extend .google.protobuf.FieldOptions {
 	optional bool key_field = 60000 [default = false];
 }
@@ -69,7 +66,6 @@ message CMsgHttpRequest {
 }
 
 message CMsgWebAPIRequest {
-	optional string UNUSED_job_name = 1;
 	optional string interface_name = 2;
 	optional string method_name = 3;
 	optional uint32 version = 4;
@@ -411,6 +407,7 @@ message CMsgGCMsgMasterSetDirectory {
 
 message CMsgGCMsgMasterSetDirectory_Response {
 	optional int32 eresult = 1 [default = 2];
+	optional string message = 2;
 }
 
 message CMsgGCMsgWebAPIJobRequestForwardResponse {

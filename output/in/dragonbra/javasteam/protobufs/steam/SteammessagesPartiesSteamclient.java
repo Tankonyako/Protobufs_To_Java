@@ -8415,61 +8415,62 @@ public final class SteammessagesPartiesSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n-steam/steammessages_parties.steamclien" +
-      "t.proto\0322steam/steammessages_unified_bas" +
-      "e.steamclient.proto\"@\n\032CParties_JoinPart" +
-      "y_Request\022\017\n\007steamid\030\001 \001(\006\022\021\n\tbeacon_id\030" +
-      "\002 \001(\004\"H\n\033CParties_JoinParty_Response\022\021\n\t" +
-      "beacon_id\030\001 \001(\004\022\026\n\016connect_string\030\002 \001(\t\"" +
-      "E\n\027CParties_BeaconLocation\022\025\n\rlocation_t" +
-      "ype\030\001 \001(\r\022\023\n\013location_id\030\002 \001(\004\"\235\001\n\035CPart" +
-      "ies_CreateBeacon_Request\022\r\n\005appid\030\001 \001(\r\022" +
-      "\026\n\016num_open_slots\030\002 \001(\r\022+\n\tlocations\030\003 \003" +
-      "(\0132\030.CParties_BeaconLocation\022\026\n\016connect_" +
-      "string\030\004 \001(\t\022\020\n\010metadata\030\005 \001(\t\"3\n\036CParti" +
-      "es_CreateBeacon_Response\022\021\n\tbeacon_id\030\001 " +
-      "\001(\004\"R\n\'CParties_OnReservationCompleted_R" +
-      "equest\022\021\n\tbeacon_id\030\001 \001(\004\022\024\n\014user_steami" +
-      "d\030\002 \001(\006\"=\n(CParties_OnReservationComplet" +
-      "ed_Response\022\021\n\tbeacon_id\030\001 \001(\004\"M\n\"CParti" +
-      "es_CancelReservation_Request\022\021\n\tbeacon_i" +
-      "d\030\001 \001(\004\022\024\n\014user_steamid\030\002 \001(\006\"8\n#CPartie" +
-      "s_CancelReservation_Response\022\021\n\tbeacon_i" +
-      "d\030\001 \001(\004\"P\n#CParties_ChangeNumOpenSlots_R" +
-      "equest\022\021\n\tbeacon_id\030\001 \001(\004\022\026\n\016num_open_sl" +
-      "ots\030\002 \001(\r\"9\n$CParties_ChangeNumOpenSlots" +
-      "_Response\022\021\n\tbeacon_id\030\001 \001(\004\"3\n\036CParties" +
-      "_DestroyBeacon_Request\022\021\n\tbeacon_id\030\001 \001(" +
-      "\004\"4\n\037CParties_DestroyBeacon_Response\022\021\n\t" +
-      "beacon_id\030\001 \001(\0042\331\007\n\007Parties\022\271\001\n\tJoinPart" +
-      "y\022\033.CParties_JoinParty_Request\032\034.CPartie" +
-      "s_JoinParty_Response\"q\202\265\030mRequest to joi" +
-      "n a Party via the given Beacon ID. If su" +
-      "ccessful, will be given the necessary \'c" +
-      "onnect\' string.\022\205\001\n\014CreateBeacon\022\036.CPart" +
-      "ies_CreateBeacon_Request\032\037.CParties_Crea" +
-      "teBeacon_Response\"4\202\265\0300Create a Beacon t" +
-      "o attract people to your Party.\022\267\001\n\026OnRe" +
-      "servationCompleted\022(.CParties_OnReservat" +
-      "ionCompleted_Request\032).CParties_OnReserv" +
-      "ationCompleted_Response\"H\202\265\030DNotify Stea" +
-      "m that a user with a reservation has suc" +
-      "cessfully joined.\022\276\001\n\021CancelReservation\022" +
-      "#.CParties_CancelReservation_Request\032$.C" +
-      "Parties_CancelReservation_Response\"^\202\265\030Z" +
-      "Notify Steam that a user with a reservat" +
-      "ion either never showed up, or has left " +
-      "the party.\022\206\001\n\022ChangeNumOpenSlots\022$.CPar" +
-      "ties_ChangeNumOpenSlots_Request\032%.CParti" +
-      "es_ChangeNumOpenSlots_Response\"#\202\265\030\037Chan" +
-      "ge the number of open slots\022j\n\rDestroyBe" +
-      "acon\022\037.CParties_DestroyBeacon_Request\032 ." +
-      "CParties_DestroyBeacon_Response\"\026\202\265\030\022Del" +
-      "ete the Beacon.\032\032\202\265\030\026Party-related servi" +
-      "cesB\003\200\001\001"
+      "t.proto\032\036steam/steammessages_base.proto\032" +
+      "2steam/steammessages_unified_base.steamc" +
+      "lient.proto\"@\n\032CParties_JoinParty_Reques" +
+      "t\022\017\n\007steamid\030\001 \001(\006\022\021\n\tbeacon_id\030\002 \001(\004\"H\n" +
+      "\033CParties_JoinParty_Response\022\021\n\tbeacon_i" +
+      "d\030\001 \001(\004\022\026\n\016connect_string\030\002 \001(\t\"E\n\027CPart" +
+      "ies_BeaconLocation\022\025\n\rlocation_type\030\001 \001(" +
+      "\r\022\023\n\013location_id\030\002 \001(\004\"\235\001\n\035CParties_Crea" +
+      "teBeacon_Request\022\r\n\005appid\030\001 \001(\r\022\026\n\016num_o" +
+      "pen_slots\030\002 \001(\r\022+\n\tlocations\030\003 \003(\0132\030.CPa" +
+      "rties_BeaconLocation\022\026\n\016connect_string\030\004" +
+      " \001(\t\022\020\n\010metadata\030\005 \001(\t\"3\n\036CParties_Creat" +
+      "eBeacon_Response\022\021\n\tbeacon_id\030\001 \001(\004\"R\n\'C" +
+      "Parties_OnReservationCompleted_Request\022\021" +
+      "\n\tbeacon_id\030\001 \001(\004\022\024\n\014user_steamid\030\002 \001(\006\"" +
+      "=\n(CParties_OnReservationCompleted_Respo" +
+      "nse\022\021\n\tbeacon_id\030\001 \001(\004\"M\n\"CParties_Cance" +
+      "lReservation_Request\022\021\n\tbeacon_id\030\001 \001(\004\022" +
+      "\024\n\014user_steamid\030\002 \001(\006\"8\n#CParties_Cancel" +
+      "Reservation_Response\022\021\n\tbeacon_id\030\001 \001(\004\"" +
+      "P\n#CParties_ChangeNumOpenSlots_Request\022\021" +
+      "\n\tbeacon_id\030\001 \001(\004\022\026\n\016num_open_slots\030\002 \001(" +
+      "\r\"9\n$CParties_ChangeNumOpenSlots_Respons" +
+      "e\022\021\n\tbeacon_id\030\001 \001(\004\"3\n\036CParties_Destroy" +
+      "Beacon_Request\022\021\n\tbeacon_id\030\001 \001(\004\"4\n\037CPa" +
+      "rties_DestroyBeacon_Response\022\021\n\tbeacon_i" +
+      "d\030\001 \001(\0042\331\007\n\007Parties\022\271\001\n\tJoinParty\022\033.CPar" +
+      "ties_JoinParty_Request\032\034.CParties_JoinPa" +
+      "rty_Response\"q\202\265\030mRequest to join a Part" +
+      "y via the given Beacon ID. If successful" +
+      ", will be given the necessary \'connect\' " +
+      "string.\022\205\001\n\014CreateBeacon\022\036.CParties_Crea" +
+      "teBeacon_Request\032\037.CParties_CreateBeacon" +
+      "_Response\"4\202\265\0300Create a Beacon to attrac" +
+      "t people to your Party.\022\267\001\n\026OnReservatio" +
+      "nCompleted\022(.CParties_OnReservationCompl" +
+      "eted_Request\032).CParties_OnReservationCom" +
+      "pleted_Response\"H\202\265\030DNotify Steam that a" +
+      " user with a reservation has successfull" +
+      "y joined.\022\276\001\n\021CancelReservation\022#.CParti" +
+      "es_CancelReservation_Request\032$.CParties_" +
+      "CancelReservation_Response\"^\202\265\030ZNotify S" +
+      "team that a user with a reservation eith" +
+      "er never showed up, or has left the part" +
+      "y.\022\206\001\n\022ChangeNumOpenSlots\022$.CParties_Cha" +
+      "ngeNumOpenSlots_Request\032%.CParties_Chang" +
+      "eNumOpenSlots_Response\"#\202\265\030\037Change the n" +
+      "umber of open slots\022j\n\rDestroyBeacon\022\037.C" +
+      "Parties_DestroyBeacon_Request\032 .CParties" +
+      "_DestroyBeacon_Response\"\026\202\265\030\022Delete the " +
+      "Beacon.\032\032\202\265\030\026Party-related servicesB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CParties_JoinParty_Request_descriptor =
@@ -8556,6 +8557,7 @@ public final class SteammessagesPartiesSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

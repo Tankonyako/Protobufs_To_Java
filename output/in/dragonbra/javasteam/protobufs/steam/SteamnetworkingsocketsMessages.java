@@ -3910,6 +3910,17 @@ public final class SteamnetworkingsocketsMessages {
     long getPacketsRecvOutOfOrder();
 
     /**
+     * <code>optional uint64 packets_recv_out_of_order_corrected = 15;</code>
+     * @return Whether the packetsRecvOutOfOrderCorrected field is set.
+     */
+    boolean hasPacketsRecvOutOfOrderCorrected();
+    /**
+     * <code>optional uint64 packets_recv_out_of_order_corrected = 15;</code>
+     * @return The packetsRecvOutOfOrderCorrected.
+     */
+    long getPacketsRecvOutOfOrderCorrected();
+
+    /**
      * <code>optional uint64 packets_recv_duplicate = 10;</code>
      * @return Whether the packetsRecvDuplicate field is set.
      */
@@ -4738,19 +4749,19 @@ public final class SteamnetworkingsocketsMessages {
               break;
             }
             case 80: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               packetsRecvDuplicate_ = input.readUInt64();
               break;
             }
             case 88: {
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               packetsRecvLurch_ = input.readUInt64();
               break;
             }
             case 96: {
-              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
                 multipathPacketsRecvSequenced_ = newLongList();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000800;
               }
               multipathPacketsRecvSequenced_.addLong(input.readUInt64());
               break;
@@ -4758,9 +4769,9 @@ public final class SteamnetworkingsocketsMessages {
             case 98: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000400) != 0) && input.getBytesUntilLimit() > 0) {
+              if (!((mutable_bitField0_ & 0x00000800) != 0) && input.getBytesUntilLimit() > 0) {
                 multipathPacketsRecvSequenced_ = newLongList();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000800;
               }
               while (input.getBytesUntilLimit() > 0) {
                 multipathPacketsRecvSequenced_.addLong(input.readUInt64());
@@ -4769,9 +4780,9 @@ public final class SteamnetworkingsocketsMessages {
               break;
             }
             case 104: {
-              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
+              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
                 multipathPacketsRecvLater_ = newLongList();
-                mutable_bitField0_ |= 0x00000800;
+                mutable_bitField0_ |= 0x00001000;
               }
               multipathPacketsRecvLater_.addLong(input.readUInt64());
               break;
@@ -4779,9 +4790,9 @@ public final class SteamnetworkingsocketsMessages {
             case 106: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000800) != 0) && input.getBytesUntilLimit() > 0) {
+              if (!((mutable_bitField0_ & 0x00001000) != 0) && input.getBytesUntilLimit() > 0) {
                 multipathPacketsRecvLater_ = newLongList();
-                mutable_bitField0_ |= 0x00000800;
+                mutable_bitField0_ |= 0x00001000;
               }
               while (input.getBytesUntilLimit() > 0) {
                 multipathPacketsRecvLater_.addLong(input.readUInt64());
@@ -4790,312 +4801,317 @@ public final class SteamnetworkingsocketsMessages {
               break;
             }
             case 112: {
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000800;
               multipathSendEnabled_ = input.readUInt32();
               break;
             }
+            case 120: {
+              bitField0_ |= 0x00000100;
+              packetsRecvOutOfOrderCorrected_ = input.readUInt64();
+              break;
+            }
             case 168: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00001000;
               qualityHistogram100_ = input.readUInt32();
               break;
             }
             case 176: {
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00002000;
               qualityHistogram99_ = input.readUInt32();
               break;
             }
             case 184: {
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00004000;
               qualityHistogram97_ = input.readUInt32();
               break;
             }
             case 192: {
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00008000;
               qualityHistogram95_ = input.readUInt32();
               break;
             }
             case 200: {
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00010000;
               qualityHistogram90_ = input.readUInt32();
               break;
             }
             case 208: {
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00020000;
               qualityHistogram75_ = input.readUInt32();
               break;
             }
             case 216: {
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00040000;
               qualityHistogram50_ = input.readUInt32();
               break;
             }
             case 224: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00080000;
               qualityHistogram1_ = input.readUInt32();
               break;
             }
             case 232: {
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00100000;
               qualityHistogramDead_ = input.readUInt32();
               break;
             }
             case 240: {
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00200000;
               qualityNtile2Nd_ = input.readUInt32();
               break;
             }
             case 248: {
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00400000;
               qualityNtile5Th_ = input.readUInt32();
               break;
             }
             case 256: {
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00800000;
               qualityNtile25Th_ = input.readUInt32();
               break;
             }
             case 264: {
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x01000000;
               qualityNtile50Th_ = input.readUInt32();
               break;
             }
             case 328: {
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x02000000;
               pingHistogram25_ = input.readUInt32();
               break;
             }
             case 336: {
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x04000000;
               pingHistogram50_ = input.readUInt32();
               break;
             }
             case 344: {
-              bitField0_ |= 0x04000000;
+              bitField0_ |= 0x08000000;
               pingHistogram75_ = input.readUInt32();
               break;
             }
             case 352: {
-              bitField0_ |= 0x08000000;
+              bitField0_ |= 0x10000000;
               pingHistogram100_ = input.readUInt32();
               break;
             }
             case 360: {
-              bitField0_ |= 0x10000000;
+              bitField0_ |= 0x20000000;
               pingHistogram125_ = input.readUInt32();
               break;
             }
             case 368: {
-              bitField0_ |= 0x20000000;
+              bitField0_ |= 0x40000000;
               pingHistogram150_ = input.readUInt32();
               break;
             }
             case 376: {
-              bitField0_ |= 0x40000000;
+              bitField0_ |= 0x80000000;
               pingHistogram200_ = input.readUInt32();
               break;
             }
             case 384: {
-              bitField0_ |= 0x80000000;
+              bitField1_ |= 0x00000001;
               pingHistogram300_ = input.readUInt32();
               break;
             }
             case 392: {
-              bitField1_ |= 0x00000001;
+              bitField1_ |= 0x00000002;
               pingHistogramMax_ = input.readUInt32();
               break;
             }
             case 400: {
-              bitField1_ |= 0x00000002;
+              bitField1_ |= 0x00000004;
               pingNtile5Th_ = input.readUInt32();
               break;
             }
             case 408: {
-              bitField1_ |= 0x00000004;
+              bitField1_ |= 0x00000008;
               pingNtile50Th_ = input.readUInt32();
               break;
             }
             case 416: {
-              bitField1_ |= 0x00000008;
+              bitField1_ |= 0x00000010;
               pingNtile75Th_ = input.readUInt32();
               break;
             }
             case 424: {
-              bitField1_ |= 0x00000010;
+              bitField1_ |= 0x00000020;
               pingNtile95Th_ = input.readUInt32();
               break;
             }
             case 432: {
-              bitField1_ |= 0x00000020;
+              bitField1_ |= 0x00000040;
               pingNtile98Th_ = input.readUInt32();
               break;
             }
             case 488: {
-              bitField1_ |= 0x00000040;
+              bitField1_ |= 0x00000080;
               jitterHistogramNegligible_ = input.readUInt32();
               break;
             }
             case 496: {
-              bitField1_ |= 0x00000080;
+              bitField1_ |= 0x00000100;
               jitterHistogram1_ = input.readUInt32();
               break;
             }
             case 504: {
-              bitField1_ |= 0x00000100;
+              bitField1_ |= 0x00000200;
               jitterHistogram2_ = input.readUInt32();
               break;
             }
             case 512: {
-              bitField1_ |= 0x00000200;
+              bitField1_ |= 0x00000400;
               jitterHistogram5_ = input.readUInt32();
               break;
             }
             case 520: {
-              bitField1_ |= 0x00000400;
+              bitField1_ |= 0x00000800;
               jitterHistogram10_ = input.readUInt32();
               break;
             }
             case 528: {
-              bitField1_ |= 0x00000800;
+              bitField1_ |= 0x00001000;
               jitterHistogram20_ = input.readUInt32();
               break;
             }
             case 536: {
-              bitField1_ |= 0x00001000;
+              bitField1_ |= 0x00002000;
               txspeedMax_ = input.readUInt32();
               break;
             }
             case 544: {
-              bitField1_ |= 0x00002000;
+              bitField1_ |= 0x00004000;
               txspeedHistogram16_ = input.readUInt32();
               break;
             }
             case 552: {
-              bitField1_ |= 0x00004000;
+              bitField1_ |= 0x00008000;
               txspeedHistogram32_ = input.readUInt32();
               break;
             }
             case 560: {
-              bitField1_ |= 0x00008000;
+              bitField1_ |= 0x00010000;
               txspeedHistogram64_ = input.readUInt32();
               break;
             }
             case 568: {
-              bitField1_ |= 0x00010000;
+              bitField1_ |= 0x00020000;
               txspeedHistogram128_ = input.readUInt32();
               break;
             }
             case 576: {
-              bitField1_ |= 0x00020000;
+              bitField1_ |= 0x00040000;
               txspeedHistogram256_ = input.readUInt32();
               break;
             }
             case 584: {
-              bitField1_ |= 0x00040000;
+              bitField1_ |= 0x00080000;
               txspeedHistogram512_ = input.readUInt32();
               break;
             }
             case 592: {
-              bitField1_ |= 0x00080000;
+              bitField1_ |= 0x00100000;
               txspeedHistogram1024_ = input.readUInt32();
               break;
             }
             case 600: {
-              bitField1_ |= 0x00100000;
+              bitField1_ |= 0x00200000;
               txspeedHistogramMax_ = input.readUInt32();
               break;
             }
             case 608: {
-              bitField1_ |= 0x00200000;
+              bitField1_ |= 0x00400000;
               txspeedNtile5Th_ = input.readUInt32();
               break;
             }
             case 616: {
-              bitField1_ |= 0x00400000;
+              bitField1_ |= 0x00800000;
               txspeedNtile50Th_ = input.readUInt32();
               break;
             }
             case 624: {
-              bitField1_ |= 0x00800000;
+              bitField1_ |= 0x01000000;
               txspeedNtile75Th_ = input.readUInt32();
               break;
             }
             case 632: {
-              bitField1_ |= 0x01000000;
+              bitField1_ |= 0x02000000;
               txspeedNtile95Th_ = input.readUInt32();
               break;
             }
             case 640: {
-              bitField1_ |= 0x02000000;
+              bitField1_ |= 0x04000000;
               txspeedNtile98Th_ = input.readUInt32();
               break;
             }
             case 648: {
-              bitField1_ |= 0x04000000;
+              bitField1_ |= 0x08000000;
               rxspeedMax_ = input.readUInt32();
               break;
             }
             case 656: {
-              bitField1_ |= 0x08000000;
+              bitField1_ |= 0x10000000;
               rxspeedHistogram16_ = input.readUInt32();
               break;
             }
             case 664: {
-              bitField1_ |= 0x10000000;
+              bitField1_ |= 0x20000000;
               rxspeedHistogram32_ = input.readUInt32();
               break;
             }
             case 672: {
-              bitField1_ |= 0x20000000;
+              bitField1_ |= 0x40000000;
               rxspeedHistogram64_ = input.readUInt32();
               break;
             }
             case 680: {
-              bitField1_ |= 0x40000000;
+              bitField1_ |= 0x80000000;
               rxspeedHistogram128_ = input.readUInt32();
               break;
             }
             case 688: {
-              bitField1_ |= 0x80000000;
+              bitField2_ |= 0x00000001;
               rxspeedHistogram256_ = input.readUInt32();
               break;
             }
             case 696: {
-              bitField2_ |= 0x00000001;
+              bitField2_ |= 0x00000002;
               rxspeedHistogram512_ = input.readUInt32();
               break;
             }
             case 704: {
-              bitField2_ |= 0x00000002;
+              bitField2_ |= 0x00000004;
               rxspeedHistogram1024_ = input.readUInt32();
               break;
             }
             case 712: {
-              bitField2_ |= 0x00000004;
+              bitField2_ |= 0x00000008;
               rxspeedHistogramMax_ = input.readUInt32();
               break;
             }
             case 720: {
-              bitField2_ |= 0x00000008;
+              bitField2_ |= 0x00000010;
               rxspeedNtile5Th_ = input.readUInt32();
               break;
             }
             case 728: {
-              bitField2_ |= 0x00000010;
+              bitField2_ |= 0x00000020;
               rxspeedNtile50Th_ = input.readUInt32();
               break;
             }
             case 736: {
-              bitField2_ |= 0x00000020;
+              bitField2_ |= 0x00000040;
               rxspeedNtile75Th_ = input.readUInt32();
               break;
             }
             case 744: {
-              bitField2_ |= 0x00000040;
+              bitField2_ |= 0x00000080;
               rxspeedNtile95Th_ = input.readUInt32();
               break;
             }
             case 752: {
-              bitField2_ |= 0x00000080;
+              bitField2_ |= 0x00000100;
               rxspeedNtile98Th_ = input.readUInt32();
               break;
             }
@@ -5114,10 +5130,10 @@ public final class SteamnetworkingsocketsMessages {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000400) != 0)) {
+        if (((mutable_bitField0_ & 0x00000800) != 0)) {
           multipathPacketsRecvSequenced_.makeImmutable(); // C
         }
-        if (((mutable_bitField0_ & 0x00000800) != 0)) {
+        if (((mutable_bitField0_ & 0x00001000) != 0)) {
           multipathPacketsRecvLater_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
@@ -5292,6 +5308,25 @@ public final class SteamnetworkingsocketsMessages {
       return packetsRecvOutOfOrder_;
     }
 
+    public static final int PACKETS_RECV_OUT_OF_ORDER_CORRECTED_FIELD_NUMBER = 15;
+    private long packetsRecvOutOfOrderCorrected_;
+    /**
+     * <code>optional uint64 packets_recv_out_of_order_corrected = 15;</code>
+     * @return Whether the packetsRecvOutOfOrderCorrected field is set.
+     */
+    @java.lang.Override
+    public boolean hasPacketsRecvOutOfOrderCorrected() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional uint64 packets_recv_out_of_order_corrected = 15;</code>
+     * @return The packetsRecvOutOfOrderCorrected.
+     */
+    @java.lang.Override
+    public long getPacketsRecvOutOfOrderCorrected() {
+      return packetsRecvOutOfOrderCorrected_;
+    }
+
     public static final int PACKETS_RECV_DUPLICATE_FIELD_NUMBER = 10;
     private long packetsRecvDuplicate_;
     /**
@@ -5300,7 +5335,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPacketsRecvDuplicate() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>optional uint64 packets_recv_duplicate = 10;</code>
@@ -5319,7 +5354,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPacketsRecvLurch() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <code>optional uint64 packets_recv_lurch = 11;</code>
@@ -5392,7 +5427,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasMultipathSendEnabled() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <code>optional uint32 multipath_send_enabled = 14;</code>
@@ -5411,7 +5446,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityHistogram100() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <code>optional uint32 quality_histogram_100 = 21;</code>
@@ -5430,7 +5465,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityHistogram99() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <code>optional uint32 quality_histogram_99 = 22;</code>
@@ -5449,7 +5484,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityHistogram97() {
-      return ((bitField0_ & 0x00002000) != 0);
+      return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <code>optional uint32 quality_histogram_97 = 23;</code>
@@ -5468,7 +5503,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityHistogram95() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <code>optional uint32 quality_histogram_95 = 24;</code>
@@ -5487,7 +5522,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityHistogram90() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <code>optional uint32 quality_histogram_90 = 25;</code>
@@ -5506,7 +5541,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityHistogram75() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <code>optional uint32 quality_histogram_75 = 26;</code>
@@ -5525,7 +5560,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityHistogram50() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <code>optional uint32 quality_histogram_50 = 27;</code>
@@ -5544,7 +5579,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityHistogram1() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <code>optional uint32 quality_histogram_1 = 28;</code>
@@ -5563,7 +5598,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityHistogramDead() {
-      return ((bitField0_ & 0x00080000) != 0);
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <code>optional uint32 quality_histogram_dead = 29;</code>
@@ -5582,7 +5617,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityNtile2Nd() {
-      return ((bitField0_ & 0x00100000) != 0);
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <code>optional uint32 quality_ntile_2nd = 30;</code>
@@ -5601,7 +5636,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityNtile5Th() {
-      return ((bitField0_ & 0x00200000) != 0);
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <code>optional uint32 quality_ntile_5th = 31;</code>
@@ -5620,7 +5655,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityNtile25Th() {
-      return ((bitField0_ & 0x00400000) != 0);
+      return ((bitField0_ & 0x00800000) != 0);
     }
     /**
      * <code>optional uint32 quality_ntile_25th = 32;</code>
@@ -5639,7 +5674,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasQualityNtile50Th() {
-      return ((bitField0_ & 0x00800000) != 0);
+      return ((bitField0_ & 0x01000000) != 0);
     }
     /**
      * <code>optional uint32 quality_ntile_50th = 33;</code>
@@ -5658,7 +5693,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingHistogram25() {
-      return ((bitField0_ & 0x01000000) != 0);
+      return ((bitField0_ & 0x02000000) != 0);
     }
     /**
      * <code>optional uint32 ping_histogram_25 = 41;</code>
@@ -5677,7 +5712,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingHistogram50() {
-      return ((bitField0_ & 0x02000000) != 0);
+      return ((bitField0_ & 0x04000000) != 0);
     }
     /**
      * <code>optional uint32 ping_histogram_50 = 42;</code>
@@ -5696,7 +5731,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingHistogram75() {
-      return ((bitField0_ & 0x04000000) != 0);
+      return ((bitField0_ & 0x08000000) != 0);
     }
     /**
      * <code>optional uint32 ping_histogram_75 = 43;</code>
@@ -5715,7 +5750,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingHistogram100() {
-      return ((bitField0_ & 0x08000000) != 0);
+      return ((bitField0_ & 0x10000000) != 0);
     }
     /**
      * <code>optional uint32 ping_histogram_100 = 44;</code>
@@ -5734,7 +5769,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingHistogram125() {
-      return ((bitField0_ & 0x10000000) != 0);
+      return ((bitField0_ & 0x20000000) != 0);
     }
     /**
      * <code>optional uint32 ping_histogram_125 = 45;</code>
@@ -5753,7 +5788,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingHistogram150() {
-      return ((bitField0_ & 0x20000000) != 0);
+      return ((bitField0_ & 0x40000000) != 0);
     }
     /**
      * <code>optional uint32 ping_histogram_150 = 46;</code>
@@ -5772,7 +5807,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingHistogram200() {
-      return ((bitField0_ & 0x40000000) != 0);
+      return ((bitField0_ & 0x80000000) != 0);
     }
     /**
      * <code>optional uint32 ping_histogram_200 = 47;</code>
@@ -5791,7 +5826,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingHistogram300() {
-      return ((bitField0_ & 0x80000000) != 0);
+      return ((bitField1_ & 0x00000001) != 0);
     }
     /**
      * <code>optional uint32 ping_histogram_300 = 48;</code>
@@ -5810,7 +5845,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingHistogramMax() {
-      return ((bitField1_ & 0x00000001) != 0);
+      return ((bitField1_ & 0x00000002) != 0);
     }
     /**
      * <code>optional uint32 ping_histogram_max = 49;</code>
@@ -5829,7 +5864,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingNtile5Th() {
-      return ((bitField1_ & 0x00000002) != 0);
+      return ((bitField1_ & 0x00000004) != 0);
     }
     /**
      * <code>optional uint32 ping_ntile_5th = 50;</code>
@@ -5848,7 +5883,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingNtile50Th() {
-      return ((bitField1_ & 0x00000004) != 0);
+      return ((bitField1_ & 0x00000008) != 0);
     }
     /**
      * <code>optional uint32 ping_ntile_50th = 51;</code>
@@ -5867,7 +5902,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingNtile75Th() {
-      return ((bitField1_ & 0x00000008) != 0);
+      return ((bitField1_ & 0x00000010) != 0);
     }
     /**
      * <code>optional uint32 ping_ntile_75th = 52;</code>
@@ -5886,7 +5921,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingNtile95Th() {
-      return ((bitField1_ & 0x00000010) != 0);
+      return ((bitField1_ & 0x00000020) != 0);
     }
     /**
      * <code>optional uint32 ping_ntile_95th = 53;</code>
@@ -5905,7 +5940,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasPingNtile98Th() {
-      return ((bitField1_ & 0x00000020) != 0);
+      return ((bitField1_ & 0x00000040) != 0);
     }
     /**
      * <code>optional uint32 ping_ntile_98th = 54;</code>
@@ -5924,7 +5959,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasJitterHistogramNegligible() {
-      return ((bitField1_ & 0x00000040) != 0);
+      return ((bitField1_ & 0x00000080) != 0);
     }
     /**
      * <code>optional uint32 jitter_histogram_negligible = 61;</code>
@@ -5943,7 +5978,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasJitterHistogram1() {
-      return ((bitField1_ & 0x00000080) != 0);
+      return ((bitField1_ & 0x00000100) != 0);
     }
     /**
      * <code>optional uint32 jitter_histogram_1 = 62;</code>
@@ -5962,7 +5997,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasJitterHistogram2() {
-      return ((bitField1_ & 0x00000100) != 0);
+      return ((bitField1_ & 0x00000200) != 0);
     }
     /**
      * <code>optional uint32 jitter_histogram_2 = 63;</code>
@@ -5981,7 +6016,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasJitterHistogram5() {
-      return ((bitField1_ & 0x00000200) != 0);
+      return ((bitField1_ & 0x00000400) != 0);
     }
     /**
      * <code>optional uint32 jitter_histogram_5 = 64;</code>
@@ -6000,7 +6035,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasJitterHistogram10() {
-      return ((bitField1_ & 0x00000400) != 0);
+      return ((bitField1_ & 0x00000800) != 0);
     }
     /**
      * <code>optional uint32 jitter_histogram_10 = 65;</code>
@@ -6019,7 +6054,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasJitterHistogram20() {
-      return ((bitField1_ & 0x00000800) != 0);
+      return ((bitField1_ & 0x00001000) != 0);
     }
     /**
      * <code>optional uint32 jitter_histogram_20 = 66;</code>
@@ -6038,7 +6073,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedMax() {
-      return ((bitField1_ & 0x00001000) != 0);
+      return ((bitField1_ & 0x00002000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_max = 67;</code>
@@ -6057,7 +6092,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedHistogram16() {
-      return ((bitField1_ & 0x00002000) != 0);
+      return ((bitField1_ & 0x00004000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_histogram_16 = 68;</code>
@@ -6076,7 +6111,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedHistogram32() {
-      return ((bitField1_ & 0x00004000) != 0);
+      return ((bitField1_ & 0x00008000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_histogram_32 = 69;</code>
@@ -6095,7 +6130,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedHistogram64() {
-      return ((bitField1_ & 0x00008000) != 0);
+      return ((bitField1_ & 0x00010000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_histogram_64 = 70;</code>
@@ -6114,7 +6149,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedHistogram128() {
-      return ((bitField1_ & 0x00010000) != 0);
+      return ((bitField1_ & 0x00020000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_histogram_128 = 71;</code>
@@ -6133,7 +6168,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedHistogram256() {
-      return ((bitField1_ & 0x00020000) != 0);
+      return ((bitField1_ & 0x00040000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_histogram_256 = 72;</code>
@@ -6152,7 +6187,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedHistogram512() {
-      return ((bitField1_ & 0x00040000) != 0);
+      return ((bitField1_ & 0x00080000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_histogram_512 = 73;</code>
@@ -6171,7 +6206,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedHistogram1024() {
-      return ((bitField1_ & 0x00080000) != 0);
+      return ((bitField1_ & 0x00100000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_histogram_1024 = 74;</code>
@@ -6190,7 +6225,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedHistogramMax() {
-      return ((bitField1_ & 0x00100000) != 0);
+      return ((bitField1_ & 0x00200000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_histogram_max = 75;</code>
@@ -6209,7 +6244,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedNtile5Th() {
-      return ((bitField1_ & 0x00200000) != 0);
+      return ((bitField1_ & 0x00400000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_ntile_5th = 76;</code>
@@ -6228,7 +6263,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedNtile50Th() {
-      return ((bitField1_ & 0x00400000) != 0);
+      return ((bitField1_ & 0x00800000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_ntile_50th = 77;</code>
@@ -6247,7 +6282,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedNtile75Th() {
-      return ((bitField1_ & 0x00800000) != 0);
+      return ((bitField1_ & 0x01000000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_ntile_75th = 78;</code>
@@ -6266,7 +6301,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedNtile95Th() {
-      return ((bitField1_ & 0x01000000) != 0);
+      return ((bitField1_ & 0x02000000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_ntile_95th = 79;</code>
@@ -6285,7 +6320,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasTxspeedNtile98Th() {
-      return ((bitField1_ & 0x02000000) != 0);
+      return ((bitField1_ & 0x04000000) != 0);
     }
     /**
      * <code>optional uint32 txspeed_ntile_98th = 80;</code>
@@ -6304,7 +6339,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedMax() {
-      return ((bitField1_ & 0x04000000) != 0);
+      return ((bitField1_ & 0x08000000) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_max = 81;</code>
@@ -6323,7 +6358,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedHistogram16() {
-      return ((bitField1_ & 0x08000000) != 0);
+      return ((bitField1_ & 0x10000000) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_histogram_16 = 82;</code>
@@ -6342,7 +6377,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedHistogram32() {
-      return ((bitField1_ & 0x10000000) != 0);
+      return ((bitField1_ & 0x20000000) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_histogram_32 = 83;</code>
@@ -6361,7 +6396,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedHistogram64() {
-      return ((bitField1_ & 0x20000000) != 0);
+      return ((bitField1_ & 0x40000000) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_histogram_64 = 84;</code>
@@ -6380,7 +6415,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedHistogram128() {
-      return ((bitField1_ & 0x40000000) != 0);
+      return ((bitField1_ & 0x80000000) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_histogram_128 = 85;</code>
@@ -6399,7 +6434,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedHistogram256() {
-      return ((bitField1_ & 0x80000000) != 0);
+      return ((bitField2_ & 0x00000001) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_histogram_256 = 86;</code>
@@ -6418,7 +6453,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedHistogram512() {
-      return ((bitField2_ & 0x00000001) != 0);
+      return ((bitField2_ & 0x00000002) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_histogram_512 = 87;</code>
@@ -6437,7 +6472,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedHistogram1024() {
-      return ((bitField2_ & 0x00000002) != 0);
+      return ((bitField2_ & 0x00000004) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_histogram_1024 = 88;</code>
@@ -6456,7 +6491,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedHistogramMax() {
-      return ((bitField2_ & 0x00000004) != 0);
+      return ((bitField2_ & 0x00000008) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_histogram_max = 89;</code>
@@ -6475,7 +6510,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedNtile5Th() {
-      return ((bitField2_ & 0x00000008) != 0);
+      return ((bitField2_ & 0x00000010) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_ntile_5th = 90;</code>
@@ -6494,7 +6529,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedNtile50Th() {
-      return ((bitField2_ & 0x00000010) != 0);
+      return ((bitField2_ & 0x00000020) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_ntile_50th = 91;</code>
@@ -6513,7 +6548,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedNtile75Th() {
-      return ((bitField2_ & 0x00000020) != 0);
+      return ((bitField2_ & 0x00000040) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_ntile_75th = 92;</code>
@@ -6532,7 +6567,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedNtile95Th() {
-      return ((bitField2_ & 0x00000040) != 0);
+      return ((bitField2_ & 0x00000080) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_ntile_95th = 93;</code>
@@ -6551,7 +6586,7 @@ public final class SteamnetworkingsocketsMessages {
      */
     @java.lang.Override
     public boolean hasRxspeedNtile98Th() {
-      return ((bitField2_ & 0x00000080) != 0);
+      return ((bitField2_ & 0x00000100) != 0);
     }
     /**
      * <code>optional uint32 rxspeed_ntile_98th = 94;</code>
@@ -6600,10 +6635,10 @@ public final class SteamnetworkingsocketsMessages {
       if (((bitField0_ & 0x00000080) != 0)) {
         output.writeUInt64(9, packetsRecvOutOfOrder_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeUInt64(10, packetsRecvDuplicate_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         output.writeUInt64(11, packetsRecvLurch_);
       }
       for (int i = 0; i < multipathPacketsRecvSequenced_.size(); i++) {
@@ -6612,190 +6647,193 @@ public final class SteamnetworkingsocketsMessages {
       for (int i = 0; i < multipathPacketsRecvLater_.size(); i++) {
         output.writeUInt64(13, multipathPacketsRecvLater_.getLong(i));
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         output.writeUInt32(14, multipathSendEnabled_);
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
-        output.writeUInt32(21, qualityHistogram100_);
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeUInt64(15, packetsRecvOutOfOrderCorrected_);
       }
       if (((bitField0_ & 0x00001000) != 0)) {
-        output.writeUInt32(22, qualityHistogram99_);
+        output.writeUInt32(21, qualityHistogram100_);
       }
       if (((bitField0_ & 0x00002000) != 0)) {
-        output.writeUInt32(23, qualityHistogram97_);
+        output.writeUInt32(22, qualityHistogram99_);
       }
       if (((bitField0_ & 0x00004000) != 0)) {
-        output.writeUInt32(24, qualityHistogram95_);
+        output.writeUInt32(23, qualityHistogram97_);
       }
       if (((bitField0_ & 0x00008000) != 0)) {
-        output.writeUInt32(25, qualityHistogram90_);
+        output.writeUInt32(24, qualityHistogram95_);
       }
       if (((bitField0_ & 0x00010000) != 0)) {
-        output.writeUInt32(26, qualityHistogram75_);
+        output.writeUInt32(25, qualityHistogram90_);
       }
       if (((bitField0_ & 0x00020000) != 0)) {
-        output.writeUInt32(27, qualityHistogram50_);
+        output.writeUInt32(26, qualityHistogram75_);
       }
       if (((bitField0_ & 0x00040000) != 0)) {
-        output.writeUInt32(28, qualityHistogram1_);
+        output.writeUInt32(27, qualityHistogram50_);
       }
       if (((bitField0_ & 0x00080000) != 0)) {
-        output.writeUInt32(29, qualityHistogramDead_);
+        output.writeUInt32(28, qualityHistogram1_);
       }
       if (((bitField0_ & 0x00100000) != 0)) {
-        output.writeUInt32(30, qualityNtile2Nd_);
+        output.writeUInt32(29, qualityHistogramDead_);
       }
       if (((bitField0_ & 0x00200000) != 0)) {
-        output.writeUInt32(31, qualityNtile5Th_);
+        output.writeUInt32(30, qualityNtile2Nd_);
       }
       if (((bitField0_ & 0x00400000) != 0)) {
-        output.writeUInt32(32, qualityNtile25Th_);
+        output.writeUInt32(31, qualityNtile5Th_);
       }
       if (((bitField0_ & 0x00800000) != 0)) {
-        output.writeUInt32(33, qualityNtile50Th_);
+        output.writeUInt32(32, qualityNtile25Th_);
       }
       if (((bitField0_ & 0x01000000) != 0)) {
-        output.writeUInt32(41, pingHistogram25_);
+        output.writeUInt32(33, qualityNtile50Th_);
       }
       if (((bitField0_ & 0x02000000) != 0)) {
-        output.writeUInt32(42, pingHistogram50_);
+        output.writeUInt32(41, pingHistogram25_);
       }
       if (((bitField0_ & 0x04000000) != 0)) {
-        output.writeUInt32(43, pingHistogram75_);
+        output.writeUInt32(42, pingHistogram50_);
       }
       if (((bitField0_ & 0x08000000) != 0)) {
-        output.writeUInt32(44, pingHistogram100_);
+        output.writeUInt32(43, pingHistogram75_);
       }
       if (((bitField0_ & 0x10000000) != 0)) {
-        output.writeUInt32(45, pingHistogram125_);
+        output.writeUInt32(44, pingHistogram100_);
       }
       if (((bitField0_ & 0x20000000) != 0)) {
-        output.writeUInt32(46, pingHistogram150_);
+        output.writeUInt32(45, pingHistogram125_);
       }
       if (((bitField0_ & 0x40000000) != 0)) {
-        output.writeUInt32(47, pingHistogram200_);
+        output.writeUInt32(46, pingHistogram150_);
       }
       if (((bitField0_ & 0x80000000) != 0)) {
-        output.writeUInt32(48, pingHistogram300_);
+        output.writeUInt32(47, pingHistogram200_);
       }
       if (((bitField1_ & 0x00000001) != 0)) {
-        output.writeUInt32(49, pingHistogramMax_);
+        output.writeUInt32(48, pingHistogram300_);
       }
       if (((bitField1_ & 0x00000002) != 0)) {
-        output.writeUInt32(50, pingNtile5Th_);
+        output.writeUInt32(49, pingHistogramMax_);
       }
       if (((bitField1_ & 0x00000004) != 0)) {
-        output.writeUInt32(51, pingNtile50Th_);
+        output.writeUInt32(50, pingNtile5Th_);
       }
       if (((bitField1_ & 0x00000008) != 0)) {
-        output.writeUInt32(52, pingNtile75Th_);
+        output.writeUInt32(51, pingNtile50Th_);
       }
       if (((bitField1_ & 0x00000010) != 0)) {
-        output.writeUInt32(53, pingNtile95Th_);
+        output.writeUInt32(52, pingNtile75Th_);
       }
       if (((bitField1_ & 0x00000020) != 0)) {
-        output.writeUInt32(54, pingNtile98Th_);
+        output.writeUInt32(53, pingNtile95Th_);
       }
       if (((bitField1_ & 0x00000040) != 0)) {
-        output.writeUInt32(61, jitterHistogramNegligible_);
+        output.writeUInt32(54, pingNtile98Th_);
       }
       if (((bitField1_ & 0x00000080) != 0)) {
-        output.writeUInt32(62, jitterHistogram1_);
+        output.writeUInt32(61, jitterHistogramNegligible_);
       }
       if (((bitField1_ & 0x00000100) != 0)) {
-        output.writeUInt32(63, jitterHistogram2_);
+        output.writeUInt32(62, jitterHistogram1_);
       }
       if (((bitField1_ & 0x00000200) != 0)) {
-        output.writeUInt32(64, jitterHistogram5_);
+        output.writeUInt32(63, jitterHistogram2_);
       }
       if (((bitField1_ & 0x00000400) != 0)) {
-        output.writeUInt32(65, jitterHistogram10_);
+        output.writeUInt32(64, jitterHistogram5_);
       }
       if (((bitField1_ & 0x00000800) != 0)) {
-        output.writeUInt32(66, jitterHistogram20_);
+        output.writeUInt32(65, jitterHistogram10_);
       }
       if (((bitField1_ & 0x00001000) != 0)) {
-        output.writeUInt32(67, txspeedMax_);
+        output.writeUInt32(66, jitterHistogram20_);
       }
       if (((bitField1_ & 0x00002000) != 0)) {
-        output.writeUInt32(68, txspeedHistogram16_);
+        output.writeUInt32(67, txspeedMax_);
       }
       if (((bitField1_ & 0x00004000) != 0)) {
-        output.writeUInt32(69, txspeedHistogram32_);
+        output.writeUInt32(68, txspeedHistogram16_);
       }
       if (((bitField1_ & 0x00008000) != 0)) {
-        output.writeUInt32(70, txspeedHistogram64_);
+        output.writeUInt32(69, txspeedHistogram32_);
       }
       if (((bitField1_ & 0x00010000) != 0)) {
-        output.writeUInt32(71, txspeedHistogram128_);
+        output.writeUInt32(70, txspeedHistogram64_);
       }
       if (((bitField1_ & 0x00020000) != 0)) {
-        output.writeUInt32(72, txspeedHistogram256_);
+        output.writeUInt32(71, txspeedHistogram128_);
       }
       if (((bitField1_ & 0x00040000) != 0)) {
-        output.writeUInt32(73, txspeedHistogram512_);
+        output.writeUInt32(72, txspeedHistogram256_);
       }
       if (((bitField1_ & 0x00080000) != 0)) {
-        output.writeUInt32(74, txspeedHistogram1024_);
+        output.writeUInt32(73, txspeedHistogram512_);
       }
       if (((bitField1_ & 0x00100000) != 0)) {
-        output.writeUInt32(75, txspeedHistogramMax_);
+        output.writeUInt32(74, txspeedHistogram1024_);
       }
       if (((bitField1_ & 0x00200000) != 0)) {
-        output.writeUInt32(76, txspeedNtile5Th_);
+        output.writeUInt32(75, txspeedHistogramMax_);
       }
       if (((bitField1_ & 0x00400000) != 0)) {
-        output.writeUInt32(77, txspeedNtile50Th_);
+        output.writeUInt32(76, txspeedNtile5Th_);
       }
       if (((bitField1_ & 0x00800000) != 0)) {
-        output.writeUInt32(78, txspeedNtile75Th_);
+        output.writeUInt32(77, txspeedNtile50Th_);
       }
       if (((bitField1_ & 0x01000000) != 0)) {
-        output.writeUInt32(79, txspeedNtile95Th_);
+        output.writeUInt32(78, txspeedNtile75Th_);
       }
       if (((bitField1_ & 0x02000000) != 0)) {
-        output.writeUInt32(80, txspeedNtile98Th_);
+        output.writeUInt32(79, txspeedNtile95Th_);
       }
       if (((bitField1_ & 0x04000000) != 0)) {
-        output.writeUInt32(81, rxspeedMax_);
+        output.writeUInt32(80, txspeedNtile98Th_);
       }
       if (((bitField1_ & 0x08000000) != 0)) {
-        output.writeUInt32(82, rxspeedHistogram16_);
+        output.writeUInt32(81, rxspeedMax_);
       }
       if (((bitField1_ & 0x10000000) != 0)) {
-        output.writeUInt32(83, rxspeedHistogram32_);
+        output.writeUInt32(82, rxspeedHistogram16_);
       }
       if (((bitField1_ & 0x20000000) != 0)) {
-        output.writeUInt32(84, rxspeedHistogram64_);
+        output.writeUInt32(83, rxspeedHistogram32_);
       }
       if (((bitField1_ & 0x40000000) != 0)) {
-        output.writeUInt32(85, rxspeedHistogram128_);
+        output.writeUInt32(84, rxspeedHistogram64_);
       }
       if (((bitField1_ & 0x80000000) != 0)) {
-        output.writeUInt32(86, rxspeedHistogram256_);
+        output.writeUInt32(85, rxspeedHistogram128_);
       }
       if (((bitField2_ & 0x00000001) != 0)) {
-        output.writeUInt32(87, rxspeedHistogram512_);
+        output.writeUInt32(86, rxspeedHistogram256_);
       }
       if (((bitField2_ & 0x00000002) != 0)) {
-        output.writeUInt32(88, rxspeedHistogram1024_);
+        output.writeUInt32(87, rxspeedHistogram512_);
       }
       if (((bitField2_ & 0x00000004) != 0)) {
-        output.writeUInt32(89, rxspeedHistogramMax_);
+        output.writeUInt32(88, rxspeedHistogram1024_);
       }
       if (((bitField2_ & 0x00000008) != 0)) {
-        output.writeUInt32(90, rxspeedNtile5Th_);
+        output.writeUInt32(89, rxspeedHistogramMax_);
       }
       if (((bitField2_ & 0x00000010) != 0)) {
-        output.writeUInt32(91, rxspeedNtile50Th_);
+        output.writeUInt32(90, rxspeedNtile5Th_);
       }
       if (((bitField2_ & 0x00000020) != 0)) {
-        output.writeUInt32(92, rxspeedNtile75Th_);
+        output.writeUInt32(91, rxspeedNtile50Th_);
       }
       if (((bitField2_ & 0x00000040) != 0)) {
-        output.writeUInt32(93, rxspeedNtile95Th_);
+        output.writeUInt32(92, rxspeedNtile75Th_);
       }
       if (((bitField2_ & 0x00000080) != 0)) {
+        output.writeUInt32(93, rxspeedNtile95Th_);
+      }
+      if (((bitField2_ & 0x00000100) != 0)) {
         output.writeUInt32(94, rxspeedNtile98Th_);
       }
       unknownFields.writeTo(output);
@@ -6839,11 +6877,11 @@ public final class SteamnetworkingsocketsMessages {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(9, packetsRecvOutOfOrder_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(10, packetsRecvDuplicate_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(11, packetsRecvLurch_);
       }
@@ -6865,251 +6903,255 @@ public final class SteamnetworkingsocketsMessages {
         size += dataSize;
         size += 1 * getMultipathPacketsRecvLaterList().size();
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(14, multipathSendEnabled_);
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(21, qualityHistogram100_);
+          .computeUInt64Size(15, packetsRecvOutOfOrderCorrected_);
       }
       if (((bitField0_ & 0x00001000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(22, qualityHistogram99_);
+          .computeUInt32Size(21, qualityHistogram100_);
       }
       if (((bitField0_ & 0x00002000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(23, qualityHistogram97_);
+          .computeUInt32Size(22, qualityHistogram99_);
       }
       if (((bitField0_ & 0x00004000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(24, qualityHistogram95_);
+          .computeUInt32Size(23, qualityHistogram97_);
       }
       if (((bitField0_ & 0x00008000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(25, qualityHistogram90_);
+          .computeUInt32Size(24, qualityHistogram95_);
       }
       if (((bitField0_ & 0x00010000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(26, qualityHistogram75_);
+          .computeUInt32Size(25, qualityHistogram90_);
       }
       if (((bitField0_ & 0x00020000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(27, qualityHistogram50_);
+          .computeUInt32Size(26, qualityHistogram75_);
       }
       if (((bitField0_ & 0x00040000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(28, qualityHistogram1_);
+          .computeUInt32Size(27, qualityHistogram50_);
       }
       if (((bitField0_ & 0x00080000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(29, qualityHistogramDead_);
+          .computeUInt32Size(28, qualityHistogram1_);
       }
       if (((bitField0_ & 0x00100000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(30, qualityNtile2Nd_);
+          .computeUInt32Size(29, qualityHistogramDead_);
       }
       if (((bitField0_ & 0x00200000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(31, qualityNtile5Th_);
+          .computeUInt32Size(30, qualityNtile2Nd_);
       }
       if (((bitField0_ & 0x00400000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(32, qualityNtile25Th_);
+          .computeUInt32Size(31, qualityNtile5Th_);
       }
       if (((bitField0_ & 0x00800000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(33, qualityNtile50Th_);
+          .computeUInt32Size(32, qualityNtile25Th_);
       }
       if (((bitField0_ & 0x01000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(41, pingHistogram25_);
+          .computeUInt32Size(33, qualityNtile50Th_);
       }
       if (((bitField0_ & 0x02000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(42, pingHistogram50_);
+          .computeUInt32Size(41, pingHistogram25_);
       }
       if (((bitField0_ & 0x04000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(43, pingHistogram75_);
+          .computeUInt32Size(42, pingHistogram50_);
       }
       if (((bitField0_ & 0x08000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(44, pingHistogram100_);
+          .computeUInt32Size(43, pingHistogram75_);
       }
       if (((bitField0_ & 0x10000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(45, pingHistogram125_);
+          .computeUInt32Size(44, pingHistogram100_);
       }
       if (((bitField0_ & 0x20000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(46, pingHistogram150_);
+          .computeUInt32Size(45, pingHistogram125_);
       }
       if (((bitField0_ & 0x40000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(47, pingHistogram200_);
+          .computeUInt32Size(46, pingHistogram150_);
       }
       if (((bitField0_ & 0x80000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(48, pingHistogram300_);
+          .computeUInt32Size(47, pingHistogram200_);
       }
       if (((bitField1_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(49, pingHistogramMax_);
+          .computeUInt32Size(48, pingHistogram300_);
       }
       if (((bitField1_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(50, pingNtile5Th_);
+          .computeUInt32Size(49, pingHistogramMax_);
       }
       if (((bitField1_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(51, pingNtile50Th_);
+          .computeUInt32Size(50, pingNtile5Th_);
       }
       if (((bitField1_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(52, pingNtile75Th_);
+          .computeUInt32Size(51, pingNtile50Th_);
       }
       if (((bitField1_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(53, pingNtile95Th_);
+          .computeUInt32Size(52, pingNtile75Th_);
       }
       if (((bitField1_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(54, pingNtile98Th_);
+          .computeUInt32Size(53, pingNtile95Th_);
       }
       if (((bitField1_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(61, jitterHistogramNegligible_);
+          .computeUInt32Size(54, pingNtile98Th_);
       }
       if (((bitField1_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(62, jitterHistogram1_);
+          .computeUInt32Size(61, jitterHistogramNegligible_);
       }
       if (((bitField1_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(63, jitterHistogram2_);
+          .computeUInt32Size(62, jitterHistogram1_);
       }
       if (((bitField1_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(64, jitterHistogram5_);
+          .computeUInt32Size(63, jitterHistogram2_);
       }
       if (((bitField1_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(65, jitterHistogram10_);
+          .computeUInt32Size(64, jitterHistogram5_);
       }
       if (((bitField1_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(66, jitterHistogram20_);
+          .computeUInt32Size(65, jitterHistogram10_);
       }
       if (((bitField1_ & 0x00001000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(67, txspeedMax_);
+          .computeUInt32Size(66, jitterHistogram20_);
       }
       if (((bitField1_ & 0x00002000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(68, txspeedHistogram16_);
+          .computeUInt32Size(67, txspeedMax_);
       }
       if (((bitField1_ & 0x00004000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(69, txspeedHistogram32_);
+          .computeUInt32Size(68, txspeedHistogram16_);
       }
       if (((bitField1_ & 0x00008000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(70, txspeedHistogram64_);
+          .computeUInt32Size(69, txspeedHistogram32_);
       }
       if (((bitField1_ & 0x00010000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(71, txspeedHistogram128_);
+          .computeUInt32Size(70, txspeedHistogram64_);
       }
       if (((bitField1_ & 0x00020000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(72, txspeedHistogram256_);
+          .computeUInt32Size(71, txspeedHistogram128_);
       }
       if (((bitField1_ & 0x00040000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(73, txspeedHistogram512_);
+          .computeUInt32Size(72, txspeedHistogram256_);
       }
       if (((bitField1_ & 0x00080000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(74, txspeedHistogram1024_);
+          .computeUInt32Size(73, txspeedHistogram512_);
       }
       if (((bitField1_ & 0x00100000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(75, txspeedHistogramMax_);
+          .computeUInt32Size(74, txspeedHistogram1024_);
       }
       if (((bitField1_ & 0x00200000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(76, txspeedNtile5Th_);
+          .computeUInt32Size(75, txspeedHistogramMax_);
       }
       if (((bitField1_ & 0x00400000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(77, txspeedNtile50Th_);
+          .computeUInt32Size(76, txspeedNtile5Th_);
       }
       if (((bitField1_ & 0x00800000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(78, txspeedNtile75Th_);
+          .computeUInt32Size(77, txspeedNtile50Th_);
       }
       if (((bitField1_ & 0x01000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(79, txspeedNtile95Th_);
+          .computeUInt32Size(78, txspeedNtile75Th_);
       }
       if (((bitField1_ & 0x02000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(80, txspeedNtile98Th_);
+          .computeUInt32Size(79, txspeedNtile95Th_);
       }
       if (((bitField1_ & 0x04000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(81, rxspeedMax_);
+          .computeUInt32Size(80, txspeedNtile98Th_);
       }
       if (((bitField1_ & 0x08000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(82, rxspeedHistogram16_);
+          .computeUInt32Size(81, rxspeedMax_);
       }
       if (((bitField1_ & 0x10000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(83, rxspeedHistogram32_);
+          .computeUInt32Size(82, rxspeedHistogram16_);
       }
       if (((bitField1_ & 0x20000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(84, rxspeedHistogram64_);
+          .computeUInt32Size(83, rxspeedHistogram32_);
       }
       if (((bitField1_ & 0x40000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(85, rxspeedHistogram128_);
+          .computeUInt32Size(84, rxspeedHistogram64_);
       }
       if (((bitField1_ & 0x80000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(86, rxspeedHistogram256_);
+          .computeUInt32Size(85, rxspeedHistogram128_);
       }
       if (((bitField2_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(87, rxspeedHistogram512_);
+          .computeUInt32Size(86, rxspeedHistogram256_);
       }
       if (((bitField2_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(88, rxspeedHistogram1024_);
+          .computeUInt32Size(87, rxspeedHistogram512_);
       }
       if (((bitField2_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(89, rxspeedHistogramMax_);
+          .computeUInt32Size(88, rxspeedHistogram1024_);
       }
       if (((bitField2_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(90, rxspeedNtile5Th_);
+          .computeUInt32Size(89, rxspeedHistogramMax_);
       }
       if (((bitField2_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(91, rxspeedNtile50Th_);
+          .computeUInt32Size(90, rxspeedNtile5Th_);
       }
       if (((bitField2_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(92, rxspeedNtile75Th_);
+          .computeUInt32Size(91, rxspeedNtile50Th_);
       }
       if (((bitField2_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(93, rxspeedNtile95Th_);
+          .computeUInt32Size(92, rxspeedNtile75Th_);
       }
       if (((bitField2_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(93, rxspeedNtile95Th_);
+      }
+      if (((bitField2_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(94, rxspeedNtile98Th_);
       }
@@ -7167,6 +7209,11 @@ public final class SteamnetworkingsocketsMessages {
       if (hasPacketsRecvOutOfOrder()) {
         if (getPacketsRecvOutOfOrder()
             != other.getPacketsRecvOutOfOrder()) return false;
+      }
+      if (hasPacketsRecvOutOfOrderCorrected() != other.hasPacketsRecvOutOfOrderCorrected()) return false;
+      if (hasPacketsRecvOutOfOrderCorrected()) {
+        if (getPacketsRecvOutOfOrderCorrected()
+            != other.getPacketsRecvOutOfOrderCorrected()) return false;
       }
       if (hasPacketsRecvDuplicate() != other.hasPacketsRecvDuplicate()) return false;
       if (hasPacketsRecvDuplicate()) {
@@ -7541,6 +7588,11 @@ public final class SteamnetworkingsocketsMessages {
         hash = (37 * hash) + PACKETS_RECV_OUT_OF_ORDER_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getPacketsRecvOutOfOrder());
+      }
+      if (hasPacketsRecvOutOfOrderCorrected()) {
+        hash = (37 * hash) + PACKETS_RECV_OUT_OF_ORDER_CORRECTED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPacketsRecvOutOfOrderCorrected());
       }
       if (hasPacketsRecvDuplicate()) {
         hash = (37 * hash) + PACKETS_RECV_DUPLICATE_FIELD_NUMBER;
@@ -7957,138 +8009,140 @@ public final class SteamnetworkingsocketsMessages {
         bitField0_ = (bitField0_ & ~0x00000040);
         packetsRecvOutOfOrder_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000080);
-        packetsRecvDuplicate_ = 0L;
+        packetsRecvOutOfOrderCorrected_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000100);
-        packetsRecvLurch_ = 0L;
+        packetsRecvDuplicate_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000200);
-        multipathPacketsRecvSequenced_ = emptyLongList();
+        packetsRecvLurch_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000400);
-        multipathPacketsRecvLater_ = emptyLongList();
+        multipathPacketsRecvSequenced_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000800);
-        multipathSendEnabled_ = 0;
+        multipathPacketsRecvLater_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00001000);
-        qualityHistogram100_ = 0;
+        multipathSendEnabled_ = 0;
         bitField0_ = (bitField0_ & ~0x00002000);
-        qualityHistogram99_ = 0;
+        qualityHistogram100_ = 0;
         bitField0_ = (bitField0_ & ~0x00004000);
-        qualityHistogram97_ = 0;
+        qualityHistogram99_ = 0;
         bitField0_ = (bitField0_ & ~0x00008000);
-        qualityHistogram95_ = 0;
+        qualityHistogram97_ = 0;
         bitField0_ = (bitField0_ & ~0x00010000);
-        qualityHistogram90_ = 0;
+        qualityHistogram95_ = 0;
         bitField0_ = (bitField0_ & ~0x00020000);
-        qualityHistogram75_ = 0;
+        qualityHistogram90_ = 0;
         bitField0_ = (bitField0_ & ~0x00040000);
-        qualityHistogram50_ = 0;
+        qualityHistogram75_ = 0;
         bitField0_ = (bitField0_ & ~0x00080000);
-        qualityHistogram1_ = 0;
+        qualityHistogram50_ = 0;
         bitField0_ = (bitField0_ & ~0x00100000);
-        qualityHistogramDead_ = 0;
+        qualityHistogram1_ = 0;
         bitField0_ = (bitField0_ & ~0x00200000);
-        qualityNtile2Nd_ = 0;
+        qualityHistogramDead_ = 0;
         bitField0_ = (bitField0_ & ~0x00400000);
-        qualityNtile5Th_ = 0;
+        qualityNtile2Nd_ = 0;
         bitField0_ = (bitField0_ & ~0x00800000);
-        qualityNtile25Th_ = 0;
+        qualityNtile5Th_ = 0;
         bitField0_ = (bitField0_ & ~0x01000000);
-        qualityNtile50Th_ = 0;
+        qualityNtile25Th_ = 0;
         bitField0_ = (bitField0_ & ~0x02000000);
-        pingHistogram25_ = 0;
+        qualityNtile50Th_ = 0;
         bitField0_ = (bitField0_ & ~0x04000000);
-        pingHistogram50_ = 0;
+        pingHistogram25_ = 0;
         bitField0_ = (bitField0_ & ~0x08000000);
-        pingHistogram75_ = 0;
+        pingHistogram50_ = 0;
         bitField0_ = (bitField0_ & ~0x10000000);
-        pingHistogram100_ = 0;
+        pingHistogram75_ = 0;
         bitField0_ = (bitField0_ & ~0x20000000);
-        pingHistogram125_ = 0;
+        pingHistogram100_ = 0;
         bitField0_ = (bitField0_ & ~0x40000000);
-        pingHistogram150_ = 0;
+        pingHistogram125_ = 0;
         bitField0_ = (bitField0_ & ~0x80000000);
-        pingHistogram200_ = 0;
+        pingHistogram150_ = 0;
         bitField1_ = (bitField1_ & ~0x00000001);
-        pingHistogram300_ = 0;
+        pingHistogram200_ = 0;
         bitField1_ = (bitField1_ & ~0x00000002);
-        pingHistogramMax_ = 0;
+        pingHistogram300_ = 0;
         bitField1_ = (bitField1_ & ~0x00000004);
-        pingNtile5Th_ = 0;
+        pingHistogramMax_ = 0;
         bitField1_ = (bitField1_ & ~0x00000008);
-        pingNtile50Th_ = 0;
+        pingNtile5Th_ = 0;
         bitField1_ = (bitField1_ & ~0x00000010);
-        pingNtile75Th_ = 0;
+        pingNtile50Th_ = 0;
         bitField1_ = (bitField1_ & ~0x00000020);
-        pingNtile95Th_ = 0;
+        pingNtile75Th_ = 0;
         bitField1_ = (bitField1_ & ~0x00000040);
-        pingNtile98Th_ = 0;
+        pingNtile95Th_ = 0;
         bitField1_ = (bitField1_ & ~0x00000080);
-        jitterHistogramNegligible_ = 0;
+        pingNtile98Th_ = 0;
         bitField1_ = (bitField1_ & ~0x00000100);
-        jitterHistogram1_ = 0;
+        jitterHistogramNegligible_ = 0;
         bitField1_ = (bitField1_ & ~0x00000200);
-        jitterHistogram2_ = 0;
+        jitterHistogram1_ = 0;
         bitField1_ = (bitField1_ & ~0x00000400);
-        jitterHistogram5_ = 0;
+        jitterHistogram2_ = 0;
         bitField1_ = (bitField1_ & ~0x00000800);
-        jitterHistogram10_ = 0;
+        jitterHistogram5_ = 0;
         bitField1_ = (bitField1_ & ~0x00001000);
-        jitterHistogram20_ = 0;
+        jitterHistogram10_ = 0;
         bitField1_ = (bitField1_ & ~0x00002000);
-        txspeedMax_ = 0;
+        jitterHistogram20_ = 0;
         bitField1_ = (bitField1_ & ~0x00004000);
-        txspeedHistogram16_ = 0;
+        txspeedMax_ = 0;
         bitField1_ = (bitField1_ & ~0x00008000);
-        txspeedHistogram32_ = 0;
+        txspeedHistogram16_ = 0;
         bitField1_ = (bitField1_ & ~0x00010000);
-        txspeedHistogram64_ = 0;
+        txspeedHistogram32_ = 0;
         bitField1_ = (bitField1_ & ~0x00020000);
-        txspeedHistogram128_ = 0;
+        txspeedHistogram64_ = 0;
         bitField1_ = (bitField1_ & ~0x00040000);
-        txspeedHistogram256_ = 0;
+        txspeedHistogram128_ = 0;
         bitField1_ = (bitField1_ & ~0x00080000);
-        txspeedHistogram512_ = 0;
+        txspeedHistogram256_ = 0;
         bitField1_ = (bitField1_ & ~0x00100000);
-        txspeedHistogram1024_ = 0;
+        txspeedHistogram512_ = 0;
         bitField1_ = (bitField1_ & ~0x00200000);
-        txspeedHistogramMax_ = 0;
+        txspeedHistogram1024_ = 0;
         bitField1_ = (bitField1_ & ~0x00400000);
-        txspeedNtile5Th_ = 0;
+        txspeedHistogramMax_ = 0;
         bitField1_ = (bitField1_ & ~0x00800000);
-        txspeedNtile50Th_ = 0;
+        txspeedNtile5Th_ = 0;
         bitField1_ = (bitField1_ & ~0x01000000);
-        txspeedNtile75Th_ = 0;
+        txspeedNtile50Th_ = 0;
         bitField1_ = (bitField1_ & ~0x02000000);
-        txspeedNtile95Th_ = 0;
+        txspeedNtile75Th_ = 0;
         bitField1_ = (bitField1_ & ~0x04000000);
-        txspeedNtile98Th_ = 0;
+        txspeedNtile95Th_ = 0;
         bitField1_ = (bitField1_ & ~0x08000000);
-        rxspeedMax_ = 0;
+        txspeedNtile98Th_ = 0;
         bitField1_ = (bitField1_ & ~0x10000000);
-        rxspeedHistogram16_ = 0;
+        rxspeedMax_ = 0;
         bitField1_ = (bitField1_ & ~0x20000000);
-        rxspeedHistogram32_ = 0;
+        rxspeedHistogram16_ = 0;
         bitField1_ = (bitField1_ & ~0x40000000);
-        rxspeedHistogram64_ = 0;
+        rxspeedHistogram32_ = 0;
         bitField1_ = (bitField1_ & ~0x80000000);
-        rxspeedHistogram128_ = 0;
+        rxspeedHistogram64_ = 0;
         bitField2_ = (bitField2_ & ~0x00000001);
-        rxspeedHistogram256_ = 0;
+        rxspeedHistogram128_ = 0;
         bitField2_ = (bitField2_ & ~0x00000002);
-        rxspeedHistogram512_ = 0;
+        rxspeedHistogram256_ = 0;
         bitField2_ = (bitField2_ & ~0x00000004);
-        rxspeedHistogram1024_ = 0;
+        rxspeedHistogram512_ = 0;
         bitField2_ = (bitField2_ & ~0x00000008);
-        rxspeedHistogramMax_ = 0;
+        rxspeedHistogram1024_ = 0;
         bitField2_ = (bitField2_ & ~0x00000010);
-        rxspeedNtile5Th_ = 0;
+        rxspeedHistogramMax_ = 0;
         bitField2_ = (bitField2_ & ~0x00000020);
-        rxspeedNtile50Th_ = 0;
+        rxspeedNtile5Th_ = 0;
         bitField2_ = (bitField2_ & ~0x00000040);
-        rxspeedNtile75Th_ = 0;
+        rxspeedNtile50Th_ = 0;
         bitField2_ = (bitField2_ & ~0x00000080);
-        rxspeedNtile95Th_ = 0;
+        rxspeedNtile75Th_ = 0;
         bitField2_ = (bitField2_ & ~0x00000100);
-        rxspeedNtile98Th_ = 0;
+        rxspeedNtile95Th_ = 0;
         bitField2_ = (bitField2_ & ~0x00000200);
+        rxspeedNtile98Th_ = 0;
+        bitField2_ = (bitField2_ & ~0x00000400);
         return this;
       }
 
@@ -8154,270 +8208,274 @@ public final class SteamnetworkingsocketsMessages {
           to_bitField0_ |= 0x00000080;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.packetsRecvDuplicate_ = packetsRecvDuplicate_;
+          result.packetsRecvOutOfOrderCorrected_ = packetsRecvOutOfOrderCorrected_;
           to_bitField0_ |= 0x00000100;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.packetsRecvLurch_ = packetsRecvLurch_;
+          result.packetsRecvDuplicate_ = packetsRecvDuplicate_;
           to_bitField0_ |= 0x00000200;
         }
-        if (((bitField0_ & 0x00000400) != 0)) {
-          multipathPacketsRecvSequenced_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000400);
-        }
-        result.multipathPacketsRecvSequenced_ = multipathPacketsRecvSequenced_;
-        if (((bitField0_ & 0x00000800) != 0)) {
-          multipathPacketsRecvLater_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000800);
-        }
-        result.multipathPacketsRecvLater_ = multipathPacketsRecvLater_;
-        if (((from_bitField0_ & 0x00001000) != 0)) {
-          result.multipathSendEnabled_ = multipathSendEnabled_;
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.packetsRecvLurch_ = packetsRecvLurch_;
           to_bitField0_ |= 0x00000400;
         }
+        if (((bitField0_ & 0x00000800) != 0)) {
+          multipathPacketsRecvSequenced_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000800);
+        }
+        result.multipathPacketsRecvSequenced_ = multipathPacketsRecvSequenced_;
+        if (((bitField0_ & 0x00001000) != 0)) {
+          multipathPacketsRecvLater_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00001000);
+        }
+        result.multipathPacketsRecvLater_ = multipathPacketsRecvLater_;
         if (((from_bitField0_ & 0x00002000) != 0)) {
-          result.qualityHistogram100_ = qualityHistogram100_;
+          result.multipathSendEnabled_ = multipathSendEnabled_;
           to_bitField0_ |= 0x00000800;
         }
         if (((from_bitField0_ & 0x00004000) != 0)) {
-          result.qualityHistogram99_ = qualityHistogram99_;
+          result.qualityHistogram100_ = qualityHistogram100_;
           to_bitField0_ |= 0x00001000;
         }
         if (((from_bitField0_ & 0x00008000) != 0)) {
-          result.qualityHistogram97_ = qualityHistogram97_;
+          result.qualityHistogram99_ = qualityHistogram99_;
           to_bitField0_ |= 0x00002000;
         }
         if (((from_bitField0_ & 0x00010000) != 0)) {
-          result.qualityHistogram95_ = qualityHistogram95_;
+          result.qualityHistogram97_ = qualityHistogram97_;
           to_bitField0_ |= 0x00004000;
         }
         if (((from_bitField0_ & 0x00020000) != 0)) {
-          result.qualityHistogram90_ = qualityHistogram90_;
+          result.qualityHistogram95_ = qualityHistogram95_;
           to_bitField0_ |= 0x00008000;
         }
         if (((from_bitField0_ & 0x00040000) != 0)) {
-          result.qualityHistogram75_ = qualityHistogram75_;
+          result.qualityHistogram90_ = qualityHistogram90_;
           to_bitField0_ |= 0x00010000;
         }
         if (((from_bitField0_ & 0x00080000) != 0)) {
-          result.qualityHistogram50_ = qualityHistogram50_;
+          result.qualityHistogram75_ = qualityHistogram75_;
           to_bitField0_ |= 0x00020000;
         }
         if (((from_bitField0_ & 0x00100000) != 0)) {
-          result.qualityHistogram1_ = qualityHistogram1_;
+          result.qualityHistogram50_ = qualityHistogram50_;
           to_bitField0_ |= 0x00040000;
         }
         if (((from_bitField0_ & 0x00200000) != 0)) {
-          result.qualityHistogramDead_ = qualityHistogramDead_;
+          result.qualityHistogram1_ = qualityHistogram1_;
           to_bitField0_ |= 0x00080000;
         }
         if (((from_bitField0_ & 0x00400000) != 0)) {
-          result.qualityNtile2Nd_ = qualityNtile2Nd_;
+          result.qualityHistogramDead_ = qualityHistogramDead_;
           to_bitField0_ |= 0x00100000;
         }
         if (((from_bitField0_ & 0x00800000) != 0)) {
-          result.qualityNtile5Th_ = qualityNtile5Th_;
+          result.qualityNtile2Nd_ = qualityNtile2Nd_;
           to_bitField0_ |= 0x00200000;
         }
         if (((from_bitField0_ & 0x01000000) != 0)) {
-          result.qualityNtile25Th_ = qualityNtile25Th_;
+          result.qualityNtile5Th_ = qualityNtile5Th_;
           to_bitField0_ |= 0x00400000;
         }
         if (((from_bitField0_ & 0x02000000) != 0)) {
-          result.qualityNtile50Th_ = qualityNtile50Th_;
+          result.qualityNtile25Th_ = qualityNtile25Th_;
           to_bitField0_ |= 0x00800000;
         }
         if (((from_bitField0_ & 0x04000000) != 0)) {
-          result.pingHistogram25_ = pingHistogram25_;
+          result.qualityNtile50Th_ = qualityNtile50Th_;
           to_bitField0_ |= 0x01000000;
         }
         if (((from_bitField0_ & 0x08000000) != 0)) {
-          result.pingHistogram50_ = pingHistogram50_;
+          result.pingHistogram25_ = pingHistogram25_;
           to_bitField0_ |= 0x02000000;
         }
         if (((from_bitField0_ & 0x10000000) != 0)) {
-          result.pingHistogram75_ = pingHistogram75_;
+          result.pingHistogram50_ = pingHistogram50_;
           to_bitField0_ |= 0x04000000;
         }
         if (((from_bitField0_ & 0x20000000) != 0)) {
-          result.pingHistogram100_ = pingHistogram100_;
+          result.pingHistogram75_ = pingHistogram75_;
           to_bitField0_ |= 0x08000000;
         }
         if (((from_bitField0_ & 0x40000000) != 0)) {
-          result.pingHistogram125_ = pingHistogram125_;
+          result.pingHistogram100_ = pingHistogram100_;
           to_bitField0_ |= 0x10000000;
         }
         if (((from_bitField0_ & 0x80000000) != 0)) {
-          result.pingHistogram150_ = pingHistogram150_;
+          result.pingHistogram125_ = pingHistogram125_;
           to_bitField0_ |= 0x20000000;
         }
         if (((from_bitField1_ & 0x00000001) != 0)) {
-          result.pingHistogram200_ = pingHistogram200_;
+          result.pingHistogram150_ = pingHistogram150_;
           to_bitField0_ |= 0x40000000;
         }
         if (((from_bitField1_ & 0x00000002) != 0)) {
-          result.pingHistogram300_ = pingHistogram300_;
+          result.pingHistogram200_ = pingHistogram200_;
           to_bitField0_ |= 0x80000000;
         }
         if (((from_bitField1_ & 0x00000004) != 0)) {
-          result.pingHistogramMax_ = pingHistogramMax_;
+          result.pingHistogram300_ = pingHistogram300_;
           to_bitField1_ |= 0x00000001;
         }
         if (((from_bitField1_ & 0x00000008) != 0)) {
-          result.pingNtile5Th_ = pingNtile5Th_;
+          result.pingHistogramMax_ = pingHistogramMax_;
           to_bitField1_ |= 0x00000002;
         }
         if (((from_bitField1_ & 0x00000010) != 0)) {
-          result.pingNtile50Th_ = pingNtile50Th_;
+          result.pingNtile5Th_ = pingNtile5Th_;
           to_bitField1_ |= 0x00000004;
         }
         if (((from_bitField1_ & 0x00000020) != 0)) {
-          result.pingNtile75Th_ = pingNtile75Th_;
+          result.pingNtile50Th_ = pingNtile50Th_;
           to_bitField1_ |= 0x00000008;
         }
         if (((from_bitField1_ & 0x00000040) != 0)) {
-          result.pingNtile95Th_ = pingNtile95Th_;
+          result.pingNtile75Th_ = pingNtile75Th_;
           to_bitField1_ |= 0x00000010;
         }
         if (((from_bitField1_ & 0x00000080) != 0)) {
-          result.pingNtile98Th_ = pingNtile98Th_;
+          result.pingNtile95Th_ = pingNtile95Th_;
           to_bitField1_ |= 0x00000020;
         }
         if (((from_bitField1_ & 0x00000100) != 0)) {
-          result.jitterHistogramNegligible_ = jitterHistogramNegligible_;
+          result.pingNtile98Th_ = pingNtile98Th_;
           to_bitField1_ |= 0x00000040;
         }
         if (((from_bitField1_ & 0x00000200) != 0)) {
-          result.jitterHistogram1_ = jitterHistogram1_;
+          result.jitterHistogramNegligible_ = jitterHistogramNegligible_;
           to_bitField1_ |= 0x00000080;
         }
         if (((from_bitField1_ & 0x00000400) != 0)) {
-          result.jitterHistogram2_ = jitterHistogram2_;
+          result.jitterHistogram1_ = jitterHistogram1_;
           to_bitField1_ |= 0x00000100;
         }
         if (((from_bitField1_ & 0x00000800) != 0)) {
-          result.jitterHistogram5_ = jitterHistogram5_;
+          result.jitterHistogram2_ = jitterHistogram2_;
           to_bitField1_ |= 0x00000200;
         }
         if (((from_bitField1_ & 0x00001000) != 0)) {
-          result.jitterHistogram10_ = jitterHistogram10_;
+          result.jitterHistogram5_ = jitterHistogram5_;
           to_bitField1_ |= 0x00000400;
         }
         if (((from_bitField1_ & 0x00002000) != 0)) {
-          result.jitterHistogram20_ = jitterHistogram20_;
+          result.jitterHistogram10_ = jitterHistogram10_;
           to_bitField1_ |= 0x00000800;
         }
         if (((from_bitField1_ & 0x00004000) != 0)) {
-          result.txspeedMax_ = txspeedMax_;
+          result.jitterHistogram20_ = jitterHistogram20_;
           to_bitField1_ |= 0x00001000;
         }
         if (((from_bitField1_ & 0x00008000) != 0)) {
-          result.txspeedHistogram16_ = txspeedHistogram16_;
+          result.txspeedMax_ = txspeedMax_;
           to_bitField1_ |= 0x00002000;
         }
         if (((from_bitField1_ & 0x00010000) != 0)) {
-          result.txspeedHistogram32_ = txspeedHistogram32_;
+          result.txspeedHistogram16_ = txspeedHistogram16_;
           to_bitField1_ |= 0x00004000;
         }
         if (((from_bitField1_ & 0x00020000) != 0)) {
-          result.txspeedHistogram64_ = txspeedHistogram64_;
+          result.txspeedHistogram32_ = txspeedHistogram32_;
           to_bitField1_ |= 0x00008000;
         }
         if (((from_bitField1_ & 0x00040000) != 0)) {
-          result.txspeedHistogram128_ = txspeedHistogram128_;
+          result.txspeedHistogram64_ = txspeedHistogram64_;
           to_bitField1_ |= 0x00010000;
         }
         if (((from_bitField1_ & 0x00080000) != 0)) {
-          result.txspeedHistogram256_ = txspeedHistogram256_;
+          result.txspeedHistogram128_ = txspeedHistogram128_;
           to_bitField1_ |= 0x00020000;
         }
         if (((from_bitField1_ & 0x00100000) != 0)) {
-          result.txspeedHistogram512_ = txspeedHistogram512_;
+          result.txspeedHistogram256_ = txspeedHistogram256_;
           to_bitField1_ |= 0x00040000;
         }
         if (((from_bitField1_ & 0x00200000) != 0)) {
-          result.txspeedHistogram1024_ = txspeedHistogram1024_;
+          result.txspeedHistogram512_ = txspeedHistogram512_;
           to_bitField1_ |= 0x00080000;
         }
         if (((from_bitField1_ & 0x00400000) != 0)) {
-          result.txspeedHistogramMax_ = txspeedHistogramMax_;
+          result.txspeedHistogram1024_ = txspeedHistogram1024_;
           to_bitField1_ |= 0x00100000;
         }
         if (((from_bitField1_ & 0x00800000) != 0)) {
-          result.txspeedNtile5Th_ = txspeedNtile5Th_;
+          result.txspeedHistogramMax_ = txspeedHistogramMax_;
           to_bitField1_ |= 0x00200000;
         }
         if (((from_bitField1_ & 0x01000000) != 0)) {
-          result.txspeedNtile50Th_ = txspeedNtile50Th_;
+          result.txspeedNtile5Th_ = txspeedNtile5Th_;
           to_bitField1_ |= 0x00400000;
         }
         if (((from_bitField1_ & 0x02000000) != 0)) {
-          result.txspeedNtile75Th_ = txspeedNtile75Th_;
+          result.txspeedNtile50Th_ = txspeedNtile50Th_;
           to_bitField1_ |= 0x00800000;
         }
         if (((from_bitField1_ & 0x04000000) != 0)) {
-          result.txspeedNtile95Th_ = txspeedNtile95Th_;
+          result.txspeedNtile75Th_ = txspeedNtile75Th_;
           to_bitField1_ |= 0x01000000;
         }
         if (((from_bitField1_ & 0x08000000) != 0)) {
-          result.txspeedNtile98Th_ = txspeedNtile98Th_;
+          result.txspeedNtile95Th_ = txspeedNtile95Th_;
           to_bitField1_ |= 0x02000000;
         }
         if (((from_bitField1_ & 0x10000000) != 0)) {
-          result.rxspeedMax_ = rxspeedMax_;
+          result.txspeedNtile98Th_ = txspeedNtile98Th_;
           to_bitField1_ |= 0x04000000;
         }
         if (((from_bitField1_ & 0x20000000) != 0)) {
-          result.rxspeedHistogram16_ = rxspeedHistogram16_;
+          result.rxspeedMax_ = rxspeedMax_;
           to_bitField1_ |= 0x08000000;
         }
         if (((from_bitField1_ & 0x40000000) != 0)) {
-          result.rxspeedHistogram32_ = rxspeedHistogram32_;
+          result.rxspeedHistogram16_ = rxspeedHistogram16_;
           to_bitField1_ |= 0x10000000;
         }
         if (((from_bitField1_ & 0x80000000) != 0)) {
-          result.rxspeedHistogram64_ = rxspeedHistogram64_;
+          result.rxspeedHistogram32_ = rxspeedHistogram32_;
           to_bitField1_ |= 0x20000000;
         }
         if (((from_bitField2_ & 0x00000001) != 0)) {
-          result.rxspeedHistogram128_ = rxspeedHistogram128_;
+          result.rxspeedHistogram64_ = rxspeedHistogram64_;
           to_bitField1_ |= 0x40000000;
         }
         if (((from_bitField2_ & 0x00000002) != 0)) {
-          result.rxspeedHistogram256_ = rxspeedHistogram256_;
+          result.rxspeedHistogram128_ = rxspeedHistogram128_;
           to_bitField1_ |= 0x80000000;
         }
         if (((from_bitField2_ & 0x00000004) != 0)) {
-          result.rxspeedHistogram512_ = rxspeedHistogram512_;
+          result.rxspeedHistogram256_ = rxspeedHistogram256_;
           to_bitField2_ |= 0x00000001;
         }
         if (((from_bitField2_ & 0x00000008) != 0)) {
-          result.rxspeedHistogram1024_ = rxspeedHistogram1024_;
+          result.rxspeedHistogram512_ = rxspeedHistogram512_;
           to_bitField2_ |= 0x00000002;
         }
         if (((from_bitField2_ & 0x00000010) != 0)) {
-          result.rxspeedHistogramMax_ = rxspeedHistogramMax_;
+          result.rxspeedHistogram1024_ = rxspeedHistogram1024_;
           to_bitField2_ |= 0x00000004;
         }
         if (((from_bitField2_ & 0x00000020) != 0)) {
-          result.rxspeedNtile5Th_ = rxspeedNtile5Th_;
+          result.rxspeedHistogramMax_ = rxspeedHistogramMax_;
           to_bitField2_ |= 0x00000008;
         }
         if (((from_bitField2_ & 0x00000040) != 0)) {
-          result.rxspeedNtile50Th_ = rxspeedNtile50Th_;
+          result.rxspeedNtile5Th_ = rxspeedNtile5Th_;
           to_bitField2_ |= 0x00000010;
         }
         if (((from_bitField2_ & 0x00000080) != 0)) {
-          result.rxspeedNtile75Th_ = rxspeedNtile75Th_;
+          result.rxspeedNtile50Th_ = rxspeedNtile50Th_;
           to_bitField2_ |= 0x00000020;
         }
         if (((from_bitField2_ & 0x00000100) != 0)) {
-          result.rxspeedNtile95Th_ = rxspeedNtile95Th_;
+          result.rxspeedNtile75Th_ = rxspeedNtile75Th_;
           to_bitField2_ |= 0x00000040;
         }
         if (((from_bitField2_ & 0x00000200) != 0)) {
-          result.rxspeedNtile98Th_ = rxspeedNtile98Th_;
+          result.rxspeedNtile95Th_ = rxspeedNtile95Th_;
           to_bitField2_ |= 0x00000080;
+        }
+        if (((from_bitField2_ & 0x00000400) != 0)) {
+          result.rxspeedNtile98Th_ = rxspeedNtile98Th_;
+          to_bitField2_ |= 0x00000100;
         }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
@@ -8494,6 +8552,9 @@ public final class SteamnetworkingsocketsMessages {
         if (other.hasPacketsRecvOutOfOrder()) {
           setPacketsRecvOutOfOrder(other.getPacketsRecvOutOfOrder());
         }
+        if (other.hasPacketsRecvOutOfOrderCorrected()) {
+          setPacketsRecvOutOfOrderCorrected(other.getPacketsRecvOutOfOrderCorrected());
+        }
         if (other.hasPacketsRecvDuplicate()) {
           setPacketsRecvDuplicate(other.getPacketsRecvDuplicate());
         }
@@ -8503,7 +8564,7 @@ public final class SteamnetworkingsocketsMessages {
         if (!other.multipathPacketsRecvSequenced_.isEmpty()) {
           if (multipathPacketsRecvSequenced_.isEmpty()) {
             multipathPacketsRecvSequenced_ = other.multipathPacketsRecvSequenced_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000800);
           } else {
             ensureMultipathPacketsRecvSequencedIsMutable();
             multipathPacketsRecvSequenced_.addAll(other.multipathPacketsRecvSequenced_);
@@ -8513,7 +8574,7 @@ public final class SteamnetworkingsocketsMessages {
         if (!other.multipathPacketsRecvLater_.isEmpty()) {
           if (multipathPacketsRecvLater_.isEmpty()) {
             multipathPacketsRecvLater_ = other.multipathPacketsRecvLater_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureMultipathPacketsRecvLaterIsMutable();
             multipathPacketsRecvLater_.addAll(other.multipathPacketsRecvLater_);
@@ -9050,6 +9111,45 @@ public final class SteamnetworkingsocketsMessages {
         return this;
       }
 
+      private long packetsRecvOutOfOrderCorrected_ ;
+      /**
+       * <code>optional uint64 packets_recv_out_of_order_corrected = 15;</code>
+       * @return Whether the packetsRecvOutOfOrderCorrected field is set.
+       */
+      @java.lang.Override
+      public boolean hasPacketsRecvOutOfOrderCorrected() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint64 packets_recv_out_of_order_corrected = 15;</code>
+       * @return The packetsRecvOutOfOrderCorrected.
+       */
+      @java.lang.Override
+      public long getPacketsRecvOutOfOrderCorrected() {
+        return packetsRecvOutOfOrderCorrected_;
+      }
+      /**
+       * <code>optional uint64 packets_recv_out_of_order_corrected = 15;</code>
+       * @param value The packetsRecvOutOfOrderCorrected to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPacketsRecvOutOfOrderCorrected(long value) {
+        bitField0_ |= 0x00000100;
+        packetsRecvOutOfOrderCorrected_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 packets_recv_out_of_order_corrected = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPacketsRecvOutOfOrderCorrected() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        packetsRecvOutOfOrderCorrected_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private long packetsRecvDuplicate_ ;
       /**
        * <code>optional uint64 packets_recv_duplicate = 10;</code>
@@ -9057,7 +9157,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPacketsRecvDuplicate() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>optional uint64 packets_recv_duplicate = 10;</code>
@@ -9073,7 +9173,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPacketsRecvDuplicate(long value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         packetsRecvDuplicate_ = value;
         onChanged();
         return this;
@@ -9083,7 +9183,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPacketsRecvDuplicate() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         packetsRecvDuplicate_ = 0L;
         onChanged();
         return this;
@@ -9096,7 +9196,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPacketsRecvLurch() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <code>optional uint64 packets_recv_lurch = 11;</code>
@@ -9112,7 +9212,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPacketsRecvLurch(long value) {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         packetsRecvLurch_ = value;
         onChanged();
         return this;
@@ -9122,7 +9222,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPacketsRecvLurch() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         packetsRecvLurch_ = 0L;
         onChanged();
         return this;
@@ -9130,9 +9230,9 @@ public final class SteamnetworkingsocketsMessages {
 
       private com.google.protobuf.Internal.LongList multipathPacketsRecvSequenced_ = emptyLongList();
       private void ensureMultipathPacketsRecvSequencedIsMutable() {
-        if (!((bitField0_ & 0x00000400) != 0)) {
+        if (!((bitField0_ & 0x00000800) != 0)) {
           multipathPacketsRecvSequenced_ = mutableCopy(multipathPacketsRecvSequenced_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000800;
          }
       }
       /**
@@ -9141,7 +9241,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       public java.util.List<java.lang.Long>
           getMultipathPacketsRecvSequencedList() {
-        return ((bitField0_ & 0x00000400) != 0) ?
+        return ((bitField0_ & 0x00000800) != 0) ?
                  java.util.Collections.unmodifiableList(multipathPacketsRecvSequenced_) : multipathPacketsRecvSequenced_;
       }
       /**
@@ -9202,16 +9302,16 @@ public final class SteamnetworkingsocketsMessages {
        */
       public Builder clearMultipathPacketsRecvSequenced() {
         multipathPacketsRecvSequenced_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.LongList multipathPacketsRecvLater_ = emptyLongList();
       private void ensureMultipathPacketsRecvLaterIsMutable() {
-        if (!((bitField0_ & 0x00000800) != 0)) {
+        if (!((bitField0_ & 0x00001000) != 0)) {
           multipathPacketsRecvLater_ = mutableCopy(multipathPacketsRecvLater_);
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00001000;
          }
       }
       /**
@@ -9220,7 +9320,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       public java.util.List<java.lang.Long>
           getMultipathPacketsRecvLaterList() {
-        return ((bitField0_ & 0x00000800) != 0) ?
+        return ((bitField0_ & 0x00001000) != 0) ?
                  java.util.Collections.unmodifiableList(multipathPacketsRecvLater_) : multipathPacketsRecvLater_;
       }
       /**
@@ -9281,7 +9381,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       public Builder clearMultipathPacketsRecvLater() {
         multipathPacketsRecvLater_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
         return this;
       }
@@ -9293,7 +9393,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasMultipathSendEnabled() {
-        return ((bitField0_ & 0x00001000) != 0);
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <code>optional uint32 multipath_send_enabled = 14;</code>
@@ -9309,7 +9409,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setMultipathSendEnabled(int value) {
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         multipathSendEnabled_ = value;
         onChanged();
         return this;
@@ -9319,7 +9419,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearMultipathSendEnabled() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         multipathSendEnabled_ = 0;
         onChanged();
         return this;
@@ -9332,7 +9432,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityHistogram100() {
-        return ((bitField0_ & 0x00002000) != 0);
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <code>optional uint32 quality_histogram_100 = 21;</code>
@@ -9348,7 +9448,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityHistogram100(int value) {
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         qualityHistogram100_ = value;
         onChanged();
         return this;
@@ -9358,7 +9458,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityHistogram100() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         qualityHistogram100_ = 0;
         onChanged();
         return this;
@@ -9371,7 +9471,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityHistogram99() {
-        return ((bitField0_ & 0x00004000) != 0);
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
        * <code>optional uint32 quality_histogram_99 = 22;</code>
@@ -9387,7 +9487,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityHistogram99(int value) {
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         qualityHistogram99_ = value;
         onChanged();
         return this;
@@ -9397,7 +9497,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityHistogram99() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         qualityHistogram99_ = 0;
         onChanged();
         return this;
@@ -9410,7 +9510,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityHistogram97() {
-        return ((bitField0_ & 0x00008000) != 0);
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <code>optional uint32 quality_histogram_97 = 23;</code>
@@ -9426,7 +9526,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityHistogram97(int value) {
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00010000;
         qualityHistogram97_ = value;
         onChanged();
         return this;
@@ -9436,7 +9536,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityHistogram97() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         qualityHistogram97_ = 0;
         onChanged();
         return this;
@@ -9449,7 +9549,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityHistogram95() {
-        return ((bitField0_ & 0x00010000) != 0);
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
        * <code>optional uint32 quality_histogram_95 = 24;</code>
@@ -9465,7 +9565,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityHistogram95(int value) {
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         qualityHistogram95_ = value;
         onChanged();
         return this;
@@ -9475,7 +9575,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityHistogram95() {
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         qualityHistogram95_ = 0;
         onChanged();
         return this;
@@ -9488,7 +9588,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityHistogram90() {
-        return ((bitField0_ & 0x00020000) != 0);
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <code>optional uint32 quality_histogram_90 = 25;</code>
@@ -9504,7 +9604,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityHistogram90(int value) {
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         qualityHistogram90_ = value;
         onChanged();
         return this;
@@ -9514,7 +9614,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityHistogram90() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         qualityHistogram90_ = 0;
         onChanged();
         return this;
@@ -9527,7 +9627,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityHistogram75() {
-        return ((bitField0_ & 0x00040000) != 0);
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <code>optional uint32 quality_histogram_75 = 26;</code>
@@ -9543,7 +9643,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityHistogram75(int value) {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         qualityHistogram75_ = value;
         onChanged();
         return this;
@@ -9553,7 +9653,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityHistogram75() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         qualityHistogram75_ = 0;
         onChanged();
         return this;
@@ -9566,7 +9666,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityHistogram50() {
-        return ((bitField0_ & 0x00080000) != 0);
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <code>optional uint32 quality_histogram_50 = 27;</code>
@@ -9582,7 +9682,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityHistogram50(int value) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00100000;
         qualityHistogram50_ = value;
         onChanged();
         return this;
@@ -9592,7 +9692,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityHistogram50() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         qualityHistogram50_ = 0;
         onChanged();
         return this;
@@ -9605,7 +9705,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityHistogram1() {
-        return ((bitField0_ & 0x00100000) != 0);
+        return ((bitField0_ & 0x00200000) != 0);
       }
       /**
        * <code>optional uint32 quality_histogram_1 = 28;</code>
@@ -9621,7 +9721,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityHistogram1(int value) {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00200000;
         qualityHistogram1_ = value;
         onChanged();
         return this;
@@ -9631,7 +9731,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityHistogram1() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         qualityHistogram1_ = 0;
         onChanged();
         return this;
@@ -9644,7 +9744,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityHistogramDead() {
-        return ((bitField0_ & 0x00200000) != 0);
+        return ((bitField0_ & 0x00400000) != 0);
       }
       /**
        * <code>optional uint32 quality_histogram_dead = 29;</code>
@@ -9660,7 +9760,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityHistogramDead(int value) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00400000;
         qualityHistogramDead_ = value;
         onChanged();
         return this;
@@ -9670,7 +9770,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityHistogramDead() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         qualityHistogramDead_ = 0;
         onChanged();
         return this;
@@ -9683,7 +9783,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityNtile2Nd() {
-        return ((bitField0_ & 0x00400000) != 0);
+        return ((bitField0_ & 0x00800000) != 0);
       }
       /**
        * <code>optional uint32 quality_ntile_2nd = 30;</code>
@@ -9699,7 +9799,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityNtile2Nd(int value) {
-        bitField0_ |= 0x00400000;
+        bitField0_ |= 0x00800000;
         qualityNtile2Nd_ = value;
         onChanged();
         return this;
@@ -9709,7 +9809,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityNtile2Nd() {
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         qualityNtile2Nd_ = 0;
         onChanged();
         return this;
@@ -9722,7 +9822,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityNtile5Th() {
-        return ((bitField0_ & 0x00800000) != 0);
+        return ((bitField0_ & 0x01000000) != 0);
       }
       /**
        * <code>optional uint32 quality_ntile_5th = 31;</code>
@@ -9738,7 +9838,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityNtile5Th(int value) {
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x01000000;
         qualityNtile5Th_ = value;
         onChanged();
         return this;
@@ -9748,7 +9848,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityNtile5Th() {
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         qualityNtile5Th_ = 0;
         onChanged();
         return this;
@@ -9761,7 +9861,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityNtile25Th() {
-        return ((bitField0_ & 0x01000000) != 0);
+        return ((bitField0_ & 0x02000000) != 0);
       }
       /**
        * <code>optional uint32 quality_ntile_25th = 32;</code>
@@ -9777,7 +9877,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityNtile25Th(int value) {
-        bitField0_ |= 0x01000000;
+        bitField0_ |= 0x02000000;
         qualityNtile25Th_ = value;
         onChanged();
         return this;
@@ -9787,7 +9887,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityNtile25Th() {
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x02000000);
         qualityNtile25Th_ = 0;
         onChanged();
         return this;
@@ -9800,7 +9900,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasQualityNtile50Th() {
-        return ((bitField0_ & 0x02000000) != 0);
+        return ((bitField0_ & 0x04000000) != 0);
       }
       /**
        * <code>optional uint32 quality_ntile_50th = 33;</code>
@@ -9816,7 +9916,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setQualityNtile50Th(int value) {
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x04000000;
         qualityNtile50Th_ = value;
         onChanged();
         return this;
@@ -9826,7 +9926,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearQualityNtile50Th() {
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         qualityNtile50Th_ = 0;
         onChanged();
         return this;
@@ -9839,7 +9939,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingHistogram25() {
-        return ((bitField0_ & 0x04000000) != 0);
+        return ((bitField0_ & 0x08000000) != 0);
       }
       /**
        * <code>optional uint32 ping_histogram_25 = 41;</code>
@@ -9855,7 +9955,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingHistogram25(int value) {
-        bitField0_ |= 0x04000000;
+        bitField0_ |= 0x08000000;
         pingHistogram25_ = value;
         onChanged();
         return this;
@@ -9865,7 +9965,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingHistogram25() {
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField0_ = (bitField0_ & ~0x08000000);
         pingHistogram25_ = 0;
         onChanged();
         return this;
@@ -9878,7 +9978,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingHistogram50() {
-        return ((bitField0_ & 0x08000000) != 0);
+        return ((bitField0_ & 0x10000000) != 0);
       }
       /**
        * <code>optional uint32 ping_histogram_50 = 42;</code>
@@ -9894,7 +9994,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingHistogram50(int value) {
-        bitField0_ |= 0x08000000;
+        bitField0_ |= 0x10000000;
         pingHistogram50_ = value;
         onChanged();
         return this;
@@ -9904,7 +10004,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingHistogram50() {
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField0_ = (bitField0_ & ~0x10000000);
         pingHistogram50_ = 0;
         onChanged();
         return this;
@@ -9917,7 +10017,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingHistogram75() {
-        return ((bitField0_ & 0x10000000) != 0);
+        return ((bitField0_ & 0x20000000) != 0);
       }
       /**
        * <code>optional uint32 ping_histogram_75 = 43;</code>
@@ -9933,7 +10033,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingHistogram75(int value) {
-        bitField0_ |= 0x10000000;
+        bitField0_ |= 0x20000000;
         pingHistogram75_ = value;
         onChanged();
         return this;
@@ -9943,7 +10043,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingHistogram75() {
-        bitField0_ = (bitField0_ & ~0x10000000);
+        bitField0_ = (bitField0_ & ~0x20000000);
         pingHistogram75_ = 0;
         onChanged();
         return this;
@@ -9956,7 +10056,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingHistogram100() {
-        return ((bitField0_ & 0x20000000) != 0);
+        return ((bitField0_ & 0x40000000) != 0);
       }
       /**
        * <code>optional uint32 ping_histogram_100 = 44;</code>
@@ -9972,7 +10072,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingHistogram100(int value) {
-        bitField0_ |= 0x20000000;
+        bitField0_ |= 0x40000000;
         pingHistogram100_ = value;
         onChanged();
         return this;
@@ -9982,7 +10082,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingHistogram100() {
-        bitField0_ = (bitField0_ & ~0x20000000);
+        bitField0_ = (bitField0_ & ~0x40000000);
         pingHistogram100_ = 0;
         onChanged();
         return this;
@@ -9995,7 +10095,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingHistogram125() {
-        return ((bitField0_ & 0x40000000) != 0);
+        return ((bitField0_ & 0x80000000) != 0);
       }
       /**
        * <code>optional uint32 ping_histogram_125 = 45;</code>
@@ -10011,7 +10111,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingHistogram125(int value) {
-        bitField0_ |= 0x40000000;
+        bitField0_ |= 0x80000000;
         pingHistogram125_ = value;
         onChanged();
         return this;
@@ -10021,7 +10121,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingHistogram125() {
-        bitField0_ = (bitField0_ & ~0x40000000);
+        bitField0_ = (bitField0_ & ~0x80000000);
         pingHistogram125_ = 0;
         onChanged();
         return this;
@@ -10034,7 +10134,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingHistogram150() {
-        return ((bitField0_ & 0x80000000) != 0);
+        return ((bitField1_ & 0x00000001) != 0);
       }
       /**
        * <code>optional uint32 ping_histogram_150 = 46;</code>
@@ -10050,7 +10150,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingHistogram150(int value) {
-        bitField0_ |= 0x80000000;
+        bitField1_ |= 0x00000001;
         pingHistogram150_ = value;
         onChanged();
         return this;
@@ -10060,7 +10160,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingHistogram150() {
-        bitField0_ = (bitField0_ & ~0x80000000);
+        bitField1_ = (bitField1_ & ~0x00000001);
         pingHistogram150_ = 0;
         onChanged();
         return this;
@@ -10073,7 +10173,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingHistogram200() {
-        return ((bitField1_ & 0x00000001) != 0);
+        return ((bitField1_ & 0x00000002) != 0);
       }
       /**
        * <code>optional uint32 ping_histogram_200 = 47;</code>
@@ -10089,7 +10189,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingHistogram200(int value) {
-        bitField1_ |= 0x00000001;
+        bitField1_ |= 0x00000002;
         pingHistogram200_ = value;
         onChanged();
         return this;
@@ -10099,7 +10199,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingHistogram200() {
-        bitField1_ = (bitField1_ & ~0x00000001);
+        bitField1_ = (bitField1_ & ~0x00000002);
         pingHistogram200_ = 0;
         onChanged();
         return this;
@@ -10112,7 +10212,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingHistogram300() {
-        return ((bitField1_ & 0x00000002) != 0);
+        return ((bitField1_ & 0x00000004) != 0);
       }
       /**
        * <code>optional uint32 ping_histogram_300 = 48;</code>
@@ -10128,7 +10228,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingHistogram300(int value) {
-        bitField1_ |= 0x00000002;
+        bitField1_ |= 0x00000004;
         pingHistogram300_ = value;
         onChanged();
         return this;
@@ -10138,7 +10238,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingHistogram300() {
-        bitField1_ = (bitField1_ & ~0x00000002);
+        bitField1_ = (bitField1_ & ~0x00000004);
         pingHistogram300_ = 0;
         onChanged();
         return this;
@@ -10151,7 +10251,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingHistogramMax() {
-        return ((bitField1_ & 0x00000004) != 0);
+        return ((bitField1_ & 0x00000008) != 0);
       }
       /**
        * <code>optional uint32 ping_histogram_max = 49;</code>
@@ -10167,7 +10267,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingHistogramMax(int value) {
-        bitField1_ |= 0x00000004;
+        bitField1_ |= 0x00000008;
         pingHistogramMax_ = value;
         onChanged();
         return this;
@@ -10177,7 +10277,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingHistogramMax() {
-        bitField1_ = (bitField1_ & ~0x00000004);
+        bitField1_ = (bitField1_ & ~0x00000008);
         pingHistogramMax_ = 0;
         onChanged();
         return this;
@@ -10190,7 +10290,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingNtile5Th() {
-        return ((bitField1_ & 0x00000008) != 0);
+        return ((bitField1_ & 0x00000010) != 0);
       }
       /**
        * <code>optional uint32 ping_ntile_5th = 50;</code>
@@ -10206,7 +10306,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingNtile5Th(int value) {
-        bitField1_ |= 0x00000008;
+        bitField1_ |= 0x00000010;
         pingNtile5Th_ = value;
         onChanged();
         return this;
@@ -10216,7 +10316,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingNtile5Th() {
-        bitField1_ = (bitField1_ & ~0x00000008);
+        bitField1_ = (bitField1_ & ~0x00000010);
         pingNtile5Th_ = 0;
         onChanged();
         return this;
@@ -10229,7 +10329,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingNtile50Th() {
-        return ((bitField1_ & 0x00000010) != 0);
+        return ((bitField1_ & 0x00000020) != 0);
       }
       /**
        * <code>optional uint32 ping_ntile_50th = 51;</code>
@@ -10245,7 +10345,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingNtile50Th(int value) {
-        bitField1_ |= 0x00000010;
+        bitField1_ |= 0x00000020;
         pingNtile50Th_ = value;
         onChanged();
         return this;
@@ -10255,7 +10355,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingNtile50Th() {
-        bitField1_ = (bitField1_ & ~0x00000010);
+        bitField1_ = (bitField1_ & ~0x00000020);
         pingNtile50Th_ = 0;
         onChanged();
         return this;
@@ -10268,7 +10368,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingNtile75Th() {
-        return ((bitField1_ & 0x00000020) != 0);
+        return ((bitField1_ & 0x00000040) != 0);
       }
       /**
        * <code>optional uint32 ping_ntile_75th = 52;</code>
@@ -10284,7 +10384,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingNtile75Th(int value) {
-        bitField1_ |= 0x00000020;
+        bitField1_ |= 0x00000040;
         pingNtile75Th_ = value;
         onChanged();
         return this;
@@ -10294,7 +10394,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingNtile75Th() {
-        bitField1_ = (bitField1_ & ~0x00000020);
+        bitField1_ = (bitField1_ & ~0x00000040);
         pingNtile75Th_ = 0;
         onChanged();
         return this;
@@ -10307,7 +10407,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingNtile95Th() {
-        return ((bitField1_ & 0x00000040) != 0);
+        return ((bitField1_ & 0x00000080) != 0);
       }
       /**
        * <code>optional uint32 ping_ntile_95th = 53;</code>
@@ -10323,7 +10423,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingNtile95Th(int value) {
-        bitField1_ |= 0x00000040;
+        bitField1_ |= 0x00000080;
         pingNtile95Th_ = value;
         onChanged();
         return this;
@@ -10333,7 +10433,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingNtile95Th() {
-        bitField1_ = (bitField1_ & ~0x00000040);
+        bitField1_ = (bitField1_ & ~0x00000080);
         pingNtile95Th_ = 0;
         onChanged();
         return this;
@@ -10346,7 +10446,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasPingNtile98Th() {
-        return ((bitField1_ & 0x00000080) != 0);
+        return ((bitField1_ & 0x00000100) != 0);
       }
       /**
        * <code>optional uint32 ping_ntile_98th = 54;</code>
@@ -10362,7 +10462,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setPingNtile98Th(int value) {
-        bitField1_ |= 0x00000080;
+        bitField1_ |= 0x00000100;
         pingNtile98Th_ = value;
         onChanged();
         return this;
@@ -10372,7 +10472,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearPingNtile98Th() {
-        bitField1_ = (bitField1_ & ~0x00000080);
+        bitField1_ = (bitField1_ & ~0x00000100);
         pingNtile98Th_ = 0;
         onChanged();
         return this;
@@ -10385,7 +10485,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasJitterHistogramNegligible() {
-        return ((bitField1_ & 0x00000100) != 0);
+        return ((bitField1_ & 0x00000200) != 0);
       }
       /**
        * <code>optional uint32 jitter_histogram_negligible = 61;</code>
@@ -10401,7 +10501,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setJitterHistogramNegligible(int value) {
-        bitField1_ |= 0x00000100;
+        bitField1_ |= 0x00000200;
         jitterHistogramNegligible_ = value;
         onChanged();
         return this;
@@ -10411,7 +10511,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearJitterHistogramNegligible() {
-        bitField1_ = (bitField1_ & ~0x00000100);
+        bitField1_ = (bitField1_ & ~0x00000200);
         jitterHistogramNegligible_ = 0;
         onChanged();
         return this;
@@ -10424,7 +10524,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasJitterHistogram1() {
-        return ((bitField1_ & 0x00000200) != 0);
+        return ((bitField1_ & 0x00000400) != 0);
       }
       /**
        * <code>optional uint32 jitter_histogram_1 = 62;</code>
@@ -10440,7 +10540,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setJitterHistogram1(int value) {
-        bitField1_ |= 0x00000200;
+        bitField1_ |= 0x00000400;
         jitterHistogram1_ = value;
         onChanged();
         return this;
@@ -10450,7 +10550,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearJitterHistogram1() {
-        bitField1_ = (bitField1_ & ~0x00000200);
+        bitField1_ = (bitField1_ & ~0x00000400);
         jitterHistogram1_ = 0;
         onChanged();
         return this;
@@ -10463,7 +10563,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasJitterHistogram2() {
-        return ((bitField1_ & 0x00000400) != 0);
+        return ((bitField1_ & 0x00000800) != 0);
       }
       /**
        * <code>optional uint32 jitter_histogram_2 = 63;</code>
@@ -10479,7 +10579,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setJitterHistogram2(int value) {
-        bitField1_ |= 0x00000400;
+        bitField1_ |= 0x00000800;
         jitterHistogram2_ = value;
         onChanged();
         return this;
@@ -10489,7 +10589,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearJitterHistogram2() {
-        bitField1_ = (bitField1_ & ~0x00000400);
+        bitField1_ = (bitField1_ & ~0x00000800);
         jitterHistogram2_ = 0;
         onChanged();
         return this;
@@ -10502,7 +10602,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasJitterHistogram5() {
-        return ((bitField1_ & 0x00000800) != 0);
+        return ((bitField1_ & 0x00001000) != 0);
       }
       /**
        * <code>optional uint32 jitter_histogram_5 = 64;</code>
@@ -10518,7 +10618,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setJitterHistogram5(int value) {
-        bitField1_ |= 0x00000800;
+        bitField1_ |= 0x00001000;
         jitterHistogram5_ = value;
         onChanged();
         return this;
@@ -10528,7 +10628,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearJitterHistogram5() {
-        bitField1_ = (bitField1_ & ~0x00000800);
+        bitField1_ = (bitField1_ & ~0x00001000);
         jitterHistogram5_ = 0;
         onChanged();
         return this;
@@ -10541,7 +10641,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasJitterHistogram10() {
-        return ((bitField1_ & 0x00001000) != 0);
+        return ((bitField1_ & 0x00002000) != 0);
       }
       /**
        * <code>optional uint32 jitter_histogram_10 = 65;</code>
@@ -10557,7 +10657,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setJitterHistogram10(int value) {
-        bitField1_ |= 0x00001000;
+        bitField1_ |= 0x00002000;
         jitterHistogram10_ = value;
         onChanged();
         return this;
@@ -10567,7 +10667,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearJitterHistogram10() {
-        bitField1_ = (bitField1_ & ~0x00001000);
+        bitField1_ = (bitField1_ & ~0x00002000);
         jitterHistogram10_ = 0;
         onChanged();
         return this;
@@ -10580,7 +10680,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasJitterHistogram20() {
-        return ((bitField1_ & 0x00002000) != 0);
+        return ((bitField1_ & 0x00004000) != 0);
       }
       /**
        * <code>optional uint32 jitter_histogram_20 = 66;</code>
@@ -10596,7 +10696,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setJitterHistogram20(int value) {
-        bitField1_ |= 0x00002000;
+        bitField1_ |= 0x00004000;
         jitterHistogram20_ = value;
         onChanged();
         return this;
@@ -10606,7 +10706,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearJitterHistogram20() {
-        bitField1_ = (bitField1_ & ~0x00002000);
+        bitField1_ = (bitField1_ & ~0x00004000);
         jitterHistogram20_ = 0;
         onChanged();
         return this;
@@ -10619,7 +10719,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedMax() {
-        return ((bitField1_ & 0x00004000) != 0);
+        return ((bitField1_ & 0x00008000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_max = 67;</code>
@@ -10635,7 +10735,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedMax(int value) {
-        bitField1_ |= 0x00004000;
+        bitField1_ |= 0x00008000;
         txspeedMax_ = value;
         onChanged();
         return this;
@@ -10645,7 +10745,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedMax() {
-        bitField1_ = (bitField1_ & ~0x00004000);
+        bitField1_ = (bitField1_ & ~0x00008000);
         txspeedMax_ = 0;
         onChanged();
         return this;
@@ -10658,7 +10758,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedHistogram16() {
-        return ((bitField1_ & 0x00008000) != 0);
+        return ((bitField1_ & 0x00010000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_histogram_16 = 68;</code>
@@ -10674,7 +10774,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedHistogram16(int value) {
-        bitField1_ |= 0x00008000;
+        bitField1_ |= 0x00010000;
         txspeedHistogram16_ = value;
         onChanged();
         return this;
@@ -10684,7 +10784,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedHistogram16() {
-        bitField1_ = (bitField1_ & ~0x00008000);
+        bitField1_ = (bitField1_ & ~0x00010000);
         txspeedHistogram16_ = 0;
         onChanged();
         return this;
@@ -10697,7 +10797,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedHistogram32() {
-        return ((bitField1_ & 0x00010000) != 0);
+        return ((bitField1_ & 0x00020000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_histogram_32 = 69;</code>
@@ -10713,7 +10813,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedHistogram32(int value) {
-        bitField1_ |= 0x00010000;
+        bitField1_ |= 0x00020000;
         txspeedHistogram32_ = value;
         onChanged();
         return this;
@@ -10723,7 +10823,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedHistogram32() {
-        bitField1_ = (bitField1_ & ~0x00010000);
+        bitField1_ = (bitField1_ & ~0x00020000);
         txspeedHistogram32_ = 0;
         onChanged();
         return this;
@@ -10736,7 +10836,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedHistogram64() {
-        return ((bitField1_ & 0x00020000) != 0);
+        return ((bitField1_ & 0x00040000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_histogram_64 = 70;</code>
@@ -10752,7 +10852,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedHistogram64(int value) {
-        bitField1_ |= 0x00020000;
+        bitField1_ |= 0x00040000;
         txspeedHistogram64_ = value;
         onChanged();
         return this;
@@ -10762,7 +10862,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedHistogram64() {
-        bitField1_ = (bitField1_ & ~0x00020000);
+        bitField1_ = (bitField1_ & ~0x00040000);
         txspeedHistogram64_ = 0;
         onChanged();
         return this;
@@ -10775,7 +10875,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedHistogram128() {
-        return ((bitField1_ & 0x00040000) != 0);
+        return ((bitField1_ & 0x00080000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_histogram_128 = 71;</code>
@@ -10791,7 +10891,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedHistogram128(int value) {
-        bitField1_ |= 0x00040000;
+        bitField1_ |= 0x00080000;
         txspeedHistogram128_ = value;
         onChanged();
         return this;
@@ -10801,7 +10901,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedHistogram128() {
-        bitField1_ = (bitField1_ & ~0x00040000);
+        bitField1_ = (bitField1_ & ~0x00080000);
         txspeedHistogram128_ = 0;
         onChanged();
         return this;
@@ -10814,7 +10914,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedHistogram256() {
-        return ((bitField1_ & 0x00080000) != 0);
+        return ((bitField1_ & 0x00100000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_histogram_256 = 72;</code>
@@ -10830,7 +10930,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedHistogram256(int value) {
-        bitField1_ |= 0x00080000;
+        bitField1_ |= 0x00100000;
         txspeedHistogram256_ = value;
         onChanged();
         return this;
@@ -10840,7 +10940,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedHistogram256() {
-        bitField1_ = (bitField1_ & ~0x00080000);
+        bitField1_ = (bitField1_ & ~0x00100000);
         txspeedHistogram256_ = 0;
         onChanged();
         return this;
@@ -10853,7 +10953,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedHistogram512() {
-        return ((bitField1_ & 0x00100000) != 0);
+        return ((bitField1_ & 0x00200000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_histogram_512 = 73;</code>
@@ -10869,7 +10969,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedHistogram512(int value) {
-        bitField1_ |= 0x00100000;
+        bitField1_ |= 0x00200000;
         txspeedHistogram512_ = value;
         onChanged();
         return this;
@@ -10879,7 +10979,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedHistogram512() {
-        bitField1_ = (bitField1_ & ~0x00100000);
+        bitField1_ = (bitField1_ & ~0x00200000);
         txspeedHistogram512_ = 0;
         onChanged();
         return this;
@@ -10892,7 +10992,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedHistogram1024() {
-        return ((bitField1_ & 0x00200000) != 0);
+        return ((bitField1_ & 0x00400000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_histogram_1024 = 74;</code>
@@ -10908,7 +11008,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedHistogram1024(int value) {
-        bitField1_ |= 0x00200000;
+        bitField1_ |= 0x00400000;
         txspeedHistogram1024_ = value;
         onChanged();
         return this;
@@ -10918,7 +11018,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedHistogram1024() {
-        bitField1_ = (bitField1_ & ~0x00200000);
+        bitField1_ = (bitField1_ & ~0x00400000);
         txspeedHistogram1024_ = 0;
         onChanged();
         return this;
@@ -10931,7 +11031,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedHistogramMax() {
-        return ((bitField1_ & 0x00400000) != 0);
+        return ((bitField1_ & 0x00800000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_histogram_max = 75;</code>
@@ -10947,7 +11047,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedHistogramMax(int value) {
-        bitField1_ |= 0x00400000;
+        bitField1_ |= 0x00800000;
         txspeedHistogramMax_ = value;
         onChanged();
         return this;
@@ -10957,7 +11057,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedHistogramMax() {
-        bitField1_ = (bitField1_ & ~0x00400000);
+        bitField1_ = (bitField1_ & ~0x00800000);
         txspeedHistogramMax_ = 0;
         onChanged();
         return this;
@@ -10970,7 +11070,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedNtile5Th() {
-        return ((bitField1_ & 0x00800000) != 0);
+        return ((bitField1_ & 0x01000000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_ntile_5th = 76;</code>
@@ -10986,7 +11086,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedNtile5Th(int value) {
-        bitField1_ |= 0x00800000;
+        bitField1_ |= 0x01000000;
         txspeedNtile5Th_ = value;
         onChanged();
         return this;
@@ -10996,7 +11096,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedNtile5Th() {
-        bitField1_ = (bitField1_ & ~0x00800000);
+        bitField1_ = (bitField1_ & ~0x01000000);
         txspeedNtile5Th_ = 0;
         onChanged();
         return this;
@@ -11009,7 +11109,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedNtile50Th() {
-        return ((bitField1_ & 0x01000000) != 0);
+        return ((bitField1_ & 0x02000000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_ntile_50th = 77;</code>
@@ -11025,7 +11125,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedNtile50Th(int value) {
-        bitField1_ |= 0x01000000;
+        bitField1_ |= 0x02000000;
         txspeedNtile50Th_ = value;
         onChanged();
         return this;
@@ -11035,7 +11135,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedNtile50Th() {
-        bitField1_ = (bitField1_ & ~0x01000000);
+        bitField1_ = (bitField1_ & ~0x02000000);
         txspeedNtile50Th_ = 0;
         onChanged();
         return this;
@@ -11048,7 +11148,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedNtile75Th() {
-        return ((bitField1_ & 0x02000000) != 0);
+        return ((bitField1_ & 0x04000000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_ntile_75th = 78;</code>
@@ -11064,7 +11164,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedNtile75Th(int value) {
-        bitField1_ |= 0x02000000;
+        bitField1_ |= 0x04000000;
         txspeedNtile75Th_ = value;
         onChanged();
         return this;
@@ -11074,7 +11174,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedNtile75Th() {
-        bitField1_ = (bitField1_ & ~0x02000000);
+        bitField1_ = (bitField1_ & ~0x04000000);
         txspeedNtile75Th_ = 0;
         onChanged();
         return this;
@@ -11087,7 +11187,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedNtile95Th() {
-        return ((bitField1_ & 0x04000000) != 0);
+        return ((bitField1_ & 0x08000000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_ntile_95th = 79;</code>
@@ -11103,7 +11203,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedNtile95Th(int value) {
-        bitField1_ |= 0x04000000;
+        bitField1_ |= 0x08000000;
         txspeedNtile95Th_ = value;
         onChanged();
         return this;
@@ -11113,7 +11213,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedNtile95Th() {
-        bitField1_ = (bitField1_ & ~0x04000000);
+        bitField1_ = (bitField1_ & ~0x08000000);
         txspeedNtile95Th_ = 0;
         onChanged();
         return this;
@@ -11126,7 +11226,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasTxspeedNtile98Th() {
-        return ((bitField1_ & 0x08000000) != 0);
+        return ((bitField1_ & 0x10000000) != 0);
       }
       /**
        * <code>optional uint32 txspeed_ntile_98th = 80;</code>
@@ -11142,7 +11242,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setTxspeedNtile98Th(int value) {
-        bitField1_ |= 0x08000000;
+        bitField1_ |= 0x10000000;
         txspeedNtile98Th_ = value;
         onChanged();
         return this;
@@ -11152,7 +11252,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearTxspeedNtile98Th() {
-        bitField1_ = (bitField1_ & ~0x08000000);
+        bitField1_ = (bitField1_ & ~0x10000000);
         txspeedNtile98Th_ = 0;
         onChanged();
         return this;
@@ -11165,7 +11265,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedMax() {
-        return ((bitField1_ & 0x10000000) != 0);
+        return ((bitField1_ & 0x20000000) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_max = 81;</code>
@@ -11181,7 +11281,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedMax(int value) {
-        bitField1_ |= 0x10000000;
+        bitField1_ |= 0x20000000;
         rxspeedMax_ = value;
         onChanged();
         return this;
@@ -11191,7 +11291,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedMax() {
-        bitField1_ = (bitField1_ & ~0x10000000);
+        bitField1_ = (bitField1_ & ~0x20000000);
         rxspeedMax_ = 0;
         onChanged();
         return this;
@@ -11204,7 +11304,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedHistogram16() {
-        return ((bitField1_ & 0x20000000) != 0);
+        return ((bitField1_ & 0x40000000) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_histogram_16 = 82;</code>
@@ -11220,7 +11320,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedHistogram16(int value) {
-        bitField1_ |= 0x20000000;
+        bitField1_ |= 0x40000000;
         rxspeedHistogram16_ = value;
         onChanged();
         return this;
@@ -11230,7 +11330,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedHistogram16() {
-        bitField1_ = (bitField1_ & ~0x20000000);
+        bitField1_ = (bitField1_ & ~0x40000000);
         rxspeedHistogram16_ = 0;
         onChanged();
         return this;
@@ -11243,7 +11343,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedHistogram32() {
-        return ((bitField1_ & 0x40000000) != 0);
+        return ((bitField1_ & 0x80000000) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_histogram_32 = 83;</code>
@@ -11259,7 +11359,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedHistogram32(int value) {
-        bitField1_ |= 0x40000000;
+        bitField1_ |= 0x80000000;
         rxspeedHistogram32_ = value;
         onChanged();
         return this;
@@ -11269,7 +11369,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedHistogram32() {
-        bitField1_ = (bitField1_ & ~0x40000000);
+        bitField1_ = (bitField1_ & ~0x80000000);
         rxspeedHistogram32_ = 0;
         onChanged();
         return this;
@@ -11282,7 +11382,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedHistogram64() {
-        return ((bitField1_ & 0x80000000) != 0);
+        return ((bitField2_ & 0x00000001) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_histogram_64 = 84;</code>
@@ -11298,7 +11398,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedHistogram64(int value) {
-        bitField1_ |= 0x80000000;
+        bitField2_ |= 0x00000001;
         rxspeedHistogram64_ = value;
         onChanged();
         return this;
@@ -11308,7 +11408,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedHistogram64() {
-        bitField1_ = (bitField1_ & ~0x80000000);
+        bitField2_ = (bitField2_ & ~0x00000001);
         rxspeedHistogram64_ = 0;
         onChanged();
         return this;
@@ -11321,7 +11421,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedHistogram128() {
-        return ((bitField2_ & 0x00000001) != 0);
+        return ((bitField2_ & 0x00000002) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_histogram_128 = 85;</code>
@@ -11337,7 +11437,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedHistogram128(int value) {
-        bitField2_ |= 0x00000001;
+        bitField2_ |= 0x00000002;
         rxspeedHistogram128_ = value;
         onChanged();
         return this;
@@ -11347,7 +11447,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedHistogram128() {
-        bitField2_ = (bitField2_ & ~0x00000001);
+        bitField2_ = (bitField2_ & ~0x00000002);
         rxspeedHistogram128_ = 0;
         onChanged();
         return this;
@@ -11360,7 +11460,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedHistogram256() {
-        return ((bitField2_ & 0x00000002) != 0);
+        return ((bitField2_ & 0x00000004) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_histogram_256 = 86;</code>
@@ -11376,7 +11476,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedHistogram256(int value) {
-        bitField2_ |= 0x00000002;
+        bitField2_ |= 0x00000004;
         rxspeedHistogram256_ = value;
         onChanged();
         return this;
@@ -11386,7 +11486,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedHistogram256() {
-        bitField2_ = (bitField2_ & ~0x00000002);
+        bitField2_ = (bitField2_ & ~0x00000004);
         rxspeedHistogram256_ = 0;
         onChanged();
         return this;
@@ -11399,7 +11499,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedHistogram512() {
-        return ((bitField2_ & 0x00000004) != 0);
+        return ((bitField2_ & 0x00000008) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_histogram_512 = 87;</code>
@@ -11415,7 +11515,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedHistogram512(int value) {
-        bitField2_ |= 0x00000004;
+        bitField2_ |= 0x00000008;
         rxspeedHistogram512_ = value;
         onChanged();
         return this;
@@ -11425,7 +11525,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedHistogram512() {
-        bitField2_ = (bitField2_ & ~0x00000004);
+        bitField2_ = (bitField2_ & ~0x00000008);
         rxspeedHistogram512_ = 0;
         onChanged();
         return this;
@@ -11438,7 +11538,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedHistogram1024() {
-        return ((bitField2_ & 0x00000008) != 0);
+        return ((bitField2_ & 0x00000010) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_histogram_1024 = 88;</code>
@@ -11454,7 +11554,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedHistogram1024(int value) {
-        bitField2_ |= 0x00000008;
+        bitField2_ |= 0x00000010;
         rxspeedHistogram1024_ = value;
         onChanged();
         return this;
@@ -11464,7 +11564,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedHistogram1024() {
-        bitField2_ = (bitField2_ & ~0x00000008);
+        bitField2_ = (bitField2_ & ~0x00000010);
         rxspeedHistogram1024_ = 0;
         onChanged();
         return this;
@@ -11477,7 +11577,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedHistogramMax() {
-        return ((bitField2_ & 0x00000010) != 0);
+        return ((bitField2_ & 0x00000020) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_histogram_max = 89;</code>
@@ -11493,7 +11593,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedHistogramMax(int value) {
-        bitField2_ |= 0x00000010;
+        bitField2_ |= 0x00000020;
         rxspeedHistogramMax_ = value;
         onChanged();
         return this;
@@ -11503,7 +11603,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedHistogramMax() {
-        bitField2_ = (bitField2_ & ~0x00000010);
+        bitField2_ = (bitField2_ & ~0x00000020);
         rxspeedHistogramMax_ = 0;
         onChanged();
         return this;
@@ -11516,7 +11616,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedNtile5Th() {
-        return ((bitField2_ & 0x00000020) != 0);
+        return ((bitField2_ & 0x00000040) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_ntile_5th = 90;</code>
@@ -11532,7 +11632,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedNtile5Th(int value) {
-        bitField2_ |= 0x00000020;
+        bitField2_ |= 0x00000040;
         rxspeedNtile5Th_ = value;
         onChanged();
         return this;
@@ -11542,7 +11642,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedNtile5Th() {
-        bitField2_ = (bitField2_ & ~0x00000020);
+        bitField2_ = (bitField2_ & ~0x00000040);
         rxspeedNtile5Th_ = 0;
         onChanged();
         return this;
@@ -11555,7 +11655,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedNtile50Th() {
-        return ((bitField2_ & 0x00000040) != 0);
+        return ((bitField2_ & 0x00000080) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_ntile_50th = 91;</code>
@@ -11571,7 +11671,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedNtile50Th(int value) {
-        bitField2_ |= 0x00000040;
+        bitField2_ |= 0x00000080;
         rxspeedNtile50Th_ = value;
         onChanged();
         return this;
@@ -11581,7 +11681,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedNtile50Th() {
-        bitField2_ = (bitField2_ & ~0x00000040);
+        bitField2_ = (bitField2_ & ~0x00000080);
         rxspeedNtile50Th_ = 0;
         onChanged();
         return this;
@@ -11594,7 +11694,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedNtile75Th() {
-        return ((bitField2_ & 0x00000080) != 0);
+        return ((bitField2_ & 0x00000100) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_ntile_75th = 92;</code>
@@ -11610,7 +11710,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedNtile75Th(int value) {
-        bitField2_ |= 0x00000080;
+        bitField2_ |= 0x00000100;
         rxspeedNtile75Th_ = value;
         onChanged();
         return this;
@@ -11620,7 +11720,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedNtile75Th() {
-        bitField2_ = (bitField2_ & ~0x00000080);
+        bitField2_ = (bitField2_ & ~0x00000100);
         rxspeedNtile75Th_ = 0;
         onChanged();
         return this;
@@ -11633,7 +11733,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedNtile95Th() {
-        return ((bitField2_ & 0x00000100) != 0);
+        return ((bitField2_ & 0x00000200) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_ntile_95th = 93;</code>
@@ -11649,7 +11749,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedNtile95Th(int value) {
-        bitField2_ |= 0x00000100;
+        bitField2_ |= 0x00000200;
         rxspeedNtile95Th_ = value;
         onChanged();
         return this;
@@ -11659,7 +11759,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedNtile95Th() {
-        bitField2_ = (bitField2_ & ~0x00000100);
+        bitField2_ = (bitField2_ & ~0x00000200);
         rxspeedNtile95Th_ = 0;
         onChanged();
         return this;
@@ -11672,7 +11772,7 @@ public final class SteamnetworkingsocketsMessages {
        */
       @java.lang.Override
       public boolean hasRxspeedNtile98Th() {
-        return ((bitField2_ & 0x00000200) != 0);
+        return ((bitField2_ & 0x00000400) != 0);
       }
       /**
        * <code>optional uint32 rxspeed_ntile_98th = 94;</code>
@@ -11688,7 +11788,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder setRxspeedNtile98Th(int value) {
-        bitField2_ |= 0x00000200;
+        bitField2_ |= 0x00000400;
         rxspeedNtile98Th_ = value;
         onChanged();
         return this;
@@ -11698,7 +11798,7 @@ public final class SteamnetworkingsocketsMessages {
        * @return This builder for chaining.
        */
       public Builder clearRxspeedNtile98Th() {
-        bitField2_ = (bitField2_ & ~0x00000200);
+        bitField2_ = (bitField2_ & ~0x00000400);
         rxspeedNtile98Th_ = 0;
         onChanged();
         return this;
@@ -12596,6 +12696,612 @@ public final class SteamnetworkingsocketsMessages {
 
   }
 
+  public interface CMsgICECandidateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgICECandidate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string candidate = 3;</code>
+     * @return Whether the candidate field is set.
+     */
+    boolean hasCandidate();
+    /**
+     * <code>optional string candidate = 3;</code>
+     * @return The candidate.
+     */
+    java.lang.String getCandidate();
+    /**
+     * <code>optional string candidate = 3;</code>
+     * @return The bytes for candidate.
+     */
+    com.google.protobuf.ByteString
+        getCandidateBytes();
+  }
+  /**
+   * Protobuf type {@code CMsgICECandidate}
+   */
+  public static final class CMsgICECandidate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgICECandidate)
+      CMsgICECandidateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgICECandidate.newBuilder() to construct.
+    private CMsgICECandidate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgICECandidate() {
+      candidate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgICECandidate();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgICECandidate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              candidate_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteamnetworkingsocketsMessages.internal_static_CMsgICECandidate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteamnetworkingsocketsMessages.internal_static_CMsgICECandidate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteamnetworkingsocketsMessages.CMsgICECandidate.class, SteamnetworkingsocketsMessages.CMsgICECandidate.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CANDIDATE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object candidate_;
+    /**
+     * <code>optional string candidate = 3;</code>
+     * @return Whether the candidate field is set.
+     */
+    @java.lang.Override
+    public boolean hasCandidate() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string candidate = 3;</code>
+     * @return The candidate.
+     */
+    @java.lang.Override
+    public java.lang.String getCandidate() {
+      java.lang.Object ref = candidate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          candidate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string candidate = 3;</code>
+     * @return The bytes for candidate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCandidateBytes() {
+      java.lang.Object ref = candidate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        candidate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, candidate_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, candidate_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteamnetworkingsocketsMessages.CMsgICECandidate)) {
+        return super.equals(obj);
+      }
+      SteamnetworkingsocketsMessages.CMsgICECandidate other = (SteamnetworkingsocketsMessages.CMsgICECandidate) obj;
+
+      if (hasCandidate() != other.hasCandidate()) return false;
+      if (hasCandidate()) {
+        if (!getCandidate()
+            .equals(other.getCandidate())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCandidate()) {
+        hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
+        hash = (53 * hash) + getCandidate().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteamnetworkingsocketsMessages.CMsgICECandidate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgICECandidate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgICECandidate)
+        SteamnetworkingsocketsMessages.CMsgICECandidateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteamnetworkingsocketsMessages.internal_static_CMsgICECandidate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteamnetworkingsocketsMessages.internal_static_CMsgICECandidate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteamnetworkingsocketsMessages.CMsgICECandidate.class, SteamnetworkingsocketsMessages.CMsgICECandidate.Builder.class);
+      }
+
+      // Construct using SteamnetworkingsocketsMessages.CMsgICECandidate.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        candidate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteamnetworkingsocketsMessages.internal_static_CMsgICECandidate_descriptor;
+      }
+
+      @java.lang.Override
+      public SteamnetworkingsocketsMessages.CMsgICECandidate getDefaultInstanceForType() {
+        return SteamnetworkingsocketsMessages.CMsgICECandidate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteamnetworkingsocketsMessages.CMsgICECandidate build() {
+        SteamnetworkingsocketsMessages.CMsgICECandidate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteamnetworkingsocketsMessages.CMsgICECandidate buildPartial() {
+        SteamnetworkingsocketsMessages.CMsgICECandidate result = new SteamnetworkingsocketsMessages.CMsgICECandidate(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.candidate_ = candidate_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteamnetworkingsocketsMessages.CMsgICECandidate) {
+          return mergeFrom((SteamnetworkingsocketsMessages.CMsgICECandidate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteamnetworkingsocketsMessages.CMsgICECandidate other) {
+        if (other == SteamnetworkingsocketsMessages.CMsgICECandidate.getDefaultInstance()) return this;
+        if (other.hasCandidate()) {
+          bitField0_ |= 0x00000001;
+          candidate_ = other.candidate_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteamnetworkingsocketsMessages.CMsgICECandidate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteamnetworkingsocketsMessages.CMsgICECandidate) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object candidate_ = "";
+      /**
+       * <code>optional string candidate = 3;</code>
+       * @return Whether the candidate field is set.
+       */
+      public boolean hasCandidate() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string candidate = 3;</code>
+       * @return The candidate.
+       */
+      public java.lang.String getCandidate() {
+        java.lang.Object ref = candidate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            candidate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string candidate = 3;</code>
+       * @return The bytes for candidate.
+       */
+      public com.google.protobuf.ByteString
+          getCandidateBytes() {
+        java.lang.Object ref = candidate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          candidate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string candidate = 3;</code>
+       * @param value The candidate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCandidate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        candidate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string candidate = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCandidate() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        candidate_ = getDefaultInstance().getCandidate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string candidate = 3;</code>
+       * @param value The bytes for candidate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCandidateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        candidate_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgICECandidate)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgICECandidate)
+    private static final SteamnetworkingsocketsMessages.CMsgICECandidate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteamnetworkingsocketsMessages.CMsgICECandidate();
+    }
+
+    public static SteamnetworkingsocketsMessages.CMsgICECandidate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgICECandidate>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgICECandidate>() {
+      @java.lang.Override
+      public CMsgICECandidate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgICECandidate(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgICECandidate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgICECandidate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteamnetworkingsocketsMessages.CMsgICECandidate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CMsgICERendezvousOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgICERendezvous)
       com.google.protobuf.MessageOrBuilder {
@@ -12616,19 +13322,19 @@ public final class SteamnetworkingsocketsMessages {
     SteamnetworkingsocketsMessages.CMsgICERendezvous.AuthOrBuilder getAuthOrBuilder();
 
     /**
-     * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+     * <code>optional .CMsgICECandidate add_candidate = 1;</code>
      * @return Whether the addCandidate field is set.
      */
     boolean hasAddCandidate();
     /**
-     * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+     * <code>optional .CMsgICECandidate add_candidate = 1;</code>
      * @return The addCandidate.
      */
-    SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate getAddCandidate();
+    SteamnetworkingsocketsMessages.CMsgICECandidate getAddCandidate();
     /**
-     * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+     * <code>optional .CMsgICECandidate add_candidate = 1;</code>
      */
-    SteamnetworkingsocketsMessages.CMsgICERendezvous.CandidateOrBuilder getAddCandidateOrBuilder();
+    SteamnetworkingsocketsMessages.CMsgICECandidateOrBuilder getAddCandidateOrBuilder();
   }
   /**
    * Protobuf type {@code CMsgICERendezvous}
@@ -12677,11 +13383,11 @@ public final class SteamnetworkingsocketsMessages {
               done = true;
               break;
             case 10: {
-              SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.Builder subBuilder = null;
+              SteamnetworkingsocketsMessages.CMsgICECandidate.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) != 0)) {
                 subBuilder = addCandidate_.toBuilder();
               }
-              addCandidate_ = input.readMessage(SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.PARSER, extensionRegistry);
+              addCandidate_ = input.readMessage(SteamnetworkingsocketsMessages.CMsgICECandidate.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(addCandidate_);
                 addCandidate_ = subBuilder.buildPartial();
@@ -13340,612 +14046,6 @@ public final class SteamnetworkingsocketsMessages {
 
     }
 
-    public interface CandidateOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:CMsgICERendezvous.Candidate)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>optional string candidate = 3;</code>
-       * @return Whether the candidate field is set.
-       */
-      boolean hasCandidate();
-      /**
-       * <code>optional string candidate = 3;</code>
-       * @return The candidate.
-       */
-      java.lang.String getCandidate();
-      /**
-       * <code>optional string candidate = 3;</code>
-       * @return The bytes for candidate.
-       */
-      com.google.protobuf.ByteString
-          getCandidateBytes();
-    }
-    /**
-     * Protobuf type {@code CMsgICERendezvous.Candidate}
-     */
-    public static final class Candidate extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:CMsgICERendezvous.Candidate)
-        CandidateOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Candidate.newBuilder() to construct.
-      private Candidate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Candidate() {
-        candidate_ = "";
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new Candidate();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Candidate(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 26: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000001;
-                candidate_ = bs;
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteamnetworkingsocketsMessages.internal_static_CMsgICERendezvous_Candidate_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteamnetworkingsocketsMessages.internal_static_CMsgICERendezvous_Candidate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.class, SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.Builder.class);
-      }
-
-      private int bitField0_;
-      public static final int CANDIDATE_FIELD_NUMBER = 3;
-      private volatile java.lang.Object candidate_;
-      /**
-       * <code>optional string candidate = 3;</code>
-       * @return Whether the candidate field is set.
-       */
-      @java.lang.Override
-      public boolean hasCandidate() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional string candidate = 3;</code>
-       * @return The candidate.
-       */
-      @java.lang.Override
-      public java.lang.String getCandidate() {
-        java.lang.Object ref = candidate_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            candidate_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string candidate = 3;</code>
-       * @return The bytes for candidate.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getCandidateBytes() {
-        java.lang.Object ref = candidate_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          candidate_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, candidate_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, candidate_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate)) {
-          return super.equals(obj);
-        }
-        SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate other = (SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate) obj;
-
-        if (hasCandidate() != other.hasCandidate()) return false;
-        if (hasCandidate()) {
-          if (!getCandidate()
-              .equals(other.getCandidate())) return false;
-        }
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasCandidate()) {
-          hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
-          hash = (53 * hash) + getCandidate().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code CMsgICERendezvous.Candidate}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:CMsgICERendezvous.Candidate)
-          SteamnetworkingsocketsMessages.CMsgICERendezvous.CandidateOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return SteamnetworkingsocketsMessages.internal_static_CMsgICERendezvous_Candidate_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return SteamnetworkingsocketsMessages.internal_static_CMsgICERendezvous_Candidate_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.class, SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.Builder.class);
-        }
-
-        // Construct using SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          candidate_ = "";
-          bitField0_ = (bitField0_ & ~0x00000001);
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return SteamnetworkingsocketsMessages.internal_static_CMsgICERendezvous_Candidate_descriptor;
-        }
-
-        @java.lang.Override
-        public SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate getDefaultInstanceForType() {
-          return SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate build() {
-          SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate buildPartial() {
-          SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate result = new SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) != 0)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.candidate_ = candidate_;
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate) {
-            return mergeFrom((SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate other) {
-          if (other == SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.getDefaultInstance()) return this;
-          if (other.hasCandidate()) {
-            bitField0_ |= 0x00000001;
-            candidate_ = other.candidate_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private java.lang.Object candidate_ = "";
-        /**
-         * <code>optional string candidate = 3;</code>
-         * @return Whether the candidate field is set.
-         */
-        public boolean hasCandidate() {
-          return ((bitField0_ & 0x00000001) != 0);
-        }
-        /**
-         * <code>optional string candidate = 3;</code>
-         * @return The candidate.
-         */
-        public java.lang.String getCandidate() {
-          java.lang.Object ref = candidate_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              candidate_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string candidate = 3;</code>
-         * @return The bytes for candidate.
-         */
-        public com.google.protobuf.ByteString
-            getCandidateBytes() {
-          java.lang.Object ref = candidate_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            candidate_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string candidate = 3;</code>
-         * @param value The candidate to set.
-         * @return This builder for chaining.
-         */
-        public Builder setCandidate(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          candidate_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string candidate = 3;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearCandidate() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          candidate_ = getDefaultInstance().getCandidate();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string candidate = 3;</code>
-         * @param value The bytes for candidate to set.
-         * @return This builder for chaining.
-         */
-        public Builder setCandidateBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          candidate_ = value;
-          onChanged();
-          return this;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:CMsgICERendezvous.Candidate)
-      }
-
-      // @@protoc_insertion_point(class_scope:CMsgICERendezvous.Candidate)
-      private static final SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate();
-      }
-
-      public static SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      @java.lang.Deprecated public static final com.google.protobuf.Parser<Candidate>
-          PARSER = new com.google.protobuf.AbstractParser<Candidate>() {
-        @java.lang.Override
-        public Candidate parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Candidate(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Candidate> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Candidate> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
     private int bitField0_;
     public static final int AUTH_FIELD_NUMBER = 2;
     private SteamnetworkingsocketsMessages.CMsgICERendezvous.Auth auth_;
@@ -13974,9 +14074,9 @@ public final class SteamnetworkingsocketsMessages {
     }
 
     public static final int ADD_CANDIDATE_FIELD_NUMBER = 1;
-    private SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate addCandidate_;
+    private SteamnetworkingsocketsMessages.CMsgICECandidate addCandidate_;
     /**
-     * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+     * <code>optional .CMsgICECandidate add_candidate = 1;</code>
      * @return Whether the addCandidate field is set.
      */
     @java.lang.Override
@@ -13984,19 +14084,19 @@ public final class SteamnetworkingsocketsMessages {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+     * <code>optional .CMsgICECandidate add_candidate = 1;</code>
      * @return The addCandidate.
      */
     @java.lang.Override
-    public SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate getAddCandidate() {
-      return addCandidate_ == null ? SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.getDefaultInstance() : addCandidate_;
+    public SteamnetworkingsocketsMessages.CMsgICECandidate getAddCandidate() {
+      return addCandidate_ == null ? SteamnetworkingsocketsMessages.CMsgICECandidate.getDefaultInstance() : addCandidate_;
     }
     /**
-     * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+     * <code>optional .CMsgICECandidate add_candidate = 1;</code>
      */
     @java.lang.Override
-    public SteamnetworkingsocketsMessages.CMsgICERendezvous.CandidateOrBuilder getAddCandidateOrBuilder() {
-      return addCandidate_ == null ? SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.getDefaultInstance() : addCandidate_;
+    public SteamnetworkingsocketsMessages.CMsgICECandidateOrBuilder getAddCandidateOrBuilder() {
+      return addCandidate_ == null ? SteamnetworkingsocketsMessages.CMsgICECandidate.getDefaultInstance() : addCandidate_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -14476,31 +14576,31 @@ public final class SteamnetworkingsocketsMessages {
         return authBuilder_;
       }
 
-      private SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate addCandidate_;
+      private SteamnetworkingsocketsMessages.CMsgICECandidate addCandidate_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate, SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.Builder, SteamnetworkingsocketsMessages.CMsgICERendezvous.CandidateOrBuilder> addCandidateBuilder_;
+          SteamnetworkingsocketsMessages.CMsgICECandidate, SteamnetworkingsocketsMessages.CMsgICECandidate.Builder, SteamnetworkingsocketsMessages.CMsgICECandidateOrBuilder> addCandidateBuilder_;
       /**
-       * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+       * <code>optional .CMsgICECandidate add_candidate = 1;</code>
        * @return Whether the addCandidate field is set.
        */
       public boolean hasAddCandidate() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+       * <code>optional .CMsgICECandidate add_candidate = 1;</code>
        * @return The addCandidate.
        */
-      public SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate getAddCandidate() {
+      public SteamnetworkingsocketsMessages.CMsgICECandidate getAddCandidate() {
         if (addCandidateBuilder_ == null) {
-          return addCandidate_ == null ? SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.getDefaultInstance() : addCandidate_;
+          return addCandidate_ == null ? SteamnetworkingsocketsMessages.CMsgICECandidate.getDefaultInstance() : addCandidate_;
         } else {
           return addCandidateBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+       * <code>optional .CMsgICECandidate add_candidate = 1;</code>
        */
-      public Builder setAddCandidate(SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate value) {
+      public Builder setAddCandidate(SteamnetworkingsocketsMessages.CMsgICECandidate value) {
         if (addCandidateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -14514,10 +14614,10 @@ public final class SteamnetworkingsocketsMessages {
         return this;
       }
       /**
-       * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+       * <code>optional .CMsgICECandidate add_candidate = 1;</code>
        */
       public Builder setAddCandidate(
-          SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.Builder builderForValue) {
+          SteamnetworkingsocketsMessages.CMsgICECandidate.Builder builderForValue) {
         if (addCandidateBuilder_ == null) {
           addCandidate_ = builderForValue.build();
           onChanged();
@@ -14528,15 +14628,15 @@ public final class SteamnetworkingsocketsMessages {
         return this;
       }
       /**
-       * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+       * <code>optional .CMsgICECandidate add_candidate = 1;</code>
        */
-      public Builder mergeAddCandidate(SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate value) {
+      public Builder mergeAddCandidate(SteamnetworkingsocketsMessages.CMsgICECandidate value) {
         if (addCandidateBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
               addCandidate_ != null &&
-              addCandidate_ != SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.getDefaultInstance()) {
+              addCandidate_ != SteamnetworkingsocketsMessages.CMsgICECandidate.getDefaultInstance()) {
             addCandidate_ =
-              SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.newBuilder(addCandidate_).mergeFrom(value).buildPartial();
+              SteamnetworkingsocketsMessages.CMsgICECandidate.newBuilder(addCandidate_).mergeFrom(value).buildPartial();
           } else {
             addCandidate_ = value;
           }
@@ -14548,7 +14648,7 @@ public final class SteamnetworkingsocketsMessages {
         return this;
       }
       /**
-       * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+       * <code>optional .CMsgICECandidate add_candidate = 1;</code>
        */
       public Builder clearAddCandidate() {
         if (addCandidateBuilder_ == null) {
@@ -14561,33 +14661,33 @@ public final class SteamnetworkingsocketsMessages {
         return this;
       }
       /**
-       * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+       * <code>optional .CMsgICECandidate add_candidate = 1;</code>
        */
-      public SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.Builder getAddCandidateBuilder() {
+      public SteamnetworkingsocketsMessages.CMsgICECandidate.Builder getAddCandidateBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getAddCandidateFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+       * <code>optional .CMsgICECandidate add_candidate = 1;</code>
        */
-      public SteamnetworkingsocketsMessages.CMsgICERendezvous.CandidateOrBuilder getAddCandidateOrBuilder() {
+      public SteamnetworkingsocketsMessages.CMsgICECandidateOrBuilder getAddCandidateOrBuilder() {
         if (addCandidateBuilder_ != null) {
           return addCandidateBuilder_.getMessageOrBuilder();
         } else {
           return addCandidate_ == null ?
-              SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.getDefaultInstance() : addCandidate_;
+              SteamnetworkingsocketsMessages.CMsgICECandidate.getDefaultInstance() : addCandidate_;
         }
       }
       /**
-       * <code>optional .CMsgICERendezvous.Candidate add_candidate = 1;</code>
+       * <code>optional .CMsgICECandidate add_candidate = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate, SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.Builder, SteamnetworkingsocketsMessages.CMsgICERendezvous.CandidateOrBuilder> 
+          SteamnetworkingsocketsMessages.CMsgICECandidate, SteamnetworkingsocketsMessages.CMsgICECandidate.Builder, SteamnetworkingsocketsMessages.CMsgICECandidateOrBuilder> 
           getAddCandidateFieldBuilder() {
         if (addCandidateBuilder_ == null) {
           addCandidateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate, SteamnetworkingsocketsMessages.CMsgICERendezvous.Candidate.Builder, SteamnetworkingsocketsMessages.CMsgICERendezvous.CandidateOrBuilder>(
+              SteamnetworkingsocketsMessages.CMsgICECandidate, SteamnetworkingsocketsMessages.CMsgICECandidate.Builder, SteamnetworkingsocketsMessages.CMsgICECandidateOrBuilder>(
                   getAddCandidate(),
                   getParentForChildren(),
                   isClean());
@@ -14842,6 +14942,30 @@ public final class SteamnetworkingsocketsMessages {
      */
     SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ReliableMessageOrBuilder getReliableMessagesOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+     */
+    java.util.List<SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage> 
+        getApplicationMessagesList();
+    /**
+     * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+     */
+    SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage getApplicationMessages(int index);
+    /**
+     * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+     */
+    int getApplicationMessagesCount();
+    /**
+     * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+     */
+    java.util.List<? extends SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessageOrBuilder> 
+        getApplicationMessagesOrBuilderList();
+    /**
+     * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+     */
+    SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessageOrBuilder getApplicationMessagesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code CMsgSteamNetworkingP2PRendezvous}
@@ -14861,6 +14985,7 @@ public final class SteamnetworkingsocketsMessages {
       sdrRoutes_ = com.google.protobuf.ByteString.EMPTY;
       hostedServerTicket_ = com.google.protobuf.ByteString.EMPTY;
       reliableMessages_ = java.util.Collections.emptyList();
+      applicationMessages_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -14994,6 +15119,15 @@ public final class SteamnetworkingsocketsMessages {
               hostedServerTicket_ = input.readBytes();
               break;
             }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
+                applicationMessages_ = new java.util.ArrayList<SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage>();
+                mutable_bitField0_ |= 0x00004000;
+              }
+              applicationMessages_.add(
+                  input.readMessage(SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.PARSER, extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -15011,6 +15145,9 @@ public final class SteamnetworkingsocketsMessages {
       } finally {
         if (((mutable_bitField0_ & 0x00002000) != 0)) {
           reliableMessages_ = java.util.Collections.unmodifiableList(reliableMessages_);
+        }
+        if (((mutable_bitField0_ & 0x00004000) != 0)) {
+          applicationMessages_ = java.util.Collections.unmodifiableList(applicationMessages_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -18426,6 +18563,831 @@ public final class SteamnetworkingsocketsMessages {
 
     }
 
+    public interface ApplicationMessageOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CMsgSteamNetworkingP2PRendezvous.ApplicationMessage)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional bytes data = 1;</code>
+       * @return Whether the data field is set.
+       */
+      boolean hasData();
+      /**
+       * <code>optional bytes data = 1;</code>
+       * @return The data.
+       */
+      com.google.protobuf.ByteString getData();
+
+      /**
+       * <code>optional uint64 msg_num = 2;</code>
+       * @return Whether the msgNum field is set.
+       */
+      boolean hasMsgNum();
+      /**
+       * <code>optional uint64 msg_num = 2;</code>
+       * @return The msgNum.
+       */
+      long getMsgNum();
+
+      /**
+       * <code>optional uint32 flags = 3;</code>
+       * @return Whether the flags field is set.
+       */
+      boolean hasFlags();
+      /**
+       * <code>optional uint32 flags = 3;</code>
+       * @return The flags.
+       */
+      int getFlags();
+
+      /**
+       * <code>optional uint32 lane_idx = 4;</code>
+       * @return Whether the laneIdx field is set.
+       */
+      boolean hasLaneIdx();
+      /**
+       * <code>optional uint32 lane_idx = 4;</code>
+       * @return The laneIdx.
+       */
+      int getLaneIdx();
+    }
+    /**
+     * Protobuf type {@code CMsgSteamNetworkingP2PRendezvous.ApplicationMessage}
+     */
+    public static final class ApplicationMessage extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CMsgSteamNetworkingP2PRendezvous.ApplicationMessage)
+        ApplicationMessageOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ApplicationMessage.newBuilder() to construct.
+      private ApplicationMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ApplicationMessage() {
+        data_ = com.google.protobuf.ByteString.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ApplicationMessage();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ApplicationMessage(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                bitField0_ |= 0x00000001;
+                data_ = input.readBytes();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                msgNum_ = input.readUInt64();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                flags_ = input.readUInt32();
+                break;
+              }
+              case 32: {
+                bitField0_ |= 0x00000008;
+                laneIdx_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteamnetworkingsocketsMessages.internal_static_CMsgSteamNetworkingP2PRendezvous_ApplicationMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteamnetworkingsocketsMessages.internal_static_CMsgSteamNetworkingP2PRendezvous_ApplicationMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.class, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int DATA_FIELD_NUMBER = 1;
+      private com.google.protobuf.ByteString data_;
+      /**
+       * <code>optional bytes data = 1;</code>
+       * @return Whether the data field is set.
+       */
+      @java.lang.Override
+      public boolean hasData() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional bytes data = 1;</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+
+      public static final int MSG_NUM_FIELD_NUMBER = 2;
+      private long msgNum_;
+      /**
+       * <code>optional uint64 msg_num = 2;</code>
+       * @return Whether the msgNum field is set.
+       */
+      @java.lang.Override
+      public boolean hasMsgNum() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 msg_num = 2;</code>
+       * @return The msgNum.
+       */
+      @java.lang.Override
+      public long getMsgNum() {
+        return msgNum_;
+      }
+
+      public static final int FLAGS_FIELD_NUMBER = 3;
+      private int flags_;
+      /**
+       * <code>optional uint32 flags = 3;</code>
+       * @return Whether the flags field is set.
+       */
+      @java.lang.Override
+      public boolean hasFlags() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 flags = 3;</code>
+       * @return The flags.
+       */
+      @java.lang.Override
+      public int getFlags() {
+        return flags_;
+      }
+
+      public static final int LANE_IDX_FIELD_NUMBER = 4;
+      private int laneIdx_;
+      /**
+       * <code>optional uint32 lane_idx = 4;</code>
+       * @return Whether the laneIdx field is set.
+       */
+      @java.lang.Override
+      public boolean hasLaneIdx() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 lane_idx = 4;</code>
+       * @return The laneIdx.
+       */
+      @java.lang.Override
+      public int getLaneIdx() {
+        return laneIdx_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeBytes(1, data_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt64(2, msgNum_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeUInt32(3, flags_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          output.writeUInt32(4, laneIdx_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, data_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(2, msgNum_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, flags_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(4, laneIdx_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage)) {
+          return super.equals(obj);
+        }
+        SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage other = (SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage) obj;
+
+        if (hasData() != other.hasData()) return false;
+        if (hasData()) {
+          if (!getData()
+              .equals(other.getData())) return false;
+        }
+        if (hasMsgNum() != other.hasMsgNum()) return false;
+        if (hasMsgNum()) {
+          if (getMsgNum()
+              != other.getMsgNum()) return false;
+        }
+        if (hasFlags() != other.hasFlags()) return false;
+        if (hasFlags()) {
+          if (getFlags()
+              != other.getFlags()) return false;
+        }
+        if (hasLaneIdx() != other.hasLaneIdx()) return false;
+        if (hasLaneIdx()) {
+          if (getLaneIdx()
+              != other.getLaneIdx()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasData()) {
+          hash = (37 * hash) + DATA_FIELD_NUMBER;
+          hash = (53 * hash) + getData().hashCode();
+        }
+        if (hasMsgNum()) {
+          hash = (37 * hash) + MSG_NUM_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getMsgNum());
+        }
+        if (hasFlags()) {
+          hash = (37 * hash) + FLAGS_FIELD_NUMBER;
+          hash = (53 * hash) + getFlags();
+        }
+        if (hasLaneIdx()) {
+          hash = (37 * hash) + LANE_IDX_FIELD_NUMBER;
+          hash = (53 * hash) + getLaneIdx();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CMsgSteamNetworkingP2PRendezvous.ApplicationMessage}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CMsgSteamNetworkingP2PRendezvous.ApplicationMessage)
+          SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessageOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteamnetworkingsocketsMessages.internal_static_CMsgSteamNetworkingP2PRendezvous_ApplicationMessage_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteamnetworkingsocketsMessages.internal_static_CMsgSteamNetworkingP2PRendezvous_ApplicationMessage_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.class, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder.class);
+        }
+
+        // Construct using SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          data_ = com.google.protobuf.ByteString.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          msgNum_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          flags_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          laneIdx_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteamnetworkingsocketsMessages.internal_static_CMsgSteamNetworkingP2PRendezvous_ApplicationMessage_descriptor;
+        }
+
+        @java.lang.Override
+        public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage getDefaultInstanceForType() {
+          return SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage build() {
+          SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage buildPartial() {
+          SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage result = new SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.data_ = data_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.msgNum_ = msgNum_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.flags_ = flags_;
+            to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.laneIdx_ = laneIdx_;
+            to_bitField0_ |= 0x00000008;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage) {
+            return mergeFrom((SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage other) {
+          if (other == SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.getDefaultInstance()) return this;
+          if (other.hasData()) {
+            setData(other.getData());
+          }
+          if (other.hasMsgNum()) {
+            setMsgNum(other.getMsgNum());
+          }
+          if (other.hasFlags()) {
+            setFlags(other.getFlags());
+          }
+          if (other.hasLaneIdx()) {
+            setLaneIdx(other.getLaneIdx());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <code>optional bytes data = 1;</code>
+         * @return Whether the data field is set.
+         */
+        @java.lang.Override
+        public boolean hasData() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional bytes data = 1;</code>
+         * @return The data.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString getData() {
+          return data_;
+        }
+        /**
+         * <code>optional bytes data = 1;</code>
+         * @param value The data to set.
+         * @return This builder for chaining.
+         */
+        public Builder setData(com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          data_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bytes data = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearData() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          data_ = getDefaultInstance().getData();
+          onChanged();
+          return this;
+        }
+
+        private long msgNum_ ;
+        /**
+         * <code>optional uint64 msg_num = 2;</code>
+         * @return Whether the msgNum field is set.
+         */
+        @java.lang.Override
+        public boolean hasMsgNum() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint64 msg_num = 2;</code>
+         * @return The msgNum.
+         */
+        @java.lang.Override
+        public long getMsgNum() {
+          return msgNum_;
+        }
+        /**
+         * <code>optional uint64 msg_num = 2;</code>
+         * @param value The msgNum to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMsgNum(long value) {
+          bitField0_ |= 0x00000002;
+          msgNum_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint64 msg_num = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMsgNum() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          msgNum_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private int flags_ ;
+        /**
+         * <code>optional uint32 flags = 3;</code>
+         * @return Whether the flags field is set.
+         */
+        @java.lang.Override
+        public boolean hasFlags() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>optional uint32 flags = 3;</code>
+         * @return The flags.
+         */
+        @java.lang.Override
+        public int getFlags() {
+          return flags_;
+        }
+        /**
+         * <code>optional uint32 flags = 3;</code>
+         * @param value The flags to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFlags(int value) {
+          bitField0_ |= 0x00000004;
+          flags_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 flags = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFlags() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          flags_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int laneIdx_ ;
+        /**
+         * <code>optional uint32 lane_idx = 4;</code>
+         * @return Whether the laneIdx field is set.
+         */
+        @java.lang.Override
+        public boolean hasLaneIdx() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <code>optional uint32 lane_idx = 4;</code>
+         * @return The laneIdx.
+         */
+        @java.lang.Override
+        public int getLaneIdx() {
+          return laneIdx_;
+        }
+        /**
+         * <code>optional uint32 lane_idx = 4;</code>
+         * @param value The laneIdx to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLaneIdx(int value) {
+          bitField0_ |= 0x00000008;
+          laneIdx_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 lane_idx = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLaneIdx() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          laneIdx_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CMsgSteamNetworkingP2PRendezvous.ApplicationMessage)
+      }
+
+      // @@protoc_insertion_point(class_scope:CMsgSteamNetworkingP2PRendezvous.ApplicationMessage)
+      private static final SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage();
+      }
+
+      public static SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ApplicationMessage>
+          PARSER = new com.google.protobuf.AbstractParser<ApplicationMessage>() {
+        @java.lang.Override
+        public ApplicationMessage parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ApplicationMessage(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ApplicationMessage> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ApplicationMessage> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int bitField0_;
     public static final int FROM_IDENTITY_FIELD_NUMBER = 8;
     private volatile java.lang.Object fromIdentity_;
@@ -18793,6 +19755,46 @@ public final class SteamnetworkingsocketsMessages {
       return reliableMessages_.get(index);
     }
 
+    public static final int APPLICATION_MESSAGES_FIELD_NUMBER = 15;
+    private java.util.List<SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage> applicationMessages_;
+    /**
+     * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage> getApplicationMessagesList() {
+      return applicationMessages_;
+    }
+    /**
+     * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessageOrBuilder> 
+        getApplicationMessagesOrBuilderList() {
+      return applicationMessages_;
+    }
+    /**
+     * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+     */
+    @java.lang.Override
+    public int getApplicationMessagesCount() {
+      return applicationMessages_.size();
+    }
+    /**
+     * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+     */
+    @java.lang.Override
+    public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage getApplicationMessages(int index) {
+      return applicationMessages_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+     */
+    @java.lang.Override
+    public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessageOrBuilder getApplicationMessagesOrBuilder(
+        int index) {
+      return applicationMessages_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18848,6 +19850,9 @@ public final class SteamnetworkingsocketsMessages {
       }
       if (((bitField0_ & 0x00000080) != 0)) {
         output.writeBytes(14, hostedServerTicket_);
+      }
+      for (int i = 0; i < applicationMessages_.size(); i++) {
+        output.writeMessage(15, applicationMessages_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -18911,6 +19916,10 @@ public final class SteamnetworkingsocketsMessages {
       if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(14, hostedServerTicket_);
+      }
+      for (int i = 0; i < applicationMessages_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, applicationMessages_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18994,6 +20003,8 @@ public final class SteamnetworkingsocketsMessages {
       }
       if (!getReliableMessagesList()
           .equals(other.getReliableMessagesList())) return false;
+      if (!getApplicationMessagesList()
+          .equals(other.getApplicationMessagesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19061,6 +20072,10 @@ public final class SteamnetworkingsocketsMessages {
       if (getReliableMessagesCount() > 0) {
         hash = (37 * hash) + RELIABLE_MESSAGES_FIELD_NUMBER;
         hash = (53 * hash) + getReliableMessagesList().hashCode();
+      }
+      if (getApplicationMessagesCount() > 0) {
+        hash = (37 * hash) + APPLICATION_MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getApplicationMessagesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -19194,6 +20209,7 @@ public final class SteamnetworkingsocketsMessages {
           getConnectOkFieldBuilder();
           getConnectionClosedFieldBuilder();
           getReliableMessagesFieldBuilder();
+          getApplicationMessagesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -19242,6 +20258,12 @@ public final class SteamnetworkingsocketsMessages {
           bitField0_ = (bitField0_ & ~0x00002000);
         } else {
           reliableMessagesBuilder_.clear();
+        }
+        if (applicationMessagesBuilder_ == null) {
+          applicationMessages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00004000);
+        } else {
+          applicationMessagesBuilder_.clear();
         }
         return this;
       }
@@ -19343,6 +20365,15 @@ public final class SteamnetworkingsocketsMessages {
           result.reliableMessages_ = reliableMessages_;
         } else {
           result.reliableMessages_ = reliableMessagesBuilder_.build();
+        }
+        if (applicationMessagesBuilder_ == null) {
+          if (((bitField0_ & 0x00004000) != 0)) {
+            applicationMessages_ = java.util.Collections.unmodifiableList(applicationMessages_);
+            bitField0_ = (bitField0_ & ~0x00004000);
+          }
+          result.applicationMessages_ = applicationMessages_;
+        } else {
+          result.applicationMessages_ = applicationMessagesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -19459,6 +20490,32 @@ public final class SteamnetworkingsocketsMessages {
                    getReliableMessagesFieldBuilder() : null;
             } else {
               reliableMessagesBuilder_.addAllMessages(other.reliableMessages_);
+            }
+          }
+        }
+        if (applicationMessagesBuilder_ == null) {
+          if (!other.applicationMessages_.isEmpty()) {
+            if (applicationMessages_.isEmpty()) {
+              applicationMessages_ = other.applicationMessages_;
+              bitField0_ = (bitField0_ & ~0x00004000);
+            } else {
+              ensureApplicationMessagesIsMutable();
+              applicationMessages_.addAll(other.applicationMessages_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.applicationMessages_.isEmpty()) {
+            if (applicationMessagesBuilder_.isEmpty()) {
+              applicationMessagesBuilder_.dispose();
+              applicationMessagesBuilder_ = null;
+              applicationMessages_ = other.applicationMessages_;
+              bitField0_ = (bitField0_ & ~0x00004000);
+              applicationMessagesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getApplicationMessagesFieldBuilder() : null;
+            } else {
+              applicationMessagesBuilder_.addAllMessages(other.applicationMessages_);
             }
           }
         }
@@ -20576,6 +21633,246 @@ public final class SteamnetworkingsocketsMessages {
           reliableMessages_ = null;
         }
         return reliableMessagesBuilder_;
+      }
+
+      private java.util.List<SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage> applicationMessages_ =
+        java.util.Collections.emptyList();
+      private void ensureApplicationMessagesIsMutable() {
+        if (!((bitField0_ & 0x00004000) != 0)) {
+          applicationMessages_ = new java.util.ArrayList<SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage>(applicationMessages_);
+          bitField0_ |= 0x00004000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessageOrBuilder> applicationMessagesBuilder_;
+
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public java.util.List<SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage> getApplicationMessagesList() {
+        if (applicationMessagesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(applicationMessages_);
+        } else {
+          return applicationMessagesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public int getApplicationMessagesCount() {
+        if (applicationMessagesBuilder_ == null) {
+          return applicationMessages_.size();
+        } else {
+          return applicationMessagesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage getApplicationMessages(int index) {
+        if (applicationMessagesBuilder_ == null) {
+          return applicationMessages_.get(index);
+        } else {
+          return applicationMessagesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public Builder setApplicationMessages(
+          int index, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage value) {
+        if (applicationMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApplicationMessagesIsMutable();
+          applicationMessages_.set(index, value);
+          onChanged();
+        } else {
+          applicationMessagesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public Builder setApplicationMessages(
+          int index, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder builderForValue) {
+        if (applicationMessagesBuilder_ == null) {
+          ensureApplicationMessagesIsMutable();
+          applicationMessages_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          applicationMessagesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public Builder addApplicationMessages(SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage value) {
+        if (applicationMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApplicationMessagesIsMutable();
+          applicationMessages_.add(value);
+          onChanged();
+        } else {
+          applicationMessagesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public Builder addApplicationMessages(
+          int index, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage value) {
+        if (applicationMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApplicationMessagesIsMutable();
+          applicationMessages_.add(index, value);
+          onChanged();
+        } else {
+          applicationMessagesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public Builder addApplicationMessages(
+          SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder builderForValue) {
+        if (applicationMessagesBuilder_ == null) {
+          ensureApplicationMessagesIsMutable();
+          applicationMessages_.add(builderForValue.build());
+          onChanged();
+        } else {
+          applicationMessagesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public Builder addApplicationMessages(
+          int index, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder builderForValue) {
+        if (applicationMessagesBuilder_ == null) {
+          ensureApplicationMessagesIsMutable();
+          applicationMessages_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          applicationMessagesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public Builder addAllApplicationMessages(
+          java.lang.Iterable<? extends SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage> values) {
+        if (applicationMessagesBuilder_ == null) {
+          ensureApplicationMessagesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, applicationMessages_);
+          onChanged();
+        } else {
+          applicationMessagesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public Builder clearApplicationMessages() {
+        if (applicationMessagesBuilder_ == null) {
+          applicationMessages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00004000);
+          onChanged();
+        } else {
+          applicationMessagesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public Builder removeApplicationMessages(int index) {
+        if (applicationMessagesBuilder_ == null) {
+          ensureApplicationMessagesIsMutable();
+          applicationMessages_.remove(index);
+          onChanged();
+        } else {
+          applicationMessagesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder getApplicationMessagesBuilder(
+          int index) {
+        return getApplicationMessagesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessageOrBuilder getApplicationMessagesOrBuilder(
+          int index) {
+        if (applicationMessagesBuilder_ == null) {
+          return applicationMessages_.get(index);  } else {
+          return applicationMessagesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public java.util.List<? extends SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessageOrBuilder> 
+           getApplicationMessagesOrBuilderList() {
+        if (applicationMessagesBuilder_ != null) {
+          return applicationMessagesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(applicationMessages_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder addApplicationMessagesBuilder() {
+        return getApplicationMessagesFieldBuilder().addBuilder(
+            SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder addApplicationMessagesBuilder(
+          int index) {
+        return getApplicationMessagesFieldBuilder().addBuilder(
+            index, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingP2PRendezvous.ApplicationMessage application_messages = 15;</code>
+       */
+      public java.util.List<SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder> 
+           getApplicationMessagesBuilderList() {
+        return getApplicationMessagesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessageOrBuilder> 
+          getApplicationMessagesFieldBuilder() {
+        if (applicationMessagesBuilder_ == null) {
+          applicationMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage.Builder, SteamnetworkingsocketsMessages.CMsgSteamNetworkingP2PRendezvous.ApplicationMessageOrBuilder>(
+                  applicationMessages_,
+                  ((bitField0_ & 0x00004000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          applicationMessages_ = null;
+        }
+        return applicationMessagesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -22570,6 +23867,11 @@ public final class SteamnetworkingsocketsMessages {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgSteamDatagramConnectionQuality_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgICECandidate_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgICECandidate_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgICERendezvous_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -22579,11 +23881,6 @@ public final class SteamnetworkingsocketsMessages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgICERendezvous_Auth_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CMsgICERendezvous_Candidate_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CMsgICERendezvous_Candidate_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgSteamNetworkingP2PRendezvous_descriptor;
   private static final 
@@ -22609,6 +23906,11 @@ public final class SteamnetworkingsocketsMessages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgSteamNetworkingP2PRendezvous_ReliableMessage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgSteamNetworkingP2PRendezvous_ApplicationMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgSteamNetworkingP2PRendezvous_ApplicationMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgSteamNetworkingICESessionSummary_descriptor;
   private static final 
@@ -22642,69 +23944,70 @@ public final class SteamnetworkingsocketsMessages {
       "es_per_sec\030\004 \001(\r\022\017\n\007ping_ms\030\005 \001(\r\022\033\n\023pac" +
       "kets_dropped_pct\030\006 \001(\r\022\"\n\032packets_weird_" +
       "sequence_pct\030\007 \001(\r\022\030\n\020peak_jitter_usec\030\010" +
-      " \001(\r\"\354\020\n\"CMsgSteamDatagramLinkLifetimeSt" +
+      " \001(\r\"\231\021\n\"CMsgSteamDatagramLinkLifetimeSt" +
       "ats\022\031\n\021connected_seconds\030\002 \001(\r\022\024\n\014packet" +
       "s_sent\030\003 \001(\004\022\017\n\007kb_sent\030\004 \001(\004\022\024\n\014packets" +
       "_recv\030\005 \001(\004\022\017\n\007kb_recv\030\006 \001(\004\022\036\n\026packets_" +
       "recv_sequenced\030\007 \001(\004\022\034\n\024packets_recv_dro" +
       "pped\030\010 \001(\004\022!\n\031packets_recv_out_of_order\030" +
-      "\t \001(\004\022\036\n\026packets_recv_duplicate\030\n \001(\004\022\032\n" +
-      "\022packets_recv_lurch\030\013 \001(\004\022(\n multipath_p" +
-      "ackets_recv_sequenced\030\014 \003(\004\022$\n\034multipath" +
-      "_packets_recv_later\030\r \003(\004\022\036\n\026multipath_s" +
-      "end_enabled\030\016 \001(\r\022\035\n\025quality_histogram_1" +
-      "00\030\025 \001(\r\022\034\n\024quality_histogram_99\030\026 \001(\r\022\034" +
-      "\n\024quality_histogram_97\030\027 \001(\r\022\034\n\024quality_" +
-      "histogram_95\030\030 \001(\r\022\034\n\024quality_histogram_" +
-      "90\030\031 \001(\r\022\034\n\024quality_histogram_75\030\032 \001(\r\022\034" +
-      "\n\024quality_histogram_50\030\033 \001(\r\022\033\n\023quality_" +
-      "histogram_1\030\034 \001(\r\022\036\n\026quality_histogram_d" +
-      "ead\030\035 \001(\r\022\031\n\021quality_ntile_2nd\030\036 \001(\r\022\031\n\021" +
-      "quality_ntile_5th\030\037 \001(\r\022\032\n\022quality_ntile" +
-      "_25th\030  \001(\r\022\032\n\022quality_ntile_50th\030! \001(\r\022" +
-      "\031\n\021ping_histogram_25\030) \001(\r\022\031\n\021ping_histo" +
-      "gram_50\030* \001(\r\022\031\n\021ping_histogram_75\030+ \001(\r" +
-      "\022\032\n\022ping_histogram_100\030, \001(\r\022\032\n\022ping_his" +
-      "togram_125\030- \001(\r\022\032\n\022ping_histogram_150\030." +
-      " \001(\r\022\032\n\022ping_histogram_200\030/ \001(\r\022\032\n\022ping" +
-      "_histogram_300\0300 \001(\r\022\032\n\022ping_histogram_m" +
-      "ax\0301 \001(\r\022\026\n\016ping_ntile_5th\0302 \001(\r\022\027\n\017ping" +
-      "_ntile_50th\0303 \001(\r\022\027\n\017ping_ntile_75th\0304 \001" +
-      "(\r\022\027\n\017ping_ntile_95th\0305 \001(\r\022\027\n\017ping_ntil" +
-      "e_98th\0306 \001(\r\022#\n\033jitter_histogram_negligi" +
-      "ble\030= \001(\r\022\032\n\022jitter_histogram_1\030> \001(\r\022\032\n" +
-      "\022jitter_histogram_2\030? \001(\r\022\032\n\022jitter_hist" +
-      "ogram_5\030@ \001(\r\022\033\n\023jitter_histogram_10\030A \001" +
-      "(\r\022\033\n\023jitter_histogram_20\030B \001(\r\022\023\n\013txspe" +
-      "ed_max\030C \001(\r\022\034\n\024txspeed_histogram_16\030D \001" +
-      "(\r\022\034\n\024txspeed_histogram_32\030E \001(\r\022\034\n\024txsp" +
-      "eed_histogram_64\030F \001(\r\022\035\n\025txspeed_histog" +
-      "ram_128\030G \001(\r\022\035\n\025txspeed_histogram_256\030H" +
-      " \001(\r\022\035\n\025txspeed_histogram_512\030I \001(\r\022\036\n\026t" +
-      "xspeed_histogram_1024\030J \001(\r\022\035\n\025txspeed_h" +
-      "istogram_max\030K \001(\r\022\031\n\021txspeed_ntile_5th\030" +
-      "L \001(\r\022\032\n\022txspeed_ntile_50th\030M \001(\r\022\032\n\022txs" +
-      "peed_ntile_75th\030N \001(\r\022\032\n\022txspeed_ntile_9" +
-      "5th\030O \001(\r\022\032\n\022txspeed_ntile_98th\030P \001(\r\022\023\n" +
-      "\013rxspeed_max\030Q \001(\r\022\034\n\024rxspeed_histogram_" +
-      "16\030R \001(\r\022\034\n\024rxspeed_histogram_32\030S \001(\r\022\034" +
-      "\n\024rxspeed_histogram_64\030T \001(\r\022\035\n\025rxspeed_" +
-      "histogram_128\030U \001(\r\022\035\n\025rxspeed_histogram" +
-      "_256\030V \001(\r\022\035\n\025rxspeed_histogram_512\030W \001(" +
-      "\r\022\036\n\026rxspeed_histogram_1024\030X \001(\r\022\035\n\025rxs" +
-      "peed_histogram_max\030Y \001(\r\022\031\n\021rxspeed_ntil" +
-      "e_5th\030Z \001(\r\022\032\n\022rxspeed_ntile_50th\030[ \001(\r\022" +
-      "\032\n\022rxspeed_ntile_75th\030\\ \001(\r\022\032\n\022rxspeed_n" +
-      "tile_95th\030] \001(\r\022\032\n\022rxspeed_ntile_98th\030^ " +
-      "\001(\r\"\234\001\n\"CMsgSteamDatagramConnectionQuali" +
-      "ty\022?\n\rinstantaneous\030\001 \001(\0132(.CMsgSteamDat" +
-      "agramLinkInstantaneousStats\0225\n\010lifetime\030" +
-      "\002 \001(\0132#.CMsgSteamDatagramLinkLifetimeSta" +
-      "ts\"\251\001\n\021CMsgICERendezvous\022%\n\004auth\030\002 \001(\0132\027" +
-      ".CMsgICERendezvous.Auth\0223\n\radd_candidate" +
-      "\030\001 \001(\0132\034.CMsgICERendezvous.Candidate\032\030\n\004" +
-      "Auth\022\020\n\010pwd_frag\030\001 \001(\t\032\036\n\tCandidate\022\021\n\tc" +
-      "andidate\030\003 \001(\t\"\371\007\n CMsgSteamNetworkingP2" +
+      "\t \001(\004\022+\n#packets_recv_out_of_order_corre" +
+      "cted\030\017 \001(\004\022\036\n\026packets_recv_duplicate\030\n \001" +
+      "(\004\022\032\n\022packets_recv_lurch\030\013 \001(\004\022(\n multip" +
+      "ath_packets_recv_sequenced\030\014 \003(\004\022$\n\034mult" +
+      "ipath_packets_recv_later\030\r \003(\004\022\036\n\026multip" +
+      "ath_send_enabled\030\016 \001(\r\022\035\n\025quality_histog" +
+      "ram_100\030\025 \001(\r\022\034\n\024quality_histogram_99\030\026 " +
+      "\001(\r\022\034\n\024quality_histogram_97\030\027 \001(\r\022\034\n\024qua" +
+      "lity_histogram_95\030\030 \001(\r\022\034\n\024quality_histo" +
+      "gram_90\030\031 \001(\r\022\034\n\024quality_histogram_75\030\032 " +
+      "\001(\r\022\034\n\024quality_histogram_50\030\033 \001(\r\022\033\n\023qua" +
+      "lity_histogram_1\030\034 \001(\r\022\036\n\026quality_histog" +
+      "ram_dead\030\035 \001(\r\022\031\n\021quality_ntile_2nd\030\036 \001(" +
+      "\r\022\031\n\021quality_ntile_5th\030\037 \001(\r\022\032\n\022quality_" +
+      "ntile_25th\030  \001(\r\022\032\n\022quality_ntile_50th\030!" +
+      " \001(\r\022\031\n\021ping_histogram_25\030) \001(\r\022\031\n\021ping_" +
+      "histogram_50\030* \001(\r\022\031\n\021ping_histogram_75\030" +
+      "+ \001(\r\022\032\n\022ping_histogram_100\030, \001(\r\022\032\n\022pin" +
+      "g_histogram_125\030- \001(\r\022\032\n\022ping_histogram_" +
+      "150\030. \001(\r\022\032\n\022ping_histogram_200\030/ \001(\r\022\032\n" +
+      "\022ping_histogram_300\0300 \001(\r\022\032\n\022ping_histog" +
+      "ram_max\0301 \001(\r\022\026\n\016ping_ntile_5th\0302 \001(\r\022\027\n" +
+      "\017ping_ntile_50th\0303 \001(\r\022\027\n\017ping_ntile_75t" +
+      "h\0304 \001(\r\022\027\n\017ping_ntile_95th\0305 \001(\r\022\027\n\017ping" +
+      "_ntile_98th\0306 \001(\r\022#\n\033jitter_histogram_ne" +
+      "gligible\030= \001(\r\022\032\n\022jitter_histogram_1\030> \001" +
+      "(\r\022\032\n\022jitter_histogram_2\030? \001(\r\022\032\n\022jitter" +
+      "_histogram_5\030@ \001(\r\022\033\n\023jitter_histogram_1" +
+      "0\030A \001(\r\022\033\n\023jitter_histogram_20\030B \001(\r\022\023\n\013" +
+      "txspeed_max\030C \001(\r\022\034\n\024txspeed_histogram_1" +
+      "6\030D \001(\r\022\034\n\024txspeed_histogram_32\030E \001(\r\022\034\n" +
+      "\024txspeed_histogram_64\030F \001(\r\022\035\n\025txspeed_h" +
+      "istogram_128\030G \001(\r\022\035\n\025txspeed_histogram_" +
+      "256\030H \001(\r\022\035\n\025txspeed_histogram_512\030I \001(\r" +
+      "\022\036\n\026txspeed_histogram_1024\030J \001(\r\022\035\n\025txsp" +
+      "eed_histogram_max\030K \001(\r\022\031\n\021txspeed_ntile" +
+      "_5th\030L \001(\r\022\032\n\022txspeed_ntile_50th\030M \001(\r\022\032" +
+      "\n\022txspeed_ntile_75th\030N \001(\r\022\032\n\022txspeed_nt" +
+      "ile_95th\030O \001(\r\022\032\n\022txspeed_ntile_98th\030P \001" +
+      "(\r\022\023\n\013rxspeed_max\030Q \001(\r\022\034\n\024rxspeed_histo" +
+      "gram_16\030R \001(\r\022\034\n\024rxspeed_histogram_32\030S " +
+      "\001(\r\022\034\n\024rxspeed_histogram_64\030T \001(\r\022\035\n\025rxs" +
+      "peed_histogram_128\030U \001(\r\022\035\n\025rxspeed_hist" +
+      "ogram_256\030V \001(\r\022\035\n\025rxspeed_histogram_512" +
+      "\030W \001(\r\022\036\n\026rxspeed_histogram_1024\030X \001(\r\022\035" +
+      "\n\025rxspeed_histogram_max\030Y \001(\r\022\031\n\021rxspeed" +
+      "_ntile_5th\030Z \001(\r\022\032\n\022rxspeed_ntile_50th\030[" +
+      " \001(\r\022\032\n\022rxspeed_ntile_75th\030\\ \001(\r\022\032\n\022rxsp" +
+      "eed_ntile_95th\030] \001(\r\022\032\n\022rxspeed_ntile_98" +
+      "th\030^ \001(\r\"\234\001\n\"CMsgSteamDatagramConnection" +
+      "Quality\022?\n\rinstantaneous\030\001 \001(\0132(.CMsgSte" +
+      "amDatagramLinkInstantaneousStats\0225\n\010life" +
+      "time\030\002 \001(\0132#.CMsgSteamDatagramLinkLifeti" +
+      "meStats\"%\n\020CMsgICECandidate\022\021\n\tcandidate" +
+      "\030\003 \001(\t\"~\n\021CMsgICERendezvous\022%\n\004auth\030\002 \001(" +
+      "\0132\027.CMsgICERendezvous.Auth\022(\n\radd_candid" +
+      "ate\030\001 \001(\0132\021.CMsgICECandidate\032\030\n\004Auth\022\020\n\010" +
+      "pwd_frag\030\001 \001(\t\"\243\t\n CMsgSteamNetworkingP2" +
       "PRendezvous\022\025\n\rfrom_identity\030\010 \001(\t\022\032\n\022fr" +
       "om_connection_id\030\t \001(\007\022\023\n\013to_identity\030\n " +
       "\001(\t\022\030\n\020to_connection_id\030\001 \001(\007\022\022\n\nsdr_rou" +
@@ -22719,32 +24022,37 @@ public final class SteamnetworkingsocketsMessages {
       "_reliable_msg\030\013 \001(\r\022\032\n\022first_reliable_ms" +
       "g\030\014 \001(\r\022L\n\021reliable_messages\030\r \003(\01321.CMs" +
       "gSteamNetworkingP2PRendezvous.ReliableMe" +
-      "ssage\032\305\001\n\016ConnectRequest\0227\n\005crypt\030\006 \001(\0132" +
-      "(.CMsgSteamDatagramSessionCryptInfoSigne" +
-      "d\0221\n\004cert\030\007 \001(\0132#.CMsgSteamDatagramCerti" +
-      "ficateSigned\022\027\n\017to_virtual_port\030\t \001(\r\022\031\n" +
-      "\021from_virtual_port\030\n \001(\r\022\023\n\013from_fakeip\030" +
-      "\013 \001(\t\032w\n\tConnectOK\0227\n\005crypt\030\005 \001(\0132(.CMsg" +
-      "SteamDatagramSessionCryptInfoSigned\0221\n\004c" +
-      "ert\030\006 \001(\0132#.CMsgSteamDatagramCertificate" +
-      "Signed\0326\n\020ConnectionClosed\022\r\n\005debug\030\005 \001(" +
-      "\t\022\023\n\013reason_code\030\006 \001(\r\0322\n\017ReliableMessag" +
-      "e\022\037\n\003ice\030\001 \001(\0132\022.CMsgICERendezvous\"\246\003\n$C" +
-      "MsgSteamNetworkingICESessionSummary\022\033\n\023f" +
-      "ailure_reason_code\030\007 \001(\r\022\035\n\025local_candid" +
-      "ate_types\030\001 \001(\r\022\036\n\026remote_candidate_type" +
-      "s\030\002 \001(\r\022\032\n\022initial_route_kind\030\003 \001(\r\022\024\n\014i" +
-      "nitial_ping\030\004 \001(\r\022\025\n\rinitial_score\030\006 \001(\r" +
-      "\022\026\n\016negotiation_ms\030\005 \001(\r\022\027\n\017best_route_k" +
-      "ind\030\020 \001(\r\022\021\n\tbest_ping\030\021 \001(\r\022\022\n\nbest_sco" +
-      "re\030\022 \001(\r\022\021\n\tbest_time\030\023 \001(\r\022\030\n\020selected_" +
-      "seconds\030\014 \001(\r\022\025\n\ruser_settings\030\r \001(\r\022\026\n\016" +
-      "ice_enable_var\030\016 \001(\r\022%\n\035local_candidate_" +
-      "types_allowed\030\017 \001(\r*\247\001\n\035ESteamNetworking" +
-      "SocketsCipher\022+\n\'k_ESteamNetworkingSocke" +
-      "tsCipher_INVALID\020\000\022(\n$k_ESteamNetworking" +
-      "SocketsCipher_NULL\020\001\022/\n+k_ESteamNetworki" +
-      "ngSocketsCipher_AES_256_GCM\020\002B\005H\001\200\001\000"
+      "ssage\022R\n\024application_messages\030\017 \003(\01324.CM" +
+      "sgSteamNetworkingP2PRendezvous.Applicati" +
+      "onMessage\032\305\001\n\016ConnectRequest\0227\n\005crypt\030\006 " +
+      "\001(\0132(.CMsgSteamDatagramSessionCryptInfoS" +
+      "igned\0221\n\004cert\030\007 \001(\0132#.CMsgSteamDatagramC" +
+      "ertificateSigned\022\027\n\017to_virtual_port\030\t \001(" +
+      "\r\022\031\n\021from_virtual_port\030\n \001(\r\022\023\n\013from_fak" +
+      "eip\030\013 \001(\t\032w\n\tConnectOK\0227\n\005crypt\030\005 \001(\0132(." +
+      "CMsgSteamDatagramSessionCryptInfoSigned\022" +
+      "1\n\004cert\030\006 \001(\0132#.CMsgSteamDatagramCertifi" +
+      "cateSigned\0326\n\020ConnectionClosed\022\r\n\005debug\030" +
+      "\005 \001(\t\022\023\n\013reason_code\030\006 \001(\r\0322\n\017ReliableMe" +
+      "ssage\022\037\n\003ice\030\001 \001(\0132\022.CMsgICERendezvous\032T" +
+      "\n\022ApplicationMessage\022\014\n\004data\030\001 \001(\014\022\017\n\007ms" +
+      "g_num\030\002 \001(\004\022\r\n\005flags\030\003 \001(\r\022\020\n\010lane_idx\030\004" +
+      " \001(\r\"\246\003\n$CMsgSteamNetworkingICESessionSu" +
+      "mmary\022\033\n\023failure_reason_code\030\007 \001(\r\022\035\n\025lo" +
+      "cal_candidate_types\030\001 \001(\r\022\036\n\026remote_cand" +
+      "idate_types\030\002 \001(\r\022\032\n\022initial_route_kind\030" +
+      "\003 \001(\r\022\024\n\014initial_ping\030\004 \001(\r\022\025\n\rinitial_s" +
+      "core\030\006 \001(\r\022\026\n\016negotiation_ms\030\005 \001(\r\022\027\n\017be" +
+      "st_route_kind\030\020 \001(\r\022\021\n\tbest_ping\030\021 \001(\r\022\022" +
+      "\n\nbest_score\030\022 \001(\r\022\021\n\tbest_time\030\023 \001(\r\022\030\n" +
+      "\020selected_seconds\030\014 \001(\r\022\025\n\ruser_settings" +
+      "\030\r \001(\r\022\026\n\016ice_enable_var\030\016 \001(\r\022%\n\035local_" +
+      "candidate_types_allowed\030\017 \001(\r*\247\001\n\035ESteam" +
+      "NetworkingSocketsCipher\022+\n\'k_ESteamNetwo" +
+      "rkingSocketsCipher_INVALID\020\000\022(\n$k_ESteam" +
+      "NetworkingSocketsCipher_NULL\020\001\022/\n+k_ESte" +
+      "amNetworkingSocketsCipher_AES_256_GCM\020\002B" +
+      "\005H\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22780,15 +24088,21 @@ public final class SteamnetworkingsocketsMessages {
     internal_static_CMsgSteamDatagramLinkLifetimeStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramLinkLifetimeStats_descriptor,
-        new java.lang.String[] { "ConnectedSeconds", "PacketsSent", "KbSent", "PacketsRecv", "KbRecv", "PacketsRecvSequenced", "PacketsRecvDropped", "PacketsRecvOutOfOrder", "PacketsRecvDuplicate", "PacketsRecvLurch", "MultipathPacketsRecvSequenced", "MultipathPacketsRecvLater", "MultipathSendEnabled", "QualityHistogram100", "QualityHistogram99", "QualityHistogram97", "QualityHistogram95", "QualityHistogram90", "QualityHistogram75", "QualityHistogram50", "QualityHistogram1", "QualityHistogramDead", "QualityNtile2Nd", "QualityNtile5Th", "QualityNtile25Th", "QualityNtile50Th", "PingHistogram25", "PingHistogram50", "PingHistogram75", "PingHistogram100", "PingHistogram125", "PingHistogram150", "PingHistogram200", "PingHistogram300", "PingHistogramMax", "PingNtile5Th", "PingNtile50Th", "PingNtile75Th", "PingNtile95Th", "PingNtile98Th", "JitterHistogramNegligible", "JitterHistogram1", "JitterHistogram2", "JitterHistogram5", "JitterHistogram10", "JitterHistogram20", "TxspeedMax", "TxspeedHistogram16", "TxspeedHistogram32", "TxspeedHistogram64", "TxspeedHistogram128", "TxspeedHistogram256", "TxspeedHistogram512", "TxspeedHistogram1024", "TxspeedHistogramMax", "TxspeedNtile5Th", "TxspeedNtile50Th", "TxspeedNtile75Th", "TxspeedNtile95Th", "TxspeedNtile98Th", "RxspeedMax", "RxspeedHistogram16", "RxspeedHistogram32", "RxspeedHistogram64", "RxspeedHistogram128", "RxspeedHistogram256", "RxspeedHistogram512", "RxspeedHistogram1024", "RxspeedHistogramMax", "RxspeedNtile5Th", "RxspeedNtile50Th", "RxspeedNtile75Th", "RxspeedNtile95Th", "RxspeedNtile98Th", });
+        new java.lang.String[] { "ConnectedSeconds", "PacketsSent", "KbSent", "PacketsRecv", "KbRecv", "PacketsRecvSequenced", "PacketsRecvDropped", "PacketsRecvOutOfOrder", "PacketsRecvOutOfOrderCorrected", "PacketsRecvDuplicate", "PacketsRecvLurch", "MultipathPacketsRecvSequenced", "MultipathPacketsRecvLater", "MultipathSendEnabled", "QualityHistogram100", "QualityHistogram99", "QualityHistogram97", "QualityHistogram95", "QualityHistogram90", "QualityHistogram75", "QualityHistogram50", "QualityHistogram1", "QualityHistogramDead", "QualityNtile2Nd", "QualityNtile5Th", "QualityNtile25Th", "QualityNtile50Th", "PingHistogram25", "PingHistogram50", "PingHistogram75", "PingHistogram100", "PingHistogram125", "PingHistogram150", "PingHistogram200", "PingHistogram300", "PingHistogramMax", "PingNtile5Th", "PingNtile50Th", "PingNtile75Th", "PingNtile95Th", "PingNtile98Th", "JitterHistogramNegligible", "JitterHistogram1", "JitterHistogram2", "JitterHistogram5", "JitterHistogram10", "JitterHistogram20", "TxspeedMax", "TxspeedHistogram16", "TxspeedHistogram32", "TxspeedHistogram64", "TxspeedHistogram128", "TxspeedHistogram256", "TxspeedHistogram512", "TxspeedHistogram1024", "TxspeedHistogramMax", "TxspeedNtile5Th", "TxspeedNtile50Th", "TxspeedNtile75Th", "TxspeedNtile95Th", "TxspeedNtile98Th", "RxspeedMax", "RxspeedHistogram16", "RxspeedHistogram32", "RxspeedHistogram64", "RxspeedHistogram128", "RxspeedHistogram256", "RxspeedHistogram512", "RxspeedHistogram1024", "RxspeedHistogramMax", "RxspeedNtile5Th", "RxspeedNtile50Th", "RxspeedNtile75Th", "RxspeedNtile95Th", "RxspeedNtile98Th", });
     internal_static_CMsgSteamDatagramConnectionQuality_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_CMsgSteamDatagramConnectionQuality_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramConnectionQuality_descriptor,
         new java.lang.String[] { "Instantaneous", "Lifetime", });
-    internal_static_CMsgICERendezvous_descriptor =
+    internal_static_CMsgICECandidate_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_CMsgICECandidate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgICECandidate_descriptor,
+        new java.lang.String[] { "Candidate", });
+    internal_static_CMsgICERendezvous_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CMsgICERendezvous_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgICERendezvous_descriptor,
@@ -22799,18 +24113,12 @@ public final class SteamnetworkingsocketsMessages {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgICERendezvous_Auth_descriptor,
         new java.lang.String[] { "PwdFrag", });
-    internal_static_CMsgICERendezvous_Candidate_descriptor =
-      internal_static_CMsgICERendezvous_descriptor.getNestedTypes().get(1);
-    internal_static_CMsgICERendezvous_Candidate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CMsgICERendezvous_Candidate_descriptor,
-        new java.lang.String[] { "Candidate", });
     internal_static_CMsgSteamNetworkingP2PRendezvous_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CMsgSteamNetworkingP2PRendezvous_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamNetworkingP2PRendezvous_descriptor,
-        new java.lang.String[] { "FromIdentity", "FromConnectionId", "ToIdentity", "ToConnectionId", "SdrRoutes", "AckPeerRoutesRevision", "IceEnabled", "HostedServerTicket", "ConnectRequest", "ConnectOk", "ConnectionClosed", "AckReliableMsg", "FirstReliableMsg", "ReliableMessages", });
+        new java.lang.String[] { "FromIdentity", "FromConnectionId", "ToIdentity", "ToConnectionId", "SdrRoutes", "AckPeerRoutesRevision", "IceEnabled", "HostedServerTicket", "ConnectRequest", "ConnectOk", "ConnectionClosed", "AckReliableMsg", "FirstReliableMsg", "ReliableMessages", "ApplicationMessages", });
     internal_static_CMsgSteamNetworkingP2PRendezvous_ConnectRequest_descriptor =
       internal_static_CMsgSteamNetworkingP2PRendezvous_descriptor.getNestedTypes().get(0);
     internal_static_CMsgSteamNetworkingP2PRendezvous_ConnectRequest_fieldAccessorTable = new
@@ -22835,8 +24143,14 @@ public final class SteamnetworkingsocketsMessages {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamNetworkingP2PRendezvous_ReliableMessage_descriptor,
         new java.lang.String[] { "Ice", });
+    internal_static_CMsgSteamNetworkingP2PRendezvous_ApplicationMessage_descriptor =
+      internal_static_CMsgSteamNetworkingP2PRendezvous_descriptor.getNestedTypes().get(4);
+    internal_static_CMsgSteamNetworkingP2PRendezvous_ApplicationMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgSteamNetworkingP2PRendezvous_ApplicationMessage_descriptor,
+        new java.lang.String[] { "Data", "MsgNum", "Flags", "LaneIdx", });
     internal_static_CMsgSteamNetworkingICESessionSummary_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CMsgSteamNetworkingICESessionSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamNetworkingICESessionSummary_descriptor,

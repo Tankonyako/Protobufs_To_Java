@@ -2486,17 +2486,6 @@ public final class SteammessagesClientserverUds {
     int getPackageVersion();
 
     /**
-     * <code>optional uint32 protocol_version = 8;</code>
-     * @return Whether the protocolVersion field is set.
-     */
-    boolean hasProtocolVersion();
-    /**
-     * <code>optional uint32 protocol_version = 8;</code>
-     * @return The protocolVersion.
-     */
-    int getProtocolVersion();
-
-    /**
      * <code>optional string os = 2;</code>
      * @return Whether the os field is set.
      */
@@ -2565,17 +2554,6 @@ public final class SteammessagesClientserverUds {
         getIpPrivateBytes();
 
     /**
-     * <code>optional uint64 bytes_available = 7;</code>
-     * @return Whether the bytesAvailable field is set.
-     */
-    boolean hasBytesAvailable();
-    /**
-     * <code>optional uint64 bytes_available = 7;</code>
-     * @return The bytesAvailable.
-     */
-    long getBytesAvailable();
-
-    /**
      * <code>repeated .CMsgClientGetClientDetailsResponse.Game games_running = 6;</code>
      */
     java.util.List<SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Game> 
@@ -2598,6 +2576,39 @@ public final class SteammessagesClientserverUds {
      */
     SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.GameOrBuilder getGamesRunningOrBuilder(
         int index);
+
+    /**
+     * <code>optional uint64 bytes_available = 7;</code>
+     * @return Whether the bytesAvailable field is set.
+     */
+    boolean hasBytesAvailable();
+    /**
+     * <code>optional uint64 bytes_available = 7;</code>
+     * @return The bytesAvailable.
+     */
+    long getBytesAvailable();
+
+    /**
+     * <code>optional uint32 protocol_version = 8;</code>
+     * @return Whether the protocolVersion field is set.
+     */
+    boolean hasProtocolVersion();
+    /**
+     * <code>optional uint32 protocol_version = 8;</code>
+     * @return The protocolVersion.
+     */
+    int getProtocolVersion();
+
+    /**
+     * <code>optional uint32 clientcomm_version = 9;</code>
+     * @return Whether the clientcommVersion field is set.
+     */
+    boolean hasClientcommVersion();
+    /**
+     * <code>optional uint32 clientcomm_version = 9;</code>
+     * @return The clientcommVersion.
+     */
+    int getClientcommVersion();
   }
   /**
    * Protobuf type {@code CMsgClientGetClientDetailsResponse}
@@ -2657,45 +2668,50 @@ public final class SteammessagesClientserverUds {
             }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               os_ = bs;
               break;
             }
             case 26: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               machineName_ = bs;
               break;
             }
             case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               ipPublic_ = bs;
               break;
             }
             case 42: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               ipPrivate_ = bs;
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 gamesRunning_ = new java.util.ArrayList<SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Game>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000020;
               }
               gamesRunning_.add(
                   input.readMessage(SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Game.PARSER, extensionRegistry));
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               bytesAvailable_ = input.readUInt64();
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000040;
               protocolVersion_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000080;
+              clientcommVersion_ = input.readUInt32();
               break;
             }
             default: {
@@ -2713,7 +2729,7 @@ public final class SteammessagesClientserverUds {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) != 0)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           gamesRunning_ = java.util.Collections.unmodifiableList(gamesRunning_);
         }
         this.unknownFields = unknownFields.build();
@@ -3557,25 +3573,6 @@ public final class SteammessagesClientserverUds {
       return packageVersion_;
     }
 
-    public static final int PROTOCOL_VERSION_FIELD_NUMBER = 8;
-    private int protocolVersion_;
-    /**
-     * <code>optional uint32 protocol_version = 8;</code>
-     * @return Whether the protocolVersion field is set.
-     */
-    @java.lang.Override
-    public boolean hasProtocolVersion() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional uint32 protocol_version = 8;</code>
-     * @return The protocolVersion.
-     */
-    @java.lang.Override
-    public int getProtocolVersion() {
-      return protocolVersion_;
-    }
-
     public static final int OS_FIELD_NUMBER = 2;
     private volatile java.lang.Object os_;
     /**
@@ -3584,7 +3581,7 @@ public final class SteammessagesClientserverUds {
      */
     @java.lang.Override
     public boolean hasOs() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>optional string os = 2;</code>
@@ -3632,7 +3629,7 @@ public final class SteammessagesClientserverUds {
      */
     @java.lang.Override
     public boolean hasMachineName() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>optional string machine_name = 3;</code>
@@ -3680,7 +3677,7 @@ public final class SteammessagesClientserverUds {
      */
     @java.lang.Override
     public boolean hasIpPublic() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>optional string ip_public = 4;</code>
@@ -3728,7 +3725,7 @@ public final class SteammessagesClientserverUds {
      */
     @java.lang.Override
     public boolean hasIpPrivate() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>optional string ip_private = 5;</code>
@@ -3766,25 +3763,6 @@ public final class SteammessagesClientserverUds {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int BYTES_AVAILABLE_FIELD_NUMBER = 7;
-    private long bytesAvailable_;
-    /**
-     * <code>optional uint64 bytes_available = 7;</code>
-     * @return Whether the bytesAvailable field is set.
-     */
-    @java.lang.Override
-    public boolean hasBytesAvailable() {
-      return ((bitField0_ & 0x00000040) != 0);
-    }
-    /**
-     * <code>optional uint64 bytes_available = 7;</code>
-     * @return The bytesAvailable.
-     */
-    @java.lang.Override
-    public long getBytesAvailable() {
-      return bytesAvailable_;
     }
 
     public static final int GAMES_RUNNING_FIELD_NUMBER = 6;
@@ -3827,6 +3805,63 @@ public final class SteammessagesClientserverUds {
       return gamesRunning_.get(index);
     }
 
+    public static final int BYTES_AVAILABLE_FIELD_NUMBER = 7;
+    private long bytesAvailable_;
+    /**
+     * <code>optional uint64 bytes_available = 7;</code>
+     * @return Whether the bytesAvailable field is set.
+     */
+    @java.lang.Override
+    public boolean hasBytesAvailable() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional uint64 bytes_available = 7;</code>
+     * @return The bytesAvailable.
+     */
+    @java.lang.Override
+    public long getBytesAvailable() {
+      return bytesAvailable_;
+    }
+
+    public static final int PROTOCOL_VERSION_FIELD_NUMBER = 8;
+    private int protocolVersion_;
+    /**
+     * <code>optional uint32 protocol_version = 8;</code>
+     * @return Whether the protocolVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasProtocolVersion() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional uint32 protocol_version = 8;</code>
+     * @return The protocolVersion.
+     */
+    @java.lang.Override
+    public int getProtocolVersion() {
+      return protocolVersion_;
+    }
+
+    public static final int CLIENTCOMM_VERSION_FIELD_NUMBER = 9;
+    private int clientcommVersion_;
+    /**
+     * <code>optional uint32 clientcomm_version = 9;</code>
+     * @return Whether the clientcommVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasClientcommVersion() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 clientcomm_version = 9;</code>
+     * @return The clientcommVersion.
+     */
+    @java.lang.Override
+    public int getClientcommVersion() {
+      return clientcommVersion_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3844,26 +3879,29 @@ public final class SteammessagesClientserverUds {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeUInt32(1, packageVersion_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, os_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, machineName_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ipPublic_);
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ipPrivate_);
       }
       for (int i = 0; i < gamesRunning_.size(); i++) {
         output.writeMessage(6, gamesRunning_.get(i));
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeUInt64(7, bytesAvailable_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         output.writeUInt32(8, protocolVersion_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(9, clientcommVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -3878,29 +3916,33 @@ public final class SteammessagesClientserverUds {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, packageVersion_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, os_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, machineName_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ipPublic_);
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ipPrivate_);
       }
       for (int i = 0; i < gamesRunning_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, gamesRunning_.get(i));
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(7, bytesAvailable_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, protocolVersion_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, clientcommVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3922,11 +3964,6 @@ public final class SteammessagesClientserverUds {
         if (getPackageVersion()
             != other.getPackageVersion()) return false;
       }
-      if (hasProtocolVersion() != other.hasProtocolVersion()) return false;
-      if (hasProtocolVersion()) {
-        if (getProtocolVersion()
-            != other.getProtocolVersion()) return false;
-      }
       if (hasOs() != other.hasOs()) return false;
       if (hasOs()) {
         if (!getOs()
@@ -3947,13 +3984,23 @@ public final class SteammessagesClientserverUds {
         if (!getIpPrivate()
             .equals(other.getIpPrivate())) return false;
       }
+      if (!getGamesRunningList()
+          .equals(other.getGamesRunningList())) return false;
       if (hasBytesAvailable() != other.hasBytesAvailable()) return false;
       if (hasBytesAvailable()) {
         if (getBytesAvailable()
             != other.getBytesAvailable()) return false;
       }
-      if (!getGamesRunningList()
-          .equals(other.getGamesRunningList())) return false;
+      if (hasProtocolVersion() != other.hasProtocolVersion()) return false;
+      if (hasProtocolVersion()) {
+        if (getProtocolVersion()
+            != other.getProtocolVersion()) return false;
+      }
+      if (hasClientcommVersion() != other.hasClientcommVersion()) return false;
+      if (hasClientcommVersion()) {
+        if (getClientcommVersion()
+            != other.getClientcommVersion()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3968,10 +4015,6 @@ public final class SteammessagesClientserverUds {
       if (hasPackageVersion()) {
         hash = (37 * hash) + PACKAGE_VERSION_FIELD_NUMBER;
         hash = (53 * hash) + getPackageVersion();
-      }
-      if (hasProtocolVersion()) {
-        hash = (37 * hash) + PROTOCOL_VERSION_FIELD_NUMBER;
-        hash = (53 * hash) + getProtocolVersion();
       }
       if (hasOs()) {
         hash = (37 * hash) + OS_FIELD_NUMBER;
@@ -3989,14 +4032,22 @@ public final class SteammessagesClientserverUds {
         hash = (37 * hash) + IP_PRIVATE_FIELD_NUMBER;
         hash = (53 * hash) + getIpPrivate().hashCode();
       }
+      if (getGamesRunningCount() > 0) {
+        hash = (37 * hash) + GAMES_RUNNING_FIELD_NUMBER;
+        hash = (53 * hash) + getGamesRunningList().hashCode();
+      }
       if (hasBytesAvailable()) {
         hash = (37 * hash) + BYTES_AVAILABLE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getBytesAvailable());
       }
-      if (getGamesRunningCount() > 0) {
-        hash = (37 * hash) + GAMES_RUNNING_FIELD_NUMBER;
-        hash = (53 * hash) + getGamesRunningList().hashCode();
+      if (hasProtocolVersion()) {
+        hash = (37 * hash) + PROTOCOL_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getProtocolVersion();
+      }
+      if (hasClientcommVersion()) {
+        hash = (37 * hash) + CLIENTCOMM_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getClientcommVersion();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4134,24 +4185,26 @@ public final class SteammessagesClientserverUds {
         super.clear();
         packageVersion_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        protocolVersion_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000002);
         os_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         machineName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         ipPublic_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         ipPrivate_ = "";
-        bitField0_ = (bitField0_ & ~0x00000020);
-        bytesAvailable_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (gamesRunningBuilder_ == null) {
           gamesRunning_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           gamesRunningBuilder_.clear();
         }
+        bytesAvailable_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        protocolVersion_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        clientcommVersion_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -4185,37 +4238,41 @@ public final class SteammessagesClientserverUds {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.protocolVersion_ = protocolVersion_;
           to_bitField0_ |= 0x00000002;
         }
+        result.os_ = os_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.os_ = os_;
+        result.machineName_ = machineName_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.machineName_ = machineName_;
+        result.ipPublic_ = ipPublic_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.ipPublic_ = ipPublic_;
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          to_bitField0_ |= 0x00000020;
-        }
         result.ipPrivate_ = ipPrivate_;
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.bytesAvailable_ = bytesAvailable_;
-          to_bitField0_ |= 0x00000040;
-        }
         if (gamesRunningBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             gamesRunning_ = java.util.Collections.unmodifiableList(gamesRunning_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.gamesRunning_ = gamesRunning_;
         } else {
           result.gamesRunning_ = gamesRunningBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.bytesAvailable_ = bytesAvailable_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.protocolVersion_ = protocolVersion_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.clientcommVersion_ = clientcommVersion_;
+          to_bitField0_ |= 0x00000080;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -4269,37 +4326,31 @@ public final class SteammessagesClientserverUds {
         if (other.hasPackageVersion()) {
           setPackageVersion(other.getPackageVersion());
         }
-        if (other.hasProtocolVersion()) {
-          setProtocolVersion(other.getProtocolVersion());
-        }
         if (other.hasOs()) {
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           os_ = other.os_;
           onChanged();
         }
         if (other.hasMachineName()) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           machineName_ = other.machineName_;
           onChanged();
         }
         if (other.hasIpPublic()) {
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
           ipPublic_ = other.ipPublic_;
           onChanged();
         }
         if (other.hasIpPrivate()) {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           ipPrivate_ = other.ipPrivate_;
           onChanged();
-        }
-        if (other.hasBytesAvailable()) {
-          setBytesAvailable(other.getBytesAvailable());
         }
         if (gamesRunningBuilder_ == null) {
           if (!other.gamesRunning_.isEmpty()) {
             if (gamesRunning_.isEmpty()) {
               gamesRunning_ = other.gamesRunning_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureGamesRunningIsMutable();
               gamesRunning_.addAll(other.gamesRunning_);
@@ -4312,7 +4363,7 @@ public final class SteammessagesClientserverUds {
               gamesRunningBuilder_.dispose();
               gamesRunningBuilder_ = null;
               gamesRunning_ = other.gamesRunning_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000020);
               gamesRunningBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getGamesRunningFieldBuilder() : null;
@@ -4320,6 +4371,15 @@ public final class SteammessagesClientserverUds {
               gamesRunningBuilder_.addAllMessages(other.gamesRunning_);
             }
           }
+        }
+        if (other.hasBytesAvailable()) {
+          setBytesAvailable(other.getBytesAvailable());
+        }
+        if (other.hasProtocolVersion()) {
+          setProtocolVersion(other.getProtocolVersion());
+        }
+        if (other.hasClientcommVersion()) {
+          setClientcommVersion(other.getClientcommVersion());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4390,52 +4450,13 @@ public final class SteammessagesClientserverUds {
         return this;
       }
 
-      private int protocolVersion_ ;
-      /**
-       * <code>optional uint32 protocol_version = 8;</code>
-       * @return Whether the protocolVersion field is set.
-       */
-      @java.lang.Override
-      public boolean hasProtocolVersion() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional uint32 protocol_version = 8;</code>
-       * @return The protocolVersion.
-       */
-      @java.lang.Override
-      public int getProtocolVersion() {
-        return protocolVersion_;
-      }
-      /**
-       * <code>optional uint32 protocol_version = 8;</code>
-       * @param value The protocolVersion to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProtocolVersion(int value) {
-        bitField0_ |= 0x00000002;
-        protocolVersion_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 protocol_version = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProtocolVersion() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        protocolVersion_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object os_ = "";
       /**
        * <code>optional string os = 2;</code>
        * @return Whether the os field is set.
        */
       public boolean hasOs() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>optional string os = 2;</code>
@@ -4482,7 +4503,7 @@ public final class SteammessagesClientserverUds {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000002;
         os_ = value;
         onChanged();
         return this;
@@ -4492,7 +4513,7 @@ public final class SteammessagesClientserverUds {
        * @return This builder for chaining.
        */
       public Builder clearOs() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         os_ = getDefaultInstance().getOs();
         onChanged();
         return this;
@@ -4507,7 +4528,7 @@ public final class SteammessagesClientserverUds {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000002;
         os_ = value;
         onChanged();
         return this;
@@ -4519,7 +4540,7 @@ public final class SteammessagesClientserverUds {
        * @return Whether the machineName field is set.
        */
       public boolean hasMachineName() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>optional string machine_name = 3;</code>
@@ -4566,7 +4587,7 @@ public final class SteammessagesClientserverUds {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         machineName_ = value;
         onChanged();
         return this;
@@ -4576,7 +4597,7 @@ public final class SteammessagesClientserverUds {
        * @return This builder for chaining.
        */
       public Builder clearMachineName() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         machineName_ = getDefaultInstance().getMachineName();
         onChanged();
         return this;
@@ -4591,7 +4612,7 @@ public final class SteammessagesClientserverUds {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         machineName_ = value;
         onChanged();
         return this;
@@ -4603,7 +4624,7 @@ public final class SteammessagesClientserverUds {
        * @return Whether the ipPublic field is set.
        */
       public boolean hasIpPublic() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>optional string ip_public = 4;</code>
@@ -4650,7 +4671,7 @@ public final class SteammessagesClientserverUds {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000008;
         ipPublic_ = value;
         onChanged();
         return this;
@@ -4660,7 +4681,7 @@ public final class SteammessagesClientserverUds {
        * @return This builder for chaining.
        */
       public Builder clearIpPublic() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         ipPublic_ = getDefaultInstance().getIpPublic();
         onChanged();
         return this;
@@ -4675,7 +4696,7 @@ public final class SteammessagesClientserverUds {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000008;
         ipPublic_ = value;
         onChanged();
         return this;
@@ -4687,7 +4708,7 @@ public final class SteammessagesClientserverUds {
        * @return Whether the ipPrivate field is set.
        */
       public boolean hasIpPrivate() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>optional string ip_private = 5;</code>
@@ -4734,7 +4755,7 @@ public final class SteammessagesClientserverUds {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000010;
         ipPrivate_ = value;
         onChanged();
         return this;
@@ -4744,7 +4765,7 @@ public final class SteammessagesClientserverUds {
        * @return This builder for chaining.
        */
       public Builder clearIpPrivate() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         ipPrivate_ = getDefaultInstance().getIpPrivate();
         onChanged();
         return this;
@@ -4759,47 +4780,8 @@ public final class SteammessagesClientserverUds {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000010;
         ipPrivate_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long bytesAvailable_ ;
-      /**
-       * <code>optional uint64 bytes_available = 7;</code>
-       * @return Whether the bytesAvailable field is set.
-       */
-      @java.lang.Override
-      public boolean hasBytesAvailable() {
-        return ((bitField0_ & 0x00000040) != 0);
-      }
-      /**
-       * <code>optional uint64 bytes_available = 7;</code>
-       * @return The bytesAvailable.
-       */
-      @java.lang.Override
-      public long getBytesAvailable() {
-        return bytesAvailable_;
-      }
-      /**
-       * <code>optional uint64 bytes_available = 7;</code>
-       * @param value The bytesAvailable to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBytesAvailable(long value) {
-        bitField0_ |= 0x00000040;
-        bytesAvailable_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint64 bytes_available = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBytesAvailable() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        bytesAvailable_ = 0L;
         onChanged();
         return this;
       }
@@ -4807,9 +4789,9 @@ public final class SteammessagesClientserverUds {
       private java.util.List<SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Game> gamesRunning_ =
         java.util.Collections.emptyList();
       private void ensureGamesRunningIsMutable() {
-        if (!((bitField0_ & 0x00000080) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           gamesRunning_ = new java.util.ArrayList<SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Game>(gamesRunning_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -4959,7 +4941,7 @@ public final class SteammessagesClientserverUds {
       public Builder clearGamesRunning() {
         if (gamesRunningBuilder_ == null) {
           gamesRunning_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           gamesRunningBuilder_.clear();
@@ -5036,12 +5018,129 @@ public final class SteammessagesClientserverUds {
           gamesRunningBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Game, SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Game.Builder, SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.GameOrBuilder>(
                   gamesRunning_,
-                  ((bitField0_ & 0x00000080) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           gamesRunning_ = null;
         }
         return gamesRunningBuilder_;
+      }
+
+      private long bytesAvailable_ ;
+      /**
+       * <code>optional uint64 bytes_available = 7;</code>
+       * @return Whether the bytesAvailable field is set.
+       */
+      @java.lang.Override
+      public boolean hasBytesAvailable() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional uint64 bytes_available = 7;</code>
+       * @return The bytesAvailable.
+       */
+      @java.lang.Override
+      public long getBytesAvailable() {
+        return bytesAvailable_;
+      }
+      /**
+       * <code>optional uint64 bytes_available = 7;</code>
+       * @param value The bytesAvailable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBytesAvailable(long value) {
+        bitField0_ |= 0x00000040;
+        bytesAvailable_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 bytes_available = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBytesAvailable() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        bytesAvailable_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int protocolVersion_ ;
+      /**
+       * <code>optional uint32 protocol_version = 8;</code>
+       * @return Whether the protocolVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasProtocolVersion() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 protocol_version = 8;</code>
+       * @return The protocolVersion.
+       */
+      @java.lang.Override
+      public int getProtocolVersion() {
+        return protocolVersion_;
+      }
+      /**
+       * <code>optional uint32 protocol_version = 8;</code>
+       * @param value The protocolVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocolVersion(int value) {
+        bitField0_ |= 0x00000080;
+        protocolVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 protocol_version = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProtocolVersion() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        protocolVersion_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int clientcommVersion_ ;
+      /**
+       * <code>optional uint32 clientcomm_version = 9;</code>
+       * @return Whether the clientcommVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasClientcommVersion() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint32 clientcomm_version = 9;</code>
+       * @return The clientcommVersion.
+       */
+      @java.lang.Override
+      public int getClientcommVersion() {
+        return clientcommVersion_;
+      }
+      /**
+       * <code>optional uint32 clientcomm_version = 9;</code>
+       * @param value The clientcommVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientcommVersion(int value) {
+        bitField0_ |= 0x00000100;
+        clientcommVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 clientcomm_version = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientcommVersion() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        clientcommVersion_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5165,6 +5264,17 @@ public final class SteammessagesClientserverUds {
      * @return The comics.
      */
     boolean getComics();
+
+    /**
+     * <code>optional bool include_client_info = 7;</code>
+     * @return Whether the includeClientInfo field is set.
+     */
+    boolean hasIncludeClientInfo();
+    /**
+     * <code>optional bool include_client_info = 7;</code>
+     * @return The includeClientInfo.
+     */
+    boolean getIncludeClientInfo();
   }
   /**
    * Protobuf type {@code CMsgClientGetClientAppList}
@@ -5240,6 +5350,11 @@ public final class SteammessagesClientserverUds {
             case 48: {
               bitField0_ |= 0x00000020;
               comics_ = input.readBool();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              includeClientInfo_ = input.readBool();
               break;
             }
             default: {
@@ -5389,6 +5504,25 @@ public final class SteammessagesClientserverUds {
       return comics_;
     }
 
+    public static final int INCLUDE_CLIENT_INFO_FIELD_NUMBER = 7;
+    private boolean includeClientInfo_;
+    /**
+     * <code>optional bool include_client_info = 7;</code>
+     * @return Whether the includeClientInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasIncludeClientInfo() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional bool include_client_info = 7;</code>
+     * @return The includeClientInfo.
+     */
+    @java.lang.Override
+    public boolean getIncludeClientInfo() {
+      return includeClientInfo_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5420,6 +5554,9 @@ public final class SteammessagesClientserverUds {
       }
       if (((bitField0_ & 0x00000020) != 0)) {
         output.writeBool(6, comics_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeBool(7, includeClientInfo_);
       }
       unknownFields.writeTo(output);
     }
@@ -5453,6 +5590,10 @@ public final class SteammessagesClientserverUds {
       if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, comics_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, includeClientInfo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5499,6 +5640,11 @@ public final class SteammessagesClientserverUds {
         if (getComics()
             != other.getComics()) return false;
       }
+      if (hasIncludeClientInfo() != other.hasIncludeClientInfo()) return false;
+      if (hasIncludeClientInfo()) {
+        if (getIncludeClientInfo()
+            != other.getIncludeClientInfo()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5539,6 +5685,11 @@ public final class SteammessagesClientserverUds {
         hash = (37 * hash) + COMICS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getComics());
+      }
+      if (hasIncludeClientInfo()) {
+        hash = (37 * hash) + INCLUDE_CLIENT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIncludeClientInfo());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5685,6 +5836,8 @@ public final class SteammessagesClientserverUds {
         bitField0_ = (bitField0_ & ~0x00000010);
         comics_ = false;
         bitField0_ = (bitField0_ & ~0x00000020);
+        includeClientInfo_ = false;
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -5736,6 +5889,10 @@ public final class SteammessagesClientserverUds {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.comics_ = comics_;
           to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.includeClientInfo_ = includeClientInfo_;
+          to_bitField0_ |= 0x00000040;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -5803,6 +5960,9 @@ public final class SteammessagesClientserverUds {
         }
         if (other.hasComics()) {
           setComics(other.getComics());
+        }
+        if (other.hasIncludeClientInfo()) {
+          setIncludeClientInfo(other.getIncludeClientInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6067,6 +6227,45 @@ public final class SteammessagesClientserverUds {
         onChanged();
         return this;
       }
+
+      private boolean includeClientInfo_ ;
+      /**
+       * <code>optional bool include_client_info = 7;</code>
+       * @return Whether the includeClientInfo field is set.
+       */
+      @java.lang.Override
+      public boolean hasIncludeClientInfo() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional bool include_client_info = 7;</code>
+       * @return The includeClientInfo.
+       */
+      @java.lang.Override
+      public boolean getIncludeClientInfo() {
+        return includeClientInfo_;
+      }
+      /**
+       * <code>optional bool include_client_info = 7;</code>
+       * @param value The includeClientInfo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludeClientInfo(boolean value) {
+        bitField0_ |= 0x00000040;
+        includeClientInfo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool include_client_info = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncludeClientInfo() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        includeClientInfo_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6158,6 +6357,21 @@ public final class SteammessagesClientserverUds {
      * @return The bytesAvailable.
      */
     long getBytesAvailable();
+
+    /**
+     * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+     * @return Whether the clientInfo field is set.
+     */
+    boolean hasClientInfo();
+    /**
+     * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+     * @return The clientInfo.
+     */
+    SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse getClientInfo();
+    /**
+     * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+     */
+    SteammessagesClientserverUds.CMsgClientGetClientDetailsResponseOrBuilder getClientInfoOrBuilder();
   }
   /**
    * Protobuf type {@code CMsgClientGetClientAppListResponse}
@@ -6218,6 +6432,19 @@ public final class SteammessagesClientserverUds {
             case 16: {
               bitField0_ |= 0x00000001;
               bytesAvailable_ = input.readUInt64();
+              break;
+            }
+            case 26: {
+              SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = clientInfo_.toBuilder();
+              }
+              clientInfo_ = input.readMessage(SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clientInfo_);
+                clientInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
               break;
             }
             default: {
@@ -6349,15 +6576,15 @@ public final class SteammessagesClientserverUds {
       long getBytesDownloaded();
 
       /**
-       * <code>optional uint64 bytes_needed = 7;</code>
-       * @return Whether the bytesNeeded field is set.
+       * <code>optional uint64 bytes_to_download = 7;</code>
+       * @return Whether the bytesToDownload field is set.
        */
-      boolean hasBytesNeeded();
+      boolean hasBytesToDownload();
       /**
-       * <code>optional uint64 bytes_needed = 7;</code>
-       * @return The bytesNeeded.
+       * <code>optional uint64 bytes_to_download = 7;</code>
+       * @return The bytesToDownload.
        */
-      long getBytesNeeded();
+      long getBytesToDownload();
 
       /**
        * <code>optional uint32 bytes_download_rate = 8;</code>
@@ -6369,6 +6596,30 @@ public final class SteammessagesClientserverUds {
        * @return The bytesDownloadRate.
        */
       int getBytesDownloadRate();
+
+      /**
+       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       */
+      java.util.List<SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC> 
+          getDlcsList();
+      /**
+       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       */
+      SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC getDlcs(int index);
+      /**
+       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       */
+      int getDlcsCount();
+      /**
+       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       */
+      java.util.List<? extends SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLCOrBuilder> 
+          getDlcsOrBuilderList();
+      /**
+       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       */
+      SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLCOrBuilder getDlcsOrBuilder(
+          int index);
 
       /**
        * <code>optional bool download_paused = 11;</code>
@@ -6426,28 +6677,103 @@ public final class SteammessagesClientserverUds {
       boolean getAvailableOnPlatform();
 
       /**
-       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       * <code>optional uint64 bytes_staged = 16;</code>
+       * @return Whether the bytesStaged field is set.
        */
-      java.util.List<SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC> 
-          getDlcsList();
+      boolean hasBytesStaged();
       /**
-       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       * <code>optional uint64 bytes_staged = 16;</code>
+       * @return The bytesStaged.
        */
-      SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC getDlcs(int index);
+      long getBytesStaged();
+
       /**
-       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       * <code>optional uint64 bytes_to_stage = 17;</code>
+       * @return Whether the bytesToStage field is set.
        */
-      int getDlcsCount();
+      boolean hasBytesToStage();
       /**
-       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       * <code>optional uint64 bytes_to_stage = 17;</code>
+       * @return The bytesToStage.
        */
-      java.util.List<? extends SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLCOrBuilder> 
-          getDlcsOrBuilderList();
+      long getBytesToStage();
+
       /**
-       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       * <code>optional uint64 bytes_required = 18;</code>
+       * @return Whether the bytesRequired field is set.
        */
-      SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLCOrBuilder getDlcsOrBuilder(
-          int index);
+      boolean hasBytesRequired();
+      /**
+       * <code>optional uint64 bytes_required = 18;</code>
+       * @return The bytesRequired.
+       */
+      long getBytesRequired();
+
+      /**
+       * <code>optional uint32 source_buildid = 19;</code>
+       * @return Whether the sourceBuildid field is set.
+       */
+      boolean hasSourceBuildid();
+      /**
+       * <code>optional uint32 source_buildid = 19;</code>
+       * @return The sourceBuildid.
+       */
+      int getSourceBuildid();
+
+      /**
+       * <code>optional uint32 target_buildid = 20;</code>
+       * @return Whether the targetBuildid field is set.
+       */
+      boolean hasTargetBuildid();
+      /**
+       * <code>optional uint32 target_buildid = 20;</code>
+       * @return The targetBuildid.
+       */
+      int getTargetBuildid();
+
+      /**
+       * <code>optional uint32 estimated_seconds_remaining = 21;</code>
+       * @return Whether the estimatedSecondsRemaining field is set.
+       */
+      boolean hasEstimatedSecondsRemaining();
+      /**
+       * <code>optional uint32 estimated_seconds_remaining = 21;</code>
+       * @return The estimatedSecondsRemaining.
+       */
+      int getEstimatedSecondsRemaining();
+
+      /**
+       * <code>optional int32 queue_position = 22;</code>
+       * @return Whether the queuePosition field is set.
+       */
+      boolean hasQueuePosition();
+      /**
+       * <code>optional int32 queue_position = 22;</code>
+       * @return The queuePosition.
+       */
+      int getQueuePosition();
+
+      /**
+       * <code>optional bool uninstalling = 23;</code>
+       * @return Whether the uninstalling field is set.
+       */
+      boolean hasUninstalling();
+      /**
+       * <code>optional bool uninstalling = 23;</code>
+       * @return The uninstalling.
+       */
+      boolean getUninstalling();
+
+      /**
+       * <code>optional uint32 rt_time_scheduled = 24;</code>
+       * @return Whether the rtTimeScheduled field is set.
+       */
+      boolean hasRtTimeScheduled();
+      /**
+       * <code>optional uint32 rt_time_scheduled = 24;</code>
+       * @return The rtTimeScheduled.
+       */
+      int getRtTimeScheduled();
     }
     /**
      * Protobuf type {@code CMsgClientGetClientAppListResponse.App}
@@ -6531,7 +6857,7 @@ public final class SteammessagesClientserverUds {
               }
               case 56: {
                 bitField0_ |= 0x00000080;
-                bytesNeeded_ = input.readUInt64();
+                bytesToDownload_ = input.readUInt64();
                 break;
               }
               case 64: {
@@ -6540,9 +6866,9 @@ public final class SteammessagesClientserverUds {
                 break;
               }
               case 74: {
-                if (!((mutable_bitField0_ & 0x00004000) != 0)) {
+                if (!((mutable_bitField0_ & 0x00000200) != 0)) {
                   dlcs_ = new java.util.ArrayList<SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC>();
-                  mutable_bitField0_ |= 0x00004000;
+                  mutable_bitField0_ |= 0x00000200;
                 }
                 dlcs_.add(
                     input.readMessage(SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC.PARSER, extensionRegistry));
@@ -6579,6 +6905,51 @@ public final class SteammessagesClientserverUds {
                 availableOnPlatform_ = input.readBool();
                 break;
               }
+              case 128: {
+                bitField0_ |= 0x00004000;
+                bytesStaged_ = input.readUInt64();
+                break;
+              }
+              case 136: {
+                bitField0_ |= 0x00008000;
+                bytesToStage_ = input.readUInt64();
+                break;
+              }
+              case 144: {
+                bitField0_ |= 0x00010000;
+                bytesRequired_ = input.readUInt64();
+                break;
+              }
+              case 152: {
+                bitField0_ |= 0x00020000;
+                sourceBuildid_ = input.readUInt32();
+                break;
+              }
+              case 160: {
+                bitField0_ |= 0x00040000;
+                targetBuildid_ = input.readUInt32();
+                break;
+              }
+              case 168: {
+                bitField0_ |= 0x00080000;
+                estimatedSecondsRemaining_ = input.readUInt32();
+                break;
+              }
+              case 176: {
+                bitField0_ |= 0x00100000;
+                queuePosition_ = input.readInt32();
+                break;
+              }
+              case 184: {
+                bitField0_ |= 0x00200000;
+                uninstalling_ = input.readBool();
+                break;
+              }
+              case 192: {
+                bitField0_ |= 0x00400000;
+                rtTimeScheduled_ = input.readUInt32();
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -6594,7 +6965,7 @@ public final class SteammessagesClientserverUds {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00004000) != 0)) {
+          if (((mutable_bitField0_ & 0x00000200) != 0)) {
             dlcs_ = java.util.Collections.unmodifiableList(dlcs_);
           }
           this.unknownFields = unknownFields.build();
@@ -7429,23 +7800,23 @@ public final class SteammessagesClientserverUds {
         return bytesDownloaded_;
       }
 
-      public static final int BYTES_NEEDED_FIELD_NUMBER = 7;
-      private long bytesNeeded_;
+      public static final int BYTES_TO_DOWNLOAD_FIELD_NUMBER = 7;
+      private long bytesToDownload_;
       /**
-       * <code>optional uint64 bytes_needed = 7;</code>
-       * @return Whether the bytesNeeded field is set.
+       * <code>optional uint64 bytes_to_download = 7;</code>
+       * @return Whether the bytesToDownload field is set.
        */
       @java.lang.Override
-      public boolean hasBytesNeeded() {
+      public boolean hasBytesToDownload() {
         return ((bitField0_ & 0x00000080) != 0);
       }
       /**
-       * <code>optional uint64 bytes_needed = 7;</code>
-       * @return The bytesNeeded.
+       * <code>optional uint64 bytes_to_download = 7;</code>
+       * @return The bytesToDownload.
        */
       @java.lang.Override
-      public long getBytesNeeded() {
-        return bytesNeeded_;
+      public long getBytesToDownload() {
+        return bytesToDownload_;
       }
 
       public static final int BYTES_DOWNLOAD_RATE_FIELD_NUMBER = 8;
@@ -7465,6 +7836,46 @@ public final class SteammessagesClientserverUds {
       @java.lang.Override
       public int getBytesDownloadRate() {
         return bytesDownloadRate_;
+      }
+
+      public static final int DLCS_FIELD_NUMBER = 9;
+      private java.util.List<SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC> dlcs_;
+      /**
+       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       */
+      @java.lang.Override
+      public java.util.List<SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC> getDlcsList() {
+        return dlcs_;
+      }
+      /**
+       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLCOrBuilder> 
+          getDlcsOrBuilderList() {
+        return dlcs_;
+      }
+      /**
+       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       */
+      @java.lang.Override
+      public int getDlcsCount() {
+        return dlcs_.size();
+      }
+      /**
+       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       */
+      @java.lang.Override
+      public SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC getDlcs(int index) {
+        return dlcs_.get(index);
+      }
+      /**
+       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       */
+      @java.lang.Override
+      public SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLCOrBuilder getDlcsOrBuilder(
+          int index) {
+        return dlcs_.get(index);
       }
 
       public static final int DOWNLOAD_PAUSED_FIELD_NUMBER = 11;
@@ -7562,44 +7973,175 @@ public final class SteammessagesClientserverUds {
         return availableOnPlatform_;
       }
 
-      public static final int DLCS_FIELD_NUMBER = 9;
-      private java.util.List<SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC> dlcs_;
+      public static final int BYTES_STAGED_FIELD_NUMBER = 16;
+      private long bytesStaged_;
       /**
-       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       * <code>optional uint64 bytes_staged = 16;</code>
+       * @return Whether the bytesStaged field is set.
        */
       @java.lang.Override
-      public java.util.List<SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC> getDlcsList() {
-        return dlcs_;
+      public boolean hasBytesStaged() {
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
-       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       * <code>optional uint64 bytes_staged = 16;</code>
+       * @return The bytesStaged.
        */
       @java.lang.Override
-      public java.util.List<? extends SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLCOrBuilder> 
-          getDlcsOrBuilderList() {
-        return dlcs_;
+      public long getBytesStaged() {
+        return bytesStaged_;
+      }
+
+      public static final int BYTES_TO_STAGE_FIELD_NUMBER = 17;
+      private long bytesToStage_;
+      /**
+       * <code>optional uint64 bytes_to_stage = 17;</code>
+       * @return Whether the bytesToStage field is set.
+       */
+      @java.lang.Override
+      public boolean hasBytesToStage() {
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
-       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       * <code>optional uint64 bytes_to_stage = 17;</code>
+       * @return The bytesToStage.
        */
       @java.lang.Override
-      public int getDlcsCount() {
-        return dlcs_.size();
+      public long getBytesToStage() {
+        return bytesToStage_;
+      }
+
+      public static final int BYTES_REQUIRED_FIELD_NUMBER = 18;
+      private long bytesRequired_;
+      /**
+       * <code>optional uint64 bytes_required = 18;</code>
+       * @return Whether the bytesRequired field is set.
+       */
+      @java.lang.Override
+      public boolean hasBytesRequired() {
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
-       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       * <code>optional uint64 bytes_required = 18;</code>
+       * @return The bytesRequired.
        */
       @java.lang.Override
-      public SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC getDlcs(int index) {
-        return dlcs_.get(index);
+      public long getBytesRequired() {
+        return bytesRequired_;
+      }
+
+      public static final int SOURCE_BUILDID_FIELD_NUMBER = 19;
+      private int sourceBuildid_;
+      /**
+       * <code>optional uint32 source_buildid = 19;</code>
+       * @return Whether the sourceBuildid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSourceBuildid() {
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
-       * <code>repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;</code>
+       * <code>optional uint32 source_buildid = 19;</code>
+       * @return The sourceBuildid.
        */
       @java.lang.Override
-      public SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLCOrBuilder getDlcsOrBuilder(
-          int index) {
-        return dlcs_.get(index);
+      public int getSourceBuildid() {
+        return sourceBuildid_;
+      }
+
+      public static final int TARGET_BUILDID_FIELD_NUMBER = 20;
+      private int targetBuildid_;
+      /**
+       * <code>optional uint32 target_buildid = 20;</code>
+       * @return Whether the targetBuildid field is set.
+       */
+      @java.lang.Override
+      public boolean hasTargetBuildid() {
+        return ((bitField0_ & 0x00040000) != 0);
+      }
+      /**
+       * <code>optional uint32 target_buildid = 20;</code>
+       * @return The targetBuildid.
+       */
+      @java.lang.Override
+      public int getTargetBuildid() {
+        return targetBuildid_;
+      }
+
+      public static final int ESTIMATED_SECONDS_REMAINING_FIELD_NUMBER = 21;
+      private int estimatedSecondsRemaining_;
+      /**
+       * <code>optional uint32 estimated_seconds_remaining = 21;</code>
+       * @return Whether the estimatedSecondsRemaining field is set.
+       */
+      @java.lang.Override
+      public boolean hasEstimatedSecondsRemaining() {
+        return ((bitField0_ & 0x00080000) != 0);
+      }
+      /**
+       * <code>optional uint32 estimated_seconds_remaining = 21;</code>
+       * @return The estimatedSecondsRemaining.
+       */
+      @java.lang.Override
+      public int getEstimatedSecondsRemaining() {
+        return estimatedSecondsRemaining_;
+      }
+
+      public static final int QUEUE_POSITION_FIELD_NUMBER = 22;
+      private int queuePosition_;
+      /**
+       * <code>optional int32 queue_position = 22;</code>
+       * @return Whether the queuePosition field is set.
+       */
+      @java.lang.Override
+      public boolean hasQueuePosition() {
+        return ((bitField0_ & 0x00100000) != 0);
+      }
+      /**
+       * <code>optional int32 queue_position = 22;</code>
+       * @return The queuePosition.
+       */
+      @java.lang.Override
+      public int getQueuePosition() {
+        return queuePosition_;
+      }
+
+      public static final int UNINSTALLING_FIELD_NUMBER = 23;
+      private boolean uninstalling_;
+      /**
+       * <code>optional bool uninstalling = 23;</code>
+       * @return Whether the uninstalling field is set.
+       */
+      @java.lang.Override
+      public boolean hasUninstalling() {
+        return ((bitField0_ & 0x00200000) != 0);
+      }
+      /**
+       * <code>optional bool uninstalling = 23;</code>
+       * @return The uninstalling.
+       */
+      @java.lang.Override
+      public boolean getUninstalling() {
+        return uninstalling_;
+      }
+
+      public static final int RT_TIME_SCHEDULED_FIELD_NUMBER = 24;
+      private int rtTimeScheduled_;
+      /**
+       * <code>optional uint32 rt_time_scheduled = 24;</code>
+       * @return Whether the rtTimeScheduled field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtTimeScheduled() {
+        return ((bitField0_ & 0x00400000) != 0);
+      }
+      /**
+       * <code>optional uint32 rt_time_scheduled = 24;</code>
+       * @return The rtTimeScheduled.
+       */
+      @java.lang.Override
+      public int getRtTimeScheduled() {
+        return rtTimeScheduled_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -7635,7 +8177,7 @@ public final class SteammessagesClientserverUds {
           output.writeUInt64(6, bytesDownloaded_);
         }
         if (((bitField0_ & 0x00000080) != 0)) {
-          output.writeUInt64(7, bytesNeeded_);
+          output.writeUInt64(7, bytesToDownload_);
         }
         if (((bitField0_ & 0x00000100) != 0)) {
           output.writeUInt32(8, bytesDownloadRate_);
@@ -7660,6 +8202,33 @@ public final class SteammessagesClientserverUds {
         }
         if (((bitField0_ & 0x00002000) != 0)) {
           output.writeBool(15, availableOnPlatform_);
+        }
+        if (((bitField0_ & 0x00004000) != 0)) {
+          output.writeUInt64(16, bytesStaged_);
+        }
+        if (((bitField0_ & 0x00008000) != 0)) {
+          output.writeUInt64(17, bytesToStage_);
+        }
+        if (((bitField0_ & 0x00010000) != 0)) {
+          output.writeUInt64(18, bytesRequired_);
+        }
+        if (((bitField0_ & 0x00020000) != 0)) {
+          output.writeUInt32(19, sourceBuildid_);
+        }
+        if (((bitField0_ & 0x00040000) != 0)) {
+          output.writeUInt32(20, targetBuildid_);
+        }
+        if (((bitField0_ & 0x00080000) != 0)) {
+          output.writeUInt32(21, estimatedSecondsRemaining_);
+        }
+        if (((bitField0_ & 0x00100000) != 0)) {
+          output.writeInt32(22, queuePosition_);
+        }
+        if (((bitField0_ & 0x00200000) != 0)) {
+          output.writeBool(23, uninstalling_);
+        }
+        if (((bitField0_ & 0x00400000) != 0)) {
+          output.writeUInt32(24, rtTimeScheduled_);
         }
         unknownFields.writeTo(output);
       }
@@ -7695,7 +8264,7 @@ public final class SteammessagesClientserverUds {
         }
         if (((bitField0_ & 0x00000080) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt64Size(7, bytesNeeded_);
+            .computeUInt64Size(7, bytesToDownload_);
         }
         if (((bitField0_ & 0x00000100) != 0)) {
           size += com.google.protobuf.CodedOutputStream
@@ -7727,6 +8296,42 @@ public final class SteammessagesClientserverUds {
         if (((bitField0_ & 0x00002000) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(15, availableOnPlatform_);
+        }
+        if (((bitField0_ & 0x00004000) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(16, bytesStaged_);
+        }
+        if (((bitField0_ & 0x00008000) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(17, bytesToStage_);
+        }
+        if (((bitField0_ & 0x00010000) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(18, bytesRequired_);
+        }
+        if (((bitField0_ & 0x00020000) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(19, sourceBuildid_);
+        }
+        if (((bitField0_ & 0x00040000) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(20, targetBuildid_);
+        }
+        if (((bitField0_ & 0x00080000) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(21, estimatedSecondsRemaining_);
+        }
+        if (((bitField0_ & 0x00100000) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(22, queuePosition_);
+        }
+        if (((bitField0_ & 0x00200000) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(23, uninstalling_);
+        }
+        if (((bitField0_ & 0x00400000) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(24, rtTimeScheduled_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -7778,16 +8383,18 @@ public final class SteammessagesClientserverUds {
           if (getBytesDownloaded()
               != other.getBytesDownloaded()) return false;
         }
-        if (hasBytesNeeded() != other.hasBytesNeeded()) return false;
-        if (hasBytesNeeded()) {
-          if (getBytesNeeded()
-              != other.getBytesNeeded()) return false;
+        if (hasBytesToDownload() != other.hasBytesToDownload()) return false;
+        if (hasBytesToDownload()) {
+          if (getBytesToDownload()
+              != other.getBytesToDownload()) return false;
         }
         if (hasBytesDownloadRate() != other.hasBytesDownloadRate()) return false;
         if (hasBytesDownloadRate()) {
           if (getBytesDownloadRate()
               != other.getBytesDownloadRate()) return false;
         }
+        if (!getDlcsList()
+            .equals(other.getDlcsList())) return false;
         if (hasDownloadPaused() != other.hasDownloadPaused()) return false;
         if (hasDownloadPaused()) {
           if (getDownloadPaused()
@@ -7813,8 +8420,51 @@ public final class SteammessagesClientserverUds {
           if (getAvailableOnPlatform()
               != other.getAvailableOnPlatform()) return false;
         }
-        if (!getDlcsList()
-            .equals(other.getDlcsList())) return false;
+        if (hasBytesStaged() != other.hasBytesStaged()) return false;
+        if (hasBytesStaged()) {
+          if (getBytesStaged()
+              != other.getBytesStaged()) return false;
+        }
+        if (hasBytesToStage() != other.hasBytesToStage()) return false;
+        if (hasBytesToStage()) {
+          if (getBytesToStage()
+              != other.getBytesToStage()) return false;
+        }
+        if (hasBytesRequired() != other.hasBytesRequired()) return false;
+        if (hasBytesRequired()) {
+          if (getBytesRequired()
+              != other.getBytesRequired()) return false;
+        }
+        if (hasSourceBuildid() != other.hasSourceBuildid()) return false;
+        if (hasSourceBuildid()) {
+          if (getSourceBuildid()
+              != other.getSourceBuildid()) return false;
+        }
+        if (hasTargetBuildid() != other.hasTargetBuildid()) return false;
+        if (hasTargetBuildid()) {
+          if (getTargetBuildid()
+              != other.getTargetBuildid()) return false;
+        }
+        if (hasEstimatedSecondsRemaining() != other.hasEstimatedSecondsRemaining()) return false;
+        if (hasEstimatedSecondsRemaining()) {
+          if (getEstimatedSecondsRemaining()
+              != other.getEstimatedSecondsRemaining()) return false;
+        }
+        if (hasQueuePosition() != other.hasQueuePosition()) return false;
+        if (hasQueuePosition()) {
+          if (getQueuePosition()
+              != other.getQueuePosition()) return false;
+        }
+        if (hasUninstalling() != other.hasUninstalling()) return false;
+        if (hasUninstalling()) {
+          if (getUninstalling()
+              != other.getUninstalling()) return false;
+        }
+        if (hasRtTimeScheduled() != other.hasRtTimeScheduled()) return false;
+        if (hasRtTimeScheduled()) {
+          if (getRtTimeScheduled()
+              != other.getRtTimeScheduled()) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -7858,14 +8508,18 @@ public final class SteammessagesClientserverUds {
           hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               getBytesDownloaded());
         }
-        if (hasBytesNeeded()) {
-          hash = (37 * hash) + BYTES_NEEDED_FIELD_NUMBER;
+        if (hasBytesToDownload()) {
+          hash = (37 * hash) + BYTES_TO_DOWNLOAD_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getBytesNeeded());
+              getBytesToDownload());
         }
         if (hasBytesDownloadRate()) {
           hash = (37 * hash) + BYTES_DOWNLOAD_RATE_FIELD_NUMBER;
           hash = (53 * hash) + getBytesDownloadRate();
+        }
+        if (getDlcsCount() > 0) {
+          hash = (37 * hash) + DLCS_FIELD_NUMBER;
+          hash = (53 * hash) + getDlcsList().hashCode();
         }
         if (hasDownloadPaused()) {
           hash = (37 * hash) + DOWNLOAD_PAUSED_FIELD_NUMBER;
@@ -7890,9 +8544,45 @@ public final class SteammessagesClientserverUds {
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getAvailableOnPlatform());
         }
-        if (getDlcsCount() > 0) {
-          hash = (37 * hash) + DLCS_FIELD_NUMBER;
-          hash = (53 * hash) + getDlcsList().hashCode();
+        if (hasBytesStaged()) {
+          hash = (37 * hash) + BYTES_STAGED_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getBytesStaged());
+        }
+        if (hasBytesToStage()) {
+          hash = (37 * hash) + BYTES_TO_STAGE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getBytesToStage());
+        }
+        if (hasBytesRequired()) {
+          hash = (37 * hash) + BYTES_REQUIRED_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getBytesRequired());
+        }
+        if (hasSourceBuildid()) {
+          hash = (37 * hash) + SOURCE_BUILDID_FIELD_NUMBER;
+          hash = (53 * hash) + getSourceBuildid();
+        }
+        if (hasTargetBuildid()) {
+          hash = (37 * hash) + TARGET_BUILDID_FIELD_NUMBER;
+          hash = (53 * hash) + getTargetBuildid();
+        }
+        if (hasEstimatedSecondsRemaining()) {
+          hash = (37 * hash) + ESTIMATED_SECONDS_REMAINING_FIELD_NUMBER;
+          hash = (53 * hash) + getEstimatedSecondsRemaining();
+        }
+        if (hasQueuePosition()) {
+          hash = (37 * hash) + QUEUE_POSITION_FIELD_NUMBER;
+          hash = (53 * hash) + getQueuePosition();
+        }
+        if (hasUninstalling()) {
+          hash = (37 * hash) + UNINSTALLING_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getUninstalling());
+        }
+        if (hasRtTimeScheduled()) {
+          hash = (37 * hash) + RT_TIME_SCHEDULED_FIELD_NUMBER;
+          hash = (53 * hash) + getRtTimeScheduled();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -8042,26 +8732,44 @@ public final class SteammessagesClientserverUds {
           bitField0_ = (bitField0_ & ~0x00000020);
           bytesDownloaded_ = 0L;
           bitField0_ = (bitField0_ & ~0x00000040);
-          bytesNeeded_ = 0L;
+          bytesToDownload_ = 0L;
           bitField0_ = (bitField0_ & ~0x00000080);
           bytesDownloadRate_ = 0;
           bitField0_ = (bitField0_ & ~0x00000100);
-          downloadPaused_ = false;
-          bitField0_ = (bitField0_ & ~0x00000200);
-          numDownloading_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000400);
-          numPaused_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000800);
-          changing_ = false;
-          bitField0_ = (bitField0_ & ~0x00001000);
-          availableOnPlatform_ = false;
-          bitField0_ = (bitField0_ & ~0x00002000);
           if (dlcsBuilder_ == null) {
             dlcs_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             dlcsBuilder_.clear();
           }
+          downloadPaused_ = false;
+          bitField0_ = (bitField0_ & ~0x00000400);
+          numDownloading_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000800);
+          numPaused_ = 0;
+          bitField0_ = (bitField0_ & ~0x00001000);
+          changing_ = false;
+          bitField0_ = (bitField0_ & ~0x00002000);
+          availableOnPlatform_ = false;
+          bitField0_ = (bitField0_ & ~0x00004000);
+          bytesStaged_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00008000);
+          bytesToStage_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00010000);
+          bytesRequired_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00020000);
+          sourceBuildid_ = 0;
+          bitField0_ = (bitField0_ & ~0x00040000);
+          targetBuildid_ = 0;
+          bitField0_ = (bitField0_ & ~0x00080000);
+          estimatedSecondsRemaining_ = 0;
+          bitField0_ = (bitField0_ & ~0x00100000);
+          queuePosition_ = 0;
+          bitField0_ = (bitField0_ & ~0x00200000);
+          uninstalling_ = false;
+          bitField0_ = (bitField0_ & ~0x00400000);
+          rtTimeScheduled_ = 0;
+          bitField0_ = (bitField0_ & ~0x00800000);
           return this;
         }
 
@@ -8119,41 +8827,77 @@ public final class SteammessagesClientserverUds {
             to_bitField0_ |= 0x00000040;
           }
           if (((from_bitField0_ & 0x00000080) != 0)) {
-            result.bytesNeeded_ = bytesNeeded_;
+            result.bytesToDownload_ = bytesToDownload_;
             to_bitField0_ |= 0x00000080;
           }
           if (((from_bitField0_ & 0x00000100) != 0)) {
             result.bytesDownloadRate_ = bytesDownloadRate_;
             to_bitField0_ |= 0x00000100;
           }
-          if (((from_bitField0_ & 0x00000200) != 0)) {
-            result.downloadPaused_ = downloadPaused_;
-            to_bitField0_ |= 0x00000200;
-          }
-          if (((from_bitField0_ & 0x00000400) != 0)) {
-            result.numDownloading_ = numDownloading_;
-            to_bitField0_ |= 0x00000400;
-          }
-          if (((from_bitField0_ & 0x00000800) != 0)) {
-            result.numPaused_ = numPaused_;
-            to_bitField0_ |= 0x00000800;
-          }
-          if (((from_bitField0_ & 0x00001000) != 0)) {
-            result.changing_ = changing_;
-            to_bitField0_ |= 0x00001000;
-          }
-          if (((from_bitField0_ & 0x00002000) != 0)) {
-            result.availableOnPlatform_ = availableOnPlatform_;
-            to_bitField0_ |= 0x00002000;
-          }
           if (dlcsBuilder_ == null) {
-            if (((bitField0_ & 0x00004000) != 0)) {
+            if (((bitField0_ & 0x00000200) != 0)) {
               dlcs_ = java.util.Collections.unmodifiableList(dlcs_);
-              bitField0_ = (bitField0_ & ~0x00004000);
+              bitField0_ = (bitField0_ & ~0x00000200);
             }
             result.dlcs_ = dlcs_;
           } else {
             result.dlcs_ = dlcsBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000400) != 0)) {
+            result.downloadPaused_ = downloadPaused_;
+            to_bitField0_ |= 0x00000200;
+          }
+          if (((from_bitField0_ & 0x00000800) != 0)) {
+            result.numDownloading_ = numDownloading_;
+            to_bitField0_ |= 0x00000400;
+          }
+          if (((from_bitField0_ & 0x00001000) != 0)) {
+            result.numPaused_ = numPaused_;
+            to_bitField0_ |= 0x00000800;
+          }
+          if (((from_bitField0_ & 0x00002000) != 0)) {
+            result.changing_ = changing_;
+            to_bitField0_ |= 0x00001000;
+          }
+          if (((from_bitField0_ & 0x00004000) != 0)) {
+            result.availableOnPlatform_ = availableOnPlatform_;
+            to_bitField0_ |= 0x00002000;
+          }
+          if (((from_bitField0_ & 0x00008000) != 0)) {
+            result.bytesStaged_ = bytesStaged_;
+            to_bitField0_ |= 0x00004000;
+          }
+          if (((from_bitField0_ & 0x00010000) != 0)) {
+            result.bytesToStage_ = bytesToStage_;
+            to_bitField0_ |= 0x00008000;
+          }
+          if (((from_bitField0_ & 0x00020000) != 0)) {
+            result.bytesRequired_ = bytesRequired_;
+            to_bitField0_ |= 0x00010000;
+          }
+          if (((from_bitField0_ & 0x00040000) != 0)) {
+            result.sourceBuildid_ = sourceBuildid_;
+            to_bitField0_ |= 0x00020000;
+          }
+          if (((from_bitField0_ & 0x00080000) != 0)) {
+            result.targetBuildid_ = targetBuildid_;
+            to_bitField0_ |= 0x00040000;
+          }
+          if (((from_bitField0_ & 0x00100000) != 0)) {
+            result.estimatedSecondsRemaining_ = estimatedSecondsRemaining_;
+            to_bitField0_ |= 0x00080000;
+          }
+          if (((from_bitField0_ & 0x00200000) != 0)) {
+            result.queuePosition_ = queuePosition_;
+            to_bitField0_ |= 0x00100000;
+          }
+          if (((from_bitField0_ & 0x00400000) != 0)) {
+            result.uninstalling_ = uninstalling_;
+            to_bitField0_ |= 0x00200000;
+          }
+          if (((from_bitField0_ & 0x00800000) != 0)) {
+            result.rtTimeScheduled_ = rtTimeScheduled_;
+            to_bitField0_ |= 0x00400000;
           }
           result.bitField0_ = to_bitField0_;
           onBuilt();
@@ -8229,11 +8973,37 @@ public final class SteammessagesClientserverUds {
           if (other.hasBytesDownloaded()) {
             setBytesDownloaded(other.getBytesDownloaded());
           }
-          if (other.hasBytesNeeded()) {
-            setBytesNeeded(other.getBytesNeeded());
+          if (other.hasBytesToDownload()) {
+            setBytesToDownload(other.getBytesToDownload());
           }
           if (other.hasBytesDownloadRate()) {
             setBytesDownloadRate(other.getBytesDownloadRate());
+          }
+          if (dlcsBuilder_ == null) {
+            if (!other.dlcs_.isEmpty()) {
+              if (dlcs_.isEmpty()) {
+                dlcs_ = other.dlcs_;
+                bitField0_ = (bitField0_ & ~0x00000200);
+              } else {
+                ensureDlcsIsMutable();
+                dlcs_.addAll(other.dlcs_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.dlcs_.isEmpty()) {
+              if (dlcsBuilder_.isEmpty()) {
+                dlcsBuilder_.dispose();
+                dlcsBuilder_ = null;
+                dlcs_ = other.dlcs_;
+                bitField0_ = (bitField0_ & ~0x00000200);
+                dlcsBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getDlcsFieldBuilder() : null;
+              } else {
+                dlcsBuilder_.addAllMessages(other.dlcs_);
+              }
+            }
           }
           if (other.hasDownloadPaused()) {
             setDownloadPaused(other.getDownloadPaused());
@@ -8250,31 +9020,32 @@ public final class SteammessagesClientserverUds {
           if (other.hasAvailableOnPlatform()) {
             setAvailableOnPlatform(other.getAvailableOnPlatform());
           }
-          if (dlcsBuilder_ == null) {
-            if (!other.dlcs_.isEmpty()) {
-              if (dlcs_.isEmpty()) {
-                dlcs_ = other.dlcs_;
-                bitField0_ = (bitField0_ & ~0x00004000);
-              } else {
-                ensureDlcsIsMutable();
-                dlcs_.addAll(other.dlcs_);
-              }
-              onChanged();
-            }
-          } else {
-            if (!other.dlcs_.isEmpty()) {
-              if (dlcsBuilder_.isEmpty()) {
-                dlcsBuilder_.dispose();
-                dlcsBuilder_ = null;
-                dlcs_ = other.dlcs_;
-                bitField0_ = (bitField0_ & ~0x00004000);
-                dlcsBuilder_ = 
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                     getDlcsFieldBuilder() : null;
-              } else {
-                dlcsBuilder_.addAllMessages(other.dlcs_);
-              }
-            }
+          if (other.hasBytesStaged()) {
+            setBytesStaged(other.getBytesStaged());
+          }
+          if (other.hasBytesToStage()) {
+            setBytesToStage(other.getBytesToStage());
+          }
+          if (other.hasBytesRequired()) {
+            setBytesRequired(other.getBytesRequired());
+          }
+          if (other.hasSourceBuildid()) {
+            setSourceBuildid(other.getSourceBuildid());
+          }
+          if (other.hasTargetBuildid()) {
+            setTargetBuildid(other.getTargetBuildid());
+          }
+          if (other.hasEstimatedSecondsRemaining()) {
+            setEstimatedSecondsRemaining(other.getEstimatedSecondsRemaining());
+          }
+          if (other.hasQueuePosition()) {
+            setQueuePosition(other.getQueuePosition());
+          }
+          if (other.hasUninstalling()) {
+            setUninstalling(other.getUninstalling());
+          }
+          if (other.hasRtTimeScheduled()) {
+            setRtTimeScheduled(other.getRtTimeScheduled());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -8669,41 +9440,41 @@ public final class SteammessagesClientserverUds {
           return this;
         }
 
-        private long bytesNeeded_ ;
+        private long bytesToDownload_ ;
         /**
-         * <code>optional uint64 bytes_needed = 7;</code>
-         * @return Whether the bytesNeeded field is set.
+         * <code>optional uint64 bytes_to_download = 7;</code>
+         * @return Whether the bytesToDownload field is set.
          */
         @java.lang.Override
-        public boolean hasBytesNeeded() {
+        public boolean hasBytesToDownload() {
           return ((bitField0_ & 0x00000080) != 0);
         }
         /**
-         * <code>optional uint64 bytes_needed = 7;</code>
-         * @return The bytesNeeded.
+         * <code>optional uint64 bytes_to_download = 7;</code>
+         * @return The bytesToDownload.
          */
         @java.lang.Override
-        public long getBytesNeeded() {
-          return bytesNeeded_;
+        public long getBytesToDownload() {
+          return bytesToDownload_;
         }
         /**
-         * <code>optional uint64 bytes_needed = 7;</code>
-         * @param value The bytesNeeded to set.
+         * <code>optional uint64 bytes_to_download = 7;</code>
+         * @param value The bytesToDownload to set.
          * @return This builder for chaining.
          */
-        public Builder setBytesNeeded(long value) {
+        public Builder setBytesToDownload(long value) {
           bitField0_ |= 0x00000080;
-          bytesNeeded_ = value;
+          bytesToDownload_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional uint64 bytes_needed = 7;</code>
+         * <code>optional uint64 bytes_to_download = 7;</code>
          * @return This builder for chaining.
          */
-        public Builder clearBytesNeeded() {
+        public Builder clearBytesToDownload() {
           bitField0_ = (bitField0_ & ~0x00000080);
-          bytesNeeded_ = 0L;
+          bytesToDownload_ = 0L;
           onChanged();
           return this;
         }
@@ -8747,207 +9518,12 @@ public final class SteammessagesClientserverUds {
           return this;
         }
 
-        private boolean downloadPaused_ ;
-        /**
-         * <code>optional bool download_paused = 11;</code>
-         * @return Whether the downloadPaused field is set.
-         */
-        @java.lang.Override
-        public boolean hasDownloadPaused() {
-          return ((bitField0_ & 0x00000200) != 0);
-        }
-        /**
-         * <code>optional bool download_paused = 11;</code>
-         * @return The downloadPaused.
-         */
-        @java.lang.Override
-        public boolean getDownloadPaused() {
-          return downloadPaused_;
-        }
-        /**
-         * <code>optional bool download_paused = 11;</code>
-         * @param value The downloadPaused to set.
-         * @return This builder for chaining.
-         */
-        public Builder setDownloadPaused(boolean value) {
-          bitField0_ |= 0x00000200;
-          downloadPaused_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional bool download_paused = 11;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearDownloadPaused() {
-          bitField0_ = (bitField0_ & ~0x00000200);
-          downloadPaused_ = false;
-          onChanged();
-          return this;
-        }
-
-        private int numDownloading_ ;
-        /**
-         * <code>optional uint32 num_downloading = 12;</code>
-         * @return Whether the numDownloading field is set.
-         */
-        @java.lang.Override
-        public boolean hasNumDownloading() {
-          return ((bitField0_ & 0x00000400) != 0);
-        }
-        /**
-         * <code>optional uint32 num_downloading = 12;</code>
-         * @return The numDownloading.
-         */
-        @java.lang.Override
-        public int getNumDownloading() {
-          return numDownloading_;
-        }
-        /**
-         * <code>optional uint32 num_downloading = 12;</code>
-         * @param value The numDownloading to set.
-         * @return This builder for chaining.
-         */
-        public Builder setNumDownloading(int value) {
-          bitField0_ |= 0x00000400;
-          numDownloading_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional uint32 num_downloading = 12;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearNumDownloading() {
-          bitField0_ = (bitField0_ & ~0x00000400);
-          numDownloading_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private int numPaused_ ;
-        /**
-         * <code>optional uint32 num_paused = 13;</code>
-         * @return Whether the numPaused field is set.
-         */
-        @java.lang.Override
-        public boolean hasNumPaused() {
-          return ((bitField0_ & 0x00000800) != 0);
-        }
-        /**
-         * <code>optional uint32 num_paused = 13;</code>
-         * @return The numPaused.
-         */
-        @java.lang.Override
-        public int getNumPaused() {
-          return numPaused_;
-        }
-        /**
-         * <code>optional uint32 num_paused = 13;</code>
-         * @param value The numPaused to set.
-         * @return This builder for chaining.
-         */
-        public Builder setNumPaused(int value) {
-          bitField0_ |= 0x00000800;
-          numPaused_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional uint32 num_paused = 13;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearNumPaused() {
-          bitField0_ = (bitField0_ & ~0x00000800);
-          numPaused_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private boolean changing_ ;
-        /**
-         * <code>optional bool changing = 14;</code>
-         * @return Whether the changing field is set.
-         */
-        @java.lang.Override
-        public boolean hasChanging() {
-          return ((bitField0_ & 0x00001000) != 0);
-        }
-        /**
-         * <code>optional bool changing = 14;</code>
-         * @return The changing.
-         */
-        @java.lang.Override
-        public boolean getChanging() {
-          return changing_;
-        }
-        /**
-         * <code>optional bool changing = 14;</code>
-         * @param value The changing to set.
-         * @return This builder for chaining.
-         */
-        public Builder setChanging(boolean value) {
-          bitField0_ |= 0x00001000;
-          changing_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional bool changing = 14;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearChanging() {
-          bitField0_ = (bitField0_ & ~0x00001000);
-          changing_ = false;
-          onChanged();
-          return this;
-        }
-
-        private boolean availableOnPlatform_ ;
-        /**
-         * <code>optional bool available_on_platform = 15;</code>
-         * @return Whether the availableOnPlatform field is set.
-         */
-        @java.lang.Override
-        public boolean hasAvailableOnPlatform() {
-          return ((bitField0_ & 0x00002000) != 0);
-        }
-        /**
-         * <code>optional bool available_on_platform = 15;</code>
-         * @return The availableOnPlatform.
-         */
-        @java.lang.Override
-        public boolean getAvailableOnPlatform() {
-          return availableOnPlatform_;
-        }
-        /**
-         * <code>optional bool available_on_platform = 15;</code>
-         * @param value The availableOnPlatform to set.
-         * @return This builder for chaining.
-         */
-        public Builder setAvailableOnPlatform(boolean value) {
-          bitField0_ |= 0x00002000;
-          availableOnPlatform_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional bool available_on_platform = 15;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearAvailableOnPlatform() {
-          bitField0_ = (bitField0_ & ~0x00002000);
-          availableOnPlatform_ = false;
-          onChanged();
-          return this;
-        }
-
         private java.util.List<SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC> dlcs_ =
           java.util.Collections.emptyList();
         private void ensureDlcsIsMutable() {
-          if (!((bitField0_ & 0x00004000) != 0)) {
+          if (!((bitField0_ & 0x00000200) != 0)) {
             dlcs_ = new java.util.ArrayList<SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC>(dlcs_);
-            bitField0_ |= 0x00004000;
+            bitField0_ |= 0x00000200;
            }
         }
 
@@ -9097,7 +9673,7 @@ public final class SteammessagesClientserverUds {
         public Builder clearDlcs() {
           if (dlcsBuilder_ == null) {
             dlcs_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00000200);
             onChanged();
           } else {
             dlcsBuilder_.clear();
@@ -9174,12 +9750,558 @@ public final class SteammessagesClientserverUds {
             dlcsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC, SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLC.Builder, SteammessagesClientserverUds.CMsgClientGetClientAppListResponse.App.DLCOrBuilder>(
                     dlcs_,
-                    ((bitField0_ & 0x00004000) != 0),
+                    ((bitField0_ & 0x00000200) != 0),
                     getParentForChildren(),
                     isClean());
             dlcs_ = null;
           }
           return dlcsBuilder_;
+        }
+
+        private boolean downloadPaused_ ;
+        /**
+         * <code>optional bool download_paused = 11;</code>
+         * @return Whether the downloadPaused field is set.
+         */
+        @java.lang.Override
+        public boolean hasDownloadPaused() {
+          return ((bitField0_ & 0x00000400) != 0);
+        }
+        /**
+         * <code>optional bool download_paused = 11;</code>
+         * @return The downloadPaused.
+         */
+        @java.lang.Override
+        public boolean getDownloadPaused() {
+          return downloadPaused_;
+        }
+        /**
+         * <code>optional bool download_paused = 11;</code>
+         * @param value The downloadPaused to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDownloadPaused(boolean value) {
+          bitField0_ |= 0x00000400;
+          downloadPaused_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool download_paused = 11;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDownloadPaused() {
+          bitField0_ = (bitField0_ & ~0x00000400);
+          downloadPaused_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int numDownloading_ ;
+        /**
+         * <code>optional uint32 num_downloading = 12;</code>
+         * @return Whether the numDownloading field is set.
+         */
+        @java.lang.Override
+        public boolean hasNumDownloading() {
+          return ((bitField0_ & 0x00000800) != 0);
+        }
+        /**
+         * <code>optional uint32 num_downloading = 12;</code>
+         * @return The numDownloading.
+         */
+        @java.lang.Override
+        public int getNumDownloading() {
+          return numDownloading_;
+        }
+        /**
+         * <code>optional uint32 num_downloading = 12;</code>
+         * @param value The numDownloading to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumDownloading(int value) {
+          bitField0_ |= 0x00000800;
+          numDownloading_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 num_downloading = 12;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumDownloading() {
+          bitField0_ = (bitField0_ & ~0x00000800);
+          numDownloading_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int numPaused_ ;
+        /**
+         * <code>optional uint32 num_paused = 13;</code>
+         * @return Whether the numPaused field is set.
+         */
+        @java.lang.Override
+        public boolean hasNumPaused() {
+          return ((bitField0_ & 0x00001000) != 0);
+        }
+        /**
+         * <code>optional uint32 num_paused = 13;</code>
+         * @return The numPaused.
+         */
+        @java.lang.Override
+        public int getNumPaused() {
+          return numPaused_;
+        }
+        /**
+         * <code>optional uint32 num_paused = 13;</code>
+         * @param value The numPaused to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumPaused(int value) {
+          bitField0_ |= 0x00001000;
+          numPaused_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 num_paused = 13;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumPaused() {
+          bitField0_ = (bitField0_ & ~0x00001000);
+          numPaused_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private boolean changing_ ;
+        /**
+         * <code>optional bool changing = 14;</code>
+         * @return Whether the changing field is set.
+         */
+        @java.lang.Override
+        public boolean hasChanging() {
+          return ((bitField0_ & 0x00002000) != 0);
+        }
+        /**
+         * <code>optional bool changing = 14;</code>
+         * @return The changing.
+         */
+        @java.lang.Override
+        public boolean getChanging() {
+          return changing_;
+        }
+        /**
+         * <code>optional bool changing = 14;</code>
+         * @param value The changing to set.
+         * @return This builder for chaining.
+         */
+        public Builder setChanging(boolean value) {
+          bitField0_ |= 0x00002000;
+          changing_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool changing = 14;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearChanging() {
+          bitField0_ = (bitField0_ & ~0x00002000);
+          changing_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean availableOnPlatform_ ;
+        /**
+         * <code>optional bool available_on_platform = 15;</code>
+         * @return Whether the availableOnPlatform field is set.
+         */
+        @java.lang.Override
+        public boolean hasAvailableOnPlatform() {
+          return ((bitField0_ & 0x00004000) != 0);
+        }
+        /**
+         * <code>optional bool available_on_platform = 15;</code>
+         * @return The availableOnPlatform.
+         */
+        @java.lang.Override
+        public boolean getAvailableOnPlatform() {
+          return availableOnPlatform_;
+        }
+        /**
+         * <code>optional bool available_on_platform = 15;</code>
+         * @param value The availableOnPlatform to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAvailableOnPlatform(boolean value) {
+          bitField0_ |= 0x00004000;
+          availableOnPlatform_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool available_on_platform = 15;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAvailableOnPlatform() {
+          bitField0_ = (bitField0_ & ~0x00004000);
+          availableOnPlatform_ = false;
+          onChanged();
+          return this;
+        }
+
+        private long bytesStaged_ ;
+        /**
+         * <code>optional uint64 bytes_staged = 16;</code>
+         * @return Whether the bytesStaged field is set.
+         */
+        @java.lang.Override
+        public boolean hasBytesStaged() {
+          return ((bitField0_ & 0x00008000) != 0);
+        }
+        /**
+         * <code>optional uint64 bytes_staged = 16;</code>
+         * @return The bytesStaged.
+         */
+        @java.lang.Override
+        public long getBytesStaged() {
+          return bytesStaged_;
+        }
+        /**
+         * <code>optional uint64 bytes_staged = 16;</code>
+         * @param value The bytesStaged to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBytesStaged(long value) {
+          bitField0_ |= 0x00008000;
+          bytesStaged_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint64 bytes_staged = 16;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBytesStaged() {
+          bitField0_ = (bitField0_ & ~0x00008000);
+          bytesStaged_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long bytesToStage_ ;
+        /**
+         * <code>optional uint64 bytes_to_stage = 17;</code>
+         * @return Whether the bytesToStage field is set.
+         */
+        @java.lang.Override
+        public boolean hasBytesToStage() {
+          return ((bitField0_ & 0x00010000) != 0);
+        }
+        /**
+         * <code>optional uint64 bytes_to_stage = 17;</code>
+         * @return The bytesToStage.
+         */
+        @java.lang.Override
+        public long getBytesToStage() {
+          return bytesToStage_;
+        }
+        /**
+         * <code>optional uint64 bytes_to_stage = 17;</code>
+         * @param value The bytesToStage to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBytesToStage(long value) {
+          bitField0_ |= 0x00010000;
+          bytesToStage_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint64 bytes_to_stage = 17;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBytesToStage() {
+          bitField0_ = (bitField0_ & ~0x00010000);
+          bytesToStage_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long bytesRequired_ ;
+        /**
+         * <code>optional uint64 bytes_required = 18;</code>
+         * @return Whether the bytesRequired field is set.
+         */
+        @java.lang.Override
+        public boolean hasBytesRequired() {
+          return ((bitField0_ & 0x00020000) != 0);
+        }
+        /**
+         * <code>optional uint64 bytes_required = 18;</code>
+         * @return The bytesRequired.
+         */
+        @java.lang.Override
+        public long getBytesRequired() {
+          return bytesRequired_;
+        }
+        /**
+         * <code>optional uint64 bytes_required = 18;</code>
+         * @param value The bytesRequired to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBytesRequired(long value) {
+          bitField0_ |= 0x00020000;
+          bytesRequired_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint64 bytes_required = 18;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBytesRequired() {
+          bitField0_ = (bitField0_ & ~0x00020000);
+          bytesRequired_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private int sourceBuildid_ ;
+        /**
+         * <code>optional uint32 source_buildid = 19;</code>
+         * @return Whether the sourceBuildid field is set.
+         */
+        @java.lang.Override
+        public boolean hasSourceBuildid() {
+          return ((bitField0_ & 0x00040000) != 0);
+        }
+        /**
+         * <code>optional uint32 source_buildid = 19;</code>
+         * @return The sourceBuildid.
+         */
+        @java.lang.Override
+        public int getSourceBuildid() {
+          return sourceBuildid_;
+        }
+        /**
+         * <code>optional uint32 source_buildid = 19;</code>
+         * @param value The sourceBuildid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSourceBuildid(int value) {
+          bitField0_ |= 0x00040000;
+          sourceBuildid_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 source_buildid = 19;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSourceBuildid() {
+          bitField0_ = (bitField0_ & ~0x00040000);
+          sourceBuildid_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int targetBuildid_ ;
+        /**
+         * <code>optional uint32 target_buildid = 20;</code>
+         * @return Whether the targetBuildid field is set.
+         */
+        @java.lang.Override
+        public boolean hasTargetBuildid() {
+          return ((bitField0_ & 0x00080000) != 0);
+        }
+        /**
+         * <code>optional uint32 target_buildid = 20;</code>
+         * @return The targetBuildid.
+         */
+        @java.lang.Override
+        public int getTargetBuildid() {
+          return targetBuildid_;
+        }
+        /**
+         * <code>optional uint32 target_buildid = 20;</code>
+         * @param value The targetBuildid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTargetBuildid(int value) {
+          bitField0_ |= 0x00080000;
+          targetBuildid_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 target_buildid = 20;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTargetBuildid() {
+          bitField0_ = (bitField0_ & ~0x00080000);
+          targetBuildid_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int estimatedSecondsRemaining_ ;
+        /**
+         * <code>optional uint32 estimated_seconds_remaining = 21;</code>
+         * @return Whether the estimatedSecondsRemaining field is set.
+         */
+        @java.lang.Override
+        public boolean hasEstimatedSecondsRemaining() {
+          return ((bitField0_ & 0x00100000) != 0);
+        }
+        /**
+         * <code>optional uint32 estimated_seconds_remaining = 21;</code>
+         * @return The estimatedSecondsRemaining.
+         */
+        @java.lang.Override
+        public int getEstimatedSecondsRemaining() {
+          return estimatedSecondsRemaining_;
+        }
+        /**
+         * <code>optional uint32 estimated_seconds_remaining = 21;</code>
+         * @param value The estimatedSecondsRemaining to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEstimatedSecondsRemaining(int value) {
+          bitField0_ |= 0x00100000;
+          estimatedSecondsRemaining_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 estimated_seconds_remaining = 21;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEstimatedSecondsRemaining() {
+          bitField0_ = (bitField0_ & ~0x00100000);
+          estimatedSecondsRemaining_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int queuePosition_ ;
+        /**
+         * <code>optional int32 queue_position = 22;</code>
+         * @return Whether the queuePosition field is set.
+         */
+        @java.lang.Override
+        public boolean hasQueuePosition() {
+          return ((bitField0_ & 0x00200000) != 0);
+        }
+        /**
+         * <code>optional int32 queue_position = 22;</code>
+         * @return The queuePosition.
+         */
+        @java.lang.Override
+        public int getQueuePosition() {
+          return queuePosition_;
+        }
+        /**
+         * <code>optional int32 queue_position = 22;</code>
+         * @param value The queuePosition to set.
+         * @return This builder for chaining.
+         */
+        public Builder setQueuePosition(int value) {
+          bitField0_ |= 0x00200000;
+          queuePosition_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 queue_position = 22;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearQueuePosition() {
+          bitField0_ = (bitField0_ & ~0x00200000);
+          queuePosition_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private boolean uninstalling_ ;
+        /**
+         * <code>optional bool uninstalling = 23;</code>
+         * @return Whether the uninstalling field is set.
+         */
+        @java.lang.Override
+        public boolean hasUninstalling() {
+          return ((bitField0_ & 0x00400000) != 0);
+        }
+        /**
+         * <code>optional bool uninstalling = 23;</code>
+         * @return The uninstalling.
+         */
+        @java.lang.Override
+        public boolean getUninstalling() {
+          return uninstalling_;
+        }
+        /**
+         * <code>optional bool uninstalling = 23;</code>
+         * @param value The uninstalling to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUninstalling(boolean value) {
+          bitField0_ |= 0x00400000;
+          uninstalling_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool uninstalling = 23;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUninstalling() {
+          bitField0_ = (bitField0_ & ~0x00400000);
+          uninstalling_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int rtTimeScheduled_ ;
+        /**
+         * <code>optional uint32 rt_time_scheduled = 24;</code>
+         * @return Whether the rtTimeScheduled field is set.
+         */
+        @java.lang.Override
+        public boolean hasRtTimeScheduled() {
+          return ((bitField0_ & 0x00800000) != 0);
+        }
+        /**
+         * <code>optional uint32 rt_time_scheduled = 24;</code>
+         * @return The rtTimeScheduled.
+         */
+        @java.lang.Override
+        public int getRtTimeScheduled() {
+          return rtTimeScheduled_;
+        }
+        /**
+         * <code>optional uint32 rt_time_scheduled = 24;</code>
+         * @param value The rtTimeScheduled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRtTimeScheduled(int value) {
+          bitField0_ |= 0x00800000;
+          rtTimeScheduled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 rt_time_scheduled = 24;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRtTimeScheduled() {
+          bitField0_ = (bitField0_ & ~0x00800000);
+          rtTimeScheduled_ = 0;
+          onChanged();
+          return this;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -9294,6 +10416,32 @@ public final class SteammessagesClientserverUds {
       return bytesAvailable_;
     }
 
+    public static final int CLIENT_INFO_FIELD_NUMBER = 3;
+    private SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse clientInfo_;
+    /**
+     * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+     * @return Whether the clientInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasClientInfo() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+     * @return The clientInfo.
+     */
+    @java.lang.Override
+    public SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse getClientInfo() {
+      return clientInfo_ == null ? SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.getDefaultInstance() : clientInfo_;
+    }
+    /**
+     * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+     */
+    @java.lang.Override
+    public SteammessagesClientserverUds.CMsgClientGetClientDetailsResponseOrBuilder getClientInfoOrBuilder() {
+      return clientInfo_ == null ? SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.getDefaultInstance() : clientInfo_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9314,6 +10462,9 @@ public final class SteammessagesClientserverUds {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeUInt64(2, bytesAvailable_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(3, getClientInfo());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9330,6 +10481,10 @@ public final class SteammessagesClientserverUds {
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, bytesAvailable_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getClientInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9353,6 +10508,11 @@ public final class SteammessagesClientserverUds {
         if (getBytesAvailable()
             != other.getBytesAvailable()) return false;
       }
+      if (hasClientInfo() != other.hasClientInfo()) return false;
+      if (hasClientInfo()) {
+        if (!getClientInfo()
+            .equals(other.getClientInfo())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9372,6 +10532,10 @@ public final class SteammessagesClientserverUds {
         hash = (37 * hash) + BYTES_AVAILABLE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getBytesAvailable());
+      }
+      if (hasClientInfo()) {
+        hash = (37 * hash) + CLIENT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getClientInfo().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9502,6 +10666,7 @@ public final class SteammessagesClientserverUds {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getAppsFieldBuilder();
+          getClientInfoFieldBuilder();
         }
       }
       @java.lang.Override
@@ -9515,6 +10680,12 @@ public final class SteammessagesClientserverUds {
         }
         bytesAvailable_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (clientInfoBuilder_ == null) {
+          clientInfo_ = null;
+        } else {
+          clientInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -9555,6 +10726,14 @@ public final class SteammessagesClientserverUds {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.bytesAvailable_ = bytesAvailable_;
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          if (clientInfoBuilder_ == null) {
+            result.clientInfo_ = clientInfo_;
+          } else {
+            result.clientInfo_ = clientInfoBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -9633,6 +10812,9 @@ public final class SteammessagesClientserverUds {
         }
         if (other.hasBytesAvailable()) {
           setBytesAvailable(other.getBytesAvailable());
+        }
+        if (other.hasClientInfo()) {
+          mergeClientInfo(other.getClientInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9941,6 +11123,126 @@ public final class SteammessagesClientserverUds {
         bytesAvailable_ = 0L;
         onChanged();
         return this;
+      }
+
+      private SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse clientInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse, SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Builder, SteammessagesClientserverUds.CMsgClientGetClientDetailsResponseOrBuilder> clientInfoBuilder_;
+      /**
+       * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+       * @return Whether the clientInfo field is set.
+       */
+      public boolean hasClientInfo() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+       * @return The clientInfo.
+       */
+      public SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse getClientInfo() {
+        if (clientInfoBuilder_ == null) {
+          return clientInfo_ == null ? SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.getDefaultInstance() : clientInfo_;
+        } else {
+          return clientInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+       */
+      public Builder setClientInfo(SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse value) {
+        if (clientInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clientInfo_ = value;
+          onChanged();
+        } else {
+          clientInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+       */
+      public Builder setClientInfo(
+          SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Builder builderForValue) {
+        if (clientInfoBuilder_ == null) {
+          clientInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          clientInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+       */
+      public Builder mergeClientInfo(SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse value) {
+        if (clientInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+              clientInfo_ != null &&
+              clientInfo_ != SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.getDefaultInstance()) {
+            clientInfo_ =
+              SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.newBuilder(clientInfo_).mergeFrom(value).buildPartial();
+          } else {
+            clientInfo_ = value;
+          }
+          onChanged();
+        } else {
+          clientInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+       */
+      public Builder clearClientInfo() {
+        if (clientInfoBuilder_ == null) {
+          clientInfo_ = null;
+          onChanged();
+        } else {
+          clientInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+       */
+      public SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Builder getClientInfoBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getClientInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+       */
+      public SteammessagesClientserverUds.CMsgClientGetClientDetailsResponseOrBuilder getClientInfoOrBuilder() {
+        if (clientInfoBuilder_ != null) {
+          return clientInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return clientInfo_ == null ?
+              SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.getDefaultInstance() : clientInfo_;
+        }
+      }
+      /**
+       * <code>optional .CMsgClientGetClientDetailsResponse client_info = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse, SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Builder, SteammessagesClientserverUds.CMsgClientGetClientDetailsResponseOrBuilder> 
+          getClientInfoFieldBuilder() {
+        if (clientInfoBuilder_ == null) {
+          clientInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse, SteammessagesClientserverUds.CMsgClientGetClientDetailsResponse.Builder, SteammessagesClientserverUds.CMsgClientGetClientDetailsResponseOrBuilder>(
+                  getClientInfo(),
+                  getParentForChildren(),
+                  isClean());
+          clientInfo_ = null;
+        }
+        return clientInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13233,6 +14535,1053 @@ public final class SteammessagesClientserverUds {
 
   }
 
+  public interface CMsgClientEnableOrDisableDownloadsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgClientEnableOrDisableDownloads)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool enable = 1;</code>
+     * @return Whether the enable field is set.
+     */
+    boolean hasEnable();
+    /**
+     * <code>optional bool enable = 1;</code>
+     * @return The enable.
+     */
+    boolean getEnable();
+  }
+  /**
+   * Protobuf type {@code CMsgClientEnableOrDisableDownloads}
+   */
+  public static final class CMsgClientEnableOrDisableDownloads extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgClientEnableOrDisableDownloads)
+      CMsgClientEnableOrDisableDownloadsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgClientEnableOrDisableDownloads.newBuilder() to construct.
+    private CMsgClientEnableOrDisableDownloads(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgClientEnableOrDisableDownloads() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgClientEnableOrDisableDownloads();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgClientEnableOrDisableDownloads(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              enable_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesClientserverUds.internal_static_CMsgClientEnableOrDisableDownloads_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesClientserverUds.internal_static_CMsgClientEnableOrDisableDownloads_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads.class, SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ENABLE_FIELD_NUMBER = 1;
+    private boolean enable_;
+    /**
+     * <code>optional bool enable = 1;</code>
+     * @return Whether the enable field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnable() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool enable = 1;</code>
+     * @return The enable.
+     */
+    @java.lang.Override
+    public boolean getEnable() {
+      return enable_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, enable_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enable_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads)) {
+        return super.equals(obj);
+      }
+      SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads other = (SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads) obj;
+
+      if (hasEnable() != other.hasEnable()) return false;
+      if (hasEnable()) {
+        if (getEnable()
+            != other.getEnable()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEnable()) {
+        hash = (37 * hash) + ENABLE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnable());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgClientEnableOrDisableDownloads}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgClientEnableOrDisableDownloads)
+        SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesClientserverUds.internal_static_CMsgClientEnableOrDisableDownloads_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesClientserverUds.internal_static_CMsgClientEnableOrDisableDownloads_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads.class, SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads.Builder.class);
+      }
+
+      // Construct using SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enable_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesClientserverUds.internal_static_CMsgClientEnableOrDisableDownloads_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads getDefaultInstanceForType() {
+        return SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads build() {
+        SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads buildPartial() {
+        SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads result = new SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enable_ = enable_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads) {
+          return mergeFrom((SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads other) {
+        if (other == SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads.getDefaultInstance()) return this;
+        if (other.hasEnable()) {
+          setEnable(other.getEnable());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enable_ ;
+      /**
+       * <code>optional bool enable = 1;</code>
+       * @return Whether the enable field is set.
+       */
+      @java.lang.Override
+      public boolean hasEnable() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional bool enable = 1;</code>
+       * @return The enable.
+       */
+      @java.lang.Override
+      public boolean getEnable() {
+        return enable_;
+      }
+      /**
+       * <code>optional bool enable = 1;</code>
+       * @param value The enable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnable(boolean value) {
+        bitField0_ |= 0x00000001;
+        enable_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enable = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnable() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enable_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgClientEnableOrDisableDownloads)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgClientEnableOrDisableDownloads)
+    private static final SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads();
+    }
+
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgClientEnableOrDisableDownloads>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgClientEnableOrDisableDownloads>() {
+      @java.lang.Override
+      public CMsgClientEnableOrDisableDownloads parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgClientEnableOrDisableDownloads(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgClientEnableOrDisableDownloads> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgClientEnableOrDisableDownloads> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloads getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgClientEnableOrDisableDownloadsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgClientEnableOrDisableDownloadsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 result = 1;</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>optional uint32 result = 1;</code>
+     * @return The result.
+     */
+    int getResult();
+  }
+  /**
+   * Protobuf type {@code CMsgClientEnableOrDisableDownloadsResponse}
+   */
+  public static final class CMsgClientEnableOrDisableDownloadsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgClientEnableOrDisableDownloadsResponse)
+      CMsgClientEnableOrDisableDownloadsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgClientEnableOrDisableDownloadsResponse.newBuilder() to construct.
+    private CMsgClientEnableOrDisableDownloadsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgClientEnableOrDisableDownloadsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgClientEnableOrDisableDownloadsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgClientEnableOrDisableDownloadsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              result_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesClientserverUds.internal_static_CMsgClientEnableOrDisableDownloadsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesClientserverUds.internal_static_CMsgClientEnableOrDisableDownloadsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse.class, SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private int result_;
+    /**
+     * <code>optional uint32 result = 1;</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 result = 1;</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public int getResult() {
+      return result_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, result_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, result_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse)) {
+        return super.equals(obj);
+      }
+      SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse other = (SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse) obj;
+
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (getResult()
+            != other.getResult()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgClientEnableOrDisableDownloadsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgClientEnableOrDisableDownloadsResponse)
+        SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesClientserverUds.internal_static_CMsgClientEnableOrDisableDownloadsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesClientserverUds.internal_static_CMsgClientEnableOrDisableDownloadsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse.class, SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse.Builder.class);
+      }
+
+      // Construct using SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        result_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesClientserverUds.internal_static_CMsgClientEnableOrDisableDownloadsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse getDefaultInstanceForType() {
+        return SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse build() {
+        SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse buildPartial() {
+        SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse result = new SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = result_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse) {
+          return mergeFrom((SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse other) {
+        if (other == SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse.getDefaultInstance()) return this;
+        if (other.hasResult()) {
+          setResult(other.getResult());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int result_ ;
+      /**
+       * <code>optional uint32 result = 1;</code>
+       * @return Whether the result field is set.
+       */
+      @java.lang.Override
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 result = 1;</code>
+       * @return The result.
+       */
+      @java.lang.Override
+      public int getResult() {
+        return result_;
+      }
+      /**
+       * <code>optional uint32 result = 1;</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(int value) {
+        bitField0_ |= 0x00000001;
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 result = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgClientEnableOrDisableDownloadsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgClientEnableOrDisableDownloadsResponse)
+    private static final SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse();
+    }
+
+    public static SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgClientEnableOrDisableDownloadsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgClientEnableOrDisableDownloadsResponse>() {
+      @java.lang.Override
+      public CMsgClientEnableOrDisableDownloadsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgClientEnableOrDisableDownloadsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgClientEnableOrDisableDownloadsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgClientEnableOrDisableDownloadsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesClientserverUds.CMsgClientEnableOrDisableDownloadsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgClientUDSP2PSessionStarted_descriptor;
   private static final 
@@ -13308,6 +15657,16 @@ public final class SteammessagesClientserverUds {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgClientSetClientAppUpdateStateResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgClientEnableOrDisableDownloads_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgClientEnableOrDisableDownloads_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgClientEnableOrDisableDownloadsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgClientEnableOrDisableDownloadsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13328,40 +15687,51 @@ public final class SteammessagesClientserverUds {
       "ent\030\007 \001(\005\022\030\n\020bytes_sent_relay\030\010 \001(\005\022\030\n\020b" +
       "ytes_recv_relay\030\t \001(\005\022\032\n\022time_to_connect" +
       "_ms\030\n \001(\005\"\034\n\032CMsgClientGetClientDetails\"" +
-      "\277\002\n\"CMsgClientGetClientDetailsResponse\022\027" +
-      "\n\017package_version\030\001 \001(\r\022\030\n\020protocol_vers" +
-      "ion\030\010 \001(\r\022\n\n\002os\030\002 \001(\t\022\024\n\014machine_name\030\003 " +
-      "\001(\t\022\021\n\tip_public\030\004 \001(\t\022\022\n\nip_private\030\005 \001" +
-      "(\t\022\027\n\017bytes_available\030\007 \001(\004\022?\n\rgames_run" +
-      "ning\030\006 \003(\0132(.CMsgClientGetClientDetailsR" +
-      "esponse.Game\032C\n\004Game\022\r\n\005appid\030\001 \001(\r\022\022\n\ne" +
-      "xtra_info\030\002 \001(\t\022\030\n\020time_running_sec\030\003 \001(" +
-      "\r\"\210\001\n\032CMsgClientGetClientAppList\022\r\n\005medi" +
-      "a\030\001 \001(\010\022\r\n\005tools\030\002 \001(\010\022\r\n\005games\030\003 \001(\010\022\026\n" +
-      "\016only_installed\030\004 \001(\010\022\025\n\ronly_changing\030\005" +
-      " \001(\010\022\016\n\006comics\030\006 \001(\010\"\221\004\n\"CMsgClientGetCl" +
-      "ientAppListResponse\0225\n\004apps\030\001 \003(\0132\'.CMsg" +
-      "ClientGetClientAppListResponse.App\022\027\n\017by" +
-      "tes_available\030\002 \001(\004\032\232\003\n\003App\022\r\n\005appid\030\001 \001" +
-      "(\r\022\020\n\010category\030\002 \001(\t\022\020\n\010app_type\030\n \001(\t\022\020" +
-      "\n\010favorite\030\003 \001(\010\022\021\n\tinstalled\030\004 \001(\010\022\023\n\013a" +
-      "uto_update\030\005 \001(\010\022\030\n\020bytes_downloaded\030\006 \001" +
-      "(\004\022\024\n\014bytes_needed\030\007 \001(\004\022\033\n\023bytes_downlo" +
-      "ad_rate\030\010 \001(\r\022\027\n\017download_paused\030\013 \001(\010\022\027" +
-      "\n\017num_downloading\030\014 \001(\r\022\022\n\nnum_paused\030\r " +
-      "\001(\r\022\020\n\010changing\030\016 \001(\010\022\035\n\025available_on_pl" +
-      "atform\030\017 \001(\010\0229\n\004dlcs\030\t \003(\0132+.CMsgClientG" +
-      "etClientAppListResponse.App.DLC\032\'\n\003DLC\022\r" +
-      "\n\005appid\030\001 \001(\r\022\021\n\tinstalled\030\002 \001(\010\"+\n\032CMsg" +
-      "ClientInstallClientApp\022\r\n\005appid\030\001 \001(\r\"4\n" +
-      "\"CMsgClientInstallClientAppResponse\022\016\n\006r" +
-      "esult\030\001 \001(\r\"-\n\034CMsgClientUninstallClient" +
-      "App\022\r\n\005appid\030\001 \001(\r\"6\n$CMsgClientUninstal" +
-      "lClientAppResponse\022\016\n\006result\030\001 \001(\r\"B\n!CM" +
-      "sgClientSetClientAppUpdateState\022\r\n\005appid" +
-      "\030\001 \001(\r\022\016\n\006update\030\002 \001(\010\";\n)CMsgClientSetC" +
-      "lientAppUpdateStateResponse\022\016\n\006result\030\001 " +
-      "\001(\rB\005H\001\200\001\000"
+      "\333\002\n\"CMsgClientGetClientDetailsResponse\022\027" +
+      "\n\017package_version\030\001 \001(\r\022\n\n\002os\030\002 \001(\t\022\024\n\014m" +
+      "achine_name\030\003 \001(\t\022\021\n\tip_public\030\004 \001(\t\022\022\n\n" +
+      "ip_private\030\005 \001(\t\022?\n\rgames_running\030\006 \003(\0132" +
+      "(.CMsgClientGetClientDetailsResponse.Gam" +
+      "e\022\027\n\017bytes_available\030\007 \001(\004\022\030\n\020protocol_v" +
+      "ersion\030\010 \001(\r\022\032\n\022clientcomm_version\030\t \001(\r" +
+      "\032C\n\004Game\022\r\n\005appid\030\001 \001(\r\022\022\n\nextra_info\030\002 " +
+      "\001(\t\022\030\n\020time_running_sec\030\003 \001(\r\"\245\001\n\032CMsgCl" +
+      "ientGetClientAppList\022\r\n\005media\030\001 \001(\010\022\r\n\005t" +
+      "ools\030\002 \001(\010\022\r\n\005games\030\003 \001(\010\022\026\n\016only_instal" +
+      "led\030\004 \001(\010\022\025\n\ronly_changing\030\005 \001(\010\022\016\n\006comi" +
+      "cs\030\006 \001(\010\022\033\n\023include_client_info\030\007 \001(\010\"\264\006" +
+      "\n\"CMsgClientGetClientAppListResponse\0225\n\004" +
+      "apps\030\001 \003(\0132\'.CMsgClientGetClientAppListR" +
+      "esponse.App\022\027\n\017bytes_available\030\002 \001(\004\0228\n\013" +
+      "client_info\030\003 \001(\0132#.CMsgClientGetClientD" +
+      "etailsResponse\032\203\005\n\003App\022\r\n\005appid\030\001 \001(\r\022\020\n" +
+      "\010category\030\002 \001(\t\022\020\n\010app_type\030\n \001(\t\022\020\n\010fav" +
+      "orite\030\003 \001(\010\022\021\n\tinstalled\030\004 \001(\010\022\023\n\013auto_u" +
+      "pdate\030\005 \001(\010\022\030\n\020bytes_downloaded\030\006 \001(\004\022\031\n" +
+      "\021bytes_to_download\030\007 \001(\004\022\033\n\023bytes_downlo" +
+      "ad_rate\030\010 \001(\r\0229\n\004dlcs\030\t \003(\0132+.CMsgClient" +
+      "GetClientAppListResponse.App.DLC\022\027\n\017down" +
+      "load_paused\030\013 \001(\010\022\027\n\017num_downloading\030\014 \001" +
+      "(\r\022\022\n\nnum_paused\030\r \001(\r\022\020\n\010changing\030\016 \001(\010" +
+      "\022\035\n\025available_on_platform\030\017 \001(\010\022\024\n\014bytes" +
+      "_staged\030\020 \001(\004\022\026\n\016bytes_to_stage\030\021 \001(\004\022\026\n" +
+      "\016bytes_required\030\022 \001(\004\022\026\n\016source_buildid\030" +
+      "\023 \001(\r\022\026\n\016target_buildid\030\024 \001(\r\022#\n\033estimat" +
+      "ed_seconds_remaining\030\025 \001(\r\022\026\n\016queue_posi" +
+      "tion\030\026 \001(\005\022\024\n\014uninstalling\030\027 \001(\010\022\031\n\021rt_t" +
+      "ime_scheduled\030\030 \001(\r\032\'\n\003DLC\022\r\n\005appid\030\001 \001(" +
+      "\r\022\021\n\tinstalled\030\002 \001(\010\"+\n\032CMsgClientInstal" +
+      "lClientApp\022\r\n\005appid\030\001 \001(\r\"4\n\"CMsgClientI" +
+      "nstallClientAppResponse\022\016\n\006result\030\001 \001(\r\"" +
+      "-\n\034CMsgClientUninstallClientApp\022\r\n\005appid" +
+      "\030\001 \001(\r\"6\n$CMsgClientUninstallClientAppRe" +
+      "sponse\022\016\n\006result\030\001 \001(\r\"B\n!CMsgClientSetC" +
+      "lientAppUpdateState\022\r\n\005appid\030\001 \001(\r\022\016\n\006up" +
+      "date\030\002 \001(\010\";\n)CMsgClientSetClientAppUpda" +
+      "teStateResponse\022\016\n\006result\030\001 \001(\r\"4\n\"CMsgC" +
+      "lientEnableOrDisableDownloads\022\016\n\006enable\030" +
+      "\001 \001(\010\"<\n*CMsgClientEnableOrDisableDownlo" +
+      "adsResponse\022\016\n\006result\030\001 \001(\rB\005H\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13391,7 +15761,7 @@ public final class SteammessagesClientserverUds {
     internal_static_CMsgClientGetClientDetailsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgClientGetClientDetailsResponse_descriptor,
-        new java.lang.String[] { "PackageVersion", "ProtocolVersion", "Os", "MachineName", "IpPublic", "IpPrivate", "BytesAvailable", "GamesRunning", });
+        new java.lang.String[] { "PackageVersion", "Os", "MachineName", "IpPublic", "IpPrivate", "GamesRunning", "BytesAvailable", "ProtocolVersion", "ClientcommVersion", });
     internal_static_CMsgClientGetClientDetailsResponse_Game_descriptor =
       internal_static_CMsgClientGetClientDetailsResponse_descriptor.getNestedTypes().get(0);
     internal_static_CMsgClientGetClientDetailsResponse_Game_fieldAccessorTable = new
@@ -13403,19 +15773,19 @@ public final class SteammessagesClientserverUds {
     internal_static_CMsgClientGetClientAppList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgClientGetClientAppList_descriptor,
-        new java.lang.String[] { "Media", "Tools", "Games", "OnlyInstalled", "OnlyChanging", "Comics", });
+        new java.lang.String[] { "Media", "Tools", "Games", "OnlyInstalled", "OnlyChanging", "Comics", "IncludeClientInfo", });
     internal_static_CMsgClientGetClientAppListResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_CMsgClientGetClientAppListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgClientGetClientAppListResponse_descriptor,
-        new java.lang.String[] { "Apps", "BytesAvailable", });
+        new java.lang.String[] { "Apps", "BytesAvailable", "ClientInfo", });
     internal_static_CMsgClientGetClientAppListResponse_App_descriptor =
       internal_static_CMsgClientGetClientAppListResponse_descriptor.getNestedTypes().get(0);
     internal_static_CMsgClientGetClientAppListResponse_App_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgClientGetClientAppListResponse_App_descriptor,
-        new java.lang.String[] { "Appid", "Category", "AppType", "Favorite", "Installed", "AutoUpdate", "BytesDownloaded", "BytesNeeded", "BytesDownloadRate", "DownloadPaused", "NumDownloading", "NumPaused", "Changing", "AvailableOnPlatform", "Dlcs", });
+        new java.lang.String[] { "Appid", "Category", "AppType", "Favorite", "Installed", "AutoUpdate", "BytesDownloaded", "BytesToDownload", "BytesDownloadRate", "Dlcs", "DownloadPaused", "NumDownloading", "NumPaused", "Changing", "AvailableOnPlatform", "BytesStaged", "BytesToStage", "BytesRequired", "SourceBuildid", "TargetBuildid", "EstimatedSecondsRemaining", "QueuePosition", "Uninstalling", "RtTimeScheduled", });
     internal_static_CMsgClientGetClientAppListResponse_App_DLC_descriptor =
       internal_static_CMsgClientGetClientAppListResponse_App_descriptor.getNestedTypes().get(0);
     internal_static_CMsgClientGetClientAppListResponse_App_DLC_fieldAccessorTable = new
@@ -13457,6 +15827,18 @@ public final class SteammessagesClientserverUds {
     internal_static_CMsgClientSetClientAppUpdateStateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgClientSetClientAppUpdateStateResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_CMsgClientEnableOrDisableDownloads_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_CMsgClientEnableOrDisableDownloads_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgClientEnableOrDisableDownloads_descriptor,
+        new java.lang.String[] { "Enable", });
+    internal_static_CMsgClientEnableOrDisableDownloadsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_CMsgClientEnableOrDisableDownloadsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgClientEnableOrDisableDownloadsResponse_descriptor,
         new java.lang.String[] { "Result", });
     SteammessagesBase.getDescriptor();
   }

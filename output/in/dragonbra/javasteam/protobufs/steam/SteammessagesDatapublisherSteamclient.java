@@ -1819,17 +1819,6 @@ public final class SteammessagesDatapublisherSteamclient {
     boolean getIsFreeWeekend();
 
     /**
-     * <code>optional uint64 total_bytes_legacy = 19;</code>
-     * @return Whether the totalBytesLegacy field is set.
-     */
-    boolean hasTotalBytesLegacy();
-    /**
-     * <code>optional uint64 total_bytes_legacy = 19;</code>
-     * @return The totalBytesLegacy.
-     */
-    long getTotalBytesLegacy();
-
-    /**
      * <code>optional uint64 total_bytes_patched = 20;</code>
      * @return Whether the totalBytesPatched field is set.
      */
@@ -2019,23 +2008,18 @@ public final class SteammessagesDatapublisherSteamclient {
               isFreeWeekend_ = input.readBool();
               break;
             }
-            case 152: {
-              bitField0_ |= 0x00020000;
-              totalBytesLegacy_ = input.readUInt64();
-              break;
-            }
             case 160: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00020000;
               totalBytesPatched_ = input.readUInt64();
               break;
             }
             case 168: {
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00040000;
               totalBytesSaved_ = input.readUInt64();
               break;
             }
             case 176: {
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00080000;
               cellId_ = input.readUInt32();
               break;
             }
@@ -2483,25 +2467,6 @@ public final class SteammessagesDatapublisherSteamclient {
       return isFreeWeekend_;
     }
 
-    public static final int TOTAL_BYTES_LEGACY_FIELD_NUMBER = 19;
-    private long totalBytesLegacy_;
-    /**
-     * <code>optional uint64 total_bytes_legacy = 19;</code>
-     * @return Whether the totalBytesLegacy field is set.
-     */
-    @java.lang.Override
-    public boolean hasTotalBytesLegacy() {
-      return ((bitField0_ & 0x00020000) != 0);
-    }
-    /**
-     * <code>optional uint64 total_bytes_legacy = 19;</code>
-     * @return The totalBytesLegacy.
-     */
-    @java.lang.Override
-    public long getTotalBytesLegacy() {
-      return totalBytesLegacy_;
-    }
-
     public static final int TOTAL_BYTES_PATCHED_FIELD_NUMBER = 20;
     private long totalBytesPatched_;
     /**
@@ -2510,7 +2475,7 @@ public final class SteammessagesDatapublisherSteamclient {
      */
     @java.lang.Override
     public boolean hasTotalBytesPatched() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <code>optional uint64 total_bytes_patched = 20;</code>
@@ -2529,7 +2494,7 @@ public final class SteammessagesDatapublisherSteamclient {
      */
     @java.lang.Override
     public boolean hasTotalBytesSaved() {
-      return ((bitField0_ & 0x00080000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <code>optional uint64 total_bytes_saved = 21;</code>
@@ -2548,7 +2513,7 @@ public final class SteammessagesDatapublisherSteamclient {
      */
     @java.lang.Override
     public boolean hasCellId() {
-      return ((bitField0_ & 0x00100000) != 0);
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <code>optional uint32 cell_id = 22;</code>
@@ -2628,15 +2593,12 @@ public final class SteammessagesDatapublisherSteamclient {
         output.writeBool(18, isFreeWeekend_);
       }
       if (((bitField0_ & 0x00020000) != 0)) {
-        output.writeUInt64(19, totalBytesLegacy_);
-      }
-      if (((bitField0_ & 0x00040000) != 0)) {
         output.writeUInt64(20, totalBytesPatched_);
       }
-      if (((bitField0_ & 0x00080000) != 0)) {
+      if (((bitField0_ & 0x00040000) != 0)) {
         output.writeUInt64(21, totalBytesSaved_);
       }
-      if (((bitField0_ & 0x00100000) != 0)) {
+      if (((bitField0_ & 0x00080000) != 0)) {
         output.writeUInt32(22, cellId_);
       }
       unknownFields.writeTo(output);
@@ -2725,17 +2687,13 @@ public final class SteammessagesDatapublisherSteamclient {
       }
       if (((bitField0_ & 0x00020000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(19, totalBytesLegacy_);
+          .computeUInt64Size(20, totalBytesPatched_);
       }
       if (((bitField0_ & 0x00040000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(20, totalBytesPatched_);
-      }
-      if (((bitField0_ & 0x00080000) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(21, totalBytesSaved_);
       }
-      if (((bitField0_ & 0x00100000) != 0)) {
+      if (((bitField0_ & 0x00080000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(22, cellId_);
       }
@@ -2840,11 +2798,6 @@ public final class SteammessagesDatapublisherSteamclient {
       if (hasIsFreeWeekend()) {
         if (getIsFreeWeekend()
             != other.getIsFreeWeekend()) return false;
-      }
-      if (hasTotalBytesLegacy() != other.hasTotalBytesLegacy()) return false;
-      if (hasTotalBytesLegacy()) {
-        if (getTotalBytesLegacy()
-            != other.getTotalBytesLegacy()) return false;
       }
       if (hasTotalBytesPatched() != other.hasTotalBytesPatched()) return false;
       if (hasTotalBytesPatched()) {
@@ -2952,11 +2905,6 @@ public final class SteammessagesDatapublisherSteamclient {
         hash = (37 * hash) + IS_FREE_WEEKEND_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsFreeWeekend());
-      }
-      if (hasTotalBytesLegacy()) {
-        hash = (37 * hash) + TOTAL_BYTES_LEGACY_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getTotalBytesLegacy());
       }
       if (hasTotalBytesPatched()) {
         hash = (37 * hash) + TOTAL_BYTES_PATCHED_FIELD_NUMBER;
@@ -3141,14 +3089,12 @@ public final class SteammessagesDatapublisherSteamclient {
         bitField0_ = (bitField0_ & ~0x00010000);
         isFreeWeekend_ = false;
         bitField0_ = (bitField0_ & ~0x00020000);
-        totalBytesLegacy_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00040000);
         totalBytesPatched_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         totalBytesSaved_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         cellId_ = 0;
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         return this;
       }
 
@@ -3251,20 +3197,16 @@ public final class SteammessagesDatapublisherSteamclient {
           to_bitField0_ |= 0x00010000;
         }
         if (((from_bitField0_ & 0x00040000) != 0)) {
-          result.totalBytesLegacy_ = totalBytesLegacy_;
+          result.totalBytesPatched_ = totalBytesPatched_;
           to_bitField0_ |= 0x00020000;
         }
         if (((from_bitField0_ & 0x00080000) != 0)) {
-          result.totalBytesPatched_ = totalBytesPatched_;
+          result.totalBytesSaved_ = totalBytesSaved_;
           to_bitField0_ |= 0x00040000;
         }
         if (((from_bitField0_ & 0x00100000) != 0)) {
-          result.totalBytesSaved_ = totalBytesSaved_;
-          to_bitField0_ |= 0x00080000;
-        }
-        if (((from_bitField0_ & 0x00200000) != 0)) {
           result.cellId_ = cellId_;
-          to_bitField0_ |= 0x00100000;
+          to_bitField0_ |= 0x00080000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -3379,9 +3321,6 @@ public final class SteammessagesDatapublisherSteamclient {
         }
         if (other.hasIsFreeWeekend()) {
           setIsFreeWeekend(other.getIsFreeWeekend());
-        }
-        if (other.hasTotalBytesLegacy()) {
-          setTotalBytesLegacy(other.getTotalBytesLegacy());
         }
         if (other.hasTotalBytesPatched()) {
           setTotalBytesPatched(other.getTotalBytesPatched());
@@ -4254,45 +4193,6 @@ public final class SteammessagesDatapublisherSteamclient {
         return this;
       }
 
-      private long totalBytesLegacy_ ;
-      /**
-       * <code>optional uint64 total_bytes_legacy = 19;</code>
-       * @return Whether the totalBytesLegacy field is set.
-       */
-      @java.lang.Override
-      public boolean hasTotalBytesLegacy() {
-        return ((bitField0_ & 0x00040000) != 0);
-      }
-      /**
-       * <code>optional uint64 total_bytes_legacy = 19;</code>
-       * @return The totalBytesLegacy.
-       */
-      @java.lang.Override
-      public long getTotalBytesLegacy() {
-        return totalBytesLegacy_;
-      }
-      /**
-       * <code>optional uint64 total_bytes_legacy = 19;</code>
-       * @param value The totalBytesLegacy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTotalBytesLegacy(long value) {
-        bitField0_ |= 0x00040000;
-        totalBytesLegacy_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint64 total_bytes_legacy = 19;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTotalBytesLegacy() {
-        bitField0_ = (bitField0_ & ~0x00040000);
-        totalBytesLegacy_ = 0L;
-        onChanged();
-        return this;
-      }
-
       private long totalBytesPatched_ ;
       /**
        * <code>optional uint64 total_bytes_patched = 20;</code>
@@ -4300,7 +4200,7 @@ public final class SteammessagesDatapublisherSteamclient {
        */
       @java.lang.Override
       public boolean hasTotalBytesPatched() {
-        return ((bitField0_ & 0x00080000) != 0);
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <code>optional uint64 total_bytes_patched = 20;</code>
@@ -4316,7 +4216,7 @@ public final class SteammessagesDatapublisherSteamclient {
        * @return This builder for chaining.
        */
       public Builder setTotalBytesPatched(long value) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00040000;
         totalBytesPatched_ = value;
         onChanged();
         return this;
@@ -4326,7 +4226,7 @@ public final class SteammessagesDatapublisherSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearTotalBytesPatched() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         totalBytesPatched_ = 0L;
         onChanged();
         return this;
@@ -4339,7 +4239,7 @@ public final class SteammessagesDatapublisherSteamclient {
        */
       @java.lang.Override
       public boolean hasTotalBytesSaved() {
-        return ((bitField0_ & 0x00100000) != 0);
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <code>optional uint64 total_bytes_saved = 21;</code>
@@ -4355,7 +4255,7 @@ public final class SteammessagesDatapublisherSteamclient {
        * @return This builder for chaining.
        */
       public Builder setTotalBytesSaved(long value) {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00080000;
         totalBytesSaved_ = value;
         onChanged();
         return this;
@@ -4365,7 +4265,7 @@ public final class SteammessagesDatapublisherSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearTotalBytesSaved() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         totalBytesSaved_ = 0L;
         onChanged();
         return this;
@@ -4378,7 +4278,7 @@ public final class SteammessagesDatapublisherSteamclient {
        */
       @java.lang.Override
       public boolean hasCellId() {
-        return ((bitField0_ & 0x00200000) != 0);
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <code>optional uint32 cell_id = 22;</code>
@@ -4394,7 +4294,7 @@ public final class SteammessagesDatapublisherSteamclient {
        * @return This builder for chaining.
        */
       public Builder setCellId(int value) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00100000;
         cellId_ = value;
         onChanged();
         return this;
@@ -4404,7 +4304,7 @@ public final class SteammessagesDatapublisherSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearCellId() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         cellId_ = 0;
         onChanged();
         return this;
@@ -4457,6 +4357,5524 @@ public final class SteammessagesDatapublisherSteamclient {
 
     @java.lang.Override
     public SteammessagesDatapublisherSteamclient.CDataPublisher_ClientUpdateAppJob_Notification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CDataPublisher_GetVRDeviceInfo_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDataPublisher_GetVRDeviceInfo_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 month_count = 1 [(.description) = "Number of months for which to generate a report"];</code>
+     * @return Whether the monthCount field is set.
+     */
+    boolean hasMonthCount();
+    /**
+     * <code>optional uint32 month_count = 1 [(.description) = "Number of months for which to generate a report"];</code>
+     * @return The monthCount.
+     */
+    int getMonthCount();
+  }
+  /**
+   * Protobuf type {@code CDataPublisher_GetVRDeviceInfo_Request}
+   */
+  public static final class CDataPublisher_GetVRDeviceInfo_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CDataPublisher_GetVRDeviceInfo_Request)
+      CDataPublisher_GetVRDeviceInfo_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CDataPublisher_GetVRDeviceInfo_Request.newBuilder() to construct.
+    private CDataPublisher_GetVRDeviceInfo_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CDataPublisher_GetVRDeviceInfo_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CDataPublisher_GetVRDeviceInfo_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDataPublisher_GetVRDeviceInfo_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              monthCount_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request.class, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MONTH_COUNT_FIELD_NUMBER = 1;
+    private int monthCount_;
+    /**
+     * <code>optional uint32 month_count = 1 [(.description) = "Number of months for which to generate a report"];</code>
+     * @return Whether the monthCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasMonthCount() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 month_count = 1 [(.description) = "Number of months for which to generate a report"];</code>
+     * @return The monthCount.
+     */
+    @java.lang.Override
+    public int getMonthCount() {
+      return monthCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, monthCount_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, monthCount_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request other = (SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request) obj;
+
+      if (hasMonthCount() != other.hasMonthCount()) return false;
+      if (hasMonthCount()) {
+        if (getMonthCount()
+            != other.getMonthCount()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMonthCount()) {
+        hash = (37 * hash) + MONTH_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getMonthCount();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDataPublisher_GetVRDeviceInfo_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDataPublisher_GetVRDeviceInfo_Request)
+        SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request.class, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        monthCount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request getDefaultInstanceForType() {
+        return SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request build() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request buildPartial() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request result = new SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.monthCount_ = monthCount_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request) {
+          return mergeFrom((SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request other) {
+        if (other == SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request.getDefaultInstance()) return this;
+        if (other.hasMonthCount()) {
+          setMonthCount(other.getMonthCount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int monthCount_ ;
+      /**
+       * <code>optional uint32 month_count = 1 [(.description) = "Number of months for which to generate a report"];</code>
+       * @return Whether the monthCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasMonthCount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 month_count = 1 [(.description) = "Number of months for which to generate a report"];</code>
+       * @return The monthCount.
+       */
+      @java.lang.Override
+      public int getMonthCount() {
+        return monthCount_;
+      }
+      /**
+       * <code>optional uint32 month_count = 1 [(.description) = "Number of months for which to generate a report"];</code>
+       * @param value The monthCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMonthCount(int value) {
+        bitField0_ |= 0x00000001;
+        monthCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 month_count = 1 [(.description) = "Number of months for which to generate a report"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMonthCount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        monthCount_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CDataPublisher_GetVRDeviceInfo_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CDataPublisher_GetVRDeviceInfo_Request)
+    private static final SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request();
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CDataPublisher_GetVRDeviceInfo_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CDataPublisher_GetVRDeviceInfo_Request>() {
+      @java.lang.Override
+      public CDataPublisher_GetVRDeviceInfo_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDataPublisher_GetVRDeviceInfo_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CDataPublisher_GetVRDeviceInfo_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDataPublisher_GetVRDeviceInfo_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CDataPublisher_GetVRDeviceInfo_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDataPublisher_GetVRDeviceInfo_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+     */
+    java.util.List<SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device> 
+        getDeviceList();
+    /**
+     * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+     */
+    SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device getDevice(int index);
+    /**
+     * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+     */
+    int getDeviceCount();
+    /**
+     * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+     */
+    java.util.List<? extends SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.DeviceOrBuilder> 
+        getDeviceOrBuilderList();
+    /**
+     * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+     */
+    SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.DeviceOrBuilder getDeviceOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CDataPublisher_GetVRDeviceInfo_Response}
+   */
+  public static final class CDataPublisher_GetVRDeviceInfo_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CDataPublisher_GetVRDeviceInfo_Response)
+      CDataPublisher_GetVRDeviceInfo_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CDataPublisher_GetVRDeviceInfo_Response.newBuilder() to construct.
+    private CDataPublisher_GetVRDeviceInfo_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CDataPublisher_GetVRDeviceInfo_Response() {
+      device_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CDataPublisher_GetVRDeviceInfo_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDataPublisher_GetVRDeviceInfo_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                device_ = new java.util.ArrayList<SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              device_.add(
+                  input.readMessage(SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          device_ = java.util.Collections.unmodifiableList(device_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.class, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Builder.class);
+    }
+
+    public interface DeviceOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CDataPublisher_GetVRDeviceInfo_Response.Device)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+       * @return Whether the name field is set.
+       */
+      boolean hasName();
+      /**
+       * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>optional uint32 ref = 2 [(.description) = "Reference number for this device"];</code>
+       * @return Whether the ref field is set.
+       */
+      boolean hasRef();
+      /**
+       * <code>optional uint32 ref = 2 [(.description) = "Reference number for this device"];</code>
+       * @return The ref.
+       */
+      int getRef();
+
+      /**
+       * <code>optional uint32 aggregation_ref = 3 [(.description) = "Reference number to aggregate this device under"];</code>
+       * @return Whether the aggregationRef field is set.
+       */
+      boolean hasAggregationRef();
+      /**
+       * <code>optional uint32 aggregation_ref = 3 [(.description) = "Reference number to aggregate this device under"];</code>
+       * @return The aggregationRef.
+       */
+      int getAggregationRef();
+
+      /**
+       * <code>optional uint32 total = 4 [(.description) = "Sum of all the counts"];</code>
+       * @return Whether the total field is set.
+       */
+      boolean hasTotal();
+      /**
+       * <code>optional uint32 total = 4 [(.description) = "Sum of all the counts"];</code>
+       * @return The total.
+       */
+      int getTotal();
+
+      /**
+       * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+       * @return Whether the driver field is set.
+       */
+      boolean hasDriver();
+      /**
+       * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+       * @return The driver.
+       */
+      java.lang.String getDriver();
+      /**
+       * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+       * @return The bytes for driver.
+       */
+      com.google.protobuf.ByteString
+          getDriverBytes();
+
+      /**
+       * <code>optional int32 device_class = 6 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+       * @return Whether the deviceClass field is set.
+       */
+      boolean hasDeviceClass();
+      /**
+       * <code>optional int32 device_class = 6 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+       * @return The deviceClass.
+       */
+      int getDeviceClass();
+    }
+    /**
+     * Protobuf type {@code CDataPublisher_GetVRDeviceInfo_Response.Device}
+     */
+    public static final class Device extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CDataPublisher_GetVRDeviceInfo_Response.Device)
+        DeviceOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Device.newBuilder() to construct.
+      private Device(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Device() {
+        name_ = "";
+        driver_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Device();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Device(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                name_ = bs;
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                ref_ = input.readUInt32();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                aggregationRef_ = input.readUInt32();
+                break;
+              }
+              case 32: {
+                bitField0_ |= 0x00000008;
+                total_ = input.readUInt32();
+                break;
+              }
+              case 42: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000010;
+                driver_ = bs;
+                break;
+              }
+              case 48: {
+                bitField0_ |= 0x00000020;
+                deviceClass_ = input.readInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Response_Device_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Response_Device_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.class, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+       * @return Whether the name field is set.
+       */
+      @java.lang.Override
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int REF_FIELD_NUMBER = 2;
+      private int ref_;
+      /**
+       * <code>optional uint32 ref = 2 [(.description) = "Reference number for this device"];</code>
+       * @return Whether the ref field is set.
+       */
+      @java.lang.Override
+      public boolean hasRef() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 ref = 2 [(.description) = "Reference number for this device"];</code>
+       * @return The ref.
+       */
+      @java.lang.Override
+      public int getRef() {
+        return ref_;
+      }
+
+      public static final int AGGREGATION_REF_FIELD_NUMBER = 3;
+      private int aggregationRef_;
+      /**
+       * <code>optional uint32 aggregation_ref = 3 [(.description) = "Reference number to aggregate this device under"];</code>
+       * @return Whether the aggregationRef field is set.
+       */
+      @java.lang.Override
+      public boolean hasAggregationRef() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 aggregation_ref = 3 [(.description) = "Reference number to aggregate this device under"];</code>
+       * @return The aggregationRef.
+       */
+      @java.lang.Override
+      public int getAggregationRef() {
+        return aggregationRef_;
+      }
+
+      public static final int TOTAL_FIELD_NUMBER = 4;
+      private int total_;
+      /**
+       * <code>optional uint32 total = 4 [(.description) = "Sum of all the counts"];</code>
+       * @return Whether the total field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotal() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 total = 4 [(.description) = "Sum of all the counts"];</code>
+       * @return The total.
+       */
+      @java.lang.Override
+      public int getTotal() {
+        return total_;
+      }
+
+      public static final int DRIVER_FIELD_NUMBER = 5;
+      private volatile java.lang.Object driver_;
+      /**
+       * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+       * @return Whether the driver field is set.
+       */
+      @java.lang.Override
+      public boolean hasDriver() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+       * @return The driver.
+       */
+      @java.lang.Override
+      public java.lang.String getDriver() {
+        java.lang.Object ref = driver_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            driver_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+       * @return The bytes for driver.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDriverBytes() {
+        java.lang.Object ref = driver_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          driver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DEVICE_CLASS_FIELD_NUMBER = 6;
+      private int deviceClass_;
+      /**
+       * <code>optional int32 device_class = 6 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+       * @return Whether the deviceClass field is set.
+       */
+      @java.lang.Override
+      public boolean hasDeviceClass() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional int32 device_class = 6 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+       * @return The deviceClass.
+       */
+      @java.lang.Override
+      public int getDeviceClass() {
+        return deviceClass_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(2, ref_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeUInt32(3, aggregationRef_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          output.writeUInt32(4, total_);
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, driver_);
+        }
+        if (((bitField0_ & 0x00000020) != 0)) {
+          output.writeInt32(6, deviceClass_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, ref_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, aggregationRef_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(4, total_);
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, driver_);
+        }
+        if (((bitField0_ & 0x00000020) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(6, deviceClass_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device)) {
+          return super.equals(obj);
+        }
+        SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device other = (SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device) obj;
+
+        if (hasName() != other.hasName()) return false;
+        if (hasName()) {
+          if (!getName()
+              .equals(other.getName())) return false;
+        }
+        if (hasRef() != other.hasRef()) return false;
+        if (hasRef()) {
+          if (getRef()
+              != other.getRef()) return false;
+        }
+        if (hasAggregationRef() != other.hasAggregationRef()) return false;
+        if (hasAggregationRef()) {
+          if (getAggregationRef()
+              != other.getAggregationRef()) return false;
+        }
+        if (hasTotal() != other.hasTotal()) return false;
+        if (hasTotal()) {
+          if (getTotal()
+              != other.getTotal()) return false;
+        }
+        if (hasDriver() != other.hasDriver()) return false;
+        if (hasDriver()) {
+          if (!getDriver()
+              .equals(other.getDriver())) return false;
+        }
+        if (hasDeviceClass() != other.hasDeviceClass()) return false;
+        if (hasDeviceClass()) {
+          if (getDeviceClass()
+              != other.getDeviceClass()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasName()) {
+          hash = (37 * hash) + NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getName().hashCode();
+        }
+        if (hasRef()) {
+          hash = (37 * hash) + REF_FIELD_NUMBER;
+          hash = (53 * hash) + getRef();
+        }
+        if (hasAggregationRef()) {
+          hash = (37 * hash) + AGGREGATION_REF_FIELD_NUMBER;
+          hash = (53 * hash) + getAggregationRef();
+        }
+        if (hasTotal()) {
+          hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+          hash = (53 * hash) + getTotal();
+        }
+        if (hasDriver()) {
+          hash = (37 * hash) + DRIVER_FIELD_NUMBER;
+          hash = (53 * hash) + getDriver().hashCode();
+        }
+        if (hasDeviceClass()) {
+          hash = (37 * hash) + DEVICE_CLASS_FIELD_NUMBER;
+          hash = (53 * hash) + getDeviceClass();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CDataPublisher_GetVRDeviceInfo_Response.Device}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CDataPublisher_GetVRDeviceInfo_Response.Device)
+          SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.DeviceOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Response_Device_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Response_Device_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.class, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder.class);
+        }
+
+        // Construct using SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          ref_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          aggregationRef_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          total_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          driver_ = "";
+          bitField0_ = (bitField0_ & ~0x00000010);
+          deviceClass_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000020);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Response_Device_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device getDefaultInstanceForType() {
+          return SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device build() {
+          SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device buildPartial() {
+          SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device result = new SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.name_ = name_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.ref_ = ref_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.aggregationRef_ = aggregationRef_;
+            to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.total_ = total_;
+            to_bitField0_ |= 0x00000008;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          result.driver_ = driver_;
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.deviceClass_ = deviceClass_;
+            to_bitField0_ |= 0x00000020;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device) {
+            return mergeFrom((SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device other) {
+          if (other == SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.getDefaultInstance()) return this;
+          if (other.hasName()) {
+            bitField0_ |= 0x00000001;
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasRef()) {
+            setRef(other.getRef());
+          }
+          if (other.hasAggregationRef()) {
+            setAggregationRef(other.getAggregationRef());
+          }
+          if (other.hasTotal()) {
+            setTotal(other.getTotal());
+          }
+          if (other.hasDriver()) {
+            bitField0_ |= 0x00000010;
+            driver_ = other.driver_;
+            onChanged();
+          }
+          if (other.hasDeviceClass()) {
+            setDeviceClass(other.getDeviceClass());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+         * @return Whether the name field is set.
+         */
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 1 [(.description) = "Name to show for this device"];</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int ref_ ;
+        /**
+         * <code>optional uint32 ref = 2 [(.description) = "Reference number for this device"];</code>
+         * @return Whether the ref field is set.
+         */
+        @java.lang.Override
+        public boolean hasRef() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint32 ref = 2 [(.description) = "Reference number for this device"];</code>
+         * @return The ref.
+         */
+        @java.lang.Override
+        public int getRef() {
+          return ref_;
+        }
+        /**
+         * <code>optional uint32 ref = 2 [(.description) = "Reference number for this device"];</code>
+         * @param value The ref to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRef(int value) {
+          bitField0_ |= 0x00000002;
+          ref_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 ref = 2 [(.description) = "Reference number for this device"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRef() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          ref_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int aggregationRef_ ;
+        /**
+         * <code>optional uint32 aggregation_ref = 3 [(.description) = "Reference number to aggregate this device under"];</code>
+         * @return Whether the aggregationRef field is set.
+         */
+        @java.lang.Override
+        public boolean hasAggregationRef() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>optional uint32 aggregation_ref = 3 [(.description) = "Reference number to aggregate this device under"];</code>
+         * @return The aggregationRef.
+         */
+        @java.lang.Override
+        public int getAggregationRef() {
+          return aggregationRef_;
+        }
+        /**
+         * <code>optional uint32 aggregation_ref = 3 [(.description) = "Reference number to aggregate this device under"];</code>
+         * @param value The aggregationRef to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAggregationRef(int value) {
+          bitField0_ |= 0x00000004;
+          aggregationRef_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 aggregation_ref = 3 [(.description) = "Reference number to aggregate this device under"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAggregationRef() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          aggregationRef_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int total_ ;
+        /**
+         * <code>optional uint32 total = 4 [(.description) = "Sum of all the counts"];</code>
+         * @return Whether the total field is set.
+         */
+        @java.lang.Override
+        public boolean hasTotal() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <code>optional uint32 total = 4 [(.description) = "Sum of all the counts"];</code>
+         * @return The total.
+         */
+        @java.lang.Override
+        public int getTotal() {
+          return total_;
+        }
+        /**
+         * <code>optional uint32 total = 4 [(.description) = "Sum of all the counts"];</code>
+         * @param value The total to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTotal(int value) {
+          bitField0_ |= 0x00000008;
+          total_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 total = 4 [(.description) = "Sum of all the counts"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTotal() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          total_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object driver_ = "";
+        /**
+         * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+         * @return Whether the driver field is set.
+         */
+        public boolean hasDriver() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+         * @return The driver.
+         */
+        public java.lang.String getDriver() {
+          java.lang.Object ref = driver_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              driver_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+         * @return The bytes for driver.
+         */
+        public com.google.protobuf.ByteString
+            getDriverBytes() {
+          java.lang.Object ref = driver_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            driver_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+         * @param value The driver to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDriver(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+          driver_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDriver() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          driver_ = getDefaultInstance().getDriver();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string driver = 5 [(.description) = "driver name reported by the user"];</code>
+         * @param value The bytes for driver to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDriverBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+          driver_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int deviceClass_ ;
+        /**
+         * <code>optional int32 device_class = 6 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+         * @return Whether the deviceClass field is set.
+         */
+        @java.lang.Override
+        public boolean hasDeviceClass() {
+          return ((bitField0_ & 0x00000020) != 0);
+        }
+        /**
+         * <code>optional int32 device_class = 6 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+         * @return The deviceClass.
+         */
+        @java.lang.Override
+        public int getDeviceClass() {
+          return deviceClass_;
+        }
+        /**
+         * <code>optional int32 device_class = 6 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+         * @param value The deviceClass to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDeviceClass(int value) {
+          bitField0_ |= 0x00000020;
+          deviceClass_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 device_class = 6 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDeviceClass() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          deviceClass_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CDataPublisher_GetVRDeviceInfo_Response.Device)
+      }
+
+      // @@protoc_insertion_point(class_scope:CDataPublisher_GetVRDeviceInfo_Response.Device)
+      private static final SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device();
+      }
+
+      public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Device>
+          PARSER = new com.google.protobuf.AbstractParser<Device>() {
+        @java.lang.Override
+        public Device parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Device(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Device> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Device> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int DEVICE_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device> device_;
+    /**
+     * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device> getDeviceList() {
+      return device_;
+    }
+    /**
+     * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.DeviceOrBuilder> 
+        getDeviceOrBuilderList() {
+      return device_;
+    }
+    /**
+     * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+     */
+    @java.lang.Override
+    public int getDeviceCount() {
+      return device_.size();
+    }
+    /**
+     * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device getDevice(int index) {
+      return device_.get(index);
+    }
+    /**
+     * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.DeviceOrBuilder getDeviceOrBuilder(
+        int index) {
+      return device_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < device_.size(); i++) {
+        output.writeMessage(1, device_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < device_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, device_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response other = (SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response) obj;
+
+      if (!getDeviceList()
+          .equals(other.getDeviceList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDeviceCount() > 0) {
+        hash = (37 * hash) + DEVICE_FIELD_NUMBER;
+        hash = (53 * hash) + getDeviceList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDataPublisher_GetVRDeviceInfo_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDataPublisher_GetVRDeviceInfo_Response)
+        SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.class, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDeviceFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (deviceBuilder_ == null) {
+          device_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          deviceBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_GetVRDeviceInfo_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response getDefaultInstanceForType() {
+        return SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response build() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response buildPartial() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response result = new SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response(this);
+        int from_bitField0_ = bitField0_;
+        if (deviceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            device_ = java.util.Collections.unmodifiableList(device_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.device_ = device_;
+        } else {
+          result.device_ = deviceBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response) {
+          return mergeFrom((SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response other) {
+        if (other == SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.getDefaultInstance()) return this;
+        if (deviceBuilder_ == null) {
+          if (!other.device_.isEmpty()) {
+            if (device_.isEmpty()) {
+              device_ = other.device_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDeviceIsMutable();
+              device_.addAll(other.device_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.device_.isEmpty()) {
+            if (deviceBuilder_.isEmpty()) {
+              deviceBuilder_.dispose();
+              deviceBuilder_ = null;
+              device_ = other.device_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              deviceBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDeviceFieldBuilder() : null;
+            } else {
+              deviceBuilder_.addAllMessages(other.device_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device> device_ =
+        java.util.Collections.emptyList();
+      private void ensureDeviceIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          device_ = new java.util.ArrayList<SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device>(device_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.DeviceOrBuilder> deviceBuilder_;
+
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public java.util.List<SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device> getDeviceList() {
+        if (deviceBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(device_);
+        } else {
+          return deviceBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public int getDeviceCount() {
+        if (deviceBuilder_ == null) {
+          return device_.size();
+        } else {
+          return deviceBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device getDevice(int index) {
+        if (deviceBuilder_ == null) {
+          return device_.get(index);
+        } else {
+          return deviceBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public Builder setDevice(
+          int index, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device value) {
+        if (deviceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeviceIsMutable();
+          device_.set(index, value);
+          onChanged();
+        } else {
+          deviceBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public Builder setDevice(
+          int index, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder builderForValue) {
+        if (deviceBuilder_ == null) {
+          ensureDeviceIsMutable();
+          device_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          deviceBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public Builder addDevice(SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device value) {
+        if (deviceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeviceIsMutable();
+          device_.add(value);
+          onChanged();
+        } else {
+          deviceBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public Builder addDevice(
+          int index, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device value) {
+        if (deviceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeviceIsMutable();
+          device_.add(index, value);
+          onChanged();
+        } else {
+          deviceBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public Builder addDevice(
+          SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder builderForValue) {
+        if (deviceBuilder_ == null) {
+          ensureDeviceIsMutable();
+          device_.add(builderForValue.build());
+          onChanged();
+        } else {
+          deviceBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public Builder addDevice(
+          int index, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder builderForValue) {
+        if (deviceBuilder_ == null) {
+          ensureDeviceIsMutable();
+          device_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          deviceBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public Builder addAllDevice(
+          java.lang.Iterable<? extends SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device> values) {
+        if (deviceBuilder_ == null) {
+          ensureDeviceIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, device_);
+          onChanged();
+        } else {
+          deviceBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public Builder clearDevice() {
+        if (deviceBuilder_ == null) {
+          device_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          deviceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public Builder removeDevice(int index) {
+        if (deviceBuilder_ == null) {
+          ensureDeviceIsMutable();
+          device_.remove(index);
+          onChanged();
+        } else {
+          deviceBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder getDeviceBuilder(
+          int index) {
+        return getDeviceFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.DeviceOrBuilder getDeviceOrBuilder(
+          int index) {
+        if (deviceBuilder_ == null) {
+          return device_.get(index);  } else {
+          return deviceBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public java.util.List<? extends SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.DeviceOrBuilder> 
+           getDeviceOrBuilderList() {
+        if (deviceBuilder_ != null) {
+          return deviceBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(device_);
+        }
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder addDeviceBuilder() {
+        return getDeviceFieldBuilder().addBuilder(
+            SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder addDeviceBuilder(
+          int index) {
+        return getDeviceFieldBuilder().addBuilder(
+            index, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(.description) = "Result devices"];</code>
+       */
+      public java.util.List<SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder> 
+           getDeviceBuilderList() {
+        return getDeviceFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.DeviceOrBuilder> 
+          getDeviceFieldBuilder() {
+        if (deviceBuilder_ == null) {
+          deviceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.Device.Builder, SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response.DeviceOrBuilder>(
+                  device_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          device_ = null;
+        }
+        return deviceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CDataPublisher_GetVRDeviceInfo_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CDataPublisher_GetVRDeviceInfo_Response)
+    private static final SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response();
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CDataPublisher_GetVRDeviceInfo_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CDataPublisher_GetVRDeviceInfo_Response>() {
+      @java.lang.Override
+      public CDataPublisher_GetVRDeviceInfo_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDataPublisher_GetVRDeviceInfo_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CDataPublisher_GetVRDeviceInfo_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDataPublisher_GetVRDeviceInfo_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesDatapublisherSteamclient.CDataPublisher_GetVRDeviceInfo_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CDataPublisher_SetVRDeviceInfoAggregationReference_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDataPublisher_SetVRDeviceInfoAggregationReference_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 ref = 1 [(.description) = "Reference number in the VRDeviceInfo table for the entry to set"];</code>
+     * @return Whether the ref field is set.
+     */
+    boolean hasRef();
+    /**
+     * <code>optional uint32 ref = 1 [(.description) = "Reference number in the VRDeviceInfo table for the entry to set"];</code>
+     * @return The ref.
+     */
+    int getRef();
+
+    /**
+     * <code>optional uint32 aggregation_ref = 2 [(.description) = "Aggregation to set the entry to"];</code>
+     * @return Whether the aggregationRef field is set.
+     */
+    boolean hasAggregationRef();
+    /**
+     * <code>optional uint32 aggregation_ref = 2 [(.description) = "Aggregation to set the entry to"];</code>
+     * @return The aggregationRef.
+     */
+    int getAggregationRef();
+  }
+  /**
+   * Protobuf type {@code CDataPublisher_SetVRDeviceInfoAggregationReference_Request}
+   */
+  public static final class CDataPublisher_SetVRDeviceInfoAggregationReference_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CDataPublisher_SetVRDeviceInfoAggregationReference_Request)
+      CDataPublisher_SetVRDeviceInfoAggregationReference_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CDataPublisher_SetVRDeviceInfoAggregationReference_Request.newBuilder() to construct.
+    private CDataPublisher_SetVRDeviceInfoAggregationReference_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CDataPublisher_SetVRDeviceInfoAggregationReference_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CDataPublisher_SetVRDeviceInfoAggregationReference_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDataPublisher_SetVRDeviceInfoAggregationReference_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              ref_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              aggregationRef_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request.class, SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REF_FIELD_NUMBER = 1;
+    private int ref_;
+    /**
+     * <code>optional uint32 ref = 1 [(.description) = "Reference number in the VRDeviceInfo table for the entry to set"];</code>
+     * @return Whether the ref field is set.
+     */
+    @java.lang.Override
+    public boolean hasRef() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 ref = 1 [(.description) = "Reference number in the VRDeviceInfo table for the entry to set"];</code>
+     * @return The ref.
+     */
+    @java.lang.Override
+    public int getRef() {
+      return ref_;
+    }
+
+    public static final int AGGREGATION_REF_FIELD_NUMBER = 2;
+    private int aggregationRef_;
+    /**
+     * <code>optional uint32 aggregation_ref = 2 [(.description) = "Aggregation to set the entry to"];</code>
+     * @return Whether the aggregationRef field is set.
+     */
+    @java.lang.Override
+    public boolean hasAggregationRef() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 aggregation_ref = 2 [(.description) = "Aggregation to set the entry to"];</code>
+     * @return The aggregationRef.
+     */
+    @java.lang.Override
+    public int getAggregationRef() {
+      return aggregationRef_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, ref_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, aggregationRef_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, ref_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, aggregationRef_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request other = (SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request) obj;
+
+      if (hasRef() != other.hasRef()) return false;
+      if (hasRef()) {
+        if (getRef()
+            != other.getRef()) return false;
+      }
+      if (hasAggregationRef() != other.hasAggregationRef()) return false;
+      if (hasAggregationRef()) {
+        if (getAggregationRef()
+            != other.getAggregationRef()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRef()) {
+        hash = (37 * hash) + REF_FIELD_NUMBER;
+        hash = (53 * hash) + getRef();
+      }
+      if (hasAggregationRef()) {
+        hash = (37 * hash) + AGGREGATION_REF_FIELD_NUMBER;
+        hash = (53 * hash) + getAggregationRef();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDataPublisher_SetVRDeviceInfoAggregationReference_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDataPublisher_SetVRDeviceInfoAggregationReference_Request)
+        SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request.class, SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        ref_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        aggregationRef_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request getDefaultInstanceForType() {
+        return SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request build() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request buildPartial() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request result = new SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ref_ = ref_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.aggregationRef_ = aggregationRef_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request) {
+          return mergeFrom((SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request other) {
+        if (other == SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request.getDefaultInstance()) return this;
+        if (other.hasRef()) {
+          setRef(other.getRef());
+        }
+        if (other.hasAggregationRef()) {
+          setAggregationRef(other.getAggregationRef());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int ref_ ;
+      /**
+       * <code>optional uint32 ref = 1 [(.description) = "Reference number in the VRDeviceInfo table for the entry to set"];</code>
+       * @return Whether the ref field is set.
+       */
+      @java.lang.Override
+      public boolean hasRef() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 ref = 1 [(.description) = "Reference number in the VRDeviceInfo table for the entry to set"];</code>
+       * @return The ref.
+       */
+      @java.lang.Override
+      public int getRef() {
+        return ref_;
+      }
+      /**
+       * <code>optional uint32 ref = 1 [(.description) = "Reference number in the VRDeviceInfo table for the entry to set"];</code>
+       * @param value The ref to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRef(int value) {
+        bitField0_ |= 0x00000001;
+        ref_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ref = 1 [(.description) = "Reference number in the VRDeviceInfo table for the entry to set"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRef() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ref_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int aggregationRef_ ;
+      /**
+       * <code>optional uint32 aggregation_ref = 2 [(.description) = "Aggregation to set the entry to"];</code>
+       * @return Whether the aggregationRef field is set.
+       */
+      @java.lang.Override
+      public boolean hasAggregationRef() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 aggregation_ref = 2 [(.description) = "Aggregation to set the entry to"];</code>
+       * @return The aggregationRef.
+       */
+      @java.lang.Override
+      public int getAggregationRef() {
+        return aggregationRef_;
+      }
+      /**
+       * <code>optional uint32 aggregation_ref = 2 [(.description) = "Aggregation to set the entry to"];</code>
+       * @param value The aggregationRef to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAggregationRef(int value) {
+        bitField0_ |= 0x00000002;
+        aggregationRef_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 aggregation_ref = 2 [(.description) = "Aggregation to set the entry to"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAggregationRef() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        aggregationRef_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CDataPublisher_SetVRDeviceInfoAggregationReference_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CDataPublisher_SetVRDeviceInfoAggregationReference_Request)
+    private static final SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request();
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CDataPublisher_SetVRDeviceInfoAggregationReference_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CDataPublisher_SetVRDeviceInfoAggregationReference_Request>() {
+      @java.lang.Override
+      public CDataPublisher_SetVRDeviceInfoAggregationReference_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDataPublisher_SetVRDeviceInfoAggregationReference_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CDataPublisher_SetVRDeviceInfoAggregationReference_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDataPublisher_SetVRDeviceInfoAggregationReference_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CDataPublisher_SetVRDeviceInfoAggregationReference_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDataPublisher_SetVRDeviceInfoAggregationReference_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+     * @return The result.
+     */
+    int getResult();
+  }
+  /**
+   * Protobuf type {@code CDataPublisher_SetVRDeviceInfoAggregationReference_Response}
+   */
+  public static final class CDataPublisher_SetVRDeviceInfoAggregationReference_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CDataPublisher_SetVRDeviceInfoAggregationReference_Response)
+      CDataPublisher_SetVRDeviceInfoAggregationReference_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CDataPublisher_SetVRDeviceInfoAggregationReference_Response.newBuilder() to construct.
+    private CDataPublisher_SetVRDeviceInfoAggregationReference_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CDataPublisher_SetVRDeviceInfoAggregationReference_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CDataPublisher_SetVRDeviceInfoAggregationReference_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDataPublisher_SetVRDeviceInfoAggregationReference_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              result_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response.class, SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private int result_;
+    /**
+     * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public int getResult() {
+      return result_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, result_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, result_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response other = (SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response) obj;
+
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (getResult()
+            != other.getResult()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDataPublisher_SetVRDeviceInfoAggregationReference_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDataPublisher_SetVRDeviceInfoAggregationReference_Response)
+        SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response.class, SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        result_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response getDefaultInstanceForType() {
+        return SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response build() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response buildPartial() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response result = new SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = result_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response) {
+          return mergeFrom((SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response other) {
+        if (other == SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response.getDefaultInstance()) return this;
+        if (other.hasResult()) {
+          setResult(other.getResult());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int result_ ;
+      /**
+       * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+       * @return Whether the result field is set.
+       */
+      @java.lang.Override
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+       * @return The result.
+       */
+      @java.lang.Override
+      public int getResult() {
+        return result_;
+      }
+      /**
+       * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(int value) {
+        bitField0_ |= 0x00000001;
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CDataPublisher_SetVRDeviceInfoAggregationReference_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CDataPublisher_SetVRDeviceInfoAggregationReference_Response)
+    private static final SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response();
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CDataPublisher_SetVRDeviceInfoAggregationReference_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CDataPublisher_SetVRDeviceInfoAggregationReference_Response>() {
+      @java.lang.Override
+      public CDataPublisher_SetVRDeviceInfoAggregationReference_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDataPublisher_SetVRDeviceInfoAggregationReference_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CDataPublisher_SetVRDeviceInfoAggregationReference_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDataPublisher_SetVRDeviceInfoAggregationReference_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesDatapublisherSteamclient.CDataPublisher_SetVRDeviceInfoAggregationReference_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CDataPublisher_AddVRDeviceInfo_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDataPublisher_AddVRDeviceInfo_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+     * @return Whether the manufacturer field is set.
+     */
+    boolean hasManufacturer();
+    /**
+     * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+     * @return The manufacturer.
+     */
+    java.lang.String getManufacturer();
+    /**
+     * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+     * @return The bytes for manufacturer.
+     */
+    com.google.protobuf.ByteString
+        getManufacturerBytes();
+
+    /**
+     * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+     * @return Whether the model field is set.
+     */
+    boolean hasModel();
+    /**
+     * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+     * @return The model.
+     */
+    java.lang.String getModel();
+    /**
+     * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+     * @return The bytes for model.
+     */
+    com.google.protobuf.ByteString
+        getModelBytes();
+
+    /**
+     * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+     * @return Whether the driver field is set.
+     */
+    boolean hasDriver();
+    /**
+     * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+     * @return The driver.
+     */
+    java.lang.String getDriver();
+    /**
+     * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+     * @return The bytes for driver.
+     */
+    com.google.protobuf.ByteString
+        getDriverBytes();
+
+    /**
+     * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+     * @return Whether the controllerType field is set.
+     */
+    boolean hasControllerType();
+    /**
+     * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+     * @return The controllerType.
+     */
+    java.lang.String getControllerType();
+    /**
+     * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+     * @return The bytes for controllerType.
+     */
+    com.google.protobuf.ByteString
+        getControllerTypeBytes();
+
+    /**
+     * <code>optional int32 device_class = 5 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+     * @return Whether the deviceClass field is set.
+     */
+    boolean hasDeviceClass();
+    /**
+     * <code>optional int32 device_class = 5 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+     * @return The deviceClass.
+     */
+    int getDeviceClass();
+  }
+  /**
+   * Protobuf type {@code CDataPublisher_AddVRDeviceInfo_Request}
+   */
+  public static final class CDataPublisher_AddVRDeviceInfo_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CDataPublisher_AddVRDeviceInfo_Request)
+      CDataPublisher_AddVRDeviceInfo_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CDataPublisher_AddVRDeviceInfo_Request.newBuilder() to construct.
+    private CDataPublisher_AddVRDeviceInfo_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CDataPublisher_AddVRDeviceInfo_Request() {
+      manufacturer_ = "";
+      model_ = "";
+      driver_ = "";
+      controllerType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CDataPublisher_AddVRDeviceInfo_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDataPublisher_AddVRDeviceInfo_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              manufacturer_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              model_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              driver_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              controllerType_ = bs;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              deviceClass_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_AddVRDeviceInfo_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_AddVRDeviceInfo_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request.class, SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MANUFACTURER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object manufacturer_;
+    /**
+     * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+     * @return Whether the manufacturer field is set.
+     */
+    @java.lang.Override
+    public boolean hasManufacturer() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+     * @return The manufacturer.
+     */
+    @java.lang.Override
+    public java.lang.String getManufacturer() {
+      java.lang.Object ref = manufacturer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          manufacturer_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+     * @return The bytes for manufacturer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getManufacturerBytes() {
+      java.lang.Object ref = manufacturer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        manufacturer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODEL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object model_;
+    /**
+     * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+     * @return Whether the model field is set.
+     */
+    @java.lang.Override
+    public boolean hasModel() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+     * @return The model.
+     */
+    @java.lang.Override
+    public java.lang.String getModel() {
+      java.lang.Object ref = model_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          model_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+     * @return The bytes for model.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelBytes() {
+      java.lang.Object ref = model_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        model_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DRIVER_FIELD_NUMBER = 3;
+    private volatile java.lang.Object driver_;
+    /**
+     * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+     * @return Whether the driver field is set.
+     */
+    @java.lang.Override
+    public boolean hasDriver() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+     * @return The driver.
+     */
+    @java.lang.Override
+    public java.lang.String getDriver() {
+      java.lang.Object ref = driver_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          driver_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+     * @return The bytes for driver.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDriverBytes() {
+      java.lang.Object ref = driver_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        driver_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTROLLER_TYPE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object controllerType_;
+    /**
+     * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+     * @return Whether the controllerType field is set.
+     */
+    @java.lang.Override
+    public boolean hasControllerType() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+     * @return The controllerType.
+     */
+    @java.lang.Override
+    public java.lang.String getControllerType() {
+      java.lang.Object ref = controllerType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          controllerType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+     * @return The bytes for controllerType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getControllerTypeBytes() {
+      java.lang.Object ref = controllerType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        controllerType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEVICE_CLASS_FIELD_NUMBER = 5;
+    private int deviceClass_;
+    /**
+     * <code>optional int32 device_class = 5 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+     * @return Whether the deviceClass field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeviceClass() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional int32 device_class = 5 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+     * @return The deviceClass.
+     */
+    @java.lang.Override
+    public int getDeviceClass() {
+      return deviceClass_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, manufacturer_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, model_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, driver_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, controllerType_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt32(5, deviceClass_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, manufacturer_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, model_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, driver_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, controllerType_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, deviceClass_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request other = (SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request) obj;
+
+      if (hasManufacturer() != other.hasManufacturer()) return false;
+      if (hasManufacturer()) {
+        if (!getManufacturer()
+            .equals(other.getManufacturer())) return false;
+      }
+      if (hasModel() != other.hasModel()) return false;
+      if (hasModel()) {
+        if (!getModel()
+            .equals(other.getModel())) return false;
+      }
+      if (hasDriver() != other.hasDriver()) return false;
+      if (hasDriver()) {
+        if (!getDriver()
+            .equals(other.getDriver())) return false;
+      }
+      if (hasControllerType() != other.hasControllerType()) return false;
+      if (hasControllerType()) {
+        if (!getControllerType()
+            .equals(other.getControllerType())) return false;
+      }
+      if (hasDeviceClass() != other.hasDeviceClass()) return false;
+      if (hasDeviceClass()) {
+        if (getDeviceClass()
+            != other.getDeviceClass()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasManufacturer()) {
+        hash = (37 * hash) + MANUFACTURER_FIELD_NUMBER;
+        hash = (53 * hash) + getManufacturer().hashCode();
+      }
+      if (hasModel()) {
+        hash = (37 * hash) + MODEL_FIELD_NUMBER;
+        hash = (53 * hash) + getModel().hashCode();
+      }
+      if (hasDriver()) {
+        hash = (37 * hash) + DRIVER_FIELD_NUMBER;
+        hash = (53 * hash) + getDriver().hashCode();
+      }
+      if (hasControllerType()) {
+        hash = (37 * hash) + CONTROLLER_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getControllerType().hashCode();
+      }
+      if (hasDeviceClass()) {
+        hash = (37 * hash) + DEVICE_CLASS_FIELD_NUMBER;
+        hash = (53 * hash) + getDeviceClass();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDataPublisher_AddVRDeviceInfo_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDataPublisher_AddVRDeviceInfo_Request)
+        SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_AddVRDeviceInfo_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_AddVRDeviceInfo_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request.class, SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        manufacturer_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        model_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        driver_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        controllerType_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        deviceClass_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_AddVRDeviceInfo_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request getDefaultInstanceForType() {
+        return SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request build() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request buildPartial() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request result = new SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.manufacturer_ = manufacturer_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.model_ = model_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.driver_ = driver_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.controllerType_ = controllerType_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.deviceClass_ = deviceClass_;
+          to_bitField0_ |= 0x00000010;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request) {
+          return mergeFrom((SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request other) {
+        if (other == SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request.getDefaultInstance()) return this;
+        if (other.hasManufacturer()) {
+          bitField0_ |= 0x00000001;
+          manufacturer_ = other.manufacturer_;
+          onChanged();
+        }
+        if (other.hasModel()) {
+          bitField0_ |= 0x00000002;
+          model_ = other.model_;
+          onChanged();
+        }
+        if (other.hasDriver()) {
+          bitField0_ |= 0x00000004;
+          driver_ = other.driver_;
+          onChanged();
+        }
+        if (other.hasControllerType()) {
+          bitField0_ |= 0x00000008;
+          controllerType_ = other.controllerType_;
+          onChanged();
+        }
+        if (other.hasDeviceClass()) {
+          setDeviceClass(other.getDeviceClass());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object manufacturer_ = "";
+      /**
+       * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+       * @return Whether the manufacturer field is set.
+       */
+      public boolean hasManufacturer() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+       * @return The manufacturer.
+       */
+      public java.lang.String getManufacturer() {
+        java.lang.Object ref = manufacturer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            manufacturer_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+       * @return The bytes for manufacturer.
+       */
+      public com.google.protobuf.ByteString
+          getManufacturerBytes() {
+        java.lang.Object ref = manufacturer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          manufacturer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+       * @param value The manufacturer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManufacturer(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        manufacturer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearManufacturer() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        manufacturer_ = getDefaultInstance().getManufacturer();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string manufacturer = 1 [(.description) = "Manufacturer for the new device"];</code>
+       * @param value The bytes for manufacturer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManufacturerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        manufacturer_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object model_ = "";
+      /**
+       * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+       * @return Whether the model field is set.
+       */
+      public boolean hasModel() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+       * @return The model.
+       */
+      public java.lang.String getModel() {
+        java.lang.Object ref = model_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            model_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+       * @return The bytes for model.
+       */
+      public com.google.protobuf.ByteString
+          getModelBytes() {
+        java.lang.Object ref = model_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          model_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+       * @param value The model to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        model_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModel() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        model_ = getDefaultInstance().getModel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string model = 2 [(.description) = "Model for the new device"];</code>
+       * @param value The bytes for model to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        model_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object driver_ = "";
+      /**
+       * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+       * @return Whether the driver field is set.
+       */
+      public boolean hasDriver() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+       * @return The driver.
+       */
+      public java.lang.String getDriver() {
+        java.lang.Object ref = driver_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            driver_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+       * @return The bytes for driver.
+       */
+      public com.google.protobuf.ByteString
+          getDriverBytes() {
+        java.lang.Object ref = driver_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          driver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+       * @param value The driver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDriver(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        driver_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDriver() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        driver_ = getDefaultInstance().getDriver();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string driver = 3 [(.description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];</code>
+       * @param value The bytes for driver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDriverBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        driver_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object controllerType_ = "";
+      /**
+       * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+       * @return Whether the controllerType field is set.
+       */
+      public boolean hasControllerType() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+       * @return The controllerType.
+       */
+      public java.lang.String getControllerType() {
+        java.lang.Object ref = controllerType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            controllerType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+       * @return The bytes for controllerType.
+       */
+      public com.google.protobuf.ByteString
+          getControllerTypeBytes() {
+        java.lang.Object ref = controllerType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          controllerType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+       * @param value The controllerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        controllerType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearControllerType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        controllerType_ = getDefaultInstance().getControllerType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string controller_type = 4 [(.description) = "controller type for the device. Can be an empty string for devices with no inputs"];</code>
+       * @param value The bytes for controllerType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        controllerType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int deviceClass_ ;
+      /**
+       * <code>optional int32 device_class = 5 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+       * @return Whether the deviceClass field is set.
+       */
+      @java.lang.Override
+      public boolean hasDeviceClass() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional int32 device_class = 5 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+       * @return The deviceClass.
+       */
+      @java.lang.Override
+      public int getDeviceClass() {
+        return deviceClass_;
+      }
+      /**
+       * <code>optional int32 device_class = 5 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+       * @param value The deviceClass to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeviceClass(int value) {
+        bitField0_ |= 0x00000010;
+        deviceClass_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 device_class = 5 [(.description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeviceClass() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        deviceClass_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CDataPublisher_AddVRDeviceInfo_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CDataPublisher_AddVRDeviceInfo_Request)
+    private static final SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request();
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CDataPublisher_AddVRDeviceInfo_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CDataPublisher_AddVRDeviceInfo_Request>() {
+      @java.lang.Override
+      public CDataPublisher_AddVRDeviceInfo_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDataPublisher_AddVRDeviceInfo_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CDataPublisher_AddVRDeviceInfo_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDataPublisher_AddVRDeviceInfo_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CDataPublisher_AddVRDeviceInfo_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDataPublisher_AddVRDeviceInfo_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+     * @return The result.
+     */
+    int getResult();
+
+    /**
+     * <code>optional uint32 ref = 2 [(.description) = "The reference number of the inserted device"];</code>
+     * @return Whether the ref field is set.
+     */
+    boolean hasRef();
+    /**
+     * <code>optional uint32 ref = 2 [(.description) = "The reference number of the inserted device"];</code>
+     * @return The ref.
+     */
+    int getRef();
+  }
+  /**
+   * Protobuf type {@code CDataPublisher_AddVRDeviceInfo_Response}
+   */
+  public static final class CDataPublisher_AddVRDeviceInfo_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CDataPublisher_AddVRDeviceInfo_Response)
+      CDataPublisher_AddVRDeviceInfo_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CDataPublisher_AddVRDeviceInfo_Response.newBuilder() to construct.
+    private CDataPublisher_AddVRDeviceInfo_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CDataPublisher_AddVRDeviceInfo_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CDataPublisher_AddVRDeviceInfo_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDataPublisher_AddVRDeviceInfo_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              result_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              ref_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_AddVRDeviceInfo_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_AddVRDeviceInfo_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response.class, SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private int result_;
+    /**
+     * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public int getResult() {
+      return result_;
+    }
+
+    public static final int REF_FIELD_NUMBER = 2;
+    private int ref_;
+    /**
+     * <code>optional uint32 ref = 2 [(.description) = "The reference number of the inserted device"];</code>
+     * @return Whether the ref field is set.
+     */
+    @java.lang.Override
+    public boolean hasRef() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 ref = 2 [(.description) = "The reference number of the inserted device"];</code>
+     * @return The ref.
+     */
+    @java.lang.Override
+    public int getRef() {
+      return ref_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, result_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, ref_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, result_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, ref_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response other = (SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response) obj;
+
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (getResult()
+            != other.getResult()) return false;
+      }
+      if (hasRef() != other.hasRef()) return false;
+      if (hasRef()) {
+        if (getRef()
+            != other.getRef()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult();
+      }
+      if (hasRef()) {
+        hash = (37 * hash) + REF_FIELD_NUMBER;
+        hash = (53 * hash) + getRef();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDataPublisher_AddVRDeviceInfo_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDataPublisher_AddVRDeviceInfo_Response)
+        SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_AddVRDeviceInfo_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_AddVRDeviceInfo_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response.class, SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        result_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ref_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesDatapublisherSteamclient.internal_static_CDataPublisher_AddVRDeviceInfo_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response getDefaultInstanceForType() {
+        return SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response build() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response buildPartial() {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response result = new SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = result_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ref_ = ref_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response) {
+          return mergeFrom((SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response other) {
+        if (other == SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response.getDefaultInstance()) return this;
+        if (other.hasResult()) {
+          setResult(other.getResult());
+        }
+        if (other.hasRef()) {
+          setRef(other.getRef());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int result_ ;
+      /**
+       * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+       * @return Whether the result field is set.
+       */
+      @java.lang.Override
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+       * @return The result.
+       */
+      @java.lang.Override
+      public int getResult() {
+        return result_;
+      }
+      /**
+       * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(int value) {
+        bitField0_ |= 0x00000001;
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 result = 1 [(.description) = "k_EResultOK, etc."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int ref_ ;
+      /**
+       * <code>optional uint32 ref = 2 [(.description) = "The reference number of the inserted device"];</code>
+       * @return Whether the ref field is set.
+       */
+      @java.lang.Override
+      public boolean hasRef() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 ref = 2 [(.description) = "The reference number of the inserted device"];</code>
+       * @return The ref.
+       */
+      @java.lang.Override
+      public int getRef() {
+        return ref_;
+      }
+      /**
+       * <code>optional uint32 ref = 2 [(.description) = "The reference number of the inserted device"];</code>
+       * @param value The ref to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRef(int value) {
+        bitField0_ |= 0x00000002;
+        ref_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ref = 2 [(.description) = "The reference number of the inserted device"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRef() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ref_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CDataPublisher_AddVRDeviceInfo_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CDataPublisher_AddVRDeviceInfo_Response)
+    private static final SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response();
+    }
+
+    public static SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CDataPublisher_AddVRDeviceInfo_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CDataPublisher_AddVRDeviceInfo_Response>() {
+      @java.lang.Override
+      public CDataPublisher_AddVRDeviceInfo_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDataPublisher_AddVRDeviceInfo_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CDataPublisher_AddVRDeviceInfo_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDataPublisher_AddVRDeviceInfo_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesDatapublisherSteamclient.CDataPublisher_AddVRDeviceInfo_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5802,6 +11220,41 @@ public final class SteammessagesDatapublisherSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CDataPublisher_ClientUpdateAppJob_Notification_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDataPublisher_GetVRDeviceInfo_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CDataPublisher_GetVRDeviceInfo_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDataPublisher_GetVRDeviceInfo_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CDataPublisher_GetVRDeviceInfo_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDataPublisher_GetVRDeviceInfo_Response_Device_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CDataPublisher_GetVRDeviceInfo_Response_Device_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDataPublisher_AddVRDeviceInfo_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CDataPublisher_AddVRDeviceInfo_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDataPublisher_AddVRDeviceInfo_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CDataPublisher_AddVRDeviceInfo_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CValveHWSurvey_GetSurveySchedule_Request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5821,56 +11274,108 @@ public final class SteammessagesDatapublisherSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n3steam/steammessages_datapublisher.stea" +
-      "mclient.proto\0322steam/steammessages_unifi" +
-      "ed_base.steamclient.proto\"\375\003\n9CDataPubli" +
-      "sher_ClientContentCorruptionReport_Notif" +
-      "ication\022\r\n\005appid\030\001 \001(\r\022\017\n\007depotid\030\002 \001(\r\022" +
-      "9\n\017download_source\030\003 \001(\tB \202\265\030\034host name " +
-      "of download source\022.\n\010objectid\030\004 \001(\tB\034\202\265" +
-      "\030\030Chunk SHA or Manifest ID\022\"\n\006cellid\030\005 \001" +
-      "(\rB\022\202\265\030\016Client Cell ID\022>\n\013is_manifest\030\006 " +
-      "\001(\010B)\202\265\030%The object is a manifest, not a" +
-      " chunk\022-\n\013object_size\030\007 \001(\004B\030\202\265\030\024object " +
-      "size in bytes\0227\n\017corruption_type\030\010 \001(\rB\036" +
-      "\202\265\030\032See EContentCorruptionType\022-\n\nused_h" +
-      "ttps\030\t \001(\010B\031\202\265\030\025the request was HTTPS\022:\n" +
-      "\021oc_proxy_detected\030\n \001(\010B\037\202\265\030\033detected a" +
-      "n OpenCache proxy\"\320\004\n.CDataPublisher_Cli" +
-      "entUpdateAppJob_Notification\022\016\n\006app_id\030\001" +
-      " \001(\r\022\021\n\tdepot_ids\030\002 \003(\r\022\021\n\tapp_state\030\003 \001" +
-      "(\r\022\025\n\rjob_app_error\030\004 \001(\r\022\025\n\rerror_detai" +
-      "ls\030\005 \001(\t\022\024\n\014job_duration\030\006 \001(\r\022\037\n\027files_" +
-      "validation_failed\030\007 \001(\r\022\034\n\024job_bytes_dow" +
-      "nloaded\030\010 \001(\004\022\030\n\020job_bytes_staged\030\t \001(\004\022" +
-      "\026\n\016bytes_comitted\030\n \001(\004\022\027\n\017start_app_sta" +
-      "te\030\013 \001(\r\022\030\n\020stats_machine_id\030\014 \001(\006\022\023\n\013br" +
-      "anch_name\030\r \001(\t\022\036\n\026total_bytes_downloade" +
-      "d\030\016 \001(\004\022\032\n\022total_bytes_staged\030\017 \001(\004\022\034\n\024t" +
-      "otal_bytes_restored\030\020 \001(\004\022\023\n\013is_borrowed" +
-      "\030\021 \001(\010\022\027\n\017is_free_weekend\030\022 \001(\010\022\032\n\022total" +
-      "_bytes_legacy\030\023 \001(\004\022\033\n\023total_bytes_patch" +
-      "ed\030\024 \001(\004\022\031\n\021total_bytes_saved\030\025 \001(\004\022\017\n\007c" +
-      "ell_id\030\026 \001(\r\"c\n(CValveHWSurvey_GetSurvey" +
-      "Schedule_Request\022\027\n\017surveydatetoken\030\001 \001(" +
-      "\t\022\036\n\026surveydatetokenversion\030\002 \001(\006\"d\n)CVa" +
-      "lveHWSurvey_GetSurveySchedule_Response\022\027" +
-      "\n\017surveydatetoken\030\001 \001(\r\022\036\n\026surveydatetok" +
-      "enversion\030\002 \001(\0062\374\001\n\rDataPublisher\022h\n\035Cli" +
-      "entContentCorruptionReport\022:.CDataPublis" +
-      "her_ClientContentCorruptionReport_Notifi" +
-      "cation\032\013.NoResponse\022X\n\030ClientUpdateAppJo" +
-      "bReport\022/.CDataPublisher_ClientUpdateApp" +
-      "Job_Notification\032\013.NoResponse\032\'\202\265\030#Data " +
-      "Publisher (DP) server services2\254\001\n\rValve" +
-      "HWSurvey\022\207\001\n\021GetSurveySchedule\022).CValveH" +
-      "WSurvey_GetSurveySchedule_Request\032*.CVal" +
-      "veHWSurvey_GetSurveySchedule_Response\"\033\202" +
-      "\265\030\027Should I run the survey\032\021\202\265\030\rValveHWS" +
-      "urveyB\003\200\001\001"
+      "mclient.proto\032\036steam/steammessages_base." +
+      "proto\0322steam/steammessages_unified_base." +
+      "steamclient.proto\"\375\003\n9CDataPublisher_Cli" +
+      "entContentCorruptionReport_Notification\022" +
+      "\r\n\005appid\030\001 \001(\r\022\017\n\007depotid\030\002 \001(\r\0229\n\017downl" +
+      "oad_source\030\003 \001(\tB \202\265\030\034host name of downl" +
+      "oad source\022.\n\010objectid\030\004 \001(\tB\034\202\265\030\030Chunk " +
+      "SHA or Manifest ID\022\"\n\006cellid\030\005 \001(\rB\022\202\265\030\016" +
+      "Client Cell ID\022>\n\013is_manifest\030\006 \001(\010B)\202\265\030" +
+      "%The object is a manifest, not a chunk\022-" +
+      "\n\013object_size\030\007 \001(\004B\030\202\265\030\024object size in " +
+      "bytes\0227\n\017corruption_type\030\010 \001(\rB\036\202\265\030\032See " +
+      "EContentCorruptionType\022-\n\nused_https\030\t \001" +
+      "(\010B\031\202\265\030\025the request was HTTPS\022:\n\021oc_prox" +
+      "y_detected\030\n \001(\010B\037\202\265\030\033detected an OpenCa" +
+      "che proxy\"\264\004\n.CDataPublisher_ClientUpdat" +
+      "eAppJob_Notification\022\016\n\006app_id\030\001 \001(\r\022\021\n\t" +
+      "depot_ids\030\002 \003(\r\022\021\n\tapp_state\030\003 \001(\r\022\025\n\rjo" +
+      "b_app_error\030\004 \001(\r\022\025\n\rerror_details\030\005 \001(\t" +
+      "\022\024\n\014job_duration\030\006 \001(\r\022\037\n\027files_validati" +
+      "on_failed\030\007 \001(\r\022\034\n\024job_bytes_downloaded\030" +
+      "\010 \001(\004\022\030\n\020job_bytes_staged\030\t \001(\004\022\026\n\016bytes" +
+      "_comitted\030\n \001(\004\022\027\n\017start_app_state\030\013 \001(\r" +
+      "\022\030\n\020stats_machine_id\030\014 \001(\006\022\023\n\013branch_nam" +
+      "e\030\r \001(\t\022\036\n\026total_bytes_downloaded\030\016 \001(\004\022" +
+      "\032\n\022total_bytes_staged\030\017 \001(\004\022\034\n\024total_byt" +
+      "es_restored\030\020 \001(\004\022\023\n\013is_borrowed\030\021 \001(\010\022\027" +
+      "\n\017is_free_weekend\030\022 \001(\010\022\033\n\023total_bytes_p" +
+      "atched\030\024 \001(\004\022\031\n\021total_bytes_saved\030\025 \001(\004\022" +
+      "\017\n\007cell_id\030\026 \001(\r\"r\n&CDataPublisher_GetVR" +
+      "DeviceInfo_Request\022H\n\013month_count\030\001 \001(\rB" +
+      "3\202\265\030/Number of months for which to gener" +
+      "ate a report\"\361\003\n\'CDataPublisher_GetVRDev" +
+      "iceInfo_Response\022S\n\006device\030\001 \003(\0132/.CData" +
+      "Publisher_GetVRDeviceInfo_Response.Devic" +
+      "eB\022\202\265\030\016Result devices\032\360\002\n\006Device\022.\n\004name" +
+      "\030\001 \001(\tB \202\265\030\034Name to show for this device" +
+      "\0221\n\003ref\030\002 \001(\rB$\202\265\030 Reference number for " +
+      "this device\022L\n\017aggregation_ref\030\003 \001(\rB3\202\265" +
+      "\030/Reference number to aggregate this dev" +
+      "ice under\022(\n\005total\030\004 \001(\rB\031\202\265\030\025Sum of all" +
+      " the counts\0224\n\006driver\030\005 \001(\tB$\202\265\030 driver " +
+      "name reported by the user\022U\n\014device_clas" +
+      "s\030\006 \001(\005B?\202\265\030;Class of the device. HMD=1," +
+      " controller=2, tracker=3, base=4\"\314\001\n:CDa" +
+      "taPublisher_SetVRDeviceInfoAggregationRe" +
+      "ference_Request\022P\n\003ref\030\001 \001(\rBC\202\265\030?Refere" +
+      "nce number in the VRDeviceInfo table for" +
+      " the entry to set\022<\n\017aggregation_ref\030\002 \001" +
+      "(\rB#\202\265\030\037Aggregation to set the entry to\"" +
+      "d\n;CDataPublisher_SetVRDeviceInfoAggrega" +
+      "tionReference_Response\022%\n\006result\030\001 \001(\rB\025" +
+      "\202\265\030\021k_EResultOK, etc.\"\266\003\n&CDataPublisher" +
+      "_AddVRDeviceInfo_Request\0229\n\014manufacturer" +
+      "\030\001 \001(\tB#\202\265\030\037Manufacturer for the new dev" +
+      "ice\022+\n\005model\030\002 \001(\tB\034\202\265\030\030Model for the ne" +
+      "w device\022]\n\006driver\030\003 \001(\tBM\202\265\030Idriver nam" +
+      "e (not including driver_). e.g. lighthou" +
+      "se, oculus, holographic\022n\n\017controller_ty" +
+      "pe\030\004 \001(\tBU\202\265\030Qcontroller type for the de" +
+      "vice. Can be an empty string for devices" +
+      " with no inputs\022U\n\014device_class\030\005 \001(\005B?\202" +
+      "\265\030;Class of the device. HMD=1, controlle" +
+      "r=2, tracker=3, base=4\"\216\001\n\'CDataPublishe" +
+      "r_AddVRDeviceInfo_Response\022%\n\006result\030\001 \001" +
+      "(\rB\025\202\265\030\021k_EResultOK, etc.\022<\n\003ref\030\002 \001(\rB/" +
+      "\202\265\030+The reference number of the inserted" +
+      " device\"c\n(CValveHWSurvey_GetSurveySched" +
+      "ule_Request\022\027\n\017surveydatetoken\030\001 \001(\t\022\036\n\026" +
+      "surveydatetokenversion\030\002 \001(\006\"d\n)CValveHW" +
+      "Survey_GetSurveySchedule_Response\022\027\n\017sur" +
+      "veydatetoken\030\001 \001(\r\022\036\n\026surveydatetokenver" +
+      "sion\030\002 \001(\0062\245\006\n\rDataPublisher\022h\n\035ClientCo" +
+      "ntentCorruptionReport\022:.CDataPublisher_C" +
+      "lientContentCorruptionReport_Notificatio" +
+      "n\032\013.NoResponse\022X\n\030ClientUpdateAppJobRepo" +
+      "rt\022/.CDataPublisher_ClientUpdateAppJob_N" +
+      "otification\032\013.NoResponse\022\243\001\n\017GetVRDevice" +
+      "Info\022\'.CDataPublisher_GetVRDeviceInfo_Re" +
+      "quest\032(.CDataPublisher_GetVRDeviceInfo_R" +
+      "esponse\"=\202\265\0309Generate a debug report of " +
+      "what devices are in the survey\022\324\001\n#SetVR" +
+      "DeviceInfoAggregationReference\022;.CDataPu" +
+      "blisher_SetVRDeviceInfoAggregationRefere" +
+      "nce_Request\032<.CDataPublisher_SetVRDevice" +
+      "InfoAggregationReference_Response\"2\202\265\030.S" +
+      "et the rollup reference of a single VR d" +
+      "evice\022\251\001\n\017AddVRDeviceInfo\022\'.CDataPublish" +
+      "er_AddVRDeviceInfo_Request\032(.CDataPublis" +
+      "her_AddVRDeviceInfo_Response\"C\202\265\030?Adds a" +
+      " device to the VRDeviceInfo table for th" +
+      "e hardware survey\032\'\202\265\030#Data Publisher (D" +
+      "P) server services2\254\001\n\rValveHWSurvey\022\207\001\n" +
+      "\021GetSurveySchedule\022).CValveHWSurvey_GetS" +
+      "urveySchedule_Request\032*.CValveHWSurvey_G" +
+      "etSurveySchedule_Response\"\033\202\265\030\027Should I " +
+      "run the survey\032\021\202\265\030\rValveHWSurveyB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CDataPublisher_ClientContentCorruptionReport_Notification_descriptor =
@@ -5884,15 +11389,57 @@ public final class SteammessagesDatapublisherSteamclient {
     internal_static_CDataPublisher_ClientUpdateAppJob_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CDataPublisher_ClientUpdateAppJob_Notification_descriptor,
-        new java.lang.String[] { "AppId", "DepotIds", "AppState", "JobAppError", "ErrorDetails", "JobDuration", "FilesValidationFailed", "JobBytesDownloaded", "JobBytesStaged", "BytesComitted", "StartAppState", "StatsMachineId", "BranchName", "TotalBytesDownloaded", "TotalBytesStaged", "TotalBytesRestored", "IsBorrowed", "IsFreeWeekend", "TotalBytesLegacy", "TotalBytesPatched", "TotalBytesSaved", "CellId", });
-    internal_static_CValveHWSurvey_GetSurveySchedule_Request_descriptor =
+        new java.lang.String[] { "AppId", "DepotIds", "AppState", "JobAppError", "ErrorDetails", "JobDuration", "FilesValidationFailed", "JobBytesDownloaded", "JobBytesStaged", "BytesComitted", "StartAppState", "StatsMachineId", "BranchName", "TotalBytesDownloaded", "TotalBytesStaged", "TotalBytesRestored", "IsBorrowed", "IsFreeWeekend", "TotalBytesPatched", "TotalBytesSaved", "CellId", });
+    internal_static_CDataPublisher_GetVRDeviceInfo_Request_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_CDataPublisher_GetVRDeviceInfo_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CDataPublisher_GetVRDeviceInfo_Request_descriptor,
+        new java.lang.String[] { "MonthCount", });
+    internal_static_CDataPublisher_GetVRDeviceInfo_Response_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_CDataPublisher_GetVRDeviceInfo_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CDataPublisher_GetVRDeviceInfo_Response_descriptor,
+        new java.lang.String[] { "Device", });
+    internal_static_CDataPublisher_GetVRDeviceInfo_Response_Device_descriptor =
+      internal_static_CDataPublisher_GetVRDeviceInfo_Response_descriptor.getNestedTypes().get(0);
+    internal_static_CDataPublisher_GetVRDeviceInfo_Response_Device_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CDataPublisher_GetVRDeviceInfo_Response_Device_descriptor,
+        new java.lang.String[] { "Name", "Ref", "AggregationRef", "Total", "Driver", "DeviceClass", });
+    internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Request_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Request_descriptor,
+        new java.lang.String[] { "Ref", "AggregationRef", });
+    internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Response_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CDataPublisher_SetVRDeviceInfoAggregationReference_Response_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_CDataPublisher_AddVRDeviceInfo_Request_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_CDataPublisher_AddVRDeviceInfo_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CDataPublisher_AddVRDeviceInfo_Request_descriptor,
+        new java.lang.String[] { "Manufacturer", "Model", "Driver", "ControllerType", "DeviceClass", });
+    internal_static_CDataPublisher_AddVRDeviceInfo_Response_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_CDataPublisher_AddVRDeviceInfo_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CDataPublisher_AddVRDeviceInfo_Response_descriptor,
+        new java.lang.String[] { "Result", "Ref", });
+    internal_static_CValveHWSurvey_GetSurveySchedule_Request_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CValveHWSurvey_GetSurveySchedule_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CValveHWSurvey_GetSurveySchedule_Request_descriptor,
         new java.lang.String[] { "Surveydatetoken", "Surveydatetokenversion", });
     internal_static_CValveHWSurvey_GetSurveySchedule_Response_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CValveHWSurvey_GetSurveySchedule_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CValveHWSurvey_GetSurveySchedule_Response_descriptor,
@@ -5904,6 +11451,7 @@ public final class SteammessagesDatapublisherSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

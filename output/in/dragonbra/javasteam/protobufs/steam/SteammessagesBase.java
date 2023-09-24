@@ -11,6 +11,7 @@ public final class SteammessagesBase {
     registry.add(SteammessagesBase.msgpoolHardLimit);
     registry.add(SteammessagesBase.forcePhpGeneration);
     registry.add(SteammessagesBase.phpOutputAlwaysNumber);
+    registry.add(SteammessagesBase.allowFieldNamedSteamId);
   }
 
   public static void registerAllExtensions(
@@ -18,6 +19,156 @@ public final class SteammessagesBase {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code EBanContentCheckResult}
+   */
+  public enum EBanContentCheckResult
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EBanContentCheckResult_NotScanned = 0;</code>
+     */
+    k_EBanContentCheckResult_NotScanned(0),
+    /**
+     * <code>k_EBanContentCheckResult_Reset = 1;</code>
+     */
+    k_EBanContentCheckResult_Reset(1),
+    /**
+     * <code>k_EBanContentCheckResult_NeedsChecking = 2;</code>
+     */
+    k_EBanContentCheckResult_NeedsChecking(2),
+    /**
+     * <code>k_EBanContentCheckResult_VeryUnlikely = 5;</code>
+     */
+    k_EBanContentCheckResult_VeryUnlikely(5),
+    /**
+     * <code>k_EBanContentCheckResult_Unlikely = 30;</code>
+     */
+    k_EBanContentCheckResult_Unlikely(30),
+    /**
+     * <code>k_EBanContentCheckResult_Possible = 50;</code>
+     */
+    k_EBanContentCheckResult_Possible(50),
+    /**
+     * <code>k_EBanContentCheckResult_Likely = 75;</code>
+     */
+    k_EBanContentCheckResult_Likely(75),
+    /**
+     * <code>k_EBanContentCheckResult_VeryLikely = 100;</code>
+     */
+    k_EBanContentCheckResult_VeryLikely(100),
+    ;
+
+    /**
+     * <code>k_EBanContentCheckResult_NotScanned = 0;</code>
+     */
+    public static final int k_EBanContentCheckResult_NotScanned_VALUE = 0;
+    /**
+     * <code>k_EBanContentCheckResult_Reset = 1;</code>
+     */
+    public static final int k_EBanContentCheckResult_Reset_VALUE = 1;
+    /**
+     * <code>k_EBanContentCheckResult_NeedsChecking = 2;</code>
+     */
+    public static final int k_EBanContentCheckResult_NeedsChecking_VALUE = 2;
+    /**
+     * <code>k_EBanContentCheckResult_VeryUnlikely = 5;</code>
+     */
+    public static final int k_EBanContentCheckResult_VeryUnlikely_VALUE = 5;
+    /**
+     * <code>k_EBanContentCheckResult_Unlikely = 30;</code>
+     */
+    public static final int k_EBanContentCheckResult_Unlikely_VALUE = 30;
+    /**
+     * <code>k_EBanContentCheckResult_Possible = 50;</code>
+     */
+    public static final int k_EBanContentCheckResult_Possible_VALUE = 50;
+    /**
+     * <code>k_EBanContentCheckResult_Likely = 75;</code>
+     */
+    public static final int k_EBanContentCheckResult_Likely_VALUE = 75;
+    /**
+     * <code>k_EBanContentCheckResult_VeryLikely = 100;</code>
+     */
+    public static final int k_EBanContentCheckResult_VeryLikely_VALUE = 100;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EBanContentCheckResult valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EBanContentCheckResult forNumber(int value) {
+      switch (value) {
+        case 0: return k_EBanContentCheckResult_NotScanned;
+        case 1: return k_EBanContentCheckResult_Reset;
+        case 2: return k_EBanContentCheckResult_NeedsChecking;
+        case 5: return k_EBanContentCheckResult_VeryUnlikely;
+        case 30: return k_EBanContentCheckResult_Unlikely;
+        case 50: return k_EBanContentCheckResult_Possible;
+        case 75: return k_EBanContentCheckResult_Likely;
+        case 100: return k_EBanContentCheckResult_VeryLikely;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EBanContentCheckResult>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EBanContentCheckResult> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EBanContentCheckResult>() {
+            public EBanContentCheckResult findValueByNumber(int number) {
+              return EBanContentCheckResult.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return SteammessagesBase.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final EBanContentCheckResult[] VALUES = values();
+
+    public static EBanContentCheckResult valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EBanContentCheckResult(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EBanContentCheckResult)
+  }
+
   /**
    * Protobuf enum {@code EProtoClanEventType}
    */
@@ -388,7 +539,7 @@ public final class SteammessagesBase {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return SteammessagesBase.getDescriptor().getEnumTypes().get(0);
+      return SteammessagesBase.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final EProtoClanEventType[] VALUES = values();
@@ -502,7 +653,7 @@ public final class SteammessagesBase {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return SteammessagesBase.getDescriptor().getEnumTypes().get(1);
+      return SteammessagesBase.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final PartnerEventNotificationType[] VALUES = values();
@@ -1963,6 +2114,629 @@ public final class SteammessagesBase {
 
   }
 
+  public interface CMsgGCRoutingProtoBufHeaderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgGCRoutingProtoBufHeader)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 dst_gcid_queue = 1;</code>
+     * @return Whether the dstGcidQueue field is set.
+     */
+    boolean hasDstGcidQueue();
+    /**
+     * <code>optional uint64 dst_gcid_queue = 1;</code>
+     * @return The dstGcidQueue.
+     */
+    long getDstGcidQueue();
+
+    /**
+     * <code>optional uint32 dst_gc_dir_index = 2;</code>
+     * @return Whether the dstGcDirIndex field is set.
+     */
+    boolean hasDstGcDirIndex();
+    /**
+     * <code>optional uint32 dst_gc_dir_index = 2;</code>
+     * @return The dstGcDirIndex.
+     */
+    int getDstGcDirIndex();
+  }
+  /**
+   * Protobuf type {@code CMsgGCRoutingProtoBufHeader}
+   */
+  public static final class CMsgGCRoutingProtoBufHeader extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgGCRoutingProtoBufHeader)
+      CMsgGCRoutingProtoBufHeaderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgGCRoutingProtoBufHeader.newBuilder() to construct.
+    private CMsgGCRoutingProtoBufHeader(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgGCRoutingProtoBufHeader() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgGCRoutingProtoBufHeader();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgGCRoutingProtoBufHeader(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              dstGcidQueue_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              dstGcDirIndex_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CMsgGCRoutingProtoBufHeader_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CMsgGCRoutingProtoBufHeader_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CMsgGCRoutingProtoBufHeader.class, SteammessagesBase.CMsgGCRoutingProtoBufHeader.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DST_GCID_QUEUE_FIELD_NUMBER = 1;
+    private long dstGcidQueue_;
+    /**
+     * <code>optional uint64 dst_gcid_queue = 1;</code>
+     * @return Whether the dstGcidQueue field is set.
+     */
+    @java.lang.Override
+    public boolean hasDstGcidQueue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 dst_gcid_queue = 1;</code>
+     * @return The dstGcidQueue.
+     */
+    @java.lang.Override
+    public long getDstGcidQueue() {
+      return dstGcidQueue_;
+    }
+
+    public static final int DST_GC_DIR_INDEX_FIELD_NUMBER = 2;
+    private int dstGcDirIndex_;
+    /**
+     * <code>optional uint32 dst_gc_dir_index = 2;</code>
+     * @return Whether the dstGcDirIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasDstGcDirIndex() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 dst_gc_dir_index = 2;</code>
+     * @return The dstGcDirIndex.
+     */
+    @java.lang.Override
+    public int getDstGcDirIndex() {
+      return dstGcDirIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, dstGcidQueue_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, dstGcDirIndex_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, dstGcidQueue_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, dstGcDirIndex_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CMsgGCRoutingProtoBufHeader)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CMsgGCRoutingProtoBufHeader other = (SteammessagesBase.CMsgGCRoutingProtoBufHeader) obj;
+
+      if (hasDstGcidQueue() != other.hasDstGcidQueue()) return false;
+      if (hasDstGcidQueue()) {
+        if (getDstGcidQueue()
+            != other.getDstGcidQueue()) return false;
+      }
+      if (hasDstGcDirIndex() != other.hasDstGcDirIndex()) return false;
+      if (hasDstGcDirIndex()) {
+        if (getDstGcDirIndex()
+            != other.getDstGcDirIndex()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDstGcidQueue()) {
+        hash = (37 * hash) + DST_GCID_QUEUE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getDstGcidQueue());
+      }
+      if (hasDstGcDirIndex()) {
+        hash = (37 * hash) + DST_GC_DIR_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getDstGcDirIndex();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CMsgGCRoutingProtoBufHeader prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgGCRoutingProtoBufHeader}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgGCRoutingProtoBufHeader)
+        SteammessagesBase.CMsgGCRoutingProtoBufHeaderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CMsgGCRoutingProtoBufHeader_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CMsgGCRoutingProtoBufHeader_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CMsgGCRoutingProtoBufHeader.class, SteammessagesBase.CMsgGCRoutingProtoBufHeader.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CMsgGCRoutingProtoBufHeader.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        dstGcidQueue_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dstGcDirIndex_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CMsgGCRoutingProtoBufHeader_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgGCRoutingProtoBufHeader getDefaultInstanceForType() {
+        return SteammessagesBase.CMsgGCRoutingProtoBufHeader.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgGCRoutingProtoBufHeader build() {
+        SteammessagesBase.CMsgGCRoutingProtoBufHeader result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgGCRoutingProtoBufHeader buildPartial() {
+        SteammessagesBase.CMsgGCRoutingProtoBufHeader result = new SteammessagesBase.CMsgGCRoutingProtoBufHeader(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dstGcidQueue_ = dstGcidQueue_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dstGcDirIndex_ = dstGcDirIndex_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CMsgGCRoutingProtoBufHeader) {
+          return mergeFrom((SteammessagesBase.CMsgGCRoutingProtoBufHeader)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CMsgGCRoutingProtoBufHeader other) {
+        if (other == SteammessagesBase.CMsgGCRoutingProtoBufHeader.getDefaultInstance()) return this;
+        if (other.hasDstGcidQueue()) {
+          setDstGcidQueue(other.getDstGcidQueue());
+        }
+        if (other.hasDstGcDirIndex()) {
+          setDstGcDirIndex(other.getDstGcDirIndex());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CMsgGCRoutingProtoBufHeader parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CMsgGCRoutingProtoBufHeader) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long dstGcidQueue_ ;
+      /**
+       * <code>optional uint64 dst_gcid_queue = 1;</code>
+       * @return Whether the dstGcidQueue field is set.
+       */
+      @java.lang.Override
+      public boolean hasDstGcidQueue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 dst_gcid_queue = 1;</code>
+       * @return The dstGcidQueue.
+       */
+      @java.lang.Override
+      public long getDstGcidQueue() {
+        return dstGcidQueue_;
+      }
+      /**
+       * <code>optional uint64 dst_gcid_queue = 1;</code>
+       * @param value The dstGcidQueue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDstGcidQueue(long value) {
+        bitField0_ |= 0x00000001;
+        dstGcidQueue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 dst_gcid_queue = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDstGcidQueue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dstGcidQueue_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int dstGcDirIndex_ ;
+      /**
+       * <code>optional uint32 dst_gc_dir_index = 2;</code>
+       * @return Whether the dstGcDirIndex field is set.
+       */
+      @java.lang.Override
+      public boolean hasDstGcDirIndex() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 dst_gc_dir_index = 2;</code>
+       * @return The dstGcDirIndex.
+       */
+      @java.lang.Override
+      public int getDstGcDirIndex() {
+        return dstGcDirIndex_;
+      }
+      /**
+       * <code>optional uint32 dst_gc_dir_index = 2;</code>
+       * @param value The dstGcDirIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDstGcDirIndex(int value) {
+        bitField0_ |= 0x00000002;
+        dstGcDirIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 dst_gc_dir_index = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDstGcDirIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dstGcDirIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgGCRoutingProtoBufHeader)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgGCRoutingProtoBufHeader)
+    private static final SteammessagesBase.CMsgGCRoutingProtoBufHeader DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CMsgGCRoutingProtoBufHeader();
+    }
+
+    public static SteammessagesBase.CMsgGCRoutingProtoBufHeader getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgGCRoutingProtoBufHeader>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgGCRoutingProtoBufHeader>() {
+      @java.lang.Override
+      public CMsgGCRoutingProtoBufHeader parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgGCRoutingProtoBufHeader(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgGCRoutingProtoBufHeader> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgGCRoutingProtoBufHeader> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CMsgGCRoutingProtoBufHeader getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CMsgProtoBufHeaderOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgProtoBufHeader)
       com.google.protobuf.MessageOrBuilder {
@@ -2217,23 +2991,6 @@ public final class SteammessagesBase {
     int getCmSysid();
 
     /**
-     * <code>optional string wg_token = 30;</code>
-     * @return Whether the wgToken field is set.
-     */
-    boolean hasWgToken();
-    /**
-     * <code>optional string wg_token = 30;</code>
-     * @return The wgToken.
-     */
-    java.lang.String getWgToken();
-    /**
-     * <code>optional string wg_token = 30;</code>
-     * @return The bytes for wgToken.
-     */
-    com.google.protobuf.ByteString
-        getWgTokenBytes();
-
-    /**
      * <code>optional uint32 launcher_type = 31 [default = 0];</code>
      * @return Whether the launcherType field is set.
      */
@@ -2254,6 +3011,116 @@ public final class SteammessagesBase {
      * @return The realm.
      */
     int getRealm();
+
+    /**
+     * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+     * @return Whether the timeoutMs field is set.
+     */
+    boolean hasTimeoutMs();
+    /**
+     * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+     * @return The timeoutMs.
+     */
+    int getTimeoutMs();
+
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return Whether the debugSource field is set.
+     */
+    boolean hasDebugSource();
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return The debugSource.
+     */
+    java.lang.String getDebugSource();
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return The bytes for debugSource.
+     */
+    com.google.protobuf.ByteString
+        getDebugSourceBytes();
+
+    /**
+     * <code>optional uint32 debug_source_string_index = 35;</code>
+     * @return Whether the debugSourceStringIndex field is set.
+     */
+    boolean hasDebugSourceStringIndex();
+    /**
+     * <code>optional uint32 debug_source_string_index = 35;</code>
+     * @return The debugSourceStringIndex.
+     */
+    int getDebugSourceStringIndex();
+
+    /**
+     * <code>optional uint64 token_id = 36;</code>
+     * @return Whether the tokenId field is set.
+     */
+    boolean hasTokenId();
+    /**
+     * <code>optional uint64 token_id = 36;</code>
+     * @return The tokenId.
+     */
+    long getTokenId();
+
+    /**
+     * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+     * @return Whether the routingGc field is set.
+     */
+    boolean hasRoutingGc();
+    /**
+     * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+     * @return The routingGc.
+     */
+    SteammessagesBase.CMsgGCRoutingProtoBufHeader getRoutingGc();
+    /**
+     * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+     */
+    SteammessagesBase.CMsgGCRoutingProtoBufHeaderOrBuilder getRoutingGcOrBuilder();
+
+    /**
+     * <code>optional .CMsgProtoBufHeader.ESessionDisposition session_disposition = 38 [default = k_ESessionDispositionNormal];</code>
+     * @return Whether the sessionDisposition field is set.
+     */
+    boolean hasSessionDisposition();
+    /**
+     * <code>optional .CMsgProtoBufHeader.ESessionDisposition session_disposition = 38 [default = k_ESessionDispositionNormal];</code>
+     * @return The sessionDisposition.
+     */
+    SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition getSessionDisposition();
+
+    /**
+     * <code>optional string wg_token = 39;</code>
+     * @return Whether the wgToken field is set.
+     */
+    boolean hasWgToken();
+    /**
+     * <code>optional string wg_token = 39;</code>
+     * @return The wgToken.
+     */
+    java.lang.String getWgToken();
+    /**
+     * <code>optional string wg_token = 39;</code>
+     * @return The bytes for wgToken.
+     */
+    com.google.protobuf.ByteString
+        getWgTokenBytes();
+
+    /**
+     * <code>optional string webui_auth_key = 40;</code>
+     * @return Whether the webuiAuthKey field is set.
+     */
+    boolean hasWebuiAuthKey();
+    /**
+     * <code>optional string webui_auth_key = 40;</code>
+     * @return The webuiAuthKey.
+     */
+    java.lang.String getWebuiAuthKey();
+    /**
+     * <code>optional string webui_auth_key = 40;</code>
+     * @return The bytes for webuiAuthKey.
+     */
+    com.google.protobuf.ByteString
+        getWebuiAuthKeyBytes();
 
     /**
      * <code>uint32 ip = 15;</code>
@@ -2300,7 +3167,11 @@ public final class SteammessagesBase {
       transportError_ = 1;
       messageid_ = -1L;
       forwardToSysid_ = emptyIntList();
+      timeoutMs_ = -1;
+      debugSource_ = "";
+      sessionDisposition_ = 0;
       wgToken_ = "";
+      webuiAuthKey_ = "";
     }
 
     @java.lang.Override
@@ -2324,6 +3195,7 @@ public final class SteammessagesBase {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2467,20 +3339,72 @@ public final class SteammessagesBase {
               ipAddr_ = input.readBytes();
               break;
             }
-            case 242: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00100000;
-              wgToken_ = bs;
-              break;
-            }
             case 248: {
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00100000;
               launcherType_ = input.readUInt32();
               break;
             }
             case 256: {
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00200000;
               realm_ = input.readUInt32();
+              break;
+            }
+            case 264: {
+              bitField0_ |= 0x00400000;
+              timeoutMs_ = input.readInt32();
+              break;
+            }
+            case 274: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00800000;
+              debugSource_ = bs;
+              break;
+            }
+            case 280: {
+              bitField0_ |= 0x01000000;
+              debugSourceStringIndex_ = input.readUInt32();
+              break;
+            }
+            case 288: {
+              bitField0_ |= 0x02000000;
+              tokenId_ = input.readUInt64();
+              break;
+            }
+            case 298: {
+              SteammessagesBase.CMsgGCRoutingProtoBufHeader.Builder subBuilder = null;
+              if (((bitField0_ & 0x04000000) != 0)) {
+                subBuilder = routingGc_.toBuilder();
+              }
+              routingGc_ = input.readMessage(SteammessagesBase.CMsgGCRoutingProtoBufHeader.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(routingGc_);
+                routingGc_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x04000000;
+              break;
+            }
+            case 304: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition value = SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(38, rawValue);
+              } else {
+                bitField0_ |= 0x08000000;
+                sessionDisposition_ = rawValue;
+              }
+              break;
+            }
+            case 314: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x10000000;
+              wgToken_ = bs;
+              break;
+            }
+            case 322: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x20000000;
+              webuiAuthKey_ = bs;
               break;
             }
             default: {
@@ -2516,6 +3440,102 @@ public final class SteammessagesBase {
       return SteammessagesBase.internal_static_CMsgProtoBufHeader_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               SteammessagesBase.CMsgProtoBufHeader.class, SteammessagesBase.CMsgProtoBufHeader.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code CMsgProtoBufHeader.ESessionDisposition}
+     */
+    public enum ESessionDisposition
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>k_ESessionDispositionNormal = 0;</code>
+       */
+      k_ESessionDispositionNormal(0),
+      /**
+       * <code>k_ESessionDispositionDisconnect = 1;</code>
+       */
+      k_ESessionDispositionDisconnect(1),
+      ;
+
+      /**
+       * <code>k_ESessionDispositionNormal = 0;</code>
+       */
+      public static final int k_ESessionDispositionNormal_VALUE = 0;
+      /**
+       * <code>k_ESessionDispositionDisconnect = 1;</code>
+       */
+      public static final int k_ESessionDispositionDisconnect_VALUE = 1;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ESessionDisposition valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ESessionDisposition forNumber(int value) {
+        switch (value) {
+          case 0: return k_ESessionDispositionNormal;
+          case 1: return k_ESessionDispositionDisconnect;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ESessionDisposition>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ESessionDisposition> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ESessionDisposition>() {
+              public ESessionDisposition findValueByNumber(int number) {
+                return ESessionDisposition.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return SteammessagesBase.CMsgProtoBufHeader.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ESessionDisposition[] VALUES = values();
+
+      public static ESessionDisposition valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ESessionDisposition(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:CMsgProtoBufHeader.ESessionDisposition)
     }
 
     private int bitField0_;
@@ -3025,54 +4045,6 @@ public final class SteammessagesBase {
       return cmSysid_;
     }
 
-    public static final int WG_TOKEN_FIELD_NUMBER = 30;
-    private volatile java.lang.Object wgToken_;
-    /**
-     * <code>optional string wg_token = 30;</code>
-     * @return Whether the wgToken field is set.
-     */
-    @java.lang.Override
-    public boolean hasWgToken() {
-      return ((bitField0_ & 0x00100000) != 0);
-    }
-    /**
-     * <code>optional string wg_token = 30;</code>
-     * @return The wgToken.
-     */
-    @java.lang.Override
-    public java.lang.String getWgToken() {
-      java.lang.Object ref = wgToken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          wgToken_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string wg_token = 30;</code>
-     * @return The bytes for wgToken.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getWgTokenBytes() {
-      java.lang.Object ref = wgToken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        wgToken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int LAUNCHER_TYPE_FIELD_NUMBER = 31;
     private int launcherType_;
     /**
@@ -3081,7 +4053,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasLauncherType() {
-      return ((bitField0_ & 0x00200000) != 0);
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <code>optional uint32 launcher_type = 31 [default = 0];</code>
@@ -3100,7 +4072,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasRealm() {
-      return ((bitField0_ & 0x00400000) != 0);
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <code>optional uint32 realm = 32 [default = 0];</code>
@@ -3109,6 +4081,252 @@ public final class SteammessagesBase {
     @java.lang.Override
     public int getRealm() {
       return realm_;
+    }
+
+    public static final int TIMEOUT_MS_FIELD_NUMBER = 33;
+    private int timeoutMs_;
+    /**
+     * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+     * @return Whether the timeoutMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeoutMs() {
+      return ((bitField0_ & 0x00400000) != 0);
+    }
+    /**
+     * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+     * @return The timeoutMs.
+     */
+    @java.lang.Override
+    public int getTimeoutMs() {
+      return timeoutMs_;
+    }
+
+    public static final int DEBUG_SOURCE_FIELD_NUMBER = 34;
+    private volatile java.lang.Object debugSource_;
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return Whether the debugSource field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebugSource() {
+      return ((bitField0_ & 0x00800000) != 0);
+    }
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return The debugSource.
+     */
+    @java.lang.Override
+    public java.lang.String getDebugSource() {
+      java.lang.Object ref = debugSource_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debugSource_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return The bytes for debugSource.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDebugSourceBytes() {
+      java.lang.Object ref = debugSource_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debugSource_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEBUG_SOURCE_STRING_INDEX_FIELD_NUMBER = 35;
+    private int debugSourceStringIndex_;
+    /**
+     * <code>optional uint32 debug_source_string_index = 35;</code>
+     * @return Whether the debugSourceStringIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebugSourceStringIndex() {
+      return ((bitField0_ & 0x01000000) != 0);
+    }
+    /**
+     * <code>optional uint32 debug_source_string_index = 35;</code>
+     * @return The debugSourceStringIndex.
+     */
+    @java.lang.Override
+    public int getDebugSourceStringIndex() {
+      return debugSourceStringIndex_;
+    }
+
+    public static final int TOKEN_ID_FIELD_NUMBER = 36;
+    private long tokenId_;
+    /**
+     * <code>optional uint64 token_id = 36;</code>
+     * @return Whether the tokenId field is set.
+     */
+    @java.lang.Override
+    public boolean hasTokenId() {
+      return ((bitField0_ & 0x02000000) != 0);
+    }
+    /**
+     * <code>optional uint64 token_id = 36;</code>
+     * @return The tokenId.
+     */
+    @java.lang.Override
+    public long getTokenId() {
+      return tokenId_;
+    }
+
+    public static final int ROUTING_GC_FIELD_NUMBER = 37;
+    private SteammessagesBase.CMsgGCRoutingProtoBufHeader routingGc_;
+    /**
+     * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+     * @return Whether the routingGc field is set.
+     */
+    @java.lang.Override
+    public boolean hasRoutingGc() {
+      return ((bitField0_ & 0x04000000) != 0);
+    }
+    /**
+     * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+     * @return The routingGc.
+     */
+    @java.lang.Override
+    public SteammessagesBase.CMsgGCRoutingProtoBufHeader getRoutingGc() {
+      return routingGc_ == null ? SteammessagesBase.CMsgGCRoutingProtoBufHeader.getDefaultInstance() : routingGc_;
+    }
+    /**
+     * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.CMsgGCRoutingProtoBufHeaderOrBuilder getRoutingGcOrBuilder() {
+      return routingGc_ == null ? SteammessagesBase.CMsgGCRoutingProtoBufHeader.getDefaultInstance() : routingGc_;
+    }
+
+    public static final int SESSION_DISPOSITION_FIELD_NUMBER = 38;
+    private int sessionDisposition_;
+    /**
+     * <code>optional .CMsgProtoBufHeader.ESessionDisposition session_disposition = 38 [default = k_ESessionDispositionNormal];</code>
+     * @return Whether the sessionDisposition field is set.
+     */
+    @java.lang.Override public boolean hasSessionDisposition() {
+      return ((bitField0_ & 0x08000000) != 0);
+    }
+    /**
+     * <code>optional .CMsgProtoBufHeader.ESessionDisposition session_disposition = 38 [default = k_ESessionDispositionNormal];</code>
+     * @return The sessionDisposition.
+     */
+    @java.lang.Override public SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition getSessionDisposition() {
+      @SuppressWarnings("deprecation")
+      SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition result = SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition.valueOf(sessionDisposition_);
+      return result == null ? SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition.k_ESessionDispositionNormal : result;
+    }
+
+    public static final int WG_TOKEN_FIELD_NUMBER = 39;
+    private volatile java.lang.Object wgToken_;
+    /**
+     * <code>optional string wg_token = 39;</code>
+     * @return Whether the wgToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasWgToken() {
+      return ((bitField0_ & 0x10000000) != 0);
+    }
+    /**
+     * <code>optional string wg_token = 39;</code>
+     * @return The wgToken.
+     */
+    @java.lang.Override
+    public java.lang.String getWgToken() {
+      java.lang.Object ref = wgToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          wgToken_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string wg_token = 39;</code>
+     * @return The bytes for wgToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWgTokenBytes() {
+      java.lang.Object ref = wgToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        wgToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEBUI_AUTH_KEY_FIELD_NUMBER = 40;
+    private volatile java.lang.Object webuiAuthKey_;
+    /**
+     * <code>optional string webui_auth_key = 40;</code>
+     * @return Whether the webuiAuthKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasWebuiAuthKey() {
+      return ((bitField0_ & 0x20000000) != 0);
+    }
+    /**
+     * <code>optional string webui_auth_key = 40;</code>
+     * @return The webuiAuthKey.
+     */
+    @java.lang.Override
+    public java.lang.String getWebuiAuthKey() {
+      java.lang.Object ref = webuiAuthKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          webuiAuthKey_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string webui_auth_key = 40;</code>
+     * @return The bytes for webuiAuthKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebuiAuthKeyBytes() {
+      java.lang.Object ref = webuiAuthKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        webuiAuthKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int IP_FIELD_NUMBER = 15;
@@ -3239,13 +4457,34 @@ public final class SteammessagesBase {
             29, (com.google.protobuf.ByteString) ipAddr_);
       }
       if (((bitField0_ & 0x00100000) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 30, wgToken_);
-      }
-      if (((bitField0_ & 0x00200000) != 0)) {
         output.writeUInt32(31, launcherType_);
       }
-      if (((bitField0_ & 0x00400000) != 0)) {
+      if (((bitField0_ & 0x00200000) != 0)) {
         output.writeUInt32(32, realm_);
+      }
+      if (((bitField0_ & 0x00400000) != 0)) {
+        output.writeInt32(33, timeoutMs_);
+      }
+      if (((bitField0_ & 0x00800000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 34, debugSource_);
+      }
+      if (((bitField0_ & 0x01000000) != 0)) {
+        output.writeUInt32(35, debugSourceStringIndex_);
+      }
+      if (((bitField0_ & 0x02000000) != 0)) {
+        output.writeUInt64(36, tokenId_);
+      }
+      if (((bitField0_ & 0x04000000) != 0)) {
+        output.writeMessage(37, getRoutingGc());
+      }
+      if (((bitField0_ & 0x08000000) != 0)) {
+        output.writeEnum(38, sessionDisposition_);
+      }
+      if (((bitField0_ & 0x10000000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 39, wgToken_);
+      }
+      if (((bitField0_ & 0x20000000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 40, webuiAuthKey_);
       }
       unknownFields.writeTo(output);
     }
@@ -3354,15 +4593,41 @@ public final class SteammessagesBase {
               29, (com.google.protobuf.ByteString) ipAddr_);
       }
       if (((bitField0_ & 0x00100000) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, wgToken_);
-      }
-      if (((bitField0_ & 0x00200000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(31, launcherType_);
       }
-      if (((bitField0_ & 0x00400000) != 0)) {
+      if (((bitField0_ & 0x00200000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(32, realm_);
+      }
+      if (((bitField0_ & 0x00400000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(33, timeoutMs_);
+      }
+      if (((bitField0_ & 0x00800000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, debugSource_);
+      }
+      if (((bitField0_ & 0x01000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(35, debugSourceStringIndex_);
+      }
+      if (((bitField0_ & 0x02000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(36, tokenId_);
+      }
+      if (((bitField0_ & 0x04000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(37, getRoutingGc());
+      }
+      if (((bitField0_ & 0x08000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(38, sessionDisposition_);
+      }
+      if (((bitField0_ & 0x10000000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, wgToken_);
+      }
+      if (((bitField0_ & 0x20000000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, webuiAuthKey_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3481,11 +4746,6 @@ public final class SteammessagesBase {
         if (getCmSysid()
             != other.getCmSysid()) return false;
       }
-      if (hasWgToken() != other.hasWgToken()) return false;
-      if (hasWgToken()) {
-        if (!getWgToken()
-            .equals(other.getWgToken())) return false;
-      }
       if (hasLauncherType() != other.hasLauncherType()) return false;
       if (hasLauncherType()) {
         if (getLauncherType()
@@ -3495,6 +4755,45 @@ public final class SteammessagesBase {
       if (hasRealm()) {
         if (getRealm()
             != other.getRealm()) return false;
+      }
+      if (hasTimeoutMs() != other.hasTimeoutMs()) return false;
+      if (hasTimeoutMs()) {
+        if (getTimeoutMs()
+            != other.getTimeoutMs()) return false;
+      }
+      if (hasDebugSource() != other.hasDebugSource()) return false;
+      if (hasDebugSource()) {
+        if (!getDebugSource()
+            .equals(other.getDebugSource())) return false;
+      }
+      if (hasDebugSourceStringIndex() != other.hasDebugSourceStringIndex()) return false;
+      if (hasDebugSourceStringIndex()) {
+        if (getDebugSourceStringIndex()
+            != other.getDebugSourceStringIndex()) return false;
+      }
+      if (hasTokenId() != other.hasTokenId()) return false;
+      if (hasTokenId()) {
+        if (getTokenId()
+            != other.getTokenId()) return false;
+      }
+      if (hasRoutingGc() != other.hasRoutingGc()) return false;
+      if (hasRoutingGc()) {
+        if (!getRoutingGc()
+            .equals(other.getRoutingGc())) return false;
+      }
+      if (hasSessionDisposition() != other.hasSessionDisposition()) return false;
+      if (hasSessionDisposition()) {
+        if (sessionDisposition_ != other.sessionDisposition_) return false;
+      }
+      if (hasWgToken() != other.hasWgToken()) return false;
+      if (hasWgToken()) {
+        if (!getWgToken()
+            .equals(other.getWgToken())) return false;
+      }
+      if (hasWebuiAuthKey() != other.hasWebuiAuthKey()) return false;
+      if (hasWebuiAuthKey()) {
+        if (!getWebuiAuthKey()
+            .equals(other.getWebuiAuthKey())) return false;
       }
       if (!getIpAddrCase().equals(other.getIpAddrCase())) return false;
       switch (ipAddrCase_) {
@@ -3611,10 +4910,6 @@ public final class SteammessagesBase {
         hash = (37 * hash) + CM_SYSID_FIELD_NUMBER;
         hash = (53 * hash) + getCmSysid();
       }
-      if (hasWgToken()) {
-        hash = (37 * hash) + WG_TOKEN_FIELD_NUMBER;
-        hash = (53 * hash) + getWgToken().hashCode();
-      }
       if (hasLauncherType()) {
         hash = (37 * hash) + LAUNCHER_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getLauncherType();
@@ -3622,6 +4917,39 @@ public final class SteammessagesBase {
       if (hasRealm()) {
         hash = (37 * hash) + REALM_FIELD_NUMBER;
         hash = (53 * hash) + getRealm();
+      }
+      if (hasTimeoutMs()) {
+        hash = (37 * hash) + TIMEOUT_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeoutMs();
+      }
+      if (hasDebugSource()) {
+        hash = (37 * hash) + DEBUG_SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getDebugSource().hashCode();
+      }
+      if (hasDebugSourceStringIndex()) {
+        hash = (37 * hash) + DEBUG_SOURCE_STRING_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getDebugSourceStringIndex();
+      }
+      if (hasTokenId()) {
+        hash = (37 * hash) + TOKEN_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTokenId());
+      }
+      if (hasRoutingGc()) {
+        hash = (37 * hash) + ROUTING_GC_FIELD_NUMBER;
+        hash = (53 * hash) + getRoutingGc().hashCode();
+      }
+      if (hasSessionDisposition()) {
+        hash = (37 * hash) + SESSION_DISPOSITION_FIELD_NUMBER;
+        hash = (53 * hash) + sessionDisposition_;
+      }
+      if (hasWgToken()) {
+        hash = (37 * hash) + WG_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getWgToken().hashCode();
+      }
+      if (hasWebuiAuthKey()) {
+        hash = (37 * hash) + WEBUI_AUTH_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getWebuiAuthKey().hashCode();
       }
       switch (ipAddrCase_) {
         case 15:
@@ -3763,6 +5091,7 @@ public final class SteammessagesBase {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getRoutingGcFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3810,12 +5139,30 @@ public final class SteammessagesBase {
         bitField0_ = (bitField0_ & ~0x00080000);
         cmSysid_ = 0;
         bitField0_ = (bitField0_ & ~0x00100000);
-        wgToken_ = "";
-        bitField0_ = (bitField0_ & ~0x00200000);
         launcherType_ = 0;
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         realm_ = 0;
+        bitField0_ = (bitField0_ & ~0x00400000);
+        timeoutMs_ = -1;
         bitField0_ = (bitField0_ & ~0x00800000);
+        debugSource_ = "";
+        bitField0_ = (bitField0_ & ~0x01000000);
+        debugSourceStringIndex_ = 0;
+        bitField0_ = (bitField0_ & ~0x02000000);
+        tokenId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x04000000);
+        if (routingGcBuilder_ == null) {
+          routingGc_ = null;
+        } else {
+          routingGcBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x08000000);
+        sessionDisposition_ = 0;
+        bitField0_ = (bitField0_ & ~0x10000000);
+        wgToken_ = "";
+        bitField0_ = (bitField0_ & ~0x20000000);
+        webuiAuthKey_ = "";
+        bitField0_ = (bitField0_ & ~0x40000000);
         ipAddrCase_ = 0;
         ipAddr_ = null;
         return this;
@@ -3845,6 +5192,7 @@ public final class SteammessagesBase {
       public SteammessagesBase.CMsgProtoBufHeader buildPartial() {
         SteammessagesBase.CMsgProtoBufHeader result = new SteammessagesBase.CMsgProtoBufHeader(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.steamid_ = steamid_;
@@ -3932,17 +5280,49 @@ public final class SteammessagesBase {
           to_bitField0_ |= 0x00080000;
         }
         if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.launcherType_ = launcherType_;
           to_bitField0_ |= 0x00100000;
         }
-        result.wgToken_ = wgToken_;
         if (((from_bitField0_ & 0x00400000) != 0)) {
-          result.launcherType_ = launcherType_;
+          result.realm_ = realm_;
           to_bitField0_ |= 0x00200000;
         }
         if (((from_bitField0_ & 0x00800000) != 0)) {
-          result.realm_ = realm_;
           to_bitField0_ |= 0x00400000;
         }
+        result.timeoutMs_ = timeoutMs_;
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          to_bitField0_ |= 0x00800000;
+        }
+        result.debugSource_ = debugSource_;
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.debugSourceStringIndex_ = debugSourceStringIndex_;
+          to_bitField0_ |= 0x01000000;
+        }
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.tokenId_ = tokenId_;
+          to_bitField0_ |= 0x02000000;
+        }
+        if (((from_bitField0_ & 0x08000000) != 0)) {
+          if (routingGcBuilder_ == null) {
+            result.routingGc_ = routingGc_;
+          } else {
+            result.routingGc_ = routingGcBuilder_.build();
+          }
+          to_bitField0_ |= 0x04000000;
+        }
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          to_bitField0_ |= 0x08000000;
+        }
+        result.sessionDisposition_ = sessionDisposition_;
+        if (((from_bitField0_ & 0x20000000) != 0)) {
+          to_bitField0_ |= 0x10000000;
+        }
+        result.wgToken_ = wgToken_;
+        if (((from_bitField0_ & 0x40000000) != 0)) {
+          to_bitField0_ |= 0x20000000;
+        }
+        result.webuiAuthKey_ = webuiAuthKey_;
         if (ipAddrCase_ == 15) {
           result.ipAddr_ = ipAddr_;
         }
@@ -4073,16 +5453,41 @@ public final class SteammessagesBase {
         if (other.hasCmSysid()) {
           setCmSysid(other.getCmSysid());
         }
-        if (other.hasWgToken()) {
-          bitField0_ |= 0x00200000;
-          wgToken_ = other.wgToken_;
-          onChanged();
-        }
         if (other.hasLauncherType()) {
           setLauncherType(other.getLauncherType());
         }
         if (other.hasRealm()) {
           setRealm(other.getRealm());
+        }
+        if (other.hasTimeoutMs()) {
+          setTimeoutMs(other.getTimeoutMs());
+        }
+        if (other.hasDebugSource()) {
+          bitField0_ |= 0x01000000;
+          debugSource_ = other.debugSource_;
+          onChanged();
+        }
+        if (other.hasDebugSourceStringIndex()) {
+          setDebugSourceStringIndex(other.getDebugSourceStringIndex());
+        }
+        if (other.hasTokenId()) {
+          setTokenId(other.getTokenId());
+        }
+        if (other.hasRoutingGc()) {
+          mergeRoutingGc(other.getRoutingGc());
+        }
+        if (other.hasSessionDisposition()) {
+          setSessionDisposition(other.getSessionDisposition());
+        }
+        if (other.hasWgToken()) {
+          bitField0_ |= 0x20000000;
+          wgToken_ = other.wgToken_;
+          onChanged();
+        }
+        if (other.hasWebuiAuthKey()) {
+          bitField0_ |= 0x40000000;
+          webuiAuthKey_ = other.webuiAuthKey_;
+          onChanged();
         }
         switch (other.getIpAddrCase()) {
           case IP: {
@@ -4141,6 +5546,7 @@ public final class SteammessagesBase {
       }
 
       private int bitField0_;
+      private int bitField1_;
 
       private long steamid_ ;
       /**
@@ -5091,16 +6497,458 @@ public final class SteammessagesBase {
         return this;
       }
 
-      private java.lang.Object wgToken_ = "";
+      private int launcherType_ ;
       /**
-       * <code>optional string wg_token = 30;</code>
-       * @return Whether the wgToken field is set.
+       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+       * @return Whether the launcherType field is set.
        */
-      public boolean hasWgToken() {
+      @java.lang.Override
+      public boolean hasLauncherType() {
         return ((bitField0_ & 0x00200000) != 0);
       }
       /**
-       * <code>optional string wg_token = 30;</code>
+       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+       * @return The launcherType.
+       */
+      @java.lang.Override
+      public int getLauncherType() {
+        return launcherType_;
+      }
+      /**
+       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+       * @param value The launcherType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLauncherType(int value) {
+        bitField0_ |= 0x00200000;
+        launcherType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLauncherType() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        launcherType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int realm_ ;
+      /**
+       * <code>optional uint32 realm = 32 [default = 0];</code>
+       * @return Whether the realm field is set.
+       */
+      @java.lang.Override
+      public boolean hasRealm() {
+        return ((bitField0_ & 0x00400000) != 0);
+      }
+      /**
+       * <code>optional uint32 realm = 32 [default = 0];</code>
+       * @return The realm.
+       */
+      @java.lang.Override
+      public int getRealm() {
+        return realm_;
+      }
+      /**
+       * <code>optional uint32 realm = 32 [default = 0];</code>
+       * @param value The realm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRealm(int value) {
+        bitField0_ |= 0x00400000;
+        realm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 realm = 32 [default = 0];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRealm() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        realm_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int timeoutMs_ = -1;
+      /**
+       * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+       * @return Whether the timeoutMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeoutMs() {
+        return ((bitField0_ & 0x00800000) != 0);
+      }
+      /**
+       * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+       * @return The timeoutMs.
+       */
+      @java.lang.Override
+      public int getTimeoutMs() {
+        return timeoutMs_;
+      }
+      /**
+       * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+       * @param value The timeoutMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeoutMs(int value) {
+        bitField0_ |= 0x00800000;
+        timeoutMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeoutMs() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        timeoutMs_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object debugSource_ = "";
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @return Whether the debugSource field is set.
+       */
+      public boolean hasDebugSource() {
+        return ((bitField0_ & 0x01000000) != 0);
+      }
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @return The debugSource.
+       */
+      public java.lang.String getDebugSource() {
+        java.lang.Object ref = debugSource_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            debugSource_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @return The bytes for debugSource.
+       */
+      public com.google.protobuf.ByteString
+          getDebugSourceBytes() {
+        java.lang.Object ref = debugSource_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debugSource_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @param value The debugSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDebugSource(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x01000000;
+        debugSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDebugSource() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        debugSource_ = getDefaultInstance().getDebugSource();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @param value The bytes for debugSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDebugSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x01000000;
+        debugSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int debugSourceStringIndex_ ;
+      /**
+       * <code>optional uint32 debug_source_string_index = 35;</code>
+       * @return Whether the debugSourceStringIndex field is set.
+       */
+      @java.lang.Override
+      public boolean hasDebugSourceStringIndex() {
+        return ((bitField0_ & 0x02000000) != 0);
+      }
+      /**
+       * <code>optional uint32 debug_source_string_index = 35;</code>
+       * @return The debugSourceStringIndex.
+       */
+      @java.lang.Override
+      public int getDebugSourceStringIndex() {
+        return debugSourceStringIndex_;
+      }
+      /**
+       * <code>optional uint32 debug_source_string_index = 35;</code>
+       * @param value The debugSourceStringIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDebugSourceStringIndex(int value) {
+        bitField0_ |= 0x02000000;
+        debugSourceStringIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 debug_source_string_index = 35;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDebugSourceStringIndex() {
+        bitField0_ = (bitField0_ & ~0x02000000);
+        debugSourceStringIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long tokenId_ ;
+      /**
+       * <code>optional uint64 token_id = 36;</code>
+       * @return Whether the tokenId field is set.
+       */
+      @java.lang.Override
+      public boolean hasTokenId() {
+        return ((bitField0_ & 0x04000000) != 0);
+      }
+      /**
+       * <code>optional uint64 token_id = 36;</code>
+       * @return The tokenId.
+       */
+      @java.lang.Override
+      public long getTokenId() {
+        return tokenId_;
+      }
+      /**
+       * <code>optional uint64 token_id = 36;</code>
+       * @param value The tokenId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenId(long value) {
+        bitField0_ |= 0x04000000;
+        tokenId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 token_id = 36;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenId() {
+        bitField0_ = (bitField0_ & ~0x04000000);
+        tokenId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private SteammessagesBase.CMsgGCRoutingProtoBufHeader routingGc_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesBase.CMsgGCRoutingProtoBufHeader, SteammessagesBase.CMsgGCRoutingProtoBufHeader.Builder, SteammessagesBase.CMsgGCRoutingProtoBufHeaderOrBuilder> routingGcBuilder_;
+      /**
+       * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+       * @return Whether the routingGc field is set.
+       */
+      public boolean hasRoutingGc() {
+        return ((bitField0_ & 0x08000000) != 0);
+      }
+      /**
+       * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+       * @return The routingGc.
+       */
+      public SteammessagesBase.CMsgGCRoutingProtoBufHeader getRoutingGc() {
+        if (routingGcBuilder_ == null) {
+          return routingGc_ == null ? SteammessagesBase.CMsgGCRoutingProtoBufHeader.getDefaultInstance() : routingGc_;
+        } else {
+          return routingGcBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+       */
+      public Builder setRoutingGc(SteammessagesBase.CMsgGCRoutingProtoBufHeader value) {
+        if (routingGcBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          routingGc_ = value;
+          onChanged();
+        } else {
+          routingGcBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x08000000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+       */
+      public Builder setRoutingGc(
+          SteammessagesBase.CMsgGCRoutingProtoBufHeader.Builder builderForValue) {
+        if (routingGcBuilder_ == null) {
+          routingGc_ = builderForValue.build();
+          onChanged();
+        } else {
+          routingGcBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x08000000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+       */
+      public Builder mergeRoutingGc(SteammessagesBase.CMsgGCRoutingProtoBufHeader value) {
+        if (routingGcBuilder_ == null) {
+          if (((bitField0_ & 0x08000000) != 0) &&
+              routingGc_ != null &&
+              routingGc_ != SteammessagesBase.CMsgGCRoutingProtoBufHeader.getDefaultInstance()) {
+            routingGc_ =
+              SteammessagesBase.CMsgGCRoutingProtoBufHeader.newBuilder(routingGc_).mergeFrom(value).buildPartial();
+          } else {
+            routingGc_ = value;
+          }
+          onChanged();
+        } else {
+          routingGcBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x08000000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+       */
+      public Builder clearRoutingGc() {
+        if (routingGcBuilder_ == null) {
+          routingGc_ = null;
+          onChanged();
+        } else {
+          routingGcBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x08000000);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+       */
+      public SteammessagesBase.CMsgGCRoutingProtoBufHeader.Builder getRoutingGcBuilder() {
+        bitField0_ |= 0x08000000;
+        onChanged();
+        return getRoutingGcFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+       */
+      public SteammessagesBase.CMsgGCRoutingProtoBufHeaderOrBuilder getRoutingGcOrBuilder() {
+        if (routingGcBuilder_ != null) {
+          return routingGcBuilder_.getMessageOrBuilder();
+        } else {
+          return routingGc_ == null ?
+              SteammessagesBase.CMsgGCRoutingProtoBufHeader.getDefaultInstance() : routingGc_;
+        }
+      }
+      /**
+       * <code>optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesBase.CMsgGCRoutingProtoBufHeader, SteammessagesBase.CMsgGCRoutingProtoBufHeader.Builder, SteammessagesBase.CMsgGCRoutingProtoBufHeaderOrBuilder> 
+          getRoutingGcFieldBuilder() {
+        if (routingGcBuilder_ == null) {
+          routingGcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesBase.CMsgGCRoutingProtoBufHeader, SteammessagesBase.CMsgGCRoutingProtoBufHeader.Builder, SteammessagesBase.CMsgGCRoutingProtoBufHeaderOrBuilder>(
+                  getRoutingGc(),
+                  getParentForChildren(),
+                  isClean());
+          routingGc_ = null;
+        }
+        return routingGcBuilder_;
+      }
+
+      private int sessionDisposition_ = 0;
+      /**
+       * <code>optional .CMsgProtoBufHeader.ESessionDisposition session_disposition = 38 [default = k_ESessionDispositionNormal];</code>
+       * @return Whether the sessionDisposition field is set.
+       */
+      @java.lang.Override public boolean hasSessionDisposition() {
+        return ((bitField0_ & 0x10000000) != 0);
+      }
+      /**
+       * <code>optional .CMsgProtoBufHeader.ESessionDisposition session_disposition = 38 [default = k_ESessionDispositionNormal];</code>
+       * @return The sessionDisposition.
+       */
+      @java.lang.Override
+      public SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition getSessionDisposition() {
+        @SuppressWarnings("deprecation")
+        SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition result = SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition.valueOf(sessionDisposition_);
+        return result == null ? SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition.k_ESessionDispositionNormal : result;
+      }
+      /**
+       * <code>optional .CMsgProtoBufHeader.ESessionDisposition session_disposition = 38 [default = k_ESessionDispositionNormal];</code>
+       * @param value The sessionDisposition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionDisposition(SteammessagesBase.CMsgProtoBufHeader.ESessionDisposition value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x10000000;
+        sessionDisposition_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .CMsgProtoBufHeader.ESessionDisposition session_disposition = 38 [default = k_ESessionDispositionNormal];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionDisposition() {
+        bitField0_ = (bitField0_ & ~0x10000000);
+        sessionDisposition_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object wgToken_ = "";
+      /**
+       * <code>optional string wg_token = 39;</code>
+       * @return Whether the wgToken field is set.
+       */
+      public boolean hasWgToken() {
+        return ((bitField0_ & 0x20000000) != 0);
+      }
+      /**
+       * <code>optional string wg_token = 39;</code>
        * @return The wgToken.
        */
       public java.lang.String getWgToken() {
@@ -5118,7 +6966,7 @@ public final class SteammessagesBase {
         }
       }
       /**
-       * <code>optional string wg_token = 30;</code>
+       * <code>optional string wg_token = 39;</code>
        * @return The bytes for wgToken.
        */
       public com.google.protobuf.ByteString
@@ -5135,7 +6983,7 @@ public final class SteammessagesBase {
         }
       }
       /**
-       * <code>optional string wg_token = 30;</code>
+       * <code>optional string wg_token = 39;</code>
        * @param value The wgToken to set.
        * @return This builder for chaining.
        */
@@ -5144,23 +6992,23 @@ public final class SteammessagesBase {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00200000;
+  bitField0_ |= 0x20000000;
         wgToken_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string wg_token = 30;</code>
+       * <code>optional string wg_token = 39;</code>
        * @return This builder for chaining.
        */
       public Builder clearWgToken() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x20000000);
         wgToken_ = getDefaultInstance().getWgToken();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string wg_token = 30;</code>
+       * <code>optional string wg_token = 39;</code>
        * @param value The bytes for wgToken to set.
        * @return This builder for chaining.
        */
@@ -5169,86 +7017,92 @@ public final class SteammessagesBase {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00200000;
+  bitField0_ |= 0x20000000;
         wgToken_ = value;
         onChanged();
         return this;
       }
 
-      private int launcherType_ ;
+      private java.lang.Object webuiAuthKey_ = "";
       /**
-       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
-       * @return Whether the launcherType field is set.
+       * <code>optional string webui_auth_key = 40;</code>
+       * @return Whether the webuiAuthKey field is set.
        */
-      @java.lang.Override
-      public boolean hasLauncherType() {
-        return ((bitField0_ & 0x00400000) != 0);
+      public boolean hasWebuiAuthKey() {
+        return ((bitField0_ & 0x40000000) != 0);
       }
       /**
-       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
-       * @return The launcherType.
+       * <code>optional string webui_auth_key = 40;</code>
+       * @return The webuiAuthKey.
        */
-      @java.lang.Override
-      public int getLauncherType() {
-        return launcherType_;
+      public java.lang.String getWebuiAuthKey() {
+        java.lang.Object ref = webuiAuthKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            webuiAuthKey_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
-       * @param value The launcherType to set.
+       * <code>optional string webui_auth_key = 40;</code>
+       * @return The bytes for webuiAuthKey.
+       */
+      public com.google.protobuf.ByteString
+          getWebuiAuthKeyBytes() {
+        java.lang.Object ref = webuiAuthKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          webuiAuthKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string webui_auth_key = 40;</code>
+       * @param value The webuiAuthKey to set.
        * @return This builder for chaining.
        */
-      public Builder setLauncherType(int value) {
-        bitField0_ |= 0x00400000;
-        launcherType_ = value;
+      public Builder setWebuiAuthKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x40000000;
+        webuiAuthKey_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+       * <code>optional string webui_auth_key = 40;</code>
        * @return This builder for chaining.
        */
-      public Builder clearLauncherType() {
-        bitField0_ = (bitField0_ & ~0x00400000);
-        launcherType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int realm_ ;
-      /**
-       * <code>optional uint32 realm = 32 [default = 0];</code>
-       * @return Whether the realm field is set.
-       */
-      @java.lang.Override
-      public boolean hasRealm() {
-        return ((bitField0_ & 0x00800000) != 0);
-      }
-      /**
-       * <code>optional uint32 realm = 32 [default = 0];</code>
-       * @return The realm.
-       */
-      @java.lang.Override
-      public int getRealm() {
-        return realm_;
-      }
-      /**
-       * <code>optional uint32 realm = 32 [default = 0];</code>
-       * @param value The realm to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRealm(int value) {
-        bitField0_ |= 0x00800000;
-        realm_ = value;
+      public Builder clearWebuiAuthKey() {
+        bitField0_ = (bitField0_ & ~0x40000000);
+        webuiAuthKey_ = getDefaultInstance().getWebuiAuthKey();
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 realm = 32 [default = 0];</code>
+       * <code>optional string webui_auth_key = 40;</code>
+       * @param value The bytes for webuiAuthKey to set.
        * @return This builder for chaining.
        */
-      public Builder clearRealm() {
-        bitField0_ = (bitField0_ & ~0x00800000);
-        realm_ = 0;
+      public Builder setWebuiAuthKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x40000000;
+        webuiAuthKey_ = value;
         onChanged();
         return this;
       }
@@ -6623,6 +8477,28 @@ public final class SteammessagesBase {
      * @return The ticket.
      */
     com.google.protobuf.ByteString getTicket();
+
+    /**
+     * <code>optional bytes server_secret = 8;</code>
+     * @return Whether the serverSecret field is set.
+     */
+    boolean hasServerSecret();
+    /**
+     * <code>optional bytes server_secret = 8;</code>
+     * @return The serverSecret.
+     */
+    com.google.protobuf.ByteString getServerSecret();
+
+    /**
+     * <code>optional uint32 ticket_type = 9;</code>
+     * @return Whether the ticketType field is set.
+     */
+    boolean hasTicketType();
+    /**
+     * <code>optional uint32 ticket_type = 9;</code>
+     * @return The ticketType.
+     */
+    int getTicketType();
   }
   /**
    * Protobuf type {@code CMsgAuthTicket}
@@ -6639,6 +8515,7 @@ public final class SteammessagesBase {
     private CMsgAuthTicket() {
       eresult_ = 2;
       ticket_ = com.google.protobuf.ByteString.EMPTY;
+      serverSecret_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -6705,6 +8582,16 @@ public final class SteammessagesBase {
             case 58: {
               bitField0_ |= 0x00000040;
               ticket_ = input.readBytes();
+              break;
+            }
+            case 66: {
+              bitField0_ |= 0x00000080;
+              serverSecret_ = input.readBytes();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              ticketType_ = input.readUInt32();
               break;
             }
             default: {
@@ -6873,6 +8760,44 @@ public final class SteammessagesBase {
       return ticket_;
     }
 
+    public static final int SERVER_SECRET_FIELD_NUMBER = 8;
+    private com.google.protobuf.ByteString serverSecret_;
+    /**
+     * <code>optional bytes server_secret = 8;</code>
+     * @return Whether the serverSecret field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerSecret() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional bytes server_secret = 8;</code>
+     * @return The serverSecret.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getServerSecret() {
+      return serverSecret_;
+    }
+
+    public static final int TICKET_TYPE_FIELD_NUMBER = 9;
+    private int ticketType_;
+    /**
+     * <code>optional uint32 ticket_type = 9;</code>
+     * @return Whether the ticketType field is set.
+     */
+    @java.lang.Override
+    public boolean hasTicketType() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional uint32 ticket_type = 9;</code>
+     * @return The ticketType.
+     */
+    @java.lang.Override
+    public int getTicketType() {
+      return ticketType_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6907,6 +8832,12 @@ public final class SteammessagesBase {
       }
       if (((bitField0_ & 0x00000040) != 0)) {
         output.writeBytes(7, ticket_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeBytes(8, serverSecret_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeUInt32(9, ticketType_);
       }
       unknownFields.writeTo(output);
     }
@@ -6944,6 +8875,14 @@ public final class SteammessagesBase {
       if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(7, ticket_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, serverSecret_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, ticketType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6995,6 +8934,16 @@ public final class SteammessagesBase {
         if (!getTicket()
             .equals(other.getTicket())) return false;
       }
+      if (hasServerSecret() != other.hasServerSecret()) return false;
+      if (hasServerSecret()) {
+        if (!getServerSecret()
+            .equals(other.getServerSecret())) return false;
+      }
+      if (hasTicketType() != other.hasTicketType()) return false;
+      if (hasTicketType()) {
+        if (getTicketType()
+            != other.getTicketType()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7035,6 +8984,14 @@ public final class SteammessagesBase {
       if (hasTicket()) {
         hash = (37 * hash) + TICKET_FIELD_NUMBER;
         hash = (53 * hash) + getTicket().hashCode();
+      }
+      if (hasServerSecret()) {
+        hash = (37 * hash) + SERVER_SECRET_FIELD_NUMBER;
+        hash = (53 * hash) + getServerSecret().hashCode();
+      }
+      if (hasTicketType()) {
+        hash = (37 * hash) + TICKET_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getTicketType();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7183,6 +9140,10 @@ public final class SteammessagesBase {
         bitField0_ = (bitField0_ & ~0x00000020);
         ticket_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000040);
+        serverSecret_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        ticketType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -7239,6 +9200,14 @@ public final class SteammessagesBase {
           to_bitField0_ |= 0x00000040;
         }
         result.ticket_ = ticket_;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.serverSecret_ = serverSecret_;
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.ticketType_ = ticketType_;
+          to_bitField0_ |= 0x00000100;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7308,6 +9277,12 @@ public final class SteammessagesBase {
         }
         if (other.hasTicket()) {
           setTicket(other.getTicket());
+        }
+        if (other.hasServerSecret()) {
+          setServerSecret(other.getServerSecret());
+        }
+        if (other.hasTicketType()) {
+          setTicketType(other.getTicketType());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7614,6 +9589,87 @@ public final class SteammessagesBase {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.ByteString serverSecret_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes server_secret = 8;</code>
+       * @return Whether the serverSecret field is set.
+       */
+      @java.lang.Override
+      public boolean hasServerSecret() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional bytes server_secret = 8;</code>
+       * @return The serverSecret.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getServerSecret() {
+        return serverSecret_;
+      }
+      /**
+       * <code>optional bytes server_secret = 8;</code>
+       * @param value The serverSecret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerSecret(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        serverSecret_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes server_secret = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerSecret() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        serverSecret_ = getDefaultInstance().getServerSecret();
+        onChanged();
+        return this;
+      }
+
+      private int ticketType_ ;
+      /**
+       * <code>optional uint32 ticket_type = 9;</code>
+       * @return Whether the ticketType field is set.
+       */
+      @java.lang.Override
+      public boolean hasTicketType() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint32 ticket_type = 9;</code>
+       * @return The ticketType.
+       */
+      @java.lang.Override
+      public int getTicketType() {
+        return ticketType_;
+      }
+      /**
+       * <code>optional uint32 ticket_type = 9;</code>
+       * @param value The ticketType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTicketType(int value) {
+        bitField0_ |= 0x00000100;
+        ticketType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ticket_type = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTicketType() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        ticketType_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7717,40 +9773,6 @@ public final class SteammessagesBase {
         getIconBytes();
 
     /**
-     * <code>optional string logo = 4;</code>
-     * @return Whether the logo field is set.
-     */
-    boolean hasLogo();
-    /**
-     * <code>optional string logo = 4;</code>
-     * @return The logo.
-     */
-    java.lang.String getLogo();
-    /**
-     * <code>optional string logo = 4;</code>
-     * @return The bytes for logo.
-     */
-    com.google.protobuf.ByteString
-        getLogoBytes();
-
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return Whether the logoSmall field is set.
-     */
-    boolean hasLogoSmall();
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return The logoSmall.
-     */
-    java.lang.String getLogoSmall();
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return The bytes for logoSmall.
-     */
-    com.google.protobuf.ByteString
-        getLogoSmallBytes();
-
-    /**
      * <code>optional bool tool = 6;</code>
      * @return Whether the tool field is set.
      */
@@ -7849,6 +9871,56 @@ public final class SteammessagesBase {
      * @return The isVisibleInSteamChina.
      */
     boolean getIsVisibleInSteamChina();
+
+    /**
+     * <code>optional uint32 app_type = 14;</code>
+     * @return Whether the appType field is set.
+     */
+    boolean hasAppType();
+    /**
+     * <code>optional uint32 app_type = 14;</code>
+     * @return The appType.
+     */
+    int getAppType();
+
+    /**
+     * <code>optional bool has_adult_content_sex = 15;</code>
+     * @return Whether the hasAdultContentSex field is set.
+     */
+    boolean hasHasAdultContentSex();
+    /**
+     * <code>optional bool has_adult_content_sex = 15;</code>
+     * @return The hasAdultContentSex.
+     */
+    boolean getHasAdultContentSex();
+
+    /**
+     * <code>optional bool has_adult_content_violence = 16;</code>
+     * @return Whether the hasAdultContentViolence field is set.
+     */
+    boolean hasHasAdultContentViolence();
+    /**
+     * <code>optional bool has_adult_content_violence = 16;</code>
+     * @return The hasAdultContentViolence.
+     */
+    boolean getHasAdultContentViolence();
+
+    /**
+     * <code>repeated uint32 content_descriptorids = 17;</code>
+     * @return A list containing the contentDescriptorids.
+     */
+    java.util.List<java.lang.Integer> getContentDescriptoridsList();
+    /**
+     * <code>repeated uint32 content_descriptorids = 17;</code>
+     * @return The count of contentDescriptorids.
+     */
+    int getContentDescriptoridsCount();
+    /**
+     * <code>repeated uint32 content_descriptorids = 17;</code>
+     * @param index The index of the element to return.
+     * @return The contentDescriptorids at the given index.
+     */
+    int getContentDescriptorids(int index);
   }
   /**
    * Protobuf type {@code CCDDBAppDetailCommon}
@@ -7865,10 +9937,9 @@ public final class SteammessagesBase {
     private CCDDBAppDetailCommon() {
       name_ = "";
       icon_ = "";
-      logo_ = "";
-      logoSmall_ = "";
       friendlyName_ = "";
       propagation_ = "";
+      contentDescriptorids_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -7919,58 +9990,82 @@ public final class SteammessagesBase {
               icon_ = bs;
               break;
             }
-            case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
-              logo_ = bs;
-              break;
-            }
-            case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
-              logoSmall_ = bs;
-              break;
-            }
             case 48: {
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000008;
               tool_ = input.readBool();
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000010;
               demo_ = input.readBool();
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000020;
               media_ = input.readBool();
               break;
             }
             case 72: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000040;
               communityVisibleStats_ = input.readBool();
               break;
             }
             case 82: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000080;
               friendlyName_ = bs;
               break;
             }
             case 90: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000100;
               propagation_ = bs;
               break;
             }
             case 96: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00000200;
               hasAdultContent_ = input.readBool();
               break;
             }
             case 104: {
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00000400;
               isVisibleInSteamChina_ = input.readBool();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00000800;
+              appType_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00001000;
+              hasAdultContentSex_ = input.readBool();
+              break;
+            }
+            case 128: {
+              bitField0_ |= 0x00002000;
+              hasAdultContentViolence_ = input.readBool();
+              break;
+            }
+            case 136: {
+              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
+                contentDescriptorids_ = newIntList();
+                mutable_bitField0_ |= 0x00004000;
+              }
+              contentDescriptorids_.addInt(input.readUInt32());
+              break;
+            }
+            case 138: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00004000) != 0) && input.getBytesUntilLimit() > 0) {
+                contentDescriptorids_ = newIntList();
+                mutable_bitField0_ |= 0x00004000;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                contentDescriptorids_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
               break;
             }
             default: {
@@ -7988,6 +10083,9 @@ public final class SteammessagesBase {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00004000) != 0)) {
+          contentDescriptorids_.makeImmutable(); // C
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -8121,102 +10219,6 @@ public final class SteammessagesBase {
       }
     }
 
-    public static final int LOGO_FIELD_NUMBER = 4;
-    private volatile java.lang.Object logo_;
-    /**
-     * <code>optional string logo = 4;</code>
-     * @return Whether the logo field is set.
-     */
-    @java.lang.Override
-    public boolean hasLogo() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <code>optional string logo = 4;</code>
-     * @return The logo.
-     */
-    @java.lang.Override
-    public java.lang.String getLogo() {
-      java.lang.Object ref = logo_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          logo_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string logo = 4;</code>
-     * @return The bytes for logo.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLogoBytes() {
-      java.lang.Object ref = logo_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        logo_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LOGO_SMALL_FIELD_NUMBER = 5;
-    private volatile java.lang.Object logoSmall_;
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return Whether the logoSmall field is set.
-     */
-    @java.lang.Override
-    public boolean hasLogoSmall() {
-      return ((bitField0_ & 0x00000010) != 0);
-    }
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return The logoSmall.
-     */
-    @java.lang.Override
-    public java.lang.String getLogoSmall() {
-      java.lang.Object ref = logoSmall_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          logoSmall_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return The bytes for logoSmall.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLogoSmallBytes() {
-      java.lang.Object ref = logoSmall_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        logoSmall_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int TOOL_FIELD_NUMBER = 6;
     private boolean tool_;
     /**
@@ -8225,7 +10227,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasTool() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>optional bool tool = 6;</code>
@@ -8244,7 +10246,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasDemo() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>optional bool demo = 7;</code>
@@ -8263,7 +10265,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasMedia() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>optional bool media = 8;</code>
@@ -8282,7 +10284,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasCommunityVisibleStats() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>optional bool community_visible_stats = 9;</code>
@@ -8301,7 +10303,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasFriendlyName() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <code>optional string friendly_name = 10;</code>
@@ -8349,7 +10351,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasPropagation() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>optional string propagation = 11;</code>
@@ -8397,7 +10399,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasHasAdultContent() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>optional bool has_adult_content = 12;</code>
@@ -8416,7 +10418,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasIsVisibleInSteamChina() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <code>optional bool is_visible_in_steam_china = 13;</code>
@@ -8425,6 +10427,90 @@ public final class SteammessagesBase {
     @java.lang.Override
     public boolean getIsVisibleInSteamChina() {
       return isVisibleInSteamChina_;
+    }
+
+    public static final int APP_TYPE_FIELD_NUMBER = 14;
+    private int appType_;
+    /**
+     * <code>optional uint32 app_type = 14;</code>
+     * @return Whether the appType field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppType() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional uint32 app_type = 14;</code>
+     * @return The appType.
+     */
+    @java.lang.Override
+    public int getAppType() {
+      return appType_;
+    }
+
+    public static final int HAS_ADULT_CONTENT_SEX_FIELD_NUMBER = 15;
+    private boolean hasAdultContentSex_;
+    /**
+     * <code>optional bool has_adult_content_sex = 15;</code>
+     * @return Whether the hasAdultContentSex field is set.
+     */
+    @java.lang.Override
+    public boolean hasHasAdultContentSex() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional bool has_adult_content_sex = 15;</code>
+     * @return The hasAdultContentSex.
+     */
+    @java.lang.Override
+    public boolean getHasAdultContentSex() {
+      return hasAdultContentSex_;
+    }
+
+    public static final int HAS_ADULT_CONTENT_VIOLENCE_FIELD_NUMBER = 16;
+    private boolean hasAdultContentViolence_;
+    /**
+     * <code>optional bool has_adult_content_violence = 16;</code>
+     * @return Whether the hasAdultContentViolence field is set.
+     */
+    @java.lang.Override
+    public boolean hasHasAdultContentViolence() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>optional bool has_adult_content_violence = 16;</code>
+     * @return The hasAdultContentViolence.
+     */
+    @java.lang.Override
+    public boolean getHasAdultContentViolence() {
+      return hasAdultContentViolence_;
+    }
+
+    public static final int CONTENT_DESCRIPTORIDS_FIELD_NUMBER = 17;
+    private com.google.protobuf.Internal.IntList contentDescriptorids_;
+    /**
+     * <code>repeated uint32 content_descriptorids = 17;</code>
+     * @return A list containing the contentDescriptorids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getContentDescriptoridsList() {
+      return contentDescriptorids_;
+    }
+    /**
+     * <code>repeated uint32 content_descriptorids = 17;</code>
+     * @return The count of contentDescriptorids.
+     */
+    public int getContentDescriptoridsCount() {
+      return contentDescriptorids_.size();
+    }
+    /**
+     * <code>repeated uint32 content_descriptorids = 17;</code>
+     * @param index The index of the element to return.
+     * @return The contentDescriptorids at the given index.
+     */
+    public int getContentDescriptorids(int index) {
+      return contentDescriptorids_.getInt(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8451,34 +10537,40 @@ public final class SteammessagesBase {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, icon_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, logo_);
-      }
-      if (((bitField0_ & 0x00000010) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, logoSmall_);
-      }
-      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeBool(6, tool_);
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeBool(7, demo_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeBool(8, media_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         output.writeBool(9, communityVisibleStats_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, friendlyName_);
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, propagation_);
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeBool(12, hasAdultContent_);
       }
-      if (((bitField0_ & 0x00001000) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         output.writeBool(13, isVisibleInSteamChina_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeUInt32(14, appType_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeBool(15, hasAdultContentSex_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        output.writeBool(16, hasAdultContentViolence_);
+      }
+      for (int i = 0; i < contentDescriptorids_.size(); i++) {
+        output.writeUInt32(17, contentDescriptorids_.getInt(i));
       }
       unknownFields.writeTo(output);
     }
@@ -8500,40 +10592,55 @@ public final class SteammessagesBase {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, icon_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, logo_);
-      }
-      if (((bitField0_ & 0x00000010) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, logoSmall_);
-      }
-      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, tool_);
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, demo_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, media_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, communityVisibleStats_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, friendlyName_);
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, propagation_);
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, hasAdultContent_);
       }
-      if (((bitField0_ & 0x00001000) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(13, isVisibleInSteamChina_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, appType_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(15, hasAdultContentSex_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(16, hasAdultContentViolence_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < contentDescriptorids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(contentDescriptorids_.getInt(i));
+        }
+        size += dataSize;
+        size += 2 * getContentDescriptoridsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8564,16 +10671,6 @@ public final class SteammessagesBase {
       if (hasIcon()) {
         if (!getIcon()
             .equals(other.getIcon())) return false;
-      }
-      if (hasLogo() != other.hasLogo()) return false;
-      if (hasLogo()) {
-        if (!getLogo()
-            .equals(other.getLogo())) return false;
-      }
-      if (hasLogoSmall() != other.hasLogoSmall()) return false;
-      if (hasLogoSmall()) {
-        if (!getLogoSmall()
-            .equals(other.getLogoSmall())) return false;
       }
       if (hasTool() != other.hasTool()) return false;
       if (hasTool()) {
@@ -8615,6 +10712,23 @@ public final class SteammessagesBase {
         if (getIsVisibleInSteamChina()
             != other.getIsVisibleInSteamChina()) return false;
       }
+      if (hasAppType() != other.hasAppType()) return false;
+      if (hasAppType()) {
+        if (getAppType()
+            != other.getAppType()) return false;
+      }
+      if (hasHasAdultContentSex() != other.hasHasAdultContentSex()) return false;
+      if (hasHasAdultContentSex()) {
+        if (getHasAdultContentSex()
+            != other.getHasAdultContentSex()) return false;
+      }
+      if (hasHasAdultContentViolence() != other.hasHasAdultContentViolence()) return false;
+      if (hasHasAdultContentViolence()) {
+        if (getHasAdultContentViolence()
+            != other.getHasAdultContentViolence()) return false;
+      }
+      if (!getContentDescriptoridsList()
+          .equals(other.getContentDescriptoridsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8637,14 +10751,6 @@ public final class SteammessagesBase {
       if (hasIcon()) {
         hash = (37 * hash) + ICON_FIELD_NUMBER;
         hash = (53 * hash) + getIcon().hashCode();
-      }
-      if (hasLogo()) {
-        hash = (37 * hash) + LOGO_FIELD_NUMBER;
-        hash = (53 * hash) + getLogo().hashCode();
-      }
-      if (hasLogoSmall()) {
-        hash = (37 * hash) + LOGO_SMALL_FIELD_NUMBER;
-        hash = (53 * hash) + getLogoSmall().hashCode();
       }
       if (hasTool()) {
         hash = (37 * hash) + TOOL_FIELD_NUMBER;
@@ -8683,6 +10789,24 @@ public final class SteammessagesBase {
         hash = (37 * hash) + IS_VISIBLE_IN_STEAM_CHINA_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsVisibleInSteamChina());
+      }
+      if (hasAppType()) {
+        hash = (37 * hash) + APP_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getAppType();
+      }
+      if (hasHasAdultContentSex()) {
+        hash = (37 * hash) + HAS_ADULT_CONTENT_SEX_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHasAdultContentSex());
+      }
+      if (hasHasAdultContentViolence()) {
+        hash = (37 * hash) + HAS_ADULT_CONTENT_VIOLENCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHasAdultContentViolence());
+      }
+      if (getContentDescriptoridsCount() > 0) {
+        hash = (37 * hash) + CONTENT_DESCRIPTORIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getContentDescriptoridsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8823,26 +10947,30 @@ public final class SteammessagesBase {
         bitField0_ = (bitField0_ & ~0x00000002);
         icon_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        logo_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
-        logoSmall_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
         tool_ = false;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000008);
         demo_ = false;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000010);
         media_ = false;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000020);
         communityVisibleStats_ = false;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000040);
         friendlyName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000080);
         propagation_ = "";
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000100);
         hasAdultContent_ = false;
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000200);
         isVisibleInSteamChina_ = false;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        appType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        hasAdultContentSex_ = false;
         bitField0_ = (bitField0_ & ~0x00001000);
+        hasAdultContentViolence_ = false;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        contentDescriptorids_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -8884,45 +11012,54 @@ public final class SteammessagesBase {
         }
         result.icon_ = icon_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.tool_ = tool_;
           to_bitField0_ |= 0x00000008;
         }
-        result.logo_ = logo_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.demo_ = demo_;
           to_bitField0_ |= 0x00000010;
         }
-        result.logoSmall_ = logoSmall_;
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.tool_ = tool_;
+          result.media_ = media_;
           to_bitField0_ |= 0x00000020;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.demo_ = demo_;
+          result.communityVisibleStats_ = communityVisibleStats_;
           to_bitField0_ |= 0x00000040;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.media_ = media_;
           to_bitField0_ |= 0x00000080;
         }
+        result.friendlyName_ = friendlyName_;
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.communityVisibleStats_ = communityVisibleStats_;
           to_bitField0_ |= 0x00000100;
         }
+        result.propagation_ = propagation_;
         if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.hasAdultContent_ = hasAdultContent_;
           to_bitField0_ |= 0x00000200;
         }
-        result.friendlyName_ = friendlyName_;
         if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.isVisibleInSteamChina_ = isVisibleInSteamChina_;
           to_bitField0_ |= 0x00000400;
         }
-        result.propagation_ = propagation_;
         if (((from_bitField0_ & 0x00000800) != 0)) {
-          result.hasAdultContent_ = hasAdultContent_;
+          result.appType_ = appType_;
           to_bitField0_ |= 0x00000800;
         }
         if (((from_bitField0_ & 0x00001000) != 0)) {
-          result.isVisibleInSteamChina_ = isVisibleInSteamChina_;
+          result.hasAdultContentSex_ = hasAdultContentSex_;
           to_bitField0_ |= 0x00001000;
         }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.hasAdultContentViolence_ = hasAdultContentViolence_;
+          to_bitField0_ |= 0x00002000;
+        }
+        if (((bitField0_ & 0x00004000) != 0)) {
+          contentDescriptorids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00004000);
+        }
+        result.contentDescriptorids_ = contentDescriptorids_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8985,16 +11122,6 @@ public final class SteammessagesBase {
           icon_ = other.icon_;
           onChanged();
         }
-        if (other.hasLogo()) {
-          bitField0_ |= 0x00000008;
-          logo_ = other.logo_;
-          onChanged();
-        }
-        if (other.hasLogoSmall()) {
-          bitField0_ |= 0x00000010;
-          logoSmall_ = other.logoSmall_;
-          onChanged();
-        }
         if (other.hasTool()) {
           setTool(other.getTool());
         }
@@ -9008,12 +11135,12 @@ public final class SteammessagesBase {
           setCommunityVisibleStats(other.getCommunityVisibleStats());
         }
         if (other.hasFriendlyName()) {
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000080;
           friendlyName_ = other.friendlyName_;
           onChanged();
         }
         if (other.hasPropagation()) {
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000100;
           propagation_ = other.propagation_;
           onChanged();
         }
@@ -9022,6 +11149,25 @@ public final class SteammessagesBase {
         }
         if (other.hasIsVisibleInSteamChina()) {
           setIsVisibleInSteamChina(other.getIsVisibleInSteamChina());
+        }
+        if (other.hasAppType()) {
+          setAppType(other.getAppType());
+        }
+        if (other.hasHasAdultContentSex()) {
+          setHasAdultContentSex(other.getHasAdultContentSex());
+        }
+        if (other.hasHasAdultContentViolence()) {
+          setHasAdultContentViolence(other.getHasAdultContentViolence());
+        }
+        if (!other.contentDescriptorids_.isEmpty()) {
+          if (contentDescriptorids_.isEmpty()) {
+            contentDescriptorids_ = other.contentDescriptorids_;
+            bitField0_ = (bitField0_ & ~0x00004000);
+          } else {
+            ensureContentDescriptoridsIsMutable();
+            contentDescriptorids_.addAll(other.contentDescriptorids_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9260,174 +11406,6 @@ public final class SteammessagesBase {
         return this;
       }
 
-      private java.lang.Object logo_ = "";
-      /**
-       * <code>optional string logo = 4;</code>
-       * @return Whether the logo field is set.
-       */
-      public boolean hasLogo() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <code>optional string logo = 4;</code>
-       * @return The logo.
-       */
-      public java.lang.String getLogo() {
-        java.lang.Object ref = logo_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            logo_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string logo = 4;</code>
-       * @return The bytes for logo.
-       */
-      public com.google.protobuf.ByteString
-          getLogoBytes() {
-        java.lang.Object ref = logo_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          logo_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string logo = 4;</code>
-       * @param value The logo to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        logo_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string logo = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLogo() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        logo_ = getDefaultInstance().getLogo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string logo = 4;</code>
-       * @param value The bytes for logo to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogoBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        logo_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object logoSmall_ = "";
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @return Whether the logoSmall field is set.
-       */
-      public boolean hasLogoSmall() {
-        return ((bitField0_ & 0x00000010) != 0);
-      }
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @return The logoSmall.
-       */
-      public java.lang.String getLogoSmall() {
-        java.lang.Object ref = logoSmall_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            logoSmall_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @return The bytes for logoSmall.
-       */
-      public com.google.protobuf.ByteString
-          getLogoSmallBytes() {
-        java.lang.Object ref = logoSmall_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          logoSmall_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @param value The logoSmall to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogoSmall(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        logoSmall_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLogoSmall() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        logoSmall_ = getDefaultInstance().getLogoSmall();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @param value The bytes for logoSmall to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogoSmallBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        logoSmall_ = value;
-        onChanged();
-        return this;
-      }
-
       private boolean tool_ ;
       /**
        * <code>optional bool tool = 6;</code>
@@ -9435,7 +11413,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasTool() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>optional bool tool = 6;</code>
@@ -9451,7 +11429,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setTool(boolean value) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000008;
         tool_ = value;
         onChanged();
         return this;
@@ -9461,7 +11439,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearTool() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000008);
         tool_ = false;
         onChanged();
         return this;
@@ -9474,7 +11452,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasDemo() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>optional bool demo = 7;</code>
@@ -9490,7 +11468,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setDemo(boolean value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000010;
         demo_ = value;
         onChanged();
         return this;
@@ -9500,7 +11478,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearDemo() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000010);
         demo_ = false;
         onChanged();
         return this;
@@ -9513,7 +11491,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasMedia() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>optional bool media = 8;</code>
@@ -9529,7 +11507,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setMedia(boolean value) {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000020;
         media_ = value;
         onChanged();
         return this;
@@ -9539,7 +11517,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearMedia() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000020);
         media_ = false;
         onChanged();
         return this;
@@ -9552,7 +11530,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasCommunityVisibleStats() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>optional bool community_visible_stats = 9;</code>
@@ -9568,7 +11546,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setCommunityVisibleStats(boolean value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000040;
         communityVisibleStats_ = value;
         onChanged();
         return this;
@@ -9578,7 +11556,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearCommunityVisibleStats() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000040);
         communityVisibleStats_ = false;
         onChanged();
         return this;
@@ -9590,7 +11568,7 @@ public final class SteammessagesBase {
        * @return Whether the friendlyName field is set.
        */
       public boolean hasFriendlyName() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <code>optional string friendly_name = 10;</code>
@@ -9637,7 +11615,7 @@ public final class SteammessagesBase {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000200;
+  bitField0_ |= 0x00000080;
         friendlyName_ = value;
         onChanged();
         return this;
@@ -9647,7 +11625,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearFriendlyName() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000080);
         friendlyName_ = getDefaultInstance().getFriendlyName();
         onChanged();
         return this;
@@ -9662,7 +11640,7 @@ public final class SteammessagesBase {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000200;
+  bitField0_ |= 0x00000080;
         friendlyName_ = value;
         onChanged();
         return this;
@@ -9674,7 +11652,7 @@ public final class SteammessagesBase {
        * @return Whether the propagation field is set.
        */
       public boolean hasPropagation() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <code>optional string propagation = 11;</code>
@@ -9721,7 +11699,7 @@ public final class SteammessagesBase {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00000100;
         propagation_ = value;
         onChanged();
         return this;
@@ -9731,7 +11709,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearPropagation() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000100);
         propagation_ = getDefaultInstance().getPropagation();
         onChanged();
         return this;
@@ -9746,7 +11724,7 @@ public final class SteammessagesBase {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00000100;
         propagation_ = value;
         onChanged();
         return this;
@@ -9759,7 +11737,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasHasAdultContent() {
-        return ((bitField0_ & 0x00000800) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>optional bool has_adult_content = 12;</code>
@@ -9775,7 +11753,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setHasAdultContent(boolean value) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000200;
         hasAdultContent_ = value;
         onChanged();
         return this;
@@ -9785,7 +11763,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearHasAdultContent() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000200);
         hasAdultContent_ = false;
         onChanged();
         return this;
@@ -9798,7 +11776,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasIsVisibleInSteamChina() {
-        return ((bitField0_ & 0x00001000) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <code>optional bool is_visible_in_steam_china = 13;</code>
@@ -9814,7 +11792,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setIsVisibleInSteamChina(boolean value) {
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000400;
         isVisibleInSteamChina_ = value;
         onChanged();
         return this;
@@ -9824,8 +11802,204 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearIsVisibleInSteamChina() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000400);
         isVisibleInSteamChina_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int appType_ ;
+      /**
+       * <code>optional uint32 app_type = 14;</code>
+       * @return Whether the appType field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppType() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional uint32 app_type = 14;</code>
+       * @return The appType.
+       */
+      @java.lang.Override
+      public int getAppType() {
+        return appType_;
+      }
+      /**
+       * <code>optional uint32 app_type = 14;</code>
+       * @param value The appType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppType(int value) {
+        bitField0_ |= 0x00000800;
+        appType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 app_type = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppType() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        appType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean hasAdultContentSex_ ;
+      /**
+       * <code>optional bool has_adult_content_sex = 15;</code>
+       * @return Whether the hasAdultContentSex field is set.
+       */
+      @java.lang.Override
+      public boolean hasHasAdultContentSex() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional bool has_adult_content_sex = 15;</code>
+       * @return The hasAdultContentSex.
+       */
+      @java.lang.Override
+      public boolean getHasAdultContentSex() {
+        return hasAdultContentSex_;
+      }
+      /**
+       * <code>optional bool has_adult_content_sex = 15;</code>
+       * @param value The hasAdultContentSex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHasAdultContentSex(boolean value) {
+        bitField0_ |= 0x00001000;
+        hasAdultContentSex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool has_adult_content_sex = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHasAdultContentSex() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        hasAdultContentSex_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean hasAdultContentViolence_ ;
+      /**
+       * <code>optional bool has_adult_content_violence = 16;</code>
+       * @return Whether the hasAdultContentViolence field is set.
+       */
+      @java.lang.Override
+      public boolean hasHasAdultContentViolence() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional bool has_adult_content_violence = 16;</code>
+       * @return The hasAdultContentViolence.
+       */
+      @java.lang.Override
+      public boolean getHasAdultContentViolence() {
+        return hasAdultContentViolence_;
+      }
+      /**
+       * <code>optional bool has_adult_content_violence = 16;</code>
+       * @param value The hasAdultContentViolence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHasAdultContentViolence(boolean value) {
+        bitField0_ |= 0x00002000;
+        hasAdultContentViolence_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool has_adult_content_violence = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHasAdultContentViolence() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        hasAdultContentViolence_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList contentDescriptorids_ = emptyIntList();
+      private void ensureContentDescriptoridsIsMutable() {
+        if (!((bitField0_ & 0x00004000) != 0)) {
+          contentDescriptorids_ = mutableCopy(contentDescriptorids_);
+          bitField0_ |= 0x00004000;
+         }
+      }
+      /**
+       * <code>repeated uint32 content_descriptorids = 17;</code>
+       * @return A list containing the contentDescriptorids.
+       */
+      public java.util.List<java.lang.Integer>
+          getContentDescriptoridsList() {
+        return ((bitField0_ & 0x00004000) != 0) ?
+                 java.util.Collections.unmodifiableList(contentDescriptorids_) : contentDescriptorids_;
+      }
+      /**
+       * <code>repeated uint32 content_descriptorids = 17;</code>
+       * @return The count of contentDescriptorids.
+       */
+      public int getContentDescriptoridsCount() {
+        return contentDescriptorids_.size();
+      }
+      /**
+       * <code>repeated uint32 content_descriptorids = 17;</code>
+       * @param index The index of the element to return.
+       * @return The contentDescriptorids at the given index.
+       */
+      public int getContentDescriptorids(int index) {
+        return contentDescriptorids_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 content_descriptorids = 17;</code>
+       * @param index The index to set the value at.
+       * @param value The contentDescriptorids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentDescriptorids(
+          int index, int value) {
+        ensureContentDescriptoridsIsMutable();
+        contentDescriptorids_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 content_descriptorids = 17;</code>
+       * @param value The contentDescriptorids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContentDescriptorids(int value) {
+        ensureContentDescriptoridsIsMutable();
+        contentDescriptorids_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 content_descriptorids = 17;</code>
+       * @param values The contentDescriptorids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllContentDescriptorids(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureContentDescriptoridsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contentDescriptorids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 content_descriptorids = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentDescriptorids() {
+        contentDescriptorids_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00004000);
         onChanged();
         return this;
       }
@@ -17648,6 +19822,28 @@ public final class SteammessagesBase {
      * @return The votedowncount.
      */
     int getVotedowncount();
+
+    /**
+     * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+     * @return Whether the banCheckResult field is set.
+     */
+    boolean hasBanCheckResult();
+    /**
+     * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+     * @return The banCheckResult.
+     */
+    SteammessagesBase.EBanContentCheckResult getBanCheckResult();
+
+    /**
+     * <code>optional bool banned = 17;</code>
+     * @return Whether the banned field is set.
+     */
+    boolean hasBanned();
+    /**
+     * <code>optional bool banned = 17;</code>
+     * @return The banned.
+     */
+    boolean getBanned();
   }
   /**
    * Protobuf type {@code CCommunity_ClanAnnouncementInfo}
@@ -17665,6 +19861,7 @@ public final class SteammessagesBase {
       headline_ = "";
       body_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      banCheckResult_ = 0;
     }
 
     @java.lang.Override
@@ -17777,6 +19974,23 @@ public final class SteammessagesBase {
             case 120: {
               bitField0_ |= 0x00002000;
               votedowncount_ = input.readInt32();
+              break;
+            }
+            case 128: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              SteammessagesBase.EBanContentCheckResult value = SteammessagesBase.EBanContentCheckResult.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(16, rawValue);
+              } else {
+                bitField0_ |= 0x00004000;
+                banCheckResult_ = rawValue;
+              }
+              break;
+            }
+            case 136: {
+              bitField0_ |= 0x00008000;
+              banned_ = input.readBool();
               break;
             }
             default: {
@@ -18174,6 +20388,44 @@ public final class SteammessagesBase {
       return votedowncount_;
     }
 
+    public static final int BAN_CHECK_RESULT_FIELD_NUMBER = 16;
+    private int banCheckResult_;
+    /**
+     * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+     * @return Whether the banCheckResult field is set.
+     */
+    @java.lang.Override public boolean hasBanCheckResult() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+     * @return The banCheckResult.
+     */
+    @java.lang.Override public SteammessagesBase.EBanContentCheckResult getBanCheckResult() {
+      @SuppressWarnings("deprecation")
+      SteammessagesBase.EBanContentCheckResult result = SteammessagesBase.EBanContentCheckResult.valueOf(banCheckResult_);
+      return result == null ? SteammessagesBase.EBanContentCheckResult.k_EBanContentCheckResult_NotScanned : result;
+    }
+
+    public static final int BANNED_FIELD_NUMBER = 17;
+    private boolean banned_;
+    /**
+     * <code>optional bool banned = 17;</code>
+     * @return Whether the banned field is set.
+     */
+    @java.lang.Override
+    public boolean hasBanned() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <code>optional bool banned = 17;</code>
+     * @return The banned.
+     */
+    @java.lang.Override
+    public boolean getBanned() {
+      return banned_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18232,6 +20484,12 @@ public final class SteammessagesBase {
       }
       if (((bitField0_ & 0x00002000) != 0)) {
         output.writeInt32(15, votedowncount_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        output.writeEnum(16, banCheckResult_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        output.writeBool(17, banned_);
       }
       unknownFields.writeTo(output);
     }
@@ -18303,6 +20561,14 @@ public final class SteammessagesBase {
       if (((bitField0_ & 0x00002000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(15, votedowncount_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(16, banCheckResult_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(17, banned_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18391,6 +20657,15 @@ public final class SteammessagesBase {
         if (getVotedowncount()
             != other.getVotedowncount()) return false;
       }
+      if (hasBanCheckResult() != other.hasBanCheckResult()) return false;
+      if (hasBanCheckResult()) {
+        if (banCheckResult_ != other.banCheckResult_) return false;
+      }
+      if (hasBanned() != other.hasBanned()) return false;
+      if (hasBanned()) {
+        if (getBanned()
+            != other.getBanned()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -18467,6 +20742,15 @@ public final class SteammessagesBase {
       if (hasVotedowncount()) {
         hash = (37 * hash) + VOTEDOWNCOUNT_FIELD_NUMBER;
         hash = (53 * hash) + getVotedowncount();
+      }
+      if (hasBanCheckResult()) {
+        hash = (37 * hash) + BAN_CHECK_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + banCheckResult_;
+      }
+      if (hasBanned()) {
+        hash = (37 * hash) + BANNED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getBanned());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -18631,6 +20915,10 @@ public final class SteammessagesBase {
         bitField0_ = (bitField0_ & ~0x00002000);
         votedowncount_ = 0;
         bitField0_ = (bitField0_ & ~0x00004000);
+        banCheckResult_ = 0;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        banned_ = false;
+        bitField0_ = (bitField0_ & ~0x00010000);
         return this;
       }
 
@@ -18719,6 +21007,14 @@ public final class SteammessagesBase {
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.votedowncount_ = votedowncount_;
           to_bitField0_ |= 0x00002000;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.banCheckResult_ = banCheckResult_;
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.banned_ = banned_;
+          to_bitField0_ |= 0x00008000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -18824,6 +21120,12 @@ public final class SteammessagesBase {
         }
         if (other.hasVotedowncount()) {
           setVotedowncount(other.getVotedowncount());
+        }
+        if (other.hasBanCheckResult()) {
+          setBanCheckResult(other.getBanCheckResult());
+        }
+        if (other.hasBanned()) {
+          setBanned(other.getBanned());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19596,6 +21898,88 @@ public final class SteammessagesBase {
       public Builder clearVotedowncount() {
         bitField0_ = (bitField0_ & ~0x00004000);
         votedowncount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int banCheckResult_ = 0;
+      /**
+       * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+       * @return Whether the banCheckResult field is set.
+       */
+      @java.lang.Override public boolean hasBanCheckResult() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+       * @return The banCheckResult.
+       */
+      @java.lang.Override
+      public SteammessagesBase.EBanContentCheckResult getBanCheckResult() {
+        @SuppressWarnings("deprecation")
+        SteammessagesBase.EBanContentCheckResult result = SteammessagesBase.EBanContentCheckResult.valueOf(banCheckResult_);
+        return result == null ? SteammessagesBase.EBanContentCheckResult.k_EBanContentCheckResult_NotScanned : result;
+      }
+      /**
+       * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+       * @param value The banCheckResult to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBanCheckResult(SteammessagesBase.EBanContentCheckResult value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00008000;
+        banCheckResult_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBanCheckResult() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        banCheckResult_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean banned_ ;
+      /**
+       * <code>optional bool banned = 17;</code>
+       * @return Whether the banned field is set.
+       */
+      @java.lang.Override
+      public boolean hasBanned() {
+        return ((bitField0_ & 0x00010000) != 0);
+      }
+      /**
+       * <code>optional bool banned = 17;</code>
+       * @return The banned.
+       */
+      @java.lang.Override
+      public boolean getBanned() {
+        return banned_;
+      }
+      /**
+       * <code>optional bool banned = 17;</code>
+       * @param value The banned to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBanned(boolean value) {
+        bitField0_ |= 0x00010000;
+        banned_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool banned = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBanned() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        banned_ = false;
         onChanged();
         return this;
       }
@@ -27217,6 +29601,3002 @@ public final class SteammessagesBase {
 
   }
 
+  public interface CMsgKeyValuePairOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgKeyValuePair)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string name = 1;</code>
+     * @return Whether the name field is set.
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional string value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>optional string value = 2;</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>optional string value = 2;</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code CMsgKeyValuePair}
+   */
+  public static final class CMsgKeyValuePair extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgKeyValuePair)
+      CMsgKeyValuePairOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgKeyValuePair.newBuilder() to construct.
+    private CMsgKeyValuePair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgKeyValuePair() {
+      name_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgKeyValuePair();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgKeyValuePair(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              value_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CMsgKeyValuePair_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CMsgKeyValuePair_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CMsgKeyValuePair.class, SteammessagesBase.CMsgKeyValuePair.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>optional string name = 1;</code>
+     * @return Whether the name field is set.
+     */
+    @java.lang.Override
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object value_;
+    /**
+     * <code>optional string value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string value = 2;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          value_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string value = 2;</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CMsgKeyValuePair)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CMsgKeyValuePair other = (SteammessagesBase.CMsgKeyValuePair) obj;
+
+      if (hasName() != other.hasName()) return false;
+      if (hasName()) {
+        if (!getName()
+            .equals(other.getName())) return false;
+      }
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CMsgKeyValuePair prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgKeyValuePair}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgKeyValuePair)
+        SteammessagesBase.CMsgKeyValuePairOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CMsgKeyValuePair_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CMsgKeyValuePair_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CMsgKeyValuePair.class, SteammessagesBase.CMsgKeyValuePair.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CMsgKeyValuePair.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CMsgKeyValuePair_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValuePair getDefaultInstanceForType() {
+        return SteammessagesBase.CMsgKeyValuePair.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValuePair build() {
+        SteammessagesBase.CMsgKeyValuePair result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValuePair buildPartial() {
+        SteammessagesBase.CMsgKeyValuePair result = new SteammessagesBase.CMsgKeyValuePair(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.value_ = value_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CMsgKeyValuePair) {
+          return mergeFrom((SteammessagesBase.CMsgKeyValuePair)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CMsgKeyValuePair other) {
+        if (other == SteammessagesBase.CMsgKeyValuePair.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasValue()) {
+          bitField0_ |= 0x00000002;
+          value_ = other.value_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CMsgKeyValuePair parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CMsgKeyValuePair) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 1;</code>
+       * @return Whether the name field is set.
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>optional string value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgKeyValuePair)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgKeyValuePair)
+    private static final SteammessagesBase.CMsgKeyValuePair DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CMsgKeyValuePair();
+    }
+
+    public static SteammessagesBase.CMsgKeyValuePair getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgKeyValuePair>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgKeyValuePair>() {
+      @java.lang.Override
+      public CMsgKeyValuePair parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgKeyValuePair(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgKeyValuePair> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgKeyValuePair> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CMsgKeyValuePair getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgKeyValueSetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgKeyValueSet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    java.util.List<SteammessagesBase.CMsgKeyValuePair> 
+        getPairsList();
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    SteammessagesBase.CMsgKeyValuePair getPairs(int index);
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    int getPairsCount();
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    java.util.List<? extends SteammessagesBase.CMsgKeyValuePairOrBuilder> 
+        getPairsOrBuilderList();
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    SteammessagesBase.CMsgKeyValuePairOrBuilder getPairsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CMsgKeyValueSet}
+   */
+  public static final class CMsgKeyValueSet extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgKeyValueSet)
+      CMsgKeyValueSetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgKeyValueSet.newBuilder() to construct.
+    private CMsgKeyValueSet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgKeyValueSet() {
+      pairs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgKeyValueSet();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgKeyValueSet(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                pairs_ = new java.util.ArrayList<SteammessagesBase.CMsgKeyValuePair>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              pairs_.add(
+                  input.readMessage(SteammessagesBase.CMsgKeyValuePair.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          pairs_ = java.util.Collections.unmodifiableList(pairs_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CMsgKeyValueSet_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CMsgKeyValueSet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CMsgKeyValueSet.class, SteammessagesBase.CMsgKeyValueSet.Builder.class);
+    }
+
+    public static final int PAIRS_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesBase.CMsgKeyValuePair> pairs_;
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesBase.CMsgKeyValuePair> getPairsList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesBase.CMsgKeyValuePairOrBuilder> 
+        getPairsOrBuilderList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    @java.lang.Override
+    public int getPairsCount() {
+      return pairs_.size();
+    }
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.CMsgKeyValuePair getPairs(int index) {
+      return pairs_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.CMsgKeyValuePairOrBuilder getPairsOrBuilder(
+        int index) {
+      return pairs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pairs_.size(); i++) {
+        output.writeMessage(1, pairs_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pairs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pairs_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CMsgKeyValueSet)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CMsgKeyValueSet other = (SteammessagesBase.CMsgKeyValueSet) obj;
+
+      if (!getPairsList()
+          .equals(other.getPairsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPairsCount() > 0) {
+        hash = (37 * hash) + PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getPairsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CMsgKeyValueSet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgKeyValueSet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgKeyValueSet)
+        SteammessagesBase.CMsgKeyValueSetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CMsgKeyValueSet_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CMsgKeyValueSet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CMsgKeyValueSet.class, SteammessagesBase.CMsgKeyValueSet.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CMsgKeyValueSet.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPairsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          pairsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CMsgKeyValueSet_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValueSet getDefaultInstanceForType() {
+        return SteammessagesBase.CMsgKeyValueSet.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValueSet build() {
+        SteammessagesBase.CMsgKeyValueSet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValueSet buildPartial() {
+        SteammessagesBase.CMsgKeyValueSet result = new SteammessagesBase.CMsgKeyValueSet(this);
+        int from_bitField0_ = bitField0_;
+        if (pairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pairs_ = java.util.Collections.unmodifiableList(pairs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pairs_ = pairs_;
+        } else {
+          result.pairs_ = pairsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CMsgKeyValueSet) {
+          return mergeFrom((SteammessagesBase.CMsgKeyValueSet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CMsgKeyValueSet other) {
+        if (other == SteammessagesBase.CMsgKeyValueSet.getDefaultInstance()) return this;
+        if (pairsBuilder_ == null) {
+          if (!other.pairs_.isEmpty()) {
+            if (pairs_.isEmpty()) {
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePairsIsMutable();
+              pairs_.addAll(other.pairs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pairs_.isEmpty()) {
+            if (pairsBuilder_.isEmpty()) {
+              pairsBuilder_.dispose();
+              pairsBuilder_ = null;
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              pairsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPairsFieldBuilder() : null;
+            } else {
+              pairsBuilder_.addAllMessages(other.pairs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CMsgKeyValueSet parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CMsgKeyValueSet) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesBase.CMsgKeyValuePair> pairs_ =
+        java.util.Collections.emptyList();
+      private void ensurePairsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pairs_ = new java.util.ArrayList<SteammessagesBase.CMsgKeyValuePair>(pairs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesBase.CMsgKeyValuePair, SteammessagesBase.CMsgKeyValuePair.Builder, SteammessagesBase.CMsgKeyValuePairOrBuilder> pairsBuilder_;
+
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public java.util.List<SteammessagesBase.CMsgKeyValuePair> getPairsList() {
+        if (pairsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pairs_);
+        } else {
+          return pairsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public int getPairsCount() {
+        if (pairsBuilder_ == null) {
+          return pairs_.size();
+        } else {
+          return pairsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public SteammessagesBase.CMsgKeyValuePair getPairs(int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);
+        } else {
+          return pairsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder setPairs(
+          int index, SteammessagesBase.CMsgKeyValuePair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.set(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder setPairs(
+          int index, SteammessagesBase.CMsgKeyValuePair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder addPairs(SteammessagesBase.CMsgKeyValuePair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder addPairs(
+          int index, SteammessagesBase.CMsgKeyValuePair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder addPairs(
+          SteammessagesBase.CMsgKeyValuePair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder addPairs(
+          int index, SteammessagesBase.CMsgKeyValuePair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder addAllPairs(
+          java.lang.Iterable<? extends SteammessagesBase.CMsgKeyValuePair> values) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pairs_);
+          onChanged();
+        } else {
+          pairsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder clearPairs() {
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          pairsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder removePairs(int index) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.remove(index);
+          onChanged();
+        } else {
+          pairsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public SteammessagesBase.CMsgKeyValuePair.Builder getPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public SteammessagesBase.CMsgKeyValuePairOrBuilder getPairsOrBuilder(
+          int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);  } else {
+          return pairsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public java.util.List<? extends SteammessagesBase.CMsgKeyValuePairOrBuilder> 
+           getPairsOrBuilderList() {
+        if (pairsBuilder_ != null) {
+          return pairsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pairs_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public SteammessagesBase.CMsgKeyValuePair.Builder addPairsBuilder() {
+        return getPairsFieldBuilder().addBuilder(
+            SteammessagesBase.CMsgKeyValuePair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public SteammessagesBase.CMsgKeyValuePair.Builder addPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().addBuilder(
+            index, SteammessagesBase.CMsgKeyValuePair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public java.util.List<SteammessagesBase.CMsgKeyValuePair.Builder> 
+           getPairsBuilderList() {
+        return getPairsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesBase.CMsgKeyValuePair, SteammessagesBase.CMsgKeyValuePair.Builder, SteammessagesBase.CMsgKeyValuePairOrBuilder> 
+          getPairsFieldBuilder() {
+        if (pairsBuilder_ == null) {
+          pairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesBase.CMsgKeyValuePair, SteammessagesBase.CMsgKeyValuePair.Builder, SteammessagesBase.CMsgKeyValuePairOrBuilder>(
+                  pairs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pairs_ = null;
+        }
+        return pairsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgKeyValueSet)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgKeyValueSet)
+    private static final SteammessagesBase.CMsgKeyValueSet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CMsgKeyValueSet();
+    }
+
+    public static SteammessagesBase.CMsgKeyValueSet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgKeyValueSet>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgKeyValueSet>() {
+      @java.lang.Override
+      public CMsgKeyValueSet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgKeyValueSet(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgKeyValueSet> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgKeyValueSet> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CMsgKeyValueSet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserContentDescriptorPreferencesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:UserContentDescriptorPreferences)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+     */
+    java.util.List<SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor> 
+        getContentDescriptorsToExcludeList();
+    /**
+     * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+     */
+    SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor getContentDescriptorsToExclude(int index);
+    /**
+     * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+     */
+    int getContentDescriptorsToExcludeCount();
+    /**
+     * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+     */
+    java.util.List<? extends SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptorOrBuilder> 
+        getContentDescriptorsToExcludeOrBuilderList();
+    /**
+     * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+     */
+    SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptorOrBuilder getContentDescriptorsToExcludeOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code UserContentDescriptorPreferences}
+   */
+  public static final class UserContentDescriptorPreferences extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:UserContentDescriptorPreferences)
+      UserContentDescriptorPreferencesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserContentDescriptorPreferences.newBuilder() to construct.
+    private UserContentDescriptorPreferences(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserContentDescriptorPreferences() {
+      contentDescriptorsToExclude_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserContentDescriptorPreferences();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UserContentDescriptorPreferences(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                contentDescriptorsToExclude_ = new java.util.ArrayList<SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              contentDescriptorsToExclude_.add(
+                  input.readMessage(SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          contentDescriptorsToExclude_ = java.util.Collections.unmodifiableList(contentDescriptorsToExclude_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_UserContentDescriptorPreferences_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_UserContentDescriptorPreferences_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.UserContentDescriptorPreferences.class, SteammessagesBase.UserContentDescriptorPreferences.Builder.class);
+    }
+
+    public interface ContentDescriptorOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:UserContentDescriptorPreferences.ContentDescriptor)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 content_descriptorid = 1;</code>
+       * @return Whether the contentDescriptorid field is set.
+       */
+      boolean hasContentDescriptorid();
+      /**
+       * <code>optional uint32 content_descriptorid = 1;</code>
+       * @return The contentDescriptorid.
+       */
+      int getContentDescriptorid();
+
+      /**
+       * <code>optional uint32 timestamp_added = 2;</code>
+       * @return Whether the timestampAdded field is set.
+       */
+      boolean hasTimestampAdded();
+      /**
+       * <code>optional uint32 timestamp_added = 2;</code>
+       * @return The timestampAdded.
+       */
+      int getTimestampAdded();
+    }
+    /**
+     * Protobuf type {@code UserContentDescriptorPreferences.ContentDescriptor}
+     */
+    public static final class ContentDescriptor extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:UserContentDescriptorPreferences.ContentDescriptor)
+        ContentDescriptorOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ContentDescriptor.newBuilder() to construct.
+      private ContentDescriptor(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ContentDescriptor() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ContentDescriptor();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ContentDescriptor(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                bitField0_ |= 0x00000001;
+                contentDescriptorid_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                timestampAdded_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_UserContentDescriptorPreferences_ContentDescriptor_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_UserContentDescriptorPreferences_ContentDescriptor_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.class, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int CONTENT_DESCRIPTORID_FIELD_NUMBER = 1;
+      private int contentDescriptorid_;
+      /**
+       * <code>optional uint32 content_descriptorid = 1;</code>
+       * @return Whether the contentDescriptorid field is set.
+       */
+      @java.lang.Override
+      public boolean hasContentDescriptorid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 content_descriptorid = 1;</code>
+       * @return The contentDescriptorid.
+       */
+      @java.lang.Override
+      public int getContentDescriptorid() {
+        return contentDescriptorid_;
+      }
+
+      public static final int TIMESTAMP_ADDED_FIELD_NUMBER = 2;
+      private int timestampAdded_;
+      /**
+       * <code>optional uint32 timestamp_added = 2;</code>
+       * @return Whether the timestampAdded field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimestampAdded() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 timestamp_added = 2;</code>
+       * @return The timestampAdded.
+       */
+      @java.lang.Override
+      public int getTimestampAdded() {
+        return timestampAdded_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeUInt32(1, contentDescriptorid_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeUInt32(2, timestampAdded_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, contentDescriptorid_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, timestampAdded_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor)) {
+          return super.equals(obj);
+        }
+        SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor other = (SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor) obj;
+
+        if (hasContentDescriptorid() != other.hasContentDescriptorid()) return false;
+        if (hasContentDescriptorid()) {
+          if (getContentDescriptorid()
+              != other.getContentDescriptorid()) return false;
+        }
+        if (hasTimestampAdded() != other.hasTimestampAdded()) return false;
+        if (hasTimestampAdded()) {
+          if (getTimestampAdded()
+              != other.getTimestampAdded()) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasContentDescriptorid()) {
+          hash = (37 * hash) + CONTENT_DESCRIPTORID_FIELD_NUMBER;
+          hash = (53 * hash) + getContentDescriptorid();
+        }
+        if (hasTimestampAdded()) {
+          hash = (37 * hash) + TIMESTAMP_ADDED_FIELD_NUMBER;
+          hash = (53 * hash) + getTimestampAdded();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code UserContentDescriptorPreferences.ContentDescriptor}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:UserContentDescriptorPreferences.ContentDescriptor)
+          SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptorOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesBase.internal_static_UserContentDescriptorPreferences_ContentDescriptor_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesBase.internal_static_UserContentDescriptorPreferences_ContentDescriptor_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.class, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder.class);
+        }
+
+        // Construct using SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          contentDescriptorid_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          timestampAdded_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesBase.internal_static_UserContentDescriptorPreferences_ContentDescriptor_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor getDefaultInstanceForType() {
+          return SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor build() {
+          SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor buildPartial() {
+          SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor result = new SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.contentDescriptorid_ = contentDescriptorid_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.timestampAdded_ = timestampAdded_;
+            to_bitField0_ |= 0x00000002;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor) {
+            return mergeFrom((SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor other) {
+          if (other == SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.getDefaultInstance()) return this;
+          if (other.hasContentDescriptorid()) {
+            setContentDescriptorid(other.getContentDescriptorid());
+          }
+          if (other.hasTimestampAdded()) {
+            setTimestampAdded(other.getTimestampAdded());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int contentDescriptorid_ ;
+        /**
+         * <code>optional uint32 content_descriptorid = 1;</code>
+         * @return Whether the contentDescriptorid field is set.
+         */
+        @java.lang.Override
+        public boolean hasContentDescriptorid() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional uint32 content_descriptorid = 1;</code>
+         * @return The contentDescriptorid.
+         */
+        @java.lang.Override
+        public int getContentDescriptorid() {
+          return contentDescriptorid_;
+        }
+        /**
+         * <code>optional uint32 content_descriptorid = 1;</code>
+         * @param value The contentDescriptorid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setContentDescriptorid(int value) {
+          bitField0_ |= 0x00000001;
+          contentDescriptorid_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 content_descriptorid = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearContentDescriptorid() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          contentDescriptorid_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int timestampAdded_ ;
+        /**
+         * <code>optional uint32 timestamp_added = 2;</code>
+         * @return Whether the timestampAdded field is set.
+         */
+        @java.lang.Override
+        public boolean hasTimestampAdded() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional uint32 timestamp_added = 2;</code>
+         * @return The timestampAdded.
+         */
+        @java.lang.Override
+        public int getTimestampAdded() {
+          return timestampAdded_;
+        }
+        /**
+         * <code>optional uint32 timestamp_added = 2;</code>
+         * @param value The timestampAdded to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTimestampAdded(int value) {
+          bitField0_ |= 0x00000002;
+          timestampAdded_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 timestamp_added = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTimestampAdded() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          timestampAdded_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:UserContentDescriptorPreferences.ContentDescriptor)
+      }
+
+      // @@protoc_insertion_point(class_scope:UserContentDescriptorPreferences.ContentDescriptor)
+      private static final SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor();
+      }
+
+      public static SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ContentDescriptor>
+          PARSER = new com.google.protobuf.AbstractParser<ContentDescriptor>() {
+        @java.lang.Override
+        public ContentDescriptor parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ContentDescriptor(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ContentDescriptor> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ContentDescriptor> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int CONTENT_DESCRIPTORS_TO_EXCLUDE_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor> contentDescriptorsToExclude_;
+    /**
+     * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor> getContentDescriptorsToExcludeList() {
+      return contentDescriptorsToExclude_;
+    }
+    /**
+     * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptorOrBuilder> 
+        getContentDescriptorsToExcludeOrBuilderList() {
+      return contentDescriptorsToExclude_;
+    }
+    /**
+     * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+     */
+    @java.lang.Override
+    public int getContentDescriptorsToExcludeCount() {
+      return contentDescriptorsToExclude_.size();
+    }
+    /**
+     * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor getContentDescriptorsToExclude(int index) {
+      return contentDescriptorsToExclude_.get(index);
+    }
+    /**
+     * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptorOrBuilder getContentDescriptorsToExcludeOrBuilder(
+        int index) {
+      return contentDescriptorsToExclude_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < contentDescriptorsToExclude_.size(); i++) {
+        output.writeMessage(1, contentDescriptorsToExclude_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < contentDescriptorsToExclude_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, contentDescriptorsToExclude_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.UserContentDescriptorPreferences)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.UserContentDescriptorPreferences other = (SteammessagesBase.UserContentDescriptorPreferences) obj;
+
+      if (!getContentDescriptorsToExcludeList()
+          .equals(other.getContentDescriptorsToExcludeList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContentDescriptorsToExcludeCount() > 0) {
+        hash = (37 * hash) + CONTENT_DESCRIPTORS_TO_EXCLUDE_FIELD_NUMBER;
+        hash = (53 * hash) + getContentDescriptorsToExcludeList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.UserContentDescriptorPreferences parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.UserContentDescriptorPreferences parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.UserContentDescriptorPreferences prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code UserContentDescriptorPreferences}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:UserContentDescriptorPreferences)
+        SteammessagesBase.UserContentDescriptorPreferencesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_UserContentDescriptorPreferences_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_UserContentDescriptorPreferences_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.UserContentDescriptorPreferences.class, SteammessagesBase.UserContentDescriptorPreferences.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.UserContentDescriptorPreferences.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContentDescriptorsToExcludeFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          contentDescriptorsToExclude_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          contentDescriptorsToExcludeBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_UserContentDescriptorPreferences_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.UserContentDescriptorPreferences getDefaultInstanceForType() {
+        return SteammessagesBase.UserContentDescriptorPreferences.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.UserContentDescriptorPreferences build() {
+        SteammessagesBase.UserContentDescriptorPreferences result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.UserContentDescriptorPreferences buildPartial() {
+        SteammessagesBase.UserContentDescriptorPreferences result = new SteammessagesBase.UserContentDescriptorPreferences(this);
+        int from_bitField0_ = bitField0_;
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            contentDescriptorsToExclude_ = java.util.Collections.unmodifiableList(contentDescriptorsToExclude_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.contentDescriptorsToExclude_ = contentDescriptorsToExclude_;
+        } else {
+          result.contentDescriptorsToExclude_ = contentDescriptorsToExcludeBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.UserContentDescriptorPreferences) {
+          return mergeFrom((SteammessagesBase.UserContentDescriptorPreferences)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.UserContentDescriptorPreferences other) {
+        if (other == SteammessagesBase.UserContentDescriptorPreferences.getDefaultInstance()) return this;
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          if (!other.contentDescriptorsToExclude_.isEmpty()) {
+            if (contentDescriptorsToExclude_.isEmpty()) {
+              contentDescriptorsToExclude_ = other.contentDescriptorsToExclude_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureContentDescriptorsToExcludeIsMutable();
+              contentDescriptorsToExclude_.addAll(other.contentDescriptorsToExclude_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contentDescriptorsToExclude_.isEmpty()) {
+            if (contentDescriptorsToExcludeBuilder_.isEmpty()) {
+              contentDescriptorsToExcludeBuilder_.dispose();
+              contentDescriptorsToExcludeBuilder_ = null;
+              contentDescriptorsToExclude_ = other.contentDescriptorsToExclude_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              contentDescriptorsToExcludeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContentDescriptorsToExcludeFieldBuilder() : null;
+            } else {
+              contentDescriptorsToExcludeBuilder_.addAllMessages(other.contentDescriptorsToExclude_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.UserContentDescriptorPreferences parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.UserContentDescriptorPreferences) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor> contentDescriptorsToExclude_ =
+        java.util.Collections.emptyList();
+      private void ensureContentDescriptorsToExcludeIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          contentDescriptorsToExclude_ = new java.util.ArrayList<SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor>(contentDescriptorsToExclude_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptorOrBuilder> contentDescriptorsToExcludeBuilder_;
+
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public java.util.List<SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor> getContentDescriptorsToExcludeList() {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contentDescriptorsToExclude_);
+        } else {
+          return contentDescriptorsToExcludeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public int getContentDescriptorsToExcludeCount() {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          return contentDescriptorsToExclude_.size();
+        } else {
+          return contentDescriptorsToExcludeBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor getContentDescriptorsToExclude(int index) {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          return contentDescriptorsToExclude_.get(index);
+        } else {
+          return contentDescriptorsToExcludeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public Builder setContentDescriptorsToExclude(
+          int index, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor value) {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentDescriptorsToExcludeIsMutable();
+          contentDescriptorsToExclude_.set(index, value);
+          onChanged();
+        } else {
+          contentDescriptorsToExcludeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public Builder setContentDescriptorsToExclude(
+          int index, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder builderForValue) {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          ensureContentDescriptorsToExcludeIsMutable();
+          contentDescriptorsToExclude_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentDescriptorsToExcludeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public Builder addContentDescriptorsToExclude(SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor value) {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentDescriptorsToExcludeIsMutable();
+          contentDescriptorsToExclude_.add(value);
+          onChanged();
+        } else {
+          contentDescriptorsToExcludeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public Builder addContentDescriptorsToExclude(
+          int index, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor value) {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentDescriptorsToExcludeIsMutable();
+          contentDescriptorsToExclude_.add(index, value);
+          onChanged();
+        } else {
+          contentDescriptorsToExcludeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public Builder addContentDescriptorsToExclude(
+          SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder builderForValue) {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          ensureContentDescriptorsToExcludeIsMutable();
+          contentDescriptorsToExclude_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contentDescriptorsToExcludeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public Builder addContentDescriptorsToExclude(
+          int index, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder builderForValue) {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          ensureContentDescriptorsToExcludeIsMutable();
+          contentDescriptorsToExclude_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentDescriptorsToExcludeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public Builder addAllContentDescriptorsToExclude(
+          java.lang.Iterable<? extends SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor> values) {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          ensureContentDescriptorsToExcludeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contentDescriptorsToExclude_);
+          onChanged();
+        } else {
+          contentDescriptorsToExcludeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public Builder clearContentDescriptorsToExclude() {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          contentDescriptorsToExclude_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          contentDescriptorsToExcludeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public Builder removeContentDescriptorsToExclude(int index) {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          ensureContentDescriptorsToExcludeIsMutable();
+          contentDescriptorsToExclude_.remove(index);
+          onChanged();
+        } else {
+          contentDescriptorsToExcludeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder getContentDescriptorsToExcludeBuilder(
+          int index) {
+        return getContentDescriptorsToExcludeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptorOrBuilder getContentDescriptorsToExcludeOrBuilder(
+          int index) {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          return contentDescriptorsToExclude_.get(index);  } else {
+          return contentDescriptorsToExcludeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public java.util.List<? extends SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptorOrBuilder> 
+           getContentDescriptorsToExcludeOrBuilderList() {
+        if (contentDescriptorsToExcludeBuilder_ != null) {
+          return contentDescriptorsToExcludeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contentDescriptorsToExclude_);
+        }
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder addContentDescriptorsToExcludeBuilder() {
+        return getContentDescriptorsToExcludeFieldBuilder().addBuilder(
+            SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder addContentDescriptorsToExcludeBuilder(
+          int index) {
+        return getContentDescriptorsToExcludeFieldBuilder().addBuilder(
+            index, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;</code>
+       */
+      public java.util.List<SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder> 
+           getContentDescriptorsToExcludeBuilderList() {
+        return getContentDescriptorsToExcludeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptorOrBuilder> 
+          getContentDescriptorsToExcludeFieldBuilder() {
+        if (contentDescriptorsToExcludeBuilder_ == null) {
+          contentDescriptorsToExcludeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptor.Builder, SteammessagesBase.UserContentDescriptorPreferences.ContentDescriptorOrBuilder>(
+                  contentDescriptorsToExclude_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contentDescriptorsToExclude_ = null;
+        }
+        return contentDescriptorsToExcludeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:UserContentDescriptorPreferences)
+    }
+
+    // @@protoc_insertion_point(class_scope:UserContentDescriptorPreferences)
+    private static final SteammessagesBase.UserContentDescriptorPreferences DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.UserContentDescriptorPreferences();
+    }
+
+    public static SteammessagesBase.UserContentDescriptorPreferences getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<UserContentDescriptorPreferences>
+        PARSER = new com.google.protobuf.AbstractParser<UserContentDescriptorPreferences>() {
+      @java.lang.Override
+      public UserContentDescriptorPreferences parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UserContentDescriptorPreferences(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserContentDescriptorPreferences> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserContentDescriptorPreferences> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.UserContentDescriptorPreferences getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public static final int MSGPOOL_SOFT_LIMIT_FIELD_NUMBER = 50000;
   /**
    * <code>extend .google.protobuf.MessageOptions { ... }</code>
@@ -27261,6 +32641,17 @@ public final class SteammessagesBase {
           .newFileScopedGeneratedExtension(
         java.lang.Boolean.class,
         null);
+  public static final int ALLOW_FIELD_NAMED_STEAM_ID_FIELD_NUMBER = 50024;
+  /**
+   * <code>extend .google.protobuf.FieldOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.FieldOptions,
+      java.lang.Boolean> allowFieldNamedSteamId = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        java.lang.Boolean.class,
+        null);
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgIPAddress_descriptor;
   private static final 
@@ -27271,6 +32662,11 @@ public final class SteammessagesBase {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgIPAddressBucket_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgGCRoutingProtoBufHeader_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgGCRoutingProtoBufHeader_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgProtoBufHeader_descriptor;
   private static final 
@@ -27341,6 +32737,26 @@ public final class SteammessagesBase {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CPackageReservationStatus_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgKeyValuePair_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgKeyValuePair_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgKeyValueSet_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgKeyValueSet_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_UserContentDescriptorPreferences_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_UserContentDescriptorPreferences_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_UserContentDescriptorPreferences_ContentDescriptor_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_UserContentDescriptorPreferences_ContentDescriptor_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -27355,142 +32771,177 @@ public final class SteammessagesBase {
       "ess\022\014\n\002v4\030\001 \001(\007H\000\022\014\n\002v6\030\002 \001(\014H\000B\004\n\002ip\"R\n" +
       "\023CMsgIPAddressBucket\022+\n\023original_ip_addr" +
       "ess\030\001 \001(\0132\016.CMsgIPAddress\022\016\n\006bucket\030\002 \001(" +
-      "\006\"\241\005\n\022CMsgProtoBufHeader\022\017\n\007steamid\030\001 \001(" +
-      "\006\022\030\n\020client_sessionid\030\002 \001(\005\022\025\n\rrouting_a" +
-      "ppid\030\003 \001(\r\022*\n\014jobid_source\030\n \001(\006:\024184467" +
-      "44073709551615\022*\n\014jobid_target\030\013 \001(\006:\02418" +
-      "446744073709551615\022\027\n\017target_job_name\030\014 " +
-      "\001(\t\022\017\n\007seq_num\030\030 \001(\005\022\022\n\007eresult\030\r \001(\005:\0012" +
-      "\022\025\n\rerror_message\030\016 \001(\t\022\032\n\022auth_account_" +
-      "flags\030\020 \001(\r\022\024\n\014token_source\030\026 \001(\r\022\033\n\023adm" +
-      "in_spoofing_user\030\027 \001(\010\022\032\n\017transport_erro" +
-      "r\030\021 \001(\005:\0011\022\'\n\tmessageid\030\022 \001(\004:\024184467440" +
-      "73709551615\022\032\n\022publisher_group_id\030\023 \001(\r\022" +
-      "\r\n\005sysid\030\024 \001(\r\022\021\n\ttrace_tag\030\025 \001(\004\022\025\n\rweb" +
-      "api_key_id\030\031 \001(\r\022\037\n\027is_from_external_sou" +
-      "rce\030\032 \001(\010\022\030\n\020forward_to_sysid\030\033 \003(\r\022\020\n\010c" +
-      "m_sysid\030\034 \001(\r\022\020\n\010wg_token\030\036 \001(\t\022\030\n\rlaunc" +
-      "her_type\030\037 \001(\r:\0010\022\020\n\005realm\030  \001(\r:\0010\022\014\n\002i" +
-      "p\030\017 \001(\rH\000\022\017\n\005ip_v6\030\035 \001(\014H\000B\t\n\007ip_addr\"8\n" +
-      "\tCMsgMulti\022\025\n\rsize_unzipped\030\001 \001(\r\022\024\n\014mes" +
-      "sage_body\030\002 \001(\014\"+\n\023CMsgProtobufWrapped\022\024" +
-      "\n\014message_body\030\001 \001(\014\"\217\001\n\016CMsgAuthTicket\022" +
-      "\016\n\006estate\030\001 \001(\r\022\022\n\007eresult\030\002 \001(\r:\0012\022\017\n\007s" +
-      "teamid\030\003 \001(\006\022\016\n\006gameid\030\004 \001(\006\022\024\n\014h_steam_" +
-      "pipe\030\005 \001(\r\022\022\n\nticket_crc\030\006 \001(\r\022\016\n\006ticket" +
-      "\030\007 \001(\014\"\231\002\n\024CCDDBAppDetailCommon\022\r\n\005appid" +
-      "\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\014\n\004icon\030\003 \001(\t\022\014\n\004lo" +
-      "go\030\004 \001(\t\022\022\n\nlogo_small\030\005 \001(\t\022\014\n\004tool\030\006 \001" +
-      "(\010\022\014\n\004demo\030\007 \001(\010\022\r\n\005media\030\010 \001(\010\022\037\n\027commu" +
-      "nity_visible_stats\030\t \001(\010\022\025\n\rfriendly_nam" +
-      "e\030\n \001(\t\022\023\n\013propagation\030\013 \001(\t\022\031\n\021has_adul" +
-      "t_content\030\014 \001(\010\022!\n\031is_visible_in_steam_c" +
-      "hina\030\r \001(\010\"\263\003\n\rCMsgAppRights\022\021\n\tedit_inf" +
-      "o\030\001 \001(\010\022\017\n\007publish\030\002 \001(\010\022\027\n\017view_error_d" +
-      "ata\030\003 \001(\010\022\020\n\010download\030\004 \001(\010\022\025\n\rupload_cd" +
-      "keys\030\005 \001(\010\022\027\n\017generate_cdkeys\030\006 \001(\010\022\027\n\017v" +
-      "iew_financials\030\007 \001(\010\022\022\n\nmanage_ceg\030\010 \001(\010" +
-      "\022\026\n\016manage_signing\030\t \001(\010\022\025\n\rmanage_cdkey" +
-      "s\030\n \001(\010\022\026\n\016edit_marketing\030\013 \001(\010\022\027\n\017econo" +
-      "my_support\030\014 \001(\010\022\"\n\032economy_support_supe" +
-      "rvisor\030\r \001(\010\022\026\n\016manage_pricing\030\016 \001(\010\022\026\n\016" +
-      "broadcast_live\030\017 \001(\010\022\036\n\026view_marketing_t" +
-      "raffic\030\020 \001(\010\022\"\n\032edit_store_display_conte" +
-      "nt\030\021 \001(\010\"\361\002\n\023CCuratorPreferences\022\033\n\023supp" +
-      "orted_languages\030\001 \001(\r\022\030\n\020platform_window" +
-      "s\030\002 \001(\010\022\024\n\014platform_mac\030\003 \001(\010\022\026\n\016platfor" +
-      "m_linux\030\004 \001(\010\022\022\n\nvr_content\030\005 \001(\010\022\036\n\026adu" +
-      "lt_content_violence\030\006 \001(\010\022\031\n\021adult_conte" +
-      "nt_sex\030\007 \001(\010\022\031\n\021timestamp_updated\030\010 \001(\r\022" +
-      "\026\n\016tagids_curated\030\t \003(\r\022\027\n\017tagids_filter" +
-      "ed\030\n \003(\r\022\025\n\rwebsite_title\030\013 \001(\t\022\023\n\013websi" +
-      "te_url\030\014 \001(\t\022\026\n\016discussion_url\030\r \001(\t\022\026\n\016" +
-      "show_broadcast\030\016 \001(\010\"@\n\022CLocalizationTok" +
-      "en\022\020\n\010language\030\001 \001(\r\022\030\n\020localized_string" +
-      "\030\002 \001(\t\"\354\001\n\027CClanEventUserNewsTuple\022\016\n\006cl" +
-      "anid\030\001 \001(\r\022\021\n\tevent_gid\030\002 \001(\006\022\030\n\020announc" +
-      "ement_gid\030\003 \001(\006\022\023\n\013rtime_start\030\004 \001(\r\022\021\n\t" +
-      "rtime_end\030\005 \001(\r\022\026\n\016priority_score\030\006 \001(\r\022" +
-      "\014\n\004type\030\007 \001(\r\022\030\n\020clamp_range_slot\030\010 \001(\r\022" +
-      "\r\n\005appid\030\t \001(\r\022\035\n\025rtime32_last_modified\030" +
-      "\n \001(\r\"\200\001\n\026CClanMatchEventByRange\022\024\n\014rtim" +
-      "e_before\030\001 \001(\r\022\023\n\013rtime_after\030\002 \001(\r\022\021\n\tq" +
-      "ualified\030\003 \001(\r\022(\n\006events\030\004 \003(\0132\030.CClanEv" +
-      "entUserNewsTuple\"\263\002\n\037CCommunity_ClanAnno" +
-      "uncementInfo\022\013\n\003gid\030\001 \001(\004\022\016\n\006clanid\030\002 \001(" +
-      "\004\022\020\n\010posterid\030\003 \001(\004\022\020\n\010headline\030\004 \001(\t\022\020\n" +
-      "\010posttime\030\005 \001(\r\022\022\n\nupdatetime\030\006 \001(\r\022\014\n\004b" +
-      "ody\030\007 \001(\t\022\024\n\014commentcount\030\010 \001(\005\022\014\n\004tags\030" +
-      "\t \003(\t\022\020\n\010language\030\n \001(\005\022\016\n\006hidden\030\013 \001(\010\022" +
-      "\026\n\016forum_topic_id\030\014 \001(\006\022\021\n\tevent_gid\030\r \001" +
-      "(\006\022\023\n\013voteupcount\030\016 \001(\005\022\025\n\rvotedowncount" +
-      "\030\017 \001(\005\"\246\006\n\016CClanEventData\022\013\n\003gid\030\001 \001(\006\022\024" +
-      "\n\014clan_steamid\030\002 \001(\006\022\022\n\nevent_name\030\003 \001(\t" +
-      "\022;\n\nevent_type\030\004 \001(\0162\024.EProtoClanEventTy" +
-      "pe:\021k_EClanOtherEvent\022\r\n\005appid\030\005 \001(\r\022\026\n\016" +
-      "server_address\030\006 \001(\t\022\027\n\017server_password\030" +
-      "\007 \001(\t\022\032\n\022rtime32_start_time\030\010 \001(\r\022\030\n\020rti" +
-      "me32_end_time\030\t \001(\r\022\025\n\rcomment_count\030\n \001" +
-      "(\005\022\027\n\017creator_steamid\030\013 \001(\006\022\033\n\023last_upda" +
-      "te_steamid\030\014 \001(\006\022\023\n\013event_notes\030\r \001(\t\022\020\n" +
-      "\010jsondata\030\016 \001(\t\022;\n\021announcement_body\030\017 \001" +
-      "(\0132 .CCommunity_ClanAnnouncementInfo\022\021\n\t" +
-      "published\030\020 \001(\010\022\016\n\006hidden\030\021 \001(\010\022 \n\030rtime" +
-      "32_visibility_start\030\022 \001(\r\022\036\n\026rtime32_vis" +
-      "ibility_end\030\023 \001(\r\022\035\n\025broadcaster_account" +
-      "id\030\024 \001(\r\022\026\n\016follower_count\030\025 \001(\r\022\024\n\014igno" +
-      "re_count\030\026 \001(\r\022\026\n\016forum_topic_id\030\027 \001(\006\022\035" +
-      "\n\025rtime32_last_modified\030\030 \001(\r\022\025\n\rnews_po" +
-      "st_gid\030\031 \001(\006\022\032\n\022rtime_mod_reviewed\030\032 \001(\r" +
-      "\022\032\n\022featured_app_tagid\030\033 \001(\r\022\031\n\021referenc" +
-      "ed_appids\030\034 \003(\r\022\020\n\010build_id\030\035 \001(\r\022\024\n\014bui" +
-      "ld_branch\030\036 \001(\t\"\307\001\n\020CBilling_Address\022\022\n\n" +
-      "first_name\030\001 \001(\t\022\021\n\tlast_name\030\002 \001(\t\022\020\n\010a" +
-      "ddress1\030\003 \001(\t\022\020\n\010address2\030\004 \001(\t\022\014\n\004city\030" +
-      "\005 \001(\t\022\020\n\010us_state\030\006 \001(\t\022\024\n\014country_code\030" +
-      "\007 \001(\t\022\020\n\010postcode\030\010 \001(\t\022\021\n\tzip_plus4\030\t \001" +
-      "(\005\022\r\n\005phone\030\n \001(\t\"\333\001\n\031CPackageReservatio" +
-      "nStatus\022\021\n\tpackageid\030\001 \001(\r\022\031\n\021reservatio" +
-      "n_state\030\002 \001(\005\022\026\n\016queue_position\030\003 \001(\005\022\030\n" +
-      "\020total_queue_size\030\004 \001(\005\022 \n\030reservation_c" +
-      "ountry_code\030\005 \001(\t\022\017\n\007expired\030\006 \001(\010\022\024\n\014ti" +
-      "me_expires\030\007 \001(\r\022\025\n\rtime_reserved\030\010 \001(\r*" +
-      "\353\007\n\023EProtoClanEventType\022\025\n\021k_EClanOtherE" +
-      "vent\020\001\022\024\n\020k_EClanGameEvent\020\002\022\025\n\021k_EClanP" +
-      "artyEvent\020\003\022\027\n\023k_EClanMeetingEvent\020\004\022\034\n\030" +
-      "k_EClanSpecialCauseEvent\020\005\022\034\n\030k_EClanMus" +
-      "icAndArtsEvent\020\006\022\026\n\022k_EClanSportsEvent\020\007" +
-      "\022\024\n\020k_EClanTripEvent\020\010\022\024\n\020k_EClanChatEve" +
-      "nt\020\t\022\033\n\027k_EClanGameReleaseEvent\020\n\022\031\n\025k_E" +
-      "ClanBroadcastEvent\020\013\022\033\n\027k_EClanSmallUpda" +
-      "teEvent\020\014\022&\n\"k_EClanPreAnnounceMajorUpda" +
-      "teEvent\020\r\022\033\n\027k_EClanMajorUpdateEvent\020\016\022\032" +
-      "\n\026k_EClanDLCReleaseEvent\020\017\022\035\n\031k_EClanFut" +
-      "ureReleaseEvent\020\020\022&\n\"k_EClanESportTourna" +
-      "mentStreamEvent\020\021\022\031\n\025k_EClanDevStreamEve" +
-      "nt\020\022\022\034\n\030k_EClanFamousStreamEvent\020\023\022\031\n\025k_" +
-      "EClanGameSalesEvent\020\024\022\035\n\031k_EClanGameItem" +
-      "SalesEvent\020\025\022\035\n\031k_EClanInGameBonusXPEven" +
-      "t\020\026\022\032\n\026k_EClanInGameLootEvent\020\027\022\033\n\027k_ECl" +
-      "anInGamePerksEvent\020\030\022\037\n\033k_EClanInGameCha" +
-      "llengeEvent\020\031\022\035\n\031k_EClanInGameContestEve" +
-      "nt\020\032\022\023\n\017k_EClanIRLEvent\020\033\022\024\n\020k_EClanNews" +
-      "Event\020\034\022\033\n\027k_EClanBetaReleaseEvent\020\035\022$\n " +
-      "k_EClanInGameContentReleaseEvent\020\036\022\024\n\020k_" +
-      "EClanFreeTrial\020\037\022\030\n\024k_EClanSeasonRelease" +
-      "\020 \022\027\n\023k_EClanSeasonUpdate\020!\022\031\n\025k_EClanCr" +
-      "osspostEvent\020\"\022\035\n\031k_EClanInGameEventGene" +
-      "ral\020#*\201\001\n\034PartnerEventNotificationType\022\021" +
-      "\n\rk_EEventStart\020\000\022\032\n\026k_EEventBroadcastSt" +
-      "art\020\001\022\026\n\022k_EEventMatchStart\020\002\022\032\n\026k_EEven" +
-      "tPartnerMaxType\020\003:A\n\022msgpool_soft_limit\022" +
-      "\037.google.protobuf.MessageOptions\030\320\206\003 \001(\005" +
-      ":\00232:B\n\022msgpool_hard_limit\022\037.google.prot" +
-      "obuf.MessageOptions\030\321\206\003 \001(\005:\003384:C\n\024forc" +
-      "e_php_generation\022\034.google.protobuf.FileO" +
-      "ptions\030\320\206\003 \001(\010:\005false:H\n\030php_output_alwa" +
-      "ys_number\022\035.google.protobuf.FieldOptions" +
-      "\030\344\206\003 \001(\010:\005falseB\tH\001\200\001\001\200\265\030\001"
+      "\006\"O\n\033CMsgGCRoutingProtoBufHeader\022\026\n\016dst_" +
+      "gcid_queue\030\001 \001(\004\022\030\n\020dst_gc_dir_index\030\002 \001" +
+      "(\r\"\216\010\n\022CMsgProtoBufHeader\022\017\n\007steamid\030\001 \001" +
+      "(\006\022\030\n\020client_sessionid\030\002 \001(\005\022\025\n\rrouting_" +
+      "appid\030\003 \001(\r\022*\n\014jobid_source\030\n \001(\006:\02418446" +
+      "744073709551615\022*\n\014jobid_target\030\013 \001(\006:\0241" +
+      "8446744073709551615\022\027\n\017target_job_name\030\014" +
+      " \001(\t\022\017\n\007seq_num\030\030 \001(\005\022\022\n\007eresult\030\r \001(\005:\001" +
+      "2\022\025\n\rerror_message\030\016 \001(\t\022\032\n\022auth_account" +
+      "_flags\030\020 \001(\r\022\024\n\014token_source\030\026 \001(\r\022\033\n\023ad" +
+      "min_spoofing_user\030\027 \001(\010\022\032\n\017transport_err" +
+      "or\030\021 \001(\005:\0011\022\'\n\tmessageid\030\022 \001(\004:\02418446744" +
+      "073709551615\022\032\n\022publisher_group_id\030\023 \001(\r" +
+      "\022\r\n\005sysid\030\024 \001(\r\022\021\n\ttrace_tag\030\025 \001(\004\022\025\n\rwe" +
+      "bapi_key_id\030\031 \001(\r\022\037\n\027is_from_external_so" +
+      "urce\030\032 \001(\010\022\030\n\020forward_to_sysid\030\033 \003(\r\022\020\n\010" +
+      "cm_sysid\030\034 \001(\r\022\030\n\rlauncher_type\030\037 \001(\r:\0010" +
+      "\022\020\n\005realm\030  \001(\r:\0010\022\026\n\ntimeout_ms\030! \001(\005:\002" +
+      "-1\022\024\n\014debug_source\030\" \001(\t\022!\n\031debug_source" +
+      "_string_index\030# \001(\r\022\020\n\010token_id\030$ \001(\004\0220\n" +
+      "\nrouting_gc\030% \001(\0132\034.CMsgGCRoutingProtoBu" +
+      "fHeader\022a\n\023session_disposition\030& \001(\0162\'.C" +
+      "MsgProtoBufHeader.ESessionDisposition:\033k" +
+      "_ESessionDispositionNormal\022\020\n\010wg_token\030\'" +
+      " \001(\t\022\026\n\016webui_auth_key\030( \001(\t\022\014\n\002ip\030\017 \001(\r" +
+      "H\000\022\017\n\005ip_v6\030\035 \001(\014H\000\"[\n\023ESessionDispositi" +
+      "on\022\037\n\033k_ESessionDispositionNormal\020\000\022#\n\037k" +
+      "_ESessionDispositionDisconnect\020\001B\t\n\007ip_a" +
+      "ddr\"8\n\tCMsgMulti\022\025\n\rsize_unzipped\030\001 \001(\r\022" +
+      "\024\n\014message_body\030\002 \001(\014\"+\n\023CMsgProtobufWra" +
+      "pped\022\024\n\014message_body\030\001 \001(\014\"\273\001\n\016CMsgAuthT" +
+      "icket\022\016\n\006estate\030\001 \001(\r\022\022\n\007eresult\030\002 \001(\r:\001" +
+      "2\022\017\n\007steamid\030\003 \001(\006\022\016\n\006gameid\030\004 \001(\006\022\024\n\014h_" +
+      "steam_pipe\030\005 \001(\r\022\022\n\nticket_crc\030\006 \001(\r\022\016\n\006" +
+      "ticket\030\007 \001(\014\022\025\n\rserver_secret\030\010 \001(\014\022\023\n\013t" +
+      "icket_type\030\t \001(\r\"\353\002\n\024CCDDBAppDetailCommo" +
+      "n\022\r\n\005appid\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\014\n\004icon\030\003" +
+      " \001(\t\022\014\n\004tool\030\006 \001(\010\022\014\n\004demo\030\007 \001(\010\022\r\n\005medi" +
+      "a\030\010 \001(\010\022\037\n\027community_visible_stats\030\t \001(\010" +
+      "\022\025\n\rfriendly_name\030\n \001(\t\022\023\n\013propagation\030\013" +
+      " \001(\t\022\031\n\021has_adult_content\030\014 \001(\010\022!\n\031is_vi" +
+      "sible_in_steam_china\030\r \001(\010\022\020\n\010app_type\030\016" +
+      " \001(\r\022\035\n\025has_adult_content_sex\030\017 \001(\010\022\"\n\032h" +
+      "as_adult_content_violence\030\020 \001(\010\022\035\n\025conte" +
+      "nt_descriptorids\030\021 \003(\r\"\263\003\n\rCMsgAppRights" +
+      "\022\021\n\tedit_info\030\001 \001(\010\022\017\n\007publish\030\002 \001(\010\022\027\n\017" +
+      "view_error_data\030\003 \001(\010\022\020\n\010download\030\004 \001(\010\022" +
+      "\025\n\rupload_cdkeys\030\005 \001(\010\022\027\n\017generate_cdkey" +
+      "s\030\006 \001(\010\022\027\n\017view_financials\030\007 \001(\010\022\022\n\nmana" +
+      "ge_ceg\030\010 \001(\010\022\026\n\016manage_signing\030\t \001(\010\022\025\n\r" +
+      "manage_cdkeys\030\n \001(\010\022\026\n\016edit_marketing\030\013 " +
+      "\001(\010\022\027\n\017economy_support\030\014 \001(\010\022\"\n\032economy_" +
+      "support_supervisor\030\r \001(\010\022\026\n\016manage_prici" +
+      "ng\030\016 \001(\010\022\026\n\016broadcast_live\030\017 \001(\010\022\036\n\026view" +
+      "_marketing_traffic\030\020 \001(\010\022\"\n\032edit_store_d" +
+      "isplay_content\030\021 \001(\010\"\361\002\n\023CCuratorPrefere" +
+      "nces\022\033\n\023supported_languages\030\001 \001(\r\022\030\n\020pla" +
+      "tform_windows\030\002 \001(\010\022\024\n\014platform_mac\030\003 \001(" +
+      "\010\022\026\n\016platform_linux\030\004 \001(\010\022\022\n\nvr_content\030" +
+      "\005 \001(\010\022\036\n\026adult_content_violence\030\006 \001(\010\022\031\n" +
+      "\021adult_content_sex\030\007 \001(\010\022\031\n\021timestamp_up" +
+      "dated\030\010 \001(\r\022\026\n\016tagids_curated\030\t \003(\r\022\027\n\017t" +
+      "agids_filtered\030\n \003(\r\022\025\n\rwebsite_title\030\013 " +
+      "\001(\t\022\023\n\013website_url\030\014 \001(\t\022\026\n\016discussion_u" +
+      "rl\030\r \001(\t\022\026\n\016show_broadcast\030\016 \001(\010\"@\n\022CLoc" +
+      "alizationToken\022\020\n\010language\030\001 \001(\r\022\030\n\020loca" +
+      "lized_string\030\002 \001(\t\"\354\001\n\027CClanEventUserNew" +
+      "sTuple\022\016\n\006clanid\030\001 \001(\r\022\021\n\tevent_gid\030\002 \001(" +
+      "\006\022\030\n\020announcement_gid\030\003 \001(\006\022\023\n\013rtime_sta" +
+      "rt\030\004 \001(\r\022\021\n\trtime_end\030\005 \001(\r\022\026\n\016priority_" +
+      "score\030\006 \001(\r\022\014\n\004type\030\007 \001(\r\022\030\n\020clamp_range" +
+      "_slot\030\010 \001(\r\022\r\n\005appid\030\t \001(\r\022\035\n\025rtime32_la" +
+      "st_modified\030\n \001(\r\"\200\001\n\026CClanMatchEventByR" +
+      "ange\022\024\n\014rtime_before\030\001 \001(\r\022\023\n\013rtime_afte" +
+      "r\030\002 \001(\r\022\021\n\tqualified\030\003 \001(\r\022(\n\006events\030\004 \003" +
+      "(\0132\030.CClanEventUserNewsTuple\"\233\003\n\037CCommun" +
+      "ity_ClanAnnouncementInfo\022\013\n\003gid\030\001 \001(\004\022\016\n" +
+      "\006clanid\030\002 \001(\004\022\020\n\010posterid\030\003 \001(\004\022\020\n\010headl" +
+      "ine\030\004 \001(\t\022\020\n\010posttime\030\005 \001(\r\022\022\n\nupdatetim" +
+      "e\030\006 \001(\r\022\014\n\004body\030\007 \001(\t\022\024\n\014commentcount\030\010 " +
+      "\001(\005\022\014\n\004tags\030\t \003(\t\022\020\n\010language\030\n \001(\005\022\016\n\006h" +
+      "idden\030\013 \001(\010\022\026\n\016forum_topic_id\030\014 \001(\006\022\021\n\te" +
+      "vent_gid\030\r \001(\006\022\023\n\013voteupcount\030\016 \001(\005\022\025\n\rv" +
+      "otedowncount\030\017 \001(\005\022V\n\020ban_check_result\030\020" +
+      " \001(\0162\027.EBanContentCheckResult:#k_EBanCon" +
+      "tentCheckResult_NotScanned\022\016\n\006banned\030\021 \001" +
+      "(\010\"\246\006\n\016CClanEventData\022\013\n\003gid\030\001 \001(\006\022\024\n\014cl" +
+      "an_steamid\030\002 \001(\006\022\022\n\nevent_name\030\003 \001(\t\022;\n\n" +
+      "event_type\030\004 \001(\0162\024.EProtoClanEventType:\021" +
+      "k_EClanOtherEvent\022\r\n\005appid\030\005 \001(\r\022\026\n\016serv" +
+      "er_address\030\006 \001(\t\022\027\n\017server_password\030\007 \001(" +
+      "\t\022\032\n\022rtime32_start_time\030\010 \001(\r\022\030\n\020rtime32" +
+      "_end_time\030\t \001(\r\022\025\n\rcomment_count\030\n \001(\005\022\027" +
+      "\n\017creator_steamid\030\013 \001(\006\022\033\n\023last_update_s" +
+      "teamid\030\014 \001(\006\022\023\n\013event_notes\030\r \001(\t\022\020\n\010jso" +
+      "ndata\030\016 \001(\t\022;\n\021announcement_body\030\017 \001(\0132 " +
+      ".CCommunity_ClanAnnouncementInfo\022\021\n\tpubl" +
+      "ished\030\020 \001(\010\022\016\n\006hidden\030\021 \001(\010\022 \n\030rtime32_v" +
+      "isibility_start\030\022 \001(\r\022\036\n\026rtime32_visibil" +
+      "ity_end\030\023 \001(\r\022\035\n\025broadcaster_accountid\030\024" +
+      " \001(\r\022\026\n\016follower_count\030\025 \001(\r\022\024\n\014ignore_c" +
+      "ount\030\026 \001(\r\022\026\n\016forum_topic_id\030\027 \001(\006\022\035\n\025rt" +
+      "ime32_last_modified\030\030 \001(\r\022\025\n\rnews_post_g" +
+      "id\030\031 \001(\006\022\032\n\022rtime_mod_reviewed\030\032 \001(\r\022\032\n\022" +
+      "featured_app_tagid\030\033 \001(\r\022\031\n\021referenced_a" +
+      "ppids\030\034 \003(\r\022\020\n\010build_id\030\035 \001(\r\022\024\n\014build_b" +
+      "ranch\030\036 \001(\t\"\307\001\n\020CBilling_Address\022\022\n\nfirs" +
+      "t_name\030\001 \001(\t\022\021\n\tlast_name\030\002 \001(\t\022\020\n\010addre" +
+      "ss1\030\003 \001(\t\022\020\n\010address2\030\004 \001(\t\022\014\n\004city\030\005 \001(" +
+      "\t\022\020\n\010us_state\030\006 \001(\t\022\024\n\014country_code\030\007 \001(" +
+      "\t\022\020\n\010postcode\030\010 \001(\t\022\021\n\tzip_plus4\030\t \001(\005\022\r" +
+      "\n\005phone\030\n \001(\t\"\333\001\n\031CPackageReservationSta" +
+      "tus\022\021\n\tpackageid\030\001 \001(\r\022\031\n\021reservation_st" +
+      "ate\030\002 \001(\005\022\026\n\016queue_position\030\003 \001(\005\022\030\n\020tot" +
+      "al_queue_size\030\004 \001(\005\022 \n\030reservation_count" +
+      "ry_code\030\005 \001(\t\022\017\n\007expired\030\006 \001(\010\022\024\n\014time_e" +
+      "xpires\030\007 \001(\r\022\025\n\rtime_reserved\030\010 \001(\r\"/\n\020C" +
+      "MsgKeyValuePair\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t\"3\n\017CMsgKeyValueSet\022 \n\005pairs\030\001 \003(\0132\021" +
+      ".CMsgKeyValuePair\"\313\001\n UserContentDescrip" +
+      "torPreferences\022[\n\036content_descriptors_to" +
+      "_exclude\030\001 \003(\01323.UserContentDescriptorPr" +
+      "eferences.ContentDescriptor\032J\n\021ContentDe" +
+      "scriptor\022\034\n\024content_descriptorid\030\001 \001(\r\022\027" +
+      "\n\017timestamp_added\030\002 \001(\r*\330\002\n\026EBanContentC" +
+      "heckResult\022\'\n#k_EBanContentCheckResult_N" +
+      "otScanned\020\000\022\"\n\036k_EBanContentCheckResult_" +
+      "Reset\020\001\022*\n&k_EBanContentCheckResult_Need" +
+      "sChecking\020\002\022)\n%k_EBanContentCheckResult_" +
+      "VeryUnlikely\020\005\022%\n!k_EBanContentCheckResu" +
+      "lt_Unlikely\020\036\022%\n!k_EBanContentCheckResul" +
+      "t_Possible\0202\022#\n\037k_EBanContentCheckResult" +
+      "_Likely\020K\022\'\n#k_EBanContentCheckResult_Ve" +
+      "ryLikely\020d*\353\007\n\023EProtoClanEventType\022\025\n\021k_" +
+      "EClanOtherEvent\020\001\022\024\n\020k_EClanGameEvent\020\002\022" +
+      "\025\n\021k_EClanPartyEvent\020\003\022\027\n\023k_EClanMeeting" +
+      "Event\020\004\022\034\n\030k_EClanSpecialCauseEvent\020\005\022\034\n" +
+      "\030k_EClanMusicAndArtsEvent\020\006\022\026\n\022k_EClanSp" +
+      "ortsEvent\020\007\022\024\n\020k_EClanTripEvent\020\010\022\024\n\020k_E" +
+      "ClanChatEvent\020\t\022\033\n\027k_EClanGameReleaseEve" +
+      "nt\020\n\022\031\n\025k_EClanBroadcastEvent\020\013\022\033\n\027k_ECl" +
+      "anSmallUpdateEvent\020\014\022&\n\"k_EClanPreAnnoun" +
+      "ceMajorUpdateEvent\020\r\022\033\n\027k_EClanMajorUpda" +
+      "teEvent\020\016\022\032\n\026k_EClanDLCReleaseEvent\020\017\022\035\n" +
+      "\031k_EClanFutureReleaseEvent\020\020\022&\n\"k_EClanE" +
+      "SportTournamentStreamEvent\020\021\022\031\n\025k_EClanD" +
+      "evStreamEvent\020\022\022\034\n\030k_EClanFamousStreamEv" +
+      "ent\020\023\022\031\n\025k_EClanGameSalesEvent\020\024\022\035\n\031k_EC" +
+      "lanGameItemSalesEvent\020\025\022\035\n\031k_EClanInGame" +
+      "BonusXPEvent\020\026\022\032\n\026k_EClanInGameLootEvent" +
+      "\020\027\022\033\n\027k_EClanInGamePerksEvent\020\030\022\037\n\033k_ECl" +
+      "anInGameChallengeEvent\020\031\022\035\n\031k_EClanInGam" +
+      "eContestEvent\020\032\022\023\n\017k_EClanIRLEvent\020\033\022\024\n\020" +
+      "k_EClanNewsEvent\020\034\022\033\n\027k_EClanBetaRelease" +
+      "Event\020\035\022$\n k_EClanInGameContentReleaseEv" +
+      "ent\020\036\022\024\n\020k_EClanFreeTrial\020\037\022\030\n\024k_EClanSe" +
+      "asonRelease\020 \022\027\n\023k_EClanSeasonUpdate\020!\022\031" +
+      "\n\025k_EClanCrosspostEvent\020\"\022\035\n\031k_EClanInGa" +
+      "meEventGeneral\020#*\201\001\n\034PartnerEventNotific" +
+      "ationType\022\021\n\rk_EEventStart\020\000\022\032\n\026k_EEvent" +
+      "BroadcastStart\020\001\022\026\n\022k_EEventMatchStart\020\002" +
+      "\022\032\n\026k_EEventPartnerMaxType\020\003:A\n\022msgpool_" +
+      "soft_limit\022\037.google.protobuf.MessageOpti" +
+      "ons\030\320\206\003 \001(\005:\00232:B\n\022msgpool_hard_limit\022\037." +
+      "google.protobuf.MessageOptions\030\321\206\003 \001(\005:\003" +
+      "384:C\n\024force_php_generation\022\034.google.pro" +
+      "tobuf.FileOptions\030\320\206\003 \001(\010:\005false:H\n\030php_" +
+      "output_always_number\022\035.google.protobuf.F" +
+      "ieldOptions\030\344\206\003 \001(\010:\005false:J\n\032allow_fiel" +
+      "d_named_steam_id\022\035.google.protobuf.Field" +
+      "Options\030\350\206\003 \001(\010:\005falseB\tH\001\200\001\001\200\265\030\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27509,94 +32960,125 @@ public final class SteammessagesBase {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgIPAddressBucket_descriptor,
         new java.lang.String[] { "OriginalIpAddress", "Bucket", });
-    internal_static_CMsgProtoBufHeader_descriptor =
+    internal_static_CMsgGCRoutingProtoBufHeader_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_CMsgGCRoutingProtoBufHeader_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgGCRoutingProtoBufHeader_descriptor,
+        new java.lang.String[] { "DstGcidQueue", "DstGcDirIndex", });
+    internal_static_CMsgProtoBufHeader_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CMsgProtoBufHeader_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgProtoBufHeader_descriptor,
-        new java.lang.String[] { "Steamid", "ClientSessionid", "RoutingAppid", "JobidSource", "JobidTarget", "TargetJobName", "SeqNum", "Eresult", "ErrorMessage", "AuthAccountFlags", "TokenSource", "AdminSpoofingUser", "TransportError", "Messageid", "PublisherGroupId", "Sysid", "TraceTag", "WebapiKeyId", "IsFromExternalSource", "ForwardToSysid", "CmSysid", "WgToken", "LauncherType", "Realm", "Ip", "IpV6", "IpAddr", });
+        new java.lang.String[] { "Steamid", "ClientSessionid", "RoutingAppid", "JobidSource", "JobidTarget", "TargetJobName", "SeqNum", "Eresult", "ErrorMessage", "AuthAccountFlags", "TokenSource", "AdminSpoofingUser", "TransportError", "Messageid", "PublisherGroupId", "Sysid", "TraceTag", "WebapiKeyId", "IsFromExternalSource", "ForwardToSysid", "CmSysid", "LauncherType", "Realm", "TimeoutMs", "DebugSource", "DebugSourceStringIndex", "TokenId", "RoutingGc", "SessionDisposition", "WgToken", "WebuiAuthKey", "Ip", "IpV6", "IpAddr", });
     internal_static_CMsgMulti_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CMsgMulti_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgMulti_descriptor,
         new java.lang.String[] { "SizeUnzipped", "MessageBody", });
     internal_static_CMsgProtobufWrapped_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CMsgProtobufWrapped_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgProtobufWrapped_descriptor,
         new java.lang.String[] { "MessageBody", });
     internal_static_CMsgAuthTicket_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CMsgAuthTicket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgAuthTicket_descriptor,
-        new java.lang.String[] { "Estate", "Eresult", "Steamid", "Gameid", "HSteamPipe", "TicketCrc", "Ticket", });
+        new java.lang.String[] { "Estate", "Eresult", "Steamid", "Gameid", "HSteamPipe", "TicketCrc", "Ticket", "ServerSecret", "TicketType", });
     internal_static_CCDDBAppDetailCommon_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CCDDBAppDetailCommon_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCDDBAppDetailCommon_descriptor,
-        new java.lang.String[] { "Appid", "Name", "Icon", "Logo", "LogoSmall", "Tool", "Demo", "Media", "CommunityVisibleStats", "FriendlyName", "Propagation", "HasAdultContent", "IsVisibleInSteamChina", });
+        new java.lang.String[] { "Appid", "Name", "Icon", "Tool", "Demo", "Media", "CommunityVisibleStats", "FriendlyName", "Propagation", "HasAdultContent", "IsVisibleInSteamChina", "AppType", "HasAdultContentSex", "HasAdultContentViolence", "ContentDescriptorids", });
     internal_static_CMsgAppRights_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CMsgAppRights_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgAppRights_descriptor,
         new java.lang.String[] { "EditInfo", "Publish", "ViewErrorData", "Download", "UploadCdkeys", "GenerateCdkeys", "ViewFinancials", "ManageCeg", "ManageSigning", "ManageCdkeys", "EditMarketing", "EconomySupport", "EconomySupportSupervisor", "ManagePricing", "BroadcastLive", "ViewMarketingTraffic", "EditStoreDisplayContent", });
     internal_static_CCuratorPreferences_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CCuratorPreferences_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCuratorPreferences_descriptor,
         new java.lang.String[] { "SupportedLanguages", "PlatformWindows", "PlatformMac", "PlatformLinux", "VrContent", "AdultContentViolence", "AdultContentSex", "TimestampUpdated", "TagidsCurated", "TagidsFiltered", "WebsiteTitle", "WebsiteUrl", "DiscussionUrl", "ShowBroadcast", });
     internal_static_CLocalizationToken_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CLocalizationToken_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CLocalizationToken_descriptor,
         new java.lang.String[] { "Language", "LocalizedString", });
     internal_static_CClanEventUserNewsTuple_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CClanEventUserNewsTuple_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClanEventUserNewsTuple_descriptor,
         new java.lang.String[] { "Clanid", "EventGid", "AnnouncementGid", "RtimeStart", "RtimeEnd", "PriorityScore", "Type", "ClampRangeSlot", "Appid", "Rtime32LastModified", });
     internal_static_CClanMatchEventByRange_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CClanMatchEventByRange_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClanMatchEventByRange_descriptor,
         new java.lang.String[] { "RtimeBefore", "RtimeAfter", "Qualified", "Events", });
     internal_static_CCommunity_ClanAnnouncementInfo_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CCommunity_ClanAnnouncementInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCommunity_ClanAnnouncementInfo_descriptor,
-        new java.lang.String[] { "Gid", "Clanid", "Posterid", "Headline", "Posttime", "Updatetime", "Body", "Commentcount", "Tags", "Language", "Hidden", "ForumTopicId", "EventGid", "Voteupcount", "Votedowncount", });
+        new java.lang.String[] { "Gid", "Clanid", "Posterid", "Headline", "Posttime", "Updatetime", "Body", "Commentcount", "Tags", "Language", "Hidden", "ForumTopicId", "EventGid", "Voteupcount", "Votedowncount", "BanCheckResult", "Banned", });
     internal_static_CClanEventData_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CClanEventData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CClanEventData_descriptor,
         new java.lang.String[] { "Gid", "ClanSteamid", "EventName", "EventType", "Appid", "ServerAddress", "ServerPassword", "Rtime32StartTime", "Rtime32EndTime", "CommentCount", "CreatorSteamid", "LastUpdateSteamid", "EventNotes", "Jsondata", "AnnouncementBody", "Published", "Hidden", "Rtime32VisibilityStart", "Rtime32VisibilityEnd", "BroadcasterAccountid", "FollowerCount", "IgnoreCount", "ForumTopicId", "Rtime32LastModified", "NewsPostGid", "RtimeModReviewed", "FeaturedAppTagid", "ReferencedAppids", "BuildId", "BuildBranch", });
     internal_static_CBilling_Address_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CBilling_Address_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CBilling_Address_descriptor,
         new java.lang.String[] { "FirstName", "LastName", "Address1", "Address2", "City", "UsState", "CountryCode", "Postcode", "ZipPlus4", "Phone", });
     internal_static_CPackageReservationStatus_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CPackageReservationStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPackageReservationStatus_descriptor,
         new java.lang.String[] { "Packageid", "ReservationState", "QueuePosition", "TotalQueueSize", "ReservationCountryCode", "Expired", "TimeExpires", "TimeReserved", });
+    internal_static_CMsgKeyValuePair_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_CMsgKeyValuePair_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgKeyValuePair_descriptor,
+        new java.lang.String[] { "Name", "Value", });
+    internal_static_CMsgKeyValueSet_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_CMsgKeyValueSet_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgKeyValueSet_descriptor,
+        new java.lang.String[] { "Pairs", });
+    internal_static_UserContentDescriptorPreferences_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_UserContentDescriptorPreferences_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_UserContentDescriptorPreferences_descriptor,
+        new java.lang.String[] { "ContentDescriptorsToExclude", });
+    internal_static_UserContentDescriptorPreferences_ContentDescriptor_descriptor =
+      internal_static_UserContentDescriptorPreferences_descriptor.getNestedTypes().get(0);
+    internal_static_UserContentDescriptorPreferences_ContentDescriptor_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_UserContentDescriptorPreferences_ContentDescriptor_descriptor,
+        new java.lang.String[] { "ContentDescriptorid", "TimestampAdded", });
     msgpoolSoftLimit.internalInit(descriptor.getExtensions().get(0));
     msgpoolHardLimit.internalInit(descriptor.getExtensions().get(1));
     forcePhpGeneration.internalInit(descriptor.getExtensions().get(2));
     phpOutputAlwaysNumber.internalInit(descriptor.getExtensions().get(3));
+    allowFieldNamedSteamId.internalInit(descriptor.getExtensions().get(4));
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(SteammessagesBase.forcePhpGeneration);

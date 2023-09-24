@@ -3928,58 +3928,60 @@ public final class SteammessagesLinkfilterSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n0steam/steammessages_linkfilter.steamcl" +
-      "ient.proto\0322steam/steammessages_unified_" +
-      "base.steamclient.proto\"\235\002\n,CCommunity_Ge" +
-      "tLinkFilterHashPrefixes_Request\022G\n\010hit_t" +
-      "ype\030\001 \001(\rB5\202\265\0301The retrieved hits will b" +
-      "e filtered to this type.\022\\\n\005count\030\002 \001(\rB" +
-      "M\202\265\030IThe number of hits to retrieve in a" +
-      " single batch. Specify 0 for no limit.\022F" +
-      "\n\005start\030\003 \001(\004B7\202\265\0303The starting count wh" +
-      "en retrieving hits in batches.\"\207\001\n-CComm" +
-      "unity_GetLinkFilterHashPrefixes_Response" +
-      "\022V\n\rhash_prefixes\030\001 \003(\rB?\202\265\030;The first 3" +
-      "2 bits of the SHA1 hashes of each hit re" +
-      "quested.\"\227\002\n&CCommunity_GetLinkFilterHas" +
-      "hes_Request\022G\n\010hit_type\030\001 \001(\rB5\202\265\0301The r" +
-      "etrieved hits will be filtered to this t" +
-      "ype.\022\\\n\005count\030\002 \001(\rBM\202\265\030IThe number of h" +
-      "its to retrieve in a single batch. Speci" +
-      "fy 0 for no limit.\022F\n\005start\030\003 \001(\004B7\202\265\0303T" +
-      "he starting count when retrieving hits i" +
-      "n batches.\"j\n\'CCommunity_GetLinkFilterHa" +
-      "shes_Response\022?\n\006hashes\030\001 \003(\014B/\202\265\030+A lis" +
-      "t of hashes returned from our request.\"\200" +
-      "\001\n+CCommunity_GetLinkFilterListVersion_R" +
-      "equest\022Q\n\010hit_type\030\001 \001(\rB?\202\265\030;The versio" +
-      "n hashes for this type\'s chunks will be " +
-      "returned.\"\252\001\n,CCommunity_GetLinkFilterLi" +
-      "stVersion_Response\022F\n\007version\030\001 \001(\tB5\202\265\030" +
-      "1A hash built using the IDs of the conta" +
-      "ined hits.\0222\n\005count\030\002 \001(\004B#\202\265\030\037The numbe" +
-      "r of hits of this type2\306\005\n\023CommunityLink" +
-      "Filter\022\322\001\n\031GetLinkFilterHashPrefixes\022-.C" +
-      "Community_GetLinkFilterHashPrefixes_Requ" +
-      "est\032..CCommunity_GetLinkFilterHashPrefix" +
-      "es_Response\"V\202\265\030RGet a list of hash pref" +
-      "ixes for the specified hit type, to use " +
-      "for client caching.\022\271\001\n\023GetLinkFilterHas" +
-      "hes\022\'.CCommunity_GetLinkFilterHashes_Req" +
-      "uest\032(.CCommunity_GetLinkFilterHashes_Re" +
-      "sponse\"O\202\265\030KGet a list of hashes for the" +
-      " specified hit type, to use for client c" +
-      "aching.\022\315\001\n\030GetLinkFilterListVersion\022,.C" +
-      "Community_GetLinkFilterListVersion_Reque" +
-      "st\032-.CCommunity_GetLinkFilterListVersion" +
-      "_Response\"T\202\265\030PGet a list of hashes desc" +
-      "ribing the version of each chunk of the " +
-      "requested size.\032N\202\265\030JA service for recor" +
-      "ding data about Steam Community phishing" +
-      " link filteringB\003\200\001\001"
+      "ient.proto\032\036steam/steammessages_base.pro" +
+      "to\0322steam/steammessages_unified_base.ste" +
+      "amclient.proto\"\235\002\n,CCommunity_GetLinkFil" +
+      "terHashPrefixes_Request\022G\n\010hit_type\030\001 \001(" +
+      "\rB5\202\265\0301The retrieved hits will be filter" +
+      "ed to this type.\022\\\n\005count\030\002 \001(\rBM\202\265\030IThe" +
+      " number of hits to retrieve in a single " +
+      "batch. Specify 0 for no limit.\022F\n\005start\030" +
+      "\003 \001(\004B7\202\265\0303The starting count when retri" +
+      "eving hits in batches.\"\207\001\n-CCommunity_Ge" +
+      "tLinkFilterHashPrefixes_Response\022V\n\rhash" +
+      "_prefixes\030\001 \003(\rB?\202\265\030;The first 32 bits o" +
+      "f the SHA1 hashes of each hit requested." +
+      "\"\227\002\n&CCommunity_GetLinkFilterHashes_Requ" +
+      "est\022G\n\010hit_type\030\001 \001(\rB5\202\265\0301The retrieved" +
+      " hits will be filtered to this type.\022\\\n\005" +
+      "count\030\002 \001(\rBM\202\265\030IThe number of hits to r" +
+      "etrieve in a single batch. Specify 0 for" +
+      " no limit.\022F\n\005start\030\003 \001(\004B7\202\265\0303The start" +
+      "ing count when retrieving hits in batche" +
+      "s.\"j\n\'CCommunity_GetLinkFilterHashes_Res" +
+      "ponse\022?\n\006hashes\030\001 \003(\014B/\202\265\030+A list of has" +
+      "hes returned from our request.\"\200\001\n+CComm" +
+      "unity_GetLinkFilterListVersion_Request\022Q" +
+      "\n\010hit_type\030\001 \001(\rB?\202\265\030;The version hashes" +
+      " for this type\'s chunks will be returned" +
+      ".\"\252\001\n,CCommunity_GetLinkFilterListVersio" +
+      "n_Response\022F\n\007version\030\001 \001(\tB5\202\265\0301A hash " +
+      "built using the IDs of the contained hit" +
+      "s.\0222\n\005count\030\002 \001(\004B#\202\265\030\037The number of hit" +
+      "s of this type2\306\005\n\023CommunityLinkFilter\022\322" +
+      "\001\n\031GetLinkFilterHashPrefixes\022-.CCommunit" +
+      "y_GetLinkFilterHashPrefixes_Request\032..CC" +
+      "ommunity_GetLinkFilterHashPrefixes_Respo" +
+      "nse\"V\202\265\030RGet a list of hash prefixes for" +
+      " the specified hit type, to use for clie" +
+      "nt caching.\022\271\001\n\023GetLinkFilterHashes\022\'.CC" +
+      "ommunity_GetLinkFilterHashes_Request\032(.C" +
+      "Community_GetLinkFilterHashes_Response\"O" +
+      "\202\265\030KGet a list of hashes for the specifi" +
+      "ed hit type, to use for client caching.\022" +
+      "\315\001\n\030GetLinkFilterListVersion\022,.CCommunit" +
+      "y_GetLinkFilterListVersion_Request\032-.CCo" +
+      "mmunity_GetLinkFilterListVersion_Respons" +
+      "e\"T\202\265\030PGet a list of hashes describing t" +
+      "he version of each chunk of the requeste" +
+      "d size.\032N\202\265\030JA service for recording dat" +
+      "a about Steam Community phishing link fi" +
+      "lteringB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CCommunity_GetLinkFilterHashPrefixes_Request_descriptor =
@@ -4025,6 +4027,7 @@ public final class SteammessagesLinkfilterSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

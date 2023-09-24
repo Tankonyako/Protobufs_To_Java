@@ -11456,82 +11456,83 @@ public final class SteammessagesDepotbuilderSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n2steam/steammessages_depotbuilder.steam" +
-      "client.proto\0322steam/steammessages_unifie" +
-      "d_base.steamclient.proto\"\216\001\n&CContentBui" +
-      "lder_InitDepotBuild_Request\022\r\n\005appid\030\001 \001" +
-      "(\r\022\017\n\007depotid\030\002 \001(\r\022\027\n\017workshop_itemid\030\003" +
-      " \001(\004\022\024\n\014for_local_cs\030\004 \001(\010\022\025\n\rtarget_bra" +
-      "nch\030\005 \001(\t\"\210\003\n\'CContentBuilder_InitDepotB" +
-      "uild_Response\022\033\n\023baseline_manifestid\030\001 \001" +
-      "(\004\022\022\n\nchunk_size\030\002 \001(\r\022\017\n\007aes_key\030\003 \001(\014\022" +
-      "\017\n\007rsa_key\030\004 \001(\014\022\020\n\010url_host\030\005 \001(\t\022 \n\030of" +
-      "fset_detection_enabled\030\006 \001(\010\022(\n offset_d" +
-      "etection_min_clean_chunk\030\007 \001(\r\022)\n!offset" +
-      "_detection_blast_radius_pre\030\010 \001(\r\022*\n\"off" +
-      "set_detection_blast_radius_post\030\t \001(\r\022)\n" +
-      "!offset_detection_max_distance_pre\030\n \001(\r" +
-      "\022*\n\"offset_detection_max_distance_post\030\013" +
-      " \001(\r\"\255\001\n(CContentBuilder_StartDepotUploa" +
-      "d_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007depotid\030\002 \001(" +
-      "\r\022\027\n\017workshop_itemid\030\003 \001(\004\022\024\n\014for_local_" +
-      "cs\030\004 \001(\010\022\033\n\023baseline_manifestid\030\005 \001(\004\022\025\n" +
-      "\rmanifest_size\030\006 \001(\r\"G\n)CContentBuilder_" +
-      "StartDepotUpload_Response\022\032\n\022depot_build" +
-      "_handle\030\001 \001(\004\"Z\n-CContentBuilder_GetMiss" +
-      "ingDepotChunks_Request\022\r\n\005appid\030\001 \001(\r\022\032\n" +
-      "\022depot_build_handle\030\002 \001(\004\"\322\001\n.CContentBu" +
-      "ilder_GetMissingDepotChunks_Response\022N\n\016" +
-      "missing_chunks\030\001 \003(\01326.CContentBuilder_G" +
-      "etMissingDepotChunks_Response.Chunks\022\034\n\024" +
-      "total_missing_chunks\030\002 \001(\r\022\033\n\023total_miss" +
-      "ing_bytes\030\003 \001(\004\032\025\n\006Chunks\022\013\n\003sha\030\001 \001(\014\"V" +
-      "\n)CContentBuilder_FinishDepotUpload_Requ" +
-      "est\022\r\n\005appid\030\001 \001(\r\022\032\n\022depot_build_handle" +
-      "\030\002 \001(\004\"U\n*CContentBuilder_FinishDepotUpl" +
-      "oad_Response\022\022\n\nmanifestid\030\001 \001(\004\022\023\n\013prev" +
-      "_reused\030\002 \001(\010\"\331\001\n&CContentBuilder_Commit" +
-      "AppBuild_Request\022\r\n\005appid\030\001 \001(\r\022G\n\017depot" +
-      "_manifests\030\002 \003(\0132..CContentBuilder_Commi" +
-      "tAppBuild_Request.Depots\022\023\n\013build_notes\030" +
-      "\004 \001(\t\022\023\n\013live_branch\030\005 \001(\t\032-\n\006Depots\022\017\n\007" +
-      "depotid\030\001 \001(\r\022\022\n\nmanifestid\030\002 \001(\004\":\n\'CCo" +
-      "ntentBuilder_CommitAppBuild_Response\022\017\n\007" +
-      "buildid\030\001 \001(\r\"c\n)CContentBuilder_SignIns" +
-      "tallScript_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007dep" +
-      "otid\030\002 \001(\r\022\026\n\016install_script\030\003 \001(\t\"K\n*CC" +
-      "ontentBuilder_SignInstallScript_Response" +
-      "\022\035\n\025signed_install_script\030\001 \001(\t2\222\010\n\016Cont" +
-      "entBuilder\022\230\001\n\016InitDepotBuild\022\'.CContent" +
-      "Builder_InitDepotBuild_Request\032(.CConten" +
-      "tBuilder_InitDepotBuild_Response\"3\202\265\030/Ge" +
-      "t inital parameters to start building a " +
-      "depot\022\236\001\n\020StartDepotUpload\022).CContentBui" +
-      "lder_StartDepotUpload_Request\032*.CContent" +
-      "Builder_StartDepotUpload_Response\"3\202\265\030/S" +
-      "tart uploading manifest and chunks for a" +
-      " depot\022\251\001\n\025GetMissingDepotChunks\022..CCont" +
-      "entBuilder_GetMissingDepotChunks_Request" +
-      "\032/.CContentBuilder_GetMissingDepotChunks" +
-      "_Response\"/\202\265\030+Get list of missing chunk" +
-      "s for depot upload\022\261\001\n\021FinishDepotUpload" +
-      "\022*.CContentBuilder_FinishDepotUpload_Req" +
-      "uest\032+.CContentBuilder_FinishDepotUpload" +
-      "_Response\"C\202\265\030?Commit a depot build afte" +
-      "r manifest and all chunks are uploaded\022\247" +
-      "\001\n\016CommitAppBuild\022\'.CContentBuilder_Comm" +
-      "itAppBuild_Request\032(.CContentBuilder_Com" +
-      "mitAppBuild_Response\"B\202\265\030>Combine previo" +
-      "us depot uploads into an app build and c" +
-      "ommit it\022\210\001\n\021SignInstallScript\022*.CConten" +
-      "tBuilder_SignInstallScript_Request\032+.CCo" +
-      "ntentBuilder_SignInstallScript_Response\"" +
-      "\032\202\265\030\026Sign an install script\032/\202\265\030+Interfa" +
-      "ce to build and upload depot contentB\003\200\001" +
-      "\001"
+      "client.proto\032\036steam/steammessages_base.p" +
+      "roto\0322steam/steammessages_unified_base.s" +
+      "teamclient.proto\"\216\001\n&CContentBuilder_Ini" +
+      "tDepotBuild_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007de" +
+      "potid\030\002 \001(\r\022\027\n\017workshop_itemid\030\003 \001(\004\022\024\n\014" +
+      "for_local_cs\030\004 \001(\010\022\025\n\rtarget_branch\030\005 \001(" +
+      "\t\"\210\003\n\'CContentBuilder_InitDepotBuild_Res" +
+      "ponse\022\033\n\023baseline_manifestid\030\001 \001(\004\022\022\n\nch" +
+      "unk_size\030\002 \001(\r\022\017\n\007aes_key\030\003 \001(\014\022\017\n\007rsa_k" +
+      "ey\030\004 \001(\014\022\020\n\010url_host\030\005 \001(\t\022 \n\030offset_det" +
+      "ection_enabled\030\006 \001(\010\022(\n offset_detection" +
+      "_min_clean_chunk\030\007 \001(\r\022)\n!offset_detecti" +
+      "on_blast_radius_pre\030\010 \001(\r\022*\n\"offset_dete" +
+      "ction_blast_radius_post\030\t \001(\r\022)\n!offset_" +
+      "detection_max_distance_pre\030\n \001(\r\022*\n\"offs" +
+      "et_detection_max_distance_post\030\013 \001(\r\"\255\001\n" +
+      "(CContentBuilder_StartDepotUpload_Reques" +
+      "t\022\r\n\005appid\030\001 \001(\r\022\017\n\007depotid\030\002 \001(\r\022\027\n\017wor" +
+      "kshop_itemid\030\003 \001(\004\022\024\n\014for_local_cs\030\004 \001(\010" +
+      "\022\033\n\023baseline_manifestid\030\005 \001(\004\022\025\n\rmanifes" +
+      "t_size\030\006 \001(\r\"G\n)CContentBuilder_StartDep" +
+      "otUpload_Response\022\032\n\022depot_build_handle\030" +
+      "\001 \001(\004\"Z\n-CContentBuilder_GetMissingDepot" +
+      "Chunks_Request\022\r\n\005appid\030\001 \001(\r\022\032\n\022depot_b" +
+      "uild_handle\030\002 \001(\004\"\322\001\n.CContentBuilder_Ge" +
+      "tMissingDepotChunks_Response\022N\n\016missing_" +
+      "chunks\030\001 \003(\01326.CContentBuilder_GetMissin" +
+      "gDepotChunks_Response.Chunks\022\034\n\024total_mi" +
+      "ssing_chunks\030\002 \001(\r\022\033\n\023total_missing_byte" +
+      "s\030\003 \001(\004\032\025\n\006Chunks\022\013\n\003sha\030\001 \001(\014\"V\n)CConte" +
+      "ntBuilder_FinishDepotUpload_Request\022\r\n\005a" +
+      "ppid\030\001 \001(\r\022\032\n\022depot_build_handle\030\002 \001(\004\"U" +
+      "\n*CContentBuilder_FinishDepotUpload_Resp" +
+      "onse\022\022\n\nmanifestid\030\001 \001(\004\022\023\n\013prev_reused\030" +
+      "\002 \001(\010\"\331\001\n&CContentBuilder_CommitAppBuild" +
+      "_Request\022\r\n\005appid\030\001 \001(\r\022G\n\017depot_manifes" +
+      "ts\030\002 \003(\0132..CContentBuilder_CommitAppBuil" +
+      "d_Request.Depots\022\023\n\013build_notes\030\004 \001(\t\022\023\n" +
+      "\013live_branch\030\005 \001(\t\032-\n\006Depots\022\017\n\007depotid\030" +
+      "\001 \001(\r\022\022\n\nmanifestid\030\002 \001(\004\":\n\'CContentBui" +
+      "lder_CommitAppBuild_Response\022\017\n\007buildid\030" +
+      "\001 \001(\r\"c\n)CContentBuilder_SignInstallScri" +
+      "pt_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007depotid\030\002 \001" +
+      "(\r\022\026\n\016install_script\030\003 \001(\t\"K\n*CContentBu" +
+      "ilder_SignInstallScript_Response\022\035\n\025sign" +
+      "ed_install_script\030\001 \001(\t2\222\010\n\016ContentBuild" +
+      "er\022\230\001\n\016InitDepotBuild\022\'.CContentBuilder_" +
+      "InitDepotBuild_Request\032(.CContentBuilder" +
+      "_InitDepotBuild_Response\"3\202\265\030/Get inital" +
+      " parameters to start building a depot\022\236\001" +
+      "\n\020StartDepotUpload\022).CContentBuilder_Sta" +
+      "rtDepotUpload_Request\032*.CContentBuilder_" +
+      "StartDepotUpload_Response\"3\202\265\030/Start upl" +
+      "oading manifest and chunks for a depot\022\251" +
+      "\001\n\025GetMissingDepotChunks\022..CContentBuild" +
+      "er_GetMissingDepotChunks_Request\032/.CCont" +
+      "entBuilder_GetMissingDepotChunks_Respons" +
+      "e\"/\202\265\030+Get list of missing chunks for de" +
+      "pot upload\022\261\001\n\021FinishDepotUpload\022*.CCont" +
+      "entBuilder_FinishDepotUpload_Request\032+.C" +
+      "ContentBuilder_FinishDepotUpload_Respons" +
+      "e\"C\202\265\030?Commit a depot build after manife" +
+      "st and all chunks are uploaded\022\247\001\n\016Commi" +
+      "tAppBuild\022\'.CContentBuilder_CommitAppBui" +
+      "ld_Request\032(.CContentBuilder_CommitAppBu" +
+      "ild_Response\"B\202\265\030>Combine previous depot" +
+      " uploads into an app build and commit it" +
+      "\022\210\001\n\021SignInstallScript\022*.CContentBuilder" +
+      "_SignInstallScript_Request\032+.CContentBui" +
+      "lder_SignInstallScript_Response\"\032\202\265\030\026Sig" +
+      "n an install script\032/\202\265\030+Interface to bu" +
+      "ild and upload depot contentB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CContentBuilder_InitDepotBuild_Request_descriptor =
@@ -11624,6 +11625,7 @@ public final class SteammessagesDepotbuilderSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

@@ -1803,28 +1803,30 @@ public final class SteammessagesLobbymatchmakingSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n6steam/steammessages_lobbymatchmaking.s" +
-      "teamclient.proto\0322steam/steammessages_un" +
-      "ified_base.steamclient.proto\"\236\001\n-LobbyMa" +
-      "tchmakingLegacy_GetLobbyStatus_Request\022\016" +
-      "\n\006app_id\030\001 \001(\r\022\025\n\rsteamid_lobby\030\002 \001(\006\022\027\n" +
-      "\017claim_ownership\030\003 \001(\010\022\030\n\020claim_membersh" +
-      "ip\030\004 \001(\010\022\023\n\013version_num\030\005 \001(\r\"\223\001\n.LobbyM" +
-      "atchmakingLegacy_GetLobbyStatus_Response" +
-      "\022\016\n\006app_id\030\001 \001(\r\022\025\n\rsteamid_lobby\030\002 \001(\006\022" +
-      ":\n\014lobby_status\030\003 \001(\0162\r.ELobbyStatus:\025k_" +
-      "ELobbyStatusInvalid*\201\001\n\014ELobbyStatus\022\031\n\025" +
-      "k_ELobbyStatusInvalid\020\000\022\030\n\024k_ELobbyStatu" +
-      "sExists\020\001\022\036\n\032k_ELobbyStatusDoesNotExist\020" +
-      "\002\022\034\n\030k_ELobbyStatusNotAMember\020\0032\306\001\n\026Lobb" +
-      "yMatchmakingLegacy\022\205\001\n\016GetLobbyStatus\022.." +
+      "teamclient.proto\032\036steam/steammessages_ba" +
+      "se.proto\0322steam/steammessages_unified_ba" +
+      "se.steamclient.proto\"\236\001\n-LobbyMatchmakin" +
+      "gLegacy_GetLobbyStatus_Request\022\016\n\006app_id" +
+      "\030\001 \001(\r\022\025\n\rsteamid_lobby\030\002 \001(\006\022\027\n\017claim_o" +
+      "wnership\030\003 \001(\010\022\030\n\020claim_membership\030\004 \001(\010" +
+      "\022\023\n\013version_num\030\005 \001(\r\"\223\001\n.LobbyMatchmaki" +
+      "ngLegacy_GetLobbyStatus_Response\022\016\n\006app_" +
+      "id\030\001 \001(\r\022\025\n\rsteamid_lobby\030\002 \001(\006\022:\n\014lobby" +
+      "_status\030\003 \001(\0162\r.ELobbyStatus:\025k_ELobbySt" +
+      "atusInvalid*\201\001\n\014ELobbyStatus\022\031\n\025k_ELobby" +
+      "StatusInvalid\020\000\022\030\n\024k_ELobbyStatusExists\020" +
+      "\001\022\036\n\032k_ELobbyStatusDoesNotExist\020\002\022\034\n\030k_E" +
+      "LobbyStatusNotAMember\020\0032\306\001\n\026LobbyMatchma" +
+      "kingLegacy\022\205\001\n\016GetLobbyStatus\022..LobbyMat" +
+      "chmakingLegacy_GetLobbyStatus_Request\032/." +
       "LobbyMatchmakingLegacy_GetLobbyStatus_Re" +
-      "quest\032/.LobbyMatchmakingLegacy_GetLobbyS" +
-      "tatus_Response\"\022\202\265\030\016GetLobbyStatus\032$\202\265\030 " +
-      "Lobby matchmaking legacy serviceB\003\200\001\001"
+      "sponse\"\022\202\265\030\016GetLobbyStatus\032$\202\265\030 Lobby ma" +
+      "tchmaking legacy serviceB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_LobbyMatchmakingLegacy_GetLobbyStatus_Request_descriptor =
@@ -1845,6 +1847,7 @@ public final class SteammessagesLobbymatchmakingSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

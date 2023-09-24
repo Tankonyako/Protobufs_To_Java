@@ -3415,35 +3415,36 @@ public final class SteammessagesVacSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n)steam/steammessages_vac.steamclient.pr" +
-      "oto\0322steam/steammessages_unified_base.st" +
-      "eamclient.proto\"\354\001\n(CFileVerification_Si" +
-      "gnatureCheck_Request\022\017\n\007steamid\030\001 \001(\006\022\r\n" +
-      "\005appid\030\002 \001(\r\022\021\n\tfile_size\030\003 \001(\004\022\026\n\016file_" +
-      "timestamp\030\004 \001(\r\022\027\n\017file_timestamp2\030\005 \001(\r" +
-      "\022\030\n\020signature_result\030\006 \001(\r\022\020\n\010filename\030\007" +
-      " \001(\t\022\036\n\026client_package_version\030\010 \001(\r\022\020\n\010" +
-      "sha1hash\030\t \001(\014\"C\n)CFileVerification_Sign" +
-      "atureCheck_Response\022\026\n\016deny_operation\030\001 " +
-      "\001(\010\"\245\001\n+CFileVerification_SteamServiceCh" +
-      "eck_Request\022\026\n\016service_status\030\002 \001(\r\022\036\n\026c" +
-      "lient_package_version\030\003 \001(\r\022\025\n\rlauncher_" +
-      "type\030\004 \001(\r\022\017\n\007os_type\030\005 \001(\r\022\026\n\016service_r" +
-      "epair\030\006 \001(\r\"F\n,CFileVerification_SteamSe" +
-      "rviceCheck_Response\022\026\n\016attempt_repair\030\001 " +
-      "\001(\0102\336\002\n\020FileVerification\022\217\001\n\016SignatureCh" +
-      "eck\022).CFileVerification_SignatureCheck_R" +
-      "equest\032*.CFileVerification_SignatureChec" +
-      "k_Response\"&\202\265\030\"File signature check was" +
-      " performed\022\227\001\n\021SteamServiceCheck\022,.CFile" +
-      "Verification_SteamServiceCheck_Request\032-" +
-      ".CFileVerification_SteamServiceCheck_Res" +
-      "ponse\"%\202\265\030!Steam Service check was perfo" +
-      "rmed\032\036\202\265\030\032File verification servicesB\003\200\001" +
-      "\001"
+      "oto\032\036steam/steammessages_base.proto\0322ste" +
+      "am/steammessages_unified_base.steamclien" +
+      "t.proto\"\354\001\n(CFileVerification_SignatureC" +
+      "heck_Request\022\017\n\007steamid\030\001 \001(\006\022\r\n\005appid\030\002" +
+      " \001(\r\022\021\n\tfile_size\030\003 \001(\004\022\026\n\016file_timestam" +
+      "p\030\004 \001(\r\022\027\n\017file_timestamp2\030\005 \001(\r\022\030\n\020sign" +
+      "ature_result\030\006 \001(\r\022\020\n\010filename\030\007 \001(\t\022\036\n\026" +
+      "client_package_version\030\010 \001(\r\022\020\n\010sha1hash" +
+      "\030\t \001(\014\"C\n)CFileVerification_SignatureChe" +
+      "ck_Response\022\026\n\016deny_operation\030\001 \001(\010\"\245\001\n+" +
+      "CFileVerification_SteamServiceCheck_Requ" +
+      "est\022\026\n\016service_status\030\002 \001(\r\022\036\n\026client_pa" +
+      "ckage_version\030\003 \001(\r\022\025\n\rlauncher_type\030\004 \001" +
+      "(\r\022\017\n\007os_type\030\005 \001(\r\022\026\n\016service_repair\030\006 " +
+      "\001(\r\"F\n,CFileVerification_SteamServiceChe" +
+      "ck_Response\022\026\n\016attempt_repair\030\001 \001(\0102\336\002\n\020" +
+      "FileVerification\022\217\001\n\016SignatureCheck\022).CF" +
+      "ileVerification_SignatureCheck_Request\032*" +
+      ".CFileVerification_SignatureCheck_Respon" +
+      "se\"&\202\265\030\"File signature check was perform" +
+      "ed\022\227\001\n\021SteamServiceCheck\022,.CFileVerifica" +
+      "tion_SteamServiceCheck_Request\032-.CFileVe" +
+      "rification_SteamServiceCheck_Response\"%\202" +
+      "\265\030!Steam Service check was performed\032\036\202\265" +
+      "\030\032File verification servicesB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CFileVerification_SignatureCheck_Request_descriptor =
@@ -3476,6 +3477,7 @@ public final class SteammessagesVacSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

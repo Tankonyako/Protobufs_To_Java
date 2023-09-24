@@ -1458,7 +1458,7 @@ public final class EngineGcmessages {
       "rentfragment\030\004 \001(\r\022\020\n\010tickrate\030\005 \001(\002\022\014\n\004" +
       "tick\030\006 \001(\r\022\017\n\007rtdelay\030\010 \001(\002\022\016\n\006rcvage\030\t " +
       "\001(\002\022\031\n\021keyframe_interval\030\n \001(\002\022\020\n\010cdndel" +
-      "ay\030\013 \001(\rB\003\200\001\000"
+      "ay\030\013 \001(\r"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

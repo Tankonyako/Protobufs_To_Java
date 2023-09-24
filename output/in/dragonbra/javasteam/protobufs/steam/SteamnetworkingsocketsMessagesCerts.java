@@ -1232,6 +1232,31 @@ public final class SteamnetworkingsocketsMessagesCerts {
      * @return The appIds at the given index.
      */
     int getAppIds(int index);
+
+    /**
+     * <code>repeated string ip_addresses = 13;</code>
+     * @return A list containing the ipAddresses.
+     */
+    java.util.List<java.lang.String>
+        getIpAddressesList();
+    /**
+     * <code>repeated string ip_addresses = 13;</code>
+     * @return The count of ipAddresses.
+     */
+    int getIpAddressesCount();
+    /**
+     * <code>repeated string ip_addresses = 13;</code>
+     * @param index The index of the element to return.
+     * @return The ipAddresses at the given index.
+     */
+    java.lang.String getIpAddresses(int index);
+    /**
+     * <code>repeated string ip_addresses = 13;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ipAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getIpAddressesBytes(int index);
   }
   /**
    * Protobuf type {@code CMsgSteamDatagramCertificate}
@@ -1251,6 +1276,7 @@ public final class SteamnetworkingsocketsMessagesCerts {
       identityString_ = "";
       gameserverDatacenterIds_ = emptyIntList();
       appIds_ = emptyIntList();
+      ipAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -1377,6 +1403,15 @@ public final class SteamnetworkingsocketsMessagesCerts {
               identityString_ = bs;
               break;
             }
+            case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
+                ipAddresses_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000200;
+              }
+              ipAddresses_.add(bs);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1397,6 +1432,9 @@ public final class SteamnetworkingsocketsMessagesCerts {
         }
         if (((mutable_bitField0_ & 0x00000100) != 0)) {
           appIds_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
+          ipAddresses_ = ipAddresses_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1735,6 +1773,41 @@ public final class SteamnetworkingsocketsMessagesCerts {
       return appIds_.getInt(index);
     }
 
+    public static final int IP_ADDRESSES_FIELD_NUMBER = 13;
+    private com.google.protobuf.LazyStringList ipAddresses_;
+    /**
+     * <code>repeated string ip_addresses = 13;</code>
+     * @return A list containing the ipAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getIpAddressesList() {
+      return ipAddresses_;
+    }
+    /**
+     * <code>repeated string ip_addresses = 13;</code>
+     * @return The count of ipAddresses.
+     */
+    public int getIpAddressesCount() {
+      return ipAddresses_.size();
+    }
+    /**
+     * <code>repeated string ip_addresses = 13;</code>
+     * @param index The index of the element to return.
+     * @return The ipAddresses at the given index.
+     */
+    public java.lang.String getIpAddresses(int index) {
+      return ipAddresses_.get(index);
+    }
+    /**
+     * <code>repeated string ip_addresses = 13;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ipAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getIpAddressesBytes(int index) {
+      return ipAddresses_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1775,6 +1848,9 @@ public final class SteamnetworkingsocketsMessagesCerts {
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, identityString_);
+      }
+      for (int i = 0; i < ipAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, ipAddresses_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1826,6 +1902,14 @@ public final class SteamnetworkingsocketsMessagesCerts {
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, identityString_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ipAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(ipAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getIpAddressesList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1880,6 +1964,8 @@ public final class SteamnetworkingsocketsMessagesCerts {
       }
       if (!getAppIdsList()
           .equals(other.getAppIdsList())) return false;
+      if (!getIpAddressesList()
+          .equals(other.getIpAddressesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1927,6 +2013,10 @@ public final class SteamnetworkingsocketsMessagesCerts {
       if (getAppIdsCount() > 0) {
         hash = (37 * hash) + APP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getAppIdsList().hashCode();
+      }
+      if (getIpAddressesCount() > 0) {
+        hash = (37 * hash) + IP_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getIpAddressesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2084,6 +2174,8 @@ public final class SteamnetworkingsocketsMessagesCerts {
         bitField0_ = (bitField0_ & ~0x00000080);
         appIds_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000100);
+        ipAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -2154,6 +2246,11 @@ public final class SteamnetworkingsocketsMessagesCerts {
           bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.appIds_ = appIds_;
+        if (((bitField0_ & 0x00000200) != 0)) {
+          ipAddresses_ = ipAddresses_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.ipAddresses_ = ipAddresses_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2243,6 +2340,16 @@ public final class SteamnetworkingsocketsMessagesCerts {
           } else {
             ensureAppIdsIsMutable();
             appIds_.addAll(other.appIds_);
+          }
+          onChanged();
+        }
+        if (!other.ipAddresses_.isEmpty()) {
+          if (ipAddresses_.isEmpty()) {
+            ipAddresses_ = other.ipAddresses_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureIpAddressesIsMutable();
+            ipAddresses_.addAll(other.ipAddresses_);
           }
           onChanged();
         }
@@ -2836,6 +2943,115 @@ public final class SteamnetworkingsocketsMessagesCerts {
       public Builder clearAppIds() {
         appIds_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList ipAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureIpAddressesIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          ipAddresses_ = new com.google.protobuf.LazyStringArrayList(ipAddresses_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+      /**
+       * <code>repeated string ip_addresses = 13;</code>
+       * @return A list containing the ipAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getIpAddressesList() {
+        return ipAddresses_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string ip_addresses = 13;</code>
+       * @return The count of ipAddresses.
+       */
+      public int getIpAddressesCount() {
+        return ipAddresses_.size();
+      }
+      /**
+       * <code>repeated string ip_addresses = 13;</code>
+       * @param index The index of the element to return.
+       * @return The ipAddresses at the given index.
+       */
+      public java.lang.String getIpAddresses(int index) {
+        return ipAddresses_.get(index);
+      }
+      /**
+       * <code>repeated string ip_addresses = 13;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ipAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getIpAddressesBytes(int index) {
+        return ipAddresses_.getByteString(index);
+      }
+      /**
+       * <code>repeated string ip_addresses = 13;</code>
+       * @param index The index to set the value at.
+       * @param value The ipAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpAddresses(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIpAddressesIsMutable();
+        ipAddresses_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ip_addresses = 13;</code>
+       * @param value The ipAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIpAddresses(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIpAddressesIsMutable();
+        ipAddresses_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ip_addresses = 13;</code>
+       * @param values The ipAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIpAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureIpAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ipAddresses_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ip_addresses = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIpAddresses() {
+        ipAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ip_addresses = 13;</code>
+       * @param value The bytes of the ipAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIpAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIpAddressesIsMutable();
+        ipAddresses_.add(value);
         onChanged();
         return this;
       }
@@ -4391,7 +4607,7 @@ public final class SteamnetworkingsocketsMessagesCerts {
       "ityLegacyBinary\022\020\n\010steam_id\030\020 \001(\006\022\030\n\020xbo" +
       "x_pairwise_id\030\021 \001(\t\022\025\n\rgeneric_bytes\030\002 \001" +
       "(\014\022\026\n\016generic_string\030\003 \001(\t\022\025\n\ripv6_and_p" +
-      "ort\030\004 \001(\014\"\364\002\n\034CMsgSteamDatagramCertifica" +
+      "ort\030\004 \001(\014\"\212\003\n\034CMsgSteamDatagramCertifica" +
       "te\022A\n\010key_type\030\001 \001(\0162&.CMsgSteamDatagram" +
       "Certificate.EKeyType:\007INVALID\022\020\n\010key_dat" +
       "a\030\002 \001(\014\022\027\n\017legacy_steam_id\030\004 \001(\006\022H\n\026lega" +
@@ -4399,13 +4615,14 @@ public final class SteamnetworkingsocketsMessagesCerts {
       "orkingIdentityLegacyBinary\022\027\n\017identity_s" +
       "tring\030\014 \001(\t\022!\n\031gameserver_datacenter_ids" +
       "\030\005 \003(\007\022\024\n\014time_created\030\010 \001(\007\022\023\n\013time_exp" +
-      "iry\030\t \001(\007\022\017\n\007app_ids\030\n \003(\r\"$\n\010EKeyType\022\013" +
-      "\n\007INVALID\020\000\022\013\n\007ED25519\020\001\"u\n\"CMsgSteamDat" +
-      "agramCertificateSigned\022\014\n\004cert\030\004 \001(\014\022\021\n\t" +
-      "ca_key_id\030\005 \001(\006\022\024\n\014ca_signature\030\006 \001(\014\022\030\n" +
-      "\020private_key_data\030\001 \001(\014\"R\n#CMsgSteamData" +
-      "gramCertificateRequest\022+\n\004cert\030\001 \001(\0132\035.C" +
-      "MsgSteamDatagramCertificateB\005H\001\200\001\000"
+      "iry\030\t \001(\007\022\017\n\007app_ids\030\n \003(\r\022\024\n\014ip_address" +
+      "es\030\r \003(\t\"$\n\010EKeyType\022\013\n\007INVALID\020\000\022\013\n\007ED2" +
+      "5519\020\001\"u\n\"CMsgSteamDatagramCertificateSi" +
+      "gned\022\014\n\004cert\030\004 \001(\014\022\021\n\tca_key_id\030\005 \001(\006\022\024\n" +
+      "\014ca_signature\030\006 \001(\014\022\030\n\020private_key_data\030" +
+      "\001 \001(\014\"R\n#CMsgSteamDatagramCertificateReq" +
+      "uest\022+\n\004cert\030\001 \001(\0132\035.CMsgSteamDatagramCe" +
+      "rtificateB\005H\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4422,7 +4639,7 @@ public final class SteamnetworkingsocketsMessagesCerts {
     internal_static_CMsgSteamDatagramCertificate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramCertificate_descriptor,
-        new java.lang.String[] { "KeyType", "KeyData", "LegacySteamId", "LegacyIdentityBinary", "IdentityString", "GameserverDatacenterIds", "TimeCreated", "TimeExpiry", "AppIds", });
+        new java.lang.String[] { "KeyType", "KeyData", "LegacySteamId", "LegacyIdentityBinary", "IdentityString", "GameserverDatacenterIds", "TimeCreated", "TimeExpiry", "AppIds", "IpAddresses", });
     internal_static_CMsgSteamDatagramCertificateSigned_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CMsgSteamDatagramCertificateSigned_fieldAccessorTable = new

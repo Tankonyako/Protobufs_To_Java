@@ -8843,6 +8843,17 @@ public final class SteammessagesAccounthardwareSteamclient {
      */
     com.google.protobuf.ByteString
         getSerialNumberBytes();
+
+    /**
+     * <code>optional bool autosave = 5 [default = false];</code>
+     * @return Whether the autosave field is set.
+     */
+    boolean hasAutosave();
+    /**
+     * <code>optional bool autosave = 5 [default = false];</code>
+     * @return The autosave.
+     */
+    boolean getAutosave();
   }
   /**
    * Protobuf type {@code CAccountHardware_SteamControllerGetConfig_ControllerConfig}
@@ -8914,6 +8925,11 @@ public final class SteammessagesAccounthardwareSteamclient {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
               serialNumber_ = bs;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              autosave_ = input.readBool();
               break;
             }
             default: {
@@ -9112,6 +9128,25 @@ public final class SteammessagesAccounthardwareSteamclient {
       }
     }
 
+    public static final int AUTOSAVE_FIELD_NUMBER = 5;
+    private boolean autosave_;
+    /**
+     * <code>optional bool autosave = 5 [default = false];</code>
+     * @return Whether the autosave field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutosave() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional bool autosave = 5 [default = false];</code>
+     * @return The autosave.
+     */
+    @java.lang.Override
+    public boolean getAutosave() {
+      return autosave_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9138,6 +9173,9 @@ public final class SteammessagesAccounthardwareSteamclient {
       if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, serialNumber_);
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeBool(5, autosave_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9159,6 +9197,10 @@ public final class SteammessagesAccounthardwareSteamclient {
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, serialNumber_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, autosave_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9195,6 +9237,11 @@ public final class SteammessagesAccounthardwareSteamclient {
         if (!getSerialNumber()
             .equals(other.getSerialNumber())) return false;
       }
+      if (hasAutosave() != other.hasAutosave()) return false;
+      if (hasAutosave()) {
+        if (getAutosave()
+            != other.getAutosave()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9222,6 +9269,11 @@ public final class SteammessagesAccounthardwareSteamclient {
       if (hasSerialNumber()) {
         hash = (37 * hash) + SERIAL_NUMBER_FIELD_NUMBER;
         hash = (53 * hash) + getSerialNumber().hashCode();
+      }
+      if (hasAutosave()) {
+        hash = (37 * hash) + AUTOSAVE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getAutosave());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9364,6 +9416,8 @@ public final class SteammessagesAccounthardwareSteamclient {
         bitField0_ = (bitField0_ & ~0x00000004);
         serialNumber_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
+        autosave_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -9408,6 +9462,10 @@ public final class SteammessagesAccounthardwareSteamclient {
           to_bitField0_ |= 0x00000008;
         }
         result.serialNumber_ = serialNumber_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.autosave_ = autosave_;
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -9474,6 +9532,9 @@ public final class SteammessagesAccounthardwareSteamclient {
           bitField0_ |= 0x00000008;
           serialNumber_ = other.serialNumber_;
           onChanged();
+        }
+        if (other.hasAutosave()) {
+          setAutosave(other.getAutosave());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9792,6 +9853,45 @@ public final class SteammessagesAccounthardwareSteamclient {
   }
   bitField0_ |= 0x00000008;
         serialNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean autosave_ ;
+      /**
+       * <code>optional bool autosave = 5 [default = false];</code>
+       * @return Whether the autosave field is set.
+       */
+      @java.lang.Override
+      public boolean hasAutosave() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional bool autosave = 5 [default = false];</code>
+       * @return The autosave.
+       */
+      @java.lang.Override
+      public boolean getAutosave() {
+        return autosave_;
+      }
+      /**
+       * <code>optional bool autosave = 5 [default = false];</code>
+       * @param value The autosave to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAutosave(boolean value) {
+        bitField0_ |= 0x00000010;
+        autosave_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool autosave = 5 [default = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAutosave() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        autosave_ = false;
         onChanged();
         return this;
       }
@@ -20684,6 +20784,1400 @@ public final class SteammessagesAccounthardwareSteamclient {
 
   }
 
+  public interface CAccountHardware_GetSteamDeckComponents_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CAccountHardware_GetSteamDeckComponents_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string serial_number = 1;</code>
+     * @return Whether the serialNumber field is set.
+     */
+    boolean hasSerialNumber();
+    /**
+     * <code>optional string serial_number = 1;</code>
+     * @return The serialNumber.
+     */
+    java.lang.String getSerialNumber();
+    /**
+     * <code>optional string serial_number = 1;</code>
+     * @return The bytes for serialNumber.
+     */
+    com.google.protobuf.ByteString
+        getSerialNumberBytes();
+
+    /**
+     * <code>optional string controller_code = 2;</code>
+     * @return Whether the controllerCode field is set.
+     */
+    boolean hasControllerCode();
+    /**
+     * <code>optional string controller_code = 2;</code>
+     * @return The controllerCode.
+     */
+    java.lang.String getControllerCode();
+    /**
+     * <code>optional string controller_code = 2;</code>
+     * @return The bytes for controllerCode.
+     */
+    com.google.protobuf.ByteString
+        getControllerCodeBytes();
+  }
+  /**
+   * Protobuf type {@code CAccountHardware_GetSteamDeckComponents_Request}
+   */
+  public static final class CAccountHardware_GetSteamDeckComponents_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CAccountHardware_GetSteamDeckComponents_Request)
+      CAccountHardware_GetSteamDeckComponents_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CAccountHardware_GetSteamDeckComponents_Request.newBuilder() to construct.
+    private CAccountHardware_GetSteamDeckComponents_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CAccountHardware_GetSteamDeckComponents_Request() {
+      serialNumber_ = "";
+      controllerCode_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CAccountHardware_GetSteamDeckComponents_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CAccountHardware_GetSteamDeckComponents_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              serialNumber_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              controllerCode_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesAccounthardwareSteamclient.internal_static_CAccountHardware_GetSteamDeckComponents_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesAccounthardwareSteamclient.internal_static_CAccountHardware_GetSteamDeckComponents_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request.class, SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SERIAL_NUMBER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object serialNumber_;
+    /**
+     * <code>optional string serial_number = 1;</code>
+     * @return Whether the serialNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasSerialNumber() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string serial_number = 1;</code>
+     * @return The serialNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getSerialNumber() {
+      java.lang.Object ref = serialNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          serialNumber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string serial_number = 1;</code>
+     * @return The bytes for serialNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSerialNumberBytes() {
+      java.lang.Object ref = serialNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serialNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTROLLER_CODE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object controllerCode_;
+    /**
+     * <code>optional string controller_code = 2;</code>
+     * @return Whether the controllerCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasControllerCode() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string controller_code = 2;</code>
+     * @return The controllerCode.
+     */
+    @java.lang.Override
+    public java.lang.String getControllerCode() {
+      java.lang.Object ref = controllerCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          controllerCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string controller_code = 2;</code>
+     * @return The bytes for controllerCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getControllerCodeBytes() {
+      java.lang.Object ref = controllerCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        controllerCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serialNumber_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, controllerCode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serialNumber_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, controllerCode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request other = (SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request) obj;
+
+      if (hasSerialNumber() != other.hasSerialNumber()) return false;
+      if (hasSerialNumber()) {
+        if (!getSerialNumber()
+            .equals(other.getSerialNumber())) return false;
+      }
+      if (hasControllerCode() != other.hasControllerCode()) return false;
+      if (hasControllerCode()) {
+        if (!getControllerCode()
+            .equals(other.getControllerCode())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSerialNumber()) {
+        hash = (37 * hash) + SERIAL_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSerialNumber().hashCode();
+      }
+      if (hasControllerCode()) {
+        hash = (37 * hash) + CONTROLLER_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getControllerCode().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CAccountHardware_GetSteamDeckComponents_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CAccountHardware_GetSteamDeckComponents_Request)
+        SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesAccounthardwareSteamclient.internal_static_CAccountHardware_GetSteamDeckComponents_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesAccounthardwareSteamclient.internal_static_CAccountHardware_GetSteamDeckComponents_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request.class, SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        serialNumber_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        controllerCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesAccounthardwareSteamclient.internal_static_CAccountHardware_GetSteamDeckComponents_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request getDefaultInstanceForType() {
+        return SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request build() {
+        SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request buildPartial() {
+        SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request result = new SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.serialNumber_ = serialNumber_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.controllerCode_ = controllerCode_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request) {
+          return mergeFrom((SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request other) {
+        if (other == SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request.getDefaultInstance()) return this;
+        if (other.hasSerialNumber()) {
+          bitField0_ |= 0x00000001;
+          serialNumber_ = other.serialNumber_;
+          onChanged();
+        }
+        if (other.hasControllerCode()) {
+          bitField0_ |= 0x00000002;
+          controllerCode_ = other.controllerCode_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object serialNumber_ = "";
+      /**
+       * <code>optional string serial_number = 1;</code>
+       * @return Whether the serialNumber field is set.
+       */
+      public boolean hasSerialNumber() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string serial_number = 1;</code>
+       * @return The serialNumber.
+       */
+      public java.lang.String getSerialNumber() {
+        java.lang.Object ref = serialNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            serialNumber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string serial_number = 1;</code>
+       * @return The bytes for serialNumber.
+       */
+      public com.google.protobuf.ByteString
+          getSerialNumberBytes() {
+        java.lang.Object ref = serialNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serialNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string serial_number = 1;</code>
+       * @param value The serialNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSerialNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        serialNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string serial_number = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSerialNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        serialNumber_ = getDefaultInstance().getSerialNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string serial_number = 1;</code>
+       * @param value The bytes for serialNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSerialNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        serialNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object controllerCode_ = "";
+      /**
+       * <code>optional string controller_code = 2;</code>
+       * @return Whether the controllerCode field is set.
+       */
+      public boolean hasControllerCode() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string controller_code = 2;</code>
+       * @return The controllerCode.
+       */
+      public java.lang.String getControllerCode() {
+        java.lang.Object ref = controllerCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            controllerCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string controller_code = 2;</code>
+       * @return The bytes for controllerCode.
+       */
+      public com.google.protobuf.ByteString
+          getControllerCodeBytes() {
+        java.lang.Object ref = controllerCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          controllerCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string controller_code = 2;</code>
+       * @param value The controllerCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        controllerCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string controller_code = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearControllerCode() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        controllerCode_ = getDefaultInstance().getControllerCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string controller_code = 2;</code>
+       * @param value The bytes for controllerCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        controllerCode_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CAccountHardware_GetSteamDeckComponents_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CAccountHardware_GetSteamDeckComponents_Request)
+    private static final SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request();
+    }
+
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CAccountHardware_GetSteamDeckComponents_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CAccountHardware_GetSteamDeckComponents_Request>() {
+      @java.lang.Override
+      public CAccountHardware_GetSteamDeckComponents_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CAccountHardware_GetSteamDeckComponents_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CAccountHardware_GetSteamDeckComponents_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CAccountHardware_GetSteamDeckComponents_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CAccountHardware_GetSteamDeckComponents_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CAccountHardware_GetSteamDeckComponents_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string json_components = 1;</code>
+     * @return Whether the jsonComponents field is set.
+     */
+    boolean hasJsonComponents();
+    /**
+     * <code>optional string json_components = 1;</code>
+     * @return The jsonComponents.
+     */
+    java.lang.String getJsonComponents();
+    /**
+     * <code>optional string json_components = 1;</code>
+     * @return The bytes for jsonComponents.
+     */
+    com.google.protobuf.ByteString
+        getJsonComponentsBytes();
+  }
+  /**
+   * Protobuf type {@code CAccountHardware_GetSteamDeckComponents_Response}
+   */
+  public static final class CAccountHardware_GetSteamDeckComponents_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CAccountHardware_GetSteamDeckComponents_Response)
+      CAccountHardware_GetSteamDeckComponents_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CAccountHardware_GetSteamDeckComponents_Response.newBuilder() to construct.
+    private CAccountHardware_GetSteamDeckComponents_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CAccountHardware_GetSteamDeckComponents_Response() {
+      jsonComponents_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CAccountHardware_GetSteamDeckComponents_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CAccountHardware_GetSteamDeckComponents_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              jsonComponents_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesAccounthardwareSteamclient.internal_static_CAccountHardware_GetSteamDeckComponents_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesAccounthardwareSteamclient.internal_static_CAccountHardware_GetSteamDeckComponents_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response.class, SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int JSON_COMPONENTS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object jsonComponents_;
+    /**
+     * <code>optional string json_components = 1;</code>
+     * @return Whether the jsonComponents field is set.
+     */
+    @java.lang.Override
+    public boolean hasJsonComponents() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string json_components = 1;</code>
+     * @return The jsonComponents.
+     */
+    @java.lang.Override
+    public java.lang.String getJsonComponents() {
+      java.lang.Object ref = jsonComponents_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          jsonComponents_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string json_components = 1;</code>
+     * @return The bytes for jsonComponents.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJsonComponentsBytes() {
+      java.lang.Object ref = jsonComponents_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jsonComponents_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, jsonComponents_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, jsonComponents_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response other = (SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response) obj;
+
+      if (hasJsonComponents() != other.hasJsonComponents()) return false;
+      if (hasJsonComponents()) {
+        if (!getJsonComponents()
+            .equals(other.getJsonComponents())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasJsonComponents()) {
+        hash = (37 * hash) + JSON_COMPONENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getJsonComponents().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CAccountHardware_GetSteamDeckComponents_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CAccountHardware_GetSteamDeckComponents_Response)
+        SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesAccounthardwareSteamclient.internal_static_CAccountHardware_GetSteamDeckComponents_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesAccounthardwareSteamclient.internal_static_CAccountHardware_GetSteamDeckComponents_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response.class, SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        jsonComponents_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesAccounthardwareSteamclient.internal_static_CAccountHardware_GetSteamDeckComponents_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response getDefaultInstanceForType() {
+        return SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response build() {
+        SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response buildPartial() {
+        SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response result = new SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.jsonComponents_ = jsonComponents_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response) {
+          return mergeFrom((SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response other) {
+        if (other == SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response.getDefaultInstance()) return this;
+        if (other.hasJsonComponents()) {
+          bitField0_ |= 0x00000001;
+          jsonComponents_ = other.jsonComponents_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object jsonComponents_ = "";
+      /**
+       * <code>optional string json_components = 1;</code>
+       * @return Whether the jsonComponents field is set.
+       */
+      public boolean hasJsonComponents() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string json_components = 1;</code>
+       * @return The jsonComponents.
+       */
+      public java.lang.String getJsonComponents() {
+        java.lang.Object ref = jsonComponents_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jsonComponents_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string json_components = 1;</code>
+       * @return The bytes for jsonComponents.
+       */
+      public com.google.protobuf.ByteString
+          getJsonComponentsBytes() {
+        java.lang.Object ref = jsonComponents_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jsonComponents_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string json_components = 1;</code>
+       * @param value The jsonComponents to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonComponents(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        jsonComponents_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string json_components = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsonComponents() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        jsonComponents_ = getDefaultInstance().getJsonComponents();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string json_components = 1;</code>
+       * @param value The bytes for jsonComponents to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonComponentsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        jsonComponents_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CAccountHardware_GetSteamDeckComponents_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CAccountHardware_GetSteamDeckComponents_Response)
+    private static final SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response();
+    }
+
+    public static SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CAccountHardware_GetSteamDeckComponents_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CAccountHardware_GetSteamDeckComponents_Response>() {
+      @java.lang.Override
+      public CAccountHardware_GetSteamDeckComponents_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CAccountHardware_GetSteamDeckComponents_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CAccountHardware_GetSteamDeckComponents_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CAccountHardware_GetSteamDeckComponents_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesAccounthardwareSteamclient.CAccountHardware_GetSteamDeckComponents_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CAccountHardware_RegisterSteamController_Request_descriptor;
   private static final 
@@ -20814,6 +22308,16 @@ public final class SteammessagesAccounthardwareSteamclient {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CAccountHardware_RegisterValveIndexComponent_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CAccountHardware_GetSteamDeckComponents_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CAccountHardware_GetSteamDeckComponents_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CAccountHardware_GetSteamDeckComponents_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CAccountHardware_GetSteamDeckComponents_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -20824,147 +22328,159 @@ public final class SteammessagesAccounthardwareSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n5steam/steammessages_accounthardware.st" +
-      "eamclient.proto\0322steam/steammessages_uni" +
-      "fied_base.steamclient.proto\"b\n0CAccountH" +
-      "ardware_RegisterSteamController_Request\022" +
-      "\025\n\rserial_number\030\001 \001(\t\022\027\n\017controller_cod" +
-      "e\030\002 \001(\t\"3\n1CAccountHardware_RegisterStea" +
-      "mController_Response\"n\n<CAccountHardware" +
-      "_CompleteSteamControllerRegistration_Req" +
-      "uest\022\025\n\rserial_number\030\001 \001(\t\022\027\n\017controlle" +
-      "r_code\030\002 \001(\t\"?\n=CAccountHardware_Complet" +
-      "eSteamControllerRegistration_Response\"j\n" +
-      "8CAccountHardware_QueryAccountsRegistere" +
-      "dToSerial_Request\022\025\n\rserial_number\030\001 \001(\t" +
-      "\022\027\n\017controller_code\030\002 \001(\t\"m\n9CAccountHar" +
-      "dware_QueryAccountsRegisteredToSerial_Ac" +
-      "counts\022\021\n\taccountid\030\001 \001(\r\022\035\n\025registratio" +
-      "n_complete\030\002 \001(\010\"\211\001\n9CAccountHardware_Qu" +
-      "eryAccountsRegisteredToSerial_Response\022L" +
-      "\n\010accounts\030\001 \003(\0132:.CAccountHardware_Quer" +
-      "yAccountsRegisteredToSerial_Accounts\"\200\001\n" +
-      ":CAccountHardware_SteamControllerSetConf" +
-      "ig_ControllerConfig\022\023\n\013appidorname\030\001 \001(\t" +
-      "\022\027\n\017publishedfileid\030\002 \001(\004\022\024\n\014templatenam" +
-      "e\030\003 \001(\t\"\214\002\n1CAccountHardware_SteamContro" +
-      "llerSetConfig_Request\022\025\n\rserial_number\030\001" +
-      " \001(\t\022\027\n\017controller_code\030\002 \001(\t\022\021\n\taccount" +
-      "id\030\003 \001(\r\022S\n\016configurations\030\004 \003(\0132;.CAcco" +
-      "untHardware_SteamControllerSetConfig_Con" +
-      "trollerConfig\022\032\n\017controller_type\030\005 \001(\005:\001" +
-      "2\022#\n\024only_for_this_serial\030\006 \001(\010:\005false\"4" +
-      "\n2CAccountHardware_SteamControllerSetCon" +
-      "fig_Response\"\314\001\n1CAccountHardware_SteamC" +
-      "ontrollerGetConfig_Request\022\025\n\rserial_num" +
-      "ber\030\001 \001(\t\022\027\n\017controller_code\030\002 \001(\t\022\021\n\tac" +
-      "countid\030\003 \001(\r\022\023\n\013appidorname\030\004 \001(\t\022\032\n\017co" +
-      "ntroller_type\030\005 \001(\005:\0012\022#\n\024only_for_this_" +
-      "serial\030\006 \001(\010:\005false\"\227\001\n:CAccountHardware" +
-      "_SteamControllerGetConfig_ControllerConf" +
-      "ig\022\023\n\013appidorname\030\001 \001(\t\022\027\n\017publishedfile" +
-      "id\030\002 \001(\004\022\024\n\014templatename\030\003 \001(\t\022\025\n\rserial" +
-      "_number\030\004 \001(\t\"\211\001\n2CAccountHardware_Steam" +
-      "ControllerGetConfig_Response\022S\n\016configur" +
-      "ations\030\001 \003(\0132;.CAccountHardware_SteamCon" +
-      "trollerGetConfig_ControllerConfig\"w\n2CAc" +
-      "countHardware_DeRegisterSteamController_" +
-      "Request\022\025\n\rserial_number\030\001 \001(\t\022\027\n\017contro" +
-      "ller_code\030\002 \001(\t\022\021\n\taccountid\030\003 \001(\r\"5\n3CA" +
-      "ccountHardware_DeRegisterSteamController" +
-      "_Response\"t\n/CAccountHardware_SetPersona" +
-      "lizationFile_Request\022\025\n\rserial_number\030\001 " +
-      "\001(\t\022\027\n\017publishedfileid\030\002 \001(\004\022\021\n\taccounti" +
-      "d\030\003 \001(\r\"2\n0CAccountHardware_SetPersonali" +
-      "zationFile_Response\"[\n/CAccountHardware_" +
-      "GetPersonalizationFile_Request\022\025\n\rserial" +
-      "_number\030\001 \001(\t\022\021\n\taccountid\030\002 \001(\r\"K\n0CAcc" +
-      "ountHardware_GetPersonalizationFile_Resp" +
-      "onse\022\027\n\017publishedfileid\030\001 \001(\004\"\367\001\n-CAccou" +
-      "ntHardware_VRCompatibilityCheck_Request\022" +
-      "8\n\014product_name\030\001 \001(\tB\"\202\265\030\036Name of produ" +
-      "ct we\'re checking\022h\n\006values\030\002 \003(\01323.CAcc" +
-      "ountHardware_VRCompatibilityCheck_Reques" +
-      "t.PairB#\202\265\030\037Values from client system pr" +
-      "obe\032\"\n\004Pair\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"" +
-      "\333\003\n.CAccountHardware_VRCompatibilityChec" +
-      "k_Response\022m\n\006values\030\001 \003(\01324.CAccountHar" +
-      "dware_VRCompatibilityCheck_Response.Pair" +
-      "B\'\202\265\030#Top-level values reported to clien" +
-      "t\022t\n\ncomponents\030\002 \003(\0132@.CAccountHardware" +
-      "_VRCompatibilityCheck_Response.Component" +
-      "DisplayB\036\202\265\030\032Specific values to display\032" +
-      "\"\n\004Pair\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\032\237\001\n\020" +
-      "ComponentDisplay\0228\n\004name\030\001 \001(\tB*\202\265\030&Name" +
-      " of component (OS, RAM, GPU, etc.)\022&\n\005im" +
-      "age\030\002 \001(\tB\027\202\265\030\023Name of icon to use\022)\n\005va" +
-      "lue\030\003 \001(\tB\032\202\265\030\026String value to report\"\372\001" +
-      "\n4CAccountHardware_RegisterValveIndexCom" +
-      "ponent_Request\022\025\n\rserial_number\030\001 \001(\t\022\"\n" +
-      "\032manufacturer_serial_number\030\002 \001(\t\022\026\n\016com" +
-      "ponent_code\030\003 \001(\t\022L\n\016component_type\030\004 \001(" +
-      "\0162\025.EValveIndexComponent:\035k_EValveIndexC" +
-      "omponentUnknown\022!\n\031estimated_time_regist" +
-      "ered\030\005 \001(\005\"7\n5CAccountHardware_RegisterV" +
-      "alveIndexComponent_Response*\247\001\n\024EValveIn" +
-      "dexComponent\022!\n\035k_EValveIndexComponentUn" +
-      "known\020\000\022\035\n\031k_EValveIndexComponentHMD\020\001\022%" +
-      "\n!k_EValveIndexComponentLeftKnuckle\020\002\022&\n" +
-      "\"k_EValveIndexComponentRightKnuckle\020\0032\352\017" +
-      "\n\017AccountHardware\022\330\001\n\027RegisterSteamContr" +
-      "oller\0221.CAccountHardware_RegisterSteamCo" +
-      "ntroller_Request\0322.CAccountHardware_Regi" +
-      "sterSteamController_Response\"V\202\265\030RRecord" +
-      "s a serial number and the calling user\'s" +
-      " account info for warranty purposes.\022\327\001\n" +
-      "#CompleteSteamControllerRegistration\022=.C" +
-      "AccountHardware_CompleteSteamControllerR" +
-      "egistration_Request\032>.CAccountHardware_C" +
-      "ompleteSteamControllerRegistration_Respo" +
-      "nse\"1\202\265\030-Marks a controller\'s registrati" +
-      "on as complete\022\333\001\n#QueryAccountsRegister" +
-      "edToController\0229.CAccountHardware_QueryA" +
-      "ccountsRegisteredToSerial_Request\032:.CAcc" +
-      "ountHardware_QueryAccountsRegisteredToSe" +
-      "rial_Response\"=\202\265\0309Sends back a list of " +
-      "accounts registered to a controller.\022\274\001\n" +
-      " SetDesiredControllerConfigForApp\0222.CAcc" +
-      "ountHardware_SteamControllerSetConfig_Re" +
-      "quest\0323.CAccountHardware_SteamController" +
-      "SetConfig_Response\"/\202\265\030+Sets a desired c" +
-      "ontroller config for an app\022\274\001\n GetDesir" +
-      "edControllerConfigForApp\0222.CAccountHardw" +
-      "are_SteamControllerGetConfig_Request\0323.C" +
-      "AccountHardware_SteamControllerGetConfig" +
-      "_Response\"/\202\265\030+Gets a desired controller" +
-      " config for an app\022\245\001\n\031DeRegisterSteamCo" +
-      "ntroller\0223.CAccountHardware_DeRegisterSt" +
-      "eamController_Request\0324.CAccountHardware" +
-      "_DeRegisterSteamController_Response\"\035\202\265\030" +
-      "\031De registers a controller\022\273\001\n SetContro" +
-      "llerPersonalizationFile\0220.CAccountHardwa" +
-      "re_SetPersonalizationFile_Request\0321.CAcc" +
-      "ountHardware_SetPersonalizationFile_Resp" +
-      "onse\"2\202\265\030.Stores the file ID of the pers" +
-      "onalization file\022\271\001\n GetControllerPerson" +
-      "alizationFile\0220.CAccountHardware_GetPers" +
-      "onalizationFile_Request\0321.CAccountHardwa" +
-      "re_GetPersonalizationFile_Response\"0\202\265\030," +
-      "Gets the file ID of the personalization " +
-      "file\022\250\001\n\024VRCompatibilityCheck\022..CAccount" +
-      "Hardware_VRCompatibilityCheck_Request\032/." +
-      "CAccountHardware_VRCompatibilityCheck_Re" +
-      "sponse\"/\202\265\030+Check system info for compat" +
-      "ibility with VR\022\301\001\n\033RegisterValveIndexCo" +
-      "mponent\0225.CAccountHardware_RegisterValve" +
-      "IndexComponent_Request\0326.CAccountHardwar" +
-      "e_RegisterValveIndexComponent_Response\"3" +
-      "\202\265\030/Registers a valve index component to" +
-      " a customer\0325\202\265\0301A service to use accoun" +
-      "t hardware related methodsB\003\200\001\001"
+      "eamclient.proto\032\036steam/steammessages_bas" +
+      "e.proto\0322steam/steammessages_unified_bas" +
+      "e.steamclient.proto\"b\n0CAccountHardware_" +
+      "RegisterSteamController_Request\022\025\n\rseria" +
+      "l_number\030\001 \001(\t\022\027\n\017controller_code\030\002 \001(\t\"" +
+      "3\n1CAccountHardware_RegisterSteamControl" +
+      "ler_Response\"n\n<CAccountHardware_Complet" +
+      "eSteamControllerRegistration_Request\022\025\n\r" +
+      "serial_number\030\001 \001(\t\022\027\n\017controller_code\030\002" +
+      " \001(\t\"?\n=CAccountHardware_CompleteSteamCo" +
+      "ntrollerRegistration_Response\"j\n8CAccoun" +
+      "tHardware_QueryAccountsRegisteredToSeria" +
+      "l_Request\022\025\n\rserial_number\030\001 \001(\t\022\027\n\017cont" +
+      "roller_code\030\002 \001(\t\"m\n9CAccountHardware_Qu" +
+      "eryAccountsRegisteredToSerial_Accounts\022\021" +
+      "\n\taccountid\030\001 \001(\r\022\035\n\025registration_comple" +
+      "te\030\002 \001(\010\"\211\001\n9CAccountHardware_QueryAccou" +
+      "ntsRegisteredToSerial_Response\022L\n\010accoun" +
+      "ts\030\001 \003(\0132:.CAccountHardware_QueryAccount" +
+      "sRegisteredToSerial_Accounts\"\200\001\n:CAccoun" +
+      "tHardware_SteamControllerSetConfig_Contr" +
+      "ollerConfig\022\023\n\013appidorname\030\001 \001(\t\022\027\n\017publ" +
+      "ishedfileid\030\002 \001(\004\022\024\n\014templatename\030\003 \001(\t\"" +
+      "\214\002\n1CAccountHardware_SteamControllerSetC" +
+      "onfig_Request\022\025\n\rserial_number\030\001 \001(\t\022\027\n\017" +
+      "controller_code\030\002 \001(\t\022\021\n\taccountid\030\003 \001(\r" +
+      "\022S\n\016configurations\030\004 \003(\0132;.CAccountHardw" +
+      "are_SteamControllerSetConfig_ControllerC" +
+      "onfig\022\032\n\017controller_type\030\005 \001(\005:\0012\022#\n\024onl" +
+      "y_for_this_serial\030\006 \001(\010:\005false\"4\n2CAccou" +
+      "ntHardware_SteamControllerSetConfig_Resp" +
+      "onse\"\314\001\n1CAccountHardware_SteamControlle" +
+      "rGetConfig_Request\022\025\n\rserial_number\030\001 \001(" +
+      "\t\022\027\n\017controller_code\030\002 \001(\t\022\021\n\taccountid\030" +
+      "\003 \001(\r\022\023\n\013appidorname\030\004 \001(\t\022\032\n\017controller" +
+      "_type\030\005 \001(\005:\0012\022#\n\024only_for_this_serial\030\006" +
+      " \001(\010:\005false\"\260\001\n:CAccountHardware_SteamCo" +
+      "ntrollerGetConfig_ControllerConfig\022\023\n\013ap" +
+      "pidorname\030\001 \001(\t\022\027\n\017publishedfileid\030\002 \001(\004" +
+      "\022\024\n\014templatename\030\003 \001(\t\022\025\n\rserial_number\030" +
+      "\004 \001(\t\022\027\n\010autosave\030\005 \001(\010:\005false\"\211\001\n2CAcco" +
+      "untHardware_SteamControllerGetConfig_Res" +
+      "ponse\022S\n\016configurations\030\001 \003(\0132;.CAccount" +
+      "Hardware_SteamControllerGetConfig_Contro" +
+      "llerConfig\"w\n2CAccountHardware_DeRegiste" +
+      "rSteamController_Request\022\025\n\rserial_numbe" +
+      "r\030\001 \001(\t\022\027\n\017controller_code\030\002 \001(\t\022\021\n\tacco" +
+      "untid\030\003 \001(\r\"5\n3CAccountHardware_DeRegist" +
+      "erSteamController_Response\"t\n/CAccountHa" +
+      "rdware_SetPersonalizationFile_Request\022\025\n" +
+      "\rserial_number\030\001 \001(\t\022\027\n\017publishedfileid\030" +
+      "\002 \001(\004\022\021\n\taccountid\030\003 \001(\r\"2\n0CAccountHard" +
+      "ware_SetPersonalizationFile_Response\"[\n/" +
+      "CAccountHardware_GetPersonalizationFile_" +
+      "Request\022\025\n\rserial_number\030\001 \001(\t\022\021\n\taccoun" +
+      "tid\030\002 \001(\r\"K\n0CAccountHardware_GetPersona" +
+      "lizationFile_Response\022\027\n\017publishedfileid" +
+      "\030\001 \001(\004\"\367\001\n-CAccountHardware_VRCompatibil" +
+      "ityCheck_Request\0228\n\014product_name\030\001 \001(\tB\"" +
+      "\202\265\030\036Name of product we\'re checking\022h\n\006va" +
+      "lues\030\002 \003(\01323.CAccountHardware_VRCompatib" +
+      "ilityCheck_Request.PairB#\202\265\030\037Values from" +
+      " client system probe\032\"\n\004Pair\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t\"\333\003\n.CAccountHardware_VR" +
+      "CompatibilityCheck_Response\022m\n\006values\030\001 " +
+      "\003(\01324.CAccountHardware_VRCompatibilityCh" +
+      "eck_Response.PairB\'\202\265\030#Top-level values " +
+      "reported to client\022t\n\ncomponents\030\002 \003(\0132@" +
+      ".CAccountHardware_VRCompatibilityCheck_R" +
+      "esponse.ComponentDisplayB\036\202\265\030\032Specific v" +
+      "alues to display\032\"\n\004Pair\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t\032\237\001\n\020ComponentDisplay\0228\n\004nam" +
+      "e\030\001 \001(\tB*\202\265\030&Name of component (OS, RAM," +
+      " GPU, etc.)\022&\n\005image\030\002 \001(\tB\027\202\265\030\023Name of " +
+      "icon to use\022)\n\005value\030\003 \001(\tB\032\202\265\030\026String v" +
+      "alue to report\"\372\001\n4CAccountHardware_Regi" +
+      "sterValveIndexComponent_Request\022\025\n\rseria" +
+      "l_number\030\001 \001(\t\022\"\n\032manufacturer_serial_nu" +
+      "mber\030\002 \001(\t\022\026\n\016component_code\030\003 \001(\t\022L\n\016co" +
+      "mponent_type\030\004 \001(\0162\025.EValveIndexComponen" +
+      "t:\035k_EValveIndexComponentUnknown\022!\n\031esti" +
+      "mated_time_registered\030\005 \001(\005\"7\n5CAccountH" +
+      "ardware_RegisterValveIndexComponent_Resp" +
+      "onse\"a\n/CAccountHardware_GetSteamDeckCom" +
+      "ponents_Request\022\025\n\rserial_number\030\001 \001(\t\022\027" +
+      "\n\017controller_code\030\002 \001(\t\"K\n0CAccountHardw" +
+      "are_GetSteamDeckComponents_Response\022\027\n\017j" +
+      "son_components\030\001 \001(\t*\247\001\n\024EValveIndexComp" +
+      "onent\022!\n\035k_EValveIndexComponentUnknown\020\000" +
+      "\022\035\n\031k_EValveIndexComponentHMD\020\001\022%\n!k_EVa" +
+      "lveIndexComponentLeftKnuckle\020\002\022&\n\"k_EVal" +
+      "veIndexComponentRightKnuckle\020\0032\252\021\n\017Accou" +
+      "ntHardware\022\330\001\n\027RegisterSteamController\0221" +
+      ".CAccountHardware_RegisterSteamControlle" +
+      "r_Request\0322.CAccountHardware_RegisterSte" +
+      "amController_Response\"V\202\265\030RRecords a ser" +
+      "ial number and the calling user\'s accoun" +
+      "t info for warranty purposes.\022\327\001\n#Comple" +
+      "teSteamControllerRegistration\022=.CAccount" +
+      "Hardware_CompleteSteamControllerRegistra" +
+      "tion_Request\032>.CAccountHardware_Complete" +
+      "SteamControllerRegistration_Response\"1\202\265" +
+      "\030-Marks a controller\'s registration as c" +
+      "omplete\022\333\001\n#QueryAccountsRegisteredToCon" +
+      "troller\0229.CAccountHardware_QueryAccounts" +
+      "RegisteredToSerial_Request\032:.CAccountHar" +
+      "dware_QueryAccountsRegisteredToSerial_Re" +
+      "sponse\"=\202\265\0309Sends back a list of account" +
+      "s registered to a controller.\022\274\001\n SetDes" +
+      "iredControllerConfigForApp\0222.CAccountHar" +
+      "dware_SteamControllerSetConfig_Request\0323" +
+      ".CAccountHardware_SteamControllerSetConf" +
+      "ig_Response\"/\202\265\030+Sets a desired controll" +
+      "er config for an app\022\274\001\n GetDesiredContr" +
+      "ollerConfigForApp\0222.CAccountHardware_Ste" +
+      "amControllerGetConfig_Request\0323.CAccount" +
+      "Hardware_SteamControllerGetConfig_Respon" +
+      "se\"/\202\265\030+Gets a desired controller config" +
+      " for an app\022\245\001\n\031DeRegisterSteamControlle" +
+      "r\0223.CAccountHardware_DeRegisterSteamCont" +
+      "roller_Request\0324.CAccountHardware_DeRegi" +
+      "sterSteamController_Response\"\035\202\265\030\031De reg" +
+      "isters a controller\022\273\001\n SetControllerPer" +
+      "sonalizationFile\0220.CAccountHardware_SetP" +
+      "ersonalizationFile_Request\0321.CAccountHar" +
+      "dware_SetPersonalizationFile_Response\"2\202" +
+      "\265\030.Stores the file ID of the personaliza" +
+      "tion file\022\271\001\n GetControllerPersonalizati" +
+      "onFile\0220.CAccountHardware_GetPersonaliza" +
+      "tionFile_Request\0321.CAccountHardware_GetP" +
+      "ersonalizationFile_Response\"0\202\265\030,Gets th" +
+      "e file ID of the personalization file\022\250\001" +
+      "\n\024VRCompatibilityCheck\022..CAccountHardwar" +
+      "e_VRCompatibilityCheck_Request\032/.CAccoun" +
+      "tHardware_VRCompatibilityCheck_Response\"" +
+      "/\202\265\030+Check system info for compatibility" +
+      " with VR\022\301\001\n\033RegisterValveIndexComponent" +
+      "\0225.CAccountHardware_RegisterValveIndexCo" +
+      "mponent_Request\0326.CAccountHardware_Regis" +
+      "terValveIndexComponent_Response\"3\202\265\030/Reg" +
+      "isters a valve index component to a cust" +
+      "omer\022\275\001\n\026GetSteamDeckComponents\0220.CAccou" +
+      "ntHardware_GetSteamDeckComponents_Reques" +
+      "t\0321.CAccountHardware_GetSteamDeckCompone" +
+      "nts_Response\">\202\265\030:Returns the components" +
+      " that went into the given Steam Deck\0325\202\265" +
+      "\0301A service to use account hardware rela" +
+      "ted methodsB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CAccountHardware_RegisterSteamController_Request_descriptor =
@@ -21038,7 +22554,7 @@ public final class SteammessagesAccounthardwareSteamclient {
     internal_static_CAccountHardware_SteamControllerGetConfig_ControllerConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CAccountHardware_SteamControllerGetConfig_ControllerConfig_descriptor,
-        new java.lang.String[] { "Appidorname", "Publishedfileid", "Templatename", "SerialNumber", });
+        new java.lang.String[] { "Appidorname", "Publishedfileid", "Templatename", "SerialNumber", "Autosave", });
     internal_static_CAccountHardware_SteamControllerGetConfig_Response_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_CAccountHardware_SteamControllerGetConfig_Response_fieldAccessorTable = new
@@ -21123,6 +22639,18 @@ public final class SteammessagesAccounthardwareSteamclient {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CAccountHardware_RegisterValveIndexComponent_Response_descriptor,
         new java.lang.String[] { });
+    internal_static_CAccountHardware_GetSteamDeckComponents_Request_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_CAccountHardware_GetSteamDeckComponents_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CAccountHardware_GetSteamDeckComponents_Request_descriptor,
+        new java.lang.String[] { "SerialNumber", "ControllerCode", });
+    internal_static_CAccountHardware_GetSteamDeckComponents_Response_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_CAccountHardware_GetSteamDeckComponents_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CAccountHardware_GetSteamDeckComponents_Response_descriptor,
+        new java.lang.String[] { "JsonComponents", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(SteammessagesUnifiedBaseSteamclient.description);
@@ -21130,6 +22658,7 @@ public final class SteammessagesAccounthardwareSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

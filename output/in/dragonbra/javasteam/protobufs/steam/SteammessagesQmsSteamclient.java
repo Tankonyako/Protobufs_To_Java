@@ -11437,84 +11437,86 @@ public final class SteammessagesQmsSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n)steam/steammessages_qms.steamclient.pr" +
-      "oto\0322steam/steammessages_unified_base.st" +
-      "eamclient.proto\"2\n\017GameSearchParam\022\020\n\010ke" +
-      "y_name\030\001 \001(\t\022\r\n\005value\030\002 \003(\t\"\351\001\n(CQueuedM" +
-      "atchmaking_SearchForGame_Request\022\r\n\005appi" +
-      "d\030\001 \001(\r\022<\n\006action\030\002 \001(\0162\022.EGameSearchAct" +
-      "ion:\030k_EGameSearchAction_None\022 \n\006params\030" +
-      "\003 \003(\0132\020.GameSearchParam\022\022\n\nplayer_min\030\004 " +
-      "\001(\r\022\022\n\nplayer_max\030\005 \001(\r\022\024\n\014steamidlobby\030" +
-      "\006 \001(\006\022\020\n\010searchid\030\007 \001(\004\"\207\003\n)CQueuedMatch" +
-      "making_SearchForGame_Response\022I\n\020gamesea" +
-      "rchresult\030\001 \001(\0162\022.EGameSearchResult:\033k_E" +
-      "GameSearchResult_Invalid\022\020\n\010searchid\030\002 \001" +
-      "(\004\022\035\n\025seconds_time_estimate\030\003 \001(\r\022\026\n\016pol" +
-      "l_frequency\030\004 \001(\r\022\027\n\017count_searching\030\005 \001" +
-      "(\r\022\030\n\020players_in_match\030\006 \001(\r\022\030\n\020players_" +
-      "accepted\030\007 \001(\r\022\026\n\016connect_string\030\t \001(\t\022\023" +
-      "\n\013steamidhost\030\n \001(\006\022\030\n\020rtime_match_made\030" +
-      "\013 \001(\r\022\021\n\trtime_now\030\014 \001(\r\022\037\n\027steamid_canc" +
-      "eled_search\030\r \001(\006\"\227\002\n3CQueuedMatchmaking" +
-      "GameHost_SearchForPlayers_Request\022\r\n\005app" +
-      "id\030\001 \001(\r\022<\n\006action\030\002 \001(\0162\022.EGameSearchAc" +
-      "tion:\030k_EGameSearchAction_None\022 \n\006params" +
-      "\030\003 \003(\0132\020.GameSearchParam\022\022\n\nplayer_min\030\004" +
-      " \001(\r\022\022\n\nplayer_max\030\005 \001(\r\022\034\n\024player_max_t" +
-      "eam_size\030\006 \001(\r\022\031\n\021connection_string\030\007 \001(" +
-      "\t\022\020\n\010searchid\030\010 \001(\004\"\223\001\n\013PlayerFound\022\017\n\007s" +
-      "teamid\030\001 \001(\006\022<\n\006action\030\002 \001(\0162\022.EGameSear" +
-      "chAction:\030k_EGameSearchAction_None\022 \n\006pa" +
-      "rams\030\003 \003(\0132\020.GameSearchParam\022\023\n\013team_num" +
-      "ber\030\004 \001(\r\"\210\002\n4CQueuedMatchmakingGameHost" +
-      "_SearchForPlayers_Response\022I\n\020gamesearch" +
-      "result\030\001 \001(\0162\022.EGameSearchResult:\033k_EGam" +
-      "eSearchResult_Invalid\022\020\n\010searchid\030\002 \001(\004\022" +
-      "\026\n\016poll_frequency\030\003 \001(\r\022\017\n\007matchid\030\004 \001(\004" +
-      "\022\035\n\007players\030\005 \003(\0132\014.PlayerFound\022\030\n\020rtime" +
-      "_match_made\030\006 \001(\r\022\021\n\trtime_now\030\007 \001(\r\".\n\014" +
-      "PlayerResult\022\017\n\007steamid\030\001 \001(\006\022\r\n\005value\030\002" +
-      " \001(\r\"~\n5CQueuedMatchmakingGameHost_Submi" +
-      "tPlayerResult_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007" +
-      "matchid\030\002 \001(\004\022%\n\016player_results\030\003 \003(\0132\r." +
-      "PlayerResult\"8\n6CQueuedMatchmakingGameHo" +
-      "st_SubmitPlayerResult_Response\"L\n*CQueue" +
-      "dMatchmakingGameHost_EndGame_Request\022\r\n\005" +
-      "appid\030\001 \001(\r\022\017\n\007matchid\030\002 \001(\004\"-\n+CQueuedM" +
-      "atchmakingGameHost_EndGame_Response*\222\001\n\021" +
-      "EGameSearchAction\022\034\n\030k_EGameSearchAction" +
-      "_None\020\000\022\036\n\032k_EGameSearchAction_Accept\020\001\022" +
-      "\037\n\033k_EGameSearchAction_Decline\020\002\022\036\n\032k_EG" +
-      "ameSearchAction_Cancel\020\003*\274\002\n\021EGameSearch" +
-      "Result\022\037\n\033k_EGameSearchResult_Invalid\020\000\022" +
-      "(\n$k_EGameSearchResult_SearchInProgress\020" +
-      "\001\022+\n\'k_EGameSearchResult_SearchFailedNoH" +
-      "osts\020\002\022\'\n#k_EGameSearchResult_SearchGame" +
-      "Found\020\003\022.\n*k_EGameSearchResult_SearchCom" +
-      "pleteAccepted\020\004\022.\n*k_EGameSearchResult_S" +
-      "earchCompleteDeclined\020\005\022&\n\"k_EGameSearch" +
-      "Result_SearchCanceled\020\0062\262\001\n\021QueuedMatchm" +
-      "aking\022}\n\rSearchForGame\022).CQueuedMatchmak" +
-      "ing_SearchForGame_Request\032*.CQueuedMatch" +
-      "making_SearchForGame_Response\"\025\202\265\030\021Searc" +
-      "h for a game\032\036\202\265\030\032Queued matchmaking ser" +
-      "vice2\353\003\n\031QueuedMatchmakingGameHost\022\225\001\n\020S" +
-      "earchForPlayers\0224.CQueuedMatchmakingGame" +
-      "Host_SearchForPlayers_Request\0325.CQueuedM" +
-      "atchmakingGameHost_SearchForPlayers_Resp" +
-      "onse\"\024\202\265\030\020SearchForPlayers\022\235\001\n\022SubmitPla" +
-      "yerResult\0226.CQueuedMatchmakingGameHost_S" +
-      "ubmitPlayerResult_Request\0327.CQueuedMatch" +
-      "makingGameHost_SubmitPlayerResult_Respon" +
-      "se\"\026\202\265\030\022SubmitPlayerResult\022q\n\007EndGame\022+." +
-      "CQueuedMatchmakingGameHost_EndGame_Reque" +
-      "st\032,.CQueuedMatchmakingGameHost_EndGame_" +
-      "Response\"\013\202\265\030\007EndGame\032#\202\265\030\037Queued matchm" +
-      "aking host serviceB\003\200\001\001"
+      "oto\032\036steam/steammessages_base.proto\0322ste" +
+      "am/steammessages_unified_base.steamclien" +
+      "t.proto\"2\n\017GameSearchParam\022\020\n\010key_name\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \003(\t\"\351\001\n(CQueuedMatchmaki" +
+      "ng_SearchForGame_Request\022\r\n\005appid\030\001 \001(\r\022" +
+      "<\n\006action\030\002 \001(\0162\022.EGameSearchAction:\030k_E" +
+      "GameSearchAction_None\022 \n\006params\030\003 \003(\0132\020." +
+      "GameSearchParam\022\022\n\nplayer_min\030\004 \001(\r\022\022\n\np" +
+      "layer_max\030\005 \001(\r\022\024\n\014steamidlobby\030\006 \001(\006\022\020\n" +
+      "\010searchid\030\007 \001(\004\"\207\003\n)CQueuedMatchmaking_S" +
+      "earchForGame_Response\022I\n\020gamesearchresul" +
+      "t\030\001 \001(\0162\022.EGameSearchResult:\033k_EGameSear" +
+      "chResult_Invalid\022\020\n\010searchid\030\002 \001(\004\022\035\n\025se" +
+      "conds_time_estimate\030\003 \001(\r\022\026\n\016poll_freque" +
+      "ncy\030\004 \001(\r\022\027\n\017count_searching\030\005 \001(\r\022\030\n\020pl" +
+      "ayers_in_match\030\006 \001(\r\022\030\n\020players_accepted" +
+      "\030\007 \001(\r\022\026\n\016connect_string\030\t \001(\t\022\023\n\013steami" +
+      "dhost\030\n \001(\006\022\030\n\020rtime_match_made\030\013 \001(\r\022\021\n" +
+      "\trtime_now\030\014 \001(\r\022\037\n\027steamid_canceled_sea" +
+      "rch\030\r \001(\006\"\227\002\n3CQueuedMatchmakingGameHost" +
+      "_SearchForPlayers_Request\022\r\n\005appid\030\001 \001(\r" +
+      "\022<\n\006action\030\002 \001(\0162\022.EGameSearchAction:\030k_" +
+      "EGameSearchAction_None\022 \n\006params\030\003 \003(\0132\020" +
+      ".GameSearchParam\022\022\n\nplayer_min\030\004 \001(\r\022\022\n\n" +
+      "player_max\030\005 \001(\r\022\034\n\024player_max_team_size" +
+      "\030\006 \001(\r\022\031\n\021connection_string\030\007 \001(\t\022\020\n\010sea" +
+      "rchid\030\010 \001(\004\"\223\001\n\013PlayerFound\022\017\n\007steamid\030\001" +
+      " \001(\006\022<\n\006action\030\002 \001(\0162\022.EGameSearchAction" +
+      ":\030k_EGameSearchAction_None\022 \n\006params\030\003 \003" +
+      "(\0132\020.GameSearchParam\022\023\n\013team_number\030\004 \001(" +
+      "\r\"\210\002\n4CQueuedMatchmakingGameHost_SearchF" +
+      "orPlayers_Response\022I\n\020gamesearchresult\030\001" +
+      " \001(\0162\022.EGameSearchResult:\033k_EGameSearchR" +
+      "esult_Invalid\022\020\n\010searchid\030\002 \001(\004\022\026\n\016poll_" +
+      "frequency\030\003 \001(\r\022\017\n\007matchid\030\004 \001(\004\022\035\n\007play" +
+      "ers\030\005 \003(\0132\014.PlayerFound\022\030\n\020rtime_match_m" +
+      "ade\030\006 \001(\r\022\021\n\trtime_now\030\007 \001(\r\".\n\014PlayerRe" +
+      "sult\022\017\n\007steamid\030\001 \001(\006\022\r\n\005value\030\002 \001(\r\"~\n5" +
+      "CQueuedMatchmakingGameHost_SubmitPlayerR" +
+      "esult_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007matchid\030" +
+      "\002 \001(\004\022%\n\016player_results\030\003 \003(\0132\r.PlayerRe" +
+      "sult\"8\n6CQueuedMatchmakingGameHost_Submi" +
+      "tPlayerResult_Response\"L\n*CQueuedMatchma" +
+      "kingGameHost_EndGame_Request\022\r\n\005appid\030\001 " +
+      "\001(\r\022\017\n\007matchid\030\002 \001(\004\"-\n+CQueuedMatchmaki" +
+      "ngGameHost_EndGame_Response*\222\001\n\021EGameSea" +
+      "rchAction\022\034\n\030k_EGameSearchAction_None\020\000\022" +
+      "\036\n\032k_EGameSearchAction_Accept\020\001\022\037\n\033k_EGa" +
+      "meSearchAction_Decline\020\002\022\036\n\032k_EGameSearc" +
+      "hAction_Cancel\020\003*\274\002\n\021EGameSearchResult\022\037" +
+      "\n\033k_EGameSearchResult_Invalid\020\000\022(\n$k_EGa" +
+      "meSearchResult_SearchInProgress\020\001\022+\n\'k_E" +
+      "GameSearchResult_SearchFailedNoHosts\020\002\022\'" +
+      "\n#k_EGameSearchResult_SearchGameFound\020\003\022" +
+      ".\n*k_EGameSearchResult_SearchCompleteAcc" +
+      "epted\020\004\022.\n*k_EGameSearchResult_SearchCom" +
+      "pleteDeclined\020\005\022&\n\"k_EGameSearchResult_S" +
+      "earchCanceled\020\0062\262\001\n\021QueuedMatchmaking\022}\n" +
+      "\rSearchForGame\022).CQueuedMatchmaking_Sear" +
+      "chForGame_Request\032*.CQueuedMatchmaking_S" +
+      "earchForGame_Response\"\025\202\265\030\021Search for a " +
+      "game\032\036\202\265\030\032Queued matchmaking service2\353\003\n" +
+      "\031QueuedMatchmakingGameHost\022\225\001\n\020SearchFor" +
+      "Players\0224.CQueuedMatchmakingGameHost_Sea" +
+      "rchForPlayers_Request\0325.CQueuedMatchmaki" +
+      "ngGameHost_SearchForPlayers_Response\"\024\202\265" +
+      "\030\020SearchForPlayers\022\235\001\n\022SubmitPlayerResul" +
+      "t\0226.CQueuedMatchmakingGameHost_SubmitPla" +
+      "yerResult_Request\0327.CQueuedMatchmakingGa" +
+      "meHost_SubmitPlayerResult_Response\"\026\202\265\030\022" +
+      "SubmitPlayerResult\022q\n\007EndGame\022+.CQueuedM" +
+      "atchmakingGameHost_EndGame_Request\032,.CQu" +
+      "euedMatchmakingGameHost_EndGame_Response" +
+      "\"\013\202\265\030\007EndGame\032#\202\265\030\037Queued matchmaking ho" +
+      "st serviceB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_GameSearchParam_descriptor =
@@ -11589,6 +11591,7 @@ public final class SteammessagesQmsSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

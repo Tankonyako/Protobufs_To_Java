@@ -810,156 +810,6 @@ public final class Enums {
   }
 
   /**
-   * Protobuf enum {@code EBanContentCheckResult}
-   */
-  public enum EBanContentCheckResult
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>k_EBanContentCheckResult_NotScanned = 0;</code>
-     */
-    k_EBanContentCheckResult_NotScanned(0),
-    /**
-     * <code>k_EBanContentCheckResult_Reset = 1;</code>
-     */
-    k_EBanContentCheckResult_Reset(1),
-    /**
-     * <code>k_EBanContentCheckResult_NeedsChecking = 2;</code>
-     */
-    k_EBanContentCheckResult_NeedsChecking(2),
-    /**
-     * <code>k_EBanContentCheckResult_VeryUnlikely = 5;</code>
-     */
-    k_EBanContentCheckResult_VeryUnlikely(5),
-    /**
-     * <code>k_EBanContentCheckResult_Unlikely = 30;</code>
-     */
-    k_EBanContentCheckResult_Unlikely(30),
-    /**
-     * <code>k_EBanContentCheckResult_Possible = 50;</code>
-     */
-    k_EBanContentCheckResult_Possible(50),
-    /**
-     * <code>k_EBanContentCheckResult_Likely = 75;</code>
-     */
-    k_EBanContentCheckResult_Likely(75),
-    /**
-     * <code>k_EBanContentCheckResult_VeryLikely = 100;</code>
-     */
-    k_EBanContentCheckResult_VeryLikely(100),
-    ;
-
-    /**
-     * <code>k_EBanContentCheckResult_NotScanned = 0;</code>
-     */
-    public static final int k_EBanContentCheckResult_NotScanned_VALUE = 0;
-    /**
-     * <code>k_EBanContentCheckResult_Reset = 1;</code>
-     */
-    public static final int k_EBanContentCheckResult_Reset_VALUE = 1;
-    /**
-     * <code>k_EBanContentCheckResult_NeedsChecking = 2;</code>
-     */
-    public static final int k_EBanContentCheckResult_NeedsChecking_VALUE = 2;
-    /**
-     * <code>k_EBanContentCheckResult_VeryUnlikely = 5;</code>
-     */
-    public static final int k_EBanContentCheckResult_VeryUnlikely_VALUE = 5;
-    /**
-     * <code>k_EBanContentCheckResult_Unlikely = 30;</code>
-     */
-    public static final int k_EBanContentCheckResult_Unlikely_VALUE = 30;
-    /**
-     * <code>k_EBanContentCheckResult_Possible = 50;</code>
-     */
-    public static final int k_EBanContentCheckResult_Possible_VALUE = 50;
-    /**
-     * <code>k_EBanContentCheckResult_Likely = 75;</code>
-     */
-    public static final int k_EBanContentCheckResult_Likely_VALUE = 75;
-    /**
-     * <code>k_EBanContentCheckResult_VeryLikely = 100;</code>
-     */
-    public static final int k_EBanContentCheckResult_VeryLikely_VALUE = 100;
-
-
-    public final int getNumber() {
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static EBanContentCheckResult valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static EBanContentCheckResult forNumber(int value) {
-      switch (value) {
-        case 0: return k_EBanContentCheckResult_NotScanned;
-        case 1: return k_EBanContentCheckResult_Reset;
-        case 2: return k_EBanContentCheckResult_NeedsChecking;
-        case 5: return k_EBanContentCheckResult_VeryUnlikely;
-        case 30: return k_EBanContentCheckResult_Unlikely;
-        case 50: return k_EBanContentCheckResult_Possible;
-        case 75: return k_EBanContentCheckResult_Likely;
-        case 100: return k_EBanContentCheckResult_VeryLikely;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<EBanContentCheckResult>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        EBanContentCheckResult> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EBanContentCheckResult>() {
-            public EBanContentCheckResult findValueByNumber(int number) {
-              return EBanContentCheckResult.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return Enums.getDescriptor().getEnumTypes().get(5);
-    }
-
-    private static final EBanContentCheckResult[] VALUES = values();
-
-    public static EBanContentCheckResult valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private EBanContentCheckResult(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:EBanContentCheckResult)
-  }
-
-  /**
    * Protobuf enum {@code EProfileCustomizationType}
    */
   public enum EProfileCustomizationType
@@ -1060,6 +910,10 @@ public final class Enums {
      * <code>k_EProfileCustomizationTypeAchievementsCompletionist = 23;</code>
      */
     k_EProfileCustomizationTypeAchievementsCompletionist(23),
+    /**
+     * <code>k_EProfileCustomizationTypeReplay = 24;</code>
+     */
+    k_EProfileCustomizationTypeReplay(24),
     ;
 
     /**
@@ -1158,6 +1012,10 @@ public final class Enums {
      * <code>k_EProfileCustomizationTypeAchievementsCompletionist = 23;</code>
      */
     public static final int k_EProfileCustomizationTypeAchievementsCompletionist_VALUE = 23;
+    /**
+     * <code>k_EProfileCustomizationTypeReplay = 24;</code>
+     */
+    public static final int k_EProfileCustomizationTypeReplay_VALUE = 24;
 
 
     public final int getNumber() {
@@ -1204,6 +1062,7 @@ public final class Enums {
         case 21: return k_EProfileCustomizationTypeLoyaltyRewardReactions;
         case 22: return k_EProfileCustomizationTypeSingleArtworkShowcase;
         case 23: return k_EProfileCustomizationTypeAchievementsCompletionist;
+        case 24: return k_EProfileCustomizationTypeReplay;
         default: return null;
       }
     }
@@ -1230,7 +1089,7 @@ public final class Enums {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Enums.getDescriptor().getEnumTypes().get(6);
+      return Enums.getDescriptor().getEnumTypes().get(5);
     }
 
     private static final EProfileCustomizationType[] VALUES = values();
@@ -1344,7 +1203,7 @@ public final class Enums {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Enums.getDescriptor().getEnumTypes().get(7);
+      return Enums.getDescriptor().getEnumTypes().get(6);
     }
 
     private static final EPublishedFileStorageSystem[] VALUES = values();
@@ -1449,7 +1308,7 @@ public final class Enums {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Enums.getDescriptor().getEnumTypes().get(8);
+      return Enums.getDescriptor().getEnumTypes().get(7);
     }
 
     private static final ECloudStoragePersistState[] VALUES = values();
@@ -1470,6 +1329,489 @@ public final class Enums {
     }
 
     // @@protoc_insertion_point(enum_scope:ECloudStoragePersistState)
+  }
+
+  /**
+   * Protobuf enum {@code ESDCardFormatStage}
+   */
+  public enum ESDCardFormatStage
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ESDCardFormatStage_Invalid = 0;</code>
+     */
+    k_ESDCardFormatStage_Invalid(0),
+    /**
+     * <code>k_ESDCardFormatStage_Starting = 1;</code>
+     */
+    k_ESDCardFormatStage_Starting(1),
+    /**
+     * <code>k_ESDCardFormatStage_Testing = 2;</code>
+     */
+    k_ESDCardFormatStage_Testing(2),
+    /**
+     * <code>k_ESDCardFormatStage_Rescuing = 3;</code>
+     */
+    k_ESDCardFormatStage_Rescuing(3),
+    /**
+     * <code>k_ESDCardFormatStage_Formatting = 4;</code>
+     */
+    k_ESDCardFormatStage_Formatting(4),
+    /**
+     * <code>k_ESDCardFormatStage_Finalizing = 5;</code>
+     */
+    k_ESDCardFormatStage_Finalizing(5),
+    ;
+
+    /**
+     * <code>k_ESDCardFormatStage_Invalid = 0;</code>
+     */
+    public static final int k_ESDCardFormatStage_Invalid_VALUE = 0;
+    /**
+     * <code>k_ESDCardFormatStage_Starting = 1;</code>
+     */
+    public static final int k_ESDCardFormatStage_Starting_VALUE = 1;
+    /**
+     * <code>k_ESDCardFormatStage_Testing = 2;</code>
+     */
+    public static final int k_ESDCardFormatStage_Testing_VALUE = 2;
+    /**
+     * <code>k_ESDCardFormatStage_Rescuing = 3;</code>
+     */
+    public static final int k_ESDCardFormatStage_Rescuing_VALUE = 3;
+    /**
+     * <code>k_ESDCardFormatStage_Formatting = 4;</code>
+     */
+    public static final int k_ESDCardFormatStage_Formatting_VALUE = 4;
+    /**
+     * <code>k_ESDCardFormatStage_Finalizing = 5;</code>
+     */
+    public static final int k_ESDCardFormatStage_Finalizing_VALUE = 5;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESDCardFormatStage valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESDCardFormatStage forNumber(int value) {
+      switch (value) {
+        case 0: return k_ESDCardFormatStage_Invalid;
+        case 1: return k_ESDCardFormatStage_Starting;
+        case 2: return k_ESDCardFormatStage_Testing;
+        case 3: return k_ESDCardFormatStage_Rescuing;
+        case 4: return k_ESDCardFormatStage_Formatting;
+        case 5: return k_ESDCardFormatStage_Finalizing;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESDCardFormatStage>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESDCardFormatStage> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESDCardFormatStage>() {
+            public ESDCardFormatStage findValueByNumber(int number) {
+              return ESDCardFormatStage.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(8);
+    }
+
+    private static final ESDCardFormatStage[] VALUES = values();
+
+    public static ESDCardFormatStage valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESDCardFormatStage(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESDCardFormatStage)
+  }
+
+  /**
+   * Protobuf enum {@code EStorageFormatStage}
+   */
+  public enum EStorageFormatStage
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EStorageFormatStage_Invalid = 0;</code>
+     */
+    k_EStorageFormatStage_Invalid(0),
+    /**
+     * <code>k_EStorageFormatStage_NotRunning = 1;</code>
+     */
+    k_EStorageFormatStage_NotRunning(1),
+    /**
+     * <code>k_EStorageFormatStage_Starting = 2;</code>
+     */
+    k_EStorageFormatStage_Starting(2),
+    /**
+     * <code>k_EStorageFormatStage_Testing = 3;</code>
+     */
+    k_EStorageFormatStage_Testing(3),
+    /**
+     * <code>k_EStorageFormatStage_Rescuing = 4;</code>
+     */
+    k_EStorageFormatStage_Rescuing(4),
+    /**
+     * <code>k_EStorageFormatStage_Formatting = 5;</code>
+     */
+    k_EStorageFormatStage_Formatting(5),
+    /**
+     * <code>k_EStorageFormatStage_Finalizing = 6;</code>
+     */
+    k_EStorageFormatStage_Finalizing(6),
+    ;
+
+    /**
+     * <code>k_EStorageFormatStage_Invalid = 0;</code>
+     */
+    public static final int k_EStorageFormatStage_Invalid_VALUE = 0;
+    /**
+     * <code>k_EStorageFormatStage_NotRunning = 1;</code>
+     */
+    public static final int k_EStorageFormatStage_NotRunning_VALUE = 1;
+    /**
+     * <code>k_EStorageFormatStage_Starting = 2;</code>
+     */
+    public static final int k_EStorageFormatStage_Starting_VALUE = 2;
+    /**
+     * <code>k_EStorageFormatStage_Testing = 3;</code>
+     */
+    public static final int k_EStorageFormatStage_Testing_VALUE = 3;
+    /**
+     * <code>k_EStorageFormatStage_Rescuing = 4;</code>
+     */
+    public static final int k_EStorageFormatStage_Rescuing_VALUE = 4;
+    /**
+     * <code>k_EStorageFormatStage_Formatting = 5;</code>
+     */
+    public static final int k_EStorageFormatStage_Formatting_VALUE = 5;
+    /**
+     * <code>k_EStorageFormatStage_Finalizing = 6;</code>
+     */
+    public static final int k_EStorageFormatStage_Finalizing_VALUE = 6;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EStorageFormatStage valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EStorageFormatStage forNumber(int value) {
+      switch (value) {
+        case 0: return k_EStorageFormatStage_Invalid;
+        case 1: return k_EStorageFormatStage_NotRunning;
+        case 2: return k_EStorageFormatStage_Starting;
+        case 3: return k_EStorageFormatStage_Testing;
+        case 4: return k_EStorageFormatStage_Rescuing;
+        case 5: return k_EStorageFormatStage_Formatting;
+        case 6: return k_EStorageFormatStage_Finalizing;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EStorageFormatStage>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EStorageFormatStage> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EStorageFormatStage>() {
+            public EStorageFormatStage findValueByNumber(int number) {
+              return EStorageFormatStage.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(9);
+    }
+
+    private static final EStorageFormatStage[] VALUES = values();
+
+    public static EStorageFormatStage valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EStorageFormatStage(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EStorageFormatStage)
+  }
+
+  /**
+   * Protobuf enum {@code ESystemFanControlMode}
+   */
+  public enum ESystemFanControlMode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_SystemFanControlMode_Invalid = 0;</code>
+     */
+    k_SystemFanControlMode_Invalid(0),
+    /**
+     * <code>k_SystemFanControlMode_Disabled = 1;</code>
+     */
+    k_SystemFanControlMode_Disabled(1),
+    /**
+     * <code>k_SystemFanControlMode_Default = 2;</code>
+     */
+    k_SystemFanControlMode_Default(2),
+    ;
+
+    /**
+     * <code>k_SystemFanControlMode_Invalid = 0;</code>
+     */
+    public static final int k_SystemFanControlMode_Invalid_VALUE = 0;
+    /**
+     * <code>k_SystemFanControlMode_Disabled = 1;</code>
+     */
+    public static final int k_SystemFanControlMode_Disabled_VALUE = 1;
+    /**
+     * <code>k_SystemFanControlMode_Default = 2;</code>
+     */
+    public static final int k_SystemFanControlMode_Default_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESystemFanControlMode valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESystemFanControlMode forNumber(int value) {
+      switch (value) {
+        case 0: return k_SystemFanControlMode_Invalid;
+        case 1: return k_SystemFanControlMode_Disabled;
+        case 2: return k_SystemFanControlMode_Default;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESystemFanControlMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESystemFanControlMode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESystemFanControlMode>() {
+            public ESystemFanControlMode findValueByNumber(int number) {
+              return ESystemFanControlMode.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(10);
+    }
+
+    private static final ESystemFanControlMode[] VALUES = values();
+
+    public static ESystemFanControlMode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESystemFanControlMode(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESystemFanControlMode)
+  }
+
+  /**
+   * Protobuf enum {@code EColorGamutLabelSet}
+   */
+  public enum EColorGamutLabelSet
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ColorGamutLabelSet_Default = 0;</code>
+     */
+    k_ColorGamutLabelSet_Default(0),
+    /**
+     * <code>k_ColorGamutLabelSet_sRGB_Native = 1;</code>
+     */
+    k_ColorGamutLabelSet_sRGB_Native(1),
+    /**
+     * <code>k_ColorGamutLabelSet_Native_sRGB_Boosted = 2;</code>
+     */
+    k_ColorGamutLabelSet_Native_sRGB_Boosted(2),
+    ;
+
+    /**
+     * <code>k_ColorGamutLabelSet_Default = 0;</code>
+     */
+    public static final int k_ColorGamutLabelSet_Default_VALUE = 0;
+    /**
+     * <code>k_ColorGamutLabelSet_sRGB_Native = 1;</code>
+     */
+    public static final int k_ColorGamutLabelSet_sRGB_Native_VALUE = 1;
+    /**
+     * <code>k_ColorGamutLabelSet_Native_sRGB_Boosted = 2;</code>
+     */
+    public static final int k_ColorGamutLabelSet_Native_sRGB_Boosted_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EColorGamutLabelSet valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EColorGamutLabelSet forNumber(int value) {
+      switch (value) {
+        case 0: return k_ColorGamutLabelSet_Default;
+        case 1: return k_ColorGamutLabelSet_sRGB_Native;
+        case 2: return k_ColorGamutLabelSet_Native_sRGB_Boosted;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EColorGamutLabelSet>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EColorGamutLabelSet> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EColorGamutLabelSet>() {
+            public EColorGamutLabelSet findValueByNumber(int number) {
+              return EColorGamutLabelSet.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(11);
+    }
+
+    private static final EColorGamutLabelSet[] VALUES = values();
+
+    public static EColorGamutLabelSet valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EColorGamutLabelSet(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EColorGamutLabelSet)
   }
 
   /**
@@ -1635,7 +1977,7 @@ public final class Enums {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Enums.getDescriptor().getEnumTypes().get(9);
+      return Enums.getDescriptor().getEnumTypes().get(12);
     }
 
     private static final EBluetoothDeviceType[] VALUES = values();
@@ -1656,6 +1998,4317 @@ public final class Enums {
     }
 
     // @@protoc_insertion_point(enum_scope:EBluetoothDeviceType)
+  }
+
+  /**
+   * Protobuf enum {@code ESystemAudioDirection}
+   */
+  public enum ESystemAudioDirection
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_SystemAudioDirection_Invalid = 0;</code>
+     */
+    k_SystemAudioDirection_Invalid(0),
+    /**
+     * <code>k_SystemAudioDirection_Input = 1;</code>
+     */
+    k_SystemAudioDirection_Input(1),
+    /**
+     * <code>k_SystemAudioDirection_Output = 2;</code>
+     */
+    k_SystemAudioDirection_Output(2),
+    ;
+
+    /**
+     * <code>k_SystemAudioDirection_Invalid = 0;</code>
+     */
+    public static final int k_SystemAudioDirection_Invalid_VALUE = 0;
+    /**
+     * <code>k_SystemAudioDirection_Input = 1;</code>
+     */
+    public static final int k_SystemAudioDirection_Input_VALUE = 1;
+    /**
+     * <code>k_SystemAudioDirection_Output = 2;</code>
+     */
+    public static final int k_SystemAudioDirection_Output_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESystemAudioDirection valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESystemAudioDirection forNumber(int value) {
+      switch (value) {
+        case 0: return k_SystemAudioDirection_Invalid;
+        case 1: return k_SystemAudioDirection_Input;
+        case 2: return k_SystemAudioDirection_Output;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESystemAudioDirection>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESystemAudioDirection> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESystemAudioDirection>() {
+            public ESystemAudioDirection findValueByNumber(int number) {
+              return ESystemAudioDirection.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(13);
+    }
+
+    private static final ESystemAudioDirection[] VALUES = values();
+
+    public static ESystemAudioDirection valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESystemAudioDirection(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESystemAudioDirection)
+  }
+
+  /**
+   * Protobuf enum {@code ESystemAudioChannel}
+   */
+  public enum ESystemAudioChannel
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_SystemAudioChannel_Invalid = 0;</code>
+     */
+    k_SystemAudioChannel_Invalid(0),
+    /**
+     * <code>k_SystemAudioChannel_Aggregated = 1;</code>
+     */
+    k_SystemAudioChannel_Aggregated(1),
+    /**
+     * <code>k_SystemAudioChannel_FrontLeft = 2;</code>
+     */
+    k_SystemAudioChannel_FrontLeft(2),
+    /**
+     * <code>k_SystemAudioChannel_FrontRight = 3;</code>
+     */
+    k_SystemAudioChannel_FrontRight(3),
+    /**
+     * <code>k_SystemAudioChannel_LFE = 4;</code>
+     */
+    k_SystemAudioChannel_LFE(4),
+    /**
+     * <code>k_SystemAudioChannel_BackLeft = 5;</code>
+     */
+    k_SystemAudioChannel_BackLeft(5),
+    /**
+     * <code>k_SystemAudioChannel_BackRight = 6;</code>
+     */
+    k_SystemAudioChannel_BackRight(6),
+    /**
+     * <code>k_SystemAudioChannel_FrontCenter = 7;</code>
+     */
+    k_SystemAudioChannel_FrontCenter(7),
+    /**
+     * <code>k_SystemAudioChannel_Unknown = 8;</code>
+     */
+    k_SystemAudioChannel_Unknown(8),
+    /**
+     * <code>k_SystemAudioChannel_Mono = 9;</code>
+     */
+    k_SystemAudioChannel_Mono(9),
+    ;
+
+    /**
+     * <code>k_SystemAudioChannel_Invalid = 0;</code>
+     */
+    public static final int k_SystemAudioChannel_Invalid_VALUE = 0;
+    /**
+     * <code>k_SystemAudioChannel_Aggregated = 1;</code>
+     */
+    public static final int k_SystemAudioChannel_Aggregated_VALUE = 1;
+    /**
+     * <code>k_SystemAudioChannel_FrontLeft = 2;</code>
+     */
+    public static final int k_SystemAudioChannel_FrontLeft_VALUE = 2;
+    /**
+     * <code>k_SystemAudioChannel_FrontRight = 3;</code>
+     */
+    public static final int k_SystemAudioChannel_FrontRight_VALUE = 3;
+    /**
+     * <code>k_SystemAudioChannel_LFE = 4;</code>
+     */
+    public static final int k_SystemAudioChannel_LFE_VALUE = 4;
+    /**
+     * <code>k_SystemAudioChannel_BackLeft = 5;</code>
+     */
+    public static final int k_SystemAudioChannel_BackLeft_VALUE = 5;
+    /**
+     * <code>k_SystemAudioChannel_BackRight = 6;</code>
+     */
+    public static final int k_SystemAudioChannel_BackRight_VALUE = 6;
+    /**
+     * <code>k_SystemAudioChannel_FrontCenter = 7;</code>
+     */
+    public static final int k_SystemAudioChannel_FrontCenter_VALUE = 7;
+    /**
+     * <code>k_SystemAudioChannel_Unknown = 8;</code>
+     */
+    public static final int k_SystemAudioChannel_Unknown_VALUE = 8;
+    /**
+     * <code>k_SystemAudioChannel_Mono = 9;</code>
+     */
+    public static final int k_SystemAudioChannel_Mono_VALUE = 9;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESystemAudioChannel valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESystemAudioChannel forNumber(int value) {
+      switch (value) {
+        case 0: return k_SystemAudioChannel_Invalid;
+        case 1: return k_SystemAudioChannel_Aggregated;
+        case 2: return k_SystemAudioChannel_FrontLeft;
+        case 3: return k_SystemAudioChannel_FrontRight;
+        case 4: return k_SystemAudioChannel_LFE;
+        case 5: return k_SystemAudioChannel_BackLeft;
+        case 6: return k_SystemAudioChannel_BackRight;
+        case 7: return k_SystemAudioChannel_FrontCenter;
+        case 8: return k_SystemAudioChannel_Unknown;
+        case 9: return k_SystemAudioChannel_Mono;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESystemAudioChannel>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESystemAudioChannel> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESystemAudioChannel>() {
+            public ESystemAudioChannel findValueByNumber(int number) {
+              return ESystemAudioChannel.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(14);
+    }
+
+    private static final ESystemAudioChannel[] VALUES = values();
+
+    public static ESystemAudioChannel valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESystemAudioChannel(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESystemAudioChannel)
+  }
+
+  /**
+   * Protobuf enum {@code ESystemAudioPortType}
+   */
+  public enum ESystemAudioPortType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_SystemAudioPortType_Invalid = 0;</code>
+     */
+    k_SystemAudioPortType_Invalid(0),
+    /**
+     * <code>k_SystemAudioPortType_Unknown = 1;</code>
+     */
+    k_SystemAudioPortType_Unknown(1),
+    /**
+     * <code>k_SystemAudioPortType_Audio32f = 2;</code>
+     */
+    k_SystemAudioPortType_Audio32f(2),
+    /**
+     * <code>k_SystemAudioPortType_Midi8b = 3;</code>
+     */
+    k_SystemAudioPortType_Midi8b(3),
+    /**
+     * <code>k_SystemAudioPortType_Video32RGBA = 4;</code>
+     */
+    k_SystemAudioPortType_Video32RGBA(4),
+    ;
+
+    /**
+     * <code>k_SystemAudioPortType_Invalid = 0;</code>
+     */
+    public static final int k_SystemAudioPortType_Invalid_VALUE = 0;
+    /**
+     * <code>k_SystemAudioPortType_Unknown = 1;</code>
+     */
+    public static final int k_SystemAudioPortType_Unknown_VALUE = 1;
+    /**
+     * <code>k_SystemAudioPortType_Audio32f = 2;</code>
+     */
+    public static final int k_SystemAudioPortType_Audio32f_VALUE = 2;
+    /**
+     * <code>k_SystemAudioPortType_Midi8b = 3;</code>
+     */
+    public static final int k_SystemAudioPortType_Midi8b_VALUE = 3;
+    /**
+     * <code>k_SystemAudioPortType_Video32RGBA = 4;</code>
+     */
+    public static final int k_SystemAudioPortType_Video32RGBA_VALUE = 4;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESystemAudioPortType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESystemAudioPortType forNumber(int value) {
+      switch (value) {
+        case 0: return k_SystemAudioPortType_Invalid;
+        case 1: return k_SystemAudioPortType_Unknown;
+        case 2: return k_SystemAudioPortType_Audio32f;
+        case 3: return k_SystemAudioPortType_Midi8b;
+        case 4: return k_SystemAudioPortType_Video32RGBA;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESystemAudioPortType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESystemAudioPortType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESystemAudioPortType>() {
+            public ESystemAudioPortType findValueByNumber(int number) {
+              return ESystemAudioPortType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(15);
+    }
+
+    private static final ESystemAudioPortType[] VALUES = values();
+
+    public static ESystemAudioPortType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESystemAudioPortType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESystemAudioPortType)
+  }
+
+  /**
+   * Protobuf enum {@code ESystemAudioPortDirection}
+   */
+  public enum ESystemAudioPortDirection
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_SystemAudioPortDirection_Invalid = 0;</code>
+     */
+    k_SystemAudioPortDirection_Invalid(0),
+    /**
+     * <code>k_SystemAudioPortDirection_Input = 1;</code>
+     */
+    k_SystemAudioPortDirection_Input(1),
+    /**
+     * <code>k_SystemAudioPortDirection_Output = 2;</code>
+     */
+    k_SystemAudioPortDirection_Output(2),
+    ;
+
+    /**
+     * <code>k_SystemAudioPortDirection_Invalid = 0;</code>
+     */
+    public static final int k_SystemAudioPortDirection_Invalid_VALUE = 0;
+    /**
+     * <code>k_SystemAudioPortDirection_Input = 1;</code>
+     */
+    public static final int k_SystemAudioPortDirection_Input_VALUE = 1;
+    /**
+     * <code>k_SystemAudioPortDirection_Output = 2;</code>
+     */
+    public static final int k_SystemAudioPortDirection_Output_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESystemAudioPortDirection valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESystemAudioPortDirection forNumber(int value) {
+      switch (value) {
+        case 0: return k_SystemAudioPortDirection_Invalid;
+        case 1: return k_SystemAudioPortDirection_Input;
+        case 2: return k_SystemAudioPortDirection_Output;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESystemAudioPortDirection>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESystemAudioPortDirection> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESystemAudioPortDirection>() {
+            public ESystemAudioPortDirection findValueByNumber(int number) {
+              return ESystemAudioPortDirection.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(16);
+    }
+
+    private static final ESystemAudioPortDirection[] VALUES = values();
+
+    public static ESystemAudioPortDirection valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESystemAudioPortDirection(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESystemAudioPortDirection)
+  }
+
+  /**
+   * Protobuf enum {@code ESystemServiceState}
+   */
+  public enum ESystemServiceState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ESystemServiceState_Unavailable = 0;</code>
+     */
+    k_ESystemServiceState_Unavailable(0),
+    /**
+     * <code>k_ESystemServiceState_Disabled = 1;</code>
+     */
+    k_ESystemServiceState_Disabled(1),
+    /**
+     * <code>k_ESystemServiceState_Enabled = 2;</code>
+     */
+    k_ESystemServiceState_Enabled(2),
+    ;
+
+    /**
+     * <code>k_ESystemServiceState_Unavailable = 0;</code>
+     */
+    public static final int k_ESystemServiceState_Unavailable_VALUE = 0;
+    /**
+     * <code>k_ESystemServiceState_Disabled = 1;</code>
+     */
+    public static final int k_ESystemServiceState_Disabled_VALUE = 1;
+    /**
+     * <code>k_ESystemServiceState_Enabled = 2;</code>
+     */
+    public static final int k_ESystemServiceState_Enabled_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESystemServiceState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESystemServiceState forNumber(int value) {
+      switch (value) {
+        case 0: return k_ESystemServiceState_Unavailable;
+        case 1: return k_ESystemServiceState_Disabled;
+        case 2: return k_ESystemServiceState_Enabled;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESystemServiceState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESystemServiceState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESystemServiceState>() {
+            public ESystemServiceState findValueByNumber(int number) {
+              return ESystemServiceState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(17);
+    }
+
+    private static final ESystemServiceState[] VALUES = values();
+
+    public static ESystemServiceState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESystemServiceState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESystemServiceState)
+  }
+
+  /**
+   * Protobuf enum {@code EGraphicsPerfOverlayLevel}
+   */
+  public enum EGraphicsPerfOverlayLevel
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EGraphicsPerfOverlayLevel_Hidden = 0;</code>
+     */
+    k_EGraphicsPerfOverlayLevel_Hidden(0),
+    /**
+     * <code>k_EGraphicsPerfOverlayLevel_Basic = 1;</code>
+     */
+    k_EGraphicsPerfOverlayLevel_Basic(1),
+    /**
+     * <code>k_EGraphicsPerfOverlayLevel_Medium = 2;</code>
+     */
+    k_EGraphicsPerfOverlayLevel_Medium(2),
+    /**
+     * <code>k_EGraphicsPerfOverlayLevel_Full = 3;</code>
+     */
+    k_EGraphicsPerfOverlayLevel_Full(3),
+    /**
+     * <code>k_EGraphicsPerfOverlayLevel_Minimal = 4;</code>
+     */
+    k_EGraphicsPerfOverlayLevel_Minimal(4),
+    ;
+
+    /**
+     * <code>k_EGraphicsPerfOverlayLevel_Hidden = 0;</code>
+     */
+    public static final int k_EGraphicsPerfOverlayLevel_Hidden_VALUE = 0;
+    /**
+     * <code>k_EGraphicsPerfOverlayLevel_Basic = 1;</code>
+     */
+    public static final int k_EGraphicsPerfOverlayLevel_Basic_VALUE = 1;
+    /**
+     * <code>k_EGraphicsPerfOverlayLevel_Medium = 2;</code>
+     */
+    public static final int k_EGraphicsPerfOverlayLevel_Medium_VALUE = 2;
+    /**
+     * <code>k_EGraphicsPerfOverlayLevel_Full = 3;</code>
+     */
+    public static final int k_EGraphicsPerfOverlayLevel_Full_VALUE = 3;
+    /**
+     * <code>k_EGraphicsPerfOverlayLevel_Minimal = 4;</code>
+     */
+    public static final int k_EGraphicsPerfOverlayLevel_Minimal_VALUE = 4;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EGraphicsPerfOverlayLevel valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EGraphicsPerfOverlayLevel forNumber(int value) {
+      switch (value) {
+        case 0: return k_EGraphicsPerfOverlayLevel_Hidden;
+        case 1: return k_EGraphicsPerfOverlayLevel_Basic;
+        case 2: return k_EGraphicsPerfOverlayLevel_Medium;
+        case 3: return k_EGraphicsPerfOverlayLevel_Full;
+        case 4: return k_EGraphicsPerfOverlayLevel_Minimal;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EGraphicsPerfOverlayLevel>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EGraphicsPerfOverlayLevel> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EGraphicsPerfOverlayLevel>() {
+            public EGraphicsPerfOverlayLevel findValueByNumber(int number) {
+              return EGraphicsPerfOverlayLevel.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(18);
+    }
+
+    private static final EGraphicsPerfOverlayLevel[] VALUES = values();
+
+    public static EGraphicsPerfOverlayLevel valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EGraphicsPerfOverlayLevel(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EGraphicsPerfOverlayLevel)
+  }
+
+  /**
+   * Protobuf enum {@code EGPUPerformanceLevel}
+   */
+  public enum EGPUPerformanceLevel
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EGPUPerformanceLevel_Invalid = 0;</code>
+     */
+    k_EGPUPerformanceLevel_Invalid(0),
+    /**
+     * <code>k_EGPUPerformanceLevel_Auto = 1;</code>
+     */
+    k_EGPUPerformanceLevel_Auto(1),
+    /**
+     * <code>k_EGPUPerformanceLevel_Manual = 2;</code>
+     */
+    k_EGPUPerformanceLevel_Manual(2),
+    /**
+     * <code>k_EGPUPerformanceLevel_Low = 3;</code>
+     */
+    k_EGPUPerformanceLevel_Low(3),
+    /**
+     * <code>k_EGPUPerformanceLevel_High = 4;</code>
+     */
+    k_EGPUPerformanceLevel_High(4),
+    /**
+     * <code>k_EGPUPerformanceLevel_Profiling = 5;</code>
+     */
+    k_EGPUPerformanceLevel_Profiling(5),
+    ;
+
+    /**
+     * <code>k_EGPUPerformanceLevel_Invalid = 0;</code>
+     */
+    public static final int k_EGPUPerformanceLevel_Invalid_VALUE = 0;
+    /**
+     * <code>k_EGPUPerformanceLevel_Auto = 1;</code>
+     */
+    public static final int k_EGPUPerformanceLevel_Auto_VALUE = 1;
+    /**
+     * <code>k_EGPUPerformanceLevel_Manual = 2;</code>
+     */
+    public static final int k_EGPUPerformanceLevel_Manual_VALUE = 2;
+    /**
+     * <code>k_EGPUPerformanceLevel_Low = 3;</code>
+     */
+    public static final int k_EGPUPerformanceLevel_Low_VALUE = 3;
+    /**
+     * <code>k_EGPUPerformanceLevel_High = 4;</code>
+     */
+    public static final int k_EGPUPerformanceLevel_High_VALUE = 4;
+    /**
+     * <code>k_EGPUPerformanceLevel_Profiling = 5;</code>
+     */
+    public static final int k_EGPUPerformanceLevel_Profiling_VALUE = 5;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EGPUPerformanceLevel valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EGPUPerformanceLevel forNumber(int value) {
+      switch (value) {
+        case 0: return k_EGPUPerformanceLevel_Invalid;
+        case 1: return k_EGPUPerformanceLevel_Auto;
+        case 2: return k_EGPUPerformanceLevel_Manual;
+        case 3: return k_EGPUPerformanceLevel_Low;
+        case 4: return k_EGPUPerformanceLevel_High;
+        case 5: return k_EGPUPerformanceLevel_Profiling;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EGPUPerformanceLevel>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EGPUPerformanceLevel> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EGPUPerformanceLevel>() {
+            public EGPUPerformanceLevel findValueByNumber(int number) {
+              return EGPUPerformanceLevel.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(19);
+    }
+
+    private static final EGPUPerformanceLevel[] VALUES = values();
+
+    public static EGPUPerformanceLevel valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EGPUPerformanceLevel(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EGPUPerformanceLevel)
+  }
+
+  /**
+   * Protobuf enum {@code EScalingFilter}
+   */
+  public enum EScalingFilter
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EScalingFilter_Invalid = 0;</code>
+     */
+    k_EScalingFilter_Invalid(0),
+    /**
+     * <code>k_EScalingFilter_FSR = 1;</code>
+     */
+    k_EScalingFilter_FSR(1),
+    /**
+     * <code>k_EScalingFilter_Nearest = 2;</code>
+     */
+    k_EScalingFilter_Nearest(2),
+    /**
+     * <code>k_EScalingFilter_Integer = 3;</code>
+     */
+    k_EScalingFilter_Integer(3),
+    /**
+     * <code>k_EScalingFilter_Linear = 4;</code>
+     */
+    k_EScalingFilter_Linear(4),
+    /**
+     * <code>k_EScalingFilter_NIS = 5;</code>
+     */
+    k_EScalingFilter_NIS(5),
+    ;
+
+    /**
+     * <code>k_EScalingFilter_Invalid = 0;</code>
+     */
+    public static final int k_EScalingFilter_Invalid_VALUE = 0;
+    /**
+     * <code>k_EScalingFilter_FSR = 1;</code>
+     */
+    public static final int k_EScalingFilter_FSR_VALUE = 1;
+    /**
+     * <code>k_EScalingFilter_Nearest = 2;</code>
+     */
+    public static final int k_EScalingFilter_Nearest_VALUE = 2;
+    /**
+     * <code>k_EScalingFilter_Integer = 3;</code>
+     */
+    public static final int k_EScalingFilter_Integer_VALUE = 3;
+    /**
+     * <code>k_EScalingFilter_Linear = 4;</code>
+     */
+    public static final int k_EScalingFilter_Linear_VALUE = 4;
+    /**
+     * <code>k_EScalingFilter_NIS = 5;</code>
+     */
+    public static final int k_EScalingFilter_NIS_VALUE = 5;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EScalingFilter valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EScalingFilter forNumber(int value) {
+      switch (value) {
+        case 0: return k_EScalingFilter_Invalid;
+        case 1: return k_EScalingFilter_FSR;
+        case 2: return k_EScalingFilter_Nearest;
+        case 3: return k_EScalingFilter_Integer;
+        case 4: return k_EScalingFilter_Linear;
+        case 5: return k_EScalingFilter_NIS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EScalingFilter>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EScalingFilter> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EScalingFilter>() {
+            public EScalingFilter findValueByNumber(int number) {
+              return EScalingFilter.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(20);
+    }
+
+    private static final EScalingFilter[] VALUES = values();
+
+    public static EScalingFilter valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EScalingFilter(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EScalingFilter)
+  }
+
+  /**
+   * Protobuf enum {@code ESplitScalingFilter}
+   */
+  public enum ESplitScalingFilter
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ESplitScalingFilter_Invalid = 0;</code>
+     */
+    k_ESplitScalingFilter_Invalid(0),
+    /**
+     * <code>k_ESplitScalingFilter_Linear = 1;</code>
+     */
+    k_ESplitScalingFilter_Linear(1),
+    /**
+     * <code>k_ESplitScalingFilter_Nearest = 2;</code>
+     */
+    k_ESplitScalingFilter_Nearest(2),
+    /**
+     * <code>k_ESplitScalingFilter_FSR = 3;</code>
+     */
+    k_ESplitScalingFilter_FSR(3),
+    /**
+     * <code>k_ESplitScalingFilter_NIS = 4;</code>
+     */
+    k_ESplitScalingFilter_NIS(4),
+    ;
+
+    /**
+     * <code>k_ESplitScalingFilter_Invalid = 0;</code>
+     */
+    public static final int k_ESplitScalingFilter_Invalid_VALUE = 0;
+    /**
+     * <code>k_ESplitScalingFilter_Linear = 1;</code>
+     */
+    public static final int k_ESplitScalingFilter_Linear_VALUE = 1;
+    /**
+     * <code>k_ESplitScalingFilter_Nearest = 2;</code>
+     */
+    public static final int k_ESplitScalingFilter_Nearest_VALUE = 2;
+    /**
+     * <code>k_ESplitScalingFilter_FSR = 3;</code>
+     */
+    public static final int k_ESplitScalingFilter_FSR_VALUE = 3;
+    /**
+     * <code>k_ESplitScalingFilter_NIS = 4;</code>
+     */
+    public static final int k_ESplitScalingFilter_NIS_VALUE = 4;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESplitScalingFilter valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESplitScalingFilter forNumber(int value) {
+      switch (value) {
+        case 0: return k_ESplitScalingFilter_Invalid;
+        case 1: return k_ESplitScalingFilter_Linear;
+        case 2: return k_ESplitScalingFilter_Nearest;
+        case 3: return k_ESplitScalingFilter_FSR;
+        case 4: return k_ESplitScalingFilter_NIS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESplitScalingFilter>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESplitScalingFilter> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESplitScalingFilter>() {
+            public ESplitScalingFilter findValueByNumber(int number) {
+              return ESplitScalingFilter.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(21);
+    }
+
+    private static final ESplitScalingFilter[] VALUES = values();
+
+    public static ESplitScalingFilter valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESplitScalingFilter(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESplitScalingFilter)
+  }
+
+  /**
+   * Protobuf enum {@code ESplitScalingScaler}
+   */
+  public enum ESplitScalingScaler
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ESplitScalingScaler_Invalid = 0;</code>
+     */
+    k_ESplitScalingScaler_Invalid(0),
+    /**
+     * <code>k_ESplitScalingScaler_Auto = 1;</code>
+     */
+    k_ESplitScalingScaler_Auto(1),
+    /**
+     * <code>k_ESplitScalingScaler_Integer = 2;</code>
+     */
+    k_ESplitScalingScaler_Integer(2),
+    /**
+     * <code>k_ESplitScalingScaler_Fit = 3;</code>
+     */
+    k_ESplitScalingScaler_Fit(3),
+    /**
+     * <code>k_ESplitScalingScaler_Fill = 4;</code>
+     */
+    k_ESplitScalingScaler_Fill(4),
+    /**
+     * <code>k_ESplitScalingScaler_Stretch = 5;</code>
+     */
+    k_ESplitScalingScaler_Stretch(5),
+    ;
+
+    /**
+     * <code>k_ESplitScalingScaler_Invalid = 0;</code>
+     */
+    public static final int k_ESplitScalingScaler_Invalid_VALUE = 0;
+    /**
+     * <code>k_ESplitScalingScaler_Auto = 1;</code>
+     */
+    public static final int k_ESplitScalingScaler_Auto_VALUE = 1;
+    /**
+     * <code>k_ESplitScalingScaler_Integer = 2;</code>
+     */
+    public static final int k_ESplitScalingScaler_Integer_VALUE = 2;
+    /**
+     * <code>k_ESplitScalingScaler_Fit = 3;</code>
+     */
+    public static final int k_ESplitScalingScaler_Fit_VALUE = 3;
+    /**
+     * <code>k_ESplitScalingScaler_Fill = 4;</code>
+     */
+    public static final int k_ESplitScalingScaler_Fill_VALUE = 4;
+    /**
+     * <code>k_ESplitScalingScaler_Stretch = 5;</code>
+     */
+    public static final int k_ESplitScalingScaler_Stretch_VALUE = 5;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESplitScalingScaler valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESplitScalingScaler forNumber(int value) {
+      switch (value) {
+        case 0: return k_ESplitScalingScaler_Invalid;
+        case 1: return k_ESplitScalingScaler_Auto;
+        case 2: return k_ESplitScalingScaler_Integer;
+        case 3: return k_ESplitScalingScaler_Fit;
+        case 4: return k_ESplitScalingScaler_Fill;
+        case 5: return k_ESplitScalingScaler_Stretch;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESplitScalingScaler>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESplitScalingScaler> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESplitScalingScaler>() {
+            public ESplitScalingScaler findValueByNumber(int number) {
+              return ESplitScalingScaler.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(22);
+    }
+
+    private static final ESplitScalingScaler[] VALUES = values();
+
+    public static ESplitScalingScaler valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESplitScalingScaler(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESplitScalingScaler)
+  }
+
+  /**
+   * Protobuf enum {@code EHDRToneMapOperator}
+   */
+  public enum EHDRToneMapOperator
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EHDRToneMapOperator_Invalid = 0;</code>
+     */
+    k_EHDRToneMapOperator_Invalid(0),
+    /**
+     * <code>k_EHDRToneMapOperator_Uncharted = 1;</code>
+     */
+    k_EHDRToneMapOperator_Uncharted(1),
+    /**
+     * <code>k_EHDRToneMapOperator_Reinhard = 2;</code>
+     */
+    k_EHDRToneMapOperator_Reinhard(2),
+    ;
+
+    /**
+     * <code>k_EHDRToneMapOperator_Invalid = 0;</code>
+     */
+    public static final int k_EHDRToneMapOperator_Invalid_VALUE = 0;
+    /**
+     * <code>k_EHDRToneMapOperator_Uncharted = 1;</code>
+     */
+    public static final int k_EHDRToneMapOperator_Uncharted_VALUE = 1;
+    /**
+     * <code>k_EHDRToneMapOperator_Reinhard = 2;</code>
+     */
+    public static final int k_EHDRToneMapOperator_Reinhard_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EHDRToneMapOperator valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EHDRToneMapOperator forNumber(int value) {
+      switch (value) {
+        case 0: return k_EHDRToneMapOperator_Invalid;
+        case 1: return k_EHDRToneMapOperator_Uncharted;
+        case 2: return k_EHDRToneMapOperator_Reinhard;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EHDRToneMapOperator>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EHDRToneMapOperator> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EHDRToneMapOperator>() {
+            public EHDRToneMapOperator findValueByNumber(int number) {
+              return EHDRToneMapOperator.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(23);
+    }
+
+    private static final EHDRToneMapOperator[] VALUES = values();
+
+    public static EHDRToneMapOperator valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EHDRToneMapOperator(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EHDRToneMapOperator)
+  }
+
+  /**
+   * Protobuf enum {@code ECPUGovernor}
+   */
+  public enum ECPUGovernor
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ECPUGovernor_Invalid = 0;</code>
+     */
+    k_ECPUGovernor_Invalid(0),
+    /**
+     * <code>k_ECPUGovernor_Perf = 1;</code>
+     */
+    k_ECPUGovernor_Perf(1),
+    /**
+     * <code>k_ECPUGovernor_Powersave = 2;</code>
+     */
+    k_ECPUGovernor_Powersave(2),
+    /**
+     * <code>k_ECPUGovernor_Manual = 3;</code>
+     */
+    k_ECPUGovernor_Manual(3),
+    ;
+
+    /**
+     * <code>k_ECPUGovernor_Invalid = 0;</code>
+     */
+    public static final int k_ECPUGovernor_Invalid_VALUE = 0;
+    /**
+     * <code>k_ECPUGovernor_Perf = 1;</code>
+     */
+    public static final int k_ECPUGovernor_Perf_VALUE = 1;
+    /**
+     * <code>k_ECPUGovernor_Powersave = 2;</code>
+     */
+    public static final int k_ECPUGovernor_Powersave_VALUE = 2;
+    /**
+     * <code>k_ECPUGovernor_Manual = 3;</code>
+     */
+    public static final int k_ECPUGovernor_Manual_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ECPUGovernor valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ECPUGovernor forNumber(int value) {
+      switch (value) {
+        case 0: return k_ECPUGovernor_Invalid;
+        case 1: return k_ECPUGovernor_Perf;
+        case 2: return k_ECPUGovernor_Powersave;
+        case 3: return k_ECPUGovernor_Manual;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ECPUGovernor>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ECPUGovernor> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ECPUGovernor>() {
+            public ECPUGovernor findValueByNumber(int number) {
+              return ECPUGovernor.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(24);
+    }
+
+    private static final ECPUGovernor[] VALUES = values();
+
+    public static ECPUGovernor valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ECPUGovernor(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ECPUGovernor)
+  }
+
+  /**
+   * Protobuf enum {@code EUpdaterType}
+   */
+  public enum EUpdaterType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EUpdaterType_Invalid = 0;</code>
+     */
+    k_EUpdaterType_Invalid(0),
+    /**
+     * <code>k_EUpdaterType_Client = 1;</code>
+     */
+    k_EUpdaterType_Client(1),
+    /**
+     * <code>k_EUpdaterType_OS = 2;</code>
+     */
+    k_EUpdaterType_OS(2),
+    /**
+     * <code>k_EUpdaterType_BIOS = 3;</code>
+     */
+    k_EUpdaterType_BIOS(3),
+    /**
+     * <code>k_EUpdaterType_Aggregated = 4;</code>
+     */
+    k_EUpdaterType_Aggregated(4),
+    /**
+     * <code>k_EUpdaterType_Test1 = 5;</code>
+     */
+    k_EUpdaterType_Test1(5),
+    /**
+     * <code>k_EUpdaterType_Test2 = 6;</code>
+     */
+    k_EUpdaterType_Test2(6),
+    /**
+     * <code>k_EUpdaterType_Dummy = 7;</code>
+     */
+    k_EUpdaterType_Dummy(7),
+    ;
+
+    /**
+     * <code>k_EUpdaterType_Invalid = 0;</code>
+     */
+    public static final int k_EUpdaterType_Invalid_VALUE = 0;
+    /**
+     * <code>k_EUpdaterType_Client = 1;</code>
+     */
+    public static final int k_EUpdaterType_Client_VALUE = 1;
+    /**
+     * <code>k_EUpdaterType_OS = 2;</code>
+     */
+    public static final int k_EUpdaterType_OS_VALUE = 2;
+    /**
+     * <code>k_EUpdaterType_BIOS = 3;</code>
+     */
+    public static final int k_EUpdaterType_BIOS_VALUE = 3;
+    /**
+     * <code>k_EUpdaterType_Aggregated = 4;</code>
+     */
+    public static final int k_EUpdaterType_Aggregated_VALUE = 4;
+    /**
+     * <code>k_EUpdaterType_Test1 = 5;</code>
+     */
+    public static final int k_EUpdaterType_Test1_VALUE = 5;
+    /**
+     * <code>k_EUpdaterType_Test2 = 6;</code>
+     */
+    public static final int k_EUpdaterType_Test2_VALUE = 6;
+    /**
+     * <code>k_EUpdaterType_Dummy = 7;</code>
+     */
+    public static final int k_EUpdaterType_Dummy_VALUE = 7;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EUpdaterType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EUpdaterType forNumber(int value) {
+      switch (value) {
+        case 0: return k_EUpdaterType_Invalid;
+        case 1: return k_EUpdaterType_Client;
+        case 2: return k_EUpdaterType_OS;
+        case 3: return k_EUpdaterType_BIOS;
+        case 4: return k_EUpdaterType_Aggregated;
+        case 5: return k_EUpdaterType_Test1;
+        case 6: return k_EUpdaterType_Test2;
+        case 7: return k_EUpdaterType_Dummy;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EUpdaterType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EUpdaterType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EUpdaterType>() {
+            public EUpdaterType findValueByNumber(int number) {
+              return EUpdaterType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(25);
+    }
+
+    private static final EUpdaterType[] VALUES = values();
+
+    public static EUpdaterType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EUpdaterType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EUpdaterType)
+  }
+
+  /**
+   * Protobuf enum {@code EUpdaterState}
+   */
+  public enum EUpdaterState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EUpdaterState_Invalid = 0;</code>
+     */
+    k_EUpdaterState_Invalid(0),
+    /**
+     * <code>k_EUpdaterState_UpToDate = 2;</code>
+     */
+    k_EUpdaterState_UpToDate(2),
+    /**
+     * <code>k_EUpdaterState_Checking = 3;</code>
+     */
+    k_EUpdaterState_Checking(3),
+    /**
+     * <code>k_EUpdaterState_Available = 4;</code>
+     */
+    k_EUpdaterState_Available(4),
+    /**
+     * <code>k_EUpdaterState_Applying = 5;</code>
+     */
+    k_EUpdaterState_Applying(5),
+    /**
+     * <code>k_EUpdaterState_ClientRestartPending = 6;</code>
+     */
+    k_EUpdaterState_ClientRestartPending(6),
+    /**
+     * <code>k_EUpdaterState_SystemRestartPending = 7;</code>
+     */
+    k_EUpdaterState_SystemRestartPending(7),
+    ;
+
+    /**
+     * <code>k_EUpdaterState_Invalid = 0;</code>
+     */
+    public static final int k_EUpdaterState_Invalid_VALUE = 0;
+    /**
+     * <code>k_EUpdaterState_UpToDate = 2;</code>
+     */
+    public static final int k_EUpdaterState_UpToDate_VALUE = 2;
+    /**
+     * <code>k_EUpdaterState_Checking = 3;</code>
+     */
+    public static final int k_EUpdaterState_Checking_VALUE = 3;
+    /**
+     * <code>k_EUpdaterState_Available = 4;</code>
+     */
+    public static final int k_EUpdaterState_Available_VALUE = 4;
+    /**
+     * <code>k_EUpdaterState_Applying = 5;</code>
+     */
+    public static final int k_EUpdaterState_Applying_VALUE = 5;
+    /**
+     * <code>k_EUpdaterState_ClientRestartPending = 6;</code>
+     */
+    public static final int k_EUpdaterState_ClientRestartPending_VALUE = 6;
+    /**
+     * <code>k_EUpdaterState_SystemRestartPending = 7;</code>
+     */
+    public static final int k_EUpdaterState_SystemRestartPending_VALUE = 7;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EUpdaterState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EUpdaterState forNumber(int value) {
+      switch (value) {
+        case 0: return k_EUpdaterState_Invalid;
+        case 2: return k_EUpdaterState_UpToDate;
+        case 3: return k_EUpdaterState_Checking;
+        case 4: return k_EUpdaterState_Available;
+        case 5: return k_EUpdaterState_Applying;
+        case 6: return k_EUpdaterState_ClientRestartPending;
+        case 7: return k_EUpdaterState_SystemRestartPending;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EUpdaterState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EUpdaterState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EUpdaterState>() {
+            public EUpdaterState findValueByNumber(int number) {
+              return EUpdaterState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(26);
+    }
+
+    private static final EUpdaterState[] VALUES = values();
+
+    public static EUpdaterState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EUpdaterState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EUpdaterState)
+  }
+
+  /**
+   * Protobuf enum {@code EStorageBlockContentType}
+   */
+  public enum EStorageBlockContentType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EStorageBlockContentType_Invalid = 0;</code>
+     */
+    k_EStorageBlockContentType_Invalid(0),
+    /**
+     * <code>k_EStorageBlockContentType_Unknown = 1;</code>
+     */
+    k_EStorageBlockContentType_Unknown(1),
+    /**
+     * <code>k_EStorageBlockContentType_FileSystem = 2;</code>
+     */
+    k_EStorageBlockContentType_FileSystem(2),
+    /**
+     * <code>k_EStorageBlockContentType_Crypto = 3;</code>
+     */
+    k_EStorageBlockContentType_Crypto(3),
+    /**
+     * <code>k_EStorageBlockContentType_Raid = 4;</code>
+     */
+    k_EStorageBlockContentType_Raid(4),
+    ;
+
+    /**
+     * <code>k_EStorageBlockContentType_Invalid = 0;</code>
+     */
+    public static final int k_EStorageBlockContentType_Invalid_VALUE = 0;
+    /**
+     * <code>k_EStorageBlockContentType_Unknown = 1;</code>
+     */
+    public static final int k_EStorageBlockContentType_Unknown_VALUE = 1;
+    /**
+     * <code>k_EStorageBlockContentType_FileSystem = 2;</code>
+     */
+    public static final int k_EStorageBlockContentType_FileSystem_VALUE = 2;
+    /**
+     * <code>k_EStorageBlockContentType_Crypto = 3;</code>
+     */
+    public static final int k_EStorageBlockContentType_Crypto_VALUE = 3;
+    /**
+     * <code>k_EStorageBlockContentType_Raid = 4;</code>
+     */
+    public static final int k_EStorageBlockContentType_Raid_VALUE = 4;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EStorageBlockContentType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EStorageBlockContentType forNumber(int value) {
+      switch (value) {
+        case 0: return k_EStorageBlockContentType_Invalid;
+        case 1: return k_EStorageBlockContentType_Unknown;
+        case 2: return k_EStorageBlockContentType_FileSystem;
+        case 3: return k_EStorageBlockContentType_Crypto;
+        case 4: return k_EStorageBlockContentType_Raid;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EStorageBlockContentType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EStorageBlockContentType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EStorageBlockContentType>() {
+            public EStorageBlockContentType findValueByNumber(int number) {
+              return EStorageBlockContentType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(27);
+    }
+
+    private static final EStorageBlockContentType[] VALUES = values();
+
+    public static EStorageBlockContentType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EStorageBlockContentType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EStorageBlockContentType)
+  }
+
+  /**
+   * Protobuf enum {@code EStorageBlockFileSystemType}
+   */
+  public enum EStorageBlockFileSystemType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EStorageBlockFileSystemType_Invalid = 0;</code>
+     */
+    k_EStorageBlockFileSystemType_Invalid(0),
+    /**
+     * <code>k_EStorageBlockFileSystemType_Unknown = 1;</code>
+     */
+    k_EStorageBlockFileSystemType_Unknown(1),
+    /**
+     * <code>k_EStorageBlockFileSystemType_VFat = 2;</code>
+     */
+    k_EStorageBlockFileSystemType_VFat(2),
+    /**
+     * <code>k_EStorageBlockFileSystemType_Ext4 = 3;</code>
+     */
+    k_EStorageBlockFileSystemType_Ext4(3),
+    ;
+
+    /**
+     * <code>k_EStorageBlockFileSystemType_Invalid = 0;</code>
+     */
+    public static final int k_EStorageBlockFileSystemType_Invalid_VALUE = 0;
+    /**
+     * <code>k_EStorageBlockFileSystemType_Unknown = 1;</code>
+     */
+    public static final int k_EStorageBlockFileSystemType_Unknown_VALUE = 1;
+    /**
+     * <code>k_EStorageBlockFileSystemType_VFat = 2;</code>
+     */
+    public static final int k_EStorageBlockFileSystemType_VFat_VALUE = 2;
+    /**
+     * <code>k_EStorageBlockFileSystemType_Ext4 = 3;</code>
+     */
+    public static final int k_EStorageBlockFileSystemType_Ext4_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EStorageBlockFileSystemType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EStorageBlockFileSystemType forNumber(int value) {
+      switch (value) {
+        case 0: return k_EStorageBlockFileSystemType_Invalid;
+        case 1: return k_EStorageBlockFileSystemType_Unknown;
+        case 2: return k_EStorageBlockFileSystemType_VFat;
+        case 3: return k_EStorageBlockFileSystemType_Ext4;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EStorageBlockFileSystemType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EStorageBlockFileSystemType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EStorageBlockFileSystemType>() {
+            public EStorageBlockFileSystemType findValueByNumber(int number) {
+              return EStorageBlockFileSystemType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(28);
+    }
+
+    private static final EStorageBlockFileSystemType[] VALUES = values();
+
+    public static EStorageBlockFileSystemType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EStorageBlockFileSystemType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EStorageBlockFileSystemType)
+  }
+
+  /**
+   * Protobuf enum {@code EStorageDriveMediaType}
+   */
+  public enum EStorageDriveMediaType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EStorageDriveMediaType_Invalid = 0;</code>
+     */
+    k_EStorageDriveMediaType_Invalid(0),
+    /**
+     * <code>k_EStorageDriveMediaType_Unknown = 1;</code>
+     */
+    k_EStorageDriveMediaType_Unknown(1),
+    /**
+     * <code>k_EStorageDriveMediaType_HDD = 2;</code>
+     */
+    k_EStorageDriveMediaType_HDD(2),
+    /**
+     * <code>k_EStorageDriveMediaType_SSD = 3;</code>
+     */
+    k_EStorageDriveMediaType_SSD(3),
+    /**
+     * <code>k_EStorageDriveMediaType_Removable = 4;</code>
+     */
+    k_EStorageDriveMediaType_Removable(4),
+    ;
+
+    /**
+     * <code>k_EStorageDriveMediaType_Invalid = 0;</code>
+     */
+    public static final int k_EStorageDriveMediaType_Invalid_VALUE = 0;
+    /**
+     * <code>k_EStorageDriveMediaType_Unknown = 1;</code>
+     */
+    public static final int k_EStorageDriveMediaType_Unknown_VALUE = 1;
+    /**
+     * <code>k_EStorageDriveMediaType_HDD = 2;</code>
+     */
+    public static final int k_EStorageDriveMediaType_HDD_VALUE = 2;
+    /**
+     * <code>k_EStorageDriveMediaType_SSD = 3;</code>
+     */
+    public static final int k_EStorageDriveMediaType_SSD_VALUE = 3;
+    /**
+     * <code>k_EStorageDriveMediaType_Removable = 4;</code>
+     */
+    public static final int k_EStorageDriveMediaType_Removable_VALUE = 4;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EStorageDriveMediaType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EStorageDriveMediaType forNumber(int value) {
+      switch (value) {
+        case 0: return k_EStorageDriveMediaType_Invalid;
+        case 1: return k_EStorageDriveMediaType_Unknown;
+        case 2: return k_EStorageDriveMediaType_HDD;
+        case 3: return k_EStorageDriveMediaType_SSD;
+        case 4: return k_EStorageDriveMediaType_Removable;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EStorageDriveMediaType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EStorageDriveMediaType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EStorageDriveMediaType>() {
+            public EStorageDriveMediaType findValueByNumber(int number) {
+              return EStorageDriveMediaType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(29);
+    }
+
+    private static final EStorageDriveMediaType[] VALUES = values();
+
+    public static EStorageDriveMediaType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EStorageDriveMediaType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EStorageDriveMediaType)
+  }
+
+  /**
+   * Protobuf enum {@code ESystemDisplayCompatibilityMode}
+   */
+  public enum ESystemDisplayCompatibilityMode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ESystemDisplayCompatibilityMode_Invalid = 0;</code>
+     */
+    k_ESystemDisplayCompatibilityMode_Invalid(0),
+    /**
+     * <code>k_ESystemDisplayCompatibilityMode_None = 1;</code>
+     */
+    k_ESystemDisplayCompatibilityMode_None(1),
+    /**
+     * <code>k_ESystemDisplayCompatibilityMode_MinimalBandwith = 2;</code>
+     */
+    k_ESystemDisplayCompatibilityMode_MinimalBandwith(2),
+    ;
+
+    /**
+     * <code>k_ESystemDisplayCompatibilityMode_Invalid = 0;</code>
+     */
+    public static final int k_ESystemDisplayCompatibilityMode_Invalid_VALUE = 0;
+    /**
+     * <code>k_ESystemDisplayCompatibilityMode_None = 1;</code>
+     */
+    public static final int k_ESystemDisplayCompatibilityMode_None_VALUE = 1;
+    /**
+     * <code>k_ESystemDisplayCompatibilityMode_MinimalBandwith = 2;</code>
+     */
+    public static final int k_ESystemDisplayCompatibilityMode_MinimalBandwith_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESystemDisplayCompatibilityMode valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESystemDisplayCompatibilityMode forNumber(int value) {
+      switch (value) {
+        case 0: return k_ESystemDisplayCompatibilityMode_Invalid;
+        case 1: return k_ESystemDisplayCompatibilityMode_None;
+        case 2: return k_ESystemDisplayCompatibilityMode_MinimalBandwith;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESystemDisplayCompatibilityMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESystemDisplayCompatibilityMode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESystemDisplayCompatibilityMode>() {
+            public ESystemDisplayCompatibilityMode findValueByNumber(int number) {
+              return ESystemDisplayCompatibilityMode.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(30);
+    }
+
+    private static final ESystemDisplayCompatibilityMode[] VALUES = values();
+
+    public static ESystemDisplayCompatibilityMode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESystemDisplayCompatibilityMode(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESystemDisplayCompatibilityMode)
+  }
+
+  /**
+   * Protobuf enum {@code ESteamDeckCompatibilityCategory}
+   */
+  public enum ESteamDeckCompatibilityCategory
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ESteamDeckCompatibilityCategory_Unknown = 0;</code>
+     */
+    k_ESteamDeckCompatibilityCategory_Unknown(0),
+    /**
+     * <code>k_ESteamDeckCompatibilityCategory_Unsupported = 1;</code>
+     */
+    k_ESteamDeckCompatibilityCategory_Unsupported(1),
+    /**
+     * <code>k_ESteamDeckCompatibilityCategory_Playable = 2;</code>
+     */
+    k_ESteamDeckCompatibilityCategory_Playable(2),
+    /**
+     * <code>k_ESteamDeckCompatibilityCategory_Verified = 3;</code>
+     */
+    k_ESteamDeckCompatibilityCategory_Verified(3),
+    ;
+
+    /**
+     * <code>k_ESteamDeckCompatibilityCategory_Unknown = 0;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityCategory_Unknown_VALUE = 0;
+    /**
+     * <code>k_ESteamDeckCompatibilityCategory_Unsupported = 1;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityCategory_Unsupported_VALUE = 1;
+    /**
+     * <code>k_ESteamDeckCompatibilityCategory_Playable = 2;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityCategory_Playable_VALUE = 2;
+    /**
+     * <code>k_ESteamDeckCompatibilityCategory_Verified = 3;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityCategory_Verified_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESteamDeckCompatibilityCategory valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESteamDeckCompatibilityCategory forNumber(int value) {
+      switch (value) {
+        case 0: return k_ESteamDeckCompatibilityCategory_Unknown;
+        case 1: return k_ESteamDeckCompatibilityCategory_Unsupported;
+        case 2: return k_ESteamDeckCompatibilityCategory_Playable;
+        case 3: return k_ESteamDeckCompatibilityCategory_Verified;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESteamDeckCompatibilityCategory>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESteamDeckCompatibilityCategory> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESteamDeckCompatibilityCategory>() {
+            public ESteamDeckCompatibilityCategory findValueByNumber(int number) {
+              return ESteamDeckCompatibilityCategory.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(31);
+    }
+
+    private static final ESteamDeckCompatibilityCategory[] VALUES = values();
+
+    public static ESteamDeckCompatibilityCategory valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESteamDeckCompatibilityCategory(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESteamDeckCompatibilityCategory)
+  }
+
+  /**
+   * Protobuf enum {@code ESteamDeckCompatibilityResultDisplayType}
+   */
+  public enum ESteamDeckCompatibilityResultDisplayType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ESteamDeckCompatibilityResultDisplayType_Invisible = 0;</code>
+     */
+    k_ESteamDeckCompatibilityResultDisplayType_Invisible(0),
+    /**
+     * <code>k_ESteamDeckCompatibilityResultDisplayType_Informational = 1;</code>
+     */
+    k_ESteamDeckCompatibilityResultDisplayType_Informational(1),
+    /**
+     * <code>k_ESteamDeckCompatibilityResultDisplayType_Unsupported = 2;</code>
+     */
+    k_ESteamDeckCompatibilityResultDisplayType_Unsupported(2),
+    /**
+     * <code>k_ESteamDeckCompatibilityResultDisplayType_Playable = 3;</code>
+     */
+    k_ESteamDeckCompatibilityResultDisplayType_Playable(3),
+    /**
+     * <code>k_ESteamDeckCompatibilityResultDisplayType_Verified = 4;</code>
+     */
+    k_ESteamDeckCompatibilityResultDisplayType_Verified(4),
+    ;
+
+    /**
+     * <code>k_ESteamDeckCompatibilityResultDisplayType_Invisible = 0;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityResultDisplayType_Invisible_VALUE = 0;
+    /**
+     * <code>k_ESteamDeckCompatibilityResultDisplayType_Informational = 1;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityResultDisplayType_Informational_VALUE = 1;
+    /**
+     * <code>k_ESteamDeckCompatibilityResultDisplayType_Unsupported = 2;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityResultDisplayType_Unsupported_VALUE = 2;
+    /**
+     * <code>k_ESteamDeckCompatibilityResultDisplayType_Playable = 3;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityResultDisplayType_Playable_VALUE = 3;
+    /**
+     * <code>k_ESteamDeckCompatibilityResultDisplayType_Verified = 4;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityResultDisplayType_Verified_VALUE = 4;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESteamDeckCompatibilityResultDisplayType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESteamDeckCompatibilityResultDisplayType forNumber(int value) {
+      switch (value) {
+        case 0: return k_ESteamDeckCompatibilityResultDisplayType_Invisible;
+        case 1: return k_ESteamDeckCompatibilityResultDisplayType_Informational;
+        case 2: return k_ESteamDeckCompatibilityResultDisplayType_Unsupported;
+        case 3: return k_ESteamDeckCompatibilityResultDisplayType_Playable;
+        case 4: return k_ESteamDeckCompatibilityResultDisplayType_Verified;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESteamDeckCompatibilityResultDisplayType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESteamDeckCompatibilityResultDisplayType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESteamDeckCompatibilityResultDisplayType>() {
+            public ESteamDeckCompatibilityResultDisplayType findValueByNumber(int number) {
+              return ESteamDeckCompatibilityResultDisplayType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(32);
+    }
+
+    private static final ESteamDeckCompatibilityResultDisplayType[] VALUES = values();
+
+    public static ESteamDeckCompatibilityResultDisplayType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESteamDeckCompatibilityResultDisplayType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESteamDeckCompatibilityResultDisplayType)
+  }
+
+  /**
+   * Protobuf enum {@code EACState}
+   */
+  public enum EACState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EACState_Unknown = 0;</code>
+     */
+    k_EACState_Unknown(0),
+    /**
+     * <code>k_EACState_Disconnected = 1;</code>
+     */
+    k_EACState_Disconnected(1),
+    /**
+     * <code>k_EACState_Connected = 2;</code>
+     */
+    k_EACState_Connected(2),
+    /**
+     * <code>k_EACState_ConnectedSlow = 3;</code>
+     */
+    k_EACState_ConnectedSlow(3),
+    ;
+
+    /**
+     * <code>k_EACState_Unknown = 0;</code>
+     */
+    public static final int k_EACState_Unknown_VALUE = 0;
+    /**
+     * <code>k_EACState_Disconnected = 1;</code>
+     */
+    public static final int k_EACState_Disconnected_VALUE = 1;
+    /**
+     * <code>k_EACState_Connected = 2;</code>
+     */
+    public static final int k_EACState_Connected_VALUE = 2;
+    /**
+     * <code>k_EACState_ConnectedSlow = 3;</code>
+     */
+    public static final int k_EACState_ConnectedSlow_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EACState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EACState forNumber(int value) {
+      switch (value) {
+        case 0: return k_EACState_Unknown;
+        case 1: return k_EACState_Disconnected;
+        case 2: return k_EACState_Connected;
+        case 3: return k_EACState_ConnectedSlow;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EACState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EACState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EACState>() {
+            public EACState findValueByNumber(int number) {
+              return EACState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(33);
+    }
+
+    private static final EACState[] VALUES = values();
+
+    public static EACState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EACState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EACState)
+  }
+
+  /**
+   * Protobuf enum {@code EBatteryState}
+   */
+  public enum EBatteryState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EBatteryState_Unknown = 0;</code>
+     */
+    k_EBatteryState_Unknown(0),
+    /**
+     * <code>k_EBatteryState_Discharging = 1;</code>
+     */
+    k_EBatteryState_Discharging(1),
+    /**
+     * <code>k_EBatteryState_Charging = 2;</code>
+     */
+    k_EBatteryState_Charging(2),
+    /**
+     * <code>k_EBatteryState_Full = 3;</code>
+     */
+    k_EBatteryState_Full(3),
+    ;
+
+    /**
+     * <code>k_EBatteryState_Unknown = 0;</code>
+     */
+    public static final int k_EBatteryState_Unknown_VALUE = 0;
+    /**
+     * <code>k_EBatteryState_Discharging = 1;</code>
+     */
+    public static final int k_EBatteryState_Discharging_VALUE = 1;
+    /**
+     * <code>k_EBatteryState_Charging = 2;</code>
+     */
+    public static final int k_EBatteryState_Charging_VALUE = 2;
+    /**
+     * <code>k_EBatteryState_Full = 3;</code>
+     */
+    public static final int k_EBatteryState_Full_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EBatteryState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EBatteryState forNumber(int value) {
+      switch (value) {
+        case 0: return k_EBatteryState_Unknown;
+        case 1: return k_EBatteryState_Discharging;
+        case 2: return k_EBatteryState_Charging;
+        case 3: return k_EBatteryState_Full;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EBatteryState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EBatteryState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EBatteryState>() {
+            public EBatteryState findValueByNumber(int number) {
+              return EBatteryState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(34);
+    }
+
+    private static final EBatteryState[] VALUES = values();
+
+    public static EBatteryState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EBatteryState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EBatteryState)
+  }
+
+  /**
+   * Protobuf enum {@code EOSBranch}
+   */
+  public enum EOSBranch
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EOSBranch_Unknown = 0;</code>
+     */
+    k_EOSBranch_Unknown(0),
+    /**
+     * <code>k_EOSBranch_Release = 1;</code>
+     */
+    k_EOSBranch_Release(1),
+    /**
+     * <code>k_EOSBranch_ReleaseCandidate = 2;</code>
+     */
+    k_EOSBranch_ReleaseCandidate(2),
+    /**
+     * <code>k_EOSBranch_Beta = 3;</code>
+     */
+    k_EOSBranch_Beta(3),
+    /**
+     * <code>k_EOSBranch_BetaCandidate = 4;</code>
+     */
+    k_EOSBranch_BetaCandidate(4),
+    /**
+     * <code>k_EOSBranch_Main = 5;</code>
+     */
+    k_EOSBranch_Main(5),
+    /**
+     * <code>k_EOSBranch_Staging = 6;</code>
+     */
+    k_EOSBranch_Staging(6),
+    ;
+
+    /**
+     * <code>k_EOSBranch_Unknown = 0;</code>
+     */
+    public static final int k_EOSBranch_Unknown_VALUE = 0;
+    /**
+     * <code>k_EOSBranch_Release = 1;</code>
+     */
+    public static final int k_EOSBranch_Release_VALUE = 1;
+    /**
+     * <code>k_EOSBranch_ReleaseCandidate = 2;</code>
+     */
+    public static final int k_EOSBranch_ReleaseCandidate_VALUE = 2;
+    /**
+     * <code>k_EOSBranch_Beta = 3;</code>
+     */
+    public static final int k_EOSBranch_Beta_VALUE = 3;
+    /**
+     * <code>k_EOSBranch_BetaCandidate = 4;</code>
+     */
+    public static final int k_EOSBranch_BetaCandidate_VALUE = 4;
+    /**
+     * <code>k_EOSBranch_Main = 5;</code>
+     */
+    public static final int k_EOSBranch_Main_VALUE = 5;
+    /**
+     * <code>k_EOSBranch_Staging = 6;</code>
+     */
+    public static final int k_EOSBranch_Staging_VALUE = 6;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EOSBranch valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EOSBranch forNumber(int value) {
+      switch (value) {
+        case 0: return k_EOSBranch_Unknown;
+        case 1: return k_EOSBranch_Release;
+        case 2: return k_EOSBranch_ReleaseCandidate;
+        case 3: return k_EOSBranch_Beta;
+        case 4: return k_EOSBranch_BetaCandidate;
+        case 5: return k_EOSBranch_Main;
+        case 6: return k_EOSBranch_Staging;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EOSBranch>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EOSBranch> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EOSBranch>() {
+            public EOSBranch findValueByNumber(int number) {
+              return EOSBranch.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(35);
+    }
+
+    private static final EOSBranch[] VALUES = values();
+
+    public static EOSBranch valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EOSBranch(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EOSBranch)
+  }
+
+  /**
+   * Protobuf enum {@code ECommunityItemClass}
+   */
+  public enum ECommunityItemClass
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ECommunityItemClass_Invalid = 0;</code>
+     */
+    k_ECommunityItemClass_Invalid(0),
+    /**
+     * <code>k_ECommunityItemClass_Badge = 1;</code>
+     */
+    k_ECommunityItemClass_Badge(1),
+    /**
+     * <code>k_ECommunityItemClass_GameCard = 2;</code>
+     */
+    k_ECommunityItemClass_GameCard(2),
+    /**
+     * <code>k_ECommunityItemClass_ProfileBackground = 3;</code>
+     */
+    k_ECommunityItemClass_ProfileBackground(3),
+    /**
+     * <code>k_ECommunityItemClass_Emoticon = 4;</code>
+     */
+    k_ECommunityItemClass_Emoticon(4),
+    /**
+     * <code>k_ECommunityItemClass_BoosterPack = 5;</code>
+     */
+    k_ECommunityItemClass_BoosterPack(5),
+    /**
+     * <code>k_ECommunityItemClass_Consumable = 6;</code>
+     */
+    k_ECommunityItemClass_Consumable(6),
+    /**
+     * <code>k_ECommunityItemClass_GameGoo = 7;</code>
+     */
+    k_ECommunityItemClass_GameGoo(7),
+    /**
+     * <code>k_ECommunityItemClass_ProfileModifier = 8;</code>
+     */
+    k_ECommunityItemClass_ProfileModifier(8),
+    /**
+     * <code>k_ECommunityItemClass_Scene = 9;</code>
+     */
+    k_ECommunityItemClass_Scene(9),
+    /**
+     * <code>k_ECommunityItemClass_SalienItem = 10;</code>
+     */
+    k_ECommunityItemClass_SalienItem(10),
+    /**
+     * <code>k_ECommunityItemClass_Sticker = 11;</code>
+     */
+    k_ECommunityItemClass_Sticker(11),
+    /**
+     * <code>k_ECommunityItemClass_ChatEffect = 12;</code>
+     */
+    k_ECommunityItemClass_ChatEffect(12),
+    /**
+     * <code>k_ECommunityItemClass_MiniProfileBackground = 13;</code>
+     */
+    k_ECommunityItemClass_MiniProfileBackground(13),
+    /**
+     * <code>k_ECommunityItemClass_AvatarFrame = 14;</code>
+     */
+    k_ECommunityItemClass_AvatarFrame(14),
+    /**
+     * <code>k_ECommunityItemClass_AnimatedAvatar = 15;</code>
+     */
+    k_ECommunityItemClass_AnimatedAvatar(15),
+    /**
+     * <code>k_ECommunityItemClass_SteamDeckKeyboardSkin = 16;</code>
+     */
+    k_ECommunityItemClass_SteamDeckKeyboardSkin(16),
+    /**
+     * <code>k_ECommunityItemClass_SteamDeckStartupMovie = 17;</code>
+     */
+    k_ECommunityItemClass_SteamDeckStartupMovie(17),
+    ;
+
+    /**
+     * <code>k_ECommunityItemClass_Invalid = 0;</code>
+     */
+    public static final int k_ECommunityItemClass_Invalid_VALUE = 0;
+    /**
+     * <code>k_ECommunityItemClass_Badge = 1;</code>
+     */
+    public static final int k_ECommunityItemClass_Badge_VALUE = 1;
+    /**
+     * <code>k_ECommunityItemClass_GameCard = 2;</code>
+     */
+    public static final int k_ECommunityItemClass_GameCard_VALUE = 2;
+    /**
+     * <code>k_ECommunityItemClass_ProfileBackground = 3;</code>
+     */
+    public static final int k_ECommunityItemClass_ProfileBackground_VALUE = 3;
+    /**
+     * <code>k_ECommunityItemClass_Emoticon = 4;</code>
+     */
+    public static final int k_ECommunityItemClass_Emoticon_VALUE = 4;
+    /**
+     * <code>k_ECommunityItemClass_BoosterPack = 5;</code>
+     */
+    public static final int k_ECommunityItemClass_BoosterPack_VALUE = 5;
+    /**
+     * <code>k_ECommunityItemClass_Consumable = 6;</code>
+     */
+    public static final int k_ECommunityItemClass_Consumable_VALUE = 6;
+    /**
+     * <code>k_ECommunityItemClass_GameGoo = 7;</code>
+     */
+    public static final int k_ECommunityItemClass_GameGoo_VALUE = 7;
+    /**
+     * <code>k_ECommunityItemClass_ProfileModifier = 8;</code>
+     */
+    public static final int k_ECommunityItemClass_ProfileModifier_VALUE = 8;
+    /**
+     * <code>k_ECommunityItemClass_Scene = 9;</code>
+     */
+    public static final int k_ECommunityItemClass_Scene_VALUE = 9;
+    /**
+     * <code>k_ECommunityItemClass_SalienItem = 10;</code>
+     */
+    public static final int k_ECommunityItemClass_SalienItem_VALUE = 10;
+    /**
+     * <code>k_ECommunityItemClass_Sticker = 11;</code>
+     */
+    public static final int k_ECommunityItemClass_Sticker_VALUE = 11;
+    /**
+     * <code>k_ECommunityItemClass_ChatEffect = 12;</code>
+     */
+    public static final int k_ECommunityItemClass_ChatEffect_VALUE = 12;
+    /**
+     * <code>k_ECommunityItemClass_MiniProfileBackground = 13;</code>
+     */
+    public static final int k_ECommunityItemClass_MiniProfileBackground_VALUE = 13;
+    /**
+     * <code>k_ECommunityItemClass_AvatarFrame = 14;</code>
+     */
+    public static final int k_ECommunityItemClass_AvatarFrame_VALUE = 14;
+    /**
+     * <code>k_ECommunityItemClass_AnimatedAvatar = 15;</code>
+     */
+    public static final int k_ECommunityItemClass_AnimatedAvatar_VALUE = 15;
+    /**
+     * <code>k_ECommunityItemClass_SteamDeckKeyboardSkin = 16;</code>
+     */
+    public static final int k_ECommunityItemClass_SteamDeckKeyboardSkin_VALUE = 16;
+    /**
+     * <code>k_ECommunityItemClass_SteamDeckStartupMovie = 17;</code>
+     */
+    public static final int k_ECommunityItemClass_SteamDeckStartupMovie_VALUE = 17;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ECommunityItemClass valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ECommunityItemClass forNumber(int value) {
+      switch (value) {
+        case 0: return k_ECommunityItemClass_Invalid;
+        case 1: return k_ECommunityItemClass_Badge;
+        case 2: return k_ECommunityItemClass_GameCard;
+        case 3: return k_ECommunityItemClass_ProfileBackground;
+        case 4: return k_ECommunityItemClass_Emoticon;
+        case 5: return k_ECommunityItemClass_BoosterPack;
+        case 6: return k_ECommunityItemClass_Consumable;
+        case 7: return k_ECommunityItemClass_GameGoo;
+        case 8: return k_ECommunityItemClass_ProfileModifier;
+        case 9: return k_ECommunityItemClass_Scene;
+        case 10: return k_ECommunityItemClass_SalienItem;
+        case 11: return k_ECommunityItemClass_Sticker;
+        case 12: return k_ECommunityItemClass_ChatEffect;
+        case 13: return k_ECommunityItemClass_MiniProfileBackground;
+        case 14: return k_ECommunityItemClass_AvatarFrame;
+        case 15: return k_ECommunityItemClass_AnimatedAvatar;
+        case 16: return k_ECommunityItemClass_SteamDeckKeyboardSkin;
+        case 17: return k_ECommunityItemClass_SteamDeckStartupMovie;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ECommunityItemClass>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ECommunityItemClass> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ECommunityItemClass>() {
+            public ECommunityItemClass findValueByNumber(int number) {
+              return ECommunityItemClass.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(36);
+    }
+
+    private static final ECommunityItemClass[] VALUES = values();
+
+    public static ECommunityItemClass valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ECommunityItemClass(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ECommunityItemClass)
+  }
+
+  /**
+   * Protobuf enum {@code ESteamDeckCompatibilityFeedback}
+   */
+  public enum ESteamDeckCompatibilityFeedback
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ESteamDeckCompatibilityFeedback_Unset = 0;</code>
+     */
+    k_ESteamDeckCompatibilityFeedback_Unset(0),
+    /**
+     * <code>k_ESteamDeckCompatibilityFeedback_Agree = 1;</code>
+     */
+    k_ESteamDeckCompatibilityFeedback_Agree(1),
+    /**
+     * <code>k_ESteamDeckCompatibilityFeedback_Disagree = 2;</code>
+     */
+    k_ESteamDeckCompatibilityFeedback_Disagree(2),
+    /**
+     * <code>k_ESteamDeckCompatibilityFeedback_Ignore = 3;</code>
+     */
+    k_ESteamDeckCompatibilityFeedback_Ignore(3),
+    ;
+
+    /**
+     * <code>k_ESteamDeckCompatibilityFeedback_Unset = 0;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityFeedback_Unset_VALUE = 0;
+    /**
+     * <code>k_ESteamDeckCompatibilityFeedback_Agree = 1;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityFeedback_Agree_VALUE = 1;
+    /**
+     * <code>k_ESteamDeckCompatibilityFeedback_Disagree = 2;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityFeedback_Disagree_VALUE = 2;
+    /**
+     * <code>k_ESteamDeckCompatibilityFeedback_Ignore = 3;</code>
+     */
+    public static final int k_ESteamDeckCompatibilityFeedback_Ignore_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESteamDeckCompatibilityFeedback valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESteamDeckCompatibilityFeedback forNumber(int value) {
+      switch (value) {
+        case 0: return k_ESteamDeckCompatibilityFeedback_Unset;
+        case 1: return k_ESteamDeckCompatibilityFeedback_Agree;
+        case 2: return k_ESteamDeckCompatibilityFeedback_Disagree;
+        case 3: return k_ESteamDeckCompatibilityFeedback_Ignore;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESteamDeckCompatibilityFeedback>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESteamDeckCompatibilityFeedback> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESteamDeckCompatibilityFeedback>() {
+            public ESteamDeckCompatibilityFeedback findValueByNumber(int number) {
+              return ESteamDeckCompatibilityFeedback.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(37);
+    }
+
+    private static final ESteamDeckCompatibilityFeedback[] VALUES = values();
+
+    public static ESteamDeckCompatibilityFeedback valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESteamDeckCompatibilityFeedback(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESteamDeckCompatibilityFeedback)
+  }
+
+  /**
+   * Protobuf enum {@code EProvideDeckFeedbackPreference}
+   */
+  public enum EProvideDeckFeedbackPreference
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EProvideDeckFeedbackPreference_Unset = 0;</code>
+     */
+    k_EProvideDeckFeedbackPreference_Unset(0),
+    /**
+     * <code>k_EProvideDeckFeedbackPreference_Yes = 1;</code>
+     */
+    k_EProvideDeckFeedbackPreference_Yes(1),
+    /**
+     * <code>k_EProvideDeckFeedbackPreference_No = 2;</code>
+     */
+    k_EProvideDeckFeedbackPreference_No(2),
+    ;
+
+    /**
+     * <code>k_EProvideDeckFeedbackPreference_Unset = 0;</code>
+     */
+    public static final int k_EProvideDeckFeedbackPreference_Unset_VALUE = 0;
+    /**
+     * <code>k_EProvideDeckFeedbackPreference_Yes = 1;</code>
+     */
+    public static final int k_EProvideDeckFeedbackPreference_Yes_VALUE = 1;
+    /**
+     * <code>k_EProvideDeckFeedbackPreference_No = 2;</code>
+     */
+    public static final int k_EProvideDeckFeedbackPreference_No_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EProvideDeckFeedbackPreference valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EProvideDeckFeedbackPreference forNumber(int value) {
+      switch (value) {
+        case 0: return k_EProvideDeckFeedbackPreference_Unset;
+        case 1: return k_EProvideDeckFeedbackPreference_Yes;
+        case 2: return k_EProvideDeckFeedbackPreference_No;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EProvideDeckFeedbackPreference>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EProvideDeckFeedbackPreference> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EProvideDeckFeedbackPreference>() {
+            public EProvideDeckFeedbackPreference findValueByNumber(int number) {
+              return EProvideDeckFeedbackPreference.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(38);
+    }
+
+    private static final EProvideDeckFeedbackPreference[] VALUES = values();
+
+    public static EProvideDeckFeedbackPreference valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EProvideDeckFeedbackPreference(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EProvideDeckFeedbackPreference)
+  }
+
+  /**
+   * Protobuf enum {@code ETouchGesture}
+   */
+  public enum ETouchGesture
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ETouchGestureNone = 0;</code>
+     */
+    k_ETouchGestureNone(0),
+    /**
+     * <code>k_ETouchGestureTouch = 1;</code>
+     */
+    k_ETouchGestureTouch(1),
+    /**
+     * <code>k_ETouchGestureTap = 2;</code>
+     */
+    k_ETouchGestureTap(2),
+    /**
+     * <code>k_ETouchGestureDoubleTap = 3;</code>
+     */
+    k_ETouchGestureDoubleTap(3),
+    /**
+     * <code>k_ETouchGestureShortPress = 4;</code>
+     */
+    k_ETouchGestureShortPress(4),
+    /**
+     * <code>k_ETouchGestureLongPress = 5;</code>
+     */
+    k_ETouchGestureLongPress(5),
+    /**
+     * <code>k_ETouchGestureLongTap = 6;</code>
+     */
+    k_ETouchGestureLongTap(6),
+    /**
+     * <code>k_ETouchGestureTwoFingerTap = 7;</code>
+     */
+    k_ETouchGestureTwoFingerTap(7),
+    /**
+     * <code>k_ETouchGestureTapCancelled = 8;</code>
+     */
+    k_ETouchGestureTapCancelled(8),
+    /**
+     * <code>k_ETouchGesturePinchBegin = 9;</code>
+     */
+    k_ETouchGesturePinchBegin(9),
+    /**
+     * <code>k_ETouchGesturePinchUpdate = 10;</code>
+     */
+    k_ETouchGesturePinchUpdate(10),
+    /**
+     * <code>k_ETouchGesturePinchEnd = 11;</code>
+     */
+    k_ETouchGesturePinchEnd(11),
+    /**
+     * <code>k_ETouchGestureFlingStart = 12;</code>
+     */
+    k_ETouchGestureFlingStart(12),
+    /**
+     * <code>k_ETouchGestureFlingCancelled = 13;</code>
+     */
+    k_ETouchGestureFlingCancelled(13),
+    ;
+
+    /**
+     * <code>k_ETouchGestureNone = 0;</code>
+     */
+    public static final int k_ETouchGestureNone_VALUE = 0;
+    /**
+     * <code>k_ETouchGestureTouch = 1;</code>
+     */
+    public static final int k_ETouchGestureTouch_VALUE = 1;
+    /**
+     * <code>k_ETouchGestureTap = 2;</code>
+     */
+    public static final int k_ETouchGestureTap_VALUE = 2;
+    /**
+     * <code>k_ETouchGestureDoubleTap = 3;</code>
+     */
+    public static final int k_ETouchGestureDoubleTap_VALUE = 3;
+    /**
+     * <code>k_ETouchGestureShortPress = 4;</code>
+     */
+    public static final int k_ETouchGestureShortPress_VALUE = 4;
+    /**
+     * <code>k_ETouchGestureLongPress = 5;</code>
+     */
+    public static final int k_ETouchGestureLongPress_VALUE = 5;
+    /**
+     * <code>k_ETouchGestureLongTap = 6;</code>
+     */
+    public static final int k_ETouchGestureLongTap_VALUE = 6;
+    /**
+     * <code>k_ETouchGestureTwoFingerTap = 7;</code>
+     */
+    public static final int k_ETouchGestureTwoFingerTap_VALUE = 7;
+    /**
+     * <code>k_ETouchGestureTapCancelled = 8;</code>
+     */
+    public static final int k_ETouchGestureTapCancelled_VALUE = 8;
+    /**
+     * <code>k_ETouchGesturePinchBegin = 9;</code>
+     */
+    public static final int k_ETouchGesturePinchBegin_VALUE = 9;
+    /**
+     * <code>k_ETouchGesturePinchUpdate = 10;</code>
+     */
+    public static final int k_ETouchGesturePinchUpdate_VALUE = 10;
+    /**
+     * <code>k_ETouchGesturePinchEnd = 11;</code>
+     */
+    public static final int k_ETouchGesturePinchEnd_VALUE = 11;
+    /**
+     * <code>k_ETouchGestureFlingStart = 12;</code>
+     */
+    public static final int k_ETouchGestureFlingStart_VALUE = 12;
+    /**
+     * <code>k_ETouchGestureFlingCancelled = 13;</code>
+     */
+    public static final int k_ETouchGestureFlingCancelled_VALUE = 13;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ETouchGesture valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ETouchGesture forNumber(int value) {
+      switch (value) {
+        case 0: return k_ETouchGestureNone;
+        case 1: return k_ETouchGestureTouch;
+        case 2: return k_ETouchGestureTap;
+        case 3: return k_ETouchGestureDoubleTap;
+        case 4: return k_ETouchGestureShortPress;
+        case 5: return k_ETouchGestureLongPress;
+        case 6: return k_ETouchGestureLongTap;
+        case 7: return k_ETouchGestureTwoFingerTap;
+        case 8: return k_ETouchGestureTapCancelled;
+        case 9: return k_ETouchGesturePinchBegin;
+        case 10: return k_ETouchGesturePinchUpdate;
+        case 11: return k_ETouchGesturePinchEnd;
+        case 12: return k_ETouchGestureFlingStart;
+        case 13: return k_ETouchGestureFlingCancelled;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ETouchGesture>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ETouchGesture> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ETouchGesture>() {
+            public ETouchGesture findValueByNumber(int number) {
+              return ETouchGesture.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(39);
+    }
+
+    private static final ETouchGesture[] VALUES = values();
+
+    public static ETouchGesture valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ETouchGesture(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ETouchGesture)
+  }
+
+  /**
+   * Protobuf enum {@code ESessionPersistence}
+   */
+  public enum ESessionPersistence
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ESessionPersistence_Invalid = -1;</code>
+     */
+    k_ESessionPersistence_Invalid(-1),
+    /**
+     * <code>k_ESessionPersistence_Ephemeral = 0;</code>
+     */
+    k_ESessionPersistence_Ephemeral(0),
+    /**
+     * <code>k_ESessionPersistence_Persistent = 1;</code>
+     */
+    k_ESessionPersistence_Persistent(1),
+    ;
+
+    /**
+     * <code>k_ESessionPersistence_Invalid = -1;</code>
+     */
+    public static final int k_ESessionPersistence_Invalid_VALUE = -1;
+    /**
+     * <code>k_ESessionPersistence_Ephemeral = 0;</code>
+     */
+    public static final int k_ESessionPersistence_Ephemeral_VALUE = 0;
+    /**
+     * <code>k_ESessionPersistence_Persistent = 1;</code>
+     */
+    public static final int k_ESessionPersistence_Persistent_VALUE = 1;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ESessionPersistence valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ESessionPersistence forNumber(int value) {
+      switch (value) {
+        case -1: return k_ESessionPersistence_Invalid;
+        case 0: return k_ESessionPersistence_Ephemeral;
+        case 1: return k_ESessionPersistence_Persistent;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ESessionPersistence>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ESessionPersistence> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ESessionPersistence>() {
+            public ESessionPersistence findValueByNumber(int number) {
+              return ESessionPersistence.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(40);
+    }
+
+    private static final ESessionPersistence[] VALUES = values();
+
+    public static ESessionPersistence valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ESessionPersistence(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ESessionPersistence)
+  }
+
+  /**
+   * Protobuf enum {@code ENewSteamAnnouncementState}
+   */
+  public enum ENewSteamAnnouncementState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ENewSteamAnnouncementState_Invalid = 0;</code>
+     */
+    k_ENewSteamAnnouncementState_Invalid(0),
+    /**
+     * <code>k_ENewSteamAnnouncementState_AllRead = 1;</code>
+     */
+    k_ENewSteamAnnouncementState_AllRead(1),
+    /**
+     * <code>k_ENewSteamAnnouncementState_NewAnnouncement = 2;</code>
+     */
+    k_ENewSteamAnnouncementState_NewAnnouncement(2),
+    /**
+     * <code>k_ENewSteamAnnouncementState_FeaturedAnnouncement = 3;</code>
+     */
+    k_ENewSteamAnnouncementState_FeaturedAnnouncement(3),
+    ;
+
+    /**
+     * <code>k_ENewSteamAnnouncementState_Invalid = 0;</code>
+     */
+    public static final int k_ENewSteamAnnouncementState_Invalid_VALUE = 0;
+    /**
+     * <code>k_ENewSteamAnnouncementState_AllRead = 1;</code>
+     */
+    public static final int k_ENewSteamAnnouncementState_AllRead_VALUE = 1;
+    /**
+     * <code>k_ENewSteamAnnouncementState_NewAnnouncement = 2;</code>
+     */
+    public static final int k_ENewSteamAnnouncementState_NewAnnouncement_VALUE = 2;
+    /**
+     * <code>k_ENewSteamAnnouncementState_FeaturedAnnouncement = 3;</code>
+     */
+    public static final int k_ENewSteamAnnouncementState_FeaturedAnnouncement_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ENewSteamAnnouncementState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ENewSteamAnnouncementState forNumber(int value) {
+      switch (value) {
+        case 0: return k_ENewSteamAnnouncementState_Invalid;
+        case 1: return k_ENewSteamAnnouncementState_AllRead;
+        case 2: return k_ENewSteamAnnouncementState_NewAnnouncement;
+        case 3: return k_ENewSteamAnnouncementState_FeaturedAnnouncement;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ENewSteamAnnouncementState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ENewSteamAnnouncementState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ENewSteamAnnouncementState>() {
+            public ENewSteamAnnouncementState findValueByNumber(int number) {
+              return ENewSteamAnnouncementState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(41);
+    }
+
+    private static final ENewSteamAnnouncementState[] VALUES = values();
+
+    public static ENewSteamAnnouncementState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ENewSteamAnnouncementState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ENewSteamAnnouncementState)
+  }
+
+  /**
+   * Protobuf enum {@code ECommentThreadType}
+   */
+  public enum ECommentThreadType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ECommentThreadTypeInvalid = 0;</code>
+     */
+    k_ECommentThreadTypeInvalid(0),
+    /**
+     * <code>k_ECommentThreadTypeScreenshot_Deprecated = 1;</code>
+     */
+    k_ECommentThreadTypeScreenshot_Deprecated(1),
+    /**
+     * <code>k_ECommentThreadTypeWorkshopAccount_Developer = 2;</code>
+     */
+    k_ECommentThreadTypeWorkshopAccount_Developer(2),
+    /**
+     * <code>k_ECommentThreadTypeWorkshopAccount_Public = 3;</code>
+     */
+    k_ECommentThreadTypeWorkshopAccount_Public(3),
+    /**
+     * <code>k_ECommentThreadTypePublishedFile_Developer = 4;</code>
+     */
+    k_ECommentThreadTypePublishedFile_Developer(4),
+    /**
+     * <code>k_ECommentThreadTypePublishedFile_Public = 5;</code>
+     */
+    k_ECommentThreadTypePublishedFile_Public(5),
+    /**
+     * <code>k_ECommentThreadTypeTest = 6;</code>
+     */
+    k_ECommentThreadTypeTest(6),
+    /**
+     * <code>k_ECommentThreadTypeForumTopic = 7;</code>
+     */
+    k_ECommentThreadTypeForumTopic(7),
+    /**
+     * <code>k_ECommentThreadTypeRecommendation = 8;</code>
+     */
+    k_ECommentThreadTypeRecommendation(8),
+    /**
+     * <code>k_ECommentThreadTypeVideo_Deprecated = 9;</code>
+     */
+    k_ECommentThreadTypeVideo_Deprecated(9),
+    /**
+     * <code>k_ECommentThreadTypeProfile = 10;</code>
+     */
+    k_ECommentThreadTypeProfile(10),
+    /**
+     * <code>k_ECommentThreadTypeNewsPost = 11;</code>
+     */
+    k_ECommentThreadTypeNewsPost(11),
+    /**
+     * <code>k_ECommentThreadTypeClan = 12;</code>
+     */
+    k_ECommentThreadTypeClan(12),
+    /**
+     * <code>k_ECommentThreadTypeClanAnnouncement = 13;</code>
+     */
+    k_ECommentThreadTypeClanAnnouncement(13),
+    /**
+     * <code>k_ECommentThreadTypeClanEvent = 14;</code>
+     */
+    k_ECommentThreadTypeClanEvent(14),
+    /**
+     * <code>k_ECommentThreadTypeUserStatusPublished = 15;</code>
+     */
+    k_ECommentThreadTypeUserStatusPublished(15),
+    /**
+     * <code>k_ECommentThreadTypeUserReceivedNewGame = 16;</code>
+     */
+    k_ECommentThreadTypeUserReceivedNewGame(16),
+    /**
+     * <code>k_ECommentThreadTypePublishedFile_Announcement = 17;</code>
+     */
+    k_ECommentThreadTypePublishedFile_Announcement(17),
+    /**
+     * <code>k_ECommentThreadTypeModeratorMessage = 18;</code>
+     */
+    k_ECommentThreadTypeModeratorMessage(18),
+    /**
+     * <code>k_ECommentThreadTypeClanCuratedApp = 19;</code>
+     */
+    k_ECommentThreadTypeClanCuratedApp(19),
+    /**
+     * <code>k_ECommentThreadTypeQAndASession = 20;</code>
+     */
+    k_ECommentThreadTypeQAndASession(20),
+    /**
+     * <code>k_ECommentThreadTypeMax = 21;</code>
+     */
+    k_ECommentThreadTypeMax(21),
+    ;
+
+    /**
+     * <code>k_ECommentThreadTypeInvalid = 0;</code>
+     */
+    public static final int k_ECommentThreadTypeInvalid_VALUE = 0;
+    /**
+     * <code>k_ECommentThreadTypeScreenshot_Deprecated = 1;</code>
+     */
+    public static final int k_ECommentThreadTypeScreenshot_Deprecated_VALUE = 1;
+    /**
+     * <code>k_ECommentThreadTypeWorkshopAccount_Developer = 2;</code>
+     */
+    public static final int k_ECommentThreadTypeWorkshopAccount_Developer_VALUE = 2;
+    /**
+     * <code>k_ECommentThreadTypeWorkshopAccount_Public = 3;</code>
+     */
+    public static final int k_ECommentThreadTypeWorkshopAccount_Public_VALUE = 3;
+    /**
+     * <code>k_ECommentThreadTypePublishedFile_Developer = 4;</code>
+     */
+    public static final int k_ECommentThreadTypePublishedFile_Developer_VALUE = 4;
+    /**
+     * <code>k_ECommentThreadTypePublishedFile_Public = 5;</code>
+     */
+    public static final int k_ECommentThreadTypePublishedFile_Public_VALUE = 5;
+    /**
+     * <code>k_ECommentThreadTypeTest = 6;</code>
+     */
+    public static final int k_ECommentThreadTypeTest_VALUE = 6;
+    /**
+     * <code>k_ECommentThreadTypeForumTopic = 7;</code>
+     */
+    public static final int k_ECommentThreadTypeForumTopic_VALUE = 7;
+    /**
+     * <code>k_ECommentThreadTypeRecommendation = 8;</code>
+     */
+    public static final int k_ECommentThreadTypeRecommendation_VALUE = 8;
+    /**
+     * <code>k_ECommentThreadTypeVideo_Deprecated = 9;</code>
+     */
+    public static final int k_ECommentThreadTypeVideo_Deprecated_VALUE = 9;
+    /**
+     * <code>k_ECommentThreadTypeProfile = 10;</code>
+     */
+    public static final int k_ECommentThreadTypeProfile_VALUE = 10;
+    /**
+     * <code>k_ECommentThreadTypeNewsPost = 11;</code>
+     */
+    public static final int k_ECommentThreadTypeNewsPost_VALUE = 11;
+    /**
+     * <code>k_ECommentThreadTypeClan = 12;</code>
+     */
+    public static final int k_ECommentThreadTypeClan_VALUE = 12;
+    /**
+     * <code>k_ECommentThreadTypeClanAnnouncement = 13;</code>
+     */
+    public static final int k_ECommentThreadTypeClanAnnouncement_VALUE = 13;
+    /**
+     * <code>k_ECommentThreadTypeClanEvent = 14;</code>
+     */
+    public static final int k_ECommentThreadTypeClanEvent_VALUE = 14;
+    /**
+     * <code>k_ECommentThreadTypeUserStatusPublished = 15;</code>
+     */
+    public static final int k_ECommentThreadTypeUserStatusPublished_VALUE = 15;
+    /**
+     * <code>k_ECommentThreadTypeUserReceivedNewGame = 16;</code>
+     */
+    public static final int k_ECommentThreadTypeUserReceivedNewGame_VALUE = 16;
+    /**
+     * <code>k_ECommentThreadTypePublishedFile_Announcement = 17;</code>
+     */
+    public static final int k_ECommentThreadTypePublishedFile_Announcement_VALUE = 17;
+    /**
+     * <code>k_ECommentThreadTypeModeratorMessage = 18;</code>
+     */
+    public static final int k_ECommentThreadTypeModeratorMessage_VALUE = 18;
+    /**
+     * <code>k_ECommentThreadTypeClanCuratedApp = 19;</code>
+     */
+    public static final int k_ECommentThreadTypeClanCuratedApp_VALUE = 19;
+    /**
+     * <code>k_ECommentThreadTypeQAndASession = 20;</code>
+     */
+    public static final int k_ECommentThreadTypeQAndASession_VALUE = 20;
+    /**
+     * <code>k_ECommentThreadTypeMax = 21;</code>
+     */
+    public static final int k_ECommentThreadTypeMax_VALUE = 21;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ECommentThreadType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ECommentThreadType forNumber(int value) {
+      switch (value) {
+        case 0: return k_ECommentThreadTypeInvalid;
+        case 1: return k_ECommentThreadTypeScreenshot_Deprecated;
+        case 2: return k_ECommentThreadTypeWorkshopAccount_Developer;
+        case 3: return k_ECommentThreadTypeWorkshopAccount_Public;
+        case 4: return k_ECommentThreadTypePublishedFile_Developer;
+        case 5: return k_ECommentThreadTypePublishedFile_Public;
+        case 6: return k_ECommentThreadTypeTest;
+        case 7: return k_ECommentThreadTypeForumTopic;
+        case 8: return k_ECommentThreadTypeRecommendation;
+        case 9: return k_ECommentThreadTypeVideo_Deprecated;
+        case 10: return k_ECommentThreadTypeProfile;
+        case 11: return k_ECommentThreadTypeNewsPost;
+        case 12: return k_ECommentThreadTypeClan;
+        case 13: return k_ECommentThreadTypeClanAnnouncement;
+        case 14: return k_ECommentThreadTypeClanEvent;
+        case 15: return k_ECommentThreadTypeUserStatusPublished;
+        case 16: return k_ECommentThreadTypeUserReceivedNewGame;
+        case 17: return k_ECommentThreadTypePublishedFile_Announcement;
+        case 18: return k_ECommentThreadTypeModeratorMessage;
+        case 19: return k_ECommentThreadTypeClanCuratedApp;
+        case 20: return k_ECommentThreadTypeQAndASession;
+        case 21: return k_ECommentThreadTypeMax;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ECommentThreadType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ECommentThreadType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ECommentThreadType>() {
+            public ECommentThreadType findValueByNumber(int number) {
+              return ECommentThreadType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(42);
+    }
+
+    private static final ECommentThreadType[] VALUES = values();
+
+    public static ECommentThreadType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ECommentThreadType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ECommentThreadType)
+  }
+
+  /**
+   * Protobuf enum {@code EBroadcastPermission}
+   */
+  public enum EBroadcastPermission
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EBroadcastPermissionDisabled = 0;</code>
+     */
+    k_EBroadcastPermissionDisabled(0),
+    /**
+     * <code>k_EBroadcastPermissionFriendsApprove = 1;</code>
+     */
+    k_EBroadcastPermissionFriendsApprove(1),
+    /**
+     * <code>k_EBroadcastPermissionFriendsAllowed = 2;</code>
+     */
+    k_EBroadcastPermissionFriendsAllowed(2),
+    /**
+     * <code>k_EBroadcastPermissionPublic = 3;</code>
+     */
+    k_EBroadcastPermissionPublic(3),
+    /**
+     * <code>k_EBroadcastPermissionSubscribers = 4;</code>
+     */
+    k_EBroadcastPermissionSubscribers(4),
+    ;
+
+    /**
+     * <code>k_EBroadcastPermissionDisabled = 0;</code>
+     */
+    public static final int k_EBroadcastPermissionDisabled_VALUE = 0;
+    /**
+     * <code>k_EBroadcastPermissionFriendsApprove = 1;</code>
+     */
+    public static final int k_EBroadcastPermissionFriendsApprove_VALUE = 1;
+    /**
+     * <code>k_EBroadcastPermissionFriendsAllowed = 2;</code>
+     */
+    public static final int k_EBroadcastPermissionFriendsAllowed_VALUE = 2;
+    /**
+     * <code>k_EBroadcastPermissionPublic = 3;</code>
+     */
+    public static final int k_EBroadcastPermissionPublic_VALUE = 3;
+    /**
+     * <code>k_EBroadcastPermissionSubscribers = 4;</code>
+     */
+    public static final int k_EBroadcastPermissionSubscribers_VALUE = 4;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EBroadcastPermission valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EBroadcastPermission forNumber(int value) {
+      switch (value) {
+        case 0: return k_EBroadcastPermissionDisabled;
+        case 1: return k_EBroadcastPermissionFriendsApprove;
+        case 2: return k_EBroadcastPermissionFriendsAllowed;
+        case 3: return k_EBroadcastPermissionPublic;
+        case 4: return k_EBroadcastPermissionSubscribers;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EBroadcastPermission>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EBroadcastPermission> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EBroadcastPermission>() {
+            public EBroadcastPermission findValueByNumber(int number) {
+              return EBroadcastPermission.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(43);
+    }
+
+    private static final EBroadcastPermission[] VALUES = values();
+
+    public static EBroadcastPermission valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EBroadcastPermission(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EBroadcastPermission)
+  }
+
+  /**
+   * Protobuf enum {@code EBroadcastEncoderSetting}
+   */
+  public enum EBroadcastEncoderSetting
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EBroadcastEncoderBestQuality = 0;</code>
+     */
+    k_EBroadcastEncoderBestQuality(0),
+    /**
+     * <code>k_EBroadcastEncoderBestPerformance = 1;</code>
+     */
+    k_EBroadcastEncoderBestPerformance(1),
+    ;
+
+    /**
+     * <code>k_EBroadcastEncoderBestQuality = 0;</code>
+     */
+    public static final int k_EBroadcastEncoderBestQuality_VALUE = 0;
+    /**
+     * <code>k_EBroadcastEncoderBestPerformance = 1;</code>
+     */
+    public static final int k_EBroadcastEncoderBestPerformance_VALUE = 1;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EBroadcastEncoderSetting valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EBroadcastEncoderSetting forNumber(int value) {
+      switch (value) {
+        case 0: return k_EBroadcastEncoderBestQuality;
+        case 1: return k_EBroadcastEncoderBestPerformance;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EBroadcastEncoderSetting>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EBroadcastEncoderSetting> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EBroadcastEncoderSetting>() {
+            public EBroadcastEncoderSetting findValueByNumber(int number) {
+              return EBroadcastEncoderSetting.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(44);
+    }
+
+    private static final EBroadcastEncoderSetting[] VALUES = values();
+
+    public static EBroadcastEncoderSetting valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EBroadcastEncoderSetting(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EBroadcastEncoderSetting)
+  }
+
+  /**
+   * Protobuf enum {@code ECloudGamingPlatform}
+   */
+  public enum ECloudGamingPlatform
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ECloudGamingPlatformNone = 0;</code>
+     */
+    k_ECloudGamingPlatformNone(0),
+    /**
+     * <code>k_ECloudGamingPlatformValve = 1;</code>
+     */
+    k_ECloudGamingPlatformValve(1),
+    /**
+     * <code>k_ECloudGamingPlatformNVIDIA = 2;</code>
+     */
+    k_ECloudGamingPlatformNVIDIA(2),
+    ;
+
+    /**
+     * <code>k_ECloudGamingPlatformNone = 0;</code>
+     */
+    public static final int k_ECloudGamingPlatformNone_VALUE = 0;
+    /**
+     * <code>k_ECloudGamingPlatformValve = 1;</code>
+     */
+    public static final int k_ECloudGamingPlatformValve_VALUE = 1;
+    /**
+     * <code>k_ECloudGamingPlatformNVIDIA = 2;</code>
+     */
+    public static final int k_ECloudGamingPlatformNVIDIA_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ECloudGamingPlatform valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ECloudGamingPlatform forNumber(int value) {
+      switch (value) {
+        case 0: return k_ECloudGamingPlatformNone;
+        case 1: return k_ECloudGamingPlatformValve;
+        case 2: return k_ECloudGamingPlatformNVIDIA;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ECloudGamingPlatform>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ECloudGamingPlatform> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ECloudGamingPlatform>() {
+            public ECloudGamingPlatform findValueByNumber(int number) {
+              return ECloudGamingPlatform.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return Enums.getDescriptor().getEnumTypes().get(45);
+    }
+
+    private static final ECloudGamingPlatform[] VALUES = values();
+
+    public static ECloudGamingPlatform valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ECloudGamingPlatform(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ECloudGamingPlatform)
   }
 
 
@@ -1728,65 +6381,275 @@ public final class Enums {
       "eckProvider\022#\n\037k_EContentCheckProvider_I" +
       "nvalid\020\000\022\"\n\036k_EContentCheckProvider_Goog" +
       "le\020\001\022\"\n\036k_EContentCheckProvider_Amazon\020\002" +
-      "\022!\n\035k_EContentCheckProvider_Local\020\003*\330\002\n\026" +
-      "EBanContentCheckResult\022\'\n#k_EBanContentC" +
-      "heckResult_NotScanned\020\000\022\"\n\036k_EBanContent" +
-      "CheckResult_Reset\020\001\022*\n&k_EBanContentChec" +
-      "kResult_NeedsChecking\020\002\022)\n%k_EBanContent" +
-      "CheckResult_VeryUnlikely\020\005\022%\n!k_EBanCont" +
-      "entCheckResult_Unlikely\020\036\022%\n!k_EBanConte" +
-      "ntCheckResult_Possible\0202\022#\n\037k_EBanConten" +
-      "tCheckResult_Likely\020K\022\'\n#k_EBanContentCh" +
-      "eckResult_VeryLikely\020d*\354\010\n\031EProfileCusto" +
-      "mizationType\022&\n\"k_EProfileCustomizationT" +
-      "ypeInvalid\020\000\0226\n2k_EProfileCustomizationT" +
-      "ypeRareAchievementShowcase\020\001\022,\n(k_EProfi" +
-      "leCustomizationTypeGameCollector\020\002\022+\n\'k_" +
-      "EProfileCustomizationTypeItemShowcase\020\003\022" +
-      ",\n(k_EProfileCustomizationTypeTradeShowc" +
-      "ase\020\004\022%\n!k_EProfileCustomizationTypeBadg" +
-      "es\020\005\022+\n\'k_EProfileCustomizationTypeFavor" +
-      "iteGame\020\006\0221\n-k_EProfileCustomizationType" +
-      "ScreenshotShowcase\020\007\022)\n%k_EProfileCustom" +
-      "izationTypeCustomText\020\010\022,\n(k_EProfileCus" +
-      "tomizationTypeFavoriteGroup\020\t\022-\n)k_EProf" +
-      "ileCustomizationTypeRecommendation\020\n\022+\n\'" +
-      "k_EProfileCustomizationTypeWorkshopItem\020" +
-      "\013\022)\n%k_EProfileCustomizationTypeMyWorksh" +
-      "op\020\014\022.\n*k_EProfileCustomizationTypeArtwo" +
-      "rkShowcase\020\r\022,\n(k_EProfileCustomizationT" +
-      "ypeVideoShowcase\020\016\022%\n!k_EProfileCustomiz" +
-      "ationTypeGuides\020\017\022\'\n#k_EProfileCustomiza" +
-      "tionTypeMyGuides\020\020\022+\n\'k_EProfileCustomiz" +
-      "ationTypeAchievements\020\021\022)\n%k_EProfileCus" +
-      "tomizationTypeGreenlight\020\022\022+\n\'k_EProfile" +
-      "CustomizationTypeMyGreenlight\020\023\022%\n!k_EPr" +
-      "ofileCustomizationTypeSalien\020\024\0225\n1k_EPro" +
-      "fileCustomizationTypeLoyaltyRewardReacti" +
-      "ons\020\025\0224\n0k_EProfileCustomizationTypeSing" +
-      "leArtworkShowcase\020\026\0228\n4k_EProfileCustomi" +
-      "zationTypeAchievementsCompletionist\020\027*\310\001" +
-      "\n\033EPublishedFileStorageSystem\022(\n$k_EPubl" +
-      "ishedFileStorageSystemInvalid\020\000\022,\n(k_EPu" +
-      "blishedFileStorageSystemLegacyCloud\020\001\022&\n" +
-      "\"k_EPublishedFileStorageSystemDepot\020\002\022)\n" +
-      "%k_EPublishedFileStorageSystemUGCCloud\020\003" +
-      "*\227\001\n\031ECloudStoragePersistState\022(\n$k_EClo" +
-      "udStoragePersistStatePersisted\020\000\022(\n$k_EC" +
-      "loudStoragePersistStateForgotten\020\001\022&\n\"k_" +
-      "ECloudStoragePersistStateDeleted\020\002*\300\003\n\024E" +
-      "BluetoothDeviceType\022!\n\035k_BluetoothDevice" +
-      "Type_Invalid\020\000\022!\n\035k_BluetoothDeviceType_" +
-      "Unknown\020\001\022\037\n\033k_BluetoothDeviceType_Phone" +
-      "\020\002\022\"\n\036k_BluetoothDeviceType_Computer\020\003\022!" +
-      "\n\035k_BluetoothDeviceType_Headset\020\004\022$\n k_B" +
-      "luetoothDeviceType_Headphones\020\005\022\"\n\036k_Blu" +
-      "etoothDeviceType_Speakers\020\006\022$\n k_Bluetoo" +
-      "thDeviceType_OtherAudio\020\007\022\037\n\033k_Bluetooth" +
-      "DeviceType_Mouse\020\010\022\"\n\036k_BluetoothDeviceT" +
-      "ype_Joystick\020\t\022!\n\035k_BluetoothDeviceType_" +
-      "Gamepad\020\n\022\"\n\036k_BluetoothDeviceType_Keybo" +
-      "ard\020\013B\tH\001\200\001\001\200\265\030\001"
+      "\022!\n\035k_EContentCheckProvider_Local\020\003*\223\t\n\031" +
+      "EProfileCustomizationType\022&\n\"k_EProfileC" +
+      "ustomizationTypeInvalid\020\000\0226\n2k_EProfileC" +
+      "ustomizationTypeRareAchievementShowcase\020" +
+      "\001\022,\n(k_EProfileCustomizationTypeGameColl" +
+      "ector\020\002\022+\n\'k_EProfileCustomizationTypeIt" +
+      "emShowcase\020\003\022,\n(k_EProfileCustomizationT" +
+      "ypeTradeShowcase\020\004\022%\n!k_EProfileCustomiz" +
+      "ationTypeBadges\020\005\022+\n\'k_EProfileCustomiza" +
+      "tionTypeFavoriteGame\020\006\0221\n-k_EProfileCust" +
+      "omizationTypeScreenshotShowcase\020\007\022)\n%k_E" +
+      "ProfileCustomizationTypeCustomText\020\010\022,\n(" +
+      "k_EProfileCustomizationTypeFavoriteGroup" +
+      "\020\t\022-\n)k_EProfileCustomizationTypeRecomme" +
+      "ndation\020\n\022+\n\'k_EProfileCustomizationType" +
+      "WorkshopItem\020\013\022)\n%k_EProfileCustomizatio" +
+      "nTypeMyWorkshop\020\014\022.\n*k_EProfileCustomiza" +
+      "tionTypeArtworkShowcase\020\r\022,\n(k_EProfileC" +
+      "ustomizationTypeVideoShowcase\020\016\022%\n!k_EPr" +
+      "ofileCustomizationTypeGuides\020\017\022\'\n#k_EPro" +
+      "fileCustomizationTypeMyGuides\020\020\022+\n\'k_EPr" +
+      "ofileCustomizationTypeAchievements\020\021\022)\n%" +
+      "k_EProfileCustomizationTypeGreenlight\020\022\022" +
+      "+\n\'k_EProfileCustomizationTypeMyGreenlig" +
+      "ht\020\023\022%\n!k_EProfileCustomizationTypeSalie" +
+      "n\020\024\0225\n1k_EProfileCustomizationTypeLoyalt" +
+      "yRewardReactions\020\025\0224\n0k_EProfileCustomiz" +
+      "ationTypeSingleArtworkShowcase\020\026\0228\n4k_EP" +
+      "rofileCustomizationTypeAchievementsCompl" +
+      "etionist\020\027\022%\n!k_EProfileCustomizationTyp" +
+      "eReplay\020\030*\310\001\n\033EPublishedFileStorageSyste" +
+      "m\022(\n$k_EPublishedFileStorageSystemInvali" +
+      "d\020\000\022,\n(k_EPublishedFileStorageSystemLega" +
+      "cyCloud\020\001\022&\n\"k_EPublishedFileStorageSyst" +
+      "emDepot\020\002\022)\n%k_EPublishedFileStorageSyst" +
+      "emUGCCloud\020\003*\227\001\n\031ECloudStoragePersistSta" +
+      "te\022(\n$k_ECloudStoragePersistStatePersist" +
+      "ed\020\000\022(\n$k_ECloudStoragePersistStateForgo" +
+      "tten\020\001\022&\n\"k_ECloudStoragePersistStateDel" +
+      "eted\020\002*\350\001\n\022ESDCardFormatStage\022 \n\034k_ESDCa" +
+      "rdFormatStage_Invalid\020\000\022!\n\035k_ESDCardForm" +
+      "atStage_Starting\020\001\022 \n\034k_ESDCardFormatSta" +
+      "ge_Testing\020\002\022!\n\035k_ESDCardFormatStage_Res" +
+      "cuing\020\003\022#\n\037k_ESDCardFormatStage_Formatti" +
+      "ng\020\004\022#\n\037k_ESDCardFormatStage_Finalizing\020" +
+      "\005*\225\002\n\023EStorageFormatStage\022!\n\035k_EStorageF" +
+      "ormatStage_Invalid\020\000\022$\n k_EStorageFormat" +
+      "Stage_NotRunning\020\001\022\"\n\036k_EStorageFormatSt" +
+      "age_Starting\020\002\022!\n\035k_EStorageFormatStage_" +
+      "Testing\020\003\022\"\n\036k_EStorageFormatStage_Rescu" +
+      "ing\020\004\022$\n k_EStorageFormatStage_Formattin" +
+      "g\020\005\022$\n k_EStorageFormatStage_Finalizing\020" +
+      "\006*\204\001\n\025ESystemFanControlMode\022\"\n\036k_SystemF" +
+      "anControlMode_Invalid\020\000\022#\n\037k_SystemFanCo" +
+      "ntrolMode_Disabled\020\001\022\"\n\036k_SystemFanContr" +
+      "olMode_Default\020\002*\213\001\n\023EColorGamutLabelSet" +
+      "\022 \n\034k_ColorGamutLabelSet_Default\020\000\022$\n k_" +
+      "ColorGamutLabelSet_sRGB_Native\020\001\022,\n(k_Co" +
+      "lorGamutLabelSet_Native_sRGB_Boosted\020\002*\300" +
+      "\003\n\024EBluetoothDeviceType\022!\n\035k_BluetoothDe" +
+      "viceType_Invalid\020\000\022!\n\035k_BluetoothDeviceT" +
+      "ype_Unknown\020\001\022\037\n\033k_BluetoothDeviceType_P" +
+      "hone\020\002\022\"\n\036k_BluetoothDeviceType_Computer" +
+      "\020\003\022!\n\035k_BluetoothDeviceType_Headset\020\004\022$\n" +
+      " k_BluetoothDeviceType_Headphones\020\005\022\"\n\036k" +
+      "_BluetoothDeviceType_Speakers\020\006\022$\n k_Blu" +
+      "etoothDeviceType_OtherAudio\020\007\022\037\n\033k_Bluet" +
+      "oothDeviceType_Mouse\020\010\022\"\n\036k_BluetoothDev" +
+      "iceType_Joystick\020\t\022!\n\035k_BluetoothDeviceT" +
+      "ype_Gamepad\020\n\022\"\n\036k_BluetoothDeviceType_K" +
+      "eyboard\020\013*\200\001\n\025ESystemAudioDirection\022\"\n\036k" +
+      "_SystemAudioDirection_Invalid\020\000\022 \n\034k_Sys" +
+      "temAudioDirection_Input\020\001\022!\n\035k_SystemAud" +
+      "ioDirection_Output\020\002*\361\002\n\023ESystemAudioCha" +
+      "nnel\022 \n\034k_SystemAudioChannel_Invalid\020\000\022#" +
+      "\n\037k_SystemAudioChannel_Aggregated\020\001\022\"\n\036k" +
+      "_SystemAudioChannel_FrontLeft\020\002\022#\n\037k_Sys" +
+      "temAudioChannel_FrontRight\020\003\022\034\n\030k_System" +
+      "AudioChannel_LFE\020\004\022!\n\035k_SystemAudioChann" +
+      "el_BackLeft\020\005\022\"\n\036k_SystemAudioChannel_Ba" +
+      "ckRight\020\006\022$\n k_SystemAudioChannel_FrontC" +
+      "enter\020\007\022 \n\034k_SystemAudioChannel_Unknown\020" +
+      "\010\022\035\n\031k_SystemAudioChannel_Mono\020\t*\311\001\n\024ESy" +
+      "stemAudioPortType\022!\n\035k_SystemAudioPortTy" +
+      "pe_Invalid\020\000\022!\n\035k_SystemAudioPortType_Un" +
+      "known\020\001\022\"\n\036k_SystemAudioPortType_Audio32" +
+      "f\020\002\022 \n\034k_SystemAudioPortType_Midi8b\020\003\022%\n" +
+      "!k_SystemAudioPortType_Video32RGBA\020\004*\220\001\n" +
+      "\031ESystemAudioPortDirection\022&\n\"k_SystemAu" +
+      "dioPortDirection_Invalid\020\000\022$\n k_SystemAu" +
+      "dioPortDirection_Input\020\001\022%\n!k_SystemAudi" +
+      "oPortDirection_Output\020\002*\203\001\n\023ESystemServi" +
+      "ceState\022%\n!k_ESystemServiceState_Unavail" +
+      "able\020\000\022\"\n\036k_ESystemServiceState_Disabled" +
+      "\020\001\022!\n\035k_ESystemServiceState_Enabled\020\002*\341\001" +
+      "\n\031EGraphicsPerfOverlayLevel\022&\n\"k_EGraphi" +
+      "csPerfOverlayLevel_Hidden\020\000\022%\n!k_EGraphi" +
+      "csPerfOverlayLevel_Basic\020\001\022&\n\"k_EGraphic" +
+      "sPerfOverlayLevel_Medium\020\002\022$\n k_EGraphic" +
+      "sPerfOverlayLevel_Full\020\003\022\'\n#k_EGraphicsP" +
+      "erfOverlayLevel_Minimal\020\004*\345\001\n\024EGPUPerfor" +
+      "manceLevel\022\"\n\036k_EGPUPerformanceLevel_Inv" +
+      "alid\020\000\022\037\n\033k_EGPUPerformanceLevel_Auto\020\001\022" +
+      "!\n\035k_EGPUPerformanceLevel_Manual\020\002\022\036\n\032k_" +
+      "EGPUPerformanceLevel_Low\020\003\022\037\n\033k_EGPUPerf" +
+      "ormanceLevel_High\020\004\022$\n k_EGPUPerformance" +
+      "Level_Profiling\020\005*\273\001\n\016EScalingFilter\022\034\n\030" +
+      "k_EScalingFilter_Invalid\020\000\022\030\n\024k_EScaling" +
+      "Filter_FSR\020\001\022\034\n\030k_EScalingFilter_Nearest" +
+      "\020\002\022\034\n\030k_EScalingFilter_Integer\020\003\022\033\n\027k_ES" +
+      "calingFilter_Linear\020\004\022\030\n\024k_EScalingFilte" +
+      "r_NIS\020\005*\273\001\n\023ESplitScalingFilter\022!\n\035k_ESp" +
+      "litScalingFilter_Invalid\020\000\022 \n\034k_ESplitSc" +
+      "alingFilter_Linear\020\001\022!\n\035k_ESplitScalingF" +
+      "ilter_Nearest\020\002\022\035\n\031k_ESplitScalingFilter" +
+      "_FSR\020\003\022\035\n\031k_ESplitScalingFilter_NIS\020\004*\335\001" +
+      "\n\023ESplitScalingScaler\022!\n\035k_ESplitScaling" +
+      "Scaler_Invalid\020\000\022\036\n\032k_ESplitScalingScale" +
+      "r_Auto\020\001\022!\n\035k_ESplitScalingScaler_Intege" +
+      "r\020\002\022\035\n\031k_ESplitScalingScaler_Fit\020\003\022\036\n\032k_" +
+      "ESplitScalingScaler_Fill\020\004\022!\n\035k_ESplitSc" +
+      "alingScaler_Stretch\020\005*\201\001\n\023EHDRToneMapOpe" +
+      "rator\022!\n\035k_EHDRToneMapOperator_Invalid\020\000" +
+      "\022#\n\037k_EHDRToneMapOperator_Uncharted\020\001\022\"\n" +
+      "\036k_EHDRToneMapOperator_Reinhard\020\002*|\n\014ECP" +
+      "UGovernor\022\032\n\026k_ECPUGovernor_Invalid\020\000\022\027\n" +
+      "\023k_ECPUGovernor_Perf\020\001\022\034\n\030k_ECPUGovernor" +
+      "_Powersave\020\002\022\031\n\025k_ECPUGovernor_Manual\020\003*" +
+      "\342\001\n\014EUpdaterType\022\032\n\026k_EUpdaterType_Inval" +
+      "id\020\000\022\031\n\025k_EUpdaterType_Client\020\001\022\025\n\021k_EUp" +
+      "daterType_OS\020\002\022\027\n\023k_EUpdaterType_BIOS\020\003\022" +
+      "\035\n\031k_EUpdaterType_Aggregated\020\004\022\030\n\024k_EUpd" +
+      "aterType_Test1\020\005\022\030\n\024k_EUpdaterType_Test2" +
+      "\020\006\022\030\n\024k_EUpdaterType_Dummy\020\007*\371\001\n\rEUpdate" +
+      "rState\022\033\n\027k_EUpdaterState_Invalid\020\000\022\034\n\030k" +
+      "_EUpdaterState_UpToDate\020\002\022\034\n\030k_EUpdaterS" +
+      "tate_Checking\020\003\022\035\n\031k_EUpdaterState_Avail" +
+      "able\020\004\022\034\n\030k_EUpdaterState_Applying\020\005\022(\n$" +
+      "k_EUpdaterState_ClientRestartPending\020\006\022(" +
+      "\n$k_EUpdaterState_SystemRestartPending\020\007" +
+      "*\341\001\n\030EStorageBlockContentType\022&\n\"k_EStor" +
+      "ageBlockContentType_Invalid\020\000\022&\n\"k_EStor" +
+      "ageBlockContentType_Unknown\020\001\022)\n%k_EStor" +
+      "ageBlockContentType_FileSystem\020\002\022%\n!k_ES" +
+      "torageBlockContentType_Crypto\020\003\022#\n\037k_ESt" +
+      "orageBlockContentType_Raid\020\004*\303\001\n\033EStorag" +
+      "eBlockFileSystemType\022)\n%k_EStorageBlockF" +
+      "ileSystemType_Invalid\020\000\022)\n%k_EStorageBlo" +
+      "ckFileSystemType_Unknown\020\001\022&\n\"k_EStorage" +
+      "BlockFileSystemType_VFat\020\002\022&\n\"k_EStorage" +
+      "BlockFileSystemType_Ext4\020\003*\320\001\n\026EStorageD" +
+      "riveMediaType\022$\n k_EStorageDriveMediaTyp" +
+      "e_Invalid\020\000\022$\n k_EStorageDriveMediaType_" +
+      "Unknown\020\001\022 \n\034k_EStorageDriveMediaType_HD" +
+      "D\020\002\022 \n\034k_EStorageDriveMediaType_SSD\020\003\022&\n" +
+      "\"k_EStorageDriveMediaType_Removable\020\004*\263\001" +
+      "\n\037ESystemDisplayCompatibilityMode\022-\n)k_E" +
+      "SystemDisplayCompatibilityMode_Invalid\020\000" +
+      "\022*\n&k_ESystemDisplayCompatibilityMode_No" +
+      "ne\020\001\0225\n1k_ESystemDisplayCompatibilityMod" +
+      "e_MinimalBandwith\020\002*\343\001\n\037ESteamDeckCompat" +
+      "ibilityCategory\022-\n)k_ESteamDeckCompatibi" +
+      "lityCategory_Unknown\020\000\0221\n-k_ESteamDeckCo" +
+      "mpatibilityCategory_Unsupported\020\001\022.\n*k_E" +
+      "SteamDeckCompatibilityCategory_Playable\020" +
+      "\002\022.\n*k_ESteamDeckCompatibilityCategory_V" +
+      "erified\020\003*\320\002\n(ESteamDeckCompatibilityRes" +
+      "ultDisplayType\0228\n4k_ESteamDeckCompatibil" +
+      "ityResultDisplayType_Invisible\020\000\022<\n8k_ES" +
+      "teamDeckCompatibilityResultDisplayType_I" +
+      "nformational\020\001\022:\n6k_ESteamDeckCompatibil" +
+      "ityResultDisplayType_Unsupported\020\002\0227\n3k_" +
+      "ESteamDeckCompatibilityResultDisplayType" +
+      "_Playable\020\003\0227\n3k_ESteamDeckCompatibility" +
+      "ResultDisplayType_Verified\020\004*w\n\010EACState" +
+      "\022\026\n\022k_EACState_Unknown\020\000\022\033\n\027k_EACState_D" +
+      "isconnected\020\001\022\030\n\024k_EACState_Connected\020\002\022" +
+      "\034\n\030k_EACState_ConnectedSlow\020\003*\205\001\n\rEBatte" +
+      "ryState\022\033\n\027k_EBatteryState_Unknown\020\000\022\037\n\033" +
+      "k_EBatteryState_Discharging\020\001\022\034\n\030k_EBatt" +
+      "eryState_Charging\020\002\022\030\n\024k_EBatteryState_F" +
+      "ull\020\003*\303\001\n\tEOSBranch\022\027\n\023k_EOSBranch_Unkno" +
+      "wn\020\000\022\027\n\023k_EOSBranch_Release\020\001\022 \n\034k_EOSBr" +
+      "anch_ReleaseCandidate\020\002\022\024\n\020k_EOSBranch_B" +
+      "eta\020\003\022\035\n\031k_EOSBranch_BetaCandidate\020\004\022\024\n\020" +
+      "k_EOSBranch_Main\020\005\022\027\n\023k_EOSBranch_Stagin" +
+      "g\020\006*\335\005\n\023ECommunityItemClass\022!\n\035k_ECommun" +
+      "ityItemClass_Invalid\020\000\022\037\n\033k_ECommunityIt" +
+      "emClass_Badge\020\001\022\"\n\036k_ECommunityItemClass" +
+      "_GameCard\020\002\022+\n\'k_ECommunityItemClass_Pro" +
+      "fileBackground\020\003\022\"\n\036k_ECommunityItemClas" +
+      "s_Emoticon\020\004\022%\n!k_ECommunityItemClass_Bo" +
+      "osterPack\020\005\022$\n k_ECommunityItemClass_Con" +
+      "sumable\020\006\022!\n\035k_ECommunityItemClass_GameG" +
+      "oo\020\007\022)\n%k_ECommunityItemClass_ProfileMod" +
+      "ifier\020\010\022\037\n\033k_ECommunityItemClass_Scene\020\t" +
+      "\022$\n k_ECommunityItemClass_SalienItem\020\n\022!" +
+      "\n\035k_ECommunityItemClass_Sticker\020\013\022$\n k_E" +
+      "CommunityItemClass_ChatEffect\020\014\022/\n+k_ECo" +
+      "mmunityItemClass_MiniProfileBackground\020\r" +
+      "\022%\n!k_ECommunityItemClass_AvatarFrame\020\016\022" +
+      "(\n$k_ECommunityItemClass_AnimatedAvatar\020" +
+      "\017\022/\n+k_ECommunityItemClass_SteamDeckKeyb" +
+      "oardSkin\020\020\022/\n+k_ECommunityItemClass_Stea" +
+      "mDeckStartupMovie\020\021*\331\001\n\037ESteamDeckCompat" +
+      "ibilityFeedback\022+\n\'k_ESteamDeckCompatibi" +
+      "lityFeedback_Unset\020\000\022+\n\'k_ESteamDeckComp" +
+      "atibilityFeedback_Agree\020\001\022.\n*k_ESteamDec" +
+      "kCompatibilityFeedback_Disagree\020\002\022,\n(k_E" +
+      "SteamDeckCompatibilityFeedback_Ignore\020\003*" +
+      "\237\001\n\036EProvideDeckFeedbackPreference\022*\n&k_" +
+      "EProvideDeckFeedbackPreference_Unset\020\000\022(" +
+      "\n$k_EProvideDeckFeedbackPreference_Yes\020\001" +
+      "\022\'\n#k_EProvideDeckFeedbackPreference_No\020" +
+      "\002*\261\003\n\rETouchGesture\022\027\n\023k_ETouchGestureNo" +
+      "ne\020\000\022\030\n\024k_ETouchGestureTouch\020\001\022\026\n\022k_ETou" +
+      "chGestureTap\020\002\022\034\n\030k_ETouchGestureDoubleT" +
+      "ap\020\003\022\035\n\031k_ETouchGestureShortPress\020\004\022\034\n\030k" +
+      "_ETouchGestureLongPress\020\005\022\032\n\026k_ETouchGes" +
+      "tureLongTap\020\006\022\037\n\033k_ETouchGestureTwoFinge" +
+      "rTap\020\007\022\037\n\033k_ETouchGestureTapCancelled\020\010\022" +
+      "\035\n\031k_ETouchGesturePinchBegin\020\t\022\036\n\032k_ETou" +
+      "chGesturePinchUpdate\020\n\022\033\n\027k_ETouchGestur" +
+      "ePinchEnd\020\013\022\035\n\031k_ETouchGestureFlingStart" +
+      "\020\014\022!\n\035k_ETouchGestureFlingCancelled\020\r*\214\001" +
+      "\n\023ESessionPersistence\022*\n\035k_ESessionPersi" +
+      "stence_Invalid\020\377\377\377\377\377\377\377\377\377\001\022#\n\037k_ESessionP" +
+      "ersistence_Ephemeral\020\000\022$\n k_ESessionPers" +
+      "istence_Persistent\020\001*\331\001\n\032ENewSteamAnnoun" +
+      "cementState\022(\n$k_ENewSteamAnnouncementSt" +
+      "ate_Invalid\020\000\022(\n$k_ENewSteamAnnouncement" +
+      "State_AllRead\020\001\0220\n,k_ENewSteamAnnounceme" +
+      "ntState_NewAnnouncement\020\002\0225\n1k_ENewSteam" +
+      "AnnouncementState_FeaturedAnnouncement\020\003" +
+      "*\213\007\n\022ECommentThreadType\022\037\n\033k_ECommentThr" +
+      "eadTypeInvalid\020\000\022-\n)k_ECommentThreadType" +
+      "Screenshot_Deprecated\020\001\0221\n-k_ECommentThr" +
+      "eadTypeWorkshopAccount_Developer\020\002\022.\n*k_" +
+      "ECommentThreadTypeWorkshopAccount_Public" +
+      "\020\003\022/\n+k_ECommentThreadTypePublishedFile_" +
+      "Developer\020\004\022,\n(k_ECommentThreadTypePubli" +
+      "shedFile_Public\020\005\022\034\n\030k_ECommentThreadTyp" +
+      "eTest\020\006\022\"\n\036k_ECommentThreadTypeForumTopi" +
+      "c\020\007\022&\n\"k_ECommentThreadTypeRecommendatio" +
+      "n\020\010\022(\n$k_ECommentThreadTypeVideo_Depreca" +
+      "ted\020\t\022\037\n\033k_ECommentThreadTypeProfile\020\n\022 " +
+      "\n\034k_ECommentThreadTypeNewsPost\020\013\022\034\n\030k_EC" +
+      "ommentThreadTypeClan\020\014\022(\n$k_ECommentThre" +
+      "adTypeClanAnnouncement\020\r\022!\n\035k_ECommentTh" +
+      "readTypeClanEvent\020\016\022+\n\'k_ECommentThreadT" +
+      "ypeUserStatusPublished\020\017\022+\n\'k_ECommentTh" +
+      "readTypeUserReceivedNewGame\020\020\0222\n.k_EComm" +
+      "entThreadTypePublishedFile_Announcement\020" +
+      "\021\022(\n$k_ECommentThreadTypeModeratorMessag" +
+      "e\020\022\022&\n\"k_ECommentThreadTypeClanCuratedAp" +
+      "p\020\023\022$\n k_ECommentThreadTypeQAndASession\020" +
+      "\024\022\033\n\027k_ECommentThreadTypeMax\020\025*\327\001\n\024EBroa" +
+      "dcastPermission\022\"\n\036k_EBroadcastPermissio" +
+      "nDisabled\020\000\022(\n$k_EBroadcastPermissionFri" +
+      "endsApprove\020\001\022(\n$k_EBroadcastPermissionF" +
+      "riendsAllowed\020\002\022 \n\034k_EBroadcastPermissio" +
+      "nPublic\020\003\022%\n!k_EBroadcastPermissionSubsc" +
+      "ribers\020\004*f\n\030EBroadcastEncoderSetting\022\"\n\036" +
+      "k_EBroadcastEncoderBestQuality\020\000\022&\n\"k_EB" +
+      "roadcastEncoderBestPerformance\020\001*y\n\024EClo" +
+      "udGamingPlatform\022\036\n\032k_ECloudGamingPlatfo" +
+      "rmNone\020\000\022\037\n\033k_ECloudGamingPlatformValve\020" +
+      "\001\022 \n\034k_ECloudGamingPlatformNVIDIA\020\002B\tH\001\200" +
+      "\001\001\200\265\030\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

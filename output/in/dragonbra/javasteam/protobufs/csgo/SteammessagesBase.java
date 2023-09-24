@@ -9,6 +9,9 @@ public final class SteammessagesBase {
       com.google.protobuf.ExtensionRegistryLite registry) {
     registry.add(SteammessagesBase.msgpoolSoftLimit);
     registry.add(SteammessagesBase.msgpoolHardLimit);
+    registry.add(SteammessagesBase.forcePhpGeneration);
+    registry.add(SteammessagesBase.phpOutputAlwaysNumber);
+    registry.add(SteammessagesBase.allowFieldNamedSteamId);
   }
 
   public static void registerAllExtensions(
@@ -16,6 +19,2101 @@ public final class SteammessagesBase {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code EBanContentCheckResult}
+   */
+  public enum EBanContentCheckResult
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EBanContentCheckResult_NotScanned = 0;</code>
+     */
+    k_EBanContentCheckResult_NotScanned(0),
+    /**
+     * <code>k_EBanContentCheckResult_Reset = 1;</code>
+     */
+    k_EBanContentCheckResult_Reset(1),
+    /**
+     * <code>k_EBanContentCheckResult_NeedsChecking = 2;</code>
+     */
+    k_EBanContentCheckResult_NeedsChecking(2),
+    /**
+     * <code>k_EBanContentCheckResult_VeryUnlikely = 5;</code>
+     */
+    k_EBanContentCheckResult_VeryUnlikely(5),
+    /**
+     * <code>k_EBanContentCheckResult_Unlikely = 30;</code>
+     */
+    k_EBanContentCheckResult_Unlikely(30),
+    /**
+     * <code>k_EBanContentCheckResult_Possible = 50;</code>
+     */
+    k_EBanContentCheckResult_Possible(50),
+    /**
+     * <code>k_EBanContentCheckResult_Likely = 75;</code>
+     */
+    k_EBanContentCheckResult_Likely(75),
+    /**
+     * <code>k_EBanContentCheckResult_VeryLikely = 100;</code>
+     */
+    k_EBanContentCheckResult_VeryLikely(100),
+    ;
+
+    /**
+     * <code>k_EBanContentCheckResult_NotScanned = 0;</code>
+     */
+    public static final int k_EBanContentCheckResult_NotScanned_VALUE = 0;
+    /**
+     * <code>k_EBanContentCheckResult_Reset = 1;</code>
+     */
+    public static final int k_EBanContentCheckResult_Reset_VALUE = 1;
+    /**
+     * <code>k_EBanContentCheckResult_NeedsChecking = 2;</code>
+     */
+    public static final int k_EBanContentCheckResult_NeedsChecking_VALUE = 2;
+    /**
+     * <code>k_EBanContentCheckResult_VeryUnlikely = 5;</code>
+     */
+    public static final int k_EBanContentCheckResult_VeryUnlikely_VALUE = 5;
+    /**
+     * <code>k_EBanContentCheckResult_Unlikely = 30;</code>
+     */
+    public static final int k_EBanContentCheckResult_Unlikely_VALUE = 30;
+    /**
+     * <code>k_EBanContentCheckResult_Possible = 50;</code>
+     */
+    public static final int k_EBanContentCheckResult_Possible_VALUE = 50;
+    /**
+     * <code>k_EBanContentCheckResult_Likely = 75;</code>
+     */
+    public static final int k_EBanContentCheckResult_Likely_VALUE = 75;
+    /**
+     * <code>k_EBanContentCheckResult_VeryLikely = 100;</code>
+     */
+    public static final int k_EBanContentCheckResult_VeryLikely_VALUE = 100;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EBanContentCheckResult valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EBanContentCheckResult forNumber(int value) {
+      switch (value) {
+        case 0: return k_EBanContentCheckResult_NotScanned;
+        case 1: return k_EBanContentCheckResult_Reset;
+        case 2: return k_EBanContentCheckResult_NeedsChecking;
+        case 5: return k_EBanContentCheckResult_VeryUnlikely;
+        case 30: return k_EBanContentCheckResult_Unlikely;
+        case 50: return k_EBanContentCheckResult_Possible;
+        case 75: return k_EBanContentCheckResult_Likely;
+        case 100: return k_EBanContentCheckResult_VeryLikely;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EBanContentCheckResult>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EBanContentCheckResult> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EBanContentCheckResult>() {
+            public EBanContentCheckResult findValueByNumber(int number) {
+              return EBanContentCheckResult.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return SteammessagesBase.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final EBanContentCheckResult[] VALUES = values();
+
+    public static EBanContentCheckResult valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EBanContentCheckResult(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EBanContentCheckResult)
+  }
+
+  /**
+   * Protobuf enum {@code EProtoClanEventType}
+   */
+  public enum EProtoClanEventType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EClanOtherEvent = 1;</code>
+     */
+    k_EClanOtherEvent(1),
+    /**
+     * <code>k_EClanGameEvent = 2;</code>
+     */
+    k_EClanGameEvent(2),
+    /**
+     * <code>k_EClanPartyEvent = 3;</code>
+     */
+    k_EClanPartyEvent(3),
+    /**
+     * <code>k_EClanMeetingEvent = 4;</code>
+     */
+    k_EClanMeetingEvent(4),
+    /**
+     * <code>k_EClanSpecialCauseEvent = 5;</code>
+     */
+    k_EClanSpecialCauseEvent(5),
+    /**
+     * <code>k_EClanMusicAndArtsEvent = 6;</code>
+     */
+    k_EClanMusicAndArtsEvent(6),
+    /**
+     * <code>k_EClanSportsEvent = 7;</code>
+     */
+    k_EClanSportsEvent(7),
+    /**
+     * <code>k_EClanTripEvent = 8;</code>
+     */
+    k_EClanTripEvent(8),
+    /**
+     * <code>k_EClanChatEvent = 9;</code>
+     */
+    k_EClanChatEvent(9),
+    /**
+     * <code>k_EClanGameReleaseEvent = 10;</code>
+     */
+    k_EClanGameReleaseEvent(10),
+    /**
+     * <code>k_EClanBroadcastEvent = 11;</code>
+     */
+    k_EClanBroadcastEvent(11),
+    /**
+     * <code>k_EClanSmallUpdateEvent = 12;</code>
+     */
+    k_EClanSmallUpdateEvent(12),
+    /**
+     * <code>k_EClanPreAnnounceMajorUpdateEvent = 13;</code>
+     */
+    k_EClanPreAnnounceMajorUpdateEvent(13),
+    /**
+     * <code>k_EClanMajorUpdateEvent = 14;</code>
+     */
+    k_EClanMajorUpdateEvent(14),
+    /**
+     * <code>k_EClanDLCReleaseEvent = 15;</code>
+     */
+    k_EClanDLCReleaseEvent(15),
+    /**
+     * <code>k_EClanFutureReleaseEvent = 16;</code>
+     */
+    k_EClanFutureReleaseEvent(16),
+    /**
+     * <code>k_EClanESportTournamentStreamEvent = 17;</code>
+     */
+    k_EClanESportTournamentStreamEvent(17),
+    /**
+     * <code>k_EClanDevStreamEvent = 18;</code>
+     */
+    k_EClanDevStreamEvent(18),
+    /**
+     * <code>k_EClanFamousStreamEvent = 19;</code>
+     */
+    k_EClanFamousStreamEvent(19),
+    /**
+     * <code>k_EClanGameSalesEvent = 20;</code>
+     */
+    k_EClanGameSalesEvent(20),
+    /**
+     * <code>k_EClanGameItemSalesEvent = 21;</code>
+     */
+    k_EClanGameItemSalesEvent(21),
+    /**
+     * <code>k_EClanInGameBonusXPEvent = 22;</code>
+     */
+    k_EClanInGameBonusXPEvent(22),
+    /**
+     * <code>k_EClanInGameLootEvent = 23;</code>
+     */
+    k_EClanInGameLootEvent(23),
+    /**
+     * <code>k_EClanInGamePerksEvent = 24;</code>
+     */
+    k_EClanInGamePerksEvent(24),
+    /**
+     * <code>k_EClanInGameChallengeEvent = 25;</code>
+     */
+    k_EClanInGameChallengeEvent(25),
+    /**
+     * <code>k_EClanInGameContestEvent = 26;</code>
+     */
+    k_EClanInGameContestEvent(26),
+    /**
+     * <code>k_EClanIRLEvent = 27;</code>
+     */
+    k_EClanIRLEvent(27),
+    /**
+     * <code>k_EClanNewsEvent = 28;</code>
+     */
+    k_EClanNewsEvent(28),
+    /**
+     * <code>k_EClanBetaReleaseEvent = 29;</code>
+     */
+    k_EClanBetaReleaseEvent(29),
+    /**
+     * <code>k_EClanInGameContentReleaseEvent = 30;</code>
+     */
+    k_EClanInGameContentReleaseEvent(30),
+    /**
+     * <code>k_EClanFreeTrial = 31;</code>
+     */
+    k_EClanFreeTrial(31),
+    /**
+     * <code>k_EClanSeasonRelease = 32;</code>
+     */
+    k_EClanSeasonRelease(32),
+    /**
+     * <code>k_EClanSeasonUpdate = 33;</code>
+     */
+    k_EClanSeasonUpdate(33),
+    /**
+     * <code>k_EClanCrosspostEvent = 34;</code>
+     */
+    k_EClanCrosspostEvent(34),
+    /**
+     * <code>k_EClanInGameEventGeneral = 35;</code>
+     */
+    k_EClanInGameEventGeneral(35),
+    ;
+
+    /**
+     * <code>k_EClanOtherEvent = 1;</code>
+     */
+    public static final int k_EClanOtherEvent_VALUE = 1;
+    /**
+     * <code>k_EClanGameEvent = 2;</code>
+     */
+    public static final int k_EClanGameEvent_VALUE = 2;
+    /**
+     * <code>k_EClanPartyEvent = 3;</code>
+     */
+    public static final int k_EClanPartyEvent_VALUE = 3;
+    /**
+     * <code>k_EClanMeetingEvent = 4;</code>
+     */
+    public static final int k_EClanMeetingEvent_VALUE = 4;
+    /**
+     * <code>k_EClanSpecialCauseEvent = 5;</code>
+     */
+    public static final int k_EClanSpecialCauseEvent_VALUE = 5;
+    /**
+     * <code>k_EClanMusicAndArtsEvent = 6;</code>
+     */
+    public static final int k_EClanMusicAndArtsEvent_VALUE = 6;
+    /**
+     * <code>k_EClanSportsEvent = 7;</code>
+     */
+    public static final int k_EClanSportsEvent_VALUE = 7;
+    /**
+     * <code>k_EClanTripEvent = 8;</code>
+     */
+    public static final int k_EClanTripEvent_VALUE = 8;
+    /**
+     * <code>k_EClanChatEvent = 9;</code>
+     */
+    public static final int k_EClanChatEvent_VALUE = 9;
+    /**
+     * <code>k_EClanGameReleaseEvent = 10;</code>
+     */
+    public static final int k_EClanGameReleaseEvent_VALUE = 10;
+    /**
+     * <code>k_EClanBroadcastEvent = 11;</code>
+     */
+    public static final int k_EClanBroadcastEvent_VALUE = 11;
+    /**
+     * <code>k_EClanSmallUpdateEvent = 12;</code>
+     */
+    public static final int k_EClanSmallUpdateEvent_VALUE = 12;
+    /**
+     * <code>k_EClanPreAnnounceMajorUpdateEvent = 13;</code>
+     */
+    public static final int k_EClanPreAnnounceMajorUpdateEvent_VALUE = 13;
+    /**
+     * <code>k_EClanMajorUpdateEvent = 14;</code>
+     */
+    public static final int k_EClanMajorUpdateEvent_VALUE = 14;
+    /**
+     * <code>k_EClanDLCReleaseEvent = 15;</code>
+     */
+    public static final int k_EClanDLCReleaseEvent_VALUE = 15;
+    /**
+     * <code>k_EClanFutureReleaseEvent = 16;</code>
+     */
+    public static final int k_EClanFutureReleaseEvent_VALUE = 16;
+    /**
+     * <code>k_EClanESportTournamentStreamEvent = 17;</code>
+     */
+    public static final int k_EClanESportTournamentStreamEvent_VALUE = 17;
+    /**
+     * <code>k_EClanDevStreamEvent = 18;</code>
+     */
+    public static final int k_EClanDevStreamEvent_VALUE = 18;
+    /**
+     * <code>k_EClanFamousStreamEvent = 19;</code>
+     */
+    public static final int k_EClanFamousStreamEvent_VALUE = 19;
+    /**
+     * <code>k_EClanGameSalesEvent = 20;</code>
+     */
+    public static final int k_EClanGameSalesEvent_VALUE = 20;
+    /**
+     * <code>k_EClanGameItemSalesEvent = 21;</code>
+     */
+    public static final int k_EClanGameItemSalesEvent_VALUE = 21;
+    /**
+     * <code>k_EClanInGameBonusXPEvent = 22;</code>
+     */
+    public static final int k_EClanInGameBonusXPEvent_VALUE = 22;
+    /**
+     * <code>k_EClanInGameLootEvent = 23;</code>
+     */
+    public static final int k_EClanInGameLootEvent_VALUE = 23;
+    /**
+     * <code>k_EClanInGamePerksEvent = 24;</code>
+     */
+    public static final int k_EClanInGamePerksEvent_VALUE = 24;
+    /**
+     * <code>k_EClanInGameChallengeEvent = 25;</code>
+     */
+    public static final int k_EClanInGameChallengeEvent_VALUE = 25;
+    /**
+     * <code>k_EClanInGameContestEvent = 26;</code>
+     */
+    public static final int k_EClanInGameContestEvent_VALUE = 26;
+    /**
+     * <code>k_EClanIRLEvent = 27;</code>
+     */
+    public static final int k_EClanIRLEvent_VALUE = 27;
+    /**
+     * <code>k_EClanNewsEvent = 28;</code>
+     */
+    public static final int k_EClanNewsEvent_VALUE = 28;
+    /**
+     * <code>k_EClanBetaReleaseEvent = 29;</code>
+     */
+    public static final int k_EClanBetaReleaseEvent_VALUE = 29;
+    /**
+     * <code>k_EClanInGameContentReleaseEvent = 30;</code>
+     */
+    public static final int k_EClanInGameContentReleaseEvent_VALUE = 30;
+    /**
+     * <code>k_EClanFreeTrial = 31;</code>
+     */
+    public static final int k_EClanFreeTrial_VALUE = 31;
+    /**
+     * <code>k_EClanSeasonRelease = 32;</code>
+     */
+    public static final int k_EClanSeasonRelease_VALUE = 32;
+    /**
+     * <code>k_EClanSeasonUpdate = 33;</code>
+     */
+    public static final int k_EClanSeasonUpdate_VALUE = 33;
+    /**
+     * <code>k_EClanCrosspostEvent = 34;</code>
+     */
+    public static final int k_EClanCrosspostEvent_VALUE = 34;
+    /**
+     * <code>k_EClanInGameEventGeneral = 35;</code>
+     */
+    public static final int k_EClanInGameEventGeneral_VALUE = 35;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EProtoClanEventType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EProtoClanEventType forNumber(int value) {
+      switch (value) {
+        case 1: return k_EClanOtherEvent;
+        case 2: return k_EClanGameEvent;
+        case 3: return k_EClanPartyEvent;
+        case 4: return k_EClanMeetingEvent;
+        case 5: return k_EClanSpecialCauseEvent;
+        case 6: return k_EClanMusicAndArtsEvent;
+        case 7: return k_EClanSportsEvent;
+        case 8: return k_EClanTripEvent;
+        case 9: return k_EClanChatEvent;
+        case 10: return k_EClanGameReleaseEvent;
+        case 11: return k_EClanBroadcastEvent;
+        case 12: return k_EClanSmallUpdateEvent;
+        case 13: return k_EClanPreAnnounceMajorUpdateEvent;
+        case 14: return k_EClanMajorUpdateEvent;
+        case 15: return k_EClanDLCReleaseEvent;
+        case 16: return k_EClanFutureReleaseEvent;
+        case 17: return k_EClanESportTournamentStreamEvent;
+        case 18: return k_EClanDevStreamEvent;
+        case 19: return k_EClanFamousStreamEvent;
+        case 20: return k_EClanGameSalesEvent;
+        case 21: return k_EClanGameItemSalesEvent;
+        case 22: return k_EClanInGameBonusXPEvent;
+        case 23: return k_EClanInGameLootEvent;
+        case 24: return k_EClanInGamePerksEvent;
+        case 25: return k_EClanInGameChallengeEvent;
+        case 26: return k_EClanInGameContestEvent;
+        case 27: return k_EClanIRLEvent;
+        case 28: return k_EClanNewsEvent;
+        case 29: return k_EClanBetaReleaseEvent;
+        case 30: return k_EClanInGameContentReleaseEvent;
+        case 31: return k_EClanFreeTrial;
+        case 32: return k_EClanSeasonRelease;
+        case 33: return k_EClanSeasonUpdate;
+        case 34: return k_EClanCrosspostEvent;
+        case 35: return k_EClanInGameEventGeneral;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EProtoClanEventType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EProtoClanEventType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EProtoClanEventType>() {
+            public EProtoClanEventType findValueByNumber(int number) {
+              return EProtoClanEventType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return SteammessagesBase.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final EProtoClanEventType[] VALUES = values();
+
+    public static EProtoClanEventType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EProtoClanEventType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EProtoClanEventType)
+  }
+
+  /**
+   * Protobuf enum {@code PartnerEventNotificationType}
+   */
+  public enum PartnerEventNotificationType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EEventStart = 0;</code>
+     */
+    k_EEventStart(0),
+    /**
+     * <code>k_EEventBroadcastStart = 1;</code>
+     */
+    k_EEventBroadcastStart(1),
+    /**
+     * <code>k_EEventMatchStart = 2;</code>
+     */
+    k_EEventMatchStart(2),
+    /**
+     * <code>k_EEventPartnerMaxType = 3;</code>
+     */
+    k_EEventPartnerMaxType(3),
+    ;
+
+    /**
+     * <code>k_EEventStart = 0;</code>
+     */
+    public static final int k_EEventStart_VALUE = 0;
+    /**
+     * <code>k_EEventBroadcastStart = 1;</code>
+     */
+    public static final int k_EEventBroadcastStart_VALUE = 1;
+    /**
+     * <code>k_EEventMatchStart = 2;</code>
+     */
+    public static final int k_EEventMatchStart_VALUE = 2;
+    /**
+     * <code>k_EEventPartnerMaxType = 3;</code>
+     */
+    public static final int k_EEventPartnerMaxType_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PartnerEventNotificationType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PartnerEventNotificationType forNumber(int value) {
+      switch (value) {
+        case 0: return k_EEventStart;
+        case 1: return k_EEventBroadcastStart;
+        case 2: return k_EEventMatchStart;
+        case 3: return k_EEventPartnerMaxType;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PartnerEventNotificationType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PartnerEventNotificationType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PartnerEventNotificationType>() {
+            public PartnerEventNotificationType findValueByNumber(int number) {
+              return PartnerEventNotificationType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return SteammessagesBase.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final PartnerEventNotificationType[] VALUES = values();
+
+    public static PartnerEventNotificationType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PartnerEventNotificationType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:PartnerEventNotificationType)
+  }
+
+  public interface CMsgIPAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgIPAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>fixed32 v4 = 1;</code>
+     * @return Whether the v4 field is set.
+     */
+    boolean hasV4();
+    /**
+     * <code>fixed32 v4 = 1;</code>
+     * @return The v4.
+     */
+    int getV4();
+
+    /**
+     * <code>bytes v6 = 2;</code>
+     * @return Whether the v6 field is set.
+     */
+    boolean hasV6();
+    /**
+     * <code>bytes v6 = 2;</code>
+     * @return The v6.
+     */
+    com.google.protobuf.ByteString getV6();
+
+    public SteammessagesBase.CMsgIPAddress.IpCase getIpCase();
+  }
+  /**
+   * Protobuf type {@code CMsgIPAddress}
+   */
+  public static final class CMsgIPAddress extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgIPAddress)
+      CMsgIPAddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgIPAddress.newBuilder() to construct.
+    private CMsgIPAddress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgIPAddress() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgIPAddress();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgIPAddress(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 13: {
+              ipCase_ = 1;
+              ip_ = input.readFixed32();
+              break;
+            }
+            case 18: {
+              ipCase_ = 2;
+              ip_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CMsgIPAddress_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CMsgIPAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CMsgIPAddress.class, SteammessagesBase.CMsgIPAddress.Builder.class);
+    }
+
+    private int bitField0_;
+    private int ipCase_ = 0;
+    private java.lang.Object ip_;
+    public enum IpCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      V4(1),
+      V6(2),
+      IP_NOT_SET(0);
+      private final int value;
+      private IpCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static IpCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static IpCase forNumber(int value) {
+        switch (value) {
+          case 1: return V4;
+          case 2: return V6;
+          case 0: return IP_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public IpCase
+    getIpCase() {
+      return IpCase.forNumber(
+          ipCase_);
+    }
+
+    public static final int V4_FIELD_NUMBER = 1;
+    /**
+     * <code>fixed32 v4 = 1;</code>
+     * @return Whether the v4 field is set.
+     */
+    @java.lang.Override
+    public boolean hasV4() {
+      return ipCase_ == 1;
+    }
+    /**
+     * <code>fixed32 v4 = 1;</code>
+     * @return The v4.
+     */
+    @java.lang.Override
+    public int getV4() {
+      if (ipCase_ == 1) {
+        return (java.lang.Integer) ip_;
+      }
+      return 0;
+    }
+
+    public static final int V6_FIELD_NUMBER = 2;
+    /**
+     * <code>bytes v6 = 2;</code>
+     * @return Whether the v6 field is set.
+     */
+    @java.lang.Override
+    public boolean hasV6() {
+      return ipCase_ == 2;
+    }
+    /**
+     * <code>bytes v6 = 2;</code>
+     * @return The v6.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getV6() {
+      if (ipCase_ == 2) {
+        return (com.google.protobuf.ByteString) ip_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (ipCase_ == 1) {
+        output.writeFixed32(
+            1, (int)((java.lang.Integer) ip_));
+      }
+      if (ipCase_ == 2) {
+        output.writeBytes(
+            2, (com.google.protobuf.ByteString) ip_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (ipCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(
+              1, (int)((java.lang.Integer) ip_));
+      }
+      if (ipCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              2, (com.google.protobuf.ByteString) ip_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CMsgIPAddress)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CMsgIPAddress other = (SteammessagesBase.CMsgIPAddress) obj;
+
+      if (!getIpCase().equals(other.getIpCase())) return false;
+      switch (ipCase_) {
+        case 1:
+          if (getV4()
+              != other.getV4()) return false;
+          break;
+        case 2:
+          if (!getV6()
+              .equals(other.getV6())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (ipCase_) {
+        case 1:
+          hash = (37 * hash) + V4_FIELD_NUMBER;
+          hash = (53 * hash) + getV4();
+          break;
+        case 2:
+          hash = (37 * hash) + V6_FIELD_NUMBER;
+          hash = (53 * hash) + getV6().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CMsgIPAddress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgIPAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CMsgIPAddress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgIPAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgIPAddress)
+        SteammessagesBase.CMsgIPAddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CMsgIPAddress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CMsgIPAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CMsgIPAddress.class, SteammessagesBase.CMsgIPAddress.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CMsgIPAddress.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        ipCase_ = 0;
+        ip_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CMsgIPAddress_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgIPAddress getDefaultInstanceForType() {
+        return SteammessagesBase.CMsgIPAddress.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgIPAddress build() {
+        SteammessagesBase.CMsgIPAddress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgIPAddress buildPartial() {
+        SteammessagesBase.CMsgIPAddress result = new SteammessagesBase.CMsgIPAddress(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (ipCase_ == 1) {
+          result.ip_ = ip_;
+        }
+        if (ipCase_ == 2) {
+          result.ip_ = ip_;
+        }
+        result.bitField0_ = to_bitField0_;
+        result.ipCase_ = ipCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CMsgIPAddress) {
+          return mergeFrom((SteammessagesBase.CMsgIPAddress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CMsgIPAddress other) {
+        if (other == SteammessagesBase.CMsgIPAddress.getDefaultInstance()) return this;
+        switch (other.getIpCase()) {
+          case V4: {
+            setV4(other.getV4());
+            break;
+          }
+          case V6: {
+            setV6(other.getV6());
+            break;
+          }
+          case IP_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CMsgIPAddress parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CMsgIPAddress) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int ipCase_ = 0;
+      private java.lang.Object ip_;
+      public IpCase
+          getIpCase() {
+        return IpCase.forNumber(
+            ipCase_);
+      }
+
+      public Builder clearIp() {
+        ipCase_ = 0;
+        ip_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      /**
+       * <code>fixed32 v4 = 1;</code>
+       * @return Whether the v4 field is set.
+       */
+      public boolean hasV4() {
+        return ipCase_ == 1;
+      }
+      /**
+       * <code>fixed32 v4 = 1;</code>
+       * @return The v4.
+       */
+      public int getV4() {
+        if (ipCase_ == 1) {
+          return (java.lang.Integer) ip_;
+        }
+        return 0;
+      }
+      /**
+       * <code>fixed32 v4 = 1;</code>
+       * @param value The v4 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setV4(int value) {
+        ipCase_ = 1;
+        ip_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>fixed32 v4 = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearV4() {
+        if (ipCase_ == 1) {
+          ipCase_ = 0;
+          ip_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <code>bytes v6 = 2;</code>
+       * @return Whether the v6 field is set.
+       */
+      public boolean hasV6() {
+        return ipCase_ == 2;
+      }
+      /**
+       * <code>bytes v6 = 2;</code>
+       * @return The v6.
+       */
+      public com.google.protobuf.ByteString getV6() {
+        if (ipCase_ == 2) {
+          return (com.google.protobuf.ByteString) ip_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <code>bytes v6 = 2;</code>
+       * @param value The v6 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setV6(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ipCase_ = 2;
+        ip_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes v6 = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearV6() {
+        if (ipCase_ == 2) {
+          ipCase_ = 0;
+          ip_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgIPAddress)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgIPAddress)
+    private static final SteammessagesBase.CMsgIPAddress DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CMsgIPAddress();
+    }
+
+    public static SteammessagesBase.CMsgIPAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgIPAddress>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgIPAddress>() {
+      @java.lang.Override
+      public CMsgIPAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgIPAddress(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgIPAddress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgIPAddress> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CMsgIPAddress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgIPAddressBucketOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgIPAddressBucket)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+     * @return Whether the originalIpAddress field is set.
+     */
+    boolean hasOriginalIpAddress();
+    /**
+     * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+     * @return The originalIpAddress.
+     */
+    SteammessagesBase.CMsgIPAddress getOriginalIpAddress();
+    /**
+     * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+     */
+    SteammessagesBase.CMsgIPAddressOrBuilder getOriginalIpAddressOrBuilder();
+
+    /**
+     * <code>optional fixed64 bucket = 2;</code>
+     * @return Whether the bucket field is set.
+     */
+    boolean hasBucket();
+    /**
+     * <code>optional fixed64 bucket = 2;</code>
+     * @return The bucket.
+     */
+    long getBucket();
+  }
+  /**
+   * Protobuf type {@code CMsgIPAddressBucket}
+   */
+  public static final class CMsgIPAddressBucket extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgIPAddressBucket)
+      CMsgIPAddressBucketOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgIPAddressBucket.newBuilder() to construct.
+    private CMsgIPAddressBucket(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgIPAddressBucket() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgIPAddressBucket();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgIPAddressBucket(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              SteammessagesBase.CMsgIPAddress.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = originalIpAddress_.toBuilder();
+              }
+              originalIpAddress_ = input.readMessage(SteammessagesBase.CMsgIPAddress.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(originalIpAddress_);
+                originalIpAddress_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              bucket_ = input.readFixed64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CMsgIPAddressBucket_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CMsgIPAddressBucket_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CMsgIPAddressBucket.class, SteammessagesBase.CMsgIPAddressBucket.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ORIGINAL_IP_ADDRESS_FIELD_NUMBER = 1;
+    private SteammessagesBase.CMsgIPAddress originalIpAddress_;
+    /**
+     * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+     * @return Whether the originalIpAddress field is set.
+     */
+    @java.lang.Override
+    public boolean hasOriginalIpAddress() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+     * @return The originalIpAddress.
+     */
+    @java.lang.Override
+    public SteammessagesBase.CMsgIPAddress getOriginalIpAddress() {
+      return originalIpAddress_ == null ? SteammessagesBase.CMsgIPAddress.getDefaultInstance() : originalIpAddress_;
+    }
+    /**
+     * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.CMsgIPAddressOrBuilder getOriginalIpAddressOrBuilder() {
+      return originalIpAddress_ == null ? SteammessagesBase.CMsgIPAddress.getDefaultInstance() : originalIpAddress_;
+    }
+
+    public static final int BUCKET_FIELD_NUMBER = 2;
+    private long bucket_;
+    /**
+     * <code>optional fixed64 bucket = 2;</code>
+     * @return Whether the bucket field is set.
+     */
+    @java.lang.Override
+    public boolean hasBucket() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional fixed64 bucket = 2;</code>
+     * @return The bucket.
+     */
+    @java.lang.Override
+    public long getBucket() {
+      return bucket_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getOriginalIpAddress());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeFixed64(2, bucket_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOriginalIpAddress());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(2, bucket_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CMsgIPAddressBucket)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CMsgIPAddressBucket other = (SteammessagesBase.CMsgIPAddressBucket) obj;
+
+      if (hasOriginalIpAddress() != other.hasOriginalIpAddress()) return false;
+      if (hasOriginalIpAddress()) {
+        if (!getOriginalIpAddress()
+            .equals(other.getOriginalIpAddress())) return false;
+      }
+      if (hasBucket() != other.hasBucket()) return false;
+      if (hasBucket()) {
+        if (getBucket()
+            != other.getBucket()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOriginalIpAddress()) {
+        hash = (37 * hash) + ORIGINAL_IP_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getOriginalIpAddress().hashCode();
+      }
+      if (hasBucket()) {
+        hash = (37 * hash) + BUCKET_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getBucket());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CMsgIPAddressBucket parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgIPAddressBucket parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CMsgIPAddressBucket prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgIPAddressBucket}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgIPAddressBucket)
+        SteammessagesBase.CMsgIPAddressBucketOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CMsgIPAddressBucket_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CMsgIPAddressBucket_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CMsgIPAddressBucket.class, SteammessagesBase.CMsgIPAddressBucket.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CMsgIPAddressBucket.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOriginalIpAddressFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (originalIpAddressBuilder_ == null) {
+          originalIpAddress_ = null;
+        } else {
+          originalIpAddressBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bucket_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CMsgIPAddressBucket_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgIPAddressBucket getDefaultInstanceForType() {
+        return SteammessagesBase.CMsgIPAddressBucket.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgIPAddressBucket build() {
+        SteammessagesBase.CMsgIPAddressBucket result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgIPAddressBucket buildPartial() {
+        SteammessagesBase.CMsgIPAddressBucket result = new SteammessagesBase.CMsgIPAddressBucket(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (originalIpAddressBuilder_ == null) {
+            result.originalIpAddress_ = originalIpAddress_;
+          } else {
+            result.originalIpAddress_ = originalIpAddressBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.bucket_ = bucket_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CMsgIPAddressBucket) {
+          return mergeFrom((SteammessagesBase.CMsgIPAddressBucket)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CMsgIPAddressBucket other) {
+        if (other == SteammessagesBase.CMsgIPAddressBucket.getDefaultInstance()) return this;
+        if (other.hasOriginalIpAddress()) {
+          mergeOriginalIpAddress(other.getOriginalIpAddress());
+        }
+        if (other.hasBucket()) {
+          setBucket(other.getBucket());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CMsgIPAddressBucket parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CMsgIPAddressBucket) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private SteammessagesBase.CMsgIPAddress originalIpAddress_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesBase.CMsgIPAddress, SteammessagesBase.CMsgIPAddress.Builder, SteammessagesBase.CMsgIPAddressOrBuilder> originalIpAddressBuilder_;
+      /**
+       * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+       * @return Whether the originalIpAddress field is set.
+       */
+      public boolean hasOriginalIpAddress() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+       * @return The originalIpAddress.
+       */
+      public SteammessagesBase.CMsgIPAddress getOriginalIpAddress() {
+        if (originalIpAddressBuilder_ == null) {
+          return originalIpAddress_ == null ? SteammessagesBase.CMsgIPAddress.getDefaultInstance() : originalIpAddress_;
+        } else {
+          return originalIpAddressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+       */
+      public Builder setOriginalIpAddress(SteammessagesBase.CMsgIPAddress value) {
+        if (originalIpAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          originalIpAddress_ = value;
+          onChanged();
+        } else {
+          originalIpAddressBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+       */
+      public Builder setOriginalIpAddress(
+          SteammessagesBase.CMsgIPAddress.Builder builderForValue) {
+        if (originalIpAddressBuilder_ == null) {
+          originalIpAddress_ = builderForValue.build();
+          onChanged();
+        } else {
+          originalIpAddressBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+       */
+      public Builder mergeOriginalIpAddress(SteammessagesBase.CMsgIPAddress value) {
+        if (originalIpAddressBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              originalIpAddress_ != null &&
+              originalIpAddress_ != SteammessagesBase.CMsgIPAddress.getDefaultInstance()) {
+            originalIpAddress_ =
+              SteammessagesBase.CMsgIPAddress.newBuilder(originalIpAddress_).mergeFrom(value).buildPartial();
+          } else {
+            originalIpAddress_ = value;
+          }
+          onChanged();
+        } else {
+          originalIpAddressBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+       */
+      public Builder clearOriginalIpAddress() {
+        if (originalIpAddressBuilder_ == null) {
+          originalIpAddress_ = null;
+          onChanged();
+        } else {
+          originalIpAddressBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+       */
+      public SteammessagesBase.CMsgIPAddress.Builder getOriginalIpAddressBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOriginalIpAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+       */
+      public SteammessagesBase.CMsgIPAddressOrBuilder getOriginalIpAddressOrBuilder() {
+        if (originalIpAddressBuilder_ != null) {
+          return originalIpAddressBuilder_.getMessageOrBuilder();
+        } else {
+          return originalIpAddress_ == null ?
+              SteammessagesBase.CMsgIPAddress.getDefaultInstance() : originalIpAddress_;
+        }
+      }
+      /**
+       * <code>optional .CMsgIPAddress original_ip_address = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesBase.CMsgIPAddress, SteammessagesBase.CMsgIPAddress.Builder, SteammessagesBase.CMsgIPAddressOrBuilder> 
+          getOriginalIpAddressFieldBuilder() {
+        if (originalIpAddressBuilder_ == null) {
+          originalIpAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesBase.CMsgIPAddress, SteammessagesBase.CMsgIPAddress.Builder, SteammessagesBase.CMsgIPAddressOrBuilder>(
+                  getOriginalIpAddress(),
+                  getParentForChildren(),
+                  isClean());
+          originalIpAddress_ = null;
+        }
+        return originalIpAddressBuilder_;
+      }
+
+      private long bucket_ ;
+      /**
+       * <code>optional fixed64 bucket = 2;</code>
+       * @return Whether the bucket field is set.
+       */
+      @java.lang.Override
+      public boolean hasBucket() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional fixed64 bucket = 2;</code>
+       * @return The bucket.
+       */
+      @java.lang.Override
+      public long getBucket() {
+        return bucket_;
+      }
+      /**
+       * <code>optional fixed64 bucket = 2;</code>
+       * @param value The bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucket(long value) {
+        bitField0_ |= 0x00000002;
+        bucket_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 bucket = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBucket() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        bucket_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgIPAddressBucket)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgIPAddressBucket)
+    private static final SteammessagesBase.CMsgIPAddressBucket DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CMsgIPAddressBucket();
+    }
+
+    public static SteammessagesBase.CMsgIPAddressBucket getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgIPAddressBucket>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgIPAddressBucket>() {
+      @java.lang.Override
+      public CMsgIPAddressBucket parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgIPAddressBucket(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgIPAddressBucket> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgIPAddressBucket> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CMsgIPAddressBucket getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CMsgProtoBufHeaderOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgProtoBufHeader)
       com.google.protobuf.MessageOrBuilder {
@@ -132,17 +2230,6 @@ public final class SteammessagesBase {
         getErrorMessageBytes();
 
     /**
-     * <code>optional uint32 ip = 15;</code>
-     * @return Whether the ip field is set.
-     */
-    boolean hasIp();
-    /**
-     * <code>optional uint32 ip = 15;</code>
-     * @return The ip.
-     */
-    int getIp();
-
-    /**
      * <code>optional uint32 auth_account_flags = 16;</code>
      * @return Whether the authAccountFlags field is set.
      */
@@ -240,6 +2327,119 @@ public final class SteammessagesBase {
      * @return The webapiKeyId.
      */
     int getWebapiKeyId();
+
+    /**
+     * <code>optional bool is_from_external_source = 26;</code>
+     * @return Whether the isFromExternalSource field is set.
+     */
+    boolean hasIsFromExternalSource();
+    /**
+     * <code>optional bool is_from_external_source = 26;</code>
+     * @return The isFromExternalSource.
+     */
+    boolean getIsFromExternalSource();
+
+    /**
+     * <code>repeated uint32 forward_to_sysid = 27;</code>
+     * @return A list containing the forwardToSysid.
+     */
+    java.util.List<java.lang.Integer> getForwardToSysidList();
+    /**
+     * <code>repeated uint32 forward_to_sysid = 27;</code>
+     * @return The count of forwardToSysid.
+     */
+    int getForwardToSysidCount();
+    /**
+     * <code>repeated uint32 forward_to_sysid = 27;</code>
+     * @param index The index of the element to return.
+     * @return The forwardToSysid at the given index.
+     */
+    int getForwardToSysid(int index);
+
+    /**
+     * <code>optional uint32 cm_sysid = 28;</code>
+     * @return Whether the cmSysid field is set.
+     */
+    boolean hasCmSysid();
+    /**
+     * <code>optional uint32 cm_sysid = 28;</code>
+     * @return The cmSysid.
+     */
+    int getCmSysid();
+
+    /**
+     * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+     * @return Whether the launcherType field is set.
+     */
+    boolean hasLauncherType();
+    /**
+     * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+     * @return The launcherType.
+     */
+    int getLauncherType();
+
+    /**
+     * <code>optional uint32 realm = 32 [default = 0];</code>
+     * @return Whether the realm field is set.
+     */
+    boolean hasRealm();
+    /**
+     * <code>optional uint32 realm = 32 [default = 0];</code>
+     * @return The realm.
+     */
+    int getRealm();
+
+    /**
+     * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+     * @return Whether the timeoutMs field is set.
+     */
+    boolean hasTimeoutMs();
+    /**
+     * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+     * @return The timeoutMs.
+     */
+    int getTimeoutMs();
+
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return Whether the debugSource field is set.
+     */
+    boolean hasDebugSource();
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return The debugSource.
+     */
+    java.lang.String getDebugSource();
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return The bytes for debugSource.
+     */
+    com.google.protobuf.ByteString
+        getDebugSourceBytes();
+
+    /**
+     * <code>uint32 ip = 15;</code>
+     * @return Whether the ip field is set.
+     */
+    boolean hasIp();
+    /**
+     * <code>uint32 ip = 15;</code>
+     * @return The ip.
+     */
+    int getIp();
+
+    /**
+     * <code>bytes ip_v6 = 29;</code>
+     * @return Whether the ipV6 field is set.
+     */
+    boolean hasIpV6();
+    /**
+     * <code>bytes ip_v6 = 29;</code>
+     * @return The ipV6.
+     */
+    com.google.protobuf.ByteString getIpV6();
+
+    public SteammessagesBase.CMsgProtoBufHeader.IpAddrCase getIpAddrCase();
   }
   /**
    * Protobuf type {@code CMsgProtoBufHeader}
@@ -261,6 +2461,9 @@ public final class SteammessagesBase {
       errorMessage_ = "";
       transportError_ = 1;
       messageid_ = -1L;
+      forwardToSysid_ = emptyIntList();
+      timeoutMs_ = -1;
+      debugSource_ = "";
     }
 
     @java.lang.Override
@@ -337,47 +2540,47 @@ public final class SteammessagesBase {
               break;
             }
             case 120: {
-              bitField0_ |= 0x00000200;
-              ip_ = input.readUInt32();
+              ipAddrCase_ = 15;
+              ipAddr_ = input.readUInt32();
               break;
             }
             case 128: {
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000200;
               authAccountFlags_ = input.readUInt32();
               break;
             }
             case 136: {
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00001000;
               transportError_ = input.readInt32();
               break;
             }
             case 144: {
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00002000;
               messageid_ = input.readUInt64();
               break;
             }
             case 152: {
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00004000;
               publisherGroupId_ = input.readUInt32();
               break;
             }
             case 160: {
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00008000;
               sysid_ = input.readUInt32();
               break;
             }
             case 168: {
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00010000;
               traceTag_ = input.readUInt64();
               break;
             }
             case 176: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00000400;
               tokenSource_ = input.readUInt32();
               break;
             }
             case 184: {
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00000800;
               adminSpoofingUser_ = input.readBool();
               break;
             }
@@ -387,8 +2590,65 @@ public final class SteammessagesBase {
               break;
             }
             case 200: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00020000;
               webapiKeyId_ = input.readUInt32();
+              break;
+            }
+            case 208: {
+              bitField0_ |= 0x00040000;
+              isFromExternalSource_ = input.readBool();
+              break;
+            }
+            case 216: {
+              if (!((mutable_bitField0_ & 0x00080000) != 0)) {
+                forwardToSysid_ = newIntList();
+                mutable_bitField0_ |= 0x00080000;
+              }
+              forwardToSysid_.addInt(input.readUInt32());
+              break;
+            }
+            case 218: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00080000) != 0) && input.getBytesUntilLimit() > 0) {
+                forwardToSysid_ = newIntList();
+                mutable_bitField0_ |= 0x00080000;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                forwardToSysid_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 224: {
+              bitField0_ |= 0x00080000;
+              cmSysid_ = input.readUInt32();
+              break;
+            }
+            case 234: {
+              ipAddrCase_ = 29;
+              ipAddr_ = input.readBytes();
+              break;
+            }
+            case 248: {
+              bitField0_ |= 0x00100000;
+              launcherType_ = input.readUInt32();
+              break;
+            }
+            case 256: {
+              bitField0_ |= 0x00200000;
+              realm_ = input.readUInt32();
+              break;
+            }
+            case 264: {
+              bitField0_ |= 0x00400000;
+              timeoutMs_ = input.readInt32();
+              break;
+            }
+            case 274: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00800000;
+              debugSource_ = bs;
               break;
             }
             default: {
@@ -406,6 +2666,9 @@ public final class SteammessagesBase {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00080000) != 0)) {
+          forwardToSysid_.makeImmutable(); // C
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -424,6 +2687,47 @@ public final class SteammessagesBase {
     }
 
     private int bitField0_;
+    private int ipAddrCase_ = 0;
+    private java.lang.Object ipAddr_;
+    public enum IpAddrCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      IP(15),
+      IP_V6(29),
+      IPADDR_NOT_SET(0);
+      private final int value;
+      private IpAddrCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static IpAddrCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static IpAddrCase forNumber(int value) {
+        switch (value) {
+          case 15: return IP;
+          case 29: return IP_V6;
+          case 0: return IPADDR_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public IpAddrCase
+    getIpAddrCase() {
+      return IpAddrCase.forNumber(
+          ipAddrCase_);
+    }
+
     public static final int STEAMID_FIELD_NUMBER = 1;
     private long steamid_;
     /**
@@ -653,25 +2957,6 @@ public final class SteammessagesBase {
       }
     }
 
-    public static final int IP_FIELD_NUMBER = 15;
-    private int ip_;
-    /**
-     * <code>optional uint32 ip = 15;</code>
-     * @return Whether the ip field is set.
-     */
-    @java.lang.Override
-    public boolean hasIp() {
-      return ((bitField0_ & 0x00000200) != 0);
-    }
-    /**
-     * <code>optional uint32 ip = 15;</code>
-     * @return The ip.
-     */
-    @java.lang.Override
-    public int getIp() {
-      return ip_;
-    }
-
     public static final int AUTH_ACCOUNT_FLAGS_FIELD_NUMBER = 16;
     private int authAccountFlags_;
     /**
@@ -680,7 +2965,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasAuthAccountFlags() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>optional uint32 auth_account_flags = 16;</code>
@@ -699,7 +2984,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasTokenSource() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <code>optional uint32 token_source = 22;</code>
@@ -718,7 +3003,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasAdminSpoofingUser() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <code>optional bool admin_spoofing_user = 23;</code>
@@ -737,7 +3022,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasTransportError() {
-      return ((bitField0_ & 0x00002000) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <code>optional int32 transport_error = 17 [default = 1];</code>
@@ -756,7 +3041,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasMessageid() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <code>optional uint64 messageid = 18 [default = 18446744073709551615];</code>
@@ -775,7 +3060,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasPublisherGroupId() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <code>optional uint32 publisher_group_id = 19;</code>
@@ -794,7 +3079,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasSysid() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <code>optional uint32 sysid = 20;</code>
@@ -813,7 +3098,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasTraceTag() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <code>optional uint64 trace_tag = 21;</code>
@@ -832,7 +3117,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasWebapiKeyId() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <code>optional uint32 webapi_key_id = 25;</code>
@@ -841,6 +3126,218 @@ public final class SteammessagesBase {
     @java.lang.Override
     public int getWebapiKeyId() {
       return webapiKeyId_;
+    }
+
+    public static final int IS_FROM_EXTERNAL_SOURCE_FIELD_NUMBER = 26;
+    private boolean isFromExternalSource_;
+    /**
+     * <code>optional bool is_from_external_source = 26;</code>
+     * @return Whether the isFromExternalSource field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsFromExternalSource() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <code>optional bool is_from_external_source = 26;</code>
+     * @return The isFromExternalSource.
+     */
+    @java.lang.Override
+    public boolean getIsFromExternalSource() {
+      return isFromExternalSource_;
+    }
+
+    public static final int FORWARD_TO_SYSID_FIELD_NUMBER = 27;
+    private com.google.protobuf.Internal.IntList forwardToSysid_;
+    /**
+     * <code>repeated uint32 forward_to_sysid = 27;</code>
+     * @return A list containing the forwardToSysid.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getForwardToSysidList() {
+      return forwardToSysid_;
+    }
+    /**
+     * <code>repeated uint32 forward_to_sysid = 27;</code>
+     * @return The count of forwardToSysid.
+     */
+    public int getForwardToSysidCount() {
+      return forwardToSysid_.size();
+    }
+    /**
+     * <code>repeated uint32 forward_to_sysid = 27;</code>
+     * @param index The index of the element to return.
+     * @return The forwardToSysid at the given index.
+     */
+    public int getForwardToSysid(int index) {
+      return forwardToSysid_.getInt(index);
+    }
+
+    public static final int CM_SYSID_FIELD_NUMBER = 28;
+    private int cmSysid_;
+    /**
+     * <code>optional uint32 cm_sysid = 28;</code>
+     * @return Whether the cmSysid field is set.
+     */
+    @java.lang.Override
+    public boolean hasCmSysid() {
+      return ((bitField0_ & 0x00080000) != 0);
+    }
+    /**
+     * <code>optional uint32 cm_sysid = 28;</code>
+     * @return The cmSysid.
+     */
+    @java.lang.Override
+    public int getCmSysid() {
+      return cmSysid_;
+    }
+
+    public static final int LAUNCHER_TYPE_FIELD_NUMBER = 31;
+    private int launcherType_;
+    /**
+     * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+     * @return Whether the launcherType field is set.
+     */
+    @java.lang.Override
+    public boolean hasLauncherType() {
+      return ((bitField0_ & 0x00100000) != 0);
+    }
+    /**
+     * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+     * @return The launcherType.
+     */
+    @java.lang.Override
+    public int getLauncherType() {
+      return launcherType_;
+    }
+
+    public static final int REALM_FIELD_NUMBER = 32;
+    private int realm_;
+    /**
+     * <code>optional uint32 realm = 32 [default = 0];</code>
+     * @return Whether the realm field is set.
+     */
+    @java.lang.Override
+    public boolean hasRealm() {
+      return ((bitField0_ & 0x00200000) != 0);
+    }
+    /**
+     * <code>optional uint32 realm = 32 [default = 0];</code>
+     * @return The realm.
+     */
+    @java.lang.Override
+    public int getRealm() {
+      return realm_;
+    }
+
+    public static final int TIMEOUT_MS_FIELD_NUMBER = 33;
+    private int timeoutMs_;
+    /**
+     * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+     * @return Whether the timeoutMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeoutMs() {
+      return ((bitField0_ & 0x00400000) != 0);
+    }
+    /**
+     * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+     * @return The timeoutMs.
+     */
+    @java.lang.Override
+    public int getTimeoutMs() {
+      return timeoutMs_;
+    }
+
+    public static final int DEBUG_SOURCE_FIELD_NUMBER = 34;
+    private volatile java.lang.Object debugSource_;
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return Whether the debugSource field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebugSource() {
+      return ((bitField0_ & 0x00800000) != 0);
+    }
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return The debugSource.
+     */
+    @java.lang.Override
+    public java.lang.String getDebugSource() {
+      java.lang.Object ref = debugSource_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debugSource_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debug_source = 34;</code>
+     * @return The bytes for debugSource.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDebugSourceBytes() {
+      java.lang.Object ref = debugSource_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debugSource_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IP_FIELD_NUMBER = 15;
+    /**
+     * <code>uint32 ip = 15;</code>
+     * @return Whether the ip field is set.
+     */
+    @java.lang.Override
+    public boolean hasIp() {
+      return ipAddrCase_ == 15;
+    }
+    /**
+     * <code>uint32 ip = 15;</code>
+     * @return The ip.
+     */
+    @java.lang.Override
+    public int getIp() {
+      if (ipAddrCase_ == 15) {
+        return (java.lang.Integer) ipAddr_;
+      }
+      return 0;
+    }
+
+    public static final int IP_V6_FIELD_NUMBER = 29;
+    /**
+     * <code>bytes ip_v6 = 29;</code>
+     * @return Whether the ipV6 field is set.
+     */
+    @java.lang.Override
+    public boolean hasIpV6() {
+      return ipAddrCase_ == 29;
+    }
+    /**
+     * <code>bytes ip_v6 = 29;</code>
+     * @return The ipV6.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getIpV6() {
+      if (ipAddrCase_ == 29) {
+        return (com.google.protobuf.ByteString) ipAddr_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -881,38 +3378,64 @@ public final class SteammessagesBase {
       if (((bitField0_ & 0x00000100) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, errorMessage_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
-        output.writeUInt32(15, ip_);
+      if (ipAddrCase_ == 15) {
+        output.writeUInt32(
+            15, (int)((java.lang.Integer) ipAddr_));
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeUInt32(16, authAccountFlags_);
       }
-      if (((bitField0_ & 0x00002000) != 0)) {
+      if (((bitField0_ & 0x00001000) != 0)) {
         output.writeInt32(17, transportError_);
       }
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00002000) != 0)) {
         output.writeUInt64(18, messageid_);
       }
-      if (((bitField0_ & 0x00008000) != 0)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         output.writeUInt32(19, publisherGroupId_);
       }
-      if (((bitField0_ & 0x00010000) != 0)) {
+      if (((bitField0_ & 0x00008000) != 0)) {
         output.writeUInt32(20, sysid_);
       }
-      if (((bitField0_ & 0x00020000) != 0)) {
+      if (((bitField0_ & 0x00010000) != 0)) {
         output.writeUInt64(21, traceTag_);
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         output.writeUInt32(22, tokenSource_);
       }
-      if (((bitField0_ & 0x00001000) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         output.writeBool(23, adminSpoofingUser_);
       }
       if (((bitField0_ & 0x00000040) != 0)) {
         output.writeInt32(24, seqNum_);
       }
-      if (((bitField0_ & 0x00040000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         output.writeUInt32(25, webapiKeyId_);
+      }
+      if (((bitField0_ & 0x00040000) != 0)) {
+        output.writeBool(26, isFromExternalSource_);
+      }
+      for (int i = 0; i < forwardToSysid_.size(); i++) {
+        output.writeUInt32(27, forwardToSysid_.getInt(i));
+      }
+      if (((bitField0_ & 0x00080000) != 0)) {
+        output.writeUInt32(28, cmSysid_);
+      }
+      if (ipAddrCase_ == 29) {
+        output.writeBytes(
+            29, (com.google.protobuf.ByteString) ipAddr_);
+      }
+      if (((bitField0_ & 0x00100000) != 0)) {
+        output.writeUInt32(31, launcherType_);
+      }
+      if (((bitField0_ & 0x00200000) != 0)) {
+        output.writeUInt32(32, realm_);
+      }
+      if (((bitField0_ & 0x00400000) != 0)) {
+        output.writeInt32(33, timeoutMs_);
+      }
+      if (((bitField0_ & 0x00800000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 34, debugSource_);
       }
       unknownFields.writeTo(output);
     }
@@ -953,39 +3476,40 @@ public final class SteammessagesBase {
       if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, errorMessage_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (ipAddrCase_ == 15) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, ip_);
+          .computeUInt32Size(
+              15, (int)((java.lang.Integer) ipAddr_));
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(16, authAccountFlags_);
       }
-      if (((bitField0_ & 0x00002000) != 0)) {
+      if (((bitField0_ & 0x00001000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(17, transportError_);
       }
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00002000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(18, messageid_);
       }
-      if (((bitField0_ & 0x00008000) != 0)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(19, publisherGroupId_);
       }
-      if (((bitField0_ & 0x00010000) != 0)) {
+      if (((bitField0_ & 0x00008000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(20, sysid_);
       }
-      if (((bitField0_ & 0x00020000) != 0)) {
+      if (((bitField0_ & 0x00010000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(21, traceTag_);
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(22, tokenSource_);
       }
-      if (((bitField0_ & 0x00001000) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(23, adminSpoofingUser_);
       }
@@ -993,9 +3517,46 @@ public final class SteammessagesBase {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(24, seqNum_);
       }
-      if (((bitField0_ & 0x00040000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(25, webapiKeyId_);
+      }
+      if (((bitField0_ & 0x00040000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(26, isFromExternalSource_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < forwardToSysid_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(forwardToSysid_.getInt(i));
+        }
+        size += dataSize;
+        size += 2 * getForwardToSysidList().size();
+      }
+      if (((bitField0_ & 0x00080000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(28, cmSysid_);
+      }
+      if (ipAddrCase_ == 29) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              29, (com.google.protobuf.ByteString) ipAddr_);
+      }
+      if (((bitField0_ & 0x00100000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(31, launcherType_);
+      }
+      if (((bitField0_ & 0x00200000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(32, realm_);
+      }
+      if (((bitField0_ & 0x00400000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(33, timeoutMs_);
+      }
+      if (((bitField0_ & 0x00800000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, debugSource_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1057,11 +3618,6 @@ public final class SteammessagesBase {
         if (!getErrorMessage()
             .equals(other.getErrorMessage())) return false;
       }
-      if (hasIp() != other.hasIp()) return false;
-      if (hasIp()) {
-        if (getIp()
-            != other.getIp()) return false;
-      }
       if (hasAuthAccountFlags() != other.hasAuthAccountFlags()) return false;
       if (hasAuthAccountFlags()) {
         if (getAuthAccountFlags()
@@ -1106,6 +3662,51 @@ public final class SteammessagesBase {
       if (hasWebapiKeyId()) {
         if (getWebapiKeyId()
             != other.getWebapiKeyId()) return false;
+      }
+      if (hasIsFromExternalSource() != other.hasIsFromExternalSource()) return false;
+      if (hasIsFromExternalSource()) {
+        if (getIsFromExternalSource()
+            != other.getIsFromExternalSource()) return false;
+      }
+      if (!getForwardToSysidList()
+          .equals(other.getForwardToSysidList())) return false;
+      if (hasCmSysid() != other.hasCmSysid()) return false;
+      if (hasCmSysid()) {
+        if (getCmSysid()
+            != other.getCmSysid()) return false;
+      }
+      if (hasLauncherType() != other.hasLauncherType()) return false;
+      if (hasLauncherType()) {
+        if (getLauncherType()
+            != other.getLauncherType()) return false;
+      }
+      if (hasRealm() != other.hasRealm()) return false;
+      if (hasRealm()) {
+        if (getRealm()
+            != other.getRealm()) return false;
+      }
+      if (hasTimeoutMs() != other.hasTimeoutMs()) return false;
+      if (hasTimeoutMs()) {
+        if (getTimeoutMs()
+            != other.getTimeoutMs()) return false;
+      }
+      if (hasDebugSource() != other.hasDebugSource()) return false;
+      if (hasDebugSource()) {
+        if (!getDebugSource()
+            .equals(other.getDebugSource())) return false;
+      }
+      if (!getIpAddrCase().equals(other.getIpAddrCase())) return false;
+      switch (ipAddrCase_) {
+        case 15:
+          if (getIp()
+              != other.getIp()) return false;
+          break;
+        case 29:
+          if (!getIpV6()
+              .equals(other.getIpV6())) return false;
+          break;
+        case 0:
+        default:
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -1157,10 +3758,6 @@ public final class SteammessagesBase {
         hash = (37 * hash) + ERROR_MESSAGE_FIELD_NUMBER;
         hash = (53 * hash) + getErrorMessage().hashCode();
       }
-      if (hasIp()) {
-        hash = (37 * hash) + IP_FIELD_NUMBER;
-        hash = (53 * hash) + getIp();
-      }
       if (hasAuthAccountFlags()) {
         hash = (37 * hash) + AUTH_ACCOUNT_FLAGS_FIELD_NUMBER;
         hash = (53 * hash) + getAuthAccountFlags();
@@ -1199,6 +3796,47 @@ public final class SteammessagesBase {
       if (hasWebapiKeyId()) {
         hash = (37 * hash) + WEBAPI_KEY_ID_FIELD_NUMBER;
         hash = (53 * hash) + getWebapiKeyId();
+      }
+      if (hasIsFromExternalSource()) {
+        hash = (37 * hash) + IS_FROM_EXTERNAL_SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsFromExternalSource());
+      }
+      if (getForwardToSysidCount() > 0) {
+        hash = (37 * hash) + FORWARD_TO_SYSID_FIELD_NUMBER;
+        hash = (53 * hash) + getForwardToSysidList().hashCode();
+      }
+      if (hasCmSysid()) {
+        hash = (37 * hash) + CM_SYSID_FIELD_NUMBER;
+        hash = (53 * hash) + getCmSysid();
+      }
+      if (hasLauncherType()) {
+        hash = (37 * hash) + LAUNCHER_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getLauncherType();
+      }
+      if (hasRealm()) {
+        hash = (37 * hash) + REALM_FIELD_NUMBER;
+        hash = (53 * hash) + getRealm();
+      }
+      if (hasTimeoutMs()) {
+        hash = (37 * hash) + TIMEOUT_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeoutMs();
+      }
+      if (hasDebugSource()) {
+        hash = (37 * hash) + DEBUG_SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getDebugSource().hashCode();
+      }
+      switch (ipAddrCase_) {
+        case 15:
+          hash = (37 * hash) + IP_FIELD_NUMBER;
+          hash = (53 * hash) + getIp();
+          break;
+        case 29:
+          hash = (37 * hash) + IP_V6_FIELD_NUMBER;
+          hash = (53 * hash) + getIpV6().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1351,26 +3989,40 @@ public final class SteammessagesBase {
         bitField0_ = (bitField0_ & ~0x00000080);
         errorMessage_ = "";
         bitField0_ = (bitField0_ & ~0x00000100);
-        ip_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000200);
         authAccountFlags_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
         tokenSource_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         adminSpoofingUser_ = false;
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         transportError_ = 1;
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         messageid_ = -1L;
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         publisherGroupId_ = 0;
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         sysid_ = 0;
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         traceTag_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         webapiKeyId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        isFromExternalSource_ = false;
         bitField0_ = (bitField0_ & ~0x00040000);
+        forwardToSysid_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00080000);
+        cmSysid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        launcherType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        realm_ = 0;
+        bitField0_ = (bitField0_ & ~0x00400000);
+        timeoutMs_ = -1;
+        bitField0_ = (bitField0_ & ~0x00800000);
+        debugSource_ = "";
+        bitField0_ = (bitField0_ & ~0x01000000);
+        ipAddrCase_ = 0;
+        ipAddr_ = null;
         return this;
       }
 
@@ -1436,46 +4088,78 @@ public final class SteammessagesBase {
         }
         result.errorMessage_ = errorMessage_;
         if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.ip_ = ip_;
+          result.authAccountFlags_ = authAccountFlags_;
           to_bitField0_ |= 0x00000200;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.authAccountFlags_ = authAccountFlags_;
+          result.tokenSource_ = tokenSource_;
           to_bitField0_ |= 0x00000400;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
-          result.tokenSource_ = tokenSource_;
+          result.adminSpoofingUser_ = adminSpoofingUser_;
           to_bitField0_ |= 0x00000800;
         }
         if (((from_bitField0_ & 0x00001000) != 0)) {
-          result.adminSpoofingUser_ = adminSpoofingUser_;
           to_bitField0_ |= 0x00001000;
         }
+        result.transportError_ = transportError_;
         if (((from_bitField0_ & 0x00002000) != 0)) {
           to_bitField0_ |= 0x00002000;
         }
-        result.transportError_ = transportError_;
+        result.messageid_ = messageid_;
         if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.publisherGroupId_ = publisherGroupId_;
           to_bitField0_ |= 0x00004000;
         }
-        result.messageid_ = messageid_;
         if (((from_bitField0_ & 0x00008000) != 0)) {
-          result.publisherGroupId_ = publisherGroupId_;
+          result.sysid_ = sysid_;
           to_bitField0_ |= 0x00008000;
         }
         if (((from_bitField0_ & 0x00010000) != 0)) {
-          result.sysid_ = sysid_;
+          result.traceTag_ = traceTag_;
           to_bitField0_ |= 0x00010000;
         }
         if (((from_bitField0_ & 0x00020000) != 0)) {
-          result.traceTag_ = traceTag_;
+          result.webapiKeyId_ = webapiKeyId_;
           to_bitField0_ |= 0x00020000;
         }
         if (((from_bitField0_ & 0x00040000) != 0)) {
-          result.webapiKeyId_ = webapiKeyId_;
+          result.isFromExternalSource_ = isFromExternalSource_;
           to_bitField0_ |= 0x00040000;
         }
+        if (((bitField0_ & 0x00080000) != 0)) {
+          forwardToSysid_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00080000);
+        }
+        result.forwardToSysid_ = forwardToSysid_;
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.cmSysid_ = cmSysid_;
+          to_bitField0_ |= 0x00080000;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.launcherType_ = launcherType_;
+          to_bitField0_ |= 0x00100000;
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.realm_ = realm_;
+          to_bitField0_ |= 0x00200000;
+        }
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          to_bitField0_ |= 0x00400000;
+        }
+        result.timeoutMs_ = timeoutMs_;
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          to_bitField0_ |= 0x00800000;
+        }
+        result.debugSource_ = debugSource_;
+        if (ipAddrCase_ == 15) {
+          result.ipAddr_ = ipAddr_;
+        }
+        if (ipAddrCase_ == 29) {
+          result.ipAddr_ = ipAddr_;
+        }
         result.bitField0_ = to_bitField0_;
+        result.ipAddrCase_ = ipAddrCase_;
         onBuilt();
         return result;
       }
@@ -1555,9 +4239,6 @@ public final class SteammessagesBase {
           errorMessage_ = other.errorMessage_;
           onChanged();
         }
-        if (other.hasIp()) {
-          setIp(other.getIp());
-        }
         if (other.hasAuthAccountFlags()) {
           setAuthAccountFlags(other.getAuthAccountFlags());
         }
@@ -1584,6 +4265,49 @@ public final class SteammessagesBase {
         }
         if (other.hasWebapiKeyId()) {
           setWebapiKeyId(other.getWebapiKeyId());
+        }
+        if (other.hasIsFromExternalSource()) {
+          setIsFromExternalSource(other.getIsFromExternalSource());
+        }
+        if (!other.forwardToSysid_.isEmpty()) {
+          if (forwardToSysid_.isEmpty()) {
+            forwardToSysid_ = other.forwardToSysid_;
+            bitField0_ = (bitField0_ & ~0x00080000);
+          } else {
+            ensureForwardToSysidIsMutable();
+            forwardToSysid_.addAll(other.forwardToSysid_);
+          }
+          onChanged();
+        }
+        if (other.hasCmSysid()) {
+          setCmSysid(other.getCmSysid());
+        }
+        if (other.hasLauncherType()) {
+          setLauncherType(other.getLauncherType());
+        }
+        if (other.hasRealm()) {
+          setRealm(other.getRealm());
+        }
+        if (other.hasTimeoutMs()) {
+          setTimeoutMs(other.getTimeoutMs());
+        }
+        if (other.hasDebugSource()) {
+          bitField0_ |= 0x01000000;
+          debugSource_ = other.debugSource_;
+          onChanged();
+        }
+        switch (other.getIpAddrCase()) {
+          case IP: {
+            setIp(other.getIp());
+            break;
+          }
+          case IP_V6: {
+            setIpV6(other.getIpV6());
+            break;
+          }
+          case IPADDR_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1613,6 +4337,21 @@ public final class SteammessagesBase {
         }
         return this;
       }
+      private int ipAddrCase_ = 0;
+      private java.lang.Object ipAddr_;
+      public IpAddrCase
+          getIpAddrCase() {
+        return IpAddrCase.forNumber(
+            ipAddrCase_);
+      }
+
+      public Builder clearIpAddr() {
+        ipAddrCase_ = 0;
+        ipAddr_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private long steamid_ ;
@@ -2056,45 +4795,6 @@ public final class SteammessagesBase {
         return this;
       }
 
-      private int ip_ ;
-      /**
-       * <code>optional uint32 ip = 15;</code>
-       * @return Whether the ip field is set.
-       */
-      @java.lang.Override
-      public boolean hasIp() {
-        return ((bitField0_ & 0x00000200) != 0);
-      }
-      /**
-       * <code>optional uint32 ip = 15;</code>
-       * @return The ip.
-       */
-      @java.lang.Override
-      public int getIp() {
-        return ip_;
-      }
-      /**
-       * <code>optional uint32 ip = 15;</code>
-       * @param value The ip to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIp(int value) {
-        bitField0_ |= 0x00000200;
-        ip_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 ip = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIp() {
-        bitField0_ = (bitField0_ & ~0x00000200);
-        ip_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int authAccountFlags_ ;
       /**
        * <code>optional uint32 auth_account_flags = 16;</code>
@@ -2102,7 +4802,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasAuthAccountFlags() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>optional uint32 auth_account_flags = 16;</code>
@@ -2118,7 +4818,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setAuthAccountFlags(int value) {
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000200;
         authAccountFlags_ = value;
         onChanged();
         return this;
@@ -2128,7 +4828,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearAuthAccountFlags() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
         authAccountFlags_ = 0;
         onChanged();
         return this;
@@ -2141,7 +4841,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasTokenSource() {
-        return ((bitField0_ & 0x00000800) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <code>optional uint32 token_source = 22;</code>
@@ -2157,7 +4857,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setTokenSource(int value) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000400;
         tokenSource_ = value;
         onChanged();
         return this;
@@ -2167,7 +4867,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearTokenSource() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         tokenSource_ = 0;
         onChanged();
         return this;
@@ -2180,7 +4880,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasAdminSpoofingUser() {
-        return ((bitField0_ & 0x00001000) != 0);
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <code>optional bool admin_spoofing_user = 23;</code>
@@ -2196,7 +4896,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setAdminSpoofingUser(boolean value) {
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000800;
         adminSpoofingUser_ = value;
         onChanged();
         return this;
@@ -2206,7 +4906,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearAdminSpoofingUser() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         adminSpoofingUser_ = false;
         onChanged();
         return this;
@@ -2219,7 +4919,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasTransportError() {
-        return ((bitField0_ & 0x00002000) != 0);
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <code>optional int32 transport_error = 17 [default = 1];</code>
@@ -2235,7 +4935,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setTransportError(int value) {
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00001000;
         transportError_ = value;
         onChanged();
         return this;
@@ -2245,7 +4945,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearTransportError() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         transportError_ = 1;
         onChanged();
         return this;
@@ -2258,7 +4958,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasMessageid() {
-        return ((bitField0_ & 0x00004000) != 0);
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <code>optional uint64 messageid = 18 [default = 18446744073709551615];</code>
@@ -2274,7 +4974,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setMessageid(long value) {
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00002000;
         messageid_ = value;
         onChanged();
         return this;
@@ -2284,7 +4984,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearMessageid() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         messageid_ = -1L;
         onChanged();
         return this;
@@ -2297,7 +4997,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasPublisherGroupId() {
-        return ((bitField0_ & 0x00008000) != 0);
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <code>optional uint32 publisher_group_id = 19;</code>
@@ -2313,7 +5013,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setPublisherGroupId(int value) {
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00004000;
         publisherGroupId_ = value;
         onChanged();
         return this;
@@ -2323,7 +5023,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearPublisherGroupId() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         publisherGroupId_ = 0;
         onChanged();
         return this;
@@ -2336,7 +5036,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasSysid() {
-        return ((bitField0_ & 0x00010000) != 0);
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
        * <code>optional uint32 sysid = 20;</code>
@@ -2352,7 +5052,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setSysid(int value) {
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00008000;
         sysid_ = value;
         onChanged();
         return this;
@@ -2362,7 +5062,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearSysid() {
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         sysid_ = 0;
         onChanged();
         return this;
@@ -2375,7 +5075,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasTraceTag() {
-        return ((bitField0_ & 0x00020000) != 0);
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <code>optional uint64 trace_tag = 21;</code>
@@ -2391,7 +5091,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setTraceTag(long value) {
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00010000;
         traceTag_ = value;
         onChanged();
         return this;
@@ -2401,7 +5101,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearTraceTag() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         traceTag_ = 0L;
         onChanged();
         return this;
@@ -2414,7 +5114,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasWebapiKeyId() {
-        return ((bitField0_ & 0x00040000) != 0);
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
        * <code>optional uint32 webapi_key_id = 25;</code>
@@ -2430,7 +5130,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setWebapiKeyId(int value) {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00020000;
         webapiKeyId_ = value;
         onChanged();
         return this;
@@ -2440,9 +5140,452 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearWebapiKeyId() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         webapiKeyId_ = 0;
         onChanged();
+        return this;
+      }
+
+      private boolean isFromExternalSource_ ;
+      /**
+       * <code>optional bool is_from_external_source = 26;</code>
+       * @return Whether the isFromExternalSource field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsFromExternalSource() {
+        return ((bitField0_ & 0x00040000) != 0);
+      }
+      /**
+       * <code>optional bool is_from_external_source = 26;</code>
+       * @return The isFromExternalSource.
+       */
+      @java.lang.Override
+      public boolean getIsFromExternalSource() {
+        return isFromExternalSource_;
+      }
+      /**
+       * <code>optional bool is_from_external_source = 26;</code>
+       * @param value The isFromExternalSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsFromExternalSource(boolean value) {
+        bitField0_ |= 0x00040000;
+        isFromExternalSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_from_external_source = 26;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsFromExternalSource() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        isFromExternalSource_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList forwardToSysid_ = emptyIntList();
+      private void ensureForwardToSysidIsMutable() {
+        if (!((bitField0_ & 0x00080000) != 0)) {
+          forwardToSysid_ = mutableCopy(forwardToSysid_);
+          bitField0_ |= 0x00080000;
+         }
+      }
+      /**
+       * <code>repeated uint32 forward_to_sysid = 27;</code>
+       * @return A list containing the forwardToSysid.
+       */
+      public java.util.List<java.lang.Integer>
+          getForwardToSysidList() {
+        return ((bitField0_ & 0x00080000) != 0) ?
+                 java.util.Collections.unmodifiableList(forwardToSysid_) : forwardToSysid_;
+      }
+      /**
+       * <code>repeated uint32 forward_to_sysid = 27;</code>
+       * @return The count of forwardToSysid.
+       */
+      public int getForwardToSysidCount() {
+        return forwardToSysid_.size();
+      }
+      /**
+       * <code>repeated uint32 forward_to_sysid = 27;</code>
+       * @param index The index of the element to return.
+       * @return The forwardToSysid at the given index.
+       */
+      public int getForwardToSysid(int index) {
+        return forwardToSysid_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 forward_to_sysid = 27;</code>
+       * @param index The index to set the value at.
+       * @param value The forwardToSysid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForwardToSysid(
+          int index, int value) {
+        ensureForwardToSysidIsMutable();
+        forwardToSysid_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 forward_to_sysid = 27;</code>
+       * @param value The forwardToSysid to add.
+       * @return This builder for chaining.
+       */
+      public Builder addForwardToSysid(int value) {
+        ensureForwardToSysidIsMutable();
+        forwardToSysid_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 forward_to_sysid = 27;</code>
+       * @param values The forwardToSysid to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllForwardToSysid(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureForwardToSysidIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, forwardToSysid_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 forward_to_sysid = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForwardToSysid() {
+        forwardToSysid_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00080000);
+        onChanged();
+        return this;
+      }
+
+      private int cmSysid_ ;
+      /**
+       * <code>optional uint32 cm_sysid = 28;</code>
+       * @return Whether the cmSysid field is set.
+       */
+      @java.lang.Override
+      public boolean hasCmSysid() {
+        return ((bitField0_ & 0x00100000) != 0);
+      }
+      /**
+       * <code>optional uint32 cm_sysid = 28;</code>
+       * @return The cmSysid.
+       */
+      @java.lang.Override
+      public int getCmSysid() {
+        return cmSysid_;
+      }
+      /**
+       * <code>optional uint32 cm_sysid = 28;</code>
+       * @param value The cmSysid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCmSysid(int value) {
+        bitField0_ |= 0x00100000;
+        cmSysid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 cm_sysid = 28;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCmSysid() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        cmSysid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int launcherType_ ;
+      /**
+       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+       * @return Whether the launcherType field is set.
+       */
+      @java.lang.Override
+      public boolean hasLauncherType() {
+        return ((bitField0_ & 0x00200000) != 0);
+      }
+      /**
+       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+       * @return The launcherType.
+       */
+      @java.lang.Override
+      public int getLauncherType() {
+        return launcherType_;
+      }
+      /**
+       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+       * @param value The launcherType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLauncherType(int value) {
+        bitField0_ |= 0x00200000;
+        launcherType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 launcher_type = 31 [default = 0];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLauncherType() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        launcherType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int realm_ ;
+      /**
+       * <code>optional uint32 realm = 32 [default = 0];</code>
+       * @return Whether the realm field is set.
+       */
+      @java.lang.Override
+      public boolean hasRealm() {
+        return ((bitField0_ & 0x00400000) != 0);
+      }
+      /**
+       * <code>optional uint32 realm = 32 [default = 0];</code>
+       * @return The realm.
+       */
+      @java.lang.Override
+      public int getRealm() {
+        return realm_;
+      }
+      /**
+       * <code>optional uint32 realm = 32 [default = 0];</code>
+       * @param value The realm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRealm(int value) {
+        bitField0_ |= 0x00400000;
+        realm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 realm = 32 [default = 0];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRealm() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        realm_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int timeoutMs_ = -1;
+      /**
+       * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+       * @return Whether the timeoutMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeoutMs() {
+        return ((bitField0_ & 0x00800000) != 0);
+      }
+      /**
+       * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+       * @return The timeoutMs.
+       */
+      @java.lang.Override
+      public int getTimeoutMs() {
+        return timeoutMs_;
+      }
+      /**
+       * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+       * @param value The timeoutMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeoutMs(int value) {
+        bitField0_ |= 0x00800000;
+        timeoutMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 timeout_ms = 33 [default = -1];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeoutMs() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        timeoutMs_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object debugSource_ = "";
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @return Whether the debugSource field is set.
+       */
+      public boolean hasDebugSource() {
+        return ((bitField0_ & 0x01000000) != 0);
+      }
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @return The debugSource.
+       */
+      public java.lang.String getDebugSource() {
+        java.lang.Object ref = debugSource_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            debugSource_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @return The bytes for debugSource.
+       */
+      public com.google.protobuf.ByteString
+          getDebugSourceBytes() {
+        java.lang.Object ref = debugSource_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debugSource_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @param value The debugSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDebugSource(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x01000000;
+        debugSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDebugSource() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        debugSource_ = getDefaultInstance().getDebugSource();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debug_source = 34;</code>
+       * @param value The bytes for debugSource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDebugSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x01000000;
+        debugSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>uint32 ip = 15;</code>
+       * @return Whether the ip field is set.
+       */
+      public boolean hasIp() {
+        return ipAddrCase_ == 15;
+      }
+      /**
+       * <code>uint32 ip = 15;</code>
+       * @return The ip.
+       */
+      public int getIp() {
+        if (ipAddrCase_ == 15) {
+          return (java.lang.Integer) ipAddr_;
+        }
+        return 0;
+      }
+      /**
+       * <code>uint32 ip = 15;</code>
+       * @param value The ip to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIp(int value) {
+        ipAddrCase_ = 15;
+        ipAddr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 ip = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIp() {
+        if (ipAddrCase_ == 15) {
+          ipAddrCase_ = 0;
+          ipAddr_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <code>bytes ip_v6 = 29;</code>
+       * @return Whether the ipV6 field is set.
+       */
+      public boolean hasIpV6() {
+        return ipAddrCase_ == 29;
+      }
+      /**
+       * <code>bytes ip_v6 = 29;</code>
+       * @return The ipV6.
+       */
+      public com.google.protobuf.ByteString getIpV6() {
+        if (ipAddrCase_ == 29) {
+          return (com.google.protobuf.ByteString) ipAddr_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <code>bytes ip_v6 = 29;</code>
+       * @param value The ipV6 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpV6(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ipAddrCase_ = 29;
+        ipAddr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes ip_v6 = 29;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIpV6() {
+        if (ipAddrCase_ == 29) {
+          ipAddrCase_ = 0;
+          ipAddr_ = null;
+          onChanged();
+        }
         return this;
       }
       @java.lang.Override
@@ -4825,40 +7968,6 @@ public final class SteammessagesBase {
         getIconBytes();
 
     /**
-     * <code>optional string logo = 4;</code>
-     * @return Whether the logo field is set.
-     */
-    boolean hasLogo();
-    /**
-     * <code>optional string logo = 4;</code>
-     * @return The logo.
-     */
-    java.lang.String getLogo();
-    /**
-     * <code>optional string logo = 4;</code>
-     * @return The bytes for logo.
-     */
-    com.google.protobuf.ByteString
-        getLogoBytes();
-
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return Whether the logoSmall field is set.
-     */
-    boolean hasLogoSmall();
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return The logoSmall.
-     */
-    java.lang.String getLogoSmall();
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return The bytes for logoSmall.
-     */
-    com.google.protobuf.ByteString
-        getLogoSmallBytes();
-
-    /**
      * <code>optional bool tool = 6;</code>
      * @return Whether the tool field is set.
      */
@@ -4946,6 +8055,28 @@ public final class SteammessagesBase {
      * @return The hasAdultContent.
      */
     boolean getHasAdultContent();
+
+    /**
+     * <code>optional bool is_visible_in_steam_china = 13;</code>
+     * @return Whether the isVisibleInSteamChina field is set.
+     */
+    boolean hasIsVisibleInSteamChina();
+    /**
+     * <code>optional bool is_visible_in_steam_china = 13;</code>
+     * @return The isVisibleInSteamChina.
+     */
+    boolean getIsVisibleInSteamChina();
+
+    /**
+     * <code>optional uint32 app_type = 14;</code>
+     * @return Whether the appType field is set.
+     */
+    boolean hasAppType();
+    /**
+     * <code>optional uint32 app_type = 14;</code>
+     * @return The appType.
+     */
+    int getAppType();
   }
   /**
    * Protobuf type {@code CCDDBAppDetailCommon}
@@ -4962,8 +8093,6 @@ public final class SteammessagesBase {
     private CCDDBAppDetailCommon() {
       name_ = "";
       icon_ = "";
-      logo_ = "";
-      logoSmall_ = "";
       friendlyName_ = "";
       propagation_ = "";
     }
@@ -5016,53 +8145,51 @@ public final class SteammessagesBase {
               icon_ = bs;
               break;
             }
-            case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
-              logo_ = bs;
-              break;
-            }
-            case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
-              logoSmall_ = bs;
-              break;
-            }
             case 48: {
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000008;
               tool_ = input.readBool();
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000010;
               demo_ = input.readBool();
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000020;
               media_ = input.readBool();
               break;
             }
             case 72: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000040;
               communityVisibleStats_ = input.readBool();
               break;
             }
             case 82: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000080;
               friendlyName_ = bs;
               break;
             }
             case 90: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000100;
               propagation_ = bs;
               break;
             }
             case 96: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00000200;
               hasAdultContent_ = input.readBool();
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00000400;
+              isVisibleInSteamChina_ = input.readBool();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00000800;
+              appType_ = input.readUInt32();
               break;
             }
             default: {
@@ -5213,102 +8340,6 @@ public final class SteammessagesBase {
       }
     }
 
-    public static final int LOGO_FIELD_NUMBER = 4;
-    private volatile java.lang.Object logo_;
-    /**
-     * <code>optional string logo = 4;</code>
-     * @return Whether the logo field is set.
-     */
-    @java.lang.Override
-    public boolean hasLogo() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <code>optional string logo = 4;</code>
-     * @return The logo.
-     */
-    @java.lang.Override
-    public java.lang.String getLogo() {
-      java.lang.Object ref = logo_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          logo_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string logo = 4;</code>
-     * @return The bytes for logo.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLogoBytes() {
-      java.lang.Object ref = logo_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        logo_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LOGO_SMALL_FIELD_NUMBER = 5;
-    private volatile java.lang.Object logoSmall_;
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return Whether the logoSmall field is set.
-     */
-    @java.lang.Override
-    public boolean hasLogoSmall() {
-      return ((bitField0_ & 0x00000010) != 0);
-    }
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return The logoSmall.
-     */
-    @java.lang.Override
-    public java.lang.String getLogoSmall() {
-      java.lang.Object ref = logoSmall_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          logoSmall_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string logo_small = 5;</code>
-     * @return The bytes for logoSmall.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLogoSmallBytes() {
-      java.lang.Object ref = logoSmall_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        logoSmall_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int TOOL_FIELD_NUMBER = 6;
     private boolean tool_;
     /**
@@ -5317,7 +8348,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasTool() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>optional bool tool = 6;</code>
@@ -5336,7 +8367,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasDemo() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>optional bool demo = 7;</code>
@@ -5355,7 +8386,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasMedia() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>optional bool media = 8;</code>
@@ -5374,7 +8405,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasCommunityVisibleStats() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>optional bool community_visible_stats = 9;</code>
@@ -5393,7 +8424,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasFriendlyName() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <code>optional string friendly_name = 10;</code>
@@ -5441,7 +8472,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasPropagation() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>optional string propagation = 11;</code>
@@ -5489,7 +8520,7 @@ public final class SteammessagesBase {
      */
     @java.lang.Override
     public boolean hasHasAdultContent() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>optional bool has_adult_content = 12;</code>
@@ -5498,6 +8529,44 @@ public final class SteammessagesBase {
     @java.lang.Override
     public boolean getHasAdultContent() {
       return hasAdultContent_;
+    }
+
+    public static final int IS_VISIBLE_IN_STEAM_CHINA_FIELD_NUMBER = 13;
+    private boolean isVisibleInSteamChina_;
+    /**
+     * <code>optional bool is_visible_in_steam_china = 13;</code>
+     * @return Whether the isVisibleInSteamChina field is set.
+     */
+    @java.lang.Override
+    public boolean hasIsVisibleInSteamChina() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional bool is_visible_in_steam_china = 13;</code>
+     * @return The isVisibleInSteamChina.
+     */
+    @java.lang.Override
+    public boolean getIsVisibleInSteamChina() {
+      return isVisibleInSteamChina_;
+    }
+
+    public static final int APP_TYPE_FIELD_NUMBER = 14;
+    private int appType_;
+    /**
+     * <code>optional uint32 app_type = 14;</code>
+     * @return Whether the appType field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppType() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional uint32 app_type = 14;</code>
+     * @return The appType.
+     */
+    @java.lang.Override
+    public int getAppType() {
+      return appType_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5524,31 +8593,31 @@ public final class SteammessagesBase {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, icon_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, logo_);
-      }
-      if (((bitField0_ & 0x00000010) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, logoSmall_);
-      }
-      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeBool(6, tool_);
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeBool(7, demo_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeBool(8, media_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         output.writeBool(9, communityVisibleStats_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, friendlyName_);
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, propagation_);
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeBool(12, hasAdultContent_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeBool(13, isVisibleInSteamChina_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeUInt32(14, appType_);
       }
       unknownFields.writeTo(output);
     }
@@ -5570,36 +8639,38 @@ public final class SteammessagesBase {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, icon_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, logo_);
-      }
-      if (((bitField0_ & 0x00000010) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, logoSmall_);
-      }
-      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, tool_);
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, demo_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, media_);
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, communityVisibleStats_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, friendlyName_);
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, propagation_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, hasAdultContent_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, isVisibleInSteamChina_);
       }
       if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, hasAdultContent_);
+          .computeUInt32Size(14, appType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5630,16 +8701,6 @@ public final class SteammessagesBase {
       if (hasIcon()) {
         if (!getIcon()
             .equals(other.getIcon())) return false;
-      }
-      if (hasLogo() != other.hasLogo()) return false;
-      if (hasLogo()) {
-        if (!getLogo()
-            .equals(other.getLogo())) return false;
-      }
-      if (hasLogoSmall() != other.hasLogoSmall()) return false;
-      if (hasLogoSmall()) {
-        if (!getLogoSmall()
-            .equals(other.getLogoSmall())) return false;
       }
       if (hasTool() != other.hasTool()) return false;
       if (hasTool()) {
@@ -5676,6 +8737,16 @@ public final class SteammessagesBase {
         if (getHasAdultContent()
             != other.getHasAdultContent()) return false;
       }
+      if (hasIsVisibleInSteamChina() != other.hasIsVisibleInSteamChina()) return false;
+      if (hasIsVisibleInSteamChina()) {
+        if (getIsVisibleInSteamChina()
+            != other.getIsVisibleInSteamChina()) return false;
+      }
+      if (hasAppType() != other.hasAppType()) return false;
+      if (hasAppType()) {
+        if (getAppType()
+            != other.getAppType()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5698,14 +8769,6 @@ public final class SteammessagesBase {
       if (hasIcon()) {
         hash = (37 * hash) + ICON_FIELD_NUMBER;
         hash = (53 * hash) + getIcon().hashCode();
-      }
-      if (hasLogo()) {
-        hash = (37 * hash) + LOGO_FIELD_NUMBER;
-        hash = (53 * hash) + getLogo().hashCode();
-      }
-      if (hasLogoSmall()) {
-        hash = (37 * hash) + LOGO_SMALL_FIELD_NUMBER;
-        hash = (53 * hash) + getLogoSmall().hashCode();
       }
       if (hasTool()) {
         hash = (37 * hash) + TOOL_FIELD_NUMBER;
@@ -5739,6 +8802,15 @@ public final class SteammessagesBase {
         hash = (37 * hash) + HAS_ADULT_CONTENT_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getHasAdultContent());
+      }
+      if (hasIsVisibleInSteamChina()) {
+        hash = (37 * hash) + IS_VISIBLE_IN_STEAM_CHINA_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsVisibleInSteamChina());
+      }
+      if (hasAppType()) {
+        hash = (37 * hash) + APP_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getAppType();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5879,23 +8951,23 @@ public final class SteammessagesBase {
         bitField0_ = (bitField0_ & ~0x00000002);
         icon_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        logo_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
-        logoSmall_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
         tool_ = false;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000008);
         demo_ = false;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000010);
         media_ = false;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000020);
         communityVisibleStats_ = false;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000040);
         friendlyName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000080);
         propagation_ = "";
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000100);
         hasAdultContent_ = false;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        isVisibleInSteamChina_ = false;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        appType_ = 0;
         bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
@@ -5938,39 +9010,39 @@ public final class SteammessagesBase {
         }
         result.icon_ = icon_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.tool_ = tool_;
           to_bitField0_ |= 0x00000008;
         }
-        result.logo_ = logo_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.demo_ = demo_;
           to_bitField0_ |= 0x00000010;
         }
-        result.logoSmall_ = logoSmall_;
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.tool_ = tool_;
+          result.media_ = media_;
           to_bitField0_ |= 0x00000020;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.demo_ = demo_;
+          result.communityVisibleStats_ = communityVisibleStats_;
           to_bitField0_ |= 0x00000040;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.media_ = media_;
           to_bitField0_ |= 0x00000080;
         }
+        result.friendlyName_ = friendlyName_;
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.communityVisibleStats_ = communityVisibleStats_;
           to_bitField0_ |= 0x00000100;
         }
+        result.propagation_ = propagation_;
         if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.hasAdultContent_ = hasAdultContent_;
           to_bitField0_ |= 0x00000200;
         }
-        result.friendlyName_ = friendlyName_;
         if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.isVisibleInSteamChina_ = isVisibleInSteamChina_;
           to_bitField0_ |= 0x00000400;
         }
-        result.propagation_ = propagation_;
         if (((from_bitField0_ & 0x00000800) != 0)) {
-          result.hasAdultContent_ = hasAdultContent_;
+          result.appType_ = appType_;
           to_bitField0_ |= 0x00000800;
         }
         result.bitField0_ = to_bitField0_;
@@ -6035,16 +9107,6 @@ public final class SteammessagesBase {
           icon_ = other.icon_;
           onChanged();
         }
-        if (other.hasLogo()) {
-          bitField0_ |= 0x00000008;
-          logo_ = other.logo_;
-          onChanged();
-        }
-        if (other.hasLogoSmall()) {
-          bitField0_ |= 0x00000010;
-          logoSmall_ = other.logoSmall_;
-          onChanged();
-        }
         if (other.hasTool()) {
           setTool(other.getTool());
         }
@@ -6058,17 +9120,23 @@ public final class SteammessagesBase {
           setCommunityVisibleStats(other.getCommunityVisibleStats());
         }
         if (other.hasFriendlyName()) {
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000080;
           friendlyName_ = other.friendlyName_;
           onChanged();
         }
         if (other.hasPropagation()) {
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000100;
           propagation_ = other.propagation_;
           onChanged();
         }
         if (other.hasHasAdultContent()) {
           setHasAdultContent(other.getHasAdultContent());
+        }
+        if (other.hasIsVisibleInSteamChina()) {
+          setIsVisibleInSteamChina(other.getIsVisibleInSteamChina());
+        }
+        if (other.hasAppType()) {
+          setAppType(other.getAppType());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6307,174 +9375,6 @@ public final class SteammessagesBase {
         return this;
       }
 
-      private java.lang.Object logo_ = "";
-      /**
-       * <code>optional string logo = 4;</code>
-       * @return Whether the logo field is set.
-       */
-      public boolean hasLogo() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <code>optional string logo = 4;</code>
-       * @return The logo.
-       */
-      public java.lang.String getLogo() {
-        java.lang.Object ref = logo_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            logo_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string logo = 4;</code>
-       * @return The bytes for logo.
-       */
-      public com.google.protobuf.ByteString
-          getLogoBytes() {
-        java.lang.Object ref = logo_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          logo_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string logo = 4;</code>
-       * @param value The logo to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        logo_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string logo = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLogo() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        logo_ = getDefaultInstance().getLogo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string logo = 4;</code>
-       * @param value The bytes for logo to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogoBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        logo_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object logoSmall_ = "";
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @return Whether the logoSmall field is set.
-       */
-      public boolean hasLogoSmall() {
-        return ((bitField0_ & 0x00000010) != 0);
-      }
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @return The logoSmall.
-       */
-      public java.lang.String getLogoSmall() {
-        java.lang.Object ref = logoSmall_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            logoSmall_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @return The bytes for logoSmall.
-       */
-      public com.google.protobuf.ByteString
-          getLogoSmallBytes() {
-        java.lang.Object ref = logoSmall_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          logoSmall_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @param value The logoSmall to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogoSmall(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        logoSmall_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLogoSmall() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        logoSmall_ = getDefaultInstance().getLogoSmall();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string logo_small = 5;</code>
-       * @param value The bytes for logoSmall to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogoSmallBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        logoSmall_ = value;
-        onChanged();
-        return this;
-      }
-
       private boolean tool_ ;
       /**
        * <code>optional bool tool = 6;</code>
@@ -6482,7 +9382,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasTool() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>optional bool tool = 6;</code>
@@ -6498,7 +9398,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setTool(boolean value) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000008;
         tool_ = value;
         onChanged();
         return this;
@@ -6508,7 +9408,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearTool() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000008);
         tool_ = false;
         onChanged();
         return this;
@@ -6521,7 +9421,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasDemo() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>optional bool demo = 7;</code>
@@ -6537,7 +9437,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setDemo(boolean value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000010;
         demo_ = value;
         onChanged();
         return this;
@@ -6547,7 +9447,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearDemo() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000010);
         demo_ = false;
         onChanged();
         return this;
@@ -6560,7 +9460,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasMedia() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>optional bool media = 8;</code>
@@ -6576,7 +9476,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setMedia(boolean value) {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000020;
         media_ = value;
         onChanged();
         return this;
@@ -6586,7 +9486,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearMedia() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000020);
         media_ = false;
         onChanged();
         return this;
@@ -6599,7 +9499,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasCommunityVisibleStats() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>optional bool community_visible_stats = 9;</code>
@@ -6615,7 +9515,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setCommunityVisibleStats(boolean value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000040;
         communityVisibleStats_ = value;
         onChanged();
         return this;
@@ -6625,7 +9525,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearCommunityVisibleStats() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000040);
         communityVisibleStats_ = false;
         onChanged();
         return this;
@@ -6637,7 +9537,7 @@ public final class SteammessagesBase {
        * @return Whether the friendlyName field is set.
        */
       public boolean hasFriendlyName() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <code>optional string friendly_name = 10;</code>
@@ -6684,7 +9584,7 @@ public final class SteammessagesBase {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000200;
+  bitField0_ |= 0x00000080;
         friendlyName_ = value;
         onChanged();
         return this;
@@ -6694,7 +9594,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearFriendlyName() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000080);
         friendlyName_ = getDefaultInstance().getFriendlyName();
         onChanged();
         return this;
@@ -6709,7 +9609,7 @@ public final class SteammessagesBase {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000200;
+  bitField0_ |= 0x00000080;
         friendlyName_ = value;
         onChanged();
         return this;
@@ -6721,7 +9621,7 @@ public final class SteammessagesBase {
        * @return Whether the propagation field is set.
        */
       public boolean hasPropagation() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <code>optional string propagation = 11;</code>
@@ -6768,7 +9668,7 @@ public final class SteammessagesBase {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00000100;
         propagation_ = value;
         onChanged();
         return this;
@@ -6778,7 +9678,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearPropagation() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000100);
         propagation_ = getDefaultInstance().getPropagation();
         onChanged();
         return this;
@@ -6793,7 +9693,7 @@ public final class SteammessagesBase {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00000100;
         propagation_ = value;
         onChanged();
         return this;
@@ -6806,7 +9706,7 @@ public final class SteammessagesBase {
        */
       @java.lang.Override
       public boolean hasHasAdultContent() {
-        return ((bitField0_ & 0x00000800) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>optional bool has_adult_content = 12;</code>
@@ -6822,7 +9722,7 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder setHasAdultContent(boolean value) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000200;
         hasAdultContent_ = value;
         onChanged();
         return this;
@@ -6832,8 +9732,86 @@ public final class SteammessagesBase {
        * @return This builder for chaining.
        */
       public Builder clearHasAdultContent() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000200);
         hasAdultContent_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isVisibleInSteamChina_ ;
+      /**
+       * <code>optional bool is_visible_in_steam_china = 13;</code>
+       * @return Whether the isVisibleInSteamChina field is set.
+       */
+      @java.lang.Override
+      public boolean hasIsVisibleInSteamChina() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional bool is_visible_in_steam_china = 13;</code>
+       * @return The isVisibleInSteamChina.
+       */
+      @java.lang.Override
+      public boolean getIsVisibleInSteamChina() {
+        return isVisibleInSteamChina_;
+      }
+      /**
+       * <code>optional bool is_visible_in_steam_china = 13;</code>
+       * @param value The isVisibleInSteamChina to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsVisibleInSteamChina(boolean value) {
+        bitField0_ |= 0x00000400;
+        isVisibleInSteamChina_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_visible_in_steam_china = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsVisibleInSteamChina() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        isVisibleInSteamChina_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int appType_ ;
+      /**
+       * <code>optional uint32 app_type = 14;</code>
+       * @return Whether the appType field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppType() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional uint32 app_type = 14;</code>
+       * @return The appType.
+       */
+      @java.lang.Override
+      public int getAppType() {
+        return appType_;
+      }
+      /**
+       * <code>optional uint32 app_type = 14;</code>
+       * @param value The appType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppType(int value) {
+        bitField0_ |= 0x00000800;
+        appType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 app_type = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppType() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        appType_ = 0;
         onChanged();
         return this;
       }
@@ -7058,6 +10036,28 @@ public final class SteammessagesBase {
      * @return The broadcastLive.
      */
     boolean getBroadcastLive();
+
+    /**
+     * <code>optional bool view_marketing_traffic = 16;</code>
+     * @return Whether the viewMarketingTraffic field is set.
+     */
+    boolean hasViewMarketingTraffic();
+    /**
+     * <code>optional bool view_marketing_traffic = 16;</code>
+     * @return The viewMarketingTraffic.
+     */
+    boolean getViewMarketingTraffic();
+
+    /**
+     * <code>optional bool edit_store_display_content = 17;</code>
+     * @return Whether the editStoreDisplayContent field is set.
+     */
+    boolean hasEditStoreDisplayContent();
+    /**
+     * <code>optional bool edit_store_display_content = 17;</code>
+     * @return The editStoreDisplayContent.
+     */
+    boolean getEditStoreDisplayContent();
   }
   /**
    * Protobuf type {@code CMsgAppRights}
@@ -7178,6 +10178,16 @@ public final class SteammessagesBase {
             case 120: {
               bitField0_ |= 0x00004000;
               broadcastLive_ = input.readBool();
+              break;
+            }
+            case 128: {
+              bitField0_ |= 0x00008000;
+              viewMarketingTraffic_ = input.readBool();
+              break;
+            }
+            case 136: {
+              bitField0_ |= 0x00010000;
+              editStoreDisplayContent_ = input.readBool();
               break;
             }
             default: {
@@ -7498,6 +10508,44 @@ public final class SteammessagesBase {
       return broadcastLive_;
     }
 
+    public static final int VIEW_MARKETING_TRAFFIC_FIELD_NUMBER = 16;
+    private boolean viewMarketingTraffic_;
+    /**
+     * <code>optional bool view_marketing_traffic = 16;</code>
+     * @return Whether the viewMarketingTraffic field is set.
+     */
+    @java.lang.Override
+    public boolean hasViewMarketingTraffic() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <code>optional bool view_marketing_traffic = 16;</code>
+     * @return The viewMarketingTraffic.
+     */
+    @java.lang.Override
+    public boolean getViewMarketingTraffic() {
+      return viewMarketingTraffic_;
+    }
+
+    public static final int EDIT_STORE_DISPLAY_CONTENT_FIELD_NUMBER = 17;
+    private boolean editStoreDisplayContent_;
+    /**
+     * <code>optional bool edit_store_display_content = 17;</code>
+     * @return Whether the editStoreDisplayContent field is set.
+     */
+    @java.lang.Override
+    public boolean hasEditStoreDisplayContent() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <code>optional bool edit_store_display_content = 17;</code>
+     * @return The editStoreDisplayContent.
+     */
+    @java.lang.Override
+    public boolean getEditStoreDisplayContent() {
+      return editStoreDisplayContent_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7556,6 +10604,12 @@ public final class SteammessagesBase {
       }
       if (((bitField0_ & 0x00004000) != 0)) {
         output.writeBool(15, broadcastLive_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        output.writeBool(16, viewMarketingTraffic_);
+      }
+      if (((bitField0_ & 0x00010000) != 0)) {
+        output.writeBool(17, editStoreDisplayContent_);
       }
       unknownFields.writeTo(output);
     }
@@ -7625,6 +10679,14 @@ public final class SteammessagesBase {
       if (((bitField0_ & 0x00004000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, broadcastLive_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(16, viewMarketingTraffic_);
+      }
+      if (((bitField0_ & 0x00010000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(17, editStoreDisplayContent_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7716,6 +10778,16 @@ public final class SteammessagesBase {
         if (getBroadcastLive()
             != other.getBroadcastLive()) return false;
       }
+      if (hasViewMarketingTraffic() != other.hasViewMarketingTraffic()) return false;
+      if (hasViewMarketingTraffic()) {
+        if (getViewMarketingTraffic()
+            != other.getViewMarketingTraffic()) return false;
+      }
+      if (hasEditStoreDisplayContent() != other.hasEditStoreDisplayContent()) return false;
+      if (hasEditStoreDisplayContent()) {
+        if (getEditStoreDisplayContent()
+            != other.getEditStoreDisplayContent()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7801,6 +10873,16 @@ public final class SteammessagesBase {
         hash = (37 * hash) + BROADCAST_LIVE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getBroadcastLive());
+      }
+      if (hasViewMarketingTraffic()) {
+        hash = (37 * hash) + VIEW_MARKETING_TRAFFIC_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getViewMarketingTraffic());
+      }
+      if (hasEditStoreDisplayContent()) {
+        hash = (37 * hash) + EDIT_STORE_DISPLAY_CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEditStoreDisplayContent());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7965,6 +11047,10 @@ public final class SteammessagesBase {
         bitField0_ = (bitField0_ & ~0x00002000);
         broadcastLive_ = false;
         bitField0_ = (bitField0_ & ~0x00004000);
+        viewMarketingTraffic_ = false;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        editStoreDisplayContent_ = false;
+        bitField0_ = (bitField0_ & ~0x00010000);
         return this;
       }
 
@@ -8052,6 +11138,14 @@ public final class SteammessagesBase {
         if (((from_bitField0_ & 0x00004000) != 0)) {
           result.broadcastLive_ = broadcastLive_;
           to_bitField0_ |= 0x00004000;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.viewMarketingTraffic_ = viewMarketingTraffic_;
+          to_bitField0_ |= 0x00008000;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.editStoreDisplayContent_ = editStoreDisplayContent_;
+          to_bitField0_ |= 0x00010000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -8146,6 +11240,12 @@ public final class SteammessagesBase {
         }
         if (other.hasBroadcastLive()) {
           setBroadcastLive(other.getBroadcastLive());
+        }
+        if (other.hasViewMarketingTraffic()) {
+          setViewMarketingTraffic(other.getViewMarketingTraffic());
+        }
+        if (other.hasEditStoreDisplayContent()) {
+          setEditStoreDisplayContent(other.getEditStoreDisplayContent());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8761,6 +11861,84 @@ public final class SteammessagesBase {
         onChanged();
         return this;
       }
+
+      private boolean viewMarketingTraffic_ ;
+      /**
+       * <code>optional bool view_marketing_traffic = 16;</code>
+       * @return Whether the viewMarketingTraffic field is set.
+       */
+      @java.lang.Override
+      public boolean hasViewMarketingTraffic() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>optional bool view_marketing_traffic = 16;</code>
+       * @return The viewMarketingTraffic.
+       */
+      @java.lang.Override
+      public boolean getViewMarketingTraffic() {
+        return viewMarketingTraffic_;
+      }
+      /**
+       * <code>optional bool view_marketing_traffic = 16;</code>
+       * @param value The viewMarketingTraffic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setViewMarketingTraffic(boolean value) {
+        bitField0_ |= 0x00008000;
+        viewMarketingTraffic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool view_marketing_traffic = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearViewMarketingTraffic() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        viewMarketingTraffic_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean editStoreDisplayContent_ ;
+      /**
+       * <code>optional bool edit_store_display_content = 17;</code>
+       * @return Whether the editStoreDisplayContent field is set.
+       */
+      @java.lang.Override
+      public boolean hasEditStoreDisplayContent() {
+        return ((bitField0_ & 0x00010000) != 0);
+      }
+      /**
+       * <code>optional bool edit_store_display_content = 17;</code>
+       * @return The editStoreDisplayContent.
+       */
+      @java.lang.Override
+      public boolean getEditStoreDisplayContent() {
+        return editStoreDisplayContent_;
+      }
+      /**
+       * <code>optional bool edit_store_display_content = 17;</code>
+       * @param value The editStoreDisplayContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEditStoreDisplayContent(boolean value) {
+        bitField0_ |= 0x00010000;
+        editStoreDisplayContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool edit_store_display_content = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEditStoreDisplayContent() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        editStoreDisplayContent_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8814,6 +11992,16908 @@ public final class SteammessagesBase {
 
   }
 
+  public interface CCuratorPreferencesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCuratorPreferences)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 supported_languages = 1;</code>
+     * @return Whether the supportedLanguages field is set.
+     */
+    boolean hasSupportedLanguages();
+    /**
+     * <code>optional uint32 supported_languages = 1;</code>
+     * @return The supportedLanguages.
+     */
+    int getSupportedLanguages();
+
+    /**
+     * <code>optional bool platform_windows = 2;</code>
+     * @return Whether the platformWindows field is set.
+     */
+    boolean hasPlatformWindows();
+    /**
+     * <code>optional bool platform_windows = 2;</code>
+     * @return The platformWindows.
+     */
+    boolean getPlatformWindows();
+
+    /**
+     * <code>optional bool platform_mac = 3;</code>
+     * @return Whether the platformMac field is set.
+     */
+    boolean hasPlatformMac();
+    /**
+     * <code>optional bool platform_mac = 3;</code>
+     * @return The platformMac.
+     */
+    boolean getPlatformMac();
+
+    /**
+     * <code>optional bool platform_linux = 4;</code>
+     * @return Whether the platformLinux field is set.
+     */
+    boolean hasPlatformLinux();
+    /**
+     * <code>optional bool platform_linux = 4;</code>
+     * @return The platformLinux.
+     */
+    boolean getPlatformLinux();
+
+    /**
+     * <code>optional bool vr_content = 5;</code>
+     * @return Whether the vrContent field is set.
+     */
+    boolean hasVrContent();
+    /**
+     * <code>optional bool vr_content = 5;</code>
+     * @return The vrContent.
+     */
+    boolean getVrContent();
+
+    /**
+     * <code>optional bool adult_content_violence = 6;</code>
+     * @return Whether the adultContentViolence field is set.
+     */
+    boolean hasAdultContentViolence();
+    /**
+     * <code>optional bool adult_content_violence = 6;</code>
+     * @return The adultContentViolence.
+     */
+    boolean getAdultContentViolence();
+
+    /**
+     * <code>optional bool adult_content_sex = 7;</code>
+     * @return Whether the adultContentSex field is set.
+     */
+    boolean hasAdultContentSex();
+    /**
+     * <code>optional bool adult_content_sex = 7;</code>
+     * @return The adultContentSex.
+     */
+    boolean getAdultContentSex();
+
+    /**
+     * <code>optional uint32 timestamp_updated = 8;</code>
+     * @return Whether the timestampUpdated field is set.
+     */
+    boolean hasTimestampUpdated();
+    /**
+     * <code>optional uint32 timestamp_updated = 8;</code>
+     * @return The timestampUpdated.
+     */
+    int getTimestampUpdated();
+
+    /**
+     * <code>repeated uint32 tagids_curated = 9;</code>
+     * @return A list containing the tagidsCurated.
+     */
+    java.util.List<java.lang.Integer> getTagidsCuratedList();
+    /**
+     * <code>repeated uint32 tagids_curated = 9;</code>
+     * @return The count of tagidsCurated.
+     */
+    int getTagidsCuratedCount();
+    /**
+     * <code>repeated uint32 tagids_curated = 9;</code>
+     * @param index The index of the element to return.
+     * @return The tagidsCurated at the given index.
+     */
+    int getTagidsCurated(int index);
+
+    /**
+     * <code>repeated uint32 tagids_filtered = 10;</code>
+     * @return A list containing the tagidsFiltered.
+     */
+    java.util.List<java.lang.Integer> getTagidsFilteredList();
+    /**
+     * <code>repeated uint32 tagids_filtered = 10;</code>
+     * @return The count of tagidsFiltered.
+     */
+    int getTagidsFilteredCount();
+    /**
+     * <code>repeated uint32 tagids_filtered = 10;</code>
+     * @param index The index of the element to return.
+     * @return The tagidsFiltered at the given index.
+     */
+    int getTagidsFiltered(int index);
+
+    /**
+     * <code>optional string website_title = 11;</code>
+     * @return Whether the websiteTitle field is set.
+     */
+    boolean hasWebsiteTitle();
+    /**
+     * <code>optional string website_title = 11;</code>
+     * @return The websiteTitle.
+     */
+    java.lang.String getWebsiteTitle();
+    /**
+     * <code>optional string website_title = 11;</code>
+     * @return The bytes for websiteTitle.
+     */
+    com.google.protobuf.ByteString
+        getWebsiteTitleBytes();
+
+    /**
+     * <code>optional string website_url = 12;</code>
+     * @return Whether the websiteUrl field is set.
+     */
+    boolean hasWebsiteUrl();
+    /**
+     * <code>optional string website_url = 12;</code>
+     * @return The websiteUrl.
+     */
+    java.lang.String getWebsiteUrl();
+    /**
+     * <code>optional string website_url = 12;</code>
+     * @return The bytes for websiteUrl.
+     */
+    com.google.protobuf.ByteString
+        getWebsiteUrlBytes();
+
+    /**
+     * <code>optional string discussion_url = 13;</code>
+     * @return Whether the discussionUrl field is set.
+     */
+    boolean hasDiscussionUrl();
+    /**
+     * <code>optional string discussion_url = 13;</code>
+     * @return The discussionUrl.
+     */
+    java.lang.String getDiscussionUrl();
+    /**
+     * <code>optional string discussion_url = 13;</code>
+     * @return The bytes for discussionUrl.
+     */
+    com.google.protobuf.ByteString
+        getDiscussionUrlBytes();
+
+    /**
+     * <code>optional bool show_broadcast = 14;</code>
+     * @return Whether the showBroadcast field is set.
+     */
+    boolean hasShowBroadcast();
+    /**
+     * <code>optional bool show_broadcast = 14;</code>
+     * @return The showBroadcast.
+     */
+    boolean getShowBroadcast();
+  }
+  /**
+   * Protobuf type {@code CCuratorPreferences}
+   */
+  public static final class CCuratorPreferences extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCuratorPreferences)
+      CCuratorPreferencesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCuratorPreferences.newBuilder() to construct.
+    private CCuratorPreferences(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCuratorPreferences() {
+      tagidsCurated_ = emptyIntList();
+      tagidsFiltered_ = emptyIntList();
+      websiteTitle_ = "";
+      websiteUrl_ = "";
+      discussionUrl_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCuratorPreferences();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCuratorPreferences(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              supportedLanguages_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              platformWindows_ = input.readBool();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              platformMac_ = input.readBool();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              platformLinux_ = input.readBool();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              vrContent_ = input.readBool();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              adultContentViolence_ = input.readBool();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              adultContentSex_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              timestampUpdated_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+                tagidsCurated_ = newIntList();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              tagidsCurated_.addInt(input.readUInt32());
+              break;
+            }
+            case 74: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000100) != 0) && input.getBytesUntilLimit() > 0) {
+                tagidsCurated_ = newIntList();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                tagidsCurated_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 80: {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
+                tagidsFiltered_ = newIntList();
+                mutable_bitField0_ |= 0x00000200;
+              }
+              tagidsFiltered_.addInt(input.readUInt32());
+              break;
+            }
+            case 82: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000200) != 0) && input.getBytesUntilLimit() > 0) {
+                tagidsFiltered_ = newIntList();
+                mutable_bitField0_ |= 0x00000200;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                tagidsFiltered_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000100;
+              websiteTitle_ = bs;
+              break;
+            }
+            case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000200;
+              websiteUrl_ = bs;
+              break;
+            }
+            case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              discussionUrl_ = bs;
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00000800;
+              showBroadcast_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
+          tagidsCurated_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
+          tagidsFiltered_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CCuratorPreferences_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CCuratorPreferences_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CCuratorPreferences.class, SteammessagesBase.CCuratorPreferences.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SUPPORTED_LANGUAGES_FIELD_NUMBER = 1;
+    private int supportedLanguages_;
+    /**
+     * <code>optional uint32 supported_languages = 1;</code>
+     * @return Whether the supportedLanguages field is set.
+     */
+    @java.lang.Override
+    public boolean hasSupportedLanguages() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 supported_languages = 1;</code>
+     * @return The supportedLanguages.
+     */
+    @java.lang.Override
+    public int getSupportedLanguages() {
+      return supportedLanguages_;
+    }
+
+    public static final int PLATFORM_WINDOWS_FIELD_NUMBER = 2;
+    private boolean platformWindows_;
+    /**
+     * <code>optional bool platform_windows = 2;</code>
+     * @return Whether the platformWindows field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlatformWindows() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool platform_windows = 2;</code>
+     * @return The platformWindows.
+     */
+    @java.lang.Override
+    public boolean getPlatformWindows() {
+      return platformWindows_;
+    }
+
+    public static final int PLATFORM_MAC_FIELD_NUMBER = 3;
+    private boolean platformMac_;
+    /**
+     * <code>optional bool platform_mac = 3;</code>
+     * @return Whether the platformMac field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlatformMac() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool platform_mac = 3;</code>
+     * @return The platformMac.
+     */
+    @java.lang.Override
+    public boolean getPlatformMac() {
+      return platformMac_;
+    }
+
+    public static final int PLATFORM_LINUX_FIELD_NUMBER = 4;
+    private boolean platformLinux_;
+    /**
+     * <code>optional bool platform_linux = 4;</code>
+     * @return Whether the platformLinux field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlatformLinux() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional bool platform_linux = 4;</code>
+     * @return The platformLinux.
+     */
+    @java.lang.Override
+    public boolean getPlatformLinux() {
+      return platformLinux_;
+    }
+
+    public static final int VR_CONTENT_FIELD_NUMBER = 5;
+    private boolean vrContent_;
+    /**
+     * <code>optional bool vr_content = 5;</code>
+     * @return Whether the vrContent field is set.
+     */
+    @java.lang.Override
+    public boolean hasVrContent() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional bool vr_content = 5;</code>
+     * @return The vrContent.
+     */
+    @java.lang.Override
+    public boolean getVrContent() {
+      return vrContent_;
+    }
+
+    public static final int ADULT_CONTENT_VIOLENCE_FIELD_NUMBER = 6;
+    private boolean adultContentViolence_;
+    /**
+     * <code>optional bool adult_content_violence = 6;</code>
+     * @return Whether the adultContentViolence field is set.
+     */
+    @java.lang.Override
+    public boolean hasAdultContentViolence() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional bool adult_content_violence = 6;</code>
+     * @return The adultContentViolence.
+     */
+    @java.lang.Override
+    public boolean getAdultContentViolence() {
+      return adultContentViolence_;
+    }
+
+    public static final int ADULT_CONTENT_SEX_FIELD_NUMBER = 7;
+    private boolean adultContentSex_;
+    /**
+     * <code>optional bool adult_content_sex = 7;</code>
+     * @return Whether the adultContentSex field is set.
+     */
+    @java.lang.Override
+    public boolean hasAdultContentSex() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional bool adult_content_sex = 7;</code>
+     * @return The adultContentSex.
+     */
+    @java.lang.Override
+    public boolean getAdultContentSex() {
+      return adultContentSex_;
+    }
+
+    public static final int TIMESTAMP_UPDATED_FIELD_NUMBER = 8;
+    private int timestampUpdated_;
+    /**
+     * <code>optional uint32 timestamp_updated = 8;</code>
+     * @return Whether the timestampUpdated field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimestampUpdated() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 timestamp_updated = 8;</code>
+     * @return The timestampUpdated.
+     */
+    @java.lang.Override
+    public int getTimestampUpdated() {
+      return timestampUpdated_;
+    }
+
+    public static final int TAGIDS_CURATED_FIELD_NUMBER = 9;
+    private com.google.protobuf.Internal.IntList tagidsCurated_;
+    /**
+     * <code>repeated uint32 tagids_curated = 9;</code>
+     * @return A list containing the tagidsCurated.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getTagidsCuratedList() {
+      return tagidsCurated_;
+    }
+    /**
+     * <code>repeated uint32 tagids_curated = 9;</code>
+     * @return The count of tagidsCurated.
+     */
+    public int getTagidsCuratedCount() {
+      return tagidsCurated_.size();
+    }
+    /**
+     * <code>repeated uint32 tagids_curated = 9;</code>
+     * @param index The index of the element to return.
+     * @return The tagidsCurated at the given index.
+     */
+    public int getTagidsCurated(int index) {
+      return tagidsCurated_.getInt(index);
+    }
+
+    public static final int TAGIDS_FILTERED_FIELD_NUMBER = 10;
+    private com.google.protobuf.Internal.IntList tagidsFiltered_;
+    /**
+     * <code>repeated uint32 tagids_filtered = 10;</code>
+     * @return A list containing the tagidsFiltered.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getTagidsFilteredList() {
+      return tagidsFiltered_;
+    }
+    /**
+     * <code>repeated uint32 tagids_filtered = 10;</code>
+     * @return The count of tagidsFiltered.
+     */
+    public int getTagidsFilteredCount() {
+      return tagidsFiltered_.size();
+    }
+    /**
+     * <code>repeated uint32 tagids_filtered = 10;</code>
+     * @param index The index of the element to return.
+     * @return The tagidsFiltered at the given index.
+     */
+    public int getTagidsFiltered(int index) {
+      return tagidsFiltered_.getInt(index);
+    }
+
+    public static final int WEBSITE_TITLE_FIELD_NUMBER = 11;
+    private volatile java.lang.Object websiteTitle_;
+    /**
+     * <code>optional string website_title = 11;</code>
+     * @return Whether the websiteTitle field is set.
+     */
+    @java.lang.Override
+    public boolean hasWebsiteTitle() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional string website_title = 11;</code>
+     * @return The websiteTitle.
+     */
+    @java.lang.Override
+    public java.lang.String getWebsiteTitle() {
+      java.lang.Object ref = websiteTitle_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          websiteTitle_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string website_title = 11;</code>
+     * @return The bytes for websiteTitle.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebsiteTitleBytes() {
+      java.lang.Object ref = websiteTitle_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        websiteTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEBSITE_URL_FIELD_NUMBER = 12;
+    private volatile java.lang.Object websiteUrl_;
+    /**
+     * <code>optional string website_url = 12;</code>
+     * @return Whether the websiteUrl field is set.
+     */
+    @java.lang.Override
+    public boolean hasWebsiteUrl() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional string website_url = 12;</code>
+     * @return The websiteUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getWebsiteUrl() {
+      java.lang.Object ref = websiteUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          websiteUrl_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string website_url = 12;</code>
+     * @return The bytes for websiteUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebsiteUrlBytes() {
+      java.lang.Object ref = websiteUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        websiteUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISCUSSION_URL_FIELD_NUMBER = 13;
+    private volatile java.lang.Object discussionUrl_;
+    /**
+     * <code>optional string discussion_url = 13;</code>
+     * @return Whether the discussionUrl field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiscussionUrl() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional string discussion_url = 13;</code>
+     * @return The discussionUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getDiscussionUrl() {
+      java.lang.Object ref = discussionUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          discussionUrl_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string discussion_url = 13;</code>
+     * @return The bytes for discussionUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDiscussionUrlBytes() {
+      java.lang.Object ref = discussionUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        discussionUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHOW_BROADCAST_FIELD_NUMBER = 14;
+    private boolean showBroadcast_;
+    /**
+     * <code>optional bool show_broadcast = 14;</code>
+     * @return Whether the showBroadcast field is set.
+     */
+    @java.lang.Override
+    public boolean hasShowBroadcast() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional bool show_broadcast = 14;</code>
+     * @return The showBroadcast.
+     */
+    @java.lang.Override
+    public boolean getShowBroadcast() {
+      return showBroadcast_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, supportedLanguages_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, platformWindows_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, platformMac_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBool(4, platformLinux_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeBool(5, vrContent_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeBool(6, adultContentViolence_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeBool(7, adultContentSex_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(8, timestampUpdated_);
+      }
+      for (int i = 0; i < tagidsCurated_.size(); i++) {
+        output.writeUInt32(9, tagidsCurated_.getInt(i));
+      }
+      for (int i = 0; i < tagidsFiltered_.size(); i++) {
+        output.writeUInt32(10, tagidsFiltered_.getInt(i));
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, websiteTitle_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, websiteUrl_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, discussionUrl_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeBool(14, showBroadcast_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, supportedLanguages_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, platformWindows_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, platformMac_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, platformLinux_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, vrContent_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, adultContentViolence_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, adultContentSex_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, timestampUpdated_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tagidsCurated_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(tagidsCurated_.getInt(i));
+        }
+        size += dataSize;
+        size += 1 * getTagidsCuratedList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tagidsFiltered_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(tagidsFiltered_.getInt(i));
+        }
+        size += dataSize;
+        size += 1 * getTagidsFilteredList().size();
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, websiteTitle_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, websiteUrl_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, discussionUrl_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, showBroadcast_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CCuratorPreferences)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CCuratorPreferences other = (SteammessagesBase.CCuratorPreferences) obj;
+
+      if (hasSupportedLanguages() != other.hasSupportedLanguages()) return false;
+      if (hasSupportedLanguages()) {
+        if (getSupportedLanguages()
+            != other.getSupportedLanguages()) return false;
+      }
+      if (hasPlatformWindows() != other.hasPlatformWindows()) return false;
+      if (hasPlatformWindows()) {
+        if (getPlatformWindows()
+            != other.getPlatformWindows()) return false;
+      }
+      if (hasPlatformMac() != other.hasPlatformMac()) return false;
+      if (hasPlatformMac()) {
+        if (getPlatformMac()
+            != other.getPlatformMac()) return false;
+      }
+      if (hasPlatformLinux() != other.hasPlatformLinux()) return false;
+      if (hasPlatformLinux()) {
+        if (getPlatformLinux()
+            != other.getPlatformLinux()) return false;
+      }
+      if (hasVrContent() != other.hasVrContent()) return false;
+      if (hasVrContent()) {
+        if (getVrContent()
+            != other.getVrContent()) return false;
+      }
+      if (hasAdultContentViolence() != other.hasAdultContentViolence()) return false;
+      if (hasAdultContentViolence()) {
+        if (getAdultContentViolence()
+            != other.getAdultContentViolence()) return false;
+      }
+      if (hasAdultContentSex() != other.hasAdultContentSex()) return false;
+      if (hasAdultContentSex()) {
+        if (getAdultContentSex()
+            != other.getAdultContentSex()) return false;
+      }
+      if (hasTimestampUpdated() != other.hasTimestampUpdated()) return false;
+      if (hasTimestampUpdated()) {
+        if (getTimestampUpdated()
+            != other.getTimestampUpdated()) return false;
+      }
+      if (!getTagidsCuratedList()
+          .equals(other.getTagidsCuratedList())) return false;
+      if (!getTagidsFilteredList()
+          .equals(other.getTagidsFilteredList())) return false;
+      if (hasWebsiteTitle() != other.hasWebsiteTitle()) return false;
+      if (hasWebsiteTitle()) {
+        if (!getWebsiteTitle()
+            .equals(other.getWebsiteTitle())) return false;
+      }
+      if (hasWebsiteUrl() != other.hasWebsiteUrl()) return false;
+      if (hasWebsiteUrl()) {
+        if (!getWebsiteUrl()
+            .equals(other.getWebsiteUrl())) return false;
+      }
+      if (hasDiscussionUrl() != other.hasDiscussionUrl()) return false;
+      if (hasDiscussionUrl()) {
+        if (!getDiscussionUrl()
+            .equals(other.getDiscussionUrl())) return false;
+      }
+      if (hasShowBroadcast() != other.hasShowBroadcast()) return false;
+      if (hasShowBroadcast()) {
+        if (getShowBroadcast()
+            != other.getShowBroadcast()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSupportedLanguages()) {
+        hash = (37 * hash) + SUPPORTED_LANGUAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getSupportedLanguages();
+      }
+      if (hasPlatformWindows()) {
+        hash = (37 * hash) + PLATFORM_WINDOWS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPlatformWindows());
+      }
+      if (hasPlatformMac()) {
+        hash = (37 * hash) + PLATFORM_MAC_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPlatformMac());
+      }
+      if (hasPlatformLinux()) {
+        hash = (37 * hash) + PLATFORM_LINUX_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPlatformLinux());
+      }
+      if (hasVrContent()) {
+        hash = (37 * hash) + VR_CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getVrContent());
+      }
+      if (hasAdultContentViolence()) {
+        hash = (37 * hash) + ADULT_CONTENT_VIOLENCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getAdultContentViolence());
+      }
+      if (hasAdultContentSex()) {
+        hash = (37 * hash) + ADULT_CONTENT_SEX_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getAdultContentSex());
+      }
+      if (hasTimestampUpdated()) {
+        hash = (37 * hash) + TIMESTAMP_UPDATED_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestampUpdated();
+      }
+      if (getTagidsCuratedCount() > 0) {
+        hash = (37 * hash) + TAGIDS_CURATED_FIELD_NUMBER;
+        hash = (53 * hash) + getTagidsCuratedList().hashCode();
+      }
+      if (getTagidsFilteredCount() > 0) {
+        hash = (37 * hash) + TAGIDS_FILTERED_FIELD_NUMBER;
+        hash = (53 * hash) + getTagidsFilteredList().hashCode();
+      }
+      if (hasWebsiteTitle()) {
+        hash = (37 * hash) + WEBSITE_TITLE_FIELD_NUMBER;
+        hash = (53 * hash) + getWebsiteTitle().hashCode();
+      }
+      if (hasWebsiteUrl()) {
+        hash = (37 * hash) + WEBSITE_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getWebsiteUrl().hashCode();
+      }
+      if (hasDiscussionUrl()) {
+        hash = (37 * hash) + DISCUSSION_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getDiscussionUrl().hashCode();
+      }
+      if (hasShowBroadcast()) {
+        hash = (37 * hash) + SHOW_BROADCAST_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getShowBroadcast());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CCuratorPreferences parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CCuratorPreferences parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CCuratorPreferences prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCuratorPreferences}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCuratorPreferences)
+        SteammessagesBase.CCuratorPreferencesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CCuratorPreferences_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CCuratorPreferences_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CCuratorPreferences.class, SteammessagesBase.CCuratorPreferences.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CCuratorPreferences.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        supportedLanguages_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        platformWindows_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        platformMac_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        platformLinux_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        vrContent_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        adultContentViolence_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        adultContentSex_ = false;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        timestampUpdated_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        tagidsCurated_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        tagidsFiltered_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        websiteTitle_ = "";
+        bitField0_ = (bitField0_ & ~0x00000400);
+        websiteUrl_ = "";
+        bitField0_ = (bitField0_ & ~0x00000800);
+        discussionUrl_ = "";
+        bitField0_ = (bitField0_ & ~0x00001000);
+        showBroadcast_ = false;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CCuratorPreferences_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CCuratorPreferences getDefaultInstanceForType() {
+        return SteammessagesBase.CCuratorPreferences.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CCuratorPreferences build() {
+        SteammessagesBase.CCuratorPreferences result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CCuratorPreferences buildPartial() {
+        SteammessagesBase.CCuratorPreferences result = new SteammessagesBase.CCuratorPreferences(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.supportedLanguages_ = supportedLanguages_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.platformWindows_ = platformWindows_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.platformMac_ = platformMac_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.platformLinux_ = platformLinux_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.vrContent_ = vrContent_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.adultContentViolence_ = adultContentViolence_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.adultContentSex_ = adultContentSex_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.timestampUpdated_ = timestampUpdated_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((bitField0_ & 0x00000100) != 0)) {
+          tagidsCurated_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.tagidsCurated_ = tagidsCurated_;
+        if (((bitField0_ & 0x00000200) != 0)) {
+          tagidsFiltered_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.tagidsFiltered_ = tagidsFiltered_;
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.websiteTitle_ = websiteTitle_;
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.websiteUrl_ = websiteUrl_;
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.discussionUrl_ = discussionUrl_;
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.showBroadcast_ = showBroadcast_;
+          to_bitField0_ |= 0x00000800;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CCuratorPreferences) {
+          return mergeFrom((SteammessagesBase.CCuratorPreferences)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CCuratorPreferences other) {
+        if (other == SteammessagesBase.CCuratorPreferences.getDefaultInstance()) return this;
+        if (other.hasSupportedLanguages()) {
+          setSupportedLanguages(other.getSupportedLanguages());
+        }
+        if (other.hasPlatformWindows()) {
+          setPlatformWindows(other.getPlatformWindows());
+        }
+        if (other.hasPlatformMac()) {
+          setPlatformMac(other.getPlatformMac());
+        }
+        if (other.hasPlatformLinux()) {
+          setPlatformLinux(other.getPlatformLinux());
+        }
+        if (other.hasVrContent()) {
+          setVrContent(other.getVrContent());
+        }
+        if (other.hasAdultContentViolence()) {
+          setAdultContentViolence(other.getAdultContentViolence());
+        }
+        if (other.hasAdultContentSex()) {
+          setAdultContentSex(other.getAdultContentSex());
+        }
+        if (other.hasTimestampUpdated()) {
+          setTimestampUpdated(other.getTimestampUpdated());
+        }
+        if (!other.tagidsCurated_.isEmpty()) {
+          if (tagidsCurated_.isEmpty()) {
+            tagidsCurated_ = other.tagidsCurated_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureTagidsCuratedIsMutable();
+            tagidsCurated_.addAll(other.tagidsCurated_);
+          }
+          onChanged();
+        }
+        if (!other.tagidsFiltered_.isEmpty()) {
+          if (tagidsFiltered_.isEmpty()) {
+            tagidsFiltered_ = other.tagidsFiltered_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureTagidsFilteredIsMutable();
+            tagidsFiltered_.addAll(other.tagidsFiltered_);
+          }
+          onChanged();
+        }
+        if (other.hasWebsiteTitle()) {
+          bitField0_ |= 0x00000400;
+          websiteTitle_ = other.websiteTitle_;
+          onChanged();
+        }
+        if (other.hasWebsiteUrl()) {
+          bitField0_ |= 0x00000800;
+          websiteUrl_ = other.websiteUrl_;
+          onChanged();
+        }
+        if (other.hasDiscussionUrl()) {
+          bitField0_ |= 0x00001000;
+          discussionUrl_ = other.discussionUrl_;
+          onChanged();
+        }
+        if (other.hasShowBroadcast()) {
+          setShowBroadcast(other.getShowBroadcast());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CCuratorPreferences parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CCuratorPreferences) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int supportedLanguages_ ;
+      /**
+       * <code>optional uint32 supported_languages = 1;</code>
+       * @return Whether the supportedLanguages field is set.
+       */
+      @java.lang.Override
+      public boolean hasSupportedLanguages() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 supported_languages = 1;</code>
+       * @return The supportedLanguages.
+       */
+      @java.lang.Override
+      public int getSupportedLanguages() {
+        return supportedLanguages_;
+      }
+      /**
+       * <code>optional uint32 supported_languages = 1;</code>
+       * @param value The supportedLanguages to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupportedLanguages(int value) {
+        bitField0_ |= 0x00000001;
+        supportedLanguages_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 supported_languages = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupportedLanguages() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        supportedLanguages_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean platformWindows_ ;
+      /**
+       * <code>optional bool platform_windows = 2;</code>
+       * @return Whether the platformWindows field is set.
+       */
+      @java.lang.Override
+      public boolean hasPlatformWindows() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool platform_windows = 2;</code>
+       * @return The platformWindows.
+       */
+      @java.lang.Override
+      public boolean getPlatformWindows() {
+        return platformWindows_;
+      }
+      /**
+       * <code>optional bool platform_windows = 2;</code>
+       * @param value The platformWindows to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformWindows(boolean value) {
+        bitField0_ |= 0x00000002;
+        platformWindows_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool platform_windows = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlatformWindows() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        platformWindows_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean platformMac_ ;
+      /**
+       * <code>optional bool platform_mac = 3;</code>
+       * @return Whether the platformMac field is set.
+       */
+      @java.lang.Override
+      public boolean hasPlatformMac() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool platform_mac = 3;</code>
+       * @return The platformMac.
+       */
+      @java.lang.Override
+      public boolean getPlatformMac() {
+        return platformMac_;
+      }
+      /**
+       * <code>optional bool platform_mac = 3;</code>
+       * @param value The platformMac to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformMac(boolean value) {
+        bitField0_ |= 0x00000004;
+        platformMac_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool platform_mac = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlatformMac() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        platformMac_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean platformLinux_ ;
+      /**
+       * <code>optional bool platform_linux = 4;</code>
+       * @return Whether the platformLinux field is set.
+       */
+      @java.lang.Override
+      public boolean hasPlatformLinux() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool platform_linux = 4;</code>
+       * @return The platformLinux.
+       */
+      @java.lang.Override
+      public boolean getPlatformLinux() {
+        return platformLinux_;
+      }
+      /**
+       * <code>optional bool platform_linux = 4;</code>
+       * @param value The platformLinux to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformLinux(boolean value) {
+        bitField0_ |= 0x00000008;
+        platformLinux_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool platform_linux = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlatformLinux() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        platformLinux_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean vrContent_ ;
+      /**
+       * <code>optional bool vr_content = 5;</code>
+       * @return Whether the vrContent field is set.
+       */
+      @java.lang.Override
+      public boolean hasVrContent() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional bool vr_content = 5;</code>
+       * @return The vrContent.
+       */
+      @java.lang.Override
+      public boolean getVrContent() {
+        return vrContent_;
+      }
+      /**
+       * <code>optional bool vr_content = 5;</code>
+       * @param value The vrContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVrContent(boolean value) {
+        bitField0_ |= 0x00000010;
+        vrContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool vr_content = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVrContent() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        vrContent_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean adultContentViolence_ ;
+      /**
+       * <code>optional bool adult_content_violence = 6;</code>
+       * @return Whether the adultContentViolence field is set.
+       */
+      @java.lang.Override
+      public boolean hasAdultContentViolence() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional bool adult_content_violence = 6;</code>
+       * @return The adultContentViolence.
+       */
+      @java.lang.Override
+      public boolean getAdultContentViolence() {
+        return adultContentViolence_;
+      }
+      /**
+       * <code>optional bool adult_content_violence = 6;</code>
+       * @param value The adultContentViolence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdultContentViolence(boolean value) {
+        bitField0_ |= 0x00000020;
+        adultContentViolence_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool adult_content_violence = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdultContentViolence() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        adultContentViolence_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean adultContentSex_ ;
+      /**
+       * <code>optional bool adult_content_sex = 7;</code>
+       * @return Whether the adultContentSex field is set.
+       */
+      @java.lang.Override
+      public boolean hasAdultContentSex() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional bool adult_content_sex = 7;</code>
+       * @return The adultContentSex.
+       */
+      @java.lang.Override
+      public boolean getAdultContentSex() {
+        return adultContentSex_;
+      }
+      /**
+       * <code>optional bool adult_content_sex = 7;</code>
+       * @param value The adultContentSex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdultContentSex(boolean value) {
+        bitField0_ |= 0x00000040;
+        adultContentSex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool adult_content_sex = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdultContentSex() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        adultContentSex_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int timestampUpdated_ ;
+      /**
+       * <code>optional uint32 timestamp_updated = 8;</code>
+       * @return Whether the timestampUpdated field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimestampUpdated() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 timestamp_updated = 8;</code>
+       * @return The timestampUpdated.
+       */
+      @java.lang.Override
+      public int getTimestampUpdated() {
+        return timestampUpdated_;
+      }
+      /**
+       * <code>optional uint32 timestamp_updated = 8;</code>
+       * @param value The timestampUpdated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestampUpdated(int value) {
+        bitField0_ |= 0x00000080;
+        timestampUpdated_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 timestamp_updated = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestampUpdated() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        timestampUpdated_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList tagidsCurated_ = emptyIntList();
+      private void ensureTagidsCuratedIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          tagidsCurated_ = mutableCopy(tagidsCurated_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+      /**
+       * <code>repeated uint32 tagids_curated = 9;</code>
+       * @return A list containing the tagidsCurated.
+       */
+      public java.util.List<java.lang.Integer>
+          getTagidsCuratedList() {
+        return ((bitField0_ & 0x00000100) != 0) ?
+                 java.util.Collections.unmodifiableList(tagidsCurated_) : tagidsCurated_;
+      }
+      /**
+       * <code>repeated uint32 tagids_curated = 9;</code>
+       * @return The count of tagidsCurated.
+       */
+      public int getTagidsCuratedCount() {
+        return tagidsCurated_.size();
+      }
+      /**
+       * <code>repeated uint32 tagids_curated = 9;</code>
+       * @param index The index of the element to return.
+       * @return The tagidsCurated at the given index.
+       */
+      public int getTagidsCurated(int index) {
+        return tagidsCurated_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 tagids_curated = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The tagidsCurated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTagidsCurated(
+          int index, int value) {
+        ensureTagidsCuratedIsMutable();
+        tagidsCurated_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 tagids_curated = 9;</code>
+       * @param value The tagidsCurated to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTagidsCurated(int value) {
+        ensureTagidsCuratedIsMutable();
+        tagidsCurated_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 tagids_curated = 9;</code>
+       * @param values The tagidsCurated to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTagidsCurated(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureTagidsCuratedIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tagidsCurated_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 tagids_curated = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTagidsCurated() {
+        tagidsCurated_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList tagidsFiltered_ = emptyIntList();
+      private void ensureTagidsFilteredIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          tagidsFiltered_ = mutableCopy(tagidsFiltered_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+      /**
+       * <code>repeated uint32 tagids_filtered = 10;</code>
+       * @return A list containing the tagidsFiltered.
+       */
+      public java.util.List<java.lang.Integer>
+          getTagidsFilteredList() {
+        return ((bitField0_ & 0x00000200) != 0) ?
+                 java.util.Collections.unmodifiableList(tagidsFiltered_) : tagidsFiltered_;
+      }
+      /**
+       * <code>repeated uint32 tagids_filtered = 10;</code>
+       * @return The count of tagidsFiltered.
+       */
+      public int getTagidsFilteredCount() {
+        return tagidsFiltered_.size();
+      }
+      /**
+       * <code>repeated uint32 tagids_filtered = 10;</code>
+       * @param index The index of the element to return.
+       * @return The tagidsFiltered at the given index.
+       */
+      public int getTagidsFiltered(int index) {
+        return tagidsFiltered_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 tagids_filtered = 10;</code>
+       * @param index The index to set the value at.
+       * @param value The tagidsFiltered to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTagidsFiltered(
+          int index, int value) {
+        ensureTagidsFilteredIsMutable();
+        tagidsFiltered_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 tagids_filtered = 10;</code>
+       * @param value The tagidsFiltered to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTagidsFiltered(int value) {
+        ensureTagidsFilteredIsMutable();
+        tagidsFiltered_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 tagids_filtered = 10;</code>
+       * @param values The tagidsFiltered to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTagidsFiltered(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureTagidsFilteredIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tagidsFiltered_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 tagids_filtered = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTagidsFiltered() {
+        tagidsFiltered_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object websiteTitle_ = "";
+      /**
+       * <code>optional string website_title = 11;</code>
+       * @return Whether the websiteTitle field is set.
+       */
+      public boolean hasWebsiteTitle() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional string website_title = 11;</code>
+       * @return The websiteTitle.
+       */
+      public java.lang.String getWebsiteTitle() {
+        java.lang.Object ref = websiteTitle_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            websiteTitle_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string website_title = 11;</code>
+       * @return The bytes for websiteTitle.
+       */
+      public com.google.protobuf.ByteString
+          getWebsiteTitleBytes() {
+        java.lang.Object ref = websiteTitle_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          websiteTitle_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string website_title = 11;</code>
+       * @param value The websiteTitle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsiteTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        websiteTitle_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string website_title = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebsiteTitle() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        websiteTitle_ = getDefaultInstance().getWebsiteTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string website_title = 11;</code>
+       * @param value The bytes for websiteTitle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsiteTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        websiteTitle_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object websiteUrl_ = "";
+      /**
+       * <code>optional string website_url = 12;</code>
+       * @return Whether the websiteUrl field is set.
+       */
+      public boolean hasWebsiteUrl() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional string website_url = 12;</code>
+       * @return The websiteUrl.
+       */
+      public java.lang.String getWebsiteUrl() {
+        java.lang.Object ref = websiteUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            websiteUrl_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string website_url = 12;</code>
+       * @return The bytes for websiteUrl.
+       */
+      public com.google.protobuf.ByteString
+          getWebsiteUrlBytes() {
+        java.lang.Object ref = websiteUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          websiteUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string website_url = 12;</code>
+       * @param value The websiteUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsiteUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        websiteUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string website_url = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebsiteUrl() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        websiteUrl_ = getDefaultInstance().getWebsiteUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string website_url = 12;</code>
+       * @param value The bytes for websiteUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsiteUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        websiteUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object discussionUrl_ = "";
+      /**
+       * <code>optional string discussion_url = 13;</code>
+       * @return Whether the discussionUrl field is set.
+       */
+      public boolean hasDiscussionUrl() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional string discussion_url = 13;</code>
+       * @return The discussionUrl.
+       */
+      public java.lang.String getDiscussionUrl() {
+        java.lang.Object ref = discussionUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            discussionUrl_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string discussion_url = 13;</code>
+       * @return The bytes for discussionUrl.
+       */
+      public com.google.protobuf.ByteString
+          getDiscussionUrlBytes() {
+        java.lang.Object ref = discussionUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          discussionUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string discussion_url = 13;</code>
+       * @param value The discussionUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiscussionUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        discussionUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string discussion_url = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiscussionUrl() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        discussionUrl_ = getDefaultInstance().getDiscussionUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string discussion_url = 13;</code>
+       * @param value The bytes for discussionUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiscussionUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        discussionUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean showBroadcast_ ;
+      /**
+       * <code>optional bool show_broadcast = 14;</code>
+       * @return Whether the showBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasShowBroadcast() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional bool show_broadcast = 14;</code>
+       * @return The showBroadcast.
+       */
+      @java.lang.Override
+      public boolean getShowBroadcast() {
+        return showBroadcast_;
+      }
+      /**
+       * <code>optional bool show_broadcast = 14;</code>
+       * @param value The showBroadcast to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShowBroadcast(boolean value) {
+        bitField0_ |= 0x00002000;
+        showBroadcast_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool show_broadcast = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShowBroadcast() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        showBroadcast_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCuratorPreferences)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCuratorPreferences)
+    private static final SteammessagesBase.CCuratorPreferences DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CCuratorPreferences();
+    }
+
+    public static SteammessagesBase.CCuratorPreferences getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCuratorPreferences>
+        PARSER = new com.google.protobuf.AbstractParser<CCuratorPreferences>() {
+      @java.lang.Override
+      public CCuratorPreferences parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCuratorPreferences(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCuratorPreferences> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCuratorPreferences> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CCuratorPreferences getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CLocalizationTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CLocalizationToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 language = 1;</code>
+     * @return Whether the language field is set.
+     */
+    boolean hasLanguage();
+    /**
+     * <code>optional uint32 language = 1;</code>
+     * @return The language.
+     */
+    int getLanguage();
+
+    /**
+     * <code>optional string localized_string = 2;</code>
+     * @return Whether the localizedString field is set.
+     */
+    boolean hasLocalizedString();
+    /**
+     * <code>optional string localized_string = 2;</code>
+     * @return The localizedString.
+     */
+    java.lang.String getLocalizedString();
+    /**
+     * <code>optional string localized_string = 2;</code>
+     * @return The bytes for localizedString.
+     */
+    com.google.protobuf.ByteString
+        getLocalizedStringBytes();
+  }
+  /**
+   * Protobuf type {@code CLocalizationToken}
+   */
+  public static final class CLocalizationToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CLocalizationToken)
+      CLocalizationTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CLocalizationToken.newBuilder() to construct.
+    private CLocalizationToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CLocalizationToken() {
+      localizedString_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CLocalizationToken();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CLocalizationToken(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              language_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              localizedString_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CLocalizationToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CLocalizationToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CLocalizationToken.class, SteammessagesBase.CLocalizationToken.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int LANGUAGE_FIELD_NUMBER = 1;
+    private int language_;
+    /**
+     * <code>optional uint32 language = 1;</code>
+     * @return Whether the language field is set.
+     */
+    @java.lang.Override
+    public boolean hasLanguage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 language = 1;</code>
+     * @return The language.
+     */
+    @java.lang.Override
+    public int getLanguage() {
+      return language_;
+    }
+
+    public static final int LOCALIZED_STRING_FIELD_NUMBER = 2;
+    private volatile java.lang.Object localizedString_;
+    /**
+     * <code>optional string localized_string = 2;</code>
+     * @return Whether the localizedString field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalizedString() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string localized_string = 2;</code>
+     * @return The localizedString.
+     */
+    @java.lang.Override
+    public java.lang.String getLocalizedString() {
+      java.lang.Object ref = localizedString_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          localizedString_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string localized_string = 2;</code>
+     * @return The bytes for localizedString.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocalizedStringBytes() {
+      java.lang.Object ref = localizedString_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        localizedString_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, language_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, localizedString_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, language_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, localizedString_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CLocalizationToken)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CLocalizationToken other = (SteammessagesBase.CLocalizationToken) obj;
+
+      if (hasLanguage() != other.hasLanguage()) return false;
+      if (hasLanguage()) {
+        if (getLanguage()
+            != other.getLanguage()) return false;
+      }
+      if (hasLocalizedString() != other.hasLocalizedString()) return false;
+      if (hasLocalizedString()) {
+        if (!getLocalizedString()
+            .equals(other.getLocalizedString())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLanguage()) {
+        hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getLanguage();
+      }
+      if (hasLocalizedString()) {
+        hash = (37 * hash) + LOCALIZED_STRING_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedString().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CLocalizationToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CLocalizationToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CLocalizationToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CLocalizationToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CLocalizationToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CLocalizationToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CLocalizationToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CLocalizationToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CLocalizationToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CLocalizationToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CLocalizationToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CLocalizationToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CLocalizationToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CLocalizationToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CLocalizationToken)
+        SteammessagesBase.CLocalizationTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CLocalizationToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CLocalizationToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CLocalizationToken.class, SteammessagesBase.CLocalizationToken.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CLocalizationToken.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        language_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        localizedString_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CLocalizationToken_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CLocalizationToken getDefaultInstanceForType() {
+        return SteammessagesBase.CLocalizationToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CLocalizationToken build() {
+        SteammessagesBase.CLocalizationToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CLocalizationToken buildPartial() {
+        SteammessagesBase.CLocalizationToken result = new SteammessagesBase.CLocalizationToken(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.language_ = language_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.localizedString_ = localizedString_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CLocalizationToken) {
+          return mergeFrom((SteammessagesBase.CLocalizationToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CLocalizationToken other) {
+        if (other == SteammessagesBase.CLocalizationToken.getDefaultInstance()) return this;
+        if (other.hasLanguage()) {
+          setLanguage(other.getLanguage());
+        }
+        if (other.hasLocalizedString()) {
+          bitField0_ |= 0x00000002;
+          localizedString_ = other.localizedString_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CLocalizationToken parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CLocalizationToken) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int language_ ;
+      /**
+       * <code>optional uint32 language = 1;</code>
+       * @return Whether the language field is set.
+       */
+      @java.lang.Override
+      public boolean hasLanguage() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 language = 1;</code>
+       * @return The language.
+       */
+      @java.lang.Override
+      public int getLanguage() {
+        return language_;
+      }
+      /**
+       * <code>optional uint32 language = 1;</code>
+       * @param value The language to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguage(int value) {
+        bitField0_ |= 0x00000001;
+        language_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 language = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLanguage() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        language_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object localizedString_ = "";
+      /**
+       * <code>optional string localized_string = 2;</code>
+       * @return Whether the localizedString field is set.
+       */
+      public boolean hasLocalizedString() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string localized_string = 2;</code>
+       * @return The localizedString.
+       */
+      public java.lang.String getLocalizedString() {
+        java.lang.Object ref = localizedString_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            localizedString_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string localized_string = 2;</code>
+       * @return The bytes for localizedString.
+       */
+      public com.google.protobuf.ByteString
+          getLocalizedStringBytes() {
+        java.lang.Object ref = localizedString_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          localizedString_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string localized_string = 2;</code>
+       * @param value The localizedString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalizedString(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        localizedString_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string localized_string = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalizedString() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        localizedString_ = getDefaultInstance().getLocalizedString();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string localized_string = 2;</code>
+       * @param value The bytes for localizedString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalizedStringBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        localizedString_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CLocalizationToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:CLocalizationToken)
+    private static final SteammessagesBase.CLocalizationToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CLocalizationToken();
+    }
+
+    public static SteammessagesBase.CLocalizationToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CLocalizationToken>
+        PARSER = new com.google.protobuf.AbstractParser<CLocalizationToken>() {
+      @java.lang.Override
+      public CLocalizationToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CLocalizationToken(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CLocalizationToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CLocalizationToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CLocalizationToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CClanEventUserNewsTupleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CClanEventUserNewsTuple)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 clanid = 1;</code>
+     * @return Whether the clanid field is set.
+     */
+    boolean hasClanid();
+    /**
+     * <code>optional uint32 clanid = 1;</code>
+     * @return The clanid.
+     */
+    int getClanid();
+
+    /**
+     * <code>optional fixed64 event_gid = 2;</code>
+     * @return Whether the eventGid field is set.
+     */
+    boolean hasEventGid();
+    /**
+     * <code>optional fixed64 event_gid = 2;</code>
+     * @return The eventGid.
+     */
+    long getEventGid();
+
+    /**
+     * <code>optional fixed64 announcement_gid = 3;</code>
+     * @return Whether the announcementGid field is set.
+     */
+    boolean hasAnnouncementGid();
+    /**
+     * <code>optional fixed64 announcement_gid = 3;</code>
+     * @return The announcementGid.
+     */
+    long getAnnouncementGid();
+
+    /**
+     * <code>optional uint32 rtime_start = 4;</code>
+     * @return Whether the rtimeStart field is set.
+     */
+    boolean hasRtimeStart();
+    /**
+     * <code>optional uint32 rtime_start = 4;</code>
+     * @return The rtimeStart.
+     */
+    int getRtimeStart();
+
+    /**
+     * <code>optional uint32 rtime_end = 5;</code>
+     * @return Whether the rtimeEnd field is set.
+     */
+    boolean hasRtimeEnd();
+    /**
+     * <code>optional uint32 rtime_end = 5;</code>
+     * @return The rtimeEnd.
+     */
+    int getRtimeEnd();
+
+    /**
+     * <code>optional uint32 priority_score = 6;</code>
+     * @return Whether the priorityScore field is set.
+     */
+    boolean hasPriorityScore();
+    /**
+     * <code>optional uint32 priority_score = 6;</code>
+     * @return The priorityScore.
+     */
+    int getPriorityScore();
+
+    /**
+     * <code>optional uint32 type = 7;</code>
+     * @return Whether the type field is set.
+     */
+    boolean hasType();
+    /**
+     * <code>optional uint32 type = 7;</code>
+     * @return The type.
+     */
+    int getType();
+
+    /**
+     * <code>optional uint32 clamp_range_slot = 8;</code>
+     * @return Whether the clampRangeSlot field is set.
+     */
+    boolean hasClampRangeSlot();
+    /**
+     * <code>optional uint32 clamp_range_slot = 8;</code>
+     * @return The clampRangeSlot.
+     */
+    int getClampRangeSlot();
+
+    /**
+     * <code>optional uint32 appid = 9;</code>
+     * @return Whether the appid field is set.
+     */
+    boolean hasAppid();
+    /**
+     * <code>optional uint32 appid = 9;</code>
+     * @return The appid.
+     */
+    int getAppid();
+
+    /**
+     * <code>optional uint32 rtime32_last_modified = 10;</code>
+     * @return Whether the rtime32LastModified field is set.
+     */
+    boolean hasRtime32LastModified();
+    /**
+     * <code>optional uint32 rtime32_last_modified = 10;</code>
+     * @return The rtime32LastModified.
+     */
+    int getRtime32LastModified();
+  }
+  /**
+   * Protobuf type {@code CClanEventUserNewsTuple}
+   */
+  public static final class CClanEventUserNewsTuple extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CClanEventUserNewsTuple)
+      CClanEventUserNewsTupleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CClanEventUserNewsTuple.newBuilder() to construct.
+    private CClanEventUserNewsTuple(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CClanEventUserNewsTuple() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CClanEventUserNewsTuple();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CClanEventUserNewsTuple(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              clanid_ = input.readUInt32();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              eventGid_ = input.readFixed64();
+              break;
+            }
+            case 25: {
+              bitField0_ |= 0x00000004;
+              announcementGid_ = input.readFixed64();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              rtimeStart_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              rtimeEnd_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              priorityScore_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              type_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              clampRangeSlot_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              appid_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              rtime32LastModified_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CClanEventUserNewsTuple_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CClanEventUserNewsTuple_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CClanEventUserNewsTuple.class, SteammessagesBase.CClanEventUserNewsTuple.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLANID_FIELD_NUMBER = 1;
+    private int clanid_;
+    /**
+     * <code>optional uint32 clanid = 1;</code>
+     * @return Whether the clanid field is set.
+     */
+    @java.lang.Override
+    public boolean hasClanid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 clanid = 1;</code>
+     * @return The clanid.
+     */
+    @java.lang.Override
+    public int getClanid() {
+      return clanid_;
+    }
+
+    public static final int EVENT_GID_FIELD_NUMBER = 2;
+    private long eventGid_;
+    /**
+     * <code>optional fixed64 event_gid = 2;</code>
+     * @return Whether the eventGid field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventGid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional fixed64 event_gid = 2;</code>
+     * @return The eventGid.
+     */
+    @java.lang.Override
+    public long getEventGid() {
+      return eventGid_;
+    }
+
+    public static final int ANNOUNCEMENT_GID_FIELD_NUMBER = 3;
+    private long announcementGid_;
+    /**
+     * <code>optional fixed64 announcement_gid = 3;</code>
+     * @return Whether the announcementGid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnnouncementGid() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional fixed64 announcement_gid = 3;</code>
+     * @return The announcementGid.
+     */
+    @java.lang.Override
+    public long getAnnouncementGid() {
+      return announcementGid_;
+    }
+
+    public static final int RTIME_START_FIELD_NUMBER = 4;
+    private int rtimeStart_;
+    /**
+     * <code>optional uint32 rtime_start = 4;</code>
+     * @return Whether the rtimeStart field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtimeStart() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime_start = 4;</code>
+     * @return The rtimeStart.
+     */
+    @java.lang.Override
+    public int getRtimeStart() {
+      return rtimeStart_;
+    }
+
+    public static final int RTIME_END_FIELD_NUMBER = 5;
+    private int rtimeEnd_;
+    /**
+     * <code>optional uint32 rtime_end = 5;</code>
+     * @return Whether the rtimeEnd field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtimeEnd() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime_end = 5;</code>
+     * @return The rtimeEnd.
+     */
+    @java.lang.Override
+    public int getRtimeEnd() {
+      return rtimeEnd_;
+    }
+
+    public static final int PRIORITY_SCORE_FIELD_NUMBER = 6;
+    private int priorityScore_;
+    /**
+     * <code>optional uint32 priority_score = 6;</code>
+     * @return Whether the priorityScore field is set.
+     */
+    @java.lang.Override
+    public boolean hasPriorityScore() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional uint32 priority_score = 6;</code>
+     * @return The priorityScore.
+     */
+    @java.lang.Override
+    public int getPriorityScore() {
+      return priorityScore_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 7;
+    private int type_;
+    /**
+     * <code>optional uint32 type = 7;</code>
+     * @return Whether the type field is set.
+     */
+    @java.lang.Override
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional uint32 type = 7;</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public int getType() {
+      return type_;
+    }
+
+    public static final int CLAMP_RANGE_SLOT_FIELD_NUMBER = 8;
+    private int clampRangeSlot_;
+    /**
+     * <code>optional uint32 clamp_range_slot = 8;</code>
+     * @return Whether the clampRangeSlot field is set.
+     */
+    @java.lang.Override
+    public boolean hasClampRangeSlot() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 clamp_range_slot = 8;</code>
+     * @return The clampRangeSlot.
+     */
+    @java.lang.Override
+    public int getClampRangeSlot() {
+      return clampRangeSlot_;
+    }
+
+    public static final int APPID_FIELD_NUMBER = 9;
+    private int appid_;
+    /**
+     * <code>optional uint32 appid = 9;</code>
+     * @return Whether the appid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppid() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional uint32 appid = 9;</code>
+     * @return The appid.
+     */
+    @java.lang.Override
+    public int getAppid() {
+      return appid_;
+    }
+
+    public static final int RTIME32_LAST_MODIFIED_FIELD_NUMBER = 10;
+    private int rtime32LastModified_;
+    /**
+     * <code>optional uint32 rtime32_last_modified = 10;</code>
+     * @return Whether the rtime32LastModified field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtime32LastModified() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime32_last_modified = 10;</code>
+     * @return The rtime32LastModified.
+     */
+    @java.lang.Override
+    public int getRtime32LastModified() {
+      return rtime32LastModified_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, clanid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeFixed64(2, eventGid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeFixed64(3, announcementGid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(4, rtimeStart_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt32(5, rtimeEnd_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeUInt32(6, priorityScore_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeUInt32(7, type_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(8, clampRangeSlot_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeUInt32(9, appid_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeUInt32(10, rtime32LastModified_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, clanid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(2, eventGid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(3, announcementGid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, rtimeStart_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, rtimeEnd_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, priorityScore_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, type_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, clampRangeSlot_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, appid_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, rtime32LastModified_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CClanEventUserNewsTuple)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CClanEventUserNewsTuple other = (SteammessagesBase.CClanEventUserNewsTuple) obj;
+
+      if (hasClanid() != other.hasClanid()) return false;
+      if (hasClanid()) {
+        if (getClanid()
+            != other.getClanid()) return false;
+      }
+      if (hasEventGid() != other.hasEventGid()) return false;
+      if (hasEventGid()) {
+        if (getEventGid()
+            != other.getEventGid()) return false;
+      }
+      if (hasAnnouncementGid() != other.hasAnnouncementGid()) return false;
+      if (hasAnnouncementGid()) {
+        if (getAnnouncementGid()
+            != other.getAnnouncementGid()) return false;
+      }
+      if (hasRtimeStart() != other.hasRtimeStart()) return false;
+      if (hasRtimeStart()) {
+        if (getRtimeStart()
+            != other.getRtimeStart()) return false;
+      }
+      if (hasRtimeEnd() != other.hasRtimeEnd()) return false;
+      if (hasRtimeEnd()) {
+        if (getRtimeEnd()
+            != other.getRtimeEnd()) return false;
+      }
+      if (hasPriorityScore() != other.hasPriorityScore()) return false;
+      if (hasPriorityScore()) {
+        if (getPriorityScore()
+            != other.getPriorityScore()) return false;
+      }
+      if (hasType() != other.hasType()) return false;
+      if (hasType()) {
+        if (getType()
+            != other.getType()) return false;
+      }
+      if (hasClampRangeSlot() != other.hasClampRangeSlot()) return false;
+      if (hasClampRangeSlot()) {
+        if (getClampRangeSlot()
+            != other.getClampRangeSlot()) return false;
+      }
+      if (hasAppid() != other.hasAppid()) return false;
+      if (hasAppid()) {
+        if (getAppid()
+            != other.getAppid()) return false;
+      }
+      if (hasRtime32LastModified() != other.hasRtime32LastModified()) return false;
+      if (hasRtime32LastModified()) {
+        if (getRtime32LastModified()
+            != other.getRtime32LastModified()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClanid()) {
+        hash = (37 * hash) + CLANID_FIELD_NUMBER;
+        hash = (53 * hash) + getClanid();
+      }
+      if (hasEventGid()) {
+        hash = (37 * hash) + EVENT_GID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getEventGid());
+      }
+      if (hasAnnouncementGid()) {
+        hash = (37 * hash) + ANNOUNCEMENT_GID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAnnouncementGid());
+      }
+      if (hasRtimeStart()) {
+        hash = (37 * hash) + RTIME_START_FIELD_NUMBER;
+        hash = (53 * hash) + getRtimeStart();
+      }
+      if (hasRtimeEnd()) {
+        hash = (37 * hash) + RTIME_END_FIELD_NUMBER;
+        hash = (53 * hash) + getRtimeEnd();
+      }
+      if (hasPriorityScore()) {
+        hash = (37 * hash) + PRIORITY_SCORE_FIELD_NUMBER;
+        hash = (53 * hash) + getPriorityScore();
+      }
+      if (hasType()) {
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getType();
+      }
+      if (hasClampRangeSlot()) {
+        hash = (37 * hash) + CLAMP_RANGE_SLOT_FIELD_NUMBER;
+        hash = (53 * hash) + getClampRangeSlot();
+      }
+      if (hasAppid()) {
+        hash = (37 * hash) + APPID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppid();
+      }
+      if (hasRtime32LastModified()) {
+        hash = (37 * hash) + RTIME32_LAST_MODIFIED_FIELD_NUMBER;
+        hash = (53 * hash) + getRtime32LastModified();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CClanEventUserNewsTuple parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CClanEventUserNewsTuple parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CClanEventUserNewsTuple prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CClanEventUserNewsTuple}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CClanEventUserNewsTuple)
+        SteammessagesBase.CClanEventUserNewsTupleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CClanEventUserNewsTuple_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CClanEventUserNewsTuple_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CClanEventUserNewsTuple.class, SteammessagesBase.CClanEventUserNewsTuple.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CClanEventUserNewsTuple.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clanid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        eventGid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        announcementGid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        rtimeStart_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        rtimeEnd_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        priorityScore_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        clampRangeSlot_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        appid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        rtime32LastModified_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CClanEventUserNewsTuple_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CClanEventUserNewsTuple getDefaultInstanceForType() {
+        return SteammessagesBase.CClanEventUserNewsTuple.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CClanEventUserNewsTuple build() {
+        SteammessagesBase.CClanEventUserNewsTuple result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CClanEventUserNewsTuple buildPartial() {
+        SteammessagesBase.CClanEventUserNewsTuple result = new SteammessagesBase.CClanEventUserNewsTuple(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.clanid_ = clanid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.eventGid_ = eventGid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.announcementGid_ = announcementGid_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.rtimeStart_ = rtimeStart_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.rtimeEnd_ = rtimeEnd_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.priorityScore_ = priorityScore_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.type_ = type_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.clampRangeSlot_ = clampRangeSlot_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.appid_ = appid_;
+          to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.rtime32LastModified_ = rtime32LastModified_;
+          to_bitField0_ |= 0x00000200;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CClanEventUserNewsTuple) {
+          return mergeFrom((SteammessagesBase.CClanEventUserNewsTuple)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CClanEventUserNewsTuple other) {
+        if (other == SteammessagesBase.CClanEventUserNewsTuple.getDefaultInstance()) return this;
+        if (other.hasClanid()) {
+          setClanid(other.getClanid());
+        }
+        if (other.hasEventGid()) {
+          setEventGid(other.getEventGid());
+        }
+        if (other.hasAnnouncementGid()) {
+          setAnnouncementGid(other.getAnnouncementGid());
+        }
+        if (other.hasRtimeStart()) {
+          setRtimeStart(other.getRtimeStart());
+        }
+        if (other.hasRtimeEnd()) {
+          setRtimeEnd(other.getRtimeEnd());
+        }
+        if (other.hasPriorityScore()) {
+          setPriorityScore(other.getPriorityScore());
+        }
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasClampRangeSlot()) {
+          setClampRangeSlot(other.getClampRangeSlot());
+        }
+        if (other.hasAppid()) {
+          setAppid(other.getAppid());
+        }
+        if (other.hasRtime32LastModified()) {
+          setRtime32LastModified(other.getRtime32LastModified());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CClanEventUserNewsTuple parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CClanEventUserNewsTuple) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int clanid_ ;
+      /**
+       * <code>optional uint32 clanid = 1;</code>
+       * @return Whether the clanid field is set.
+       */
+      @java.lang.Override
+      public boolean hasClanid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 clanid = 1;</code>
+       * @return The clanid.
+       */
+      @java.lang.Override
+      public int getClanid() {
+        return clanid_;
+      }
+      /**
+       * <code>optional uint32 clanid = 1;</code>
+       * @param value The clanid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClanid(int value) {
+        bitField0_ |= 0x00000001;
+        clanid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 clanid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClanid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        clanid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long eventGid_ ;
+      /**
+       * <code>optional fixed64 event_gid = 2;</code>
+       * @return Whether the eventGid field is set.
+       */
+      @java.lang.Override
+      public boolean hasEventGid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional fixed64 event_gid = 2;</code>
+       * @return The eventGid.
+       */
+      @java.lang.Override
+      public long getEventGid() {
+        return eventGid_;
+      }
+      /**
+       * <code>optional fixed64 event_gid = 2;</code>
+       * @param value The eventGid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventGid(long value) {
+        bitField0_ |= 0x00000002;
+        eventGid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 event_gid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventGid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        eventGid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long announcementGid_ ;
+      /**
+       * <code>optional fixed64 announcement_gid = 3;</code>
+       * @return Whether the announcementGid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAnnouncementGid() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional fixed64 announcement_gid = 3;</code>
+       * @return The announcementGid.
+       */
+      @java.lang.Override
+      public long getAnnouncementGid() {
+        return announcementGid_;
+      }
+      /**
+       * <code>optional fixed64 announcement_gid = 3;</code>
+       * @param value The announcementGid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAnnouncementGid(long value) {
+        bitField0_ |= 0x00000004;
+        announcementGid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 announcement_gid = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAnnouncementGid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        announcementGid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int rtimeStart_ ;
+      /**
+       * <code>optional uint32 rtime_start = 4;</code>
+       * @return Whether the rtimeStart field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtimeStart() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime_start = 4;</code>
+       * @return The rtimeStart.
+       */
+      @java.lang.Override
+      public int getRtimeStart() {
+        return rtimeStart_;
+      }
+      /**
+       * <code>optional uint32 rtime_start = 4;</code>
+       * @param value The rtimeStart to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtimeStart(int value) {
+        bitField0_ |= 0x00000008;
+        rtimeStart_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime_start = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtimeStart() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        rtimeStart_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rtimeEnd_ ;
+      /**
+       * <code>optional uint32 rtime_end = 5;</code>
+       * @return Whether the rtimeEnd field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtimeEnd() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime_end = 5;</code>
+       * @return The rtimeEnd.
+       */
+      @java.lang.Override
+      public int getRtimeEnd() {
+        return rtimeEnd_;
+      }
+      /**
+       * <code>optional uint32 rtime_end = 5;</code>
+       * @param value The rtimeEnd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtimeEnd(int value) {
+        bitField0_ |= 0x00000010;
+        rtimeEnd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime_end = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtimeEnd() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        rtimeEnd_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int priorityScore_ ;
+      /**
+       * <code>optional uint32 priority_score = 6;</code>
+       * @return Whether the priorityScore field is set.
+       */
+      @java.lang.Override
+      public boolean hasPriorityScore() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint32 priority_score = 6;</code>
+       * @return The priorityScore.
+       */
+      @java.lang.Override
+      public int getPriorityScore() {
+        return priorityScore_;
+      }
+      /**
+       * <code>optional uint32 priority_score = 6;</code>
+       * @param value The priorityScore to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPriorityScore(int value) {
+        bitField0_ |= 0x00000020;
+        priorityScore_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 priority_score = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPriorityScore() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        priorityScore_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int type_ ;
+      /**
+       * <code>optional uint32 type = 7;</code>
+       * @return Whether the type field is set.
+       */
+      @java.lang.Override
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional uint32 type = 7;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional uint32 type = 7;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000040;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 type = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int clampRangeSlot_ ;
+      /**
+       * <code>optional uint32 clamp_range_slot = 8;</code>
+       * @return Whether the clampRangeSlot field is set.
+       */
+      @java.lang.Override
+      public boolean hasClampRangeSlot() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 clamp_range_slot = 8;</code>
+       * @return The clampRangeSlot.
+       */
+      @java.lang.Override
+      public int getClampRangeSlot() {
+        return clampRangeSlot_;
+      }
+      /**
+       * <code>optional uint32 clamp_range_slot = 8;</code>
+       * @param value The clampRangeSlot to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClampRangeSlot(int value) {
+        bitField0_ |= 0x00000080;
+        clampRangeSlot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 clamp_range_slot = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClampRangeSlot() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        clampRangeSlot_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int appid_ ;
+      /**
+       * <code>optional uint32 appid = 9;</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 9;</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+      /**
+       * <code>optional uint32 appid = 9;</code>
+       * @param value The appid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppid(int value) {
+        bitField0_ |= 0x00000100;
+        appid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 appid = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppid() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        appid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rtime32LastModified_ ;
+      /**
+       * <code>optional uint32 rtime32_last_modified = 10;</code>
+       * @return Whether the rtime32LastModified field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtime32LastModified() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime32_last_modified = 10;</code>
+       * @return The rtime32LastModified.
+       */
+      @java.lang.Override
+      public int getRtime32LastModified() {
+        return rtime32LastModified_;
+      }
+      /**
+       * <code>optional uint32 rtime32_last_modified = 10;</code>
+       * @param value The rtime32LastModified to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtime32LastModified(int value) {
+        bitField0_ |= 0x00000200;
+        rtime32LastModified_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime32_last_modified = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtime32LastModified() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        rtime32LastModified_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CClanEventUserNewsTuple)
+    }
+
+    // @@protoc_insertion_point(class_scope:CClanEventUserNewsTuple)
+    private static final SteammessagesBase.CClanEventUserNewsTuple DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CClanEventUserNewsTuple();
+    }
+
+    public static SteammessagesBase.CClanEventUserNewsTuple getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CClanEventUserNewsTuple>
+        PARSER = new com.google.protobuf.AbstractParser<CClanEventUserNewsTuple>() {
+      @java.lang.Override
+      public CClanEventUserNewsTuple parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CClanEventUserNewsTuple(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CClanEventUserNewsTuple> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CClanEventUserNewsTuple> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CClanEventUserNewsTuple getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CClanMatchEventByRangeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CClanMatchEventByRange)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 rtime_before = 1;</code>
+     * @return Whether the rtimeBefore field is set.
+     */
+    boolean hasRtimeBefore();
+    /**
+     * <code>optional uint32 rtime_before = 1;</code>
+     * @return The rtimeBefore.
+     */
+    int getRtimeBefore();
+
+    /**
+     * <code>optional uint32 rtime_after = 2;</code>
+     * @return Whether the rtimeAfter field is set.
+     */
+    boolean hasRtimeAfter();
+    /**
+     * <code>optional uint32 rtime_after = 2;</code>
+     * @return The rtimeAfter.
+     */
+    int getRtimeAfter();
+
+    /**
+     * <code>optional uint32 qualified = 3;</code>
+     * @return Whether the qualified field is set.
+     */
+    boolean hasQualified();
+    /**
+     * <code>optional uint32 qualified = 3;</code>
+     * @return The qualified.
+     */
+    int getQualified();
+
+    /**
+     * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+     */
+    java.util.List<SteammessagesBase.CClanEventUserNewsTuple> 
+        getEventsList();
+    /**
+     * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+     */
+    SteammessagesBase.CClanEventUserNewsTuple getEvents(int index);
+    /**
+     * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+     */
+    int getEventsCount();
+    /**
+     * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+     */
+    java.util.List<? extends SteammessagesBase.CClanEventUserNewsTupleOrBuilder> 
+        getEventsOrBuilderList();
+    /**
+     * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+     */
+    SteammessagesBase.CClanEventUserNewsTupleOrBuilder getEventsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CClanMatchEventByRange}
+   */
+  public static final class CClanMatchEventByRange extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CClanMatchEventByRange)
+      CClanMatchEventByRangeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CClanMatchEventByRange.newBuilder() to construct.
+    private CClanMatchEventByRange(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CClanMatchEventByRange() {
+      events_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CClanMatchEventByRange();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CClanMatchEventByRange(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              rtimeBefore_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              rtimeAfter_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              qualified_ = input.readUInt32();
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                events_ = new java.util.ArrayList<SteammessagesBase.CClanEventUserNewsTuple>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              events_.add(
+                  input.readMessage(SteammessagesBase.CClanEventUserNewsTuple.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          events_ = java.util.Collections.unmodifiableList(events_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CClanMatchEventByRange_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CClanMatchEventByRange_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CClanMatchEventByRange.class, SteammessagesBase.CClanMatchEventByRange.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RTIME_BEFORE_FIELD_NUMBER = 1;
+    private int rtimeBefore_;
+    /**
+     * <code>optional uint32 rtime_before = 1;</code>
+     * @return Whether the rtimeBefore field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtimeBefore() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime_before = 1;</code>
+     * @return The rtimeBefore.
+     */
+    @java.lang.Override
+    public int getRtimeBefore() {
+      return rtimeBefore_;
+    }
+
+    public static final int RTIME_AFTER_FIELD_NUMBER = 2;
+    private int rtimeAfter_;
+    /**
+     * <code>optional uint32 rtime_after = 2;</code>
+     * @return Whether the rtimeAfter field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtimeAfter() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime_after = 2;</code>
+     * @return The rtimeAfter.
+     */
+    @java.lang.Override
+    public int getRtimeAfter() {
+      return rtimeAfter_;
+    }
+
+    public static final int QUALIFIED_FIELD_NUMBER = 3;
+    private int qualified_;
+    /**
+     * <code>optional uint32 qualified = 3;</code>
+     * @return Whether the qualified field is set.
+     */
+    @java.lang.Override
+    public boolean hasQualified() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 qualified = 3;</code>
+     * @return The qualified.
+     */
+    @java.lang.Override
+    public int getQualified() {
+      return qualified_;
+    }
+
+    public static final int EVENTS_FIELD_NUMBER = 4;
+    private java.util.List<SteammessagesBase.CClanEventUserNewsTuple> events_;
+    /**
+     * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesBase.CClanEventUserNewsTuple> getEventsList() {
+      return events_;
+    }
+    /**
+     * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesBase.CClanEventUserNewsTupleOrBuilder> 
+        getEventsOrBuilderList() {
+      return events_;
+    }
+    /**
+     * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+     */
+    @java.lang.Override
+    public int getEventsCount() {
+      return events_.size();
+    }
+    /**
+     * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.CClanEventUserNewsTuple getEvents(int index) {
+      return events_.get(index);
+    }
+    /**
+     * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.CClanEventUserNewsTupleOrBuilder getEventsOrBuilder(
+        int index) {
+      return events_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, rtimeBefore_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, rtimeAfter_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, qualified_);
+      }
+      for (int i = 0; i < events_.size(); i++) {
+        output.writeMessage(4, events_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, rtimeBefore_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, rtimeAfter_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, qualified_);
+      }
+      for (int i = 0; i < events_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, events_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CClanMatchEventByRange)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CClanMatchEventByRange other = (SteammessagesBase.CClanMatchEventByRange) obj;
+
+      if (hasRtimeBefore() != other.hasRtimeBefore()) return false;
+      if (hasRtimeBefore()) {
+        if (getRtimeBefore()
+            != other.getRtimeBefore()) return false;
+      }
+      if (hasRtimeAfter() != other.hasRtimeAfter()) return false;
+      if (hasRtimeAfter()) {
+        if (getRtimeAfter()
+            != other.getRtimeAfter()) return false;
+      }
+      if (hasQualified() != other.hasQualified()) return false;
+      if (hasQualified()) {
+        if (getQualified()
+            != other.getQualified()) return false;
+      }
+      if (!getEventsList()
+          .equals(other.getEventsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRtimeBefore()) {
+        hash = (37 * hash) + RTIME_BEFORE_FIELD_NUMBER;
+        hash = (53 * hash) + getRtimeBefore();
+      }
+      if (hasRtimeAfter()) {
+        hash = (37 * hash) + RTIME_AFTER_FIELD_NUMBER;
+        hash = (53 * hash) + getRtimeAfter();
+      }
+      if (hasQualified()) {
+        hash = (37 * hash) + QUALIFIED_FIELD_NUMBER;
+        hash = (53 * hash) + getQualified();
+      }
+      if (getEventsCount() > 0) {
+        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CClanMatchEventByRange parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CClanMatchEventByRange parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CClanMatchEventByRange prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CClanMatchEventByRange}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CClanMatchEventByRange)
+        SteammessagesBase.CClanMatchEventByRangeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CClanMatchEventByRange_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CClanMatchEventByRange_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CClanMatchEventByRange.class, SteammessagesBase.CClanMatchEventByRange.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CClanMatchEventByRange.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEventsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        rtimeBefore_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rtimeAfter_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        qualified_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (eventsBuilder_ == null) {
+          events_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          eventsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CClanMatchEventByRange_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CClanMatchEventByRange getDefaultInstanceForType() {
+        return SteammessagesBase.CClanMatchEventByRange.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CClanMatchEventByRange build() {
+        SteammessagesBase.CClanMatchEventByRange result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CClanMatchEventByRange buildPartial() {
+        SteammessagesBase.CClanMatchEventByRange result = new SteammessagesBase.CClanMatchEventByRange(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rtimeBefore_ = rtimeBefore_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.rtimeAfter_ = rtimeAfter_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.qualified_ = qualified_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (eventsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            events_ = java.util.Collections.unmodifiableList(events_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.events_ = events_;
+        } else {
+          result.events_ = eventsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CClanMatchEventByRange) {
+          return mergeFrom((SteammessagesBase.CClanMatchEventByRange)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CClanMatchEventByRange other) {
+        if (other == SteammessagesBase.CClanMatchEventByRange.getDefaultInstance()) return this;
+        if (other.hasRtimeBefore()) {
+          setRtimeBefore(other.getRtimeBefore());
+        }
+        if (other.hasRtimeAfter()) {
+          setRtimeAfter(other.getRtimeAfter());
+        }
+        if (other.hasQualified()) {
+          setQualified(other.getQualified());
+        }
+        if (eventsBuilder_ == null) {
+          if (!other.events_.isEmpty()) {
+            if (events_.isEmpty()) {
+              events_ = other.events_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureEventsIsMutable();
+              events_.addAll(other.events_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.events_.isEmpty()) {
+            if (eventsBuilder_.isEmpty()) {
+              eventsBuilder_.dispose();
+              eventsBuilder_ = null;
+              events_ = other.events_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              eventsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEventsFieldBuilder() : null;
+            } else {
+              eventsBuilder_.addAllMessages(other.events_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CClanMatchEventByRange parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CClanMatchEventByRange) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int rtimeBefore_ ;
+      /**
+       * <code>optional uint32 rtime_before = 1;</code>
+       * @return Whether the rtimeBefore field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtimeBefore() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime_before = 1;</code>
+       * @return The rtimeBefore.
+       */
+      @java.lang.Override
+      public int getRtimeBefore() {
+        return rtimeBefore_;
+      }
+      /**
+       * <code>optional uint32 rtime_before = 1;</code>
+       * @param value The rtimeBefore to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtimeBefore(int value) {
+        bitField0_ |= 0x00000001;
+        rtimeBefore_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime_before = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtimeBefore() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rtimeBefore_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rtimeAfter_ ;
+      /**
+       * <code>optional uint32 rtime_after = 2;</code>
+       * @return Whether the rtimeAfter field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtimeAfter() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime_after = 2;</code>
+       * @return The rtimeAfter.
+       */
+      @java.lang.Override
+      public int getRtimeAfter() {
+        return rtimeAfter_;
+      }
+      /**
+       * <code>optional uint32 rtime_after = 2;</code>
+       * @param value The rtimeAfter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtimeAfter(int value) {
+        bitField0_ |= 0x00000002;
+        rtimeAfter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime_after = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtimeAfter() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        rtimeAfter_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int qualified_ ;
+      /**
+       * <code>optional uint32 qualified = 3;</code>
+       * @return Whether the qualified field is set.
+       */
+      @java.lang.Override
+      public boolean hasQualified() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 qualified = 3;</code>
+       * @return The qualified.
+       */
+      @java.lang.Override
+      public int getQualified() {
+        return qualified_;
+      }
+      /**
+       * <code>optional uint32 qualified = 3;</code>
+       * @param value The qualified to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQualified(int value) {
+        bitField0_ |= 0x00000004;
+        qualified_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 qualified = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQualified() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        qualified_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<SteammessagesBase.CClanEventUserNewsTuple> events_ =
+        java.util.Collections.emptyList();
+      private void ensureEventsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          events_ = new java.util.ArrayList<SteammessagesBase.CClanEventUserNewsTuple>(events_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesBase.CClanEventUserNewsTuple, SteammessagesBase.CClanEventUserNewsTuple.Builder, SteammessagesBase.CClanEventUserNewsTupleOrBuilder> eventsBuilder_;
+
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public java.util.List<SteammessagesBase.CClanEventUserNewsTuple> getEventsList() {
+        if (eventsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(events_);
+        } else {
+          return eventsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public int getEventsCount() {
+        if (eventsBuilder_ == null) {
+          return events_.size();
+        } else {
+          return eventsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public SteammessagesBase.CClanEventUserNewsTuple getEvents(int index) {
+        if (eventsBuilder_ == null) {
+          return events_.get(index);
+        } else {
+          return eventsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public Builder setEvents(
+          int index, SteammessagesBase.CClanEventUserNewsTuple value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.set(index, value);
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public Builder setEvents(
+          int index, SteammessagesBase.CClanEventUserNewsTuple.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public Builder addEvents(SteammessagesBase.CClanEventUserNewsTuple value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.add(value);
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public Builder addEvents(
+          int index, SteammessagesBase.CClanEventUserNewsTuple value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.add(index, value);
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public Builder addEvents(
+          SteammessagesBase.CClanEventUserNewsTuple.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public Builder addEvents(
+          int index, SteammessagesBase.CClanEventUserNewsTuple.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public Builder addAllEvents(
+          java.lang.Iterable<? extends SteammessagesBase.CClanEventUserNewsTuple> values) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, events_);
+          onChanged();
+        } else {
+          eventsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public Builder clearEvents() {
+        if (eventsBuilder_ == null) {
+          events_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          eventsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public Builder removeEvents(int index) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.remove(index);
+          onChanged();
+        } else {
+          eventsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public SteammessagesBase.CClanEventUserNewsTuple.Builder getEventsBuilder(
+          int index) {
+        return getEventsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public SteammessagesBase.CClanEventUserNewsTupleOrBuilder getEventsOrBuilder(
+          int index) {
+        if (eventsBuilder_ == null) {
+          return events_.get(index);  } else {
+          return eventsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public java.util.List<? extends SteammessagesBase.CClanEventUserNewsTupleOrBuilder> 
+           getEventsOrBuilderList() {
+        if (eventsBuilder_ != null) {
+          return eventsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(events_);
+        }
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public SteammessagesBase.CClanEventUserNewsTuple.Builder addEventsBuilder() {
+        return getEventsFieldBuilder().addBuilder(
+            SteammessagesBase.CClanEventUserNewsTuple.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public SteammessagesBase.CClanEventUserNewsTuple.Builder addEventsBuilder(
+          int index) {
+        return getEventsFieldBuilder().addBuilder(
+            index, SteammessagesBase.CClanEventUserNewsTuple.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CClanEventUserNewsTuple events = 4;</code>
+       */
+      public java.util.List<SteammessagesBase.CClanEventUserNewsTuple.Builder> 
+           getEventsBuilderList() {
+        return getEventsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesBase.CClanEventUserNewsTuple, SteammessagesBase.CClanEventUserNewsTuple.Builder, SteammessagesBase.CClanEventUserNewsTupleOrBuilder> 
+          getEventsFieldBuilder() {
+        if (eventsBuilder_ == null) {
+          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesBase.CClanEventUserNewsTuple, SteammessagesBase.CClanEventUserNewsTuple.Builder, SteammessagesBase.CClanEventUserNewsTupleOrBuilder>(
+                  events_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          events_ = null;
+        }
+        return eventsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CClanMatchEventByRange)
+    }
+
+    // @@protoc_insertion_point(class_scope:CClanMatchEventByRange)
+    private static final SteammessagesBase.CClanMatchEventByRange DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CClanMatchEventByRange();
+    }
+
+    public static SteammessagesBase.CClanMatchEventByRange getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CClanMatchEventByRange>
+        PARSER = new com.google.protobuf.AbstractParser<CClanMatchEventByRange>() {
+      @java.lang.Override
+      public CClanMatchEventByRange parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CClanMatchEventByRange(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CClanMatchEventByRange> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CClanMatchEventByRange> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CClanMatchEventByRange getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CCommunity_ClanAnnouncementInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCommunity_ClanAnnouncementInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 gid = 1;</code>
+     * @return Whether the gid field is set.
+     */
+    boolean hasGid();
+    /**
+     * <code>optional uint64 gid = 1;</code>
+     * @return The gid.
+     */
+    long getGid();
+
+    /**
+     * <code>optional uint64 clanid = 2;</code>
+     * @return Whether the clanid field is set.
+     */
+    boolean hasClanid();
+    /**
+     * <code>optional uint64 clanid = 2;</code>
+     * @return The clanid.
+     */
+    long getClanid();
+
+    /**
+     * <code>optional uint64 posterid = 3;</code>
+     * @return Whether the posterid field is set.
+     */
+    boolean hasPosterid();
+    /**
+     * <code>optional uint64 posterid = 3;</code>
+     * @return The posterid.
+     */
+    long getPosterid();
+
+    /**
+     * <code>optional string headline = 4;</code>
+     * @return Whether the headline field is set.
+     */
+    boolean hasHeadline();
+    /**
+     * <code>optional string headline = 4;</code>
+     * @return The headline.
+     */
+    java.lang.String getHeadline();
+    /**
+     * <code>optional string headline = 4;</code>
+     * @return The bytes for headline.
+     */
+    com.google.protobuf.ByteString
+        getHeadlineBytes();
+
+    /**
+     * <code>optional uint32 posttime = 5;</code>
+     * @return Whether the posttime field is set.
+     */
+    boolean hasPosttime();
+    /**
+     * <code>optional uint32 posttime = 5;</code>
+     * @return The posttime.
+     */
+    int getPosttime();
+
+    /**
+     * <code>optional uint32 updatetime = 6;</code>
+     * @return Whether the updatetime field is set.
+     */
+    boolean hasUpdatetime();
+    /**
+     * <code>optional uint32 updatetime = 6;</code>
+     * @return The updatetime.
+     */
+    int getUpdatetime();
+
+    /**
+     * <code>optional string body = 7;</code>
+     * @return Whether the body field is set.
+     */
+    boolean hasBody();
+    /**
+     * <code>optional string body = 7;</code>
+     * @return The body.
+     */
+    java.lang.String getBody();
+    /**
+     * <code>optional string body = 7;</code>
+     * @return The bytes for body.
+     */
+    com.google.protobuf.ByteString
+        getBodyBytes();
+
+    /**
+     * <code>optional int32 commentcount = 8;</code>
+     * @return Whether the commentcount field is set.
+     */
+    boolean hasCommentcount();
+    /**
+     * <code>optional int32 commentcount = 8;</code>
+     * @return The commentcount.
+     */
+    int getCommentcount();
+
+    /**
+     * <code>repeated string tags = 9;</code>
+     * @return A list containing the tags.
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 9;</code>
+     * @return The count of tags.
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 9;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
+
+    /**
+     * <code>optional int32 language = 10;</code>
+     * @return Whether the language field is set.
+     */
+    boolean hasLanguage();
+    /**
+     * <code>optional int32 language = 10;</code>
+     * @return The language.
+     */
+    int getLanguage();
+
+    /**
+     * <code>optional bool hidden = 11;</code>
+     * @return Whether the hidden field is set.
+     */
+    boolean hasHidden();
+    /**
+     * <code>optional bool hidden = 11;</code>
+     * @return The hidden.
+     */
+    boolean getHidden();
+
+    /**
+     * <code>optional fixed64 forum_topic_id = 12;</code>
+     * @return Whether the forumTopicId field is set.
+     */
+    boolean hasForumTopicId();
+    /**
+     * <code>optional fixed64 forum_topic_id = 12;</code>
+     * @return The forumTopicId.
+     */
+    long getForumTopicId();
+
+    /**
+     * <code>optional fixed64 event_gid = 13;</code>
+     * @return Whether the eventGid field is set.
+     */
+    boolean hasEventGid();
+    /**
+     * <code>optional fixed64 event_gid = 13;</code>
+     * @return The eventGid.
+     */
+    long getEventGid();
+
+    /**
+     * <code>optional int32 voteupcount = 14;</code>
+     * @return Whether the voteupcount field is set.
+     */
+    boolean hasVoteupcount();
+    /**
+     * <code>optional int32 voteupcount = 14;</code>
+     * @return The voteupcount.
+     */
+    int getVoteupcount();
+
+    /**
+     * <code>optional int32 votedowncount = 15;</code>
+     * @return Whether the votedowncount field is set.
+     */
+    boolean hasVotedowncount();
+    /**
+     * <code>optional int32 votedowncount = 15;</code>
+     * @return The votedowncount.
+     */
+    int getVotedowncount();
+
+    /**
+     * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+     * @return Whether the banCheckResult field is set.
+     */
+    boolean hasBanCheckResult();
+    /**
+     * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+     * @return The banCheckResult.
+     */
+    SteammessagesBase.EBanContentCheckResult getBanCheckResult();
+  }
+  /**
+   * Protobuf type {@code CCommunity_ClanAnnouncementInfo}
+   */
+  public static final class CCommunity_ClanAnnouncementInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCommunity_ClanAnnouncementInfo)
+      CCommunity_ClanAnnouncementInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCommunity_ClanAnnouncementInfo.newBuilder() to construct.
+    private CCommunity_ClanAnnouncementInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCommunity_ClanAnnouncementInfo() {
+      headline_ = "";
+      body_ = "";
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      banCheckResult_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCommunity_ClanAnnouncementInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCommunity_ClanAnnouncementInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              gid_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              clanid_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              posterid_ = input.readUInt64();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              headline_ = bs;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              posttime_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              updatetime_ = input.readUInt32();
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              body_ = bs;
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              commentcount_ = input.readInt32();
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+                tags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              tags_.add(bs);
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000100;
+              language_ = input.readInt32();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000200;
+              hidden_ = input.readBool();
+              break;
+            }
+            case 97: {
+              bitField0_ |= 0x00000400;
+              forumTopicId_ = input.readFixed64();
+              break;
+            }
+            case 105: {
+              bitField0_ |= 0x00000800;
+              eventGid_ = input.readFixed64();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00001000;
+              voteupcount_ = input.readInt32();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00002000;
+              votedowncount_ = input.readInt32();
+              break;
+            }
+            case 128: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              SteammessagesBase.EBanContentCheckResult value = SteammessagesBase.EBanContentCheckResult.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(16, rawValue);
+              } else {
+                bitField0_ |= 0x00004000;
+                banCheckResult_ = rawValue;
+              }
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CCommunity_ClanAnnouncementInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CCommunity_ClanAnnouncementInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CCommunity_ClanAnnouncementInfo.class, SteammessagesBase.CCommunity_ClanAnnouncementInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int GID_FIELD_NUMBER = 1;
+    private long gid_;
+    /**
+     * <code>optional uint64 gid = 1;</code>
+     * @return Whether the gid field is set.
+     */
+    @java.lang.Override
+    public boolean hasGid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 gid = 1;</code>
+     * @return The gid.
+     */
+    @java.lang.Override
+    public long getGid() {
+      return gid_;
+    }
+
+    public static final int CLANID_FIELD_NUMBER = 2;
+    private long clanid_;
+    /**
+     * <code>optional uint64 clanid = 2;</code>
+     * @return Whether the clanid field is set.
+     */
+    @java.lang.Override
+    public boolean hasClanid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 clanid = 2;</code>
+     * @return The clanid.
+     */
+    @java.lang.Override
+    public long getClanid() {
+      return clanid_;
+    }
+
+    public static final int POSTERID_FIELD_NUMBER = 3;
+    private long posterid_;
+    /**
+     * <code>optional uint64 posterid = 3;</code>
+     * @return Whether the posterid field is set.
+     */
+    @java.lang.Override
+    public boolean hasPosterid() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint64 posterid = 3;</code>
+     * @return The posterid.
+     */
+    @java.lang.Override
+    public long getPosterid() {
+      return posterid_;
+    }
+
+    public static final int HEADLINE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object headline_;
+    /**
+     * <code>optional string headline = 4;</code>
+     * @return Whether the headline field is set.
+     */
+    @java.lang.Override
+    public boolean hasHeadline() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string headline = 4;</code>
+     * @return The headline.
+     */
+    @java.lang.Override
+    public java.lang.String getHeadline() {
+      java.lang.Object ref = headline_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          headline_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string headline = 4;</code>
+     * @return The bytes for headline.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHeadlineBytes() {
+      java.lang.Object ref = headline_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        headline_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSTTIME_FIELD_NUMBER = 5;
+    private int posttime_;
+    /**
+     * <code>optional uint32 posttime = 5;</code>
+     * @return Whether the posttime field is set.
+     */
+    @java.lang.Override
+    public boolean hasPosttime() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint32 posttime = 5;</code>
+     * @return The posttime.
+     */
+    @java.lang.Override
+    public int getPosttime() {
+      return posttime_;
+    }
+
+    public static final int UPDATETIME_FIELD_NUMBER = 6;
+    private int updatetime_;
+    /**
+     * <code>optional uint32 updatetime = 6;</code>
+     * @return Whether the updatetime field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatetime() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional uint32 updatetime = 6;</code>
+     * @return The updatetime.
+     */
+    @java.lang.Override
+    public int getUpdatetime() {
+      return updatetime_;
+    }
+
+    public static final int BODY_FIELD_NUMBER = 7;
+    private volatile java.lang.Object body_;
+    /**
+     * <code>optional string body = 7;</code>
+     * @return Whether the body field is set.
+     */
+    @java.lang.Override
+    public boolean hasBody() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional string body = 7;</code>
+     * @return The body.
+     */
+    @java.lang.Override
+    public java.lang.String getBody() {
+      java.lang.Object ref = body_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          body_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string body = 7;</code>
+     * @return The bytes for body.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBodyBytes() {
+      java.lang.Object ref = body_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        body_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMENTCOUNT_FIELD_NUMBER = 8;
+    private int commentcount_;
+    /**
+     * <code>optional int32 commentcount = 8;</code>
+     * @return Whether the commentcount field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommentcount() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional int32 commentcount = 8;</code>
+     * @return The commentcount.
+     */
+    @java.lang.Override
+    public int getCommentcount() {
+      return commentcount_;
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 9;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <code>repeated string tags = 9;</code>
+     * @return A list containing the tags.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 9;</code>
+     * @return The count of tags.
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 9;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 9;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
+    public static final int LANGUAGE_FIELD_NUMBER = 10;
+    private int language_;
+    /**
+     * <code>optional int32 language = 10;</code>
+     * @return Whether the language field is set.
+     */
+    @java.lang.Override
+    public boolean hasLanguage() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional int32 language = 10;</code>
+     * @return The language.
+     */
+    @java.lang.Override
+    public int getLanguage() {
+      return language_;
+    }
+
+    public static final int HIDDEN_FIELD_NUMBER = 11;
+    private boolean hidden_;
+    /**
+     * <code>optional bool hidden = 11;</code>
+     * @return Whether the hidden field is set.
+     */
+    @java.lang.Override
+    public boolean hasHidden() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional bool hidden = 11;</code>
+     * @return The hidden.
+     */
+    @java.lang.Override
+    public boolean getHidden() {
+      return hidden_;
+    }
+
+    public static final int FORUM_TOPIC_ID_FIELD_NUMBER = 12;
+    private long forumTopicId_;
+    /**
+     * <code>optional fixed64 forum_topic_id = 12;</code>
+     * @return Whether the forumTopicId field is set.
+     */
+    @java.lang.Override
+    public boolean hasForumTopicId() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional fixed64 forum_topic_id = 12;</code>
+     * @return The forumTopicId.
+     */
+    @java.lang.Override
+    public long getForumTopicId() {
+      return forumTopicId_;
+    }
+
+    public static final int EVENT_GID_FIELD_NUMBER = 13;
+    private long eventGid_;
+    /**
+     * <code>optional fixed64 event_gid = 13;</code>
+     * @return Whether the eventGid field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventGid() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional fixed64 event_gid = 13;</code>
+     * @return The eventGid.
+     */
+    @java.lang.Override
+    public long getEventGid() {
+      return eventGid_;
+    }
+
+    public static final int VOTEUPCOUNT_FIELD_NUMBER = 14;
+    private int voteupcount_;
+    /**
+     * <code>optional int32 voteupcount = 14;</code>
+     * @return Whether the voteupcount field is set.
+     */
+    @java.lang.Override
+    public boolean hasVoteupcount() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional int32 voteupcount = 14;</code>
+     * @return The voteupcount.
+     */
+    @java.lang.Override
+    public int getVoteupcount() {
+      return voteupcount_;
+    }
+
+    public static final int VOTEDOWNCOUNT_FIELD_NUMBER = 15;
+    private int votedowncount_;
+    /**
+     * <code>optional int32 votedowncount = 15;</code>
+     * @return Whether the votedowncount field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotedowncount() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>optional int32 votedowncount = 15;</code>
+     * @return The votedowncount.
+     */
+    @java.lang.Override
+    public int getVotedowncount() {
+      return votedowncount_;
+    }
+
+    public static final int BAN_CHECK_RESULT_FIELD_NUMBER = 16;
+    private int banCheckResult_;
+    /**
+     * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+     * @return Whether the banCheckResult field is set.
+     */
+    @java.lang.Override public boolean hasBanCheckResult() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+     * @return The banCheckResult.
+     */
+    @java.lang.Override public SteammessagesBase.EBanContentCheckResult getBanCheckResult() {
+      @SuppressWarnings("deprecation")
+      SteammessagesBase.EBanContentCheckResult result = SteammessagesBase.EBanContentCheckResult.valueOf(banCheckResult_);
+      return result == null ? SteammessagesBase.EBanContentCheckResult.k_EBanContentCheckResult_NotScanned : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, gid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(2, clanid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(3, posterid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, headline_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt32(5, posttime_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeUInt32(6, updatetime_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, body_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeInt32(8, commentcount_);
+      }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, tags_.getRaw(i));
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeInt32(10, language_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeBool(11, hidden_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeFixed64(12, forumTopicId_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeFixed64(13, eventGid_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeInt32(14, voteupcount_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        output.writeInt32(15, votedowncount_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        output.writeEnum(16, banCheckResult_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, gid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, clanid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, posterid_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, headline_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, posttime_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, updatetime_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, body_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, commentcount_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, language_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, hidden_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(12, forumTopicId_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(13, eventGid_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(14, voteupcount_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(15, votedowncount_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(16, banCheckResult_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CCommunity_ClanAnnouncementInfo)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CCommunity_ClanAnnouncementInfo other = (SteammessagesBase.CCommunity_ClanAnnouncementInfo) obj;
+
+      if (hasGid() != other.hasGid()) return false;
+      if (hasGid()) {
+        if (getGid()
+            != other.getGid()) return false;
+      }
+      if (hasClanid() != other.hasClanid()) return false;
+      if (hasClanid()) {
+        if (getClanid()
+            != other.getClanid()) return false;
+      }
+      if (hasPosterid() != other.hasPosterid()) return false;
+      if (hasPosterid()) {
+        if (getPosterid()
+            != other.getPosterid()) return false;
+      }
+      if (hasHeadline() != other.hasHeadline()) return false;
+      if (hasHeadline()) {
+        if (!getHeadline()
+            .equals(other.getHeadline())) return false;
+      }
+      if (hasPosttime() != other.hasPosttime()) return false;
+      if (hasPosttime()) {
+        if (getPosttime()
+            != other.getPosttime()) return false;
+      }
+      if (hasUpdatetime() != other.hasUpdatetime()) return false;
+      if (hasUpdatetime()) {
+        if (getUpdatetime()
+            != other.getUpdatetime()) return false;
+      }
+      if (hasBody() != other.hasBody()) return false;
+      if (hasBody()) {
+        if (!getBody()
+            .equals(other.getBody())) return false;
+      }
+      if (hasCommentcount() != other.hasCommentcount()) return false;
+      if (hasCommentcount()) {
+        if (getCommentcount()
+            != other.getCommentcount()) return false;
+      }
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (hasLanguage() != other.hasLanguage()) return false;
+      if (hasLanguage()) {
+        if (getLanguage()
+            != other.getLanguage()) return false;
+      }
+      if (hasHidden() != other.hasHidden()) return false;
+      if (hasHidden()) {
+        if (getHidden()
+            != other.getHidden()) return false;
+      }
+      if (hasForumTopicId() != other.hasForumTopicId()) return false;
+      if (hasForumTopicId()) {
+        if (getForumTopicId()
+            != other.getForumTopicId()) return false;
+      }
+      if (hasEventGid() != other.hasEventGid()) return false;
+      if (hasEventGid()) {
+        if (getEventGid()
+            != other.getEventGid()) return false;
+      }
+      if (hasVoteupcount() != other.hasVoteupcount()) return false;
+      if (hasVoteupcount()) {
+        if (getVoteupcount()
+            != other.getVoteupcount()) return false;
+      }
+      if (hasVotedowncount() != other.hasVotedowncount()) return false;
+      if (hasVotedowncount()) {
+        if (getVotedowncount()
+            != other.getVotedowncount()) return false;
+      }
+      if (hasBanCheckResult() != other.hasBanCheckResult()) return false;
+      if (hasBanCheckResult()) {
+        if (banCheckResult_ != other.banCheckResult_) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasGid()) {
+        hash = (37 * hash) + GID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getGid());
+      }
+      if (hasClanid()) {
+        hash = (37 * hash) + CLANID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getClanid());
+      }
+      if (hasPosterid()) {
+        hash = (37 * hash) + POSTERID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPosterid());
+      }
+      if (hasHeadline()) {
+        hash = (37 * hash) + HEADLINE_FIELD_NUMBER;
+        hash = (53 * hash) + getHeadline().hashCode();
+      }
+      if (hasPosttime()) {
+        hash = (37 * hash) + POSTTIME_FIELD_NUMBER;
+        hash = (53 * hash) + getPosttime();
+      }
+      if (hasUpdatetime()) {
+        hash = (37 * hash) + UPDATETIME_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatetime();
+      }
+      if (hasBody()) {
+        hash = (37 * hash) + BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getBody().hashCode();
+      }
+      if (hasCommentcount()) {
+        hash = (37 * hash) + COMMENTCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getCommentcount();
+      }
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (hasLanguage()) {
+        hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getLanguage();
+      }
+      if (hasHidden()) {
+        hash = (37 * hash) + HIDDEN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHidden());
+      }
+      if (hasForumTopicId()) {
+        hash = (37 * hash) + FORUM_TOPIC_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getForumTopicId());
+      }
+      if (hasEventGid()) {
+        hash = (37 * hash) + EVENT_GID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getEventGid());
+      }
+      if (hasVoteupcount()) {
+        hash = (37 * hash) + VOTEUPCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getVoteupcount();
+      }
+      if (hasVotedowncount()) {
+        hash = (37 * hash) + VOTEDOWNCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getVotedowncount();
+      }
+      if (hasBanCheckResult()) {
+        hash = (37 * hash) + BAN_CHECK_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + banCheckResult_;
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CCommunity_ClanAnnouncementInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCommunity_ClanAnnouncementInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCommunity_ClanAnnouncementInfo)
+        SteammessagesBase.CCommunity_ClanAnnouncementInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CCommunity_ClanAnnouncementInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CCommunity_ClanAnnouncementInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CCommunity_ClanAnnouncementInfo.class, SteammessagesBase.CCommunity_ClanAnnouncementInfo.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CCommunity_ClanAnnouncementInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        gid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        clanid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        posterid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        headline_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        posttime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        updatetime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        body_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        commentcount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        language_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        hidden_ = false;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        forumTopicId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        eventGid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        voteupcount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        votedowncount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        banCheckResult_ = 0;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CCommunity_ClanAnnouncementInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CCommunity_ClanAnnouncementInfo getDefaultInstanceForType() {
+        return SteammessagesBase.CCommunity_ClanAnnouncementInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CCommunity_ClanAnnouncementInfo build() {
+        SteammessagesBase.CCommunity_ClanAnnouncementInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CCommunity_ClanAnnouncementInfo buildPartial() {
+        SteammessagesBase.CCommunity_ClanAnnouncementInfo result = new SteammessagesBase.CCommunity_ClanAnnouncementInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.gid_ = gid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.clanid_ = clanid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.posterid_ = posterid_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.headline_ = headline_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.posttime_ = posttime_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.updatetime_ = updatetime_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.body_ = body_;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.commentcount_ = commentcount_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((bitField0_ & 0x00000100) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.tags_ = tags_;
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.language_ = language_;
+          to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.hidden_ = hidden_;
+          to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.forumTopicId_ = forumTopicId_;
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.eventGid_ = eventGid_;
+          to_bitField0_ |= 0x00000800;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.voteupcount_ = voteupcount_;
+          to_bitField0_ |= 0x00001000;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.votedowncount_ = votedowncount_;
+          to_bitField0_ |= 0x00002000;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.banCheckResult_ = banCheckResult_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CCommunity_ClanAnnouncementInfo) {
+          return mergeFrom((SteammessagesBase.CCommunity_ClanAnnouncementInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CCommunity_ClanAnnouncementInfo other) {
+        if (other == SteammessagesBase.CCommunity_ClanAnnouncementInfo.getDefaultInstance()) return this;
+        if (other.hasGid()) {
+          setGid(other.getGid());
+        }
+        if (other.hasClanid()) {
+          setClanid(other.getClanid());
+        }
+        if (other.hasPosterid()) {
+          setPosterid(other.getPosterid());
+        }
+        if (other.hasHeadline()) {
+          bitField0_ |= 0x00000008;
+          headline_ = other.headline_;
+          onChanged();
+        }
+        if (other.hasPosttime()) {
+          setPosttime(other.getPosttime());
+        }
+        if (other.hasUpdatetime()) {
+          setUpdatetime(other.getUpdatetime());
+        }
+        if (other.hasBody()) {
+          bitField0_ |= 0x00000040;
+          body_ = other.body_;
+          onChanged();
+        }
+        if (other.hasCommentcount()) {
+          setCommentcount(other.getCommentcount());
+        }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
+        }
+        if (other.hasLanguage()) {
+          setLanguage(other.getLanguage());
+        }
+        if (other.hasHidden()) {
+          setHidden(other.getHidden());
+        }
+        if (other.hasForumTopicId()) {
+          setForumTopicId(other.getForumTopicId());
+        }
+        if (other.hasEventGid()) {
+          setEventGid(other.getEventGid());
+        }
+        if (other.hasVoteupcount()) {
+          setVoteupcount(other.getVoteupcount());
+        }
+        if (other.hasVotedowncount()) {
+          setVotedowncount(other.getVotedowncount());
+        }
+        if (other.hasBanCheckResult()) {
+          setBanCheckResult(other.getBanCheckResult());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CCommunity_ClanAnnouncementInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CCommunity_ClanAnnouncementInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long gid_ ;
+      /**
+       * <code>optional uint64 gid = 1;</code>
+       * @return Whether the gid field is set.
+       */
+      @java.lang.Override
+      public boolean hasGid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 gid = 1;</code>
+       * @return The gid.
+       */
+      @java.lang.Override
+      public long getGid() {
+        return gid_;
+      }
+      /**
+       * <code>optional uint64 gid = 1;</code>
+       * @param value The gid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGid(long value) {
+        bitField0_ |= 0x00000001;
+        gid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 gid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long clanid_ ;
+      /**
+       * <code>optional uint64 clanid = 2;</code>
+       * @return Whether the clanid field is set.
+       */
+      @java.lang.Override
+      public boolean hasClanid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 clanid = 2;</code>
+       * @return The clanid.
+       */
+      @java.lang.Override
+      public long getClanid() {
+        return clanid_;
+      }
+      /**
+       * <code>optional uint64 clanid = 2;</code>
+       * @param value The clanid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClanid(long value) {
+        bitField0_ |= 0x00000002;
+        clanid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 clanid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClanid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        clanid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long posterid_ ;
+      /**
+       * <code>optional uint64 posterid = 3;</code>
+       * @return Whether the posterid field is set.
+       */
+      @java.lang.Override
+      public boolean hasPosterid() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint64 posterid = 3;</code>
+       * @return The posterid.
+       */
+      @java.lang.Override
+      public long getPosterid() {
+        return posterid_;
+      }
+      /**
+       * <code>optional uint64 posterid = 3;</code>
+       * @param value The posterid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPosterid(long value) {
+        bitField0_ |= 0x00000004;
+        posterid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 posterid = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPosterid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        posterid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object headline_ = "";
+      /**
+       * <code>optional string headline = 4;</code>
+       * @return Whether the headline field is set.
+       */
+      public boolean hasHeadline() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string headline = 4;</code>
+       * @return The headline.
+       */
+      public java.lang.String getHeadline() {
+        java.lang.Object ref = headline_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            headline_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string headline = 4;</code>
+       * @return The bytes for headline.
+       */
+      public com.google.protobuf.ByteString
+          getHeadlineBytes() {
+        java.lang.Object ref = headline_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          headline_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string headline = 4;</code>
+       * @param value The headline to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeadline(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        headline_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string headline = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeadline() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        headline_ = getDefaultInstance().getHeadline();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string headline = 4;</code>
+       * @param value The bytes for headline to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeadlineBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        headline_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int posttime_ ;
+      /**
+       * <code>optional uint32 posttime = 5;</code>
+       * @return Whether the posttime field is set.
+       */
+      @java.lang.Override
+      public boolean hasPosttime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 posttime = 5;</code>
+       * @return The posttime.
+       */
+      @java.lang.Override
+      public int getPosttime() {
+        return posttime_;
+      }
+      /**
+       * <code>optional uint32 posttime = 5;</code>
+       * @param value The posttime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPosttime(int value) {
+        bitField0_ |= 0x00000010;
+        posttime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 posttime = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPosttime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        posttime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int updatetime_ ;
+      /**
+       * <code>optional uint32 updatetime = 6;</code>
+       * @return Whether the updatetime field is set.
+       */
+      @java.lang.Override
+      public boolean hasUpdatetime() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint32 updatetime = 6;</code>
+       * @return The updatetime.
+       */
+      @java.lang.Override
+      public int getUpdatetime() {
+        return updatetime_;
+      }
+      /**
+       * <code>optional uint32 updatetime = 6;</code>
+       * @param value The updatetime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdatetime(int value) {
+        bitField0_ |= 0x00000020;
+        updatetime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 updatetime = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdatetime() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        updatetime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object body_ = "";
+      /**
+       * <code>optional string body = 7;</code>
+       * @return Whether the body field is set.
+       */
+      public boolean hasBody() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional string body = 7;</code>
+       * @return The body.
+       */
+      public java.lang.String getBody() {
+        java.lang.Object ref = body_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            body_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string body = 7;</code>
+       * @return The bytes for body.
+       */
+      public com.google.protobuf.ByteString
+          getBodyBytes() {
+        java.lang.Object ref = body_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          body_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string body = 7;</code>
+       * @param value The body to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBody(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        body_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string body = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBody() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        body_ = getDefaultInstance().getBody();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string body = 7;</code>
+       * @param value The bytes for body to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBodyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        body_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int commentcount_ ;
+      /**
+       * <code>optional int32 commentcount = 8;</code>
+       * @return Whether the commentcount field is set.
+       */
+      @java.lang.Override
+      public boolean hasCommentcount() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional int32 commentcount = 8;</code>
+       * @return The commentcount.
+       */
+      @java.lang.Override
+      public int getCommentcount() {
+        return commentcount_;
+      }
+      /**
+       * <code>optional int32 commentcount = 8;</code>
+       * @param value The commentcount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommentcount(int value) {
+        bitField0_ |= 0x00000080;
+        commentcount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 commentcount = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommentcount() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        commentcount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       * @return A list containing the tags.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       * @return The count of tags.
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 9;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private int language_ ;
+      /**
+       * <code>optional int32 language = 10;</code>
+       * @return Whether the language field is set.
+       */
+      @java.lang.Override
+      public boolean hasLanguage() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional int32 language = 10;</code>
+       * @return The language.
+       */
+      @java.lang.Override
+      public int getLanguage() {
+        return language_;
+      }
+      /**
+       * <code>optional int32 language = 10;</code>
+       * @param value The language to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguage(int value) {
+        bitField0_ |= 0x00000200;
+        language_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 language = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLanguage() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        language_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean hidden_ ;
+      /**
+       * <code>optional bool hidden = 11;</code>
+       * @return Whether the hidden field is set.
+       */
+      @java.lang.Override
+      public boolean hasHidden() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional bool hidden = 11;</code>
+       * @return The hidden.
+       */
+      @java.lang.Override
+      public boolean getHidden() {
+        return hidden_;
+      }
+      /**
+       * <code>optional bool hidden = 11;</code>
+       * @param value The hidden to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHidden(boolean value) {
+        bitField0_ |= 0x00000400;
+        hidden_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool hidden = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHidden() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        hidden_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long forumTopicId_ ;
+      /**
+       * <code>optional fixed64 forum_topic_id = 12;</code>
+       * @return Whether the forumTopicId field is set.
+       */
+      @java.lang.Override
+      public boolean hasForumTopicId() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional fixed64 forum_topic_id = 12;</code>
+       * @return The forumTopicId.
+       */
+      @java.lang.Override
+      public long getForumTopicId() {
+        return forumTopicId_;
+      }
+      /**
+       * <code>optional fixed64 forum_topic_id = 12;</code>
+       * @param value The forumTopicId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForumTopicId(long value) {
+        bitField0_ |= 0x00000800;
+        forumTopicId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 forum_topic_id = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForumTopicId() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        forumTopicId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long eventGid_ ;
+      /**
+       * <code>optional fixed64 event_gid = 13;</code>
+       * @return Whether the eventGid field is set.
+       */
+      @java.lang.Override
+      public boolean hasEventGid() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional fixed64 event_gid = 13;</code>
+       * @return The eventGid.
+       */
+      @java.lang.Override
+      public long getEventGid() {
+        return eventGid_;
+      }
+      /**
+       * <code>optional fixed64 event_gid = 13;</code>
+       * @param value The eventGid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventGid(long value) {
+        bitField0_ |= 0x00001000;
+        eventGid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 event_gid = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventGid() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        eventGid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int voteupcount_ ;
+      /**
+       * <code>optional int32 voteupcount = 14;</code>
+       * @return Whether the voteupcount field is set.
+       */
+      @java.lang.Override
+      public boolean hasVoteupcount() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional int32 voteupcount = 14;</code>
+       * @return The voteupcount.
+       */
+      @java.lang.Override
+      public int getVoteupcount() {
+        return voteupcount_;
+      }
+      /**
+       * <code>optional int32 voteupcount = 14;</code>
+       * @param value The voteupcount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoteupcount(int value) {
+        bitField0_ |= 0x00002000;
+        voteupcount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 voteupcount = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoteupcount() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        voteupcount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int votedowncount_ ;
+      /**
+       * <code>optional int32 votedowncount = 15;</code>
+       * @return Whether the votedowncount field is set.
+       */
+      @java.lang.Override
+      public boolean hasVotedowncount() {
+        return ((bitField0_ & 0x00004000) != 0);
+      }
+      /**
+       * <code>optional int32 votedowncount = 15;</code>
+       * @return The votedowncount.
+       */
+      @java.lang.Override
+      public int getVotedowncount() {
+        return votedowncount_;
+      }
+      /**
+       * <code>optional int32 votedowncount = 15;</code>
+       * @param value The votedowncount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotedowncount(int value) {
+        bitField0_ |= 0x00004000;
+        votedowncount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 votedowncount = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVotedowncount() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        votedowncount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int banCheckResult_ = 0;
+      /**
+       * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+       * @return Whether the banCheckResult field is set.
+       */
+      @java.lang.Override public boolean hasBanCheckResult() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+       * @return The banCheckResult.
+       */
+      @java.lang.Override
+      public SteammessagesBase.EBanContentCheckResult getBanCheckResult() {
+        @SuppressWarnings("deprecation")
+        SteammessagesBase.EBanContentCheckResult result = SteammessagesBase.EBanContentCheckResult.valueOf(banCheckResult_);
+        return result == null ? SteammessagesBase.EBanContentCheckResult.k_EBanContentCheckResult_NotScanned : result;
+      }
+      /**
+       * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+       * @param value The banCheckResult to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBanCheckResult(SteammessagesBase.EBanContentCheckResult value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00008000;
+        banCheckResult_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBanCheckResult() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        banCheckResult_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCommunity_ClanAnnouncementInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCommunity_ClanAnnouncementInfo)
+    private static final SteammessagesBase.CCommunity_ClanAnnouncementInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CCommunity_ClanAnnouncementInfo();
+    }
+
+    public static SteammessagesBase.CCommunity_ClanAnnouncementInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCommunity_ClanAnnouncementInfo>
+        PARSER = new com.google.protobuf.AbstractParser<CCommunity_ClanAnnouncementInfo>() {
+      @java.lang.Override
+      public CCommunity_ClanAnnouncementInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCommunity_ClanAnnouncementInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCommunity_ClanAnnouncementInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCommunity_ClanAnnouncementInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CCommunity_ClanAnnouncementInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CClanEventDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CClanEventData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed64 gid = 1;</code>
+     * @return Whether the gid field is set.
+     */
+    boolean hasGid();
+    /**
+     * <code>optional fixed64 gid = 1;</code>
+     * @return The gid.
+     */
+    long getGid();
+
+    /**
+     * <code>optional fixed64 clan_steamid = 2;</code>
+     * @return Whether the clanSteamid field is set.
+     */
+    boolean hasClanSteamid();
+    /**
+     * <code>optional fixed64 clan_steamid = 2;</code>
+     * @return The clanSteamid.
+     */
+    long getClanSteamid();
+
+    /**
+     * <code>optional string event_name = 3;</code>
+     * @return Whether the eventName field is set.
+     */
+    boolean hasEventName();
+    /**
+     * <code>optional string event_name = 3;</code>
+     * @return The eventName.
+     */
+    java.lang.String getEventName();
+    /**
+     * <code>optional string event_name = 3;</code>
+     * @return The bytes for eventName.
+     */
+    com.google.protobuf.ByteString
+        getEventNameBytes();
+
+    /**
+     * <code>optional .EProtoClanEventType event_type = 4 [default = k_EClanOtherEvent];</code>
+     * @return Whether the eventType field is set.
+     */
+    boolean hasEventType();
+    /**
+     * <code>optional .EProtoClanEventType event_type = 4 [default = k_EClanOtherEvent];</code>
+     * @return The eventType.
+     */
+    SteammessagesBase.EProtoClanEventType getEventType();
+
+    /**
+     * <code>optional uint32 appid = 5;</code>
+     * @return Whether the appid field is set.
+     */
+    boolean hasAppid();
+    /**
+     * <code>optional uint32 appid = 5;</code>
+     * @return The appid.
+     */
+    int getAppid();
+
+    /**
+     * <code>optional string server_address = 6;</code>
+     * @return Whether the serverAddress field is set.
+     */
+    boolean hasServerAddress();
+    /**
+     * <code>optional string server_address = 6;</code>
+     * @return The serverAddress.
+     */
+    java.lang.String getServerAddress();
+    /**
+     * <code>optional string server_address = 6;</code>
+     * @return The bytes for serverAddress.
+     */
+    com.google.protobuf.ByteString
+        getServerAddressBytes();
+
+    /**
+     * <code>optional string server_password = 7;</code>
+     * @return Whether the serverPassword field is set.
+     */
+    boolean hasServerPassword();
+    /**
+     * <code>optional string server_password = 7;</code>
+     * @return The serverPassword.
+     */
+    java.lang.String getServerPassword();
+    /**
+     * <code>optional string server_password = 7;</code>
+     * @return The bytes for serverPassword.
+     */
+    com.google.protobuf.ByteString
+        getServerPasswordBytes();
+
+    /**
+     * <code>optional uint32 rtime32_start_time = 8;</code>
+     * @return Whether the rtime32StartTime field is set.
+     */
+    boolean hasRtime32StartTime();
+    /**
+     * <code>optional uint32 rtime32_start_time = 8;</code>
+     * @return The rtime32StartTime.
+     */
+    int getRtime32StartTime();
+
+    /**
+     * <code>optional uint32 rtime32_end_time = 9;</code>
+     * @return Whether the rtime32EndTime field is set.
+     */
+    boolean hasRtime32EndTime();
+    /**
+     * <code>optional uint32 rtime32_end_time = 9;</code>
+     * @return The rtime32EndTime.
+     */
+    int getRtime32EndTime();
+
+    /**
+     * <code>optional int32 comment_count = 10;</code>
+     * @return Whether the commentCount field is set.
+     */
+    boolean hasCommentCount();
+    /**
+     * <code>optional int32 comment_count = 10;</code>
+     * @return The commentCount.
+     */
+    int getCommentCount();
+
+    /**
+     * <code>optional fixed64 creator_steamid = 11;</code>
+     * @return Whether the creatorSteamid field is set.
+     */
+    boolean hasCreatorSteamid();
+    /**
+     * <code>optional fixed64 creator_steamid = 11;</code>
+     * @return The creatorSteamid.
+     */
+    long getCreatorSteamid();
+
+    /**
+     * <code>optional fixed64 last_update_steamid = 12;</code>
+     * @return Whether the lastUpdateSteamid field is set.
+     */
+    boolean hasLastUpdateSteamid();
+    /**
+     * <code>optional fixed64 last_update_steamid = 12;</code>
+     * @return The lastUpdateSteamid.
+     */
+    long getLastUpdateSteamid();
+
+    /**
+     * <code>optional string event_notes = 13;</code>
+     * @return Whether the eventNotes field is set.
+     */
+    boolean hasEventNotes();
+    /**
+     * <code>optional string event_notes = 13;</code>
+     * @return The eventNotes.
+     */
+    java.lang.String getEventNotes();
+    /**
+     * <code>optional string event_notes = 13;</code>
+     * @return The bytes for eventNotes.
+     */
+    com.google.protobuf.ByteString
+        getEventNotesBytes();
+
+    /**
+     * <code>optional string jsondata = 14;</code>
+     * @return Whether the jsondata field is set.
+     */
+    boolean hasJsondata();
+    /**
+     * <code>optional string jsondata = 14;</code>
+     * @return The jsondata.
+     */
+    java.lang.String getJsondata();
+    /**
+     * <code>optional string jsondata = 14;</code>
+     * @return The bytes for jsondata.
+     */
+    com.google.protobuf.ByteString
+        getJsondataBytes();
+
+    /**
+     * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+     * @return Whether the announcementBody field is set.
+     */
+    boolean hasAnnouncementBody();
+    /**
+     * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+     * @return The announcementBody.
+     */
+    SteammessagesBase.CCommunity_ClanAnnouncementInfo getAnnouncementBody();
+    /**
+     * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+     */
+    SteammessagesBase.CCommunity_ClanAnnouncementInfoOrBuilder getAnnouncementBodyOrBuilder();
+
+    /**
+     * <code>optional bool published = 16;</code>
+     * @return Whether the published field is set.
+     */
+    boolean hasPublished();
+    /**
+     * <code>optional bool published = 16;</code>
+     * @return The published.
+     */
+    boolean getPublished();
+
+    /**
+     * <code>optional bool hidden = 17;</code>
+     * @return Whether the hidden field is set.
+     */
+    boolean hasHidden();
+    /**
+     * <code>optional bool hidden = 17;</code>
+     * @return The hidden.
+     */
+    boolean getHidden();
+
+    /**
+     * <code>optional uint32 rtime32_visibility_start = 18;</code>
+     * @return Whether the rtime32VisibilityStart field is set.
+     */
+    boolean hasRtime32VisibilityStart();
+    /**
+     * <code>optional uint32 rtime32_visibility_start = 18;</code>
+     * @return The rtime32VisibilityStart.
+     */
+    int getRtime32VisibilityStart();
+
+    /**
+     * <code>optional uint32 rtime32_visibility_end = 19;</code>
+     * @return Whether the rtime32VisibilityEnd field is set.
+     */
+    boolean hasRtime32VisibilityEnd();
+    /**
+     * <code>optional uint32 rtime32_visibility_end = 19;</code>
+     * @return The rtime32VisibilityEnd.
+     */
+    int getRtime32VisibilityEnd();
+
+    /**
+     * <code>optional uint32 broadcaster_accountid = 20;</code>
+     * @return Whether the broadcasterAccountid field is set.
+     */
+    boolean hasBroadcasterAccountid();
+    /**
+     * <code>optional uint32 broadcaster_accountid = 20;</code>
+     * @return The broadcasterAccountid.
+     */
+    int getBroadcasterAccountid();
+
+    /**
+     * <code>optional uint32 follower_count = 21;</code>
+     * @return Whether the followerCount field is set.
+     */
+    boolean hasFollowerCount();
+    /**
+     * <code>optional uint32 follower_count = 21;</code>
+     * @return The followerCount.
+     */
+    int getFollowerCount();
+
+    /**
+     * <code>optional uint32 ignore_count = 22;</code>
+     * @return Whether the ignoreCount field is set.
+     */
+    boolean hasIgnoreCount();
+    /**
+     * <code>optional uint32 ignore_count = 22;</code>
+     * @return The ignoreCount.
+     */
+    int getIgnoreCount();
+
+    /**
+     * <code>optional fixed64 forum_topic_id = 23;</code>
+     * @return Whether the forumTopicId field is set.
+     */
+    boolean hasForumTopicId();
+    /**
+     * <code>optional fixed64 forum_topic_id = 23;</code>
+     * @return The forumTopicId.
+     */
+    long getForumTopicId();
+
+    /**
+     * <code>optional uint32 rtime32_last_modified = 24;</code>
+     * @return Whether the rtime32LastModified field is set.
+     */
+    boolean hasRtime32LastModified();
+    /**
+     * <code>optional uint32 rtime32_last_modified = 24;</code>
+     * @return The rtime32LastModified.
+     */
+    int getRtime32LastModified();
+
+    /**
+     * <code>optional fixed64 news_post_gid = 25;</code>
+     * @return Whether the newsPostGid field is set.
+     */
+    boolean hasNewsPostGid();
+    /**
+     * <code>optional fixed64 news_post_gid = 25;</code>
+     * @return The newsPostGid.
+     */
+    long getNewsPostGid();
+
+    /**
+     * <code>optional uint32 rtime_mod_reviewed = 26;</code>
+     * @return Whether the rtimeModReviewed field is set.
+     */
+    boolean hasRtimeModReviewed();
+    /**
+     * <code>optional uint32 rtime_mod_reviewed = 26;</code>
+     * @return The rtimeModReviewed.
+     */
+    int getRtimeModReviewed();
+
+    /**
+     * <code>optional uint32 featured_app_tagid = 27;</code>
+     * @return Whether the featuredAppTagid field is set.
+     */
+    boolean hasFeaturedAppTagid();
+    /**
+     * <code>optional uint32 featured_app_tagid = 27;</code>
+     * @return The featuredAppTagid.
+     */
+    int getFeaturedAppTagid();
+
+    /**
+     * <code>repeated uint32 referenced_appids = 28;</code>
+     * @return A list containing the referencedAppids.
+     */
+    java.util.List<java.lang.Integer> getReferencedAppidsList();
+    /**
+     * <code>repeated uint32 referenced_appids = 28;</code>
+     * @return The count of referencedAppids.
+     */
+    int getReferencedAppidsCount();
+    /**
+     * <code>repeated uint32 referenced_appids = 28;</code>
+     * @param index The index of the element to return.
+     * @return The referencedAppids at the given index.
+     */
+    int getReferencedAppids(int index);
+
+    /**
+     * <code>optional uint32 build_id = 29;</code>
+     * @return Whether the buildId field is set.
+     */
+    boolean hasBuildId();
+    /**
+     * <code>optional uint32 build_id = 29;</code>
+     * @return The buildId.
+     */
+    int getBuildId();
+
+    /**
+     * <code>optional string build_branch = 30;</code>
+     * @return Whether the buildBranch field is set.
+     */
+    boolean hasBuildBranch();
+    /**
+     * <code>optional string build_branch = 30;</code>
+     * @return The buildBranch.
+     */
+    java.lang.String getBuildBranch();
+    /**
+     * <code>optional string build_branch = 30;</code>
+     * @return The bytes for buildBranch.
+     */
+    com.google.protobuf.ByteString
+        getBuildBranchBytes();
+  }
+  /**
+   * Protobuf type {@code CClanEventData}
+   */
+  public static final class CClanEventData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CClanEventData)
+      CClanEventDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CClanEventData.newBuilder() to construct.
+    private CClanEventData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CClanEventData() {
+      eventName_ = "";
+      eventType_ = 1;
+      serverAddress_ = "";
+      serverPassword_ = "";
+      eventNotes_ = "";
+      jsondata_ = "";
+      referencedAppids_ = emptyIntList();
+      buildBranch_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CClanEventData();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CClanEventData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              bitField0_ |= 0x00000001;
+              gid_ = input.readFixed64();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              clanSteamid_ = input.readFixed64();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              eventName_ = bs;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              SteammessagesBase.EProtoClanEventType value = SteammessagesBase.EProtoClanEventType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(4, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                eventType_ = rawValue;
+              }
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              appid_ = input.readUInt32();
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              serverAddress_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              serverPassword_ = bs;
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              rtime32StartTime_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              rtime32EndTime_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              commentCount_ = input.readInt32();
+              break;
+            }
+            case 89: {
+              bitField0_ |= 0x00000400;
+              creatorSteamid_ = input.readFixed64();
+              break;
+            }
+            case 97: {
+              bitField0_ |= 0x00000800;
+              lastUpdateSteamid_ = input.readFixed64();
+              break;
+            }
+            case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00001000;
+              eventNotes_ = bs;
+              break;
+            }
+            case 114: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00002000;
+              jsondata_ = bs;
+              break;
+            }
+            case 122: {
+              SteammessagesBase.CCommunity_ClanAnnouncementInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00004000) != 0)) {
+                subBuilder = announcementBody_.toBuilder();
+              }
+              announcementBody_ = input.readMessage(SteammessagesBase.CCommunity_ClanAnnouncementInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(announcementBody_);
+                announcementBody_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00004000;
+              break;
+            }
+            case 128: {
+              bitField0_ |= 0x00008000;
+              published_ = input.readBool();
+              break;
+            }
+            case 136: {
+              bitField0_ |= 0x00010000;
+              hidden_ = input.readBool();
+              break;
+            }
+            case 144: {
+              bitField0_ |= 0x00020000;
+              rtime32VisibilityStart_ = input.readUInt32();
+              break;
+            }
+            case 152: {
+              bitField0_ |= 0x00040000;
+              rtime32VisibilityEnd_ = input.readUInt32();
+              break;
+            }
+            case 160: {
+              bitField0_ |= 0x00080000;
+              broadcasterAccountid_ = input.readUInt32();
+              break;
+            }
+            case 168: {
+              bitField0_ |= 0x00100000;
+              followerCount_ = input.readUInt32();
+              break;
+            }
+            case 176: {
+              bitField0_ |= 0x00200000;
+              ignoreCount_ = input.readUInt32();
+              break;
+            }
+            case 185: {
+              bitField0_ |= 0x00400000;
+              forumTopicId_ = input.readFixed64();
+              break;
+            }
+            case 192: {
+              bitField0_ |= 0x00800000;
+              rtime32LastModified_ = input.readUInt32();
+              break;
+            }
+            case 201: {
+              bitField0_ |= 0x01000000;
+              newsPostGid_ = input.readFixed64();
+              break;
+            }
+            case 208: {
+              bitField0_ |= 0x02000000;
+              rtimeModReviewed_ = input.readUInt32();
+              break;
+            }
+            case 216: {
+              bitField0_ |= 0x04000000;
+              featuredAppTagid_ = input.readUInt32();
+              break;
+            }
+            case 224: {
+              if (!((mutable_bitField0_ & 0x08000000) != 0)) {
+                referencedAppids_ = newIntList();
+                mutable_bitField0_ |= 0x08000000;
+              }
+              referencedAppids_.addInt(input.readUInt32());
+              break;
+            }
+            case 226: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x08000000) != 0) && input.getBytesUntilLimit() > 0) {
+                referencedAppids_ = newIntList();
+                mutable_bitField0_ |= 0x08000000;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                referencedAppids_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 232: {
+              bitField0_ |= 0x08000000;
+              buildId_ = input.readUInt32();
+              break;
+            }
+            case 242: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x10000000;
+              buildBranch_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x08000000) != 0)) {
+          referencedAppids_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CClanEventData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CClanEventData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CClanEventData.class, SteammessagesBase.CClanEventData.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int GID_FIELD_NUMBER = 1;
+    private long gid_;
+    /**
+     * <code>optional fixed64 gid = 1;</code>
+     * @return Whether the gid field is set.
+     */
+    @java.lang.Override
+    public boolean hasGid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed64 gid = 1;</code>
+     * @return The gid.
+     */
+    @java.lang.Override
+    public long getGid() {
+      return gid_;
+    }
+
+    public static final int CLAN_STEAMID_FIELD_NUMBER = 2;
+    private long clanSteamid_;
+    /**
+     * <code>optional fixed64 clan_steamid = 2;</code>
+     * @return Whether the clanSteamid field is set.
+     */
+    @java.lang.Override
+    public boolean hasClanSteamid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional fixed64 clan_steamid = 2;</code>
+     * @return The clanSteamid.
+     */
+    @java.lang.Override
+    public long getClanSteamid() {
+      return clanSteamid_;
+    }
+
+    public static final int EVENT_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object eventName_;
+    /**
+     * <code>optional string event_name = 3;</code>
+     * @return Whether the eventName field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventName() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string event_name = 3;</code>
+     * @return The eventName.
+     */
+    @java.lang.Override
+    public java.lang.String getEventName() {
+      java.lang.Object ref = eventName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          eventName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string event_name = 3;</code>
+     * @return The bytes for eventName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEventNameBytes() {
+      java.lang.Object ref = eventName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eventName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVENT_TYPE_FIELD_NUMBER = 4;
+    private int eventType_;
+    /**
+     * <code>optional .EProtoClanEventType event_type = 4 [default = k_EClanOtherEvent];</code>
+     * @return Whether the eventType field is set.
+     */
+    @java.lang.Override public boolean hasEventType() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .EProtoClanEventType event_type = 4 [default = k_EClanOtherEvent];</code>
+     * @return The eventType.
+     */
+    @java.lang.Override public SteammessagesBase.EProtoClanEventType getEventType() {
+      @SuppressWarnings("deprecation")
+      SteammessagesBase.EProtoClanEventType result = SteammessagesBase.EProtoClanEventType.valueOf(eventType_);
+      return result == null ? SteammessagesBase.EProtoClanEventType.k_EClanOtherEvent : result;
+    }
+
+    public static final int APPID_FIELD_NUMBER = 5;
+    private int appid_;
+    /**
+     * <code>optional uint32 appid = 5;</code>
+     * @return Whether the appid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppid() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint32 appid = 5;</code>
+     * @return The appid.
+     */
+    @java.lang.Override
+    public int getAppid() {
+      return appid_;
+    }
+
+    public static final int SERVER_ADDRESS_FIELD_NUMBER = 6;
+    private volatile java.lang.Object serverAddress_;
+    /**
+     * <code>optional string server_address = 6;</code>
+     * @return Whether the serverAddress field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerAddress() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional string server_address = 6;</code>
+     * @return The serverAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getServerAddress() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          serverAddress_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string server_address = 6;</code>
+     * @return The bytes for serverAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServerAddressBytes() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serverAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVER_PASSWORD_FIELD_NUMBER = 7;
+    private volatile java.lang.Object serverPassword_;
+    /**
+     * <code>optional string server_password = 7;</code>
+     * @return Whether the serverPassword field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerPassword() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional string server_password = 7;</code>
+     * @return The serverPassword.
+     */
+    @java.lang.Override
+    public java.lang.String getServerPassword() {
+      java.lang.Object ref = serverPassword_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          serverPassword_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string server_password = 7;</code>
+     * @return The bytes for serverPassword.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServerPasswordBytes() {
+      java.lang.Object ref = serverPassword_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serverPassword_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RTIME32_START_TIME_FIELD_NUMBER = 8;
+    private int rtime32StartTime_;
+    /**
+     * <code>optional uint32 rtime32_start_time = 8;</code>
+     * @return Whether the rtime32StartTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtime32StartTime() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime32_start_time = 8;</code>
+     * @return The rtime32StartTime.
+     */
+    @java.lang.Override
+    public int getRtime32StartTime() {
+      return rtime32StartTime_;
+    }
+
+    public static final int RTIME32_END_TIME_FIELD_NUMBER = 9;
+    private int rtime32EndTime_;
+    /**
+     * <code>optional uint32 rtime32_end_time = 9;</code>
+     * @return Whether the rtime32EndTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtime32EndTime() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime32_end_time = 9;</code>
+     * @return The rtime32EndTime.
+     */
+    @java.lang.Override
+    public int getRtime32EndTime() {
+      return rtime32EndTime_;
+    }
+
+    public static final int COMMENT_COUNT_FIELD_NUMBER = 10;
+    private int commentCount_;
+    /**
+     * <code>optional int32 comment_count = 10;</code>
+     * @return Whether the commentCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommentCount() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional int32 comment_count = 10;</code>
+     * @return The commentCount.
+     */
+    @java.lang.Override
+    public int getCommentCount() {
+      return commentCount_;
+    }
+
+    public static final int CREATOR_STEAMID_FIELD_NUMBER = 11;
+    private long creatorSteamid_;
+    /**
+     * <code>optional fixed64 creator_steamid = 11;</code>
+     * @return Whether the creatorSteamid field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatorSteamid() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional fixed64 creator_steamid = 11;</code>
+     * @return The creatorSteamid.
+     */
+    @java.lang.Override
+    public long getCreatorSteamid() {
+      return creatorSteamid_;
+    }
+
+    public static final int LAST_UPDATE_STEAMID_FIELD_NUMBER = 12;
+    private long lastUpdateSteamid_;
+    /**
+     * <code>optional fixed64 last_update_steamid = 12;</code>
+     * @return Whether the lastUpdateSteamid field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastUpdateSteamid() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional fixed64 last_update_steamid = 12;</code>
+     * @return The lastUpdateSteamid.
+     */
+    @java.lang.Override
+    public long getLastUpdateSteamid() {
+      return lastUpdateSteamid_;
+    }
+
+    public static final int EVENT_NOTES_FIELD_NUMBER = 13;
+    private volatile java.lang.Object eventNotes_;
+    /**
+     * <code>optional string event_notes = 13;</code>
+     * @return Whether the eventNotes field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventNotes() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional string event_notes = 13;</code>
+     * @return The eventNotes.
+     */
+    @java.lang.Override
+    public java.lang.String getEventNotes() {
+      java.lang.Object ref = eventNotes_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          eventNotes_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string event_notes = 13;</code>
+     * @return The bytes for eventNotes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEventNotesBytes() {
+      java.lang.Object ref = eventNotes_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eventNotes_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JSONDATA_FIELD_NUMBER = 14;
+    private volatile java.lang.Object jsondata_;
+    /**
+     * <code>optional string jsondata = 14;</code>
+     * @return Whether the jsondata field is set.
+     */
+    @java.lang.Override
+    public boolean hasJsondata() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>optional string jsondata = 14;</code>
+     * @return The jsondata.
+     */
+    @java.lang.Override
+    public java.lang.String getJsondata() {
+      java.lang.Object ref = jsondata_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          jsondata_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string jsondata = 14;</code>
+     * @return The bytes for jsondata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJsondataBytes() {
+      java.lang.Object ref = jsondata_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jsondata_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ANNOUNCEMENT_BODY_FIELD_NUMBER = 15;
+    private SteammessagesBase.CCommunity_ClanAnnouncementInfo announcementBody_;
+    /**
+     * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+     * @return Whether the announcementBody field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnnouncementBody() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+     * @return The announcementBody.
+     */
+    @java.lang.Override
+    public SteammessagesBase.CCommunity_ClanAnnouncementInfo getAnnouncementBody() {
+      return announcementBody_ == null ? SteammessagesBase.CCommunity_ClanAnnouncementInfo.getDefaultInstance() : announcementBody_;
+    }
+    /**
+     * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.CCommunity_ClanAnnouncementInfoOrBuilder getAnnouncementBodyOrBuilder() {
+      return announcementBody_ == null ? SteammessagesBase.CCommunity_ClanAnnouncementInfo.getDefaultInstance() : announcementBody_;
+    }
+
+    public static final int PUBLISHED_FIELD_NUMBER = 16;
+    private boolean published_;
+    /**
+     * <code>optional bool published = 16;</code>
+     * @return Whether the published field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublished() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <code>optional bool published = 16;</code>
+     * @return The published.
+     */
+    @java.lang.Override
+    public boolean getPublished() {
+      return published_;
+    }
+
+    public static final int HIDDEN_FIELD_NUMBER = 17;
+    private boolean hidden_;
+    /**
+     * <code>optional bool hidden = 17;</code>
+     * @return Whether the hidden field is set.
+     */
+    @java.lang.Override
+    public boolean hasHidden() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <code>optional bool hidden = 17;</code>
+     * @return The hidden.
+     */
+    @java.lang.Override
+    public boolean getHidden() {
+      return hidden_;
+    }
+
+    public static final int RTIME32_VISIBILITY_START_FIELD_NUMBER = 18;
+    private int rtime32VisibilityStart_;
+    /**
+     * <code>optional uint32 rtime32_visibility_start = 18;</code>
+     * @return Whether the rtime32VisibilityStart field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtime32VisibilityStart() {
+      return ((bitField0_ & 0x00020000) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime32_visibility_start = 18;</code>
+     * @return The rtime32VisibilityStart.
+     */
+    @java.lang.Override
+    public int getRtime32VisibilityStart() {
+      return rtime32VisibilityStart_;
+    }
+
+    public static final int RTIME32_VISIBILITY_END_FIELD_NUMBER = 19;
+    private int rtime32VisibilityEnd_;
+    /**
+     * <code>optional uint32 rtime32_visibility_end = 19;</code>
+     * @return Whether the rtime32VisibilityEnd field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtime32VisibilityEnd() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime32_visibility_end = 19;</code>
+     * @return The rtime32VisibilityEnd.
+     */
+    @java.lang.Override
+    public int getRtime32VisibilityEnd() {
+      return rtime32VisibilityEnd_;
+    }
+
+    public static final int BROADCASTER_ACCOUNTID_FIELD_NUMBER = 20;
+    private int broadcasterAccountid_;
+    /**
+     * <code>optional uint32 broadcaster_accountid = 20;</code>
+     * @return Whether the broadcasterAccountid field is set.
+     */
+    @java.lang.Override
+    public boolean hasBroadcasterAccountid() {
+      return ((bitField0_ & 0x00080000) != 0);
+    }
+    /**
+     * <code>optional uint32 broadcaster_accountid = 20;</code>
+     * @return The broadcasterAccountid.
+     */
+    @java.lang.Override
+    public int getBroadcasterAccountid() {
+      return broadcasterAccountid_;
+    }
+
+    public static final int FOLLOWER_COUNT_FIELD_NUMBER = 21;
+    private int followerCount_;
+    /**
+     * <code>optional uint32 follower_count = 21;</code>
+     * @return Whether the followerCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasFollowerCount() {
+      return ((bitField0_ & 0x00100000) != 0);
+    }
+    /**
+     * <code>optional uint32 follower_count = 21;</code>
+     * @return The followerCount.
+     */
+    @java.lang.Override
+    public int getFollowerCount() {
+      return followerCount_;
+    }
+
+    public static final int IGNORE_COUNT_FIELD_NUMBER = 22;
+    private int ignoreCount_;
+    /**
+     * <code>optional uint32 ignore_count = 22;</code>
+     * @return Whether the ignoreCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasIgnoreCount() {
+      return ((bitField0_ & 0x00200000) != 0);
+    }
+    /**
+     * <code>optional uint32 ignore_count = 22;</code>
+     * @return The ignoreCount.
+     */
+    @java.lang.Override
+    public int getIgnoreCount() {
+      return ignoreCount_;
+    }
+
+    public static final int FORUM_TOPIC_ID_FIELD_NUMBER = 23;
+    private long forumTopicId_;
+    /**
+     * <code>optional fixed64 forum_topic_id = 23;</code>
+     * @return Whether the forumTopicId field is set.
+     */
+    @java.lang.Override
+    public boolean hasForumTopicId() {
+      return ((bitField0_ & 0x00400000) != 0);
+    }
+    /**
+     * <code>optional fixed64 forum_topic_id = 23;</code>
+     * @return The forumTopicId.
+     */
+    @java.lang.Override
+    public long getForumTopicId() {
+      return forumTopicId_;
+    }
+
+    public static final int RTIME32_LAST_MODIFIED_FIELD_NUMBER = 24;
+    private int rtime32LastModified_;
+    /**
+     * <code>optional uint32 rtime32_last_modified = 24;</code>
+     * @return Whether the rtime32LastModified field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtime32LastModified() {
+      return ((bitField0_ & 0x00800000) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime32_last_modified = 24;</code>
+     * @return The rtime32LastModified.
+     */
+    @java.lang.Override
+    public int getRtime32LastModified() {
+      return rtime32LastModified_;
+    }
+
+    public static final int NEWS_POST_GID_FIELD_NUMBER = 25;
+    private long newsPostGid_;
+    /**
+     * <code>optional fixed64 news_post_gid = 25;</code>
+     * @return Whether the newsPostGid field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewsPostGid() {
+      return ((bitField0_ & 0x01000000) != 0);
+    }
+    /**
+     * <code>optional fixed64 news_post_gid = 25;</code>
+     * @return The newsPostGid.
+     */
+    @java.lang.Override
+    public long getNewsPostGid() {
+      return newsPostGid_;
+    }
+
+    public static final int RTIME_MOD_REVIEWED_FIELD_NUMBER = 26;
+    private int rtimeModReviewed_;
+    /**
+     * <code>optional uint32 rtime_mod_reviewed = 26;</code>
+     * @return Whether the rtimeModReviewed field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtimeModReviewed() {
+      return ((bitField0_ & 0x02000000) != 0);
+    }
+    /**
+     * <code>optional uint32 rtime_mod_reviewed = 26;</code>
+     * @return The rtimeModReviewed.
+     */
+    @java.lang.Override
+    public int getRtimeModReviewed() {
+      return rtimeModReviewed_;
+    }
+
+    public static final int FEATURED_APP_TAGID_FIELD_NUMBER = 27;
+    private int featuredAppTagid_;
+    /**
+     * <code>optional uint32 featured_app_tagid = 27;</code>
+     * @return Whether the featuredAppTagid field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeaturedAppTagid() {
+      return ((bitField0_ & 0x04000000) != 0);
+    }
+    /**
+     * <code>optional uint32 featured_app_tagid = 27;</code>
+     * @return The featuredAppTagid.
+     */
+    @java.lang.Override
+    public int getFeaturedAppTagid() {
+      return featuredAppTagid_;
+    }
+
+    public static final int REFERENCED_APPIDS_FIELD_NUMBER = 28;
+    private com.google.protobuf.Internal.IntList referencedAppids_;
+    /**
+     * <code>repeated uint32 referenced_appids = 28;</code>
+     * @return A list containing the referencedAppids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getReferencedAppidsList() {
+      return referencedAppids_;
+    }
+    /**
+     * <code>repeated uint32 referenced_appids = 28;</code>
+     * @return The count of referencedAppids.
+     */
+    public int getReferencedAppidsCount() {
+      return referencedAppids_.size();
+    }
+    /**
+     * <code>repeated uint32 referenced_appids = 28;</code>
+     * @param index The index of the element to return.
+     * @return The referencedAppids at the given index.
+     */
+    public int getReferencedAppids(int index) {
+      return referencedAppids_.getInt(index);
+    }
+
+    public static final int BUILD_ID_FIELD_NUMBER = 29;
+    private int buildId_;
+    /**
+     * <code>optional uint32 build_id = 29;</code>
+     * @return Whether the buildId field is set.
+     */
+    @java.lang.Override
+    public boolean hasBuildId() {
+      return ((bitField0_ & 0x08000000) != 0);
+    }
+    /**
+     * <code>optional uint32 build_id = 29;</code>
+     * @return The buildId.
+     */
+    @java.lang.Override
+    public int getBuildId() {
+      return buildId_;
+    }
+
+    public static final int BUILD_BRANCH_FIELD_NUMBER = 30;
+    private volatile java.lang.Object buildBranch_;
+    /**
+     * <code>optional string build_branch = 30;</code>
+     * @return Whether the buildBranch field is set.
+     */
+    @java.lang.Override
+    public boolean hasBuildBranch() {
+      return ((bitField0_ & 0x10000000) != 0);
+    }
+    /**
+     * <code>optional string build_branch = 30;</code>
+     * @return The buildBranch.
+     */
+    @java.lang.Override
+    public java.lang.String getBuildBranch() {
+      java.lang.Object ref = buildBranch_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          buildBranch_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string build_branch = 30;</code>
+     * @return The bytes for buildBranch.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuildBranchBytes() {
+      java.lang.Object ref = buildBranch_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buildBranch_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeFixed64(1, gid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeFixed64(2, clanSteamid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, eventName_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeEnum(4, eventType_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt32(5, appid_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, serverAddress_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, serverPassword_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(8, rtime32StartTime_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeUInt32(9, rtime32EndTime_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeInt32(10, commentCount_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeFixed64(11, creatorSteamid_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeFixed64(12, lastUpdateSteamid_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, eventNotes_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, jsondata_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        output.writeMessage(15, getAnnouncementBody());
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        output.writeBool(16, published_);
+      }
+      if (((bitField0_ & 0x00010000) != 0)) {
+        output.writeBool(17, hidden_);
+      }
+      if (((bitField0_ & 0x00020000) != 0)) {
+        output.writeUInt32(18, rtime32VisibilityStart_);
+      }
+      if (((bitField0_ & 0x00040000) != 0)) {
+        output.writeUInt32(19, rtime32VisibilityEnd_);
+      }
+      if (((bitField0_ & 0x00080000) != 0)) {
+        output.writeUInt32(20, broadcasterAccountid_);
+      }
+      if (((bitField0_ & 0x00100000) != 0)) {
+        output.writeUInt32(21, followerCount_);
+      }
+      if (((bitField0_ & 0x00200000) != 0)) {
+        output.writeUInt32(22, ignoreCount_);
+      }
+      if (((bitField0_ & 0x00400000) != 0)) {
+        output.writeFixed64(23, forumTopicId_);
+      }
+      if (((bitField0_ & 0x00800000) != 0)) {
+        output.writeUInt32(24, rtime32LastModified_);
+      }
+      if (((bitField0_ & 0x01000000) != 0)) {
+        output.writeFixed64(25, newsPostGid_);
+      }
+      if (((bitField0_ & 0x02000000) != 0)) {
+        output.writeUInt32(26, rtimeModReviewed_);
+      }
+      if (((bitField0_ & 0x04000000) != 0)) {
+        output.writeUInt32(27, featuredAppTagid_);
+      }
+      for (int i = 0; i < referencedAppids_.size(); i++) {
+        output.writeUInt32(28, referencedAppids_.getInt(i));
+      }
+      if (((bitField0_ & 0x08000000) != 0)) {
+        output.writeUInt32(29, buildId_);
+      }
+      if (((bitField0_ & 0x10000000) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 30, buildBranch_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(1, gid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(2, clanSteamid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, eventName_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, eventType_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, appid_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, serverAddress_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, serverPassword_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, rtime32StartTime_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, rtime32EndTime_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, commentCount_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(11, creatorSteamid_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(12, lastUpdateSteamid_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, eventNotes_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, jsondata_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getAnnouncementBody());
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(16, published_);
+      }
+      if (((bitField0_ & 0x00010000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(17, hidden_);
+      }
+      if (((bitField0_ & 0x00020000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(18, rtime32VisibilityStart_);
+      }
+      if (((bitField0_ & 0x00040000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(19, rtime32VisibilityEnd_);
+      }
+      if (((bitField0_ & 0x00080000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(20, broadcasterAccountid_);
+      }
+      if (((bitField0_ & 0x00100000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(21, followerCount_);
+      }
+      if (((bitField0_ & 0x00200000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(22, ignoreCount_);
+      }
+      if (((bitField0_ & 0x00400000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(23, forumTopicId_);
+      }
+      if (((bitField0_ & 0x00800000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(24, rtime32LastModified_);
+      }
+      if (((bitField0_ & 0x01000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(25, newsPostGid_);
+      }
+      if (((bitField0_ & 0x02000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(26, rtimeModReviewed_);
+      }
+      if (((bitField0_ & 0x04000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(27, featuredAppTagid_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < referencedAppids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(referencedAppids_.getInt(i));
+        }
+        size += dataSize;
+        size += 2 * getReferencedAppidsList().size();
+      }
+      if (((bitField0_ & 0x08000000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(29, buildId_);
+      }
+      if (((bitField0_ & 0x10000000) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, buildBranch_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CClanEventData)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CClanEventData other = (SteammessagesBase.CClanEventData) obj;
+
+      if (hasGid() != other.hasGid()) return false;
+      if (hasGid()) {
+        if (getGid()
+            != other.getGid()) return false;
+      }
+      if (hasClanSteamid() != other.hasClanSteamid()) return false;
+      if (hasClanSteamid()) {
+        if (getClanSteamid()
+            != other.getClanSteamid()) return false;
+      }
+      if (hasEventName() != other.hasEventName()) return false;
+      if (hasEventName()) {
+        if (!getEventName()
+            .equals(other.getEventName())) return false;
+      }
+      if (hasEventType() != other.hasEventType()) return false;
+      if (hasEventType()) {
+        if (eventType_ != other.eventType_) return false;
+      }
+      if (hasAppid() != other.hasAppid()) return false;
+      if (hasAppid()) {
+        if (getAppid()
+            != other.getAppid()) return false;
+      }
+      if (hasServerAddress() != other.hasServerAddress()) return false;
+      if (hasServerAddress()) {
+        if (!getServerAddress()
+            .equals(other.getServerAddress())) return false;
+      }
+      if (hasServerPassword() != other.hasServerPassword()) return false;
+      if (hasServerPassword()) {
+        if (!getServerPassword()
+            .equals(other.getServerPassword())) return false;
+      }
+      if (hasRtime32StartTime() != other.hasRtime32StartTime()) return false;
+      if (hasRtime32StartTime()) {
+        if (getRtime32StartTime()
+            != other.getRtime32StartTime()) return false;
+      }
+      if (hasRtime32EndTime() != other.hasRtime32EndTime()) return false;
+      if (hasRtime32EndTime()) {
+        if (getRtime32EndTime()
+            != other.getRtime32EndTime()) return false;
+      }
+      if (hasCommentCount() != other.hasCommentCount()) return false;
+      if (hasCommentCount()) {
+        if (getCommentCount()
+            != other.getCommentCount()) return false;
+      }
+      if (hasCreatorSteamid() != other.hasCreatorSteamid()) return false;
+      if (hasCreatorSteamid()) {
+        if (getCreatorSteamid()
+            != other.getCreatorSteamid()) return false;
+      }
+      if (hasLastUpdateSteamid() != other.hasLastUpdateSteamid()) return false;
+      if (hasLastUpdateSteamid()) {
+        if (getLastUpdateSteamid()
+            != other.getLastUpdateSteamid()) return false;
+      }
+      if (hasEventNotes() != other.hasEventNotes()) return false;
+      if (hasEventNotes()) {
+        if (!getEventNotes()
+            .equals(other.getEventNotes())) return false;
+      }
+      if (hasJsondata() != other.hasJsondata()) return false;
+      if (hasJsondata()) {
+        if (!getJsondata()
+            .equals(other.getJsondata())) return false;
+      }
+      if (hasAnnouncementBody() != other.hasAnnouncementBody()) return false;
+      if (hasAnnouncementBody()) {
+        if (!getAnnouncementBody()
+            .equals(other.getAnnouncementBody())) return false;
+      }
+      if (hasPublished() != other.hasPublished()) return false;
+      if (hasPublished()) {
+        if (getPublished()
+            != other.getPublished()) return false;
+      }
+      if (hasHidden() != other.hasHidden()) return false;
+      if (hasHidden()) {
+        if (getHidden()
+            != other.getHidden()) return false;
+      }
+      if (hasRtime32VisibilityStart() != other.hasRtime32VisibilityStart()) return false;
+      if (hasRtime32VisibilityStart()) {
+        if (getRtime32VisibilityStart()
+            != other.getRtime32VisibilityStart()) return false;
+      }
+      if (hasRtime32VisibilityEnd() != other.hasRtime32VisibilityEnd()) return false;
+      if (hasRtime32VisibilityEnd()) {
+        if (getRtime32VisibilityEnd()
+            != other.getRtime32VisibilityEnd()) return false;
+      }
+      if (hasBroadcasterAccountid() != other.hasBroadcasterAccountid()) return false;
+      if (hasBroadcasterAccountid()) {
+        if (getBroadcasterAccountid()
+            != other.getBroadcasterAccountid()) return false;
+      }
+      if (hasFollowerCount() != other.hasFollowerCount()) return false;
+      if (hasFollowerCount()) {
+        if (getFollowerCount()
+            != other.getFollowerCount()) return false;
+      }
+      if (hasIgnoreCount() != other.hasIgnoreCount()) return false;
+      if (hasIgnoreCount()) {
+        if (getIgnoreCount()
+            != other.getIgnoreCount()) return false;
+      }
+      if (hasForumTopicId() != other.hasForumTopicId()) return false;
+      if (hasForumTopicId()) {
+        if (getForumTopicId()
+            != other.getForumTopicId()) return false;
+      }
+      if (hasRtime32LastModified() != other.hasRtime32LastModified()) return false;
+      if (hasRtime32LastModified()) {
+        if (getRtime32LastModified()
+            != other.getRtime32LastModified()) return false;
+      }
+      if (hasNewsPostGid() != other.hasNewsPostGid()) return false;
+      if (hasNewsPostGid()) {
+        if (getNewsPostGid()
+            != other.getNewsPostGid()) return false;
+      }
+      if (hasRtimeModReviewed() != other.hasRtimeModReviewed()) return false;
+      if (hasRtimeModReviewed()) {
+        if (getRtimeModReviewed()
+            != other.getRtimeModReviewed()) return false;
+      }
+      if (hasFeaturedAppTagid() != other.hasFeaturedAppTagid()) return false;
+      if (hasFeaturedAppTagid()) {
+        if (getFeaturedAppTagid()
+            != other.getFeaturedAppTagid()) return false;
+      }
+      if (!getReferencedAppidsList()
+          .equals(other.getReferencedAppidsList())) return false;
+      if (hasBuildId() != other.hasBuildId()) return false;
+      if (hasBuildId()) {
+        if (getBuildId()
+            != other.getBuildId()) return false;
+      }
+      if (hasBuildBranch() != other.hasBuildBranch()) return false;
+      if (hasBuildBranch()) {
+        if (!getBuildBranch()
+            .equals(other.getBuildBranch())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasGid()) {
+        hash = (37 * hash) + GID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getGid());
+      }
+      if (hasClanSteamid()) {
+        hash = (37 * hash) + CLAN_STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getClanSteamid());
+      }
+      if (hasEventName()) {
+        hash = (37 * hash) + EVENT_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getEventName().hashCode();
+      }
+      if (hasEventType()) {
+        hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + eventType_;
+      }
+      if (hasAppid()) {
+        hash = (37 * hash) + APPID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppid();
+      }
+      if (hasServerAddress()) {
+        hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getServerAddress().hashCode();
+      }
+      if (hasServerPassword()) {
+        hash = (37 * hash) + SERVER_PASSWORD_FIELD_NUMBER;
+        hash = (53 * hash) + getServerPassword().hashCode();
+      }
+      if (hasRtime32StartTime()) {
+        hash = (37 * hash) + RTIME32_START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getRtime32StartTime();
+      }
+      if (hasRtime32EndTime()) {
+        hash = (37 * hash) + RTIME32_END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getRtime32EndTime();
+      }
+      if (hasCommentCount()) {
+        hash = (37 * hash) + COMMENT_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getCommentCount();
+      }
+      if (hasCreatorSteamid()) {
+        hash = (37 * hash) + CREATOR_STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCreatorSteamid());
+      }
+      if (hasLastUpdateSteamid()) {
+        hash = (37 * hash) + LAST_UPDATE_STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getLastUpdateSteamid());
+      }
+      if (hasEventNotes()) {
+        hash = (37 * hash) + EVENT_NOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getEventNotes().hashCode();
+      }
+      if (hasJsondata()) {
+        hash = (37 * hash) + JSONDATA_FIELD_NUMBER;
+        hash = (53 * hash) + getJsondata().hashCode();
+      }
+      if (hasAnnouncementBody()) {
+        hash = (37 * hash) + ANNOUNCEMENT_BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getAnnouncementBody().hashCode();
+      }
+      if (hasPublished()) {
+        hash = (37 * hash) + PUBLISHED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPublished());
+      }
+      if (hasHidden()) {
+        hash = (37 * hash) + HIDDEN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHidden());
+      }
+      if (hasRtime32VisibilityStart()) {
+        hash = (37 * hash) + RTIME32_VISIBILITY_START_FIELD_NUMBER;
+        hash = (53 * hash) + getRtime32VisibilityStart();
+      }
+      if (hasRtime32VisibilityEnd()) {
+        hash = (37 * hash) + RTIME32_VISIBILITY_END_FIELD_NUMBER;
+        hash = (53 * hash) + getRtime32VisibilityEnd();
+      }
+      if (hasBroadcasterAccountid()) {
+        hash = (37 * hash) + BROADCASTER_ACCOUNTID_FIELD_NUMBER;
+        hash = (53 * hash) + getBroadcasterAccountid();
+      }
+      if (hasFollowerCount()) {
+        hash = (37 * hash) + FOLLOWER_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getFollowerCount();
+      }
+      if (hasIgnoreCount()) {
+        hash = (37 * hash) + IGNORE_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getIgnoreCount();
+      }
+      if (hasForumTopicId()) {
+        hash = (37 * hash) + FORUM_TOPIC_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getForumTopicId());
+      }
+      if (hasRtime32LastModified()) {
+        hash = (37 * hash) + RTIME32_LAST_MODIFIED_FIELD_NUMBER;
+        hash = (53 * hash) + getRtime32LastModified();
+      }
+      if (hasNewsPostGid()) {
+        hash = (37 * hash) + NEWS_POST_GID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNewsPostGid());
+      }
+      if (hasRtimeModReviewed()) {
+        hash = (37 * hash) + RTIME_MOD_REVIEWED_FIELD_NUMBER;
+        hash = (53 * hash) + getRtimeModReviewed();
+      }
+      if (hasFeaturedAppTagid()) {
+        hash = (37 * hash) + FEATURED_APP_TAGID_FIELD_NUMBER;
+        hash = (53 * hash) + getFeaturedAppTagid();
+      }
+      if (getReferencedAppidsCount() > 0) {
+        hash = (37 * hash) + REFERENCED_APPIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getReferencedAppidsList().hashCode();
+      }
+      if (hasBuildId()) {
+        hash = (37 * hash) + BUILD_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getBuildId();
+      }
+      if (hasBuildBranch()) {
+        hash = (37 * hash) + BUILD_BRANCH_FIELD_NUMBER;
+        hash = (53 * hash) + getBuildBranch().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CClanEventData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CClanEventData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanEventData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CClanEventData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanEventData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CClanEventData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanEventData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CClanEventData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanEventData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CClanEventData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CClanEventData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CClanEventData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CClanEventData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CClanEventData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CClanEventData)
+        SteammessagesBase.CClanEventDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CClanEventData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CClanEventData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CClanEventData.class, SteammessagesBase.CClanEventData.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CClanEventData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAnnouncementBodyFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        gid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        clanSteamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        eventName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        eventType_ = 1;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        appid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        serverAddress_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        serverPassword_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        rtime32StartTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        rtime32EndTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        commentCount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        creatorSteamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        lastUpdateSteamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        eventNotes_ = "";
+        bitField0_ = (bitField0_ & ~0x00001000);
+        jsondata_ = "";
+        bitField0_ = (bitField0_ & ~0x00002000);
+        if (announcementBodyBuilder_ == null) {
+          announcementBody_ = null;
+        } else {
+          announcementBodyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00004000);
+        published_ = false;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        hidden_ = false;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        rtime32VisibilityStart_ = 0;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        rtime32VisibilityEnd_ = 0;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        broadcasterAccountid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        followerCount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        ignoreCount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        forumTopicId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00400000);
+        rtime32LastModified_ = 0;
+        bitField0_ = (bitField0_ & ~0x00800000);
+        newsPostGid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x01000000);
+        rtimeModReviewed_ = 0;
+        bitField0_ = (bitField0_ & ~0x02000000);
+        featuredAppTagid_ = 0;
+        bitField0_ = (bitField0_ & ~0x04000000);
+        referencedAppids_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x08000000);
+        buildId_ = 0;
+        bitField0_ = (bitField0_ & ~0x10000000);
+        buildBranch_ = "";
+        bitField0_ = (bitField0_ & ~0x20000000);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CClanEventData_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CClanEventData getDefaultInstanceForType() {
+        return SteammessagesBase.CClanEventData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CClanEventData build() {
+        SteammessagesBase.CClanEventData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CClanEventData buildPartial() {
+        SteammessagesBase.CClanEventData result = new SteammessagesBase.CClanEventData(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.gid_ = gid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.clanSteamid_ = clanSteamid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.eventName_ = eventName_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.eventType_ = eventType_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.appid_ = appid_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.serverAddress_ = serverAddress_;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.serverPassword_ = serverPassword_;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.rtime32StartTime_ = rtime32StartTime_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.rtime32EndTime_ = rtime32EndTime_;
+          to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.commentCount_ = commentCount_;
+          to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.creatorSteamid_ = creatorSteamid_;
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.lastUpdateSteamid_ = lastUpdateSteamid_;
+          to_bitField0_ |= 0x00000800;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.eventNotes_ = eventNotes_;
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        result.jsondata_ = jsondata_;
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          if (announcementBodyBuilder_ == null) {
+            result.announcementBody_ = announcementBody_;
+          } else {
+            result.announcementBody_ = announcementBodyBuilder_.build();
+          }
+          to_bitField0_ |= 0x00004000;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.published_ = published_;
+          to_bitField0_ |= 0x00008000;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.hidden_ = hidden_;
+          to_bitField0_ |= 0x00010000;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.rtime32VisibilityStart_ = rtime32VisibilityStart_;
+          to_bitField0_ |= 0x00020000;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.rtime32VisibilityEnd_ = rtime32VisibilityEnd_;
+          to_bitField0_ |= 0x00040000;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.broadcasterAccountid_ = broadcasterAccountid_;
+          to_bitField0_ |= 0x00080000;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.followerCount_ = followerCount_;
+          to_bitField0_ |= 0x00100000;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.ignoreCount_ = ignoreCount_;
+          to_bitField0_ |= 0x00200000;
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.forumTopicId_ = forumTopicId_;
+          to_bitField0_ |= 0x00400000;
+        }
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.rtime32LastModified_ = rtime32LastModified_;
+          to_bitField0_ |= 0x00800000;
+        }
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.newsPostGid_ = newsPostGid_;
+          to_bitField0_ |= 0x01000000;
+        }
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.rtimeModReviewed_ = rtimeModReviewed_;
+          to_bitField0_ |= 0x02000000;
+        }
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.featuredAppTagid_ = featuredAppTagid_;
+          to_bitField0_ |= 0x04000000;
+        }
+        if (((bitField0_ & 0x08000000) != 0)) {
+          referencedAppids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x08000000);
+        }
+        result.referencedAppids_ = referencedAppids_;
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.buildId_ = buildId_;
+          to_bitField0_ |= 0x08000000;
+        }
+        if (((from_bitField0_ & 0x20000000) != 0)) {
+          to_bitField0_ |= 0x10000000;
+        }
+        result.buildBranch_ = buildBranch_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CClanEventData) {
+          return mergeFrom((SteammessagesBase.CClanEventData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CClanEventData other) {
+        if (other == SteammessagesBase.CClanEventData.getDefaultInstance()) return this;
+        if (other.hasGid()) {
+          setGid(other.getGid());
+        }
+        if (other.hasClanSteamid()) {
+          setClanSteamid(other.getClanSteamid());
+        }
+        if (other.hasEventName()) {
+          bitField0_ |= 0x00000004;
+          eventName_ = other.eventName_;
+          onChanged();
+        }
+        if (other.hasEventType()) {
+          setEventType(other.getEventType());
+        }
+        if (other.hasAppid()) {
+          setAppid(other.getAppid());
+        }
+        if (other.hasServerAddress()) {
+          bitField0_ |= 0x00000020;
+          serverAddress_ = other.serverAddress_;
+          onChanged();
+        }
+        if (other.hasServerPassword()) {
+          bitField0_ |= 0x00000040;
+          serverPassword_ = other.serverPassword_;
+          onChanged();
+        }
+        if (other.hasRtime32StartTime()) {
+          setRtime32StartTime(other.getRtime32StartTime());
+        }
+        if (other.hasRtime32EndTime()) {
+          setRtime32EndTime(other.getRtime32EndTime());
+        }
+        if (other.hasCommentCount()) {
+          setCommentCount(other.getCommentCount());
+        }
+        if (other.hasCreatorSteamid()) {
+          setCreatorSteamid(other.getCreatorSteamid());
+        }
+        if (other.hasLastUpdateSteamid()) {
+          setLastUpdateSteamid(other.getLastUpdateSteamid());
+        }
+        if (other.hasEventNotes()) {
+          bitField0_ |= 0x00001000;
+          eventNotes_ = other.eventNotes_;
+          onChanged();
+        }
+        if (other.hasJsondata()) {
+          bitField0_ |= 0x00002000;
+          jsondata_ = other.jsondata_;
+          onChanged();
+        }
+        if (other.hasAnnouncementBody()) {
+          mergeAnnouncementBody(other.getAnnouncementBody());
+        }
+        if (other.hasPublished()) {
+          setPublished(other.getPublished());
+        }
+        if (other.hasHidden()) {
+          setHidden(other.getHidden());
+        }
+        if (other.hasRtime32VisibilityStart()) {
+          setRtime32VisibilityStart(other.getRtime32VisibilityStart());
+        }
+        if (other.hasRtime32VisibilityEnd()) {
+          setRtime32VisibilityEnd(other.getRtime32VisibilityEnd());
+        }
+        if (other.hasBroadcasterAccountid()) {
+          setBroadcasterAccountid(other.getBroadcasterAccountid());
+        }
+        if (other.hasFollowerCount()) {
+          setFollowerCount(other.getFollowerCount());
+        }
+        if (other.hasIgnoreCount()) {
+          setIgnoreCount(other.getIgnoreCount());
+        }
+        if (other.hasForumTopicId()) {
+          setForumTopicId(other.getForumTopicId());
+        }
+        if (other.hasRtime32LastModified()) {
+          setRtime32LastModified(other.getRtime32LastModified());
+        }
+        if (other.hasNewsPostGid()) {
+          setNewsPostGid(other.getNewsPostGid());
+        }
+        if (other.hasRtimeModReviewed()) {
+          setRtimeModReviewed(other.getRtimeModReviewed());
+        }
+        if (other.hasFeaturedAppTagid()) {
+          setFeaturedAppTagid(other.getFeaturedAppTagid());
+        }
+        if (!other.referencedAppids_.isEmpty()) {
+          if (referencedAppids_.isEmpty()) {
+            referencedAppids_ = other.referencedAppids_;
+            bitField0_ = (bitField0_ & ~0x08000000);
+          } else {
+            ensureReferencedAppidsIsMutable();
+            referencedAppids_.addAll(other.referencedAppids_);
+          }
+          onChanged();
+        }
+        if (other.hasBuildId()) {
+          setBuildId(other.getBuildId());
+        }
+        if (other.hasBuildBranch()) {
+          bitField0_ |= 0x20000000;
+          buildBranch_ = other.buildBranch_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CClanEventData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CClanEventData) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long gid_ ;
+      /**
+       * <code>optional fixed64 gid = 1;</code>
+       * @return Whether the gid field is set.
+       */
+      @java.lang.Override
+      public boolean hasGid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional fixed64 gid = 1;</code>
+       * @return The gid.
+       */
+      @java.lang.Override
+      public long getGid() {
+        return gid_;
+      }
+      /**
+       * <code>optional fixed64 gid = 1;</code>
+       * @param value The gid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGid(long value) {
+        bitField0_ |= 0x00000001;
+        gid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 gid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long clanSteamid_ ;
+      /**
+       * <code>optional fixed64 clan_steamid = 2;</code>
+       * @return Whether the clanSteamid field is set.
+       */
+      @java.lang.Override
+      public boolean hasClanSteamid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional fixed64 clan_steamid = 2;</code>
+       * @return The clanSteamid.
+       */
+      @java.lang.Override
+      public long getClanSteamid() {
+        return clanSteamid_;
+      }
+      /**
+       * <code>optional fixed64 clan_steamid = 2;</code>
+       * @param value The clanSteamid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClanSteamid(long value) {
+        bitField0_ |= 0x00000002;
+        clanSteamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 clan_steamid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClanSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        clanSteamid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object eventName_ = "";
+      /**
+       * <code>optional string event_name = 3;</code>
+       * @return Whether the eventName field is set.
+       */
+      public boolean hasEventName() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string event_name = 3;</code>
+       * @return The eventName.
+       */
+      public java.lang.String getEventName() {
+        java.lang.Object ref = eventName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            eventName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string event_name = 3;</code>
+       * @return The bytes for eventName.
+       */
+      public com.google.protobuf.ByteString
+          getEventNameBytes() {
+        java.lang.Object ref = eventName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string event_name = 3;</code>
+       * @param value The eventName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        eventName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string event_name = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        eventName_ = getDefaultInstance().getEventName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string event_name = 3;</code>
+       * @param value The bytes for eventName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        eventName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int eventType_ = 1;
+      /**
+       * <code>optional .EProtoClanEventType event_type = 4 [default = k_EClanOtherEvent];</code>
+       * @return Whether the eventType field is set.
+       */
+      @java.lang.Override public boolean hasEventType() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .EProtoClanEventType event_type = 4 [default = k_EClanOtherEvent];</code>
+       * @return The eventType.
+       */
+      @java.lang.Override
+      public SteammessagesBase.EProtoClanEventType getEventType() {
+        @SuppressWarnings("deprecation")
+        SteammessagesBase.EProtoClanEventType result = SteammessagesBase.EProtoClanEventType.valueOf(eventType_);
+        return result == null ? SteammessagesBase.EProtoClanEventType.k_EClanOtherEvent : result;
+      }
+      /**
+       * <code>optional .EProtoClanEventType event_type = 4 [default = k_EClanOtherEvent];</code>
+       * @param value The eventType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventType(SteammessagesBase.EProtoClanEventType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        eventType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .EProtoClanEventType event_type = 4 [default = k_EClanOtherEvent];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        eventType_ = 1;
+        onChanged();
+        return this;
+      }
+
+      private int appid_ ;
+      /**
+       * <code>optional uint32 appid = 5;</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 5;</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+      /**
+       * <code>optional uint32 appid = 5;</code>
+       * @param value The appid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppid(int value) {
+        bitField0_ |= 0x00000010;
+        appid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 appid = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppid() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        appid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serverAddress_ = "";
+      /**
+       * <code>optional string server_address = 6;</code>
+       * @return Whether the serverAddress field is set.
+       */
+      public boolean hasServerAddress() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string server_address = 6;</code>
+       * @return The serverAddress.
+       */
+      public java.lang.String getServerAddress() {
+        java.lang.Object ref = serverAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            serverAddress_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string server_address = 6;</code>
+       * @return The bytes for serverAddress.
+       */
+      public com.google.protobuf.ByteString
+          getServerAddressBytes() {
+        java.lang.Object ref = serverAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serverAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string server_address = 6;</code>
+       * @param value The serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string server_address = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerAddress() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        serverAddress_ = getDefaultInstance().getServerAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string server_address = 6;</code>
+       * @param value The bytes for serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serverPassword_ = "";
+      /**
+       * <code>optional string server_password = 7;</code>
+       * @return Whether the serverPassword field is set.
+       */
+      public boolean hasServerPassword() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional string server_password = 7;</code>
+       * @return The serverPassword.
+       */
+      public java.lang.String getServerPassword() {
+        java.lang.Object ref = serverPassword_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            serverPassword_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string server_password = 7;</code>
+       * @return The bytes for serverPassword.
+       */
+      public com.google.protobuf.ByteString
+          getServerPasswordBytes() {
+        java.lang.Object ref = serverPassword_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serverPassword_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string server_password = 7;</code>
+       * @param value The serverPassword to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        serverPassword_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string server_password = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerPassword() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        serverPassword_ = getDefaultInstance().getServerPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string server_password = 7;</code>
+       * @param value The bytes for serverPassword to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        serverPassword_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int rtime32StartTime_ ;
+      /**
+       * <code>optional uint32 rtime32_start_time = 8;</code>
+       * @return Whether the rtime32StartTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtime32StartTime() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime32_start_time = 8;</code>
+       * @return The rtime32StartTime.
+       */
+      @java.lang.Override
+      public int getRtime32StartTime() {
+        return rtime32StartTime_;
+      }
+      /**
+       * <code>optional uint32 rtime32_start_time = 8;</code>
+       * @param value The rtime32StartTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtime32StartTime(int value) {
+        bitField0_ |= 0x00000080;
+        rtime32StartTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime32_start_time = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtime32StartTime() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        rtime32StartTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rtime32EndTime_ ;
+      /**
+       * <code>optional uint32 rtime32_end_time = 9;</code>
+       * @return Whether the rtime32EndTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtime32EndTime() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime32_end_time = 9;</code>
+       * @return The rtime32EndTime.
+       */
+      @java.lang.Override
+      public int getRtime32EndTime() {
+        return rtime32EndTime_;
+      }
+      /**
+       * <code>optional uint32 rtime32_end_time = 9;</code>
+       * @param value The rtime32EndTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtime32EndTime(int value) {
+        bitField0_ |= 0x00000100;
+        rtime32EndTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime32_end_time = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtime32EndTime() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        rtime32EndTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int commentCount_ ;
+      /**
+       * <code>optional int32 comment_count = 10;</code>
+       * @return Whether the commentCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasCommentCount() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional int32 comment_count = 10;</code>
+       * @return The commentCount.
+       */
+      @java.lang.Override
+      public int getCommentCount() {
+        return commentCount_;
+      }
+      /**
+       * <code>optional int32 comment_count = 10;</code>
+       * @param value The commentCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommentCount(int value) {
+        bitField0_ |= 0x00000200;
+        commentCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 comment_count = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommentCount() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        commentCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long creatorSteamid_ ;
+      /**
+       * <code>optional fixed64 creator_steamid = 11;</code>
+       * @return Whether the creatorSteamid field is set.
+       */
+      @java.lang.Override
+      public boolean hasCreatorSteamid() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional fixed64 creator_steamid = 11;</code>
+       * @return The creatorSteamid.
+       */
+      @java.lang.Override
+      public long getCreatorSteamid() {
+        return creatorSteamid_;
+      }
+      /**
+       * <code>optional fixed64 creator_steamid = 11;</code>
+       * @param value The creatorSteamid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorSteamid(long value) {
+        bitField0_ |= 0x00000400;
+        creatorSteamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 creator_steamid = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreatorSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        creatorSteamid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lastUpdateSteamid_ ;
+      /**
+       * <code>optional fixed64 last_update_steamid = 12;</code>
+       * @return Whether the lastUpdateSteamid field is set.
+       */
+      @java.lang.Override
+      public boolean hasLastUpdateSteamid() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional fixed64 last_update_steamid = 12;</code>
+       * @return The lastUpdateSteamid.
+       */
+      @java.lang.Override
+      public long getLastUpdateSteamid() {
+        return lastUpdateSteamid_;
+      }
+      /**
+       * <code>optional fixed64 last_update_steamid = 12;</code>
+       * @param value The lastUpdateSteamid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastUpdateSteamid(long value) {
+        bitField0_ |= 0x00000800;
+        lastUpdateSteamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 last_update_steamid = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastUpdateSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        lastUpdateSteamid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object eventNotes_ = "";
+      /**
+       * <code>optional string event_notes = 13;</code>
+       * @return Whether the eventNotes field is set.
+       */
+      public boolean hasEventNotes() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional string event_notes = 13;</code>
+       * @return The eventNotes.
+       */
+      public java.lang.String getEventNotes() {
+        java.lang.Object ref = eventNotes_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            eventNotes_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string event_notes = 13;</code>
+       * @return The bytes for eventNotes.
+       */
+      public com.google.protobuf.ByteString
+          getEventNotesBytes() {
+        java.lang.Object ref = eventNotes_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventNotes_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string event_notes = 13;</code>
+       * @param value The eventNotes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventNotes(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        eventNotes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string event_notes = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventNotes() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        eventNotes_ = getDefaultInstance().getEventNotes();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string event_notes = 13;</code>
+       * @param value The bytes for eventNotes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventNotesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        eventNotes_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jsondata_ = "";
+      /**
+       * <code>optional string jsondata = 14;</code>
+       * @return Whether the jsondata field is set.
+       */
+      public boolean hasJsondata() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional string jsondata = 14;</code>
+       * @return The jsondata.
+       */
+      public java.lang.String getJsondata() {
+        java.lang.Object ref = jsondata_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jsondata_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string jsondata = 14;</code>
+       * @return The bytes for jsondata.
+       */
+      public com.google.protobuf.ByteString
+          getJsondataBytes() {
+        java.lang.Object ref = jsondata_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jsondata_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string jsondata = 14;</code>
+       * @param value The jsondata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsondata(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        jsondata_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string jsondata = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsondata() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        jsondata_ = getDefaultInstance().getJsondata();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string jsondata = 14;</code>
+       * @param value The bytes for jsondata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsondataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        jsondata_ = value;
+        onChanged();
+        return this;
+      }
+
+      private SteammessagesBase.CCommunity_ClanAnnouncementInfo announcementBody_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesBase.CCommunity_ClanAnnouncementInfo, SteammessagesBase.CCommunity_ClanAnnouncementInfo.Builder, SteammessagesBase.CCommunity_ClanAnnouncementInfoOrBuilder> announcementBodyBuilder_;
+      /**
+       * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+       * @return Whether the announcementBody field is set.
+       */
+      public boolean hasAnnouncementBody() {
+        return ((bitField0_ & 0x00004000) != 0);
+      }
+      /**
+       * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+       * @return The announcementBody.
+       */
+      public SteammessagesBase.CCommunity_ClanAnnouncementInfo getAnnouncementBody() {
+        if (announcementBodyBuilder_ == null) {
+          return announcementBody_ == null ? SteammessagesBase.CCommunity_ClanAnnouncementInfo.getDefaultInstance() : announcementBody_;
+        } else {
+          return announcementBodyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+       */
+      public Builder setAnnouncementBody(SteammessagesBase.CCommunity_ClanAnnouncementInfo value) {
+        if (announcementBodyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          announcementBody_ = value;
+          onChanged();
+        } else {
+          announcementBodyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+       */
+      public Builder setAnnouncementBody(
+          SteammessagesBase.CCommunity_ClanAnnouncementInfo.Builder builderForValue) {
+        if (announcementBodyBuilder_ == null) {
+          announcementBody_ = builderForValue.build();
+          onChanged();
+        } else {
+          announcementBodyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+       */
+      public Builder mergeAnnouncementBody(SteammessagesBase.CCommunity_ClanAnnouncementInfo value) {
+        if (announcementBodyBuilder_ == null) {
+          if (((bitField0_ & 0x00004000) != 0) &&
+              announcementBody_ != null &&
+              announcementBody_ != SteammessagesBase.CCommunity_ClanAnnouncementInfo.getDefaultInstance()) {
+            announcementBody_ =
+              SteammessagesBase.CCommunity_ClanAnnouncementInfo.newBuilder(announcementBody_).mergeFrom(value).buildPartial();
+          } else {
+            announcementBody_ = value;
+          }
+          onChanged();
+        } else {
+          announcementBodyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+       */
+      public Builder clearAnnouncementBody() {
+        if (announcementBodyBuilder_ == null) {
+          announcementBody_ = null;
+          onChanged();
+        } else {
+          announcementBodyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00004000);
+        return this;
+      }
+      /**
+       * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+       */
+      public SteammessagesBase.CCommunity_ClanAnnouncementInfo.Builder getAnnouncementBodyBuilder() {
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return getAnnouncementBodyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+       */
+      public SteammessagesBase.CCommunity_ClanAnnouncementInfoOrBuilder getAnnouncementBodyOrBuilder() {
+        if (announcementBodyBuilder_ != null) {
+          return announcementBodyBuilder_.getMessageOrBuilder();
+        } else {
+          return announcementBody_ == null ?
+              SteammessagesBase.CCommunity_ClanAnnouncementInfo.getDefaultInstance() : announcementBody_;
+        }
+      }
+      /**
+       * <code>optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesBase.CCommunity_ClanAnnouncementInfo, SteammessagesBase.CCommunity_ClanAnnouncementInfo.Builder, SteammessagesBase.CCommunity_ClanAnnouncementInfoOrBuilder> 
+          getAnnouncementBodyFieldBuilder() {
+        if (announcementBodyBuilder_ == null) {
+          announcementBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesBase.CCommunity_ClanAnnouncementInfo, SteammessagesBase.CCommunity_ClanAnnouncementInfo.Builder, SteammessagesBase.CCommunity_ClanAnnouncementInfoOrBuilder>(
+                  getAnnouncementBody(),
+                  getParentForChildren(),
+                  isClean());
+          announcementBody_ = null;
+        }
+        return announcementBodyBuilder_;
+      }
+
+      private boolean published_ ;
+      /**
+       * <code>optional bool published = 16;</code>
+       * @return Whether the published field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublished() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>optional bool published = 16;</code>
+       * @return The published.
+       */
+      @java.lang.Override
+      public boolean getPublished() {
+        return published_;
+      }
+      /**
+       * <code>optional bool published = 16;</code>
+       * @param value The published to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublished(boolean value) {
+        bitField0_ |= 0x00008000;
+        published_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool published = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublished() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        published_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean hidden_ ;
+      /**
+       * <code>optional bool hidden = 17;</code>
+       * @return Whether the hidden field is set.
+       */
+      @java.lang.Override
+      public boolean hasHidden() {
+        return ((bitField0_ & 0x00010000) != 0);
+      }
+      /**
+       * <code>optional bool hidden = 17;</code>
+       * @return The hidden.
+       */
+      @java.lang.Override
+      public boolean getHidden() {
+        return hidden_;
+      }
+      /**
+       * <code>optional bool hidden = 17;</code>
+       * @param value The hidden to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHidden(boolean value) {
+        bitField0_ |= 0x00010000;
+        hidden_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool hidden = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHidden() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        hidden_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int rtime32VisibilityStart_ ;
+      /**
+       * <code>optional uint32 rtime32_visibility_start = 18;</code>
+       * @return Whether the rtime32VisibilityStart field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtime32VisibilityStart() {
+        return ((bitField0_ & 0x00020000) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime32_visibility_start = 18;</code>
+       * @return The rtime32VisibilityStart.
+       */
+      @java.lang.Override
+      public int getRtime32VisibilityStart() {
+        return rtime32VisibilityStart_;
+      }
+      /**
+       * <code>optional uint32 rtime32_visibility_start = 18;</code>
+       * @param value The rtime32VisibilityStart to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtime32VisibilityStart(int value) {
+        bitField0_ |= 0x00020000;
+        rtime32VisibilityStart_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime32_visibility_start = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtime32VisibilityStart() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        rtime32VisibilityStart_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rtime32VisibilityEnd_ ;
+      /**
+       * <code>optional uint32 rtime32_visibility_end = 19;</code>
+       * @return Whether the rtime32VisibilityEnd field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtime32VisibilityEnd() {
+        return ((bitField0_ & 0x00040000) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime32_visibility_end = 19;</code>
+       * @return The rtime32VisibilityEnd.
+       */
+      @java.lang.Override
+      public int getRtime32VisibilityEnd() {
+        return rtime32VisibilityEnd_;
+      }
+      /**
+       * <code>optional uint32 rtime32_visibility_end = 19;</code>
+       * @param value The rtime32VisibilityEnd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtime32VisibilityEnd(int value) {
+        bitField0_ |= 0x00040000;
+        rtime32VisibilityEnd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime32_visibility_end = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtime32VisibilityEnd() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        rtime32VisibilityEnd_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int broadcasterAccountid_ ;
+      /**
+       * <code>optional uint32 broadcaster_accountid = 20;</code>
+       * @return Whether the broadcasterAccountid field is set.
+       */
+      @java.lang.Override
+      public boolean hasBroadcasterAccountid() {
+        return ((bitField0_ & 0x00080000) != 0);
+      }
+      /**
+       * <code>optional uint32 broadcaster_accountid = 20;</code>
+       * @return The broadcasterAccountid.
+       */
+      @java.lang.Override
+      public int getBroadcasterAccountid() {
+        return broadcasterAccountid_;
+      }
+      /**
+       * <code>optional uint32 broadcaster_accountid = 20;</code>
+       * @param value The broadcasterAccountid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBroadcasterAccountid(int value) {
+        bitField0_ |= 0x00080000;
+        broadcasterAccountid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 broadcaster_accountid = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBroadcasterAccountid() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        broadcasterAccountid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int followerCount_ ;
+      /**
+       * <code>optional uint32 follower_count = 21;</code>
+       * @return Whether the followerCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasFollowerCount() {
+        return ((bitField0_ & 0x00100000) != 0);
+      }
+      /**
+       * <code>optional uint32 follower_count = 21;</code>
+       * @return The followerCount.
+       */
+      @java.lang.Override
+      public int getFollowerCount() {
+        return followerCount_;
+      }
+      /**
+       * <code>optional uint32 follower_count = 21;</code>
+       * @param value The followerCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFollowerCount(int value) {
+        bitField0_ |= 0x00100000;
+        followerCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 follower_count = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFollowerCount() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        followerCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int ignoreCount_ ;
+      /**
+       * <code>optional uint32 ignore_count = 22;</code>
+       * @return Whether the ignoreCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasIgnoreCount() {
+        return ((bitField0_ & 0x00200000) != 0);
+      }
+      /**
+       * <code>optional uint32 ignore_count = 22;</code>
+       * @return The ignoreCount.
+       */
+      @java.lang.Override
+      public int getIgnoreCount() {
+        return ignoreCount_;
+      }
+      /**
+       * <code>optional uint32 ignore_count = 22;</code>
+       * @param value The ignoreCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIgnoreCount(int value) {
+        bitField0_ |= 0x00200000;
+        ignoreCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ignore_count = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIgnoreCount() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        ignoreCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long forumTopicId_ ;
+      /**
+       * <code>optional fixed64 forum_topic_id = 23;</code>
+       * @return Whether the forumTopicId field is set.
+       */
+      @java.lang.Override
+      public boolean hasForumTopicId() {
+        return ((bitField0_ & 0x00400000) != 0);
+      }
+      /**
+       * <code>optional fixed64 forum_topic_id = 23;</code>
+       * @return The forumTopicId.
+       */
+      @java.lang.Override
+      public long getForumTopicId() {
+        return forumTopicId_;
+      }
+      /**
+       * <code>optional fixed64 forum_topic_id = 23;</code>
+       * @param value The forumTopicId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForumTopicId(long value) {
+        bitField0_ |= 0x00400000;
+        forumTopicId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 forum_topic_id = 23;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForumTopicId() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        forumTopicId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int rtime32LastModified_ ;
+      /**
+       * <code>optional uint32 rtime32_last_modified = 24;</code>
+       * @return Whether the rtime32LastModified field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtime32LastModified() {
+        return ((bitField0_ & 0x00800000) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime32_last_modified = 24;</code>
+       * @return The rtime32LastModified.
+       */
+      @java.lang.Override
+      public int getRtime32LastModified() {
+        return rtime32LastModified_;
+      }
+      /**
+       * <code>optional uint32 rtime32_last_modified = 24;</code>
+       * @param value The rtime32LastModified to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtime32LastModified(int value) {
+        bitField0_ |= 0x00800000;
+        rtime32LastModified_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime32_last_modified = 24;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtime32LastModified() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        rtime32LastModified_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long newsPostGid_ ;
+      /**
+       * <code>optional fixed64 news_post_gid = 25;</code>
+       * @return Whether the newsPostGid field is set.
+       */
+      @java.lang.Override
+      public boolean hasNewsPostGid() {
+        return ((bitField0_ & 0x01000000) != 0);
+      }
+      /**
+       * <code>optional fixed64 news_post_gid = 25;</code>
+       * @return The newsPostGid.
+       */
+      @java.lang.Override
+      public long getNewsPostGid() {
+        return newsPostGid_;
+      }
+      /**
+       * <code>optional fixed64 news_post_gid = 25;</code>
+       * @param value The newsPostGid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewsPostGid(long value) {
+        bitField0_ |= 0x01000000;
+        newsPostGid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 news_post_gid = 25;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewsPostGid() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        newsPostGid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int rtimeModReviewed_ ;
+      /**
+       * <code>optional uint32 rtime_mod_reviewed = 26;</code>
+       * @return Whether the rtimeModReviewed field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtimeModReviewed() {
+        return ((bitField0_ & 0x02000000) != 0);
+      }
+      /**
+       * <code>optional uint32 rtime_mod_reviewed = 26;</code>
+       * @return The rtimeModReviewed.
+       */
+      @java.lang.Override
+      public int getRtimeModReviewed() {
+        return rtimeModReviewed_;
+      }
+      /**
+       * <code>optional uint32 rtime_mod_reviewed = 26;</code>
+       * @param value The rtimeModReviewed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtimeModReviewed(int value) {
+        bitField0_ |= 0x02000000;
+        rtimeModReviewed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rtime_mod_reviewed = 26;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtimeModReviewed() {
+        bitField0_ = (bitField0_ & ~0x02000000);
+        rtimeModReviewed_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int featuredAppTagid_ ;
+      /**
+       * <code>optional uint32 featured_app_tagid = 27;</code>
+       * @return Whether the featuredAppTagid field is set.
+       */
+      @java.lang.Override
+      public boolean hasFeaturedAppTagid() {
+        return ((bitField0_ & 0x04000000) != 0);
+      }
+      /**
+       * <code>optional uint32 featured_app_tagid = 27;</code>
+       * @return The featuredAppTagid.
+       */
+      @java.lang.Override
+      public int getFeaturedAppTagid() {
+        return featuredAppTagid_;
+      }
+      /**
+       * <code>optional uint32 featured_app_tagid = 27;</code>
+       * @param value The featuredAppTagid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeaturedAppTagid(int value) {
+        bitField0_ |= 0x04000000;
+        featuredAppTagid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 featured_app_tagid = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeaturedAppTagid() {
+        bitField0_ = (bitField0_ & ~0x04000000);
+        featuredAppTagid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList referencedAppids_ = emptyIntList();
+      private void ensureReferencedAppidsIsMutable() {
+        if (!((bitField0_ & 0x08000000) != 0)) {
+          referencedAppids_ = mutableCopy(referencedAppids_);
+          bitField0_ |= 0x08000000;
+         }
+      }
+      /**
+       * <code>repeated uint32 referenced_appids = 28;</code>
+       * @return A list containing the referencedAppids.
+       */
+      public java.util.List<java.lang.Integer>
+          getReferencedAppidsList() {
+        return ((bitField0_ & 0x08000000) != 0) ?
+                 java.util.Collections.unmodifiableList(referencedAppids_) : referencedAppids_;
+      }
+      /**
+       * <code>repeated uint32 referenced_appids = 28;</code>
+       * @return The count of referencedAppids.
+       */
+      public int getReferencedAppidsCount() {
+        return referencedAppids_.size();
+      }
+      /**
+       * <code>repeated uint32 referenced_appids = 28;</code>
+       * @param index The index of the element to return.
+       * @return The referencedAppids at the given index.
+       */
+      public int getReferencedAppids(int index) {
+        return referencedAppids_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 referenced_appids = 28;</code>
+       * @param index The index to set the value at.
+       * @param value The referencedAppids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReferencedAppids(
+          int index, int value) {
+        ensureReferencedAppidsIsMutable();
+        referencedAppids_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 referenced_appids = 28;</code>
+       * @param value The referencedAppids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addReferencedAppids(int value) {
+        ensureReferencedAppidsIsMutable();
+        referencedAppids_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 referenced_appids = 28;</code>
+       * @param values The referencedAppids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllReferencedAppids(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureReferencedAppidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, referencedAppids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 referenced_appids = 28;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReferencedAppids() {
+        referencedAppids_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x08000000);
+        onChanged();
+        return this;
+      }
+
+      private int buildId_ ;
+      /**
+       * <code>optional uint32 build_id = 29;</code>
+       * @return Whether the buildId field is set.
+       */
+      @java.lang.Override
+      public boolean hasBuildId() {
+        return ((bitField0_ & 0x10000000) != 0);
+      }
+      /**
+       * <code>optional uint32 build_id = 29;</code>
+       * @return The buildId.
+       */
+      @java.lang.Override
+      public int getBuildId() {
+        return buildId_;
+      }
+      /**
+       * <code>optional uint32 build_id = 29;</code>
+       * @param value The buildId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuildId(int value) {
+        bitField0_ |= 0x10000000;
+        buildId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 build_id = 29;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuildId() {
+        bitField0_ = (bitField0_ & ~0x10000000);
+        buildId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buildBranch_ = "";
+      /**
+       * <code>optional string build_branch = 30;</code>
+       * @return Whether the buildBranch field is set.
+       */
+      public boolean hasBuildBranch() {
+        return ((bitField0_ & 0x20000000) != 0);
+      }
+      /**
+       * <code>optional string build_branch = 30;</code>
+       * @return The buildBranch.
+       */
+      public java.lang.String getBuildBranch() {
+        java.lang.Object ref = buildBranch_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            buildBranch_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string build_branch = 30;</code>
+       * @return The bytes for buildBranch.
+       */
+      public com.google.protobuf.ByteString
+          getBuildBranchBytes() {
+        java.lang.Object ref = buildBranch_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buildBranch_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string build_branch = 30;</code>
+       * @param value The buildBranch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuildBranch(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x20000000;
+        buildBranch_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string build_branch = 30;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuildBranch() {
+        bitField0_ = (bitField0_ & ~0x20000000);
+        buildBranch_ = getDefaultInstance().getBuildBranch();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string build_branch = 30;</code>
+       * @param value The bytes for buildBranch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuildBranchBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x20000000;
+        buildBranch_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CClanEventData)
+    }
+
+    // @@protoc_insertion_point(class_scope:CClanEventData)
+    private static final SteammessagesBase.CClanEventData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CClanEventData();
+    }
+
+    public static SteammessagesBase.CClanEventData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CClanEventData>
+        PARSER = new com.google.protobuf.AbstractParser<CClanEventData>() {
+      @java.lang.Override
+      public CClanEventData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CClanEventData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CClanEventData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CClanEventData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CClanEventData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CBilling_AddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CBilling_Address)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string first_name = 1;</code>
+     * @return Whether the firstName field is set.
+     */
+    boolean hasFirstName();
+    /**
+     * <code>optional string first_name = 1;</code>
+     * @return The firstName.
+     */
+    java.lang.String getFirstName();
+    /**
+     * <code>optional string first_name = 1;</code>
+     * @return The bytes for firstName.
+     */
+    com.google.protobuf.ByteString
+        getFirstNameBytes();
+
+    /**
+     * <code>optional string last_name = 2;</code>
+     * @return Whether the lastName field is set.
+     */
+    boolean hasLastName();
+    /**
+     * <code>optional string last_name = 2;</code>
+     * @return The lastName.
+     */
+    java.lang.String getLastName();
+    /**
+     * <code>optional string last_name = 2;</code>
+     * @return The bytes for lastName.
+     */
+    com.google.protobuf.ByteString
+        getLastNameBytes();
+
+    /**
+     * <code>optional string address1 = 3;</code>
+     * @return Whether the address1 field is set.
+     */
+    boolean hasAddress1();
+    /**
+     * <code>optional string address1 = 3;</code>
+     * @return The address1.
+     */
+    java.lang.String getAddress1();
+    /**
+     * <code>optional string address1 = 3;</code>
+     * @return The bytes for address1.
+     */
+    com.google.protobuf.ByteString
+        getAddress1Bytes();
+
+    /**
+     * <code>optional string address2 = 4;</code>
+     * @return Whether the address2 field is set.
+     */
+    boolean hasAddress2();
+    /**
+     * <code>optional string address2 = 4;</code>
+     * @return The address2.
+     */
+    java.lang.String getAddress2();
+    /**
+     * <code>optional string address2 = 4;</code>
+     * @return The bytes for address2.
+     */
+    com.google.protobuf.ByteString
+        getAddress2Bytes();
+
+    /**
+     * <code>optional string city = 5;</code>
+     * @return Whether the city field is set.
+     */
+    boolean hasCity();
+    /**
+     * <code>optional string city = 5;</code>
+     * @return The city.
+     */
+    java.lang.String getCity();
+    /**
+     * <code>optional string city = 5;</code>
+     * @return The bytes for city.
+     */
+    com.google.protobuf.ByteString
+        getCityBytes();
+
+    /**
+     * <code>optional string us_state = 6;</code>
+     * @return Whether the usState field is set.
+     */
+    boolean hasUsState();
+    /**
+     * <code>optional string us_state = 6;</code>
+     * @return The usState.
+     */
+    java.lang.String getUsState();
+    /**
+     * <code>optional string us_state = 6;</code>
+     * @return The bytes for usState.
+     */
+    com.google.protobuf.ByteString
+        getUsStateBytes();
+
+    /**
+     * <code>optional string country_code = 7;</code>
+     * @return Whether the countryCode field is set.
+     */
+    boolean hasCountryCode();
+    /**
+     * <code>optional string country_code = 7;</code>
+     * @return The countryCode.
+     */
+    java.lang.String getCountryCode();
+    /**
+     * <code>optional string country_code = 7;</code>
+     * @return The bytes for countryCode.
+     */
+    com.google.protobuf.ByteString
+        getCountryCodeBytes();
+
+    /**
+     * <code>optional string postcode = 8;</code>
+     * @return Whether the postcode field is set.
+     */
+    boolean hasPostcode();
+    /**
+     * <code>optional string postcode = 8;</code>
+     * @return The postcode.
+     */
+    java.lang.String getPostcode();
+    /**
+     * <code>optional string postcode = 8;</code>
+     * @return The bytes for postcode.
+     */
+    com.google.protobuf.ByteString
+        getPostcodeBytes();
+
+    /**
+     * <code>optional int32 zip_plus4 = 9;</code>
+     * @return Whether the zipPlus4 field is set.
+     */
+    boolean hasZipPlus4();
+    /**
+     * <code>optional int32 zip_plus4 = 9;</code>
+     * @return The zipPlus4.
+     */
+    int getZipPlus4();
+
+    /**
+     * <code>optional string phone = 10;</code>
+     * @return Whether the phone field is set.
+     */
+    boolean hasPhone();
+    /**
+     * <code>optional string phone = 10;</code>
+     * @return The phone.
+     */
+    java.lang.String getPhone();
+    /**
+     * <code>optional string phone = 10;</code>
+     * @return The bytes for phone.
+     */
+    com.google.protobuf.ByteString
+        getPhoneBytes();
+  }
+  /**
+   * Protobuf type {@code CBilling_Address}
+   */
+  public static final class CBilling_Address extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CBilling_Address)
+      CBilling_AddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CBilling_Address.newBuilder() to construct.
+    private CBilling_Address(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CBilling_Address() {
+      firstName_ = "";
+      lastName_ = "";
+      address1_ = "";
+      address2_ = "";
+      city_ = "";
+      usState_ = "";
+      countryCode_ = "";
+      postcode_ = "";
+      phone_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CBilling_Address();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CBilling_Address(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              firstName_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              lastName_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              address1_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              address2_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              city_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              usState_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              countryCode_ = bs;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              postcode_ = bs;
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              zipPlus4_ = input.readInt32();
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000200;
+              phone_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CBilling_Address_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CBilling_Address_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CBilling_Address.class, SteammessagesBase.CBilling_Address.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FIRST_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object firstName_;
+    /**
+     * <code>optional string first_name = 1;</code>
+     * @return Whether the firstName field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string first_name = 1;</code>
+     * @return The firstName.
+     */
+    @java.lang.Override
+    public java.lang.String getFirstName() {
+      java.lang.Object ref = firstName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          firstName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string first_name = 1;</code>
+     * @return The bytes for firstName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFirstNameBytes() {
+      java.lang.Object ref = firstName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        firstName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LAST_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object lastName_;
+    /**
+     * <code>optional string last_name = 2;</code>
+     * @return Whether the lastName field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string last_name = 2;</code>
+     * @return The lastName.
+     */
+    @java.lang.Override
+    public java.lang.String getLastName() {
+      java.lang.Object ref = lastName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          lastName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string last_name = 2;</code>
+     * @return The bytes for lastName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLastNameBytes() {
+      java.lang.Object ref = lastName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS1_FIELD_NUMBER = 3;
+    private volatile java.lang.Object address1_;
+    /**
+     * <code>optional string address1 = 3;</code>
+     * @return Whether the address1 field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddress1() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string address1 = 3;</code>
+     * @return The address1.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress1() {
+      java.lang.Object ref = address1_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          address1_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string address1 = 3;</code>
+     * @return The bytes for address1.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddress1Bytes() {
+      java.lang.Object ref = address1_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS2_FIELD_NUMBER = 4;
+    private volatile java.lang.Object address2_;
+    /**
+     * <code>optional string address2 = 4;</code>
+     * @return Whether the address2 field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddress2() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string address2 = 4;</code>
+     * @return The address2.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress2() {
+      java.lang.Object ref = address2_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          address2_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string address2 = 4;</code>
+     * @return The bytes for address2.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddress2Bytes() {
+      java.lang.Object ref = address2_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CITY_FIELD_NUMBER = 5;
+    private volatile java.lang.Object city_;
+    /**
+     * <code>optional string city = 5;</code>
+     * @return Whether the city field is set.
+     */
+    @java.lang.Override
+    public boolean hasCity() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string city = 5;</code>
+     * @return The city.
+     */
+    @java.lang.Override
+    public java.lang.String getCity() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          city_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string city = 5;</code>
+     * @return The bytes for city.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int US_STATE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object usState_;
+    /**
+     * <code>optional string us_state = 6;</code>
+     * @return Whether the usState field is set.
+     */
+    @java.lang.Override
+    public boolean hasUsState() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional string us_state = 6;</code>
+     * @return The usState.
+     */
+    @java.lang.Override
+    public java.lang.String getUsState() {
+      java.lang.Object ref = usState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          usState_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string us_state = 6;</code>
+     * @return The bytes for usState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUsStateBytes() {
+      java.lang.Object ref = usState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        usState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNTRY_CODE_FIELD_NUMBER = 7;
+    private volatile java.lang.Object countryCode_;
+    /**
+     * <code>optional string country_code = 7;</code>
+     * @return Whether the countryCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasCountryCode() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional string country_code = 7;</code>
+     * @return The countryCode.
+     */
+    @java.lang.Override
+    public java.lang.String getCountryCode() {
+      java.lang.Object ref = countryCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          countryCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string country_code = 7;</code>
+     * @return The bytes for countryCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCountryCodeBytes() {
+      java.lang.Object ref = countryCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        countryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSTCODE_FIELD_NUMBER = 8;
+    private volatile java.lang.Object postcode_;
+    /**
+     * <code>optional string postcode = 8;</code>
+     * @return Whether the postcode field is set.
+     */
+    @java.lang.Override
+    public boolean hasPostcode() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional string postcode = 8;</code>
+     * @return The postcode.
+     */
+    @java.lang.Override
+    public java.lang.String getPostcode() {
+      java.lang.Object ref = postcode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          postcode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string postcode = 8;</code>
+     * @return The bytes for postcode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPostcodeBytes() {
+      java.lang.Object ref = postcode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postcode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZIP_PLUS4_FIELD_NUMBER = 9;
+    private int zipPlus4_;
+    /**
+     * <code>optional int32 zip_plus4 = 9;</code>
+     * @return Whether the zipPlus4 field is set.
+     */
+    @java.lang.Override
+    public boolean hasZipPlus4() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional int32 zip_plus4 = 9;</code>
+     * @return The zipPlus4.
+     */
+    @java.lang.Override
+    public int getZipPlus4() {
+      return zipPlus4_;
+    }
+
+    public static final int PHONE_FIELD_NUMBER = 10;
+    private volatile java.lang.Object phone_;
+    /**
+     * <code>optional string phone = 10;</code>
+     * @return Whether the phone field is set.
+     */
+    @java.lang.Override
+    public boolean hasPhone() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional string phone = 10;</code>
+     * @return The phone.
+     */
+    @java.lang.Override
+    public java.lang.String getPhone() {
+      java.lang.Object ref = phone_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          phone_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string phone = 10;</code>
+     * @return The bytes for phone.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPhoneBytes() {
+      java.lang.Object ref = phone_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        phone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, firstName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, lastName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address1_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, address2_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, city_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, usState_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, countryCode_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, postcode_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeInt32(9, zipPlus4_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, phone_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, firstName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, lastName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address1_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, address2_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, city_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, usState_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, countryCode_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, postcode_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, zipPlus4_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, phone_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CBilling_Address)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CBilling_Address other = (SteammessagesBase.CBilling_Address) obj;
+
+      if (hasFirstName() != other.hasFirstName()) return false;
+      if (hasFirstName()) {
+        if (!getFirstName()
+            .equals(other.getFirstName())) return false;
+      }
+      if (hasLastName() != other.hasLastName()) return false;
+      if (hasLastName()) {
+        if (!getLastName()
+            .equals(other.getLastName())) return false;
+      }
+      if (hasAddress1() != other.hasAddress1()) return false;
+      if (hasAddress1()) {
+        if (!getAddress1()
+            .equals(other.getAddress1())) return false;
+      }
+      if (hasAddress2() != other.hasAddress2()) return false;
+      if (hasAddress2()) {
+        if (!getAddress2()
+            .equals(other.getAddress2())) return false;
+      }
+      if (hasCity() != other.hasCity()) return false;
+      if (hasCity()) {
+        if (!getCity()
+            .equals(other.getCity())) return false;
+      }
+      if (hasUsState() != other.hasUsState()) return false;
+      if (hasUsState()) {
+        if (!getUsState()
+            .equals(other.getUsState())) return false;
+      }
+      if (hasCountryCode() != other.hasCountryCode()) return false;
+      if (hasCountryCode()) {
+        if (!getCountryCode()
+            .equals(other.getCountryCode())) return false;
+      }
+      if (hasPostcode() != other.hasPostcode()) return false;
+      if (hasPostcode()) {
+        if (!getPostcode()
+            .equals(other.getPostcode())) return false;
+      }
+      if (hasZipPlus4() != other.hasZipPlus4()) return false;
+      if (hasZipPlus4()) {
+        if (getZipPlus4()
+            != other.getZipPlus4()) return false;
+      }
+      if (hasPhone() != other.hasPhone()) return false;
+      if (hasPhone()) {
+        if (!getPhone()
+            .equals(other.getPhone())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFirstName()) {
+        hash = (37 * hash) + FIRST_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getFirstName().hashCode();
+      }
+      if (hasLastName()) {
+        hash = (37 * hash) + LAST_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastName().hashCode();
+      }
+      if (hasAddress1()) {
+        hash = (37 * hash) + ADDRESS1_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress1().hashCode();
+      }
+      if (hasAddress2()) {
+        hash = (37 * hash) + ADDRESS2_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress2().hashCode();
+      }
+      if (hasCity()) {
+        hash = (37 * hash) + CITY_FIELD_NUMBER;
+        hash = (53 * hash) + getCity().hashCode();
+      }
+      if (hasUsState()) {
+        hash = (37 * hash) + US_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getUsState().hashCode();
+      }
+      if (hasCountryCode()) {
+        hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getCountryCode().hashCode();
+      }
+      if (hasPostcode()) {
+        hash = (37 * hash) + POSTCODE_FIELD_NUMBER;
+        hash = (53 * hash) + getPostcode().hashCode();
+      }
+      if (hasZipPlus4()) {
+        hash = (37 * hash) + ZIP_PLUS4_FIELD_NUMBER;
+        hash = (53 * hash) + getZipPlus4();
+      }
+      if (hasPhone()) {
+        hash = (37 * hash) + PHONE_FIELD_NUMBER;
+        hash = (53 * hash) + getPhone().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CBilling_Address parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CBilling_Address parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CBilling_Address parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CBilling_Address parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CBilling_Address parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CBilling_Address parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CBilling_Address parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CBilling_Address parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CBilling_Address parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CBilling_Address parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CBilling_Address parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CBilling_Address parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CBilling_Address prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CBilling_Address}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CBilling_Address)
+        SteammessagesBase.CBilling_AddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CBilling_Address_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CBilling_Address_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CBilling_Address.class, SteammessagesBase.CBilling_Address.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CBilling_Address.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        firstName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lastName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        address1_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        address2_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        city_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        usState_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        countryCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        postcode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
+        zipPlus4_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        phone_ = "";
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CBilling_Address_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CBilling_Address getDefaultInstanceForType() {
+        return SteammessagesBase.CBilling_Address.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CBilling_Address build() {
+        SteammessagesBase.CBilling_Address result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CBilling_Address buildPartial() {
+        SteammessagesBase.CBilling_Address result = new SteammessagesBase.CBilling_Address(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.firstName_ = firstName_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.lastName_ = lastName_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.address1_ = address1_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.address2_ = address2_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.city_ = city_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.usState_ = usState_;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.countryCode_ = countryCode_;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.postcode_ = postcode_;
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.zipPlus4_ = zipPlus4_;
+          to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.phone_ = phone_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CBilling_Address) {
+          return mergeFrom((SteammessagesBase.CBilling_Address)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CBilling_Address other) {
+        if (other == SteammessagesBase.CBilling_Address.getDefaultInstance()) return this;
+        if (other.hasFirstName()) {
+          bitField0_ |= 0x00000001;
+          firstName_ = other.firstName_;
+          onChanged();
+        }
+        if (other.hasLastName()) {
+          bitField0_ |= 0x00000002;
+          lastName_ = other.lastName_;
+          onChanged();
+        }
+        if (other.hasAddress1()) {
+          bitField0_ |= 0x00000004;
+          address1_ = other.address1_;
+          onChanged();
+        }
+        if (other.hasAddress2()) {
+          bitField0_ |= 0x00000008;
+          address2_ = other.address2_;
+          onChanged();
+        }
+        if (other.hasCity()) {
+          bitField0_ |= 0x00000010;
+          city_ = other.city_;
+          onChanged();
+        }
+        if (other.hasUsState()) {
+          bitField0_ |= 0x00000020;
+          usState_ = other.usState_;
+          onChanged();
+        }
+        if (other.hasCountryCode()) {
+          bitField0_ |= 0x00000040;
+          countryCode_ = other.countryCode_;
+          onChanged();
+        }
+        if (other.hasPostcode()) {
+          bitField0_ |= 0x00000080;
+          postcode_ = other.postcode_;
+          onChanged();
+        }
+        if (other.hasZipPlus4()) {
+          setZipPlus4(other.getZipPlus4());
+        }
+        if (other.hasPhone()) {
+          bitField0_ |= 0x00000200;
+          phone_ = other.phone_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CBilling_Address parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CBilling_Address) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object firstName_ = "";
+      /**
+       * <code>optional string first_name = 1;</code>
+       * @return Whether the firstName field is set.
+       */
+      public boolean hasFirstName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string first_name = 1;</code>
+       * @return The firstName.
+       */
+      public java.lang.String getFirstName() {
+        java.lang.Object ref = firstName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            firstName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string first_name = 1;</code>
+       * @return The bytes for firstName.
+       */
+      public com.google.protobuf.ByteString
+          getFirstNameBytes() {
+        java.lang.Object ref = firstName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          firstName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string first_name = 1;</code>
+       * @param value The firstName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        firstName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string first_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirstName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        firstName_ = getDefaultInstance().getFirstName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string first_name = 1;</code>
+       * @param value The bytes for firstName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        firstName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object lastName_ = "";
+      /**
+       * <code>optional string last_name = 2;</code>
+       * @return Whether the lastName field is set.
+       */
+      public boolean hasLastName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string last_name = 2;</code>
+       * @return The lastName.
+       */
+      public java.lang.String getLastName() {
+        java.lang.Object ref = lastName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            lastName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string last_name = 2;</code>
+       * @return The bytes for lastName.
+       */
+      public com.google.protobuf.ByteString
+          getLastNameBytes() {
+        java.lang.Object ref = lastName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lastName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string last_name = 2;</code>
+       * @param value The lastName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        lastName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string last_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        lastName_ = getDefaultInstance().getLastName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string last_name = 2;</code>
+       * @param value The bytes for lastName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        lastName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address1_ = "";
+      /**
+       * <code>optional string address1 = 3;</code>
+       * @return Whether the address1 field is set.
+       */
+      public boolean hasAddress1() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string address1 = 3;</code>
+       * @return The address1.
+       */
+      public java.lang.String getAddress1() {
+        java.lang.Object ref = address1_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            address1_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string address1 = 3;</code>
+       * @return The bytes for address1.
+       */
+      public com.google.protobuf.ByteString
+          getAddress1Bytes() {
+        java.lang.Object ref = address1_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address1_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string address1 = 3;</code>
+       * @param value The address1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress1(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        address1_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address1 = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress1() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        address1_ = getDefaultInstance().getAddress1();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address1 = 3;</code>
+       * @param value The bytes for address1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress1Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        address1_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address2_ = "";
+      /**
+       * <code>optional string address2 = 4;</code>
+       * @return Whether the address2 field is set.
+       */
+      public boolean hasAddress2() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string address2 = 4;</code>
+       * @return The address2.
+       */
+      public java.lang.String getAddress2() {
+        java.lang.Object ref = address2_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            address2_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string address2 = 4;</code>
+       * @return The bytes for address2.
+       */
+      public com.google.protobuf.ByteString
+          getAddress2Bytes() {
+        java.lang.Object ref = address2_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address2_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string address2 = 4;</code>
+       * @param value The address2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress2(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        address2_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address2 = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress2() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        address2_ = getDefaultInstance().getAddress2();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address2 = 4;</code>
+       * @param value The bytes for address2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress2Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        address2_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object city_ = "";
+      /**
+       * <code>optional string city = 5;</code>
+       * @return Whether the city field is set.
+       */
+      public boolean hasCity() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string city = 5;</code>
+       * @return The city.
+       */
+      public java.lang.String getCity() {
+        java.lang.Object ref = city_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            city_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string city = 5;</code>
+       * @return The bytes for city.
+       */
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        java.lang.Object ref = city_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          city_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string city = 5;</code>
+       * @param value The city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        city_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string city = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCity() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        city_ = getDefaultInstance().getCity();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string city = 5;</code>
+       * @param value The bytes for city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        city_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object usState_ = "";
+      /**
+       * <code>optional string us_state = 6;</code>
+       * @return Whether the usState field is set.
+       */
+      public boolean hasUsState() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string us_state = 6;</code>
+       * @return The usState.
+       */
+      public java.lang.String getUsState() {
+        java.lang.Object ref = usState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            usState_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string us_state = 6;</code>
+       * @return The bytes for usState.
+       */
+      public com.google.protobuf.ByteString
+          getUsStateBytes() {
+        java.lang.Object ref = usState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          usState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string us_state = 6;</code>
+       * @param value The usState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        usState_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string us_state = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUsState() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        usState_ = getDefaultInstance().getUsState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string us_state = 6;</code>
+       * @param value The bytes for usState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        usState_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object countryCode_ = "";
+      /**
+       * <code>optional string country_code = 7;</code>
+       * @return Whether the countryCode field is set.
+       */
+      public boolean hasCountryCode() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional string country_code = 7;</code>
+       * @return The countryCode.
+       */
+      public java.lang.String getCountryCode() {
+        java.lang.Object ref = countryCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            countryCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string country_code = 7;</code>
+       * @return The bytes for countryCode.
+       */
+      public com.google.protobuf.ByteString
+          getCountryCodeBytes() {
+        java.lang.Object ref = countryCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          countryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string country_code = 7;</code>
+       * @param value The countryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        countryCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string country_code = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountryCode() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        countryCode_ = getDefaultInstance().getCountryCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string country_code = 7;</code>
+       * @param value The bytes for countryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        countryCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postcode_ = "";
+      /**
+       * <code>optional string postcode = 8;</code>
+       * @return Whether the postcode field is set.
+       */
+      public boolean hasPostcode() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional string postcode = 8;</code>
+       * @return The postcode.
+       */
+      public java.lang.String getPostcode() {
+        java.lang.Object ref = postcode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            postcode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string postcode = 8;</code>
+       * @return The bytes for postcode.
+       */
+      public com.google.protobuf.ByteString
+          getPostcodeBytes() {
+        java.lang.Object ref = postcode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postcode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string postcode = 8;</code>
+       * @param value The postcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostcode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        postcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postcode = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPostcode() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        postcode_ = getDefaultInstance().getPostcode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postcode = 8;</code>
+       * @param value The bytes for postcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostcodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        postcode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int zipPlus4_ ;
+      /**
+       * <code>optional int32 zip_plus4 = 9;</code>
+       * @return Whether the zipPlus4 field is set.
+       */
+      @java.lang.Override
+      public boolean hasZipPlus4() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional int32 zip_plus4 = 9;</code>
+       * @return The zipPlus4.
+       */
+      @java.lang.Override
+      public int getZipPlus4() {
+        return zipPlus4_;
+      }
+      /**
+       * <code>optional int32 zip_plus4 = 9;</code>
+       * @param value The zipPlus4 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZipPlus4(int value) {
+        bitField0_ |= 0x00000100;
+        zipPlus4_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 zip_plus4 = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZipPlus4() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        zipPlus4_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object phone_ = "";
+      /**
+       * <code>optional string phone = 10;</code>
+       * @return Whether the phone field is set.
+       */
+      public boolean hasPhone() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional string phone = 10;</code>
+       * @return The phone.
+       */
+      public java.lang.String getPhone() {
+        java.lang.Object ref = phone_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            phone_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string phone = 10;</code>
+       * @return The bytes for phone.
+       */
+      public com.google.protobuf.ByteString
+          getPhoneBytes() {
+        java.lang.Object ref = phone_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phone_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string phone = 10;</code>
+       * @param value The phone to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhone(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        phone_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string phone = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPhone() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        phone_ = getDefaultInstance().getPhone();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string phone = 10;</code>
+       * @param value The bytes for phone to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        phone_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CBilling_Address)
+    }
+
+    // @@protoc_insertion_point(class_scope:CBilling_Address)
+    private static final SteammessagesBase.CBilling_Address DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CBilling_Address();
+    }
+
+    public static SteammessagesBase.CBilling_Address getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CBilling_Address>
+        PARSER = new com.google.protobuf.AbstractParser<CBilling_Address>() {
+      @java.lang.Override
+      public CBilling_Address parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CBilling_Address(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CBilling_Address> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CBilling_Address> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CBilling_Address getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CPackageReservationStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CPackageReservationStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 packageid = 1;</code>
+     * @return Whether the packageid field is set.
+     */
+    boolean hasPackageid();
+    /**
+     * <code>optional uint32 packageid = 1;</code>
+     * @return The packageid.
+     */
+    int getPackageid();
+
+    /**
+     * <code>optional int32 reservation_state = 2;</code>
+     * @return Whether the reservationState field is set.
+     */
+    boolean hasReservationState();
+    /**
+     * <code>optional int32 reservation_state = 2;</code>
+     * @return The reservationState.
+     */
+    int getReservationState();
+
+    /**
+     * <code>optional int32 queue_position = 3;</code>
+     * @return Whether the queuePosition field is set.
+     */
+    boolean hasQueuePosition();
+    /**
+     * <code>optional int32 queue_position = 3;</code>
+     * @return The queuePosition.
+     */
+    int getQueuePosition();
+
+    /**
+     * <code>optional int32 total_queue_size = 4;</code>
+     * @return Whether the totalQueueSize field is set.
+     */
+    boolean hasTotalQueueSize();
+    /**
+     * <code>optional int32 total_queue_size = 4;</code>
+     * @return The totalQueueSize.
+     */
+    int getTotalQueueSize();
+
+    /**
+     * <code>optional string reservation_country_code = 5;</code>
+     * @return Whether the reservationCountryCode field is set.
+     */
+    boolean hasReservationCountryCode();
+    /**
+     * <code>optional string reservation_country_code = 5;</code>
+     * @return The reservationCountryCode.
+     */
+    java.lang.String getReservationCountryCode();
+    /**
+     * <code>optional string reservation_country_code = 5;</code>
+     * @return The bytes for reservationCountryCode.
+     */
+    com.google.protobuf.ByteString
+        getReservationCountryCodeBytes();
+
+    /**
+     * <code>optional bool expired = 6;</code>
+     * @return Whether the expired field is set.
+     */
+    boolean hasExpired();
+    /**
+     * <code>optional bool expired = 6;</code>
+     * @return The expired.
+     */
+    boolean getExpired();
+
+    /**
+     * <code>optional uint32 time_expires = 7;</code>
+     * @return Whether the timeExpires field is set.
+     */
+    boolean hasTimeExpires();
+    /**
+     * <code>optional uint32 time_expires = 7;</code>
+     * @return The timeExpires.
+     */
+    int getTimeExpires();
+
+    /**
+     * <code>optional uint32 time_reserved = 8;</code>
+     * @return Whether the timeReserved field is set.
+     */
+    boolean hasTimeReserved();
+    /**
+     * <code>optional uint32 time_reserved = 8;</code>
+     * @return The timeReserved.
+     */
+    int getTimeReserved();
+  }
+  /**
+   * Protobuf type {@code CPackageReservationStatus}
+   */
+  public static final class CPackageReservationStatus extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CPackageReservationStatus)
+      CPackageReservationStatusOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPackageReservationStatus.newBuilder() to construct.
+    private CPackageReservationStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPackageReservationStatus() {
+      reservationCountryCode_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPackageReservationStatus();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CPackageReservationStatus(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              packageid_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              reservationState_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              queuePosition_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              totalQueueSize_ = input.readInt32();
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              reservationCountryCode_ = bs;
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              expired_ = input.readBool();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              timeExpires_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              timeReserved_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CPackageReservationStatus_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CPackageReservationStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CPackageReservationStatus.class, SteammessagesBase.CPackageReservationStatus.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PACKAGEID_FIELD_NUMBER = 1;
+    private int packageid_;
+    /**
+     * <code>optional uint32 packageid = 1;</code>
+     * @return Whether the packageid field is set.
+     */
+    @java.lang.Override
+    public boolean hasPackageid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 packageid = 1;</code>
+     * @return The packageid.
+     */
+    @java.lang.Override
+    public int getPackageid() {
+      return packageid_;
+    }
+
+    public static final int RESERVATION_STATE_FIELD_NUMBER = 2;
+    private int reservationState_;
+    /**
+     * <code>optional int32 reservation_state = 2;</code>
+     * @return Whether the reservationState field is set.
+     */
+    @java.lang.Override
+    public boolean hasReservationState() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional int32 reservation_state = 2;</code>
+     * @return The reservationState.
+     */
+    @java.lang.Override
+    public int getReservationState() {
+      return reservationState_;
+    }
+
+    public static final int QUEUE_POSITION_FIELD_NUMBER = 3;
+    private int queuePosition_;
+    /**
+     * <code>optional int32 queue_position = 3;</code>
+     * @return Whether the queuePosition field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueuePosition() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional int32 queue_position = 3;</code>
+     * @return The queuePosition.
+     */
+    @java.lang.Override
+    public int getQueuePosition() {
+      return queuePosition_;
+    }
+
+    public static final int TOTAL_QUEUE_SIZE_FIELD_NUMBER = 4;
+    private int totalQueueSize_;
+    /**
+     * <code>optional int32 total_queue_size = 4;</code>
+     * @return Whether the totalQueueSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalQueueSize() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional int32 total_queue_size = 4;</code>
+     * @return The totalQueueSize.
+     */
+    @java.lang.Override
+    public int getTotalQueueSize() {
+      return totalQueueSize_;
+    }
+
+    public static final int RESERVATION_COUNTRY_CODE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object reservationCountryCode_;
+    /**
+     * <code>optional string reservation_country_code = 5;</code>
+     * @return Whether the reservationCountryCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasReservationCountryCode() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string reservation_country_code = 5;</code>
+     * @return The reservationCountryCode.
+     */
+    @java.lang.Override
+    public java.lang.String getReservationCountryCode() {
+      java.lang.Object ref = reservationCountryCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          reservationCountryCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string reservation_country_code = 5;</code>
+     * @return The bytes for reservationCountryCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReservationCountryCodeBytes() {
+      java.lang.Object ref = reservationCountryCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reservationCountryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPIRED_FIELD_NUMBER = 6;
+    private boolean expired_;
+    /**
+     * <code>optional bool expired = 6;</code>
+     * @return Whether the expired field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpired() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional bool expired = 6;</code>
+     * @return The expired.
+     */
+    @java.lang.Override
+    public boolean getExpired() {
+      return expired_;
+    }
+
+    public static final int TIME_EXPIRES_FIELD_NUMBER = 7;
+    private int timeExpires_;
+    /**
+     * <code>optional uint32 time_expires = 7;</code>
+     * @return Whether the timeExpires field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeExpires() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional uint32 time_expires = 7;</code>
+     * @return The timeExpires.
+     */
+    @java.lang.Override
+    public int getTimeExpires() {
+      return timeExpires_;
+    }
+
+    public static final int TIME_RESERVED_FIELD_NUMBER = 8;
+    private int timeReserved_;
+    /**
+     * <code>optional uint32 time_reserved = 8;</code>
+     * @return Whether the timeReserved field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeReserved() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 time_reserved = 8;</code>
+     * @return The timeReserved.
+     */
+    @java.lang.Override
+    public int getTimeReserved() {
+      return timeReserved_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, packageid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, reservationState_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt32(3, queuePosition_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt32(4, totalQueueSize_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, reservationCountryCode_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeBool(6, expired_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeUInt32(7, timeExpires_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(8, timeReserved_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, packageid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, reservationState_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, queuePosition_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, totalQueueSize_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, reservationCountryCode_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, expired_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, timeExpires_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, timeReserved_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CPackageReservationStatus)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CPackageReservationStatus other = (SteammessagesBase.CPackageReservationStatus) obj;
+
+      if (hasPackageid() != other.hasPackageid()) return false;
+      if (hasPackageid()) {
+        if (getPackageid()
+            != other.getPackageid()) return false;
+      }
+      if (hasReservationState() != other.hasReservationState()) return false;
+      if (hasReservationState()) {
+        if (getReservationState()
+            != other.getReservationState()) return false;
+      }
+      if (hasQueuePosition() != other.hasQueuePosition()) return false;
+      if (hasQueuePosition()) {
+        if (getQueuePosition()
+            != other.getQueuePosition()) return false;
+      }
+      if (hasTotalQueueSize() != other.hasTotalQueueSize()) return false;
+      if (hasTotalQueueSize()) {
+        if (getTotalQueueSize()
+            != other.getTotalQueueSize()) return false;
+      }
+      if (hasReservationCountryCode() != other.hasReservationCountryCode()) return false;
+      if (hasReservationCountryCode()) {
+        if (!getReservationCountryCode()
+            .equals(other.getReservationCountryCode())) return false;
+      }
+      if (hasExpired() != other.hasExpired()) return false;
+      if (hasExpired()) {
+        if (getExpired()
+            != other.getExpired()) return false;
+      }
+      if (hasTimeExpires() != other.hasTimeExpires()) return false;
+      if (hasTimeExpires()) {
+        if (getTimeExpires()
+            != other.getTimeExpires()) return false;
+      }
+      if (hasTimeReserved() != other.hasTimeReserved()) return false;
+      if (hasTimeReserved()) {
+        if (getTimeReserved()
+            != other.getTimeReserved()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPackageid()) {
+        hash = (37 * hash) + PACKAGEID_FIELD_NUMBER;
+        hash = (53 * hash) + getPackageid();
+      }
+      if (hasReservationState()) {
+        hash = (37 * hash) + RESERVATION_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getReservationState();
+      }
+      if (hasQueuePosition()) {
+        hash = (37 * hash) + QUEUE_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + getQueuePosition();
+      }
+      if (hasTotalQueueSize()) {
+        hash = (37 * hash) + TOTAL_QUEUE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalQueueSize();
+      }
+      if (hasReservationCountryCode()) {
+        hash = (37 * hash) + RESERVATION_COUNTRY_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getReservationCountryCode().hashCode();
+      }
+      if (hasExpired()) {
+        hash = (37 * hash) + EXPIRED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getExpired());
+      }
+      if (hasTimeExpires()) {
+        hash = (37 * hash) + TIME_EXPIRES_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeExpires();
+      }
+      if (hasTimeReserved()) {
+        hash = (37 * hash) + TIME_RESERVED_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeReserved();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CPackageReservationStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CPackageReservationStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CPackageReservationStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CPackageReservationStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CPackageReservationStatus)
+        SteammessagesBase.CPackageReservationStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CPackageReservationStatus_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CPackageReservationStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CPackageReservationStatus.class, SteammessagesBase.CPackageReservationStatus.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CPackageReservationStatus.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        packageid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        reservationState_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        queuePosition_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalQueueSize_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        reservationCountryCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        expired_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        timeExpires_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        timeReserved_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CPackageReservationStatus_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CPackageReservationStatus getDefaultInstanceForType() {
+        return SteammessagesBase.CPackageReservationStatus.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CPackageReservationStatus build() {
+        SteammessagesBase.CPackageReservationStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CPackageReservationStatus buildPartial() {
+        SteammessagesBase.CPackageReservationStatus result = new SteammessagesBase.CPackageReservationStatus(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.packageid_ = packageid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.reservationState_ = reservationState_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.queuePosition_ = queuePosition_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.totalQueueSize_ = totalQueueSize_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.reservationCountryCode_ = reservationCountryCode_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.expired_ = expired_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.timeExpires_ = timeExpires_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.timeReserved_ = timeReserved_;
+          to_bitField0_ |= 0x00000080;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CPackageReservationStatus) {
+          return mergeFrom((SteammessagesBase.CPackageReservationStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CPackageReservationStatus other) {
+        if (other == SteammessagesBase.CPackageReservationStatus.getDefaultInstance()) return this;
+        if (other.hasPackageid()) {
+          setPackageid(other.getPackageid());
+        }
+        if (other.hasReservationState()) {
+          setReservationState(other.getReservationState());
+        }
+        if (other.hasQueuePosition()) {
+          setQueuePosition(other.getQueuePosition());
+        }
+        if (other.hasTotalQueueSize()) {
+          setTotalQueueSize(other.getTotalQueueSize());
+        }
+        if (other.hasReservationCountryCode()) {
+          bitField0_ |= 0x00000010;
+          reservationCountryCode_ = other.reservationCountryCode_;
+          onChanged();
+        }
+        if (other.hasExpired()) {
+          setExpired(other.getExpired());
+        }
+        if (other.hasTimeExpires()) {
+          setTimeExpires(other.getTimeExpires());
+        }
+        if (other.hasTimeReserved()) {
+          setTimeReserved(other.getTimeReserved());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CPackageReservationStatus parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CPackageReservationStatus) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int packageid_ ;
+      /**
+       * <code>optional uint32 packageid = 1;</code>
+       * @return Whether the packageid field is set.
+       */
+      @java.lang.Override
+      public boolean hasPackageid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 packageid = 1;</code>
+       * @return The packageid.
+       */
+      @java.lang.Override
+      public int getPackageid() {
+        return packageid_;
+      }
+      /**
+       * <code>optional uint32 packageid = 1;</code>
+       * @param value The packageid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPackageid(int value) {
+        bitField0_ |= 0x00000001;
+        packageid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 packageid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPackageid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        packageid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int reservationState_ ;
+      /**
+       * <code>optional int32 reservation_state = 2;</code>
+       * @return Whether the reservationState field is set.
+       */
+      @java.lang.Override
+      public boolean hasReservationState() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional int32 reservation_state = 2;</code>
+       * @return The reservationState.
+       */
+      @java.lang.Override
+      public int getReservationState() {
+        return reservationState_;
+      }
+      /**
+       * <code>optional int32 reservation_state = 2;</code>
+       * @param value The reservationState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservationState(int value) {
+        bitField0_ |= 0x00000002;
+        reservationState_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 reservation_state = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReservationState() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        reservationState_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int queuePosition_ ;
+      /**
+       * <code>optional int32 queue_position = 3;</code>
+       * @return Whether the queuePosition field is set.
+       */
+      @java.lang.Override
+      public boolean hasQueuePosition() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional int32 queue_position = 3;</code>
+       * @return The queuePosition.
+       */
+      @java.lang.Override
+      public int getQueuePosition() {
+        return queuePosition_;
+      }
+      /**
+       * <code>optional int32 queue_position = 3;</code>
+       * @param value The queuePosition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueuePosition(int value) {
+        bitField0_ |= 0x00000004;
+        queuePosition_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 queue_position = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueuePosition() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        queuePosition_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int totalQueueSize_ ;
+      /**
+       * <code>optional int32 total_queue_size = 4;</code>
+       * @return Whether the totalQueueSize field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotalQueueSize() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional int32 total_queue_size = 4;</code>
+       * @return The totalQueueSize.
+       */
+      @java.lang.Override
+      public int getTotalQueueSize() {
+        return totalQueueSize_;
+      }
+      /**
+       * <code>optional int32 total_queue_size = 4;</code>
+       * @param value The totalQueueSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalQueueSize(int value) {
+        bitField0_ |= 0x00000008;
+        totalQueueSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 total_queue_size = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalQueueSize() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        totalQueueSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reservationCountryCode_ = "";
+      /**
+       * <code>optional string reservation_country_code = 5;</code>
+       * @return Whether the reservationCountryCode field is set.
+       */
+      public boolean hasReservationCountryCode() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string reservation_country_code = 5;</code>
+       * @return The reservationCountryCode.
+       */
+      public java.lang.String getReservationCountryCode() {
+        java.lang.Object ref = reservationCountryCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            reservationCountryCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string reservation_country_code = 5;</code>
+       * @return The bytes for reservationCountryCode.
+       */
+      public com.google.protobuf.ByteString
+          getReservationCountryCodeBytes() {
+        java.lang.Object ref = reservationCountryCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reservationCountryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string reservation_country_code = 5;</code>
+       * @param value The reservationCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservationCountryCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        reservationCountryCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string reservation_country_code = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReservationCountryCode() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        reservationCountryCode_ = getDefaultInstance().getReservationCountryCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string reservation_country_code = 5;</code>
+       * @param value The bytes for reservationCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservationCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        reservationCountryCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean expired_ ;
+      /**
+       * <code>optional bool expired = 6;</code>
+       * @return Whether the expired field is set.
+       */
+      @java.lang.Override
+      public boolean hasExpired() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional bool expired = 6;</code>
+       * @return The expired.
+       */
+      @java.lang.Override
+      public boolean getExpired() {
+        return expired_;
+      }
+      /**
+       * <code>optional bool expired = 6;</code>
+       * @param value The expired to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpired(boolean value) {
+        bitField0_ |= 0x00000020;
+        expired_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool expired = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpired() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        expired_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int timeExpires_ ;
+      /**
+       * <code>optional uint32 time_expires = 7;</code>
+       * @return Whether the timeExpires field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeExpires() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional uint32 time_expires = 7;</code>
+       * @return The timeExpires.
+       */
+      @java.lang.Override
+      public int getTimeExpires() {
+        return timeExpires_;
+      }
+      /**
+       * <code>optional uint32 time_expires = 7;</code>
+       * @param value The timeExpires to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeExpires(int value) {
+        bitField0_ |= 0x00000040;
+        timeExpires_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 time_expires = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeExpires() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        timeExpires_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int timeReserved_ ;
+      /**
+       * <code>optional uint32 time_reserved = 8;</code>
+       * @return Whether the timeReserved field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeReserved() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 time_reserved = 8;</code>
+       * @return The timeReserved.
+       */
+      @java.lang.Override
+      public int getTimeReserved() {
+        return timeReserved_;
+      }
+      /**
+       * <code>optional uint32 time_reserved = 8;</code>
+       * @param value The timeReserved to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeReserved(int value) {
+        bitField0_ |= 0x00000080;
+        timeReserved_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 time_reserved = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeReserved() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        timeReserved_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CPackageReservationStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:CPackageReservationStatus)
+    private static final SteammessagesBase.CPackageReservationStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CPackageReservationStatus();
+    }
+
+    public static SteammessagesBase.CPackageReservationStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CPackageReservationStatus>
+        PARSER = new com.google.protobuf.AbstractParser<CPackageReservationStatus>() {
+      @java.lang.Override
+      public CPackageReservationStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CPackageReservationStatus(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPackageReservationStatus> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPackageReservationStatus> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CPackageReservationStatus getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgKeyValuePairOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgKeyValuePair)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string name = 1;</code>
+     * @return Whether the name field is set.
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional string value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>optional string value = 2;</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>optional string value = 2;</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code CMsgKeyValuePair}
+   */
+  public static final class CMsgKeyValuePair extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgKeyValuePair)
+      CMsgKeyValuePairOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgKeyValuePair.newBuilder() to construct.
+    private CMsgKeyValuePair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgKeyValuePair() {
+      name_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgKeyValuePair();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgKeyValuePair(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              value_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CMsgKeyValuePair_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CMsgKeyValuePair_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CMsgKeyValuePair.class, SteammessagesBase.CMsgKeyValuePair.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>optional string name = 1;</code>
+     * @return Whether the name field is set.
+     */
+    @java.lang.Override
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object value_;
+    /**
+     * <code>optional string value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string value = 2;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          value_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string value = 2;</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CMsgKeyValuePair)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CMsgKeyValuePair other = (SteammessagesBase.CMsgKeyValuePair) obj;
+
+      if (hasName() != other.hasName()) return false;
+      if (hasName()) {
+        if (!getName()
+            .equals(other.getName())) return false;
+      }
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValuePair parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CMsgKeyValuePair prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgKeyValuePair}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgKeyValuePair)
+        SteammessagesBase.CMsgKeyValuePairOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CMsgKeyValuePair_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CMsgKeyValuePair_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CMsgKeyValuePair.class, SteammessagesBase.CMsgKeyValuePair.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CMsgKeyValuePair.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CMsgKeyValuePair_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValuePair getDefaultInstanceForType() {
+        return SteammessagesBase.CMsgKeyValuePair.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValuePair build() {
+        SteammessagesBase.CMsgKeyValuePair result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValuePair buildPartial() {
+        SteammessagesBase.CMsgKeyValuePair result = new SteammessagesBase.CMsgKeyValuePair(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.value_ = value_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CMsgKeyValuePair) {
+          return mergeFrom((SteammessagesBase.CMsgKeyValuePair)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CMsgKeyValuePair other) {
+        if (other == SteammessagesBase.CMsgKeyValuePair.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasValue()) {
+          bitField0_ |= 0x00000002;
+          value_ = other.value_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CMsgKeyValuePair parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CMsgKeyValuePair) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 1;</code>
+       * @return Whether the name field is set.
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>optional string value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgKeyValuePair)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgKeyValuePair)
+    private static final SteammessagesBase.CMsgKeyValuePair DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CMsgKeyValuePair();
+    }
+
+    public static SteammessagesBase.CMsgKeyValuePair getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgKeyValuePair>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgKeyValuePair>() {
+      @java.lang.Override
+      public CMsgKeyValuePair parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgKeyValuePair(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgKeyValuePair> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgKeyValuePair> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CMsgKeyValuePair getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgKeyValueSetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgKeyValueSet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    java.util.List<SteammessagesBase.CMsgKeyValuePair> 
+        getPairsList();
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    SteammessagesBase.CMsgKeyValuePair getPairs(int index);
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    int getPairsCount();
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    java.util.List<? extends SteammessagesBase.CMsgKeyValuePairOrBuilder> 
+        getPairsOrBuilderList();
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    SteammessagesBase.CMsgKeyValuePairOrBuilder getPairsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CMsgKeyValueSet}
+   */
+  public static final class CMsgKeyValueSet extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgKeyValueSet)
+      CMsgKeyValueSetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgKeyValueSet.newBuilder() to construct.
+    private CMsgKeyValueSet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgKeyValueSet() {
+      pairs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgKeyValueSet();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgKeyValueSet(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                pairs_ = new java.util.ArrayList<SteammessagesBase.CMsgKeyValuePair>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              pairs_.add(
+                  input.readMessage(SteammessagesBase.CMsgKeyValuePair.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          pairs_ = java.util.Collections.unmodifiableList(pairs_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesBase.internal_static_CMsgKeyValueSet_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesBase.internal_static_CMsgKeyValueSet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesBase.CMsgKeyValueSet.class, SteammessagesBase.CMsgKeyValueSet.Builder.class);
+    }
+
+    public static final int PAIRS_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesBase.CMsgKeyValuePair> pairs_;
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesBase.CMsgKeyValuePair> getPairsList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesBase.CMsgKeyValuePairOrBuilder> 
+        getPairsOrBuilderList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    @java.lang.Override
+    public int getPairsCount() {
+      return pairs_.size();
+    }
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.CMsgKeyValuePair getPairs(int index) {
+      return pairs_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesBase.CMsgKeyValuePairOrBuilder getPairsOrBuilder(
+        int index) {
+      return pairs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pairs_.size(); i++) {
+        output.writeMessage(1, pairs_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pairs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pairs_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesBase.CMsgKeyValueSet)) {
+        return super.equals(obj);
+      }
+      SteammessagesBase.CMsgKeyValueSet other = (SteammessagesBase.CMsgKeyValueSet) obj;
+
+      if (!getPairsList()
+          .equals(other.getPairsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPairsCount() > 0) {
+        hash = (37 * hash) + PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getPairsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesBase.CMsgKeyValueSet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesBase.CMsgKeyValueSet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgKeyValueSet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgKeyValueSet)
+        SteammessagesBase.CMsgKeyValueSetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesBase.internal_static_CMsgKeyValueSet_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesBase.internal_static_CMsgKeyValueSet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesBase.CMsgKeyValueSet.class, SteammessagesBase.CMsgKeyValueSet.Builder.class);
+      }
+
+      // Construct using SteammessagesBase.CMsgKeyValueSet.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPairsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          pairsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesBase.internal_static_CMsgKeyValueSet_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValueSet getDefaultInstanceForType() {
+        return SteammessagesBase.CMsgKeyValueSet.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValueSet build() {
+        SteammessagesBase.CMsgKeyValueSet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesBase.CMsgKeyValueSet buildPartial() {
+        SteammessagesBase.CMsgKeyValueSet result = new SteammessagesBase.CMsgKeyValueSet(this);
+        int from_bitField0_ = bitField0_;
+        if (pairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pairs_ = java.util.Collections.unmodifiableList(pairs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pairs_ = pairs_;
+        } else {
+          result.pairs_ = pairsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesBase.CMsgKeyValueSet) {
+          return mergeFrom((SteammessagesBase.CMsgKeyValueSet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesBase.CMsgKeyValueSet other) {
+        if (other == SteammessagesBase.CMsgKeyValueSet.getDefaultInstance()) return this;
+        if (pairsBuilder_ == null) {
+          if (!other.pairs_.isEmpty()) {
+            if (pairs_.isEmpty()) {
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePairsIsMutable();
+              pairs_.addAll(other.pairs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pairs_.isEmpty()) {
+            if (pairsBuilder_.isEmpty()) {
+              pairsBuilder_.dispose();
+              pairsBuilder_ = null;
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              pairsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPairsFieldBuilder() : null;
+            } else {
+              pairsBuilder_.addAllMessages(other.pairs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesBase.CMsgKeyValueSet parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesBase.CMsgKeyValueSet) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesBase.CMsgKeyValuePair> pairs_ =
+        java.util.Collections.emptyList();
+      private void ensurePairsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pairs_ = new java.util.ArrayList<SteammessagesBase.CMsgKeyValuePair>(pairs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesBase.CMsgKeyValuePair, SteammessagesBase.CMsgKeyValuePair.Builder, SteammessagesBase.CMsgKeyValuePairOrBuilder> pairsBuilder_;
+
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public java.util.List<SteammessagesBase.CMsgKeyValuePair> getPairsList() {
+        if (pairsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pairs_);
+        } else {
+          return pairsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public int getPairsCount() {
+        if (pairsBuilder_ == null) {
+          return pairs_.size();
+        } else {
+          return pairsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public SteammessagesBase.CMsgKeyValuePair getPairs(int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);
+        } else {
+          return pairsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder setPairs(
+          int index, SteammessagesBase.CMsgKeyValuePair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.set(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder setPairs(
+          int index, SteammessagesBase.CMsgKeyValuePair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder addPairs(SteammessagesBase.CMsgKeyValuePair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder addPairs(
+          int index, SteammessagesBase.CMsgKeyValuePair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder addPairs(
+          SteammessagesBase.CMsgKeyValuePair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder addPairs(
+          int index, SteammessagesBase.CMsgKeyValuePair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder addAllPairs(
+          java.lang.Iterable<? extends SteammessagesBase.CMsgKeyValuePair> values) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pairs_);
+          onChanged();
+        } else {
+          pairsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder clearPairs() {
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          pairsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public Builder removePairs(int index) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.remove(index);
+          onChanged();
+        } else {
+          pairsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public SteammessagesBase.CMsgKeyValuePair.Builder getPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public SteammessagesBase.CMsgKeyValuePairOrBuilder getPairsOrBuilder(
+          int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);  } else {
+          return pairsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public java.util.List<? extends SteammessagesBase.CMsgKeyValuePairOrBuilder> 
+           getPairsOrBuilderList() {
+        if (pairsBuilder_ != null) {
+          return pairsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pairs_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public SteammessagesBase.CMsgKeyValuePair.Builder addPairsBuilder() {
+        return getPairsFieldBuilder().addBuilder(
+            SteammessagesBase.CMsgKeyValuePair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public SteammessagesBase.CMsgKeyValuePair.Builder addPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().addBuilder(
+            index, SteammessagesBase.CMsgKeyValuePair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgKeyValuePair pairs = 1;</code>
+       */
+      public java.util.List<SteammessagesBase.CMsgKeyValuePair.Builder> 
+           getPairsBuilderList() {
+        return getPairsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesBase.CMsgKeyValuePair, SteammessagesBase.CMsgKeyValuePair.Builder, SteammessagesBase.CMsgKeyValuePairOrBuilder> 
+          getPairsFieldBuilder() {
+        if (pairsBuilder_ == null) {
+          pairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesBase.CMsgKeyValuePair, SteammessagesBase.CMsgKeyValuePair.Builder, SteammessagesBase.CMsgKeyValuePairOrBuilder>(
+                  pairs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pairs_ = null;
+        }
+        return pairsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgKeyValueSet)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgKeyValueSet)
+    private static final SteammessagesBase.CMsgKeyValueSet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesBase.CMsgKeyValueSet();
+    }
+
+    public static SteammessagesBase.CMsgKeyValueSet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgKeyValueSet>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgKeyValueSet>() {
+      @java.lang.Override
+      public CMsgKeyValueSet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgKeyValueSet(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgKeyValueSet> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgKeyValueSet> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesBase.CMsgKeyValueSet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public static final int MSGPOOL_SOFT_LIMIT_FIELD_NUMBER = 50000;
   /**
    * <code>extend .google.protobuf.MessageOptions { ... }</code>
@@ -8836,6 +28916,49 @@ public final class SteammessagesBase {
           .newFileScopedGeneratedExtension(
         java.lang.Integer.class,
         null);
+  public static final int FORCE_PHP_GENERATION_FIELD_NUMBER = 50000;
+  /**
+   * <code>extend .google.protobuf.FileOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.FileOptions,
+      java.lang.Boolean> forcePhpGeneration = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        java.lang.Boolean.class,
+        null);
+  public static final int PHP_OUTPUT_ALWAYS_NUMBER_FIELD_NUMBER = 50020;
+  /**
+   * <code>extend .google.protobuf.FieldOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.FieldOptions,
+      java.lang.Boolean> phpOutputAlwaysNumber = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        java.lang.Boolean.class,
+        null);
+  public static final int ALLOW_FIELD_NAMED_STEAM_ID_FIELD_NUMBER = 50024;
+  /**
+   * <code>extend .google.protobuf.FieldOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.FieldOptions,
+      java.lang.Boolean> allowFieldNamedSteamId = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        java.lang.Boolean.class,
+        null);
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgIPAddress_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgIPAddress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgIPAddressBucket_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgIPAddressBucket_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgProtoBufHeader_descriptor;
   private static final 
@@ -8866,6 +28989,56 @@ public final class SteammessagesBase {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgAppRights_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCuratorPreferences_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCuratorPreferences_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CLocalizationToken_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CLocalizationToken_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CClanEventUserNewsTuple_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CClanEventUserNewsTuple_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CClanMatchEventByRange_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CClanMatchEventByRange_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCommunity_ClanAnnouncementInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCommunity_ClanAnnouncementInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CClanEventData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CClanEventData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CBilling_Address_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CBilling_Address_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CPackageReservationStatus_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CPackageReservationStatus_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgKeyValuePair_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgKeyValuePair_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgKeyValueSet_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgKeyValueSet_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8876,89 +29049,286 @@ public final class SteammessagesBase {
   static {
     java.lang.String[] descriptorData = {
       "\n\035csgo/steammessages_base.proto\032 google/" +
-      "protobuf/descriptor.proto\"\370\003\n\022CMsgProtoB" +
-      "ufHeader\022\017\n\007steamid\030\001 \001(\006\022\030\n\020client_sess" +
-      "ionid\030\002 \001(\005\022\025\n\rrouting_appid\030\003 \001(\r\022*\n\014jo" +
-      "bid_source\030\n \001(\006:\02418446744073709551615\022*" +
-      "\n\014jobid_target\030\013 \001(\006:\024184467440737095516" +
-      "15\022\027\n\017target_job_name\030\014 \001(\t\022\017\n\007seq_num\030\030" +
-      " \001(\005\022\022\n\007eresult\030\r \001(\005:\0012\022\025\n\rerror_messag" +
-      "e\030\016 \001(\t\022\n\n\002ip\030\017 \001(\r\022\032\n\022auth_account_flag" +
-      "s\030\020 \001(\r\022\024\n\014token_source\030\026 \001(\r\022\033\n\023admin_s" +
-      "poofing_user\030\027 \001(\010\022\032\n\017transport_error\030\021 " +
-      "\001(\005:\0011\022\'\n\tmessageid\030\022 \001(\004:\0241844674407370" +
-      "9551615\022\032\n\022publisher_group_id\030\023 \001(\r\022\r\n\005s" +
-      "ysid\030\024 \001(\r\022\021\n\ttrace_tag\030\025 \001(\004\022\025\n\rwebapi_" +
-      "key_id\030\031 \001(\r\"8\n\tCMsgMulti\022\025\n\rsize_unzipp" +
-      "ed\030\001 \001(\r\022\024\n\014message_body\030\002 \001(\014\"+\n\023CMsgPr" +
-      "otobufWrapped\022\024\n\014message_body\030\001 \001(\014\"\217\001\n\016" +
-      "CMsgAuthTicket\022\016\n\006estate\030\001 \001(\r\022\022\n\007eresul" +
-      "t\030\002 \001(\r:\0012\022\017\n\007steamid\030\003 \001(\006\022\016\n\006gameid\030\004 " +
-      "\001(\006\022\024\n\014h_steam_pipe\030\005 \001(\r\022\022\n\nticket_crc\030" +
-      "\006 \001(\r\022\016\n\006ticket\030\007 \001(\014\"\366\001\n\024CCDDBAppDetail" +
-      "Common\022\r\n\005appid\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\014\n\004i" +
-      "con\030\003 \001(\t\022\014\n\004logo\030\004 \001(\t\022\022\n\nlogo_small\030\005 " +
-      "\001(\t\022\014\n\004tool\030\006 \001(\010\022\014\n\004demo\030\007 \001(\010\022\r\n\005media" +
-      "\030\010 \001(\010\022\037\n\027community_visible_stats\030\t \001(\010\022" +
-      "\025\n\rfriendly_name\030\n \001(\t\022\023\n\013propagation\030\013 " +
-      "\001(\t\022\031\n\021has_adult_content\030\014 \001(\010\"\357\002\n\rCMsgA" +
-      "ppRights\022\021\n\tedit_info\030\001 \001(\010\022\017\n\007publish\030\002" +
-      " \001(\010\022\027\n\017view_error_data\030\003 \001(\010\022\020\n\010downloa" +
-      "d\030\004 \001(\010\022\025\n\rupload_cdkeys\030\005 \001(\010\022\027\n\017genera" +
-      "te_cdkeys\030\006 \001(\010\022\027\n\017view_financials\030\007 \001(\010" +
-      "\022\022\n\nmanage_ceg\030\010 \001(\010\022\026\n\016manage_signing\030\t" +
-      " \001(\010\022\025\n\rmanage_cdkeys\030\n \001(\010\022\026\n\016edit_mark" +
-      "eting\030\013 \001(\010\022\027\n\017economy_support\030\014 \001(\010\022\"\n\032" +
-      "economy_support_supervisor\030\r \001(\010\022\026\n\016mana" +
-      "ge_pricing\030\016 \001(\010\022\026\n\016broadcast_live\030\017 \001(\010" +
-      ":A\n\022msgpool_soft_limit\022\037.google.protobuf" +
-      ".MessageOptions\030\320\206\003 \001(\005:\00232:B\n\022msgpool_h" +
-      "ard_limit\022\037.google.protobuf.MessageOptio" +
-      "ns\030\321\206\003 \001(\005:\003384B\005H\001\200\001\000"
+      "protobuf/descriptor.proto\"1\n\rCMsgIPAddre" +
+      "ss\022\014\n\002v4\030\001 \001(\007H\000\022\014\n\002v6\030\002 \001(\014H\000B\004\n\002ip\"R\n\023" +
+      "CMsgIPAddressBucket\022+\n\023original_ip_addre" +
+      "ss\030\001 \001(\0132\016.CMsgIPAddress\022\016\n\006bucket\030\002 \001(\006" +
+      "\"\275\005\n\022CMsgProtoBufHeader\022\017\n\007steamid\030\001 \001(\006" +
+      "\022\030\n\020client_sessionid\030\002 \001(\005\022\025\n\rrouting_ap" +
+      "pid\030\003 \001(\r\022*\n\014jobid_source\030\n \001(\006:\0241844674" +
+      "4073709551615\022*\n\014jobid_target\030\013 \001(\006:\024184" +
+      "46744073709551615\022\027\n\017target_job_name\030\014 \001" +
+      "(\t\022\017\n\007seq_num\030\030 \001(\005\022\022\n\007eresult\030\r \001(\005:\0012\022" +
+      "\025\n\rerror_message\030\016 \001(\t\022\032\n\022auth_account_f" +
+      "lags\030\020 \001(\r\022\024\n\014token_source\030\026 \001(\r\022\033\n\023admi" +
+      "n_spoofing_user\030\027 \001(\010\022\032\n\017transport_error" +
+      "\030\021 \001(\005:\0011\022\'\n\tmessageid\030\022 \001(\004:\0241844674407" +
+      "3709551615\022\032\n\022publisher_group_id\030\023 \001(\r\022\r" +
+      "\n\005sysid\030\024 \001(\r\022\021\n\ttrace_tag\030\025 \001(\004\022\025\n\rweba" +
+      "pi_key_id\030\031 \001(\r\022\037\n\027is_from_external_sour" +
+      "ce\030\032 \001(\010\022\030\n\020forward_to_sysid\030\033 \003(\r\022\020\n\010cm" +
+      "_sysid\030\034 \001(\r\022\030\n\rlauncher_type\030\037 \001(\r:\0010\022\020" +
+      "\n\005realm\030  \001(\r:\0010\022\026\n\ntimeout_ms\030! \001(\005:\002-1" +
+      "\022\024\n\014debug_source\030\" \001(\t\022\014\n\002ip\030\017 \001(\rH\000\022\017\n\005" +
+      "ip_v6\030\035 \001(\014H\000B\t\n\007ip_addr\"8\n\tCMsgMulti\022\025\n" +
+      "\rsize_unzipped\030\001 \001(\r\022\024\n\014message_body\030\002 \001" +
+      "(\014\"+\n\023CMsgProtobufWrapped\022\024\n\014message_bod" +
+      "y\030\001 \001(\014\"\217\001\n\016CMsgAuthTicket\022\016\n\006estate\030\001 \001" +
+      "(\r\022\022\n\007eresult\030\002 \001(\r:\0012\022\017\n\007steamid\030\003 \001(\006\022" +
+      "\016\n\006gameid\030\004 \001(\006\022\024\n\014h_steam_pipe\030\005 \001(\r\022\022\n" +
+      "\nticket_crc\030\006 \001(\r\022\016\n\006ticket\030\007 \001(\014\"\211\002\n\024CC" +
+      "DDBAppDetailCommon\022\r\n\005appid\030\001 \001(\r\022\014\n\004nam" +
+      "e\030\002 \001(\t\022\014\n\004icon\030\003 \001(\t\022\014\n\004tool\030\006 \001(\010\022\014\n\004d" +
+      "emo\030\007 \001(\010\022\r\n\005media\030\010 \001(\010\022\037\n\027community_vi" +
+      "sible_stats\030\t \001(\010\022\025\n\rfriendly_name\030\n \001(\t" +
+      "\022\023\n\013propagation\030\013 \001(\t\022\031\n\021has_adult_conte" +
+      "nt\030\014 \001(\010\022!\n\031is_visible_in_steam_china\030\r " +
+      "\001(\010\022\020\n\010app_type\030\016 \001(\r\"\263\003\n\rCMsgAppRights\022" +
+      "\021\n\tedit_info\030\001 \001(\010\022\017\n\007publish\030\002 \001(\010\022\027\n\017v" +
+      "iew_error_data\030\003 \001(\010\022\020\n\010download\030\004 \001(\010\022\025" +
+      "\n\rupload_cdkeys\030\005 \001(\010\022\027\n\017generate_cdkeys" +
+      "\030\006 \001(\010\022\027\n\017view_financials\030\007 \001(\010\022\022\n\nmanag" +
+      "e_ceg\030\010 \001(\010\022\026\n\016manage_signing\030\t \001(\010\022\025\n\rm" +
+      "anage_cdkeys\030\n \001(\010\022\026\n\016edit_marketing\030\013 \001" +
+      "(\010\022\027\n\017economy_support\030\014 \001(\010\022\"\n\032economy_s" +
+      "upport_supervisor\030\r \001(\010\022\026\n\016manage_pricin" +
+      "g\030\016 \001(\010\022\026\n\016broadcast_live\030\017 \001(\010\022\036\n\026view_" +
+      "marketing_traffic\030\020 \001(\010\022\"\n\032edit_store_di" +
+      "splay_content\030\021 \001(\010\"\361\002\n\023CCuratorPreferen" +
+      "ces\022\033\n\023supported_languages\030\001 \001(\r\022\030\n\020plat" +
+      "form_windows\030\002 \001(\010\022\024\n\014platform_mac\030\003 \001(\010" +
+      "\022\026\n\016platform_linux\030\004 \001(\010\022\022\n\nvr_content\030\005" +
+      " \001(\010\022\036\n\026adult_content_violence\030\006 \001(\010\022\031\n\021" +
+      "adult_content_sex\030\007 \001(\010\022\031\n\021timestamp_upd" +
+      "ated\030\010 \001(\r\022\026\n\016tagids_curated\030\t \003(\r\022\027\n\017ta" +
+      "gids_filtered\030\n \003(\r\022\025\n\rwebsite_title\030\013 \001" +
+      "(\t\022\023\n\013website_url\030\014 \001(\t\022\026\n\016discussion_ur" +
+      "l\030\r \001(\t\022\026\n\016show_broadcast\030\016 \001(\010\"@\n\022CLoca" +
+      "lizationToken\022\020\n\010language\030\001 \001(\r\022\030\n\020local" +
+      "ized_string\030\002 \001(\t\"\354\001\n\027CClanEventUserNews" +
+      "Tuple\022\016\n\006clanid\030\001 \001(\r\022\021\n\tevent_gid\030\002 \001(\006" +
+      "\022\030\n\020announcement_gid\030\003 \001(\006\022\023\n\013rtime_star" +
+      "t\030\004 \001(\r\022\021\n\trtime_end\030\005 \001(\r\022\026\n\016priority_s" +
+      "core\030\006 \001(\r\022\014\n\004type\030\007 \001(\r\022\030\n\020clamp_range_" +
+      "slot\030\010 \001(\r\022\r\n\005appid\030\t \001(\r\022\035\n\025rtime32_las" +
+      "t_modified\030\n \001(\r\"\200\001\n\026CClanMatchEventByRa" +
+      "nge\022\024\n\014rtime_before\030\001 \001(\r\022\023\n\013rtime_after" +
+      "\030\002 \001(\r\022\021\n\tqualified\030\003 \001(\r\022(\n\006events\030\004 \003(" +
+      "\0132\030.CClanEventUserNewsTuple\"\213\003\n\037CCommuni" +
+      "ty_ClanAnnouncementInfo\022\013\n\003gid\030\001 \001(\004\022\016\n\006" +
+      "clanid\030\002 \001(\004\022\020\n\010posterid\030\003 \001(\004\022\020\n\010headli" +
+      "ne\030\004 \001(\t\022\020\n\010posttime\030\005 \001(\r\022\022\n\nupdatetime" +
+      "\030\006 \001(\r\022\014\n\004body\030\007 \001(\t\022\024\n\014commentcount\030\010 \001" +
+      "(\005\022\014\n\004tags\030\t \003(\t\022\020\n\010language\030\n \001(\005\022\016\n\006hi" +
+      "dden\030\013 \001(\010\022\026\n\016forum_topic_id\030\014 \001(\006\022\021\n\tev" +
+      "ent_gid\030\r \001(\006\022\023\n\013voteupcount\030\016 \001(\005\022\025\n\rvo" +
+      "tedowncount\030\017 \001(\005\022V\n\020ban_check_result\030\020 " +
+      "\001(\0162\027.EBanContentCheckResult:#k_EBanCont" +
+      "entCheckResult_NotScanned\"\246\006\n\016CClanEvent" +
+      "Data\022\013\n\003gid\030\001 \001(\006\022\024\n\014clan_steamid\030\002 \001(\006\022" +
+      "\022\n\nevent_name\030\003 \001(\t\022;\n\nevent_type\030\004 \001(\0162" +
+      "\024.EProtoClanEventType:\021k_EClanOtherEvent" +
+      "\022\r\n\005appid\030\005 \001(\r\022\026\n\016server_address\030\006 \001(\t\022" +
+      "\027\n\017server_password\030\007 \001(\t\022\032\n\022rtime32_star" +
+      "t_time\030\010 \001(\r\022\030\n\020rtime32_end_time\030\t \001(\r\022\025" +
+      "\n\rcomment_count\030\n \001(\005\022\027\n\017creator_steamid" +
+      "\030\013 \001(\006\022\033\n\023last_update_steamid\030\014 \001(\006\022\023\n\013e" +
+      "vent_notes\030\r \001(\t\022\020\n\010jsondata\030\016 \001(\t\022;\n\021an" +
+      "nouncement_body\030\017 \001(\0132 .CCommunity_ClanA" +
+      "nnouncementInfo\022\021\n\tpublished\030\020 \001(\010\022\016\n\006hi" +
+      "dden\030\021 \001(\010\022 \n\030rtime32_visibility_start\030\022" +
+      " \001(\r\022\036\n\026rtime32_visibility_end\030\023 \001(\r\022\035\n\025" +
+      "broadcaster_accountid\030\024 \001(\r\022\026\n\016follower_" +
+      "count\030\025 \001(\r\022\024\n\014ignore_count\030\026 \001(\r\022\026\n\016for" +
+      "um_topic_id\030\027 \001(\006\022\035\n\025rtime32_last_modifi" +
+      "ed\030\030 \001(\r\022\025\n\rnews_post_gid\030\031 \001(\006\022\032\n\022rtime" +
+      "_mod_reviewed\030\032 \001(\r\022\032\n\022featured_app_tagi" +
+      "d\030\033 \001(\r\022\031\n\021referenced_appids\030\034 \003(\r\022\020\n\010bu" +
+      "ild_id\030\035 \001(\r\022\024\n\014build_branch\030\036 \001(\t\"\307\001\n\020C" +
+      "Billing_Address\022\022\n\nfirst_name\030\001 \001(\t\022\021\n\tl" +
+      "ast_name\030\002 \001(\t\022\020\n\010address1\030\003 \001(\t\022\020\n\010addr" +
+      "ess2\030\004 \001(\t\022\014\n\004city\030\005 \001(\t\022\020\n\010us_state\030\006 \001" +
+      "(\t\022\024\n\014country_code\030\007 \001(\t\022\020\n\010postcode\030\010 \001" +
+      "(\t\022\021\n\tzip_plus4\030\t \001(\005\022\r\n\005phone\030\n \001(\t\"\333\001\n" +
+      "\031CPackageReservationStatus\022\021\n\tpackageid\030" +
+      "\001 \001(\r\022\031\n\021reservation_state\030\002 \001(\005\022\026\n\016queu" +
+      "e_position\030\003 \001(\005\022\030\n\020total_queue_size\030\004 \001" +
+      "(\005\022 \n\030reservation_country_code\030\005 \001(\t\022\017\n\007" +
+      "expired\030\006 \001(\010\022\024\n\014time_expires\030\007 \001(\r\022\025\n\rt" +
+      "ime_reserved\030\010 \001(\r\"/\n\020CMsgKeyValuePair\022\014" +
+      "\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"3\n\017CMsgKeyVa" +
+      "lueSet\022 \n\005pairs\030\001 \003(\0132\021.CMsgKeyValuePair" +
+      "*\330\002\n\026EBanContentCheckResult\022\'\n#k_EBanCon" +
+      "tentCheckResult_NotScanned\020\000\022\"\n\036k_EBanCo" +
+      "ntentCheckResult_Reset\020\001\022*\n&k_EBanConten" +
+      "tCheckResult_NeedsChecking\020\002\022)\n%k_EBanCo" +
+      "ntentCheckResult_VeryUnlikely\020\005\022%\n!k_EBa" +
+      "nContentCheckResult_Unlikely\020\036\022%\n!k_EBan" +
+      "ContentCheckResult_Possible\0202\022#\n\037k_EBanC" +
+      "ontentCheckResult_Likely\020K\022\'\n#k_EBanCont" +
+      "entCheckResult_VeryLikely\020d*\353\007\n\023EProtoCl" +
+      "anEventType\022\025\n\021k_EClanOtherEvent\020\001\022\024\n\020k_" +
+      "EClanGameEvent\020\002\022\025\n\021k_EClanPartyEvent\020\003\022" +
+      "\027\n\023k_EClanMeetingEvent\020\004\022\034\n\030k_EClanSpeci" +
+      "alCauseEvent\020\005\022\034\n\030k_EClanMusicAndArtsEve" +
+      "nt\020\006\022\026\n\022k_EClanSportsEvent\020\007\022\024\n\020k_EClanT" +
+      "ripEvent\020\010\022\024\n\020k_EClanChatEvent\020\t\022\033\n\027k_EC" +
+      "lanGameReleaseEvent\020\n\022\031\n\025k_EClanBroadcas" +
+      "tEvent\020\013\022\033\n\027k_EClanSmallUpdateEvent\020\014\022&\n" +
+      "\"k_EClanPreAnnounceMajorUpdateEvent\020\r\022\033\n" +
+      "\027k_EClanMajorUpdateEvent\020\016\022\032\n\026k_EClanDLC" +
+      "ReleaseEvent\020\017\022\035\n\031k_EClanFutureReleaseEv" +
+      "ent\020\020\022&\n\"k_EClanESportTournamentStreamEv" +
+      "ent\020\021\022\031\n\025k_EClanDevStreamEvent\020\022\022\034\n\030k_EC" +
+      "lanFamousStreamEvent\020\023\022\031\n\025k_EClanGameSal" +
+      "esEvent\020\024\022\035\n\031k_EClanGameItemSalesEvent\020\025" +
+      "\022\035\n\031k_EClanInGameBonusXPEvent\020\026\022\032\n\026k_ECl" +
+      "anInGameLootEvent\020\027\022\033\n\027k_EClanInGamePerk" +
+      "sEvent\020\030\022\037\n\033k_EClanInGameChallengeEvent\020" +
+      "\031\022\035\n\031k_EClanInGameContestEvent\020\032\022\023\n\017k_EC" +
+      "lanIRLEvent\020\033\022\024\n\020k_EClanNewsEvent\020\034\022\033\n\027k" +
+      "_EClanBetaReleaseEvent\020\035\022$\n k_EClanInGam" +
+      "eContentReleaseEvent\020\036\022\024\n\020k_EClanFreeTri" +
+      "al\020\037\022\030\n\024k_EClanSeasonRelease\020 \022\027\n\023k_ECla" +
+      "nSeasonUpdate\020!\022\031\n\025k_EClanCrosspostEvent" +
+      "\020\"\022\035\n\031k_EClanInGameEventGeneral\020#*\201\001\n\034Pa" +
+      "rtnerEventNotificationType\022\021\n\rk_EEventSt" +
+      "art\020\000\022\032\n\026k_EEventBroadcastStart\020\001\022\026\n\022k_E" +
+      "EventMatchStart\020\002\022\032\n\026k_EEventPartnerMaxT" +
+      "ype\020\003:A\n\022msgpool_soft_limit\022\037.google.pro" +
+      "tobuf.MessageOptions\030\320\206\003 \001(\005:\00232:B\n\022msgp" +
+      "ool_hard_limit\022\037.google.protobuf.Message" +
+      "Options\030\321\206\003 \001(\005:\003384:C\n\024force_php_genera" +
+      "tion\022\034.google.protobuf.FileOptions\030\320\206\003 \001" +
+      "(\010:\005false:H\n\030php_output_always_number\022\035." +
+      "google.protobuf.FieldOptions\030\344\206\003 \001(\010:\005fa" +
+      "lse:J\n\032allow_field_named_steam_id\022\035.goog" +
+      "le.protobuf.FieldOptions\030\350\206\003 \001(\010:\005falseB" +
+      "\tH\001\200\001\001\200\265\030\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
         });
-    internal_static_CMsgProtoBufHeader_descriptor =
+    internal_static_CMsgIPAddress_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_CMsgIPAddress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgIPAddress_descriptor,
+        new java.lang.String[] { "V4", "V6", "Ip", });
+    internal_static_CMsgIPAddressBucket_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_CMsgIPAddressBucket_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgIPAddressBucket_descriptor,
+        new java.lang.String[] { "OriginalIpAddress", "Bucket", });
+    internal_static_CMsgProtoBufHeader_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CMsgProtoBufHeader_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgProtoBufHeader_descriptor,
-        new java.lang.String[] { "Steamid", "ClientSessionid", "RoutingAppid", "JobidSource", "JobidTarget", "TargetJobName", "SeqNum", "Eresult", "ErrorMessage", "Ip", "AuthAccountFlags", "TokenSource", "AdminSpoofingUser", "TransportError", "Messageid", "PublisherGroupId", "Sysid", "TraceTag", "WebapiKeyId", });
+        new java.lang.String[] { "Steamid", "ClientSessionid", "RoutingAppid", "JobidSource", "JobidTarget", "TargetJobName", "SeqNum", "Eresult", "ErrorMessage", "AuthAccountFlags", "TokenSource", "AdminSpoofingUser", "TransportError", "Messageid", "PublisherGroupId", "Sysid", "TraceTag", "WebapiKeyId", "IsFromExternalSource", "ForwardToSysid", "CmSysid", "LauncherType", "Realm", "TimeoutMs", "DebugSource", "Ip", "IpV6", "IpAddr", });
     internal_static_CMsgMulti_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CMsgMulti_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgMulti_descriptor,
         new java.lang.String[] { "SizeUnzipped", "MessageBody", });
     internal_static_CMsgProtobufWrapped_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CMsgProtobufWrapped_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgProtobufWrapped_descriptor,
         new java.lang.String[] { "MessageBody", });
     internal_static_CMsgAuthTicket_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CMsgAuthTicket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgAuthTicket_descriptor,
         new java.lang.String[] { "Estate", "Eresult", "Steamid", "Gameid", "HSteamPipe", "TicketCrc", "Ticket", });
     internal_static_CCDDBAppDetailCommon_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CCDDBAppDetailCommon_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCDDBAppDetailCommon_descriptor,
-        new java.lang.String[] { "Appid", "Name", "Icon", "Logo", "LogoSmall", "Tool", "Demo", "Media", "CommunityVisibleStats", "FriendlyName", "Propagation", "HasAdultContent", });
+        new java.lang.String[] { "Appid", "Name", "Icon", "Tool", "Demo", "Media", "CommunityVisibleStats", "FriendlyName", "Propagation", "HasAdultContent", "IsVisibleInSteamChina", "AppType", });
     internal_static_CMsgAppRights_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CMsgAppRights_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgAppRights_descriptor,
-        new java.lang.String[] { "EditInfo", "Publish", "ViewErrorData", "Download", "UploadCdkeys", "GenerateCdkeys", "ViewFinancials", "ManageCeg", "ManageSigning", "ManageCdkeys", "EditMarketing", "EconomySupport", "EconomySupportSupervisor", "ManagePricing", "BroadcastLive", });
+        new java.lang.String[] { "EditInfo", "Publish", "ViewErrorData", "Download", "UploadCdkeys", "GenerateCdkeys", "ViewFinancials", "ManageCeg", "ManageSigning", "ManageCdkeys", "EditMarketing", "EconomySupport", "EconomySupportSupervisor", "ManagePricing", "BroadcastLive", "ViewMarketingTraffic", "EditStoreDisplayContent", });
+    internal_static_CCuratorPreferences_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_CCuratorPreferences_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCuratorPreferences_descriptor,
+        new java.lang.String[] { "SupportedLanguages", "PlatformWindows", "PlatformMac", "PlatformLinux", "VrContent", "AdultContentViolence", "AdultContentSex", "TimestampUpdated", "TagidsCurated", "TagidsFiltered", "WebsiteTitle", "WebsiteUrl", "DiscussionUrl", "ShowBroadcast", });
+    internal_static_CLocalizationToken_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_CLocalizationToken_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CLocalizationToken_descriptor,
+        new java.lang.String[] { "Language", "LocalizedString", });
+    internal_static_CClanEventUserNewsTuple_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_CClanEventUserNewsTuple_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CClanEventUserNewsTuple_descriptor,
+        new java.lang.String[] { "Clanid", "EventGid", "AnnouncementGid", "RtimeStart", "RtimeEnd", "PriorityScore", "Type", "ClampRangeSlot", "Appid", "Rtime32LastModified", });
+    internal_static_CClanMatchEventByRange_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_CClanMatchEventByRange_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CClanMatchEventByRange_descriptor,
+        new java.lang.String[] { "RtimeBefore", "RtimeAfter", "Qualified", "Events", });
+    internal_static_CCommunity_ClanAnnouncementInfo_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_CCommunity_ClanAnnouncementInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCommunity_ClanAnnouncementInfo_descriptor,
+        new java.lang.String[] { "Gid", "Clanid", "Posterid", "Headline", "Posttime", "Updatetime", "Body", "Commentcount", "Tags", "Language", "Hidden", "ForumTopicId", "EventGid", "Voteupcount", "Votedowncount", "BanCheckResult", });
+    internal_static_CClanEventData_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_CClanEventData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CClanEventData_descriptor,
+        new java.lang.String[] { "Gid", "ClanSteamid", "EventName", "EventType", "Appid", "ServerAddress", "ServerPassword", "Rtime32StartTime", "Rtime32EndTime", "CommentCount", "CreatorSteamid", "LastUpdateSteamid", "EventNotes", "Jsondata", "AnnouncementBody", "Published", "Hidden", "Rtime32VisibilityStart", "Rtime32VisibilityEnd", "BroadcasterAccountid", "FollowerCount", "IgnoreCount", "ForumTopicId", "Rtime32LastModified", "NewsPostGid", "RtimeModReviewed", "FeaturedAppTagid", "ReferencedAppids", "BuildId", "BuildBranch", });
+    internal_static_CBilling_Address_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_CBilling_Address_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CBilling_Address_descriptor,
+        new java.lang.String[] { "FirstName", "LastName", "Address1", "Address2", "City", "UsState", "CountryCode", "Postcode", "ZipPlus4", "Phone", });
+    internal_static_CPackageReservationStatus_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_CPackageReservationStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CPackageReservationStatus_descriptor,
+        new java.lang.String[] { "Packageid", "ReservationState", "QueuePosition", "TotalQueueSize", "ReservationCountryCode", "Expired", "TimeExpires", "TimeReserved", });
+    internal_static_CMsgKeyValuePair_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_CMsgKeyValuePair_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgKeyValuePair_descriptor,
+        new java.lang.String[] { "Name", "Value", });
+    internal_static_CMsgKeyValueSet_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_CMsgKeyValueSet_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgKeyValueSet_descriptor,
+        new java.lang.String[] { "Pairs", });
     msgpoolSoftLimit.internalInit(descriptor.getExtensions().get(0));
     msgpoolHardLimit.internalInit(descriptor.getExtensions().get(1));
+    forcePhpGeneration.internalInit(descriptor.getExtensions().get(2));
+    phpOutputAlwaysNumber.internalInit(descriptor.getExtensions().get(3));
+    allowFieldNamedSteamId.internalInit(descriptor.getExtensions().get(4));
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(SteammessagesBase.forcePhpGeneration);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.DescriptorProtos.getDescriptor();
   }
 

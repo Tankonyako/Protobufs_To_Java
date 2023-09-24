@@ -36,10 +36,6 @@ public final class SteamdatagramMessagesSdr {
      */
     k_ESteamDatagramMsg_GameserverPingRequest(3),
     /**
-     * <code>k_ESteamDatagramMsg_LegacyGameserverPingReply = 4;</code>
-     */
-    k_ESteamDatagramMsg_LegacyGameserverPingReply(4),
-    /**
      * <code>k_ESteamDatagramMsg_GameserverSessionRequest = 5;</code>
      */
     k_ESteamDatagramMsg_GameserverSessionRequest(5),
@@ -108,13 +104,13 @@ public final class SteamdatagramMessagesSdr {
      */
     k_ESteamDatagramMsg_NoConnection(21),
     /**
-     * <code>k_ESteamDatagramMsg_RelayToRelayPingRequest = 22;</code>
+     * <code>k_ESteamDatagramMsg_TicketDecryptRequest = 22;</code>
      */
-    k_ESteamDatagramMsg_RelayToRelayPingRequest(22),
+    k_ESteamDatagramMsg_TicketDecryptRequest(22),
     /**
-     * <code>k_ESteamDatagramMsg_RelayToRelayPingReply = 23;</code>
+     * <code>k_ESteamDatagramMsg_TicketDecryptReply = 23;</code>
      */
-    k_ESteamDatagramMsg_RelayToRelayPingReply(23),
+    k_ESteamDatagramMsg_TicketDecryptReply(23),
     /**
      * <code>k_ESteamDatagramMsg_P2PSessionRequest = 24;</code>
      */
@@ -140,9 +136,9 @@ public final class SteamdatagramMessagesSdr {
      */
     k_ESteamDatagramMsg_GameserverPingReply(29),
     /**
-     * <code>k_ESteamDatagramMsg_GameserverRegistration = 30;</code>
+     * <code>k_ESteamDatagramMsg_LegacyGameserverRegistration = 30;</code>
      */
-    k_ESteamDatagramMsg_GameserverRegistration(30),
+    k_ESteamDatagramMsg_LegacyGameserverRegistration(30),
     /**
      * <code>k_ESteamDatagramMsg_SetSecondaryAddressRequest = 31;</code>
      */
@@ -151,6 +147,14 @@ public final class SteamdatagramMessagesSdr {
      * <code>k_ESteamDatagramMsg_SetSecondaryAddressResult = 32;</code>
      */
     k_ESteamDatagramMsg_SetSecondaryAddressResult(32),
+    /**
+     * <code>k_ESteamDatagramMsg_RelayToRelayPingRequest = 33;</code>
+     */
+    k_ESteamDatagramMsg_RelayToRelayPingRequest(33),
+    /**
+     * <code>k_ESteamDatagramMsg_RelayToRelayPingReply = 34;</code>
+     */
+    k_ESteamDatagramMsg_RelayToRelayPingReply(34),
     ;
 
     /**
@@ -169,10 +173,6 @@ public final class SteamdatagramMessagesSdr {
      * <code>k_ESteamDatagramMsg_GameserverPingRequest = 3;</code>
      */
     public static final int k_ESteamDatagramMsg_GameserverPingRequest_VALUE = 3;
-    /**
-     * <code>k_ESteamDatagramMsg_LegacyGameserverPingReply = 4;</code>
-     */
-    public static final int k_ESteamDatagramMsg_LegacyGameserverPingReply_VALUE = 4;
     /**
      * <code>k_ESteamDatagramMsg_GameserverSessionRequest = 5;</code>
      */
@@ -242,13 +242,13 @@ public final class SteamdatagramMessagesSdr {
      */
     public static final int k_ESteamDatagramMsg_NoConnection_VALUE = 21;
     /**
-     * <code>k_ESteamDatagramMsg_RelayToRelayPingRequest = 22;</code>
+     * <code>k_ESteamDatagramMsg_TicketDecryptRequest = 22;</code>
      */
-    public static final int k_ESteamDatagramMsg_RelayToRelayPingRequest_VALUE = 22;
+    public static final int k_ESteamDatagramMsg_TicketDecryptRequest_VALUE = 22;
     /**
-     * <code>k_ESteamDatagramMsg_RelayToRelayPingReply = 23;</code>
+     * <code>k_ESteamDatagramMsg_TicketDecryptReply = 23;</code>
      */
-    public static final int k_ESteamDatagramMsg_RelayToRelayPingReply_VALUE = 23;
+    public static final int k_ESteamDatagramMsg_TicketDecryptReply_VALUE = 23;
     /**
      * <code>k_ESteamDatagramMsg_P2PSessionRequest = 24;</code>
      */
@@ -274,9 +274,9 @@ public final class SteamdatagramMessagesSdr {
      */
     public static final int k_ESteamDatagramMsg_GameserverPingReply_VALUE = 29;
     /**
-     * <code>k_ESteamDatagramMsg_GameserverRegistration = 30;</code>
+     * <code>k_ESteamDatagramMsg_LegacyGameserverRegistration = 30;</code>
      */
-    public static final int k_ESteamDatagramMsg_GameserverRegistration_VALUE = 30;
+    public static final int k_ESteamDatagramMsg_LegacyGameserverRegistration_VALUE = 30;
     /**
      * <code>k_ESteamDatagramMsg_SetSecondaryAddressRequest = 31;</code>
      */
@@ -285,6 +285,14 @@ public final class SteamdatagramMessagesSdr {
      * <code>k_ESteamDatagramMsg_SetSecondaryAddressResult = 32;</code>
      */
     public static final int k_ESteamDatagramMsg_SetSecondaryAddressResult_VALUE = 32;
+    /**
+     * <code>k_ESteamDatagramMsg_RelayToRelayPingRequest = 33;</code>
+     */
+    public static final int k_ESteamDatagramMsg_RelayToRelayPingRequest_VALUE = 33;
+    /**
+     * <code>k_ESteamDatagramMsg_RelayToRelayPingReply = 34;</code>
+     */
+    public static final int k_ESteamDatagramMsg_RelayToRelayPingReply_VALUE = 34;
 
 
     public final int getNumber() {
@@ -311,7 +319,6 @@ public final class SteamdatagramMessagesSdr {
         case 1: return k_ESteamDatagramMsg_RouterPingRequest;
         case 2: return k_ESteamDatagramMsg_RouterPingReply;
         case 3: return k_ESteamDatagramMsg_GameserverPingRequest;
-        case 4: return k_ESteamDatagramMsg_LegacyGameserverPingReply;
         case 5: return k_ESteamDatagramMsg_GameserverSessionRequest;
         case 6: return k_ESteamDatagramMsg_GameserverSessionEstablished;
         case 7: return k_ESteamDatagramMsg_NoSession;
@@ -329,17 +336,19 @@ public final class SteamdatagramMessagesSdr {
         case 19: return k_ESteamDatagramMsg_ConnectOK;
         case 20: return k_ESteamDatagramMsg_ConnectionClosed;
         case 21: return k_ESteamDatagramMsg_NoConnection;
-        case 22: return k_ESteamDatagramMsg_RelayToRelayPingRequest;
-        case 23: return k_ESteamDatagramMsg_RelayToRelayPingReply;
+        case 22: return k_ESteamDatagramMsg_TicketDecryptRequest;
+        case 23: return k_ESteamDatagramMsg_TicketDecryptReply;
         case 24: return k_ESteamDatagramMsg_P2PSessionRequest;
         case 25: return k_ESteamDatagramMsg_P2PSessionEstablished;
         case 26: return k_ESteamDatagramMsg_P2PStatsClient;
         case 27: return k_ESteamDatagramMsg_P2PStatsRelay;
         case 28: return k_ESteamDatagramMsg_P2PBadRoute;
         case 29: return k_ESteamDatagramMsg_GameserverPingReply;
-        case 30: return k_ESteamDatagramMsg_GameserverRegistration;
+        case 30: return k_ESteamDatagramMsg_LegacyGameserverRegistration;
         case 31: return k_ESteamDatagramMsg_SetSecondaryAddressRequest;
         case 32: return k_ESteamDatagramMsg_SetSecondaryAddressResult;
+        case 33: return k_ESteamDatagramMsg_RelayToRelayPingRequest;
+        case 34: return k_ESteamDatagramMsg_RelayToRelayPingReply;
         default: return null;
       }
     }
@@ -387,6 +396,1573 @@ public final class SteamdatagramMessagesSdr {
     }
 
     // @@protoc_insertion_point(enum_scope:ESteamDatagramMsgID)
+  }
+
+  public interface CMsgSteamNetworkingIPAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgSteamNetworkingIPAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed32 v4 = 1;</code>
+     * @return Whether the v4 field is set.
+     */
+    boolean hasV4();
+    /**
+     * <code>optional fixed32 v4 = 1;</code>
+     * @return The v4.
+     */
+    int getV4();
+
+    /**
+     * <code>optional bytes v6 = 2;</code>
+     * @return Whether the v6 field is set.
+     */
+    boolean hasV6();
+    /**
+     * <code>optional bytes v6 = 2;</code>
+     * @return The v6.
+     */
+    com.google.protobuf.ByteString getV6();
+  }
+  /**
+   * Protobuf type {@code CMsgSteamNetworkingIPAddress}
+   */
+  public static final class CMsgSteamNetworkingIPAddress extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgSteamNetworkingIPAddress)
+      CMsgSteamNetworkingIPAddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgSteamNetworkingIPAddress.newBuilder() to construct.
+    private CMsgSteamNetworkingIPAddress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgSteamNetworkingIPAddress() {
+      v6_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgSteamNetworkingIPAddress();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgSteamNetworkingIPAddress(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 13: {
+              bitField0_ |= 0x00000001;
+              v4_ = input.readFixed32();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              v6_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteamdatagramMessagesSdr.internal_static_CMsgSteamNetworkingIPAddress_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteamdatagramMessagesSdr.internal_static_CMsgSteamNetworkingIPAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.class, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int V4_FIELD_NUMBER = 1;
+    private int v4_;
+    /**
+     * <code>optional fixed32 v4 = 1;</code>
+     * @return Whether the v4 field is set.
+     */
+    @java.lang.Override
+    public boolean hasV4() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed32 v4 = 1;</code>
+     * @return The v4.
+     */
+    @java.lang.Override
+    public int getV4() {
+      return v4_;
+    }
+
+    public static final int V6_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString v6_;
+    /**
+     * <code>optional bytes v6 = 2;</code>
+     * @return Whether the v6 field is set.
+     */
+    @java.lang.Override
+    public boolean hasV6() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bytes v6 = 2;</code>
+     * @return The v6.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getV6() {
+      return v6_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeFixed32(1, v4_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBytes(2, v6_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(1, v4_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, v6_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress)) {
+        return super.equals(obj);
+      }
+      SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress other = (SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress) obj;
+
+      if (hasV4() != other.hasV4()) return false;
+      if (hasV4()) {
+        if (getV4()
+            != other.getV4()) return false;
+      }
+      if (hasV6() != other.hasV6()) return false;
+      if (hasV6()) {
+        if (!getV6()
+            .equals(other.getV6())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasV4()) {
+        hash = (37 * hash) + V4_FIELD_NUMBER;
+        hash = (53 * hash) + getV4();
+      }
+      if (hasV6()) {
+        hash = (37 * hash) + V6_FIELD_NUMBER;
+        hash = (53 * hash) + getV6().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgSteamNetworkingIPAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgSteamNetworkingIPAddress)
+        SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamNetworkingIPAddress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamNetworkingIPAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.class, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder.class);
+      }
+
+      // Construct using SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        v4_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        v6_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamNetworkingIPAddress_descriptor;
+      }
+
+      @java.lang.Override
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress getDefaultInstanceForType() {
+        return SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress build() {
+        SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress buildPartial() {
+        SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress result = new SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.v4_ = v4_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.v6_ = v6_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress) {
+          return mergeFrom((SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress other) {
+        if (other == SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.getDefaultInstance()) return this;
+        if (other.hasV4()) {
+          setV4(other.getV4());
+        }
+        if (other.hasV6()) {
+          setV6(other.getV6());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int v4_ ;
+      /**
+       * <code>optional fixed32 v4 = 1;</code>
+       * @return Whether the v4 field is set.
+       */
+      @java.lang.Override
+      public boolean hasV4() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional fixed32 v4 = 1;</code>
+       * @return The v4.
+       */
+      @java.lang.Override
+      public int getV4() {
+        return v4_;
+      }
+      /**
+       * <code>optional fixed32 v4 = 1;</code>
+       * @param value The v4 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setV4(int value) {
+        bitField0_ |= 0x00000001;
+        v4_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 v4 = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearV4() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        v4_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString v6_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes v6 = 2;</code>
+       * @return Whether the v6 field is set.
+       */
+      @java.lang.Override
+      public boolean hasV6() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bytes v6 = 2;</code>
+       * @return The v6.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getV6() {
+        return v6_;
+      }
+      /**
+       * <code>optional bytes v6 = 2;</code>
+       * @param value The v6 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setV6(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        v6_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes v6 = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearV6() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        v6_ = getDefaultInstance().getV6();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgSteamNetworkingIPAddress)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgSteamNetworkingIPAddress)
+    private static final SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress();
+    }
+
+    public static SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgSteamNetworkingIPAddress>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgSteamNetworkingIPAddress>() {
+      @java.lang.Override
+      public CMsgSteamNetworkingIPAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgSteamNetworkingIPAddress(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgSteamNetworkingIPAddress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgSteamNetworkingIPAddress> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgSteamDatagramSignedMessageGenericOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgSteamDatagramSignedMessageGeneric)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+     * @return Whether the cert field is set.
+     */
+    boolean hasCert();
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+     * @return The cert.
+     */
+    SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getCert();
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+     */
+    SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getCertOrBuilder();
+
+    /**
+     * <code>optional bytes signed_data = 2;</code>
+     * @return Whether the signedData field is set.
+     */
+    boolean hasSignedData();
+    /**
+     * <code>optional bytes signed_data = 2;</code>
+     * @return The signedData.
+     */
+    com.google.protobuf.ByteString getSignedData();
+
+    /**
+     * <code>optional bytes signature = 3;</code>
+     * @return Whether the signature field is set.
+     */
+    boolean hasSignature();
+    /**
+     * <code>optional bytes signature = 3;</code>
+     * @return The signature.
+     */
+    com.google.protobuf.ByteString getSignature();
+
+    /**
+     * <code>optional bytes dummy_pad = 1023;</code>
+     * @return Whether the dummyPad field is set.
+     */
+    boolean hasDummyPad();
+    /**
+     * <code>optional bytes dummy_pad = 1023;</code>
+     * @return The dummyPad.
+     */
+    com.google.protobuf.ByteString getDummyPad();
+  }
+  /**
+   * Protobuf type {@code CMsgSteamDatagramSignedMessageGeneric}
+   */
+  public static final class CMsgSteamDatagramSignedMessageGeneric extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgSteamDatagramSignedMessageGeneric)
+      CMsgSteamDatagramSignedMessageGenericOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgSteamDatagramSignedMessageGeneric.newBuilder() to construct.
+    private CMsgSteamDatagramSignedMessageGeneric(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgSteamDatagramSignedMessageGeneric() {
+      signedData_ = com.google.protobuf.ByteString.EMPTY;
+      signature_ = com.google.protobuf.ByteString.EMPTY;
+      dummyPad_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgSteamDatagramSignedMessageGeneric();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgSteamDatagramSignedMessageGeneric(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = cert_.toBuilder();
+              }
+              cert_ = input.readMessage(SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cert_);
+                cert_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              signedData_ = input.readBytes();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              signature_ = input.readBytes();
+              break;
+            }
+            case 8186: {
+              bitField0_ |= 0x00000008;
+              dummyPad_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramSignedMessageGeneric_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramSignedMessageGeneric_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric.class, SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CERT_FIELD_NUMBER = 1;
+    private SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned cert_;
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+     * @return Whether the cert field is set.
+     */
+    @java.lang.Override
+    public boolean hasCert() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+     * @return The cert.
+     */
+    @java.lang.Override
+    public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getCert() {
+      return cert_ == null ? SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : cert_;
+    }
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+     */
+    @java.lang.Override
+    public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getCertOrBuilder() {
+      return cert_ == null ? SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : cert_;
+    }
+
+    public static final int SIGNED_DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString signedData_;
+    /**
+     * <code>optional bytes signed_data = 2;</code>
+     * @return Whether the signedData field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignedData() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bytes signed_data = 2;</code>
+     * @return The signedData.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignedData() {
+      return signedData_;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString signature_;
+    /**
+     * <code>optional bytes signature = 3;</code>
+     * @return Whether the signature field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignature() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bytes signature = 3;</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignature() {
+      return signature_;
+    }
+
+    public static final int DUMMY_PAD_FIELD_NUMBER = 1023;
+    private com.google.protobuf.ByteString dummyPad_;
+    /**
+     * <code>optional bytes dummy_pad = 1023;</code>
+     * @return Whether the dummyPad field is set.
+     */
+    @java.lang.Override
+    public boolean hasDummyPad() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional bytes dummy_pad = 1023;</code>
+     * @return The dummyPad.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDummyPad() {
+      return dummyPad_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getCert());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBytes(2, signedData_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBytes(3, signature_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBytes(1023, dummyPad_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCert());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, signedData_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, signature_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1023, dummyPad_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric)) {
+        return super.equals(obj);
+      }
+      SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric other = (SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric) obj;
+
+      if (hasCert() != other.hasCert()) return false;
+      if (hasCert()) {
+        if (!getCert()
+            .equals(other.getCert())) return false;
+      }
+      if (hasSignedData() != other.hasSignedData()) return false;
+      if (hasSignedData()) {
+        if (!getSignedData()
+            .equals(other.getSignedData())) return false;
+      }
+      if (hasSignature() != other.hasSignature()) return false;
+      if (hasSignature()) {
+        if (!getSignature()
+            .equals(other.getSignature())) return false;
+      }
+      if (hasDummyPad() != other.hasDummyPad()) return false;
+      if (hasDummyPad()) {
+        if (!getDummyPad()
+            .equals(other.getDummyPad())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCert()) {
+        hash = (37 * hash) + CERT_FIELD_NUMBER;
+        hash = (53 * hash) + getCert().hashCode();
+      }
+      if (hasSignedData()) {
+        hash = (37 * hash) + SIGNED_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getSignedData().hashCode();
+      }
+      if (hasSignature()) {
+        hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+        hash = (53 * hash) + getSignature().hashCode();
+      }
+      if (hasDummyPad()) {
+        hash = (37 * hash) + DUMMY_PAD_FIELD_NUMBER;
+        hash = (53 * hash) + getDummyPad().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgSteamDatagramSignedMessageGeneric}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgSteamDatagramSignedMessageGeneric)
+        SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGenericOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramSignedMessageGeneric_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramSignedMessageGeneric_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric.class, SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric.Builder.class);
+      }
+
+      // Construct using SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCertFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (certBuilder_ == null) {
+          cert_ = null;
+        } else {
+          certBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signedData_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signature_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dummyPad_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramSignedMessageGeneric_descriptor;
+      }
+
+      @java.lang.Override
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric getDefaultInstanceForType() {
+        return SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric build() {
+        SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric buildPartial() {
+        SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric result = new SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (certBuilder_ == null) {
+            result.cert_ = cert_;
+          } else {
+            result.cert_ = certBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.signedData_ = signedData_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.signature_ = signature_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.dummyPad_ = dummyPad_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric) {
+          return mergeFrom((SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric other) {
+        if (other == SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric.getDefaultInstance()) return this;
+        if (other.hasCert()) {
+          mergeCert(other.getCert());
+        }
+        if (other.hasSignedData()) {
+          setSignedData(other.getSignedData());
+        }
+        if (other.hasSignature()) {
+          setSignature(other.getSignature());
+        }
+        if (other.hasDummyPad()) {
+          setDummyPad(other.getDummyPad());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned cert_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder> certBuilder_;
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * @return Whether the cert field is set.
+       */
+      public boolean hasCert() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * @return The cert.
+       */
+      public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getCert() {
+        if (certBuilder_ == null) {
+          return cert_ == null ? SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : cert_;
+        } else {
+          return certBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       */
+      public Builder setCert(SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned value) {
+        if (certBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cert_ = value;
+          onChanged();
+        } else {
+          certBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       */
+      public Builder setCert(
+          SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder builderForValue) {
+        if (certBuilder_ == null) {
+          cert_ = builderForValue.build();
+          onChanged();
+        } else {
+          certBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       */
+      public Builder mergeCert(SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned value) {
+        if (certBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              cert_ != null &&
+              cert_ != SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance()) {
+            cert_ =
+              SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.newBuilder(cert_).mergeFrom(value).buildPartial();
+          } else {
+            cert_ = value;
+          }
+          onChanged();
+        } else {
+          certBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       */
+      public Builder clearCert() {
+        if (certBuilder_ == null) {
+          cert_ = null;
+          onChanged();
+        } else {
+          certBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       */
+      public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder getCertBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCertFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       */
+      public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getCertOrBuilder() {
+        if (certBuilder_ != null) {
+          return certBuilder_.getMessageOrBuilder();
+        } else {
+          return cert_ == null ?
+              SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : cert_;
+        }
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder> 
+          getCertFieldBuilder() {
+        if (certBuilder_ == null) {
+          certBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder>(
+                  getCert(),
+                  getParentForChildren(),
+                  isClean());
+          cert_ = null;
+        }
+        return certBuilder_;
+      }
+
+      private com.google.protobuf.ByteString signedData_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes signed_data = 2;</code>
+       * @return Whether the signedData field is set.
+       */
+      @java.lang.Override
+      public boolean hasSignedData() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bytes signed_data = 2;</code>
+       * @return The signedData.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignedData() {
+        return signedData_;
+      }
+      /**
+       * <code>optional bytes signed_data = 2;</code>
+       * @param value The signedData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignedData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        signedData_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes signed_data = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignedData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signedData_ = getDefaultInstance().getSignedData();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes signature = 3;</code>
+       * @return Whether the signature field is set.
+       */
+      @java.lang.Override
+      public boolean hasSignature() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bytes signature = 3;</code>
+       * @return The signature.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignature() {
+        return signature_;
+      }
+      /**
+       * <code>optional bytes signature = 3;</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignature(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        signature_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes signature = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignature() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString dummyPad_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes dummy_pad = 1023;</code>
+       * @return Whether the dummyPad field is set.
+       */
+      @java.lang.Override
+      public boolean hasDummyPad() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bytes dummy_pad = 1023;</code>
+       * @return The dummyPad.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDummyPad() {
+        return dummyPad_;
+      }
+      /**
+       * <code>optional bytes dummy_pad = 1023;</code>
+       * @param value The dummyPad to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDummyPad(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        dummyPad_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes dummy_pad = 1023;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDummyPad() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        dummyPad_ = getDefaultInstance().getDummyPad();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgSteamDatagramSignedMessageGeneric)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgSteamDatagramSignedMessageGeneric)
+    private static final SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric();
+    }
+
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgSteamDatagramSignedMessageGeneric>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgSteamDatagramSignedMessageGeneric>() {
+      @java.lang.Override
+      public CMsgSteamDatagramSignedMessageGeneric parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgSteamDatagramSignedMessageGeneric(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgSteamDatagramSignedMessageGeneric> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgSteamDatagramSignedMessageGeneric> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteamdatagramMessagesSdr.CMsgSteamDatagramSignedMessageGeneric getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   public interface CMsgSteamDatagramRouterPingReplyOrBuilder extends
@@ -437,6 +2013,40 @@ public final class SteamdatagramMessagesSdr {
      * @return The latencyPingMs at the given index.
      */
     int getLatencyPingMs(int index);
+
+    /**
+     * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+     * @return A list containing the latencyDatacenterIdsP2p.
+     */
+    java.util.List<java.lang.Integer> getLatencyDatacenterIdsP2PList();
+    /**
+     * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+     * @return The count of latencyDatacenterIdsP2p.
+     */
+    int getLatencyDatacenterIdsP2PCount();
+    /**
+     * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The latencyDatacenterIdsP2p at the given index.
+     */
+    int getLatencyDatacenterIdsP2P(int index);
+
+    /**
+     * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+     * @return A list containing the latencyPingMsP2p.
+     */
+    java.util.List<java.lang.Integer> getLatencyPingMsP2PList();
+    /**
+     * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+     * @return The count of latencyPingMsP2p.
+     */
+    int getLatencyPingMsP2PCount();
+    /**
+     * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The latencyPingMsP2p at the given index.
+     */
+    int getLatencyPingMsP2P(int index);
 
     /**
      * <code>optional fixed32 your_public_ip = 4;</code>
@@ -573,6 +2183,17 @@ public final class SteamdatagramMessagesSdr {
      */
     SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.AltAddressOrBuilder getAltAddressesOrBuilder(
         int index);
+
+    /**
+     * <code>optional bytes dummy_pad = 99;</code>
+     * @return Whether the dummyPad field is set.
+     */
+    boolean hasDummyPad();
+    /**
+     * <code>optional bytes dummy_pad = 99;</code>
+     * @return The dummyPad.
+     */
+    com.google.protobuf.ByteString getDummyPad();
   }
   /**
    * Protobuf type {@code CMsgSteamDatagramRouterPingReply}
@@ -589,8 +2210,11 @@ public final class SteamdatagramMessagesSdr {
     private CMsgSteamDatagramRouterPingReply() {
       latencyDatacenterIds_ = emptyIntList();
       latencyPingMs_ = emptyIntList();
+      latencyDatacenterIdsP2P_ = emptyIntList();
+      latencyPingMsP2P_ = emptyIntList();
       routeExceptions_ = java.util.Collections.emptyList();
       altAddresses_ = java.util.Collections.emptyList();
+      dummyPad_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -702,9 +2326,9 @@ public final class SteamdatagramMessagesSdr {
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
+              if (!((mutable_bitField0_ & 0x00002000) != 0)) {
                 routeExceptions_ = new java.util.ArrayList<SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.RouteException>();
-                mutable_bitField0_ |= 0x00000800;
+                mutable_bitField0_ |= 0x00002000;
               }
               routeExceptions_.add(
                   input.readMessage(SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.RouteException.PARSER, extensionRegistry));
@@ -721,12 +2345,59 @@ public final class SteamdatagramMessagesSdr {
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
+              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
                 altAddresses_ = new java.util.ArrayList<SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.AltAddress>();
-                mutable_bitField0_ |= 0x00001000;
+                mutable_bitField0_ |= 0x00004000;
               }
               altAddresses_.add(
                   input.readMessage(SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.AltAddress.PARSER, extensionRegistry));
+              break;
+            }
+            case 117: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                latencyDatacenterIdsP2P_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              latencyDatacenterIdsP2P_.addInt(input.readFixed32());
+              break;
+            }
+            case 114: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                latencyDatacenterIdsP2P_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                latencyDatacenterIdsP2P_.addInt(input.readFixed32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 120: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                latencyPingMsP2P_ = newIntList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              latencyPingMsP2P_.addInt(input.readUInt32());
+              break;
+            }
+            case 122: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
+                latencyPingMsP2P_ = newIntList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                latencyPingMsP2P_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 794: {
+              bitField0_ |= 0x00000200;
+              dummyPad_ = input.readBytes();
               break;
             }
             default: {
@@ -750,11 +2421,17 @@ public final class SteamdatagramMessagesSdr {
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
           latencyPingMs_.makeImmutable(); // C
         }
-        if (((mutable_bitField0_ & 0x00000800) != 0)) {
+        if (((mutable_bitField0_ & 0x00002000) != 0)) {
           routeExceptions_ = java.util.Collections.unmodifiableList(routeExceptions_);
         }
-        if (((mutable_bitField0_ & 0x00001000) != 0)) {
+        if (((mutable_bitField0_ & 0x00004000) != 0)) {
           altAddresses_ = java.util.Collections.unmodifiableList(altAddresses_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          latencyDatacenterIdsP2P_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          latencyPingMsP2P_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2775,6 +4452,62 @@ public final class SteamdatagramMessagesSdr {
     }
     private int latencyPingMsMemoizedSerializedSize = -1;
 
+    public static final int LATENCY_DATACENTER_IDS_P2P_FIELD_NUMBER = 14;
+    private com.google.protobuf.Internal.IntList latencyDatacenterIdsP2P_;
+    /**
+     * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+     * @return A list containing the latencyDatacenterIdsP2p.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getLatencyDatacenterIdsP2PList() {
+      return latencyDatacenterIdsP2P_;
+    }
+    /**
+     * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+     * @return The count of latencyDatacenterIdsP2p.
+     */
+    public int getLatencyDatacenterIdsP2PCount() {
+      return latencyDatacenterIdsP2P_.size();
+    }
+    /**
+     * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The latencyDatacenterIdsP2p at the given index.
+     */
+    public int getLatencyDatacenterIdsP2P(int index) {
+      return latencyDatacenterIdsP2P_.getInt(index);
+    }
+    private int latencyDatacenterIdsP2PMemoizedSerializedSize = -1;
+
+    public static final int LATENCY_PING_MS_P2P_FIELD_NUMBER = 15;
+    private com.google.protobuf.Internal.IntList latencyPingMsP2P_;
+    /**
+     * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+     * @return A list containing the latencyPingMsP2p.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getLatencyPingMsP2PList() {
+      return latencyPingMsP2P_;
+    }
+    /**
+     * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+     * @return The count of latencyPingMsP2p.
+     */
+    public int getLatencyPingMsP2PCount() {
+      return latencyPingMsP2P_.size();
+    }
+    /**
+     * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+     * @param index The index of the element to return.
+     * @return The latencyPingMsP2p at the given index.
+     */
+    public int getLatencyPingMsP2P(int index) {
+      return latencyPingMsP2P_.getInt(index);
+    }
+    private int latencyPingMsP2PMemoizedSerializedSize = -1;
+
     public static final int YOUR_PUBLIC_IP_FIELD_NUMBER = 4;
     private int yourPublicIp_;
     /**
@@ -3007,6 +4740,25 @@ public final class SteamdatagramMessagesSdr {
       return altAddresses_.get(index);
     }
 
+    public static final int DUMMY_PAD_FIELD_NUMBER = 99;
+    private com.google.protobuf.ByteString dummyPad_;
+    /**
+     * <code>optional bytes dummy_pad = 99;</code>
+     * @return Whether the dummyPad field is set.
+     */
+    @java.lang.Override
+    public boolean hasDummyPad() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional bytes dummy_pad = 99;</code>
+     * @return The dummyPad.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDummyPad() {
+      return dummyPad_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3068,6 +4820,23 @@ public final class SteamdatagramMessagesSdr {
       }
       for (int i = 0; i < altAddresses_.size(); i++) {
         output.writeMessage(13, altAddresses_.get(i));
+      }
+      if (getLatencyDatacenterIdsP2PList().size() > 0) {
+        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(latencyDatacenterIdsP2PMemoizedSerializedSize);
+      }
+      for (int i = 0; i < latencyDatacenterIdsP2P_.size(); i++) {
+        output.writeFixed32NoTag(latencyDatacenterIdsP2P_.getInt(i));
+      }
+      if (getLatencyPingMsP2PList().size() > 0) {
+        output.writeUInt32NoTag(122);
+        output.writeUInt32NoTag(latencyPingMsP2PMemoizedSerializedSize);
+      }
+      for (int i = 0; i < latencyPingMsP2P_.size(); i++) {
+        output.writeUInt32NoTag(latencyPingMsP2P_.getInt(i));
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeBytes(99, dummyPad_);
       }
       unknownFields.writeTo(output);
     }
@@ -3147,6 +4916,35 @@ public final class SteamdatagramMessagesSdr {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, altAddresses_.get(i));
       }
+      {
+        int dataSize = 0;
+        dataSize = 4 * getLatencyDatacenterIdsP2PList().size();
+        size += dataSize;
+        if (!getLatencyDatacenterIdsP2PList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        latencyDatacenterIdsP2PMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < latencyPingMsP2P_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(latencyPingMsP2P_.getInt(i));
+        }
+        size += dataSize;
+        if (!getLatencyPingMsP2PList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        latencyPingMsP2PMemoizedSerializedSize = dataSize;
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(99, dummyPad_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3171,6 +4969,10 @@ public final class SteamdatagramMessagesSdr {
           .equals(other.getLatencyDatacenterIdsList())) return false;
       if (!getLatencyPingMsList()
           .equals(other.getLatencyPingMsList())) return false;
+      if (!getLatencyDatacenterIdsP2PList()
+          .equals(other.getLatencyDatacenterIdsP2PList())) return false;
+      if (!getLatencyPingMsP2PList()
+          .equals(other.getLatencyPingMsP2PList())) return false;
       if (hasYourPublicIp() != other.hasYourPublicIp()) return false;
       if (hasYourPublicIp()) {
         if (getYourPublicIp()
@@ -3215,6 +5017,11 @@ public final class SteamdatagramMessagesSdr {
           .equals(other.getRouteExceptionsList())) return false;
       if (!getAltAddressesList()
           .equals(other.getAltAddressesList())) return false;
+      if (hasDummyPad() != other.hasDummyPad()) return false;
+      if (hasDummyPad()) {
+        if (!getDummyPad()
+            .equals(other.getDummyPad())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3237,6 +5044,14 @@ public final class SteamdatagramMessagesSdr {
       if (getLatencyPingMsCount() > 0) {
         hash = (37 * hash) + LATENCY_PING_MS_FIELD_NUMBER;
         hash = (53 * hash) + getLatencyPingMsList().hashCode();
+      }
+      if (getLatencyDatacenterIdsP2PCount() > 0) {
+        hash = (37 * hash) + LATENCY_DATACENTER_IDS_P2P_FIELD_NUMBER;
+        hash = (53 * hash) + getLatencyDatacenterIdsP2PList().hashCode();
+      }
+      if (getLatencyPingMsP2PCount() > 0) {
+        hash = (37 * hash) + LATENCY_PING_MS_P2P_FIELD_NUMBER;
+        hash = (53 * hash) + getLatencyPingMsP2PList().hashCode();
       }
       if (hasYourPublicIp()) {
         hash = (37 * hash) + YOUR_PUBLIC_IP_FIELD_NUMBER;
@@ -3278,6 +5093,10 @@ public final class SteamdatagramMessagesSdr {
       if (getAltAddressesCount() > 0) {
         hash = (37 * hash) + ALT_ADDRESSES_FIELD_NUMBER;
         hash = (53 * hash) + getAltAddressesList().hashCode();
+      }
+      if (hasDummyPad()) {
+        hash = (37 * hash) + DUMMY_PAD_FIELD_NUMBER;
+        hash = (53 * hash) + getDummyPad().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3420,34 +5239,40 @@ public final class SteamdatagramMessagesSdr {
         bitField0_ = (bitField0_ & ~0x00000002);
         latencyPingMs_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
-        yourPublicIp_ = 0;
+        latencyDatacenterIdsP2P_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000008);
-        yourPublicPort_ = 0;
+        latencyPingMsP2P_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000010);
-        serverTime_ = 0;
+        yourPublicIp_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
-        challenge_ = 0L;
+        yourPublicPort_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
-        secondsUntilShutdown_ = 0;
+        serverTime_ = 0;
         bitField0_ = (bitField0_ & ~0x00000080);
-        clientCookie_ = 0;
+        challenge_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000100);
-        scoringPenaltyRelayCluster_ = 0;
+        secondsUntilShutdown_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
-        flags_ = 0;
+        clientCookie_ = 0;
         bitField0_ = (bitField0_ & ~0x00000400);
+        scoringPenaltyRelayCluster_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        flags_ = 0;
+        bitField0_ = (bitField0_ & ~0x00001000);
         if (routeExceptionsBuilder_ == null) {
           routeExceptions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00002000);
         } else {
           routeExceptionsBuilder_.clear();
         }
         if (altAddressesBuilder_ == null) {
           altAddresses_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00004000);
         } else {
           altAddressesBuilder_.clear();
         }
+        dummyPad_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00008000);
         return this;
       }
 
@@ -3490,56 +5315,70 @@ public final class SteamdatagramMessagesSdr {
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.latencyPingMs_ = latencyPingMs_;
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          latencyDatacenterIdsP2P_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.latencyDatacenterIdsP2P_ = latencyDatacenterIdsP2P_;
+        if (((bitField0_ & 0x00000010) != 0)) {
+          latencyPingMsP2P_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.latencyPingMsP2P_ = latencyPingMsP2P_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.yourPublicIp_ = yourPublicIp_;
           to_bitField0_ |= 0x00000002;
         }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000040) != 0)) {
           result.yourPublicPort_ = yourPublicPort_;
           to_bitField0_ |= 0x00000004;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000080) != 0)) {
           result.serverTime_ = serverTime_;
           to_bitField0_ |= 0x00000008;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000100) != 0)) {
           result.challenge_ = challenge_;
           to_bitField0_ |= 0x00000010;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000200) != 0)) {
           result.secondsUntilShutdown_ = secondsUntilShutdown_;
           to_bitField0_ |= 0x00000020;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000400) != 0)) {
           result.clientCookie_ = clientCookie_;
           to_bitField0_ |= 0x00000040;
         }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           result.scoringPenaltyRelayCluster_ = scoringPenaltyRelayCluster_;
           to_bitField0_ |= 0x00000080;
         }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
+        if (((from_bitField0_ & 0x00001000) != 0)) {
           result.flags_ = flags_;
           to_bitField0_ |= 0x00000100;
         }
         if (routeExceptionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) != 0)) {
+          if (((bitField0_ & 0x00002000) != 0)) {
             routeExceptions_ = java.util.Collections.unmodifiableList(routeExceptions_);
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00002000);
           }
           result.routeExceptions_ = routeExceptions_;
         } else {
           result.routeExceptions_ = routeExceptionsBuilder_.build();
         }
         if (altAddressesBuilder_ == null) {
-          if (((bitField0_ & 0x00001000) != 0)) {
+          if (((bitField0_ & 0x00004000) != 0)) {
             altAddresses_ = java.util.Collections.unmodifiableList(altAddresses_);
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00004000);
           }
           result.altAddresses_ = altAddresses_;
         } else {
           result.altAddresses_ = altAddressesBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.dummyPad_ = dummyPad_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3612,6 +5451,26 @@ public final class SteamdatagramMessagesSdr {
           }
           onChanged();
         }
+        if (!other.latencyDatacenterIdsP2P_.isEmpty()) {
+          if (latencyDatacenterIdsP2P_.isEmpty()) {
+            latencyDatacenterIdsP2P_ = other.latencyDatacenterIdsP2P_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureLatencyDatacenterIdsP2PIsMutable();
+            latencyDatacenterIdsP2P_.addAll(other.latencyDatacenterIdsP2P_);
+          }
+          onChanged();
+        }
+        if (!other.latencyPingMsP2P_.isEmpty()) {
+          if (latencyPingMsP2P_.isEmpty()) {
+            latencyPingMsP2P_ = other.latencyPingMsP2P_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureLatencyPingMsP2PIsMutable();
+            latencyPingMsP2P_.addAll(other.latencyPingMsP2P_);
+          }
+          onChanged();
+        }
         if (other.hasYourPublicIp()) {
           setYourPublicIp(other.getYourPublicIp());
         }
@@ -3640,7 +5499,7 @@ public final class SteamdatagramMessagesSdr {
           if (!other.routeExceptions_.isEmpty()) {
             if (routeExceptions_.isEmpty()) {
               routeExceptions_ = other.routeExceptions_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00002000);
             } else {
               ensureRouteExceptionsIsMutable();
               routeExceptions_.addAll(other.routeExceptions_);
@@ -3653,7 +5512,7 @@ public final class SteamdatagramMessagesSdr {
               routeExceptionsBuilder_.dispose();
               routeExceptionsBuilder_ = null;
               routeExceptions_ = other.routeExceptions_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00002000);
               routeExceptionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRouteExceptionsFieldBuilder() : null;
@@ -3666,7 +5525,7 @@ public final class SteamdatagramMessagesSdr {
           if (!other.altAddresses_.isEmpty()) {
             if (altAddresses_.isEmpty()) {
               altAddresses_ = other.altAddresses_;
-              bitField0_ = (bitField0_ & ~0x00001000);
+              bitField0_ = (bitField0_ & ~0x00004000);
             } else {
               ensureAltAddressesIsMutable();
               altAddresses_.addAll(other.altAddresses_);
@@ -3679,7 +5538,7 @@ public final class SteamdatagramMessagesSdr {
               altAddressesBuilder_.dispose();
               altAddressesBuilder_ = null;
               altAddresses_ = other.altAddresses_;
-              bitField0_ = (bitField0_ & ~0x00001000);
+              bitField0_ = (bitField0_ & ~0x00004000);
               altAddressesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAltAddressesFieldBuilder() : null;
@@ -3687,6 +5546,9 @@ public final class SteamdatagramMessagesSdr {
               altAddressesBuilder_.addAllMessages(other.altAddresses_);
             }
           }
+        }
+        if (other.hasDummyPad()) {
+          setDummyPad(other.getDummyPad());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3915,6 +5777,164 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
 
+      private com.google.protobuf.Internal.IntList latencyDatacenterIdsP2P_ = emptyIntList();
+      private void ensureLatencyDatacenterIdsP2PIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          latencyDatacenterIdsP2P_ = mutableCopy(latencyDatacenterIdsP2P_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+       * @return A list containing the latencyDatacenterIdsP2p.
+       */
+      public java.util.List<java.lang.Integer>
+          getLatencyDatacenterIdsP2PList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(latencyDatacenterIdsP2P_) : latencyDatacenterIdsP2P_;
+      }
+      /**
+       * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+       * @return The count of latencyDatacenterIdsP2p.
+       */
+      public int getLatencyDatacenterIdsP2PCount() {
+        return latencyDatacenterIdsP2P_.size();
+      }
+      /**
+       * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+       * @param index The index of the element to return.
+       * @return The latencyDatacenterIdsP2p at the given index.
+       */
+      public int getLatencyDatacenterIdsP2P(int index) {
+        return latencyDatacenterIdsP2P_.getInt(index);
+      }
+      /**
+       * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+       * @param index The index to set the value at.
+       * @param value The latencyDatacenterIdsP2p to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatencyDatacenterIdsP2P(
+          int index, int value) {
+        ensureLatencyDatacenterIdsP2PIsMutable();
+        latencyDatacenterIdsP2P_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+       * @param value The latencyDatacenterIdsP2p to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLatencyDatacenterIdsP2P(int value) {
+        ensureLatencyDatacenterIdsP2PIsMutable();
+        latencyDatacenterIdsP2P_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+       * @param values The latencyDatacenterIdsP2p to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLatencyDatacenterIdsP2P(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureLatencyDatacenterIdsP2PIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, latencyDatacenterIdsP2P_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatencyDatacenterIdsP2P() {
+        latencyDatacenterIdsP2P_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList latencyPingMsP2P_ = emptyIntList();
+      private void ensureLatencyPingMsP2PIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          latencyPingMsP2P_ = mutableCopy(latencyPingMsP2P_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+       * @return A list containing the latencyPingMsP2p.
+       */
+      public java.util.List<java.lang.Integer>
+          getLatencyPingMsP2PList() {
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(latencyPingMsP2P_) : latencyPingMsP2P_;
+      }
+      /**
+       * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+       * @return The count of latencyPingMsP2p.
+       */
+      public int getLatencyPingMsP2PCount() {
+        return latencyPingMsP2P_.size();
+      }
+      /**
+       * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+       * @param index The index of the element to return.
+       * @return The latencyPingMsP2p at the given index.
+       */
+      public int getLatencyPingMsP2P(int index) {
+        return latencyPingMsP2P_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+       * @param index The index to set the value at.
+       * @param value The latencyPingMsP2p to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatencyPingMsP2P(
+          int index, int value) {
+        ensureLatencyPingMsP2PIsMutable();
+        latencyPingMsP2P_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+       * @param value The latencyPingMsP2p to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLatencyPingMsP2P(int value) {
+        ensureLatencyPingMsP2PIsMutable();
+        latencyPingMsP2P_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+       * @param values The latencyPingMsP2p to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLatencyPingMsP2P(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureLatencyPingMsP2PIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, latencyPingMsP2P_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 latency_ping_ms_p2p = 15 [packed = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatencyPingMsP2P() {
+        latencyPingMsP2P_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+
       private int yourPublicIp_ ;
       /**
        * <code>optional fixed32 your_public_ip = 4;</code>
@@ -3922,7 +5942,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasYourPublicIp() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>optional fixed32 your_public_ip = 4;</code>
@@ -3938,7 +5958,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setYourPublicIp(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000020;
         yourPublicIp_ = value;
         onChanged();
         return this;
@@ -3948,7 +5968,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearYourPublicIp() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000020);
         yourPublicIp_ = 0;
         onChanged();
         return this;
@@ -3961,7 +5981,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasYourPublicPort() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>optional fixed32 your_public_port = 11;</code>
@@ -3977,7 +5997,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setYourPublicPort(int value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000040;
         yourPublicPort_ = value;
         onChanged();
         return this;
@@ -3987,7 +6007,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearYourPublicPort() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000040);
         yourPublicPort_ = 0;
         onChanged();
         return this;
@@ -4000,7 +6020,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasServerTime() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <code>optional fixed32 server_time = 5;</code>
@@ -4016,7 +6036,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setServerTime(int value) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000080;
         serverTime_ = value;
         onChanged();
         return this;
@@ -4026,7 +6046,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearServerTime() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000080);
         serverTime_ = 0;
         onChanged();
         return this;
@@ -4039,7 +6059,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasChallenge() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <code>optional fixed64 challenge = 6;</code>
@@ -4055,7 +6075,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setChallenge(long value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
         challenge_ = value;
         onChanged();
         return this;
@@ -4065,7 +6085,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearChallenge() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000100);
         challenge_ = 0L;
         onChanged();
         return this;
@@ -4078,7 +6098,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasSecondsUntilShutdown() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>optional uint32 seconds_until_shutdown = 7;</code>
@@ -4094,7 +6114,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setSecondsUntilShutdown(int value) {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         secondsUntilShutdown_ = value;
         onChanged();
         return this;
@@ -4104,7 +6124,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearSecondsUntilShutdown() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000200);
         secondsUntilShutdown_ = 0;
         onChanged();
         return this;
@@ -4117,7 +6137,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasClientCookie() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <code>optional fixed32 client_cookie = 8;</code>
@@ -4133,7 +6153,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setClientCookie(int value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000400;
         clientCookie_ = value;
         onChanged();
         return this;
@@ -4143,7 +6163,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearClientCookie() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000400);
         clientCookie_ = 0;
         onChanged();
         return this;
@@ -4156,7 +6176,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasScoringPenaltyRelayCluster() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <code>optional uint32 scoring_penalty_relay_cluster = 9;</code>
@@ -4172,7 +6192,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setScoringPenaltyRelayCluster(int value) {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000800;
         scoringPenaltyRelayCluster_ = value;
         onChanged();
         return this;
@@ -4182,7 +6202,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearScoringPenaltyRelayCluster() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000800);
         scoringPenaltyRelayCluster_ = 0;
         onChanged();
         return this;
@@ -4195,7 +6215,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasFlags() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <code>optional uint32 flags = 12;</code>
@@ -4211,7 +6231,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setFlags(int value) {
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00001000;
         flags_ = value;
         onChanged();
         return this;
@@ -4221,7 +6241,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearFlags() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00001000);
         flags_ = 0;
         onChanged();
         return this;
@@ -4230,9 +6250,9 @@ public final class SteamdatagramMessagesSdr {
       private java.util.List<SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.RouteException> routeExceptions_ =
         java.util.Collections.emptyList();
       private void ensureRouteExceptionsIsMutable() {
-        if (!((bitField0_ & 0x00000800) != 0)) {
+        if (!((bitField0_ & 0x00002000) != 0)) {
           routeExceptions_ = new java.util.ArrayList<SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.RouteException>(routeExceptions_);
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00002000;
          }
       }
 
@@ -4382,7 +6402,7 @@ public final class SteamdatagramMessagesSdr {
       public Builder clearRouteExceptions() {
         if (routeExceptionsBuilder_ == null) {
           routeExceptions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00002000);
           onChanged();
         } else {
           routeExceptionsBuilder_.clear();
@@ -4459,7 +6479,7 @@ public final class SteamdatagramMessagesSdr {
           routeExceptionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.RouteException, SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.RouteException.Builder, SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.RouteExceptionOrBuilder>(
                   routeExceptions_,
-                  ((bitField0_ & 0x00000800) != 0),
+                  ((bitField0_ & 0x00002000) != 0),
                   getParentForChildren(),
                   isClean());
           routeExceptions_ = null;
@@ -4470,9 +6490,9 @@ public final class SteamdatagramMessagesSdr {
       private java.util.List<SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.AltAddress> altAddresses_ =
         java.util.Collections.emptyList();
       private void ensureAltAddressesIsMutable() {
-        if (!((bitField0_ & 0x00001000) != 0)) {
+        if (!((bitField0_ & 0x00004000) != 0)) {
           altAddresses_ = new java.util.ArrayList<SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.AltAddress>(altAddresses_);
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00004000;
          }
       }
 
@@ -4622,7 +6642,7 @@ public final class SteamdatagramMessagesSdr {
       public Builder clearAltAddresses() {
         if (altAddressesBuilder_ == null) {
           altAddresses_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00004000);
           onChanged();
         } else {
           altAddressesBuilder_.clear();
@@ -4699,12 +6719,54 @@ public final class SteamdatagramMessagesSdr {
           altAddressesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.AltAddress, SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.AltAddress.Builder, SteamdatagramMessagesSdr.CMsgSteamDatagramRouterPingReply.AltAddressOrBuilder>(
                   altAddresses_,
-                  ((bitField0_ & 0x00001000) != 0),
+                  ((bitField0_ & 0x00004000) != 0),
                   getParentForChildren(),
                   isClean());
           altAddresses_ = null;
         }
         return altAddressesBuilder_;
+      }
+
+      private com.google.protobuf.ByteString dummyPad_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes dummy_pad = 99;</code>
+       * @return Whether the dummyPad field is set.
+       */
+      @java.lang.Override
+      public boolean hasDummyPad() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>optional bytes dummy_pad = 99;</code>
+       * @return The dummyPad.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDummyPad() {
+        return dummyPad_;
+      }
+      /**
+       * <code>optional bytes dummy_pad = 99;</code>
+       * @param value The dummyPad to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDummyPad(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00008000;
+        dummyPad_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes dummy_pad = 99;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDummyPad() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        dummyPad_ = getDefaultInstance().getDummyPad();
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4759,85 +6821,126 @@ public final class SteamdatagramMessagesSdr {
 
   }
 
-  public interface CMsgSteamDatagramGameserverPingRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CMsgSteamDatagramGameserverPingRequest)
+  public interface CMsgSteamDatagramGameserverPingRequestBodyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgSteamDatagramGameserverPingRequestBody)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional fixed32 your_public_ip = 1;</code>
+     * <code>optional fixed32 relay_popid = 1;</code>
+     * @return Whether the relayPopid field is set.
+     */
+    boolean hasRelayPopid();
+    /**
+     * <code>optional fixed32 relay_popid = 1;</code>
+     * @return The relayPopid.
+     */
+    int getRelayPopid();
+
+    /**
+     * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
      * @return Whether the yourPublicIp field is set.
      */
     boolean hasYourPublicIp();
     /**
-     * <code>optional fixed32 your_public_ip = 1;</code>
+     * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
      * @return The yourPublicIp.
      */
-    int getYourPublicIp();
+    SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress getYourPublicIp();
+    /**
+     * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+     */
+    SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder getYourPublicIpOrBuilder();
 
     /**
-     * <code>optional fixed32 your_public_port = 5;</code>
+     * <code>optional uint32 your_public_port = 3;</code>
      * @return Whether the yourPublicPort field is set.
      */
     boolean hasYourPublicPort();
     /**
-     * <code>optional fixed32 your_public_port = 5;</code>
+     * <code>optional uint32 your_public_port = 3;</code>
      * @return The yourPublicPort.
      */
     int getYourPublicPort();
 
     /**
-     * <code>optional fixed32 server_time = 2;</code>
-     * @return Whether the serverTime field is set.
+     * <code>optional uint64 relay_unix_time = 4;</code>
+     * @return Whether the relayUnixTime field is set.
      */
-    boolean hasServerTime();
+    boolean hasRelayUnixTime();
     /**
-     * <code>optional fixed32 server_time = 2;</code>
-     * @return The serverTime.
+     * <code>optional uint64 relay_unix_time = 4;</code>
+     * @return The relayUnixTime.
      */
-    int getServerTime();
+    long getRelayUnixTime();
 
     /**
-     * <code>optional fixed64 challenge = 3;</code>
-     * @return Whether the challenge field is set.
+     * <code>optional fixed64 routing_secret = 5;</code>
+     * @return Whether the routingSecret field is set.
      */
-    boolean hasChallenge();
+    boolean hasRoutingSecret();
     /**
-     * <code>optional fixed64 challenge = 3;</code>
-     * @return The challenge.
+     * <code>optional fixed64 routing_secret = 5;</code>
+     * @return The routingSecret.
      */
-    long getChallenge();
+    long getRoutingSecret();
 
     /**
-     * <code>optional fixed32 router_timestamp = 4;</code>
-     * @return Whether the routerTimestamp field is set.
+     * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
      */
-    boolean hasRouterTimestamp();
+    java.util.List<SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress> 
+        getMyIpsList();
     /**
-     * <code>optional fixed32 router_timestamp = 4;</code>
-     * @return The routerTimestamp.
+     * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
      */
-    int getRouterTimestamp();
+    SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress getMyIps(int index);
+    /**
+     * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+     */
+    int getMyIpsCount();
+    /**
+     * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+     */
+    java.util.List<? extends SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder> 
+        getMyIpsOrBuilderList();
+    /**
+     * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+     */
+    SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder getMyIpsOrBuilder(
+        int index);
+
+    /**
+     * <code>optional bytes echo = 8;</code>
+     * @return Whether the echo field is set.
+     */
+    boolean hasEcho();
+    /**
+     * <code>optional bytes echo = 8;</code>
+     * @return The echo.
+     */
+    com.google.protobuf.ByteString getEcho();
   }
   /**
-   * Protobuf type {@code CMsgSteamDatagramGameserverPingRequest}
+   * Protobuf type {@code CMsgSteamDatagramGameserverPingRequestBody}
    */
-  public static final class CMsgSteamDatagramGameserverPingRequest extends
+  public static final class CMsgSteamDatagramGameserverPingRequestBody extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CMsgSteamDatagramGameserverPingRequest)
-      CMsgSteamDatagramGameserverPingRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:CMsgSteamDatagramGameserverPingRequestBody)
+      CMsgSteamDatagramGameserverPingRequestBodyOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CMsgSteamDatagramGameserverPingRequest.newBuilder() to construct.
-    private CMsgSteamDatagramGameserverPingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CMsgSteamDatagramGameserverPingRequestBody.newBuilder() to construct.
+    private CMsgSteamDatagramGameserverPingRequestBody(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CMsgSteamDatagramGameserverPingRequest() {
+    private CMsgSteamDatagramGameserverPingRequestBody() {
+      myIps_ = java.util.Collections.emptyList();
+      echo_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CMsgSteamDatagramGameserverPingRequest();
+      return new CMsgSteamDatagramGameserverPingRequestBody();
     }
 
     @java.lang.Override
@@ -4845,7 +6948,7 @@ public final class SteamdatagramMessagesSdr {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CMsgSteamDatagramGameserverPingRequest(
+    private CMsgSteamDatagramGameserverPingRequestBody(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4866,27 +6969,49 @@ public final class SteamdatagramMessagesSdr {
               break;
             case 13: {
               bitField0_ |= 0x00000001;
-              yourPublicIp_ = input.readFixed32();
+              relayPopid_ = input.readFixed32();
               break;
             }
-            case 21: {
-              bitField0_ |= 0x00000004;
-              serverTime_ = input.readFixed32();
-              break;
-            }
-            case 25: {
-              bitField0_ |= 0x00000008;
-              challenge_ = input.readFixed64();
-              break;
-            }
-            case 37: {
-              bitField0_ |= 0x00000010;
-              routerTimestamp_ = input.readFixed32();
-              break;
-            }
-            case 45: {
+            case 18: {
+              SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = yourPublicIp_.toBuilder();
+              }
+              yourPublicIp_ = input.readMessage(SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(yourPublicIp_);
+                yourPublicIp_ = subBuilder.buildPartial();
+              }
               bitField0_ |= 0x00000002;
-              yourPublicPort_ = input.readFixed32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              yourPublicPort_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              relayUnixTime_ = input.readUInt64();
+              break;
+            }
+            case 41: {
+              bitField0_ |= 0x00000010;
+              routingSecret_ = input.readFixed64();
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                myIps_ = new java.util.ArrayList<SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              myIps_.add(
+                  input.readMessage(SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.PARSER, extensionRegistry));
+              break;
+            }
+            case 66: {
+              bitField0_ |= 0x00000020;
+              echo_ = input.readBytes();
               break;
             }
             default: {
@@ -4904,55 +7029,84 @@ public final class SteamdatagramMessagesSdr {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          myIps_ = java.util.Collections.unmodifiableList(myIps_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequest_descriptor;
+      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequestBody_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequest_fieldAccessorTable
+      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequestBody_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest.Builder.class);
+              SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody.Builder.class);
     }
 
     private int bitField0_;
-    public static final int YOUR_PUBLIC_IP_FIELD_NUMBER = 1;
-    private int yourPublicIp_;
+    public static final int RELAY_POPID_FIELD_NUMBER = 1;
+    private int relayPopid_;
     /**
-     * <code>optional fixed32 your_public_ip = 1;</code>
+     * <code>optional fixed32 relay_popid = 1;</code>
+     * @return Whether the relayPopid field is set.
+     */
+    @java.lang.Override
+    public boolean hasRelayPopid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed32 relay_popid = 1;</code>
+     * @return The relayPopid.
+     */
+    @java.lang.Override
+    public int getRelayPopid() {
+      return relayPopid_;
+    }
+
+    public static final int YOUR_PUBLIC_IP_FIELD_NUMBER = 2;
+    private SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress yourPublicIp_;
+    /**
+     * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
      * @return Whether the yourPublicIp field is set.
      */
     @java.lang.Override
     public boolean hasYourPublicIp() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional fixed32 your_public_ip = 1;</code>
+     * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
      * @return The yourPublicIp.
      */
     @java.lang.Override
-    public int getYourPublicIp() {
-      return yourPublicIp_;
+    public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress getYourPublicIp() {
+      return yourPublicIp_ == null ? SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.getDefaultInstance() : yourPublicIp_;
+    }
+    /**
+     * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+     */
+    @java.lang.Override
+    public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder getYourPublicIpOrBuilder() {
+      return yourPublicIp_ == null ? SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.getDefaultInstance() : yourPublicIp_;
     }
 
-    public static final int YOUR_PUBLIC_PORT_FIELD_NUMBER = 5;
+    public static final int YOUR_PUBLIC_PORT_FIELD_NUMBER = 3;
     private int yourPublicPort_;
     /**
-     * <code>optional fixed32 your_public_port = 5;</code>
+     * <code>optional uint32 your_public_port = 3;</code>
      * @return Whether the yourPublicPort field is set.
      */
     @java.lang.Override
     public boolean hasYourPublicPort() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional fixed32 your_public_port = 5;</code>
+     * <code>optional uint32 your_public_port = 3;</code>
      * @return The yourPublicPort.
      */
     @java.lang.Override
@@ -4960,61 +7114,101 @@ public final class SteamdatagramMessagesSdr {
       return yourPublicPort_;
     }
 
-    public static final int SERVER_TIME_FIELD_NUMBER = 2;
-    private int serverTime_;
+    public static final int RELAY_UNIX_TIME_FIELD_NUMBER = 4;
+    private long relayUnixTime_;
     /**
-     * <code>optional fixed32 server_time = 2;</code>
-     * @return Whether the serverTime field is set.
+     * <code>optional uint64 relay_unix_time = 4;</code>
+     * @return Whether the relayUnixTime field is set.
      */
     @java.lang.Override
-    public boolean hasServerTime() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>optional fixed32 server_time = 2;</code>
-     * @return The serverTime.
-     */
-    @java.lang.Override
-    public int getServerTime() {
-      return serverTime_;
-    }
-
-    public static final int CHALLENGE_FIELD_NUMBER = 3;
-    private long challenge_;
-    /**
-     * <code>optional fixed64 challenge = 3;</code>
-     * @return Whether the challenge field is set.
-     */
-    @java.lang.Override
-    public boolean hasChallenge() {
+    public boolean hasRelayUnixTime() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>optional fixed64 challenge = 3;</code>
-     * @return The challenge.
+     * <code>optional uint64 relay_unix_time = 4;</code>
+     * @return The relayUnixTime.
      */
     @java.lang.Override
-    public long getChallenge() {
-      return challenge_;
+    public long getRelayUnixTime() {
+      return relayUnixTime_;
     }
 
-    public static final int ROUTER_TIMESTAMP_FIELD_NUMBER = 4;
-    private int routerTimestamp_;
+    public static final int ROUTING_SECRET_FIELD_NUMBER = 5;
+    private long routingSecret_;
     /**
-     * <code>optional fixed32 router_timestamp = 4;</code>
-     * @return Whether the routerTimestamp field is set.
+     * <code>optional fixed64 routing_secret = 5;</code>
+     * @return Whether the routingSecret field is set.
      */
     @java.lang.Override
-    public boolean hasRouterTimestamp() {
+    public boolean hasRoutingSecret() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>optional fixed32 router_timestamp = 4;</code>
-     * @return The routerTimestamp.
+     * <code>optional fixed64 routing_secret = 5;</code>
+     * @return The routingSecret.
      */
     @java.lang.Override
-    public int getRouterTimestamp() {
-      return routerTimestamp_;
+    public long getRoutingSecret() {
+      return routingSecret_;
+    }
+
+    public static final int MY_IPS_FIELD_NUMBER = 6;
+    private java.util.List<SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress> myIps_;
+    /**
+     * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress> getMyIpsList() {
+      return myIps_;
+    }
+    /**
+     * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder> 
+        getMyIpsOrBuilderList() {
+      return myIps_;
+    }
+    /**
+     * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+     */
+    @java.lang.Override
+    public int getMyIpsCount() {
+      return myIps_.size();
+    }
+    /**
+     * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+     */
+    @java.lang.Override
+    public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress getMyIps(int index) {
+      return myIps_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+     */
+    @java.lang.Override
+    public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder getMyIpsOrBuilder(
+        int index) {
+      return myIps_.get(index);
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 8;
+    private com.google.protobuf.ByteString echo_;
+    /**
+     * <code>optional bytes echo = 8;</code>
+     * @return Whether the echo field is set.
+     */
+    @java.lang.Override
+    public boolean hasEcho() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional bytes echo = 8;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEcho() {
+      return echo_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5032,19 +7226,25 @@ public final class SteamdatagramMessagesSdr {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeFixed32(1, yourPublicIp_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeFixed32(2, serverTime_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeFixed64(3, challenge_);
-      }
-      if (((bitField0_ & 0x00000010) != 0)) {
-        output.writeFixed32(4, routerTimestamp_);
+        output.writeFixed32(1, relayPopid_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeFixed32(5, yourPublicPort_);
+        output.writeMessage(2, getYourPublicIp());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, yourPublicPort_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt64(4, relayUnixTime_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeFixed64(5, routingSecret_);
+      }
+      for (int i = 0; i < myIps_.size(); i++) {
+        output.writeMessage(6, myIps_.get(i));
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeBytes(8, echo_);
       }
       unknownFields.writeTo(output);
     }
@@ -5057,23 +7257,31 @@ public final class SteamdatagramMessagesSdr {
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(1, yourPublicIp_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(2, serverTime_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFixed64Size(3, challenge_);
-      }
-      if (((bitField0_ & 0x00000010) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(4, routerTimestamp_);
+          .computeFixed32Size(1, relayPopid_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(5, yourPublicPort_);
+          .computeMessageSize(2, getYourPublicIp());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, yourPublicPort_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, relayUnixTime_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(5, routingSecret_);
+      }
+      for (int i = 0; i < myIps_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, myIps_.get(i));
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5085,35 +7293,42 @@ public final class SteamdatagramMessagesSdr {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest)) {
+      if (!(obj instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody)) {
         return super.equals(obj);
       }
-      SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest other = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest) obj;
+      SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody other = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody) obj;
 
+      if (hasRelayPopid() != other.hasRelayPopid()) return false;
+      if (hasRelayPopid()) {
+        if (getRelayPopid()
+            != other.getRelayPopid()) return false;
+      }
       if (hasYourPublicIp() != other.hasYourPublicIp()) return false;
       if (hasYourPublicIp()) {
-        if (getYourPublicIp()
-            != other.getYourPublicIp()) return false;
+        if (!getYourPublicIp()
+            .equals(other.getYourPublicIp())) return false;
       }
       if (hasYourPublicPort() != other.hasYourPublicPort()) return false;
       if (hasYourPublicPort()) {
         if (getYourPublicPort()
             != other.getYourPublicPort()) return false;
       }
-      if (hasServerTime() != other.hasServerTime()) return false;
-      if (hasServerTime()) {
-        if (getServerTime()
-            != other.getServerTime()) return false;
+      if (hasRelayUnixTime() != other.hasRelayUnixTime()) return false;
+      if (hasRelayUnixTime()) {
+        if (getRelayUnixTime()
+            != other.getRelayUnixTime()) return false;
       }
-      if (hasChallenge() != other.hasChallenge()) return false;
-      if (hasChallenge()) {
-        if (getChallenge()
-            != other.getChallenge()) return false;
+      if (hasRoutingSecret() != other.hasRoutingSecret()) return false;
+      if (hasRoutingSecret()) {
+        if (getRoutingSecret()
+            != other.getRoutingSecret()) return false;
       }
-      if (hasRouterTimestamp() != other.hasRouterTimestamp()) return false;
-      if (hasRouterTimestamp()) {
-        if (getRouterTimestamp()
-            != other.getRouterTimestamp()) return false;
+      if (!getMyIpsList()
+          .equals(other.getMyIpsList())) return false;
+      if (hasEcho() != other.hasEcho()) return false;
+      if (hasEcho()) {
+        if (!getEcho()
+            .equals(other.getEcho())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -5126,95 +7341,104 @@ public final class SteamdatagramMessagesSdr {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRelayPopid()) {
+        hash = (37 * hash) + RELAY_POPID_FIELD_NUMBER;
+        hash = (53 * hash) + getRelayPopid();
+      }
       if (hasYourPublicIp()) {
         hash = (37 * hash) + YOUR_PUBLIC_IP_FIELD_NUMBER;
-        hash = (53 * hash) + getYourPublicIp();
+        hash = (53 * hash) + getYourPublicIp().hashCode();
       }
       if (hasYourPublicPort()) {
         hash = (37 * hash) + YOUR_PUBLIC_PORT_FIELD_NUMBER;
         hash = (53 * hash) + getYourPublicPort();
       }
-      if (hasServerTime()) {
-        hash = (37 * hash) + SERVER_TIME_FIELD_NUMBER;
-        hash = (53 * hash) + getServerTime();
-      }
-      if (hasChallenge()) {
-        hash = (37 * hash) + CHALLENGE_FIELD_NUMBER;
+      if (hasRelayUnixTime()) {
+        hash = (37 * hash) + RELAY_UNIX_TIME_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getChallenge());
+            getRelayUnixTime());
       }
-      if (hasRouterTimestamp()) {
-        hash = (37 * hash) + ROUTER_TIMESTAMP_FIELD_NUMBER;
-        hash = (53 * hash) + getRouterTimestamp();
+      if (hasRoutingSecret()) {
+        hash = (37 * hash) + ROUTING_SECRET_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRoutingSecret());
+      }
+      if (getMyIpsCount() > 0) {
+        hash = (37 * hash) + MY_IPS_FIELD_NUMBER;
+        hash = (53 * hash) + getMyIpsList().hashCode();
+      }
+      if (hasEcho()) {
+        hash = (37 * hash) + ECHO_FIELD_NUMBER;
+        hash = (53 * hash) + getEcho().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseFrom(byte[] data)
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseFrom(java.io.InputStream input)
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseDelimitedFrom(java.io.InputStream input)
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseDelimitedFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5227,7 +7451,7 @@ public final class SteamdatagramMessagesSdr {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest prototype) {
+    public static Builder newBuilder(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5243,26 +7467,26 @@ public final class SteamdatagramMessagesSdr {
       return builder;
     }
     /**
-     * Protobuf type {@code CMsgSteamDatagramGameserverPingRequest}
+     * Protobuf type {@code CMsgSteamDatagramGameserverPingRequestBody}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CMsgSteamDatagramGameserverPingRequest)
-        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CMsgSteamDatagramGameserverPingRequestBody)
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBodyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequest_descriptor;
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequestBody_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequest_fieldAccessorTable
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequestBody_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest.Builder.class);
+                SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody.Builder.class);
       }
 
-      // Construct using SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest.newBuilder()
+      // Construct using SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5275,38 +7499,52 @@ public final class SteamdatagramMessagesSdr {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getYourPublicIpFieldBuilder();
+          getMyIpsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        yourPublicIp_ = 0;
+        relayPopid_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        yourPublicPort_ = 0;
+        if (yourPublicIpBuilder_ == null) {
+          yourPublicIp_ = null;
+        } else {
+          yourPublicIpBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000002);
-        serverTime_ = 0;
+        yourPublicPort_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
-        challenge_ = 0L;
+        relayUnixTime_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000008);
-        routerTimestamp_ = 0;
+        routingSecret_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000010);
+        if (myIpsBuilder_ == null) {
+          myIps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          myIpsBuilder_.clear();
+        }
+        echo_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequest_descriptor;
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequestBody_descriptor;
       }
 
       @java.lang.Override
-      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest getDefaultInstanceForType() {
-        return SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest.getDefaultInstance();
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody getDefaultInstanceForType() {
+        return SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody.getDefaultInstance();
       }
 
       @java.lang.Override
-      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest build() {
-        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest result = buildPartial();
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody build() {
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5314,30 +7552,47 @@ public final class SteamdatagramMessagesSdr {
       }
 
       @java.lang.Override
-      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest buildPartial() {
-        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest result = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest(this);
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody buildPartial() {
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody result = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.yourPublicIp_ = yourPublicIp_;
+          result.relayPopid_ = relayPopid_;
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.yourPublicPort_ = yourPublicPort_;
+          if (yourPublicIpBuilder_ == null) {
+            result.yourPublicIp_ = yourPublicIp_;
+          } else {
+            result.yourPublicIp_ = yourPublicIpBuilder_.build();
+          }
           to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.serverTime_ = serverTime_;
+          result.yourPublicPort_ = yourPublicPort_;
           to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.challenge_ = challenge_;
+          result.relayUnixTime_ = relayUnixTime_;
           to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.routerTimestamp_ = routerTimestamp_;
+          result.routingSecret_ = routingSecret_;
           to_bitField0_ |= 0x00000010;
         }
+        if (myIpsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            myIps_ = java.util.Collections.unmodifiableList(myIps_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.myIps_ = myIps_;
+        } else {
+          result.myIps_ = myIpsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.echo_ = echo_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -5377,30 +7632,59 @@ public final class SteamdatagramMessagesSdr {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest) {
-          return mergeFrom((SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest)other);
+        if (other instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody) {
+          return mergeFrom((SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest other) {
-        if (other == SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody other) {
+        if (other == SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody.getDefaultInstance()) return this;
+        if (other.hasRelayPopid()) {
+          setRelayPopid(other.getRelayPopid());
+        }
         if (other.hasYourPublicIp()) {
-          setYourPublicIp(other.getYourPublicIp());
+          mergeYourPublicIp(other.getYourPublicIp());
         }
         if (other.hasYourPublicPort()) {
           setYourPublicPort(other.getYourPublicPort());
         }
-        if (other.hasServerTime()) {
-          setServerTime(other.getServerTime());
+        if (other.hasRelayUnixTime()) {
+          setRelayUnixTime(other.getRelayUnixTime());
         }
-        if (other.hasChallenge()) {
-          setChallenge(other.getChallenge());
+        if (other.hasRoutingSecret()) {
+          setRoutingSecret(other.getRoutingSecret());
         }
-        if (other.hasRouterTimestamp()) {
-          setRouterTimestamp(other.getRouterTimestamp());
+        if (myIpsBuilder_ == null) {
+          if (!other.myIps_.isEmpty()) {
+            if (myIps_.isEmpty()) {
+              myIps_ = other.myIps_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureMyIpsIsMutable();
+              myIps_.addAll(other.myIps_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.myIps_.isEmpty()) {
+            if (myIpsBuilder_.isEmpty()) {
+              myIpsBuilder_.dispose();
+              myIpsBuilder_ = null;
+              myIps_ = other.myIps_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              myIpsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMyIpsFieldBuilder() : null;
+            } else {
+              myIpsBuilder_.addAllMessages(other.myIps_);
+            }
+          }
+        }
+        if (other.hasEcho()) {
+          setEcho(other.getEcho());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5417,11 +7701,11 @@ public final class SteamdatagramMessagesSdr {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest parsedMessage = null;
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest) e.getUnfinishedMessage();
+          parsedMessage = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5432,56 +7716,176 @@ public final class SteamdatagramMessagesSdr {
       }
       private int bitField0_;
 
-      private int yourPublicIp_ ;
+      private int relayPopid_ ;
       /**
-       * <code>optional fixed32 your_public_ip = 1;</code>
-       * @return Whether the yourPublicIp field is set.
+       * <code>optional fixed32 relay_popid = 1;</code>
+       * @return Whether the relayPopid field is set.
        */
       @java.lang.Override
-      public boolean hasYourPublicIp() {
+      public boolean hasRelayPopid() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional fixed32 your_public_ip = 1;</code>
-       * @return The yourPublicIp.
+       * <code>optional fixed32 relay_popid = 1;</code>
+       * @return The relayPopid.
        */
       @java.lang.Override
-      public int getYourPublicIp() {
-        return yourPublicIp_;
+      public int getRelayPopid() {
+        return relayPopid_;
       }
       /**
-       * <code>optional fixed32 your_public_ip = 1;</code>
-       * @param value The yourPublicIp to set.
+       * <code>optional fixed32 relay_popid = 1;</code>
+       * @param value The relayPopid to set.
        * @return This builder for chaining.
        */
-      public Builder setYourPublicIp(int value) {
+      public Builder setRelayPopid(int value) {
         bitField0_ |= 0x00000001;
-        yourPublicIp_ = value;
+        relayPopid_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional fixed32 your_public_ip = 1;</code>
+       * <code>optional fixed32 relay_popid = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearYourPublicIp() {
+      public Builder clearRelayPopid() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        yourPublicIp_ = 0;
+        relayPopid_ = 0;
         onChanged();
         return this;
       }
 
+      private SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress yourPublicIp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder> yourPublicIpBuilder_;
+      /**
+       * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+       * @return Whether the yourPublicIp field is set.
+       */
+      public boolean hasYourPublicIp() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+       * @return The yourPublicIp.
+       */
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress getYourPublicIp() {
+        if (yourPublicIpBuilder_ == null) {
+          return yourPublicIp_ == null ? SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.getDefaultInstance() : yourPublicIp_;
+        } else {
+          return yourPublicIpBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+       */
+      public Builder setYourPublicIp(SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress value) {
+        if (yourPublicIpBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          yourPublicIp_ = value;
+          onChanged();
+        } else {
+          yourPublicIpBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+       */
+      public Builder setYourPublicIp(
+          SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder builderForValue) {
+        if (yourPublicIpBuilder_ == null) {
+          yourPublicIp_ = builderForValue.build();
+          onChanged();
+        } else {
+          yourPublicIpBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+       */
+      public Builder mergeYourPublicIp(SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress value) {
+        if (yourPublicIpBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              yourPublicIp_ != null &&
+              yourPublicIp_ != SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.getDefaultInstance()) {
+            yourPublicIp_ =
+              SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.newBuilder(yourPublicIp_).mergeFrom(value).buildPartial();
+          } else {
+            yourPublicIp_ = value;
+          }
+          onChanged();
+        } else {
+          yourPublicIpBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+       */
+      public Builder clearYourPublicIp() {
+        if (yourPublicIpBuilder_ == null) {
+          yourPublicIp_ = null;
+          onChanged();
+        } else {
+          yourPublicIpBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+       */
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder getYourPublicIpBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getYourPublicIpFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+       */
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder getYourPublicIpOrBuilder() {
+        if (yourPublicIpBuilder_ != null) {
+          return yourPublicIpBuilder_.getMessageOrBuilder();
+        } else {
+          return yourPublicIp_ == null ?
+              SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.getDefaultInstance() : yourPublicIp_;
+        }
+      }
+      /**
+       * <code>optional .CMsgSteamNetworkingIPAddress your_public_ip = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder> 
+          getYourPublicIpFieldBuilder() {
+        if (yourPublicIpBuilder_ == null) {
+          yourPublicIpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder>(
+                  getYourPublicIp(),
+                  getParentForChildren(),
+                  isClean());
+          yourPublicIp_ = null;
+        }
+        return yourPublicIpBuilder_;
+      }
+
       private int yourPublicPort_ ;
       /**
-       * <code>optional fixed32 your_public_port = 5;</code>
+       * <code>optional uint32 your_public_port = 3;</code>
        * @return Whether the yourPublicPort field is set.
        */
       @java.lang.Override
       public boolean hasYourPublicPort() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional fixed32 your_public_port = 5;</code>
+       * <code>optional uint32 your_public_port = 3;</code>
        * @return The yourPublicPort.
        */
       @java.lang.Override
@@ -5489,140 +7893,383 @@ public final class SteamdatagramMessagesSdr {
         return yourPublicPort_;
       }
       /**
-       * <code>optional fixed32 your_public_port = 5;</code>
+       * <code>optional uint32 your_public_port = 3;</code>
        * @param value The yourPublicPort to set.
        * @return This builder for chaining.
        */
       public Builder setYourPublicPort(int value) {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         yourPublicPort_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional fixed32 your_public_port = 5;</code>
+       * <code>optional uint32 your_public_port = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearYourPublicPort() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         yourPublicPort_ = 0;
         onChanged();
         return this;
       }
 
-      private int serverTime_ ;
+      private long relayUnixTime_ ;
       /**
-       * <code>optional fixed32 server_time = 2;</code>
-       * @return Whether the serverTime field is set.
+       * <code>optional uint64 relay_unix_time = 4;</code>
+       * @return Whether the relayUnixTime field is set.
        */
       @java.lang.Override
-      public boolean hasServerTime() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>optional fixed32 server_time = 2;</code>
-       * @return The serverTime.
-       */
-      @java.lang.Override
-      public int getServerTime() {
-        return serverTime_;
-      }
-      /**
-       * <code>optional fixed32 server_time = 2;</code>
-       * @param value The serverTime to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServerTime(int value) {
-        bitField0_ |= 0x00000004;
-        serverTime_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional fixed32 server_time = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServerTime() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        serverTime_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private long challenge_ ;
-      /**
-       * <code>optional fixed64 challenge = 3;</code>
-       * @return Whether the challenge field is set.
-       */
-      @java.lang.Override
-      public boolean hasChallenge() {
+      public boolean hasRelayUnixTime() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>optional fixed64 challenge = 3;</code>
-       * @return The challenge.
+       * <code>optional uint64 relay_unix_time = 4;</code>
+       * @return The relayUnixTime.
        */
       @java.lang.Override
-      public long getChallenge() {
-        return challenge_;
+      public long getRelayUnixTime() {
+        return relayUnixTime_;
       }
       /**
-       * <code>optional fixed64 challenge = 3;</code>
-       * @param value The challenge to set.
+       * <code>optional uint64 relay_unix_time = 4;</code>
+       * @param value The relayUnixTime to set.
        * @return This builder for chaining.
        */
-      public Builder setChallenge(long value) {
+      public Builder setRelayUnixTime(long value) {
         bitField0_ |= 0x00000008;
-        challenge_ = value;
+        relayUnixTime_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional fixed64 challenge = 3;</code>
+       * <code>optional uint64 relay_unix_time = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearChallenge() {
+      public Builder clearRelayUnixTime() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        challenge_ = 0L;
+        relayUnixTime_ = 0L;
         onChanged();
         return this;
       }
 
-      private int routerTimestamp_ ;
+      private long routingSecret_ ;
       /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @return Whether the routerTimestamp field is set.
+       * <code>optional fixed64 routing_secret = 5;</code>
+       * @return Whether the routingSecret field is set.
        */
       @java.lang.Override
-      public boolean hasRouterTimestamp() {
+      public boolean hasRoutingSecret() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @return The routerTimestamp.
+       * <code>optional fixed64 routing_secret = 5;</code>
+       * @return The routingSecret.
        */
       @java.lang.Override
-      public int getRouterTimestamp() {
-        return routerTimestamp_;
+      public long getRoutingSecret() {
+        return routingSecret_;
       }
       /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @param value The routerTimestamp to set.
+       * <code>optional fixed64 routing_secret = 5;</code>
+       * @param value The routingSecret to set.
        * @return This builder for chaining.
        */
-      public Builder setRouterTimestamp(int value) {
+      public Builder setRoutingSecret(long value) {
         bitField0_ |= 0x00000010;
-        routerTimestamp_ = value;
+        routingSecret_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
+       * <code>optional fixed64 routing_secret = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRouterTimestamp() {
+      public Builder clearRoutingSecret() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        routerTimestamp_ = 0;
+        routingSecret_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress> myIps_ =
+        java.util.Collections.emptyList();
+      private void ensureMyIpsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          myIps_ = new java.util.ArrayList<SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress>(myIps_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder> myIpsBuilder_;
+
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public java.util.List<SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress> getMyIpsList() {
+        if (myIpsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(myIps_);
+        } else {
+          return myIpsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public int getMyIpsCount() {
+        if (myIpsBuilder_ == null) {
+          return myIps_.size();
+        } else {
+          return myIpsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress getMyIps(int index) {
+        if (myIpsBuilder_ == null) {
+          return myIps_.get(index);
+        } else {
+          return myIpsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public Builder setMyIps(
+          int index, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress value) {
+        if (myIpsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMyIpsIsMutable();
+          myIps_.set(index, value);
+          onChanged();
+        } else {
+          myIpsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public Builder setMyIps(
+          int index, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder builderForValue) {
+        if (myIpsBuilder_ == null) {
+          ensureMyIpsIsMutable();
+          myIps_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          myIpsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public Builder addMyIps(SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress value) {
+        if (myIpsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMyIpsIsMutable();
+          myIps_.add(value);
+          onChanged();
+        } else {
+          myIpsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public Builder addMyIps(
+          int index, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress value) {
+        if (myIpsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMyIpsIsMutable();
+          myIps_.add(index, value);
+          onChanged();
+        } else {
+          myIpsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public Builder addMyIps(
+          SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder builderForValue) {
+        if (myIpsBuilder_ == null) {
+          ensureMyIpsIsMutable();
+          myIps_.add(builderForValue.build());
+          onChanged();
+        } else {
+          myIpsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public Builder addMyIps(
+          int index, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder builderForValue) {
+        if (myIpsBuilder_ == null) {
+          ensureMyIpsIsMutable();
+          myIps_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          myIpsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public Builder addAllMyIps(
+          java.lang.Iterable<? extends SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress> values) {
+        if (myIpsBuilder_ == null) {
+          ensureMyIpsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, myIps_);
+          onChanged();
+        } else {
+          myIpsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public Builder clearMyIps() {
+        if (myIpsBuilder_ == null) {
+          myIps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          myIpsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public Builder removeMyIps(int index) {
+        if (myIpsBuilder_ == null) {
+          ensureMyIpsIsMutable();
+          myIps_.remove(index);
+          onChanged();
+        } else {
+          myIpsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder getMyIpsBuilder(
+          int index) {
+        return getMyIpsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder getMyIpsOrBuilder(
+          int index) {
+        if (myIpsBuilder_ == null) {
+          return myIps_.get(index);  } else {
+          return myIpsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public java.util.List<? extends SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder> 
+           getMyIpsOrBuilderList() {
+        if (myIpsBuilder_ != null) {
+          return myIpsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(myIps_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder addMyIpsBuilder() {
+        return getMyIpsFieldBuilder().addBuilder(
+            SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder addMyIpsBuilder(
+          int index) {
+        return getMyIpsFieldBuilder().addBuilder(
+            index, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgSteamNetworkingIPAddress my_ips = 6;</code>
+       */
+      public java.util.List<SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder> 
+           getMyIpsBuilderList() {
+        return getMyIpsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder> 
+          getMyIpsFieldBuilder() {
+        if (myIpsBuilder_ == null) {
+          myIpsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddress.Builder, SteamdatagramMessagesSdr.CMsgSteamNetworkingIPAddressOrBuilder>(
+                  myIps_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          myIps_ = null;
+        }
+        return myIpsBuilder_;
+      }
+
+      private com.google.protobuf.ByteString echo_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes echo = 8;</code>
+       * @return Whether the echo field is set.
+       */
+      @java.lang.Override
+      public boolean hasEcho() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional bytes echo = 8;</code>
+       * @return The echo.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEcho() {
+        return echo_;
+      }
+      /**
+       * <code>optional bytes echo = 8;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes echo = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        echo_ = getDefaultInstance().getEcho();
         onChanged();
         return this;
       }
@@ -5639,92 +8286,176 @@ public final class SteamdatagramMessagesSdr {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:CMsgSteamDatagramGameserverPingRequest)
+      // @@protoc_insertion_point(builder_scope:CMsgSteamDatagramGameserverPingRequestBody)
     }
 
-    // @@protoc_insertion_point(class_scope:CMsgSteamDatagramGameserverPingRequest)
-    private static final SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CMsgSteamDatagramGameserverPingRequestBody)
+    private static final SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest();
+      DEFAULT_INSTANCE = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody();
     }
 
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest getDefaultInstance() {
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CMsgSteamDatagramGameserverPingRequest>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingRequestBody>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgSteamDatagramGameserverPingRequestBody>() {
       @java.lang.Override
-      public CMsgSteamDatagramGameserverPingRequest parsePartialFrom(
+      public CMsgSteamDatagramGameserverPingRequestBody parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CMsgSteamDatagramGameserverPingRequest(input, extensionRegistry);
+        return new CMsgSteamDatagramGameserverPingRequestBody(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingRequest> parser() {
+    public static com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingRequestBody> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingRequest> getParserForType() {
+    public com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingRequestBody> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequest getDefaultInstanceForType() {
+    public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestBody getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface CMsgSteamDatagramLegacyGameserverPingReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CMsgSteamDatagramLegacyGameserverPingReply)
+  public interface CMsgSteamDatagramGameserverPingRequestEnvelopeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgSteamDatagramGameserverPingRequestEnvelope)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional fixed32 router_timestamp = 4;</code>
-     * @return Whether the routerTimestamp field is set.
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
+     * @return Whether the cert field is set.
      */
-    boolean hasRouterTimestamp();
+    boolean hasCert();
     /**
-     * <code>optional fixed32 router_timestamp = 4;</code>
-     * @return The routerTimestamp.
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
+     * @return The cert.
      */
-    int getRouterTimestamp();
+    SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getCert();
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
+     */
+    SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getCertOrBuilder();
 
     /**
-     * <code>optional fixed64 dummy_pad = 99;</code>
+     * <code>optional bytes signed_data = 7;</code>
+     * @return Whether the signedData field is set.
+     */
+    boolean hasSignedData();
+    /**
+     * <code>optional bytes signed_data = 7;</code>
+     * @return The signedData.
+     */
+    com.google.protobuf.ByteString getSignedData();
+
+    /**
+     * <code>optional bytes signature = 8;</code>
+     * @return Whether the signature field is set.
+     */
+    boolean hasSignature();
+    /**
+     * <code>optional bytes signature = 8;</code>
+     * @return The signature.
+     */
+    com.google.protobuf.ByteString getSignature();
+
+    /**
+     * <code>optional fixed32 legacy_your_public_ip = 1;</code>
+     * @return Whether the legacyYourPublicIp field is set.
+     */
+    boolean hasLegacyYourPublicIp();
+    /**
+     * <code>optional fixed32 legacy_your_public_ip = 1;</code>
+     * @return The legacyYourPublicIp.
+     */
+    int getLegacyYourPublicIp();
+
+    /**
+     * <code>optional fixed32 legacy_your_public_port = 5;</code>
+     * @return Whether the legacyYourPublicPort field is set.
+     */
+    boolean hasLegacyYourPublicPort();
+    /**
+     * <code>optional fixed32 legacy_your_public_port = 5;</code>
+     * @return The legacyYourPublicPort.
+     */
+    int getLegacyYourPublicPort();
+
+    /**
+     * <code>optional fixed32 legacy_relay_unix_time = 2;</code>
+     * @return Whether the legacyRelayUnixTime field is set.
+     */
+    boolean hasLegacyRelayUnixTime();
+    /**
+     * <code>optional fixed32 legacy_relay_unix_time = 2;</code>
+     * @return The legacyRelayUnixTime.
+     */
+    int getLegacyRelayUnixTime();
+
+    /**
+     * <code>optional fixed64 legacy_challenge = 3;</code>
+     * @return Whether the legacyChallenge field is set.
+     */
+    boolean hasLegacyChallenge();
+    /**
+     * <code>optional fixed64 legacy_challenge = 3;</code>
+     * @return The legacyChallenge.
+     */
+    long getLegacyChallenge();
+
+    /**
+     * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+     * @return Whether the legacyRouterTimestamp field is set.
+     */
+    boolean hasLegacyRouterTimestamp();
+    /**
+     * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+     * @return The legacyRouterTimestamp.
+     */
+    int getLegacyRouterTimestamp();
+
+    /**
+     * <code>optional bytes dummy_pad = 1023;</code>
      * @return Whether the dummyPad field is set.
      */
     boolean hasDummyPad();
     /**
-     * <code>optional fixed64 dummy_pad = 99;</code>
+     * <code>optional bytes dummy_pad = 1023;</code>
      * @return The dummyPad.
      */
-    long getDummyPad();
+    com.google.protobuf.ByteString getDummyPad();
   }
   /**
-   * Protobuf type {@code CMsgSteamDatagramLegacyGameserverPingReply}
+   * Protobuf type {@code CMsgSteamDatagramGameserverPingRequestEnvelope}
    */
-  public static final class CMsgSteamDatagramLegacyGameserverPingReply extends
+  public static final class CMsgSteamDatagramGameserverPingRequestEnvelope extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CMsgSteamDatagramLegacyGameserverPingReply)
-      CMsgSteamDatagramLegacyGameserverPingReplyOrBuilder {
+      // @@protoc_insertion_point(message_implements:CMsgSteamDatagramGameserverPingRequestEnvelope)
+      CMsgSteamDatagramGameserverPingRequestEnvelopeOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CMsgSteamDatagramLegacyGameserverPingReply.newBuilder() to construct.
-    private CMsgSteamDatagramLegacyGameserverPingReply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CMsgSteamDatagramGameserverPingRequestEnvelope.newBuilder() to construct.
+    private CMsgSteamDatagramGameserverPingRequestEnvelope(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CMsgSteamDatagramLegacyGameserverPingReply() {
+    private CMsgSteamDatagramGameserverPingRequestEnvelope() {
+      signedData_ = com.google.protobuf.ByteString.EMPTY;
+      signature_ = com.google.protobuf.ByteString.EMPTY;
+      dummyPad_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CMsgSteamDatagramLegacyGameserverPingReply();
+      return new CMsgSteamDatagramGameserverPingRequestEnvelope();
     }
 
     @java.lang.Override
@@ -5732,7 +8463,7 @@ public final class SteamdatagramMessagesSdr {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CMsgSteamDatagramLegacyGameserverPingReply(
+    private CMsgSteamDatagramGameserverPingRequestEnvelope(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5751,14 +8482,57 @@ public final class SteamdatagramMessagesSdr {
             case 0:
               done = true;
               break;
-            case 37: {
-              bitField0_ |= 0x00000001;
-              routerTimestamp_ = input.readFixed32();
+            case 13: {
+              bitField0_ |= 0x00000008;
+              legacyYourPublicIp_ = input.readFixed32();
               break;
             }
-            case 793: {
+            case 21: {
+              bitField0_ |= 0x00000020;
+              legacyRelayUnixTime_ = input.readFixed32();
+              break;
+            }
+            case 25: {
+              bitField0_ |= 0x00000040;
+              legacyChallenge_ = input.readFixed64();
+              break;
+            }
+            case 37: {
+              bitField0_ |= 0x00000080;
+              legacyRouterTimestamp_ = input.readFixed32();
+              break;
+            }
+            case 45: {
+              bitField0_ |= 0x00000010;
+              legacyYourPublicPort_ = input.readFixed32();
+              break;
+            }
+            case 50: {
+              SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = cert_.toBuilder();
+              }
+              cert_ = input.readMessage(SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cert_);
+                cert_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 58: {
               bitField0_ |= 0x00000002;
-              dummyPad_ = input.readFixed64();
+              signedData_ = input.readBytes();
+              break;
+            }
+            case 66: {
+              bitField0_ |= 0x00000004;
+              signature_ = input.readBytes();
+              break;
+            }
+            case 8186: {
+              bitField0_ |= 0x00000100;
+              dummyPad_ = input.readBytes();
               break;
             }
             default: {
@@ -5782,53 +8556,193 @@ public final class SteamdatagramMessagesSdr {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramLegacyGameserverPingReply_descriptor;
+      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequestEnvelope_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramLegacyGameserverPingReply_fieldAccessorTable
+      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequestEnvelope_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply.class, SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply.Builder.class);
+              SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope.Builder.class);
     }
 
     private int bitField0_;
-    public static final int ROUTER_TIMESTAMP_FIELD_NUMBER = 4;
-    private int routerTimestamp_;
+    public static final int CERT_FIELD_NUMBER = 6;
+    private SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned cert_;
     /**
-     * <code>optional fixed32 router_timestamp = 4;</code>
-     * @return Whether the routerTimestamp field is set.
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
+     * @return Whether the cert field is set.
      */
     @java.lang.Override
-    public boolean hasRouterTimestamp() {
+    public boolean hasCert() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional fixed32 router_timestamp = 4;</code>
-     * @return The routerTimestamp.
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
+     * @return The cert.
      */
     @java.lang.Override
-    public int getRouterTimestamp() {
-      return routerTimestamp_;
+    public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getCert() {
+      return cert_ == null ? SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : cert_;
+    }
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
+     */
+    @java.lang.Override
+    public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getCertOrBuilder() {
+      return cert_ == null ? SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : cert_;
     }
 
-    public static final int DUMMY_PAD_FIELD_NUMBER = 99;
-    private long dummyPad_;
+    public static final int SIGNED_DATA_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString signedData_;
     /**
-     * <code>optional fixed64 dummy_pad = 99;</code>
+     * <code>optional bytes signed_data = 7;</code>
+     * @return Whether the signedData field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignedData() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bytes signed_data = 7;</code>
+     * @return The signedData.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignedData() {
+      return signedData_;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 8;
+    private com.google.protobuf.ByteString signature_;
+    /**
+     * <code>optional bytes signature = 8;</code>
+     * @return Whether the signature field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignature() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bytes signature = 8;</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignature() {
+      return signature_;
+    }
+
+    public static final int LEGACY_YOUR_PUBLIC_IP_FIELD_NUMBER = 1;
+    private int legacyYourPublicIp_;
+    /**
+     * <code>optional fixed32 legacy_your_public_ip = 1;</code>
+     * @return Whether the legacyYourPublicIp field is set.
+     */
+    @java.lang.Override
+    public boolean hasLegacyYourPublicIp() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional fixed32 legacy_your_public_ip = 1;</code>
+     * @return The legacyYourPublicIp.
+     */
+    @java.lang.Override
+    public int getLegacyYourPublicIp() {
+      return legacyYourPublicIp_;
+    }
+
+    public static final int LEGACY_YOUR_PUBLIC_PORT_FIELD_NUMBER = 5;
+    private int legacyYourPublicPort_;
+    /**
+     * <code>optional fixed32 legacy_your_public_port = 5;</code>
+     * @return Whether the legacyYourPublicPort field is set.
+     */
+    @java.lang.Override
+    public boolean hasLegacyYourPublicPort() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional fixed32 legacy_your_public_port = 5;</code>
+     * @return The legacyYourPublicPort.
+     */
+    @java.lang.Override
+    public int getLegacyYourPublicPort() {
+      return legacyYourPublicPort_;
+    }
+
+    public static final int LEGACY_RELAY_UNIX_TIME_FIELD_NUMBER = 2;
+    private int legacyRelayUnixTime_;
+    /**
+     * <code>optional fixed32 legacy_relay_unix_time = 2;</code>
+     * @return Whether the legacyRelayUnixTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasLegacyRelayUnixTime() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional fixed32 legacy_relay_unix_time = 2;</code>
+     * @return The legacyRelayUnixTime.
+     */
+    @java.lang.Override
+    public int getLegacyRelayUnixTime() {
+      return legacyRelayUnixTime_;
+    }
+
+    public static final int LEGACY_CHALLENGE_FIELD_NUMBER = 3;
+    private long legacyChallenge_;
+    /**
+     * <code>optional fixed64 legacy_challenge = 3;</code>
+     * @return Whether the legacyChallenge field is set.
+     */
+    @java.lang.Override
+    public boolean hasLegacyChallenge() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional fixed64 legacy_challenge = 3;</code>
+     * @return The legacyChallenge.
+     */
+    @java.lang.Override
+    public long getLegacyChallenge() {
+      return legacyChallenge_;
+    }
+
+    public static final int LEGACY_ROUTER_TIMESTAMP_FIELD_NUMBER = 4;
+    private int legacyRouterTimestamp_;
+    /**
+     * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+     * @return Whether the legacyRouterTimestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasLegacyRouterTimestamp() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+     * @return The legacyRouterTimestamp.
+     */
+    @java.lang.Override
+    public int getLegacyRouterTimestamp() {
+      return legacyRouterTimestamp_;
+    }
+
+    public static final int DUMMY_PAD_FIELD_NUMBER = 1023;
+    private com.google.protobuf.ByteString dummyPad_;
+    /**
+     * <code>optional bytes dummy_pad = 1023;</code>
      * @return Whether the dummyPad field is set.
      */
     @java.lang.Override
     public boolean hasDummyPad() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
-     * <code>optional fixed64 dummy_pad = 99;</code>
+     * <code>optional bytes dummy_pad = 1023;</code>
      * @return The dummyPad.
      */
     @java.lang.Override
-    public long getDummyPad() {
+    public com.google.protobuf.ByteString getDummyPad() {
       return dummyPad_;
     }
 
@@ -5846,11 +8760,32 @@ public final class SteamdatagramMessagesSdr {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeFixed32(1, legacyYourPublicIp_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeFixed32(2, legacyRelayUnixTime_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeFixed64(3, legacyChallenge_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeFixed32(4, legacyRouterTimestamp_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeFixed32(5, legacyYourPublicPort_);
+      }
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeFixed32(4, routerTimestamp_);
+        output.writeMessage(6, getCert());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeFixed64(99, dummyPad_);
+        output.writeBytes(7, signedData_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBytes(8, signature_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeBytes(1023, dummyPad_);
       }
       unknownFields.writeTo(output);
     }
@@ -5861,13 +8796,41 @@ public final class SteamdatagramMessagesSdr {
       if (size != -1) return size;
 
       size = 0;
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(1, legacyYourPublicIp_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(2, legacyRelayUnixTime_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(3, legacyChallenge_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(4, legacyRouterTimestamp_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(5, legacyYourPublicPort_);
+      }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(4, routerTimestamp_);
+          .computeMessageSize(6, getCert());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed64Size(99, dummyPad_);
+          .computeBytesSize(7, signedData_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, signature_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1023, dummyPad_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5879,1616 +8842,10 @@ public final class SteamdatagramMessagesSdr {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply)) {
+      if (!(obj instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope)) {
         return super.equals(obj);
       }
-      SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply other = (SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply) obj;
-
-      if (hasRouterTimestamp() != other.hasRouterTimestamp()) return false;
-      if (hasRouterTimestamp()) {
-        if (getRouterTimestamp()
-            != other.getRouterTimestamp()) return false;
-      }
-      if (hasDummyPad() != other.hasDummyPad()) return false;
-      if (hasDummyPad()) {
-        if (getDummyPad()
-            != other.getDummyPad()) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasRouterTimestamp()) {
-        hash = (37 * hash) + ROUTER_TIMESTAMP_FIELD_NUMBER;
-        hash = (53 * hash) + getRouterTimestamp();
-      }
-      if (hasDummyPad()) {
-        hash = (37 * hash) + DUMMY_PAD_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getDummyPad());
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CMsgSteamDatagramLegacyGameserverPingReply}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CMsgSteamDatagramLegacyGameserverPingReply)
-        SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReplyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramLegacyGameserverPingReply_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramLegacyGameserverPingReply_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply.class, SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply.Builder.class);
-      }
-
-      // Construct using SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        routerTimestamp_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        dummyPad_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramLegacyGameserverPingReply_descriptor;
-      }
-
-      @java.lang.Override
-      public SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply getDefaultInstanceForType() {
-        return SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply build() {
-        SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply buildPartial() {
-        SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply result = new SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.routerTimestamp_ = routerTimestamp_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.dummyPad_ = dummyPad_;
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply) {
-          return mergeFrom((SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply other) {
-        if (other == SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply.getDefaultInstance()) return this;
-        if (other.hasRouterTimestamp()) {
-          setRouterTimestamp(other.getRouterTimestamp());
-        }
-        if (other.hasDummyPad()) {
-          setDummyPad(other.getDummyPad());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private int routerTimestamp_ ;
-      /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @return Whether the routerTimestamp field is set.
-       */
-      @java.lang.Override
-      public boolean hasRouterTimestamp() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @return The routerTimestamp.
-       */
-      @java.lang.Override
-      public int getRouterTimestamp() {
-        return routerTimestamp_;
-      }
-      /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @param value The routerTimestamp to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRouterTimestamp(int value) {
-        bitField0_ |= 0x00000001;
-        routerTimestamp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRouterTimestamp() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        routerTimestamp_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private long dummyPad_ ;
-      /**
-       * <code>optional fixed64 dummy_pad = 99;</code>
-       * @return Whether the dummyPad field is set.
-       */
-      @java.lang.Override
-      public boolean hasDummyPad() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional fixed64 dummy_pad = 99;</code>
-       * @return The dummyPad.
-       */
-      @java.lang.Override
-      public long getDummyPad() {
-        return dummyPad_;
-      }
-      /**
-       * <code>optional fixed64 dummy_pad = 99;</code>
-       * @param value The dummyPad to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDummyPad(long value) {
-        bitField0_ |= 0x00000002;
-        dummyPad_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional fixed64 dummy_pad = 99;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDummyPad() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        dummyPad_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CMsgSteamDatagramLegacyGameserverPingReply)
-    }
-
-    // @@protoc_insertion_point(class_scope:CMsgSteamDatagramLegacyGameserverPingReply)
-    private static final SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply();
-    }
-
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgSteamDatagramLegacyGameserverPingReply>
-        PARSER = new com.google.protobuf.AbstractParser<CMsgSteamDatagramLegacyGameserverPingReply>() {
-      @java.lang.Override
-      public CMsgSteamDatagramLegacyGameserverPingReply parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CMsgSteamDatagramLegacyGameserverPingReply(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CMsgSteamDatagramLegacyGameserverPingReply> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CMsgSteamDatagramLegacyGameserverPingReply> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteamdatagramMessagesSdr.CMsgSteamDatagramLegacyGameserverPingReply getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CMsgSteamDatagramGameserverPingReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CMsgSteamDatagramGameserverPingReply)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
-     * @return Whether the cert field is set.
-     */
-    boolean hasCert();
-    /**
-     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
-     * @return The cert.
-     */
-    SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getCert();
-    /**
-     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
-     */
-    SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getCertOrBuilder();
-
-    /**
-     * <code>optional bytes signed_data = 2;</code>
-     * @return Whether the signedData field is set.
-     */
-    boolean hasSignedData();
-    /**
-     * <code>optional bytes signed_data = 2;</code>
-     * @return The signedData.
-     */
-    com.google.protobuf.ByteString getSignedData();
-
-    /**
-     * <code>optional bytes signature = 3;</code>
-     * @return Whether the signature field is set.
-     */
-    boolean hasSignature();
-    /**
-     * <code>optional bytes signature = 3;</code>
-     * @return The signature.
-     */
-    com.google.protobuf.ByteString getSignature();
-  }
-  /**
-   * Protobuf type {@code CMsgSteamDatagramGameserverPingReply}
-   */
-  public static final class CMsgSteamDatagramGameserverPingReply extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CMsgSteamDatagramGameserverPingReply)
-      CMsgSteamDatagramGameserverPingReplyOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CMsgSteamDatagramGameserverPingReply.newBuilder() to construct.
-    private CMsgSteamDatagramGameserverPingReply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CMsgSteamDatagramGameserverPingReply() {
-      signedData_ = com.google.protobuf.ByteString.EMPTY;
-      signature_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CMsgSteamDatagramGameserverPingReply();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CMsgSteamDatagramGameserverPingReply(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) != 0)) {
-                subBuilder = cert_.toBuilder();
-              }
-              cert_ = input.readMessage(SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(cert_);
-                cert_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              signedData_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              signature_ = input.readBytes();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReply_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReply_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.Builder.class);
-    }
-
-    public interface SignedDataOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:CMsgSteamDatagramGameserverPingReply.SignedData)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>optional fixed32 challenge_time = 2;</code>
-       * @return Whether the challengeTime field is set.
-       */
-      boolean hasChallengeTime();
-      /**
-       * <code>optional fixed32 challenge_time = 2;</code>
-       * @return The challengeTime.
-       */
-      int getChallengeTime();
-
-      /**
-       * <code>optional fixed64 challenge = 3;</code>
-       * @return Whether the challenge field is set.
-       */
-      boolean hasChallenge();
-      /**
-       * <code>optional fixed64 challenge = 3;</code>
-       * @return The challenge.
-       */
-      long getChallenge();
-
-      /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @return Whether the routerTimestamp field is set.
-       */
-      boolean hasRouterTimestamp();
-      /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @return The routerTimestamp.
-       */
-      int getRouterTimestamp();
-
-      /**
-       * <code>optional fixed32 data_center_id = 5;</code>
-       * @return Whether the dataCenterId field is set.
-       */
-      boolean hasDataCenterId();
-      /**
-       * <code>optional fixed32 data_center_id = 5;</code>
-       * @return The dataCenterId.
-       */
-      int getDataCenterId();
-
-      /**
-       * <code>optional uint32 appid = 6;</code>
-       * @return Whether the appid field is set.
-       */
-      boolean hasAppid();
-      /**
-       * <code>optional uint32 appid = 6;</code>
-       * @return The appid.
-       */
-      int getAppid();
-    }
-    /**
-     * Protobuf type {@code CMsgSteamDatagramGameserverPingReply.SignedData}
-     */
-    public static final class SignedData extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:CMsgSteamDatagramGameserverPingReply.SignedData)
-        SignedDataOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use SignedData.newBuilder() to construct.
-      private SignedData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private SignedData() {
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new SignedData();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private SignedData(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 21: {
-                bitField0_ |= 0x00000001;
-                challengeTime_ = input.readFixed32();
-                break;
-              }
-              case 25: {
-                bitField0_ |= 0x00000002;
-                challenge_ = input.readFixed64();
-                break;
-              }
-              case 37: {
-                bitField0_ |= 0x00000004;
-                routerTimestamp_ = input.readFixed32();
-                break;
-              }
-              case 45: {
-                bitField0_ |= 0x00000008;
-                dataCenterId_ = input.readFixed32();
-                break;
-              }
-              case 48: {
-                bitField0_ |= 0x00000010;
-                appid_ = input.readUInt32();
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReply_SignedData_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReply_SignedData_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData.Builder.class);
-      }
-
-      private int bitField0_;
-      public static final int CHALLENGE_TIME_FIELD_NUMBER = 2;
-      private int challengeTime_;
-      /**
-       * <code>optional fixed32 challenge_time = 2;</code>
-       * @return Whether the challengeTime field is set.
-       */
-      @java.lang.Override
-      public boolean hasChallengeTime() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional fixed32 challenge_time = 2;</code>
-       * @return The challengeTime.
-       */
-      @java.lang.Override
-      public int getChallengeTime() {
-        return challengeTime_;
-      }
-
-      public static final int CHALLENGE_FIELD_NUMBER = 3;
-      private long challenge_;
-      /**
-       * <code>optional fixed64 challenge = 3;</code>
-       * @return Whether the challenge field is set.
-       */
-      @java.lang.Override
-      public boolean hasChallenge() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional fixed64 challenge = 3;</code>
-       * @return The challenge.
-       */
-      @java.lang.Override
-      public long getChallenge() {
-        return challenge_;
-      }
-
-      public static final int ROUTER_TIMESTAMP_FIELD_NUMBER = 4;
-      private int routerTimestamp_;
-      /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @return Whether the routerTimestamp field is set.
-       */
-      @java.lang.Override
-      public boolean hasRouterTimestamp() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>optional fixed32 router_timestamp = 4;</code>
-       * @return The routerTimestamp.
-       */
-      @java.lang.Override
-      public int getRouterTimestamp() {
-        return routerTimestamp_;
-      }
-
-      public static final int DATA_CENTER_ID_FIELD_NUMBER = 5;
-      private int dataCenterId_;
-      /**
-       * <code>optional fixed32 data_center_id = 5;</code>
-       * @return Whether the dataCenterId field is set.
-       */
-      @java.lang.Override
-      public boolean hasDataCenterId() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <code>optional fixed32 data_center_id = 5;</code>
-       * @return The dataCenterId.
-       */
-      @java.lang.Override
-      public int getDataCenterId() {
-        return dataCenterId_;
-      }
-
-      public static final int APPID_FIELD_NUMBER = 6;
-      private int appid_;
-      /**
-       * <code>optional uint32 appid = 6;</code>
-       * @return Whether the appid field is set.
-       */
-      @java.lang.Override
-      public boolean hasAppid() {
-        return ((bitField0_ & 0x00000010) != 0);
-      }
-      /**
-       * <code>optional uint32 appid = 6;</code>
-       * @return The appid.
-       */
-      @java.lang.Override
-      public int getAppid() {
-        return appid_;
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          output.writeFixed32(2, challengeTime_);
-        }
-        if (((bitField0_ & 0x00000002) != 0)) {
-          output.writeFixed64(3, challenge_);
-        }
-        if (((bitField0_ & 0x00000004) != 0)) {
-          output.writeFixed32(4, routerTimestamp_);
-        }
-        if (((bitField0_ & 0x00000008) != 0)) {
-          output.writeFixed32(5, dataCenterId_);
-        }
-        if (((bitField0_ & 0x00000010) != 0)) {
-          output.writeUInt32(6, appid_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeFixed32Size(2, challengeTime_);
-        }
-        if (((bitField0_ & 0x00000002) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeFixed64Size(3, challenge_);
-        }
-        if (((bitField0_ & 0x00000004) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeFixed32Size(4, routerTimestamp_);
-        }
-        if (((bitField0_ & 0x00000008) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeFixed32Size(5, dataCenterId_);
-        }
-        if (((bitField0_ & 0x00000010) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(6, appid_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData)) {
-          return super.equals(obj);
-        }
-        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData other = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData) obj;
-
-        if (hasChallengeTime() != other.hasChallengeTime()) return false;
-        if (hasChallengeTime()) {
-          if (getChallengeTime()
-              != other.getChallengeTime()) return false;
-        }
-        if (hasChallenge() != other.hasChallenge()) return false;
-        if (hasChallenge()) {
-          if (getChallenge()
-              != other.getChallenge()) return false;
-        }
-        if (hasRouterTimestamp() != other.hasRouterTimestamp()) return false;
-        if (hasRouterTimestamp()) {
-          if (getRouterTimestamp()
-              != other.getRouterTimestamp()) return false;
-        }
-        if (hasDataCenterId() != other.hasDataCenterId()) return false;
-        if (hasDataCenterId()) {
-          if (getDataCenterId()
-              != other.getDataCenterId()) return false;
-        }
-        if (hasAppid() != other.hasAppid()) return false;
-        if (hasAppid()) {
-          if (getAppid()
-              != other.getAppid()) return false;
-        }
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasChallengeTime()) {
-          hash = (37 * hash) + CHALLENGE_TIME_FIELD_NUMBER;
-          hash = (53 * hash) + getChallengeTime();
-        }
-        if (hasChallenge()) {
-          hash = (37 * hash) + CHALLENGE_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getChallenge());
-        }
-        if (hasRouterTimestamp()) {
-          hash = (37 * hash) + ROUTER_TIMESTAMP_FIELD_NUMBER;
-          hash = (53 * hash) + getRouterTimestamp();
-        }
-        if (hasDataCenterId()) {
-          hash = (37 * hash) + DATA_CENTER_ID_FIELD_NUMBER;
-          hash = (53 * hash) + getDataCenterId();
-        }
-        if (hasAppid()) {
-          hash = (37 * hash) + APPID_FIELD_NUMBER;
-          hash = (53 * hash) + getAppid();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code CMsgSteamDatagramGameserverPingReply.SignedData}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:CMsgSteamDatagramGameserverPingReply.SignedData)
-          SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedDataOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReply_SignedData_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReply_SignedData_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData.Builder.class);
-        }
-
-        // Construct using SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          challengeTime_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          challenge_ = 0L;
-          bitField0_ = (bitField0_ & ~0x00000002);
-          routerTimestamp_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000004);
-          dataCenterId_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000008);
-          appid_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000010);
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReply_SignedData_descriptor;
-        }
-
-        @java.lang.Override
-        public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData getDefaultInstanceForType() {
-          return SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData build() {
-          SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData buildPartial() {
-          SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData result = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.challengeTime_ = challengeTime_;
-            to_bitField0_ |= 0x00000001;
-          }
-          if (((from_bitField0_ & 0x00000002) != 0)) {
-            result.challenge_ = challenge_;
-            to_bitField0_ |= 0x00000002;
-          }
-          if (((from_bitField0_ & 0x00000004) != 0)) {
-            result.routerTimestamp_ = routerTimestamp_;
-            to_bitField0_ |= 0x00000004;
-          }
-          if (((from_bitField0_ & 0x00000008) != 0)) {
-            result.dataCenterId_ = dataCenterId_;
-            to_bitField0_ |= 0x00000008;
-          }
-          if (((from_bitField0_ & 0x00000010) != 0)) {
-            result.appid_ = appid_;
-            to_bitField0_ |= 0x00000010;
-          }
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData) {
-            return mergeFrom((SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData other) {
-          if (other == SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData.getDefaultInstance()) return this;
-          if (other.hasChallengeTime()) {
-            setChallengeTime(other.getChallengeTime());
-          }
-          if (other.hasChallenge()) {
-            setChallenge(other.getChallenge());
-          }
-          if (other.hasRouterTimestamp()) {
-            setRouterTimestamp(other.getRouterTimestamp());
-          }
-          if (other.hasDataCenterId()) {
-            setDataCenterId(other.getDataCenterId());
-          }
-          if (other.hasAppid()) {
-            setAppid(other.getAppid());
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private int challengeTime_ ;
-        /**
-         * <code>optional fixed32 challenge_time = 2;</code>
-         * @return Whether the challengeTime field is set.
-         */
-        @java.lang.Override
-        public boolean hasChallengeTime() {
-          return ((bitField0_ & 0x00000001) != 0);
-        }
-        /**
-         * <code>optional fixed32 challenge_time = 2;</code>
-         * @return The challengeTime.
-         */
-        @java.lang.Override
-        public int getChallengeTime() {
-          return challengeTime_;
-        }
-        /**
-         * <code>optional fixed32 challenge_time = 2;</code>
-         * @param value The challengeTime to set.
-         * @return This builder for chaining.
-         */
-        public Builder setChallengeTime(int value) {
-          bitField0_ |= 0x00000001;
-          challengeTime_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional fixed32 challenge_time = 2;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearChallengeTime() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          challengeTime_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private long challenge_ ;
-        /**
-         * <code>optional fixed64 challenge = 3;</code>
-         * @return Whether the challenge field is set.
-         */
-        @java.lang.Override
-        public boolean hasChallenge() {
-          return ((bitField0_ & 0x00000002) != 0);
-        }
-        /**
-         * <code>optional fixed64 challenge = 3;</code>
-         * @return The challenge.
-         */
-        @java.lang.Override
-        public long getChallenge() {
-          return challenge_;
-        }
-        /**
-         * <code>optional fixed64 challenge = 3;</code>
-         * @param value The challenge to set.
-         * @return This builder for chaining.
-         */
-        public Builder setChallenge(long value) {
-          bitField0_ |= 0x00000002;
-          challenge_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional fixed64 challenge = 3;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearChallenge() {
-          bitField0_ = (bitField0_ & ~0x00000002);
-          challenge_ = 0L;
-          onChanged();
-          return this;
-        }
-
-        private int routerTimestamp_ ;
-        /**
-         * <code>optional fixed32 router_timestamp = 4;</code>
-         * @return Whether the routerTimestamp field is set.
-         */
-        @java.lang.Override
-        public boolean hasRouterTimestamp() {
-          return ((bitField0_ & 0x00000004) != 0);
-        }
-        /**
-         * <code>optional fixed32 router_timestamp = 4;</code>
-         * @return The routerTimestamp.
-         */
-        @java.lang.Override
-        public int getRouterTimestamp() {
-          return routerTimestamp_;
-        }
-        /**
-         * <code>optional fixed32 router_timestamp = 4;</code>
-         * @param value The routerTimestamp to set.
-         * @return This builder for chaining.
-         */
-        public Builder setRouterTimestamp(int value) {
-          bitField0_ |= 0x00000004;
-          routerTimestamp_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional fixed32 router_timestamp = 4;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearRouterTimestamp() {
-          bitField0_ = (bitField0_ & ~0x00000004);
-          routerTimestamp_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private int dataCenterId_ ;
-        /**
-         * <code>optional fixed32 data_center_id = 5;</code>
-         * @return Whether the dataCenterId field is set.
-         */
-        @java.lang.Override
-        public boolean hasDataCenterId() {
-          return ((bitField0_ & 0x00000008) != 0);
-        }
-        /**
-         * <code>optional fixed32 data_center_id = 5;</code>
-         * @return The dataCenterId.
-         */
-        @java.lang.Override
-        public int getDataCenterId() {
-          return dataCenterId_;
-        }
-        /**
-         * <code>optional fixed32 data_center_id = 5;</code>
-         * @param value The dataCenterId to set.
-         * @return This builder for chaining.
-         */
-        public Builder setDataCenterId(int value) {
-          bitField0_ |= 0x00000008;
-          dataCenterId_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional fixed32 data_center_id = 5;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearDataCenterId() {
-          bitField0_ = (bitField0_ & ~0x00000008);
-          dataCenterId_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private int appid_ ;
-        /**
-         * <code>optional uint32 appid = 6;</code>
-         * @return Whether the appid field is set.
-         */
-        @java.lang.Override
-        public boolean hasAppid() {
-          return ((bitField0_ & 0x00000010) != 0);
-        }
-        /**
-         * <code>optional uint32 appid = 6;</code>
-         * @return The appid.
-         */
-        @java.lang.Override
-        public int getAppid() {
-          return appid_;
-        }
-        /**
-         * <code>optional uint32 appid = 6;</code>
-         * @param value The appid to set.
-         * @return This builder for chaining.
-         */
-        public Builder setAppid(int value) {
-          bitField0_ |= 0x00000010;
-          appid_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional uint32 appid = 6;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearAppid() {
-          bitField0_ = (bitField0_ & ~0x00000010);
-          appid_ = 0;
-          onChanged();
-          return this;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:CMsgSteamDatagramGameserverPingReply.SignedData)
-      }
-
-      // @@protoc_insertion_point(class_scope:CMsgSteamDatagramGameserverPingReply.SignedData)
-      private static final SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData();
-      }
-
-      public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      @java.lang.Deprecated public static final com.google.protobuf.Parser<SignedData>
-          PARSER = new com.google.protobuf.AbstractParser<SignedData>() {
-        @java.lang.Override
-        public SignedData parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SignedData(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<SignedData> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<SignedData> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.SignedData getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    private int bitField0_;
-    public static final int CERT_FIELD_NUMBER = 1;
-    private SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned cert_;
-    /**
-     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
-     * @return Whether the cert field is set.
-     */
-    @java.lang.Override
-    public boolean hasCert() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
-     * @return The cert.
-     */
-    @java.lang.Override
-    public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getCert() {
-      return cert_ == null ? SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : cert_;
-    }
-    /**
-     * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
-     */
-    @java.lang.Override
-    public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getCertOrBuilder() {
-      return cert_ == null ? SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : cert_;
-    }
-
-    public static final int SIGNED_DATA_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString signedData_;
-    /**
-     * <code>optional bytes signed_data = 2;</code>
-     * @return Whether the signedData field is set.
-     */
-    @java.lang.Override
-    public boolean hasSignedData() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional bytes signed_data = 2;</code>
-     * @return The signedData.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getSignedData() {
-      return signedData_;
-    }
-
-    public static final int SIGNATURE_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString signature_;
-    /**
-     * <code>optional bytes signature = 3;</code>
-     * @return Whether the signature field is set.
-     */
-    @java.lang.Override
-    public boolean hasSignature() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>optional bytes signature = 3;</code>
-     * @return The signature.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getSignature() {
-      return signature_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getCert());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeBytes(2, signedData_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeBytes(3, signature_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCert());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, signedData_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, signature_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply)) {
-        return super.equals(obj);
-      }
-      SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply other = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply) obj;
+      SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope other = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope) obj;
 
       if (hasCert() != other.hasCert()) return false;
       if (hasCert()) {
@@ -7504,6 +8861,36 @@ public final class SteamdatagramMessagesSdr {
       if (hasSignature()) {
         if (!getSignature()
             .equals(other.getSignature())) return false;
+      }
+      if (hasLegacyYourPublicIp() != other.hasLegacyYourPublicIp()) return false;
+      if (hasLegacyYourPublicIp()) {
+        if (getLegacyYourPublicIp()
+            != other.getLegacyYourPublicIp()) return false;
+      }
+      if (hasLegacyYourPublicPort() != other.hasLegacyYourPublicPort()) return false;
+      if (hasLegacyYourPublicPort()) {
+        if (getLegacyYourPublicPort()
+            != other.getLegacyYourPublicPort()) return false;
+      }
+      if (hasLegacyRelayUnixTime() != other.hasLegacyRelayUnixTime()) return false;
+      if (hasLegacyRelayUnixTime()) {
+        if (getLegacyRelayUnixTime()
+            != other.getLegacyRelayUnixTime()) return false;
+      }
+      if (hasLegacyChallenge() != other.hasLegacyChallenge()) return false;
+      if (hasLegacyChallenge()) {
+        if (getLegacyChallenge()
+            != other.getLegacyChallenge()) return false;
+      }
+      if (hasLegacyRouterTimestamp() != other.hasLegacyRouterTimestamp()) return false;
+      if (hasLegacyRouterTimestamp()) {
+        if (getLegacyRouterTimestamp()
+            != other.getLegacyRouterTimestamp()) return false;
+      }
+      if (hasDummyPad() != other.hasDummyPad()) return false;
+      if (hasDummyPad()) {
+        if (!getDummyPad()
+            .equals(other.getDummyPad())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -7528,74 +8915,99 @@ public final class SteamdatagramMessagesSdr {
         hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
         hash = (53 * hash) + getSignature().hashCode();
       }
+      if (hasLegacyYourPublicIp()) {
+        hash = (37 * hash) + LEGACY_YOUR_PUBLIC_IP_FIELD_NUMBER;
+        hash = (53 * hash) + getLegacyYourPublicIp();
+      }
+      if (hasLegacyYourPublicPort()) {
+        hash = (37 * hash) + LEGACY_YOUR_PUBLIC_PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getLegacyYourPublicPort();
+      }
+      if (hasLegacyRelayUnixTime()) {
+        hash = (37 * hash) + LEGACY_RELAY_UNIX_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLegacyRelayUnixTime();
+      }
+      if (hasLegacyChallenge()) {
+        hash = (37 * hash) + LEGACY_CHALLENGE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getLegacyChallenge());
+      }
+      if (hasLegacyRouterTimestamp()) {
+        hash = (37 * hash) + LEGACY_ROUTER_TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getLegacyRouterTimestamp();
+      }
+      if (hasDummyPad()) {
+        hash = (37 * hash) + DUMMY_PAD_FIELD_NUMBER;
+        hash = (53 * hash) + getDummyPad().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseFrom(byte[] data)
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseFrom(java.io.InputStream input)
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseDelimitedFrom(java.io.InputStream input)
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseDelimitedFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parseFrom(
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7608,7 +9020,7 @@ public final class SteamdatagramMessagesSdr {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply prototype) {
+    public static Builder newBuilder(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7624,26 +9036,26 @@ public final class SteamdatagramMessagesSdr {
       return builder;
     }
     /**
-     * Protobuf type {@code CMsgSteamDatagramGameserverPingReply}
+     * Protobuf type {@code CMsgSteamDatagramGameserverPingRequestEnvelope}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CMsgSteamDatagramGameserverPingReply)
-        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CMsgSteamDatagramGameserverPingRequestEnvelope)
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelopeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReply_descriptor;
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequestEnvelope_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReply_fieldAccessorTable
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequestEnvelope_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.Builder.class);
+                SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope.Builder.class);
       }
 
-      // Construct using SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.newBuilder()
+      // Construct using SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7672,23 +9084,35 @@ public final class SteamdatagramMessagesSdr {
         bitField0_ = (bitField0_ & ~0x00000002);
         signature_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        legacyYourPublicIp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        legacyYourPublicPort_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        legacyRelayUnixTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        legacyChallenge_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        legacyRouterTimestamp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        dummyPad_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReply_descriptor;
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingRequestEnvelope_descriptor;
       }
 
       @java.lang.Override
-      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply getDefaultInstanceForType() {
-        return SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.getDefaultInstance();
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope getDefaultInstanceForType() {
+        return SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope.getDefaultInstance();
       }
 
       @java.lang.Override
-      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply build() {
-        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply result = buildPartial();
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope build() {
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7696,8 +9120,8 @@ public final class SteamdatagramMessagesSdr {
       }
 
       @java.lang.Override
-      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply buildPartial() {
-        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply result = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply(this);
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope buildPartial() {
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope result = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -7716,6 +9140,30 @@ public final class SteamdatagramMessagesSdr {
           to_bitField0_ |= 0x00000004;
         }
         result.signature_ = signature_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.legacyYourPublicIp_ = legacyYourPublicIp_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.legacyYourPublicPort_ = legacyYourPublicPort_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.legacyRelayUnixTime_ = legacyRelayUnixTime_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.legacyChallenge_ = legacyChallenge_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.legacyRouterTimestamp_ = legacyRouterTimestamp_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.dummyPad_ = dummyPad_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7755,16 +9203,16 @@ public final class SteamdatagramMessagesSdr {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply) {
-          return mergeFrom((SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply)other);
+        if (other instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope) {
+          return mergeFrom((SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply other) {
-        if (other == SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply.getDefaultInstance()) return this;
+      public Builder mergeFrom(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope other) {
+        if (other == SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope.getDefaultInstance()) return this;
         if (other.hasCert()) {
           mergeCert(other.getCert());
         }
@@ -7773,6 +9221,24 @@ public final class SteamdatagramMessagesSdr {
         }
         if (other.hasSignature()) {
           setSignature(other.getSignature());
+        }
+        if (other.hasLegacyYourPublicIp()) {
+          setLegacyYourPublicIp(other.getLegacyYourPublicIp());
+        }
+        if (other.hasLegacyYourPublicPort()) {
+          setLegacyYourPublicPort(other.getLegacyYourPublicPort());
+        }
+        if (other.hasLegacyRelayUnixTime()) {
+          setLegacyRelayUnixTime(other.getLegacyRelayUnixTime());
+        }
+        if (other.hasLegacyChallenge()) {
+          setLegacyChallenge(other.getLegacyChallenge());
+        }
+        if (other.hasLegacyRouterTimestamp()) {
+          setLegacyRouterTimestamp(other.getLegacyRouterTimestamp());
+        }
+        if (other.hasDummyPad()) {
+          setDummyPad(other.getDummyPad());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7789,11 +9255,11 @@ public final class SteamdatagramMessagesSdr {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply parsedMessage = null;
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply) e.getUnfinishedMessage();
+          parsedMessage = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7808,14 +9274,14 @@ public final class SteamdatagramMessagesSdr {
       private com.google.protobuf.SingleFieldBuilderV3<
           SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder> certBuilder_;
       /**
-       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
        * @return Whether the cert field is set.
        */
       public boolean hasCert() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
        * @return The cert.
        */
       public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getCert() {
@@ -7826,7 +9292,7 @@ public final class SteamdatagramMessagesSdr {
         }
       }
       /**
-       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
        */
       public Builder setCert(SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned value) {
         if (certBuilder_ == null) {
@@ -7842,7 +9308,7 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
       /**
-       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
        */
       public Builder setCert(
           SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder builderForValue) {
@@ -7856,7 +9322,7 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
       /**
-       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
        */
       public Builder mergeCert(SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned value) {
         if (certBuilder_ == null) {
@@ -7876,7 +9342,7 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
       /**
-       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
        */
       public Builder clearCert() {
         if (certBuilder_ == null) {
@@ -7889,7 +9355,7 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
       /**
-       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
        */
       public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder getCertBuilder() {
         bitField0_ |= 0x00000001;
@@ -7897,7 +9363,7 @@ public final class SteamdatagramMessagesSdr {
         return getCertFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
        */
       public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getCertOrBuilder() {
         if (certBuilder_ != null) {
@@ -7908,7 +9374,7 @@ public final class SteamdatagramMessagesSdr {
         }
       }
       /**
-       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 1;</code>
+       * <code>optional .CMsgSteamDatagramCertificateSigned cert = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder> 
@@ -7926,7 +9392,7 @@ public final class SteamdatagramMessagesSdr {
 
       private com.google.protobuf.ByteString signedData_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>optional bytes signed_data = 2;</code>
+       * <code>optional bytes signed_data = 7;</code>
        * @return Whether the signedData field is set.
        */
       @java.lang.Override
@@ -7934,7 +9400,7 @@ public final class SteamdatagramMessagesSdr {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional bytes signed_data = 2;</code>
+       * <code>optional bytes signed_data = 7;</code>
        * @return The signedData.
        */
       @java.lang.Override
@@ -7942,7 +9408,7 @@ public final class SteamdatagramMessagesSdr {
         return signedData_;
       }
       /**
-       * <code>optional bytes signed_data = 2;</code>
+       * <code>optional bytes signed_data = 7;</code>
        * @param value The signedData to set.
        * @return This builder for chaining.
        */
@@ -7956,7 +9422,7 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
       /**
-       * <code>optional bytes signed_data = 2;</code>
+       * <code>optional bytes signed_data = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearSignedData() {
@@ -7968,7 +9434,7 @@ public final class SteamdatagramMessagesSdr {
 
       private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>optional bytes signature = 3;</code>
+       * <code>optional bytes signature = 8;</code>
        * @return Whether the signature field is set.
        */
       @java.lang.Override
@@ -7976,7 +9442,7 @@ public final class SteamdatagramMessagesSdr {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional bytes signature = 3;</code>
+       * <code>optional bytes signature = 8;</code>
        * @return The signature.
        */
       @java.lang.Override
@@ -7984,7 +9450,7 @@ public final class SteamdatagramMessagesSdr {
         return signature_;
       }
       /**
-       * <code>optional bytes signature = 3;</code>
+       * <code>optional bytes signature = 8;</code>
        * @param value The signature to set.
        * @return This builder for chaining.
        */
@@ -7998,12 +9464,249 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
       /**
-       * <code>optional bytes signature = 3;</code>
+       * <code>optional bytes signature = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearSignature() {
         bitField0_ = (bitField0_ & ~0x00000004);
         signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+
+      private int legacyYourPublicIp_ ;
+      /**
+       * <code>optional fixed32 legacy_your_public_ip = 1;</code>
+       * @return Whether the legacyYourPublicIp field is set.
+       */
+      @java.lang.Override
+      public boolean hasLegacyYourPublicIp() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional fixed32 legacy_your_public_ip = 1;</code>
+       * @return The legacyYourPublicIp.
+       */
+      @java.lang.Override
+      public int getLegacyYourPublicIp() {
+        return legacyYourPublicIp_;
+      }
+      /**
+       * <code>optional fixed32 legacy_your_public_ip = 1;</code>
+       * @param value The legacyYourPublicIp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLegacyYourPublicIp(int value) {
+        bitField0_ |= 0x00000008;
+        legacyYourPublicIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 legacy_your_public_ip = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLegacyYourPublicIp() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        legacyYourPublicIp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int legacyYourPublicPort_ ;
+      /**
+       * <code>optional fixed32 legacy_your_public_port = 5;</code>
+       * @return Whether the legacyYourPublicPort field is set.
+       */
+      @java.lang.Override
+      public boolean hasLegacyYourPublicPort() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional fixed32 legacy_your_public_port = 5;</code>
+       * @return The legacyYourPublicPort.
+       */
+      @java.lang.Override
+      public int getLegacyYourPublicPort() {
+        return legacyYourPublicPort_;
+      }
+      /**
+       * <code>optional fixed32 legacy_your_public_port = 5;</code>
+       * @param value The legacyYourPublicPort to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLegacyYourPublicPort(int value) {
+        bitField0_ |= 0x00000010;
+        legacyYourPublicPort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 legacy_your_public_port = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLegacyYourPublicPort() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        legacyYourPublicPort_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int legacyRelayUnixTime_ ;
+      /**
+       * <code>optional fixed32 legacy_relay_unix_time = 2;</code>
+       * @return Whether the legacyRelayUnixTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasLegacyRelayUnixTime() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional fixed32 legacy_relay_unix_time = 2;</code>
+       * @return The legacyRelayUnixTime.
+       */
+      @java.lang.Override
+      public int getLegacyRelayUnixTime() {
+        return legacyRelayUnixTime_;
+      }
+      /**
+       * <code>optional fixed32 legacy_relay_unix_time = 2;</code>
+       * @param value The legacyRelayUnixTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLegacyRelayUnixTime(int value) {
+        bitField0_ |= 0x00000020;
+        legacyRelayUnixTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 legacy_relay_unix_time = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLegacyRelayUnixTime() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        legacyRelayUnixTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long legacyChallenge_ ;
+      /**
+       * <code>optional fixed64 legacy_challenge = 3;</code>
+       * @return Whether the legacyChallenge field is set.
+       */
+      @java.lang.Override
+      public boolean hasLegacyChallenge() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional fixed64 legacy_challenge = 3;</code>
+       * @return The legacyChallenge.
+       */
+      @java.lang.Override
+      public long getLegacyChallenge() {
+        return legacyChallenge_;
+      }
+      /**
+       * <code>optional fixed64 legacy_challenge = 3;</code>
+       * @param value The legacyChallenge to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLegacyChallenge(long value) {
+        bitField0_ |= 0x00000040;
+        legacyChallenge_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 legacy_challenge = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLegacyChallenge() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        legacyChallenge_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int legacyRouterTimestamp_ ;
+      /**
+       * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+       * @return Whether the legacyRouterTimestamp field is set.
+       */
+      @java.lang.Override
+      public boolean hasLegacyRouterTimestamp() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+       * @return The legacyRouterTimestamp.
+       */
+      @java.lang.Override
+      public int getLegacyRouterTimestamp() {
+        return legacyRouterTimestamp_;
+      }
+      /**
+       * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+       * @param value The legacyRouterTimestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLegacyRouterTimestamp(int value) {
+        bitField0_ |= 0x00000080;
+        legacyRouterTimestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLegacyRouterTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        legacyRouterTimestamp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString dummyPad_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes dummy_pad = 1023;</code>
+       * @return Whether the dummyPad field is set.
+       */
+      @java.lang.Override
+      public boolean hasDummyPad() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional bytes dummy_pad = 1023;</code>
+       * @return The dummyPad.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDummyPad() {
+        return dummyPad_;
+      }
+      /**
+       * <code>optional bytes dummy_pad = 1023;</code>
+       * @param value The dummyPad to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDummyPad(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        dummyPad_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes dummy_pad = 1023;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDummyPad() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        dummyPad_ = getDefaultInstance().getDummyPad();
         onChanged();
         return this;
       }
@@ -8020,41 +9723,1544 @@ public final class SteamdatagramMessagesSdr {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:CMsgSteamDatagramGameserverPingReply)
+      // @@protoc_insertion_point(builder_scope:CMsgSteamDatagramGameserverPingRequestEnvelope)
     }
 
-    // @@protoc_insertion_point(class_scope:CMsgSteamDatagramGameserverPingReply)
-    private static final SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CMsgSteamDatagramGameserverPingRequestEnvelope)
+    private static final SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply();
+      DEFAULT_INSTANCE = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope();
     }
 
-    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply getDefaultInstance() {
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingReply>
-        PARSER = new com.google.protobuf.AbstractParser<CMsgSteamDatagramGameserverPingReply>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingRequestEnvelope>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgSteamDatagramGameserverPingRequestEnvelope>() {
       @java.lang.Override
-      public CMsgSteamDatagramGameserverPingReply parsePartialFrom(
+      public CMsgSteamDatagramGameserverPingRequestEnvelope parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CMsgSteamDatagramGameserverPingReply(input, extensionRegistry);
+        return new CMsgSteamDatagramGameserverPingRequestEnvelope(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingReply> parser() {
+    public static com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingRequestEnvelope> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingReply> getParserForType() {
+    public com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingRequestEnvelope> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReply getDefaultInstanceForType() {
+    public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingRequestEnvelope getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgSteamDatagramGameserverPingReplyDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgSteamDatagramGameserverPingReplyData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed32 echo_relay_unix_time = 2;</code>
+     * @return Whether the echoRelayUnixTime field is set.
+     */
+    boolean hasEchoRelayUnixTime();
+    /**
+     * <code>optional fixed32 echo_relay_unix_time = 2;</code>
+     * @return The echoRelayUnixTime.
+     */
+    int getEchoRelayUnixTime();
+
+    /**
+     * <code>optional bytes echo = 8;</code>
+     * @return Whether the echo field is set.
+     */
+    boolean hasEcho();
+    /**
+     * <code>optional bytes echo = 8;</code>
+     * @return The echo.
+     */
+    com.google.protobuf.ByteString getEcho();
+
+    /**
+     * <code>optional fixed64 legacy_challenge = 3;</code>
+     * @return Whether the legacyChallenge field is set.
+     */
+    boolean hasLegacyChallenge();
+    /**
+     * <code>optional fixed64 legacy_challenge = 3;</code>
+     * @return The legacyChallenge.
+     */
+    long getLegacyChallenge();
+
+    /**
+     * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+     * @return Whether the legacyRouterTimestamp field is set.
+     */
+    boolean hasLegacyRouterTimestamp();
+    /**
+     * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+     * @return The legacyRouterTimestamp.
+     */
+    int getLegacyRouterTimestamp();
+
+    /**
+     * <code>optional fixed32 data_center_id = 5;</code>
+     * @return Whether the dataCenterId field is set.
+     */
+    boolean hasDataCenterId();
+    /**
+     * <code>optional fixed32 data_center_id = 5;</code>
+     * @return The dataCenterId.
+     */
+    int getDataCenterId();
+
+    /**
+     * <code>optional uint32 appid = 6;</code>
+     * @return Whether the appid field is set.
+     */
+    boolean hasAppid();
+    /**
+     * <code>optional uint32 appid = 6;</code>
+     * @return The appid.
+     */
+    int getAppid();
+
+    /**
+     * <code>optional uint32 protocol_version = 7;</code>
+     * @return Whether the protocolVersion field is set.
+     */
+    boolean hasProtocolVersion();
+    /**
+     * <code>optional uint32 protocol_version = 7;</code>
+     * @return The protocolVersion.
+     */
+    int getProtocolVersion();
+
+    /**
+     * <code>optional string build = 9;</code>
+     * @return Whether the build field is set.
+     */
+    boolean hasBuild();
+    /**
+     * <code>optional string build = 9;</code>
+     * @return The build.
+     */
+    java.lang.String getBuild();
+    /**
+     * <code>optional string build = 9;</code>
+     * @return The bytes for build.
+     */
+    com.google.protobuf.ByteString
+        getBuildBytes();
+
+    /**
+     * <code>optional uint64 network_config_version = 10;</code>
+     * @return Whether the networkConfigVersion field is set.
+     */
+    boolean hasNetworkConfigVersion();
+    /**
+     * <code>optional uint64 network_config_version = 10;</code>
+     * @return The networkConfigVersion.
+     */
+    long getNetworkConfigVersion();
+
+    /**
+     * <code>optional fixed32 my_unix_time = 11;</code>
+     * @return Whether the myUnixTime field is set.
+     */
+    boolean hasMyUnixTime();
+    /**
+     * <code>optional fixed32 my_unix_time = 11;</code>
+     * @return The myUnixTime.
+     */
+    int getMyUnixTime();
+  }
+  /**
+   * Protobuf type {@code CMsgSteamDatagramGameserverPingReplyData}
+   */
+  public static final class CMsgSteamDatagramGameserverPingReplyData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgSteamDatagramGameserverPingReplyData)
+      CMsgSteamDatagramGameserverPingReplyDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgSteamDatagramGameserverPingReplyData.newBuilder() to construct.
+    private CMsgSteamDatagramGameserverPingReplyData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgSteamDatagramGameserverPingReplyData() {
+      echo_ = com.google.protobuf.ByteString.EMPTY;
+      build_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgSteamDatagramGameserverPingReplyData();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgSteamDatagramGameserverPingReplyData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 21: {
+              bitField0_ |= 0x00000001;
+              echoRelayUnixTime_ = input.readFixed32();
+              break;
+            }
+            case 25: {
+              bitField0_ |= 0x00000004;
+              legacyChallenge_ = input.readFixed64();
+              break;
+            }
+            case 37: {
+              bitField0_ |= 0x00000008;
+              legacyRouterTimestamp_ = input.readFixed32();
+              break;
+            }
+            case 45: {
+              bitField0_ |= 0x00000010;
+              dataCenterId_ = input.readFixed32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              appid_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              protocolVersion_ = input.readUInt32();
+              break;
+            }
+            case 66: {
+              bitField0_ |= 0x00000002;
+              echo_ = input.readBytes();
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              build_ = bs;
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000100;
+              networkConfigVersion_ = input.readUInt64();
+              break;
+            }
+            case 93: {
+              bitField0_ |= 0x00000200;
+              myUnixTime_ = input.readFixed32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReplyData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReplyData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ECHO_RELAY_UNIX_TIME_FIELD_NUMBER = 2;
+    private int echoRelayUnixTime_;
+    /**
+     * <code>optional fixed32 echo_relay_unix_time = 2;</code>
+     * @return Whether the echoRelayUnixTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEchoRelayUnixTime() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed32 echo_relay_unix_time = 2;</code>
+     * @return The echoRelayUnixTime.
+     */
+    @java.lang.Override
+    public int getEchoRelayUnixTime() {
+      return echoRelayUnixTime_;
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 8;
+    private com.google.protobuf.ByteString echo_;
+    /**
+     * <code>optional bytes echo = 8;</code>
+     * @return Whether the echo field is set.
+     */
+    @java.lang.Override
+    public boolean hasEcho() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bytes echo = 8;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEcho() {
+      return echo_;
+    }
+
+    public static final int LEGACY_CHALLENGE_FIELD_NUMBER = 3;
+    private long legacyChallenge_;
+    /**
+     * <code>optional fixed64 legacy_challenge = 3;</code>
+     * @return Whether the legacyChallenge field is set.
+     */
+    @java.lang.Override
+    public boolean hasLegacyChallenge() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional fixed64 legacy_challenge = 3;</code>
+     * @return The legacyChallenge.
+     */
+    @java.lang.Override
+    public long getLegacyChallenge() {
+      return legacyChallenge_;
+    }
+
+    public static final int LEGACY_ROUTER_TIMESTAMP_FIELD_NUMBER = 4;
+    private int legacyRouterTimestamp_;
+    /**
+     * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+     * @return Whether the legacyRouterTimestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasLegacyRouterTimestamp() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+     * @return The legacyRouterTimestamp.
+     */
+    @java.lang.Override
+    public int getLegacyRouterTimestamp() {
+      return legacyRouterTimestamp_;
+    }
+
+    public static final int DATA_CENTER_ID_FIELD_NUMBER = 5;
+    private int dataCenterId_;
+    /**
+     * <code>optional fixed32 data_center_id = 5;</code>
+     * @return Whether the dataCenterId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataCenterId() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional fixed32 data_center_id = 5;</code>
+     * @return The dataCenterId.
+     */
+    @java.lang.Override
+    public int getDataCenterId() {
+      return dataCenterId_;
+    }
+
+    public static final int APPID_FIELD_NUMBER = 6;
+    private int appid_;
+    /**
+     * <code>optional uint32 appid = 6;</code>
+     * @return Whether the appid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppid() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional uint32 appid = 6;</code>
+     * @return The appid.
+     */
+    @java.lang.Override
+    public int getAppid() {
+      return appid_;
+    }
+
+    public static final int PROTOCOL_VERSION_FIELD_NUMBER = 7;
+    private int protocolVersion_;
+    /**
+     * <code>optional uint32 protocol_version = 7;</code>
+     * @return Whether the protocolVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasProtocolVersion() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional uint32 protocol_version = 7;</code>
+     * @return The protocolVersion.
+     */
+    @java.lang.Override
+    public int getProtocolVersion() {
+      return protocolVersion_;
+    }
+
+    public static final int BUILD_FIELD_NUMBER = 9;
+    private volatile java.lang.Object build_;
+    /**
+     * <code>optional string build = 9;</code>
+     * @return Whether the build field is set.
+     */
+    @java.lang.Override
+    public boolean hasBuild() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional string build = 9;</code>
+     * @return The build.
+     */
+    @java.lang.Override
+    public java.lang.String getBuild() {
+      java.lang.Object ref = build_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          build_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string build = 9;</code>
+     * @return The bytes for build.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuildBytes() {
+      java.lang.Object ref = build_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        build_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NETWORK_CONFIG_VERSION_FIELD_NUMBER = 10;
+    private long networkConfigVersion_;
+    /**
+     * <code>optional uint64 network_config_version = 10;</code>
+     * @return Whether the networkConfigVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasNetworkConfigVersion() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional uint64 network_config_version = 10;</code>
+     * @return The networkConfigVersion.
+     */
+    @java.lang.Override
+    public long getNetworkConfigVersion() {
+      return networkConfigVersion_;
+    }
+
+    public static final int MY_UNIX_TIME_FIELD_NUMBER = 11;
+    private int myUnixTime_;
+    /**
+     * <code>optional fixed32 my_unix_time = 11;</code>
+     * @return Whether the myUnixTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasMyUnixTime() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional fixed32 my_unix_time = 11;</code>
+     * @return The myUnixTime.
+     */
+    @java.lang.Override
+    public int getMyUnixTime() {
+      return myUnixTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeFixed32(2, echoRelayUnixTime_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeFixed64(3, legacyChallenge_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeFixed32(4, legacyRouterTimestamp_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeFixed32(5, dataCenterId_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeUInt32(6, appid_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeUInt32(7, protocolVersion_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBytes(8, echo_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, build_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeUInt64(10, networkConfigVersion_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeFixed32(11, myUnixTime_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(2, echoRelayUnixTime_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(3, legacyChallenge_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(4, legacyRouterTimestamp_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(5, dataCenterId_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, appid_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, protocolVersion_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, echo_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, build_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, networkConfigVersion_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(11, myUnixTime_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData)) {
+        return super.equals(obj);
+      }
+      SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData other = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData) obj;
+
+      if (hasEchoRelayUnixTime() != other.hasEchoRelayUnixTime()) return false;
+      if (hasEchoRelayUnixTime()) {
+        if (getEchoRelayUnixTime()
+            != other.getEchoRelayUnixTime()) return false;
+      }
+      if (hasEcho() != other.hasEcho()) return false;
+      if (hasEcho()) {
+        if (!getEcho()
+            .equals(other.getEcho())) return false;
+      }
+      if (hasLegacyChallenge() != other.hasLegacyChallenge()) return false;
+      if (hasLegacyChallenge()) {
+        if (getLegacyChallenge()
+            != other.getLegacyChallenge()) return false;
+      }
+      if (hasLegacyRouterTimestamp() != other.hasLegacyRouterTimestamp()) return false;
+      if (hasLegacyRouterTimestamp()) {
+        if (getLegacyRouterTimestamp()
+            != other.getLegacyRouterTimestamp()) return false;
+      }
+      if (hasDataCenterId() != other.hasDataCenterId()) return false;
+      if (hasDataCenterId()) {
+        if (getDataCenterId()
+            != other.getDataCenterId()) return false;
+      }
+      if (hasAppid() != other.hasAppid()) return false;
+      if (hasAppid()) {
+        if (getAppid()
+            != other.getAppid()) return false;
+      }
+      if (hasProtocolVersion() != other.hasProtocolVersion()) return false;
+      if (hasProtocolVersion()) {
+        if (getProtocolVersion()
+            != other.getProtocolVersion()) return false;
+      }
+      if (hasBuild() != other.hasBuild()) return false;
+      if (hasBuild()) {
+        if (!getBuild()
+            .equals(other.getBuild())) return false;
+      }
+      if (hasNetworkConfigVersion() != other.hasNetworkConfigVersion()) return false;
+      if (hasNetworkConfigVersion()) {
+        if (getNetworkConfigVersion()
+            != other.getNetworkConfigVersion()) return false;
+      }
+      if (hasMyUnixTime() != other.hasMyUnixTime()) return false;
+      if (hasMyUnixTime()) {
+        if (getMyUnixTime()
+            != other.getMyUnixTime()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEchoRelayUnixTime()) {
+        hash = (37 * hash) + ECHO_RELAY_UNIX_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEchoRelayUnixTime();
+      }
+      if (hasEcho()) {
+        hash = (37 * hash) + ECHO_FIELD_NUMBER;
+        hash = (53 * hash) + getEcho().hashCode();
+      }
+      if (hasLegacyChallenge()) {
+        hash = (37 * hash) + LEGACY_CHALLENGE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getLegacyChallenge());
+      }
+      if (hasLegacyRouterTimestamp()) {
+        hash = (37 * hash) + LEGACY_ROUTER_TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getLegacyRouterTimestamp();
+      }
+      if (hasDataCenterId()) {
+        hash = (37 * hash) + DATA_CENTER_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDataCenterId();
+      }
+      if (hasAppid()) {
+        hash = (37 * hash) + APPID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppid();
+      }
+      if (hasProtocolVersion()) {
+        hash = (37 * hash) + PROTOCOL_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getProtocolVersion();
+      }
+      if (hasBuild()) {
+        hash = (37 * hash) + BUILD_FIELD_NUMBER;
+        hash = (53 * hash) + getBuild().hashCode();
+      }
+      if (hasNetworkConfigVersion()) {
+        hash = (37 * hash) + NETWORK_CONFIG_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNetworkConfigVersion());
+      }
+      if (hasMyUnixTime()) {
+        hash = (37 * hash) + MY_UNIX_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getMyUnixTime();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgSteamDatagramGameserverPingReplyData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgSteamDatagramGameserverPingReplyData)
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReplyData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReplyData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData.class, SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData.Builder.class);
+      }
+
+      // Construct using SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        echoRelayUnixTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        echo_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        legacyChallenge_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        legacyRouterTimestamp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        dataCenterId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        appid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        protocolVersion_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        build_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
+        networkConfigVersion_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        myUnixTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramGameserverPingReplyData_descriptor;
+      }
+
+      @java.lang.Override
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData getDefaultInstanceForType() {
+        return SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData build() {
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData buildPartial() {
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData result = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.echoRelayUnixTime_ = echoRelayUnixTime_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.echo_ = echo_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.legacyChallenge_ = legacyChallenge_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.legacyRouterTimestamp_ = legacyRouterTimestamp_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.dataCenterId_ = dataCenterId_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.appid_ = appid_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.protocolVersion_ = protocolVersion_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.build_ = build_;
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.networkConfigVersion_ = networkConfigVersion_;
+          to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.myUnixTime_ = myUnixTime_;
+          to_bitField0_ |= 0x00000200;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData) {
+          return mergeFrom((SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData other) {
+        if (other == SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData.getDefaultInstance()) return this;
+        if (other.hasEchoRelayUnixTime()) {
+          setEchoRelayUnixTime(other.getEchoRelayUnixTime());
+        }
+        if (other.hasEcho()) {
+          setEcho(other.getEcho());
+        }
+        if (other.hasLegacyChallenge()) {
+          setLegacyChallenge(other.getLegacyChallenge());
+        }
+        if (other.hasLegacyRouterTimestamp()) {
+          setLegacyRouterTimestamp(other.getLegacyRouterTimestamp());
+        }
+        if (other.hasDataCenterId()) {
+          setDataCenterId(other.getDataCenterId());
+        }
+        if (other.hasAppid()) {
+          setAppid(other.getAppid());
+        }
+        if (other.hasProtocolVersion()) {
+          setProtocolVersion(other.getProtocolVersion());
+        }
+        if (other.hasBuild()) {
+          bitField0_ |= 0x00000080;
+          build_ = other.build_;
+          onChanged();
+        }
+        if (other.hasNetworkConfigVersion()) {
+          setNetworkConfigVersion(other.getNetworkConfigVersion());
+        }
+        if (other.hasMyUnixTime()) {
+          setMyUnixTime(other.getMyUnixTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int echoRelayUnixTime_ ;
+      /**
+       * <code>optional fixed32 echo_relay_unix_time = 2;</code>
+       * @return Whether the echoRelayUnixTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasEchoRelayUnixTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional fixed32 echo_relay_unix_time = 2;</code>
+       * @return The echoRelayUnixTime.
+       */
+      @java.lang.Override
+      public int getEchoRelayUnixTime() {
+        return echoRelayUnixTime_;
+      }
+      /**
+       * <code>optional fixed32 echo_relay_unix_time = 2;</code>
+       * @param value The echoRelayUnixTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoRelayUnixTime(int value) {
+        bitField0_ |= 0x00000001;
+        echoRelayUnixTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 echo_relay_unix_time = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEchoRelayUnixTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        echoRelayUnixTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString echo_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes echo = 8;</code>
+       * @return Whether the echo field is set.
+       */
+      @java.lang.Override
+      public boolean hasEcho() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bytes echo = 8;</code>
+       * @return The echo.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEcho() {
+        return echo_;
+      }
+      /**
+       * <code>optional bytes echo = 8;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes echo = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+
+      private long legacyChallenge_ ;
+      /**
+       * <code>optional fixed64 legacy_challenge = 3;</code>
+       * @return Whether the legacyChallenge field is set.
+       */
+      @java.lang.Override
+      public boolean hasLegacyChallenge() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional fixed64 legacy_challenge = 3;</code>
+       * @return The legacyChallenge.
+       */
+      @java.lang.Override
+      public long getLegacyChallenge() {
+        return legacyChallenge_;
+      }
+      /**
+       * <code>optional fixed64 legacy_challenge = 3;</code>
+       * @param value The legacyChallenge to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLegacyChallenge(long value) {
+        bitField0_ |= 0x00000004;
+        legacyChallenge_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 legacy_challenge = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLegacyChallenge() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        legacyChallenge_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int legacyRouterTimestamp_ ;
+      /**
+       * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+       * @return Whether the legacyRouterTimestamp field is set.
+       */
+      @java.lang.Override
+      public boolean hasLegacyRouterTimestamp() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+       * @return The legacyRouterTimestamp.
+       */
+      @java.lang.Override
+      public int getLegacyRouterTimestamp() {
+        return legacyRouterTimestamp_;
+      }
+      /**
+       * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+       * @param value The legacyRouterTimestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLegacyRouterTimestamp(int value) {
+        bitField0_ |= 0x00000008;
+        legacyRouterTimestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 legacy_router_timestamp = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLegacyRouterTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        legacyRouterTimestamp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int dataCenterId_ ;
+      /**
+       * <code>optional fixed32 data_center_id = 5;</code>
+       * @return Whether the dataCenterId field is set.
+       */
+      @java.lang.Override
+      public boolean hasDataCenterId() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional fixed32 data_center_id = 5;</code>
+       * @return The dataCenterId.
+       */
+      @java.lang.Override
+      public int getDataCenterId() {
+        return dataCenterId_;
+      }
+      /**
+       * <code>optional fixed32 data_center_id = 5;</code>
+       * @param value The dataCenterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataCenterId(int value) {
+        bitField0_ |= 0x00000010;
+        dataCenterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 data_center_id = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataCenterId() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        dataCenterId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int appid_ ;
+      /**
+       * <code>optional uint32 appid = 6;</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 6;</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+      /**
+       * <code>optional uint32 appid = 6;</code>
+       * @param value The appid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppid(int value) {
+        bitField0_ |= 0x00000020;
+        appid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 appid = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppid() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        appid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int protocolVersion_ ;
+      /**
+       * <code>optional uint32 protocol_version = 7;</code>
+       * @return Whether the protocolVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasProtocolVersion() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional uint32 protocol_version = 7;</code>
+       * @return The protocolVersion.
+       */
+      @java.lang.Override
+      public int getProtocolVersion() {
+        return protocolVersion_;
+      }
+      /**
+       * <code>optional uint32 protocol_version = 7;</code>
+       * @param value The protocolVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocolVersion(int value) {
+        bitField0_ |= 0x00000040;
+        protocolVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 protocol_version = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProtocolVersion() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        protocolVersion_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object build_ = "";
+      /**
+       * <code>optional string build = 9;</code>
+       * @return Whether the build field is set.
+       */
+      public boolean hasBuild() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional string build = 9;</code>
+       * @return The build.
+       */
+      public java.lang.String getBuild() {
+        java.lang.Object ref = build_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            build_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string build = 9;</code>
+       * @return The bytes for build.
+       */
+      public com.google.protobuf.ByteString
+          getBuildBytes() {
+        java.lang.Object ref = build_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          build_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string build = 9;</code>
+       * @param value The build to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuild(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        build_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string build = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuild() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        build_ = getDefaultInstance().getBuild();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string build = 9;</code>
+       * @param value The bytes for build to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuildBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        build_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long networkConfigVersion_ ;
+      /**
+       * <code>optional uint64 network_config_version = 10;</code>
+       * @return Whether the networkConfigVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasNetworkConfigVersion() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint64 network_config_version = 10;</code>
+       * @return The networkConfigVersion.
+       */
+      @java.lang.Override
+      public long getNetworkConfigVersion() {
+        return networkConfigVersion_;
+      }
+      /**
+       * <code>optional uint64 network_config_version = 10;</code>
+       * @param value The networkConfigVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkConfigVersion(long value) {
+        bitField0_ |= 0x00000100;
+        networkConfigVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 network_config_version = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNetworkConfigVersion() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        networkConfigVersion_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int myUnixTime_ ;
+      /**
+       * <code>optional fixed32 my_unix_time = 11;</code>
+       * @return Whether the myUnixTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasMyUnixTime() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional fixed32 my_unix_time = 11;</code>
+       * @return The myUnixTime.
+       */
+      @java.lang.Override
+      public int getMyUnixTime() {
+        return myUnixTime_;
+      }
+      /**
+       * <code>optional fixed32 my_unix_time = 11;</code>
+       * @param value The myUnixTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMyUnixTime(int value) {
+        bitField0_ |= 0x00000200;
+        myUnixTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 my_unix_time = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMyUnixTime() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        myUnixTime_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgSteamDatagramGameserverPingReplyData)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgSteamDatagramGameserverPingReplyData)
+    private static final SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData();
+    }
+
+    public static SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingReplyData>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgSteamDatagramGameserverPingReplyData>() {
+      @java.lang.Override
+      public CMsgSteamDatagramGameserverPingReplyData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgSteamDatagramGameserverPingReplyData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingReplyData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgSteamDatagramGameserverPingReplyData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteamdatagramMessagesSdr.CMsgSteamDatagramGameserverPingReplyData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10439,15 +13645,15 @@ public final class SteamdatagramMessagesSdr {
     int getConnectionId();
 
     /**
-     * <code>optional bool override_active = 4;</code>
-     * @return Whether the overrideActive field is set.
+     * <code>optional bool relay_override_active = 5;</code>
+     * @return Whether the relayOverrideActive field is set.
      */
-    boolean hasOverrideActive();
+    boolean hasRelayOverrideActive();
     /**
-     * <code>optional bool override_active = 4;</code>
-     * @return The overrideActive.
+     * <code>optional bool relay_override_active = 5;</code>
+     * @return The relayOverrideActive.
      */
-    boolean getOverrideActive();
+    boolean getRelayOverrideActive();
 
     /**
      * <code>repeated .CMsgSteamDatagramClientPingSampleReply.POP pops = 2;</code>
@@ -10568,9 +13774,9 @@ public final class SteamdatagramMessagesSdr {
                   input.readMessage(SteamdatagramMessagesSdr.CMsgSteamDatagramClientPingSampleReply.LegacyDataCenter.PARSER, extensionRegistry));
               break;
             }
-            case 32: {
+            case 40: {
               bitField0_ |= 0x00000002;
-              overrideActive_ = input.readBool();
+              relayOverrideActive_ = input.readBool();
               break;
             }
             default: {
@@ -14437,23 +17643,23 @@ public final class SteamdatagramMessagesSdr {
       return connectionId_;
     }
 
-    public static final int OVERRIDE_ACTIVE_FIELD_NUMBER = 4;
-    private boolean overrideActive_;
+    public static final int RELAY_OVERRIDE_ACTIVE_FIELD_NUMBER = 5;
+    private boolean relayOverrideActive_;
     /**
-     * <code>optional bool override_active = 4;</code>
-     * @return Whether the overrideActive field is set.
+     * <code>optional bool relay_override_active = 5;</code>
+     * @return Whether the relayOverrideActive field is set.
      */
     @java.lang.Override
-    public boolean hasOverrideActive() {
+    public boolean hasRelayOverrideActive() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional bool override_active = 4;</code>
-     * @return The overrideActive.
+     * <code>optional bool relay_override_active = 5;</code>
+     * @return The relayOverrideActive.
      */
     @java.lang.Override
-    public boolean getOverrideActive() {
-      return overrideActive_;
+    public boolean getRelayOverrideActive() {
+      return relayOverrideActive_;
     }
 
     public static final int POPS_FIELD_NUMBER = 2;
@@ -14560,7 +17766,7 @@ public final class SteamdatagramMessagesSdr {
         output.writeMessage(3, legacyDataCenters_.get(i));
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeBool(4, overrideActive_);
+        output.writeBool(5, relayOverrideActive_);
       }
       unknownFields.writeTo(output);
     }
@@ -14585,7 +17791,7 @@ public final class SteamdatagramMessagesSdr {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, overrideActive_);
+          .computeBoolSize(5, relayOverrideActive_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14607,10 +17813,10 @@ public final class SteamdatagramMessagesSdr {
         if (getConnectionId()
             != other.getConnectionId()) return false;
       }
-      if (hasOverrideActive() != other.hasOverrideActive()) return false;
-      if (hasOverrideActive()) {
-        if (getOverrideActive()
-            != other.getOverrideActive()) return false;
+      if (hasRelayOverrideActive() != other.hasRelayOverrideActive()) return false;
+      if (hasRelayOverrideActive()) {
+        if (getRelayOverrideActive()
+            != other.getRelayOverrideActive()) return false;
       }
       if (!getPopsList()
           .equals(other.getPopsList())) return false;
@@ -14631,10 +17837,10 @@ public final class SteamdatagramMessagesSdr {
         hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
         hash = (53 * hash) + getConnectionId();
       }
-      if (hasOverrideActive()) {
-        hash = (37 * hash) + OVERRIDE_ACTIVE_FIELD_NUMBER;
+      if (hasRelayOverrideActive()) {
+        hash = (37 * hash) + RELAY_OVERRIDE_ACTIVE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getOverrideActive());
+            getRelayOverrideActive());
       }
       if (getPopsCount() > 0) {
         hash = (37 * hash) + POPS_FIELD_NUMBER;
@@ -14781,7 +17987,7 @@ public final class SteamdatagramMessagesSdr {
         super.clear();
         connectionId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        overrideActive_ = false;
+        relayOverrideActive_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
         if (popsBuilder_ == null) {
           pops_ = java.util.Collections.emptyList();
@@ -14828,7 +18034,7 @@ public final class SteamdatagramMessagesSdr {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.overrideActive_ = overrideActive_;
+          result.relayOverrideActive_ = relayOverrideActive_;
           to_bitField0_ |= 0x00000002;
         }
         if (popsBuilder_ == null) {
@@ -14901,8 +18107,8 @@ public final class SteamdatagramMessagesSdr {
         if (other.hasConnectionId()) {
           setConnectionId(other.getConnectionId());
         }
-        if (other.hasOverrideActive()) {
-          setOverrideActive(other.getOverrideActive());
+        if (other.hasRelayOverrideActive()) {
+          setRelayOverrideActive(other.getRelayOverrideActive());
         }
         if (popsBuilder_ == null) {
           if (!other.pops_.isEmpty()) {
@@ -15025,41 +18231,41 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
 
-      private boolean overrideActive_ ;
+      private boolean relayOverrideActive_ ;
       /**
-       * <code>optional bool override_active = 4;</code>
-       * @return Whether the overrideActive field is set.
+       * <code>optional bool relay_override_active = 5;</code>
+       * @return Whether the relayOverrideActive field is set.
        */
       @java.lang.Override
-      public boolean hasOverrideActive() {
+      public boolean hasRelayOverrideActive() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional bool override_active = 4;</code>
-       * @return The overrideActive.
+       * <code>optional bool relay_override_active = 5;</code>
+       * @return The relayOverrideActive.
        */
       @java.lang.Override
-      public boolean getOverrideActive() {
-        return overrideActive_;
+      public boolean getRelayOverrideActive() {
+        return relayOverrideActive_;
       }
       /**
-       * <code>optional bool override_active = 4;</code>
-       * @param value The overrideActive to set.
+       * <code>optional bool relay_override_active = 5;</code>
+       * @param value The relayOverrideActive to set.
        * @return This builder for chaining.
        */
-      public Builder setOverrideActive(boolean value) {
+      public Builder setRelayOverrideActive(boolean value) {
         bitField0_ |= 0x00000002;
-        overrideActive_ = value;
+        relayOverrideActive_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bool override_active = 4;</code>
+       * <code>optional bool relay_override_active = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearOverrideActive() {
+      public Builder clearRelayOverrideActive() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        overrideActive_ = false;
+        relayOverrideActive_ = false;
         onChanged();
         return this;
       }
@@ -21490,6 +24696,83 @@ public final class SteamdatagramMessagesSdr {
     int getInitialPopRemote();
 
     /**
+     * <code>optional uint32 best_ping = 11;</code>
+     * @return Whether the bestPing field is set.
+     */
+    boolean hasBestPing();
+    /**
+     * <code>optional uint32 best_ping = 11;</code>
+     * @return The bestPing.
+     */
+    int getBestPing();
+
+    /**
+     * <code>optional uint32 best_ping_front_local = 12;</code>
+     * @return Whether the bestPingFrontLocal field is set.
+     */
+    boolean hasBestPingFrontLocal();
+    /**
+     * <code>optional uint32 best_ping_front_local = 12;</code>
+     * @return The bestPingFrontLocal.
+     */
+    int getBestPingFrontLocal();
+
+    /**
+     * <code>optional uint32 best_ping_front_remote = 13;</code>
+     * @return Whether the bestPingFrontRemote field is set.
+     */
+    boolean hasBestPingFrontRemote();
+    /**
+     * <code>optional uint32 best_ping_front_remote = 13;</code>
+     * @return The bestPingFrontRemote.
+     */
+    int getBestPingFrontRemote();
+
+    /**
+     * <code>optional uint32 best_score = 14;</code>
+     * @return Whether the bestScore field is set.
+     */
+    boolean hasBestScore();
+    /**
+     * <code>optional uint32 best_score = 14;</code>
+     * @return The bestScore.
+     */
+    int getBestScore();
+
+    /**
+     * <code>optional fixed32 best_pop_local = 15;</code>
+     * @return Whether the bestPopLocal field is set.
+     */
+    boolean hasBestPopLocal();
+    /**
+     * <code>optional fixed32 best_pop_local = 15;</code>
+     * @return The bestPopLocal.
+     */
+    int getBestPopLocal();
+
+    /**
+     * <code>optional fixed32 best_pop_remote = 16;</code>
+     * @return Whether the bestPopRemote field is set.
+     */
+    boolean hasBestPopRemote();
+    /**
+     * <code>optional fixed32 best_pop_remote = 16;</code>
+     * @return The bestPopRemote.
+     */
+    int getBestPopRemote();
+
+    /**
+     * <code>optional uint32 best_time = 17;</code>
+     * @return Whether the bestTime field is set.
+     */
+    boolean hasBestTime();
+    /**
+     * <code>optional uint32 best_time = 17;</code>
+     * @return The bestTime.
+     */
+    int getBestTime();
+
+    /**
      * <code>optional uint32 negotiation_ms = 7;</code>
      * @return Whether the negotiationMs field is set.
      */
@@ -21588,13 +24871,48 @@ public final class SteamdatagramMessagesSdr {
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00002000;
               negotiationMs_ = input.readUInt32();
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00004000;
               selectedSeconds_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000040;
+              bestPing_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+              bitField0_ |= 0x00000080;
+              bestPingFrontLocal_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00000100;
+              bestPingFrontRemote_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00000200;
+              bestScore_ = input.readUInt32();
+              break;
+            }
+            case 125: {
+              bitField0_ |= 0x00000400;
+              bestPopLocal_ = input.readFixed32();
+              break;
+            }
+            case 133: {
+              bitField0_ |= 0x00000800;
+              bestPopRemote_ = input.readFixed32();
+              break;
+            }
+            case 136: {
+              bitField0_ |= 0x00001000;
+              bestTime_ = input.readUInt32();
               break;
             }
             default: {
@@ -21744,6 +25062,139 @@ public final class SteamdatagramMessagesSdr {
       return initialPopRemote_;
     }
 
+    public static final int BEST_PING_FIELD_NUMBER = 11;
+    private int bestPing_;
+    /**
+     * <code>optional uint32 best_ping = 11;</code>
+     * @return Whether the bestPing field is set.
+     */
+    @java.lang.Override
+    public boolean hasBestPing() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional uint32 best_ping = 11;</code>
+     * @return The bestPing.
+     */
+    @java.lang.Override
+    public int getBestPing() {
+      return bestPing_;
+    }
+
+    public static final int BEST_PING_FRONT_LOCAL_FIELD_NUMBER = 12;
+    private int bestPingFrontLocal_;
+    /**
+     * <code>optional uint32 best_ping_front_local = 12;</code>
+     * @return Whether the bestPingFrontLocal field is set.
+     */
+    @java.lang.Override
+    public boolean hasBestPingFrontLocal() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 best_ping_front_local = 12;</code>
+     * @return The bestPingFrontLocal.
+     */
+    @java.lang.Override
+    public int getBestPingFrontLocal() {
+      return bestPingFrontLocal_;
+    }
+
+    public static final int BEST_PING_FRONT_REMOTE_FIELD_NUMBER = 13;
+    private int bestPingFrontRemote_;
+    /**
+     * <code>optional uint32 best_ping_front_remote = 13;</code>
+     * @return Whether the bestPingFrontRemote field is set.
+     */
+    @java.lang.Override
+    public boolean hasBestPingFrontRemote() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional uint32 best_ping_front_remote = 13;</code>
+     * @return The bestPingFrontRemote.
+     */
+    @java.lang.Override
+    public int getBestPingFrontRemote() {
+      return bestPingFrontRemote_;
+    }
+
+    public static final int BEST_SCORE_FIELD_NUMBER = 14;
+    private int bestScore_;
+    /**
+     * <code>optional uint32 best_score = 14;</code>
+     * @return Whether the bestScore field is set.
+     */
+    @java.lang.Override
+    public boolean hasBestScore() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional uint32 best_score = 14;</code>
+     * @return The bestScore.
+     */
+    @java.lang.Override
+    public int getBestScore() {
+      return bestScore_;
+    }
+
+    public static final int BEST_POP_LOCAL_FIELD_NUMBER = 15;
+    private int bestPopLocal_;
+    /**
+     * <code>optional fixed32 best_pop_local = 15;</code>
+     * @return Whether the bestPopLocal field is set.
+     */
+    @java.lang.Override
+    public boolean hasBestPopLocal() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional fixed32 best_pop_local = 15;</code>
+     * @return The bestPopLocal.
+     */
+    @java.lang.Override
+    public int getBestPopLocal() {
+      return bestPopLocal_;
+    }
+
+    public static final int BEST_POP_REMOTE_FIELD_NUMBER = 16;
+    private int bestPopRemote_;
+    /**
+     * <code>optional fixed32 best_pop_remote = 16;</code>
+     * @return Whether the bestPopRemote field is set.
+     */
+    @java.lang.Override
+    public boolean hasBestPopRemote() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>optional fixed32 best_pop_remote = 16;</code>
+     * @return The bestPopRemote.
+     */
+    @java.lang.Override
+    public int getBestPopRemote() {
+      return bestPopRemote_;
+    }
+
+    public static final int BEST_TIME_FIELD_NUMBER = 17;
+    private int bestTime_;
+    /**
+     * <code>optional uint32 best_time = 17;</code>
+     * @return Whether the bestTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasBestTime() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional uint32 best_time = 17;</code>
+     * @return The bestTime.
+     */
+    @java.lang.Override
+    public int getBestTime() {
+      return bestTime_;
+    }
+
     public static final int NEGOTIATION_MS_FIELD_NUMBER = 7;
     private int negotiationMs_;
     /**
@@ -21752,7 +25203,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasNegotiationMs() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <code>optional uint32 negotiation_ms = 7;</code>
@@ -21771,7 +25222,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasSelectedSeconds() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <code>optional uint32 selected_seconds = 8;</code>
@@ -21814,11 +25265,32 @@ public final class SteamdatagramMessagesSdr {
       if (((bitField0_ & 0x00000020) != 0)) {
         output.writeFixed32(6, initialPopRemote_);
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00002000) != 0)) {
         output.writeUInt32(7, negotiationMs_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         output.writeUInt32(8, selectedSeconds_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeUInt32(11, bestPing_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(12, bestPingFrontLocal_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeUInt32(13, bestPingFrontRemote_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeUInt32(14, bestScore_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeFixed32(15, bestPopLocal_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        output.writeFixed32(16, bestPopRemote_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeUInt32(17, bestTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -21853,13 +25325,41 @@ public final class SteamdatagramMessagesSdr {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(6, initialPopRemote_);
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00002000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, negotiationMs_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, selectedSeconds_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, bestPing_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(12, bestPingFrontLocal_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, bestPingFrontRemote_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, bestScore_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(15, bestPopLocal_);
+      }
+      if (((bitField0_ & 0x00000800) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(16, bestPopRemote_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(17, bestTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -21906,6 +25406,41 @@ public final class SteamdatagramMessagesSdr {
         if (getInitialPopRemote()
             != other.getInitialPopRemote()) return false;
       }
+      if (hasBestPing() != other.hasBestPing()) return false;
+      if (hasBestPing()) {
+        if (getBestPing()
+            != other.getBestPing()) return false;
+      }
+      if (hasBestPingFrontLocal() != other.hasBestPingFrontLocal()) return false;
+      if (hasBestPingFrontLocal()) {
+        if (getBestPingFrontLocal()
+            != other.getBestPingFrontLocal()) return false;
+      }
+      if (hasBestPingFrontRemote() != other.hasBestPingFrontRemote()) return false;
+      if (hasBestPingFrontRemote()) {
+        if (getBestPingFrontRemote()
+            != other.getBestPingFrontRemote()) return false;
+      }
+      if (hasBestScore() != other.hasBestScore()) return false;
+      if (hasBestScore()) {
+        if (getBestScore()
+            != other.getBestScore()) return false;
+      }
+      if (hasBestPopLocal() != other.hasBestPopLocal()) return false;
+      if (hasBestPopLocal()) {
+        if (getBestPopLocal()
+            != other.getBestPopLocal()) return false;
+      }
+      if (hasBestPopRemote() != other.hasBestPopRemote()) return false;
+      if (hasBestPopRemote()) {
+        if (getBestPopRemote()
+            != other.getBestPopRemote()) return false;
+      }
+      if (hasBestTime() != other.hasBestTime()) return false;
+      if (hasBestTime()) {
+        if (getBestTime()
+            != other.getBestTime()) return false;
+      }
       if (hasNegotiationMs() != other.hasNegotiationMs()) return false;
       if (hasNegotiationMs()) {
         if (getNegotiationMs()
@@ -21950,6 +25485,34 @@ public final class SteamdatagramMessagesSdr {
       if (hasInitialPopRemote()) {
         hash = (37 * hash) + INITIAL_POP_REMOTE_FIELD_NUMBER;
         hash = (53 * hash) + getInitialPopRemote();
+      }
+      if (hasBestPing()) {
+        hash = (37 * hash) + BEST_PING_FIELD_NUMBER;
+        hash = (53 * hash) + getBestPing();
+      }
+      if (hasBestPingFrontLocal()) {
+        hash = (37 * hash) + BEST_PING_FRONT_LOCAL_FIELD_NUMBER;
+        hash = (53 * hash) + getBestPingFrontLocal();
+      }
+      if (hasBestPingFrontRemote()) {
+        hash = (37 * hash) + BEST_PING_FRONT_REMOTE_FIELD_NUMBER;
+        hash = (53 * hash) + getBestPingFrontRemote();
+      }
+      if (hasBestScore()) {
+        hash = (37 * hash) + BEST_SCORE_FIELD_NUMBER;
+        hash = (53 * hash) + getBestScore();
+      }
+      if (hasBestPopLocal()) {
+        hash = (37 * hash) + BEST_POP_LOCAL_FIELD_NUMBER;
+        hash = (53 * hash) + getBestPopLocal();
+      }
+      if (hasBestPopRemote()) {
+        hash = (37 * hash) + BEST_POP_REMOTE_FIELD_NUMBER;
+        hash = (53 * hash) + getBestPopRemote();
+      }
+      if (hasBestTime()) {
+        hash = (37 * hash) + BEST_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getBestTime();
       }
       if (hasNegotiationMs()) {
         hash = (37 * hash) + NEGOTIATION_MS_FIELD_NUMBER;
@@ -22104,10 +25667,24 @@ public final class SteamdatagramMessagesSdr {
         bitField0_ = (bitField0_ & ~0x00000010);
         initialPopRemote_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
-        negotiationMs_ = 0;
+        bestPing_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
-        selectedSeconds_ = 0;
+        bestPingFrontLocal_ = 0;
         bitField0_ = (bitField0_ & ~0x00000080);
+        bestPingFrontRemote_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        bestScore_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        bestPopLocal_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        bestPopRemote_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        bestTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        negotiationMs_ = 0;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        selectedSeconds_ = 0;
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -22161,12 +25738,40 @@ public final class SteamdatagramMessagesSdr {
           to_bitField0_ |= 0x00000020;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.negotiationMs_ = negotiationMs_;
+          result.bestPing_ = bestPing_;
           to_bitField0_ |= 0x00000040;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.selectedSeconds_ = selectedSeconds_;
+          result.bestPingFrontLocal_ = bestPingFrontLocal_;
           to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.bestPingFrontRemote_ = bestPingFrontRemote_;
+          to_bitField0_ |= 0x00000100;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.bestScore_ = bestScore_;
+          to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.bestPopLocal_ = bestPopLocal_;
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.bestPopRemote_ = bestPopRemote_;
+          to_bitField0_ |= 0x00000800;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.bestTime_ = bestTime_;
+          to_bitField0_ |= 0x00001000;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.negotiationMs_ = negotiationMs_;
+          to_bitField0_ |= 0x00002000;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.selectedSeconds_ = selectedSeconds_;
+          to_bitField0_ |= 0x00004000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -22234,6 +25839,27 @@ public final class SteamdatagramMessagesSdr {
         }
         if (other.hasInitialPopRemote()) {
           setInitialPopRemote(other.getInitialPopRemote());
+        }
+        if (other.hasBestPing()) {
+          setBestPing(other.getBestPing());
+        }
+        if (other.hasBestPingFrontLocal()) {
+          setBestPingFrontLocal(other.getBestPingFrontLocal());
+        }
+        if (other.hasBestPingFrontRemote()) {
+          setBestPingFrontRemote(other.getBestPingFrontRemote());
+        }
+        if (other.hasBestScore()) {
+          setBestScore(other.getBestScore());
+        }
+        if (other.hasBestPopLocal()) {
+          setBestPopLocal(other.getBestPopLocal());
+        }
+        if (other.hasBestPopRemote()) {
+          setBestPopRemote(other.getBestPopRemote());
+        }
+        if (other.hasBestTime()) {
+          setBestTime(other.getBestTime());
         }
         if (other.hasNegotiationMs()) {
           setNegotiationMs(other.getNegotiationMs());
@@ -22505,6 +26131,279 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
 
+      private int bestPing_ ;
+      /**
+       * <code>optional uint32 best_ping = 11;</code>
+       * @return Whether the bestPing field is set.
+       */
+      @java.lang.Override
+      public boolean hasBestPing() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional uint32 best_ping = 11;</code>
+       * @return The bestPing.
+       */
+      @java.lang.Override
+      public int getBestPing() {
+        return bestPing_;
+      }
+      /**
+       * <code>optional uint32 best_ping = 11;</code>
+       * @param value The bestPing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBestPing(int value) {
+        bitField0_ |= 0x00000040;
+        bestPing_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 best_ping = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBestPing() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        bestPing_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bestPingFrontLocal_ ;
+      /**
+       * <code>optional uint32 best_ping_front_local = 12;</code>
+       * @return Whether the bestPingFrontLocal field is set.
+       */
+      @java.lang.Override
+      public boolean hasBestPingFrontLocal() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 best_ping_front_local = 12;</code>
+       * @return The bestPingFrontLocal.
+       */
+      @java.lang.Override
+      public int getBestPingFrontLocal() {
+        return bestPingFrontLocal_;
+      }
+      /**
+       * <code>optional uint32 best_ping_front_local = 12;</code>
+       * @param value The bestPingFrontLocal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBestPingFrontLocal(int value) {
+        bitField0_ |= 0x00000080;
+        bestPingFrontLocal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 best_ping_front_local = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBestPingFrontLocal() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        bestPingFrontLocal_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bestPingFrontRemote_ ;
+      /**
+       * <code>optional uint32 best_ping_front_remote = 13;</code>
+       * @return Whether the bestPingFrontRemote field is set.
+       */
+      @java.lang.Override
+      public boolean hasBestPingFrontRemote() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint32 best_ping_front_remote = 13;</code>
+       * @return The bestPingFrontRemote.
+       */
+      @java.lang.Override
+      public int getBestPingFrontRemote() {
+        return bestPingFrontRemote_;
+      }
+      /**
+       * <code>optional uint32 best_ping_front_remote = 13;</code>
+       * @param value The bestPingFrontRemote to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBestPingFrontRemote(int value) {
+        bitField0_ |= 0x00000100;
+        bestPingFrontRemote_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 best_ping_front_remote = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBestPingFrontRemote() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        bestPingFrontRemote_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bestScore_ ;
+      /**
+       * <code>optional uint32 best_score = 14;</code>
+       * @return Whether the bestScore field is set.
+       */
+      @java.lang.Override
+      public boolean hasBestScore() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional uint32 best_score = 14;</code>
+       * @return The bestScore.
+       */
+      @java.lang.Override
+      public int getBestScore() {
+        return bestScore_;
+      }
+      /**
+       * <code>optional uint32 best_score = 14;</code>
+       * @param value The bestScore to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBestScore(int value) {
+        bitField0_ |= 0x00000200;
+        bestScore_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 best_score = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBestScore() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        bestScore_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bestPopLocal_ ;
+      /**
+       * <code>optional fixed32 best_pop_local = 15;</code>
+       * @return Whether the bestPopLocal field is set.
+       */
+      @java.lang.Override
+      public boolean hasBestPopLocal() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional fixed32 best_pop_local = 15;</code>
+       * @return The bestPopLocal.
+       */
+      @java.lang.Override
+      public int getBestPopLocal() {
+        return bestPopLocal_;
+      }
+      /**
+       * <code>optional fixed32 best_pop_local = 15;</code>
+       * @param value The bestPopLocal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBestPopLocal(int value) {
+        bitField0_ |= 0x00000400;
+        bestPopLocal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 best_pop_local = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBestPopLocal() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        bestPopLocal_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bestPopRemote_ ;
+      /**
+       * <code>optional fixed32 best_pop_remote = 16;</code>
+       * @return Whether the bestPopRemote field is set.
+       */
+      @java.lang.Override
+      public boolean hasBestPopRemote() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional fixed32 best_pop_remote = 16;</code>
+       * @return The bestPopRemote.
+       */
+      @java.lang.Override
+      public int getBestPopRemote() {
+        return bestPopRemote_;
+      }
+      /**
+       * <code>optional fixed32 best_pop_remote = 16;</code>
+       * @param value The bestPopRemote to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBestPopRemote(int value) {
+        bitField0_ |= 0x00000800;
+        bestPopRemote_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 best_pop_remote = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBestPopRemote() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        bestPopRemote_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bestTime_ ;
+      /**
+       * <code>optional uint32 best_time = 17;</code>
+       * @return Whether the bestTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasBestTime() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional uint32 best_time = 17;</code>
+       * @return The bestTime.
+       */
+      @java.lang.Override
+      public int getBestTime() {
+        return bestTime_;
+      }
+      /**
+       * <code>optional uint32 best_time = 17;</code>
+       * @param value The bestTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBestTime(int value) {
+        bitField0_ |= 0x00001000;
+        bestTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 best_time = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBestTime() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        bestTime_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int negotiationMs_ ;
       /**
        * <code>optional uint32 negotiation_ms = 7;</code>
@@ -22512,7 +26411,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasNegotiationMs() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <code>optional uint32 negotiation_ms = 7;</code>
@@ -22528,7 +26427,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setNegotiationMs(int value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00002000;
         negotiationMs_ = value;
         onChanged();
         return this;
@@ -22538,7 +26437,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearNegotiationMs() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00002000);
         negotiationMs_ = 0;
         onChanged();
         return this;
@@ -22551,7 +26450,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasSelectedSeconds() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <code>optional uint32 selected_seconds = 8;</code>
@@ -22567,7 +26466,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setSelectedSeconds(int value) {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00004000;
         selectedSeconds_ = value;
         onChanged();
         return this;
@@ -22577,7 +26476,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearSelectedSeconds() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00004000);
         selectedSeconds_ = 0;
         onChanged();
         return this;
@@ -23672,6 +27571,17 @@ public final class SteamdatagramMessagesSdr {
     boolean getNotPrimaryTransport();
 
     /**
+     * <code>optional bool relay_override_active = 22;</code>
+     * @return Whether the relayOverrideActive field is set.
+     */
+    boolean hasRelayOverrideActive();
+    /**
+     * <code>optional bool relay_override_active = 22;</code>
+     * @return The relayOverrideActive.
+     */
+    boolean getRelayOverrideActive();
+
+    /**
      * <code>optional .CMsgSteamDatagramConnectionQuality quality_relay = 17;</code>
      * @return Whether the qualityRelay field is set.
      */
@@ -23860,7 +27770,7 @@ public final class SteamdatagramMessagesSdr {
             }
             case 138: {
               SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.Builder subBuilder = null;
-              if (((bitField0_ & 0x00010000) != 0)) {
+              if (((bitField0_ & 0x00020000) != 0)) {
                 subBuilder = qualityRelay_.toBuilder();
               }
               qualityRelay_ = input.readMessage(SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.PARSER, extensionRegistry);
@@ -23868,12 +27778,12 @@ public final class SteamdatagramMessagesSdr {
                 subBuilder.mergeFrom(qualityRelay_);
                 qualityRelay_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00020000;
               break;
             }
             case 146: {
               SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.Builder subBuilder = null;
-              if (((bitField0_ & 0x00020000) != 0)) {
+              if (((bitField0_ & 0x00040000) != 0)) {
                 subBuilder = qualityE2E_.toBuilder();
               }
               qualityE2E_ = input.readMessage(SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.PARSER, extensionRegistry);
@@ -23881,7 +27791,7 @@ public final class SteamdatagramMessagesSdr {
                 subBuilder.mergeFrom(qualityE2E_);
                 qualityE2E_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00040000;
               break;
             }
             case 152: {
@@ -23891,7 +27801,7 @@ public final class SteamdatagramMessagesSdr {
             }
             case 170: {
               SteamdatagramMessagesSdr.CMsgSteamDatagramP2PRoutingSummary.Builder subBuilder = null;
-              if (((bitField0_ & 0x00040000) != 0)) {
+              if (((bitField0_ & 0x00080000) != 0)) {
                 subBuilder = p2PRoutingSummary_.toBuilder();
               }
               p2PRoutingSummary_ = input.readMessage(SteamdatagramMessagesSdr.CMsgSteamDatagramP2PRoutingSummary.PARSER, extensionRegistry);
@@ -23899,7 +27809,12 @@ public final class SteamdatagramMessagesSdr {
                 subBuilder.mergeFrom(p2PRoutingSummary_);
                 p2PRoutingSummary_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00080000;
+              break;
+            }
+            case 176: {
+              bitField0_ |= 0x00010000;
+              relayOverrideActive_ = input.readBool();
               break;
             }
             default: {
@@ -24409,6 +28324,25 @@ public final class SteamdatagramMessagesSdr {
       return notPrimaryTransport_;
     }
 
+    public static final int RELAY_OVERRIDE_ACTIVE_FIELD_NUMBER = 22;
+    private boolean relayOverrideActive_;
+    /**
+     * <code>optional bool relay_override_active = 22;</code>
+     * @return Whether the relayOverrideActive field is set.
+     */
+    @java.lang.Override
+    public boolean hasRelayOverrideActive() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <code>optional bool relay_override_active = 22;</code>
+     * @return The relayOverrideActive.
+     */
+    @java.lang.Override
+    public boolean getRelayOverrideActive() {
+      return relayOverrideActive_;
+    }
+
     public static final int QUALITY_RELAY_FIELD_NUMBER = 17;
     private SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality qualityRelay_;
     /**
@@ -24417,7 +28351,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasQualityRelay() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <code>optional .CMsgSteamDatagramConnectionQuality quality_relay = 17;</code>
@@ -24443,7 +28377,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasQualityE2E() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <code>optional .CMsgSteamDatagramConnectionQuality quality_e2e = 18;</code>
@@ -24469,7 +28403,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasP2PRoutingSummary() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <code>optional .CMsgSteamDatagramP2PRoutingSummary p2p_routing_summary = 21;</code>
@@ -24546,17 +28480,20 @@ public final class SteamdatagramMessagesSdr {
       if (((bitField0_ & 0x00004000) != 0)) {
         output.writeBool(16, notPrimarySession_);
       }
-      if (((bitField0_ & 0x00010000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         output.writeMessage(17, getQualityRelay());
       }
-      if (((bitField0_ & 0x00020000) != 0)) {
+      if (((bitField0_ & 0x00040000) != 0)) {
         output.writeMessage(18, getQualityE2E());
       }
       if (((bitField0_ & 0x00008000) != 0)) {
         output.writeBool(19, notPrimaryTransport_);
       }
-      if (((bitField0_ & 0x00040000) != 0)) {
+      if (((bitField0_ & 0x00080000) != 0)) {
         output.writeMessage(21, getP2PRoutingSummary());
+      }
+      if (((bitField0_ & 0x00010000) != 0)) {
+        output.writeBool(22, relayOverrideActive_);
       }
       unknownFields.writeTo(output);
     }
@@ -24625,11 +28562,11 @@ public final class SteamdatagramMessagesSdr {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(16, notPrimarySession_);
       }
-      if (((bitField0_ & 0x00010000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getQualityRelay());
       }
-      if (((bitField0_ & 0x00020000) != 0)) {
+      if (((bitField0_ & 0x00040000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getQualityE2E());
       }
@@ -24637,9 +28574,13 @@ public final class SteamdatagramMessagesSdr {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(19, notPrimaryTransport_);
       }
-      if (((bitField0_ & 0x00040000) != 0)) {
+      if (((bitField0_ & 0x00080000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(21, getP2PRoutingSummary());
+      }
+      if (((bitField0_ & 0x00010000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(22, relayOverrideActive_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -24735,6 +28676,11 @@ public final class SteamdatagramMessagesSdr {
         if (getNotPrimaryTransport()
             != other.getNotPrimaryTransport()) return false;
       }
+      if (hasRelayOverrideActive() != other.hasRelayOverrideActive()) return false;
+      if (hasRelayOverrideActive()) {
+        if (getRelayOverrideActive()
+            != other.getRelayOverrideActive()) return false;
+      }
       if (hasQualityRelay() != other.hasQualityRelay()) return false;
       if (hasQualityRelay()) {
         if (!getQualityRelay()
@@ -24828,6 +28774,11 @@ public final class SteamdatagramMessagesSdr {
         hash = (37 * hash) + NOT_PRIMARY_TRANSPORT_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getNotPrimaryTransport());
+      }
+      if (hasRelayOverrideActive()) {
+        hash = (37 * hash) + RELAY_OVERRIDE_ACTIVE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getRelayOverrideActive());
       }
       if (hasQualityRelay()) {
         hash = (37 * hash) + QUALITY_RELAY_FIELD_NUMBER;
@@ -25014,24 +28965,26 @@ public final class SteamdatagramMessagesSdr {
         bitField0_ = (bitField0_ & ~0x00004000);
         notPrimaryTransport_ = false;
         bitField0_ = (bitField0_ & ~0x00008000);
+        relayOverrideActive_ = false;
+        bitField0_ = (bitField0_ & ~0x00010000);
         if (qualityRelayBuilder_ == null) {
           qualityRelay_ = null;
         } else {
           qualityRelayBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         if (qualityE2EBuilder_ == null) {
           qualityE2E_ = null;
         } else {
           qualityE2EBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         if (p2PRoutingSummaryBuilder_ == null) {
           p2PRoutingSummary_ = null;
         } else {
           p2PRoutingSummaryBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         return this;
       }
 
@@ -25129,28 +29082,32 @@ public final class SteamdatagramMessagesSdr {
           to_bitField0_ |= 0x00008000;
         }
         if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.relayOverrideActive_ = relayOverrideActive_;
+          to_bitField0_ |= 0x00010000;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
           if (qualityRelayBuilder_ == null) {
             result.qualityRelay_ = qualityRelay_;
           } else {
             result.qualityRelay_ = qualityRelayBuilder_.build();
           }
-          to_bitField0_ |= 0x00010000;
+          to_bitField0_ |= 0x00020000;
         }
-        if (((from_bitField0_ & 0x00020000) != 0)) {
+        if (((from_bitField0_ & 0x00040000) != 0)) {
           if (qualityE2EBuilder_ == null) {
             result.qualityE2E_ = qualityE2E_;
           } else {
             result.qualityE2E_ = qualityE2EBuilder_.build();
           }
-          to_bitField0_ |= 0x00020000;
+          to_bitField0_ |= 0x00040000;
         }
-        if (((from_bitField0_ & 0x00040000) != 0)) {
+        if (((from_bitField0_ & 0x00080000) != 0)) {
           if (p2PRoutingSummaryBuilder_ == null) {
             result.p2PRoutingSummary_ = p2PRoutingSummary_;
           } else {
             result.p2PRoutingSummary_ = p2PRoutingSummaryBuilder_.build();
           }
-          to_bitField0_ |= 0x00040000;
+          to_bitField0_ |= 0x00080000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -25252,6 +29209,9 @@ public final class SteamdatagramMessagesSdr {
         }
         if (other.hasNotPrimaryTransport()) {
           setNotPrimaryTransport(other.getNotPrimaryTransport());
+        }
+        if (other.hasRelayOverrideActive()) {
+          setRelayOverrideActive(other.getRelayOverrideActive());
         }
         if (other.hasQualityRelay()) {
           mergeQualityRelay(other.getQualityRelay());
@@ -26094,6 +30054,45 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
 
+      private boolean relayOverrideActive_ ;
+      /**
+       * <code>optional bool relay_override_active = 22;</code>
+       * @return Whether the relayOverrideActive field is set.
+       */
+      @java.lang.Override
+      public boolean hasRelayOverrideActive() {
+        return ((bitField0_ & 0x00010000) != 0);
+      }
+      /**
+       * <code>optional bool relay_override_active = 22;</code>
+       * @return The relayOverrideActive.
+       */
+      @java.lang.Override
+      public boolean getRelayOverrideActive() {
+        return relayOverrideActive_;
+      }
+      /**
+       * <code>optional bool relay_override_active = 22;</code>
+       * @param value The relayOverrideActive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayOverrideActive(boolean value) {
+        bitField0_ |= 0x00010000;
+        relayOverrideActive_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool relay_override_active = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRelayOverrideActive() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        relayOverrideActive_ = false;
+        onChanged();
+        return this;
+      }
+
       private SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality qualityRelay_;
       private com.google.protobuf.SingleFieldBuilderV3<
           SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality, SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.Builder, SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQualityOrBuilder> qualityRelayBuilder_;
@@ -26102,7 +30101,7 @@ public final class SteamdatagramMessagesSdr {
        * @return Whether the qualityRelay field is set.
        */
       public boolean hasQualityRelay() {
-        return ((bitField0_ & 0x00010000) != 0);
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
        * <code>optional .CMsgSteamDatagramConnectionQuality quality_relay = 17;</code>
@@ -26128,7 +30127,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityRelayBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         return this;
       }
       /**
@@ -26142,7 +30141,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityRelayBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         return this;
       }
       /**
@@ -26150,7 +30149,7 @@ public final class SteamdatagramMessagesSdr {
        */
       public Builder mergeQualityRelay(SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality value) {
         if (qualityRelayBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) != 0) &&
+          if (((bitField0_ & 0x00020000) != 0) &&
               qualityRelay_ != null &&
               qualityRelay_ != SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.getDefaultInstance()) {
             qualityRelay_ =
@@ -26162,7 +30161,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityRelayBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         return this;
       }
       /**
@@ -26175,14 +30174,14 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityRelayBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         return this;
       }
       /**
        * <code>optional .CMsgSteamDatagramConnectionQuality quality_relay = 17;</code>
        */
       public SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.Builder getQualityRelayBuilder() {
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         onChanged();
         return getQualityRelayFieldBuilder().getBuilder();
       }
@@ -26222,7 +30221,7 @@ public final class SteamdatagramMessagesSdr {
        * @return Whether the qualityE2e field is set.
        */
       public boolean hasQualityE2E() {
-        return ((bitField0_ & 0x00020000) != 0);
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <code>optional .CMsgSteamDatagramConnectionQuality quality_e2e = 18;</code>
@@ -26248,7 +30247,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityE2EBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         return this;
       }
       /**
@@ -26262,7 +30261,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityE2EBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         return this;
       }
       /**
@@ -26270,7 +30269,7 @@ public final class SteamdatagramMessagesSdr {
        */
       public Builder mergeQualityE2E(SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality value) {
         if (qualityE2EBuilder_ == null) {
-          if (((bitField0_ & 0x00020000) != 0) &&
+          if (((bitField0_ & 0x00040000) != 0) &&
               qualityE2E_ != null &&
               qualityE2E_ != SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.getDefaultInstance()) {
             qualityE2E_ =
@@ -26282,7 +30281,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityE2EBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         return this;
       }
       /**
@@ -26295,14 +30294,14 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityE2EBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         return this;
       }
       /**
        * <code>optional .CMsgSteamDatagramConnectionQuality quality_e2e = 18;</code>
        */
       public SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.Builder getQualityE2EBuilder() {
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         onChanged();
         return getQualityE2EFieldBuilder().getBuilder();
       }
@@ -26342,7 +30341,7 @@ public final class SteamdatagramMessagesSdr {
        * @return Whether the p2pRoutingSummary field is set.
        */
       public boolean hasP2PRoutingSummary() {
-        return ((bitField0_ & 0x00040000) != 0);
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <code>optional .CMsgSteamDatagramP2PRoutingSummary p2p_routing_summary = 21;</code>
@@ -26368,7 +30367,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           p2PRoutingSummaryBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         return this;
       }
       /**
@@ -26382,7 +30381,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           p2PRoutingSummaryBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         return this;
       }
       /**
@@ -26390,7 +30389,7 @@ public final class SteamdatagramMessagesSdr {
        */
       public Builder mergeP2PRoutingSummary(SteamdatagramMessagesSdr.CMsgSteamDatagramP2PRoutingSummary value) {
         if (p2PRoutingSummaryBuilder_ == null) {
-          if (((bitField0_ & 0x00040000) != 0) &&
+          if (((bitField0_ & 0x00080000) != 0) &&
               p2PRoutingSummary_ != null &&
               p2PRoutingSummary_ != SteamdatagramMessagesSdr.CMsgSteamDatagramP2PRoutingSummary.getDefaultInstance()) {
             p2PRoutingSummary_ =
@@ -26402,7 +30401,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           p2PRoutingSummaryBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         return this;
       }
       /**
@@ -26415,14 +30414,14 @@ public final class SteamdatagramMessagesSdr {
         } else {
           p2PRoutingSummaryBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         return this;
       }
       /**
        * <code>optional .CMsgSteamDatagramP2PRoutingSummary p2p_routing_summary = 21;</code>
        */
       public SteamdatagramMessagesSdr.CMsgSteamDatagramP2PRoutingSummary.Builder getP2PRoutingSummaryBuilder() {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         onChanged();
         return getP2PRoutingSummaryFieldBuilder().getBuilder();
       }
@@ -26627,6 +30626,17 @@ public final class SteamdatagramMessagesSdr {
     boolean getNotPrimaryTransport();
 
     /**
+     * <code>optional bool relay_override_active = 17;</code>
+     * @return Whether the relayOverrideActive field is set.
+     */
+    boolean hasRelayOverrideActive();
+    /**
+     * <code>optional bool relay_override_active = 17;</code>
+     * @return The relayOverrideActive.
+     */
+    boolean getRelayOverrideActive();
+
+    /**
      * <code>optional .CMsgSteamDatagramConnectionQuality quality_relay = 13;</code>
      * @return Whether the qualityRelay field is set.
      */
@@ -26782,7 +30792,7 @@ public final class SteamdatagramMessagesSdr {
               break;
             }
             case 89: {
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00004000;
               routingSecret_ = input.readFixed64();
               break;
             }
@@ -26793,7 +30803,7 @@ public final class SteamdatagramMessagesSdr {
             }
             case 106: {
               SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000400) != 0)) {
+              if (((bitField0_ & 0x00000800) != 0)) {
                 subBuilder = qualityRelay_.toBuilder();
               }
               qualityRelay_ = input.readMessage(SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.PARSER, extensionRegistry);
@@ -26801,12 +30811,12 @@ public final class SteamdatagramMessagesSdr {
                 subBuilder.mergeFrom(qualityRelay_);
                 qualityRelay_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000800;
               break;
             }
             case 114: {
               SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000800) != 0)) {
+              if (((bitField0_ & 0x00001000) != 0)) {
                 subBuilder = qualityE2E_.toBuilder();
               }
               qualityE2E_ = input.readMessage(SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.PARSER, extensionRegistry);
@@ -26814,7 +30824,7 @@ public final class SteamdatagramMessagesSdr {
                 subBuilder.mergeFrom(qualityE2E_);
                 qualityE2E_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00001000;
               break;
             }
             case 120: {
@@ -26824,7 +30834,7 @@ public final class SteamdatagramMessagesSdr {
             }
             case 130: {
               SteamdatagramMessagesSdr.CMsgSteamDatagramP2PRoutingSummary.Builder subBuilder = null;
-              if (((bitField0_ & 0x00001000) != 0)) {
+              if (((bitField0_ & 0x00002000) != 0)) {
                 subBuilder = p2PRoutingSummary_.toBuilder();
               }
               p2PRoutingSummary_ = input.readMessage(SteamdatagramMessagesSdr.CMsgSteamDatagramP2PRoutingSummary.PARSER, extensionRegistry);
@@ -26832,11 +30842,16 @@ public final class SteamdatagramMessagesSdr {
                 subBuilder.mergeFrom(p2PRoutingSummary_);
                 p2PRoutingSummary_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00002000;
+              break;
+            }
+            case 136: {
+              bitField0_ |= 0x00000400;
+              relayOverrideActive_ = input.readBool();
               break;
             }
             case 8189: {
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00008000;
               dummyPad_ = input.readFixed32();
               break;
             }
@@ -27092,6 +31107,25 @@ public final class SteamdatagramMessagesSdr {
       return notPrimaryTransport_;
     }
 
+    public static final int RELAY_OVERRIDE_ACTIVE_FIELD_NUMBER = 17;
+    private boolean relayOverrideActive_;
+    /**
+     * <code>optional bool relay_override_active = 17;</code>
+     * @return Whether the relayOverrideActive field is set.
+     */
+    @java.lang.Override
+    public boolean hasRelayOverrideActive() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional bool relay_override_active = 17;</code>
+     * @return The relayOverrideActive.
+     */
+    @java.lang.Override
+    public boolean getRelayOverrideActive() {
+      return relayOverrideActive_;
+    }
+
     public static final int QUALITY_RELAY_FIELD_NUMBER = 13;
     private SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality qualityRelay_;
     /**
@@ -27100,7 +31134,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasQualityRelay() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <code>optional .CMsgSteamDatagramConnectionQuality quality_relay = 13;</code>
@@ -27126,7 +31160,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasQualityE2E() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <code>optional .CMsgSteamDatagramConnectionQuality quality_e2e = 14;</code>
@@ -27152,7 +31186,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasP2PRoutingSummary() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <code>optional .CMsgSteamDatagramP2PRoutingSummary p2p_routing_summary = 16;</code>
@@ -27178,7 +31212,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasRoutingSecret() {
-      return ((bitField0_ & 0x00002000) != 0);
+      return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <code>optional fixed64 routing_secret = 11;</code>
@@ -27197,7 +31231,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasDummyPad() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <code>optional fixed32 dummy_pad = 1023;</code>
@@ -27246,25 +31280,28 @@ public final class SteamdatagramMessagesSdr {
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeFixed32(10, fromRelaySessionId_);
       }
-      if (((bitField0_ & 0x00002000) != 0)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         output.writeFixed64(11, routingSecret_);
       }
       if (((bitField0_ & 0x00000100) != 0)) {
         output.writeBool(12, notPrimarySession_);
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         output.writeMessage(13, getQualityRelay());
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00001000) != 0)) {
         output.writeMessage(14, getQualityE2E());
       }
       if (((bitField0_ & 0x00000200) != 0)) {
         output.writeBool(15, notPrimaryTransport_);
       }
-      if (((bitField0_ & 0x00001000) != 0)) {
+      if (((bitField0_ & 0x00002000) != 0)) {
         output.writeMessage(16, getP2PRoutingSummary());
       }
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeBool(17, relayOverrideActive_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
         output.writeFixed32(1023, dummyPad_);
       }
       unknownFields.writeTo(output);
@@ -27307,7 +31344,7 @@ public final class SteamdatagramMessagesSdr {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(10, fromRelaySessionId_);
       }
-      if (((bitField0_ & 0x00002000) != 0)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed64Size(11, routingSecret_);
       }
@@ -27315,11 +31352,11 @@ public final class SteamdatagramMessagesSdr {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, notPrimarySession_);
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getQualityRelay());
       }
-      if (((bitField0_ & 0x00000800) != 0)) {
+      if (((bitField0_ & 0x00001000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getQualityE2E());
       }
@@ -27327,11 +31364,15 @@ public final class SteamdatagramMessagesSdr {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, notPrimaryTransport_);
       }
-      if (((bitField0_ & 0x00001000) != 0)) {
+      if (((bitField0_ & 0x00002000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getP2PRoutingSummary());
       }
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(17, relayOverrideActive_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(1023, dummyPad_);
       }
@@ -27399,6 +31440,11 @@ public final class SteamdatagramMessagesSdr {
       if (hasNotPrimaryTransport()) {
         if (getNotPrimaryTransport()
             != other.getNotPrimaryTransport()) return false;
+      }
+      if (hasRelayOverrideActive() != other.hasRelayOverrideActive()) return false;
+      if (hasRelayOverrideActive()) {
+        if (getRelayOverrideActive()
+            != other.getRelayOverrideActive()) return false;
       }
       if (hasQualityRelay() != other.hasQualityRelay()) return false;
       if (hasQualityRelay()) {
@@ -27479,6 +31525,11 @@ public final class SteamdatagramMessagesSdr {
         hash = (37 * hash) + NOT_PRIMARY_TRANSPORT_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getNotPrimaryTransport());
+      }
+      if (hasRelayOverrideActive()) {
+        hash = (37 * hash) + RELAY_OVERRIDE_ACTIVE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getRelayOverrideActive());
       }
       if (hasQualityRelay()) {
         hash = (37 * hash) + QUALITY_RELAY_FIELD_NUMBER;
@@ -27657,28 +31708,30 @@ public final class SteamdatagramMessagesSdr {
         bitField0_ = (bitField0_ & ~0x00000100);
         notPrimaryTransport_ = false;
         bitField0_ = (bitField0_ & ~0x00000200);
+        relayOverrideActive_ = false;
+        bitField0_ = (bitField0_ & ~0x00000400);
         if (qualityRelayBuilder_ == null) {
           qualityRelay_ = null;
         } else {
           qualityRelayBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         if (qualityE2EBuilder_ == null) {
           qualityE2E_ = null;
         } else {
           qualityE2EBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         if (p2PRoutingSummaryBuilder_ == null) {
           p2PRoutingSummary_ = null;
         } else {
           p2PRoutingSummaryBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00001000);
-        routingSecret_ = 0L;
         bitField0_ = (bitField0_ & ~0x00002000);
-        dummyPad_ = 0;
+        routingSecret_ = 0L;
         bitField0_ = (bitField0_ & ~0x00004000);
+        dummyPad_ = 0;
+        bitField0_ = (bitField0_ & ~0x00008000);
         return this;
       }
 
@@ -27748,36 +31801,40 @@ public final class SteamdatagramMessagesSdr {
           to_bitField0_ |= 0x00000200;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.relayOverrideActive_ = relayOverrideActive_;
+          to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           if (qualityRelayBuilder_ == null) {
             result.qualityRelay_ = qualityRelay_;
           } else {
             result.qualityRelay_ = qualityRelayBuilder_.build();
           }
-          to_bitField0_ |= 0x00000400;
+          to_bitField0_ |= 0x00000800;
         }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
+        if (((from_bitField0_ & 0x00001000) != 0)) {
           if (qualityE2EBuilder_ == null) {
             result.qualityE2E_ = qualityE2E_;
           } else {
             result.qualityE2E_ = qualityE2EBuilder_.build();
           }
-          to_bitField0_ |= 0x00000800;
+          to_bitField0_ |= 0x00001000;
         }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
+        if (((from_bitField0_ & 0x00002000) != 0)) {
           if (p2PRoutingSummaryBuilder_ == null) {
             result.p2PRoutingSummary_ = p2PRoutingSummary_;
           } else {
             result.p2PRoutingSummary_ = p2PRoutingSummaryBuilder_.build();
           }
-          to_bitField0_ |= 0x00001000;
-        }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
-          result.routingSecret_ = routingSecret_;
           to_bitField0_ |= 0x00002000;
         }
         if (((from_bitField0_ & 0x00004000) != 0)) {
-          result.dummyPad_ = dummyPad_;
+          result.routingSecret_ = routingSecret_;
           to_bitField0_ |= 0x00004000;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.dummyPad_ = dummyPad_;
+          to_bitField0_ |= 0x00008000;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -27859,6 +31916,9 @@ public final class SteamdatagramMessagesSdr {
         }
         if (other.hasNotPrimaryTransport()) {
           setNotPrimaryTransport(other.getNotPrimaryTransport());
+        }
+        if (other.hasRelayOverrideActive()) {
+          setRelayOverrideActive(other.getRelayOverrideActive());
         }
         if (other.hasQualityRelay()) {
           mergeQualityRelay(other.getQualityRelay());
@@ -28340,6 +32400,45 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
 
+      private boolean relayOverrideActive_ ;
+      /**
+       * <code>optional bool relay_override_active = 17;</code>
+       * @return Whether the relayOverrideActive field is set.
+       */
+      @java.lang.Override
+      public boolean hasRelayOverrideActive() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional bool relay_override_active = 17;</code>
+       * @return The relayOverrideActive.
+       */
+      @java.lang.Override
+      public boolean getRelayOverrideActive() {
+        return relayOverrideActive_;
+      }
+      /**
+       * <code>optional bool relay_override_active = 17;</code>
+       * @param value The relayOverrideActive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayOverrideActive(boolean value) {
+        bitField0_ |= 0x00000400;
+        relayOverrideActive_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool relay_override_active = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRelayOverrideActive() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        relayOverrideActive_ = false;
+        onChanged();
+        return this;
+      }
+
       private SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality qualityRelay_;
       private com.google.protobuf.SingleFieldBuilderV3<
           SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality, SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.Builder, SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQualityOrBuilder> qualityRelayBuilder_;
@@ -28348,7 +32447,7 @@ public final class SteamdatagramMessagesSdr {
        * @return Whether the qualityRelay field is set.
        */
       public boolean hasQualityRelay() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <code>optional .CMsgSteamDatagramConnectionQuality quality_relay = 13;</code>
@@ -28374,7 +32473,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityRelayBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
@@ -28388,7 +32487,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityRelayBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
@@ -28396,7 +32495,7 @@ public final class SteamdatagramMessagesSdr {
        */
       public Builder mergeQualityRelay(SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality value) {
         if (qualityRelayBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) != 0) &&
+          if (((bitField0_ & 0x00000800) != 0) &&
               qualityRelay_ != null &&
               qualityRelay_ != SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.getDefaultInstance()) {
             qualityRelay_ =
@@ -28408,7 +32507,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityRelayBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
@@ -28421,14 +32520,14 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityRelayBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
       /**
        * <code>optional .CMsgSteamDatagramConnectionQuality quality_relay = 13;</code>
        */
       public SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.Builder getQualityRelayBuilder() {
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return getQualityRelayFieldBuilder().getBuilder();
       }
@@ -28468,7 +32567,7 @@ public final class SteamdatagramMessagesSdr {
        * @return Whether the qualityE2e field is set.
        */
       public boolean hasQualityE2E() {
-        return ((bitField0_ & 0x00000800) != 0);
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <code>optional .CMsgSteamDatagramConnectionQuality quality_e2e = 14;</code>
@@ -28494,7 +32593,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityE2EBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         return this;
       }
       /**
@@ -28508,7 +32607,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityE2EBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         return this;
       }
       /**
@@ -28516,7 +32615,7 @@ public final class SteamdatagramMessagesSdr {
        */
       public Builder mergeQualityE2E(SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality value) {
         if (qualityE2EBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) != 0) &&
+          if (((bitField0_ & 0x00001000) != 0) &&
               qualityE2E_ != null &&
               qualityE2E_ != SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.getDefaultInstance()) {
             qualityE2E_ =
@@ -28528,7 +32627,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityE2EBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         return this;
       }
       /**
@@ -28541,14 +32640,14 @@ public final class SteamdatagramMessagesSdr {
         } else {
           qualityE2EBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
       /**
        * <code>optional .CMsgSteamDatagramConnectionQuality quality_e2e = 14;</code>
        */
       public SteamnetworkingsocketsMessages.CMsgSteamDatagramConnectionQuality.Builder getQualityE2EBuilder() {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         onChanged();
         return getQualityE2EFieldBuilder().getBuilder();
       }
@@ -28588,7 +32687,7 @@ public final class SteamdatagramMessagesSdr {
        * @return Whether the p2pRoutingSummary field is set.
        */
       public boolean hasP2PRoutingSummary() {
-        return ((bitField0_ & 0x00001000) != 0);
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <code>optional .CMsgSteamDatagramP2PRoutingSummary p2p_routing_summary = 16;</code>
@@ -28614,7 +32713,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           p2PRoutingSummaryBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         return this;
       }
       /**
@@ -28628,7 +32727,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           p2PRoutingSummaryBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         return this;
       }
       /**
@@ -28636,7 +32735,7 @@ public final class SteamdatagramMessagesSdr {
        */
       public Builder mergeP2PRoutingSummary(SteamdatagramMessagesSdr.CMsgSteamDatagramP2PRoutingSummary value) {
         if (p2PRoutingSummaryBuilder_ == null) {
-          if (((bitField0_ & 0x00001000) != 0) &&
+          if (((bitField0_ & 0x00002000) != 0) &&
               p2PRoutingSummary_ != null &&
               p2PRoutingSummary_ != SteamdatagramMessagesSdr.CMsgSteamDatagramP2PRoutingSummary.getDefaultInstance()) {
             p2PRoutingSummary_ =
@@ -28648,7 +32747,7 @@ public final class SteamdatagramMessagesSdr {
         } else {
           p2PRoutingSummaryBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         return this;
       }
       /**
@@ -28661,14 +32760,14 @@ public final class SteamdatagramMessagesSdr {
         } else {
           p2PRoutingSummaryBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         return this;
       }
       /**
        * <code>optional .CMsgSteamDatagramP2PRoutingSummary p2p_routing_summary = 16;</code>
        */
       public SteamdatagramMessagesSdr.CMsgSteamDatagramP2PRoutingSummary.Builder getP2PRoutingSummaryBuilder() {
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         onChanged();
         return getP2PRoutingSummaryFieldBuilder().getBuilder();
       }
@@ -28707,7 +32806,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasRoutingSecret() {
-        return ((bitField0_ & 0x00002000) != 0);
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <code>optional fixed64 routing_secret = 11;</code>
@@ -28723,7 +32822,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setRoutingSecret(long value) {
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         routingSecret_ = value;
         onChanged();
         return this;
@@ -28733,7 +32832,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearRoutingSecret() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         routingSecret_ = 0L;
         onChanged();
         return this;
@@ -28746,7 +32845,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasDummyPad() {
-        return ((bitField0_ & 0x00004000) != 0);
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
        * <code>optional fixed32 dummy_pad = 1023;</code>
@@ -28762,7 +32861,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setDummyPad(int value) {
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         dummyPad_ = value;
         onChanged();
         return this;
@@ -28772,7 +32871,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearDummyPad() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         dummyPad_ = 0;
         onChanged();
         return this;
@@ -28890,15 +32989,15 @@ public final class SteamdatagramMessagesSdr {
     int getServerConnectionId();
 
     /**
-     * <code>optional uint32 network_config_version = 6;</code>
+     * <code>optional uint64 network_config_version = 6;</code>
      * @return Whether the networkConfigVersion field is set.
      */
     boolean hasNetworkConfigVersion();
     /**
-     * <code>optional uint32 network_config_version = 6;</code>
+     * <code>optional uint64 network_config_version = 6;</code>
      * @return The networkConfigVersion.
      */
-    int getNetworkConfigVersion();
+    long getNetworkConfigVersion();
 
     /**
      * <code>optional uint32 protocol_version = 7;</code>
@@ -28944,6 +33043,38 @@ public final class SteamdatagramMessagesSdr {
      */
     com.google.protobuf.ByteString
         getBuildBytes();
+
+    /**
+     * <code>optional string dev_gameserver_identity = 100;</code>
+     * @return Whether the devGameserverIdentity field is set.
+     */
+    boolean hasDevGameserverIdentity();
+    /**
+     * <code>optional string dev_gameserver_identity = 100;</code>
+     * @return The devGameserverIdentity.
+     */
+    java.lang.String getDevGameserverIdentity();
+    /**
+     * <code>optional string dev_gameserver_identity = 100;</code>
+     * @return The bytes for devGameserverIdentity.
+     */
+    com.google.protobuf.ByteString
+        getDevGameserverIdentityBytes();
+
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+     * @return Whether the devClientCert field is set.
+     */
+    boolean hasDevClientCert();
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+     * @return The devClientCert.
+     */
+    SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getDevClientCert();
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+     */
+    SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getDevClientCertOrBuilder();
   }
   /**
    * Protobuf type {@code CMsgSteamDatagramGameserverSessionRequest}
@@ -28961,6 +33092,7 @@ public final class SteamdatagramMessagesSdr {
       ticket_ = com.google.protobuf.ByteString.EMPTY;
       platform_ = "";
       build_ = "";
+      devGameserverIdentity_ = "";
     }
 
     @java.lang.Override
@@ -29016,7 +33148,7 @@ public final class SteamdatagramMessagesSdr {
             }
             case 48: {
               bitField0_ |= 0x00000020;
-              networkConfigVersion_ = input.readUInt32();
+              networkConfigVersion_ = input.readUInt64();
               break;
             }
             case 56: {
@@ -29039,6 +33171,25 @@ public final class SteamdatagramMessagesSdr {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000100;
               build_ = bs;
+              break;
+            }
+            case 802: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000200;
+              devGameserverIdentity_ = bs;
+              break;
+            }
+            case 810: {
+              SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000400) != 0)) {
+                subBuilder = devClientCert_.toBuilder();
+              }
+              devClientCert_ = input.readMessage(SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(devClientCert_);
+                devClientCert_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000400;
               break;
             }
             default: {
@@ -29170,9 +33321,9 @@ public final class SteamdatagramMessagesSdr {
     }
 
     public static final int NETWORK_CONFIG_VERSION_FIELD_NUMBER = 6;
-    private int networkConfigVersion_;
+    private long networkConfigVersion_;
     /**
-     * <code>optional uint32 network_config_version = 6;</code>
+     * <code>optional uint64 network_config_version = 6;</code>
      * @return Whether the networkConfigVersion field is set.
      */
     @java.lang.Override
@@ -29180,11 +33331,11 @@ public final class SteamdatagramMessagesSdr {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>optional uint32 network_config_version = 6;</code>
+     * <code>optional uint64 network_config_version = 6;</code>
      * @return The networkConfigVersion.
      */
     @java.lang.Override
-    public int getNetworkConfigVersion() {
+    public long getNetworkConfigVersion() {
       return networkConfigVersion_;
     }
 
@@ -29303,6 +33454,80 @@ public final class SteamdatagramMessagesSdr {
       }
     }
 
+    public static final int DEV_GAMESERVER_IDENTITY_FIELD_NUMBER = 100;
+    private volatile java.lang.Object devGameserverIdentity_;
+    /**
+     * <code>optional string dev_gameserver_identity = 100;</code>
+     * @return Whether the devGameserverIdentity field is set.
+     */
+    @java.lang.Override
+    public boolean hasDevGameserverIdentity() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional string dev_gameserver_identity = 100;</code>
+     * @return The devGameserverIdentity.
+     */
+    @java.lang.Override
+    public java.lang.String getDevGameserverIdentity() {
+      java.lang.Object ref = devGameserverIdentity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          devGameserverIdentity_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string dev_gameserver_identity = 100;</code>
+     * @return The bytes for devGameserverIdentity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDevGameserverIdentityBytes() {
+      java.lang.Object ref = devGameserverIdentity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        devGameserverIdentity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEV_CLIENT_CERT_FIELD_NUMBER = 101;
+    private SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned devClientCert_;
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+     * @return Whether the devClientCert field is set.
+     */
+    @java.lang.Override
+    public boolean hasDevClientCert() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+     * @return The devClientCert.
+     */
+    @java.lang.Override
+    public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getDevClientCert() {
+      return devClientCert_ == null ? SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : devClientCert_;
+    }
+    /**
+     * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+     */
+    @java.lang.Override
+    public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getDevClientCertOrBuilder() {
+      return devClientCert_ == null ? SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : devClientCert_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -29330,7 +33555,7 @@ public final class SteamdatagramMessagesSdr {
         output.writeFixed32(5, clientConnectionId_);
       }
       if (((bitField0_ & 0x00000020) != 0)) {
-        output.writeUInt32(6, networkConfigVersion_);
+        output.writeUInt64(6, networkConfigVersion_);
       }
       if (((bitField0_ & 0x00000040) != 0)) {
         output.writeUInt32(7, protocolVersion_);
@@ -29343,6 +33568,12 @@ public final class SteamdatagramMessagesSdr {
       }
       if (((bitField0_ & 0x00000100) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, build_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 100, devGameserverIdentity_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeMessage(101, getDevClientCert());
       }
       unknownFields.writeTo(output);
     }
@@ -29371,7 +33602,7 @@ public final class SteamdatagramMessagesSdr {
       }
       if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, networkConfigVersion_);
+          .computeUInt64Size(6, networkConfigVersion_);
       }
       if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -29386,6 +33617,13 @@ public final class SteamdatagramMessagesSdr {
       }
       if (((bitField0_ & 0x00000100) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, build_);
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(100, devGameserverIdentity_);
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(101, getDevClientCert());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -29447,6 +33685,16 @@ public final class SteamdatagramMessagesSdr {
         if (!getBuild()
             .equals(other.getBuild())) return false;
       }
+      if (hasDevGameserverIdentity() != other.hasDevGameserverIdentity()) return false;
+      if (hasDevGameserverIdentity()) {
+        if (!getDevGameserverIdentity()
+            .equals(other.getDevGameserverIdentity())) return false;
+      }
+      if (hasDevClientCert() != other.hasDevClientCert()) return false;
+      if (hasDevClientCert()) {
+        if (!getDevClientCert()
+            .equals(other.getDevClientCert())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -29481,7 +33729,8 @@ public final class SteamdatagramMessagesSdr {
       }
       if (hasNetworkConfigVersion()) {
         hash = (37 * hash) + NETWORK_CONFIG_VERSION_FIELD_NUMBER;
-        hash = (53 * hash) + getNetworkConfigVersion();
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNetworkConfigVersion());
       }
       if (hasProtocolVersion()) {
         hash = (37 * hash) + PROTOCOL_VERSION_FIELD_NUMBER;
@@ -29494,6 +33743,14 @@ public final class SteamdatagramMessagesSdr {
       if (hasBuild()) {
         hash = (37 * hash) + BUILD_FIELD_NUMBER;
         hash = (53 * hash) + getBuild().hashCode();
+      }
+      if (hasDevGameserverIdentity()) {
+        hash = (37 * hash) + DEV_GAMESERVER_IDENTITY_FIELD_NUMBER;
+        hash = (53 * hash) + getDevGameserverIdentity().hashCode();
+      }
+      if (hasDevClientCert()) {
+        hash = (37 * hash) + DEV_CLIENT_CERT_FIELD_NUMBER;
+        hash = (53 * hash) + getDevClientCert().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -29623,6 +33880,7 @@ public final class SteamdatagramMessagesSdr {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getDevClientCertFieldBuilder();
         }
       }
       @java.lang.Override
@@ -29638,7 +33896,7 @@ public final class SteamdatagramMessagesSdr {
         bitField0_ = (bitField0_ & ~0x00000008);
         serverConnectionId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000010);
-        networkConfigVersion_ = 0;
+        networkConfigVersion_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000020);
         protocolVersion_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -29646,6 +33904,14 @@ public final class SteamdatagramMessagesSdr {
         bitField0_ = (bitField0_ & ~0x00000080);
         build_ = "";
         bitField0_ = (bitField0_ & ~0x00000100);
+        devGameserverIdentity_ = "";
+        bitField0_ = (bitField0_ & ~0x00000200);
+        if (devClientCertBuilder_ == null) {
+          devClientCert_ = null;
+        } else {
+          devClientCertBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -29710,6 +33976,18 @@ public final class SteamdatagramMessagesSdr {
           to_bitField0_ |= 0x00000100;
         }
         result.build_ = build_;
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.devGameserverIdentity_ = devGameserverIdentity_;
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          if (devClientCertBuilder_ == null) {
+            result.devClientCert_ = devClientCert_;
+          } else {
+            result.devClientCert_ = devClientCertBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000400;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -29789,6 +34067,14 @@ public final class SteamdatagramMessagesSdr {
           bitField0_ |= 0x00000100;
           build_ = other.build_;
           onChanged();
+        }
+        if (other.hasDevGameserverIdentity()) {
+          bitField0_ |= 0x00000200;
+          devGameserverIdentity_ = other.devGameserverIdentity_;
+          onChanged();
+        }
+        if (other.hasDevClientCert()) {
+          mergeDevClientCert(other.getDevClientCert());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -30018,9 +34304,9 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
 
-      private int networkConfigVersion_ ;
+      private long networkConfigVersion_ ;
       /**
-       * <code>optional uint32 network_config_version = 6;</code>
+       * <code>optional uint64 network_config_version = 6;</code>
        * @return Whether the networkConfigVersion field is set.
        */
       @java.lang.Override
@@ -30028,31 +34314,31 @@ public final class SteamdatagramMessagesSdr {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>optional uint32 network_config_version = 6;</code>
+       * <code>optional uint64 network_config_version = 6;</code>
        * @return The networkConfigVersion.
        */
       @java.lang.Override
-      public int getNetworkConfigVersion() {
+      public long getNetworkConfigVersion() {
         return networkConfigVersion_;
       }
       /**
-       * <code>optional uint32 network_config_version = 6;</code>
+       * <code>optional uint64 network_config_version = 6;</code>
        * @param value The networkConfigVersion to set.
        * @return This builder for chaining.
        */
-      public Builder setNetworkConfigVersion(int value) {
+      public Builder setNetworkConfigVersion(long value) {
         bitField0_ |= 0x00000020;
         networkConfigVersion_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 network_config_version = 6;</code>
+       * <code>optional uint64 network_config_version = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearNetworkConfigVersion() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        networkConfigVersion_ = 0;
+        networkConfigVersion_ = 0L;
         onChanged();
         return this;
       }
@@ -30262,6 +34548,210 @@ public final class SteamdatagramMessagesSdr {
         build_ = value;
         onChanged();
         return this;
+      }
+
+      private java.lang.Object devGameserverIdentity_ = "";
+      /**
+       * <code>optional string dev_gameserver_identity = 100;</code>
+       * @return Whether the devGameserverIdentity field is set.
+       */
+      public boolean hasDevGameserverIdentity() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>optional string dev_gameserver_identity = 100;</code>
+       * @return The devGameserverIdentity.
+       */
+      public java.lang.String getDevGameserverIdentity() {
+        java.lang.Object ref = devGameserverIdentity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            devGameserverIdentity_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string dev_gameserver_identity = 100;</code>
+       * @return The bytes for devGameserverIdentity.
+       */
+      public com.google.protobuf.ByteString
+          getDevGameserverIdentityBytes() {
+        java.lang.Object ref = devGameserverIdentity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          devGameserverIdentity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string dev_gameserver_identity = 100;</code>
+       * @param value The devGameserverIdentity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDevGameserverIdentity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        devGameserverIdentity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string dev_gameserver_identity = 100;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDevGameserverIdentity() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        devGameserverIdentity_ = getDefaultInstance().getDevGameserverIdentity();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string dev_gameserver_identity = 100;</code>
+       * @param value The bytes for devGameserverIdentity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDevGameserverIdentityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        devGameserverIdentity_ = value;
+        onChanged();
+        return this;
+      }
+
+      private SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned devClientCert_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder> devClientCertBuilder_;
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+       * @return Whether the devClientCert field is set.
+       */
+      public boolean hasDevClientCert() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+       * @return The devClientCert.
+       */
+      public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned getDevClientCert() {
+        if (devClientCertBuilder_ == null) {
+          return devClientCert_ == null ? SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : devClientCert_;
+        } else {
+          return devClientCertBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+       */
+      public Builder setDevClientCert(SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned value) {
+        if (devClientCertBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          devClientCert_ = value;
+          onChanged();
+        } else {
+          devClientCertBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+       */
+      public Builder setDevClientCert(
+          SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder builderForValue) {
+        if (devClientCertBuilder_ == null) {
+          devClientCert_ = builderForValue.build();
+          onChanged();
+        } else {
+          devClientCertBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+       */
+      public Builder mergeDevClientCert(SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned value) {
+        if (devClientCertBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+              devClientCert_ != null &&
+              devClientCert_ != SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance()) {
+            devClientCert_ =
+              SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.newBuilder(devClientCert_).mergeFrom(value).buildPartial();
+          } else {
+            devClientCert_ = value;
+          }
+          onChanged();
+        } else {
+          devClientCertBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+       */
+      public Builder clearDevClientCert() {
+        if (devClientCertBuilder_ == null) {
+          devClientCert_ = null;
+          onChanged();
+        } else {
+          devClientCertBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+       */
+      public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder getDevClientCertBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getDevClientCertFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+       */
+      public SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder getDevClientCertOrBuilder() {
+        if (devClientCertBuilder_ != null) {
+          return devClientCertBuilder_.getMessageOrBuilder();
+        } else {
+          return devClientCert_ == null ?
+              SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.getDefaultInstance() : devClientCert_;
+        }
+      }
+      /**
+       * <code>optional .CMsgSteamDatagramCertificateSigned dev_client_cert = 101;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder> 
+          getDevClientCertFieldBuilder() {
+        if (devClientCertBuilder_ == null) {
+          devClientCertBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSigned.Builder, SteamnetworkingsocketsMessagesCerts.CMsgSteamDatagramCertificateSignedOrBuilder>(
+                  getDevClientCert(),
+                  getParentForChildren(),
+                  isClean());
+          devClientCert_ = null;
+        }
+        return devClientCertBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -31729,6 +36219,10 @@ public final class SteamdatagramMessagesSdr {
        * <code>NOT_PRIMARY_SESSION = 8;</code>
        */
       NOT_PRIMARY_SESSION(8),
+      /**
+       * <code>CLIENT_RELAY_OVERRIDE = 32;</code>
+       */
+      CLIENT_RELAY_OVERRIDE(32),
       ;
 
       /**
@@ -31747,6 +36241,10 @@ public final class SteamdatagramMessagesSdr {
        * <code>NOT_PRIMARY_SESSION = 8;</code>
        */
       public static final int NOT_PRIMARY_SESSION_VALUE = 8;
+      /**
+       * <code>CLIENT_RELAY_OVERRIDE = 32;</code>
+       */
+      public static final int CLIENT_RELAY_OVERRIDE_VALUE = 32;
 
 
       public final int getNumber() {
@@ -31773,6 +36271,7 @@ public final class SteamdatagramMessagesSdr {
           case 2: return ACK_REQUEST_E2E;
           case 4: return ACK_REQUEST_IMMEDIATE;
           case 8: return NOT_PRIMARY_SESSION;
+          case 32: return CLIENT_RELAY_OVERRIDE;
           default: return null;
         }
       }
@@ -39486,6 +43985,39 @@ public final class SteamdatagramMessagesSdr {
     int getPeerConnectionId();
 
     /**
+     * <code>optional bytes encrypted_data = 14;</code>
+     * @return Whether the encryptedData field is set.
+     */
+    boolean hasEncryptedData();
+    /**
+     * <code>optional bytes encrypted_data = 14;</code>
+     * @return The encryptedData.
+     */
+    com.google.protobuf.ByteString getEncryptedData();
+
+    /**
+     * <code>optional uint32 encryption_your_public_key_lead_byte = 15;</code>
+     * @return Whether the encryptionYourPublicKeyLeadByte field is set.
+     */
+    boolean hasEncryptionYourPublicKeyLeadByte();
+    /**
+     * <code>optional uint32 encryption_your_public_key_lead_byte = 15;</code>
+     * @return The encryptionYourPublicKeyLeadByte.
+     */
+    int getEncryptionYourPublicKeyLeadByte();
+
+    /**
+     * <code>optional bytes encryption_my_ephemeral_public_key = 16;</code>
+     * @return Whether the encryptionMyEphemeralPublicKey field is set.
+     */
+    boolean hasEncryptionMyEphemeralPublicKey();
+    /**
+     * <code>optional bytes encryption_my_ephemeral_public_key = 16;</code>
+     * @return The encryptionMyEphemeralPublicKey.
+     */
+    com.google.protobuf.ByteString getEncryptionMyEphemeralPublicKey();
+
+    /**
      * <code>optional uint32 protocol_version = 8;</code>
      * @return Whether the protocolVersion field is set.
      */
@@ -39497,26 +44029,15 @@ public final class SteamdatagramMessagesSdr {
     int getProtocolVersion();
 
     /**
-     * <code>optional uint32 network_config_version = 9;</code>
+     * <code>optional uint64 network_config_version = 9;</code>
      * @return Whether the networkConfigVersion field is set.
      */
     boolean hasNetworkConfigVersion();
     /**
-     * <code>optional uint32 network_config_version = 9;</code>
+     * <code>optional uint64 network_config_version = 9;</code>
      * @return The networkConfigVersion.
      */
-    int getNetworkConfigVersion();
-
-    /**
-     * <code>optional fixed32 unused_public_ip = 10;</code>
-     * @return Whether the unusedPublicIp field is set.
-     */
-    boolean hasUnusedPublicIp();
-    /**
-     * <code>optional fixed32 unused_public_ip = 10;</code>
-     * @return The unusedPublicIp.
-     */
-    int getUnusedPublicIp();
+    long getNetworkConfigVersion();
 
     /**
      * <code>optional string platform = 12;</code>
@@ -39566,6 +44087,8 @@ public final class SteamdatagramMessagesSdr {
     }
     private CMsgSteamDatagramP2PSessionRequestBody() {
       peerIdentityString_ = "";
+      encryptedData_ = com.google.protobuf.ByteString.EMPTY;
+      encryptionMyEphemeralPublicKey_ = com.google.protobuf.ByteString.EMPTY;
       platform_ = "";
       build_ = "";
     }
@@ -39627,18 +44150,13 @@ public final class SteamdatagramMessagesSdr {
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000200;
               protocolVersion_ = input.readUInt32();
               break;
             }
             case 72: {
-              bitField0_ |= 0x00000080;
-              networkConfigVersion_ = input.readUInt32();
-              break;
-            }
-            case 85: {
-              bitField0_ |= 0x00000100;
-              unusedPublicIp_ = input.readFixed32();
+              bitField0_ |= 0x00000400;
+              networkConfigVersion_ = input.readUInt64();
               break;
             }
             case 90: {
@@ -39649,14 +44167,29 @@ public final class SteamdatagramMessagesSdr {
             }
             case 98: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000800;
               platform_ = bs;
               break;
             }
             case 106: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00001000;
               build_ = bs;
+              break;
+            }
+            case 114: {
+              bitField0_ |= 0x00000040;
+              encryptedData_ = input.readBytes();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00000080;
+              encryptionYourPublicKeyLeadByte_ = input.readUInt32();
+              break;
+            }
+            case 130: {
+              bitField0_ |= 0x00000100;
+              encryptionMyEphemeralPublicKey_ = input.readBytes();
               break;
             }
             default: {
@@ -39689,6 +44222,612 @@ public final class SteamdatagramMessagesSdr {
       return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramP2PSessionRequestBody_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.class, SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.Builder.class);
+    }
+
+    public interface EncryptedDataOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CMsgSteamDatagramP2PSessionRequestBody.EncryptedData)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string peer_identity_string = 1;</code>
+       * @return Whether the peerIdentityString field is set.
+       */
+      boolean hasPeerIdentityString();
+      /**
+       * <code>optional string peer_identity_string = 1;</code>
+       * @return The peerIdentityString.
+       */
+      java.lang.String getPeerIdentityString();
+      /**
+       * <code>optional string peer_identity_string = 1;</code>
+       * @return The bytes for peerIdentityString.
+       */
+      com.google.protobuf.ByteString
+          getPeerIdentityStringBytes();
+    }
+    /**
+     * Protobuf type {@code CMsgSteamDatagramP2PSessionRequestBody.EncryptedData}
+     */
+    public static final class EncryptedData extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CMsgSteamDatagramP2PSessionRequestBody.EncryptedData)
+        EncryptedDataOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use EncryptedData.newBuilder() to construct.
+      private EncryptedData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private EncryptedData() {
+        peerIdentityString_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new EncryptedData();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private EncryptedData(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                peerIdentityString_ = bs;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramP2PSessionRequestBody_EncryptedData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramP2PSessionRequestBody_EncryptedData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData.class, SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int PEER_IDENTITY_STRING_FIELD_NUMBER = 1;
+      private volatile java.lang.Object peerIdentityString_;
+      /**
+       * <code>optional string peer_identity_string = 1;</code>
+       * @return Whether the peerIdentityString field is set.
+       */
+      @java.lang.Override
+      public boolean hasPeerIdentityString() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string peer_identity_string = 1;</code>
+       * @return The peerIdentityString.
+       */
+      @java.lang.Override
+      public java.lang.String getPeerIdentityString() {
+        java.lang.Object ref = peerIdentityString_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            peerIdentityString_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string peer_identity_string = 1;</code>
+       * @return The bytes for peerIdentityString.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPeerIdentityStringBytes() {
+        java.lang.Object ref = peerIdentityString_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          peerIdentityString_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, peerIdentityString_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, peerIdentityString_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData)) {
+          return super.equals(obj);
+        }
+        SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData other = (SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData) obj;
+
+        if (hasPeerIdentityString() != other.hasPeerIdentityString()) return false;
+        if (hasPeerIdentityString()) {
+          if (!getPeerIdentityString()
+              .equals(other.getPeerIdentityString())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasPeerIdentityString()) {
+          hash = (37 * hash) + PEER_IDENTITY_STRING_FIELD_NUMBER;
+          hash = (53 * hash) + getPeerIdentityString().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CMsgSteamDatagramP2PSessionRequestBody.EncryptedData}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CMsgSteamDatagramP2PSessionRequestBody.EncryptedData)
+          SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedDataOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramP2PSessionRequestBody_EncryptedData_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramP2PSessionRequestBody_EncryptedData_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData.class, SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData.Builder.class);
+        }
+
+        // Construct using SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          peerIdentityString_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteamdatagramMessagesSdr.internal_static_CMsgSteamDatagramP2PSessionRequestBody_EncryptedData_descriptor;
+        }
+
+        @java.lang.Override
+        public SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData getDefaultInstanceForType() {
+          return SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData build() {
+          SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData buildPartial() {
+          SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData result = new SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.peerIdentityString_ = peerIdentityString_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData) {
+            return mergeFrom((SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData other) {
+          if (other == SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData.getDefaultInstance()) return this;
+          if (other.hasPeerIdentityString()) {
+            bitField0_ |= 0x00000001;
+            peerIdentityString_ = other.peerIdentityString_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object peerIdentityString_ = "";
+        /**
+         * <code>optional string peer_identity_string = 1;</code>
+         * @return Whether the peerIdentityString field is set.
+         */
+        public boolean hasPeerIdentityString() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string peer_identity_string = 1;</code>
+         * @return The peerIdentityString.
+         */
+        public java.lang.String getPeerIdentityString() {
+          java.lang.Object ref = peerIdentityString_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              peerIdentityString_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string peer_identity_string = 1;</code>
+         * @return The bytes for peerIdentityString.
+         */
+        public com.google.protobuf.ByteString
+            getPeerIdentityStringBytes() {
+          java.lang.Object ref = peerIdentityString_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            peerIdentityString_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string peer_identity_string = 1;</code>
+         * @param value The peerIdentityString to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPeerIdentityString(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          peerIdentityString_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string peer_identity_string = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPeerIdentityString() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          peerIdentityString_ = getDefaultInstance().getPeerIdentityString();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string peer_identity_string = 1;</code>
+         * @param value The bytes for peerIdentityString to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPeerIdentityStringBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          peerIdentityString_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CMsgSteamDatagramP2PSessionRequestBody.EncryptedData)
+      }
+
+      // @@protoc_insertion_point(class_scope:CMsgSteamDatagramP2PSessionRequestBody.EncryptedData)
+      private static final SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData();
+      }
+
+      public static SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<EncryptedData>
+          PARSER = new com.google.protobuf.AbstractParser<EncryptedData>() {
+        @java.lang.Override
+        public EncryptedData parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new EncryptedData(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<EncryptedData> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<EncryptedData> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteamdatagramMessagesSdr.CMsgSteamDatagramP2PSessionRequestBody.EncryptedData getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     private int bitField0_;
@@ -39835,6 +44974,63 @@ public final class SteamdatagramMessagesSdr {
       return peerConnectionId_;
     }
 
+    public static final int ENCRYPTED_DATA_FIELD_NUMBER = 14;
+    private com.google.protobuf.ByteString encryptedData_;
+    /**
+     * <code>optional bytes encrypted_data = 14;</code>
+     * @return Whether the encryptedData field is set.
+     */
+    @java.lang.Override
+    public boolean hasEncryptedData() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional bytes encrypted_data = 14;</code>
+     * @return The encryptedData.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEncryptedData() {
+      return encryptedData_;
+    }
+
+    public static final int ENCRYPTION_YOUR_PUBLIC_KEY_LEAD_BYTE_FIELD_NUMBER = 15;
+    private int encryptionYourPublicKeyLeadByte_;
+    /**
+     * <code>optional uint32 encryption_your_public_key_lead_byte = 15;</code>
+     * @return Whether the encryptionYourPublicKeyLeadByte field is set.
+     */
+    @java.lang.Override
+    public boolean hasEncryptionYourPublicKeyLeadByte() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 encryption_your_public_key_lead_byte = 15;</code>
+     * @return The encryptionYourPublicKeyLeadByte.
+     */
+    @java.lang.Override
+    public int getEncryptionYourPublicKeyLeadByte() {
+      return encryptionYourPublicKeyLeadByte_;
+    }
+
+    public static final int ENCRYPTION_MY_EPHEMERAL_PUBLIC_KEY_FIELD_NUMBER = 16;
+    private com.google.protobuf.ByteString encryptionMyEphemeralPublicKey_;
+    /**
+     * <code>optional bytes encryption_my_ephemeral_public_key = 16;</code>
+     * @return Whether the encryptionMyEphemeralPublicKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasEncryptionMyEphemeralPublicKey() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional bytes encryption_my_ephemeral_public_key = 16;</code>
+     * @return The encryptionMyEphemeralPublicKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEncryptionMyEphemeralPublicKey() {
+      return encryptionMyEphemeralPublicKey_;
+    }
+
     public static final int PROTOCOL_VERSION_FIELD_NUMBER = 8;
     private int protocolVersion_;
     /**
@@ -39843,7 +45039,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasProtocolVersion() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>optional uint32 protocol_version = 8;</code>
@@ -39855,41 +45051,22 @@ public final class SteamdatagramMessagesSdr {
     }
 
     public static final int NETWORK_CONFIG_VERSION_FIELD_NUMBER = 9;
-    private int networkConfigVersion_;
+    private long networkConfigVersion_;
     /**
-     * <code>optional uint32 network_config_version = 9;</code>
+     * <code>optional uint64 network_config_version = 9;</code>
      * @return Whether the networkConfigVersion field is set.
      */
     @java.lang.Override
     public boolean hasNetworkConfigVersion() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
-     * <code>optional uint32 network_config_version = 9;</code>
+     * <code>optional uint64 network_config_version = 9;</code>
      * @return The networkConfigVersion.
      */
     @java.lang.Override
-    public int getNetworkConfigVersion() {
+    public long getNetworkConfigVersion() {
       return networkConfigVersion_;
-    }
-
-    public static final int UNUSED_PUBLIC_IP_FIELD_NUMBER = 10;
-    private int unusedPublicIp_;
-    /**
-     * <code>optional fixed32 unused_public_ip = 10;</code>
-     * @return Whether the unusedPublicIp field is set.
-     */
-    @java.lang.Override
-    public boolean hasUnusedPublicIp() {
-      return ((bitField0_ & 0x00000100) != 0);
-    }
-    /**
-     * <code>optional fixed32 unused_public_ip = 10;</code>
-     * @return The unusedPublicIp.
-     */
-    @java.lang.Override
-    public int getUnusedPublicIp() {
-      return unusedPublicIp_;
     }
 
     public static final int PLATFORM_FIELD_NUMBER = 12;
@@ -39900,7 +45077,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasPlatform() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <code>optional string platform = 12;</code>
@@ -39948,7 +45125,7 @@ public final class SteamdatagramMessagesSdr {
      */
     @java.lang.Override
     public boolean hasBuild() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <code>optional string build = 13;</code>
@@ -40017,23 +45194,29 @@ public final class SteamdatagramMessagesSdr {
       if (((bitField0_ & 0x00000020) != 0)) {
         output.writeFixed32(5, peerConnectionId_);
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         output.writeUInt32(8, protocolVersion_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
-        output.writeUInt32(9, networkConfigVersion_);
-      }
-      if (((bitField0_ & 0x00000100) != 0)) {
-        output.writeFixed32(10, unusedPublicIp_);
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeUInt64(9, networkConfigVersion_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, peerIdentityString_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, platform_);
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00001000) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, build_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeBytes(14, encryptedData_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeUInt32(15, encryptionYourPublicKeyLeadByte_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeBytes(16, encryptionMyEphemeralPublicKey_);
       }
       unknownFields.writeTo(output);
     }
@@ -40064,26 +45247,34 @@ public final class SteamdatagramMessagesSdr {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(5, peerConnectionId_);
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, protocolVersion_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, networkConfigVersion_);
-      }
-      if (((bitField0_ & 0x00000100) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(10, unusedPublicIp_);
+          .computeUInt64Size(9, networkConfigVersion_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, peerIdentityString_);
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, platform_);
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
+      if (((bitField0_ & 0x00001000) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, build_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(14, encryptedData_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, encryptionYourPublicKeyLeadByte_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(16, encryptionMyEphemeralPublicKey_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -40130,6 +45321,21 @@ public final class SteamdatagramMessagesSdr {
         if (getPeerConnectionId()
             != other.getPeerConnectionId()) return false;
       }
+      if (hasEncryptedData() != other.hasEncryptedData()) return false;
+      if (hasEncryptedData()) {
+        if (!getEncryptedData()
+            .equals(other.getEncryptedData())) return false;
+      }
+      if (hasEncryptionYourPublicKeyLeadByte() != other.hasEncryptionYourPublicKeyLeadByte()) return false;
+      if (hasEncryptionYourPublicKeyLeadByte()) {
+        if (getEncryptionYourPublicKeyLeadByte()
+            != other.getEncryptionYourPublicKeyLeadByte()) return false;
+      }
+      if (hasEncryptionMyEphemeralPublicKey() != other.hasEncryptionMyEphemeralPublicKey()) return false;
+      if (hasEncryptionMyEphemeralPublicKey()) {
+        if (!getEncryptionMyEphemeralPublicKey()
+            .equals(other.getEncryptionMyEphemeralPublicKey())) return false;
+      }
       if (hasProtocolVersion() != other.hasProtocolVersion()) return false;
       if (hasProtocolVersion()) {
         if (getProtocolVersion()
@@ -40139,11 +45345,6 @@ public final class SteamdatagramMessagesSdr {
       if (hasNetworkConfigVersion()) {
         if (getNetworkConfigVersion()
             != other.getNetworkConfigVersion()) return false;
-      }
-      if (hasUnusedPublicIp() != other.hasUnusedPublicIp()) return false;
-      if (hasUnusedPublicIp()) {
-        if (getUnusedPublicIp()
-            != other.getUnusedPublicIp()) return false;
       }
       if (hasPlatform() != other.hasPlatform()) return false;
       if (hasPlatform()) {
@@ -40192,17 +45393,26 @@ public final class SteamdatagramMessagesSdr {
         hash = (37 * hash) + PEER_CONNECTION_ID_FIELD_NUMBER;
         hash = (53 * hash) + getPeerConnectionId();
       }
+      if (hasEncryptedData()) {
+        hash = (37 * hash) + ENCRYPTED_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getEncryptedData().hashCode();
+      }
+      if (hasEncryptionYourPublicKeyLeadByte()) {
+        hash = (37 * hash) + ENCRYPTION_YOUR_PUBLIC_KEY_LEAD_BYTE_FIELD_NUMBER;
+        hash = (53 * hash) + getEncryptionYourPublicKeyLeadByte();
+      }
+      if (hasEncryptionMyEphemeralPublicKey()) {
+        hash = (37 * hash) + ENCRYPTION_MY_EPHEMERAL_PUBLIC_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getEncryptionMyEphemeralPublicKey().hashCode();
+      }
       if (hasProtocolVersion()) {
         hash = (37 * hash) + PROTOCOL_VERSION_FIELD_NUMBER;
         hash = (53 * hash) + getProtocolVersion();
       }
       if (hasNetworkConfigVersion()) {
         hash = (37 * hash) + NETWORK_CONFIG_VERSION_FIELD_NUMBER;
-        hash = (53 * hash) + getNetworkConfigVersion();
-      }
-      if (hasUnusedPublicIp()) {
-        hash = (37 * hash) + UNUSED_PUBLIC_IP_FIELD_NUMBER;
-        hash = (53 * hash) + getUnusedPublicIp();
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNetworkConfigVersion());
       }
       if (hasPlatform()) {
         hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
@@ -40357,16 +45567,20 @@ public final class SteamdatagramMessagesSdr {
         bitField0_ = (bitField0_ & ~0x00000010);
         peerConnectionId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
-        protocolVersion_ = 0;
+        encryptedData_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000040);
-        networkConfigVersion_ = 0;
+        encryptionYourPublicKeyLeadByte_ = 0;
         bitField0_ = (bitField0_ & ~0x00000080);
-        unusedPublicIp_ = 0;
+        encryptionMyEphemeralPublicKey_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000100);
-        platform_ = "";
+        protocolVersion_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
-        build_ = "";
+        networkConfigVersion_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000400);
+        platform_ = "";
+        bitField0_ = (bitField0_ & ~0x00000800);
+        build_ = "";
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -40420,23 +45634,31 @@ public final class SteamdatagramMessagesSdr {
           to_bitField0_ |= 0x00000020;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.protocolVersion_ = protocolVersion_;
           to_bitField0_ |= 0x00000040;
         }
+        result.encryptedData_ = encryptedData_;
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.networkConfigVersion_ = networkConfigVersion_;
+          result.encryptionYourPublicKeyLeadByte_ = encryptionYourPublicKeyLeadByte_;
           to_bitField0_ |= 0x00000080;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.unusedPublicIp_ = unusedPublicIp_;
           to_bitField0_ |= 0x00000100;
         }
+        result.encryptionMyEphemeralPublicKey_ = encryptionMyEphemeralPublicKey_;
         if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.protocolVersion_ = protocolVersion_;
           to_bitField0_ |= 0x00000200;
         }
-        result.platform_ = platform_;
         if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.networkConfigVersion_ = networkConfigVersion_;
           to_bitField0_ |= 0x00000400;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.platform_ = platform_;
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          to_bitField0_ |= 0x00001000;
         }
         result.build_ = build_;
         result.bitField0_ = to_bitField0_;
@@ -40508,22 +45730,28 @@ public final class SteamdatagramMessagesSdr {
         if (other.hasPeerConnectionId()) {
           setPeerConnectionId(other.getPeerConnectionId());
         }
+        if (other.hasEncryptedData()) {
+          setEncryptedData(other.getEncryptedData());
+        }
+        if (other.hasEncryptionYourPublicKeyLeadByte()) {
+          setEncryptionYourPublicKeyLeadByte(other.getEncryptionYourPublicKeyLeadByte());
+        }
+        if (other.hasEncryptionMyEphemeralPublicKey()) {
+          setEncryptionMyEphemeralPublicKey(other.getEncryptionMyEphemeralPublicKey());
+        }
         if (other.hasProtocolVersion()) {
           setProtocolVersion(other.getProtocolVersion());
         }
         if (other.hasNetworkConfigVersion()) {
           setNetworkConfigVersion(other.getNetworkConfigVersion());
         }
-        if (other.hasUnusedPublicIp()) {
-          setUnusedPublicIp(other.getUnusedPublicIp());
-        }
         if (other.hasPlatform()) {
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000800;
           platform_ = other.platform_;
           onChanged();
         }
         if (other.hasBuild()) {
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00001000;
           build_ = other.build_;
           onChanged();
         }
@@ -40836,6 +46064,129 @@ public final class SteamdatagramMessagesSdr {
         return this;
       }
 
+      private com.google.protobuf.ByteString encryptedData_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes encrypted_data = 14;</code>
+       * @return Whether the encryptedData field is set.
+       */
+      @java.lang.Override
+      public boolean hasEncryptedData() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional bytes encrypted_data = 14;</code>
+       * @return The encryptedData.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEncryptedData() {
+        return encryptedData_;
+      }
+      /**
+       * <code>optional bytes encrypted_data = 14;</code>
+       * @param value The encryptedData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncryptedData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        encryptedData_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes encrypted_data = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEncryptedData() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        encryptedData_ = getDefaultInstance().getEncryptedData();
+        onChanged();
+        return this;
+      }
+
+      private int encryptionYourPublicKeyLeadByte_ ;
+      /**
+       * <code>optional uint32 encryption_your_public_key_lead_byte = 15;</code>
+       * @return Whether the encryptionYourPublicKeyLeadByte field is set.
+       */
+      @java.lang.Override
+      public boolean hasEncryptionYourPublicKeyLeadByte() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional uint32 encryption_your_public_key_lead_byte = 15;</code>
+       * @return The encryptionYourPublicKeyLeadByte.
+       */
+      @java.lang.Override
+      public int getEncryptionYourPublicKeyLeadByte() {
+        return encryptionYourPublicKeyLeadByte_;
+      }
+      /**
+       * <code>optional uint32 encryption_your_public_key_lead_byte = 15;</code>
+       * @param value The encryptionYourPublicKeyLeadByte to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncryptionYourPublicKeyLeadByte(int value) {
+        bitField0_ |= 0x00000080;
+        encryptionYourPublicKeyLeadByte_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 encryption_your_public_key_lead_byte = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEncryptionYourPublicKeyLeadByte() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        encryptionYourPublicKeyLeadByte_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString encryptionMyEphemeralPublicKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes encryption_my_ephemeral_public_key = 16;</code>
+       * @return Whether the encryptionMyEphemeralPublicKey field is set.
+       */
+      @java.lang.Override
+      public boolean hasEncryptionMyEphemeralPublicKey() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional bytes encryption_my_ephemeral_public_key = 16;</code>
+       * @return The encryptionMyEphemeralPublicKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEncryptionMyEphemeralPublicKey() {
+        return encryptionMyEphemeralPublicKey_;
+      }
+      /**
+       * <code>optional bytes encryption_my_ephemeral_public_key = 16;</code>
+       * @param value The encryptionMyEphemeralPublicKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncryptionMyEphemeralPublicKey(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        encryptionMyEphemeralPublicKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes encryption_my_ephemeral_public_key = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEncryptionMyEphemeralPublicKey() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        encryptionMyEphemeralPublicKey_ = getDefaultInstance().getEncryptionMyEphemeralPublicKey();
+        onChanged();
+        return this;
+      }
+
       private int protocolVersion_ ;
       /**
        * <code>optional uint32 protocol_version = 8;</code>
@@ -40843,7 +46194,7 @@ public final class SteamdatagramMessagesSdr {
        */
       @java.lang.Override
       public boolean hasProtocolVersion() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>optional uint32 protocol_version = 8;</code>
@@ -40859,7 +46210,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder setProtocolVersion(int value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000200;
         protocolVersion_ = value;
         onChanged();
         return this;
@@ -40869,86 +46220,47 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearProtocolVersion() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000200);
         protocolVersion_ = 0;
         onChanged();
         return this;
       }
 
-      private int networkConfigVersion_ ;
+      private long networkConfigVersion_ ;
       /**
-       * <code>optional uint32 network_config_version = 9;</code>
+       * <code>optional uint64 network_config_version = 9;</code>
        * @return Whether the networkConfigVersion field is set.
        */
       @java.lang.Override
       public boolean hasNetworkConfigVersion() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
-       * <code>optional uint32 network_config_version = 9;</code>
+       * <code>optional uint64 network_config_version = 9;</code>
        * @return The networkConfigVersion.
        */
       @java.lang.Override
-      public int getNetworkConfigVersion() {
+      public long getNetworkConfigVersion() {
         return networkConfigVersion_;
       }
       /**
-       * <code>optional uint32 network_config_version = 9;</code>
+       * <code>optional uint64 network_config_version = 9;</code>
        * @param value The networkConfigVersion to set.
        * @return This builder for chaining.
        */
-      public Builder setNetworkConfigVersion(int value) {
-        bitField0_ |= 0x00000080;
+      public Builder setNetworkConfigVersion(long value) {
+        bitField0_ |= 0x00000400;
         networkConfigVersion_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 network_config_version = 9;</code>
+       * <code>optional uint64 network_config_version = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearNetworkConfigVersion() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        networkConfigVersion_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int unusedPublicIp_ ;
-      /**
-       * <code>optional fixed32 unused_public_ip = 10;</code>
-       * @return Whether the unusedPublicIp field is set.
-       */
-      @java.lang.Override
-      public boolean hasUnusedPublicIp() {
-        return ((bitField0_ & 0x00000100) != 0);
-      }
-      /**
-       * <code>optional fixed32 unused_public_ip = 10;</code>
-       * @return The unusedPublicIp.
-       */
-      @java.lang.Override
-      public int getUnusedPublicIp() {
-        return unusedPublicIp_;
-      }
-      /**
-       * <code>optional fixed32 unused_public_ip = 10;</code>
-       * @param value The unusedPublicIp to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnusedPublicIp(int value) {
-        bitField0_ |= 0x00000100;
-        unusedPublicIp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional fixed32 unused_public_ip = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnusedPublicIp() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        unusedPublicIp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        networkConfigVersion_ = 0L;
         onChanged();
         return this;
       }
@@ -40959,7 +46271,7 @@ public final class SteamdatagramMessagesSdr {
        * @return Whether the platform field is set.
        */
       public boolean hasPlatform() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <code>optional string platform = 12;</code>
@@ -41006,7 +46318,7 @@ public final class SteamdatagramMessagesSdr {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000200;
+  bitField0_ |= 0x00000800;
         platform_ = value;
         onChanged();
         return this;
@@ -41016,7 +46328,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearPlatform() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000800);
         platform_ = getDefaultInstance().getPlatform();
         onChanged();
         return this;
@@ -41031,7 +46343,7 @@ public final class SteamdatagramMessagesSdr {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000200;
+  bitField0_ |= 0x00000800;
         platform_ = value;
         onChanged();
         return this;
@@ -41043,7 +46355,7 @@ public final class SteamdatagramMessagesSdr {
        * @return Whether the build field is set.
        */
       public boolean hasBuild() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <code>optional string build = 13;</code>
@@ -41090,7 +46402,7 @@ public final class SteamdatagramMessagesSdr {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00001000;
         build_ = value;
         onChanged();
         return this;
@@ -41100,7 +46412,7 @@ public final class SteamdatagramMessagesSdr {
        * @return This builder for chaining.
        */
       public Builder clearBuild() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00001000);
         build_ = getDefaultInstance().getBuild();
         onChanged();
         return this;
@@ -41115,7 +46427,7 @@ public final class SteamdatagramMessagesSdr {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00001000;
         build_ = value;
         onChanged();
         return this;
@@ -43240,6 +48552,10 @@ public final class SteamdatagramMessagesSdr {
        * <code>NOT_PRIMARY_TRANSPORT_E2E = 16;</code>
        */
       NOT_PRIMARY_TRANSPORT_E2E(16),
+      /**
+       * <code>CLIENT_RELAY_OVERRIDE = 32;</code>
+       */
+      CLIENT_RELAY_OVERRIDE(32),
       ;
 
       /**
@@ -43262,6 +48578,10 @@ public final class SteamdatagramMessagesSdr {
        * <code>NOT_PRIMARY_TRANSPORT_E2E = 16;</code>
        */
       public static final int NOT_PRIMARY_TRANSPORT_E2E_VALUE = 16;
+      /**
+       * <code>CLIENT_RELAY_OVERRIDE = 32;</code>
+       */
+      public static final int CLIENT_RELAY_OVERRIDE_VALUE = 32;
 
 
       public final int getNumber() {
@@ -43289,6 +48609,7 @@ public final class SteamdatagramMessagesSdr {
           case 4: return ACK_REQUEST_IMMEDIATE;
           case 8: return NOT_PRIMARY_SESSION;
           case 16: return NOT_PRIMARY_TRANSPORT_E2E;
+          case 32: return CLIENT_RELAY_OVERRIDE;
           default: return null;
         }
       }
@@ -49421,15 +54742,26 @@ public final class SteamdatagramMessagesSdr {
       int getYourPopId();
 
       /**
-       * <code>optional uint32 score = 3;</code>
-       * @return Whether the score field is set.
+       * <code>optional uint32 legacy_score = 3;</code>
+       * @return Whether the legacyScore field is set.
        */
-      boolean hasScore();
+      boolean hasLegacyScore();
       /**
-       * <code>optional uint32 score = 3;</code>
-       * @return The score.
+       * <code>optional uint32 legacy_score = 3;</code>
+       * @return The legacyScore.
        */
-      int getScore();
+      int getLegacyScore();
+
+      /**
+       * <code>optional uint32 interior_score = 4;</code>
+       * @return Whether the interiorScore field is set.
+       */
+      boolean hasInteriorScore();
+      /**
+       * <code>optional uint32 interior_score = 4;</code>
+       * @return The interiorScore.
+       */
+      int getInteriorScore();
     }
     /**
      * Protobuf type {@code CMsgSteamDatagramP2PRoutes.Route}
@@ -49489,7 +54821,12 @@ public final class SteamdatagramMessagesSdr {
               }
               case 24: {
                 bitField0_ |= 0x00000004;
-                score_ = input.readUInt32();
+                legacyScore_ = input.readUInt32();
+                break;
+              }
+              case 32: {
+                bitField0_ |= 0x00000008;
+                interiorScore_ = input.readUInt32();
                 break;
               }
               default: {
@@ -49563,23 +54900,42 @@ public final class SteamdatagramMessagesSdr {
         return yourPopId_;
       }
 
-      public static final int SCORE_FIELD_NUMBER = 3;
-      private int score_;
+      public static final int LEGACY_SCORE_FIELD_NUMBER = 3;
+      private int legacyScore_;
       /**
-       * <code>optional uint32 score = 3;</code>
-       * @return Whether the score field is set.
+       * <code>optional uint32 legacy_score = 3;</code>
+       * @return Whether the legacyScore field is set.
        */
       @java.lang.Override
-      public boolean hasScore() {
+      public boolean hasLegacyScore() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional uint32 score = 3;</code>
-       * @return The score.
+       * <code>optional uint32 legacy_score = 3;</code>
+       * @return The legacyScore.
        */
       @java.lang.Override
-      public int getScore() {
-        return score_;
+      public int getLegacyScore() {
+        return legacyScore_;
+      }
+
+      public static final int INTERIOR_SCORE_FIELD_NUMBER = 4;
+      private int interiorScore_;
+      /**
+       * <code>optional uint32 interior_score = 4;</code>
+       * @return Whether the interiorScore field is set.
+       */
+      @java.lang.Override
+      public boolean hasInteriorScore() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 interior_score = 4;</code>
+       * @return The interiorScore.
+       */
+      @java.lang.Override
+      public int getInteriorScore() {
+        return interiorScore_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -49603,7 +54959,10 @@ public final class SteamdatagramMessagesSdr {
           output.writeFixed32(2, yourPopId_);
         }
         if (((bitField0_ & 0x00000004) != 0)) {
-          output.writeUInt32(3, score_);
+          output.writeUInt32(3, legacyScore_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          output.writeUInt32(4, interiorScore_);
         }
         unknownFields.writeTo(output);
       }
@@ -49624,7 +54983,11 @@ public final class SteamdatagramMessagesSdr {
         }
         if (((bitField0_ & 0x00000004) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(3, score_);
+            .computeUInt32Size(3, legacyScore_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(4, interiorScore_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -49651,10 +55014,15 @@ public final class SteamdatagramMessagesSdr {
           if (getYourPopId()
               != other.getYourPopId()) return false;
         }
-        if (hasScore() != other.hasScore()) return false;
-        if (hasScore()) {
-          if (getScore()
-              != other.getScore()) return false;
+        if (hasLegacyScore() != other.hasLegacyScore()) return false;
+        if (hasLegacyScore()) {
+          if (getLegacyScore()
+              != other.getLegacyScore()) return false;
+        }
+        if (hasInteriorScore() != other.hasInteriorScore()) return false;
+        if (hasInteriorScore()) {
+          if (getInteriorScore()
+              != other.getInteriorScore()) return false;
         }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
@@ -49675,9 +55043,13 @@ public final class SteamdatagramMessagesSdr {
           hash = (37 * hash) + YOUR_POP_ID_FIELD_NUMBER;
           hash = (53 * hash) + getYourPopId();
         }
-        if (hasScore()) {
-          hash = (37 * hash) + SCORE_FIELD_NUMBER;
-          hash = (53 * hash) + getScore();
+        if (hasLegacyScore()) {
+          hash = (37 * hash) + LEGACY_SCORE_FIELD_NUMBER;
+          hash = (53 * hash) + getLegacyScore();
+        }
+        if (hasInteriorScore()) {
+          hash = (37 * hash) + INTERIOR_SCORE_FIELD_NUMBER;
+          hash = (53 * hash) + getInteriorScore();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -49816,8 +55188,10 @@ public final class SteamdatagramMessagesSdr {
           bitField0_ = (bitField0_ & ~0x00000001);
           yourPopId_ = 0;
           bitField0_ = (bitField0_ & ~0x00000002);
-          score_ = 0;
+          legacyScore_ = 0;
           bitField0_ = (bitField0_ & ~0x00000004);
+          interiorScore_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000008);
           return this;
         }
 
@@ -49855,8 +55229,12 @@ public final class SteamdatagramMessagesSdr {
             to_bitField0_ |= 0x00000002;
           }
           if (((from_bitField0_ & 0x00000004) != 0)) {
-            result.score_ = score_;
+            result.legacyScore_ = legacyScore_;
             to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.interiorScore_ = interiorScore_;
+            to_bitField0_ |= 0x00000008;
           }
           result.bitField0_ = to_bitField0_;
           onBuilt();
@@ -49913,8 +55291,11 @@ public final class SteamdatagramMessagesSdr {
           if (other.hasYourPopId()) {
             setYourPopId(other.getYourPopId());
           }
-          if (other.hasScore()) {
-            setScore(other.getScore());
+          if (other.hasLegacyScore()) {
+            setLegacyScore(other.getLegacyScore());
+          }
+          if (other.hasInteriorScore()) {
+            setInteriorScore(other.getInteriorScore());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -50024,41 +55405,80 @@ public final class SteamdatagramMessagesSdr {
           return this;
         }
 
-        private int score_ ;
+        private int legacyScore_ ;
         /**
-         * <code>optional uint32 score = 3;</code>
-         * @return Whether the score field is set.
+         * <code>optional uint32 legacy_score = 3;</code>
+         * @return Whether the legacyScore field is set.
          */
         @java.lang.Override
-        public boolean hasScore() {
+        public boolean hasLegacyScore() {
           return ((bitField0_ & 0x00000004) != 0);
         }
         /**
-         * <code>optional uint32 score = 3;</code>
-         * @return The score.
+         * <code>optional uint32 legacy_score = 3;</code>
+         * @return The legacyScore.
          */
         @java.lang.Override
-        public int getScore() {
-          return score_;
+        public int getLegacyScore() {
+          return legacyScore_;
         }
         /**
-         * <code>optional uint32 score = 3;</code>
-         * @param value The score to set.
+         * <code>optional uint32 legacy_score = 3;</code>
+         * @param value The legacyScore to set.
          * @return This builder for chaining.
          */
-        public Builder setScore(int value) {
+        public Builder setLegacyScore(int value) {
           bitField0_ |= 0x00000004;
-          score_ = value;
+          legacyScore_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional uint32 score = 3;</code>
+         * <code>optional uint32 legacy_score = 3;</code>
          * @return This builder for chaining.
          */
-        public Builder clearScore() {
+        public Builder clearLegacyScore() {
           bitField0_ = (bitField0_ & ~0x00000004);
-          score_ = 0;
+          legacyScore_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int interiorScore_ ;
+        /**
+         * <code>optional uint32 interior_score = 4;</code>
+         * @return Whether the interiorScore field is set.
+         */
+        @java.lang.Override
+        public boolean hasInteriorScore() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <code>optional uint32 interior_score = 4;</code>
+         * @return The interiorScore.
+         */
+        @java.lang.Override
+        public int getInteriorScore() {
+          return interiorScore_;
+        }
+        /**
+         * <code>optional uint32 interior_score = 4;</code>
+         * @param value The interiorScore to set.
+         * @return This builder for chaining.
+         */
+        public Builder setInteriorScore(int value) {
+          bitField0_ |= 0x00000008;
+          interiorScore_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 interior_score = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearInteriorScore() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          interiorScore_ = 0;
           onChanged();
           return this;
         }
@@ -53023,6 +58443,16 @@ public final class SteamdatagramMessagesSdr {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgSteamNetworkingIPAddress_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgSteamNetworkingIPAddress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgSteamDatagramSignedMessageGeneric_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgSteamDatagramSignedMessageGeneric_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgSteamDatagramRouterPingReply_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -53038,25 +58468,20 @@ public final class SteamdatagramMessagesSdr {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgSteamDatagramRouterPingReply_AltAddress_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CMsgSteamDatagramGameserverPingRequest_descriptor;
+    internal_static_CMsgSteamDatagramGameserverPingRequestBody_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CMsgSteamDatagramGameserverPingRequest_fieldAccessorTable;
+      internal_static_CMsgSteamDatagramGameserverPingRequestBody_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CMsgSteamDatagramLegacyGameserverPingReply_descriptor;
+    internal_static_CMsgSteamDatagramGameserverPingRequestEnvelope_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CMsgSteamDatagramLegacyGameserverPingReply_fieldAccessorTable;
+      internal_static_CMsgSteamDatagramGameserverPingRequestEnvelope_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CMsgSteamDatagramGameserverPingReply_descriptor;
+    internal_static_CMsgSteamDatagramGameserverPingReplyData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CMsgSteamDatagramGameserverPingReply_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CMsgSteamDatagramGameserverPingReply_SignedData_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CMsgSteamDatagramGameserverPingReply_SignedData_fieldAccessorTable;
+      internal_static_CMsgSteamDatagramGameserverPingReplyData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgSteamDatagramNoSessionRelayToClient_descriptor;
   private static final 
@@ -53168,6 +58593,11 @@ public final class SteamdatagramMessagesSdr {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgSteamDatagramP2PSessionRequestBody_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgSteamDatagramP2PSessionRequestBody_EncryptedData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgSteamDatagramP2PSessionRequestBody_EncryptedData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgSteamDatagramP2PSessionRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -53229,312 +58659,343 @@ public final class SteamdatagramMessagesSdr {
       "\n%csgo/steamdatagram_messages_sdr.proto\032" +
       "1steam/steamnetworkingsockets_messages_c" +
       "erts.proto\032+steam/steamnetworkingsockets" +
-      "_messages.proto\"\301\006\n CMsgSteamDatagramRou" +
-      "terPingReply\022\030\n\020client_timestamp\030\001 \001(\007\022\"" +
-      "\n\026latency_datacenter_ids\030\002 \003(\007B\002\020\001\022\033\n\017la" +
-      "tency_ping_ms\030\003 \003(\rB\002\020\001\022\026\n\016your_public_i" +
-      "p\030\004 \001(\007\022\030\n\020your_public_port\030\013 \001(\007\022\023\n\013ser" +
-      "ver_time\030\005 \001(\007\022\021\n\tchallenge\030\006 \001(\006\022\036\n\026sec" +
-      "onds_until_shutdown\030\007 \001(\r\022\025\n\rclient_cook" +
-      "ie\030\010 \001(\007\022%\n\035scoring_penalty_relay_cluste" +
-      "r\030\t \001(\r\022\r\n\005flags\030\014 \001(\r\022J\n\020route_exceptio" +
-      "ns\030\n \003(\01320.CMsgSteamDatagramRouterPingRe" +
-      "ply.RouteException\022C\n\ralt_addresses\030\r \003(" +
-      "\0132,.CMsgSteamDatagramRouterPingReply.Alt" +
-      "Address\032H\n\016RouteException\022\026\n\016data_center" +
-      "_id\030\001 \001(\007\022\r\n\005flags\030\002 \001(\r\022\017\n\007penalty\030\003 \001(" +
-      "\r\032\321\001\n\nAltAddress\022\014\n\004ipv4\030\001 \001(\007\022\014\n\004port\030\002" +
-      " \001(\r\022\017\n\007penalty\030\003 \001(\r\022X\n\010protocol\030\004 \001(\0162" +
-      "5.CMsgSteamDatagramRouterPingReply.AltAd" +
-      "dress.Protocol:\017DefaultProtocol\022\n\n\002id\030\005 " +
-      "\001(\t\"0\n\010Protocol\022\023\n\017DefaultProtocol\020\000\022\017\n\013" +
-      "NetworkNext\020\001\"L\n\005Flags\022 \n\034FLAG_MAYBE_MOR" +
-      "E_DATA_CENTERS\020\001\022!\n\035FLAG_MAYBE_MORE_ALT_" +
-      "ADDRESSES\020\002\"\234\001\n&CMsgSteamDatagramGameser" +
-      "verPingRequest\022\026\n\016your_public_ip\030\001 \001(\007\022\030" +
-      "\n\020your_public_port\030\005 \001(\007\022\023\n\013server_time\030" +
-      "\002 \001(\007\022\021\n\tchallenge\030\003 \001(\006\022\030\n\020router_times" +
-      "tamp\030\004 \001(\007\"Y\n*CMsgSteamDatagramLegacyGam" +
-      "eserverPingReply\022\030\n\020router_timestamp\030\004 \001" +
-      "(\007\022\021\n\tdummy_pad\030c \001(\006\"\373\001\n$CMsgSteamDatag" +
-      "ramGameserverPingReply\0221\n\004cert\030\001 \001(\0132#.C" +
+      "_messages.proto\"6\n\034CMsgSteamNetworkingIP" +
+      "Address\022\n\n\002v4\030\001 \001(\007\022\n\n\002v6\030\002 \001(\014\"\226\001\n%CMsg" +
+      "SteamDatagramSignedMessageGeneric\0221\n\004cer" +
+      "t\030\001 \001(\0132#.CMsgSteamDatagramCertificateSi" +
+      "gned\022\023\n\013signed_data\030\002 \001(\014\022\021\n\tsignature\030\003" +
+      " \001(\014\022\022\n\tdummy_pad\030\377\007 \001(\014\"\235\007\n CMsgSteamDa" +
+      "tagramRouterPingReply\022\030\n\020client_timestam" +
+      "p\030\001 \001(\007\022\"\n\026latency_datacenter_ids\030\002 \003(\007B" +
+      "\002\020\001\022\033\n\017latency_ping_ms\030\003 \003(\rB\002\020\001\022&\n\032late" +
+      "ncy_datacenter_ids_p2p\030\016 \003(\007B\002\020\001\022\037\n\023late" +
+      "ncy_ping_ms_p2p\030\017 \003(\rB\002\020\001\022\026\n\016your_public" +
+      "_ip\030\004 \001(\007\022\030\n\020your_public_port\030\013 \001(\007\022\023\n\013s" +
+      "erver_time\030\005 \001(\007\022\021\n\tchallenge\030\006 \001(\006\022\036\n\026s" +
+      "econds_until_shutdown\030\007 \001(\r\022\025\n\rclient_co" +
+      "okie\030\010 \001(\007\022%\n\035scoring_penalty_relay_clus" +
+      "ter\030\t \001(\r\022\r\n\005flags\030\014 \001(\r\022J\n\020route_except" +
+      "ions\030\n \003(\01320.CMsgSteamDatagramRouterPing" +
+      "Reply.RouteException\022C\n\ralt_addresses\030\r " +
+      "\003(\0132,.CMsgSteamDatagramRouterPingReply.A" +
+      "ltAddress\022\021\n\tdummy_pad\030c \001(\014\032H\n\016RouteExc" +
+      "eption\022\026\n\016data_center_id\030\001 \001(\007\022\r\n\005flags\030" +
+      "\002 \001(\r\022\017\n\007penalty\030\003 \001(\r\032\321\001\n\nAltAddress\022\014\n" +
+      "\004ipv4\030\001 \001(\007\022\014\n\004port\030\002 \001(\r\022\017\n\007penalty\030\003 \001" +
+      "(\r\022X\n\010protocol\030\004 \001(\01625.CMsgSteamDatagram" +
+      "RouterPingReply.AltAddress.Protocol:\017Def" +
+      "aultProtocol\022\n\n\002id\030\005 \001(\t\"0\n\010Protocol\022\023\n\017" +
+      "DefaultProtocol\020\000\022\017\n\013NetworkNext\020\001\"L\n\005Fl" +
+      "ags\022 \n\034FLAG_MAYBE_MORE_DATA_CENTERS\020\001\022!\n" +
+      "\035FLAG_MAYBE_MORE_ALT_ADDRESSES\020\002\"\200\002\n*CMs" +
+      "gSteamDatagramGameserverPingRequestBody\022" +
+      "\023\n\013relay_popid\030\001 \001(\007\0225\n\016your_public_ip\030\002" +
+      " \001(\0132\035.CMsgSteamNetworkingIPAddress\022\030\n\020y" +
+      "our_public_port\030\003 \001(\r\022\027\n\017relay_unix_time" +
+      "\030\004 \001(\004\022\026\n\016routing_secret\030\005 \001(\006\022-\n\006my_ips" +
+      "\030\006 \003(\0132\035.CMsgSteamNetworkingIPAddress\022\014\n" +
+      "\004echo\030\010 \001(\014\"\272\002\n.CMsgSteamDatagramGameser" +
+      "verPingRequestEnvelope\0221\n\004cert\030\006 \001(\0132#.C" +
       "MsgSteamDatagramCertificateSigned\022\023\n\013sig" +
-      "ned_data\030\002 \001(\014\022\021\n\tsignature\030\003 \001(\014\032x\n\nSig" +
-      "nedData\022\026\n\016challenge_time\030\002 \001(\007\022\021\n\tchall" +
-      "enge\030\003 \001(\006\022\030\n\020router_timestamp\030\004 \001(\007\022\026\n\016" +
-      "data_center_id\030\005 \001(\007\022\r\n\005appid\030\006 \001(\r\"\272\001\n\'" +
-      "CMsgSteamDatagramNoSessionRelayToClient\022" +
-      "\025\n\rconnection_id\030\007 \001(\007\022\026\n\016your_public_ip" +
-      "\030\002 \001(\007\022\030\n\020your_public_port\030\006 \001(\007\022\023\n\013serv" +
-      "er_time\030\003 \001(\007\022\021\n\tchallenge\030\004 \001(\006\022\036\n\026seco" +
-      "nds_until_shutdown\030\005 \001(\r\"\227\001\n%CMsgSteamDa" +
-      "tagramNoSessionRelayToPeer\022\037\n\027legacy_rel" +
-      "ay_session_id\030\001 \001(\r\022\035\n\025from_relay_sessio" +
-      "n_id\030\002 \001(\007\022\032\n\022from_connection_id\030\007 \001(\007\022\022" +
-      "\n\nkludge_pad\030c \001(\006\"A\n(CMsgSteamDatagramC" +
-      "lientPingSampleRequest\022\025\n\rconnection_id\030" +
-      "\001 \001(\007\"\214\007\n&CMsgSteamDatagramClientPingSam" +
-      "pleReply\022\025\n\rconnection_id\030\001 \001(\007\022\027\n\017overr" +
-      "ide_active\030\004 \001(\010\0229\n\004pops\030\002 \003(\0132+.CMsgSte" +
-      "amDatagramClientPingSampleReply.POP\022U\n\023l" +
-      "egacy_data_centers\030\003 \003(\01328.CMsgSteamData" +
-      "gramClientPingSampleReply.LegacyDataCent" +
-      "er\032\270\004\n\003POP\022\016\n\006pop_id\030\001 \001(\007\022\035\n\025default_fr" +
-      "ont_ping_ms\030\002 \001(\r\022\027\n\017cluster_penalty\030\004 \001" +
-      "(\r\022M\n\ralt_addresses\030\007 \003(\01326.CMsgSteamDat" +
-      "agramClientPingSampleReply.POP.AltAddres" +
-      "s\022\033\n\023default_e2e_ping_ms\030\003 \001(\r\022\031\n\021defaul" +
-      "t_e2e_score\030\005 \001(\r\022!\n\031p2p_via_peer_relay_" +
-      "pop_id\030\006 \001(\007\022\027\n\017best_dc_ping_ms\030\t \001(\r\022\025\n" +
-      "\rbest_dc_score\030\n \001(\r\022 \n\030best_dc_via_rela" +
-      "y_pop_id\030\013 \001(\007\022\032\n\022default_dc_ping_ms\030\014 \001" +
-      "(\r\022\030\n\020default_dc_score\030\r \001(\r\022#\n\033default_" +
-      "dc_via_relay_pop_id\030\016 \001(\007\022\027\n\017test_dc_pin" +
-      "g_ms\030\017 \001(\r\022\025\n\rtest_dc_score\030\020 \001(\r\022 \n\030tes" +
-      "t_dc_via_relay_pop_id\030\021 \001(\007\032@\n\nAltAddres" +
-      "s\022\n\n\002id\030\001 \001(\t\022\025\n\rfront_ping_ms\030\002 \001(\r\022\017\n\007" +
-      "penalty\030\003 \001(\r\032e\n\020LegacyDataCenter\022\026\n\016dat" +
-      "a_center_id\030\001 \001(\007\022 \n\030best_dc_via_relay_p" +
-      "op_id\030\002 \001(\007\022\027\n\017best_dc_ping_ms\030\003 \001(\r\"\216\005\n" +
-      "&CMsgSteamDatagramClientSwitchedPrimary\022" +
-      "\025\n\rconnection_id\030\001 \001(\007\022\017\n\007from_ip\030\002 \001(\007\022" +
-      "\021\n\tfrom_port\030\003 \001(\r\022\033\n\023from_router_cluste" +
-      "r\030\004 \001(\007\022\030\n\020from_active_time\030\005 \001(\r\022 \n\030fro" +
-      "m_active_packets_recv\030\006 \001(\r\022\033\n\023from_drop" +
-      "ped_reason\030\007 \001(\t\022\016\n\006gap_ms\030\010 \001(\r\022O\n\020from" +
-      "_quality_now\030\t \001(\01325.CMsgSteamDatagramCl" +
-      "ientSwitchedPrimary.RouterQuality\022M\n\016to_" +
-      "quality_now\030\n \001(\01325.CMsgSteamDatagramCli" +
-      "entSwitchedPrimary.RouterQuality\022P\n\021from" +
-      "_quality_then\030\013 \001(\01325.CMsgSteamDatagramC" +
-      "lientSwitchedPrimary.RouterQuality\022N\n\017to" +
-      "_quality_then\030\014 \001(\01325.CMsgSteamDatagramC" +
-      "lientSwitchedPrimary.RouterQuality\032a\n\rRo" +
-      "uterQuality\022\r\n\005score\030\001 \001(\r\022\022\n\nfront_ping" +
-      "\030\002 \001(\r\022\021\n\tback_ping\030\003 \001(\r\022\032\n\022seconds_unt" +
-      "il_down\030\004 \001(\r\"\302\002\n\037CMsgSteamDatagramConne" +
-      "ctRequest\022\025\n\rconnection_id\030\001 \001(\007\022\024\n\014my_t" +
-      "imestamp\030\004 \001(\006\022\023\n\013ping_est_ms\030\005 \001(\r\022\024\n\014v" +
-      "irtual_port\030\t \001(\r\022#\n\033gameserver_relay_se" +
-      "ssion_id\030\002 \001(\r\0227\n\005crypt\030\006 \001(\0132(.CMsgStea" +
-      "mDatagramSessionCryptInfoSigned\0221\n\004cert\030" +
-      "\007 \001(\0132#.CMsgSteamDatagramCertificateSign" +
-      "ed\022\026\n\016routing_secret\030\n \001(\006\022\036\n\026legacy_cli" +
-      "ent_steam_id\030\003 \001(\006\"\232\002\n\032CMsgSteamDatagram" +
-      "ConnectOK\022\034\n\024client_connection_id\030\001 \001(\007\022" +
-      "\034\n\024server_connection_id\030\007 \001(\007\022\026\n\016your_ti" +
-      "mestamp\030\003 \001(\006\022\027\n\017delay_time_usec\030\004 \001(\r\022#" +
+      "ned_data\030\007 \001(\014\022\021\n\tsignature\030\010 \001(\014\022\035\n\025leg" +
+      "acy_your_public_ip\030\001 \001(\007\022\037\n\027legacy_your_" +
+      "public_port\030\005 \001(\007\022\036\n\026legacy_relay_unix_t" +
+      "ime\030\002 \001(\007\022\030\n\020legacy_challenge\030\003 \001(\006\022\037\n\027l" +
+      "egacy_router_timestamp\030\004 \001(\007\022\022\n\tdummy_pa" +
+      "d\030\377\007 \001(\014\"\227\002\n(CMsgSteamDatagramGameserver" +
+      "PingReplyData\022\034\n\024echo_relay_unix_time\030\002 " +
+      "\001(\007\022\014\n\004echo\030\010 \001(\014\022\030\n\020legacy_challenge\030\003 " +
+      "\001(\006\022\037\n\027legacy_router_timestamp\030\004 \001(\007\022\026\n\016" +
+      "data_center_id\030\005 \001(\007\022\r\n\005appid\030\006 \001(\r\022\030\n\020p" +
+      "rotocol_version\030\007 \001(\r\022\r\n\005build\030\t \001(\t\022\036\n\026" +
+      "network_config_version\030\n \001(\004\022\024\n\014my_unix_" +
+      "time\030\013 \001(\007\"\272\001\n\'CMsgSteamDatagramNoSessio" +
+      "nRelayToClient\022\025\n\rconnection_id\030\007 \001(\007\022\026\n" +
+      "\016your_public_ip\030\002 \001(\007\022\030\n\020your_public_por" +
+      "t\030\006 \001(\007\022\023\n\013server_time\030\003 \001(\007\022\021\n\tchalleng" +
+      "e\030\004 \001(\006\022\036\n\026seconds_until_shutdown\030\005 \001(\r\"" +
+      "\227\001\n%CMsgSteamDatagramNoSessionRelayToPee" +
+      "r\022\037\n\027legacy_relay_session_id\030\001 \001(\r\022\035\n\025fr" +
+      "om_relay_session_id\030\002 \001(\007\022\032\n\022from_connec" +
+      "tion_id\030\007 \001(\007\022\022\n\nkludge_pad\030c \001(\006\"A\n(CMs" +
+      "gSteamDatagramClientPingSampleRequest\022\025\n" +
+      "\rconnection_id\030\001 \001(\007\"\222\007\n&CMsgSteamDatagr" +
+      "amClientPingSampleReply\022\025\n\rconnection_id" +
+      "\030\001 \001(\007\022\035\n\025relay_override_active\030\005 \001(\010\0229\n" +
+      "\004pops\030\002 \003(\0132+.CMsgSteamDatagramClientPin" +
+      "gSampleReply.POP\022U\n\023legacy_data_centers\030" +
+      "\003 \003(\01328.CMsgSteamDatagramClientPingSampl" +
+      "eReply.LegacyDataCenter\032\270\004\n\003POP\022\016\n\006pop_i" +
+      "d\030\001 \001(\007\022\035\n\025default_front_ping_ms\030\002 \001(\r\022\027" +
+      "\n\017cluster_penalty\030\004 \001(\r\022M\n\ralt_addresses" +
+      "\030\007 \003(\01326.CMsgSteamDatagramClientPingSamp" +
+      "leReply.POP.AltAddress\022\033\n\023default_e2e_pi" +
+      "ng_ms\030\003 \001(\r\022\031\n\021default_e2e_score\030\005 \001(\r\022!" +
+      "\n\031p2p_via_peer_relay_pop_id\030\006 \001(\007\022\027\n\017bes" +
+      "t_dc_ping_ms\030\t \001(\r\022\025\n\rbest_dc_score\030\n \001(" +
+      "\r\022 \n\030best_dc_via_relay_pop_id\030\013 \001(\007\022\032\n\022d" +
+      "efault_dc_ping_ms\030\014 \001(\r\022\030\n\020default_dc_sc" +
+      "ore\030\r \001(\r\022#\n\033default_dc_via_relay_pop_id" +
+      "\030\016 \001(\007\022\027\n\017test_dc_ping_ms\030\017 \001(\r\022\025\n\rtest_" +
+      "dc_score\030\020 \001(\r\022 \n\030test_dc_via_relay_pop_" +
+      "id\030\021 \001(\007\032@\n\nAltAddress\022\n\n\002id\030\001 \001(\t\022\025\n\rfr" +
+      "ont_ping_ms\030\002 \001(\r\022\017\n\007penalty\030\003 \001(\r\032e\n\020Le" +
+      "gacyDataCenter\022\026\n\016data_center_id\030\001 \001(\007\022 " +
+      "\n\030best_dc_via_relay_pop_id\030\002 \001(\007\022\027\n\017best" +
+      "_dc_ping_ms\030\003 \001(\r\"\216\005\n&CMsgSteamDatagramC" +
+      "lientSwitchedPrimary\022\025\n\rconnection_id\030\001 " +
+      "\001(\007\022\017\n\007from_ip\030\002 \001(\007\022\021\n\tfrom_port\030\003 \001(\r\022" +
+      "\033\n\023from_router_cluster\030\004 \001(\007\022\030\n\020from_act" +
+      "ive_time\030\005 \001(\r\022 \n\030from_active_packets_re" +
+      "cv\030\006 \001(\r\022\033\n\023from_dropped_reason\030\007 \001(\t\022\016\n" +
+      "\006gap_ms\030\010 \001(\r\022O\n\020from_quality_now\030\t \001(\0132" +
+      "5.CMsgSteamDatagramClientSwitchedPrimary" +
+      ".RouterQuality\022M\n\016to_quality_now\030\n \001(\01325" +
+      ".CMsgSteamDatagramClientSwitchedPrimary." +
+      "RouterQuality\022P\n\021from_quality_then\030\013 \001(\013" +
+      "25.CMsgSteamDatagramClientSwitchedPrimar" +
+      "y.RouterQuality\022N\n\017to_quality_then\030\014 \001(\013" +
+      "25.CMsgSteamDatagramClientSwitchedPrimar" +
+      "y.RouterQuality\032a\n\rRouterQuality\022\r\n\005scor" +
+      "e\030\001 \001(\r\022\022\n\nfront_ping\030\002 \001(\r\022\021\n\tback_ping" +
+      "\030\003 \001(\r\022\032\n\022seconds_until_down\030\004 \001(\r\"\302\002\n\037C" +
+      "MsgSteamDatagramConnectRequest\022\025\n\rconnec" +
+      "tion_id\030\001 \001(\007\022\024\n\014my_timestamp\030\004 \001(\006\022\023\n\013p" +
+      "ing_est_ms\030\005 \001(\r\022\024\n\014virtual_port\030\t \001(\r\022#" +
       "\n\033gameserver_relay_session_id\030\002 \001(\r\0227\n\005c" +
-      "rypt\030\005 \001(\0132(.CMsgSteamDatagramSessionCry" +
-      "ptInfoSigned\0221\n\004cert\030\006 \001(\0132#.CMsgSteamDa" +
-      "tagramCertificateSigned\"\204\002\n\'CMsgSteamNet" +
-      "workingP2PSDRRoutingSummary\022\024\n\014initial_p" +
-      "ing\030\001 \001(\r\022 \n\030initial_ping_front_local\030\002 " +
-      "\001(\r\022!\n\031initial_ping_front_remote\030\003 \001(\r\022\025" +
-      "\n\rinitial_score\030\004 \001(\r\022\031\n\021initial_pop_loc" +
-      "al\030\005 \001(\007\022\032\n\022initial_pop_remote\030\006 \001(\007\022\026\n\016" +
-      "negotiation_ms\030\007 \001(\r\022\030\n\020selected_seconds" +
-      "\030\010 \001(\r\"\217\001\n\"CMsgSteamDatagramP2PRoutingSu" +
-      "mmary\0222\n\003ice\030\002 \001(\0132%.CMsgSteamNetworking" +
-      "ICESessionSummary\0225\n\003sdr\030\003 \001(\0132(.CMsgSte" +
-      "amNetworkingP2PSDRRoutingSummary\"\312\006\n!CMs" +
-      "gSteamDatagramConnectionClosed\022\030\n\020to_con" +
-      "nection_id\030\007 \001(\007\022\032\n\022from_connection_id\030\010" +
-      " \001(\007\022\034\n\024from_identity_string\030\017 \001(\t\022M\n\033le" +
-      "gacy_from_identity_binary\030\r \001(\0132(.CMsgSt" +
-      "eamNetworkingIdentityLegacyBinary\022\034\n\024leg" +
-      "acy_from_steam_id\030\003 \001(\006\022*\n\"legacy_gamese" +
-      "rver_relay_session_id\030\002 \001(\r\022\033\n\023to_relay_" +
-      "session_id\030\t \001(\007\022\035\n\025from_relay_session_i" +
-      "d\030\n \001(\007\022*\n\"forward_target_relay_routing_" +
-      "token\030\013 \001(\014\022\037\n\027forward_target_revision\030\014" +
-      " \001(\r\022G\n\nrelay_mode\030\004 \001(\0162-.CMsgSteamData" +
-      "gramConnectionClosed.ERelayMode:\004None\022\r\n" +
-      "\005debug\030\005 \001(\t\022\023\n\013reason_code\030\006 \001(\r\022\026\n\016rou" +
-      "ting_secret\030\016 \001(\006\022\033\n\023not_primary_session" +
-      "\030\020 \001(\010\022\035\n\025not_primary_transport\030\023 \001(\010\022:\n" +
-      "\rquality_relay\030\021 \001(\0132#.CMsgSteamDatagram" +
-      "ConnectionQuality\0228\n\013quality_e2e\030\022 \001(\0132#" +
-      ".CMsgSteamDatagramConnectionQuality\022@\n\023p" +
-      "2p_routing_summary\030\025 \001(\0132#.CMsgSteamData" +
-      "gramP2PRoutingSummary\"6\n\nERelayMode\022\010\n\004N" +
-      "one\020\000\022\014\n\010EndToEnd\020\001\022\020\n\014ClosedByPeer\020\002\"\255\004" +
-      "\n\035CMsgSteamDatagramNoConnection\022\030\n\020to_co" +
-      "nnection_id\030\005 \001(\007\022\032\n\022from_connection_id\030" +
-      "\006 \001(\007\022*\n\"legacy_gameserver_relay_session" +
-      "_id\030\002 \001(\r\022\033\n\023to_relay_session_id\030\t \001(\007\022\035" +
-      "\n\025from_relay_session_id\030\n \001(\007\022\034\n\024from_id" +
-      "entity_string\030\007 \001(\t\022\034\n\024legacy_from_steam" +
-      "_id\030\003 \001(\006\022\022\n\nend_to_end\030\004 \001(\010\022\033\n\023not_pri" +
-      "mary_session\030\014 \001(\010\022\035\n\025not_primary_transp" +
-      "ort\030\017 \001(\010\022:\n\rquality_relay\030\r \001(\0132#.CMsgS" +
-      "teamDatagramConnectionQuality\0228\n\013quality" +
-      "_e2e\030\016 \001(\0132#.CMsgSteamDatagramConnection" +
-      "Quality\022@\n\023p2p_routing_summary\030\020 \001(\0132#.C" +
-      "MsgSteamDatagramP2PRoutingSummary\022\026\n\016rou" +
-      "ting_secret\030\013 \001(\006\022\022\n\tdummy_pad\030\377\007 \001(\007\"\375\001" +
-      "\n)CMsgSteamDatagramGameserverSessionRequ" +
-      "est\022\016\n\006ticket\030\001 \001(\014\022\026\n\016challenge_time\030\003 " +
-      "\001(\007\022\021\n\tchallenge\030\004 \001(\006\022\034\n\024client_connect" +
-      "ion_id\030\005 \001(\007\022\034\n\024server_connection_id\030\010 \001" +
-      "(\007\022\036\n\026network_config_version\030\006 \001(\r\022\030\n\020pr" +
-      "otocol_version\030\007 \001(\r\022\020\n\010platform\030\t \001(\t\022\r" +
-      "\n\005build\030\n \001(\t\"\350\001\n-CMsgSteamDatagramGames" +
-      "erverSessionEstablished\022\025\n\rconnection_id" +
-      "\030\001 \001(\007\022\"\n\032gameserver_identity_string\030\002 \001" +
-      "(\t\022\036\n\026seconds_until_shutdown\030\004 \001(\r\022\023\n\013se" +
-      "q_num_r2c\030\006 \001(\r\022$\n\034dummy_legacy_identity" +
-      "_binary\030\007 \001(\014\022!\n\031legacy_gameserver_steam" +
-      "id\030\003 \001(\006\"\221\003\n.CMsgSteamDatagramConnection" +
-      "StatsClientToRouter\022:\n\rquality_relay\030\001 \001" +
+      "rypt\030\006 \001(\0132(.CMsgSteamDatagramSessionCry" +
+      "ptInfoSigned\0221\n\004cert\030\007 \001(\0132#.CMsgSteamDa" +
+      "tagramCertificateSigned\022\026\n\016routing_secre" +
+      "t\030\n \001(\006\022\036\n\026legacy_client_steam_id\030\003 \001(\006\"" +
+      "\232\002\n\032CMsgSteamDatagramConnectOK\022\034\n\024client" +
+      "_connection_id\030\001 \001(\007\022\034\n\024server_connectio" +
+      "n_id\030\007 \001(\007\022\026\n\016your_timestamp\030\003 \001(\006\022\027\n\017de" +
+      "lay_time_usec\030\004 \001(\r\022#\n\033gameserver_relay_" +
+      "session_id\030\002 \001(\r\0227\n\005crypt\030\005 \001(\0132(.CMsgSt" +
+      "eamDatagramSessionCryptInfoSigned\0221\n\004cer" +
+      "t\030\006 \001(\0132#.CMsgSteamDatagramCertificateSi" +
+      "gned\"\256\003\n\'CMsgSteamNetworkingP2PSDRRoutin" +
+      "gSummary\022\024\n\014initial_ping\030\001 \001(\r\022 \n\030initia" +
+      "l_ping_front_local\030\002 \001(\r\022!\n\031initial_ping" +
+      "_front_remote\030\003 \001(\r\022\025\n\rinitial_score\030\004 \001" +
+      "(\r\022\031\n\021initial_pop_local\030\005 \001(\007\022\032\n\022initial" +
+      "_pop_remote\030\006 \001(\007\022\021\n\tbest_ping\030\013 \001(\r\022\035\n\025" +
+      "best_ping_front_local\030\014 \001(\r\022\036\n\026best_ping" +
+      "_front_remote\030\r \001(\r\022\022\n\nbest_score\030\016 \001(\r\022" +
+      "\026\n\016best_pop_local\030\017 \001(\007\022\027\n\017best_pop_remo" +
+      "te\030\020 \001(\007\022\021\n\tbest_time\030\021 \001(\r\022\026\n\016negotiati" +
+      "on_ms\030\007 \001(\r\022\030\n\020selected_seconds\030\010 \001(\r\"\217\001" +
+      "\n\"CMsgSteamDatagramP2PRoutingSummary\0222\n\003" +
+      "ice\030\002 \001(\0132%.CMsgSteamNetworkingICESessio" +
+      "nSummary\0225\n\003sdr\030\003 \001(\0132(.CMsgSteamNetwork" +
+      "ingP2PSDRRoutingSummary\"\351\006\n!CMsgSteamDat" +
+      "agramConnectionClosed\022\030\n\020to_connection_i" +
+      "d\030\007 \001(\007\022\032\n\022from_connection_id\030\010 \001(\007\022\034\n\024f" +
+      "rom_identity_string\030\017 \001(\t\022M\n\033legacy_from" +
+      "_identity_binary\030\r \001(\0132(.CMsgSteamNetwor" +
+      "kingIdentityLegacyBinary\022\034\n\024legacy_from_" +
+      "steam_id\030\003 \001(\006\022*\n\"legacy_gameserver_rela" +
+      "y_session_id\030\002 \001(\r\022\033\n\023to_relay_session_i" +
+      "d\030\t \001(\007\022\035\n\025from_relay_session_id\030\n \001(\007\022*" +
+      "\n\"forward_target_relay_routing_token\030\013 \001" +
+      "(\014\022\037\n\027forward_target_revision\030\014 \001(\r\022G\n\nr" +
+      "elay_mode\030\004 \001(\0162-.CMsgSteamDatagramConne" +
+      "ctionClosed.ERelayMode:\004None\022\r\n\005debug\030\005 " +
+      "\001(\t\022\023\n\013reason_code\030\006 \001(\r\022\026\n\016routing_secr" +
+      "et\030\016 \001(\006\022\033\n\023not_primary_session\030\020 \001(\010\022\035\n" +
+      "\025not_primary_transport\030\023 \001(\010\022\035\n\025relay_ov" +
+      "erride_active\030\026 \001(\010\022:\n\rquality_relay\030\021 \001" +
       "(\0132#.CMsgSteamDatagramConnectionQuality\022" +
-      "8\n\013quality_e2e\030\002 \001(\0132#.CMsgSteamDatagram" +
-      "ConnectionQuality\022\021\n\tack_relay\030\004 \003(\007\022\026\n\016" +
-      "legacy_ack_e2e\030\005 \003(\007\022\r\n\005flags\030\006 \001(\r\022\034\n\024c" +
-      "lient_connection_id\030\010 \001(\007\022\023\n\013seq_num_c2r" +
-      "\030\t \001(\r\022\023\n\013seq_num_e2e\030\n \001(\r\"g\n\005Flags\022\025\n\021" +
-      "ACK_REQUEST_RELAY\020\001\022\023\n\017ACK_REQUEST_E2E\020\002" +
-      "\022\031\n\025ACK_REQUEST_IMMEDIATE\020\004\022\027\n\023NOT_PRIMA" +
-      "RY_SESSION\020\010\"\371\003\n.CMsgSteamDatagramConnec" +
-      "tionStatsRouterToClient\022:\n\rquality_relay" +
-      "\030\001 \001(\0132#.CMsgSteamDatagramConnectionQual" +
-      "ity\0228\n\013quality_e2e\030\002 \001(\0132#.CMsgSteamData" +
-      "gramConnectionQuality\022\036\n\026seconds_until_s" +
-      "hutdown\030\006 \001(\r\022\032\n\022migrate_request_ip\030\n \001(" +
-      "\007\022\034\n\024migrate_request_port\030\013 \001(\r\022%\n\035scori" +
-      "ng_penalty_relay_cluster\030\014 \001(\r\022\021\n\tack_re" +
-      "lay\030\r \003(\007\022\026\n\016legacy_ack_e2e\030\016 \003(\007\022\r\n\005fla" +
-      "gs\030\017 \001(\r\022\034\n\024client_connection_id\030\007 \001(\007\022\023" +
-      "\n\013seq_num_r2c\030\010 \001(\r\022\023\n\013seq_num_e2e\030\t \001(\r" +
-      "\"N\n\005Flags\022\025\n\021ACK_REQUEST_RELAY\020\001\022\023\n\017ACK_" +
-      "REQUEST_E2E\020\002\022\031\n\025ACK_REQUEST_IMMEDIATE\020\004" +
-      "\"\210\004\n.CMsgSteamDatagramConnectionStatsRou" +
-      "terToServer\022:\n\rquality_relay\030\001 \001(\0132#.CMs" +
-      "gSteamDatagramConnectionQuality\0228\n\013quali" +
-      "ty_e2e\030\002 \001(\0132#.CMsgSteamDatagramConnecti" +
-      "onQuality\022\021\n\tack_relay\030\n \003(\007\022\026\n\016legacy_a" +
-      "ck_e2e\030\013 \003(\007\022\r\n\005flags\030\014 \001(\r\022\023\n\013seq_num_r" +
-      "2s\030\005 \001(\r\022\023\n\013seq_num_e2e\030\006 \001(\r\022\036\n\026client_" +
-      "identity_string\030\017 \001(\t\022\036\n\026legacy_client_s" +
-      "team_id\030\007 \001(\006\022\030\n\020relay_session_id\030\010 \001(\r\022" +
-      "\034\n\024client_connection_id\030\t \001(\007\022\034\n\024server_" +
-      "connection_id\030\r \001(\007\022\026\n\016routing_secret\030\016 " +
-      "\001(\006\"N\n\005Flags\022\025\n\021ACK_REQUEST_RELAY\020\001\022\023\n\017A" +
-      "CK_REQUEST_E2E\020\002\022\031\n\025ACK_REQUEST_IMMEDIAT" +
-      "E\020\004\"\260\003\n.CMsgSteamDatagramConnectionStats" +
-      "ServerToRouter\022:\n\rquality_relay\030\001 \001(\0132#." +
-      "CMsgSteamDatagramConnectionQuality\0228\n\013qu" +
-      "ality_e2e\030\002 \001(\0132#.CMsgSteamDatagramConne" +
-      "ctionQuality\022\021\n\tack_relay\030\010 \003(\007\022\026\n\016legac" +
-      "y_ack_e2e\030\t \003(\007\022\r\n\005flags\030\n \001(\r\022\023\n\013seq_nu" +
-      "m_s2r\030\003 \001(\r\022\023\n\013seq_num_e2e\030\004 \001(\r\022\030\n\020rela" +
-      "y_session_id\030\006 \001(\r\022\034\n\024client_connection_" +
-      "id\030\007 \001(\007\022\034\n\024server_connection_id\030\013 \001(\007\"N" +
-      "\n\005Flags\022\025\n\021ACK_REQUEST_RELAY\020\001\022\023\n\017ACK_RE" +
-      "QUEST_E2E\020\002\022\031\n\025ACK_REQUEST_IMMEDIATE\020\004\"\276" +
-      "\002\n&CMsgSteamDatagramP2PSessionRequestBod" +
-      "y\022\026\n\016challenge_time\030\001 \001(\007\022\021\n\tchallenge\030\002" +
-      " \001(\006\022\034\n\024client_connection_id\030\003 \001(\007\022\034\n\024le" +
-      "gacy_peer_steam_id\030\004 \001(\006\022\034\n\024peer_identit" +
-      "y_string\030\013 \001(\t\022\032\n\022peer_connection_id\030\005 \001" +
-      "(\007\022\030\n\020protocol_version\030\010 \001(\r\022\036\n\026network_" +
-      "config_version\030\t \001(\r\022\030\n\020unused_public_ip" +
-      "\030\n \001(\007\022\020\n\010platform\030\014 \001(\t\022\r\n\005build\030\r \001(\t\"" +
-      "x\n\"CMsgSteamDatagramP2PSessionRequest\0221\n" +
-      "\004cert\030\001 \001(\0132#.CMsgSteamDatagramCertifica" +
-      "teSigned\022\014\n\004body\030\002 \001(\014\022\021\n\tsignature\030\003 \001(" +
-      "\014\"\221\001\n&CMsgSteamDatagramP2PSessionEstabli" +
-      "shed\022\025\n\rconnection_id\030\001 \001(\007\022\036\n\026seconds_u" +
-      "ntil_shutdown\030\003 \001(\r\022\033\n\023relay_routing_tok" +
-      "en\030\004 \001(\014\022\023\n\013seq_num_r2c\030\005 \001(\r\"\356\004\n1CMsgSt" +
-      "eamDatagramConnectionStatsP2PClientToRou" +
-      "ter\022:\n\rquality_relay\030\001 \001(\0132#.CMsgSteamDa" +
-      "tagramConnectionQuality\0228\n\013quality_e2e\030\002" +
-      " \001(\0132#.CMsgSteamDatagramConnectionQualit" +
-      "y\022@\n\023p2p_routing_summary\030\016 \001(\0132#.CMsgSte" +
-      "amDatagramP2PRoutingSummary\022\021\n\tack_relay" +
-      "\030\003 \003(\007\022\026\n\016legacy_ack_e2e\030\004 \003(\007\022\r\n\005flags\030" +
-      "\005 \001(\r\022*\n\"forward_target_relay_routing_to" +
-      "ken\030\006 \001(\014\022\037\n\027forward_target_revision\030\007 \001" +
-      "(\r\022\016\n\006routes\030\010 \001(\014\022 \n\030ack_peer_routes_re" +
-      "vision\030\t \001(\r\022\025\n\rconnection_id\030\n \001(\007\022\023\n\013s" +
-      "eq_num_c2r\030\013 \001(\r\022\023\n\013seq_num_e2e\030\014 \001(\r\"\206\001" +
-      "\n\005Flags\022\025\n\021ACK_REQUEST_RELAY\020\001\022\023\n\017ACK_RE" +
-      "QUEST_E2E\020\002\022\031\n\025ACK_REQUEST_IMMEDIATE\020\004\022\027" +
-      "\n\023NOT_PRIMARY_SESSION\020\010\022\035\n\031NOT_PRIMARY_T" +
-      "RANSPORT_E2E\020\020\"\353\004\n1CMsgSteamDatagramConn" +
-      "ectionStatsP2PRouterToClient\022:\n\rquality_" +
-      "relay\030\001 \001(\0132#.CMsgSteamDatagramConnectio" +
-      "nQuality\0228\n\013quality_e2e\030\002 \001(\0132#.CMsgStea" +
-      "mDatagramConnectionQuality\022\036\n\026seconds_un" +
-      "til_shutdown\030\003 \001(\r\022\032\n\022migrate_request_ip" +
-      "\030\004 \001(\007\022\034\n\024migrate_request_port\030\005 \001(\r\022%\n\035" +
-      "scoring_penalty_relay_cluster\030\006 \001(\r\022\021\n\ta" +
-      "ck_relay\030\007 \003(\007\022\026\n\016legacy_ack_e2e\030\010 \003(\007\022\r" +
-      "\n\005flags\030\t \001(\r\022#\n\033ack_forward_target_revi" +
-      "sion\030\n \001(\r\022\016\n\006routes\030\013 \001(\014\022 \n\030ack_peer_r" +
-      "outes_revision\030\014 \001(\r\022\025\n\rconnection_id\030\r " +
-      "\001(\007\022\023\n\013seq_num_r2c\030\016 \001(\r\022\023\n\013seq_num_e2e\030" +
-      "\017 \001(\r\"m\n\005Flags\022\025\n\021ACK_REQUEST_RELAY\020\001\022\023\n" +
-      "\017ACK_REQUEST_E2E\020\002\022\031\n\025ACK_REQUEST_IMMEDI" +
-      "ATE\020\004\022\035\n\031NOT_PRIMARY_TRANSPORT_E2E\020\020\"\240\001\n" +
-      "*CMsgSteamDatagramP2PBadRouteRouterToCli" +
-      "ent\022\025\n\rconnection_id\030\001 \001(\007\022\"\n\032failed_rel" +
-      "ay_routing_token\030\002 \001(\014\022#\n\033ack_forward_ta" +
-      "rget_revision\030\003 \001(\r\022\022\n\nkludge_pad\030c \001(\006\"" +
-      "\320\002\n\032CMsgSteamDatagramP2PRoutes\022@\n\016relay_" +
-      "clusters\030\001 \003(\0132(.CMsgSteamDatagramP2PRou" +
-      "tes.RelayCluster\0221\n\006routes\030\002 \003(\0132!.CMsgS" +
-      "teamDatagramP2PRoutes.Route\022\020\n\010revision\030" +
-      "\003 \001(\r\032k\n\014RelayCluster\022\016\n\006pop_id\030\001 \001(\007\022\017\n" +
-      "\007ping_ms\030\002 \001(\r\022\025\n\rscore_penalty\030\003 \001(\r\022#\n" +
-      "\033session_relay_routing_token\030\004 \001(\014\032>\n\005Ro" +
-      "ute\022\021\n\tmy_pop_id\030\001 \001(\007\022\023\n\013your_pop_id\030\002 " +
-      "\001(\007\022\r\n\005score\030\003 \001(\r\"\314\001\n+CMsgSteamDatagram" +
-      "SetSecondaryAddressRequest\022\026\n\016client_mai" +
-      "n_ip\030\001 \001(\007\022\030\n\020client_main_port\030\002 \001(\007\022\034\n\024" +
-      "client_connection_id\030\003 \001(\007\022\027\n\017client_ide" +
-      "ntity\030\004 \001(\t\022 \n\030request_send_duplication\030" +
-      "\005 \001(\010\022\022\n\nkludge_pad\030c \001(\014\"N\n*CMsgSteamDa" +
-      "tagramSetSecondaryAddressResult\022\017\n\007succe" +
-      "ss\030\001 \001(\010\022\017\n\007message\030\002 \001(\t*\263\013\n\023ESteamData" +
-      "gramMsgID\022\037\n\033k_ESteamDatagramMsg_Invalid" +
-      "\020\000\022)\n%k_ESteamDatagramMsg_RouterPingRequ" +
-      "est\020\001\022\'\n#k_ESteamDatagramMsg_RouterPingR" +
-      "eply\020\002\022-\n)k_ESteamDatagramMsg_Gameserver" +
-      "PingRequest\020\003\0221\n-k_ESteamDatagramMsg_Leg" +
-      "acyGameserverPingReply\020\004\0220\n,k_ESteamData" +
-      "gramMsg_GameserverSessionRequest\020\005\0224\n0k_" +
-      "ESteamDatagramMsg_GameserverSessionEstab" +
-      "lished\020\006\022!\n\035k_ESteamDatagramMsg_NoSessio" +
-      "n\020\007\022\"\n\036k_ESteamDatagramMsg_Diagnostic\020\010\022" +
-      "*\n&k_ESteamDatagramMsg_DataClientToRoute" +
-      "r\020\t\022*\n&k_ESteamDatagramMsg_DataRouterToS" +
-      "erver\020\n\022*\n&k_ESteamDatagramMsg_DataServe" +
-      "rToRouter\020\013\022*\n&k_ESteamDatagramMsg_DataR" +
-      "outerToClient\020\014\022\035\n\031k_ESteamDatagramMsg_S" +
-      "tats\020\r\022/\n+k_ESteamDatagramMsg_ClientPing" +
-      "SampleRequest\020\016\022-\n)k_ESteamDatagramMsg_C" +
-      "lientPingSampleReply\020\017\0225\n1k_ESteamDatagr" +
-      "amMsg_ClientToRouterSwitchedPrimary\020\020\022#\n" +
-      "\037k_ESteamDatagramMsg_RelayHealth\020\021\022&\n\"k_" +
-      "ESteamDatagramMsg_ConnectRequest\020\022\022!\n\035k_" +
-      "ESteamDatagramMsg_ConnectOK\020\023\022(\n$k_EStea" +
-      "mDatagramMsg_ConnectionClosed\020\024\022$\n k_ESt" +
-      "eamDatagramMsg_NoConnection\020\025\022/\n+k_EStea" +
-      "mDatagramMsg_RelayToRelayPingRequest\020\026\022-" +
-      "\n)k_ESteamDatagramMsg_RelayToRelayPingRe" +
-      "ply\020\027\022)\n%k_ESteamDatagramMsg_P2PSessionR" +
-      "equest\020\030\022-\n)k_ESteamDatagramMsg_P2PSessi" +
-      "onEstablished\020\031\022&\n\"k_ESteamDatagramMsg_P" +
-      "2PStatsClient\020\032\022%\n!k_ESteamDatagramMsg_P" +
-      "2PStatsRelay\020\033\022#\n\037k_ESteamDatagramMsg_P2" +
-      "PBadRoute\020\034\022+\n\'k_ESteamDatagramMsg_Games" +
-      "erverPingReply\020\035\022.\n*k_ESteamDatagramMsg_" +
-      "GameserverRegistration\020\036\0222\n.k_ESteamData" +
-      "gramMsg_SetSecondaryAddressRequest\020\037\0221\n-" +
-      "k_ESteamDatagramMsg_SetSecondaryAddressR" +
-      "esult\020 B\005H\001\200\001\000"
+      "8\n\013quality_e2e\030\022 \001(\0132#.CMsgSteamDatagram" +
+      "ConnectionQuality\022@\n\023p2p_routing_summary" +
+      "\030\025 \001(\0132#.CMsgSteamDatagramP2PRoutingSumm" +
+      "ary\"6\n\nERelayMode\022\010\n\004None\020\000\022\014\n\010EndToEnd\020" +
+      "\001\022\020\n\014ClosedByPeer\020\002\"\314\004\n\035CMsgSteamDatagra" +
+      "mNoConnection\022\030\n\020to_connection_id\030\005 \001(\007\022" +
+      "\032\n\022from_connection_id\030\006 \001(\007\022*\n\"legacy_ga" +
+      "meserver_relay_session_id\030\002 \001(\r\022\033\n\023to_re" +
+      "lay_session_id\030\t \001(\007\022\035\n\025from_relay_sessi" +
+      "on_id\030\n \001(\007\022\034\n\024from_identity_string\030\007 \001(" +
+      "\t\022\034\n\024legacy_from_steam_id\030\003 \001(\006\022\022\n\nend_t" +
+      "o_end\030\004 \001(\010\022\033\n\023not_primary_session\030\014 \001(\010" +
+      "\022\035\n\025not_primary_transport\030\017 \001(\010\022\035\n\025relay" +
+      "_override_active\030\021 \001(\010\022:\n\rquality_relay\030" +
+      "\r \001(\0132#.CMsgSteamDatagramConnectionQuali" +
+      "ty\0228\n\013quality_e2e\030\016 \001(\0132#.CMsgSteamDatag" +
+      "ramConnectionQuality\022@\n\023p2p_routing_summ" +
+      "ary\030\020 \001(\0132#.CMsgSteamDatagramP2PRoutingS" +
+      "ummary\022\026\n\016routing_secret\030\013 \001(\006\022\022\n\tdummy_" +
+      "pad\030\377\007 \001(\007\"\334\002\n)CMsgSteamDatagramGameserv" +
+      "erSessionRequest\022\016\n\006ticket\030\001 \001(\014\022\026\n\016chal" +
+      "lenge_time\030\003 \001(\007\022\021\n\tchallenge\030\004 \001(\006\022\034\n\024c" +
+      "lient_connection_id\030\005 \001(\007\022\034\n\024server_conn" +
+      "ection_id\030\010 \001(\007\022\036\n\026network_config_versio" +
+      "n\030\006 \001(\004\022\030\n\020protocol_version\030\007 \001(\r\022\020\n\010pla" +
+      "tform\030\t \001(\t\022\r\n\005build\030\n \001(\t\022\037\n\027dev_gamese" +
+      "rver_identity\030d \001(\t\022<\n\017dev_client_cert\030e" +
+      " \001(\0132#.CMsgSteamDatagramCertificateSigne" +
+      "d\"\350\001\n-CMsgSteamDatagramGameserverSession" +
+      "Established\022\025\n\rconnection_id\030\001 \001(\007\022\"\n\032ga" +
+      "meserver_identity_string\030\002 \001(\t\022\036\n\026second" +
+      "s_until_shutdown\030\004 \001(\r\022\023\n\013seq_num_r2c\030\006 " +
+      "\001(\r\022$\n\034dummy_legacy_identity_binary\030\007 \001(" +
+      "\014\022!\n\031legacy_gameserver_steamid\030\003 \001(\006\"\255\003\n" +
+      ".CMsgSteamDatagramConnectionStatsClientT" +
+      "oRouter\022:\n\rquality_relay\030\001 \001(\0132#.CMsgSte" +
+      "amDatagramConnectionQuality\0228\n\013quality_e" +
+      "2e\030\002 \001(\0132#.CMsgSteamDatagramConnectionQu" +
+      "ality\022\021\n\tack_relay\030\004 \003(\007\022\026\n\016legacy_ack_e" +
+      "2e\030\005 \003(\007\022\r\n\005flags\030\006 \001(\r\022\034\n\024client_connec" +
+      "tion_id\030\010 \001(\007\022\023\n\013seq_num_c2r\030\t \001(\r\022\023\n\013se" +
+      "q_num_e2e\030\n \001(\r\"\202\001\n\005Flags\022\025\n\021ACK_REQUEST" +
+      "_RELAY\020\001\022\023\n\017ACK_REQUEST_E2E\020\002\022\031\n\025ACK_REQ" +
+      "UEST_IMMEDIATE\020\004\022\027\n\023NOT_PRIMARY_SESSION\020" +
+      "\010\022\031\n\025CLIENT_RELAY_OVERRIDE\020 \"\371\003\n.CMsgSte" +
+      "amDatagramConnectionStatsRouterToClient\022" +
+      ":\n\rquality_relay\030\001 \001(\0132#.CMsgSteamDatagr" +
+      "amConnectionQuality\0228\n\013quality_e2e\030\002 \001(\013" +
+      "2#.CMsgSteamDatagramConnectionQuality\022\036\n" +
+      "\026seconds_until_shutdown\030\006 \001(\r\022\032\n\022migrate" +
+      "_request_ip\030\n \001(\007\022\034\n\024migrate_request_por" +
+      "t\030\013 \001(\r\022%\n\035scoring_penalty_relay_cluster" +
+      "\030\014 \001(\r\022\021\n\tack_relay\030\r \003(\007\022\026\n\016legacy_ack_" +
+      "e2e\030\016 \003(\007\022\r\n\005flags\030\017 \001(\r\022\034\n\024client_conne" +
+      "ction_id\030\007 \001(\007\022\023\n\013seq_num_r2c\030\010 \001(\r\022\023\n\013s" +
+      "eq_num_e2e\030\t \001(\r\"N\n\005Flags\022\025\n\021ACK_REQUEST" +
+      "_RELAY\020\001\022\023\n\017ACK_REQUEST_E2E\020\002\022\031\n\025ACK_REQ" +
+      "UEST_IMMEDIATE\020\004\"\210\004\n.CMsgSteamDatagramCo" +
+      "nnectionStatsRouterToServer\022:\n\rquality_r" +
+      "elay\030\001 \001(\0132#.CMsgSteamDatagramConnection" +
+      "Quality\0228\n\013quality_e2e\030\002 \001(\0132#.CMsgSteam" +
+      "DatagramConnectionQuality\022\021\n\tack_relay\030\n" +
+      " \003(\007\022\026\n\016legacy_ack_e2e\030\013 \003(\007\022\r\n\005flags\030\014 " +
+      "\001(\r\022\023\n\013seq_num_r2s\030\005 \001(\r\022\023\n\013seq_num_e2e\030" +
+      "\006 \001(\r\022\036\n\026client_identity_string\030\017 \001(\t\022\036\n" +
+      "\026legacy_client_steam_id\030\007 \001(\006\022\030\n\020relay_s" +
+      "ession_id\030\010 \001(\r\022\034\n\024client_connection_id\030" +
+      "\t \001(\007\022\034\n\024server_connection_id\030\r \001(\007\022\026\n\016r" +
+      "outing_secret\030\016 \001(\006\"N\n\005Flags\022\025\n\021ACK_REQU" +
+      "EST_RELAY\020\001\022\023\n\017ACK_REQUEST_E2E\020\002\022\031\n\025ACK_" +
+      "REQUEST_IMMEDIATE\020\004\"\260\003\n.CMsgSteamDatagra" +
+      "mConnectionStatsServerToRouter\022:\n\rqualit" +
+      "y_relay\030\001 \001(\0132#.CMsgSteamDatagramConnect" +
+      "ionQuality\0228\n\013quality_e2e\030\002 \001(\0132#.CMsgSt" +
+      "eamDatagramConnectionQuality\022\021\n\tack_rela" +
+      "y\030\010 \003(\007\022\026\n\016legacy_ack_e2e\030\t \003(\007\022\r\n\005flags" +
+      "\030\n \001(\r\022\023\n\013seq_num_s2r\030\003 \001(\r\022\023\n\013seq_num_e" +
+      "2e\030\004 \001(\r\022\030\n\020relay_session_id\030\006 \001(\r\022\034\n\024cl" +
+      "ient_connection_id\030\007 \001(\007\022\034\n\024server_conne" +
+      "ction_id\030\013 \001(\007\"N\n\005Flags\022\025\n\021ACK_REQUEST_R" +
+      "ELAY\020\001\022\023\n\017ACK_REQUEST_E2E\020\002\022\031\n\025ACK_REQUE" +
+      "ST_IMMEDIATE\020\004\"\305\003\n&CMsgSteamDatagramP2PS" +
+      "essionRequestBody\022\026\n\016challenge_time\030\001 \001(" +
+      "\007\022\021\n\tchallenge\030\002 \001(\006\022\034\n\024client_connectio" +
+      "n_id\030\003 \001(\007\022\034\n\024legacy_peer_steam_id\030\004 \001(\006" +
+      "\022\034\n\024peer_identity_string\030\013 \001(\t\022\032\n\022peer_c" +
+      "onnection_id\030\005 \001(\007\022\026\n\016encrypted_data\030\016 \001" +
+      "(\014\022,\n$encryption_your_public_key_lead_by" +
+      "te\030\017 \001(\r\022*\n\"encryption_my_ephemeral_publ" +
+      "ic_key\030\020 \001(\014\022\030\n\020protocol_version\030\010 \001(\r\022\036" +
+      "\n\026network_config_version\030\t \001(\004\022\020\n\010platfo" +
+      "rm\030\014 \001(\t\022\r\n\005build\030\r \001(\t\032-\n\rEncryptedData" +
+      "\022\034\n\024peer_identity_string\030\001 \001(\t\"x\n\"CMsgSt" +
+      "eamDatagramP2PSessionRequest\0221\n\004cert\030\001 \001" +
+      "(\0132#.CMsgSteamDatagramCertificateSigned\022" +
+      "\014\n\004body\030\002 \001(\014\022\021\n\tsignature\030\003 \001(\014\"\221\001\n&CMs" +
+      "gSteamDatagramP2PSessionEstablished\022\025\n\rc" +
+      "onnection_id\030\001 \001(\007\022\036\n\026seconds_until_shut" +
+      "down\030\003 \001(\r\022\033\n\023relay_routing_token\030\004 \001(\014\022" +
+      "\023\n\013seq_num_r2c\030\005 \001(\r\"\211\005\n1CMsgSteamDatagr" +
+      "amConnectionStatsP2PClientToRouter\022:\n\rqu" +
+      "ality_relay\030\001 \001(\0132#.CMsgSteamDatagramCon" +
+      "nectionQuality\0228\n\013quality_e2e\030\002 \001(\0132#.CM" +
+      "sgSteamDatagramConnectionQuality\022@\n\023p2p_" +
+      "routing_summary\030\016 \001(\0132#.CMsgSteamDatagra" +
+      "mP2PRoutingSummary\022\021\n\tack_relay\030\003 \003(\007\022\026\n" +
+      "\016legacy_ack_e2e\030\004 \003(\007\022\r\n\005flags\030\005 \001(\r\022*\n\"" +
+      "forward_target_relay_routing_token\030\006 \001(\014" +
+      "\022\037\n\027forward_target_revision\030\007 \001(\r\022\016\n\006rou" +
+      "tes\030\010 \001(\014\022 \n\030ack_peer_routes_revision\030\t " +
+      "\001(\r\022\025\n\rconnection_id\030\n \001(\007\022\023\n\013seq_num_c2" +
+      "r\030\013 \001(\r\022\023\n\013seq_num_e2e\030\014 \001(\r\"\241\001\n\005Flags\022\025" +
+      "\n\021ACK_REQUEST_RELAY\020\001\022\023\n\017ACK_REQUEST_E2E" +
+      "\020\002\022\031\n\025ACK_REQUEST_IMMEDIATE\020\004\022\027\n\023NOT_PRI" +
+      "MARY_SESSION\020\010\022\035\n\031NOT_PRIMARY_TRANSPORT_" +
+      "E2E\020\020\022\031\n\025CLIENT_RELAY_OVERRIDE\020 \"\353\004\n1CMs" +
+      "gSteamDatagramConnectionStatsP2PRouterTo" +
+      "Client\022:\n\rquality_relay\030\001 \001(\0132#.CMsgStea" +
+      "mDatagramConnectionQuality\0228\n\013quality_e2" +
+      "e\030\002 \001(\0132#.CMsgSteamDatagramConnectionQua" +
+      "lity\022\036\n\026seconds_until_shutdown\030\003 \001(\r\022\032\n\022" +
+      "migrate_request_ip\030\004 \001(\007\022\034\n\024migrate_requ" +
+      "est_port\030\005 \001(\r\022%\n\035scoring_penalty_relay_" +
+      "cluster\030\006 \001(\r\022\021\n\tack_relay\030\007 \003(\007\022\026\n\016lega" +
+      "cy_ack_e2e\030\010 \003(\007\022\r\n\005flags\030\t \001(\r\022#\n\033ack_f" +
+      "orward_target_revision\030\n \001(\r\022\016\n\006routes\030\013" +
+      " \001(\014\022 \n\030ack_peer_routes_revision\030\014 \001(\r\022\025" +
+      "\n\rconnection_id\030\r \001(\007\022\023\n\013seq_num_r2c\030\016 \001" +
+      "(\r\022\023\n\013seq_num_e2e\030\017 \001(\r\"m\n\005Flags\022\025\n\021ACK_" +
+      "REQUEST_RELAY\020\001\022\023\n\017ACK_REQUEST_E2E\020\002\022\031\n\025" +
+      "ACK_REQUEST_IMMEDIATE\020\004\022\035\n\031NOT_PRIMARY_T" +
+      "RANSPORT_E2E\020\020\"\240\001\n*CMsgSteamDatagramP2PB" +
+      "adRouteRouterToClient\022\025\n\rconnection_id\030\001" +
+      " \001(\007\022\"\n\032failed_relay_routing_token\030\002 \001(\014" +
+      "\022#\n\033ack_forward_target_revision\030\003 \001(\r\022\022\n" +
+      "\nkludge_pad\030c \001(\006\"\357\002\n\032CMsgSteamDatagramP" +
+      "2PRoutes\022@\n\016relay_clusters\030\001 \003(\0132(.CMsgS" +
+      "teamDatagramP2PRoutes.RelayCluster\0221\n\006ro" +
+      "utes\030\002 \003(\0132!.CMsgSteamDatagramP2PRoutes." +
+      "Route\022\020\n\010revision\030\003 \001(\r\032k\n\014RelayCluster\022" +
+      "\016\n\006pop_id\030\001 \001(\007\022\017\n\007ping_ms\030\002 \001(\r\022\025\n\rscor" +
+      "e_penalty\030\003 \001(\r\022#\n\033session_relay_routing" +
+      "_token\030\004 \001(\014\032]\n\005Route\022\021\n\tmy_pop_id\030\001 \001(\007" +
+      "\022\023\n\013your_pop_id\030\002 \001(\007\022\024\n\014legacy_score\030\003 " +
+      "\001(\r\022\026\n\016interior_score\030\004 \001(\r\"\314\001\n+CMsgStea" +
+      "mDatagramSetSecondaryAddressRequest\022\026\n\016c" +
+      "lient_main_ip\030\001 \001(\007\022\030\n\020client_main_port\030" +
+      "\002 \001(\007\022\034\n\024client_connection_id\030\003 \001(\007\022\027\n\017c" +
+      "lient_identity\030\004 \001(\t\022 \n\030request_send_dup" +
+      "lication\030\005 \001(\010\022\022\n\nkludge_pad\030c \001(\014\"N\n*CM" +
+      "sgSteamDatagramSetSecondaryAddressResult" +
+      "\022\017\n\007success\030\001 \001(\010\022\017\n\007message\030\002 \001(\t*\340\013\n\023E" +
+      "SteamDatagramMsgID\022\037\n\033k_ESteamDatagramMs" +
+      "g_Invalid\020\000\022)\n%k_ESteamDatagramMsg_Route" +
+      "rPingRequest\020\001\022\'\n#k_ESteamDatagramMsg_Ro" +
+      "uterPingReply\020\002\022-\n)k_ESteamDatagramMsg_G" +
+      "ameserverPingRequest\020\003\0220\n,k_ESteamDatagr" +
+      "amMsg_GameserverSessionRequest\020\005\0224\n0k_ES" +
+      "teamDatagramMsg_GameserverSessionEstabli" +
+      "shed\020\006\022!\n\035k_ESteamDatagramMsg_NoSession\020" +
+      "\007\022\"\n\036k_ESteamDatagramMsg_Diagnostic\020\010\022*\n" +
+      "&k_ESteamDatagramMsg_DataClientToRouter\020" +
+      "\t\022*\n&k_ESteamDatagramMsg_DataRouterToSer" +
+      "ver\020\n\022*\n&k_ESteamDatagramMsg_DataServerT" +
+      "oRouter\020\013\022*\n&k_ESteamDatagramMsg_DataRou" +
+      "terToClient\020\014\022\035\n\031k_ESteamDatagramMsg_Sta" +
+      "ts\020\r\022/\n+k_ESteamDatagramMsg_ClientPingSa" +
+      "mpleRequest\020\016\022-\n)k_ESteamDatagramMsg_Cli" +
+      "entPingSampleReply\020\017\0225\n1k_ESteamDatagram" +
+      "Msg_ClientToRouterSwitchedPrimary\020\020\022#\n\037k" +
+      "_ESteamDatagramMsg_RelayHealth\020\021\022&\n\"k_ES" +
+      "teamDatagramMsg_ConnectRequest\020\022\022!\n\035k_ES" +
+      "teamDatagramMsg_ConnectOK\020\023\022(\n$k_ESteamD" +
+      "atagramMsg_ConnectionClosed\020\024\022$\n k_EStea" +
+      "mDatagramMsg_NoConnection\020\025\022,\n(k_ESteamD" +
+      "atagramMsg_TicketDecryptRequest\020\026\022*\n&k_E" +
+      "SteamDatagramMsg_TicketDecryptReply\020\027\022)\n" +
+      "%k_ESteamDatagramMsg_P2PSessionRequest\020\030" +
+      "\022-\n)k_ESteamDatagramMsg_P2PSessionEstabl" +
+      "ished\020\031\022&\n\"k_ESteamDatagramMsg_P2PStatsC" +
+      "lient\020\032\022%\n!k_ESteamDatagramMsg_P2PStatsR" +
+      "elay\020\033\022#\n\037k_ESteamDatagramMsg_P2PBadRout" +
+      "e\020\034\022+\n\'k_ESteamDatagramMsg_GameserverPin" +
+      "gReply\020\035\0224\n0k_ESteamDatagramMsg_LegacyGa" +
+      "meserverRegistration\020\036\0222\n.k_ESteamDatagr" +
+      "amMsg_SetSecondaryAddressRequest\020\037\0221\n-k_" +
+      "ESteamDatagramMsg_SetSecondaryAddressRes" +
+      "ult\020 \022/\n+k_ESteamDatagramMsg_RelayToRela" +
+      "yPingRequest\020!\022-\n)k_ESteamDatagramMsg_Re" +
+      "layToRelayPingReply\020\"B\005H\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -53542,12 +59003,24 @@ public final class SteamdatagramMessagesSdr {
           SteamnetworkingsocketsMessagesCerts.getDescriptor(),
           SteamnetworkingsocketsMessages.getDescriptor(),
         });
-    internal_static_CMsgSteamDatagramRouterPingReply_descriptor =
+    internal_static_CMsgSteamNetworkingIPAddress_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_CMsgSteamNetworkingIPAddress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgSteamNetworkingIPAddress_descriptor,
+        new java.lang.String[] { "V4", "V6", });
+    internal_static_CMsgSteamDatagramSignedMessageGeneric_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_CMsgSteamDatagramSignedMessageGeneric_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgSteamDatagramSignedMessageGeneric_descriptor,
+        new java.lang.String[] { "Cert", "SignedData", "Signature", "DummyPad", });
+    internal_static_CMsgSteamDatagramRouterPingReply_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CMsgSteamDatagramRouterPingReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramRouterPingReply_descriptor,
-        new java.lang.String[] { "ClientTimestamp", "LatencyDatacenterIds", "LatencyPingMs", "YourPublicIp", "YourPublicPort", "ServerTime", "Challenge", "SecondsUntilShutdown", "ClientCookie", "ScoringPenaltyRelayCluster", "Flags", "RouteExceptions", "AltAddresses", });
+        new java.lang.String[] { "ClientTimestamp", "LatencyDatacenterIds", "LatencyPingMs", "LatencyDatacenterIdsP2P", "LatencyPingMsP2P", "YourPublicIp", "YourPublicPort", "ServerTime", "Challenge", "SecondsUntilShutdown", "ClientCookie", "ScoringPenaltyRelayCluster", "Flags", "RouteExceptions", "AltAddresses", "DummyPad", });
     internal_static_CMsgSteamDatagramRouterPingReply_RouteException_descriptor =
       internal_static_CMsgSteamDatagramRouterPingReply_descriptor.getNestedTypes().get(0);
     internal_static_CMsgSteamDatagramRouterPingReply_RouteException_fieldAccessorTable = new
@@ -53560,54 +59033,48 @@ public final class SteamdatagramMessagesSdr {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramRouterPingReply_AltAddress_descriptor,
         new java.lang.String[] { "Ipv4", "Port", "Penalty", "Protocol", "Id", });
-    internal_static_CMsgSteamDatagramGameserverPingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_CMsgSteamDatagramGameserverPingRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CMsgSteamDatagramGameserverPingRequest_descriptor,
-        new java.lang.String[] { "YourPublicIp", "YourPublicPort", "ServerTime", "Challenge", "RouterTimestamp", });
-    internal_static_CMsgSteamDatagramLegacyGameserverPingReply_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_CMsgSteamDatagramLegacyGameserverPingReply_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CMsgSteamDatagramLegacyGameserverPingReply_descriptor,
-        new java.lang.String[] { "RouterTimestamp", "DummyPad", });
-    internal_static_CMsgSteamDatagramGameserverPingReply_descriptor =
+    internal_static_CMsgSteamDatagramGameserverPingRequestBody_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_CMsgSteamDatagramGameserverPingReply_fieldAccessorTable = new
+    internal_static_CMsgSteamDatagramGameserverPingRequestBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CMsgSteamDatagramGameserverPingReply_descriptor,
-        new java.lang.String[] { "Cert", "SignedData", "Signature", });
-    internal_static_CMsgSteamDatagramGameserverPingReply_SignedData_descriptor =
-      internal_static_CMsgSteamDatagramGameserverPingReply_descriptor.getNestedTypes().get(0);
-    internal_static_CMsgSteamDatagramGameserverPingReply_SignedData_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CMsgSteamDatagramGameserverPingReply_SignedData_descriptor,
-        new java.lang.String[] { "ChallengeTime", "Challenge", "RouterTimestamp", "DataCenterId", "Appid", });
-    internal_static_CMsgSteamDatagramNoSessionRelayToClient_descriptor =
+        internal_static_CMsgSteamDatagramGameserverPingRequestBody_descriptor,
+        new java.lang.String[] { "RelayPopid", "YourPublicIp", "YourPublicPort", "RelayUnixTime", "RoutingSecret", "MyIps", "Echo", });
+    internal_static_CMsgSteamDatagramGameserverPingRequestEnvelope_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_CMsgSteamDatagramGameserverPingRequestEnvelope_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgSteamDatagramGameserverPingRequestEnvelope_descriptor,
+        new java.lang.String[] { "Cert", "SignedData", "Signature", "LegacyYourPublicIp", "LegacyYourPublicPort", "LegacyRelayUnixTime", "LegacyChallenge", "LegacyRouterTimestamp", "DummyPad", });
+    internal_static_CMsgSteamDatagramGameserverPingReplyData_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_CMsgSteamDatagramGameserverPingReplyData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgSteamDatagramGameserverPingReplyData_descriptor,
+        new java.lang.String[] { "EchoRelayUnixTime", "Echo", "LegacyChallenge", "LegacyRouterTimestamp", "DataCenterId", "Appid", "ProtocolVersion", "Build", "NetworkConfigVersion", "MyUnixTime", });
+    internal_static_CMsgSteamDatagramNoSessionRelayToClient_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CMsgSteamDatagramNoSessionRelayToClient_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramNoSessionRelayToClient_descriptor,
         new java.lang.String[] { "ConnectionId", "YourPublicIp", "YourPublicPort", "ServerTime", "Challenge", "SecondsUntilShutdown", });
     internal_static_CMsgSteamDatagramNoSessionRelayToPeer_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CMsgSteamDatagramNoSessionRelayToPeer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramNoSessionRelayToPeer_descriptor,
         new java.lang.String[] { "LegacyRelaySessionId", "FromRelaySessionId", "FromConnectionId", "KludgePad", });
     internal_static_CMsgSteamDatagramClientPingSampleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CMsgSteamDatagramClientPingSampleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramClientPingSampleRequest_descriptor,
         new java.lang.String[] { "ConnectionId", });
     internal_static_CMsgSteamDatagramClientPingSampleReply_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CMsgSteamDatagramClientPingSampleReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramClientPingSampleReply_descriptor,
-        new java.lang.String[] { "ConnectionId", "OverrideActive", "Pops", "LegacyDataCenters", });
+        new java.lang.String[] { "ConnectionId", "RelayOverrideActive", "Pops", "LegacyDataCenters", });
     internal_static_CMsgSteamDatagramClientPingSampleReply_POP_descriptor =
       internal_static_CMsgSteamDatagramClientPingSampleReply_descriptor.getNestedTypes().get(0);
     internal_static_CMsgSteamDatagramClientPingSampleReply_POP_fieldAccessorTable = new
@@ -53627,7 +59094,7 @@ public final class SteamdatagramMessagesSdr {
         internal_static_CMsgSteamDatagramClientPingSampleReply_LegacyDataCenter_descriptor,
         new java.lang.String[] { "DataCenterId", "BestDcViaRelayPopId", "BestDcPingMs", });
     internal_static_CMsgSteamDatagramClientSwitchedPrimary_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CMsgSteamDatagramClientSwitchedPrimary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramClientSwitchedPrimary_descriptor,
@@ -53639,115 +59106,121 @@ public final class SteamdatagramMessagesSdr {
         internal_static_CMsgSteamDatagramClientSwitchedPrimary_RouterQuality_descriptor,
         new java.lang.String[] { "Score", "FrontPing", "BackPing", "SecondsUntilDown", });
     internal_static_CMsgSteamDatagramConnectRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CMsgSteamDatagramConnectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramConnectRequest_descriptor,
         new java.lang.String[] { "ConnectionId", "MyTimestamp", "PingEstMs", "VirtualPort", "GameserverRelaySessionId", "Crypt", "Cert", "RoutingSecret", "LegacyClientSteamId", });
     internal_static_CMsgSteamDatagramConnectOK_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CMsgSteamDatagramConnectOK_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramConnectOK_descriptor,
         new java.lang.String[] { "ClientConnectionId", "ServerConnectionId", "YourTimestamp", "DelayTimeUsec", "GameserverRelaySessionId", "Crypt", "Cert", });
     internal_static_CMsgSteamNetworkingP2PSDRRoutingSummary_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CMsgSteamNetworkingP2PSDRRoutingSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamNetworkingP2PSDRRoutingSummary_descriptor,
-        new java.lang.String[] { "InitialPing", "InitialPingFrontLocal", "InitialPingFrontRemote", "InitialScore", "InitialPopLocal", "InitialPopRemote", "NegotiationMs", "SelectedSeconds", });
+        new java.lang.String[] { "InitialPing", "InitialPingFrontLocal", "InitialPingFrontRemote", "InitialScore", "InitialPopLocal", "InitialPopRemote", "BestPing", "BestPingFrontLocal", "BestPingFrontRemote", "BestScore", "BestPopLocal", "BestPopRemote", "BestTime", "NegotiationMs", "SelectedSeconds", });
     internal_static_CMsgSteamDatagramP2PRoutingSummary_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CMsgSteamDatagramP2PRoutingSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramP2PRoutingSummary_descriptor,
         new java.lang.String[] { "Ice", "Sdr", });
     internal_static_CMsgSteamDatagramConnectionClosed_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CMsgSteamDatagramConnectionClosed_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramConnectionClosed_descriptor,
-        new java.lang.String[] { "ToConnectionId", "FromConnectionId", "FromIdentityString", "LegacyFromIdentityBinary", "LegacyFromSteamId", "LegacyGameserverRelaySessionId", "ToRelaySessionId", "FromRelaySessionId", "ForwardTargetRelayRoutingToken", "ForwardTargetRevision", "RelayMode", "Debug", "ReasonCode", "RoutingSecret", "NotPrimarySession", "NotPrimaryTransport", "QualityRelay", "QualityE2E", "P2PRoutingSummary", });
+        new java.lang.String[] { "ToConnectionId", "FromConnectionId", "FromIdentityString", "LegacyFromIdentityBinary", "LegacyFromSteamId", "LegacyGameserverRelaySessionId", "ToRelaySessionId", "FromRelaySessionId", "ForwardTargetRelayRoutingToken", "ForwardTargetRevision", "RelayMode", "Debug", "ReasonCode", "RoutingSecret", "NotPrimarySession", "NotPrimaryTransport", "RelayOverrideActive", "QualityRelay", "QualityE2E", "P2PRoutingSummary", });
     internal_static_CMsgSteamDatagramNoConnection_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CMsgSteamDatagramNoConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramNoConnection_descriptor,
-        new java.lang.String[] { "ToConnectionId", "FromConnectionId", "LegacyGameserverRelaySessionId", "ToRelaySessionId", "FromRelaySessionId", "FromIdentityString", "LegacyFromSteamId", "EndToEnd", "NotPrimarySession", "NotPrimaryTransport", "QualityRelay", "QualityE2E", "P2PRoutingSummary", "RoutingSecret", "DummyPad", });
+        new java.lang.String[] { "ToConnectionId", "FromConnectionId", "LegacyGameserverRelaySessionId", "ToRelaySessionId", "FromRelaySessionId", "FromIdentityString", "LegacyFromSteamId", "EndToEnd", "NotPrimarySession", "NotPrimaryTransport", "RelayOverrideActive", "QualityRelay", "QualityE2E", "P2PRoutingSummary", "RoutingSecret", "DummyPad", });
     internal_static_CMsgSteamDatagramGameserverSessionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CMsgSteamDatagramGameserverSessionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramGameserverSessionRequest_descriptor,
-        new java.lang.String[] { "Ticket", "ChallengeTime", "Challenge", "ClientConnectionId", "ServerConnectionId", "NetworkConfigVersion", "ProtocolVersion", "Platform", "Build", });
+        new java.lang.String[] { "Ticket", "ChallengeTime", "Challenge", "ClientConnectionId", "ServerConnectionId", "NetworkConfigVersion", "ProtocolVersion", "Platform", "Build", "DevGameserverIdentity", "DevClientCert", });
     internal_static_CMsgSteamDatagramGameserverSessionEstablished_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CMsgSteamDatagramGameserverSessionEstablished_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramGameserverSessionEstablished_descriptor,
         new java.lang.String[] { "ConnectionId", "GameserverIdentityString", "SecondsUntilShutdown", "SeqNumR2C", "DummyLegacyIdentityBinary", "LegacyGameserverSteamid", });
     internal_static_CMsgSteamDatagramConnectionStatsClientToRouter_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_CMsgSteamDatagramConnectionStatsClientToRouter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramConnectionStatsClientToRouter_descriptor,
         new java.lang.String[] { "QualityRelay", "QualityE2E", "AckRelay", "LegacyAckE2E", "Flags", "ClientConnectionId", "SeqNumC2R", "SeqNumE2E", });
     internal_static_CMsgSteamDatagramConnectionStatsRouterToClient_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_CMsgSteamDatagramConnectionStatsRouterToClient_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramConnectionStatsRouterToClient_descriptor,
         new java.lang.String[] { "QualityRelay", "QualityE2E", "SecondsUntilShutdown", "MigrateRequestIp", "MigrateRequestPort", "ScoringPenaltyRelayCluster", "AckRelay", "LegacyAckE2E", "Flags", "ClientConnectionId", "SeqNumR2C", "SeqNumE2E", });
     internal_static_CMsgSteamDatagramConnectionStatsRouterToServer_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_CMsgSteamDatagramConnectionStatsRouterToServer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramConnectionStatsRouterToServer_descriptor,
         new java.lang.String[] { "QualityRelay", "QualityE2E", "AckRelay", "LegacyAckE2E", "Flags", "SeqNumR2S", "SeqNumE2E", "ClientIdentityString", "LegacyClientSteamId", "RelaySessionId", "ClientConnectionId", "ServerConnectionId", "RoutingSecret", });
     internal_static_CMsgSteamDatagramConnectionStatsServerToRouter_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_CMsgSteamDatagramConnectionStatsServerToRouter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramConnectionStatsServerToRouter_descriptor,
         new java.lang.String[] { "QualityRelay", "QualityE2E", "AckRelay", "LegacyAckE2E", "Flags", "SeqNumS2R", "SeqNumE2E", "RelaySessionId", "ClientConnectionId", "ServerConnectionId", });
     internal_static_CMsgSteamDatagramP2PSessionRequestBody_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_CMsgSteamDatagramP2PSessionRequestBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramP2PSessionRequestBody_descriptor,
-        new java.lang.String[] { "ChallengeTime", "Challenge", "ClientConnectionId", "LegacyPeerSteamId", "PeerIdentityString", "PeerConnectionId", "ProtocolVersion", "NetworkConfigVersion", "UnusedPublicIp", "Platform", "Build", });
+        new java.lang.String[] { "ChallengeTime", "Challenge", "ClientConnectionId", "LegacyPeerSteamId", "PeerIdentityString", "PeerConnectionId", "EncryptedData", "EncryptionYourPublicKeyLeadByte", "EncryptionMyEphemeralPublicKey", "ProtocolVersion", "NetworkConfigVersion", "Platform", "Build", });
+    internal_static_CMsgSteamDatagramP2PSessionRequestBody_EncryptedData_descriptor =
+      internal_static_CMsgSteamDatagramP2PSessionRequestBody_descriptor.getNestedTypes().get(0);
+    internal_static_CMsgSteamDatagramP2PSessionRequestBody_EncryptedData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgSteamDatagramP2PSessionRequestBody_EncryptedData_descriptor,
+        new java.lang.String[] { "PeerIdentityString", });
     internal_static_CMsgSteamDatagramP2PSessionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_CMsgSteamDatagramP2PSessionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramP2PSessionRequest_descriptor,
         new java.lang.String[] { "Cert", "Body", "Signature", });
     internal_static_CMsgSteamDatagramP2PSessionEstablished_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_CMsgSteamDatagramP2PSessionEstablished_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramP2PSessionEstablished_descriptor,
         new java.lang.String[] { "ConnectionId", "SecondsUntilShutdown", "RelayRoutingToken", "SeqNumR2C", });
     internal_static_CMsgSteamDatagramConnectionStatsP2PClientToRouter_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_CMsgSteamDatagramConnectionStatsP2PClientToRouter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramConnectionStatsP2PClientToRouter_descriptor,
         new java.lang.String[] { "QualityRelay", "QualityE2E", "P2PRoutingSummary", "AckRelay", "LegacyAckE2E", "Flags", "ForwardTargetRelayRoutingToken", "ForwardTargetRevision", "Routes", "AckPeerRoutesRevision", "ConnectionId", "SeqNumC2R", "SeqNumE2E", });
     internal_static_CMsgSteamDatagramConnectionStatsP2PRouterToClient_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_CMsgSteamDatagramConnectionStatsP2PRouterToClient_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramConnectionStatsP2PRouterToClient_descriptor,
         new java.lang.String[] { "QualityRelay", "QualityE2E", "SecondsUntilShutdown", "MigrateRequestIp", "MigrateRequestPort", "ScoringPenaltyRelayCluster", "AckRelay", "LegacyAckE2E", "Flags", "AckForwardTargetRevision", "Routes", "AckPeerRoutesRevision", "ConnectionId", "SeqNumR2C", "SeqNumE2E", });
     internal_static_CMsgSteamDatagramP2PBadRouteRouterToClient_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_CMsgSteamDatagramP2PBadRouteRouterToClient_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramP2PBadRouteRouterToClient_descriptor,
         new java.lang.String[] { "ConnectionId", "FailedRelayRoutingToken", "AckForwardTargetRevision", "KludgePad", });
     internal_static_CMsgSteamDatagramP2PRoutes_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_CMsgSteamDatagramP2PRoutes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramP2PRoutes_descriptor,
@@ -53763,15 +59236,15 @@ public final class SteamdatagramMessagesSdr {
     internal_static_CMsgSteamDatagramP2PRoutes_Route_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramP2PRoutes_Route_descriptor,
-        new java.lang.String[] { "MyPopId", "YourPopId", "Score", });
+        new java.lang.String[] { "MyPopId", "YourPopId", "LegacyScore", "InteriorScore", });
     internal_static_CMsgSteamDatagramSetSecondaryAddressRequest_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_CMsgSteamDatagramSetSecondaryAddressRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramSetSecondaryAddressRequest_descriptor,
         new java.lang.String[] { "ClientMainIp", "ClientMainPort", "ClientConnectionId", "ClientIdentity", "RequestSendDuplication", "KludgePad", });
     internal_static_CMsgSteamDatagramSetSecondaryAddressResult_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_CMsgSteamDatagramSetSecondaryAddressResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgSteamDatagramSetSecondaryAddressResult_descriptor,

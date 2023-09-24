@@ -1055,6 +1055,530 @@ public final class SteammessagesRemoteclientServiceMessages {
 
   }
 
+  public interface CRemoteClient_DeleteSession_NotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CRemoteClient_DeleteSession_Notification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed64 session_id = 1;</code>
+     * @return Whether the sessionId field is set.
+     */
+    boolean hasSessionId();
+    /**
+     * <code>optional fixed64 session_id = 1;</code>
+     * @return The sessionId.
+     */
+    long getSessionId();
+  }
+  /**
+   * Protobuf type {@code CRemoteClient_DeleteSession_Notification}
+   */
+  public static final class CRemoteClient_DeleteSession_Notification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CRemoteClient_DeleteSession_Notification)
+      CRemoteClient_DeleteSession_NotificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CRemoteClient_DeleteSession_Notification.newBuilder() to construct.
+    private CRemoteClient_DeleteSession_Notification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CRemoteClient_DeleteSession_Notification() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CRemoteClient_DeleteSession_Notification();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CRemoteClient_DeleteSession_Notification(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              bitField0_ |= 0x00000001;
+              sessionId_ = input.readFixed64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_DeleteSession_Notification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_DeleteSession_Notification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification.class, SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SESSION_ID_FIELD_NUMBER = 1;
+    private long sessionId_;
+    /**
+     * <code>optional fixed64 session_id = 1;</code>
+     * @return Whether the sessionId field is set.
+     */
+    @java.lang.Override
+    public boolean hasSessionId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional fixed64 session_id = 1;</code>
+     * @return The sessionId.
+     */
+    @java.lang.Override
+    public long getSessionId() {
+      return sessionId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeFixed64(1, sessionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(1, sessionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification)) {
+        return super.equals(obj);
+      }
+      SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification other = (SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification) obj;
+
+      if (hasSessionId() != other.hasSessionId()) return false;
+      if (hasSessionId()) {
+        if (getSessionId()
+            != other.getSessionId()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSessionId()) {
+        hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSessionId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CRemoteClient_DeleteSession_Notification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CRemoteClient_DeleteSession_Notification)
+        SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_NotificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_DeleteSession_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_DeleteSession_Notification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification.class, SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification.Builder.class);
+      }
+
+      // Construct using SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        sessionId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_DeleteSession_Notification_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification getDefaultInstanceForType() {
+        return SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification build() {
+        SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification buildPartial() {
+        SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification result = new SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sessionId_ = sessionId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification) {
+          return mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification other) {
+        if (other == SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification.getDefaultInstance()) return this;
+        if (other.hasSessionId()) {
+          setSessionId(other.getSessionId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long sessionId_ ;
+      /**
+       * <code>optional fixed64 session_id = 1;</code>
+       * @return Whether the sessionId field is set.
+       */
+      @java.lang.Override
+      public boolean hasSessionId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional fixed64 session_id = 1;</code>
+       * @return The sessionId.
+       */
+      @java.lang.Override
+      public long getSessionId() {
+        return sessionId_;
+      }
+      /**
+       * <code>optional fixed64 session_id = 1;</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionId(long value) {
+        bitField0_ |= 0x00000001;
+        sessionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 session_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sessionId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CRemoteClient_DeleteSession_Notification)
+    }
+
+    // @@protoc_insertion_point(class_scope:CRemoteClient_DeleteSession_Notification)
+    private static final SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification();
+    }
+
+    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CRemoteClient_DeleteSession_Notification>
+        PARSER = new com.google.protobuf.AbstractParser<CRemoteClient_DeleteSession_Notification>() {
+      @java.lang.Override
+      public CRemoteClient_DeleteSession_Notification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CRemoteClient_DeleteSession_Notification(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CRemoteClient_DeleteSession_Notification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CRemoteClient_DeleteSession_Notification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_DeleteSession_Notification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CRemoteClient_StartPairing_RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CRemoteClient_StartPairing_Request)
       com.google.protobuf.MessageOrBuilder {
@@ -6801,6 +7325,17 @@ public final class SteammessagesRemoteclientServiceMessages {
      * @return The steamid.
      */
     long getSteamid();
+
+    /**
+     * <code>optional fixed64 remote_client_id = 2;</code>
+     * @return Whether the remoteClientId field is set.
+     */
+    boolean hasRemoteClientId();
+    /**
+     * <code>optional fixed64 remote_client_id = 2;</code>
+     * @return The remoteClientId.
+     */
+    long getRemoteClientId();
   }
   /**
    * Protobuf type {@code CRemoteClient_Online_Notification}
@@ -6851,6 +7386,11 @@ public final class SteammessagesRemoteclientServiceMessages {
             case 9: {
               bitField0_ |= 0x00000001;
               steamid_ = input.readFixed64();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              remoteClientId_ = input.readFixed64();
               break;
             }
             default: {
@@ -6905,6 +7445,25 @@ public final class SteammessagesRemoteclientServiceMessages {
       return steamid_;
     }
 
+    public static final int REMOTE_CLIENT_ID_FIELD_NUMBER = 2;
+    private long remoteClientId_;
+    /**
+     * <code>optional fixed64 remote_client_id = 2;</code>
+     * @return Whether the remoteClientId field is set.
+     */
+    @java.lang.Override
+    public boolean hasRemoteClientId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional fixed64 remote_client_id = 2;</code>
+     * @return The remoteClientId.
+     */
+    @java.lang.Override
+    public long getRemoteClientId() {
+      return remoteClientId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6922,6 +7481,9 @@ public final class SteammessagesRemoteclientServiceMessages {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeFixed64(1, steamid_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeFixed64(2, remoteClientId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6934,6 +7496,10 @@ public final class SteammessagesRemoteclientServiceMessages {
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed64Size(1, steamid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(2, remoteClientId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6955,6 +7521,11 @@ public final class SteammessagesRemoteclientServiceMessages {
         if (getSteamid()
             != other.getSteamid()) return false;
       }
+      if (hasRemoteClientId() != other.hasRemoteClientId()) return false;
+      if (hasRemoteClientId()) {
+        if (getRemoteClientId()
+            != other.getRemoteClientId()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6970,6 +7541,11 @@ public final class SteammessagesRemoteclientServiceMessages {
         hash = (37 * hash) + STEAMID_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getSteamid());
+      }
+      if (hasRemoteClientId()) {
+        hash = (37 * hash) + REMOTE_CLIENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRemoteClientId());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7106,6 +7682,8 @@ public final class SteammessagesRemoteclientServiceMessages {
         super.clear();
         steamid_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
+        remoteClientId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -7137,6 +7715,10 @@ public final class SteammessagesRemoteclientServiceMessages {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.steamid_ = steamid_;
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.remoteClientId_ = remoteClientId_;
+          to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -7189,6 +7771,9 @@ public final class SteammessagesRemoteclientServiceMessages {
         if (other == SteammessagesRemoteclientServiceMessages.CRemoteClient_Online_Notification.getDefaultInstance()) return this;
         if (other.hasSteamid()) {
           setSteamid(other.getSteamid());
+        }
+        if (other.hasRemoteClientId()) {
+          setRemoteClientId(other.getRemoteClientId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7255,6 +7840,45 @@ public final class SteammessagesRemoteclientServiceMessages {
       public Builder clearSteamid() {
         bitField0_ = (bitField0_ & ~0x00000001);
         steamid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long remoteClientId_ ;
+      /**
+       * <code>optional fixed64 remote_client_id = 2;</code>
+       * @return Whether the remoteClientId field is set.
+       */
+      @java.lang.Override
+      public boolean hasRemoteClientId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional fixed64 remote_client_id = 2;</code>
+       * @return The remoteClientId.
+       */
+      @java.lang.Override
+      public long getRemoteClientId() {
+        return remoteClientId_;
+      }
+      /**
+       * <code>optional fixed64 remote_client_id = 2;</code>
+       * @param value The remoteClientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteClientId(long value) {
+        bitField0_ |= 0x00000002;
+        remoteClientId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 remote_client_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoteClientId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        remoteClientId_ = 0L;
         onChanged();
         return this;
       }
@@ -9781,1317 +10405,6 @@ public final class SteammessagesRemoteclientServiceMessages {
 
     @java.lang.Override
     public SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CRemoteClient_AllocateTURNServer_RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CRemoteClient_AllocateTURNServer_Request)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional uint32 cellid = 1;</code>
-     * @return Whether the cellid field is set.
-     */
-    boolean hasCellid();
-    /**
-     * <code>optional uint32 cellid = 1;</code>
-     * @return The cellid.
-     */
-    int getCellid();
-
-    /**
-     * <code>optional string credentials = 2;</code>
-     * @return Whether the credentials field is set.
-     */
-    boolean hasCredentials();
-    /**
-     * <code>optional string credentials = 2;</code>
-     * @return The credentials.
-     */
-    java.lang.String getCredentials();
-    /**
-     * <code>optional string credentials = 2;</code>
-     * @return The bytes for credentials.
-     */
-    com.google.protobuf.ByteString
-        getCredentialsBytes();
-  }
-  /**
-   * Protobuf type {@code CRemoteClient_AllocateTURNServer_Request}
-   */
-  public static final class CRemoteClient_AllocateTURNServer_Request extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CRemoteClient_AllocateTURNServer_Request)
-      CRemoteClient_AllocateTURNServer_RequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CRemoteClient_AllocateTURNServer_Request.newBuilder() to construct.
-    private CRemoteClient_AllocateTURNServer_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CRemoteClient_AllocateTURNServer_Request() {
-      credentials_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CRemoteClient_AllocateTURNServer_Request();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CRemoteClient_AllocateTURNServer_Request(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              bitField0_ |= 0x00000001;
-              cellid_ = input.readUInt32();
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              credentials_ = bs;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_AllocateTURNServer_Request_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_AllocateTURNServer_Request_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request.class, SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int CELLID_FIELD_NUMBER = 1;
-    private int cellid_;
-    /**
-     * <code>optional uint32 cellid = 1;</code>
-     * @return Whether the cellid field is set.
-     */
-    @java.lang.Override
-    public boolean hasCellid() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional uint32 cellid = 1;</code>
-     * @return The cellid.
-     */
-    @java.lang.Override
-    public int getCellid() {
-      return cellid_;
-    }
-
-    public static final int CREDENTIALS_FIELD_NUMBER = 2;
-    private volatile java.lang.Object credentials_;
-    /**
-     * <code>optional string credentials = 2;</code>
-     * @return Whether the credentials field is set.
-     */
-    @java.lang.Override
-    public boolean hasCredentials() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional string credentials = 2;</code>
-     * @return The credentials.
-     */
-    @java.lang.Override
-    public java.lang.String getCredentials() {
-      java.lang.Object ref = credentials_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          credentials_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string credentials = 2;</code>
-     * @return The bytes for credentials.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCredentialsBytes() {
-      java.lang.Object ref = credentials_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        credentials_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeUInt32(1, cellid_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, credentials_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, cellid_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, credentials_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request)) {
-        return super.equals(obj);
-      }
-      SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request other = (SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request) obj;
-
-      if (hasCellid() != other.hasCellid()) return false;
-      if (hasCellid()) {
-        if (getCellid()
-            != other.getCellid()) return false;
-      }
-      if (hasCredentials() != other.hasCredentials()) return false;
-      if (hasCredentials()) {
-        if (!getCredentials()
-            .equals(other.getCredentials())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasCellid()) {
-        hash = (37 * hash) + CELLID_FIELD_NUMBER;
-        hash = (53 * hash) + getCellid();
-      }
-      if (hasCredentials()) {
-        hash = (37 * hash) + CREDENTIALS_FIELD_NUMBER;
-        hash = (53 * hash) + getCredentials().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CRemoteClient_AllocateTURNServer_Request}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CRemoteClient_AllocateTURNServer_Request)
-        SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_RequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_AllocateTURNServer_Request_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_AllocateTURNServer_Request_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request.class, SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request.Builder.class);
-      }
-
-      // Construct using SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        cellid_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        credentials_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_AllocateTURNServer_Request_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request getDefaultInstanceForType() {
-        return SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request build() {
-        SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request buildPartial() {
-        SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request result = new SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.cellid_ = cellid_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.credentials_ = credentials_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request) {
-          return mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request other) {
-        if (other == SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request.getDefaultInstance()) return this;
-        if (other.hasCellid()) {
-          setCellid(other.getCellid());
-        }
-        if (other.hasCredentials()) {
-          bitField0_ |= 0x00000002;
-          credentials_ = other.credentials_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private int cellid_ ;
-      /**
-       * <code>optional uint32 cellid = 1;</code>
-       * @return Whether the cellid field is set.
-       */
-      @java.lang.Override
-      public boolean hasCellid() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional uint32 cellid = 1;</code>
-       * @return The cellid.
-       */
-      @java.lang.Override
-      public int getCellid() {
-        return cellid_;
-      }
-      /**
-       * <code>optional uint32 cellid = 1;</code>
-       * @param value The cellid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCellid(int value) {
-        bitField0_ |= 0x00000001;
-        cellid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 cellid = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCellid() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        cellid_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object credentials_ = "";
-      /**
-       * <code>optional string credentials = 2;</code>
-       * @return Whether the credentials field is set.
-       */
-      public boolean hasCredentials() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional string credentials = 2;</code>
-       * @return The credentials.
-       */
-      public java.lang.String getCredentials() {
-        java.lang.Object ref = credentials_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            credentials_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string credentials = 2;</code>
-       * @return The bytes for credentials.
-       */
-      public com.google.protobuf.ByteString
-          getCredentialsBytes() {
-        java.lang.Object ref = credentials_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          credentials_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string credentials = 2;</code>
-       * @param value The credentials to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCredentials(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        credentials_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string credentials = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCredentials() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        credentials_ = getDefaultInstance().getCredentials();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string credentials = 2;</code>
-       * @param value The bytes for credentials to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCredentialsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        credentials_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CRemoteClient_AllocateTURNServer_Request)
-    }
-
-    // @@protoc_insertion_point(class_scope:CRemoteClient_AllocateTURNServer_Request)
-    private static final SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request();
-    }
-
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CRemoteClient_AllocateTURNServer_Request>
-        PARSER = new com.google.protobuf.AbstractParser<CRemoteClient_AllocateTURNServer_Request>() {
-      @java.lang.Override
-      public CRemoteClient_AllocateTURNServer_Request parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CRemoteClient_AllocateTURNServer_Request(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CRemoteClient_AllocateTURNServer_Request> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CRemoteClient_AllocateTURNServer_Request> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Request getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CRemoteClient_AllocateTURNServer_ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CRemoteClient_AllocateTURNServer_Response)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string turn_server = 1;</code>
-     * @return Whether the turnServer field is set.
-     */
-    boolean hasTurnServer();
-    /**
-     * <code>optional string turn_server = 1;</code>
-     * @return The turnServer.
-     */
-    java.lang.String getTurnServer();
-    /**
-     * <code>optional string turn_server = 1;</code>
-     * @return The bytes for turnServer.
-     */
-    com.google.protobuf.ByteString
-        getTurnServerBytes();
-  }
-  /**
-   * Protobuf type {@code CRemoteClient_AllocateTURNServer_Response}
-   */
-  public static final class CRemoteClient_AllocateTURNServer_Response extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CRemoteClient_AllocateTURNServer_Response)
-      CRemoteClient_AllocateTURNServer_ResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CRemoteClient_AllocateTURNServer_Response.newBuilder() to construct.
-    private CRemoteClient_AllocateTURNServer_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CRemoteClient_AllocateTURNServer_Response() {
-      turnServer_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CRemoteClient_AllocateTURNServer_Response();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CRemoteClient_AllocateTURNServer_Response(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              turnServer_ = bs;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_AllocateTURNServer_Response_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_AllocateTURNServer_Response_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response.class, SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int TURN_SERVER_FIELD_NUMBER = 1;
-    private volatile java.lang.Object turnServer_;
-    /**
-     * <code>optional string turn_server = 1;</code>
-     * @return Whether the turnServer field is set.
-     */
-    @java.lang.Override
-    public boolean hasTurnServer() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional string turn_server = 1;</code>
-     * @return The turnServer.
-     */
-    @java.lang.Override
-    public java.lang.String getTurnServer() {
-      java.lang.Object ref = turnServer_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          turnServer_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string turn_server = 1;</code>
-     * @return The bytes for turnServer.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTurnServerBytes() {
-      java.lang.Object ref = turnServer_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        turnServer_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, turnServer_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, turnServer_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response)) {
-        return super.equals(obj);
-      }
-      SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response other = (SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response) obj;
-
-      if (hasTurnServer() != other.hasTurnServer()) return false;
-      if (hasTurnServer()) {
-        if (!getTurnServer()
-            .equals(other.getTurnServer())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTurnServer()) {
-        hash = (37 * hash) + TURN_SERVER_FIELD_NUMBER;
-        hash = (53 * hash) + getTurnServer().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CRemoteClient_AllocateTURNServer_Response}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CRemoteClient_AllocateTURNServer_Response)
-        SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_ResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_AllocateTURNServer_Response_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_AllocateTURNServer_Response_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response.class, SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response.Builder.class);
-      }
-
-      // Construct using SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        turnServer_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesRemoteclientServiceMessages.internal_static_CRemoteClient_AllocateTURNServer_Response_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response getDefaultInstanceForType() {
-        return SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response build() {
-        SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response buildPartial() {
-        SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response result = new SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.turnServer_ = turnServer_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response) {
-          return mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response other) {
-        if (other == SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response.getDefaultInstance()) return this;
-        if (other.hasTurnServer()) {
-          bitField0_ |= 0x00000001;
-          turnServer_ = other.turnServer_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object turnServer_ = "";
-      /**
-       * <code>optional string turn_server = 1;</code>
-       * @return Whether the turnServer field is set.
-       */
-      public boolean hasTurnServer() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional string turn_server = 1;</code>
-       * @return The turnServer.
-       */
-      public java.lang.String getTurnServer() {
-        java.lang.Object ref = turnServer_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            turnServer_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string turn_server = 1;</code>
-       * @return The bytes for turnServer.
-       */
-      public com.google.protobuf.ByteString
-          getTurnServerBytes() {
-        java.lang.Object ref = turnServer_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          turnServer_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string turn_server = 1;</code>
-       * @param value The turnServer to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTurnServer(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        turnServer_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string turn_server = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTurnServer() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        turnServer_ = getDefaultInstance().getTurnServer();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string turn_server = 1;</code>
-       * @param value The bytes for turnServer to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTurnServerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        turnServer_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CRemoteClient_AllocateTURNServer_Response)
-    }
-
-    // @@protoc_insertion_point(class_scope:CRemoteClient_AllocateTURNServer_Response)
-    private static final SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response();
-    }
-
-    public static SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CRemoteClient_AllocateTURNServer_Response>
-        PARSER = new com.google.protobuf.AbstractParser<CRemoteClient_AllocateTURNServer_Response>() {
-      @java.lang.Override
-      public CRemoteClient_AllocateTURNServer_Response parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CRemoteClient_AllocateTURNServer_Response(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CRemoteClient_AllocateTURNServer_Response> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CRemoteClient_AllocateTURNServer_Response> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesRemoteclientServiceMessages.CRemoteClient_AllocateTURNServer_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19177,6 +18490,17 @@ public final class SteammessagesRemoteclientServiceMessages {
        * <code>optional .CRemotePlayTogether_Notification.Player player = 2;</code>
        */
       SteammessagesRemoteclientServiceMessages.CRemotePlayTogether_Notification.PlayerOrBuilder getPlayerOrBuilder();
+
+      /**
+       * <code>optional int32 controller_type = 3;</code>
+       * @return Whether the controllerType field is set.
+       */
+      boolean hasControllerType();
+      /**
+       * <code>optional int32 controller_type = 3;</code>
+       * @return The controllerType.
+       */
+      int getControllerType();
     }
     /**
      * Protobuf type {@code CRemotePlayTogether_Notification.ControllerSlot}
@@ -19240,6 +18564,11 @@ public final class SteammessagesRemoteclientServiceMessages {
                   player_ = subBuilder.buildPartial();
                 }
                 bitField0_ |= 0x00000002;
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                controllerType_ = input.readInt32();
                 break;
               }
               default: {
@@ -19320,6 +18649,25 @@ public final class SteammessagesRemoteclientServiceMessages {
         return player_ == null ? SteammessagesRemoteclientServiceMessages.CRemotePlayTogether_Notification.Player.getDefaultInstance() : player_;
       }
 
+      public static final int CONTROLLER_TYPE_FIELD_NUMBER = 3;
+      private int controllerType_;
+      /**
+       * <code>optional int32 controller_type = 3;</code>
+       * @return Whether the controllerType field is set.
+       */
+      @java.lang.Override
+      public boolean hasControllerType() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional int32 controller_type = 3;</code>
+       * @return The controllerType.
+       */
+      @java.lang.Override
+      public int getControllerType() {
+        return controllerType_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -19340,6 +18688,9 @@ public final class SteammessagesRemoteclientServiceMessages {
         if (((bitField0_ & 0x00000002) != 0)) {
           output.writeMessage(2, getPlayer());
         }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeInt32(3, controllerType_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -19356,6 +18707,10 @@ public final class SteammessagesRemoteclientServiceMessages {
         if (((bitField0_ & 0x00000002) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getPlayer());
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(3, controllerType_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -19382,6 +18737,11 @@ public final class SteammessagesRemoteclientServiceMessages {
           if (!getPlayer()
               .equals(other.getPlayer())) return false;
         }
+        if (hasControllerType() != other.hasControllerType()) return false;
+        if (hasControllerType()) {
+          if (getControllerType()
+              != other.getControllerType()) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -19400,6 +18760,10 @@ public final class SteammessagesRemoteclientServiceMessages {
         if (hasPlayer()) {
           hash = (37 * hash) + PLAYER_FIELD_NUMBER;
           hash = (53 * hash) + getPlayer().hashCode();
+        }
+        if (hasControllerType()) {
+          hash = (37 * hash) + CONTROLLER_TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + getControllerType();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -19543,6 +18907,8 @@ public final class SteammessagesRemoteclientServiceMessages {
             playerBuilder_.clear();
           }
           bitField0_ = (bitField0_ & ~0x00000002);
+          controllerType_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
           return this;
         }
 
@@ -19582,6 +18948,10 @@ public final class SteammessagesRemoteclientServiceMessages {
               result.player_ = playerBuilder_.build();
             }
             to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.controllerType_ = controllerType_;
+            to_bitField0_ |= 0x00000004;
           }
           result.bitField0_ = to_bitField0_;
           onBuilt();
@@ -19637,6 +19007,9 @@ public final class SteammessagesRemoteclientServiceMessages {
           }
           if (other.hasPlayer()) {
             mergePlayer(other.getPlayer());
+          }
+          if (other.hasControllerType()) {
+            setControllerType(other.getControllerType());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -19825,6 +19198,45 @@ public final class SteammessagesRemoteclientServiceMessages {
             player_ = null;
           }
           return playerBuilder_;
+        }
+
+        private int controllerType_ ;
+        /**
+         * <code>optional int32 controller_type = 3;</code>
+         * @return Whether the controllerType field is set.
+         */
+        @java.lang.Override
+        public boolean hasControllerType() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>optional int32 controller_type = 3;</code>
+         * @return The controllerType.
+         */
+        @java.lang.Override
+        public int getControllerType() {
+          return controllerType_;
+        }
+        /**
+         * <code>optional int32 controller_type = 3;</code>
+         * @param value The controllerType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setControllerType(int value) {
+          bitField0_ |= 0x00000004;
+          controllerType_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 controller_type = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearControllerType() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          controllerType_ = 0;
+          onChanged();
+          return this;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -26241,6 +25653,3843 @@ public final class SteammessagesRemoteclientServiceMessages {
 
   }
 
+  public interface CCMRemoteClient_ClientMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCMRemoteClient_ClientMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+     * @return Whether the createSessionRequest field is set.
+     */
+    boolean hasCreateSessionRequest();
+    /**
+     * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+     * @return The createSessionRequest.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request getCreateSessionRequest();
+    /**
+     * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_RequestOrBuilder getCreateSessionRequestOrBuilder();
+
+    /**
+     * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+     * @return Whether the startPairingRequest field is set.
+     */
+    boolean hasStartPairingRequest();
+    /**
+     * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+     * @return The startPairingRequest.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request getStartPairingRequest();
+    /**
+     * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_RequestOrBuilder getStartPairingRequestOrBuilder();
+
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+     * @return Whether the setPairingInfoRequest field is set.
+     */
+    boolean hasSetPairingInfoRequest();
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+     * @return The setPairingInfoRequest.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request getSetPairingInfoRequest();
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_RequestOrBuilder getSetPairingInfoRequestOrBuilder();
+
+    /**
+     * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+     * @return Whether the cancelPairingRequest field is set.
+     */
+    boolean hasCancelPairingRequest();
+    /**
+     * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+     * @return The cancelPairingRequest.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request getCancelPairingRequest();
+    /**
+     * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_RequestOrBuilder getCancelPairingRequestOrBuilder();
+
+    /**
+     * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+     * @return Whether the registerStatusUpdate field is set.
+     */
+    boolean hasRegisterStatusUpdate();
+    /**
+     * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+     * @return The registerStatusUpdate.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification getRegisterStatusUpdate();
+    /**
+     * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_NotificationOrBuilder getRegisterStatusUpdateOrBuilder();
+
+    /**
+     * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+     * @return Whether the unregisterStatusUpdate field is set.
+     */
+    boolean hasUnregisterStatusUpdate();
+    /**
+     * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+     * @return The unregisterStatusUpdate.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification getUnregisterStatusUpdate();
+    /**
+     * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_NotificationOrBuilder getUnregisterStatusUpdateOrBuilder();
+
+    /**
+     * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+     * @return Whether the remotePacket field is set.
+     */
+    boolean hasRemotePacket();
+    /**
+     * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+     * @return The remotePacket.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification getRemotePacket();
+    /**
+     * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_NotificationOrBuilder getRemotePacketOrBuilder();
+
+    public SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage.MessageCase getMessageCase();
+  }
+  /**
+   * Protobuf type {@code CCMRemoteClient_ClientMessage}
+   */
+  public static final class CCMRemoteClient_ClientMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCMRemoteClient_ClientMessage)
+      CCMRemoteClient_ClientMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCMRemoteClient_ClientMessage.newBuilder() to construct.
+    private CCMRemoteClient_ClientMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCMRemoteClient_ClientMessage() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCMRemoteClient_ClientMessage();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCMRemoteClient_ClientMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.Builder subBuilder = null;
+              if (messageCase_ == 1) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 1;
+              break;
+            }
+            case 18: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.Builder subBuilder = null;
+              if (messageCase_ == 2) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 2;
+              break;
+            }
+            case 26: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.Builder subBuilder = null;
+              if (messageCase_ == 3) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 3;
+              break;
+            }
+            case 34: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.Builder subBuilder = null;
+              if (messageCase_ == 4) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 4;
+              break;
+            }
+            case 42: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.Builder subBuilder = null;
+              if (messageCase_ == 5) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 5;
+              break;
+            }
+            case 50: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.Builder subBuilder = null;
+              if (messageCase_ == 6) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 6;
+              break;
+            }
+            case 58: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.Builder subBuilder = null;
+              if (messageCase_ == 7) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 7;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesRemoteclientServiceMessages.internal_static_CCMRemoteClient_ClientMessage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesRemoteclientServiceMessages.internal_static_CCMRemoteClient_ClientMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage.class, SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage.Builder.class);
+    }
+
+    private int bitField0_;
+    private int messageCase_ = 0;
+    private java.lang.Object message_;
+    public enum MessageCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      CREATE_SESSION_REQUEST(1),
+      START_PAIRING_REQUEST(2),
+      SET_PAIRING_INFO_REQUEST(3),
+      CANCEL_PAIRING_REQUEST(4),
+      REGISTER_STATUS_UPDATE(5),
+      UNREGISTER_STATUS_UPDATE(6),
+      REMOTE_PACKET(7),
+      MESSAGE_NOT_SET(0);
+      private final int value;
+      private MessageCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MessageCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static MessageCase forNumber(int value) {
+        switch (value) {
+          case 1: return CREATE_SESSION_REQUEST;
+          case 2: return START_PAIRING_REQUEST;
+          case 3: return SET_PAIRING_INFO_REQUEST;
+          case 4: return CANCEL_PAIRING_REQUEST;
+          case 5: return REGISTER_STATUS_UPDATE;
+          case 6: return UNREGISTER_STATUS_UPDATE;
+          case 7: return REMOTE_PACKET;
+          case 0: return MESSAGE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public MessageCase
+    getMessageCase() {
+      return MessageCase.forNumber(
+          messageCase_);
+    }
+
+    public static final int CREATE_SESSION_REQUEST_FIELD_NUMBER = 1;
+    /**
+     * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+     * @return Whether the createSessionRequest field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreateSessionRequest() {
+      return messageCase_ == 1;
+    }
+    /**
+     * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+     * @return The createSessionRequest.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request getCreateSessionRequest() {
+      if (messageCase_ == 1) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_RequestOrBuilder getCreateSessionRequestOrBuilder() {
+      if (messageCase_ == 1) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.getDefaultInstance();
+    }
+
+    public static final int START_PAIRING_REQUEST_FIELD_NUMBER = 2;
+    /**
+     * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+     * @return Whether the startPairingRequest field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartPairingRequest() {
+      return messageCase_ == 2;
+    }
+    /**
+     * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+     * @return The startPairingRequest.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request getStartPairingRequest() {
+      if (messageCase_ == 2) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_RequestOrBuilder getStartPairingRequestOrBuilder() {
+      if (messageCase_ == 2) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.getDefaultInstance();
+    }
+
+    public static final int SET_PAIRING_INFO_REQUEST_FIELD_NUMBER = 3;
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+     * @return Whether the setPairingInfoRequest field is set.
+     */
+    @java.lang.Override
+    public boolean hasSetPairingInfoRequest() {
+      return messageCase_ == 3;
+    }
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+     * @return The setPairingInfoRequest.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request getSetPairingInfoRequest() {
+      if (messageCase_ == 3) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_RequestOrBuilder getSetPairingInfoRequestOrBuilder() {
+      if (messageCase_ == 3) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.getDefaultInstance();
+    }
+
+    public static final int CANCEL_PAIRING_REQUEST_FIELD_NUMBER = 4;
+    /**
+     * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+     * @return Whether the cancelPairingRequest field is set.
+     */
+    @java.lang.Override
+    public boolean hasCancelPairingRequest() {
+      return messageCase_ == 4;
+    }
+    /**
+     * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+     * @return The cancelPairingRequest.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request getCancelPairingRequest() {
+      if (messageCase_ == 4) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_RequestOrBuilder getCancelPairingRequestOrBuilder() {
+      if (messageCase_ == 4) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.getDefaultInstance();
+    }
+
+    public static final int REGISTER_STATUS_UPDATE_FIELD_NUMBER = 5;
+    /**
+     * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+     * @return Whether the registerStatusUpdate field is set.
+     */
+    @java.lang.Override
+    public boolean hasRegisterStatusUpdate() {
+      return messageCase_ == 5;
+    }
+    /**
+     * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+     * @return The registerStatusUpdate.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification getRegisterStatusUpdate() {
+      if (messageCase_ == 5) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_NotificationOrBuilder getRegisterStatusUpdateOrBuilder() {
+      if (messageCase_ == 5) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.getDefaultInstance();
+    }
+
+    public static final int UNREGISTER_STATUS_UPDATE_FIELD_NUMBER = 6;
+    /**
+     * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+     * @return Whether the unregisterStatusUpdate field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnregisterStatusUpdate() {
+      return messageCase_ == 6;
+    }
+    /**
+     * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+     * @return The unregisterStatusUpdate.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification getUnregisterStatusUpdate() {
+      if (messageCase_ == 6) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_NotificationOrBuilder getUnregisterStatusUpdateOrBuilder() {
+      if (messageCase_ == 6) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.getDefaultInstance();
+    }
+
+    public static final int REMOTE_PACKET_FIELD_NUMBER = 7;
+    /**
+     * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+     * @return Whether the remotePacket field is set.
+     */
+    @java.lang.Override
+    public boolean hasRemotePacket() {
+      return messageCase_ == 7;
+    }
+    /**
+     * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+     * @return The remotePacket.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification getRemotePacket() {
+      if (messageCase_ == 7) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_NotificationOrBuilder getRemotePacketOrBuilder() {
+      if (messageCase_ == 7) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (messageCase_ == 1) {
+        output.writeMessage(1, (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request) message_);
+      }
+      if (messageCase_ == 2) {
+        output.writeMessage(2, (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request) message_);
+      }
+      if (messageCase_ == 3) {
+        output.writeMessage(3, (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request) message_);
+      }
+      if (messageCase_ == 4) {
+        output.writeMessage(4, (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request) message_);
+      }
+      if (messageCase_ == 5) {
+        output.writeMessage(5, (SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification) message_);
+      }
+      if (messageCase_ == 6) {
+        output.writeMessage(6, (SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification) message_);
+      }
+      if (messageCase_ == 7) {
+        output.writeMessage(7, (SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification) message_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (messageCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request) message_);
+      }
+      if (messageCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request) message_);
+      }
+      if (messageCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request) message_);
+      }
+      if (messageCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request) message_);
+      }
+      if (messageCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification) message_);
+      }
+      if (messageCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification) message_);
+      }
+      if (messageCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification) message_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage)) {
+        return super.equals(obj);
+      }
+      SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage other = (SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage) obj;
+
+      if (!getMessageCase().equals(other.getMessageCase())) return false;
+      switch (messageCase_) {
+        case 1:
+          if (!getCreateSessionRequest()
+              .equals(other.getCreateSessionRequest())) return false;
+          break;
+        case 2:
+          if (!getStartPairingRequest()
+              .equals(other.getStartPairingRequest())) return false;
+          break;
+        case 3:
+          if (!getSetPairingInfoRequest()
+              .equals(other.getSetPairingInfoRequest())) return false;
+          break;
+        case 4:
+          if (!getCancelPairingRequest()
+              .equals(other.getCancelPairingRequest())) return false;
+          break;
+        case 5:
+          if (!getRegisterStatusUpdate()
+              .equals(other.getRegisterStatusUpdate())) return false;
+          break;
+        case 6:
+          if (!getUnregisterStatusUpdate()
+              .equals(other.getUnregisterStatusUpdate())) return false;
+          break;
+        case 7:
+          if (!getRemotePacket()
+              .equals(other.getRemotePacket())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (messageCase_) {
+        case 1:
+          hash = (37 * hash) + CREATE_SESSION_REQUEST_FIELD_NUMBER;
+          hash = (53 * hash) + getCreateSessionRequest().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + START_PAIRING_REQUEST_FIELD_NUMBER;
+          hash = (53 * hash) + getStartPairingRequest().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + SET_PAIRING_INFO_REQUEST_FIELD_NUMBER;
+          hash = (53 * hash) + getSetPairingInfoRequest().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + CANCEL_PAIRING_REQUEST_FIELD_NUMBER;
+          hash = (53 * hash) + getCancelPairingRequest().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + REGISTER_STATUS_UPDATE_FIELD_NUMBER;
+          hash = (53 * hash) + getRegisterStatusUpdate().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + UNREGISTER_STATUS_UPDATE_FIELD_NUMBER;
+          hash = (53 * hash) + getUnregisterStatusUpdate().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + REMOTE_PACKET_FIELD_NUMBER;
+          hash = (53 * hash) + getRemotePacket().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCMRemoteClient_ClientMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCMRemoteClient_ClientMessage)
+        SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesRemoteclientServiceMessages.internal_static_CCMRemoteClient_ClientMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesRemoteclientServiceMessages.internal_static_CCMRemoteClient_ClientMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage.class, SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage.Builder.class);
+      }
+
+      // Construct using SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        messageCase_ = 0;
+        message_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesRemoteclientServiceMessages.internal_static_CCMRemoteClient_ClientMessage_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage getDefaultInstanceForType() {
+        return SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage build() {
+        SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage buildPartial() {
+        SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage result = new SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (messageCase_ == 1) {
+          if (createSessionRequestBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = createSessionRequestBuilder_.build();
+          }
+        }
+        if (messageCase_ == 2) {
+          if (startPairingRequestBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = startPairingRequestBuilder_.build();
+          }
+        }
+        if (messageCase_ == 3) {
+          if (setPairingInfoRequestBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = setPairingInfoRequestBuilder_.build();
+          }
+        }
+        if (messageCase_ == 4) {
+          if (cancelPairingRequestBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = cancelPairingRequestBuilder_.build();
+          }
+        }
+        if (messageCase_ == 5) {
+          if (registerStatusUpdateBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = registerStatusUpdateBuilder_.build();
+          }
+        }
+        if (messageCase_ == 6) {
+          if (unregisterStatusUpdateBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = unregisterStatusUpdateBuilder_.build();
+          }
+        }
+        if (messageCase_ == 7) {
+          if (remotePacketBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = remotePacketBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.messageCase_ = messageCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage) {
+          return mergeFrom((SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage other) {
+        if (other == SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage.getDefaultInstance()) return this;
+        switch (other.getMessageCase()) {
+          case CREATE_SESSION_REQUEST: {
+            mergeCreateSessionRequest(other.getCreateSessionRequest());
+            break;
+          }
+          case START_PAIRING_REQUEST: {
+            mergeStartPairingRequest(other.getStartPairingRequest());
+            break;
+          }
+          case SET_PAIRING_INFO_REQUEST: {
+            mergeSetPairingInfoRequest(other.getSetPairingInfoRequest());
+            break;
+          }
+          case CANCEL_PAIRING_REQUEST: {
+            mergeCancelPairingRequest(other.getCancelPairingRequest());
+            break;
+          }
+          case REGISTER_STATUS_UPDATE: {
+            mergeRegisterStatusUpdate(other.getRegisterStatusUpdate());
+            break;
+          }
+          case UNREGISTER_STATUS_UPDATE: {
+            mergeUnregisterStatusUpdate(other.getUnregisterStatusUpdate());
+            break;
+          }
+          case REMOTE_PACKET: {
+            mergeRemotePacket(other.getRemotePacket());
+            break;
+          }
+          case MESSAGE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int messageCase_ = 0;
+      private java.lang.Object message_;
+      public MessageCase
+          getMessageCase() {
+        return MessageCase.forNumber(
+            messageCase_);
+      }
+
+      public Builder clearMessage() {
+        messageCase_ = 0;
+        message_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_RequestOrBuilder> createSessionRequestBuilder_;
+      /**
+       * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+       * @return Whether the createSessionRequest field is set.
+       */
+      @java.lang.Override
+      public boolean hasCreateSessionRequest() {
+        return messageCase_ == 1;
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+       * @return The createSessionRequest.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request getCreateSessionRequest() {
+        if (createSessionRequestBuilder_ == null) {
+          if (messageCase_ == 1) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.getDefaultInstance();
+        } else {
+          if (messageCase_ == 1) {
+            return createSessionRequestBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+       */
+      public Builder setCreateSessionRequest(SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request value) {
+        if (createSessionRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          createSessionRequestBuilder_.setMessage(value);
+        }
+        messageCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+       */
+      public Builder setCreateSessionRequest(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.Builder builderForValue) {
+        if (createSessionRequestBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          createSessionRequestBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+       */
+      public Builder mergeCreateSessionRequest(SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request value) {
+        if (createSessionRequestBuilder_ == null) {
+          if (messageCase_ == 1 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 1) {
+            createSessionRequestBuilder_.mergeFrom(value);
+          }
+          createSessionRequestBuilder_.setMessage(value);
+        }
+        messageCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+       */
+      public Builder clearCreateSessionRequest() {
+        if (createSessionRequestBuilder_ == null) {
+          if (messageCase_ == 1) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 1) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          createSessionRequestBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.Builder getCreateSessionRequestBuilder() {
+        return getCreateSessionRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_RequestOrBuilder getCreateSessionRequestOrBuilder() {
+        if ((messageCase_ == 1) && (createSessionRequestBuilder_ != null)) {
+          return createSessionRequestBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 1) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Request create_session_request = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_RequestOrBuilder> 
+          getCreateSessionRequestFieldBuilder() {
+        if (createSessionRequestBuilder_ == null) {
+          if (!(messageCase_ == 1)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.getDefaultInstance();
+          }
+          createSessionRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_RequestOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Request) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 1;
+        onChanged();;
+        return createSessionRequestBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_RequestOrBuilder> startPairingRequestBuilder_;
+      /**
+       * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+       * @return Whether the startPairingRequest field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartPairingRequest() {
+        return messageCase_ == 2;
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+       * @return The startPairingRequest.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request getStartPairingRequest() {
+        if (startPairingRequestBuilder_ == null) {
+          if (messageCase_ == 2) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.getDefaultInstance();
+        } else {
+          if (messageCase_ == 2) {
+            return startPairingRequestBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+       */
+      public Builder setStartPairingRequest(SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request value) {
+        if (startPairingRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          startPairingRequestBuilder_.setMessage(value);
+        }
+        messageCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+       */
+      public Builder setStartPairingRequest(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.Builder builderForValue) {
+        if (startPairingRequestBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          startPairingRequestBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+       */
+      public Builder mergeStartPairingRequest(SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request value) {
+        if (startPairingRequestBuilder_ == null) {
+          if (messageCase_ == 2 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 2) {
+            startPairingRequestBuilder_.mergeFrom(value);
+          }
+          startPairingRequestBuilder_.setMessage(value);
+        }
+        messageCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+       */
+      public Builder clearStartPairingRequest() {
+        if (startPairingRequestBuilder_ == null) {
+          if (messageCase_ == 2) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 2) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          startPairingRequestBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.Builder getStartPairingRequestBuilder() {
+        return getStartPairingRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_RequestOrBuilder getStartPairingRequestOrBuilder() {
+        if ((messageCase_ == 2) && (startPairingRequestBuilder_ != null)) {
+          return startPairingRequestBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 2) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Request start_pairing_request = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_RequestOrBuilder> 
+          getStartPairingRequestFieldBuilder() {
+        if (startPairingRequestBuilder_ == null) {
+          if (!(messageCase_ == 2)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.getDefaultInstance();
+          }
+          startPairingRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_RequestOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Request) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 2;
+        onChanged();;
+        return startPairingRequestBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_RequestOrBuilder> setPairingInfoRequestBuilder_;
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+       * @return Whether the setPairingInfoRequest field is set.
+       */
+      @java.lang.Override
+      public boolean hasSetPairingInfoRequest() {
+        return messageCase_ == 3;
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+       * @return The setPairingInfoRequest.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request getSetPairingInfoRequest() {
+        if (setPairingInfoRequestBuilder_ == null) {
+          if (messageCase_ == 3) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.getDefaultInstance();
+        } else {
+          if (messageCase_ == 3) {
+            return setPairingInfoRequestBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+       */
+      public Builder setSetPairingInfoRequest(SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request value) {
+        if (setPairingInfoRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          setPairingInfoRequestBuilder_.setMessage(value);
+        }
+        messageCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+       */
+      public Builder setSetPairingInfoRequest(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.Builder builderForValue) {
+        if (setPairingInfoRequestBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          setPairingInfoRequestBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+       */
+      public Builder mergeSetPairingInfoRequest(SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request value) {
+        if (setPairingInfoRequestBuilder_ == null) {
+          if (messageCase_ == 3 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 3) {
+            setPairingInfoRequestBuilder_.mergeFrom(value);
+          }
+          setPairingInfoRequestBuilder_.setMessage(value);
+        }
+        messageCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+       */
+      public Builder clearSetPairingInfoRequest() {
+        if (setPairingInfoRequestBuilder_ == null) {
+          if (messageCase_ == 3) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 3) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          setPairingInfoRequestBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.Builder getSetPairingInfoRequestBuilder() {
+        return getSetPairingInfoRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_RequestOrBuilder getSetPairingInfoRequestOrBuilder() {
+        if ((messageCase_ == 3) && (setPairingInfoRequestBuilder_ != null)) {
+          return setPairingInfoRequestBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 3) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_RequestOrBuilder> 
+          getSetPairingInfoRequestFieldBuilder() {
+        if (setPairingInfoRequestBuilder_ == null) {
+          if (!(messageCase_ == 3)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.getDefaultInstance();
+          }
+          setPairingInfoRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_RequestOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Request) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 3;
+        onChanged();;
+        return setPairingInfoRequestBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_RequestOrBuilder> cancelPairingRequestBuilder_;
+      /**
+       * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+       * @return Whether the cancelPairingRequest field is set.
+       */
+      @java.lang.Override
+      public boolean hasCancelPairingRequest() {
+        return messageCase_ == 4;
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+       * @return The cancelPairingRequest.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request getCancelPairingRequest() {
+        if (cancelPairingRequestBuilder_ == null) {
+          if (messageCase_ == 4) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.getDefaultInstance();
+        } else {
+          if (messageCase_ == 4) {
+            return cancelPairingRequestBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+       */
+      public Builder setCancelPairingRequest(SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request value) {
+        if (cancelPairingRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          cancelPairingRequestBuilder_.setMessage(value);
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+       */
+      public Builder setCancelPairingRequest(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.Builder builderForValue) {
+        if (cancelPairingRequestBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          cancelPairingRequestBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+       */
+      public Builder mergeCancelPairingRequest(SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request value) {
+        if (cancelPairingRequestBuilder_ == null) {
+          if (messageCase_ == 4 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 4) {
+            cancelPairingRequestBuilder_.mergeFrom(value);
+          }
+          cancelPairingRequestBuilder_.setMessage(value);
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+       */
+      public Builder clearCancelPairingRequest() {
+        if (cancelPairingRequestBuilder_ == null) {
+          if (messageCase_ == 4) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 4) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          cancelPairingRequestBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.Builder getCancelPairingRequestBuilder() {
+        return getCancelPairingRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_RequestOrBuilder getCancelPairingRequestOrBuilder() {
+        if ((messageCase_ == 4) && (cancelPairingRequestBuilder_ != null)) {
+          return cancelPairingRequestBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 4) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_RequestOrBuilder> 
+          getCancelPairingRequestFieldBuilder() {
+        if (cancelPairingRequestBuilder_ == null) {
+          if (!(messageCase_ == 4)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.getDefaultInstance();
+          }
+          cancelPairingRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_RequestOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Request) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 4;
+        onChanged();;
+        return cancelPairingRequestBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification, SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_NotificationOrBuilder> registerStatusUpdateBuilder_;
+      /**
+       * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+       * @return Whether the registerStatusUpdate field is set.
+       */
+      @java.lang.Override
+      public boolean hasRegisterStatusUpdate() {
+        return messageCase_ == 5;
+      }
+      /**
+       * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+       * @return The registerStatusUpdate.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification getRegisterStatusUpdate() {
+        if (registerStatusUpdateBuilder_ == null) {
+          if (messageCase_ == 5) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.getDefaultInstance();
+        } else {
+          if (messageCase_ == 5) {
+            return registerStatusUpdateBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+       */
+      public Builder setRegisterStatusUpdate(SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification value) {
+        if (registerStatusUpdateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          registerStatusUpdateBuilder_.setMessage(value);
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+       */
+      public Builder setRegisterStatusUpdate(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.Builder builderForValue) {
+        if (registerStatusUpdateBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          registerStatusUpdateBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+       */
+      public Builder mergeRegisterStatusUpdate(SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification value) {
+        if (registerStatusUpdateBuilder_ == null) {
+          if (messageCase_ == 5 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 5) {
+            registerStatusUpdateBuilder_.mergeFrom(value);
+          }
+          registerStatusUpdateBuilder_.setMessage(value);
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+       */
+      public Builder clearRegisterStatusUpdate() {
+        if (registerStatusUpdateBuilder_ == null) {
+          if (messageCase_ == 5) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 5) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          registerStatusUpdateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.Builder getRegisterStatusUpdateBuilder() {
+        return getRegisterStatusUpdateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_NotificationOrBuilder getRegisterStatusUpdateOrBuilder() {
+        if ((messageCase_ == 5) && (registerStatusUpdateBuilder_ != null)) {
+          return registerStatusUpdateBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 5) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification, SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_NotificationOrBuilder> 
+          getRegisterStatusUpdateFieldBuilder() {
+        if (registerStatusUpdateBuilder_ == null) {
+          if (!(messageCase_ == 5)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.getDefaultInstance();
+          }
+          registerStatusUpdateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification, SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_NotificationOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_RegisterStatusUpdate_Notification) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 5;
+        onChanged();;
+        return registerStatusUpdateBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification, SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_NotificationOrBuilder> unregisterStatusUpdateBuilder_;
+      /**
+       * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+       * @return Whether the unregisterStatusUpdate field is set.
+       */
+      @java.lang.Override
+      public boolean hasUnregisterStatusUpdate() {
+        return messageCase_ == 6;
+      }
+      /**
+       * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+       * @return The unregisterStatusUpdate.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification getUnregisterStatusUpdate() {
+        if (unregisterStatusUpdateBuilder_ == null) {
+          if (messageCase_ == 6) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.getDefaultInstance();
+        } else {
+          if (messageCase_ == 6) {
+            return unregisterStatusUpdateBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+       */
+      public Builder setUnregisterStatusUpdate(SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification value) {
+        if (unregisterStatusUpdateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          unregisterStatusUpdateBuilder_.setMessage(value);
+        }
+        messageCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+       */
+      public Builder setUnregisterStatusUpdate(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.Builder builderForValue) {
+        if (unregisterStatusUpdateBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          unregisterStatusUpdateBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+       */
+      public Builder mergeUnregisterStatusUpdate(SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification value) {
+        if (unregisterStatusUpdateBuilder_ == null) {
+          if (messageCase_ == 6 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 6) {
+            unregisterStatusUpdateBuilder_.mergeFrom(value);
+          }
+          unregisterStatusUpdateBuilder_.setMessage(value);
+        }
+        messageCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+       */
+      public Builder clearUnregisterStatusUpdate() {
+        if (unregisterStatusUpdateBuilder_ == null) {
+          if (messageCase_ == 6) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 6) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          unregisterStatusUpdateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.Builder getUnregisterStatusUpdateBuilder() {
+        return getUnregisterStatusUpdateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_NotificationOrBuilder getUnregisterStatusUpdateOrBuilder() {
+        if ((messageCase_ == 6) && (unregisterStatusUpdateBuilder_ != null)) {
+          return unregisterStatusUpdateBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 6) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification, SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_NotificationOrBuilder> 
+          getUnregisterStatusUpdateFieldBuilder() {
+        if (unregisterStatusUpdateBuilder_ == null) {
+          if (!(messageCase_ == 6)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.getDefaultInstance();
+          }
+          unregisterStatusUpdateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification, SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_NotificationOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_UnregisterStatusUpdate_Notification) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 6;
+        onChanged();;
+        return unregisterStatusUpdateBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification, SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_NotificationOrBuilder> remotePacketBuilder_;
+      /**
+       * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+       * @return Whether the remotePacket field is set.
+       */
+      @java.lang.Override
+      public boolean hasRemotePacket() {
+        return messageCase_ == 7;
+      }
+      /**
+       * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+       * @return The remotePacket.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification getRemotePacket() {
+        if (remotePacketBuilder_ == null) {
+          if (messageCase_ == 7) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.getDefaultInstance();
+        } else {
+          if (messageCase_ == 7) {
+            return remotePacketBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+       */
+      public Builder setRemotePacket(SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification value) {
+        if (remotePacketBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          remotePacketBuilder_.setMessage(value);
+        }
+        messageCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+       */
+      public Builder setRemotePacket(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.Builder builderForValue) {
+        if (remotePacketBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          remotePacketBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+       */
+      public Builder mergeRemotePacket(SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification value) {
+        if (remotePacketBuilder_ == null) {
+          if (messageCase_ == 7 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 7) {
+            remotePacketBuilder_.mergeFrom(value);
+          }
+          remotePacketBuilder_.setMessage(value);
+        }
+        messageCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+       */
+      public Builder clearRemotePacket() {
+        if (remotePacketBuilder_ == null) {
+          if (messageCase_ == 7) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 7) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          remotePacketBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.Builder getRemotePacketBuilder() {
+        return getRemotePacketFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_NotificationOrBuilder getRemotePacketOrBuilder() {
+        if ((messageCase_ == 7) && (remotePacketBuilder_ != null)) {
+          return remotePacketBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 7) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_RemotePacket_Notification remote_packet = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification, SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_NotificationOrBuilder> 
+          getRemotePacketFieldBuilder() {
+        if (remotePacketBuilder_ == null) {
+          if (!(messageCase_ == 7)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.getDefaultInstance();
+          }
+          remotePacketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification, SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_NotificationOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_RemotePacket_Notification) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 7;
+        onChanged();;
+        return remotePacketBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCMRemoteClient_ClientMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCMRemoteClient_ClientMessage)
+    private static final SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage();
+    }
+
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCMRemoteClient_ClientMessage>
+        PARSER = new com.google.protobuf.AbstractParser<CCMRemoteClient_ClientMessage>() {
+      @java.lang.Override
+      public CCMRemoteClient_ClientMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCMRemoteClient_ClientMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCMRemoteClient_ClientMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCMRemoteClient_ClientMessage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ClientMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CCMRemoteClient_ServerMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCMRemoteClient_ServerMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 result = 1;</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>optional int32 result = 1;</code>
+     * @return The result.
+     */
+    int getResult();
+
+    /**
+     * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+     * @return Whether the createSessionResponse field is set.
+     */
+    boolean hasCreateSessionResponse();
+    /**
+     * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+     * @return The createSessionResponse.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response getCreateSessionResponse();
+    /**
+     * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_ResponseOrBuilder getCreateSessionResponseOrBuilder();
+
+    /**
+     * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+     * @return Whether the startPairingResponse field is set.
+     */
+    boolean hasStartPairingResponse();
+    /**
+     * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+     * @return The startPairingResponse.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response getStartPairingResponse();
+    /**
+     * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_ResponseOrBuilder getStartPairingResponseOrBuilder();
+
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+     * @return Whether the setPairingInfoResponse field is set.
+     */
+    boolean hasSetPairingInfoResponse();
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+     * @return The setPairingInfoResponse.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response getSetPairingInfoResponse();
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_ResponseOrBuilder getSetPairingInfoResponseOrBuilder();
+
+    /**
+     * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+     * @return Whether the cancelPairingResponse field is set.
+     */
+    boolean hasCancelPairingResponse();
+    /**
+     * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+     * @return The cancelPairingResponse.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response getCancelPairingResponse();
+    /**
+     * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_ResponseOrBuilder getCancelPairingResponseOrBuilder();
+
+    /**
+     * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+     * @return Whether the replyPacket field is set.
+     */
+    boolean hasReplyPacket();
+    /**
+     * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+     * @return The replyPacket.
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response getReplyPacket();
+    /**
+     * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+     */
+    SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_ResponseOrBuilder getReplyPacketOrBuilder();
+
+    public SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage.MessageCase getMessageCase();
+  }
+  /**
+   * Protobuf type {@code CCMRemoteClient_ServerMessage}
+   */
+  public static final class CCMRemoteClient_ServerMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCMRemoteClient_ServerMessage)
+      CCMRemoteClient_ServerMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCMRemoteClient_ServerMessage.newBuilder() to construct.
+    private CCMRemoteClient_ServerMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCMRemoteClient_ServerMessage() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCMRemoteClient_ServerMessage();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCMRemoteClient_ServerMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              result_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.Builder subBuilder = null;
+              if (messageCase_ == 2) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 2;
+              break;
+            }
+            case 26: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.Builder subBuilder = null;
+              if (messageCase_ == 3) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 3;
+              break;
+            }
+            case 34: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.Builder subBuilder = null;
+              if (messageCase_ == 4) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 4;
+              break;
+            }
+            case 42: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.Builder subBuilder = null;
+              if (messageCase_ == 5) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 5;
+              break;
+            }
+            case 50: {
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.Builder subBuilder = null;
+              if (messageCase_ == 6) {
+                subBuilder = ((SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response) message_).toBuilder();
+              }
+              message_ =
+                  input.readMessage(SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response) message_);
+                message_ = subBuilder.buildPartial();
+              }
+              messageCase_ = 6;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesRemoteclientServiceMessages.internal_static_CCMRemoteClient_ServerMessage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesRemoteclientServiceMessages.internal_static_CCMRemoteClient_ServerMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage.class, SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage.Builder.class);
+    }
+
+    private int bitField0_;
+    private int messageCase_ = 0;
+    private java.lang.Object message_;
+    public enum MessageCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      CREATE_SESSION_RESPONSE(2),
+      START_PAIRING_RESPONSE(3),
+      SET_PAIRING_INFO_RESPONSE(4),
+      CANCEL_PAIRING_RESPONSE(5),
+      REPLY_PACKET(6),
+      MESSAGE_NOT_SET(0);
+      private final int value;
+      private MessageCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MessageCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static MessageCase forNumber(int value) {
+        switch (value) {
+          case 2: return CREATE_SESSION_RESPONSE;
+          case 3: return START_PAIRING_RESPONSE;
+          case 4: return SET_PAIRING_INFO_RESPONSE;
+          case 5: return CANCEL_PAIRING_RESPONSE;
+          case 6: return REPLY_PACKET;
+          case 0: return MESSAGE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public MessageCase
+    getMessageCase() {
+      return MessageCase.forNumber(
+          messageCase_);
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private int result_;
+    /**
+     * <code>optional int32 result = 1;</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional int32 result = 1;</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public int getResult() {
+      return result_;
+    }
+
+    public static final int CREATE_SESSION_RESPONSE_FIELD_NUMBER = 2;
+    /**
+     * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+     * @return Whether the createSessionResponse field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreateSessionResponse() {
+      return messageCase_ == 2;
+    }
+    /**
+     * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+     * @return The createSessionResponse.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response getCreateSessionResponse() {
+      if (messageCase_ == 2) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_ResponseOrBuilder getCreateSessionResponseOrBuilder() {
+      if (messageCase_ == 2) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.getDefaultInstance();
+    }
+
+    public static final int START_PAIRING_RESPONSE_FIELD_NUMBER = 3;
+    /**
+     * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+     * @return Whether the startPairingResponse field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartPairingResponse() {
+      return messageCase_ == 3;
+    }
+    /**
+     * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+     * @return The startPairingResponse.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response getStartPairingResponse() {
+      if (messageCase_ == 3) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_ResponseOrBuilder getStartPairingResponseOrBuilder() {
+      if (messageCase_ == 3) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.getDefaultInstance();
+    }
+
+    public static final int SET_PAIRING_INFO_RESPONSE_FIELD_NUMBER = 4;
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+     * @return Whether the setPairingInfoResponse field is set.
+     */
+    @java.lang.Override
+    public boolean hasSetPairingInfoResponse() {
+      return messageCase_ == 4;
+    }
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+     * @return The setPairingInfoResponse.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response getSetPairingInfoResponse() {
+      if (messageCase_ == 4) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_ResponseOrBuilder getSetPairingInfoResponseOrBuilder() {
+      if (messageCase_ == 4) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.getDefaultInstance();
+    }
+
+    public static final int CANCEL_PAIRING_RESPONSE_FIELD_NUMBER = 5;
+    /**
+     * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+     * @return Whether the cancelPairingResponse field is set.
+     */
+    @java.lang.Override
+    public boolean hasCancelPairingResponse() {
+      return messageCase_ == 5;
+    }
+    /**
+     * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+     * @return The cancelPairingResponse.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response getCancelPairingResponse() {
+      if (messageCase_ == 5) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_ResponseOrBuilder getCancelPairingResponseOrBuilder() {
+      if (messageCase_ == 5) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.getDefaultInstance();
+    }
+
+    public static final int REPLY_PACKET_FIELD_NUMBER = 6;
+    /**
+     * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+     * @return Whether the replyPacket field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplyPacket() {
+      return messageCase_ == 6;
+    }
+    /**
+     * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+     * @return The replyPacket.
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response getReplyPacket() {
+      if (messageCase_ == 6) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.getDefaultInstance();
+    }
+    /**
+     * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+     */
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_ResponseOrBuilder getReplyPacketOrBuilder() {
+      if (messageCase_ == 6) {
+         return (SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response) message_;
+      }
+      return SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, result_);
+      }
+      if (messageCase_ == 2) {
+        output.writeMessage(2, (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response) message_);
+      }
+      if (messageCase_ == 3) {
+        output.writeMessage(3, (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response) message_);
+      }
+      if (messageCase_ == 4) {
+        output.writeMessage(4, (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response) message_);
+      }
+      if (messageCase_ == 5) {
+        output.writeMessage(5, (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response) message_);
+      }
+      if (messageCase_ == 6) {
+        output.writeMessage(6, (SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response) message_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, result_);
+      }
+      if (messageCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response) message_);
+      }
+      if (messageCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response) message_);
+      }
+      if (messageCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response) message_);
+      }
+      if (messageCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response) message_);
+      }
+      if (messageCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response) message_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage)) {
+        return super.equals(obj);
+      }
+      SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage other = (SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage) obj;
+
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (getResult()
+            != other.getResult()) return false;
+      }
+      if (!getMessageCase().equals(other.getMessageCase())) return false;
+      switch (messageCase_) {
+        case 2:
+          if (!getCreateSessionResponse()
+              .equals(other.getCreateSessionResponse())) return false;
+          break;
+        case 3:
+          if (!getStartPairingResponse()
+              .equals(other.getStartPairingResponse())) return false;
+          break;
+        case 4:
+          if (!getSetPairingInfoResponse()
+              .equals(other.getSetPairingInfoResponse())) return false;
+          break;
+        case 5:
+          if (!getCancelPairingResponse()
+              .equals(other.getCancelPairingResponse())) return false;
+          break;
+        case 6:
+          if (!getReplyPacket()
+              .equals(other.getReplyPacket())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult();
+      }
+      switch (messageCase_) {
+        case 2:
+          hash = (37 * hash) + CREATE_SESSION_RESPONSE_FIELD_NUMBER;
+          hash = (53 * hash) + getCreateSessionResponse().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + START_PAIRING_RESPONSE_FIELD_NUMBER;
+          hash = (53 * hash) + getStartPairingResponse().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + SET_PAIRING_INFO_RESPONSE_FIELD_NUMBER;
+          hash = (53 * hash) + getSetPairingInfoResponse().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + CANCEL_PAIRING_RESPONSE_FIELD_NUMBER;
+          hash = (53 * hash) + getCancelPairingResponse().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + REPLY_PACKET_FIELD_NUMBER;
+          hash = (53 * hash) + getReplyPacket().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCMRemoteClient_ServerMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCMRemoteClient_ServerMessage)
+        SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesRemoteclientServiceMessages.internal_static_CCMRemoteClient_ServerMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesRemoteclientServiceMessages.internal_static_CCMRemoteClient_ServerMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage.class, SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage.Builder.class);
+      }
+
+      // Construct using SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        result_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        messageCase_ = 0;
+        message_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesRemoteclientServiceMessages.internal_static_CCMRemoteClient_ServerMessage_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage getDefaultInstanceForType() {
+        return SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage build() {
+        SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage buildPartial() {
+        SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage result = new SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = result_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (messageCase_ == 2) {
+          if (createSessionResponseBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = createSessionResponseBuilder_.build();
+          }
+        }
+        if (messageCase_ == 3) {
+          if (startPairingResponseBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = startPairingResponseBuilder_.build();
+          }
+        }
+        if (messageCase_ == 4) {
+          if (setPairingInfoResponseBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = setPairingInfoResponseBuilder_.build();
+          }
+        }
+        if (messageCase_ == 5) {
+          if (cancelPairingResponseBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = cancelPairingResponseBuilder_.build();
+          }
+        }
+        if (messageCase_ == 6) {
+          if (replyPacketBuilder_ == null) {
+            result.message_ = message_;
+          } else {
+            result.message_ = replyPacketBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.messageCase_ = messageCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage) {
+          return mergeFrom((SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage other) {
+        if (other == SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage.getDefaultInstance()) return this;
+        if (other.hasResult()) {
+          setResult(other.getResult());
+        }
+        switch (other.getMessageCase()) {
+          case CREATE_SESSION_RESPONSE: {
+            mergeCreateSessionResponse(other.getCreateSessionResponse());
+            break;
+          }
+          case START_PAIRING_RESPONSE: {
+            mergeStartPairingResponse(other.getStartPairingResponse());
+            break;
+          }
+          case SET_PAIRING_INFO_RESPONSE: {
+            mergeSetPairingInfoResponse(other.getSetPairingInfoResponse());
+            break;
+          }
+          case CANCEL_PAIRING_RESPONSE: {
+            mergeCancelPairingResponse(other.getCancelPairingResponse());
+            break;
+          }
+          case REPLY_PACKET: {
+            mergeReplyPacket(other.getReplyPacket());
+            break;
+          }
+          case MESSAGE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int messageCase_ = 0;
+      private java.lang.Object message_;
+      public MessageCase
+          getMessageCase() {
+        return MessageCase.forNumber(
+            messageCase_);
+      }
+
+      public Builder clearMessage() {
+        messageCase_ = 0;
+        message_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private int result_ ;
+      /**
+       * <code>optional int32 result = 1;</code>
+       * @return Whether the result field is set.
+       */
+      @java.lang.Override
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional int32 result = 1;</code>
+       * @return The result.
+       */
+      @java.lang.Override
+      public int getResult() {
+        return result_;
+      }
+      /**
+       * <code>optional int32 result = 1;</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(int value) {
+        bitField0_ |= 0x00000001;
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 result = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_ResponseOrBuilder> createSessionResponseBuilder_;
+      /**
+       * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+       * @return Whether the createSessionResponse field is set.
+       */
+      @java.lang.Override
+      public boolean hasCreateSessionResponse() {
+        return messageCase_ == 2;
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+       * @return The createSessionResponse.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response getCreateSessionResponse() {
+        if (createSessionResponseBuilder_ == null) {
+          if (messageCase_ == 2) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.getDefaultInstance();
+        } else {
+          if (messageCase_ == 2) {
+            return createSessionResponseBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+       */
+      public Builder setCreateSessionResponse(SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response value) {
+        if (createSessionResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          createSessionResponseBuilder_.setMessage(value);
+        }
+        messageCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+       */
+      public Builder setCreateSessionResponse(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.Builder builderForValue) {
+        if (createSessionResponseBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          createSessionResponseBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+       */
+      public Builder mergeCreateSessionResponse(SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response value) {
+        if (createSessionResponseBuilder_ == null) {
+          if (messageCase_ == 2 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 2) {
+            createSessionResponseBuilder_.mergeFrom(value);
+          }
+          createSessionResponseBuilder_.setMessage(value);
+        }
+        messageCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+       */
+      public Builder clearCreateSessionResponse() {
+        if (createSessionResponseBuilder_ == null) {
+          if (messageCase_ == 2) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 2) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          createSessionResponseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.Builder getCreateSessionResponseBuilder() {
+        return getCreateSessionResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_ResponseOrBuilder getCreateSessionResponseOrBuilder() {
+        if ((messageCase_ == 2) && (createSessionResponseBuilder_ != null)) {
+          return createSessionResponseBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 2) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_CreateSession_Response create_session_response = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_ResponseOrBuilder> 
+          getCreateSessionResponseFieldBuilder() {
+        if (createSessionResponseBuilder_ == null) {
+          if (!(messageCase_ == 2)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.getDefaultInstance();
+          }
+          createSessionResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_ResponseOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_CreateSession_Response) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 2;
+        onChanged();;
+        return createSessionResponseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_ResponseOrBuilder> startPairingResponseBuilder_;
+      /**
+       * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+       * @return Whether the startPairingResponse field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartPairingResponse() {
+        return messageCase_ == 3;
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+       * @return The startPairingResponse.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response getStartPairingResponse() {
+        if (startPairingResponseBuilder_ == null) {
+          if (messageCase_ == 3) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.getDefaultInstance();
+        } else {
+          if (messageCase_ == 3) {
+            return startPairingResponseBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+       */
+      public Builder setStartPairingResponse(SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response value) {
+        if (startPairingResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          startPairingResponseBuilder_.setMessage(value);
+        }
+        messageCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+       */
+      public Builder setStartPairingResponse(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.Builder builderForValue) {
+        if (startPairingResponseBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          startPairingResponseBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+       */
+      public Builder mergeStartPairingResponse(SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response value) {
+        if (startPairingResponseBuilder_ == null) {
+          if (messageCase_ == 3 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 3) {
+            startPairingResponseBuilder_.mergeFrom(value);
+          }
+          startPairingResponseBuilder_.setMessage(value);
+        }
+        messageCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+       */
+      public Builder clearStartPairingResponse() {
+        if (startPairingResponseBuilder_ == null) {
+          if (messageCase_ == 3) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 3) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          startPairingResponseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.Builder getStartPairingResponseBuilder() {
+        return getStartPairingResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_ResponseOrBuilder getStartPairingResponseOrBuilder() {
+        if ((messageCase_ == 3) && (startPairingResponseBuilder_ != null)) {
+          return startPairingResponseBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 3) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_StartPairing_Response start_pairing_response = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_ResponseOrBuilder> 
+          getStartPairingResponseFieldBuilder() {
+        if (startPairingResponseBuilder_ == null) {
+          if (!(messageCase_ == 3)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.getDefaultInstance();
+          }
+          startPairingResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_ResponseOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_StartPairing_Response) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 3;
+        onChanged();;
+        return startPairingResponseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_ResponseOrBuilder> setPairingInfoResponseBuilder_;
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+       * @return Whether the setPairingInfoResponse field is set.
+       */
+      @java.lang.Override
+      public boolean hasSetPairingInfoResponse() {
+        return messageCase_ == 4;
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+       * @return The setPairingInfoResponse.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response getSetPairingInfoResponse() {
+        if (setPairingInfoResponseBuilder_ == null) {
+          if (messageCase_ == 4) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.getDefaultInstance();
+        } else {
+          if (messageCase_ == 4) {
+            return setPairingInfoResponseBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+       */
+      public Builder setSetPairingInfoResponse(SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response value) {
+        if (setPairingInfoResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          setPairingInfoResponseBuilder_.setMessage(value);
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+       */
+      public Builder setSetPairingInfoResponse(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.Builder builderForValue) {
+        if (setPairingInfoResponseBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          setPairingInfoResponseBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+       */
+      public Builder mergeSetPairingInfoResponse(SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response value) {
+        if (setPairingInfoResponseBuilder_ == null) {
+          if (messageCase_ == 4 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 4) {
+            setPairingInfoResponseBuilder_.mergeFrom(value);
+          }
+          setPairingInfoResponseBuilder_.setMessage(value);
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+       */
+      public Builder clearSetPairingInfoResponse() {
+        if (setPairingInfoResponseBuilder_ == null) {
+          if (messageCase_ == 4) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 4) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          setPairingInfoResponseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.Builder getSetPairingInfoResponseBuilder() {
+        return getSetPairingInfoResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_ResponseOrBuilder getSetPairingInfoResponseOrBuilder() {
+        if ((messageCase_ == 4) && (setPairingInfoResponseBuilder_ != null)) {
+          return setPairingInfoResponseBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 4) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_ResponseOrBuilder> 
+          getSetPairingInfoResponseFieldBuilder() {
+        if (setPairingInfoResponseBuilder_ == null) {
+          if (!(messageCase_ == 4)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.getDefaultInstance();
+          }
+          setPairingInfoResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_ResponseOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_SetPairingInfo_Response) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 4;
+        onChanged();;
+        return setPairingInfoResponseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_ResponseOrBuilder> cancelPairingResponseBuilder_;
+      /**
+       * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+       * @return Whether the cancelPairingResponse field is set.
+       */
+      @java.lang.Override
+      public boolean hasCancelPairingResponse() {
+        return messageCase_ == 5;
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+       * @return The cancelPairingResponse.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response getCancelPairingResponse() {
+        if (cancelPairingResponseBuilder_ == null) {
+          if (messageCase_ == 5) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.getDefaultInstance();
+        } else {
+          if (messageCase_ == 5) {
+            return cancelPairingResponseBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+       */
+      public Builder setCancelPairingResponse(SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response value) {
+        if (cancelPairingResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          cancelPairingResponseBuilder_.setMessage(value);
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+       */
+      public Builder setCancelPairingResponse(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.Builder builderForValue) {
+        if (cancelPairingResponseBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          cancelPairingResponseBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+       */
+      public Builder mergeCancelPairingResponse(SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response value) {
+        if (cancelPairingResponseBuilder_ == null) {
+          if (messageCase_ == 5 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 5) {
+            cancelPairingResponseBuilder_.mergeFrom(value);
+          }
+          cancelPairingResponseBuilder_.setMessage(value);
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+       */
+      public Builder clearCancelPairingResponse() {
+        if (cancelPairingResponseBuilder_ == null) {
+          if (messageCase_ == 5) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 5) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          cancelPairingResponseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.Builder getCancelPairingResponseBuilder() {
+        return getCancelPairingResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_ResponseOrBuilder getCancelPairingResponseOrBuilder() {
+        if ((messageCase_ == 5) && (cancelPairingResponseBuilder_ != null)) {
+          return cancelPairingResponseBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 5) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_ResponseOrBuilder> 
+          getCancelPairingResponseFieldBuilder() {
+        if (cancelPairingResponseBuilder_ == null) {
+          if (!(messageCase_ == 5)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.getDefaultInstance();
+          }
+          cancelPairingResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_ResponseOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_CancelPairing_Response) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 5;
+        onChanged();;
+        return cancelPairingResponseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_ResponseOrBuilder> replyPacketBuilder_;
+      /**
+       * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+       * @return Whether the replyPacket field is set.
+       */
+      @java.lang.Override
+      public boolean hasReplyPacket() {
+        return messageCase_ == 6;
+      }
+      /**
+       * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+       * @return The replyPacket.
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response getReplyPacket() {
+        if (replyPacketBuilder_ == null) {
+          if (messageCase_ == 6) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.getDefaultInstance();
+        } else {
+          if (messageCase_ == 6) {
+            return replyPacketBuilder_.getMessage();
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+       */
+      public Builder setReplyPacket(SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response value) {
+        if (replyPacketBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          replyPacketBuilder_.setMessage(value);
+        }
+        messageCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+       */
+      public Builder setReplyPacket(
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.Builder builderForValue) {
+        if (replyPacketBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          replyPacketBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+       */
+      public Builder mergeReplyPacket(SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response value) {
+        if (replyPacketBuilder_ == null) {
+          if (messageCase_ == 6 &&
+              message_ != SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.getDefaultInstance()) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.newBuilder((SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 6) {
+            replyPacketBuilder_.mergeFrom(value);
+          }
+          replyPacketBuilder_.setMessage(value);
+        }
+        messageCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+       */
+      public Builder clearReplyPacket() {
+        if (replyPacketBuilder_ == null) {
+          if (messageCase_ == 6) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 6) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          replyPacketBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+       */
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.Builder getReplyPacketBuilder() {
+        return getReplyPacketFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+       */
+      @java.lang.Override
+      public SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_ResponseOrBuilder getReplyPacketOrBuilder() {
+        if ((messageCase_ == 6) && (replyPacketBuilder_ != null)) {
+          return replyPacketBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 6) {
+            return (SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response) message_;
+          }
+          return SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.CRemoteClient_GetReplies_Response reply_packet = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_ResponseOrBuilder> 
+          getReplyPacketFieldBuilder() {
+        if (replyPacketBuilder_ == null) {
+          if (!(messageCase_ == 6)) {
+            message_ = SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.getDefaultInstance();
+          }
+          replyPacketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response, SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response.Builder, SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_ResponseOrBuilder>(
+                  (SteammessagesRemoteclientServiceMessages.CRemoteClient_GetReplies_Response) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 6;
+        onChanged();;
+        return replyPacketBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCMRemoteClient_ServerMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCMRemoteClient_ServerMessage)
+    private static final SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage();
+    }
+
+    public static SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCMRemoteClient_ServerMessage>
+        PARSER = new com.google.protobuf.AbstractParser<CCMRemoteClient_ServerMessage>() {
+      @java.lang.Override
+      public CCMRemoteClient_ServerMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCMRemoteClient_ServerMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCMRemoteClient_ServerMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCMRemoteClient_ServerMessage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesRemoteclientServiceMessages.CCMRemoteClient_ServerMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CRemoteClient_CreateSession_Request_descriptor;
   private static final 
@@ -26251,6 +29500,11 @@ public final class SteammessagesRemoteclientServiceMessages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CRemoteClient_CreateSession_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CRemoteClient_DeleteSession_Notification_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CRemoteClient_DeleteSession_Notification_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CRemoteClient_StartPairing_Request_descriptor;
   private static final 
@@ -26326,16 +29580,6 @@ public final class SteammessagesRemoteclientServiceMessages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CRemoteClient_GetReplies_Response_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CRemoteClient_AllocateTURNServer_Request_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CRemoteClient_AllocateTURNServer_Request_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CRemoteClient_AllocateTURNServer_Response_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CRemoteClient_AllocateTURNServer_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CRemoteClient_AllocateRelayServer_Request_descriptor;
   private static final 
@@ -26436,6 +29680,16 @@ public final class SteammessagesRemoteclientServiceMessages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CRemoteClient_LookupRemotePlayTogetherInvitation_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCMRemoteClient_ClientMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCMRemoteClient_ClientMessage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCMRemoteClient_ServerMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCMRemoteClient_ServerMessage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -26449,90 +29703,114 @@ public final class SteammessagesRemoteclientServiceMessages {
       "ce_messages.proto\"%\n#CRemoteClient_Creat" +
       "eSession_Request\"M\n$CRemoteClient_Create" +
       "Session_Response\022\022\n\nsession_id\030\001 \001(\006\022\021\n\t" +
-      "euniverse\030\002 \001(\005\"8\n\"CRemoteClient_StartPa" +
-      "iring_Request\022\022\n\nsession_id\030\001 \001(\006\"2\n#CRe" +
-      "moteClient_StartPairing_Response\022\013\n\003pin\030" +
-      "\001 \001(\r\"^\n$CRemoteClient_SetPairingInfo_Re" +
-      "quest\022\022\n\nsession_id\030\001 \001(\006\022\021\n\tdevice_id\030\002" +
-      " \001(\006\022\017\n\007request\030\003 \001(\014\"\'\n%CRemoteClient_S" +
-      "etPairingInfo_Response\"3\n$CRemoteClient_" +
-      "GetPairingInfo_Request\022\013\n\003pin\030\001 \001(\r\"_\n%C" +
-      "RemoteClient_GetPairingInfo_Response\022\022\n\n" +
-      "session_id\030\001 \001(\006\022\021\n\tdevice_id\030\002 \001(\006\022\017\n\007r" +
-      "equest\030\003 \001(\014\"9\n#CRemoteClient_CancelPair" +
-      "ing_Request\022\022\n\nsession_id\030\001 \001(\006\"&\n$CRemo" +
-      "teClient_CancelPairing_Response\"i\n/CRemo" +
-      "teClient_RegisterStatusUpdate_Notificati" +
-      "on\022\022\n\nsession_id\030\001 \001(\006\022\017\n\007steamid\030\002 \001(\006\022" +
-      "\021\n\tdevice_id\030\003 \001(\006\"X\n1CRemoteClient_Unre" +
-      "gisterStatusUpdate_Notification\022\022\n\nsessi" +
-      "on_id\030\001 \001(\006\022\017\n\007steamid\030\002 \001(\006\"4\n!CRemoteC" +
-      "lient_Online_Notification\022\017\n\007steamid\030\001 \001" +
-      "(\006\"_\n\'CRemoteClient_RemotePacket_Notific" +
-      "ation\022\022\n\nsession_id\030\001 \001(\006\022\017\n\007steamid\030\002 \001" +
-      "(\006\022\017\n\007payload\030\004 \001(\014\"M\n&CRemoteClient_Rep" +
-      "lyPacket_Notification\022\022\n\nsession_id\030\001 \001(" +
-      "\006\022\017\n\007payload\030\002 \001(\014\"6\n CRemoteClient_GetR" +
-      "eplies_Request\022\022\n\nsession_id\030\001 \001(\006\"4\n!CR" +
-      "emoteClient_GetReplies_Response\022\017\n\007paylo" +
-      "ad\030\001 \003(\014\"O\n(CRemoteClient_AllocateTURNSe" +
-      "rver_Request\022\016\n\006cellid\030\001 \001(\r\022\023\n\013credenti" +
-      "als\030\002 \001(\t\"@\n)CRemoteClient_AllocateTURNS" +
-      "erver_Response\022\023\n\013turn_server\030\001 \001(\t\"P\n)C" +
-      "RemoteClient_AllocateRelayServer_Request" +
-      "\022\016\n\006cellid\030\001 \001(\r\022\023\n\013credentials\030\002 \001(\t\"B\n" +
-      "*CRemoteClient_AllocateRelayServer_Respo" +
-      "nse\022\024\n\014relay_server\030\001 \001(\t\"2\n!CRemoteClie" +
-      "nt_AllocateSDR_Request\022\r\n\005appid\030\001 \001(\r\"$\n" +
-      "\"CRemoteClient_AllocateSDR_Response\"_\n)C" +
-      "RemoteClient_SteamBroadcast_Notification" +
-      "\022\017\n\007steamid\030\001 \001(\006\022\020\n\010clientid\030\002 \001(\006\022\017\n\007p" +
-      "ayload\030\003 \001(\014\"\223\001\n\'CRemoteClient_SteamToSt" +
-      "eam_Notification\022\017\n\007steamid\030\001 \001(\006\022\024\n\014src" +
-      "_clientid\030\002 \001(\006\022\024\n\014dst_clientid\030\003 \001(\006\022\020\n" +
-      "\010secretid\030\004 \001(\r\022\031\n\021encrypted_payload\030\005 \001" +
-      "(\014\"\270\001\n\"CRemotePlay_SessionStarted_Reques" +
-      "t\022\027\n\017host_account_id\030\001 \001(\r\022\031\n\021client_acc" +
-      "ount_id\030\002 \001(\r\022\r\n\005appid\030\003 \001(\r\022\032\n\022device_f" +
-      "orm_factor\030\004 \001(\005\022\034\n\024remote_play_together" +
-      "\030\005 \001(\010\022\025\n\rguest_session\030\006 \001(\010\"8\n#CRemote" +
-      "Play_SessionStarted_Response\022\021\n\trecord_i" +
-      "d\030\001 \001(\006\"u\n\'CRemotePlay_SessionStopped_No" +
-      "tification\022\021\n\trecord_id\030\001 \001(\006\022\021\n\tused_x2" +
-      "64\030\002 \001(\010\022\021\n\tused_h264\030\003 \001(\010\022\021\n\tused_hevc" +
-      "\030\004 \001(\010\"\236\006\n CRemotePlayTogether_Notificat" +
-      "ion\022\017\n\007steamid\030\001 \001(\006\022G\n\rgroup_updated\030\002 " +
-      "\001(\0132..CRemotePlayTogether_Notification.G" +
-      "roupUpdatedH\000\032\214\001\n\006Player\022\017\n\007steamid\030\001 \001(" +
-      "\006\022\017\n\007guestid\030\002 \001(\r\022\023\n\013avatar_hash\030\003 \001(\014\022" +
-      "\030\n\020keyboard_enabled\030\004 \001(\010\022\025\n\rmouse_enabl" +
-      "ed\030\005 \001(\010\022\032\n\022controller_enabled\030\006 \001(\010\032:\n\027" +
-      "ControllerSlot_obsolete\022\016\n\006slotid\030\001 \001(\r\022" +
-      "\017\n\007steamid\030\002 \001(\006\032Z\n\016ControllerSlot\022\016\n\006sl" +
-      "otid\030\001 \001(\r\0228\n\006player\030\002 \001(\0132(.CRemotePlay" +
-      "Together_Notification.Player\032\355\002\n\014GroupUp" +
-      "dated\022\024\n\014host_steamid\030\001 \001(\006\022\025\n\rhost_clie" +
-      "ntid\030\002 \001(\006\022\030\n\020players_obsolete\030\003 \003(\006\022\023\n\013" +
-      "host_gameid\030\004 \001(\006\022\\\n\031controller_slots_ob" +
-      "solete\030\005 \003(\01329.CRemotePlayTogether_Notif" +
-      "ication.ControllerSlot_obsolete\022\027\n\017has_n" +
-      "ew_players\030\006 \001(\010\022>\n\014player_slots\030\007 \003(\0132(" +
-      ".CRemotePlayTogether_Notification.Player" +
-      "\022J\n\020controller_slots\030\010 \003(\01320.CRemotePlay" +
-      "Together_Notification.ControllerSlotB\t\n\007" +
-      "Message\"d\n8CRemoteClient_CreateRemotePla" +
-      "yTogetherInvitation_Request\022\r\n\005appid\030\001 \001" +
-      "(\r\022\031\n\021launch_parameters\030\002 \001(\t\"T\n9CRemote" +
-      "Client_CreateRemotePlayTogetherInvitatio" +
-      "n_Response\022\027\n\017invitation_code\030\001 \001(\t\"S\n8C" +
-      "RemoteClient_DeleteRemotePlayTogetherInv" +
-      "itation_Request\022\027\n\017invitation_code\030\001 \001(\t" +
-      "\";\n9CRemoteClient_DeleteRemotePlayTogeth" +
-      "erInvitation_Response\"S\n8CRemoteClient_L" +
-      "ookupRemotePlayTogetherInvitation_Reques" +
-      "t\022\027\n\017invitation_code\030\001 \001(\t\"S\n9CRemoteCli" +
-      "ent_LookupRemotePlayTogetherInvitation_R" +
-      "esponse\022\026\n\016invitation_url\030\001 \001(\t"
+      "euniverse\030\002 \001(\005\">\n(CRemoteClient_DeleteS" +
+      "ession_Notification\022\022\n\nsession_id\030\001 \001(\006\"" +
+      "8\n\"CRemoteClient_StartPairing_Request\022\022\n" +
+      "\nsession_id\030\001 \001(\006\"2\n#CRemoteClient_Start" +
+      "Pairing_Response\022\013\n\003pin\030\001 \001(\r\"^\n$CRemote" +
+      "Client_SetPairingInfo_Request\022\022\n\nsession" +
+      "_id\030\001 \001(\006\022\021\n\tdevice_id\030\002 \001(\006\022\017\n\007request\030" +
+      "\003 \001(\014\"\'\n%CRemoteClient_SetPairingInfo_Re" +
+      "sponse\"3\n$CRemoteClient_GetPairingInfo_R" +
+      "equest\022\013\n\003pin\030\001 \001(\r\"_\n%CRemoteClient_Get" +
+      "PairingInfo_Response\022\022\n\nsession_id\030\001 \001(\006" +
+      "\022\021\n\tdevice_id\030\002 \001(\006\022\017\n\007request\030\003 \001(\014\"9\n#" +
+      "CRemoteClient_CancelPairing_Request\022\022\n\ns" +
+      "ession_id\030\001 \001(\006\"&\n$CRemoteClient_CancelP" +
+      "airing_Response\"i\n/CRemoteClient_Registe" +
+      "rStatusUpdate_Notification\022\022\n\nsession_id" +
+      "\030\001 \001(\006\022\017\n\007steamid\030\002 \001(\006\022\021\n\tdevice_id\030\003 \001" +
+      "(\006\"X\n1CRemoteClient_UnregisterStatusUpda" +
+      "te_Notification\022\022\n\nsession_id\030\001 \001(\006\022\017\n\007s" +
+      "teamid\030\002 \001(\006\"N\n!CRemoteClient_Online_Not" +
+      "ification\022\017\n\007steamid\030\001 \001(\006\022\030\n\020remote_cli" +
+      "ent_id\030\002 \001(\006\"_\n\'CRemoteClient_RemotePack" +
+      "et_Notification\022\022\n\nsession_id\030\001 \001(\006\022\017\n\007s" +
+      "teamid\030\002 \001(\006\022\017\n\007payload\030\004 \001(\014\"M\n&CRemote" +
+      "Client_ReplyPacket_Notification\022\022\n\nsessi" +
+      "on_id\030\001 \001(\006\022\017\n\007payload\030\002 \001(\014\"6\n CRemoteC" +
+      "lient_GetReplies_Request\022\022\n\nsession_id\030\001" +
+      " \001(\006\"4\n!CRemoteClient_GetReplies_Respons" +
+      "e\022\017\n\007payload\030\001 \003(\014\"P\n)CRemoteClient_Allo" +
+      "cateRelayServer_Request\022\016\n\006cellid\030\001 \001(\r\022" +
+      "\023\n\013credentials\030\002 \001(\t\"B\n*CRemoteClient_Al" +
+      "locateRelayServer_Response\022\024\n\014relay_serv" +
+      "er\030\001 \001(\t\"2\n!CRemoteClient_AllocateSDR_Re" +
+      "quest\022\r\n\005appid\030\001 \001(\r\"$\n\"CRemoteClient_Al" +
+      "locateSDR_Response\"_\n)CRemoteClient_Stea" +
+      "mBroadcast_Notification\022\017\n\007steamid\030\001 \001(\006" +
+      "\022\020\n\010clientid\030\002 \001(\006\022\017\n\007payload\030\003 \001(\014\"\223\001\n\'" +
+      "CRemoteClient_SteamToSteam_Notification\022" +
+      "\017\n\007steamid\030\001 \001(\006\022\024\n\014src_clientid\030\002 \001(\006\022\024" +
+      "\n\014dst_clientid\030\003 \001(\006\022\020\n\010secretid\030\004 \001(\r\022\031" +
+      "\n\021encrypted_payload\030\005 \001(\014\"\270\001\n\"CRemotePla" +
+      "y_SessionStarted_Request\022\027\n\017host_account" +
+      "_id\030\001 \001(\r\022\031\n\021client_account_id\030\002 \001(\r\022\r\n\005" +
+      "appid\030\003 \001(\r\022\032\n\022device_form_factor\030\004 \001(\005\022" +
+      "\034\n\024remote_play_together\030\005 \001(\010\022\025\n\rguest_s" +
+      "ession\030\006 \001(\010\"8\n#CRemotePlay_SessionStart" +
+      "ed_Response\022\021\n\trecord_id\030\001 \001(\006\"u\n\'CRemot" +
+      "ePlay_SessionStopped_Notification\022\021\n\trec" +
+      "ord_id\030\001 \001(\006\022\021\n\tused_x264\030\002 \001(\010\022\021\n\tused_" +
+      "h264\030\003 \001(\010\022\021\n\tused_hevc\030\004 \001(\010\"\267\006\n CRemot" +
+      "ePlayTogether_Notification\022\017\n\007steamid\030\001 " +
+      "\001(\006\022G\n\rgroup_updated\030\002 \001(\0132..CRemotePlay" +
+      "Together_Notification.GroupUpdatedH\000\032\214\001\n" +
+      "\006Player\022\017\n\007steamid\030\001 \001(\006\022\017\n\007guestid\030\002 \001(" +
+      "\r\022\023\n\013avatar_hash\030\003 \001(\014\022\030\n\020keyboard_enabl" +
+      "ed\030\004 \001(\010\022\025\n\rmouse_enabled\030\005 \001(\010\022\032\n\022contr" +
+      "oller_enabled\030\006 \001(\010\032:\n\027ControllerSlot_ob" +
+      "solete\022\016\n\006slotid\030\001 \001(\r\022\017\n\007steamid\030\002 \001(\006\032" +
+      "s\n\016ControllerSlot\022\016\n\006slotid\030\001 \001(\r\0228\n\006pla" +
+      "yer\030\002 \001(\0132(.CRemotePlayTogether_Notifica" +
+      "tion.Player\022\027\n\017controller_type\030\003 \001(\005\032\355\002\n" +
+      "\014GroupUpdated\022\024\n\014host_steamid\030\001 \001(\006\022\025\n\rh" +
+      "ost_clientid\030\002 \001(\006\022\030\n\020players_obsolete\030\003" +
+      " \003(\006\022\023\n\013host_gameid\030\004 \001(\006\022\\\n\031controller_" +
+      "slots_obsolete\030\005 \003(\01329.CRemotePlayTogeth" +
+      "er_Notification.ControllerSlot_obsolete\022" +
+      "\027\n\017has_new_players\030\006 \001(\010\022>\n\014player_slots" +
+      "\030\007 \003(\0132(.CRemotePlayTogether_Notificatio" +
+      "n.Player\022J\n\020controller_slots\030\010 \003(\01320.CRe" +
+      "motePlayTogether_Notification.Controller" +
+      "SlotB\t\n\007Message\"d\n8CRemoteClient_CreateR" +
+      "emotePlayTogetherInvitation_Request\022\r\n\005a" +
+      "ppid\030\001 \001(\r\022\031\n\021launch_parameters\030\002 \001(\t\"T\n" +
+      "9CRemoteClient_CreateRemotePlayTogetherI" +
+      "nvitation_Response\022\027\n\017invitation_code\030\001 " +
+      "\001(\t\"S\n8CRemoteClient_DeleteRemotePlayTog" +
+      "etherInvitation_Request\022\027\n\017invitation_co" +
+      "de\030\001 \001(\t\";\n9CRemoteClient_DeleteRemotePl" +
+      "ayTogetherInvitation_Response\"S\n8CRemote" +
+      "Client_LookupRemotePlayTogetherInvitatio" +
+      "n_Request\022\027\n\017invitation_code\030\001 \001(\t\"S\n9CR" +
+      "emoteClient_LookupRemotePlayTogetherInvi" +
+      "tation_Response\022\026\n\016invitation_url\030\001 \001(\t\"" +
+      "\272\004\n\035CCMRemoteClient_ClientMessage\022F\n\026cre" +
+      "ate_session_request\030\001 \001(\0132$.CRemoteClien" +
+      "t_CreateSession_RequestH\000\022D\n\025start_pairi" +
+      "ng_request\030\002 \001(\0132#.CRemoteClient_StartPa" +
+      "iring_RequestH\000\022I\n\030set_pairing_info_requ" +
+      "est\030\003 \001(\0132%.CRemoteClient_SetPairingInfo" +
+      "_RequestH\000\022F\n\026cancel_pairing_request\030\004 \001" +
+      "(\0132$.CRemoteClient_CancelPairing_Request" +
+      "H\000\022R\n\026register_status_update\030\005 \001(\01320.CRe" +
+      "moteClient_RegisterStatusUpdate_Notifica" +
+      "tionH\000\022V\n\030unregister_status_update\030\006 \001(\013" +
+      "22.CRemoteClient_UnregisterStatusUpdate_" +
+      "NotificationH\000\022A\n\rremote_packet\030\007 \001(\0132(." +
+      "CRemoteClient_RemotePacket_NotificationH" +
+      "\000B\t\n\007Message\"\237\003\n\035CCMRemoteClient_ServerM" +
+      "essage\022\016\n\006result\030\001 \001(\005\022H\n\027create_session" +
+      "_response\030\002 \001(\0132%.CRemoteClient_CreateSe" +
+      "ssion_ResponseH\000\022F\n\026start_pairing_respon" +
+      "se\030\003 \001(\0132$.CRemoteClient_StartPairing_Re" +
+      "sponseH\000\022K\n\031set_pairing_info_response\030\004 " +
+      "\001(\0132&.CRemoteClient_SetPairingInfo_Respo" +
+      "nseH\000\022H\n\027cancel_pairing_response\030\005 \001(\0132%" +
+      ".CRemoteClient_CancelPairing_ResponseH\000\022" +
+      ":\n\014reply_packet\030\006 \001(\0132\".CRemoteClient_Ge" +
+      "tReplies_ResponseH\000B\t\n\007Message"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26550,164 +29828,158 @@ public final class SteammessagesRemoteclientServiceMessages {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_CreateSession_Response_descriptor,
         new java.lang.String[] { "SessionId", "Euniverse", });
-    internal_static_CRemoteClient_StartPairing_Request_descriptor =
+    internal_static_CRemoteClient_DeleteSession_Notification_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_CRemoteClient_DeleteSession_Notification_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CRemoteClient_DeleteSession_Notification_descriptor,
+        new java.lang.String[] { "SessionId", });
+    internal_static_CRemoteClient_StartPairing_Request_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CRemoteClient_StartPairing_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_StartPairing_Request_descriptor,
         new java.lang.String[] { "SessionId", });
     internal_static_CRemoteClient_StartPairing_Response_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CRemoteClient_StartPairing_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_StartPairing_Response_descriptor,
         new java.lang.String[] { "Pin", });
     internal_static_CRemoteClient_SetPairingInfo_Request_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CRemoteClient_SetPairingInfo_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_SetPairingInfo_Request_descriptor,
         new java.lang.String[] { "SessionId", "DeviceId", "Request", });
     internal_static_CRemoteClient_SetPairingInfo_Response_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CRemoteClient_SetPairingInfo_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_SetPairingInfo_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CRemoteClient_GetPairingInfo_Request_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CRemoteClient_GetPairingInfo_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_GetPairingInfo_Request_descriptor,
         new java.lang.String[] { "Pin", });
     internal_static_CRemoteClient_GetPairingInfo_Response_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CRemoteClient_GetPairingInfo_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_GetPairingInfo_Response_descriptor,
         new java.lang.String[] { "SessionId", "DeviceId", "Request", });
     internal_static_CRemoteClient_CancelPairing_Request_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CRemoteClient_CancelPairing_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_CancelPairing_Request_descriptor,
         new java.lang.String[] { "SessionId", });
     internal_static_CRemoteClient_CancelPairing_Response_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CRemoteClient_CancelPairing_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_CancelPairing_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CRemoteClient_RegisterStatusUpdate_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CRemoteClient_RegisterStatusUpdate_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_RegisterStatusUpdate_Notification_descriptor,
         new java.lang.String[] { "SessionId", "Steamid", "DeviceId", });
     internal_static_CRemoteClient_UnregisterStatusUpdate_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CRemoteClient_UnregisterStatusUpdate_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_UnregisterStatusUpdate_Notification_descriptor,
         new java.lang.String[] { "SessionId", "Steamid", });
     internal_static_CRemoteClient_Online_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CRemoteClient_Online_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_Online_Notification_descriptor,
-        new java.lang.String[] { "Steamid", });
+        new java.lang.String[] { "Steamid", "RemoteClientId", });
     internal_static_CRemoteClient_RemotePacket_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CRemoteClient_RemotePacket_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_RemotePacket_Notification_descriptor,
         new java.lang.String[] { "SessionId", "Steamid", "Payload", });
     internal_static_CRemoteClient_ReplyPacket_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CRemoteClient_ReplyPacket_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_ReplyPacket_Notification_descriptor,
         new java.lang.String[] { "SessionId", "Payload", });
     internal_static_CRemoteClient_GetReplies_Request_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CRemoteClient_GetReplies_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_GetReplies_Request_descriptor,
         new java.lang.String[] { "SessionId", });
     internal_static_CRemoteClient_GetReplies_Response_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CRemoteClient_GetReplies_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_GetReplies_Response_descriptor,
         new java.lang.String[] { "Payload", });
-    internal_static_CRemoteClient_AllocateTURNServer_Request_descriptor =
-      getDescriptor().getMessageTypes().get(17);
-    internal_static_CRemoteClient_AllocateTURNServer_Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CRemoteClient_AllocateTURNServer_Request_descriptor,
-        new java.lang.String[] { "Cellid", "Credentials", });
-    internal_static_CRemoteClient_AllocateTURNServer_Response_descriptor =
-      getDescriptor().getMessageTypes().get(18);
-    internal_static_CRemoteClient_AllocateTURNServer_Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CRemoteClient_AllocateTURNServer_Response_descriptor,
-        new java.lang.String[] { "TurnServer", });
     internal_static_CRemoteClient_AllocateRelayServer_Request_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CRemoteClient_AllocateRelayServer_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_AllocateRelayServer_Request_descriptor,
         new java.lang.String[] { "Cellid", "Credentials", });
     internal_static_CRemoteClient_AllocateRelayServer_Response_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_CRemoteClient_AllocateRelayServer_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_AllocateRelayServer_Response_descriptor,
         new java.lang.String[] { "RelayServer", });
     internal_static_CRemoteClient_AllocateSDR_Request_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_CRemoteClient_AllocateSDR_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_AllocateSDR_Request_descriptor,
         new java.lang.String[] { "Appid", });
     internal_static_CRemoteClient_AllocateSDR_Response_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_CRemoteClient_AllocateSDR_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_AllocateSDR_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CRemoteClient_SteamBroadcast_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_CRemoteClient_SteamBroadcast_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_SteamBroadcast_Notification_descriptor,
         new java.lang.String[] { "Steamid", "Clientid", "Payload", });
     internal_static_CRemoteClient_SteamToSteam_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_CRemoteClient_SteamToSteam_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_SteamToSteam_Notification_descriptor,
         new java.lang.String[] { "Steamid", "SrcClientid", "DstClientid", "Secretid", "EncryptedPayload", });
     internal_static_CRemotePlay_SessionStarted_Request_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_CRemotePlay_SessionStarted_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemotePlay_SessionStarted_Request_descriptor,
         new java.lang.String[] { "HostAccountId", "ClientAccountId", "Appid", "DeviceFormFactor", "RemotePlayTogether", "GuestSession", });
     internal_static_CRemotePlay_SessionStarted_Response_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_CRemotePlay_SessionStarted_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemotePlay_SessionStarted_Response_descriptor,
         new java.lang.String[] { "RecordId", });
     internal_static_CRemotePlay_SessionStopped_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_CRemotePlay_SessionStopped_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemotePlay_SessionStopped_Notification_descriptor,
         new java.lang.String[] { "RecordId", "UsedX264", "UsedH264", "UsedHevc", });
     internal_static_CRemotePlayTogether_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_CRemotePlayTogether_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemotePlayTogether_Notification_descriptor,
@@ -26729,7 +30001,7 @@ public final class SteammessagesRemoteclientServiceMessages {
     internal_static_CRemotePlayTogether_Notification_ControllerSlot_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemotePlayTogether_Notification_ControllerSlot_descriptor,
-        new java.lang.String[] { "Slotid", "Player", });
+        new java.lang.String[] { "Slotid", "Player", "ControllerType", });
     internal_static_CRemotePlayTogether_Notification_GroupUpdated_descriptor =
       internal_static_CRemotePlayTogether_Notification_descriptor.getNestedTypes().get(3);
     internal_static_CRemotePlayTogether_Notification_GroupUpdated_fieldAccessorTable = new
@@ -26737,41 +30009,53 @@ public final class SteammessagesRemoteclientServiceMessages {
         internal_static_CRemotePlayTogether_Notification_GroupUpdated_descriptor,
         new java.lang.String[] { "HostSteamid", "HostClientid", "PlayersObsolete", "HostGameid", "ControllerSlotsObsolete", "HasNewPlayers", "PlayerSlots", "ControllerSlots", });
     internal_static_CRemoteClient_CreateRemotePlayTogetherInvitation_Request_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_CRemoteClient_CreateRemotePlayTogetherInvitation_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_CreateRemotePlayTogetherInvitation_Request_descriptor,
         new java.lang.String[] { "Appid", "LaunchParameters", });
     internal_static_CRemoteClient_CreateRemotePlayTogetherInvitation_Response_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_CRemoteClient_CreateRemotePlayTogetherInvitation_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_CreateRemotePlayTogetherInvitation_Response_descriptor,
         new java.lang.String[] { "InvitationCode", });
     internal_static_CRemoteClient_DeleteRemotePlayTogetherInvitation_Request_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_CRemoteClient_DeleteRemotePlayTogetherInvitation_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_DeleteRemotePlayTogetherInvitation_Request_descriptor,
         new java.lang.String[] { "InvitationCode", });
     internal_static_CRemoteClient_DeleteRemotePlayTogetherInvitation_Response_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_CRemoteClient_DeleteRemotePlayTogetherInvitation_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_DeleteRemotePlayTogetherInvitation_Response_descriptor,
         new java.lang.String[] { });
     internal_static_CRemoteClient_LookupRemotePlayTogetherInvitation_Request_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_CRemoteClient_LookupRemotePlayTogetherInvitation_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_LookupRemotePlayTogetherInvitation_Request_descriptor,
         new java.lang.String[] { "InvitationCode", });
     internal_static_CRemoteClient_LookupRemotePlayTogetherInvitation_Response_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_CRemoteClient_LookupRemotePlayTogetherInvitation_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CRemoteClient_LookupRemotePlayTogetherInvitation_Response_descriptor,
         new java.lang.String[] { "InvitationUrl", });
+    internal_static_CCMRemoteClient_ClientMessage_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_CCMRemoteClient_ClientMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCMRemoteClient_ClientMessage_descriptor,
+        new java.lang.String[] { "CreateSessionRequest", "StartPairingRequest", "SetPairingInfoRequest", "CancelPairingRequest", "RegisterStatusUpdate", "UnregisterStatusUpdate", "RemotePacket", "Message", });
+    internal_static_CCMRemoteClient_ServerMessage_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_CCMRemoteClient_ServerMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCMRemoteClient_ServerMessage_descriptor,
+        new java.lang.String[] { "Result", "CreateSessionResponse", "StartPairingResponse", "SetPairingInfoResponse", "CancelPairingResponse", "ReplyPacket", "Message", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

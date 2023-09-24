@@ -5504,12 +5504,12 @@ public final class SteammessagesVirtualcontroller {
         int index);
 
     /**
-     * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeRelative];</code>
+     * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeAbsoluteCursor];</code>
      * @return Whether the defaultMouseMode field is set.
      */
     boolean hasDefaultMouseMode();
     /**
-     * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeRelative];</code>
+     * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeAbsoluteCursor];</code>
      * @return The defaultMouseMode.
      */
     SteammessagesVirtualcontroller.EMouseMode getDefaultMouseMode();
@@ -5529,7 +5529,7 @@ public final class SteammessagesVirtualcontroller {
     private CVirtualControllerConfig() {
       name_ = "";
       actionsets_ = java.util.Collections.emptyList();
-      defaultMouseMode_ = 4;
+      defaultMouseMode_ = 2;
     }
 
     @java.lang.Override
@@ -9135,20 +9135,20 @@ public final class SteammessagesVirtualcontroller {
     public static final int DEFAULT_MOUSE_MODE_FIELD_NUMBER = 3;
     private int defaultMouseMode_;
     /**
-     * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeRelative];</code>
+     * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeAbsoluteCursor];</code>
      * @return Whether the defaultMouseMode field is set.
      */
     @java.lang.Override public boolean hasDefaultMouseMode() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeRelative];</code>
+     * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeAbsoluteCursor];</code>
      * @return The defaultMouseMode.
      */
     @java.lang.Override public SteammessagesVirtualcontroller.EMouseMode getDefaultMouseMode() {
       @SuppressWarnings("deprecation")
       SteammessagesVirtualcontroller.EMouseMode result = SteammessagesVirtualcontroller.EMouseMode.valueOf(defaultMouseMode_);
-      return result == null ? SteammessagesVirtualcontroller.EMouseMode.k_EMouseModeRelative : result;
+      return result == null ? SteammessagesVirtualcontroller.EMouseMode.k_EMouseModeAbsoluteCursor : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9385,7 +9385,7 @@ public final class SteammessagesVirtualcontroller {
         } else {
           actionsetsBuilder_.clear();
         }
-        defaultMouseMode_ = 4;
+        defaultMouseMode_ = 2;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -9869,26 +9869,26 @@ public final class SteammessagesVirtualcontroller {
         return actionsetsBuilder_;
       }
 
-      private int defaultMouseMode_ = 4;
+      private int defaultMouseMode_ = 2;
       /**
-       * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeRelative];</code>
+       * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeAbsoluteCursor];</code>
        * @return Whether the defaultMouseMode field is set.
        */
       @java.lang.Override public boolean hasDefaultMouseMode() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeRelative];</code>
+       * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeAbsoluteCursor];</code>
        * @return The defaultMouseMode.
        */
       @java.lang.Override
       public SteammessagesVirtualcontroller.EMouseMode getDefaultMouseMode() {
         @SuppressWarnings("deprecation")
         SteammessagesVirtualcontroller.EMouseMode result = SteammessagesVirtualcontroller.EMouseMode.valueOf(defaultMouseMode_);
-        return result == null ? SteammessagesVirtualcontroller.EMouseMode.k_EMouseModeRelative : result;
+        return result == null ? SteammessagesVirtualcontroller.EMouseMode.k_EMouseModeAbsoluteCursor : result;
       }
       /**
-       * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeRelative];</code>
+       * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeAbsoluteCursor];</code>
        * @param value The defaultMouseMode to set.
        * @return This builder for chaining.
        */
@@ -9902,12 +9902,12 @@ public final class SteammessagesVirtualcontroller {
         return this;
       }
       /**
-       * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeRelative];</code>
+       * <code>optional .EMouseMode default_mouse_mode = 3 [default = k_EMouseModeAbsoluteCursor];</code>
        * @return This builder for chaining.
        */
       public Builder clearDefaultMouseMode() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        defaultMouseMode_ = 4;
+        defaultMouseMode_ = 2;
         onChanged();
         return this;
       }
@@ -12203,79 +12203,79 @@ public final class SteammessagesVirtualcontroller {
       "nabled\030\005 \001(\010:\005false\022\027\n\014pinch_zoom_x\030\006 \001(" +
       "\002:\0010\022\027\n\014pinch_zoom_y\030\007 \001(\002:\0010\022\033\n\020pinch_z" +
       "oom_scale\030\010 \001(\002:\0011\022\016\n\006shaken\030\t \001(\010\022\027\n\017mo" +
-      "use_offscreen\030\n \001(\010\"\372\004\n\030CVirtualControll" +
+      "use_offscreen\030\n \001(\010\"\200\005\n\030CVirtualControll" +
       "erConfig\022\014\n\004name\030\001 \001(\t\0227\n\nactionsets\030\002 \003" +
       "(\0132#.CVirtualControllerConfig.ActionSet\022" +
-      "=\n\022default_mouse_mode\030\003 \001(\0162\013.EMouseMode" +
-      ":\024k_EMouseModeRelative\032\350\002\n\007Control\022\014\n\004na" +
-      "me\030\001 \001(\t\022\014\n\004icon\030\002 \001(\t\022\024\n\014input_source\030\003" +
-      " \001(\005\022\022\n\ninput_mode\030\004 \001(\005\022\025\n\rinput_elemen" +
-      "t\030\005 \001(\005\022\026\n\016output_gamepad\030\006 \001(\005\022\027\n\017outpu" +
-      "t_keyboard\030\007 \001(\005\022\024\n\014output_mouse\030\010 \001(\005\022\027" +
-      "\n\017icon_foreground\030\t \001(\t\022\027\n\017icon_backgrou" +
-      "nd\030\n \001(\t\022\024\n\014input_toggle\030\013 \001(\010\022(\n input_" +
-      "activate_stick_or_trackpad\030\014 \001(\005\022\027\n\017acti" +
-      "vation_type\030\r \001(\005\022\025\n\rlong_press_ms\030\016 \001(\005" +
-      "\022\027\n\017double_press_ms\030\017 \001(\005\032m\n\tActionSet\022\n" +
-      "\n\002id\030\001 \001(\005\022\021\n\tparent_id\030\002 \001(\005\022\014\n\004name\030\003 " +
-      "\001(\t\0223\n\010controls\030\004 \003(\0132!.CVirtualControll" +
-      "erConfig.Control\"\313\001\n\037CVirtualControllerL" +
-      "ayoutPackage\022\r\n\005appid\030\001 \001(\r\022\017\n\007creator\030\002" +
-      " \001(\004\022\030\n\020initial_revision\030\003 \001(\r\022\026\n\016saved_" +
-      "revision\030\004 \001(\r\022)\n\006config\030\005 \001(\0132\031.CVirtua" +
-      "lControllerConfig\022+\n\007layouts\030\006 \001(\0132\032.CVi" +
-      "rtualControllerLayouts\"\266\001\n\036CVirtualContr" +
-      "ollerGlobalConfig\022\030\n\020feedback_enabled\030\001 " +
-      "\001(\010\022\037\n\021gyroscope_enabled\030\002 \001(\010:\004true\022\037\n\021" +
-      "auto_fade_enabled\030\003 \001(\010:\004true\022\034\n\016rumble_" +
-      "enabled\030\004 \001(\010:\004true\022\032\n\022shake_fade_enable" +
-      "d\030\005 \001(\010*|\n\nEInputMode\022\027\n\023k_EInputModeUnk" +
-      "nown\020\000\022\025\n\021k_EInputModeMouse\020\001\022\032\n\026k_EInpu" +
-      "tModeController\020\002\022\"\n\036k_EInputModeMouseAn" +
-      "dController\020\003*\226\001\n\nEMouseMode\022\027\n\023k_EMouse" +
-      "ModeUnknown\020\000\022\036\n\032k_EMouseModeRelativeCur" +
-      "sor\020\001\022\036\n\032k_EMouseModeAbsoluteCursor\020\002\022\025\n" +
-      "\021k_EMouseModeTouch\020\003\022\030\n\024k_EMouseModeRela" +
-      "tive\020\004*\246\014\n\026EControllerElementType\022)\n\034k_E" +
-      "ControllerElementTypeNone\020\377\377\377\377\377\377\377\377\377\001\022!\n\035" +
-      "k_EControllerElementTypeThumb\020\000\022\'\n#k_ECo" +
-      "ntrollerElementTypeButtonSteam\020\001\022(\n$k_EC" +
-      "ontrollerElementTypeJoystickLeft\020\002\022.\n*k_" +
-      "EControllerElementTypeButtonJoystickLeft" +
-      "\020\003\022)\n%k_EControllerElementTypeJoystickRi" +
-      "ght\020\004\022/\n+k_EControllerElementTypeButtonJ" +
-      "oystickRight\020\005\022 \n\034k_EControllerElementTy" +
-      "peDPad\020\006\022#\n\037k_EControllerElementTypeButt" +
-      "onA\020\007\022#\n\037k_EControllerElementTypeButtonB" +
-      "\020\010\022#\n\037k_EControllerElementTypeButtonX\020\t\022" +
-      "#\n\037k_EControllerElementTypeButtonY\020\n\022(\n$" +
-      "k_EControllerElementTypeButtonSelect\020\013\022\'" +
-      "\n#k_EControllerElementTypeButtonStart\020\014\022" +
-      "-\n)k_EControllerElementTypeButtonTrigger" +
-      "Left\020\r\022.\n*k_EControllerElementTypeButton" +
-      "TriggerRight\020\016\022,\n(k_EControllerElementTy" +
-      "peButtonBumperLeft\020\017\022-\n)k_EControllerEle" +
-      "mentTypeButtonBumperRight\020\020\022(\n$k_EContro" +
-      "llerElementTypeButtonMacro0\020\021\022(\n$k_ECont" +
-      "rollerElementTypeButtonMacro1\020\022\022(\n$k_ECo" +
-      "ntrollerElementTypeButtonMacro2\020\023\022(\n$k_E" +
-      "ControllerElementTypeButtonMacro3\020\024\022(\n$k" +
-      "_EControllerElementTypeButtonMacro4\020\025\022(\n" +
-      "$k_EControllerElementTypeButtonMacro5\020\026\022" +
-      "(\n$k_EControllerElementTypeButtonMacro6\020" +
-      "\027\022(\n$k_EControllerElementTypeButtonMacro" +
-      "7\020\030\022*\n&k_EControllerElementTypeTrackpadC" +
-      "enter\020\031\022(\n$k_EControllerElementTypeTrack" +
-      "padLeft\020\032\022)\n%k_EControllerElementTypeTra" +
-      "ckpadRight\020\033\022$\n k_EControllerElementType" +
-      "Keyboard\020\034\022+\n\'k_EControllerElementTypeMa" +
-      "gnifyingGlass\020\035\022.\n*k_EControllerElementT" +
-      "ypeButtonMacro1Finger\020\036\022.\n*k_EController" +
-      "ElementTypeButtonMacro2Finger\020\037\022\'\n#k_ECo" +
-      "ntrollerElementTypeRecordInput\020 \022)\n%k_EC" +
-      "ontrollerElementTypePlaybackInput\020!\022!\n\035k" +
-      "_EControllerElementTypePaste\020\"\022\037\n\033k_ECon" +
-      "trollerElementTypeMax\020#"
+      "C\n\022default_mouse_mode\030\003 \001(\0162\013.EMouseMode" +
+      ":\032k_EMouseModeAbsoluteCursor\032\350\002\n\007Control" +
+      "\022\014\n\004name\030\001 \001(\t\022\014\n\004icon\030\002 \001(\t\022\024\n\014input_so" +
+      "urce\030\003 \001(\005\022\022\n\ninput_mode\030\004 \001(\005\022\025\n\rinput_" +
+      "element\030\005 \001(\005\022\026\n\016output_gamepad\030\006 \001(\005\022\027\n" +
+      "\017output_keyboard\030\007 \001(\005\022\024\n\014output_mouse\030\010" +
+      " \001(\005\022\027\n\017icon_foreground\030\t \001(\t\022\027\n\017icon_ba" +
+      "ckground\030\n \001(\t\022\024\n\014input_toggle\030\013 \001(\010\022(\n " +
+      "input_activate_stick_or_trackpad\030\014 \001(\005\022\027" +
+      "\n\017activation_type\030\r \001(\005\022\025\n\rlong_press_ms" +
+      "\030\016 \001(\005\022\027\n\017double_press_ms\030\017 \001(\005\032m\n\tActio" +
+      "nSet\022\n\n\002id\030\001 \001(\005\022\021\n\tparent_id\030\002 \001(\005\022\014\n\004n" +
+      "ame\030\003 \001(\t\0223\n\010controls\030\004 \003(\0132!.CVirtualCo" +
+      "ntrollerConfig.Control\"\313\001\n\037CVirtualContr" +
+      "ollerLayoutPackage\022\r\n\005appid\030\001 \001(\r\022\017\n\007cre" +
+      "ator\030\002 \001(\004\022\030\n\020initial_revision\030\003 \001(\r\022\026\n\016" +
+      "saved_revision\030\004 \001(\r\022)\n\006config\030\005 \001(\0132\031.C" +
+      "VirtualControllerConfig\022+\n\007layouts\030\006 \001(\013" +
+      "2\032.CVirtualControllerLayouts\"\266\001\n\036CVirtua" +
+      "lControllerGlobalConfig\022\030\n\020feedback_enab" +
+      "led\030\001 \001(\010\022\037\n\021gyroscope_enabled\030\002 \001(\010:\004tr" +
+      "ue\022\037\n\021auto_fade_enabled\030\003 \001(\010:\004true\022\034\n\016r" +
+      "umble_enabled\030\004 \001(\010:\004true\022\032\n\022shake_fade_" +
+      "enabled\030\005 \001(\010*|\n\nEInputMode\022\027\n\023k_EInputM" +
+      "odeUnknown\020\000\022\025\n\021k_EInputModeMouse\020\001\022\032\n\026k" +
+      "_EInputModeController\020\002\022\"\n\036k_EInputModeM" +
+      "ouseAndController\020\003*\226\001\n\nEMouseMode\022\027\n\023k_" +
+      "EMouseModeUnknown\020\000\022\036\n\032k_EMouseModeRelat" +
+      "iveCursor\020\001\022\036\n\032k_EMouseModeAbsoluteCurso" +
+      "r\020\002\022\025\n\021k_EMouseModeTouch\020\003\022\030\n\024k_EMouseMo" +
+      "deRelative\020\004*\246\014\n\026EControllerElementType\022" +
+      ")\n\034k_EControllerElementTypeNone\020\377\377\377\377\377\377\377\377" +
+      "\377\001\022!\n\035k_EControllerElementTypeThumb\020\000\022\'\n" +
+      "#k_EControllerElementTypeButtonSteam\020\001\022(" +
+      "\n$k_EControllerElementTypeJoystickLeft\020\002" +
+      "\022.\n*k_EControllerElementTypeButtonJoysti" +
+      "ckLeft\020\003\022)\n%k_EControllerElementTypeJoys" +
+      "tickRight\020\004\022/\n+k_EControllerElementTypeB" +
+      "uttonJoystickRight\020\005\022 \n\034k_EControllerEle" +
+      "mentTypeDPad\020\006\022#\n\037k_EControllerElementTy" +
+      "peButtonA\020\007\022#\n\037k_EControllerElementTypeB" +
+      "uttonB\020\010\022#\n\037k_EControllerElementTypeButt" +
+      "onX\020\t\022#\n\037k_EControllerElementTypeButtonY" +
+      "\020\n\022(\n$k_EControllerElementTypeButtonSele" +
+      "ct\020\013\022\'\n#k_EControllerElementTypeButtonSt" +
+      "art\020\014\022-\n)k_EControllerElementTypeButtonT" +
+      "riggerLeft\020\r\022.\n*k_EControllerElementType" +
+      "ButtonTriggerRight\020\016\022,\n(k_EControllerEle" +
+      "mentTypeButtonBumperLeft\020\017\022-\n)k_EControl" +
+      "lerElementTypeButtonBumperRight\020\020\022(\n$k_E" +
+      "ControllerElementTypeButtonMacro0\020\021\022(\n$k" +
+      "_EControllerElementTypeButtonMacro1\020\022\022(\n" +
+      "$k_EControllerElementTypeButtonMacro2\020\023\022" +
+      "(\n$k_EControllerElementTypeButtonMacro3\020" +
+      "\024\022(\n$k_EControllerElementTypeButtonMacro" +
+      "4\020\025\022(\n$k_EControllerElementTypeButtonMac" +
+      "ro5\020\026\022(\n$k_EControllerElementTypeButtonM" +
+      "acro6\020\027\022(\n$k_EControllerElementTypeButto" +
+      "nMacro7\020\030\022*\n&k_EControllerElementTypeTra" +
+      "ckpadCenter\020\031\022(\n$k_EControllerElementTyp" +
+      "eTrackpadLeft\020\032\022)\n%k_EControllerElementT" +
+      "ypeTrackpadRight\020\033\022$\n k_EControllerEleme" +
+      "ntTypeKeyboard\020\034\022+\n\'k_EControllerElement" +
+      "TypeMagnifyingGlass\020\035\022.\n*k_EControllerEl" +
+      "ementTypeButtonMacro1Finger\020\036\022.\n*k_ECont" +
+      "rollerElementTypeButtonMacro2Finger\020\037\022\'\n" +
+      "#k_EControllerElementTypeRecordInput\020 \022)" +
+      "\n%k_EControllerElementTypePlaybackInput\020" +
+      "!\022!\n\035k_EControllerElementTypePaste\020\"\022\037\n\033" +
+      "k_EControllerElementTypeMax\020#"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

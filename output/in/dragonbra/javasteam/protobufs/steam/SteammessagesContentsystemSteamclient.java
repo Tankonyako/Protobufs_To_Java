@@ -7247,6 +7247,6266 @@ public final class SteammessagesContentsystemSteamclient {
 
   }
 
+  public interface CContentServerDirectory_GetManifestRequestCode_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CContentServerDirectory_GetManifestRequestCode_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 app_id = 1;</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <code>optional uint32 app_id = 1;</code>
+     * @return The appId.
+     */
+    int getAppId();
+
+    /**
+     * <code>optional uint32 depot_id = 2;</code>
+     * @return Whether the depotId field is set.
+     */
+    boolean hasDepotId();
+    /**
+     * <code>optional uint32 depot_id = 2;</code>
+     * @return The depotId.
+     */
+    int getDepotId();
+
+    /**
+     * <code>optional uint64 manifest_id = 3;</code>
+     * @return Whether the manifestId field is set.
+     */
+    boolean hasManifestId();
+    /**
+     * <code>optional uint64 manifest_id = 3;</code>
+     * @return The manifestId.
+     */
+    long getManifestId();
+
+    /**
+     * <code>optional string app_branch = 4;</code>
+     * @return Whether the appBranch field is set.
+     */
+    boolean hasAppBranch();
+    /**
+     * <code>optional string app_branch = 4;</code>
+     * @return The appBranch.
+     */
+    java.lang.String getAppBranch();
+    /**
+     * <code>optional string app_branch = 4;</code>
+     * @return The bytes for appBranch.
+     */
+    com.google.protobuf.ByteString
+        getAppBranchBytes();
+
+    /**
+     * <code>optional string branch_password_hash = 5;</code>
+     * @return Whether the branchPasswordHash field is set.
+     */
+    boolean hasBranchPasswordHash();
+    /**
+     * <code>optional string branch_password_hash = 5;</code>
+     * @return The branchPasswordHash.
+     */
+    java.lang.String getBranchPasswordHash();
+    /**
+     * <code>optional string branch_password_hash = 5;</code>
+     * @return The bytes for branchPasswordHash.
+     */
+    com.google.protobuf.ByteString
+        getBranchPasswordHashBytes();
+  }
+  /**
+   * Protobuf type {@code CContentServerDirectory_GetManifestRequestCode_Request}
+   */
+  public static final class CContentServerDirectory_GetManifestRequestCode_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CContentServerDirectory_GetManifestRequestCode_Request)
+      CContentServerDirectory_GetManifestRequestCode_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CContentServerDirectory_GetManifestRequestCode_Request.newBuilder() to construct.
+    private CContentServerDirectory_GetManifestRequestCode_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CContentServerDirectory_GetManifestRequestCode_Request() {
+      appBranch_ = "";
+      branchPasswordHash_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CContentServerDirectory_GetManifestRequestCode_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CContentServerDirectory_GetManifestRequestCode_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              appId_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              depotId_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              manifestId_ = input.readUInt64();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              appBranch_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              branchPasswordHash_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetManifestRequestCode_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetManifestRequestCode_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private int appId_;
+    /**
+     * <code>optional uint32 app_id = 1;</code>
+     * @return Whether the appId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 app_id = 1;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public int getAppId() {
+      return appId_;
+    }
+
+    public static final int DEPOT_ID_FIELD_NUMBER = 2;
+    private int depotId_;
+    /**
+     * <code>optional uint32 depot_id = 2;</code>
+     * @return Whether the depotId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepotId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 depot_id = 2;</code>
+     * @return The depotId.
+     */
+    @java.lang.Override
+    public int getDepotId() {
+      return depotId_;
+    }
+
+    public static final int MANIFEST_ID_FIELD_NUMBER = 3;
+    private long manifestId_;
+    /**
+     * <code>optional uint64 manifest_id = 3;</code>
+     * @return Whether the manifestId field is set.
+     */
+    @java.lang.Override
+    public boolean hasManifestId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint64 manifest_id = 3;</code>
+     * @return The manifestId.
+     */
+    @java.lang.Override
+    public long getManifestId() {
+      return manifestId_;
+    }
+
+    public static final int APP_BRANCH_FIELD_NUMBER = 4;
+    private volatile java.lang.Object appBranch_;
+    /**
+     * <code>optional string app_branch = 4;</code>
+     * @return Whether the appBranch field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppBranch() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string app_branch = 4;</code>
+     * @return The appBranch.
+     */
+    @java.lang.Override
+    public java.lang.String getAppBranch() {
+      java.lang.Object ref = appBranch_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          appBranch_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string app_branch = 4;</code>
+     * @return The bytes for appBranch.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAppBranchBytes() {
+      java.lang.Object ref = appBranch_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        appBranch_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BRANCH_PASSWORD_HASH_FIELD_NUMBER = 5;
+    private volatile java.lang.Object branchPasswordHash_;
+    /**
+     * <code>optional string branch_password_hash = 5;</code>
+     * @return Whether the branchPasswordHash field is set.
+     */
+    @java.lang.Override
+    public boolean hasBranchPasswordHash() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string branch_password_hash = 5;</code>
+     * @return The branchPasswordHash.
+     */
+    @java.lang.Override
+    public java.lang.String getBranchPasswordHash() {
+      java.lang.Object ref = branchPasswordHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          branchPasswordHash_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string branch_password_hash = 5;</code>
+     * @return The bytes for branchPasswordHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBranchPasswordHashBytes() {
+      java.lang.Object ref = branchPasswordHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        branchPasswordHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, appId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, depotId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(3, manifestId_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, appBranch_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, branchPasswordHash_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, appId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, depotId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, manifestId_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, appBranch_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, branchPasswordHash_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request other = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request) obj;
+
+      if (hasAppId() != other.hasAppId()) return false;
+      if (hasAppId()) {
+        if (getAppId()
+            != other.getAppId()) return false;
+      }
+      if (hasDepotId() != other.hasDepotId()) return false;
+      if (hasDepotId()) {
+        if (getDepotId()
+            != other.getDepotId()) return false;
+      }
+      if (hasManifestId() != other.hasManifestId()) return false;
+      if (hasManifestId()) {
+        if (getManifestId()
+            != other.getManifestId()) return false;
+      }
+      if (hasAppBranch() != other.hasAppBranch()) return false;
+      if (hasAppBranch()) {
+        if (!getAppBranch()
+            .equals(other.getAppBranch())) return false;
+      }
+      if (hasBranchPasswordHash() != other.hasBranchPasswordHash()) return false;
+      if (hasBranchPasswordHash()) {
+        if (!getBranchPasswordHash()
+            .equals(other.getBranchPasswordHash())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAppId()) {
+        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppId();
+      }
+      if (hasDepotId()) {
+        hash = (37 * hash) + DEPOT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDepotId();
+      }
+      if (hasManifestId()) {
+        hash = (37 * hash) + MANIFEST_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getManifestId());
+      }
+      if (hasAppBranch()) {
+        hash = (37 * hash) + APP_BRANCH_FIELD_NUMBER;
+        hash = (53 * hash) + getAppBranch().hashCode();
+      }
+      if (hasBranchPasswordHash()) {
+        hash = (37 * hash) + BRANCH_PASSWORD_HASH_FIELD_NUMBER;
+        hash = (53 * hash) + getBranchPasswordHash().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CContentServerDirectory_GetManifestRequestCode_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CContentServerDirectory_GetManifestRequestCode_Request)
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetManifestRequestCode_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetManifestRequestCode_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        appId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        depotId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        manifestId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        appBranch_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        branchPasswordHash_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetManifestRequestCode_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request getDefaultInstanceForType() {
+        return SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request build() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request buildPartial() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request result = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.depotId_ = depotId_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.manifestId_ = manifestId_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.appBranch_ = appBranch_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.branchPasswordHash_ = branchPasswordHash_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request) {
+          return mergeFrom((SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request other) {
+        if (other == SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request.getDefaultInstance()) return this;
+        if (other.hasAppId()) {
+          setAppId(other.getAppId());
+        }
+        if (other.hasDepotId()) {
+          setDepotId(other.getDepotId());
+        }
+        if (other.hasManifestId()) {
+          setManifestId(other.getManifestId());
+        }
+        if (other.hasAppBranch()) {
+          bitField0_ |= 0x00000008;
+          appBranch_ = other.appBranch_;
+          onChanged();
+        }
+        if (other.hasBranchPasswordHash()) {
+          bitField0_ |= 0x00000010;
+          branchPasswordHash_ = other.branchPasswordHash_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int appId_ ;
+      /**
+       * <code>optional uint32 app_id = 1;</code>
+       * @return Whether the appId field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 app_id = 1;</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public int getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>optional uint32 app_id = 1;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(int value) {
+        bitField0_ |= 0x00000001;
+        appId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 app_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int depotId_ ;
+      /**
+       * <code>optional uint32 depot_id = 2;</code>
+       * @return Whether the depotId field is set.
+       */
+      @java.lang.Override
+      public boolean hasDepotId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 depot_id = 2;</code>
+       * @return The depotId.
+       */
+      @java.lang.Override
+      public int getDepotId() {
+        return depotId_;
+      }
+      /**
+       * <code>optional uint32 depot_id = 2;</code>
+       * @param value The depotId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepotId(int value) {
+        bitField0_ |= 0x00000002;
+        depotId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 depot_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepotId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        depotId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long manifestId_ ;
+      /**
+       * <code>optional uint64 manifest_id = 3;</code>
+       * @return Whether the manifestId field is set.
+       */
+      @java.lang.Override
+      public boolean hasManifestId() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint64 manifest_id = 3;</code>
+       * @return The manifestId.
+       */
+      @java.lang.Override
+      public long getManifestId() {
+        return manifestId_;
+      }
+      /**
+       * <code>optional uint64 manifest_id = 3;</code>
+       * @param value The manifestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManifestId(long value) {
+        bitField0_ |= 0x00000004;
+        manifestId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 manifest_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearManifestId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        manifestId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object appBranch_ = "";
+      /**
+       * <code>optional string app_branch = 4;</code>
+       * @return Whether the appBranch field is set.
+       */
+      public boolean hasAppBranch() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string app_branch = 4;</code>
+       * @return The appBranch.
+       */
+      public java.lang.String getAppBranch() {
+        java.lang.Object ref = appBranch_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            appBranch_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string app_branch = 4;</code>
+       * @return The bytes for appBranch.
+       */
+      public com.google.protobuf.ByteString
+          getAppBranchBytes() {
+        java.lang.Object ref = appBranch_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          appBranch_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string app_branch = 4;</code>
+       * @param value The appBranch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppBranch(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        appBranch_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string app_branch = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppBranch() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        appBranch_ = getDefaultInstance().getAppBranch();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string app_branch = 4;</code>
+       * @param value The bytes for appBranch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppBranchBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        appBranch_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object branchPasswordHash_ = "";
+      /**
+       * <code>optional string branch_password_hash = 5;</code>
+       * @return Whether the branchPasswordHash field is set.
+       */
+      public boolean hasBranchPasswordHash() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string branch_password_hash = 5;</code>
+       * @return The branchPasswordHash.
+       */
+      public java.lang.String getBranchPasswordHash() {
+        java.lang.Object ref = branchPasswordHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            branchPasswordHash_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string branch_password_hash = 5;</code>
+       * @return The bytes for branchPasswordHash.
+       */
+      public com.google.protobuf.ByteString
+          getBranchPasswordHashBytes() {
+        java.lang.Object ref = branchPasswordHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          branchPasswordHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string branch_password_hash = 5;</code>
+       * @param value The branchPasswordHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBranchPasswordHash(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        branchPasswordHash_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string branch_password_hash = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBranchPasswordHash() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        branchPasswordHash_ = getDefaultInstance().getBranchPasswordHash();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string branch_password_hash = 5;</code>
+       * @param value The bytes for branchPasswordHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBranchPasswordHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        branchPasswordHash_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CContentServerDirectory_GetManifestRequestCode_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CContentServerDirectory_GetManifestRequestCode_Request)
+    private static final SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request();
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CContentServerDirectory_GetManifestRequestCode_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CContentServerDirectory_GetManifestRequestCode_Request>() {
+      @java.lang.Override
+      public CContentServerDirectory_GetManifestRequestCode_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CContentServerDirectory_GetManifestRequestCode_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CContentServerDirectory_GetManifestRequestCode_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CContentServerDirectory_GetManifestRequestCode_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CContentServerDirectory_GetManifestRequestCode_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CContentServerDirectory_GetManifestRequestCode_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 manifest_request_code = 1;</code>
+     * @return Whether the manifestRequestCode field is set.
+     */
+    boolean hasManifestRequestCode();
+    /**
+     * <code>optional uint64 manifest_request_code = 1;</code>
+     * @return The manifestRequestCode.
+     */
+    long getManifestRequestCode();
+  }
+  /**
+   * Protobuf type {@code CContentServerDirectory_GetManifestRequestCode_Response}
+   */
+  public static final class CContentServerDirectory_GetManifestRequestCode_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CContentServerDirectory_GetManifestRequestCode_Response)
+      CContentServerDirectory_GetManifestRequestCode_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CContentServerDirectory_GetManifestRequestCode_Response.newBuilder() to construct.
+    private CContentServerDirectory_GetManifestRequestCode_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CContentServerDirectory_GetManifestRequestCode_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CContentServerDirectory_GetManifestRequestCode_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CContentServerDirectory_GetManifestRequestCode_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              manifestRequestCode_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetManifestRequestCode_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetManifestRequestCode_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MANIFEST_REQUEST_CODE_FIELD_NUMBER = 1;
+    private long manifestRequestCode_;
+    /**
+     * <code>optional uint64 manifest_request_code = 1;</code>
+     * @return Whether the manifestRequestCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasManifestRequestCode() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 manifest_request_code = 1;</code>
+     * @return The manifestRequestCode.
+     */
+    @java.lang.Override
+    public long getManifestRequestCode() {
+      return manifestRequestCode_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, manifestRequestCode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, manifestRequestCode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response other = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response) obj;
+
+      if (hasManifestRequestCode() != other.hasManifestRequestCode()) return false;
+      if (hasManifestRequestCode()) {
+        if (getManifestRequestCode()
+            != other.getManifestRequestCode()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasManifestRequestCode()) {
+        hash = (37 * hash) + MANIFEST_REQUEST_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getManifestRequestCode());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CContentServerDirectory_GetManifestRequestCode_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CContentServerDirectory_GetManifestRequestCode_Response)
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetManifestRequestCode_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetManifestRequestCode_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        manifestRequestCode_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetManifestRequestCode_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response getDefaultInstanceForType() {
+        return SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response build() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response buildPartial() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response result = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.manifestRequestCode_ = manifestRequestCode_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response) {
+          return mergeFrom((SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response other) {
+        if (other == SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response.getDefaultInstance()) return this;
+        if (other.hasManifestRequestCode()) {
+          setManifestRequestCode(other.getManifestRequestCode());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long manifestRequestCode_ ;
+      /**
+       * <code>optional uint64 manifest_request_code = 1;</code>
+       * @return Whether the manifestRequestCode field is set.
+       */
+      @java.lang.Override
+      public boolean hasManifestRequestCode() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 manifest_request_code = 1;</code>
+       * @return The manifestRequestCode.
+       */
+      @java.lang.Override
+      public long getManifestRequestCode() {
+        return manifestRequestCode_;
+      }
+      /**
+       * <code>optional uint64 manifest_request_code = 1;</code>
+       * @param value The manifestRequestCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManifestRequestCode(long value) {
+        bitField0_ |= 0x00000001;
+        manifestRequestCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 manifest_request_code = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearManifestRequestCode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        manifestRequestCode_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CContentServerDirectory_GetManifestRequestCode_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CContentServerDirectory_GetManifestRequestCode_Response)
+    private static final SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response();
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CContentServerDirectory_GetManifestRequestCode_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CContentServerDirectory_GetManifestRequestCode_Response>() {
+      @java.lang.Override
+      public CContentServerDirectory_GetManifestRequestCode_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CContentServerDirectory_GetManifestRequestCode_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CContentServerDirectory_GetManifestRequestCode_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CContentServerDirectory_GetManifestRequestCode_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetManifestRequestCode_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CContentServerDirectory_GetCDNAuthToken_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CContentServerDirectory_GetCDNAuthToken_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 depot_id = 1;</code>
+     * @return Whether the depotId field is set.
+     */
+    boolean hasDepotId();
+    /**
+     * <code>optional uint32 depot_id = 1;</code>
+     * @return The depotId.
+     */
+    int getDepotId();
+
+    /**
+     * <code>optional string host_name = 2;</code>
+     * @return Whether the hostName field is set.
+     */
+    boolean hasHostName();
+    /**
+     * <code>optional string host_name = 2;</code>
+     * @return The hostName.
+     */
+    java.lang.String getHostName();
+    /**
+     * <code>optional string host_name = 2;</code>
+     * @return The bytes for hostName.
+     */
+    com.google.protobuf.ByteString
+        getHostNameBytes();
+
+    /**
+     * <code>optional uint32 app_id = 3;</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <code>optional uint32 app_id = 3;</code>
+     * @return The appId.
+     */
+    int getAppId();
+  }
+  /**
+   * Protobuf type {@code CContentServerDirectory_GetCDNAuthToken_Request}
+   */
+  public static final class CContentServerDirectory_GetCDNAuthToken_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CContentServerDirectory_GetCDNAuthToken_Request)
+      CContentServerDirectory_GetCDNAuthToken_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CContentServerDirectory_GetCDNAuthToken_Request.newBuilder() to construct.
+    private CContentServerDirectory_GetCDNAuthToken_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CContentServerDirectory_GetCDNAuthToken_Request() {
+      hostName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CContentServerDirectory_GetCDNAuthToken_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CContentServerDirectory_GetCDNAuthToken_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              depotId_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              hostName_ = bs;
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              appId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetCDNAuthToken_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetCDNAuthToken_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DEPOT_ID_FIELD_NUMBER = 1;
+    private int depotId_;
+    /**
+     * <code>optional uint32 depot_id = 1;</code>
+     * @return Whether the depotId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepotId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 depot_id = 1;</code>
+     * @return The depotId.
+     */
+    @java.lang.Override
+    public int getDepotId() {
+      return depotId_;
+    }
+
+    public static final int HOST_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object hostName_;
+    /**
+     * <code>optional string host_name = 2;</code>
+     * @return Whether the hostName field is set.
+     */
+    @java.lang.Override
+    public boolean hasHostName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string host_name = 2;</code>
+     * @return The hostName.
+     */
+    @java.lang.Override
+    public java.lang.String getHostName() {
+      java.lang.Object ref = hostName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          hostName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string host_name = 2;</code>
+     * @return The bytes for hostName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostNameBytes() {
+      java.lang.Object ref = hostName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 3;
+    private int appId_;
+    /**
+     * <code>optional uint32 app_id = 3;</code>
+     * @return Whether the appId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 app_id = 3;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public int getAppId() {
+      return appId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, depotId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hostName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, appId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, depotId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, hostName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, appId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request other = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request) obj;
+
+      if (hasDepotId() != other.hasDepotId()) return false;
+      if (hasDepotId()) {
+        if (getDepotId()
+            != other.getDepotId()) return false;
+      }
+      if (hasHostName() != other.hasHostName()) return false;
+      if (hasHostName()) {
+        if (!getHostName()
+            .equals(other.getHostName())) return false;
+      }
+      if (hasAppId() != other.hasAppId()) return false;
+      if (hasAppId()) {
+        if (getAppId()
+            != other.getAppId()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDepotId()) {
+        hash = (37 * hash) + DEPOT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDepotId();
+      }
+      if (hasHostName()) {
+        hash = (37 * hash) + HOST_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getHostName().hashCode();
+      }
+      if (hasAppId()) {
+        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppId();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CContentServerDirectory_GetCDNAuthToken_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CContentServerDirectory_GetCDNAuthToken_Request)
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetCDNAuthToken_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetCDNAuthToken_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        depotId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hostName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetCDNAuthToken_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request getDefaultInstanceForType() {
+        return SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request build() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request buildPartial() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request result = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.depotId_ = depotId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.hostName_ = hostName_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.appId_ = appId_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request) {
+          return mergeFrom((SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request other) {
+        if (other == SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request.getDefaultInstance()) return this;
+        if (other.hasDepotId()) {
+          setDepotId(other.getDepotId());
+        }
+        if (other.hasHostName()) {
+          bitField0_ |= 0x00000002;
+          hostName_ = other.hostName_;
+          onChanged();
+        }
+        if (other.hasAppId()) {
+          setAppId(other.getAppId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int depotId_ ;
+      /**
+       * <code>optional uint32 depot_id = 1;</code>
+       * @return Whether the depotId field is set.
+       */
+      @java.lang.Override
+      public boolean hasDepotId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 depot_id = 1;</code>
+       * @return The depotId.
+       */
+      @java.lang.Override
+      public int getDepotId() {
+        return depotId_;
+      }
+      /**
+       * <code>optional uint32 depot_id = 1;</code>
+       * @param value The depotId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepotId(int value) {
+        bitField0_ |= 0x00000001;
+        depotId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 depot_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepotId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        depotId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hostName_ = "";
+      /**
+       * <code>optional string host_name = 2;</code>
+       * @return Whether the hostName field is set.
+       */
+      public boolean hasHostName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string host_name = 2;</code>
+       * @return The hostName.
+       */
+      public java.lang.String getHostName() {
+        java.lang.Object ref = hostName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            hostName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string host_name = 2;</code>
+       * @return The bytes for hostName.
+       */
+      public com.google.protobuf.ByteString
+          getHostNameBytes() {
+        java.lang.Object ref = hostName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string host_name = 2;</code>
+       * @param value The hostName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        hostName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string host_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        hostName_ = getDefaultInstance().getHostName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string host_name = 2;</code>
+       * @param value The bytes for hostName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        hostName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int appId_ ;
+      /**
+       * <code>optional uint32 app_id = 3;</code>
+       * @return Whether the appId field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppId() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 app_id = 3;</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public int getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>optional uint32 app_id = 3;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(int value) {
+        bitField0_ |= 0x00000004;
+        appId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 app_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        appId_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CContentServerDirectory_GetCDNAuthToken_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CContentServerDirectory_GetCDNAuthToken_Request)
+    private static final SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request();
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CContentServerDirectory_GetCDNAuthToken_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CContentServerDirectory_GetCDNAuthToken_Request>() {
+      @java.lang.Override
+      public CContentServerDirectory_GetCDNAuthToken_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CContentServerDirectory_GetCDNAuthToken_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CContentServerDirectory_GetCDNAuthToken_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CContentServerDirectory_GetCDNAuthToken_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CContentServerDirectory_GetCDNAuthToken_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CContentServerDirectory_GetCDNAuthToken_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string token = 1;</code>
+     * @return Whether the token field is set.
+     */
+    boolean hasToken();
+    /**
+     * <code>optional string token = 1;</code>
+     * @return The token.
+     */
+    java.lang.String getToken();
+    /**
+     * <code>optional string token = 1;</code>
+     * @return The bytes for token.
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
+
+    /**
+     * <code>optional uint32 expiration_time = 2;</code>
+     * @return Whether the expirationTime field is set.
+     */
+    boolean hasExpirationTime();
+    /**
+     * <code>optional uint32 expiration_time = 2;</code>
+     * @return The expirationTime.
+     */
+    int getExpirationTime();
+  }
+  /**
+   * Protobuf type {@code CContentServerDirectory_GetCDNAuthToken_Response}
+   */
+  public static final class CContentServerDirectory_GetCDNAuthToken_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CContentServerDirectory_GetCDNAuthToken_Response)
+      CContentServerDirectory_GetCDNAuthToken_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CContentServerDirectory_GetCDNAuthToken_Response.newBuilder() to construct.
+    private CContentServerDirectory_GetCDNAuthToken_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CContentServerDirectory_GetCDNAuthToken_Response() {
+      token_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CContentServerDirectory_GetCDNAuthToken_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CContentServerDirectory_GetCDNAuthToken_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              token_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              expirationTime_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetCDNAuthToken_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetCDNAuthToken_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TOKEN_FIELD_NUMBER = 1;
+    private volatile java.lang.Object token_;
+    /**
+     * <code>optional string token = 1;</code>
+     * @return Whether the token field is set.
+     */
+    @java.lang.Override
+    public boolean hasToken() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string token = 1;</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          token_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string token = 1;</code>
+     * @return The bytes for token.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPIRATION_TIME_FIELD_NUMBER = 2;
+    private int expirationTime_;
+    /**
+     * <code>optional uint32 expiration_time = 2;</code>
+     * @return Whether the expirationTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpirationTime() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 expiration_time = 2;</code>
+     * @return The expirationTime.
+     */
+    @java.lang.Override
+    public int getExpirationTime() {
+      return expirationTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, expirationTime_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, expirationTime_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response other = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response) obj;
+
+      if (hasToken() != other.hasToken()) return false;
+      if (hasToken()) {
+        if (!getToken()
+            .equals(other.getToken())) return false;
+      }
+      if (hasExpirationTime() != other.hasExpirationTime()) return false;
+      if (hasExpirationTime()) {
+        if (getExpirationTime()
+            != other.getExpirationTime()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasToken()) {
+        hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getToken().hashCode();
+      }
+      if (hasExpirationTime()) {
+        hash = (37 * hash) + EXPIRATION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getExpirationTime();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CContentServerDirectory_GetCDNAuthToken_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CContentServerDirectory_GetCDNAuthToken_Response)
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetCDNAuthToken_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetCDNAuthToken_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        token_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        expirationTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetCDNAuthToken_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response getDefaultInstanceForType() {
+        return SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response build() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response buildPartial() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response result = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.token_ = token_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.expirationTime_ = expirationTime_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response) {
+          return mergeFrom((SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response other) {
+        if (other == SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response.getDefaultInstance()) return this;
+        if (other.hasToken()) {
+          bitField0_ |= 0x00000001;
+          token_ = other.token_;
+          onChanged();
+        }
+        if (other.hasExpirationTime()) {
+          setExpirationTime(other.getExpirationTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object token_ = "";
+      /**
+       * <code>optional string token = 1;</code>
+       * @return Whether the token field is set.
+       */
+      public boolean hasToken() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string token = 1;</code>
+       * @return The token.
+       */
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            token_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string token = 1;</code>
+       * @return The bytes for token.
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string token = 1;</code>
+       * @param value The token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        token_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string token = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToken() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        token_ = getDefaultInstance().getToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string token = 1;</code>
+       * @param value The bytes for token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        token_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int expirationTime_ ;
+      /**
+       * <code>optional uint32 expiration_time = 2;</code>
+       * @return Whether the expirationTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasExpirationTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 expiration_time = 2;</code>
+       * @return The expirationTime.
+       */
+      @java.lang.Override
+      public int getExpirationTime() {
+        return expirationTime_;
+      }
+      /**
+       * <code>optional uint32 expiration_time = 2;</code>
+       * @param value The expirationTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpirationTime(int value) {
+        bitField0_ |= 0x00000002;
+        expirationTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 expiration_time = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpirationTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        expirationTime_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CContentServerDirectory_GetCDNAuthToken_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CContentServerDirectory_GetCDNAuthToken_Response)
+    private static final SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response();
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CContentServerDirectory_GetCDNAuthToken_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CContentServerDirectory_GetCDNAuthToken_Response>() {
+      @java.lang.Override
+      public CContentServerDirectory_GetCDNAuthToken_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CContentServerDirectory_GetCDNAuthToken_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CContentServerDirectory_GetCDNAuthToken_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CContentServerDirectory_GetCDNAuthToken_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetCDNAuthToken_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CContentServerDirectory_RequestPeerContentServer_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CContentServerDirectory_RequestPeerContentServer_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 remote_client_id = 1;</code>
+     * @return Whether the remoteClientId field is set.
+     */
+    boolean hasRemoteClientId();
+    /**
+     * <code>optional uint64 remote_client_id = 1;</code>
+     * @return The remoteClientId.
+     */
+    long getRemoteClientId();
+
+    /**
+     * <code>optional uint64 steamid = 2;</code>
+     * @return Whether the steamid field is set.
+     */
+    boolean hasSteamid();
+    /**
+     * <code>optional uint64 steamid = 2;</code>
+     * @return The steamid.
+     */
+    long getSteamid();
+
+    /**
+     * <code>optional uint64 server_remote_client_id = 3;</code>
+     * @return Whether the serverRemoteClientId field is set.
+     */
+    boolean hasServerRemoteClientId();
+    /**
+     * <code>optional uint64 server_remote_client_id = 3;</code>
+     * @return The serverRemoteClientId.
+     */
+    long getServerRemoteClientId();
+
+    /**
+     * <code>optional uint32 app_id = 4;</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <code>optional uint32 app_id = 4;</code>
+     * @return The appId.
+     */
+    int getAppId();
+
+    /**
+     * <code>optional uint32 current_build_id = 5;</code>
+     * @return Whether the currentBuildId field is set.
+     */
+    boolean hasCurrentBuildId();
+    /**
+     * <code>optional uint32 current_build_id = 5;</code>
+     * @return The currentBuildId.
+     */
+    int getCurrentBuildId();
+  }
+  /**
+   * Protobuf type {@code CContentServerDirectory_RequestPeerContentServer_Request}
+   */
+  public static final class CContentServerDirectory_RequestPeerContentServer_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CContentServerDirectory_RequestPeerContentServer_Request)
+      CContentServerDirectory_RequestPeerContentServer_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CContentServerDirectory_RequestPeerContentServer_Request.newBuilder() to construct.
+    private CContentServerDirectory_RequestPeerContentServer_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CContentServerDirectory_RequestPeerContentServer_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CContentServerDirectory_RequestPeerContentServer_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CContentServerDirectory_RequestPeerContentServer_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              remoteClientId_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              steamid_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              serverRemoteClientId_ = input.readUInt64();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              appId_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              currentBuildId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_RequestPeerContentServer_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_RequestPeerContentServer_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REMOTE_CLIENT_ID_FIELD_NUMBER = 1;
+    private long remoteClientId_;
+    /**
+     * <code>optional uint64 remote_client_id = 1;</code>
+     * @return Whether the remoteClientId field is set.
+     */
+    @java.lang.Override
+    public boolean hasRemoteClientId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 remote_client_id = 1;</code>
+     * @return The remoteClientId.
+     */
+    @java.lang.Override
+    public long getRemoteClientId() {
+      return remoteClientId_;
+    }
+
+    public static final int STEAMID_FIELD_NUMBER = 2;
+    private long steamid_;
+    /**
+     * <code>optional uint64 steamid = 2;</code>
+     * @return Whether the steamid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSteamid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 steamid = 2;</code>
+     * @return The steamid.
+     */
+    @java.lang.Override
+    public long getSteamid() {
+      return steamid_;
+    }
+
+    public static final int SERVER_REMOTE_CLIENT_ID_FIELD_NUMBER = 3;
+    private long serverRemoteClientId_;
+    /**
+     * <code>optional uint64 server_remote_client_id = 3;</code>
+     * @return Whether the serverRemoteClientId field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerRemoteClientId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint64 server_remote_client_id = 3;</code>
+     * @return The serverRemoteClientId.
+     */
+    @java.lang.Override
+    public long getServerRemoteClientId() {
+      return serverRemoteClientId_;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 4;
+    private int appId_;
+    /**
+     * <code>optional uint32 app_id = 4;</code>
+     * @return Whether the appId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 app_id = 4;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public int getAppId() {
+      return appId_;
+    }
+
+    public static final int CURRENT_BUILD_ID_FIELD_NUMBER = 5;
+    private int currentBuildId_;
+    /**
+     * <code>optional uint32 current_build_id = 5;</code>
+     * @return Whether the currentBuildId field is set.
+     */
+    @java.lang.Override
+    public boolean hasCurrentBuildId() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint32 current_build_id = 5;</code>
+     * @return The currentBuildId.
+     */
+    @java.lang.Override
+    public int getCurrentBuildId() {
+      return currentBuildId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, remoteClientId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(2, steamid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(3, serverRemoteClientId_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(4, appId_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt32(5, currentBuildId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, remoteClientId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, steamid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, serverRemoteClientId_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, appId_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, currentBuildId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request other = (SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request) obj;
+
+      if (hasRemoteClientId() != other.hasRemoteClientId()) return false;
+      if (hasRemoteClientId()) {
+        if (getRemoteClientId()
+            != other.getRemoteClientId()) return false;
+      }
+      if (hasSteamid() != other.hasSteamid()) return false;
+      if (hasSteamid()) {
+        if (getSteamid()
+            != other.getSteamid()) return false;
+      }
+      if (hasServerRemoteClientId() != other.hasServerRemoteClientId()) return false;
+      if (hasServerRemoteClientId()) {
+        if (getServerRemoteClientId()
+            != other.getServerRemoteClientId()) return false;
+      }
+      if (hasAppId() != other.hasAppId()) return false;
+      if (hasAppId()) {
+        if (getAppId()
+            != other.getAppId()) return false;
+      }
+      if (hasCurrentBuildId() != other.hasCurrentBuildId()) return false;
+      if (hasCurrentBuildId()) {
+        if (getCurrentBuildId()
+            != other.getCurrentBuildId()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRemoteClientId()) {
+        hash = (37 * hash) + REMOTE_CLIENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRemoteClientId());
+      }
+      if (hasSteamid()) {
+        hash = (37 * hash) + STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSteamid());
+      }
+      if (hasServerRemoteClientId()) {
+        hash = (37 * hash) + SERVER_REMOTE_CLIENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getServerRemoteClientId());
+      }
+      if (hasAppId()) {
+        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppId();
+      }
+      if (hasCurrentBuildId()) {
+        hash = (37 * hash) + CURRENT_BUILD_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrentBuildId();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CContentServerDirectory_RequestPeerContentServer_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CContentServerDirectory_RequestPeerContentServer_Request)
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_RequestPeerContentServer_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_RequestPeerContentServer_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        remoteClientId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        steamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        serverRemoteClientId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        appId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        currentBuildId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_RequestPeerContentServer_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request getDefaultInstanceForType() {
+        return SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request build() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request buildPartial() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request result = new SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.remoteClientId_ = remoteClientId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.steamid_ = steamid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.serverRemoteClientId_ = serverRemoteClientId_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.appId_ = appId_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.currentBuildId_ = currentBuildId_;
+          to_bitField0_ |= 0x00000010;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request) {
+          return mergeFrom((SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request other) {
+        if (other == SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request.getDefaultInstance()) return this;
+        if (other.hasRemoteClientId()) {
+          setRemoteClientId(other.getRemoteClientId());
+        }
+        if (other.hasSteamid()) {
+          setSteamid(other.getSteamid());
+        }
+        if (other.hasServerRemoteClientId()) {
+          setServerRemoteClientId(other.getServerRemoteClientId());
+        }
+        if (other.hasAppId()) {
+          setAppId(other.getAppId());
+        }
+        if (other.hasCurrentBuildId()) {
+          setCurrentBuildId(other.getCurrentBuildId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long remoteClientId_ ;
+      /**
+       * <code>optional uint64 remote_client_id = 1;</code>
+       * @return Whether the remoteClientId field is set.
+       */
+      @java.lang.Override
+      public boolean hasRemoteClientId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 remote_client_id = 1;</code>
+       * @return The remoteClientId.
+       */
+      @java.lang.Override
+      public long getRemoteClientId() {
+        return remoteClientId_;
+      }
+      /**
+       * <code>optional uint64 remote_client_id = 1;</code>
+       * @param value The remoteClientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteClientId(long value) {
+        bitField0_ |= 0x00000001;
+        remoteClientId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 remote_client_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoteClientId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        remoteClientId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long steamid_ ;
+      /**
+       * <code>optional uint64 steamid = 2;</code>
+       * @return Whether the steamid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSteamid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 steamid = 2;</code>
+       * @return The steamid.
+       */
+      @java.lang.Override
+      public long getSteamid() {
+        return steamid_;
+      }
+      /**
+       * <code>optional uint64 steamid = 2;</code>
+       * @param value The steamid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamid(long value) {
+        bitField0_ |= 0x00000002;
+        steamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 steamid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        steamid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long serverRemoteClientId_ ;
+      /**
+       * <code>optional uint64 server_remote_client_id = 3;</code>
+       * @return Whether the serverRemoteClientId field is set.
+       */
+      @java.lang.Override
+      public boolean hasServerRemoteClientId() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint64 server_remote_client_id = 3;</code>
+       * @return The serverRemoteClientId.
+       */
+      @java.lang.Override
+      public long getServerRemoteClientId() {
+        return serverRemoteClientId_;
+      }
+      /**
+       * <code>optional uint64 server_remote_client_id = 3;</code>
+       * @param value The serverRemoteClientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerRemoteClientId(long value) {
+        bitField0_ |= 0x00000004;
+        serverRemoteClientId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 server_remote_client_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerRemoteClientId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        serverRemoteClientId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int appId_ ;
+      /**
+       * <code>optional uint32 app_id = 4;</code>
+       * @return Whether the appId field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppId() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 app_id = 4;</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public int getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>optional uint32 app_id = 4;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(int value) {
+        bitField0_ |= 0x00000008;
+        appId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 app_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        appId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int currentBuildId_ ;
+      /**
+       * <code>optional uint32 current_build_id = 5;</code>
+       * @return Whether the currentBuildId field is set.
+       */
+      @java.lang.Override
+      public boolean hasCurrentBuildId() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 current_build_id = 5;</code>
+       * @return The currentBuildId.
+       */
+      @java.lang.Override
+      public int getCurrentBuildId() {
+        return currentBuildId_;
+      }
+      /**
+       * <code>optional uint32 current_build_id = 5;</code>
+       * @param value The currentBuildId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentBuildId(int value) {
+        bitField0_ |= 0x00000010;
+        currentBuildId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 current_build_id = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentBuildId() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        currentBuildId_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CContentServerDirectory_RequestPeerContentServer_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CContentServerDirectory_RequestPeerContentServer_Request)
+    private static final SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request();
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CContentServerDirectory_RequestPeerContentServer_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CContentServerDirectory_RequestPeerContentServer_Request>() {
+      @java.lang.Override
+      public CContentServerDirectory_RequestPeerContentServer_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CContentServerDirectory_RequestPeerContentServer_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CContentServerDirectory_RequestPeerContentServer_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CContentServerDirectory_RequestPeerContentServer_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CContentServerDirectory_RequestPeerContentServer_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CContentServerDirectory_RequestPeerContentServer_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 server_port = 1;</code>
+     * @return Whether the serverPort field is set.
+     */
+    boolean hasServerPort();
+    /**
+     * <code>optional uint32 server_port = 1;</code>
+     * @return The serverPort.
+     */
+    int getServerPort();
+
+    /**
+     * <code>repeated uint32 installed_depots = 2;</code>
+     * @return A list containing the installedDepots.
+     */
+    java.util.List<java.lang.Integer> getInstalledDepotsList();
+    /**
+     * <code>repeated uint32 installed_depots = 2;</code>
+     * @return The count of installedDepots.
+     */
+    int getInstalledDepotsCount();
+    /**
+     * <code>repeated uint32 installed_depots = 2;</code>
+     * @param index The index of the element to return.
+     * @return The installedDepots at the given index.
+     */
+    int getInstalledDepots(int index);
+  }
+  /**
+   * Protobuf type {@code CContentServerDirectory_RequestPeerContentServer_Response}
+   */
+  public static final class CContentServerDirectory_RequestPeerContentServer_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CContentServerDirectory_RequestPeerContentServer_Response)
+      CContentServerDirectory_RequestPeerContentServer_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CContentServerDirectory_RequestPeerContentServer_Response.newBuilder() to construct.
+    private CContentServerDirectory_RequestPeerContentServer_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CContentServerDirectory_RequestPeerContentServer_Response() {
+      installedDepots_ = emptyIntList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CContentServerDirectory_RequestPeerContentServer_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CContentServerDirectory_RequestPeerContentServer_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              serverPort_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                installedDepots_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              installedDepots_.addInt(input.readUInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                installedDepots_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                installedDepots_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          installedDepots_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_RequestPeerContentServer_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_RequestPeerContentServer_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SERVER_PORT_FIELD_NUMBER = 1;
+    private int serverPort_;
+    /**
+     * <code>optional uint32 server_port = 1;</code>
+     * @return Whether the serverPort field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerPort() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 server_port = 1;</code>
+     * @return The serverPort.
+     */
+    @java.lang.Override
+    public int getServerPort() {
+      return serverPort_;
+    }
+
+    public static final int INSTALLED_DEPOTS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.IntList installedDepots_;
+    /**
+     * <code>repeated uint32 installed_depots = 2;</code>
+     * @return A list containing the installedDepots.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getInstalledDepotsList() {
+      return installedDepots_;
+    }
+    /**
+     * <code>repeated uint32 installed_depots = 2;</code>
+     * @return The count of installedDepots.
+     */
+    public int getInstalledDepotsCount() {
+      return installedDepots_.size();
+    }
+    /**
+     * <code>repeated uint32 installed_depots = 2;</code>
+     * @param index The index of the element to return.
+     * @return The installedDepots at the given index.
+     */
+    public int getInstalledDepots(int index) {
+      return installedDepots_.getInt(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, serverPort_);
+      }
+      for (int i = 0; i < installedDepots_.size(); i++) {
+        output.writeUInt32(2, installedDepots_.getInt(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, serverPort_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < installedDepots_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(installedDepots_.getInt(i));
+        }
+        size += dataSize;
+        size += 1 * getInstalledDepotsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response other = (SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response) obj;
+
+      if (hasServerPort() != other.hasServerPort()) return false;
+      if (hasServerPort()) {
+        if (getServerPort()
+            != other.getServerPort()) return false;
+      }
+      if (!getInstalledDepotsList()
+          .equals(other.getInstalledDepotsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasServerPort()) {
+        hash = (37 * hash) + SERVER_PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getServerPort();
+      }
+      if (getInstalledDepotsCount() > 0) {
+        hash = (37 * hash) + INSTALLED_DEPOTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInstalledDepotsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CContentServerDirectory_RequestPeerContentServer_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CContentServerDirectory_RequestPeerContentServer_Response)
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_RequestPeerContentServer_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_RequestPeerContentServer_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        serverPort_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        installedDepots_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_RequestPeerContentServer_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response getDefaultInstanceForType() {
+        return SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response build() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response buildPartial() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response result = new SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.serverPort_ = serverPort_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          installedDepots_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.installedDepots_ = installedDepots_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response) {
+          return mergeFrom((SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response other) {
+        if (other == SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response.getDefaultInstance()) return this;
+        if (other.hasServerPort()) {
+          setServerPort(other.getServerPort());
+        }
+        if (!other.installedDepots_.isEmpty()) {
+          if (installedDepots_.isEmpty()) {
+            installedDepots_ = other.installedDepots_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureInstalledDepotsIsMutable();
+            installedDepots_.addAll(other.installedDepots_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int serverPort_ ;
+      /**
+       * <code>optional uint32 server_port = 1;</code>
+       * @return Whether the serverPort field is set.
+       */
+      @java.lang.Override
+      public boolean hasServerPort() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 server_port = 1;</code>
+       * @return The serverPort.
+       */
+      @java.lang.Override
+      public int getServerPort() {
+        return serverPort_;
+      }
+      /**
+       * <code>optional uint32 server_port = 1;</code>
+       * @param value The serverPort to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerPort(int value) {
+        bitField0_ |= 0x00000001;
+        serverPort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 server_port = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerPort() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        serverPort_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList installedDepots_ = emptyIntList();
+      private void ensureInstalledDepotsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          installedDepots_ = mutableCopy(installedDepots_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated uint32 installed_depots = 2;</code>
+       * @return A list containing the installedDepots.
+       */
+      public java.util.List<java.lang.Integer>
+          getInstalledDepotsList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(installedDepots_) : installedDepots_;
+      }
+      /**
+       * <code>repeated uint32 installed_depots = 2;</code>
+       * @return The count of installedDepots.
+       */
+      public int getInstalledDepotsCount() {
+        return installedDepots_.size();
+      }
+      /**
+       * <code>repeated uint32 installed_depots = 2;</code>
+       * @param index The index of the element to return.
+       * @return The installedDepots at the given index.
+       */
+      public int getInstalledDepots(int index) {
+        return installedDepots_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 installed_depots = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The installedDepots to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstalledDepots(
+          int index, int value) {
+        ensureInstalledDepotsIsMutable();
+        installedDepots_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 installed_depots = 2;</code>
+       * @param value The installedDepots to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInstalledDepots(int value) {
+        ensureInstalledDepotsIsMutable();
+        installedDepots_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 installed_depots = 2;</code>
+       * @param values The installedDepots to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllInstalledDepots(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureInstalledDepotsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, installedDepots_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 installed_depots = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstalledDepots() {
+        installedDepots_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CContentServerDirectory_RequestPeerContentServer_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CContentServerDirectory_RequestPeerContentServer_Response)
+    private static final SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response();
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CContentServerDirectory_RequestPeerContentServer_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CContentServerDirectory_RequestPeerContentServer_Response>() {
+      @java.lang.Override
+      public CContentServerDirectory_RequestPeerContentServer_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CContentServerDirectory_RequestPeerContentServer_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CContentServerDirectory_RequestPeerContentServer_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CContentServerDirectory_RequestPeerContentServer_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesContentsystemSteamclient.CContentServerDirectory_RequestPeerContentServer_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CContentServerDirectory_GetPeerContentInfo_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CContentServerDirectory_GetPeerContentInfo_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 remote_client_id = 1;</code>
+     * @return Whether the remoteClientId field is set.
+     */
+    boolean hasRemoteClientId();
+    /**
+     * <code>optional uint64 remote_client_id = 1;</code>
+     * @return The remoteClientId.
+     */
+    long getRemoteClientId();
+
+    /**
+     * <code>optional uint64 steamid = 2;</code>
+     * @return Whether the steamid field is set.
+     */
+    boolean hasSteamid();
+    /**
+     * <code>optional uint64 steamid = 2;</code>
+     * @return The steamid.
+     */
+    long getSteamid();
+
+    /**
+     * <code>optional uint64 server_remote_client_id = 3;</code>
+     * @return Whether the serverRemoteClientId field is set.
+     */
+    boolean hasServerRemoteClientId();
+    /**
+     * <code>optional uint64 server_remote_client_id = 3;</code>
+     * @return The serverRemoteClientId.
+     */
+    long getServerRemoteClientId();
+  }
+  /**
+   * Protobuf type {@code CContentServerDirectory_GetPeerContentInfo_Request}
+   */
+  public static final class CContentServerDirectory_GetPeerContentInfo_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CContentServerDirectory_GetPeerContentInfo_Request)
+      CContentServerDirectory_GetPeerContentInfo_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CContentServerDirectory_GetPeerContentInfo_Request.newBuilder() to construct.
+    private CContentServerDirectory_GetPeerContentInfo_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CContentServerDirectory_GetPeerContentInfo_Request() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CContentServerDirectory_GetPeerContentInfo_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CContentServerDirectory_GetPeerContentInfo_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              remoteClientId_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              steamid_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              serverRemoteClientId_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetPeerContentInfo_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetPeerContentInfo_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REMOTE_CLIENT_ID_FIELD_NUMBER = 1;
+    private long remoteClientId_;
+    /**
+     * <code>optional uint64 remote_client_id = 1;</code>
+     * @return Whether the remoteClientId field is set.
+     */
+    @java.lang.Override
+    public boolean hasRemoteClientId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 remote_client_id = 1;</code>
+     * @return The remoteClientId.
+     */
+    @java.lang.Override
+    public long getRemoteClientId() {
+      return remoteClientId_;
+    }
+
+    public static final int STEAMID_FIELD_NUMBER = 2;
+    private long steamid_;
+    /**
+     * <code>optional uint64 steamid = 2;</code>
+     * @return Whether the steamid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSteamid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 steamid = 2;</code>
+     * @return The steamid.
+     */
+    @java.lang.Override
+    public long getSteamid() {
+      return steamid_;
+    }
+
+    public static final int SERVER_REMOTE_CLIENT_ID_FIELD_NUMBER = 3;
+    private long serverRemoteClientId_;
+    /**
+     * <code>optional uint64 server_remote_client_id = 3;</code>
+     * @return Whether the serverRemoteClientId field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerRemoteClientId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint64 server_remote_client_id = 3;</code>
+     * @return The serverRemoteClientId.
+     */
+    @java.lang.Override
+    public long getServerRemoteClientId() {
+      return serverRemoteClientId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, remoteClientId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(2, steamid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt64(3, serverRemoteClientId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, remoteClientId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, steamid_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, serverRemoteClientId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request other = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request) obj;
+
+      if (hasRemoteClientId() != other.hasRemoteClientId()) return false;
+      if (hasRemoteClientId()) {
+        if (getRemoteClientId()
+            != other.getRemoteClientId()) return false;
+      }
+      if (hasSteamid() != other.hasSteamid()) return false;
+      if (hasSteamid()) {
+        if (getSteamid()
+            != other.getSteamid()) return false;
+      }
+      if (hasServerRemoteClientId() != other.hasServerRemoteClientId()) return false;
+      if (hasServerRemoteClientId()) {
+        if (getServerRemoteClientId()
+            != other.getServerRemoteClientId()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRemoteClientId()) {
+        hash = (37 * hash) + REMOTE_CLIENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRemoteClientId());
+      }
+      if (hasSteamid()) {
+        hash = (37 * hash) + STEAMID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSteamid());
+      }
+      if (hasServerRemoteClientId()) {
+        hash = (37 * hash) + SERVER_REMOTE_CLIENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getServerRemoteClientId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CContentServerDirectory_GetPeerContentInfo_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CContentServerDirectory_GetPeerContentInfo_Request)
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetPeerContentInfo_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetPeerContentInfo_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        remoteClientId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        steamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        serverRemoteClientId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetPeerContentInfo_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request getDefaultInstanceForType() {
+        return SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request build() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request buildPartial() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request result = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.remoteClientId_ = remoteClientId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.steamid_ = steamid_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.serverRemoteClientId_ = serverRemoteClientId_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request) {
+          return mergeFrom((SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request other) {
+        if (other == SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request.getDefaultInstance()) return this;
+        if (other.hasRemoteClientId()) {
+          setRemoteClientId(other.getRemoteClientId());
+        }
+        if (other.hasSteamid()) {
+          setSteamid(other.getSteamid());
+        }
+        if (other.hasServerRemoteClientId()) {
+          setServerRemoteClientId(other.getServerRemoteClientId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long remoteClientId_ ;
+      /**
+       * <code>optional uint64 remote_client_id = 1;</code>
+       * @return Whether the remoteClientId field is set.
+       */
+      @java.lang.Override
+      public boolean hasRemoteClientId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 remote_client_id = 1;</code>
+       * @return The remoteClientId.
+       */
+      @java.lang.Override
+      public long getRemoteClientId() {
+        return remoteClientId_;
+      }
+      /**
+       * <code>optional uint64 remote_client_id = 1;</code>
+       * @param value The remoteClientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteClientId(long value) {
+        bitField0_ |= 0x00000001;
+        remoteClientId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 remote_client_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoteClientId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        remoteClientId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long steamid_ ;
+      /**
+       * <code>optional uint64 steamid = 2;</code>
+       * @return Whether the steamid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSteamid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 steamid = 2;</code>
+       * @return The steamid.
+       */
+      @java.lang.Override
+      public long getSteamid() {
+        return steamid_;
+      }
+      /**
+       * <code>optional uint64 steamid = 2;</code>
+       * @param value The steamid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamid(long value) {
+        bitField0_ |= 0x00000002;
+        steamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 steamid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        steamid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long serverRemoteClientId_ ;
+      /**
+       * <code>optional uint64 server_remote_client_id = 3;</code>
+       * @return Whether the serverRemoteClientId field is set.
+       */
+      @java.lang.Override
+      public boolean hasServerRemoteClientId() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint64 server_remote_client_id = 3;</code>
+       * @return The serverRemoteClientId.
+       */
+      @java.lang.Override
+      public long getServerRemoteClientId() {
+        return serverRemoteClientId_;
+      }
+      /**
+       * <code>optional uint64 server_remote_client_id = 3;</code>
+       * @param value The serverRemoteClientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerRemoteClientId(long value) {
+        bitField0_ |= 0x00000004;
+        serverRemoteClientId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 server_remote_client_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerRemoteClientId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        serverRemoteClientId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CContentServerDirectory_GetPeerContentInfo_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CContentServerDirectory_GetPeerContentInfo_Request)
+    private static final SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request();
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CContentServerDirectory_GetPeerContentInfo_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CContentServerDirectory_GetPeerContentInfo_Request>() {
+      @java.lang.Override
+      public CContentServerDirectory_GetPeerContentInfo_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CContentServerDirectory_GetPeerContentInfo_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CContentServerDirectory_GetPeerContentInfo_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CContentServerDirectory_GetPeerContentInfo_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CContentServerDirectory_GetPeerContentInfo_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CContentServerDirectory_GetPeerContentInfo_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated uint32 appids = 1;</code>
+     * @return A list containing the appids.
+     */
+    java.util.List<java.lang.Integer> getAppidsList();
+    /**
+     * <code>repeated uint32 appids = 1;</code>
+     * @return The count of appids.
+     */
+    int getAppidsCount();
+    /**
+     * <code>repeated uint32 appids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The appids at the given index.
+     */
+    int getAppids(int index);
+
+    /**
+     * <code>optional string ip_public = 2;</code>
+     * @return Whether the ipPublic field is set.
+     */
+    boolean hasIpPublic();
+    /**
+     * <code>optional string ip_public = 2;</code>
+     * @return The ipPublic.
+     */
+    java.lang.String getIpPublic();
+    /**
+     * <code>optional string ip_public = 2;</code>
+     * @return The bytes for ipPublic.
+     */
+    com.google.protobuf.ByteString
+        getIpPublicBytes();
+  }
+  /**
+   * Protobuf type {@code CContentServerDirectory_GetPeerContentInfo_Response}
+   */
+  public static final class CContentServerDirectory_GetPeerContentInfo_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CContentServerDirectory_GetPeerContentInfo_Response)
+      CContentServerDirectory_GetPeerContentInfo_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CContentServerDirectory_GetPeerContentInfo_Response.newBuilder() to construct.
+    private CContentServerDirectory_GetPeerContentInfo_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CContentServerDirectory_GetPeerContentInfo_Response() {
+      appids_ = emptyIntList();
+      ipPublic_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CContentServerDirectory_GetPeerContentInfo_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CContentServerDirectory_GetPeerContentInfo_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                appids_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              appids_.addInt(input.readUInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                appids_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                appids_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              ipPublic_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          appids_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetPeerContentInfo_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetPeerContentInfo_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int APPIDS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.IntList appids_;
+    /**
+     * <code>repeated uint32 appids = 1;</code>
+     * @return A list containing the appids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getAppidsList() {
+      return appids_;
+    }
+    /**
+     * <code>repeated uint32 appids = 1;</code>
+     * @return The count of appids.
+     */
+    public int getAppidsCount() {
+      return appids_.size();
+    }
+    /**
+     * <code>repeated uint32 appids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The appids at the given index.
+     */
+    public int getAppids(int index) {
+      return appids_.getInt(index);
+    }
+
+    public static final int IP_PUBLIC_FIELD_NUMBER = 2;
+    private volatile java.lang.Object ipPublic_;
+    /**
+     * <code>optional string ip_public = 2;</code>
+     * @return Whether the ipPublic field is set.
+     */
+    @java.lang.Override
+    public boolean hasIpPublic() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string ip_public = 2;</code>
+     * @return The ipPublic.
+     */
+    @java.lang.Override
+    public java.lang.String getIpPublic() {
+      java.lang.Object ref = ipPublic_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          ipPublic_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ip_public = 2;</code>
+     * @return The bytes for ipPublic.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIpPublicBytes() {
+      java.lang.Object ref = ipPublic_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ipPublic_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < appids_.size(); i++) {
+        output.writeUInt32(1, appids_.getInt(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ipPublic_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < appids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(appids_.getInt(i));
+        }
+        size += dataSize;
+        size += 1 * getAppidsList().size();
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ipPublic_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response other = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response) obj;
+
+      if (!getAppidsList()
+          .equals(other.getAppidsList())) return false;
+      if (hasIpPublic() != other.hasIpPublic()) return false;
+      if (hasIpPublic()) {
+        if (!getIpPublic()
+            .equals(other.getIpPublic())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAppidsCount() > 0) {
+        hash = (37 * hash) + APPIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getAppidsList().hashCode();
+      }
+      if (hasIpPublic()) {
+        hash = (37 * hash) + IP_PUBLIC_FIELD_NUMBER;
+        hash = (53 * hash) + getIpPublic().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CContentServerDirectory_GetPeerContentInfo_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CContentServerDirectory_GetPeerContentInfo_Response)
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetPeerContentInfo_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetPeerContentInfo_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response.class, SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        appids_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ipPublic_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesContentsystemSteamclient.internal_static_CContentServerDirectory_GetPeerContentInfo_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response getDefaultInstanceForType() {
+        return SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response build() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response buildPartial() {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response result = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          appids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.appids_ = appids_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.ipPublic_ = ipPublic_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response) {
+          return mergeFrom((SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response other) {
+        if (other == SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response.getDefaultInstance()) return this;
+        if (!other.appids_.isEmpty()) {
+          if (appids_.isEmpty()) {
+            appids_ = other.appids_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureAppidsIsMutable();
+            appids_.addAll(other.appids_);
+          }
+          onChanged();
+        }
+        if (other.hasIpPublic()) {
+          bitField0_ |= 0x00000002;
+          ipPublic_ = other.ipPublic_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.IntList appids_ = emptyIntList();
+      private void ensureAppidsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          appids_ = mutableCopy(appids_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated uint32 appids = 1;</code>
+       * @return A list containing the appids.
+       */
+      public java.util.List<java.lang.Integer>
+          getAppidsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(appids_) : appids_;
+      }
+      /**
+       * <code>repeated uint32 appids = 1;</code>
+       * @return The count of appids.
+       */
+      public int getAppidsCount() {
+        return appids_.size();
+      }
+      /**
+       * <code>repeated uint32 appids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The appids at the given index.
+       */
+      public int getAppids(int index) {
+        return appids_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 appids = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The appids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppids(
+          int index, int value) {
+        ensureAppidsIsMutable();
+        appids_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 appids = 1;</code>
+       * @param value The appids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAppids(int value) {
+        ensureAppidsIsMutable();
+        appids_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 appids = 1;</code>
+       * @param values The appids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAppids(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureAppidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, appids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 appids = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppids() {
+        appids_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ipPublic_ = "";
+      /**
+       * <code>optional string ip_public = 2;</code>
+       * @return Whether the ipPublic field is set.
+       */
+      public boolean hasIpPublic() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string ip_public = 2;</code>
+       * @return The ipPublic.
+       */
+      public java.lang.String getIpPublic() {
+        java.lang.Object ref = ipPublic_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            ipPublic_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ip_public = 2;</code>
+       * @return The bytes for ipPublic.
+       */
+      public com.google.protobuf.ByteString
+          getIpPublicBytes() {
+        java.lang.Object ref = ipPublic_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ipPublic_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ip_public = 2;</code>
+       * @param value The ipPublic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpPublic(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        ipPublic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ip_public = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIpPublic() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ipPublic_ = getDefaultInstance().getIpPublic();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ip_public = 2;</code>
+       * @param value The bytes for ipPublic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpPublicBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        ipPublic_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CContentServerDirectory_GetPeerContentInfo_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CContentServerDirectory_GetPeerContentInfo_Response)
+    private static final SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response();
+    }
+
+    public static SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CContentServerDirectory_GetPeerContentInfo_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CContentServerDirectory_GetPeerContentInfo_Response>() {
+      @java.lang.Override
+      public CContentServerDirectory_GetPeerContentInfo_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CContentServerDirectory_GetPeerContentInfo_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CContentServerDirectory_GetPeerContentInfo_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CContentServerDirectory_GetPeerContentInfo_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesContentsystemSteamclient.CContentServerDirectory_GetPeerContentInfo_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CContentServerDirectory_GetServersForSteamPipe_Request_descriptor;
   private static final 
@@ -7282,6 +13542,46 @@ public final class SteammessagesContentsystemSteamclient {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CContentServerDirectory_GetClientUpdateHosts_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CContentServerDirectory_GetManifestRequestCode_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CContentServerDirectory_GetManifestRequestCode_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CContentServerDirectory_GetManifestRequestCode_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CContentServerDirectory_GetManifestRequestCode_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CContentServerDirectory_GetCDNAuthToken_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CContentServerDirectory_GetCDNAuthToken_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CContentServerDirectory_GetCDNAuthToken_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CContentServerDirectory_GetCDNAuthToken_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CContentServerDirectory_RequestPeerContentServer_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CContentServerDirectory_RequestPeerContentServer_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CContentServerDirectory_RequestPeerContentServer_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CContentServerDirectory_RequestPeerContentServer_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CContentServerDirectory_GetPeerContentInfo_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CContentServerDirectory_GetPeerContentInfo_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CContentServerDirectory_GetPeerContentInfo_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CContentServerDirectory_GetPeerContentInfo_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7292,55 +13592,94 @@ public final class SteammessagesContentsystemSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n3steam/steammessages_contentsystem.stea" +
-      "mclient.proto\0322steam/steammessages_unifi" +
-      "ed_base.steamclient.proto\"\265\002\n6CContentSe" +
-      "rverDirectory_GetServersForSteamPipe_Req" +
-      "uest\022#\n\007cell_id\030\001 \001(\rB\022\202\265\030\016client Cell I" +
-      "D\0229\n\013max_servers\030\002 \001(\r:\00220B \202\265\030\034max serv" +
-      "ers in response list\022*\n\013ip_override\030\003 \001(" +
-      "\tB\025\202\265\030\021client IP address\022+\n\rlauncher_typ" +
-      "e\030\004 \001(\005:\0010B\021\202\265\030\rlauncher type\022B\n\013ipv6_pu" +
-      "blic\030\005 \001(\tB-\202\265\030)client public ipv6 addre" +
-      "ss if it knows it\"\333\002\n\"CContentServerDire" +
-      "ctory_ServerInfo\022\014\n\004type\030\001 \001(\t\022\021\n\tsource" +
-      "_id\030\002 \001(\005\022\017\n\007cell_id\030\003 \001(\005\022\014\n\004load\030\004 \001(\005" +
-      "\022\025\n\rweighted_load\030\005 \001(\002\022\"\n\032num_entries_i" +
-      "n_client_list\030\006 \001(\005\022\030\n\020steam_china_only\030" +
-      "\007 \001(\010\022\014\n\004host\030\010 \001(\t\022\r\n\005vhost\030\t \001(\t\022\024\n\014us" +
-      "e_as_proxy\030\n \001(\010\022#\n\033proxy_request_path_t" +
-      "emplate\030\013 \001(\t\022\025\n\rhttps_support\030\014 \001(\t\022\027\n\017" +
-      "allowed_app_ids\030\r \003(\r\022\030\n\020preferred_serve" +
-      "r\030\016 \001(\010\"o\n7CContentServerDirectory_GetSe" +
-      "rversForSteamPipe_Response\0224\n\007servers\030\001 " +
-      "\003(\0132#.CContentServerDirectory_ServerInfo" +
-      "\"\211\001\n1CContentServerDirectory_GetDepotPat" +
-      "chInfo_Request\022\r\n\005appid\030\001 \001(\r\022\017\n\007depotid" +
-      "\030\002 \001(\r\022\031\n\021source_manifestid\030\003 \001(\004\022\031\n\021tar" +
-      "get_manifestid\030\004 \001(\004\"{\n2CContentServerDi" +
-      "rectory_GetDepotPatchInfo_Response\022\024\n\014is" +
-      "_available\030\001 \001(\010\022\022\n\npatch_size\030\002 \001(\004\022\033\n\023" +
-      "patched_chunks_size\030\003 \001(\004\"P\n4CContentSer" +
-      "verDirectory_GetClientUpdateHosts_Reques" +
-      "t\022\030\n\020cached_signature\030\001 \001(\t\"w\n5CContentS" +
-      "erverDirectory_GetClientUpdateHosts_Resp" +
-      "onse\022\020\n\010hosts_kv\030\001 \001(\t\022\030\n\020valid_until_ti" +
-      "me\030\002 \001(\004\022\022\n\nip_country\030\003 \001(\t2\322\003\n\026Content" +
-      "ServerDirectory\022\213\001\n\026GetServersForSteamPi" +
-      "pe\0227.CContentServerDirectory_GetServersF" +
-      "orSteamPipe_Request\0328.CContentServerDire" +
-      "ctory_GetServersForSteamPipe_Response\022|\n" +
-      "\021GetDepotPatchInfo\0222.CContentServerDirec" +
-      "tory_GetDepotPatchInfo_Request\0323.CConten" +
-      "tServerDirectory_GetDepotPatchInfo_Respo" +
-      "nse\022\205\001\n\024GetClientUpdateHosts\0225.CContentS" +
-      "erverDirectory_GetClientUpdateHosts_Requ" +
-      "est\0326.CContentServerDirectory_GetClientU" +
-      "pdateHosts_Response\032$\202\265\030 Content Server " +
-      "and CDN directoryB\003\200\001\001"
+      "mclient.proto\032\036steam/steammessages_base." +
+      "proto\0322steam/steammessages_unified_base." +
+      "steamclient.proto\"\265\002\n6CContentServerDire" +
+      "ctory_GetServersForSteamPipe_Request\022#\n\007" +
+      "cell_id\030\001 \001(\rB\022\202\265\030\016client Cell ID\0229\n\013max" +
+      "_servers\030\002 \001(\r:\00220B \202\265\030\034max servers in r" +
+      "esponse list\022*\n\013ip_override\030\003 \001(\tB\025\202\265\030\021c" +
+      "lient IP address\022+\n\rlauncher_type\030\004 \001(\005:" +
+      "\0010B\021\202\265\030\rlauncher type\022B\n\013ipv6_public\030\005 \001" +
+      "(\tB-\202\265\030)client public ipv6 address if it" +
+      " knows it\"\333\002\n\"CContentServerDirectory_Se" +
+      "rverInfo\022\014\n\004type\030\001 \001(\t\022\021\n\tsource_id\030\002 \001(" +
+      "\005\022\017\n\007cell_id\030\003 \001(\005\022\014\n\004load\030\004 \001(\005\022\025\n\rweig" +
+      "hted_load\030\005 \001(\002\022\"\n\032num_entries_in_client" +
+      "_list\030\006 \001(\005\022\030\n\020steam_china_only\030\007 \001(\010\022\014\n" +
+      "\004host\030\010 \001(\t\022\r\n\005vhost\030\t \001(\t\022\024\n\014use_as_pro" +
+      "xy\030\n \001(\010\022#\n\033proxy_request_path_template\030" +
+      "\013 \001(\t\022\025\n\rhttps_support\030\014 \001(\t\022\027\n\017allowed_" +
+      "app_ids\030\r \003(\r\022\030\n\020preferred_server\030\016 \001(\010\"" +
+      "o\n7CContentServerDirectory_GetServersFor" +
+      "SteamPipe_Response\0224\n\007servers\030\001 \003(\0132#.CC" +
+      "ontentServerDirectory_ServerInfo\"\211\001\n1CCo" +
+      "ntentServerDirectory_GetDepotPatchInfo_R" +
+      "equest\022\r\n\005appid\030\001 \001(\r\022\017\n\007depotid\030\002 \001(\r\022\031" +
+      "\n\021source_manifestid\030\003 \001(\004\022\031\n\021target_mani" +
+      "festid\030\004 \001(\004\"{\n2CContentServerDirectory_" +
+      "GetDepotPatchInfo_Response\022\024\n\014is_availab" +
+      "le\030\001 \001(\010\022\022\n\npatch_size\030\002 \001(\004\022\033\n\023patched_" +
+      "chunks_size\030\003 \001(\004\"P\n4CContentServerDirec" +
+      "tory_GetClientUpdateHosts_Request\022\030\n\020cac" +
+      "hed_signature\030\001 \001(\t\"w\n5CContentServerDir" +
+      "ectory_GetClientUpdateHosts_Response\022\020\n\010" +
+      "hosts_kv\030\001 \001(\t\022\030\n\020valid_until_time\030\002 \001(\004" +
+      "\022\022\n\nip_country\030\003 \001(\t\"\241\001\n6CContentServerD" +
+      "irectory_GetManifestRequestCode_Request\022" +
+      "\016\n\006app_id\030\001 \001(\r\022\020\n\010depot_id\030\002 \001(\r\022\023\n\013man" +
+      "ifest_id\030\003 \001(\004\022\022\n\napp_branch\030\004 \001(\t\022\034\n\024br" +
+      "anch_password_hash\030\005 \001(\t\"X\n7CContentServ" +
+      "erDirectory_GetManifestRequestCode_Respo" +
+      "nse\022\035\n\025manifest_request_code\030\001 \001(\004\"f\n/CC" +
+      "ontentServerDirectory_GetCDNAuthToken_Re" +
+      "quest\022\020\n\010depot_id\030\001 \001(\r\022\021\n\thost_name\030\002 \001" +
+      "(\t\022\016\n\006app_id\030\003 \001(\r\"Z\n0CContentServerDire" +
+      "ctory_GetCDNAuthToken_Response\022\r\n\005token\030" +
+      "\001 \001(\t\022\027\n\017expiration_time\030\002 \001(\r\"\260\001\n8CCont" +
+      "entServerDirectory_RequestPeerContentSer" +
+      "ver_Request\022\030\n\020remote_client_id\030\001 \001(\004\022\017\n" +
+      "\007steamid\030\002 \001(\004\022\037\n\027server_remote_client_i" +
+      "d\030\003 \001(\004\022\016\n\006app_id\030\004 \001(\r\022\030\n\020current_build" +
+      "_id\030\005 \001(\r\"j\n9CContentServerDirectory_Req" +
+      "uestPeerContentServer_Response\022\023\n\013server" +
+      "_port\030\001 \001(\r\022\030\n\020installed_depots\030\002 \003(\r\"\200\001" +
+      "\n2CContentServerDirectory_GetPeerContent" +
+      "Info_Request\022\030\n\020remote_client_id\030\001 \001(\004\022\017" +
+      "\n\007steamid\030\002 \001(\004\022\037\n\027server_remote_client_" +
+      "id\030\003 \001(\004\"X\n3CContentServerDirectory_GetP" +
+      "eerContentInfo_Response\022\016\n\006appids\030\001 \003(\r\022" +
+      "\021\n\tip_public\030\002 \001(\t2\355\007\n\026ContentServerDire" +
+      "ctory\022\213\001\n\026GetServersForSteamPipe\0227.CCont" +
+      "entServerDirectory_GetServersForSteamPip" +
+      "e_Request\0328.CContentServerDirectory_GetS" +
+      "erversForSteamPipe_Response\022|\n\021GetDepotP" +
+      "atchInfo\0222.CContentServerDirectory_GetDe" +
+      "potPatchInfo_Request\0323.CContentServerDir" +
+      "ectory_GetDepotPatchInfo_Response\022\205\001\n\024Ge" +
+      "tClientUpdateHosts\0225.CContentServerDirec" +
+      "tory_GetClientUpdateHosts_Request\0326.CCon" +
+      "tentServerDirectory_GetClientUpdateHosts" +
+      "_Response\022\213\001\n\026GetManifestRequestCode\0227.C" +
+      "ContentServerDirectory_GetManifestReques" +
+      "tCode_Request\0328.CContentServerDirectory_" +
+      "GetManifestRequestCode_Response\022v\n\017GetCD" +
+      "NAuthToken\0220.CContentServerDirectory_Get" +
+      "CDNAuthToken_Request\0321.CContentServerDir" +
+      "ectory_GetCDNAuthToken_Response\022\221\001\n\030Requ" +
+      "estPeerContentServer\0229.CContentServerDir" +
+      "ectory_RequestPeerContentServer_Request\032" +
+      ":.CContentServerDirectory_RequestPeerCon" +
+      "tentServer_Response\022\177\n\022GetPeerContentInf" +
+      "o\0223.CContentServerDirectory_GetPeerConte" +
+      "ntInfo_Request\0324.CContentServerDirectory" +
+      "_GetPeerContentInfo_Response\032$\202\265\030 Conten" +
+      "t Server and CDN directoryB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CContentServerDirectory_GetServersForSteamPipe_Request_descriptor =
@@ -7385,12 +13724,61 @@ public final class SteammessagesContentsystemSteamclient {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CContentServerDirectory_GetClientUpdateHosts_Response_descriptor,
         new java.lang.String[] { "HostsKv", "ValidUntilTime", "IpCountry", });
+    internal_static_CContentServerDirectory_GetManifestRequestCode_Request_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_CContentServerDirectory_GetManifestRequestCode_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CContentServerDirectory_GetManifestRequestCode_Request_descriptor,
+        new java.lang.String[] { "AppId", "DepotId", "ManifestId", "AppBranch", "BranchPasswordHash", });
+    internal_static_CContentServerDirectory_GetManifestRequestCode_Response_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_CContentServerDirectory_GetManifestRequestCode_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CContentServerDirectory_GetManifestRequestCode_Response_descriptor,
+        new java.lang.String[] { "ManifestRequestCode", });
+    internal_static_CContentServerDirectory_GetCDNAuthToken_Request_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_CContentServerDirectory_GetCDNAuthToken_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CContentServerDirectory_GetCDNAuthToken_Request_descriptor,
+        new java.lang.String[] { "DepotId", "HostName", "AppId", });
+    internal_static_CContentServerDirectory_GetCDNAuthToken_Response_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_CContentServerDirectory_GetCDNAuthToken_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CContentServerDirectory_GetCDNAuthToken_Response_descriptor,
+        new java.lang.String[] { "Token", "ExpirationTime", });
+    internal_static_CContentServerDirectory_RequestPeerContentServer_Request_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_CContentServerDirectory_RequestPeerContentServer_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CContentServerDirectory_RequestPeerContentServer_Request_descriptor,
+        new java.lang.String[] { "RemoteClientId", "Steamid", "ServerRemoteClientId", "AppId", "CurrentBuildId", });
+    internal_static_CContentServerDirectory_RequestPeerContentServer_Response_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_CContentServerDirectory_RequestPeerContentServer_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CContentServerDirectory_RequestPeerContentServer_Response_descriptor,
+        new java.lang.String[] { "ServerPort", "InstalledDepots", });
+    internal_static_CContentServerDirectory_GetPeerContentInfo_Request_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_CContentServerDirectory_GetPeerContentInfo_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CContentServerDirectory_GetPeerContentInfo_Request_descriptor,
+        new java.lang.String[] { "RemoteClientId", "Steamid", "ServerRemoteClientId", });
+    internal_static_CContentServerDirectory_GetPeerContentInfo_Response_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_CContentServerDirectory_GetPeerContentInfo_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CContentServerDirectory_GetPeerContentInfo_Response_descriptor,
+        new java.lang.String[] { "Appids", "IpPublic", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(SteammessagesUnifiedBaseSteamclient.description);
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

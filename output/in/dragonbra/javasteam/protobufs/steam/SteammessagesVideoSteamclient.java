@@ -4856,6 +4856,11383 @@ public final class SteammessagesVideoSteamclient {
 
   }
 
+  public interface CVideo_GameClipRepresentationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CVideo_GameClipRepresentation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+     * @return Whether the representationName field is set.
+     */
+    boolean hasRepresentationName();
+    /**
+     * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+     * @return The representationName.
+     */
+    java.lang.String getRepresentationName();
+    /**
+     * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+     * @return The bytes for representationName.
+     */
+    com.google.protobuf.ByteString
+        getRepresentationNameBytes();
+
+    /**
+     * <code>optional uint32 horizontal_resolution = 3 [(.description) = "Width in pixels if contains video"];</code>
+     * @return Whether the horizontalResolution field is set.
+     */
+    boolean hasHorizontalResolution();
+    /**
+     * <code>optional uint32 horizontal_resolution = 3 [(.description) = "Width in pixels if contains video"];</code>
+     * @return The horizontalResolution.
+     */
+    int getHorizontalResolution();
+
+    /**
+     * <code>optional uint32 vertical_resolution = 4 [(.description) = "Height in pixels if contains video"];</code>
+     * @return Whether the verticalResolution field is set.
+     */
+    boolean hasVerticalResolution();
+    /**
+     * <code>optional uint32 vertical_resolution = 4 [(.description) = "Height in pixels if contains video"];</code>
+     * @return The verticalResolution.
+     */
+    int getVerticalResolution();
+
+    /**
+     * <code>optional double frame_rate = 5 [(.description) = "Frame Rate if contains video"];</code>
+     * @return Whether the frameRate field is set.
+     */
+    boolean hasFrameRate();
+    /**
+     * <code>optional double frame_rate = 5 [(.description) = "Frame Rate if contains video"];</code>
+     * @return The frameRate.
+     */
+    double getFrameRate();
+
+    /**
+     * <code>optional uint32 bandwidth = 6 [(.description) = "Kbps"];</code>
+     * @return Whether the bandwidth field is set.
+     */
+    boolean hasBandwidth();
+    /**
+     * <code>optional uint32 bandwidth = 6 [(.description) = "Kbps"];</code>
+     * @return The bandwidth.
+     */
+    int getBandwidth();
+
+    /**
+     * <code>optional uint32 audio_sample_rate = 7 [(.description) = "Sample rate in Hz if contains audio"];</code>
+     * @return Whether the audioSampleRate field is set.
+     */
+    boolean hasAudioSampleRate();
+    /**
+     * <code>optional uint32 audio_sample_rate = 7 [(.description) = "Sample rate in Hz if contains audio"];</code>
+     * @return The audioSampleRate.
+     */
+    int getAudioSampleRate();
+
+    /**
+     * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+     * @return Whether the frameRateString field is set.
+     */
+    boolean hasFrameRateString();
+    /**
+     * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+     * @return The frameRateString.
+     */
+    java.lang.String getFrameRateString();
+    /**
+     * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+     * @return The bytes for frameRateString.
+     */
+    com.google.protobuf.ByteString
+        getFrameRateStringBytes();
+
+    /**
+     * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+     * @return Whether the codec field is set.
+     */
+    boolean hasCodec();
+    /**
+     * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+     * @return The codec.
+     */
+    java.lang.String getCodec();
+    /**
+     * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+     * @return The bytes for codec.
+     */
+    com.google.protobuf.ByteString
+        getCodecBytes();
+
+    /**
+     * <code>optional uint32 audio_channel_config = 10 [(.description) = "audio channel config if relevant"];</code>
+     * @return Whether the audioChannelConfig field is set.
+     */
+    boolean hasAudioChannelConfig();
+    /**
+     * <code>optional uint32 audio_channel_config = 10 [(.description) = "audio channel config if relevant"];</code>
+     * @return The audioChannelConfig.
+     */
+    int getAudioChannelConfig();
+  }
+  /**
+   * Protobuf type {@code CVideo_GameClipRepresentation}
+   */
+  public static final class CVideo_GameClipRepresentation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CVideo_GameClipRepresentation)
+      CVideo_GameClipRepresentationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVideo_GameClipRepresentation.newBuilder() to construct.
+    private CVideo_GameClipRepresentation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVideo_GameClipRepresentation() {
+      representationName_ = "";
+      frameRateString_ = "";
+      codec_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVideo_GameClipRepresentation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CVideo_GameClipRepresentation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              representationName_ = bs;
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              horizontalResolution_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000004;
+              verticalResolution_ = input.readUInt32();
+              break;
+            }
+            case 41: {
+              bitField0_ |= 0x00000008;
+              frameRate_ = input.readDouble();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000010;
+              bandwidth_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000020;
+              audioSampleRate_ = input.readUInt32();
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              frameRateString_ = bs;
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              codec_ = bs;
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000100;
+              audioChannelConfig_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipRepresentation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipRepresentation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.class, SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REPRESENTATION_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object representationName_;
+    /**
+     * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+     * @return Whether the representationName field is set.
+     */
+    @java.lang.Override
+    public boolean hasRepresentationName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+     * @return The representationName.
+     */
+    @java.lang.Override
+    public java.lang.String getRepresentationName() {
+      java.lang.Object ref = representationName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          representationName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+     * @return The bytes for representationName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRepresentationNameBytes() {
+      java.lang.Object ref = representationName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        representationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HORIZONTAL_RESOLUTION_FIELD_NUMBER = 3;
+    private int horizontalResolution_;
+    /**
+     * <code>optional uint32 horizontal_resolution = 3 [(.description) = "Width in pixels if contains video"];</code>
+     * @return Whether the horizontalResolution field is set.
+     */
+    @java.lang.Override
+    public boolean hasHorizontalResolution() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 horizontal_resolution = 3 [(.description) = "Width in pixels if contains video"];</code>
+     * @return The horizontalResolution.
+     */
+    @java.lang.Override
+    public int getHorizontalResolution() {
+      return horizontalResolution_;
+    }
+
+    public static final int VERTICAL_RESOLUTION_FIELD_NUMBER = 4;
+    private int verticalResolution_;
+    /**
+     * <code>optional uint32 vertical_resolution = 4 [(.description) = "Height in pixels if contains video"];</code>
+     * @return Whether the verticalResolution field is set.
+     */
+    @java.lang.Override
+    public boolean hasVerticalResolution() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 vertical_resolution = 4 [(.description) = "Height in pixels if contains video"];</code>
+     * @return The verticalResolution.
+     */
+    @java.lang.Override
+    public int getVerticalResolution() {
+      return verticalResolution_;
+    }
+
+    public static final int FRAME_RATE_FIELD_NUMBER = 5;
+    private double frameRate_;
+    /**
+     * <code>optional double frame_rate = 5 [(.description) = "Frame Rate if contains video"];</code>
+     * @return Whether the frameRate field is set.
+     */
+    @java.lang.Override
+    public boolean hasFrameRate() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional double frame_rate = 5 [(.description) = "Frame Rate if contains video"];</code>
+     * @return The frameRate.
+     */
+    @java.lang.Override
+    public double getFrameRate() {
+      return frameRate_;
+    }
+
+    public static final int BANDWIDTH_FIELD_NUMBER = 6;
+    private int bandwidth_;
+    /**
+     * <code>optional uint32 bandwidth = 6 [(.description) = "Kbps"];</code>
+     * @return Whether the bandwidth field is set.
+     */
+    @java.lang.Override
+    public boolean hasBandwidth() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint32 bandwidth = 6 [(.description) = "Kbps"];</code>
+     * @return The bandwidth.
+     */
+    @java.lang.Override
+    public int getBandwidth() {
+      return bandwidth_;
+    }
+
+    public static final int AUDIO_SAMPLE_RATE_FIELD_NUMBER = 7;
+    private int audioSampleRate_;
+    /**
+     * <code>optional uint32 audio_sample_rate = 7 [(.description) = "Sample rate in Hz if contains audio"];</code>
+     * @return Whether the audioSampleRate field is set.
+     */
+    @java.lang.Override
+    public boolean hasAudioSampleRate() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional uint32 audio_sample_rate = 7 [(.description) = "Sample rate in Hz if contains audio"];</code>
+     * @return The audioSampleRate.
+     */
+    @java.lang.Override
+    public int getAudioSampleRate() {
+      return audioSampleRate_;
+    }
+
+    public static final int FRAME_RATE_STRING_FIELD_NUMBER = 8;
+    private volatile java.lang.Object frameRateString_;
+    /**
+     * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+     * @return Whether the frameRateString field is set.
+     */
+    @java.lang.Override
+    public boolean hasFrameRateString() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+     * @return The frameRateString.
+     */
+    @java.lang.Override
+    public java.lang.String getFrameRateString() {
+      java.lang.Object ref = frameRateString_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          frameRateString_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+     * @return The bytes for frameRateString.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFrameRateStringBytes() {
+      java.lang.Object ref = frameRateString_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        frameRateString_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CODEC_FIELD_NUMBER = 9;
+    private volatile java.lang.Object codec_;
+    /**
+     * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+     * @return Whether the codec field is set.
+     */
+    @java.lang.Override
+    public boolean hasCodec() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+     * @return The codec.
+     */
+    @java.lang.Override
+    public java.lang.String getCodec() {
+      java.lang.Object ref = codec_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          codec_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+     * @return The bytes for codec.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCodecBytes() {
+      java.lang.Object ref = codec_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        codec_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUDIO_CHANNEL_CONFIG_FIELD_NUMBER = 10;
+    private int audioChannelConfig_;
+    /**
+     * <code>optional uint32 audio_channel_config = 10 [(.description) = "audio channel config if relevant"];</code>
+     * @return Whether the audioChannelConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasAudioChannelConfig() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional uint32 audio_channel_config = 10 [(.description) = "audio channel config if relevant"];</code>
+     * @return The audioChannelConfig.
+     */
+    @java.lang.Override
+    public int getAudioChannelConfig() {
+      return audioChannelConfig_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, representationName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(3, horizontalResolution_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(4, verticalResolution_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeDouble(5, frameRate_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt32(6, bandwidth_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeUInt32(7, audioSampleRate_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, frameRateString_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, codec_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeUInt32(10, audioChannelConfig_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, representationName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, horizontalResolution_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, verticalResolution_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(5, frameRate_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, bandwidth_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, audioSampleRate_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, frameRateString_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, codec_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, audioChannelConfig_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_GameClipRepresentation)) {
+        return super.equals(obj);
+      }
+      SteammessagesVideoSteamclient.CVideo_GameClipRepresentation other = (SteammessagesVideoSteamclient.CVideo_GameClipRepresentation) obj;
+
+      if (hasRepresentationName() != other.hasRepresentationName()) return false;
+      if (hasRepresentationName()) {
+        if (!getRepresentationName()
+            .equals(other.getRepresentationName())) return false;
+      }
+      if (hasHorizontalResolution() != other.hasHorizontalResolution()) return false;
+      if (hasHorizontalResolution()) {
+        if (getHorizontalResolution()
+            != other.getHorizontalResolution()) return false;
+      }
+      if (hasVerticalResolution() != other.hasVerticalResolution()) return false;
+      if (hasVerticalResolution()) {
+        if (getVerticalResolution()
+            != other.getVerticalResolution()) return false;
+      }
+      if (hasFrameRate() != other.hasFrameRate()) return false;
+      if (hasFrameRate()) {
+        if (java.lang.Double.doubleToLongBits(getFrameRate())
+            != java.lang.Double.doubleToLongBits(
+                other.getFrameRate())) return false;
+      }
+      if (hasBandwidth() != other.hasBandwidth()) return false;
+      if (hasBandwidth()) {
+        if (getBandwidth()
+            != other.getBandwidth()) return false;
+      }
+      if (hasAudioSampleRate() != other.hasAudioSampleRate()) return false;
+      if (hasAudioSampleRate()) {
+        if (getAudioSampleRate()
+            != other.getAudioSampleRate()) return false;
+      }
+      if (hasFrameRateString() != other.hasFrameRateString()) return false;
+      if (hasFrameRateString()) {
+        if (!getFrameRateString()
+            .equals(other.getFrameRateString())) return false;
+      }
+      if (hasCodec() != other.hasCodec()) return false;
+      if (hasCodec()) {
+        if (!getCodec()
+            .equals(other.getCodec())) return false;
+      }
+      if (hasAudioChannelConfig() != other.hasAudioChannelConfig()) return false;
+      if (hasAudioChannelConfig()) {
+        if (getAudioChannelConfig()
+            != other.getAudioChannelConfig()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRepresentationName()) {
+        hash = (37 * hash) + REPRESENTATION_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getRepresentationName().hashCode();
+      }
+      if (hasHorizontalResolution()) {
+        hash = (37 * hash) + HORIZONTAL_RESOLUTION_FIELD_NUMBER;
+        hash = (53 * hash) + getHorizontalResolution();
+      }
+      if (hasVerticalResolution()) {
+        hash = (37 * hash) + VERTICAL_RESOLUTION_FIELD_NUMBER;
+        hash = (53 * hash) + getVerticalResolution();
+      }
+      if (hasFrameRate()) {
+        hash = (37 * hash) + FRAME_RATE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getFrameRate()));
+      }
+      if (hasBandwidth()) {
+        hash = (37 * hash) + BANDWIDTH_FIELD_NUMBER;
+        hash = (53 * hash) + getBandwidth();
+      }
+      if (hasAudioSampleRate()) {
+        hash = (37 * hash) + AUDIO_SAMPLE_RATE_FIELD_NUMBER;
+        hash = (53 * hash) + getAudioSampleRate();
+      }
+      if (hasFrameRateString()) {
+        hash = (37 * hash) + FRAME_RATE_STRING_FIELD_NUMBER;
+        hash = (53 * hash) + getFrameRateString().hashCode();
+      }
+      if (hasCodec()) {
+        hash = (37 * hash) + CODEC_FIELD_NUMBER;
+        hash = (53 * hash) + getCodec().hashCode();
+      }
+      if (hasAudioChannelConfig()) {
+        hash = (37 * hash) + AUDIO_CHANNEL_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getAudioChannelConfig();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_GameClipRepresentation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CVideo_GameClipRepresentation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CVideo_GameClipRepresentation)
+        SteammessagesVideoSteamclient.CVideo_GameClipRepresentationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipRepresentation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipRepresentation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.class, SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder.class);
+      }
+
+      // Construct using SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        representationName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        horizontalResolution_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        verticalResolution_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        frameRate_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        bandwidth_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        audioSampleRate_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        frameRateString_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        codec_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
+        audioChannelConfig_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipRepresentation_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipRepresentation getDefaultInstanceForType() {
+        return SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipRepresentation build() {
+        SteammessagesVideoSteamclient.CVideo_GameClipRepresentation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipRepresentation buildPartial() {
+        SteammessagesVideoSteamclient.CVideo_GameClipRepresentation result = new SteammessagesVideoSteamclient.CVideo_GameClipRepresentation(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.representationName_ = representationName_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.horizontalResolution_ = horizontalResolution_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.verticalResolution_ = verticalResolution_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.frameRate_ = frameRate_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.bandwidth_ = bandwidth_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.audioSampleRate_ = audioSampleRate_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.frameRateString_ = frameRateString_;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.codec_ = codec_;
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.audioChannelConfig_ = audioChannelConfig_;
+          to_bitField0_ |= 0x00000100;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesVideoSteamclient.CVideo_GameClipRepresentation) {
+          return mergeFrom((SteammessagesVideoSteamclient.CVideo_GameClipRepresentation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_GameClipRepresentation other) {
+        if (other == SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.getDefaultInstance()) return this;
+        if (other.hasRepresentationName()) {
+          bitField0_ |= 0x00000001;
+          representationName_ = other.representationName_;
+          onChanged();
+        }
+        if (other.hasHorizontalResolution()) {
+          setHorizontalResolution(other.getHorizontalResolution());
+        }
+        if (other.hasVerticalResolution()) {
+          setVerticalResolution(other.getVerticalResolution());
+        }
+        if (other.hasFrameRate()) {
+          setFrameRate(other.getFrameRate());
+        }
+        if (other.hasBandwidth()) {
+          setBandwidth(other.getBandwidth());
+        }
+        if (other.hasAudioSampleRate()) {
+          setAudioSampleRate(other.getAudioSampleRate());
+        }
+        if (other.hasFrameRateString()) {
+          bitField0_ |= 0x00000040;
+          frameRateString_ = other.frameRateString_;
+          onChanged();
+        }
+        if (other.hasCodec()) {
+          bitField0_ |= 0x00000080;
+          codec_ = other.codec_;
+          onChanged();
+        }
+        if (other.hasAudioChannelConfig()) {
+          setAudioChannelConfig(other.getAudioChannelConfig());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesVideoSteamclient.CVideo_GameClipRepresentation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesVideoSteamclient.CVideo_GameClipRepresentation) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object representationName_ = "";
+      /**
+       * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+       * @return Whether the representationName field is set.
+       */
+      public boolean hasRepresentationName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+       * @return The representationName.
+       */
+      public java.lang.String getRepresentationName() {
+        java.lang.Object ref = representationName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            representationName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+       * @return The bytes for representationName.
+       */
+      public com.google.protobuf.ByteString
+          getRepresentationNameBytes() {
+        java.lang.Object ref = representationName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          representationName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+       * @param value The representationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepresentationName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        representationName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRepresentationName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        representationName_ = getDefaultInstance().getRepresentationName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string representation_name = 2 [(.description) = "EG 480p30"];</code>
+       * @param value The bytes for representationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepresentationNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        representationName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int horizontalResolution_ ;
+      /**
+       * <code>optional uint32 horizontal_resolution = 3 [(.description) = "Width in pixels if contains video"];</code>
+       * @return Whether the horizontalResolution field is set.
+       */
+      @java.lang.Override
+      public boolean hasHorizontalResolution() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 horizontal_resolution = 3 [(.description) = "Width in pixels if contains video"];</code>
+       * @return The horizontalResolution.
+       */
+      @java.lang.Override
+      public int getHorizontalResolution() {
+        return horizontalResolution_;
+      }
+      /**
+       * <code>optional uint32 horizontal_resolution = 3 [(.description) = "Width in pixels if contains video"];</code>
+       * @param value The horizontalResolution to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHorizontalResolution(int value) {
+        bitField0_ |= 0x00000002;
+        horizontalResolution_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 horizontal_resolution = 3 [(.description) = "Width in pixels if contains video"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHorizontalResolution() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        horizontalResolution_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int verticalResolution_ ;
+      /**
+       * <code>optional uint32 vertical_resolution = 4 [(.description) = "Height in pixels if contains video"];</code>
+       * @return Whether the verticalResolution field is set.
+       */
+      @java.lang.Override
+      public boolean hasVerticalResolution() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 vertical_resolution = 4 [(.description) = "Height in pixels if contains video"];</code>
+       * @return The verticalResolution.
+       */
+      @java.lang.Override
+      public int getVerticalResolution() {
+        return verticalResolution_;
+      }
+      /**
+       * <code>optional uint32 vertical_resolution = 4 [(.description) = "Height in pixels if contains video"];</code>
+       * @param value The verticalResolution to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVerticalResolution(int value) {
+        bitField0_ |= 0x00000004;
+        verticalResolution_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 vertical_resolution = 4 [(.description) = "Height in pixels if contains video"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVerticalResolution() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        verticalResolution_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private double frameRate_ ;
+      /**
+       * <code>optional double frame_rate = 5 [(.description) = "Frame Rate if contains video"];</code>
+       * @return Whether the frameRate field is set.
+       */
+      @java.lang.Override
+      public boolean hasFrameRate() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional double frame_rate = 5 [(.description) = "Frame Rate if contains video"];</code>
+       * @return The frameRate.
+       */
+      @java.lang.Override
+      public double getFrameRate() {
+        return frameRate_;
+      }
+      /**
+       * <code>optional double frame_rate = 5 [(.description) = "Frame Rate if contains video"];</code>
+       * @param value The frameRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrameRate(double value) {
+        bitField0_ |= 0x00000008;
+        frameRate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional double frame_rate = 5 [(.description) = "Frame Rate if contains video"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrameRate() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        frameRate_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private int bandwidth_ ;
+      /**
+       * <code>optional uint32 bandwidth = 6 [(.description) = "Kbps"];</code>
+       * @return Whether the bandwidth field is set.
+       */
+      @java.lang.Override
+      public boolean hasBandwidth() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 bandwidth = 6 [(.description) = "Kbps"];</code>
+       * @return The bandwidth.
+       */
+      @java.lang.Override
+      public int getBandwidth() {
+        return bandwidth_;
+      }
+      /**
+       * <code>optional uint32 bandwidth = 6 [(.description) = "Kbps"];</code>
+       * @param value The bandwidth to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBandwidth(int value) {
+        bitField0_ |= 0x00000010;
+        bandwidth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 bandwidth = 6 [(.description) = "Kbps"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBandwidth() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        bandwidth_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int audioSampleRate_ ;
+      /**
+       * <code>optional uint32 audio_sample_rate = 7 [(.description) = "Sample rate in Hz if contains audio"];</code>
+       * @return Whether the audioSampleRate field is set.
+       */
+      @java.lang.Override
+      public boolean hasAudioSampleRate() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint32 audio_sample_rate = 7 [(.description) = "Sample rate in Hz if contains audio"];</code>
+       * @return The audioSampleRate.
+       */
+      @java.lang.Override
+      public int getAudioSampleRate() {
+        return audioSampleRate_;
+      }
+      /**
+       * <code>optional uint32 audio_sample_rate = 7 [(.description) = "Sample rate in Hz if contains audio"];</code>
+       * @param value The audioSampleRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAudioSampleRate(int value) {
+        bitField0_ |= 0x00000020;
+        audioSampleRate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 audio_sample_rate = 7 [(.description) = "Sample rate in Hz if contains audio"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAudioSampleRate() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        audioSampleRate_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object frameRateString_ = "";
+      /**
+       * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+       * @return Whether the frameRateString field is set.
+       */
+      public boolean hasFrameRateString() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+       * @return The frameRateString.
+       */
+      public java.lang.String getFrameRateString() {
+        java.lang.Object ref = frameRateString_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            frameRateString_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+       * @return The bytes for frameRateString.
+       */
+      public com.google.protobuf.ByteString
+          getFrameRateStringBytes() {
+        java.lang.Object ref = frameRateString_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          frameRateString_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+       * @param value The frameRateString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrameRateString(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        frameRateString_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrameRateString() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        frameRateString_ = getDefaultInstance().getFrameRateString();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string frame_rate_string = 8 [(.description) = "Frame Rate string if contains video"];</code>
+       * @param value The bytes for frameRateString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrameRateStringBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        frameRateString_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object codec_ = "";
+      /**
+       * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+       * @return Whether the codec field is set.
+       */
+      public boolean hasCodec() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+       * @return The codec.
+       */
+      public java.lang.String getCodec() {
+        java.lang.Object ref = codec_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            codec_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+       * @return The bytes for codec.
+       */
+      public com.google.protobuf.ByteString
+          getCodecBytes() {
+        java.lang.Object ref = codec_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          codec_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+       * @param value The codec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodec(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        codec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodec() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        codec_ = getDefaultInstance().getCodec();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string codec = 9 [(.description) = "codec(s) used"];</code>
+       * @param value The bytes for codec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodecBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        codec_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int audioChannelConfig_ ;
+      /**
+       * <code>optional uint32 audio_channel_config = 10 [(.description) = "audio channel config if relevant"];</code>
+       * @return Whether the audioChannelConfig field is set.
+       */
+      @java.lang.Override
+      public boolean hasAudioChannelConfig() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional uint32 audio_channel_config = 10 [(.description) = "audio channel config if relevant"];</code>
+       * @return The audioChannelConfig.
+       */
+      @java.lang.Override
+      public int getAudioChannelConfig() {
+        return audioChannelConfig_;
+      }
+      /**
+       * <code>optional uint32 audio_channel_config = 10 [(.description) = "audio channel config if relevant"];</code>
+       * @param value The audioChannelConfig to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAudioChannelConfig(int value) {
+        bitField0_ |= 0x00000100;
+        audioChannelConfig_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 audio_channel_config = 10 [(.description) = "audio channel config if relevant"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAudioChannelConfig() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        audioChannelConfig_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CVideo_GameClipRepresentation)
+    }
+
+    // @@protoc_insertion_point(class_scope:CVideo_GameClipRepresentation)
+    private static final SteammessagesVideoSteamclient.CVideo_GameClipRepresentation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_GameClipRepresentation();
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_GameClipRepresentation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CVideo_GameClipRepresentation>
+        PARSER = new com.google.protobuf.AbstractParser<CVideo_GameClipRepresentation>() {
+      @java.lang.Override
+      public CVideo_GameClipRepresentation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CVideo_GameClipRepresentation(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVideo_GameClipRepresentation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVideo_GameClipRepresentation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipRepresentation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CVideo_GameClipComponentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CVideo_GameClipComponent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+     * @return Whether the componentName field is set.
+     */
+    boolean hasComponentName();
+    /**
+     * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <code>optional uint32 contents = 2 [(.description) = "EVideoTrackContents"];</code>
+     * @return Whether the contents field is set.
+     */
+    boolean hasContents();
+    /**
+     * <code>optional uint32 contents = 2 [(.description) = "EVideoTrackContents"];</code>
+     * @return The contents.
+     */
+    int getContents();
+
+    /**
+     * <code>optional uint32 segment_size = 3 [(.description) = "size of most segments (last may be shorter)"];</code>
+     * @return Whether the segmentSize field is set.
+     */
+    boolean hasSegmentSize();
+    /**
+     * <code>optional uint32 segment_size = 3 [(.description) = "size of most segments (last may be shorter)"];</code>
+     * @return The segmentSize.
+     */
+    int getSegmentSize();
+
+    /**
+     * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+     * @return Whether the fileType field is set.
+     */
+    boolean hasFileType();
+    /**
+     * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+     * @return The fileType.
+     */
+    java.lang.String getFileType();
+    /**
+     * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+     * @return The bytes for fileType.
+     */
+    com.google.protobuf.ByteString
+        getFileTypeBytes();
+
+    /**
+     * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+     */
+    java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipRepresentation> 
+        getRepresentationsList();
+    /**
+     * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipRepresentation getRepresentations(int index);
+    /**
+     * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+     */
+    int getRepresentationsCount();
+    /**
+     * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+     */
+    java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipRepresentationOrBuilder> 
+        getRepresentationsOrBuilderList();
+    /**
+     * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipRepresentationOrBuilder getRepresentationsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CVideo_GameClipComponent}
+   */
+  public static final class CVideo_GameClipComponent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CVideo_GameClipComponent)
+      CVideo_GameClipComponentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVideo_GameClipComponent.newBuilder() to construct.
+    private CVideo_GameClipComponent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVideo_GameClipComponent() {
+      componentName_ = "";
+      fileType_ = "";
+      representations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVideo_GameClipComponent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CVideo_GameClipComponent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              componentName_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              contents_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              segmentSize_ = input.readUInt32();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              fileType_ = bs;
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                representations_ = new java.util.ArrayList<SteammessagesVideoSteamclient.CVideo_GameClipRepresentation>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              representations_.add(
+                  input.readMessage(SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          representations_ = java.util.Collections.unmodifiableList(representations_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipComponent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipComponent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesVideoSteamclient.CVideo_GameClipComponent.class, SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object componentName_;
+    /**
+     * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+     * @return Whether the componentName field is set.
+     */
+    @java.lang.Override
+    public boolean hasComponentName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      java.lang.Object ref = componentName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          componentName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      java.lang.Object ref = componentName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        componentName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENTS_FIELD_NUMBER = 2;
+    private int contents_;
+    /**
+     * <code>optional uint32 contents = 2 [(.description) = "EVideoTrackContents"];</code>
+     * @return Whether the contents field is set.
+     */
+    @java.lang.Override
+    public boolean hasContents() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 contents = 2 [(.description) = "EVideoTrackContents"];</code>
+     * @return The contents.
+     */
+    @java.lang.Override
+    public int getContents() {
+      return contents_;
+    }
+
+    public static final int SEGMENT_SIZE_FIELD_NUMBER = 3;
+    private int segmentSize_;
+    /**
+     * <code>optional uint32 segment_size = 3 [(.description) = "size of most segments (last may be shorter)"];</code>
+     * @return Whether the segmentSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasSegmentSize() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 segment_size = 3 [(.description) = "size of most segments (last may be shorter)"];</code>
+     * @return The segmentSize.
+     */
+    @java.lang.Override
+    public int getSegmentSize() {
+      return segmentSize_;
+    }
+
+    public static final int FILE_TYPE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object fileType_;
+    /**
+     * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+     * @return Whether the fileType field is set.
+     */
+    @java.lang.Override
+    public boolean hasFileType() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+     * @return The fileType.
+     */
+    @java.lang.Override
+    public java.lang.String getFileType() {
+      java.lang.Object ref = fileType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          fileType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+     * @return The bytes for fileType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFileTypeBytes() {
+      java.lang.Object ref = fileType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fileType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REPRESENTATIONS_FIELD_NUMBER = 5;
+    private java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipRepresentation> representations_;
+    /**
+     * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipRepresentation> getRepresentationsList() {
+      return representations_;
+    }
+    /**
+     * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipRepresentationOrBuilder> 
+        getRepresentationsOrBuilderList() {
+      return representations_;
+    }
+    /**
+     * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+     */
+    @java.lang.Override
+    public int getRepresentationsCount() {
+      return representations_.size();
+    }
+    /**
+     * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipRepresentation getRepresentations(int index) {
+      return representations_.get(index);
+    }
+    /**
+     * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipRepresentationOrBuilder getRepresentationsOrBuilder(
+        int index) {
+      return representations_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, componentName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, contents_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, segmentSize_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fileType_);
+      }
+      for (int i = 0; i < representations_.size(); i++) {
+        output.writeMessage(5, representations_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, componentName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, contents_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, segmentSize_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fileType_);
+      }
+      for (int i = 0; i < representations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, representations_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_GameClipComponent)) {
+        return super.equals(obj);
+      }
+      SteammessagesVideoSteamclient.CVideo_GameClipComponent other = (SteammessagesVideoSteamclient.CVideo_GameClipComponent) obj;
+
+      if (hasComponentName() != other.hasComponentName()) return false;
+      if (hasComponentName()) {
+        if (!getComponentName()
+            .equals(other.getComponentName())) return false;
+      }
+      if (hasContents() != other.hasContents()) return false;
+      if (hasContents()) {
+        if (getContents()
+            != other.getContents()) return false;
+      }
+      if (hasSegmentSize() != other.hasSegmentSize()) return false;
+      if (hasSegmentSize()) {
+        if (getSegmentSize()
+            != other.getSegmentSize()) return false;
+      }
+      if (hasFileType() != other.hasFileType()) return false;
+      if (hasFileType()) {
+        if (!getFileType()
+            .equals(other.getFileType())) return false;
+      }
+      if (!getRepresentationsList()
+          .equals(other.getRepresentationsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasComponentName()) {
+        hash = (37 * hash) + COMPONENT_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getComponentName().hashCode();
+      }
+      if (hasContents()) {
+        hash = (37 * hash) + CONTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContents();
+      }
+      if (hasSegmentSize()) {
+        hash = (37 * hash) + SEGMENT_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentSize();
+      }
+      if (hasFileType()) {
+        hash = (37 * hash) + FILE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getFileType().hashCode();
+      }
+      if (getRepresentationsCount() > 0) {
+        hash = (37 * hash) + REPRESENTATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRepresentationsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_GameClipComponent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CVideo_GameClipComponent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CVideo_GameClipComponent)
+        SteammessagesVideoSteamclient.CVideo_GameClipComponentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipComponent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipComponent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_GameClipComponent.class, SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder.class);
+      }
+
+      // Construct using SteammessagesVideoSteamclient.CVideo_GameClipComponent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRepresentationsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        componentName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        contents_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        segmentSize_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        fileType_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (representationsBuilder_ == null) {
+          representations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          representationsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipComponent_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipComponent getDefaultInstanceForType() {
+        return SteammessagesVideoSteamclient.CVideo_GameClipComponent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipComponent build() {
+        SteammessagesVideoSteamclient.CVideo_GameClipComponent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipComponent buildPartial() {
+        SteammessagesVideoSteamclient.CVideo_GameClipComponent result = new SteammessagesVideoSteamclient.CVideo_GameClipComponent(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.componentName_ = componentName_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contents_ = contents_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.segmentSize_ = segmentSize_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.fileType_ = fileType_;
+        if (representationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            representations_ = java.util.Collections.unmodifiableList(representations_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.representations_ = representations_;
+        } else {
+          result.representations_ = representationsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesVideoSteamclient.CVideo_GameClipComponent) {
+          return mergeFrom((SteammessagesVideoSteamclient.CVideo_GameClipComponent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_GameClipComponent other) {
+        if (other == SteammessagesVideoSteamclient.CVideo_GameClipComponent.getDefaultInstance()) return this;
+        if (other.hasComponentName()) {
+          bitField0_ |= 0x00000001;
+          componentName_ = other.componentName_;
+          onChanged();
+        }
+        if (other.hasContents()) {
+          setContents(other.getContents());
+        }
+        if (other.hasSegmentSize()) {
+          setSegmentSize(other.getSegmentSize());
+        }
+        if (other.hasFileType()) {
+          bitField0_ |= 0x00000008;
+          fileType_ = other.fileType_;
+          onChanged();
+        }
+        if (representationsBuilder_ == null) {
+          if (!other.representations_.isEmpty()) {
+            if (representations_.isEmpty()) {
+              representations_ = other.representations_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureRepresentationsIsMutable();
+              representations_.addAll(other.representations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.representations_.isEmpty()) {
+            if (representationsBuilder_.isEmpty()) {
+              representationsBuilder_.dispose();
+              representationsBuilder_ = null;
+              representations_ = other.representations_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              representationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRepresentationsFieldBuilder() : null;
+            } else {
+              representationsBuilder_.addAllMessages(other.representations_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesVideoSteamclient.CVideo_GameClipComponent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesVideoSteamclient.CVideo_GameClipComponent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object componentName_ = "";
+      /**
+       * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+       * @return Whether the componentName field is set.
+       */
+      public boolean hasComponentName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+       * @return The componentName.
+       */
+      public java.lang.String getComponentName() {
+        java.lang.Object ref = componentName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            componentName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+       * @return The bytes for componentName.
+       */
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        java.lang.Object ref = componentName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          componentName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        componentName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        componentName_ = getDefaultInstance().getComponentName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string component_name = 1 [(.description) = "video/audio/etc"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        componentName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int contents_ ;
+      /**
+       * <code>optional uint32 contents = 2 [(.description) = "EVideoTrackContents"];</code>
+       * @return Whether the contents field is set.
+       */
+      @java.lang.Override
+      public boolean hasContents() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 contents = 2 [(.description) = "EVideoTrackContents"];</code>
+       * @return The contents.
+       */
+      @java.lang.Override
+      public int getContents() {
+        return contents_;
+      }
+      /**
+       * <code>optional uint32 contents = 2 [(.description) = "EVideoTrackContents"];</code>
+       * @param value The contents to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContents(int value) {
+        bitField0_ |= 0x00000002;
+        contents_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 contents = 2 [(.description) = "EVideoTrackContents"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContents() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contents_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int segmentSize_ ;
+      /**
+       * <code>optional uint32 segment_size = 3 [(.description) = "size of most segments (last may be shorter)"];</code>
+       * @return Whether the segmentSize field is set.
+       */
+      @java.lang.Override
+      public boolean hasSegmentSize() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 segment_size = 3 [(.description) = "size of most segments (last may be shorter)"];</code>
+       * @return The segmentSize.
+       */
+      @java.lang.Override
+      public int getSegmentSize() {
+        return segmentSize_;
+      }
+      /**
+       * <code>optional uint32 segment_size = 3 [(.description) = "size of most segments (last may be shorter)"];</code>
+       * @param value The segmentSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSegmentSize(int value) {
+        bitField0_ |= 0x00000004;
+        segmentSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 segment_size = 3 [(.description) = "size of most segments (last may be shorter)"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSegmentSize() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        segmentSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fileType_ = "";
+      /**
+       * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+       * @return Whether the fileType field is set.
+       */
+      public boolean hasFileType() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+       * @return The fileType.
+       */
+      public java.lang.String getFileType() {
+        java.lang.Object ref = fileType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fileType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+       * @return The bytes for fileType.
+       */
+      public com.google.protobuf.ByteString
+          getFileTypeBytes() {
+        java.lang.Object ref = fileType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fileType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+       * @param value The fileType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        fileType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        fileType_ = getDefaultInstance().getFileType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string file_type = 4 [(.description) = "file type"];</code>
+       * @param value The bytes for fileType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        fileType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipRepresentation> representations_ =
+        java.util.Collections.emptyList();
+      private void ensureRepresentationsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          representations_ = new java.util.ArrayList<SteammessagesVideoSteamclient.CVideo_GameClipRepresentation>(representations_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipRepresentation, SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder, SteammessagesVideoSteamclient.CVideo_GameClipRepresentationOrBuilder> representationsBuilder_;
+
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipRepresentation> getRepresentationsList() {
+        if (representationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(representations_);
+        } else {
+          return representationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public int getRepresentationsCount() {
+        if (representationsBuilder_ == null) {
+          return representations_.size();
+        } else {
+          return representationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipRepresentation getRepresentations(int index) {
+        if (representationsBuilder_ == null) {
+          return representations_.get(index);
+        } else {
+          return representationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public Builder setRepresentations(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipRepresentation value) {
+        if (representationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRepresentationsIsMutable();
+          representations_.set(index, value);
+          onChanged();
+        } else {
+          representationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public Builder setRepresentations(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder builderForValue) {
+        if (representationsBuilder_ == null) {
+          ensureRepresentationsIsMutable();
+          representations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          representationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public Builder addRepresentations(SteammessagesVideoSteamclient.CVideo_GameClipRepresentation value) {
+        if (representationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRepresentationsIsMutable();
+          representations_.add(value);
+          onChanged();
+        } else {
+          representationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public Builder addRepresentations(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipRepresentation value) {
+        if (representationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRepresentationsIsMutable();
+          representations_.add(index, value);
+          onChanged();
+        } else {
+          representationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public Builder addRepresentations(
+          SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder builderForValue) {
+        if (representationsBuilder_ == null) {
+          ensureRepresentationsIsMutable();
+          representations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          representationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public Builder addRepresentations(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder builderForValue) {
+        if (representationsBuilder_ == null) {
+          ensureRepresentationsIsMutable();
+          representations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          representationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public Builder addAllRepresentations(
+          java.lang.Iterable<? extends SteammessagesVideoSteamclient.CVideo_GameClipRepresentation> values) {
+        if (representationsBuilder_ == null) {
+          ensureRepresentationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, representations_);
+          onChanged();
+        } else {
+          representationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public Builder clearRepresentations() {
+        if (representationsBuilder_ == null) {
+          representations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          representationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public Builder removeRepresentations(int index) {
+        if (representationsBuilder_ == null) {
+          ensureRepresentationsIsMutable();
+          representations_.remove(index);
+          onChanged();
+        } else {
+          representationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder getRepresentationsBuilder(
+          int index) {
+        return getRepresentationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipRepresentationOrBuilder getRepresentationsOrBuilder(
+          int index) {
+        if (representationsBuilder_ == null) {
+          return representations_.get(index);  } else {
+          return representationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipRepresentationOrBuilder> 
+           getRepresentationsOrBuilderList() {
+        if (representationsBuilder_ != null) {
+          return representationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(representations_);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder addRepresentationsBuilder() {
+        return getRepresentationsFieldBuilder().addBuilder(
+            SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder addRepresentationsBuilder(
+          int index) {
+        return getRepresentationsFieldBuilder().addBuilder(
+            index, SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CVideo_GameClipRepresentation representations = 5 [(.description) = "list of representations"];</code>
+       */
+      public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder> 
+           getRepresentationsBuilderList() {
+        return getRepresentationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipRepresentation, SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder, SteammessagesVideoSteamclient.CVideo_GameClipRepresentationOrBuilder> 
+          getRepresentationsFieldBuilder() {
+        if (representationsBuilder_ == null) {
+          representationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesVideoSteamclient.CVideo_GameClipRepresentation, SteammessagesVideoSteamclient.CVideo_GameClipRepresentation.Builder, SteammessagesVideoSteamclient.CVideo_GameClipRepresentationOrBuilder>(
+                  representations_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          representations_ = null;
+        }
+        return representationsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CVideo_GameClipComponent)
+    }
+
+    // @@protoc_insertion_point(class_scope:CVideo_GameClipComponent)
+    private static final SteammessagesVideoSteamclient.CVideo_GameClipComponent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_GameClipComponent();
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_GameClipComponent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CVideo_GameClipComponent>
+        PARSER = new com.google.protobuf.AbstractParser<CVideo_GameClipComponent>() {
+      @java.lang.Override
+      public CVideo_GameClipComponent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CVideo_GameClipComponent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVideo_GameClipComponent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVideo_GameClipComponent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipComponent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CVideo_CreateGameClip_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CVideo_CreateGameClip_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 app_id = 1 [(.description) = "app ID stream is tagged with"];</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <code>optional uint32 app_id = 1 [(.description) = "app ID stream is tagged with"];</code>
+     * @return The appId.
+     */
+    int getAppId();
+
+    /**
+     * <code>optional uint32 num_segments = 2 [(.description) = "number of segments in this clip"];</code>
+     * @return Whether the numSegments field is set.
+     */
+    boolean hasNumSegments();
+    /**
+     * <code>optional uint32 num_segments = 2 [(.description) = "number of segments in this clip"];</code>
+     * @return The numSegments.
+     */
+    int getNumSegments();
+
+    /**
+     * <code>optional uint32 length_milliseconds = 3 [(.description) = "length of video in ms"];</code>
+     * @return Whether the lengthMilliseconds field is set.
+     */
+    boolean hasLengthMilliseconds();
+    /**
+     * <code>optional uint32 length_milliseconds = 3 [(.description) = "length of video in ms"];</code>
+     * @return The lengthMilliseconds.
+     */
+    int getLengthMilliseconds();
+
+    /**
+     * <code>optional uint32 segment_duration_timescale = 4 [(.description) = "timescale (denominator) for segment duration below, eg 1000 for milliseconds"];</code>
+     * @return Whether the segmentDurationTimescale field is set.
+     */
+    boolean hasSegmentDurationTimescale();
+    /**
+     * <code>optional uint32 segment_duration_timescale = 4 [(.description) = "timescale (denominator) for segment duration below, eg 1000 for milliseconds"];</code>
+     * @return The segmentDurationTimescale.
+     */
+    int getSegmentDurationTimescale();
+
+    /**
+     * <code>optional uint32 segment_duration = 5 [(.description) = "length of most segments in &#92;'timescale&#92;' units (last may be shorter)"];</code>
+     * @return Whether the segmentDuration field is set.
+     */
+    boolean hasSegmentDuration();
+    /**
+     * <code>optional uint32 segment_duration = 5 [(.description) = "length of most segments in &#92;'timescale&#92;' units (last may be shorter)"];</code>
+     * @return The segmentDuration.
+     */
+    int getSegmentDuration();
+
+    /**
+     * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+     */
+    java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipComponent> 
+        getComponentsList();
+    /**
+     * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipComponent getComponents(int index);
+    /**
+     * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+     */
+    int getComponentsCount();
+    /**
+     * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+     */
+    java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipComponentOrBuilder> 
+        getComponentsOrBuilderList();
+    /**
+     * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipComponentOrBuilder getComponentsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CVideo_CreateGameClip_Request}
+   */
+  public static final class CVideo_CreateGameClip_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CVideo_CreateGameClip_Request)
+      CVideo_CreateGameClip_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVideo_CreateGameClip_Request.newBuilder() to construct.
+    private CVideo_CreateGameClip_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVideo_CreateGameClip_Request() {
+      components_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVideo_CreateGameClip_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CVideo_CreateGameClip_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              appId_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              numSegments_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              lengthMilliseconds_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              segmentDurationTimescale_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              segmentDuration_ = input.readUInt32();
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                components_ = new java.util.ArrayList<SteammessagesVideoSteamclient.CVideo_GameClipComponent>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              components_.add(
+                  input.readMessage(SteammessagesVideoSteamclient.CVideo_GameClipComponent.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          components_ = java.util.Collections.unmodifiableList(components_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_CreateGameClip_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_CreateGameClip_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request.class, SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private int appId_;
+    /**
+     * <code>optional uint32 app_id = 1 [(.description) = "app ID stream is tagged with"];</code>
+     * @return Whether the appId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 app_id = 1 [(.description) = "app ID stream is tagged with"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public int getAppId() {
+      return appId_;
+    }
+
+    public static final int NUM_SEGMENTS_FIELD_NUMBER = 2;
+    private int numSegments_;
+    /**
+     * <code>optional uint32 num_segments = 2 [(.description) = "number of segments in this clip"];</code>
+     * @return Whether the numSegments field is set.
+     */
+    @java.lang.Override
+    public boolean hasNumSegments() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 num_segments = 2 [(.description) = "number of segments in this clip"];</code>
+     * @return The numSegments.
+     */
+    @java.lang.Override
+    public int getNumSegments() {
+      return numSegments_;
+    }
+
+    public static final int LENGTH_MILLISECONDS_FIELD_NUMBER = 3;
+    private int lengthMilliseconds_;
+    /**
+     * <code>optional uint32 length_milliseconds = 3 [(.description) = "length of video in ms"];</code>
+     * @return Whether the lengthMilliseconds field is set.
+     */
+    @java.lang.Override
+    public boolean hasLengthMilliseconds() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 length_milliseconds = 3 [(.description) = "length of video in ms"];</code>
+     * @return The lengthMilliseconds.
+     */
+    @java.lang.Override
+    public int getLengthMilliseconds() {
+      return lengthMilliseconds_;
+    }
+
+    public static final int SEGMENT_DURATION_TIMESCALE_FIELD_NUMBER = 4;
+    private int segmentDurationTimescale_;
+    /**
+     * <code>optional uint32 segment_duration_timescale = 4 [(.description) = "timescale (denominator) for segment duration below, eg 1000 for milliseconds"];</code>
+     * @return Whether the segmentDurationTimescale field is set.
+     */
+    @java.lang.Override
+    public boolean hasSegmentDurationTimescale() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 segment_duration_timescale = 4 [(.description) = "timescale (denominator) for segment duration below, eg 1000 for milliseconds"];</code>
+     * @return The segmentDurationTimescale.
+     */
+    @java.lang.Override
+    public int getSegmentDurationTimescale() {
+      return segmentDurationTimescale_;
+    }
+
+    public static final int SEGMENT_DURATION_FIELD_NUMBER = 5;
+    private int segmentDuration_;
+    /**
+     * <code>optional uint32 segment_duration = 5 [(.description) = "length of most segments in &#92;'timescale&#92;' units (last may be shorter)"];</code>
+     * @return Whether the segmentDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasSegmentDuration() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint32 segment_duration = 5 [(.description) = "length of most segments in &#92;'timescale&#92;' units (last may be shorter)"];</code>
+     * @return The segmentDuration.
+     */
+    @java.lang.Override
+    public int getSegmentDuration() {
+      return segmentDuration_;
+    }
+
+    public static final int COMPONENTS_FIELD_NUMBER = 6;
+    private java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipComponent> components_;
+    /**
+     * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipComponent> getComponentsList() {
+      return components_;
+    }
+    /**
+     * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipComponentOrBuilder> 
+        getComponentsOrBuilderList() {
+      return components_;
+    }
+    /**
+     * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+     */
+    @java.lang.Override
+    public int getComponentsCount() {
+      return components_.size();
+    }
+    /**
+     * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipComponent getComponents(int index) {
+      return components_.get(index);
+    }
+    /**
+     * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipComponentOrBuilder getComponentsOrBuilder(
+        int index) {
+      return components_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, appId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, numSegments_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, lengthMilliseconds_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(4, segmentDurationTimescale_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt32(5, segmentDuration_);
+      }
+      for (int i = 0; i < components_.size(); i++) {
+        output.writeMessage(6, components_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, appId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, numSegments_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, lengthMilliseconds_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, segmentDurationTimescale_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, segmentDuration_);
+      }
+      for (int i = 0; i < components_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, components_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request other = (SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request) obj;
+
+      if (hasAppId() != other.hasAppId()) return false;
+      if (hasAppId()) {
+        if (getAppId()
+            != other.getAppId()) return false;
+      }
+      if (hasNumSegments() != other.hasNumSegments()) return false;
+      if (hasNumSegments()) {
+        if (getNumSegments()
+            != other.getNumSegments()) return false;
+      }
+      if (hasLengthMilliseconds() != other.hasLengthMilliseconds()) return false;
+      if (hasLengthMilliseconds()) {
+        if (getLengthMilliseconds()
+            != other.getLengthMilliseconds()) return false;
+      }
+      if (hasSegmentDurationTimescale() != other.hasSegmentDurationTimescale()) return false;
+      if (hasSegmentDurationTimescale()) {
+        if (getSegmentDurationTimescale()
+            != other.getSegmentDurationTimescale()) return false;
+      }
+      if (hasSegmentDuration() != other.hasSegmentDuration()) return false;
+      if (hasSegmentDuration()) {
+        if (getSegmentDuration()
+            != other.getSegmentDuration()) return false;
+      }
+      if (!getComponentsList()
+          .equals(other.getComponentsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAppId()) {
+        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppId();
+      }
+      if (hasNumSegments()) {
+        hash = (37 * hash) + NUM_SEGMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getNumSegments();
+      }
+      if (hasLengthMilliseconds()) {
+        hash = (37 * hash) + LENGTH_MILLISECONDS_FIELD_NUMBER;
+        hash = (53 * hash) + getLengthMilliseconds();
+      }
+      if (hasSegmentDurationTimescale()) {
+        hash = (37 * hash) + SEGMENT_DURATION_TIMESCALE_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentDurationTimescale();
+      }
+      if (hasSegmentDuration()) {
+        hash = (37 * hash) + SEGMENT_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentDuration();
+      }
+      if (getComponentsCount() > 0) {
+        hash = (37 * hash) + COMPONENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getComponentsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CVideo_CreateGameClip_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CVideo_CreateGameClip_Request)
+        SteammessagesVideoSteamclient.CVideo_CreateGameClip_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CreateGameClip_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CreateGameClip_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request.class, SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getComponentsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        appId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        numSegments_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        lengthMilliseconds_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        segmentDurationTimescale_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        segmentDuration_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (componentsBuilder_ == null) {
+          components_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          componentsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CreateGameClip_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request getDefaultInstanceForType() {
+        return SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request build() {
+        SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request buildPartial() {
+        SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request result = new SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.numSegments_ = numSegments_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lengthMilliseconds_ = lengthMilliseconds_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.segmentDurationTimescale_ = segmentDurationTimescale_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.segmentDuration_ = segmentDuration_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (componentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            components_ = java.util.Collections.unmodifiableList(components_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.components_ = components_;
+        } else {
+          result.components_ = componentsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request) {
+          return mergeFrom((SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request other) {
+        if (other == SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request.getDefaultInstance()) return this;
+        if (other.hasAppId()) {
+          setAppId(other.getAppId());
+        }
+        if (other.hasNumSegments()) {
+          setNumSegments(other.getNumSegments());
+        }
+        if (other.hasLengthMilliseconds()) {
+          setLengthMilliseconds(other.getLengthMilliseconds());
+        }
+        if (other.hasSegmentDurationTimescale()) {
+          setSegmentDurationTimescale(other.getSegmentDurationTimescale());
+        }
+        if (other.hasSegmentDuration()) {
+          setSegmentDuration(other.getSegmentDuration());
+        }
+        if (componentsBuilder_ == null) {
+          if (!other.components_.isEmpty()) {
+            if (components_.isEmpty()) {
+              components_ = other.components_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureComponentsIsMutable();
+              components_.addAll(other.components_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.components_.isEmpty()) {
+            if (componentsBuilder_.isEmpty()) {
+              componentsBuilder_.dispose();
+              componentsBuilder_ = null;
+              components_ = other.components_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              componentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getComponentsFieldBuilder() : null;
+            } else {
+              componentsBuilder_.addAllMessages(other.components_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int appId_ ;
+      /**
+       * <code>optional uint32 app_id = 1 [(.description) = "app ID stream is tagged with"];</code>
+       * @return Whether the appId field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 app_id = 1 [(.description) = "app ID stream is tagged with"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public int getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>optional uint32 app_id = 1 [(.description) = "app ID stream is tagged with"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(int value) {
+        bitField0_ |= 0x00000001;
+        appId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 app_id = 1 [(.description) = "app ID stream is tagged with"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int numSegments_ ;
+      /**
+       * <code>optional uint32 num_segments = 2 [(.description) = "number of segments in this clip"];</code>
+       * @return Whether the numSegments field is set.
+       */
+      @java.lang.Override
+      public boolean hasNumSegments() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 num_segments = 2 [(.description) = "number of segments in this clip"];</code>
+       * @return The numSegments.
+       */
+      @java.lang.Override
+      public int getNumSegments() {
+        return numSegments_;
+      }
+      /**
+       * <code>optional uint32 num_segments = 2 [(.description) = "number of segments in this clip"];</code>
+       * @param value The numSegments to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumSegments(int value) {
+        bitField0_ |= 0x00000002;
+        numSegments_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 num_segments = 2 [(.description) = "number of segments in this clip"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumSegments() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        numSegments_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int lengthMilliseconds_ ;
+      /**
+       * <code>optional uint32 length_milliseconds = 3 [(.description) = "length of video in ms"];</code>
+       * @return Whether the lengthMilliseconds field is set.
+       */
+      @java.lang.Override
+      public boolean hasLengthMilliseconds() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 length_milliseconds = 3 [(.description) = "length of video in ms"];</code>
+       * @return The lengthMilliseconds.
+       */
+      @java.lang.Override
+      public int getLengthMilliseconds() {
+        return lengthMilliseconds_;
+      }
+      /**
+       * <code>optional uint32 length_milliseconds = 3 [(.description) = "length of video in ms"];</code>
+       * @param value The lengthMilliseconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLengthMilliseconds(int value) {
+        bitField0_ |= 0x00000004;
+        lengthMilliseconds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 length_milliseconds = 3 [(.description) = "length of video in ms"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLengthMilliseconds() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lengthMilliseconds_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int segmentDurationTimescale_ ;
+      /**
+       * <code>optional uint32 segment_duration_timescale = 4 [(.description) = "timescale (denominator) for segment duration below, eg 1000 for milliseconds"];</code>
+       * @return Whether the segmentDurationTimescale field is set.
+       */
+      @java.lang.Override
+      public boolean hasSegmentDurationTimescale() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 segment_duration_timescale = 4 [(.description) = "timescale (denominator) for segment duration below, eg 1000 for milliseconds"];</code>
+       * @return The segmentDurationTimescale.
+       */
+      @java.lang.Override
+      public int getSegmentDurationTimescale() {
+        return segmentDurationTimescale_;
+      }
+      /**
+       * <code>optional uint32 segment_duration_timescale = 4 [(.description) = "timescale (denominator) for segment duration below, eg 1000 for milliseconds"];</code>
+       * @param value The segmentDurationTimescale to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSegmentDurationTimescale(int value) {
+        bitField0_ |= 0x00000008;
+        segmentDurationTimescale_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 segment_duration_timescale = 4 [(.description) = "timescale (denominator) for segment duration below, eg 1000 for milliseconds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSegmentDurationTimescale() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        segmentDurationTimescale_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int segmentDuration_ ;
+      /**
+       * <code>optional uint32 segment_duration = 5 [(.description) = "length of most segments in &#92;'timescale&#92;' units (last may be shorter)"];</code>
+       * @return Whether the segmentDuration field is set.
+       */
+      @java.lang.Override
+      public boolean hasSegmentDuration() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 segment_duration = 5 [(.description) = "length of most segments in &#92;'timescale&#92;' units (last may be shorter)"];</code>
+       * @return The segmentDuration.
+       */
+      @java.lang.Override
+      public int getSegmentDuration() {
+        return segmentDuration_;
+      }
+      /**
+       * <code>optional uint32 segment_duration = 5 [(.description) = "length of most segments in &#92;'timescale&#92;' units (last may be shorter)"];</code>
+       * @param value The segmentDuration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSegmentDuration(int value) {
+        bitField0_ |= 0x00000010;
+        segmentDuration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 segment_duration = 5 [(.description) = "length of most segments in &#92;'timescale&#92;' units (last may be shorter)"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSegmentDuration() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        segmentDuration_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipComponent> components_ =
+        java.util.Collections.emptyList();
+      private void ensureComponentsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          components_ = new java.util.ArrayList<SteammessagesVideoSteamclient.CVideo_GameClipComponent>(components_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipComponent, SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder, SteammessagesVideoSteamclient.CVideo_GameClipComponentOrBuilder> componentsBuilder_;
+
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipComponent> getComponentsList() {
+        if (componentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(components_);
+        } else {
+          return componentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public int getComponentsCount() {
+        if (componentsBuilder_ == null) {
+          return components_.size();
+        } else {
+          return componentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipComponent getComponents(int index) {
+        if (componentsBuilder_ == null) {
+          return components_.get(index);
+        } else {
+          return componentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public Builder setComponents(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipComponent value) {
+        if (componentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureComponentsIsMutable();
+          components_.set(index, value);
+          onChanged();
+        } else {
+          componentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public Builder setComponents(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder builderForValue) {
+        if (componentsBuilder_ == null) {
+          ensureComponentsIsMutable();
+          components_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          componentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public Builder addComponents(SteammessagesVideoSteamclient.CVideo_GameClipComponent value) {
+        if (componentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureComponentsIsMutable();
+          components_.add(value);
+          onChanged();
+        } else {
+          componentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public Builder addComponents(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipComponent value) {
+        if (componentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureComponentsIsMutable();
+          components_.add(index, value);
+          onChanged();
+        } else {
+          componentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public Builder addComponents(
+          SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder builderForValue) {
+        if (componentsBuilder_ == null) {
+          ensureComponentsIsMutable();
+          components_.add(builderForValue.build());
+          onChanged();
+        } else {
+          componentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public Builder addComponents(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder builderForValue) {
+        if (componentsBuilder_ == null) {
+          ensureComponentsIsMutable();
+          components_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          componentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public Builder addAllComponents(
+          java.lang.Iterable<? extends SteammessagesVideoSteamclient.CVideo_GameClipComponent> values) {
+        if (componentsBuilder_ == null) {
+          ensureComponentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, components_);
+          onChanged();
+        } else {
+          componentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public Builder clearComponents() {
+        if (componentsBuilder_ == null) {
+          components_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          componentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public Builder removeComponents(int index) {
+        if (componentsBuilder_ == null) {
+          ensureComponentsIsMutable();
+          components_.remove(index);
+          onChanged();
+        } else {
+          componentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder getComponentsBuilder(
+          int index) {
+        return getComponentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipComponentOrBuilder getComponentsOrBuilder(
+          int index) {
+        if (componentsBuilder_ == null) {
+          return components_.get(index);  } else {
+          return componentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipComponentOrBuilder> 
+           getComponentsOrBuilderList() {
+        if (componentsBuilder_ != null) {
+          return componentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(components_);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder addComponentsBuilder() {
+        return getComponentsFieldBuilder().addBuilder(
+            SteammessagesVideoSteamclient.CVideo_GameClipComponent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder addComponentsBuilder(
+          int index) {
+        return getComponentsFieldBuilder().addBuilder(
+            index, SteammessagesVideoSteamclient.CVideo_GameClipComponent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CVideo_GameClipComponent components = 6 [(.description) = "List of components"];</code>
+       */
+      public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder> 
+           getComponentsBuilderList() {
+        return getComponentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipComponent, SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder, SteammessagesVideoSteamclient.CVideo_GameClipComponentOrBuilder> 
+          getComponentsFieldBuilder() {
+        if (componentsBuilder_ == null) {
+          componentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesVideoSteamclient.CVideo_GameClipComponent, SteammessagesVideoSteamclient.CVideo_GameClipComponent.Builder, SteammessagesVideoSteamclient.CVideo_GameClipComponentOrBuilder>(
+                  components_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          components_ = null;
+        }
+        return componentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CVideo_CreateGameClip_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CVideo_CreateGameClip_Request)
+    private static final SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request();
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CVideo_CreateGameClip_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CVideo_CreateGameClip_Request>() {
+      @java.lang.Override
+      public CVideo_CreateGameClip_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CVideo_CreateGameClip_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVideo_CreateGameClip_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVideo_CreateGameClip_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_CreateGameClip_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CVideo_CreateGameClip_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CVideo_CreateGameClip_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID if successful"];</code>
+     * @return Whether the clipId field is set.
+     */
+    boolean hasClipId();
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID if successful"];</code>
+     * @return The clipId.
+     */
+    long getClipId();
+  }
+  /**
+   * Protobuf type {@code CVideo_CreateGameClip_Response}
+   */
+  public static final class CVideo_CreateGameClip_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CVideo_CreateGameClip_Response)
+      CVideo_CreateGameClip_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVideo_CreateGameClip_Response.newBuilder() to construct.
+    private CVideo_CreateGameClip_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVideo_CreateGameClip_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVideo_CreateGameClip_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CVideo_CreateGameClip_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              clipId_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_CreateGameClip_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_CreateGameClip_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response.class, SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLIP_ID_FIELD_NUMBER = 1;
+    private long clipId_;
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID if successful"];</code>
+     * @return Whether the clipId field is set.
+     */
+    @java.lang.Override
+    public boolean hasClipId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID if successful"];</code>
+     * @return The clipId.
+     */
+    @java.lang.Override
+    public long getClipId() {
+      return clipId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, clipId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, clipId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response other = (SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response) obj;
+
+      if (hasClipId() != other.hasClipId()) return false;
+      if (hasClipId()) {
+        if (getClipId()
+            != other.getClipId()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClipId()) {
+        hash = (37 * hash) + CLIP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getClipId());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CVideo_CreateGameClip_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CVideo_CreateGameClip_Response)
+        SteammessagesVideoSteamclient.CVideo_CreateGameClip_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CreateGameClip_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CreateGameClip_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response.class, SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clipId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CreateGameClip_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response getDefaultInstanceForType() {
+        return SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response build() {
+        SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response buildPartial() {
+        SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response result = new SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.clipId_ = clipId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response) {
+          return mergeFrom((SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response other) {
+        if (other == SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response.getDefaultInstance()) return this;
+        if (other.hasClipId()) {
+          setClipId(other.getClipId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long clipId_ ;
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID if successful"];</code>
+       * @return Whether the clipId field is set.
+       */
+      @java.lang.Override
+      public boolean hasClipId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID if successful"];</code>
+       * @return The clipId.
+       */
+      @java.lang.Override
+      public long getClipId() {
+        return clipId_;
+      }
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID if successful"];</code>
+       * @param value The clipId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClipId(long value) {
+        bitField0_ |= 0x00000001;
+        clipId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID if successful"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClipId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        clipId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CVideo_CreateGameClip_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CVideo_CreateGameClip_Response)
+    private static final SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response();
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CVideo_CreateGameClip_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CVideo_CreateGameClip_Response>() {
+      @java.lang.Override
+      public CVideo_CreateGameClip_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CVideo_CreateGameClip_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVideo_CreateGameClip_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVideo_CreateGameClip_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_CreateGameClip_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CVideo_GameClipSegmentInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CVideo_GameClipSegmentInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 segment_number = 4 [(.description) = "segment number"];</code>
+     * @return Whether the segmentNumber field is set.
+     */
+    boolean hasSegmentNumber();
+    /**
+     * <code>optional uint32 segment_number = 4 [(.description) = "segment number"];</code>
+     * @return The segmentNumber.
+     */
+    int getSegmentNumber();
+
+    /**
+     * <code>optional uint64 segment_size_bytes = 5 [(.description) = "segment size in bytes"];</code>
+     * @return Whether the segmentSizeBytes field is set.
+     */
+    boolean hasSegmentSizeBytes();
+    /**
+     * <code>optional uint64 segment_size_bytes = 5 [(.description) = "segment size in bytes"];</code>
+     * @return The segmentSizeBytes.
+     */
+    long getSegmentSizeBytes();
+  }
+  /**
+   * Protobuf type {@code CVideo_GameClipSegmentInfo}
+   */
+  public static final class CVideo_GameClipSegmentInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CVideo_GameClipSegmentInfo)
+      CVideo_GameClipSegmentInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVideo_GameClipSegmentInfo.newBuilder() to construct.
+    private CVideo_GameClipSegmentInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVideo_GameClipSegmentInfo() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVideo_GameClipSegmentInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CVideo_GameClipSegmentInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+              bitField0_ |= 0x00000001;
+              segmentNumber_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000002;
+              segmentSizeBytes_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.class, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SEGMENT_NUMBER_FIELD_NUMBER = 4;
+    private int segmentNumber_;
+    /**
+     * <code>optional uint32 segment_number = 4 [(.description) = "segment number"];</code>
+     * @return Whether the segmentNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasSegmentNumber() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 segment_number = 4 [(.description) = "segment number"];</code>
+     * @return The segmentNumber.
+     */
+    @java.lang.Override
+    public int getSegmentNumber() {
+      return segmentNumber_;
+    }
+
+    public static final int SEGMENT_SIZE_BYTES_FIELD_NUMBER = 5;
+    private long segmentSizeBytes_;
+    /**
+     * <code>optional uint64 segment_size_bytes = 5 [(.description) = "segment size in bytes"];</code>
+     * @return Whether the segmentSizeBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasSegmentSizeBytes() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint64 segment_size_bytes = 5 [(.description) = "segment size in bytes"];</code>
+     * @return The segmentSizeBytes.
+     */
+    @java.lang.Override
+    public long getSegmentSizeBytes() {
+      return segmentSizeBytes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(4, segmentNumber_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt64(5, segmentSizeBytes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, segmentNumber_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, segmentSizeBytes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo)) {
+        return super.equals(obj);
+      }
+      SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo other = (SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo) obj;
+
+      if (hasSegmentNumber() != other.hasSegmentNumber()) return false;
+      if (hasSegmentNumber()) {
+        if (getSegmentNumber()
+            != other.getSegmentNumber()) return false;
+      }
+      if (hasSegmentSizeBytes() != other.hasSegmentSizeBytes()) return false;
+      if (hasSegmentSizeBytes()) {
+        if (getSegmentSizeBytes()
+            != other.getSegmentSizeBytes()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSegmentNumber()) {
+        hash = (37 * hash) + SEGMENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentNumber();
+      }
+      if (hasSegmentSizeBytes()) {
+        hash = (37 * hash) + SEGMENT_SIZE_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSegmentSizeBytes());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CVideo_GameClipSegmentInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CVideo_GameClipSegmentInfo)
+        SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.class, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder.class);
+      }
+
+      // Construct using SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        segmentNumber_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        segmentSizeBytes_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo getDefaultInstanceForType() {
+        return SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo build() {
+        SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo buildPartial() {
+        SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo result = new SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.segmentNumber_ = segmentNumber_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.segmentSizeBytes_ = segmentSizeBytes_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo) {
+          return mergeFrom((SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo other) {
+        if (other == SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.getDefaultInstance()) return this;
+        if (other.hasSegmentNumber()) {
+          setSegmentNumber(other.getSegmentNumber());
+        }
+        if (other.hasSegmentSizeBytes()) {
+          setSegmentSizeBytes(other.getSegmentSizeBytes());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int segmentNumber_ ;
+      /**
+       * <code>optional uint32 segment_number = 4 [(.description) = "segment number"];</code>
+       * @return Whether the segmentNumber field is set.
+       */
+      @java.lang.Override
+      public boolean hasSegmentNumber() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 segment_number = 4 [(.description) = "segment number"];</code>
+       * @return The segmentNumber.
+       */
+      @java.lang.Override
+      public int getSegmentNumber() {
+        return segmentNumber_;
+      }
+      /**
+       * <code>optional uint32 segment_number = 4 [(.description) = "segment number"];</code>
+       * @param value The segmentNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSegmentNumber(int value) {
+        bitField0_ |= 0x00000001;
+        segmentNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 segment_number = 4 [(.description) = "segment number"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSegmentNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        segmentNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long segmentSizeBytes_ ;
+      /**
+       * <code>optional uint64 segment_size_bytes = 5 [(.description) = "segment size in bytes"];</code>
+       * @return Whether the segmentSizeBytes field is set.
+       */
+      @java.lang.Override
+      public boolean hasSegmentSizeBytes() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint64 segment_size_bytes = 5 [(.description) = "segment size in bytes"];</code>
+       * @return The segmentSizeBytes.
+       */
+      @java.lang.Override
+      public long getSegmentSizeBytes() {
+        return segmentSizeBytes_;
+      }
+      /**
+       * <code>optional uint64 segment_size_bytes = 5 [(.description) = "segment size in bytes"];</code>
+       * @param value The segmentSizeBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSegmentSizeBytes(long value) {
+        bitField0_ |= 0x00000002;
+        segmentSizeBytes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 segment_size_bytes = 5 [(.description) = "segment size in bytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSegmentSizeBytes() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        segmentSizeBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CVideo_GameClipSegmentInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:CVideo_GameClipSegmentInfo)
+    private static final SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo();
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CVideo_GameClipSegmentInfo>
+        PARSER = new com.google.protobuf.AbstractParser<CVideo_GameClipSegmentInfo>() {
+      @java.lang.Override
+      public CVideo_GameClipSegmentInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CVideo_GameClipSegmentInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVideo_GameClipSegmentInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVideo_GameClipSegmentInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CVideo_BeginGameClipSegmentsUpload_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CVideo_BeginGameClipSegmentsUpload_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+     * @return Whether the clipId field is set.
+     */
+    boolean hasClipId();
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+     * @return The clipId.
+     */
+    long getClipId();
+
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return Whether the componentName field is set.
+     */
+    boolean hasComponentName();
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return Whether the representationName field is set.
+     */
+    boolean hasRepresentationName();
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return The representationName.
+     */
+    java.lang.String getRepresentationName();
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return The bytes for representationName.
+     */
+    com.google.protobuf.ByteString
+        getRepresentationNameBytes();
+
+    /**
+     * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+     */
+    java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo> 
+        getSegmentsToStoreList();
+    /**
+     * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo getSegmentsToStore(int index);
+    /**
+     * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+     */
+    int getSegmentsToStoreCount();
+    /**
+     * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+     */
+    java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder> 
+        getSegmentsToStoreOrBuilderList();
+    /**
+     * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder getSegmentsToStoreOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CVideo_BeginGameClipSegmentsUpload_Request}
+   */
+  public static final class CVideo_BeginGameClipSegmentsUpload_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CVideo_BeginGameClipSegmentsUpload_Request)
+      CVideo_BeginGameClipSegmentsUpload_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVideo_BeginGameClipSegmentsUpload_Request.newBuilder() to construct.
+    private CVideo_BeginGameClipSegmentsUpload_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVideo_BeginGameClipSegmentsUpload_Request() {
+      componentName_ = "";
+      representationName_ = "";
+      segmentsToStore_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVideo_BeginGameClipSegmentsUpload_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CVideo_BeginGameClipSegmentsUpload_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              clipId_ = input.readUInt64();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              componentName_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              representationName_ = bs;
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                segmentsToStore_ = new java.util.ArrayList<SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              segmentsToStore_.add(
+                  input.readMessage(SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          segmentsToStore_ = java.util.Collections.unmodifiableList(segmentsToStore_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_BeginGameClipSegmentsUpload_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_BeginGameClipSegmentsUpload_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request.class, SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLIP_ID_FIELD_NUMBER = 1;
+    private long clipId_;
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+     * @return Whether the clipId field is set.
+     */
+    @java.lang.Override
+    public boolean hasClipId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+     * @return The clipId.
+     */
+    @java.lang.Override
+    public long getClipId() {
+      return clipId_;
+    }
+
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object componentName_;
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return Whether the componentName field is set.
+     */
+    @java.lang.Override
+    public boolean hasComponentName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      java.lang.Object ref = componentName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          componentName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      java.lang.Object ref = componentName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        componentName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REPRESENTATION_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object representationName_;
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return Whether the representationName field is set.
+     */
+    @java.lang.Override
+    public boolean hasRepresentationName() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return The representationName.
+     */
+    @java.lang.Override
+    public java.lang.String getRepresentationName() {
+      java.lang.Object ref = representationName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          representationName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return The bytes for representationName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRepresentationNameBytes() {
+      java.lang.Object ref = representationName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        representationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEGMENTS_TO_STORE_FIELD_NUMBER = 4;
+    private java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo> segmentsToStore_;
+    /**
+     * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo> getSegmentsToStoreList() {
+      return segmentsToStore_;
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder> 
+        getSegmentsToStoreOrBuilderList() {
+      return segmentsToStore_;
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+     */
+    @java.lang.Override
+    public int getSegmentsToStoreCount() {
+      return segmentsToStore_.size();
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo getSegmentsToStore(int index) {
+      return segmentsToStore_.get(index);
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder getSegmentsToStoreOrBuilder(
+        int index) {
+      return segmentsToStore_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, clipId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, componentName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, representationName_);
+      }
+      for (int i = 0; i < segmentsToStore_.size(); i++) {
+        output.writeMessage(4, segmentsToStore_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, clipId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, componentName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, representationName_);
+      }
+      for (int i = 0; i < segmentsToStore_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, segmentsToStore_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request other = (SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request) obj;
+
+      if (hasClipId() != other.hasClipId()) return false;
+      if (hasClipId()) {
+        if (getClipId()
+            != other.getClipId()) return false;
+      }
+      if (hasComponentName() != other.hasComponentName()) return false;
+      if (hasComponentName()) {
+        if (!getComponentName()
+            .equals(other.getComponentName())) return false;
+      }
+      if (hasRepresentationName() != other.hasRepresentationName()) return false;
+      if (hasRepresentationName()) {
+        if (!getRepresentationName()
+            .equals(other.getRepresentationName())) return false;
+      }
+      if (!getSegmentsToStoreList()
+          .equals(other.getSegmentsToStoreList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClipId()) {
+        hash = (37 * hash) + CLIP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getClipId());
+      }
+      if (hasComponentName()) {
+        hash = (37 * hash) + COMPONENT_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getComponentName().hashCode();
+      }
+      if (hasRepresentationName()) {
+        hash = (37 * hash) + REPRESENTATION_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getRepresentationName().hashCode();
+      }
+      if (getSegmentsToStoreCount() > 0) {
+        hash = (37 * hash) + SEGMENTS_TO_STORE_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentsToStoreList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CVideo_BeginGameClipSegmentsUpload_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CVideo_BeginGameClipSegmentsUpload_Request)
+        SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_BeginGameClipSegmentsUpload_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_BeginGameClipSegmentsUpload_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request.class, SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSegmentsToStoreFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clipId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        componentName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        representationName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (segmentsToStoreBuilder_ == null) {
+          segmentsToStore_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          segmentsToStoreBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_BeginGameClipSegmentsUpload_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request getDefaultInstanceForType() {
+        return SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request build() {
+        SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request buildPartial() {
+        SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request result = new SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.clipId_ = clipId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.componentName_ = componentName_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.representationName_ = representationName_;
+        if (segmentsToStoreBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            segmentsToStore_ = java.util.Collections.unmodifiableList(segmentsToStore_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.segmentsToStore_ = segmentsToStore_;
+        } else {
+          result.segmentsToStore_ = segmentsToStoreBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request) {
+          return mergeFrom((SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request other) {
+        if (other == SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request.getDefaultInstance()) return this;
+        if (other.hasClipId()) {
+          setClipId(other.getClipId());
+        }
+        if (other.hasComponentName()) {
+          bitField0_ |= 0x00000002;
+          componentName_ = other.componentName_;
+          onChanged();
+        }
+        if (other.hasRepresentationName()) {
+          bitField0_ |= 0x00000004;
+          representationName_ = other.representationName_;
+          onChanged();
+        }
+        if (segmentsToStoreBuilder_ == null) {
+          if (!other.segmentsToStore_.isEmpty()) {
+            if (segmentsToStore_.isEmpty()) {
+              segmentsToStore_ = other.segmentsToStore_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureSegmentsToStoreIsMutable();
+              segmentsToStore_.addAll(other.segmentsToStore_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.segmentsToStore_.isEmpty()) {
+            if (segmentsToStoreBuilder_.isEmpty()) {
+              segmentsToStoreBuilder_.dispose();
+              segmentsToStoreBuilder_ = null;
+              segmentsToStore_ = other.segmentsToStore_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              segmentsToStoreBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSegmentsToStoreFieldBuilder() : null;
+            } else {
+              segmentsToStoreBuilder_.addAllMessages(other.segmentsToStore_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long clipId_ ;
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+       * @return Whether the clipId field is set.
+       */
+      @java.lang.Override
+      public boolean hasClipId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+       * @return The clipId.
+       */
+      @java.lang.Override
+      public long getClipId() {
+        return clipId_;
+      }
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+       * @param value The clipId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClipId(long value) {
+        bitField0_ |= 0x00000001;
+        clipId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClipId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        clipId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object componentName_ = "";
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @return Whether the componentName field is set.
+       */
+      public boolean hasComponentName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @return The componentName.
+       */
+      public java.lang.String getComponentName() {
+        java.lang.Object ref = componentName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            componentName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @return The bytes for componentName.
+       */
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        java.lang.Object ref = componentName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          componentName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        componentName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        componentName_ = getDefaultInstance().getComponentName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        componentName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object representationName_ = "";
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @return Whether the representationName field is set.
+       */
+      public boolean hasRepresentationName() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @return The representationName.
+       */
+      public java.lang.String getRepresentationName() {
+        java.lang.Object ref = representationName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            representationName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @return The bytes for representationName.
+       */
+      public com.google.protobuf.ByteString
+          getRepresentationNameBytes() {
+        java.lang.Object ref = representationName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          representationName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @param value The representationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepresentationName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        representationName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRepresentationName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        representationName_ = getDefaultInstance().getRepresentationName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @param value The bytes for representationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepresentationNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        representationName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo> segmentsToStore_ =
+        java.util.Collections.emptyList();
+      private void ensureSegmentsToStoreIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          segmentsToStore_ = new java.util.ArrayList<SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo>(segmentsToStore_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder> segmentsToStoreBuilder_;
+
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo> getSegmentsToStoreList() {
+        if (segmentsToStoreBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(segmentsToStore_);
+        } else {
+          return segmentsToStoreBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public int getSegmentsToStoreCount() {
+        if (segmentsToStoreBuilder_ == null) {
+          return segmentsToStore_.size();
+        } else {
+          return segmentsToStoreBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo getSegmentsToStore(int index) {
+        if (segmentsToStoreBuilder_ == null) {
+          return segmentsToStore_.get(index);
+        } else {
+          return segmentsToStoreBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public Builder setSegmentsToStore(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo value) {
+        if (segmentsToStoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSegmentsToStoreIsMutable();
+          segmentsToStore_.set(index, value);
+          onChanged();
+        } else {
+          segmentsToStoreBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public Builder setSegmentsToStore(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder builderForValue) {
+        if (segmentsToStoreBuilder_ == null) {
+          ensureSegmentsToStoreIsMutable();
+          segmentsToStore_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          segmentsToStoreBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public Builder addSegmentsToStore(SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo value) {
+        if (segmentsToStoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSegmentsToStoreIsMutable();
+          segmentsToStore_.add(value);
+          onChanged();
+        } else {
+          segmentsToStoreBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public Builder addSegmentsToStore(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo value) {
+        if (segmentsToStoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSegmentsToStoreIsMutable();
+          segmentsToStore_.add(index, value);
+          onChanged();
+        } else {
+          segmentsToStoreBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public Builder addSegmentsToStore(
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder builderForValue) {
+        if (segmentsToStoreBuilder_ == null) {
+          ensureSegmentsToStoreIsMutable();
+          segmentsToStore_.add(builderForValue.build());
+          onChanged();
+        } else {
+          segmentsToStoreBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public Builder addSegmentsToStore(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder builderForValue) {
+        if (segmentsToStoreBuilder_ == null) {
+          ensureSegmentsToStoreIsMutable();
+          segmentsToStore_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          segmentsToStoreBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public Builder addAllSegmentsToStore(
+          java.lang.Iterable<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo> values) {
+        if (segmentsToStoreBuilder_ == null) {
+          ensureSegmentsToStoreIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, segmentsToStore_);
+          onChanged();
+        } else {
+          segmentsToStoreBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public Builder clearSegmentsToStore() {
+        if (segmentsToStoreBuilder_ == null) {
+          segmentsToStore_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          segmentsToStoreBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public Builder removeSegmentsToStore(int index) {
+        if (segmentsToStoreBuilder_ == null) {
+          ensureSegmentsToStoreIsMutable();
+          segmentsToStore_.remove(index);
+          onChanged();
+        } else {
+          segmentsToStoreBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder getSegmentsToStoreBuilder(
+          int index) {
+        return getSegmentsToStoreFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder getSegmentsToStoreOrBuilder(
+          int index) {
+        if (segmentsToStoreBuilder_ == null) {
+          return segmentsToStore_.get(index);  } else {
+          return segmentsToStoreBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder> 
+           getSegmentsToStoreOrBuilderList() {
+        if (segmentsToStoreBuilder_ != null) {
+          return segmentsToStoreBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(segmentsToStore_);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder addSegmentsToStoreBuilder() {
+        return getSegmentsToStoreFieldBuilder().addBuilder(
+            SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder addSegmentsToStoreBuilder(
+          int index) {
+        return getSegmentsToStoreFieldBuilder().addBuilder(
+            index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentInfo segments_to_store = 4 [(.description) = "Segments the client has to upload"];</code>
+       */
+      public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder> 
+           getSegmentsToStoreBuilderList() {
+        return getSegmentsToStoreFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder> 
+          getSegmentsToStoreFieldBuilder() {
+        if (segmentsToStoreBuilder_ == null) {
+          segmentsToStoreBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder>(
+                  segmentsToStore_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          segmentsToStore_ = null;
+        }
+        return segmentsToStoreBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CVideo_BeginGameClipSegmentsUpload_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CVideo_BeginGameClipSegmentsUpload_Request)
+    private static final SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request();
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CVideo_BeginGameClipSegmentsUpload_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CVideo_BeginGameClipSegmentsUpload_Request>() {
+      @java.lang.Override
+      public CVideo_BeginGameClipSegmentsUpload_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CVideo_BeginGameClipSegmentsUpload_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVideo_BeginGameClipSegmentsUpload_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVideo_BeginGameClipSegmentsUpload_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CVideo_GameClipSegmentUploadInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CVideo_GameClipSegmentUploadInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+     * @return Whether the segmentInfo field is set.
+     */
+    boolean hasSegmentInfo();
+    /**
+     * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+     * @return The segmentInfo.
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo getSegmentInfo();
+    /**
+     * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder getSegmentInfoOrBuilder();
+
+    /**
+     * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+     * @return Whether the urlHost field is set.
+     */
+    boolean hasUrlHost();
+    /**
+     * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+     * @return The urlHost.
+     */
+    java.lang.String getUrlHost();
+    /**
+     * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+     * @return The bytes for urlHost.
+     */
+    com.google.protobuf.ByteString
+        getUrlHostBytes();
+
+    /**
+     * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+     * @return Whether the urlPath field is set.
+     */
+    boolean hasUrlPath();
+    /**
+     * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+     * @return The urlPath.
+     */
+    java.lang.String getUrlPath();
+    /**
+     * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+     * @return The bytes for urlPath.
+     */
+    com.google.protobuf.ByteString
+        getUrlPathBytes();
+
+    /**
+     * <code>optional bool use_https = 4 [(.description) = "If true, use https, otherwise use http."];</code>
+     * @return Whether the useHttps field is set.
+     */
+    boolean hasUseHttps();
+    /**
+     * <code>optional bool use_https = 4 [(.description) = "If true, use https, otherwise use http."];</code>
+     * @return The useHttps.
+     */
+    boolean getUseHttps();
+
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+     */
+    java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders> 
+        getRequestHeadersList();
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders getRequestHeaders(int index);
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+     */
+    int getRequestHeadersCount();
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+     */
+    java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeadersOrBuilder> 
+        getRequestHeadersOrBuilderList();
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeadersOrBuilder getRequestHeadersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CVideo_GameClipSegmentUploadInfo}
+   */
+  public static final class CVideo_GameClipSegmentUploadInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CVideo_GameClipSegmentUploadInfo)
+      CVideo_GameClipSegmentUploadInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVideo_GameClipSegmentUploadInfo.newBuilder() to construct.
+    private CVideo_GameClipSegmentUploadInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVideo_GameClipSegmentUploadInfo() {
+      urlHost_ = "";
+      urlPath_ = "";
+      requestHeaders_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVideo_GameClipSegmentUploadInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CVideo_GameClipSegmentUploadInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = segmentInfo_.toBuilder();
+              }
+              segmentInfo_ = input.readMessage(SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(segmentInfo_);
+                segmentInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              urlHost_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              urlPath_ = bs;
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              useHttps_ = input.readBool();
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                requestHeaders_ = new java.util.ArrayList<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              requestHeaders_.add(
+                  input.readMessage(SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.PARSER, extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          requestHeaders_ = java.util.Collections.unmodifiableList(requestHeaders_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentUploadInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentUploadInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.class, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder.class);
+    }
+
+    public interface HTTPHeadersOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CVideo_GameClipSegmentUploadInfo.HTTPHeaders)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+       * @return Whether the name field is set.
+       */
+      boolean hasName();
+      /**
+       * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+       * @return Whether the value field is set.
+       */
+      boolean hasValue();
+      /**
+       * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+       * @return The value.
+       */
+      java.lang.String getValue();
+      /**
+       * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+       * @return The bytes for value.
+       */
+      com.google.protobuf.ByteString
+          getValueBytes();
+    }
+    /**
+     * Protobuf type {@code CVideo_GameClipSegmentUploadInfo.HTTPHeaders}
+     */
+    public static final class HTTPHeaders extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:CVideo_GameClipSegmentUploadInfo.HTTPHeaders)
+        HTTPHeadersOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use HTTPHeaders.newBuilder() to construct.
+      private HTTPHeaders(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private HTTPHeaders() {
+        name_ = "";
+        value_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new HTTPHeaders();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private HTTPHeaders(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                name_ = bs;
+                break;
+              }
+              case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000002;
+                value_ = bs;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentUploadInfo_HTTPHeaders_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentUploadInfo_HTTPHeaders_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.class, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+       * @return Whether the name field is set.
+       */
+      @java.lang.Override
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int VALUE_FIELD_NUMBER = 2;
+      private volatile java.lang.Object value_;
+      /**
+       * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+       * @return Whether the value field is set.
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+       * @return The bytes for value.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders)) {
+          return super.equals(obj);
+        }
+        SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders other = (SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders) obj;
+
+        if (hasName() != other.hasName()) return false;
+        if (hasName()) {
+          if (!getName()
+              .equals(other.getName())) return false;
+        }
+        if (hasValue() != other.hasValue()) return false;
+        if (hasValue()) {
+          if (!getValue()
+              .equals(other.getValue())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasName()) {
+          hash = (37 * hash) + NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getName().hashCode();
+        }
+        if (hasValue()) {
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValue().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CVideo_GameClipSegmentUploadInfo.HTTPHeaders}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CVideo_GameClipSegmentUploadInfo.HTTPHeaders)
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeadersOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentUploadInfo_HTTPHeaders_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentUploadInfo_HTTPHeaders_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.class, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder.class);
+        }
+
+        // Construct using SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          value_ = "";
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentUploadInfo_HTTPHeaders_descriptor;
+        }
+
+        @java.lang.Override
+        public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders getDefaultInstanceForType() {
+          return SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders build() {
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders buildPartial() {
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders result = new SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.name_ = name_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.value_ = value_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders) {
+            return mergeFrom((SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders other) {
+          if (other == SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.getDefaultInstance()) return this;
+          if (other.hasName()) {
+            bitField0_ |= 0x00000001;
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasValue()) {
+            bitField0_ |= 0x00000002;
+            value_ = other.value_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+         * @return Whether the name field is set.
+         */
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 1 [(.description) = "HTTP header name"];</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object value_ = "";
+        /**
+         * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+         * @return Whether the value field is set.
+         */
+        public boolean hasValue() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+         * @return The value.
+         */
+        public java.lang.String getValue() {
+          java.lang.Object ref = value_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              value_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+         * @return The bytes for value.
+         */
+        public com.google.protobuf.ByteString
+            getValueBytes() {
+          java.lang.Object ref = value_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            value_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+         * @param value The value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValue(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValue() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          value_ = getDefaultInstance().getValue();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string value = 2 [(.description) = "HTTP header value"];</code>
+         * @param value The bytes for value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValueBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:CVideo_GameClipSegmentUploadInfo.HTTPHeaders)
+      }
+
+      // @@protoc_insertion_point(class_scope:CVideo_GameClipSegmentUploadInfo.HTTPHeaders)
+      private static final SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders();
+      }
+
+      public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<HTTPHeaders>
+          PARSER = new com.google.protobuf.AbstractParser<HTTPHeaders>() {
+        @java.lang.Override
+        public HTTPHeaders parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new HTTPHeaders(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<HTTPHeaders> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<HTTPHeaders> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int SEGMENT_INFO_FIELD_NUMBER = 1;
+    private SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo segmentInfo_;
+    /**
+     * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+     * @return Whether the segmentInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasSegmentInfo() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+     * @return The segmentInfo.
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo getSegmentInfo() {
+      return segmentInfo_ == null ? SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.getDefaultInstance() : segmentInfo_;
+    }
+    /**
+     * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder getSegmentInfoOrBuilder() {
+      return segmentInfo_ == null ? SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.getDefaultInstance() : segmentInfo_;
+    }
+
+    public static final int URL_HOST_FIELD_NUMBER = 2;
+    private volatile java.lang.Object urlHost_;
+    /**
+     * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+     * @return Whether the urlHost field is set.
+     */
+    @java.lang.Override
+    public boolean hasUrlHost() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+     * @return The urlHost.
+     */
+    @java.lang.Override
+    public java.lang.String getUrlHost() {
+      java.lang.Object ref = urlHost_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          urlHost_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+     * @return The bytes for urlHost.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlHostBytes() {
+      java.lang.Object ref = urlHost_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        urlHost_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URL_PATH_FIELD_NUMBER = 3;
+    private volatile java.lang.Object urlPath_;
+    /**
+     * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+     * @return Whether the urlPath field is set.
+     */
+    @java.lang.Override
+    public boolean hasUrlPath() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+     * @return The urlPath.
+     */
+    @java.lang.Override
+    public java.lang.String getUrlPath() {
+      java.lang.Object ref = urlPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          urlPath_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+     * @return The bytes for urlPath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlPathBytes() {
+      java.lang.Object ref = urlPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        urlPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USE_HTTPS_FIELD_NUMBER = 4;
+    private boolean useHttps_;
+    /**
+     * <code>optional bool use_https = 4 [(.description) = "If true, use https, otherwise use http."];</code>
+     * @return Whether the useHttps field is set.
+     */
+    @java.lang.Override
+    public boolean hasUseHttps() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional bool use_https = 4 [(.description) = "If true, use https, otherwise use http."];</code>
+     * @return The useHttps.
+     */
+    @java.lang.Override
+    public boolean getUseHttps() {
+      return useHttps_;
+    }
+
+    public static final int REQUEST_HEADERS_FIELD_NUMBER = 5;
+    private java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders> requestHeaders_;
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders> getRequestHeadersList() {
+      return requestHeaders_;
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeadersOrBuilder> 
+        getRequestHeadersOrBuilderList() {
+      return requestHeaders_;
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+     */
+    @java.lang.Override
+    public int getRequestHeadersCount() {
+      return requestHeaders_.size();
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders getRequestHeaders(int index) {
+      return requestHeaders_.get(index);
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeadersOrBuilder getRequestHeadersOrBuilder(
+        int index) {
+      return requestHeaders_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getSegmentInfo());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, urlHost_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, urlPath_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBool(4, useHttps_);
+      }
+      for (int i = 0; i < requestHeaders_.size(); i++) {
+        output.writeMessage(5, requestHeaders_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSegmentInfo());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, urlHost_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, urlPath_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, useHttps_);
+      }
+      for (int i = 0; i < requestHeaders_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, requestHeaders_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo)) {
+        return super.equals(obj);
+      }
+      SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo other = (SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo) obj;
+
+      if (hasSegmentInfo() != other.hasSegmentInfo()) return false;
+      if (hasSegmentInfo()) {
+        if (!getSegmentInfo()
+            .equals(other.getSegmentInfo())) return false;
+      }
+      if (hasUrlHost() != other.hasUrlHost()) return false;
+      if (hasUrlHost()) {
+        if (!getUrlHost()
+            .equals(other.getUrlHost())) return false;
+      }
+      if (hasUrlPath() != other.hasUrlPath()) return false;
+      if (hasUrlPath()) {
+        if (!getUrlPath()
+            .equals(other.getUrlPath())) return false;
+      }
+      if (hasUseHttps() != other.hasUseHttps()) return false;
+      if (hasUseHttps()) {
+        if (getUseHttps()
+            != other.getUseHttps()) return false;
+      }
+      if (!getRequestHeadersList()
+          .equals(other.getRequestHeadersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSegmentInfo()) {
+        hash = (37 * hash) + SEGMENT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentInfo().hashCode();
+      }
+      if (hasUrlHost()) {
+        hash = (37 * hash) + URL_HOST_FIELD_NUMBER;
+        hash = (53 * hash) + getUrlHost().hashCode();
+      }
+      if (hasUrlPath()) {
+        hash = (37 * hash) + URL_PATH_FIELD_NUMBER;
+        hash = (53 * hash) + getUrlPath().hashCode();
+      }
+      if (hasUseHttps()) {
+        hash = (37 * hash) + USE_HTTPS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUseHttps());
+      }
+      if (getRequestHeadersCount() > 0) {
+        hash = (37 * hash) + REQUEST_HEADERS_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestHeadersList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CVideo_GameClipSegmentUploadInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CVideo_GameClipSegmentUploadInfo)
+        SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentUploadInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentUploadInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.class, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder.class);
+      }
+
+      // Construct using SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSegmentInfoFieldBuilder();
+          getRequestHeadersFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (segmentInfoBuilder_ == null) {
+          segmentInfo_ = null;
+        } else {
+          segmentInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        urlHost_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        urlPath_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        useHttps_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (requestHeadersBuilder_ == null) {
+          requestHeaders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          requestHeadersBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_GameClipSegmentUploadInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo getDefaultInstanceForType() {
+        return SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo build() {
+        SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo buildPartial() {
+        SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo result = new SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (segmentInfoBuilder_ == null) {
+            result.segmentInfo_ = segmentInfo_;
+          } else {
+            result.segmentInfo_ = segmentInfoBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.urlHost_ = urlHost_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.urlPath_ = urlPath_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.useHttps_ = useHttps_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (requestHeadersBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            requestHeaders_ = java.util.Collections.unmodifiableList(requestHeaders_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.requestHeaders_ = requestHeaders_;
+        } else {
+          result.requestHeaders_ = requestHeadersBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo) {
+          return mergeFrom((SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo other) {
+        if (other == SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.getDefaultInstance()) return this;
+        if (other.hasSegmentInfo()) {
+          mergeSegmentInfo(other.getSegmentInfo());
+        }
+        if (other.hasUrlHost()) {
+          bitField0_ |= 0x00000002;
+          urlHost_ = other.urlHost_;
+          onChanged();
+        }
+        if (other.hasUrlPath()) {
+          bitField0_ |= 0x00000004;
+          urlPath_ = other.urlPath_;
+          onChanged();
+        }
+        if (other.hasUseHttps()) {
+          setUseHttps(other.getUseHttps());
+        }
+        if (requestHeadersBuilder_ == null) {
+          if (!other.requestHeaders_.isEmpty()) {
+            if (requestHeaders_.isEmpty()) {
+              requestHeaders_ = other.requestHeaders_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureRequestHeadersIsMutable();
+              requestHeaders_.addAll(other.requestHeaders_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.requestHeaders_.isEmpty()) {
+            if (requestHeadersBuilder_.isEmpty()) {
+              requestHeadersBuilder_.dispose();
+              requestHeadersBuilder_ = null;
+              requestHeaders_ = other.requestHeaders_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              requestHeadersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRequestHeadersFieldBuilder() : null;
+            } else {
+              requestHeadersBuilder_.addAllMessages(other.requestHeaders_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo segmentInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder> segmentInfoBuilder_;
+      /**
+       * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+       * @return Whether the segmentInfo field is set.
+       */
+      public boolean hasSegmentInfo() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+       * @return The segmentInfo.
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo getSegmentInfo() {
+        if (segmentInfoBuilder_ == null) {
+          return segmentInfo_ == null ? SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.getDefaultInstance() : segmentInfo_;
+        } else {
+          return segmentInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+       */
+      public Builder setSegmentInfo(SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo value) {
+        if (segmentInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          segmentInfo_ = value;
+          onChanged();
+        } else {
+          segmentInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+       */
+      public Builder setSegmentInfo(
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder builderForValue) {
+        if (segmentInfoBuilder_ == null) {
+          segmentInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          segmentInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+       */
+      public Builder mergeSegmentInfo(SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo value) {
+        if (segmentInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              segmentInfo_ != null &&
+              segmentInfo_ != SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.getDefaultInstance()) {
+            segmentInfo_ =
+              SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.newBuilder(segmentInfo_).mergeFrom(value).buildPartial();
+          } else {
+            segmentInfo_ = value;
+          }
+          onChanged();
+        } else {
+          segmentInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+       */
+      public Builder clearSegmentInfo() {
+        if (segmentInfoBuilder_ == null) {
+          segmentInfo_ = null;
+          onChanged();
+        } else {
+          segmentInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder getSegmentInfoBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSegmentInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder getSegmentInfoOrBuilder() {
+        if (segmentInfoBuilder_ != null) {
+          return segmentInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return segmentInfo_ == null ?
+              SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.getDefaultInstance() : segmentInfo_;
+        }
+      }
+      /**
+       * <code>optional .CVideo_GameClipSegmentInfo segment_info = 1 [(.description) = "segment ID information"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder> 
+          getSegmentInfoFieldBuilder() {
+        if (segmentInfoBuilder_ == null) {
+          segmentInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfo.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentInfoOrBuilder>(
+                  getSegmentInfo(),
+                  getParentForChildren(),
+                  isClean());
+          segmentInfo_ = null;
+        }
+        return segmentInfoBuilder_;
+      }
+
+      private java.lang.Object urlHost_ = "";
+      /**
+       * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+       * @return Whether the urlHost field is set.
+       */
+      public boolean hasUrlHost() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+       * @return The urlHost.
+       */
+      public java.lang.String getUrlHost() {
+        java.lang.Object ref = urlHost_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            urlHost_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+       * @return The bytes for urlHost.
+       */
+      public com.google.protobuf.ByteString
+          getUrlHostBytes() {
+        java.lang.Object ref = urlHost_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          urlHost_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+       * @param value The urlHost to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlHost(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        urlHost_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrlHost() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        urlHost_ = getDefaultInstance().getUrlHost();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url_host = 2 [(.description) = "Host name of server to which file should be uploaded via HTTP PUT."];</code>
+       * @param value The bytes for urlHost to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlHostBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        urlHost_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object urlPath_ = "";
+      /**
+       * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+       * @return Whether the urlPath field is set.
+       */
+      public boolean hasUrlPath() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+       * @return The urlPath.
+       */
+      public java.lang.String getUrlPath() {
+        java.lang.Object ref = urlPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            urlPath_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+       * @return The bytes for urlPath.
+       */
+      public com.google.protobuf.ByteString
+          getUrlPathBytes() {
+        java.lang.Object ref = urlPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          urlPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+       * @param value The urlPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        urlPath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrlPath() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        urlPath_ = getDefaultInstance().getUrlPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url_path = 3 [(.description) = "Relative path on server to which file should be uploaded."];</code>
+       * @param value The bytes for urlPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        urlPath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean useHttps_ ;
+      /**
+       * <code>optional bool use_https = 4 [(.description) = "If true, use https, otherwise use http."];</code>
+       * @return Whether the useHttps field is set.
+       */
+      @java.lang.Override
+      public boolean hasUseHttps() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool use_https = 4 [(.description) = "If true, use https, otherwise use http."];</code>
+       * @return The useHttps.
+       */
+      @java.lang.Override
+      public boolean getUseHttps() {
+        return useHttps_;
+      }
+      /**
+       * <code>optional bool use_https = 4 [(.description) = "If true, use https, otherwise use http."];</code>
+       * @param value The useHttps to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUseHttps(boolean value) {
+        bitField0_ |= 0x00000008;
+        useHttps_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool use_https = 4 [(.description) = "If true, use https, otherwise use http."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUseHttps() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        useHttps_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders> requestHeaders_ =
+        java.util.Collections.emptyList();
+      private void ensureRequestHeadersIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          requestHeaders_ = new java.util.ArrayList<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders>(requestHeaders_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeadersOrBuilder> requestHeadersBuilder_;
+
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders> getRequestHeadersList() {
+        if (requestHeadersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(requestHeaders_);
+        } else {
+          return requestHeadersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public int getRequestHeadersCount() {
+        if (requestHeadersBuilder_ == null) {
+          return requestHeaders_.size();
+        } else {
+          return requestHeadersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders getRequestHeaders(int index) {
+        if (requestHeadersBuilder_ == null) {
+          return requestHeaders_.get(index);
+        } else {
+          return requestHeadersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public Builder setRequestHeaders(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders value) {
+        if (requestHeadersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestHeadersIsMutable();
+          requestHeaders_.set(index, value);
+          onChanged();
+        } else {
+          requestHeadersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public Builder setRequestHeaders(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder builderForValue) {
+        if (requestHeadersBuilder_ == null) {
+          ensureRequestHeadersIsMutable();
+          requestHeaders_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestHeadersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public Builder addRequestHeaders(SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders value) {
+        if (requestHeadersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestHeadersIsMutable();
+          requestHeaders_.add(value);
+          onChanged();
+        } else {
+          requestHeadersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public Builder addRequestHeaders(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders value) {
+        if (requestHeadersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestHeadersIsMutable();
+          requestHeaders_.add(index, value);
+          onChanged();
+        } else {
+          requestHeadersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public Builder addRequestHeaders(
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder builderForValue) {
+        if (requestHeadersBuilder_ == null) {
+          ensureRequestHeadersIsMutable();
+          requestHeaders_.add(builderForValue.build());
+          onChanged();
+        } else {
+          requestHeadersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public Builder addRequestHeaders(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder builderForValue) {
+        if (requestHeadersBuilder_ == null) {
+          ensureRequestHeadersIsMutable();
+          requestHeaders_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestHeadersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public Builder addAllRequestHeaders(
+          java.lang.Iterable<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders> values) {
+        if (requestHeadersBuilder_ == null) {
+          ensureRequestHeadersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, requestHeaders_);
+          onChanged();
+        } else {
+          requestHeadersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public Builder clearRequestHeaders() {
+        if (requestHeadersBuilder_ == null) {
+          requestHeaders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          requestHeadersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public Builder removeRequestHeaders(int index) {
+        if (requestHeadersBuilder_ == null) {
+          ensureRequestHeadersIsMutable();
+          requestHeaders_.remove(index);
+          onChanged();
+        } else {
+          requestHeadersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder getRequestHeadersBuilder(
+          int index) {
+        return getRequestHeadersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeadersOrBuilder getRequestHeadersOrBuilder(
+          int index) {
+        if (requestHeadersBuilder_ == null) {
+          return requestHeaders_.get(index);  } else {
+          return requestHeadersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeadersOrBuilder> 
+           getRequestHeadersOrBuilderList() {
+        if (requestHeadersBuilder_ != null) {
+          return requestHeadersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(requestHeaders_);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder addRequestHeadersBuilder() {
+        return getRequestHeadersFieldBuilder().addBuilder(
+            SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder addRequestHeadersBuilder(
+          int index) {
+        return getRequestHeadersFieldBuilder().addBuilder(
+            index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo.HTTPHeaders request_headers = 5 [(.description) = "Name-value pairs to be sent in HTTP PUT request."];</code>
+       */
+      public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder> 
+           getRequestHeadersBuilderList() {
+        return getRequestHeadersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeadersOrBuilder> 
+          getRequestHeadersFieldBuilder() {
+        if (requestHeadersBuilder_ == null) {
+          requestHeadersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeaders.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.HTTPHeadersOrBuilder>(
+                  requestHeaders_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          requestHeaders_ = null;
+        }
+        return requestHeadersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CVideo_GameClipSegmentUploadInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:CVideo_GameClipSegmentUploadInfo)
+    private static final SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo();
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CVideo_GameClipSegmentUploadInfo>
+        PARSER = new com.google.protobuf.AbstractParser<CVideo_GameClipSegmentUploadInfo>() {
+      @java.lang.Override
+      public CVideo_GameClipSegmentUploadInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CVideo_GameClipSegmentUploadInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVideo_GameClipSegmentUploadInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVideo_GameClipSegmentUploadInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CVideo_BeginGameClipSegmentsUpload_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CVideo_BeginGameClipSegmentsUpload_Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+     */
+    java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo> 
+        getSegmentsNeededList();
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo getSegmentsNeeded(int index);
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+     */
+    int getSegmentsNeededCount();
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+     */
+    java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfoOrBuilder> 
+        getSegmentsNeededOrBuilderList();
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+     */
+    SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfoOrBuilder getSegmentsNeededOrBuilder(
+        int index);
+
+    /**
+     * <code>optional bool call_again = 2 [(.description) = "If true, you should ask again once you&#92;'ve uploaded the segments indicated in this response. There may be more we want. If there was no work to do in this response, then wait a few seconds before asking again"];</code>
+     * @return Whether the callAgain field is set.
+     */
+    boolean hasCallAgain();
+    /**
+     * <code>optional bool call_again = 2 [(.description) = "If true, you should ask again once you&#92;'ve uploaded the segments indicated in this response. There may be more we want. If there was no work to do in this response, then wait a few seconds before asking again"];</code>
+     * @return The callAgain.
+     */
+    boolean getCallAgain();
+  }
+  /**
+   * Protobuf type {@code CVideo_BeginGameClipSegmentsUpload_Response}
+   */
+  public static final class CVideo_BeginGameClipSegmentsUpload_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CVideo_BeginGameClipSegmentsUpload_Response)
+      CVideo_BeginGameClipSegmentsUpload_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVideo_BeginGameClipSegmentsUpload_Response.newBuilder() to construct.
+    private CVideo_BeginGameClipSegmentsUpload_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVideo_BeginGameClipSegmentsUpload_Response() {
+      segmentsNeeded_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVideo_BeginGameClipSegmentsUpload_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CVideo_BeginGameClipSegmentsUpload_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                segmentsNeeded_ = new java.util.ArrayList<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              segmentsNeeded_.add(
+                  input.readMessage(SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.PARSER, extensionRegistry));
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              callAgain_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          segmentsNeeded_ = java.util.Collections.unmodifiableList(segmentsNeeded_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_BeginGameClipSegmentsUpload_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_BeginGameClipSegmentsUpload_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response.class, SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SEGMENTS_NEEDED_FIELD_NUMBER = 1;
+    private java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo> segmentsNeeded_;
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo> getSegmentsNeededList() {
+      return segmentsNeeded_;
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfoOrBuilder> 
+        getSegmentsNeededOrBuilderList() {
+      return segmentsNeeded_;
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+     */
+    @java.lang.Override
+    public int getSegmentsNeededCount() {
+      return segmentsNeeded_.size();
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo getSegmentsNeeded(int index) {
+      return segmentsNeeded_.get(index);
+    }
+    /**
+     * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+     */
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfoOrBuilder getSegmentsNeededOrBuilder(
+        int index) {
+      return segmentsNeeded_.get(index);
+    }
+
+    public static final int CALL_AGAIN_FIELD_NUMBER = 2;
+    private boolean callAgain_;
+    /**
+     * <code>optional bool call_again = 2 [(.description) = "If true, you should ask again once you&#92;'ve uploaded the segments indicated in this response. There may be more we want. If there was no work to do in this response, then wait a few seconds before asking again"];</code>
+     * @return Whether the callAgain field is set.
+     */
+    @java.lang.Override
+    public boolean hasCallAgain() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool call_again = 2 [(.description) = "If true, you should ask again once you&#92;'ve uploaded the segments indicated in this response. There may be more we want. If there was no work to do in this response, then wait a few seconds before asking again"];</code>
+     * @return The callAgain.
+     */
+    @java.lang.Override
+    public boolean getCallAgain() {
+      return callAgain_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < segmentsNeeded_.size(); i++) {
+        output.writeMessage(1, segmentsNeeded_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(2, callAgain_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < segmentsNeeded_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, segmentsNeeded_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, callAgain_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response other = (SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response) obj;
+
+      if (!getSegmentsNeededList()
+          .equals(other.getSegmentsNeededList())) return false;
+      if (hasCallAgain() != other.hasCallAgain()) return false;
+      if (hasCallAgain()) {
+        if (getCallAgain()
+            != other.getCallAgain()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSegmentsNeededCount() > 0) {
+        hash = (37 * hash) + SEGMENTS_NEEDED_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentsNeededList().hashCode();
+      }
+      if (hasCallAgain()) {
+        hash = (37 * hash) + CALL_AGAIN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCallAgain());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CVideo_BeginGameClipSegmentsUpload_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CVideo_BeginGameClipSegmentsUpload_Response)
+        SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_BeginGameClipSegmentsUpload_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_BeginGameClipSegmentsUpload_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response.class, SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSegmentsNeededFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (segmentsNeededBuilder_ == null) {
+          segmentsNeeded_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          segmentsNeededBuilder_.clear();
+        }
+        callAgain_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_BeginGameClipSegmentsUpload_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response getDefaultInstanceForType() {
+        return SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response build() {
+        SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response buildPartial() {
+        SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response result = new SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (segmentsNeededBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            segmentsNeeded_ = java.util.Collections.unmodifiableList(segmentsNeeded_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.segmentsNeeded_ = segmentsNeeded_;
+        } else {
+          result.segmentsNeeded_ = segmentsNeededBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.callAgain_ = callAgain_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response) {
+          return mergeFrom((SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response other) {
+        if (other == SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response.getDefaultInstance()) return this;
+        if (segmentsNeededBuilder_ == null) {
+          if (!other.segmentsNeeded_.isEmpty()) {
+            if (segmentsNeeded_.isEmpty()) {
+              segmentsNeeded_ = other.segmentsNeeded_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSegmentsNeededIsMutable();
+              segmentsNeeded_.addAll(other.segmentsNeeded_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.segmentsNeeded_.isEmpty()) {
+            if (segmentsNeededBuilder_.isEmpty()) {
+              segmentsNeededBuilder_.dispose();
+              segmentsNeededBuilder_ = null;
+              segmentsNeeded_ = other.segmentsNeeded_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              segmentsNeededBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSegmentsNeededFieldBuilder() : null;
+            } else {
+              segmentsNeededBuilder_.addAllMessages(other.segmentsNeeded_);
+            }
+          }
+        }
+        if (other.hasCallAgain()) {
+          setCallAgain(other.getCallAgain());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo> segmentsNeeded_ =
+        java.util.Collections.emptyList();
+      private void ensureSegmentsNeededIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          segmentsNeeded_ = new java.util.ArrayList<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo>(segmentsNeeded_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfoOrBuilder> segmentsNeededBuilder_;
+
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo> getSegmentsNeededList() {
+        if (segmentsNeededBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(segmentsNeeded_);
+        } else {
+          return segmentsNeededBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public int getSegmentsNeededCount() {
+        if (segmentsNeededBuilder_ == null) {
+          return segmentsNeeded_.size();
+        } else {
+          return segmentsNeededBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo getSegmentsNeeded(int index) {
+        if (segmentsNeededBuilder_ == null) {
+          return segmentsNeeded_.get(index);
+        } else {
+          return segmentsNeededBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public Builder setSegmentsNeeded(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo value) {
+        if (segmentsNeededBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSegmentsNeededIsMutable();
+          segmentsNeeded_.set(index, value);
+          onChanged();
+        } else {
+          segmentsNeededBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public Builder setSegmentsNeeded(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder builderForValue) {
+        if (segmentsNeededBuilder_ == null) {
+          ensureSegmentsNeededIsMutable();
+          segmentsNeeded_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          segmentsNeededBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public Builder addSegmentsNeeded(SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo value) {
+        if (segmentsNeededBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSegmentsNeededIsMutable();
+          segmentsNeeded_.add(value);
+          onChanged();
+        } else {
+          segmentsNeededBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public Builder addSegmentsNeeded(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo value) {
+        if (segmentsNeededBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSegmentsNeededIsMutable();
+          segmentsNeeded_.add(index, value);
+          onChanged();
+        } else {
+          segmentsNeededBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public Builder addSegmentsNeeded(
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder builderForValue) {
+        if (segmentsNeededBuilder_ == null) {
+          ensureSegmentsNeededIsMutable();
+          segmentsNeeded_.add(builderForValue.build());
+          onChanged();
+        } else {
+          segmentsNeededBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public Builder addSegmentsNeeded(
+          int index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder builderForValue) {
+        if (segmentsNeededBuilder_ == null) {
+          ensureSegmentsNeededIsMutable();
+          segmentsNeeded_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          segmentsNeededBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public Builder addAllSegmentsNeeded(
+          java.lang.Iterable<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo> values) {
+        if (segmentsNeededBuilder_ == null) {
+          ensureSegmentsNeededIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, segmentsNeeded_);
+          onChanged();
+        } else {
+          segmentsNeededBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public Builder clearSegmentsNeeded() {
+        if (segmentsNeededBuilder_ == null) {
+          segmentsNeeded_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          segmentsNeededBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public Builder removeSegmentsNeeded(int index) {
+        if (segmentsNeededBuilder_ == null) {
+          ensureSegmentsNeededIsMutable();
+          segmentsNeeded_.remove(index);
+          onChanged();
+        } else {
+          segmentsNeededBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder getSegmentsNeededBuilder(
+          int index) {
+        return getSegmentsNeededFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfoOrBuilder getSegmentsNeededOrBuilder(
+          int index) {
+        if (segmentsNeededBuilder_ == null) {
+          return segmentsNeeded_.get(index);  } else {
+          return segmentsNeededBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public java.util.List<? extends SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfoOrBuilder> 
+           getSegmentsNeededOrBuilderList() {
+        if (segmentsNeededBuilder_ != null) {
+          return segmentsNeededBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(segmentsNeeded_);
+        }
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder addSegmentsNeededBuilder() {
+        return getSegmentsNeededFieldBuilder().addBuilder(
+            SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder addSegmentsNeededBuilder(
+          int index) {
+        return getSegmentsNeededFieldBuilder().addBuilder(
+            index, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CVideo_GameClipSegmentUploadInfo segments_needed = 1 [(.description) = "Segments that need uploading"];</code>
+       */
+      public java.util.List<SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder> 
+           getSegmentsNeededBuilderList() {
+        return getSegmentsNeededFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfoOrBuilder> 
+          getSegmentsNeededFieldBuilder() {
+        if (segmentsNeededBuilder_ == null) {
+          segmentsNeededBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfo.Builder, SteammessagesVideoSteamclient.CVideo_GameClipSegmentUploadInfoOrBuilder>(
+                  segmentsNeeded_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          segmentsNeeded_ = null;
+        }
+        return segmentsNeededBuilder_;
+      }
+
+      private boolean callAgain_ ;
+      /**
+       * <code>optional bool call_again = 2 [(.description) = "If true, you should ask again once you&#92;'ve uploaded the segments indicated in this response. There may be more we want. If there was no work to do in this response, then wait a few seconds before asking again"];</code>
+       * @return Whether the callAgain field is set.
+       */
+      @java.lang.Override
+      public boolean hasCallAgain() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool call_again = 2 [(.description) = "If true, you should ask again once you&#92;'ve uploaded the segments indicated in this response. There may be more we want. If there was no work to do in this response, then wait a few seconds before asking again"];</code>
+       * @return The callAgain.
+       */
+      @java.lang.Override
+      public boolean getCallAgain() {
+        return callAgain_;
+      }
+      /**
+       * <code>optional bool call_again = 2 [(.description) = "If true, you should ask again once you&#92;'ve uploaded the segments indicated in this response. There may be more we want. If there was no work to do in this response, then wait a few seconds before asking again"];</code>
+       * @param value The callAgain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallAgain(boolean value) {
+        bitField0_ |= 0x00000002;
+        callAgain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool call_again = 2 [(.description) = "If true, you should ask again once you&#92;'ve uploaded the segments indicated in this response. There may be more we want. If there was no work to do in this response, then wait a few seconds before asking again"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallAgain() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        callAgain_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CVideo_BeginGameClipSegmentsUpload_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CVideo_BeginGameClipSegmentsUpload_Response)
+    private static final SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response();
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CVideo_BeginGameClipSegmentsUpload_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CVideo_BeginGameClipSegmentsUpload_Response>() {
+      @java.lang.Override
+      public CVideo_BeginGameClipSegmentsUpload_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CVideo_BeginGameClipSegmentsUpload_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVideo_BeginGameClipSegmentsUpload_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVideo_BeginGameClipSegmentsUpload_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_BeginGameClipSegmentsUpload_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CVideo_CommitGameClipSegmentsUpload_RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CVideo_CommitGameClipSegmentsUpload_Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+     * @return Whether the clipId field is set.
+     */
+    boolean hasClipId();
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+     * @return The clipId.
+     */
+    long getClipId();
+
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return Whether the componentName field is set.
+     */
+    boolean hasComponentName();
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return Whether the representationName field is set.
+     */
+    boolean hasRepresentationName();
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return The representationName.
+     */
+    java.lang.String getRepresentationName();
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return The bytes for representationName.
+     */
+    com.google.protobuf.ByteString
+        getRepresentationNameBytes();
+
+    /**
+     * <code>optional uint32 first_segment_number = 4 [(.description) = "Segment Number of first segment uploaded in this batch"];</code>
+     * @return Whether the firstSegmentNumber field is set.
+     */
+    boolean hasFirstSegmentNumber();
+    /**
+     * <code>optional uint32 first_segment_number = 4 [(.description) = "Segment Number of first segment uploaded in this batch"];</code>
+     * @return The firstSegmentNumber.
+     */
+    int getFirstSegmentNumber();
+
+    /**
+     * <code>optional uint32 num_segments = 5 [(.description) = "Number of segments in Batch"];</code>
+     * @return Whether the numSegments field is set.
+     */
+    boolean hasNumSegments();
+    /**
+     * <code>optional uint32 num_segments = 5 [(.description) = "Number of segments in Batch"];</code>
+     * @return The numSegments.
+     */
+    int getNumSegments();
+
+    /**
+     * <code>optional uint32 upload_result = 6 [(.description) = "eresult of the upload attempt"];</code>
+     * @return Whether the uploadResult field is set.
+     */
+    boolean hasUploadResult();
+    /**
+     * <code>optional uint32 upload_result = 6 [(.description) = "eresult of the upload attempt"];</code>
+     * @return The uploadResult.
+     */
+    int getUploadResult();
+  }
+  /**
+   * Protobuf type {@code CVideo_CommitGameClipSegmentsUpload_Request}
+   */
+  public static final class CVideo_CommitGameClipSegmentsUpload_Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CVideo_CommitGameClipSegmentsUpload_Request)
+      CVideo_CommitGameClipSegmentsUpload_RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVideo_CommitGameClipSegmentsUpload_Request.newBuilder() to construct.
+    private CVideo_CommitGameClipSegmentsUpload_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVideo_CommitGameClipSegmentsUpload_Request() {
+      componentName_ = "";
+      representationName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVideo_CommitGameClipSegmentsUpload_Request();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CVideo_CommitGameClipSegmentsUpload_Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              clipId_ = input.readUInt64();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              componentName_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              representationName_ = bs;
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              firstSegmentNumber_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              numSegments_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              uploadResult_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_CommitGameClipSegmentsUpload_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_CommitGameClipSegmentsUpload_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request.class, SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLIP_ID_FIELD_NUMBER = 1;
+    private long clipId_;
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+     * @return Whether the clipId field is set.
+     */
+    @java.lang.Override
+    public boolean hasClipId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+     * @return The clipId.
+     */
+    @java.lang.Override
+    public long getClipId() {
+      return clipId_;
+    }
+
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object componentName_;
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return Whether the componentName field is set.
+     */
+    @java.lang.Override
+    public boolean hasComponentName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      java.lang.Object ref = componentName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          componentName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      java.lang.Object ref = componentName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        componentName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REPRESENTATION_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object representationName_;
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return Whether the representationName field is set.
+     */
+    @java.lang.Override
+    public boolean hasRepresentationName() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return The representationName.
+     */
+    @java.lang.Override
+    public java.lang.String getRepresentationName() {
+      java.lang.Object ref = representationName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          representationName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+     * @return The bytes for representationName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRepresentationNameBytes() {
+      java.lang.Object ref = representationName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        representationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FIRST_SEGMENT_NUMBER_FIELD_NUMBER = 4;
+    private int firstSegmentNumber_;
+    /**
+     * <code>optional uint32 first_segment_number = 4 [(.description) = "Segment Number of first segment uploaded in this batch"];</code>
+     * @return Whether the firstSegmentNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstSegmentNumber() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional uint32 first_segment_number = 4 [(.description) = "Segment Number of first segment uploaded in this batch"];</code>
+     * @return The firstSegmentNumber.
+     */
+    @java.lang.Override
+    public int getFirstSegmentNumber() {
+      return firstSegmentNumber_;
+    }
+
+    public static final int NUM_SEGMENTS_FIELD_NUMBER = 5;
+    private int numSegments_;
+    /**
+     * <code>optional uint32 num_segments = 5 [(.description) = "Number of segments in Batch"];</code>
+     * @return Whether the numSegments field is set.
+     */
+    @java.lang.Override
+    public boolean hasNumSegments() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional uint32 num_segments = 5 [(.description) = "Number of segments in Batch"];</code>
+     * @return The numSegments.
+     */
+    @java.lang.Override
+    public int getNumSegments() {
+      return numSegments_;
+    }
+
+    public static final int UPLOAD_RESULT_FIELD_NUMBER = 6;
+    private int uploadResult_;
+    /**
+     * <code>optional uint32 upload_result = 6 [(.description) = "eresult of the upload attempt"];</code>
+     * @return Whether the uploadResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasUploadResult() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional uint32 upload_result = 6 [(.description) = "eresult of the upload attempt"];</code>
+     * @return The uploadResult.
+     */
+    @java.lang.Override
+    public int getUploadResult() {
+      return uploadResult_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, clipId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, componentName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, representationName_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeUInt32(4, firstSegmentNumber_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeUInt32(5, numSegments_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeUInt32(6, uploadResult_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, clipId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, componentName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, representationName_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, firstSegmentNumber_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, numSegments_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, uploadResult_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request)) {
+        return super.equals(obj);
+      }
+      SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request other = (SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request) obj;
+
+      if (hasClipId() != other.hasClipId()) return false;
+      if (hasClipId()) {
+        if (getClipId()
+            != other.getClipId()) return false;
+      }
+      if (hasComponentName() != other.hasComponentName()) return false;
+      if (hasComponentName()) {
+        if (!getComponentName()
+            .equals(other.getComponentName())) return false;
+      }
+      if (hasRepresentationName() != other.hasRepresentationName()) return false;
+      if (hasRepresentationName()) {
+        if (!getRepresentationName()
+            .equals(other.getRepresentationName())) return false;
+      }
+      if (hasFirstSegmentNumber() != other.hasFirstSegmentNumber()) return false;
+      if (hasFirstSegmentNumber()) {
+        if (getFirstSegmentNumber()
+            != other.getFirstSegmentNumber()) return false;
+      }
+      if (hasNumSegments() != other.hasNumSegments()) return false;
+      if (hasNumSegments()) {
+        if (getNumSegments()
+            != other.getNumSegments()) return false;
+      }
+      if (hasUploadResult() != other.hasUploadResult()) return false;
+      if (hasUploadResult()) {
+        if (getUploadResult()
+            != other.getUploadResult()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClipId()) {
+        hash = (37 * hash) + CLIP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getClipId());
+      }
+      if (hasComponentName()) {
+        hash = (37 * hash) + COMPONENT_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getComponentName().hashCode();
+      }
+      if (hasRepresentationName()) {
+        hash = (37 * hash) + REPRESENTATION_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getRepresentationName().hashCode();
+      }
+      if (hasFirstSegmentNumber()) {
+        hash = (37 * hash) + FIRST_SEGMENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getFirstSegmentNumber();
+      }
+      if (hasNumSegments()) {
+        hash = (37 * hash) + NUM_SEGMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getNumSegments();
+      }
+      if (hasUploadResult()) {
+        hash = (37 * hash) + UPLOAD_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getUploadResult();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CVideo_CommitGameClipSegmentsUpload_Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CVideo_CommitGameClipSegmentsUpload_Request)
+        SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CommitGameClipSegmentsUpload_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CommitGameClipSegmentsUpload_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request.class, SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request.Builder.class);
+      }
+
+      // Construct using SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clipId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        componentName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        representationName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        firstSegmentNumber_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        numSegments_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        uploadResult_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CommitGameClipSegmentsUpload_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request getDefaultInstanceForType() {
+        return SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request build() {
+        SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request buildPartial() {
+        SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request result = new SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.clipId_ = clipId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.componentName_ = componentName_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.representationName_ = representationName_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.firstSegmentNumber_ = firstSegmentNumber_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.numSegments_ = numSegments_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.uploadResult_ = uploadResult_;
+          to_bitField0_ |= 0x00000020;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request) {
+          return mergeFrom((SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request other) {
+        if (other == SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request.getDefaultInstance()) return this;
+        if (other.hasClipId()) {
+          setClipId(other.getClipId());
+        }
+        if (other.hasComponentName()) {
+          bitField0_ |= 0x00000002;
+          componentName_ = other.componentName_;
+          onChanged();
+        }
+        if (other.hasRepresentationName()) {
+          bitField0_ |= 0x00000004;
+          representationName_ = other.representationName_;
+          onChanged();
+        }
+        if (other.hasFirstSegmentNumber()) {
+          setFirstSegmentNumber(other.getFirstSegmentNumber());
+        }
+        if (other.hasNumSegments()) {
+          setNumSegments(other.getNumSegments());
+        }
+        if (other.hasUploadResult()) {
+          setUploadResult(other.getUploadResult());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long clipId_ ;
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+       * @return Whether the clipId field is set.
+       */
+      @java.lang.Override
+      public boolean hasClipId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+       * @return The clipId.
+       */
+      @java.lang.Override
+      public long getClipId() {
+        return clipId_;
+      }
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+       * @param value The clipId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClipId(long value) {
+        bitField0_ |= 0x00000001;
+        clipId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 clip_id = 1 [(.description) = "Clip ID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClipId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        clipId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object componentName_ = "";
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @return Whether the componentName field is set.
+       */
+      public boolean hasComponentName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @return The componentName.
+       */
+      public java.lang.String getComponentName() {
+        java.lang.Object ref = componentName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            componentName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @return The bytes for componentName.
+       */
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        java.lang.Object ref = componentName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          componentName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        componentName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        componentName_ = getDefaultInstance().getComponentName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string component_name = 2 [(.description) = "component segments belong to"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        componentName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object representationName_ = "";
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @return Whether the representationName field is set.
+       */
+      public boolean hasRepresentationName() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @return The representationName.
+       */
+      public java.lang.String getRepresentationName() {
+        java.lang.Object ref = representationName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            representationName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @return The bytes for representationName.
+       */
+      public com.google.protobuf.ByteString
+          getRepresentationNameBytes() {
+        java.lang.Object ref = representationName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          representationName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @param value The representationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepresentationName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        representationName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRepresentationName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        representationName_ = getDefaultInstance().getRepresentationName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string representation_name = 3 [(.description) = "representation name"];</code>
+       * @param value The bytes for representationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepresentationNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        representationName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int firstSegmentNumber_ ;
+      /**
+       * <code>optional uint32 first_segment_number = 4 [(.description) = "Segment Number of first segment uploaded in this batch"];</code>
+       * @return Whether the firstSegmentNumber field is set.
+       */
+      @java.lang.Override
+      public boolean hasFirstSegmentNumber() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional uint32 first_segment_number = 4 [(.description) = "Segment Number of first segment uploaded in this batch"];</code>
+       * @return The firstSegmentNumber.
+       */
+      @java.lang.Override
+      public int getFirstSegmentNumber() {
+        return firstSegmentNumber_;
+      }
+      /**
+       * <code>optional uint32 first_segment_number = 4 [(.description) = "Segment Number of first segment uploaded in this batch"];</code>
+       * @param value The firstSegmentNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstSegmentNumber(int value) {
+        bitField0_ |= 0x00000008;
+        firstSegmentNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 first_segment_number = 4 [(.description) = "Segment Number of first segment uploaded in this batch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirstSegmentNumber() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        firstSegmentNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int numSegments_ ;
+      /**
+       * <code>optional uint32 num_segments = 5 [(.description) = "Number of segments in Batch"];</code>
+       * @return Whether the numSegments field is set.
+       */
+      @java.lang.Override
+      public boolean hasNumSegments() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional uint32 num_segments = 5 [(.description) = "Number of segments in Batch"];</code>
+       * @return The numSegments.
+       */
+      @java.lang.Override
+      public int getNumSegments() {
+        return numSegments_;
+      }
+      /**
+       * <code>optional uint32 num_segments = 5 [(.description) = "Number of segments in Batch"];</code>
+       * @param value The numSegments to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumSegments(int value) {
+        bitField0_ |= 0x00000010;
+        numSegments_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 num_segments = 5 [(.description) = "Number of segments in Batch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumSegments() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        numSegments_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int uploadResult_ ;
+      /**
+       * <code>optional uint32 upload_result = 6 [(.description) = "eresult of the upload attempt"];</code>
+       * @return Whether the uploadResult field is set.
+       */
+      @java.lang.Override
+      public boolean hasUploadResult() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint32 upload_result = 6 [(.description) = "eresult of the upload attempt"];</code>
+       * @return The uploadResult.
+       */
+      @java.lang.Override
+      public int getUploadResult() {
+        return uploadResult_;
+      }
+      /**
+       * <code>optional uint32 upload_result = 6 [(.description) = "eresult of the upload attempt"];</code>
+       * @param value The uploadResult to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadResult(int value) {
+        bitField0_ |= 0x00000020;
+        uploadResult_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 upload_result = 6 [(.description) = "eresult of the upload attempt"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUploadResult() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        uploadResult_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CVideo_CommitGameClipSegmentsUpload_Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:CVideo_CommitGameClipSegmentsUpload_Request)
+    private static final SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request();
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CVideo_CommitGameClipSegmentsUpload_Request>
+        PARSER = new com.google.protobuf.AbstractParser<CVideo_CommitGameClipSegmentsUpload_Request>() {
+      @java.lang.Override
+      public CVideo_CommitGameClipSegmentsUpload_Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CVideo_CommitGameClipSegmentsUpload_Request(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVideo_CommitGameClipSegmentsUpload_Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVideo_CommitGameClipSegmentsUpload_Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CVideo_CommitGameClipSegmentsUpload_ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CVideo_CommitGameClipSegmentsUpload_Response)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CVideo_CommitGameClipSegmentsUpload_Response}
+   */
+  public static final class CVideo_CommitGameClipSegmentsUpload_Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CVideo_CommitGameClipSegmentsUpload_Response)
+      CVideo_CommitGameClipSegmentsUpload_ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CVideo_CommitGameClipSegmentsUpload_Response.newBuilder() to construct.
+    private CVideo_CommitGameClipSegmentsUpload_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CVideo_CommitGameClipSegmentsUpload_Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CVideo_CommitGameClipSegmentsUpload_Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CVideo_CommitGameClipSegmentsUpload_Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_CommitGameClipSegmentsUpload_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesVideoSteamclient.internal_static_CVideo_CommitGameClipSegmentsUpload_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response.class, SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response)) {
+        return super.equals(obj);
+      }
+      SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response other = (SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CVideo_CommitGameClipSegmentsUpload_Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CVideo_CommitGameClipSegmentsUpload_Response)
+        SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CommitGameClipSegmentsUpload_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CommitGameClipSegmentsUpload_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response.class, SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response.Builder.class);
+      }
+
+      // Construct using SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesVideoSteamclient.internal_static_CVideo_CommitGameClipSegmentsUpload_Response_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response getDefaultInstanceForType() {
+        return SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response build() {
+        SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response buildPartial() {
+        SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response result = new SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response) {
+          return mergeFrom((SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response other) {
+        if (other == SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CVideo_CommitGameClipSegmentsUpload_Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:CVideo_CommitGameClipSegmentsUpload_Response)
+    private static final SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response();
+    }
+
+    public static SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CVideo_CommitGameClipSegmentsUpload_Response>
+        PARSER = new com.google.protobuf.AbstractParser<CVideo_CommitGameClipSegmentsUpload_Response>() {
+      @java.lang.Override
+      public CVideo_CommitGameClipSegmentsUpload_Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CVideo_CommitGameClipSegmentsUpload_Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CVideo_CommitGameClipSegmentsUpload_Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CVideo_CommitGameClipSegmentsUpload_Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesVideoSteamclient.CVideo_CommitGameClipSegmentsUpload_Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CVideo_UnlockedH264_NotificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CVideo_UnlockedH264_Notification)
       com.google.protobuf.MessageOrBuilder {
@@ -6741,6 +18118,61 @@ public final class SteammessagesVideoSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CVideo_GetVideoBookmarks_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_GameClipRepresentation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_GameClipRepresentation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_GameClipComponent_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_GameClipComponent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_CreateGameClip_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_CreateGameClip_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_CreateGameClip_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_CreateGameClip_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_GameClipSegmentInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_GameClipSegmentInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_BeginGameClipSegmentsUpload_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_BeginGameClipSegmentsUpload_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_GameClipSegmentUploadInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_GameClipSegmentUploadInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_GameClipSegmentUploadInfo_HTTPHeaders_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_GameClipSegmentUploadInfo_HTTPHeaders_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_BeginGameClipSegmentsUpload_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_BeginGameClipSegmentsUpload_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_CommitGameClipSegmentsUpload_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_CommitGameClipSegmentsUpload_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CVideo_CommitGameClipSegmentsUpload_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CVideo_CommitGameClipSegmentsUpload_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CVideo_UnlockedH264_Notification_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6765,40 +18197,121 @@ public final class SteammessagesVideoSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n+steam/steammessages_video.steamclient." +
-      "proto\0322steam/steammessages_unified_base." +
-      "steamclient.proto\"\201\001\n CVideo_ClientGetVi" +
-      "deoURL_Request\022\036\n\010video_id\030\001 \001(\004B\014\202\265\030\010Vi" +
-      "deo ID\022=\n\rclient_cellid\030\002 \001(\rB&\202\265\030\"Cell " +
-      "ID of client, zero if unknown\"r\n!CVideo_" +
-      "ClientGetVideoURL_Response\022\036\n\010video_id\030\001" +
-      " \001(\004B\014\202\265\030\010Video ID\022-\n\tvideo_url\030\002 \001(\tB\032\202" +
-      "\265\030\026URL for video manifest\"\252\004\n\rVideoBookm" +
-      "ark\022\032\n\006app_id\030\001 \001(\rB\n\202\265\030\006App ID\022]\n\034playb" +
-      "ack_position_in_seconds\030\002 \001(\rB7\202\265\0303How m" +
-      "any seconds into the video the bookmark " +
-      "is for\022/\n\016video_track_id\030\003 \001(\004B\027\202\265\030\023vide" +
-      "o track choice.\022/\n\016audio_track_id\030\004 \001(\004B" +
-      "\027\202\265\030\023audio track choice.\022C\n\022timedtext_tr" +
-      "ack_id\030\005 \001(\004B\'\202\265\030#timedtimed or subtitle" +
-      " track choice\022O\n\rlast_modified\030\006 \001(\rB8\202\265" +
-      "\0304when we recorded it was last modified." +
-      " Not settable.\022U\n\027hide_from_watch_histor" +
-      "y\030\007 \001(\010:\005falseB-\202\265\030)Whether I want to sh" +
-      "ow this in my history\022O\n\021hide_from_libra" +
-      "ry\030\010 \001(\010:\005falseB-\202\265\030)Whether I want to s" +
-      "how this in my library\"r\n$CVideo_SetVide" +
-      "oBookmark_Notification\022J\n\tbookmarks\030\001 \003(" +
-      "\0132\016.VideoBookmarkB\'\202\265\030#list of bookmarks" +
-      " we want to store.\"\201\002\n CVideo_GetVideoBo" +
-      "okmarks_Request\022_\n\006appids\030\001 \003(\rBO\202\265\030KLis" +
-      "t of App IDs to grab bookmarks for. Can " +
-      "be empty if using updated_since.\022|\n\rupda" +
-      "ted_since\030\002 \001(\rBe\202\265\030aOnly return results" +
-      " after time. Min value is 1. (seconds si" +
-      "nce epoch January 1st, 1970 Unix Time)\"u" +
-      "\n!CVideo_GetVideoBookmarks_Response\022P\n\tb" +
-      "ookmarks\030\001 \003(\0132\016.VideoBookmarkB-\202\265\030)List" +
-      " of bookmarks we found. Can be empty.\":\n" +
+      "proto\032\036steam/steammessages_base.proto\0322s" +
+      "team/steammessages_unified_base.steamcli" +
+      "ent.proto\"\201\001\n CVideo_ClientGetVideoURL_R" +
+      "equest\022\036\n\010video_id\030\001 \001(\004B\014\202\265\030\010Video ID\022=" +
+      "\n\rclient_cellid\030\002 \001(\rB&\202\265\030\"Cell ID of cl" +
+      "ient, zero if unknown\"r\n!CVideo_ClientGe" +
+      "tVideoURL_Response\022\036\n\010video_id\030\001 \001(\004B\014\202\265" +
+      "\030\010Video ID\022-\n\tvideo_url\030\002 \001(\tB\032\202\265\030\026URL f" +
+      "or video manifest\"\252\004\n\rVideoBookmark\022\032\n\006a" +
+      "pp_id\030\001 \001(\rB\n\202\265\030\006App ID\022]\n\034playback_posi" +
+      "tion_in_seconds\030\002 \001(\rB7\202\265\0303How many seco" +
+      "nds into the video the bookmark is for\022/" +
+      "\n\016video_track_id\030\003 \001(\004B\027\202\265\030\023video track " +
+      "choice.\022/\n\016audio_track_id\030\004 \001(\004B\027\202\265\030\023aud" +
+      "io track choice.\022C\n\022timedtext_track_id\030\005" +
+      " \001(\004B\'\202\265\030#timedtimed or subtitle track c" +
+      "hoice\022O\n\rlast_modified\030\006 \001(\rB8\202\265\0304when w" +
+      "e recorded it was last modified. Not set" +
+      "table.\022U\n\027hide_from_watch_history\030\007 \001(\010:" +
+      "\005falseB-\202\265\030)Whether I want to show this " +
+      "in my history\022O\n\021hide_from_library\030\010 \001(\010" +
+      ":\005falseB-\202\265\030)Whether I want to show this" +
+      " in my library\"r\n$CVideo_SetVideoBookmar" +
+      "k_Notification\022J\n\tbookmarks\030\001 \003(\0132\016.Vide" +
+      "oBookmarkB\'\202\265\030#list of bookmarks we want" +
+      " to store.\"\201\002\n CVideo_GetVideoBookmarks_" +
+      "Request\022_\n\006appids\030\001 \003(\rBO\202\265\030KList of App" +
+      " IDs to grab bookmarks for. Can be empty" +
+      " if using updated_since.\022|\n\rupdated_sinc" +
+      "e\030\002 \001(\rBe\202\265\030aOnly return results after t" +
+      "ime. Min value is 1. (seconds since epoc" +
+      "h January 1st, 1970 Unix Time)\"u\n!CVideo" +
+      "_GetVideoBookmarks_Response\022P\n\tbookmarks" +
+      "\030\001 \003(\0132\016.VideoBookmarkB-\202\265\030)List of book" +
+      "marks we found. Can be empty.\"\227\004\n\035CVideo" +
+      "_GameClipRepresentation\022*\n\023representatio" +
+      "n_name\030\002 \001(\tB\r\202\265\030\tEG 480p30\022D\n\025horizonta" +
+      "l_resolution\030\003 \001(\rB%\202\265\030!Width in pixels " +
+      "if contains video\022C\n\023vertical_resolution" +
+      "\030\004 \001(\rB&\202\265\030\"Height in pixels if contains" +
+      " video\0224\n\nframe_rate\030\005 \001(\001B \202\265\030\034Frame Ra" +
+      "te if contains video\022\033\n\tbandwidth\030\006 \001(\rB" +
+      "\010\202\265\030\004Kbps\022B\n\021audio_sample_rate\030\007 \001(\rB\'\202\265" +
+      "\030#Sample rate in Hz if contains audio\022B\n" +
+      "\021frame_rate_string\030\010 \001(\tB\'\202\265\030#Frame Rate" +
+      " string if contains video\022 \n\005codec\030\t \001(\t" +
+      "B\021\202\265\030\rcodec(s) used\022B\n\024audio_channel_con" +
+      "fig\030\n \001(\rB$\202\265\030 audio channel config if r" +
+      "elevant\"\261\002\n\030CVideo_GameClipComponent\022+\n\016" +
+      "component_name\030\001 \001(\tB\023\202\265\030\017video/audio/et" +
+      "c\022)\n\010contents\030\002 \001(\rB\027\202\265\030\023EVideoTrackCont" +
+      "ents\022E\n\014segment_size\030\003 \001(\rB/\202\265\030+size of " +
+      "most segments (last may be shorter)\022 \n\tf" +
+      "ile_type\030\004 \001(\tB\r\202\265\030\tfile type\022T\n\017represe" +
+      "ntations\030\005 \003(\0132\036.CVideo_GameClipRepresen" +
+      "tationB\033\202\265\030\027list of representations\"\343\003\n\035" +
+      "CVideo_CreateGameClip_Request\0220\n\006app_id\030" +
+      "\001 \001(\rB \202\265\030\034app ID stream is tagged with\022" +
+      "9\n\014num_segments\030\002 \001(\rB#\202\265\030\037number of seg" +
+      "ments in this clip\0226\n\023length_millisecond" +
+      "s\030\003 \001(\rB\031\202\265\030\025length of video in ms\022t\n\032se" +
+      "gment_duration_timescale\030\004 \001(\rBP\202\265\030Ltime" +
+      "scale (denominator) for segment duration" +
+      " below, eg 1000 for milliseconds\022`\n\020segm" +
+      "ent_duration\030\005 \001(\rBF\202\265\030Blength of most s" +
+      "egments in \'timescale\' units (last may b" +
+      "e shorter)\022E\n\ncomponents\030\006 \003(\0132\031.CVideo_" +
+      "GameClipComponentB\026\202\265\030\022List of component" +
+      "s\"L\n\036CVideo_CreateGameClip_Response\022*\n\007c" +
+      "lip_id\030\001 \001(\004B\031\202\265\030\025Clip ID if successful\"" +
+      "\177\n\032CVideo_GameClipSegmentInfo\022*\n\016segment" +
+      "_number\030\004 \001(\rB\022\202\265\030\016segment number\0225\n\022seg" +
+      "ment_size_bytes\030\005 \001(\004B\031\202\265\030\025segment size " +
+      "in bytes\"\231\002\n*CVideo_BeginGameClipSegment" +
+      "sUpload_Request\022\034\n\007clip_id\030\001 \001(\004B\013\202\265\030\007Cl" +
+      "ip ID\0228\n\016component_name\030\002 \001(\tB \202\265\030\034compo" +
+      "nent segments belong to\0224\n\023representatio" +
+      "n_name\030\003 \001(\tB\027\202\265\030\023representation name\022]\n" +
+      "\021segments_to_store\030\004 \003(\0132\033.CVideo_GameCl" +
+      "ipSegmentInfoB%\202\265\030!Segments the client h" +
+      "as to upload\"\263\004\n CVideo_GameClipSegmentU" +
+      "ploadInfo\022M\n\014segment_info\030\001 \001(\0132\033.CVideo" +
+      "_GameClipSegmentInfoB\032\202\265\030\026segment ID inf" +
+      "ormation\022X\n\010url_host\030\002 \001(\tBF\202\265\030BHost nam" +
+      "e of server to which file should be uplo" +
+      "aded via HTTP PUT.\022O\n\010url_path\030\003 \001(\tB=\202\265" +
+      "\0309Relative path on server to which file " +
+      "should be uploaded.\022>\n\tuse_https\030\004 \001(\010B+" +
+      "\202\265\030\'If true, use https, otherwise use ht" +
+      "tp.\022|\n\017request_headers\030\005 \003(\0132-.CVideo_Ga" +
+      "meClipSegmentUploadInfo.HTTPHeadersB4\202\265\030" +
+      "0Name-value pairs to be sent in HTTP PUT" +
+      " request.\032W\n\013HTTPHeaders\022\"\n\004name\030\001 \001(\tB\024" +
+      "\202\265\030\020HTTP header name\022$\n\005value\030\002 \001(\tB\025\202\265\030" +
+      "\021HTTP header value\"\367\002\n+CVideo_BeginGameC" +
+      "lipSegmentsUpload_Response\022\\\n\017segments_n" +
+      "eeded\030\001 \003(\0132!.CVideo_GameClipSegmentUplo" +
+      "adInfoB \202\265\030\034Segments that need uploading" +
+      "\022\351\001\n\ncall_again\030\002 \001(\010B\324\001\202\265\030\317\001If true, yo" +
+      "u should ask again once you\'ve uploaded " +
+      "the segments indicated in this response." +
+      " There may be more we want. If there was" +
+      " no work to do in this response, then wa" +
+      "it a few seconds before asking again\"\206\003\n" +
+      "+CVideo_CommitGameClipSegmentsUpload_Req" +
+      "uest\022\034\n\007clip_id\030\001 \001(\004B\013\202\265\030\007Clip ID\0228\n\016co" +
+      "mponent_name\030\002 \001(\tB \202\265\030\034component segmen" +
+      "ts belong to\0224\n\023representation_name\030\003 \001(" +
+      "\tB\027\202\265\030\023representation name\022X\n\024first_segm" +
+      "ent_number\030\004 \001(\rB:\202\265\0306Segment Number of " +
+      "first segment uploaded in this batch\0225\n\014" +
+      "num_segments\030\005 \001(\rB\037\202\265\030\033Number of segmen" +
+      "ts in Batch\0228\n\rupload_result\030\006 \001(\rB!\202\265\030\035" +
+      "eresult of the upload attempt\".\n,CVideo_" +
+      "CommitGameClipSegmentsUpload_Response\":\n" +
       " CVideo_UnlockedH264_Notification\022\026\n\016enc" +
       "ryption_key\030\001 \001(\014\"\205\001\n(CFovasVideo_Client" +
       "GetOPFSettings_Request\022\032\n\006app_id\030\001 \001(\rB\n" +
@@ -6807,7 +18320,7 @@ public final class SteammessagesVideoSteamclient {
       "vasVideo_ClientGetOPFSettings_Response\022\032" +
       "\n\006app_id\030\001 \001(\rB\n\202\265\030\006App ID\0223\n\014opf_settin" +
       "gs\030\002 \001(\tB\035\202\265\030\031JSON blob of OPF Settings2" +
-      "\265\004\n\005Video\022\216\001\n\021ClientGetVideoURL\022!.CVideo" +
+      "\232\010\n\005Video\022\216\001\n\021ClientGetVideoURL\022!.CVideo" +
       "_ClientGetVideoURL_Request\032\".CVideo_Clie" +
       "ntGetVideoURL_Response\"2\202\265\030.Get the init" +
       "ial URL to begin streaming a video\022\301\001\n\020S" +
@@ -6820,22 +18333,35 @@ public final class SteammessagesVideoSteamclient {
       "Request\032\".CVideo_GetVideoBookmarks_Respo" +
       "nse\"g\202\265\030cReturns the video bookmarks loc" +
       "ations for the specific videos. Includes" +
-      " playback settings per video\032\021\202\265\030\rVideo " +
-      "methods2\236\001\n\013VideoClient\022\210\001\n\022NotifyUnlock" +
-      "edH264\022!.CVideo_UnlockedH264_Notificatio" +
-      "n\032\013.NoResponse\"B\202\265\030>Notification from se" +
-      "rver to client that h264 has been unlock" +
-      "ed\032\004\300\265\030\0022\363\001\n\nFovasVideo\022\303\001\n\024ClientGetOPF" +
-      "Settings\022).CFovasVideo_ClientGetOPFSetti" +
-      "ngs_Request\032*.CFovasVideo_ClientGetOPFSe" +
-      "ttings_Response\"T\202\265\030PRetrieve the OPF se" +
-      "ttings JSON blob. Available via the Clie" +
-      "nt for 360 Player App\032\037\202\265\030\033Fovas Video S" +
-      "ervice MethodsB\003\200\001\001"
+      " playback settings per video\022y\n\016CreateGa" +
+      "meClip\022\036.CVideo_CreateGameClip_Request\032\037" +
+      ".CVideo_CreateGameClip_Response\"&\202\265\030\"Cre" +
+      "ate a game recording clip video\022\255\001\n\033Begi" +
+      "nGameClipSegmentsUpload\022+.CVideo_BeginGa" +
+      "meClipSegmentsUpload_Request\032,.CVideo_Be" +
+      "ginGameClipSegmentsUpload_Response\"3\202\265\030/" +
+      "Begin a batch of segment uploads for a G" +
+      "ameClip\022\267\001\n\034CommitGameClipSegmentsUpload" +
+      "\022,.CVideo_CommitGameClipSegmentsUpload_R" +
+      "equest\032-.CVideo_CommitGameClipSegmentsUp" +
+      "load_Response\":\202\265\0306Note completion of a " +
+      "batch of GameClip segment uploads\032\021\202\265\030\rV" +
+      "ideo methods2\236\001\n\013VideoClient\022\210\001\n\022NotifyU" +
+      "nlockedH264\022!.CVideo_UnlockedH264_Notifi" +
+      "cation\032\013.NoResponse\"B\202\265\030>Notification fr" +
+      "om server to client that h264 has been u" +
+      "nlocked\032\004\300\265\030\0022\363\001\n\nFovasVideo\022\303\001\n\024ClientG" +
+      "etOPFSettings\022).CFovasVideo_ClientGetOPF" +
+      "Settings_Request\032*.CFovasVideo_ClientGet" +
+      "OPFSettings_Response\"T\202\265\030PRetrieve the O" +
+      "PF settings JSON blob. Available via the" +
+      " Client for 360 Player App\032\037\202\265\030\033Fovas Vi" +
+      "deo Service MethodsB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CVideo_ClientGetVideoURL_Request_descriptor =
@@ -6874,20 +18400,86 @@ public final class SteammessagesVideoSteamclient {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CVideo_GetVideoBookmarks_Response_descriptor,
         new java.lang.String[] { "Bookmarks", });
-    internal_static_CVideo_UnlockedH264_Notification_descriptor =
+    internal_static_CVideo_GameClipRepresentation_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_CVideo_GameClipRepresentation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_GameClipRepresentation_descriptor,
+        new java.lang.String[] { "RepresentationName", "HorizontalResolution", "VerticalResolution", "FrameRate", "Bandwidth", "AudioSampleRate", "FrameRateString", "Codec", "AudioChannelConfig", });
+    internal_static_CVideo_GameClipComponent_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_CVideo_GameClipComponent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_GameClipComponent_descriptor,
+        new java.lang.String[] { "ComponentName", "Contents", "SegmentSize", "FileType", "Representations", });
+    internal_static_CVideo_CreateGameClip_Request_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_CVideo_CreateGameClip_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_CreateGameClip_Request_descriptor,
+        new java.lang.String[] { "AppId", "NumSegments", "LengthMilliseconds", "SegmentDurationTimescale", "SegmentDuration", "Components", });
+    internal_static_CVideo_CreateGameClip_Response_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_CVideo_CreateGameClip_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_CreateGameClip_Response_descriptor,
+        new java.lang.String[] { "ClipId", });
+    internal_static_CVideo_GameClipSegmentInfo_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_CVideo_GameClipSegmentInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_GameClipSegmentInfo_descriptor,
+        new java.lang.String[] { "SegmentNumber", "SegmentSizeBytes", });
+    internal_static_CVideo_BeginGameClipSegmentsUpload_Request_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_CVideo_BeginGameClipSegmentsUpload_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_BeginGameClipSegmentsUpload_Request_descriptor,
+        new java.lang.String[] { "ClipId", "ComponentName", "RepresentationName", "SegmentsToStore", });
+    internal_static_CVideo_GameClipSegmentUploadInfo_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_CVideo_GameClipSegmentUploadInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_GameClipSegmentUploadInfo_descriptor,
+        new java.lang.String[] { "SegmentInfo", "UrlHost", "UrlPath", "UseHttps", "RequestHeaders", });
+    internal_static_CVideo_GameClipSegmentUploadInfo_HTTPHeaders_descriptor =
+      internal_static_CVideo_GameClipSegmentUploadInfo_descriptor.getNestedTypes().get(0);
+    internal_static_CVideo_GameClipSegmentUploadInfo_HTTPHeaders_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_GameClipSegmentUploadInfo_HTTPHeaders_descriptor,
+        new java.lang.String[] { "Name", "Value", });
+    internal_static_CVideo_BeginGameClipSegmentsUpload_Response_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_CVideo_BeginGameClipSegmentsUpload_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_BeginGameClipSegmentsUpload_Response_descriptor,
+        new java.lang.String[] { "SegmentsNeeded", "CallAgain", });
+    internal_static_CVideo_CommitGameClipSegmentsUpload_Request_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_CVideo_CommitGameClipSegmentsUpload_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_CommitGameClipSegmentsUpload_Request_descriptor,
+        new java.lang.String[] { "ClipId", "ComponentName", "RepresentationName", "FirstSegmentNumber", "NumSegments", "UploadResult", });
+    internal_static_CVideo_CommitGameClipSegmentsUpload_Response_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_CVideo_CommitGameClipSegmentsUpload_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CVideo_CommitGameClipSegmentsUpload_Response_descriptor,
+        new java.lang.String[] { });
+    internal_static_CVideo_UnlockedH264_Notification_descriptor =
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CVideo_UnlockedH264_Notification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CVideo_UnlockedH264_Notification_descriptor,
         new java.lang.String[] { "EncryptionKey", });
     internal_static_CFovasVideo_ClientGetOPFSettings_Request_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CFovasVideo_ClientGetOPFSettings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CFovasVideo_ClientGetOPFSettings_Request_descriptor,
         new java.lang.String[] { "AppId", "ClientCellid", });
     internal_static_CFovasVideo_ClientGetOPFSettings_Response_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CFovasVideo_ClientGetOPFSettings_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CFovasVideo_ClientGetOPFSettings_Response_descriptor,
@@ -6900,6 +18492,7 @@ public final class SteammessagesVideoSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceExecutionSite);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

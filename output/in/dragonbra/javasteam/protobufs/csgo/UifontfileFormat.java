@@ -2182,8 +2182,7 @@ public final class UifontfileFormat {
       "gePB\022\027\n\017package_version\030\001 \002(\r\022J\n\024encrypt" +
       "ed_font_files\030\002 \003(\0132,.CUIFontFilePackage" +
       "PB.CUIEncryptedFontFilePB\0324\n\026CUIEncrypte" +
-      "dFontFilePB\022\032\n\022encrypted_contents\030\001 \001(\014B" +
-      "\005H\001\200\001\000"
+      "dFontFilePB\022\032\n\022encrypted_contents\030\001 \001(\014"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -20,599 +20,615 @@ public final class Cstrike15Usermessages {
   public enum ECstrike15UserMessages
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>CS_UM_VGUIMenu = 1;</code>
+     * <code>CS_UM_VGUIMenu = 301;</code>
      */
-    CS_UM_VGUIMenu(1),
+    CS_UM_VGUIMenu(301),
     /**
-     * <code>CS_UM_Geiger = 2;</code>
+     * <code>CS_UM_Geiger = 302;</code>
      */
-    CS_UM_Geiger(2),
+    CS_UM_Geiger(302),
     /**
-     * <code>CS_UM_Train = 3;</code>
+     * <code>CS_UM_Train = 303;</code>
      */
-    CS_UM_Train(3),
+    CS_UM_Train(303),
     /**
-     * <code>CS_UM_HudText = 4;</code>
+     * <code>CS_UM_HudText = 304;</code>
      */
-    CS_UM_HudText(4),
+    CS_UM_HudText(304),
     /**
-     * <code>CS_UM_SayText = 5;</code>
+     * <code>CS_UM_SayText = 305;</code>
      */
-    CS_UM_SayText(5),
+    CS_UM_SayText(305),
     /**
-     * <code>CS_UM_SayText2 = 6;</code>
+     * <code>CS_UM_SayText2 = 306;</code>
      */
-    CS_UM_SayText2(6),
+    CS_UM_SayText2(306),
     /**
-     * <code>CS_UM_TextMsg = 7;</code>
+     * <code>CS_UM_TextMsg = 307;</code>
      */
-    CS_UM_TextMsg(7),
+    CS_UM_TextMsg(307),
     /**
-     * <code>CS_UM_HudMsg = 8;</code>
+     * <code>CS_UM_HudMsg = 308;</code>
      */
-    CS_UM_HudMsg(8),
+    CS_UM_HudMsg(308),
     /**
-     * <code>CS_UM_ResetHud = 9;</code>
+     * <code>CS_UM_ResetHud = 309;</code>
      */
-    CS_UM_ResetHud(9),
+    CS_UM_ResetHud(309),
     /**
-     * <code>CS_UM_GameTitle = 10;</code>
+     * <code>CS_UM_GameTitle = 310;</code>
      */
-    CS_UM_GameTitle(10),
+    CS_UM_GameTitle(310),
     /**
-     * <code>CS_UM_Shake = 12;</code>
+     * <code>CS_UM_Shake = 312;</code>
      */
-    CS_UM_Shake(12),
+    CS_UM_Shake(312),
     /**
-     * <code>CS_UM_Fade = 13;</code>
+     * <code>CS_UM_Fade = 313;</code>
      */
-    CS_UM_Fade(13),
+    CS_UM_Fade(313),
     /**
-     * <code>CS_UM_Rumble = 14;</code>
+     * <code>CS_UM_Rumble = 314;</code>
      */
-    CS_UM_Rumble(14),
+    CS_UM_Rumble(314),
     /**
-     * <code>CS_UM_CloseCaption = 15;</code>
+     * <code>CS_UM_CloseCaption = 315;</code>
      */
-    CS_UM_CloseCaption(15),
+    CS_UM_CloseCaption(315),
     /**
-     * <code>CS_UM_CloseCaptionDirect = 16;</code>
+     * <code>CS_UM_CloseCaptionDirect = 316;</code>
      */
-    CS_UM_CloseCaptionDirect(16),
+    CS_UM_CloseCaptionDirect(316),
     /**
-     * <code>CS_UM_SendAudio = 17;</code>
+     * <code>CS_UM_SendAudio = 317;</code>
      */
-    CS_UM_SendAudio(17),
+    CS_UM_SendAudio(317),
     /**
-     * <code>CS_UM_RawAudio = 18;</code>
+     * <code>CS_UM_RawAudio = 318;</code>
      */
-    CS_UM_RawAudio(18),
+    CS_UM_RawAudio(318),
     /**
-     * <code>CS_UM_VoiceMask = 19;</code>
+     * <code>CS_UM_VoiceMask = 319;</code>
      */
-    CS_UM_VoiceMask(19),
+    CS_UM_VoiceMask(319),
     /**
-     * <code>CS_UM_RequestState = 20;</code>
+     * <code>CS_UM_RequestState = 320;</code>
      */
-    CS_UM_RequestState(20),
+    CS_UM_RequestState(320),
     /**
-     * <code>CS_UM_Damage = 21;</code>
+     * <code>CS_UM_Damage = 321;</code>
      */
-    CS_UM_Damage(21),
+    CS_UM_Damage(321),
     /**
-     * <code>CS_UM_RadioText = 22;</code>
+     * <code>CS_UM_RadioText = 322;</code>
      */
-    CS_UM_RadioText(22),
+    CS_UM_RadioText(322),
     /**
-     * <code>CS_UM_HintText = 23;</code>
+     * <code>CS_UM_HintText = 323;</code>
      */
-    CS_UM_HintText(23),
+    CS_UM_HintText(323),
     /**
-     * <code>CS_UM_KeyHintText = 24;</code>
+     * <code>CS_UM_KeyHintText = 324;</code>
      */
-    CS_UM_KeyHintText(24),
+    CS_UM_KeyHintText(324),
     /**
-     * <code>CS_UM_ProcessSpottedEntityUpdate = 25;</code>
+     * <code>CS_UM_ProcessSpottedEntityUpdate = 325;</code>
      */
-    CS_UM_ProcessSpottedEntityUpdate(25),
+    CS_UM_ProcessSpottedEntityUpdate(325),
     /**
-     * <code>CS_UM_ReloadEffect = 26;</code>
+     * <code>CS_UM_ReloadEffect = 326;</code>
      */
-    CS_UM_ReloadEffect(26),
+    CS_UM_ReloadEffect(326),
     /**
-     * <code>CS_UM_AdjustMoney = 27;</code>
+     * <code>CS_UM_AdjustMoney = 327;</code>
      */
-    CS_UM_AdjustMoney(27),
+    CS_UM_AdjustMoney(327),
     /**
-     * <code>CS_UM_UpdateTeamMoney = 28;</code>
+     * <code>CS_UM_UpdateTeamMoney = 328;</code>
      */
-    CS_UM_UpdateTeamMoney(28),
+    CS_UM_UpdateTeamMoney(328),
     /**
-     * <code>CS_UM_StopSpectatorMode = 29;</code>
+     * <code>CS_UM_StopSpectatorMode = 329;</code>
      */
-    CS_UM_StopSpectatorMode(29),
+    CS_UM_StopSpectatorMode(329),
     /**
-     * <code>CS_UM_KillCam = 30;</code>
+     * <code>CS_UM_KillCam = 330;</code>
      */
-    CS_UM_KillCam(30),
+    CS_UM_KillCam(330),
     /**
-     * <code>CS_UM_DesiredTimescale = 31;</code>
+     * <code>CS_UM_DesiredTimescale = 331;</code>
      */
-    CS_UM_DesiredTimescale(31),
+    CS_UM_DesiredTimescale(331),
     /**
-     * <code>CS_UM_CurrentTimescale = 32;</code>
+     * <code>CS_UM_CurrentTimescale = 332;</code>
      */
-    CS_UM_CurrentTimescale(32),
+    CS_UM_CurrentTimescale(332),
     /**
-     * <code>CS_UM_AchievementEvent = 33;</code>
+     * <code>CS_UM_AchievementEvent = 333;</code>
      */
-    CS_UM_AchievementEvent(33),
+    CS_UM_AchievementEvent(333),
     /**
-     * <code>CS_UM_MatchEndConditions = 34;</code>
+     * <code>CS_UM_MatchEndConditions = 334;</code>
      */
-    CS_UM_MatchEndConditions(34),
+    CS_UM_MatchEndConditions(334),
     /**
-     * <code>CS_UM_DisconnectToLobby = 35;</code>
+     * <code>CS_UM_DisconnectToLobby = 335;</code>
      */
-    CS_UM_DisconnectToLobby(35),
+    CS_UM_DisconnectToLobby(335),
     /**
-     * <code>CS_UM_PlayerStatsUpdate = 36;</code>
+     * <code>CS_UM_PlayerStatsUpdate = 336;</code>
      */
-    CS_UM_PlayerStatsUpdate(36),
+    CS_UM_PlayerStatsUpdate(336),
     /**
-     * <code>CS_UM_DisplayInventory = 37;</code>
+     * <code>CS_UM_WarmupHasEnded = 338;</code>
      */
-    CS_UM_DisplayInventory(37),
+    CS_UM_WarmupHasEnded(338),
     /**
-     * <code>CS_UM_WarmupHasEnded = 38;</code>
+     * <code>CS_UM_ClientInfo = 339;</code>
      */
-    CS_UM_WarmupHasEnded(38),
+    CS_UM_ClientInfo(339),
     /**
-     * <code>CS_UM_ClientInfo = 39;</code>
+     * <code>CS_UM_XRankGet = 340;</code>
      */
-    CS_UM_ClientInfo(39),
+    CS_UM_XRankGet(340),
     /**
-     * <code>CS_UM_XRankGet = 40;</code>
+     * <code>CS_UM_XRankUpd = 341;</code>
      */
-    CS_UM_XRankGet(40),
+    CS_UM_XRankUpd(341),
     /**
-     * <code>CS_UM_XRankUpd = 41;</code>
+     * <code>CS_UM_CallVoteFailed = 345;</code>
      */
-    CS_UM_XRankUpd(41),
+    CS_UM_CallVoteFailed(345),
     /**
-     * <code>CS_UM_CallVoteFailed = 45;</code>
+     * <code>CS_UM_VoteStart = 346;</code>
      */
-    CS_UM_CallVoteFailed(45),
+    CS_UM_VoteStart(346),
     /**
-     * <code>CS_UM_VoteStart = 46;</code>
+     * <code>CS_UM_VotePass = 347;</code>
      */
-    CS_UM_VoteStart(46),
+    CS_UM_VotePass(347),
     /**
-     * <code>CS_UM_VotePass = 47;</code>
+     * <code>CS_UM_VoteFailed = 348;</code>
      */
-    CS_UM_VotePass(47),
+    CS_UM_VoteFailed(348),
     /**
-     * <code>CS_UM_VoteFailed = 48;</code>
+     * <code>CS_UM_VoteSetup = 349;</code>
      */
-    CS_UM_VoteFailed(48),
+    CS_UM_VoteSetup(349),
     /**
-     * <code>CS_UM_VoteSetup = 49;</code>
+     * <code>CS_UM_ServerRankRevealAll = 350;</code>
      */
-    CS_UM_VoteSetup(49),
+    CS_UM_ServerRankRevealAll(350),
     /**
-     * <code>CS_UM_ServerRankRevealAll = 50;</code>
+     * <code>CS_UM_SendLastKillerDamageToClient = 351;</code>
      */
-    CS_UM_ServerRankRevealAll(50),
+    CS_UM_SendLastKillerDamageToClient(351),
     /**
-     * <code>CS_UM_SendLastKillerDamageToClient = 51;</code>
+     * <code>CS_UM_ServerRankUpdate = 352;</code>
      */
-    CS_UM_SendLastKillerDamageToClient(51),
+    CS_UM_ServerRankUpdate(352),
     /**
-     * <code>CS_UM_ServerRankUpdate = 52;</code>
+     * <code>CS_UM_ItemPickup = 353;</code>
      */
-    CS_UM_ServerRankUpdate(52),
+    CS_UM_ItemPickup(353),
     /**
-     * <code>CS_UM_ItemPickup = 53;</code>
+     * <code>CS_UM_ShowMenu = 354;</code>
      */
-    CS_UM_ItemPickup(53),
+    CS_UM_ShowMenu(354),
     /**
-     * <code>CS_UM_ShowMenu = 54;</code>
+     * <code>CS_UM_BarTime = 355;</code>
      */
-    CS_UM_ShowMenu(54),
+    CS_UM_BarTime(355),
     /**
-     * <code>CS_UM_BarTime = 55;</code>
+     * <code>CS_UM_AmmoDenied = 356;</code>
      */
-    CS_UM_BarTime(55),
+    CS_UM_AmmoDenied(356),
     /**
-     * <code>CS_UM_AmmoDenied = 56;</code>
+     * <code>CS_UM_MarkAchievement = 357;</code>
      */
-    CS_UM_AmmoDenied(56),
+    CS_UM_MarkAchievement(357),
     /**
-     * <code>CS_UM_MarkAchievement = 57;</code>
+     * <code>CS_UM_MatchStatsUpdate = 358;</code>
      */
-    CS_UM_MarkAchievement(57),
+    CS_UM_MatchStatsUpdate(358),
     /**
-     * <code>CS_UM_MatchStatsUpdate = 58;</code>
+     * <code>CS_UM_ItemDrop = 359;</code>
      */
-    CS_UM_MatchStatsUpdate(58),
+    CS_UM_ItemDrop(359),
     /**
-     * <code>CS_UM_ItemDrop = 59;</code>
+     * <code>CS_UM_GlowPropTurnOff = 360;</code>
      */
-    CS_UM_ItemDrop(59),
+    CS_UM_GlowPropTurnOff(360),
     /**
-     * <code>CS_UM_GlowPropTurnOff = 60;</code>
+     * <code>CS_UM_SendPlayerItemDrops = 361;</code>
      */
-    CS_UM_GlowPropTurnOff(60),
+    CS_UM_SendPlayerItemDrops(361),
     /**
-     * <code>CS_UM_SendPlayerItemDrops = 61;</code>
+     * <code>CS_UM_RoundBackupFilenames = 362;</code>
      */
-    CS_UM_SendPlayerItemDrops(61),
+    CS_UM_RoundBackupFilenames(362),
     /**
-     * <code>CS_UM_RoundBackupFilenames = 62;</code>
+     * <code>CS_UM_SendPlayerItemFound = 363;</code>
      */
-    CS_UM_RoundBackupFilenames(62),
+    CS_UM_SendPlayerItemFound(363),
     /**
-     * <code>CS_UM_SendPlayerItemFound = 63;</code>
+     * <code>CS_UM_ReportHit = 364;</code>
      */
-    CS_UM_SendPlayerItemFound(63),
+    CS_UM_ReportHit(364),
     /**
-     * <code>CS_UM_ReportHit = 64;</code>
+     * <code>CS_UM_XpUpdate = 365;</code>
      */
-    CS_UM_ReportHit(64),
+    CS_UM_XpUpdate(365),
     /**
-     * <code>CS_UM_XpUpdate = 65;</code>
+     * <code>CS_UM_QuestProgress = 366;</code>
      */
-    CS_UM_XpUpdate(65),
+    CS_UM_QuestProgress(366),
     /**
-     * <code>CS_UM_QuestProgress = 66;</code>
+     * <code>CS_UM_ScoreLeaderboardData = 367;</code>
      */
-    CS_UM_QuestProgress(66),
+    CS_UM_ScoreLeaderboardData(367),
     /**
-     * <code>CS_UM_ScoreLeaderboardData = 67;</code>
+     * <code>CS_UM_PlayerDecalDigitalSignature = 368;</code>
      */
-    CS_UM_ScoreLeaderboardData(67),
+    CS_UM_PlayerDecalDigitalSignature(368),
     /**
-     * <code>CS_UM_PlayerDecalDigitalSignature = 68;</code>
+     * <code>CS_UM_WeaponSound = 369;</code>
      */
-    CS_UM_PlayerDecalDigitalSignature(68),
+    CS_UM_WeaponSound(369),
     /**
-     * <code>CS_UM_WeaponSound = 69;</code>
+     * <code>CS_UM_UpdateScreenHealthBar = 370;</code>
      */
-    CS_UM_WeaponSound(69),
+    CS_UM_UpdateScreenHealthBar(370),
     /**
-     * <code>CS_UM_UpdateScreenHealthBar = 70;</code>
+     * <code>CS_UM_EntityOutlineHighlight = 371;</code>
      */
-    CS_UM_UpdateScreenHealthBar(70),
+    CS_UM_EntityOutlineHighlight(371),
     /**
-     * <code>CS_UM_EntityOutlineHighlight = 71;</code>
+     * <code>CS_UM_SSUI = 372;</code>
      */
-    CS_UM_EntityOutlineHighlight(71),
+    CS_UM_SSUI(372),
     /**
-     * <code>CS_UM_SSUI = 72;</code>
+     * <code>CS_UM_SurvivalStats = 373;</code>
      */
-    CS_UM_SSUI(72),
+    CS_UM_SurvivalStats(373),
     /**
-     * <code>CS_UM_SurvivalStats = 73;</code>
+     * <code>CS_UM_DisconnectToLobby2 = 374;</code>
      */
-    CS_UM_SurvivalStats(73),
+    CS_UM_DisconnectToLobby2(374),
     /**
-     * <code>CS_UM_DisconnectToLobby2 = 74;</code>
+     * <code>CS_UM_EndOfMatchAllPlayersData = 375;</code>
      */
-    CS_UM_DisconnectToLobby2(74),
+    CS_UM_EndOfMatchAllPlayersData(375),
     /**
-     * <code>CS_UM_EndOfMatchAllPlayersData = 75;</code>
+     * <code>CS_UM_PostRoundDamageReport = 376;</code>
      */
-    CS_UM_EndOfMatchAllPlayersData(75),
+    CS_UM_PostRoundDamageReport(376),
     /**
-     * <code>CS_UM_RoundImpactScoreData = 79;</code>
+     * <code>CS_UM_RoundEndReportData = 379;</code>
      */
-    CS_UM_RoundImpactScoreData(79),
+    CS_UM_RoundEndReportData(379),
     /**
-     * <code>CS_UM_CurrentRoundOdds = 80;</code>
+     * <code>CS_UM_CurrentRoundOdds = 380;</code>
      */
-    CS_UM_CurrentRoundOdds(80),
+    CS_UM_CurrentRoundOdds(380),
     /**
-     * <code>CS_UM_DeepStats = 81;</code>
+     * <code>CS_UM_DeepStats = 381;</code>
      */
-    CS_UM_DeepStats(81),
+    CS_UM_DeepStats(381),
+    /**
+     * <code>CS_UM_UtilMsg = 382;</code>
+     */
+    CS_UM_UtilMsg(382),
+    /**
+     * <code>CS_UM_ShootInfo = 383;</code>
+     */
+    CS_UM_ShootInfo(383),
     ;
 
     /**
-     * <code>CS_UM_VGUIMenu = 1;</code>
+     * <code>CS_UM_VGUIMenu = 301;</code>
      */
-    public static final int CS_UM_VGUIMenu_VALUE = 1;
+    public static final int CS_UM_VGUIMenu_VALUE = 301;
     /**
-     * <code>CS_UM_Geiger = 2;</code>
+     * <code>CS_UM_Geiger = 302;</code>
      */
-    public static final int CS_UM_Geiger_VALUE = 2;
+    public static final int CS_UM_Geiger_VALUE = 302;
     /**
-     * <code>CS_UM_Train = 3;</code>
+     * <code>CS_UM_Train = 303;</code>
      */
-    public static final int CS_UM_Train_VALUE = 3;
+    public static final int CS_UM_Train_VALUE = 303;
     /**
-     * <code>CS_UM_HudText = 4;</code>
+     * <code>CS_UM_HudText = 304;</code>
      */
-    public static final int CS_UM_HudText_VALUE = 4;
+    public static final int CS_UM_HudText_VALUE = 304;
     /**
-     * <code>CS_UM_SayText = 5;</code>
+     * <code>CS_UM_SayText = 305;</code>
      */
-    public static final int CS_UM_SayText_VALUE = 5;
+    public static final int CS_UM_SayText_VALUE = 305;
     /**
-     * <code>CS_UM_SayText2 = 6;</code>
+     * <code>CS_UM_SayText2 = 306;</code>
      */
-    public static final int CS_UM_SayText2_VALUE = 6;
+    public static final int CS_UM_SayText2_VALUE = 306;
     /**
-     * <code>CS_UM_TextMsg = 7;</code>
+     * <code>CS_UM_TextMsg = 307;</code>
      */
-    public static final int CS_UM_TextMsg_VALUE = 7;
+    public static final int CS_UM_TextMsg_VALUE = 307;
     /**
-     * <code>CS_UM_HudMsg = 8;</code>
+     * <code>CS_UM_HudMsg = 308;</code>
      */
-    public static final int CS_UM_HudMsg_VALUE = 8;
+    public static final int CS_UM_HudMsg_VALUE = 308;
     /**
-     * <code>CS_UM_ResetHud = 9;</code>
+     * <code>CS_UM_ResetHud = 309;</code>
      */
-    public static final int CS_UM_ResetHud_VALUE = 9;
+    public static final int CS_UM_ResetHud_VALUE = 309;
     /**
-     * <code>CS_UM_GameTitle = 10;</code>
+     * <code>CS_UM_GameTitle = 310;</code>
      */
-    public static final int CS_UM_GameTitle_VALUE = 10;
+    public static final int CS_UM_GameTitle_VALUE = 310;
     /**
-     * <code>CS_UM_Shake = 12;</code>
+     * <code>CS_UM_Shake = 312;</code>
      */
-    public static final int CS_UM_Shake_VALUE = 12;
+    public static final int CS_UM_Shake_VALUE = 312;
     /**
-     * <code>CS_UM_Fade = 13;</code>
+     * <code>CS_UM_Fade = 313;</code>
      */
-    public static final int CS_UM_Fade_VALUE = 13;
+    public static final int CS_UM_Fade_VALUE = 313;
     /**
-     * <code>CS_UM_Rumble = 14;</code>
+     * <code>CS_UM_Rumble = 314;</code>
      */
-    public static final int CS_UM_Rumble_VALUE = 14;
+    public static final int CS_UM_Rumble_VALUE = 314;
     /**
-     * <code>CS_UM_CloseCaption = 15;</code>
+     * <code>CS_UM_CloseCaption = 315;</code>
      */
-    public static final int CS_UM_CloseCaption_VALUE = 15;
+    public static final int CS_UM_CloseCaption_VALUE = 315;
     /**
-     * <code>CS_UM_CloseCaptionDirect = 16;</code>
+     * <code>CS_UM_CloseCaptionDirect = 316;</code>
      */
-    public static final int CS_UM_CloseCaptionDirect_VALUE = 16;
+    public static final int CS_UM_CloseCaptionDirect_VALUE = 316;
     /**
-     * <code>CS_UM_SendAudio = 17;</code>
+     * <code>CS_UM_SendAudio = 317;</code>
      */
-    public static final int CS_UM_SendAudio_VALUE = 17;
+    public static final int CS_UM_SendAudio_VALUE = 317;
     /**
-     * <code>CS_UM_RawAudio = 18;</code>
+     * <code>CS_UM_RawAudio = 318;</code>
      */
-    public static final int CS_UM_RawAudio_VALUE = 18;
+    public static final int CS_UM_RawAudio_VALUE = 318;
     /**
-     * <code>CS_UM_VoiceMask = 19;</code>
+     * <code>CS_UM_VoiceMask = 319;</code>
      */
-    public static final int CS_UM_VoiceMask_VALUE = 19;
+    public static final int CS_UM_VoiceMask_VALUE = 319;
     /**
-     * <code>CS_UM_RequestState = 20;</code>
+     * <code>CS_UM_RequestState = 320;</code>
      */
-    public static final int CS_UM_RequestState_VALUE = 20;
+    public static final int CS_UM_RequestState_VALUE = 320;
     /**
-     * <code>CS_UM_Damage = 21;</code>
+     * <code>CS_UM_Damage = 321;</code>
      */
-    public static final int CS_UM_Damage_VALUE = 21;
+    public static final int CS_UM_Damage_VALUE = 321;
     /**
-     * <code>CS_UM_RadioText = 22;</code>
+     * <code>CS_UM_RadioText = 322;</code>
      */
-    public static final int CS_UM_RadioText_VALUE = 22;
+    public static final int CS_UM_RadioText_VALUE = 322;
     /**
-     * <code>CS_UM_HintText = 23;</code>
+     * <code>CS_UM_HintText = 323;</code>
      */
-    public static final int CS_UM_HintText_VALUE = 23;
+    public static final int CS_UM_HintText_VALUE = 323;
     /**
-     * <code>CS_UM_KeyHintText = 24;</code>
+     * <code>CS_UM_KeyHintText = 324;</code>
      */
-    public static final int CS_UM_KeyHintText_VALUE = 24;
+    public static final int CS_UM_KeyHintText_VALUE = 324;
     /**
-     * <code>CS_UM_ProcessSpottedEntityUpdate = 25;</code>
+     * <code>CS_UM_ProcessSpottedEntityUpdate = 325;</code>
      */
-    public static final int CS_UM_ProcessSpottedEntityUpdate_VALUE = 25;
+    public static final int CS_UM_ProcessSpottedEntityUpdate_VALUE = 325;
     /**
-     * <code>CS_UM_ReloadEffect = 26;</code>
+     * <code>CS_UM_ReloadEffect = 326;</code>
      */
-    public static final int CS_UM_ReloadEffect_VALUE = 26;
+    public static final int CS_UM_ReloadEffect_VALUE = 326;
     /**
-     * <code>CS_UM_AdjustMoney = 27;</code>
+     * <code>CS_UM_AdjustMoney = 327;</code>
      */
-    public static final int CS_UM_AdjustMoney_VALUE = 27;
+    public static final int CS_UM_AdjustMoney_VALUE = 327;
     /**
-     * <code>CS_UM_UpdateTeamMoney = 28;</code>
+     * <code>CS_UM_UpdateTeamMoney = 328;</code>
      */
-    public static final int CS_UM_UpdateTeamMoney_VALUE = 28;
+    public static final int CS_UM_UpdateTeamMoney_VALUE = 328;
     /**
-     * <code>CS_UM_StopSpectatorMode = 29;</code>
+     * <code>CS_UM_StopSpectatorMode = 329;</code>
      */
-    public static final int CS_UM_StopSpectatorMode_VALUE = 29;
+    public static final int CS_UM_StopSpectatorMode_VALUE = 329;
     /**
-     * <code>CS_UM_KillCam = 30;</code>
+     * <code>CS_UM_KillCam = 330;</code>
      */
-    public static final int CS_UM_KillCam_VALUE = 30;
+    public static final int CS_UM_KillCam_VALUE = 330;
     /**
-     * <code>CS_UM_DesiredTimescale = 31;</code>
+     * <code>CS_UM_DesiredTimescale = 331;</code>
      */
-    public static final int CS_UM_DesiredTimescale_VALUE = 31;
+    public static final int CS_UM_DesiredTimescale_VALUE = 331;
     /**
-     * <code>CS_UM_CurrentTimescale = 32;</code>
+     * <code>CS_UM_CurrentTimescale = 332;</code>
      */
-    public static final int CS_UM_CurrentTimescale_VALUE = 32;
+    public static final int CS_UM_CurrentTimescale_VALUE = 332;
     /**
-     * <code>CS_UM_AchievementEvent = 33;</code>
+     * <code>CS_UM_AchievementEvent = 333;</code>
      */
-    public static final int CS_UM_AchievementEvent_VALUE = 33;
+    public static final int CS_UM_AchievementEvent_VALUE = 333;
     /**
-     * <code>CS_UM_MatchEndConditions = 34;</code>
+     * <code>CS_UM_MatchEndConditions = 334;</code>
      */
-    public static final int CS_UM_MatchEndConditions_VALUE = 34;
+    public static final int CS_UM_MatchEndConditions_VALUE = 334;
     /**
-     * <code>CS_UM_DisconnectToLobby = 35;</code>
+     * <code>CS_UM_DisconnectToLobby = 335;</code>
      */
-    public static final int CS_UM_DisconnectToLobby_VALUE = 35;
+    public static final int CS_UM_DisconnectToLobby_VALUE = 335;
     /**
-     * <code>CS_UM_PlayerStatsUpdate = 36;</code>
+     * <code>CS_UM_PlayerStatsUpdate = 336;</code>
      */
-    public static final int CS_UM_PlayerStatsUpdate_VALUE = 36;
+    public static final int CS_UM_PlayerStatsUpdate_VALUE = 336;
     /**
-     * <code>CS_UM_DisplayInventory = 37;</code>
+     * <code>CS_UM_WarmupHasEnded = 338;</code>
      */
-    public static final int CS_UM_DisplayInventory_VALUE = 37;
+    public static final int CS_UM_WarmupHasEnded_VALUE = 338;
     /**
-     * <code>CS_UM_WarmupHasEnded = 38;</code>
+     * <code>CS_UM_ClientInfo = 339;</code>
      */
-    public static final int CS_UM_WarmupHasEnded_VALUE = 38;
+    public static final int CS_UM_ClientInfo_VALUE = 339;
     /**
-     * <code>CS_UM_ClientInfo = 39;</code>
+     * <code>CS_UM_XRankGet = 340;</code>
      */
-    public static final int CS_UM_ClientInfo_VALUE = 39;
+    public static final int CS_UM_XRankGet_VALUE = 340;
     /**
-     * <code>CS_UM_XRankGet = 40;</code>
+     * <code>CS_UM_XRankUpd = 341;</code>
      */
-    public static final int CS_UM_XRankGet_VALUE = 40;
+    public static final int CS_UM_XRankUpd_VALUE = 341;
     /**
-     * <code>CS_UM_XRankUpd = 41;</code>
+     * <code>CS_UM_CallVoteFailed = 345;</code>
      */
-    public static final int CS_UM_XRankUpd_VALUE = 41;
+    public static final int CS_UM_CallVoteFailed_VALUE = 345;
     /**
-     * <code>CS_UM_CallVoteFailed = 45;</code>
+     * <code>CS_UM_VoteStart = 346;</code>
      */
-    public static final int CS_UM_CallVoteFailed_VALUE = 45;
+    public static final int CS_UM_VoteStart_VALUE = 346;
     /**
-     * <code>CS_UM_VoteStart = 46;</code>
+     * <code>CS_UM_VotePass = 347;</code>
      */
-    public static final int CS_UM_VoteStart_VALUE = 46;
+    public static final int CS_UM_VotePass_VALUE = 347;
     /**
-     * <code>CS_UM_VotePass = 47;</code>
+     * <code>CS_UM_VoteFailed = 348;</code>
      */
-    public static final int CS_UM_VotePass_VALUE = 47;
+    public static final int CS_UM_VoteFailed_VALUE = 348;
     /**
-     * <code>CS_UM_VoteFailed = 48;</code>
+     * <code>CS_UM_VoteSetup = 349;</code>
      */
-    public static final int CS_UM_VoteFailed_VALUE = 48;
+    public static final int CS_UM_VoteSetup_VALUE = 349;
     /**
-     * <code>CS_UM_VoteSetup = 49;</code>
+     * <code>CS_UM_ServerRankRevealAll = 350;</code>
      */
-    public static final int CS_UM_VoteSetup_VALUE = 49;
+    public static final int CS_UM_ServerRankRevealAll_VALUE = 350;
     /**
-     * <code>CS_UM_ServerRankRevealAll = 50;</code>
+     * <code>CS_UM_SendLastKillerDamageToClient = 351;</code>
      */
-    public static final int CS_UM_ServerRankRevealAll_VALUE = 50;
+    public static final int CS_UM_SendLastKillerDamageToClient_VALUE = 351;
     /**
-     * <code>CS_UM_SendLastKillerDamageToClient = 51;</code>
+     * <code>CS_UM_ServerRankUpdate = 352;</code>
      */
-    public static final int CS_UM_SendLastKillerDamageToClient_VALUE = 51;
+    public static final int CS_UM_ServerRankUpdate_VALUE = 352;
     /**
-     * <code>CS_UM_ServerRankUpdate = 52;</code>
+     * <code>CS_UM_ItemPickup = 353;</code>
      */
-    public static final int CS_UM_ServerRankUpdate_VALUE = 52;
+    public static final int CS_UM_ItemPickup_VALUE = 353;
     /**
-     * <code>CS_UM_ItemPickup = 53;</code>
+     * <code>CS_UM_ShowMenu = 354;</code>
      */
-    public static final int CS_UM_ItemPickup_VALUE = 53;
+    public static final int CS_UM_ShowMenu_VALUE = 354;
     /**
-     * <code>CS_UM_ShowMenu = 54;</code>
+     * <code>CS_UM_BarTime = 355;</code>
      */
-    public static final int CS_UM_ShowMenu_VALUE = 54;
+    public static final int CS_UM_BarTime_VALUE = 355;
     /**
-     * <code>CS_UM_BarTime = 55;</code>
+     * <code>CS_UM_AmmoDenied = 356;</code>
      */
-    public static final int CS_UM_BarTime_VALUE = 55;
+    public static final int CS_UM_AmmoDenied_VALUE = 356;
     /**
-     * <code>CS_UM_AmmoDenied = 56;</code>
+     * <code>CS_UM_MarkAchievement = 357;</code>
      */
-    public static final int CS_UM_AmmoDenied_VALUE = 56;
+    public static final int CS_UM_MarkAchievement_VALUE = 357;
     /**
-     * <code>CS_UM_MarkAchievement = 57;</code>
+     * <code>CS_UM_MatchStatsUpdate = 358;</code>
      */
-    public static final int CS_UM_MarkAchievement_VALUE = 57;
+    public static final int CS_UM_MatchStatsUpdate_VALUE = 358;
     /**
-     * <code>CS_UM_MatchStatsUpdate = 58;</code>
+     * <code>CS_UM_ItemDrop = 359;</code>
      */
-    public static final int CS_UM_MatchStatsUpdate_VALUE = 58;
+    public static final int CS_UM_ItemDrop_VALUE = 359;
     /**
-     * <code>CS_UM_ItemDrop = 59;</code>
+     * <code>CS_UM_GlowPropTurnOff = 360;</code>
      */
-    public static final int CS_UM_ItemDrop_VALUE = 59;
+    public static final int CS_UM_GlowPropTurnOff_VALUE = 360;
     /**
-     * <code>CS_UM_GlowPropTurnOff = 60;</code>
+     * <code>CS_UM_SendPlayerItemDrops = 361;</code>
      */
-    public static final int CS_UM_GlowPropTurnOff_VALUE = 60;
+    public static final int CS_UM_SendPlayerItemDrops_VALUE = 361;
     /**
-     * <code>CS_UM_SendPlayerItemDrops = 61;</code>
+     * <code>CS_UM_RoundBackupFilenames = 362;</code>
      */
-    public static final int CS_UM_SendPlayerItemDrops_VALUE = 61;
+    public static final int CS_UM_RoundBackupFilenames_VALUE = 362;
     /**
-     * <code>CS_UM_RoundBackupFilenames = 62;</code>
+     * <code>CS_UM_SendPlayerItemFound = 363;</code>
      */
-    public static final int CS_UM_RoundBackupFilenames_VALUE = 62;
+    public static final int CS_UM_SendPlayerItemFound_VALUE = 363;
     /**
-     * <code>CS_UM_SendPlayerItemFound = 63;</code>
+     * <code>CS_UM_ReportHit = 364;</code>
      */
-    public static final int CS_UM_SendPlayerItemFound_VALUE = 63;
+    public static final int CS_UM_ReportHit_VALUE = 364;
     /**
-     * <code>CS_UM_ReportHit = 64;</code>
+     * <code>CS_UM_XpUpdate = 365;</code>
      */
-    public static final int CS_UM_ReportHit_VALUE = 64;
+    public static final int CS_UM_XpUpdate_VALUE = 365;
     /**
-     * <code>CS_UM_XpUpdate = 65;</code>
+     * <code>CS_UM_QuestProgress = 366;</code>
      */
-    public static final int CS_UM_XpUpdate_VALUE = 65;
+    public static final int CS_UM_QuestProgress_VALUE = 366;
     /**
-     * <code>CS_UM_QuestProgress = 66;</code>
+     * <code>CS_UM_ScoreLeaderboardData = 367;</code>
      */
-    public static final int CS_UM_QuestProgress_VALUE = 66;
+    public static final int CS_UM_ScoreLeaderboardData_VALUE = 367;
     /**
-     * <code>CS_UM_ScoreLeaderboardData = 67;</code>
+     * <code>CS_UM_PlayerDecalDigitalSignature = 368;</code>
      */
-    public static final int CS_UM_ScoreLeaderboardData_VALUE = 67;
+    public static final int CS_UM_PlayerDecalDigitalSignature_VALUE = 368;
     /**
-     * <code>CS_UM_PlayerDecalDigitalSignature = 68;</code>
+     * <code>CS_UM_WeaponSound = 369;</code>
      */
-    public static final int CS_UM_PlayerDecalDigitalSignature_VALUE = 68;
+    public static final int CS_UM_WeaponSound_VALUE = 369;
     /**
-     * <code>CS_UM_WeaponSound = 69;</code>
+     * <code>CS_UM_UpdateScreenHealthBar = 370;</code>
      */
-    public static final int CS_UM_WeaponSound_VALUE = 69;
+    public static final int CS_UM_UpdateScreenHealthBar_VALUE = 370;
     /**
-     * <code>CS_UM_UpdateScreenHealthBar = 70;</code>
+     * <code>CS_UM_EntityOutlineHighlight = 371;</code>
      */
-    public static final int CS_UM_UpdateScreenHealthBar_VALUE = 70;
+    public static final int CS_UM_EntityOutlineHighlight_VALUE = 371;
     /**
-     * <code>CS_UM_EntityOutlineHighlight = 71;</code>
+     * <code>CS_UM_SSUI = 372;</code>
      */
-    public static final int CS_UM_EntityOutlineHighlight_VALUE = 71;
+    public static final int CS_UM_SSUI_VALUE = 372;
     /**
-     * <code>CS_UM_SSUI = 72;</code>
+     * <code>CS_UM_SurvivalStats = 373;</code>
      */
-    public static final int CS_UM_SSUI_VALUE = 72;
+    public static final int CS_UM_SurvivalStats_VALUE = 373;
     /**
-     * <code>CS_UM_SurvivalStats = 73;</code>
+     * <code>CS_UM_DisconnectToLobby2 = 374;</code>
      */
-    public static final int CS_UM_SurvivalStats_VALUE = 73;
+    public static final int CS_UM_DisconnectToLobby2_VALUE = 374;
     /**
-     * <code>CS_UM_DisconnectToLobby2 = 74;</code>
+     * <code>CS_UM_EndOfMatchAllPlayersData = 375;</code>
      */
-    public static final int CS_UM_DisconnectToLobby2_VALUE = 74;
+    public static final int CS_UM_EndOfMatchAllPlayersData_VALUE = 375;
     /**
-     * <code>CS_UM_EndOfMatchAllPlayersData = 75;</code>
+     * <code>CS_UM_PostRoundDamageReport = 376;</code>
      */
-    public static final int CS_UM_EndOfMatchAllPlayersData_VALUE = 75;
+    public static final int CS_UM_PostRoundDamageReport_VALUE = 376;
     /**
-     * <code>CS_UM_RoundImpactScoreData = 79;</code>
+     * <code>CS_UM_RoundEndReportData = 379;</code>
      */
-    public static final int CS_UM_RoundImpactScoreData_VALUE = 79;
+    public static final int CS_UM_RoundEndReportData_VALUE = 379;
     /**
-     * <code>CS_UM_CurrentRoundOdds = 80;</code>
+     * <code>CS_UM_CurrentRoundOdds = 380;</code>
      */
-    public static final int CS_UM_CurrentRoundOdds_VALUE = 80;
+    public static final int CS_UM_CurrentRoundOdds_VALUE = 380;
     /**
-     * <code>CS_UM_DeepStats = 81;</code>
+     * <code>CS_UM_DeepStats = 381;</code>
      */
-    public static final int CS_UM_DeepStats_VALUE = 81;
+    public static final int CS_UM_DeepStats_VALUE = 381;
+    /**
+     * <code>CS_UM_UtilMsg = 382;</code>
+     */
+    public static final int CS_UM_UtilMsg_VALUE = 382;
+    /**
+     * <code>CS_UM_ShootInfo = 383;</code>
+     */
+    public static final int CS_UM_ShootInfo_VALUE = 383;
 
 
     public final int getNumber() {
@@ -635,80 +651,82 @@ public final class Cstrike15Usermessages {
      */
     public static ECstrike15UserMessages forNumber(int value) {
       switch (value) {
-        case 1: return CS_UM_VGUIMenu;
-        case 2: return CS_UM_Geiger;
-        case 3: return CS_UM_Train;
-        case 4: return CS_UM_HudText;
-        case 5: return CS_UM_SayText;
-        case 6: return CS_UM_SayText2;
-        case 7: return CS_UM_TextMsg;
-        case 8: return CS_UM_HudMsg;
-        case 9: return CS_UM_ResetHud;
-        case 10: return CS_UM_GameTitle;
-        case 12: return CS_UM_Shake;
-        case 13: return CS_UM_Fade;
-        case 14: return CS_UM_Rumble;
-        case 15: return CS_UM_CloseCaption;
-        case 16: return CS_UM_CloseCaptionDirect;
-        case 17: return CS_UM_SendAudio;
-        case 18: return CS_UM_RawAudio;
-        case 19: return CS_UM_VoiceMask;
-        case 20: return CS_UM_RequestState;
-        case 21: return CS_UM_Damage;
-        case 22: return CS_UM_RadioText;
-        case 23: return CS_UM_HintText;
-        case 24: return CS_UM_KeyHintText;
-        case 25: return CS_UM_ProcessSpottedEntityUpdate;
-        case 26: return CS_UM_ReloadEffect;
-        case 27: return CS_UM_AdjustMoney;
-        case 28: return CS_UM_UpdateTeamMoney;
-        case 29: return CS_UM_StopSpectatorMode;
-        case 30: return CS_UM_KillCam;
-        case 31: return CS_UM_DesiredTimescale;
-        case 32: return CS_UM_CurrentTimescale;
-        case 33: return CS_UM_AchievementEvent;
-        case 34: return CS_UM_MatchEndConditions;
-        case 35: return CS_UM_DisconnectToLobby;
-        case 36: return CS_UM_PlayerStatsUpdate;
-        case 37: return CS_UM_DisplayInventory;
-        case 38: return CS_UM_WarmupHasEnded;
-        case 39: return CS_UM_ClientInfo;
-        case 40: return CS_UM_XRankGet;
-        case 41: return CS_UM_XRankUpd;
-        case 45: return CS_UM_CallVoteFailed;
-        case 46: return CS_UM_VoteStart;
-        case 47: return CS_UM_VotePass;
-        case 48: return CS_UM_VoteFailed;
-        case 49: return CS_UM_VoteSetup;
-        case 50: return CS_UM_ServerRankRevealAll;
-        case 51: return CS_UM_SendLastKillerDamageToClient;
-        case 52: return CS_UM_ServerRankUpdate;
-        case 53: return CS_UM_ItemPickup;
-        case 54: return CS_UM_ShowMenu;
-        case 55: return CS_UM_BarTime;
-        case 56: return CS_UM_AmmoDenied;
-        case 57: return CS_UM_MarkAchievement;
-        case 58: return CS_UM_MatchStatsUpdate;
-        case 59: return CS_UM_ItemDrop;
-        case 60: return CS_UM_GlowPropTurnOff;
-        case 61: return CS_UM_SendPlayerItemDrops;
-        case 62: return CS_UM_RoundBackupFilenames;
-        case 63: return CS_UM_SendPlayerItemFound;
-        case 64: return CS_UM_ReportHit;
-        case 65: return CS_UM_XpUpdate;
-        case 66: return CS_UM_QuestProgress;
-        case 67: return CS_UM_ScoreLeaderboardData;
-        case 68: return CS_UM_PlayerDecalDigitalSignature;
-        case 69: return CS_UM_WeaponSound;
-        case 70: return CS_UM_UpdateScreenHealthBar;
-        case 71: return CS_UM_EntityOutlineHighlight;
-        case 72: return CS_UM_SSUI;
-        case 73: return CS_UM_SurvivalStats;
-        case 74: return CS_UM_DisconnectToLobby2;
-        case 75: return CS_UM_EndOfMatchAllPlayersData;
-        case 79: return CS_UM_RoundImpactScoreData;
-        case 80: return CS_UM_CurrentRoundOdds;
-        case 81: return CS_UM_DeepStats;
+        case 301: return CS_UM_VGUIMenu;
+        case 302: return CS_UM_Geiger;
+        case 303: return CS_UM_Train;
+        case 304: return CS_UM_HudText;
+        case 305: return CS_UM_SayText;
+        case 306: return CS_UM_SayText2;
+        case 307: return CS_UM_TextMsg;
+        case 308: return CS_UM_HudMsg;
+        case 309: return CS_UM_ResetHud;
+        case 310: return CS_UM_GameTitle;
+        case 312: return CS_UM_Shake;
+        case 313: return CS_UM_Fade;
+        case 314: return CS_UM_Rumble;
+        case 315: return CS_UM_CloseCaption;
+        case 316: return CS_UM_CloseCaptionDirect;
+        case 317: return CS_UM_SendAudio;
+        case 318: return CS_UM_RawAudio;
+        case 319: return CS_UM_VoiceMask;
+        case 320: return CS_UM_RequestState;
+        case 321: return CS_UM_Damage;
+        case 322: return CS_UM_RadioText;
+        case 323: return CS_UM_HintText;
+        case 324: return CS_UM_KeyHintText;
+        case 325: return CS_UM_ProcessSpottedEntityUpdate;
+        case 326: return CS_UM_ReloadEffect;
+        case 327: return CS_UM_AdjustMoney;
+        case 328: return CS_UM_UpdateTeamMoney;
+        case 329: return CS_UM_StopSpectatorMode;
+        case 330: return CS_UM_KillCam;
+        case 331: return CS_UM_DesiredTimescale;
+        case 332: return CS_UM_CurrentTimescale;
+        case 333: return CS_UM_AchievementEvent;
+        case 334: return CS_UM_MatchEndConditions;
+        case 335: return CS_UM_DisconnectToLobby;
+        case 336: return CS_UM_PlayerStatsUpdate;
+        case 338: return CS_UM_WarmupHasEnded;
+        case 339: return CS_UM_ClientInfo;
+        case 340: return CS_UM_XRankGet;
+        case 341: return CS_UM_XRankUpd;
+        case 345: return CS_UM_CallVoteFailed;
+        case 346: return CS_UM_VoteStart;
+        case 347: return CS_UM_VotePass;
+        case 348: return CS_UM_VoteFailed;
+        case 349: return CS_UM_VoteSetup;
+        case 350: return CS_UM_ServerRankRevealAll;
+        case 351: return CS_UM_SendLastKillerDamageToClient;
+        case 352: return CS_UM_ServerRankUpdate;
+        case 353: return CS_UM_ItemPickup;
+        case 354: return CS_UM_ShowMenu;
+        case 355: return CS_UM_BarTime;
+        case 356: return CS_UM_AmmoDenied;
+        case 357: return CS_UM_MarkAchievement;
+        case 358: return CS_UM_MatchStatsUpdate;
+        case 359: return CS_UM_ItemDrop;
+        case 360: return CS_UM_GlowPropTurnOff;
+        case 361: return CS_UM_SendPlayerItemDrops;
+        case 362: return CS_UM_RoundBackupFilenames;
+        case 363: return CS_UM_SendPlayerItemFound;
+        case 364: return CS_UM_ReportHit;
+        case 365: return CS_UM_XpUpdate;
+        case 366: return CS_UM_QuestProgress;
+        case 367: return CS_UM_ScoreLeaderboardData;
+        case 368: return CS_UM_PlayerDecalDigitalSignature;
+        case 369: return CS_UM_WeaponSound;
+        case 370: return CS_UM_UpdateScreenHealthBar;
+        case 371: return CS_UM_EntityOutlineHighlight;
+        case 372: return CS_UM_SSUI;
+        case 373: return CS_UM_SurvivalStats;
+        case 374: return CS_UM_DisconnectToLobby2;
+        case 375: return CS_UM_EndOfMatchAllPlayersData;
+        case 376: return CS_UM_PostRoundDamageReport;
+        case 379: return CS_UM_RoundEndReportData;
+        case 380: return CS_UM_CurrentRoundOdds;
+        case 381: return CS_UM_DeepStats;
+        case 382: return CS_UM_UtilMsg;
+        case 383: return CS_UM_ShootInfo;
         default: return null;
       }
     }
@@ -887,27 +905,27 @@ public final class Cstrike15Usermessages {
     boolean getShow();
 
     /**
-     * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+     * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
      */
-    java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey> 
-        getSubkeysList();
+    java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys> 
+        getKeysList();
     /**
-     * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+     * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
      */
-    Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey getSubkeys(int index);
+    Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys getKeys(int index);
     /**
-     * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+     * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
      */
-    int getSubkeysCount();
+    int getKeysCount();
     /**
-     * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+     * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
      */
-    java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.SubkeyOrBuilder> 
-        getSubkeysOrBuilderList();
+    java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.KeysOrBuilder> 
+        getKeysOrBuilderList();
     /**
-     * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+     * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
      */
-    Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.SubkeyOrBuilder getSubkeysOrBuilder(
+    Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.KeysOrBuilder getKeysOrBuilder(
         int index);
   }
   /**
@@ -924,7 +942,7 @@ public final class Cstrike15Usermessages {
     }
     private CCSUsrMsg_VGUIMenu() {
       name_ = "";
-      subkeys_ = java.util.Collections.emptyList();
+      keys_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -971,11 +989,11 @@ public final class Cstrike15Usermessages {
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                subkeys_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey>();
+                keys_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys>();
                 mutable_bitField0_ |= 0x00000004;
               }
-              subkeys_.add(
-                  input.readMessage(Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.PARSER, extensionRegistry));
+              keys_.add(
+                  input.readMessage(Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.PARSER, extensionRegistry));
               break;
             }
             default: {
@@ -994,7 +1012,7 @@ public final class Cstrike15Usermessages {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          subkeys_ = java.util.Collections.unmodifiableList(subkeys_);
+          keys_ = java.util.Collections.unmodifiableList(keys_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1013,8 +1031,8 @@ public final class Cstrike15Usermessages {
               Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.class, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Builder.class);
     }
 
-    public interface SubkeyOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:CCSUsrMsg_VGUIMenu.Subkey)
+    public interface KeysOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CCSUsrMsg_VGUIMenu.Keys)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -1035,44 +1053,44 @@ public final class Cstrike15Usermessages {
           getNameBytes();
 
       /**
-       * <code>optional string str = 2;</code>
-       * @return Whether the str field is set.
+       * <code>optional string value = 2;</code>
+       * @return Whether the value field is set.
        */
-      boolean hasStr();
+      boolean hasValue();
       /**
-       * <code>optional string str = 2;</code>
-       * @return The str.
+       * <code>optional string value = 2;</code>
+       * @return The value.
        */
-      java.lang.String getStr();
+      java.lang.String getValue();
       /**
-       * <code>optional string str = 2;</code>
-       * @return The bytes for str.
+       * <code>optional string value = 2;</code>
+       * @return The bytes for value.
        */
       com.google.protobuf.ByteString
-          getStrBytes();
+          getValueBytes();
     }
     /**
-     * Protobuf type {@code CCSUsrMsg_VGUIMenu.Subkey}
+     * Protobuf type {@code CCSUsrMsg_VGUIMenu.Keys}
      */
-    public static final class Subkey extends
+    public static final class Keys extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:CCSUsrMsg_VGUIMenu.Subkey)
-        SubkeyOrBuilder {
+        // @@protoc_insertion_point(message_implements:CCSUsrMsg_VGUIMenu.Keys)
+        KeysOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use Subkey.newBuilder() to construct.
-      private Subkey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use Keys.newBuilder() to construct.
+      private Keys(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private Subkey() {
+      private Keys() {
         name_ = "";
-        str_ = "";
+        value_ = "";
       }
 
       @java.lang.Override
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(
           UnusedPrivateParameter unused) {
-        return new Subkey();
+        return new Keys();
       }
 
       @java.lang.Override
@@ -1080,7 +1098,7 @@ public final class Cstrike15Usermessages {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private Subkey(
+      private Keys(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1108,7 +1126,7 @@ public final class Cstrike15Usermessages {
               case 18: {
                 com.google.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
-                str_ = bs;
+                value_ = bs;
                 break;
               }
               default: {
@@ -1132,15 +1150,15 @@ public final class Cstrike15Usermessages {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_VGUIMenu_Subkey_descriptor;
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_VGUIMenu_Keys_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_VGUIMenu_Subkey_fieldAccessorTable
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_VGUIMenu_Keys_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.class, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder.class);
+                Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.class, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder.class);
       }
 
       private int bitField0_;
@@ -1192,23 +1210,23 @@ public final class Cstrike15Usermessages {
         }
       }
 
-      public static final int STR_FIELD_NUMBER = 2;
-      private volatile java.lang.Object str_;
+      public static final int VALUE_FIELD_NUMBER = 2;
+      private volatile java.lang.Object value_;
       /**
-       * <code>optional string str = 2;</code>
-       * @return Whether the str field is set.
+       * <code>optional string value = 2;</code>
+       * @return Whether the value field is set.
        */
       @java.lang.Override
-      public boolean hasStr() {
+      public boolean hasValue() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional string str = 2;</code>
-       * @return The str.
+       * <code>optional string value = 2;</code>
+       * @return The value.
        */
       @java.lang.Override
-      public java.lang.String getStr() {
-        java.lang.Object ref = str_;
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
@@ -1216,24 +1234,24 @@ public final class Cstrike15Usermessages {
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            str_ = s;
+            value_ = s;
           }
           return s;
         }
       }
       /**
-       * <code>optional string str = 2;</code>
-       * @return The bytes for str.
+       * <code>optional string value = 2;</code>
+       * @return The bytes for value.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getStrBytes() {
-        java.lang.Object ref = str_;
+          getValueBytes() {
+        java.lang.Object ref = value_;
         if (ref instanceof java.lang.String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          str_ = b;
+          value_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1258,7 +1276,7 @@ public final class Cstrike15Usermessages {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
         if (((bitField0_ & 0x00000002) != 0)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, str_);
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
         }
         unknownFields.writeTo(output);
       }
@@ -1273,7 +1291,7 @@ public final class Cstrike15Usermessages {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
         if (((bitField0_ & 0x00000002) != 0)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, str_);
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -1285,20 +1303,20 @@ public final class Cstrike15Usermessages {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey)) {
+        if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys)) {
           return super.equals(obj);
         }
-        Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey other = (Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey) obj;
+        Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys other = (Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys) obj;
 
         if (hasName() != other.hasName()) return false;
         if (hasName()) {
           if (!getName()
               .equals(other.getName())) return false;
         }
-        if (hasStr() != other.hasStr()) return false;
-        if (hasStr()) {
-          if (!getStr()
-              .equals(other.getStr())) return false;
+        if (hasValue() != other.hasValue()) return false;
+        if (hasValue()) {
+          if (!getValue()
+              .equals(other.getValue())) return false;
         }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
@@ -1315,78 +1333,78 @@ public final class Cstrike15Usermessages {
           hash = (37 * hash) + NAME_FIELD_NUMBER;
           hash = (53 * hash) + getName().hashCode();
         }
-        if (hasStr()) {
-          hash = (37 * hash) + STR_FIELD_NUMBER;
-          hash = (53 * hash) + getStr().hashCode();
+        if (hasValue()) {
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValue().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
       }
 
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseFrom(byte[] data)
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseFrom(java.io.InputStream input)
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseDelimitedFrom(java.io.InputStream input)
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseDelimitedFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -1399,7 +1417,7 @@ public final class Cstrike15Usermessages {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey prototype) {
+      public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -1415,26 +1433,26 @@ public final class Cstrike15Usermessages {
         return builder;
       }
       /**
-       * Protobuf type {@code CCSUsrMsg_VGUIMenu.Subkey}
+       * Protobuf type {@code CCSUsrMsg_VGUIMenu.Keys}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:CCSUsrMsg_VGUIMenu.Subkey)
-          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.SubkeyOrBuilder {
+          // @@protoc_insertion_point(builder_implements:CCSUsrMsg_VGUIMenu.Keys)
+          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.KeysOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_VGUIMenu_Subkey_descriptor;
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_VGUIMenu_Keys_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_VGUIMenu_Subkey_fieldAccessorTable
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_VGUIMenu_Keys_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.class, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder.class);
+                  Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.class, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder.class);
         }
 
-        // Construct using Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.newBuilder()
+        // Construct using Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -1454,7 +1472,7 @@ public final class Cstrike15Usermessages {
           super.clear();
           name_ = "";
           bitField0_ = (bitField0_ & ~0x00000001);
-          str_ = "";
+          value_ = "";
           bitField0_ = (bitField0_ & ~0x00000002);
           return this;
         }
@@ -1462,17 +1480,17 @@ public final class Cstrike15Usermessages {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_VGUIMenu_Subkey_descriptor;
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_VGUIMenu_Keys_descriptor;
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey getDefaultInstanceForType() {
-          return Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.getDefaultInstance();
+        public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys getDefaultInstanceForType() {
+          return Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.getDefaultInstance();
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey build() {
-          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey result = buildPartial();
+        public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys build() {
+          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -1480,8 +1498,8 @@ public final class Cstrike15Usermessages {
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey buildPartial() {
-          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey result = new Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey(this);
+        public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys buildPartial() {
+          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys result = new Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -1491,7 +1509,7 @@ public final class Cstrike15Usermessages {
           if (((from_bitField0_ & 0x00000002) != 0)) {
             to_bitField0_ |= 0x00000002;
           }
-          result.str_ = str_;
+          result.value_ = value_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -1531,24 +1549,24 @@ public final class Cstrike15Usermessages {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey) {
-            return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey)other);
+          if (other instanceof Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys) {
+            return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey other) {
-          if (other == Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.getDefaultInstance()) return this;
+        public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys other) {
+          if (other == Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.getDefaultInstance()) return this;
           if (other.hasName()) {
             bitField0_ |= 0x00000001;
             name_ = other.name_;
             onChanged();
           }
-          if (other.hasStr()) {
+          if (other.hasValue()) {
             bitField0_ |= 0x00000002;
-            str_ = other.str_;
+            value_ = other.value_;
             onChanged();
           }
           this.mergeUnknownFields(other.unknownFields);
@@ -1566,11 +1584,11 @@ public final class Cstrike15Usermessages {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey parsedMessage = null;
+          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey) e.getUnfinishedMessage();
+            parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -1665,26 +1683,26 @@ public final class Cstrike15Usermessages {
           return this;
         }
 
-        private java.lang.Object str_ = "";
+        private java.lang.Object value_ = "";
         /**
-         * <code>optional string str = 2;</code>
-         * @return Whether the str field is set.
+         * <code>optional string value = 2;</code>
+         * @return Whether the value field is set.
          */
-        public boolean hasStr() {
+        public boolean hasValue() {
           return ((bitField0_ & 0x00000002) != 0);
         }
         /**
-         * <code>optional string str = 2;</code>
-         * @return The str.
+         * <code>optional string value = 2;</code>
+         * @return The value.
          */
-        public java.lang.String getStr() {
-          java.lang.Object ref = str_;
+        public java.lang.String getValue() {
+          java.lang.Object ref = value_;
           if (!(ref instanceof java.lang.String)) {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
-              str_ = s;
+              value_ = s;
             }
             return s;
           } else {
@@ -1692,59 +1710,59 @@ public final class Cstrike15Usermessages {
           }
         }
         /**
-         * <code>optional string str = 2;</code>
-         * @return The bytes for str.
+         * <code>optional string value = 2;</code>
+         * @return The bytes for value.
          */
         public com.google.protobuf.ByteString
-            getStrBytes() {
-          java.lang.Object ref = str_;
+            getValueBytes() {
+          java.lang.Object ref = value_;
           if (ref instanceof String) {
             com.google.protobuf.ByteString b = 
                 com.google.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
-            str_ = b;
+            value_ = b;
             return b;
           } else {
             return (com.google.protobuf.ByteString) ref;
           }
         }
         /**
-         * <code>optional string str = 2;</code>
-         * @param value The str to set.
+         * <code>optional string value = 2;</code>
+         * @param value The value to set.
          * @return This builder for chaining.
          */
-        public Builder setStr(
+        public Builder setValue(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-          str_ = value;
+          value_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string str = 2;</code>
+         * <code>optional string value = 2;</code>
          * @return This builder for chaining.
          */
-        public Builder clearStr() {
+        public Builder clearValue() {
           bitField0_ = (bitField0_ & ~0x00000002);
-          str_ = getDefaultInstance().getStr();
+          value_ = getDefaultInstance().getValue();
           onChanged();
           return this;
         }
         /**
-         * <code>optional string str = 2;</code>
-         * @param value The bytes for str to set.
+         * <code>optional string value = 2;</code>
+         * @param value The bytes for value to set.
          * @return This builder for chaining.
          */
-        public Builder setStrBytes(
+        public Builder setValueBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-          str_ = value;
+          value_ = value;
           onChanged();
           return this;
         }
@@ -1761,41 +1779,41 @@ public final class Cstrike15Usermessages {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:CCSUsrMsg_VGUIMenu.Subkey)
+        // @@protoc_insertion_point(builder_scope:CCSUsrMsg_VGUIMenu.Keys)
       }
 
-      // @@protoc_insertion_point(class_scope:CCSUsrMsg_VGUIMenu.Subkey)
-      private static final Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:CCSUsrMsg_VGUIMenu.Keys)
+      private static final Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey();
+        DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys();
       }
 
-      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey getDefaultInstance() {
+      public static Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      @java.lang.Deprecated public static final com.google.protobuf.Parser<Subkey>
-          PARSER = new com.google.protobuf.AbstractParser<Subkey>() {
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Keys>
+          PARSER = new com.google.protobuf.AbstractParser<Keys>() {
         @java.lang.Override
-        public Subkey parsePartialFrom(
+        public Keys parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Subkey(input, extensionRegistry);
+          return new Keys(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<Subkey> parser() {
+      public static com.google.protobuf.Parser<Keys> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<Subkey> getParserForType() {
+      public com.google.protobuf.Parser<Keys> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey getDefaultInstanceForType() {
+      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -1869,44 +1887,44 @@ public final class Cstrike15Usermessages {
       return show_;
     }
 
-    public static final int SUBKEYS_FIELD_NUMBER = 3;
-    private java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey> subkeys_;
+    public static final int KEYS_FIELD_NUMBER = 3;
+    private java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys> keys_;
     /**
-     * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+     * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
      */
     @java.lang.Override
-    public java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey> getSubkeysList() {
-      return subkeys_;
+    public java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys> getKeysList() {
+      return keys_;
     }
     /**
-     * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+     * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.SubkeyOrBuilder> 
-        getSubkeysOrBuilderList() {
-      return subkeys_;
+    public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.KeysOrBuilder> 
+        getKeysOrBuilderList() {
+      return keys_;
     }
     /**
-     * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+     * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
      */
     @java.lang.Override
-    public int getSubkeysCount() {
-      return subkeys_.size();
+    public int getKeysCount() {
+      return keys_.size();
     }
     /**
-     * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+     * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
      */
     @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey getSubkeys(int index) {
-      return subkeys_.get(index);
+    public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys getKeys(int index) {
+      return keys_.get(index);
     }
     /**
-     * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+     * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
      */
     @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.SubkeyOrBuilder getSubkeysOrBuilder(
+    public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.KeysOrBuilder getKeysOrBuilder(
         int index) {
-      return subkeys_.get(index);
+      return keys_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1929,8 +1947,8 @@ public final class Cstrike15Usermessages {
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeBool(2, show_);
       }
-      for (int i = 0; i < subkeys_.size(); i++) {
-        output.writeMessage(3, subkeys_.get(i));
+      for (int i = 0; i < keys_.size(); i++) {
+        output.writeMessage(3, keys_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1948,9 +1966,9 @@ public final class Cstrike15Usermessages {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, show_);
       }
-      for (int i = 0; i < subkeys_.size(); i++) {
+      for (int i = 0; i < keys_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, subkeys_.get(i));
+          .computeMessageSize(3, keys_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1977,8 +1995,8 @@ public final class Cstrike15Usermessages {
         if (getShow()
             != other.getShow()) return false;
       }
-      if (!getSubkeysList()
-          .equals(other.getSubkeysList())) return false;
+      if (!getKeysList()
+          .equals(other.getKeysList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1999,9 +2017,9 @@ public final class Cstrike15Usermessages {
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getShow());
       }
-      if (getSubkeysCount() > 0) {
-        hash = (37 * hash) + SUBKEYS_FIELD_NUMBER;
-        hash = (53 * hash) + getSubkeysList().hashCode();
+      if (getKeysCount() > 0) {
+        hash = (37 * hash) + KEYS_FIELD_NUMBER;
+        hash = (53 * hash) + getKeysList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2131,7 +2149,7 @@ public final class Cstrike15Usermessages {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getSubkeysFieldBuilder();
+          getKeysFieldBuilder();
         }
       }
       @java.lang.Override
@@ -2141,11 +2159,11 @@ public final class Cstrike15Usermessages {
         bitField0_ = (bitField0_ & ~0x00000001);
         show_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (subkeysBuilder_ == null) {
-          subkeys_ = java.util.Collections.emptyList();
+        if (keysBuilder_ == null) {
+          keys_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          subkeysBuilder_.clear();
+          keysBuilder_.clear();
         }
         return this;
       }
@@ -2183,14 +2201,14 @@ public final class Cstrike15Usermessages {
           result.show_ = show_;
           to_bitField0_ |= 0x00000002;
         }
-        if (subkeysBuilder_ == null) {
+        if (keysBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
-            subkeys_ = java.util.Collections.unmodifiableList(subkeys_);
+            keys_ = java.util.Collections.unmodifiableList(keys_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
-          result.subkeys_ = subkeys_;
+          result.keys_ = keys_;
         } else {
-          result.subkeys_ = subkeysBuilder_.build();
+          result.keys_ = keysBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -2249,29 +2267,29 @@ public final class Cstrike15Usermessages {
         if (other.hasShow()) {
           setShow(other.getShow());
         }
-        if (subkeysBuilder_ == null) {
-          if (!other.subkeys_.isEmpty()) {
-            if (subkeys_.isEmpty()) {
-              subkeys_ = other.subkeys_;
+        if (keysBuilder_ == null) {
+          if (!other.keys_.isEmpty()) {
+            if (keys_.isEmpty()) {
+              keys_ = other.keys_;
               bitField0_ = (bitField0_ & ~0x00000004);
             } else {
-              ensureSubkeysIsMutable();
-              subkeys_.addAll(other.subkeys_);
+              ensureKeysIsMutable();
+              keys_.addAll(other.keys_);
             }
             onChanged();
           }
         } else {
-          if (!other.subkeys_.isEmpty()) {
-            if (subkeysBuilder_.isEmpty()) {
-              subkeysBuilder_.dispose();
-              subkeysBuilder_ = null;
-              subkeys_ = other.subkeys_;
+          if (!other.keys_.isEmpty()) {
+            if (keysBuilder_.isEmpty()) {
+              keysBuilder_.dispose();
+              keysBuilder_ = null;
+              keys_ = other.keys_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              subkeysBuilder_ = 
+              keysBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getSubkeysFieldBuilder() : null;
+                   getKeysFieldBuilder() : null;
             } else {
-              subkeysBuilder_.addAllMessages(other.subkeys_);
+              keysBuilder_.addAllMessages(other.keys_);
             }
           }
         }
@@ -2428,244 +2446,244 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey> subkeys_ =
+      private java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys> keys_ =
         java.util.Collections.emptyList();
-      private void ensureSubkeysIsMutable() {
+      private void ensureKeysIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          subkeys_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey>(subkeys_);
+          keys_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys>(keys_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.SubkeyOrBuilder> subkeysBuilder_;
+          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.KeysOrBuilder> keysBuilder_;
 
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey> getSubkeysList() {
-        if (subkeysBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(subkeys_);
+      public java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys> getKeysList() {
+        if (keysBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(keys_);
         } else {
-          return subkeysBuilder_.getMessageList();
+          return keysBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public int getSubkeysCount() {
-        if (subkeysBuilder_ == null) {
-          return subkeys_.size();
+      public int getKeysCount() {
+        if (keysBuilder_ == null) {
+          return keys_.size();
         } else {
-          return subkeysBuilder_.getCount();
+          return keysBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey getSubkeys(int index) {
-        if (subkeysBuilder_ == null) {
-          return subkeys_.get(index);
+      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys getKeys(int index) {
+        if (keysBuilder_ == null) {
+          return keys_.get(index);
         } else {
-          return subkeysBuilder_.getMessage(index);
+          return keysBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Builder setSubkeys(
-          int index, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey value) {
-        if (subkeysBuilder_ == null) {
+      public Builder setKeys(
+          int index, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys value) {
+        if (keysBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureSubkeysIsMutable();
-          subkeys_.set(index, value);
+          ensureKeysIsMutable();
+          keys_.set(index, value);
           onChanged();
         } else {
-          subkeysBuilder_.setMessage(index, value);
+          keysBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Builder setSubkeys(
-          int index, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder builderForValue) {
-        if (subkeysBuilder_ == null) {
-          ensureSubkeysIsMutable();
-          subkeys_.set(index, builderForValue.build());
+      public Builder setKeys(
+          int index, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder builderForValue) {
+        if (keysBuilder_ == null) {
+          ensureKeysIsMutable();
+          keys_.set(index, builderForValue.build());
           onChanged();
         } else {
-          subkeysBuilder_.setMessage(index, builderForValue.build());
+          keysBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Builder addSubkeys(Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey value) {
-        if (subkeysBuilder_ == null) {
+      public Builder addKeys(Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys value) {
+        if (keysBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureSubkeysIsMutable();
-          subkeys_.add(value);
+          ensureKeysIsMutable();
+          keys_.add(value);
           onChanged();
         } else {
-          subkeysBuilder_.addMessage(value);
+          keysBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Builder addSubkeys(
-          int index, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey value) {
-        if (subkeysBuilder_ == null) {
+      public Builder addKeys(
+          int index, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys value) {
+        if (keysBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureSubkeysIsMutable();
-          subkeys_.add(index, value);
+          ensureKeysIsMutable();
+          keys_.add(index, value);
           onChanged();
         } else {
-          subkeysBuilder_.addMessage(index, value);
+          keysBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Builder addSubkeys(
-          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder builderForValue) {
-        if (subkeysBuilder_ == null) {
-          ensureSubkeysIsMutable();
-          subkeys_.add(builderForValue.build());
+      public Builder addKeys(
+          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder builderForValue) {
+        if (keysBuilder_ == null) {
+          ensureKeysIsMutable();
+          keys_.add(builderForValue.build());
           onChanged();
         } else {
-          subkeysBuilder_.addMessage(builderForValue.build());
+          keysBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Builder addSubkeys(
-          int index, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder builderForValue) {
-        if (subkeysBuilder_ == null) {
-          ensureSubkeysIsMutable();
-          subkeys_.add(index, builderForValue.build());
+      public Builder addKeys(
+          int index, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder builderForValue) {
+        if (keysBuilder_ == null) {
+          ensureKeysIsMutable();
+          keys_.add(index, builderForValue.build());
           onChanged();
         } else {
-          subkeysBuilder_.addMessage(index, builderForValue.build());
+          keysBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Builder addAllSubkeys(
-          java.lang.Iterable<? extends Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey> values) {
-        if (subkeysBuilder_ == null) {
-          ensureSubkeysIsMutable();
+      public Builder addAllKeys(
+          java.lang.Iterable<? extends Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys> values) {
+        if (keysBuilder_ == null) {
+          ensureKeysIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, subkeys_);
+              values, keys_);
           onChanged();
         } else {
-          subkeysBuilder_.addAllMessages(values);
+          keysBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Builder clearSubkeys() {
-        if (subkeysBuilder_ == null) {
-          subkeys_ = java.util.Collections.emptyList();
+      public Builder clearKeys() {
+        if (keysBuilder_ == null) {
+          keys_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
-          subkeysBuilder_.clear();
+          keysBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Builder removeSubkeys(int index) {
-        if (subkeysBuilder_ == null) {
-          ensureSubkeysIsMutable();
-          subkeys_.remove(index);
+      public Builder removeKeys(int index) {
+        if (keysBuilder_ == null) {
+          ensureKeysIsMutable();
+          keys_.remove(index);
           onChanged();
         } else {
-          subkeysBuilder_.remove(index);
+          keysBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder getSubkeysBuilder(
+      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder getKeysBuilder(
           int index) {
-        return getSubkeysFieldBuilder().getBuilder(index);
+        return getKeysFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.SubkeyOrBuilder getSubkeysOrBuilder(
+      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.KeysOrBuilder getKeysOrBuilder(
           int index) {
-        if (subkeysBuilder_ == null) {
-          return subkeys_.get(index);  } else {
-          return subkeysBuilder_.getMessageOrBuilder(index);
+        if (keysBuilder_ == null) {
+          return keys_.get(index);  } else {
+          return keysBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.SubkeyOrBuilder> 
-           getSubkeysOrBuilderList() {
-        if (subkeysBuilder_ != null) {
-          return subkeysBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.KeysOrBuilder> 
+           getKeysOrBuilderList() {
+        if (keysBuilder_ != null) {
+          return keysBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(subkeys_);
+          return java.util.Collections.unmodifiableList(keys_);
         }
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder addSubkeysBuilder() {
-        return getSubkeysFieldBuilder().addBuilder(
-            Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.getDefaultInstance());
+      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder addKeysBuilder() {
+        return getKeysFieldBuilder().addBuilder(
+            Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.getDefaultInstance());
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder addSubkeysBuilder(
+      public Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder addKeysBuilder(
           int index) {
-        return getSubkeysFieldBuilder().addBuilder(
-            index, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.getDefaultInstance());
+        return getKeysFieldBuilder().addBuilder(
+            index, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.getDefaultInstance());
       }
       /**
-       * <code>repeated .CCSUsrMsg_VGUIMenu.Subkey subkeys = 3;</code>
+       * <code>repeated .CCSUsrMsg_VGUIMenu.Keys keys = 3;</code>
        */
-      public java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder> 
-           getSubkeysBuilderList() {
-        return getSubkeysFieldBuilder().getBuilderList();
+      public java.util.List<Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder> 
+           getKeysBuilderList() {
+        return getKeysFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.SubkeyOrBuilder> 
-          getSubkeysFieldBuilder() {
-        if (subkeysBuilder_ == null) {
-          subkeysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Subkey.Builder, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.SubkeyOrBuilder>(
-                  subkeys_,
+          Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.KeysOrBuilder> 
+          getKeysFieldBuilder() {
+        if (keysBuilder_ == null) {
+          keysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.Keys.Builder, Cstrike15Usermessages.CCSUsrMsg_VGUIMenu.KeysOrBuilder>(
+                  keys_,
                   ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
-          subkeys_ = null;
+          keys_ = null;
         }
-        return subkeysBuilder_;
+        return keysBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4372,2771 +4390,6 @@ public final class Cstrike15Usermessages {
 
   }
 
-  public interface CCSUsrMsg_SayTextOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_SayText)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional int32 ent_idx = 1;</code>
-     * @return Whether the entIdx field is set.
-     */
-    boolean hasEntIdx();
-    /**
-     * <code>optional int32 ent_idx = 1;</code>
-     * @return The entIdx.
-     */
-    int getEntIdx();
-
-    /**
-     * <code>optional string text = 2;</code>
-     * @return Whether the text field is set.
-     */
-    boolean hasText();
-    /**
-     * <code>optional string text = 2;</code>
-     * @return The text.
-     */
-    java.lang.String getText();
-    /**
-     * <code>optional string text = 2;</code>
-     * @return The bytes for text.
-     */
-    com.google.protobuf.ByteString
-        getTextBytes();
-
-    /**
-     * <code>optional bool chat = 3;</code>
-     * @return Whether the chat field is set.
-     */
-    boolean hasChat();
-    /**
-     * <code>optional bool chat = 3;</code>
-     * @return The chat.
-     */
-    boolean getChat();
-
-    /**
-     * <code>optional bool textallchat = 4;</code>
-     * @return Whether the textallchat field is set.
-     */
-    boolean hasTextallchat();
-    /**
-     * <code>optional bool textallchat = 4;</code>
-     * @return The textallchat.
-     */
-    boolean getTextallchat();
-  }
-  /**
-   * Protobuf type {@code CCSUsrMsg_SayText}
-   */
-  public static final class CCSUsrMsg_SayText extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CCSUsrMsg_SayText)
-      CCSUsrMsg_SayTextOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CCSUsrMsg_SayText.newBuilder() to construct.
-    private CCSUsrMsg_SayText(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CCSUsrMsg_SayText() {
-      text_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CCSUsrMsg_SayText();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CCSUsrMsg_SayText(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              bitField0_ |= 0x00000001;
-              entIdx_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              text_ = bs;
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              chat_ = input.readBool();
-              break;
-            }
-            case 32: {
-              bitField0_ |= 0x00000008;
-              textallchat_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Cstrike15Usermessages.internal_static_CCSUsrMsg_SayText_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Cstrike15Usermessages.internal_static_CCSUsrMsg_SayText_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Cstrike15Usermessages.CCSUsrMsg_SayText.class, Cstrike15Usermessages.CCSUsrMsg_SayText.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int ENT_IDX_FIELD_NUMBER = 1;
-    private int entIdx_;
-    /**
-     * <code>optional int32 ent_idx = 1;</code>
-     * @return Whether the entIdx field is set.
-     */
-    @java.lang.Override
-    public boolean hasEntIdx() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional int32 ent_idx = 1;</code>
-     * @return The entIdx.
-     */
-    @java.lang.Override
-    public int getEntIdx() {
-      return entIdx_;
-    }
-
-    public static final int TEXT_FIELD_NUMBER = 2;
-    private volatile java.lang.Object text_;
-    /**
-     * <code>optional string text = 2;</code>
-     * @return Whether the text field is set.
-     */
-    @java.lang.Override
-    public boolean hasText() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional string text = 2;</code>
-     * @return The text.
-     */
-    @java.lang.Override
-    public java.lang.String getText() {
-      java.lang.Object ref = text_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          text_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string text = 2;</code>
-     * @return The bytes for text.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTextBytes() {
-      java.lang.Object ref = text_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        text_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CHAT_FIELD_NUMBER = 3;
-    private boolean chat_;
-    /**
-     * <code>optional bool chat = 3;</code>
-     * @return Whether the chat field is set.
-     */
-    @java.lang.Override
-    public boolean hasChat() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>optional bool chat = 3;</code>
-     * @return The chat.
-     */
-    @java.lang.Override
-    public boolean getChat() {
-      return chat_;
-    }
-
-    public static final int TEXTALLCHAT_FIELD_NUMBER = 4;
-    private boolean textallchat_;
-    /**
-     * <code>optional bool textallchat = 4;</code>
-     * @return Whether the textallchat field is set.
-     */
-    @java.lang.Override
-    public boolean hasTextallchat() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <code>optional bool textallchat = 4;</code>
-     * @return The textallchat.
-     */
-    @java.lang.Override
-    public boolean getTextallchat() {
-      return textallchat_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeInt32(1, entIdx_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeBool(3, chat_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeBool(4, textallchat_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, entIdx_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, chat_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, textallchat_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_SayText)) {
-        return super.equals(obj);
-      }
-      Cstrike15Usermessages.CCSUsrMsg_SayText other = (Cstrike15Usermessages.CCSUsrMsg_SayText) obj;
-
-      if (hasEntIdx() != other.hasEntIdx()) return false;
-      if (hasEntIdx()) {
-        if (getEntIdx()
-            != other.getEntIdx()) return false;
-      }
-      if (hasText() != other.hasText()) return false;
-      if (hasText()) {
-        if (!getText()
-            .equals(other.getText())) return false;
-      }
-      if (hasChat() != other.hasChat()) return false;
-      if (hasChat()) {
-        if (getChat()
-            != other.getChat()) return false;
-      }
-      if (hasTextallchat() != other.hasTextallchat()) return false;
-      if (hasTextallchat()) {
-        if (getTextallchat()
-            != other.getTextallchat()) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasEntIdx()) {
-        hash = (37 * hash) + ENT_IDX_FIELD_NUMBER;
-        hash = (53 * hash) + getEntIdx();
-      }
-      if (hasText()) {
-        hash = (37 * hash) + TEXT_FIELD_NUMBER;
-        hash = (53 * hash) + getText().hashCode();
-      }
-      if (hasChat()) {
-        hash = (37 * hash) + CHAT_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getChat());
-      }
-      if (hasTextallchat()) {
-        hash = (37 * hash) + TEXTALLCHAT_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getTextallchat());
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_SayText prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CCSUsrMsg_SayText}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_SayText)
-        Cstrike15Usermessages.CCSUsrMsg_SayTextOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_SayText_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_SayText_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Cstrike15Usermessages.CCSUsrMsg_SayText.class, Cstrike15Usermessages.CCSUsrMsg_SayText.Builder.class);
-      }
-
-      // Construct using Cstrike15Usermessages.CCSUsrMsg_SayText.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        entIdx_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        text_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        chat_ = false;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        textallchat_ = false;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_SayText_descriptor;
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_SayText getDefaultInstanceForType() {
-        return Cstrike15Usermessages.CCSUsrMsg_SayText.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_SayText build() {
-        Cstrike15Usermessages.CCSUsrMsg_SayText result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_SayText buildPartial() {
-        Cstrike15Usermessages.CCSUsrMsg_SayText result = new Cstrike15Usermessages.CCSUsrMsg_SayText(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.entIdx_ = entIdx_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.text_ = text_;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.chat_ = chat_;
-          to_bitField0_ |= 0x00000004;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.textallchat_ = textallchat_;
-          to_bitField0_ |= 0x00000008;
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Cstrike15Usermessages.CCSUsrMsg_SayText) {
-          return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_SayText)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_SayText other) {
-        if (other == Cstrike15Usermessages.CCSUsrMsg_SayText.getDefaultInstance()) return this;
-        if (other.hasEntIdx()) {
-          setEntIdx(other.getEntIdx());
-        }
-        if (other.hasText()) {
-          bitField0_ |= 0x00000002;
-          text_ = other.text_;
-          onChanged();
-        }
-        if (other.hasChat()) {
-          setChat(other.getChat());
-        }
-        if (other.hasTextallchat()) {
-          setTextallchat(other.getTextallchat());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        Cstrike15Usermessages.CCSUsrMsg_SayText parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_SayText) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private int entIdx_ ;
-      /**
-       * <code>optional int32 ent_idx = 1;</code>
-       * @return Whether the entIdx field is set.
-       */
-      @java.lang.Override
-      public boolean hasEntIdx() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional int32 ent_idx = 1;</code>
-       * @return The entIdx.
-       */
-      @java.lang.Override
-      public int getEntIdx() {
-        return entIdx_;
-      }
-      /**
-       * <code>optional int32 ent_idx = 1;</code>
-       * @param value The entIdx to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEntIdx(int value) {
-        bitField0_ |= 0x00000001;
-        entIdx_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 ent_idx = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEntIdx() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        entIdx_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object text_ = "";
-      /**
-       * <code>optional string text = 2;</code>
-       * @return Whether the text field is set.
-       */
-      public boolean hasText() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional string text = 2;</code>
-       * @return The text.
-       */
-      public java.lang.String getText() {
-        java.lang.Object ref = text_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            text_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string text = 2;</code>
-       * @return The bytes for text.
-       */
-      public com.google.protobuf.ByteString
-          getTextBytes() {
-        java.lang.Object ref = text_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          text_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string text = 2;</code>
-       * @param value The text to set.
-       * @return This builder for chaining.
-       */
-      public Builder setText(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        text_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string text = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearText() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        text_ = getDefaultInstance().getText();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string text = 2;</code>
-       * @param value The bytes for text to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTextBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        text_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean chat_ ;
-      /**
-       * <code>optional bool chat = 3;</code>
-       * @return Whether the chat field is set.
-       */
-      @java.lang.Override
-      public boolean hasChat() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>optional bool chat = 3;</code>
-       * @return The chat.
-       */
-      @java.lang.Override
-      public boolean getChat() {
-        return chat_;
-      }
-      /**
-       * <code>optional bool chat = 3;</code>
-       * @param value The chat to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChat(boolean value) {
-        bitField0_ |= 0x00000004;
-        chat_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool chat = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearChat() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        chat_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean textallchat_ ;
-      /**
-       * <code>optional bool textallchat = 4;</code>
-       * @return Whether the textallchat field is set.
-       */
-      @java.lang.Override
-      public boolean hasTextallchat() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <code>optional bool textallchat = 4;</code>
-       * @return The textallchat.
-       */
-      @java.lang.Override
-      public boolean getTextallchat() {
-        return textallchat_;
-      }
-      /**
-       * <code>optional bool textallchat = 4;</code>
-       * @param value The textallchat to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTextallchat(boolean value) {
-        bitField0_ |= 0x00000008;
-        textallchat_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool textallchat = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTextallchat() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        textallchat_ = false;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_SayText)
-    }
-
-    // @@protoc_insertion_point(class_scope:CCSUsrMsg_SayText)
-    private static final Cstrike15Usermessages.CCSUsrMsg_SayText DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_SayText();
-    }
-
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCSUsrMsg_SayText>
-        PARSER = new com.google.protobuf.AbstractParser<CCSUsrMsg_SayText>() {
-      @java.lang.Override
-      public CCSUsrMsg_SayText parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CCSUsrMsg_SayText(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CCSUsrMsg_SayText> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CCSUsrMsg_SayText> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_SayText getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CCSUsrMsg_SayText2OrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_SayText2)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional int32 ent_idx = 1;</code>
-     * @return Whether the entIdx field is set.
-     */
-    boolean hasEntIdx();
-    /**
-     * <code>optional int32 ent_idx = 1;</code>
-     * @return The entIdx.
-     */
-    int getEntIdx();
-
-    /**
-     * <code>optional bool chat = 2;</code>
-     * @return Whether the chat field is set.
-     */
-    boolean hasChat();
-    /**
-     * <code>optional bool chat = 2;</code>
-     * @return The chat.
-     */
-    boolean getChat();
-
-    /**
-     * <code>optional string msg_name = 3;</code>
-     * @return Whether the msgName field is set.
-     */
-    boolean hasMsgName();
-    /**
-     * <code>optional string msg_name = 3;</code>
-     * @return The msgName.
-     */
-    java.lang.String getMsgName();
-    /**
-     * <code>optional string msg_name = 3;</code>
-     * @return The bytes for msgName.
-     */
-    com.google.protobuf.ByteString
-        getMsgNameBytes();
-
-    /**
-     * <code>repeated string params = 4;</code>
-     * @return A list containing the params.
-     */
-    java.util.List<java.lang.String>
-        getParamsList();
-    /**
-     * <code>repeated string params = 4;</code>
-     * @return The count of params.
-     */
-    int getParamsCount();
-    /**
-     * <code>repeated string params = 4;</code>
-     * @param index The index of the element to return.
-     * @return The params at the given index.
-     */
-    java.lang.String getParams(int index);
-    /**
-     * <code>repeated string params = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the params at the given index.
-     */
-    com.google.protobuf.ByteString
-        getParamsBytes(int index);
-
-    /**
-     * <code>optional bool textallchat = 5;</code>
-     * @return Whether the textallchat field is set.
-     */
-    boolean hasTextallchat();
-    /**
-     * <code>optional bool textallchat = 5;</code>
-     * @return The textallchat.
-     */
-    boolean getTextallchat();
-  }
-  /**
-   * Protobuf type {@code CCSUsrMsg_SayText2}
-   */
-  public static final class CCSUsrMsg_SayText2 extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CCSUsrMsg_SayText2)
-      CCSUsrMsg_SayText2OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CCSUsrMsg_SayText2.newBuilder() to construct.
-    private CCSUsrMsg_SayText2(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CCSUsrMsg_SayText2() {
-      msgName_ = "";
-      params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CCSUsrMsg_SayText2();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CCSUsrMsg_SayText2(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              bitField0_ |= 0x00000001;
-              entIdx_ = input.readInt32();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              chat_ = input.readBool();
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              msgName_ = bs;
-              break;
-            }
-            case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                params_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              params_.add(bs);
-              break;
-            }
-            case 40: {
-              bitField0_ |= 0x00000008;
-              textallchat_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          params_ = params_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Cstrike15Usermessages.internal_static_CCSUsrMsg_SayText2_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Cstrike15Usermessages.internal_static_CCSUsrMsg_SayText2_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Cstrike15Usermessages.CCSUsrMsg_SayText2.class, Cstrike15Usermessages.CCSUsrMsg_SayText2.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int ENT_IDX_FIELD_NUMBER = 1;
-    private int entIdx_;
-    /**
-     * <code>optional int32 ent_idx = 1;</code>
-     * @return Whether the entIdx field is set.
-     */
-    @java.lang.Override
-    public boolean hasEntIdx() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional int32 ent_idx = 1;</code>
-     * @return The entIdx.
-     */
-    @java.lang.Override
-    public int getEntIdx() {
-      return entIdx_;
-    }
-
-    public static final int CHAT_FIELD_NUMBER = 2;
-    private boolean chat_;
-    /**
-     * <code>optional bool chat = 2;</code>
-     * @return Whether the chat field is set.
-     */
-    @java.lang.Override
-    public boolean hasChat() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional bool chat = 2;</code>
-     * @return The chat.
-     */
-    @java.lang.Override
-    public boolean getChat() {
-      return chat_;
-    }
-
-    public static final int MSG_NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object msgName_;
-    /**
-     * <code>optional string msg_name = 3;</code>
-     * @return Whether the msgName field is set.
-     */
-    @java.lang.Override
-    public boolean hasMsgName() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>optional string msg_name = 3;</code>
-     * @return The msgName.
-     */
-    @java.lang.Override
-    public java.lang.String getMsgName() {
-      java.lang.Object ref = msgName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          msgName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string msg_name = 3;</code>
-     * @return The bytes for msgName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMsgNameBytes() {
-      java.lang.Object ref = msgName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        msgName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PARAMS_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList params_;
-    /**
-     * <code>repeated string params = 4;</code>
-     * @return A list containing the params.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getParamsList() {
-      return params_;
-    }
-    /**
-     * <code>repeated string params = 4;</code>
-     * @return The count of params.
-     */
-    public int getParamsCount() {
-      return params_.size();
-    }
-    /**
-     * <code>repeated string params = 4;</code>
-     * @param index The index of the element to return.
-     * @return The params at the given index.
-     */
-    public java.lang.String getParams(int index) {
-      return params_.get(index);
-    }
-    /**
-     * <code>repeated string params = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the params at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getParamsBytes(int index) {
-      return params_.getByteString(index);
-    }
-
-    public static final int TEXTALLCHAT_FIELD_NUMBER = 5;
-    private boolean textallchat_;
-    /**
-     * <code>optional bool textallchat = 5;</code>
-     * @return Whether the textallchat field is set.
-     */
-    @java.lang.Override
-    public boolean hasTextallchat() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <code>optional bool textallchat = 5;</code>
-     * @return The textallchat.
-     */
-    @java.lang.Override
-    public boolean getTextallchat() {
-      return textallchat_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeInt32(1, entIdx_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeBool(2, chat_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, msgName_);
-      }
-      for (int i = 0; i < params_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, params_.getRaw(i));
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeBool(5, textallchat_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, entIdx_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, chat_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, msgName_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < params_.size(); i++) {
-          dataSize += computeStringSizeNoTag(params_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getParamsList().size();
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, textallchat_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_SayText2)) {
-        return super.equals(obj);
-      }
-      Cstrike15Usermessages.CCSUsrMsg_SayText2 other = (Cstrike15Usermessages.CCSUsrMsg_SayText2) obj;
-
-      if (hasEntIdx() != other.hasEntIdx()) return false;
-      if (hasEntIdx()) {
-        if (getEntIdx()
-            != other.getEntIdx()) return false;
-      }
-      if (hasChat() != other.hasChat()) return false;
-      if (hasChat()) {
-        if (getChat()
-            != other.getChat()) return false;
-      }
-      if (hasMsgName() != other.hasMsgName()) return false;
-      if (hasMsgName()) {
-        if (!getMsgName()
-            .equals(other.getMsgName())) return false;
-      }
-      if (!getParamsList()
-          .equals(other.getParamsList())) return false;
-      if (hasTextallchat() != other.hasTextallchat()) return false;
-      if (hasTextallchat()) {
-        if (getTextallchat()
-            != other.getTextallchat()) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasEntIdx()) {
-        hash = (37 * hash) + ENT_IDX_FIELD_NUMBER;
-        hash = (53 * hash) + getEntIdx();
-      }
-      if (hasChat()) {
-        hash = (37 * hash) + CHAT_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getChat());
-      }
-      if (hasMsgName()) {
-        hash = (37 * hash) + MSG_NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getMsgName().hashCode();
-      }
-      if (getParamsCount() > 0) {
-        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
-        hash = (53 * hash) + getParamsList().hashCode();
-      }
-      if (hasTextallchat()) {
-        hash = (37 * hash) + TEXTALLCHAT_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getTextallchat());
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_SayText2 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CCSUsrMsg_SayText2}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_SayText2)
-        Cstrike15Usermessages.CCSUsrMsg_SayText2OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_SayText2_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_SayText2_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Cstrike15Usermessages.CCSUsrMsg_SayText2.class, Cstrike15Usermessages.CCSUsrMsg_SayText2.Builder.class);
-      }
-
-      // Construct using Cstrike15Usermessages.CCSUsrMsg_SayText2.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        entIdx_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        chat_ = false;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        msgName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        textallchat_ = false;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_SayText2_descriptor;
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_SayText2 getDefaultInstanceForType() {
-        return Cstrike15Usermessages.CCSUsrMsg_SayText2.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_SayText2 build() {
-        Cstrike15Usermessages.CCSUsrMsg_SayText2 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_SayText2 buildPartial() {
-        Cstrike15Usermessages.CCSUsrMsg_SayText2 result = new Cstrike15Usermessages.CCSUsrMsg_SayText2(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.entIdx_ = entIdx_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.chat_ = chat_;
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.msgName_ = msgName_;
-        if (((bitField0_ & 0x00000008) != 0)) {
-          params_ = params_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.params_ = params_;
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.textallchat_ = textallchat_;
-          to_bitField0_ |= 0x00000008;
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Cstrike15Usermessages.CCSUsrMsg_SayText2) {
-          return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_SayText2)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_SayText2 other) {
-        if (other == Cstrike15Usermessages.CCSUsrMsg_SayText2.getDefaultInstance()) return this;
-        if (other.hasEntIdx()) {
-          setEntIdx(other.getEntIdx());
-        }
-        if (other.hasChat()) {
-          setChat(other.getChat());
-        }
-        if (other.hasMsgName()) {
-          bitField0_ |= 0x00000004;
-          msgName_ = other.msgName_;
-          onChanged();
-        }
-        if (!other.params_.isEmpty()) {
-          if (params_.isEmpty()) {
-            params_ = other.params_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureParamsIsMutable();
-            params_.addAll(other.params_);
-          }
-          onChanged();
-        }
-        if (other.hasTextallchat()) {
-          setTextallchat(other.getTextallchat());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        Cstrike15Usermessages.CCSUsrMsg_SayText2 parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_SayText2) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private int entIdx_ ;
-      /**
-       * <code>optional int32 ent_idx = 1;</code>
-       * @return Whether the entIdx field is set.
-       */
-      @java.lang.Override
-      public boolean hasEntIdx() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional int32 ent_idx = 1;</code>
-       * @return The entIdx.
-       */
-      @java.lang.Override
-      public int getEntIdx() {
-        return entIdx_;
-      }
-      /**
-       * <code>optional int32 ent_idx = 1;</code>
-       * @param value The entIdx to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEntIdx(int value) {
-        bitField0_ |= 0x00000001;
-        entIdx_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 ent_idx = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEntIdx() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        entIdx_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean chat_ ;
-      /**
-       * <code>optional bool chat = 2;</code>
-       * @return Whether the chat field is set.
-       */
-      @java.lang.Override
-      public boolean hasChat() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional bool chat = 2;</code>
-       * @return The chat.
-       */
-      @java.lang.Override
-      public boolean getChat() {
-        return chat_;
-      }
-      /**
-       * <code>optional bool chat = 2;</code>
-       * @param value The chat to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChat(boolean value) {
-        bitField0_ |= 0x00000002;
-        chat_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool chat = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearChat() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        chat_ = false;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object msgName_ = "";
-      /**
-       * <code>optional string msg_name = 3;</code>
-       * @return Whether the msgName field is set.
-       */
-      public boolean hasMsgName() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>optional string msg_name = 3;</code>
-       * @return The msgName.
-       */
-      public java.lang.String getMsgName() {
-        java.lang.Object ref = msgName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            msgName_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string msg_name = 3;</code>
-       * @return The bytes for msgName.
-       */
-      public com.google.protobuf.ByteString
-          getMsgNameBytes() {
-        java.lang.Object ref = msgName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          msgName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string msg_name = 3;</code>
-       * @param value The msgName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMsgName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        msgName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string msg_name = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMsgName() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        msgName_ = getDefaultInstance().getMsgName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string msg_name = 3;</code>
-       * @param value The bytes for msgName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMsgNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        msgName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureParamsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          params_ = new com.google.protobuf.LazyStringArrayList(params_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-      /**
-       * <code>repeated string params = 4;</code>
-       * @return A list containing the params.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getParamsList() {
-        return params_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string params = 4;</code>
-       * @return The count of params.
-       */
-      public int getParamsCount() {
-        return params_.size();
-      }
-      /**
-       * <code>repeated string params = 4;</code>
-       * @param index The index of the element to return.
-       * @return The params at the given index.
-       */
-      public java.lang.String getParams(int index) {
-        return params_.get(index);
-      }
-      /**
-       * <code>repeated string params = 4;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the params at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getParamsBytes(int index) {
-        return params_.getByteString(index);
-      }
-      /**
-       * <code>repeated string params = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The params to set.
-       * @return This builder for chaining.
-       */
-      public Builder setParams(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureParamsIsMutable();
-        params_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string params = 4;</code>
-       * @param value The params to add.
-       * @return This builder for chaining.
-       */
-      public Builder addParams(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureParamsIsMutable();
-        params_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string params = 4;</code>
-       * @param values The params to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllParams(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureParamsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, params_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string params = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearParams() {
-        params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string params = 4;</code>
-       * @param value The bytes of the params to add.
-       * @return This builder for chaining.
-       */
-      public Builder addParamsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureParamsIsMutable();
-        params_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private boolean textallchat_ ;
-      /**
-       * <code>optional bool textallchat = 5;</code>
-       * @return Whether the textallchat field is set.
-       */
-      @java.lang.Override
-      public boolean hasTextallchat() {
-        return ((bitField0_ & 0x00000010) != 0);
-      }
-      /**
-       * <code>optional bool textallchat = 5;</code>
-       * @return The textallchat.
-       */
-      @java.lang.Override
-      public boolean getTextallchat() {
-        return textallchat_;
-      }
-      /**
-       * <code>optional bool textallchat = 5;</code>
-       * @param value The textallchat to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTextallchat(boolean value) {
-        bitField0_ |= 0x00000010;
-        textallchat_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool textallchat = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTextallchat() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        textallchat_ = false;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_SayText2)
-    }
-
-    // @@protoc_insertion_point(class_scope:CCSUsrMsg_SayText2)
-    private static final Cstrike15Usermessages.CCSUsrMsg_SayText2 DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_SayText2();
-    }
-
-    public static Cstrike15Usermessages.CCSUsrMsg_SayText2 getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCSUsrMsg_SayText2>
-        PARSER = new com.google.protobuf.AbstractParser<CCSUsrMsg_SayText2>() {
-      @java.lang.Override
-      public CCSUsrMsg_SayText2 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CCSUsrMsg_SayText2(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CCSUsrMsg_SayText2> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CCSUsrMsg_SayText2> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_SayText2 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CCSUsrMsg_TextMsgOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_TextMsg)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional int32 msg_dst = 1;</code>
-     * @return Whether the msgDst field is set.
-     */
-    boolean hasMsgDst();
-    /**
-     * <code>optional int32 msg_dst = 1;</code>
-     * @return The msgDst.
-     */
-    int getMsgDst();
-
-    /**
-     * <code>repeated string params = 3;</code>
-     * @return A list containing the params.
-     */
-    java.util.List<java.lang.String>
-        getParamsList();
-    /**
-     * <code>repeated string params = 3;</code>
-     * @return The count of params.
-     */
-    int getParamsCount();
-    /**
-     * <code>repeated string params = 3;</code>
-     * @param index The index of the element to return.
-     * @return The params at the given index.
-     */
-    java.lang.String getParams(int index);
-    /**
-     * <code>repeated string params = 3;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the params at the given index.
-     */
-    com.google.protobuf.ByteString
-        getParamsBytes(int index);
-  }
-  /**
-   * Protobuf type {@code CCSUsrMsg_TextMsg}
-   */
-  public static final class CCSUsrMsg_TextMsg extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CCSUsrMsg_TextMsg)
-      CCSUsrMsg_TextMsgOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CCSUsrMsg_TextMsg.newBuilder() to construct.
-    private CCSUsrMsg_TextMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CCSUsrMsg_TextMsg() {
-      params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CCSUsrMsg_TextMsg();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CCSUsrMsg_TextMsg(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              bitField0_ |= 0x00000001;
-              msgDst_ = input.readInt32();
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                params_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              params_.add(bs);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          params_ = params_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Cstrike15Usermessages.internal_static_CCSUsrMsg_TextMsg_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Cstrike15Usermessages.internal_static_CCSUsrMsg_TextMsg_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Cstrike15Usermessages.CCSUsrMsg_TextMsg.class, Cstrike15Usermessages.CCSUsrMsg_TextMsg.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int MSG_DST_FIELD_NUMBER = 1;
-    private int msgDst_;
-    /**
-     * <code>optional int32 msg_dst = 1;</code>
-     * @return Whether the msgDst field is set.
-     */
-    @java.lang.Override
-    public boolean hasMsgDst() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional int32 msg_dst = 1;</code>
-     * @return The msgDst.
-     */
-    @java.lang.Override
-    public int getMsgDst() {
-      return msgDst_;
-    }
-
-    public static final int PARAMS_FIELD_NUMBER = 3;
-    private com.google.protobuf.LazyStringList params_;
-    /**
-     * <code>repeated string params = 3;</code>
-     * @return A list containing the params.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getParamsList() {
-      return params_;
-    }
-    /**
-     * <code>repeated string params = 3;</code>
-     * @return The count of params.
-     */
-    public int getParamsCount() {
-      return params_.size();
-    }
-    /**
-     * <code>repeated string params = 3;</code>
-     * @param index The index of the element to return.
-     * @return The params at the given index.
-     */
-    public java.lang.String getParams(int index) {
-      return params_.get(index);
-    }
-    /**
-     * <code>repeated string params = 3;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the params at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getParamsBytes(int index) {
-      return params_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeInt32(1, msgDst_);
-      }
-      for (int i = 0; i < params_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, params_.getRaw(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, msgDst_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < params_.size(); i++) {
-          dataSize += computeStringSizeNoTag(params_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getParamsList().size();
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_TextMsg)) {
-        return super.equals(obj);
-      }
-      Cstrike15Usermessages.CCSUsrMsg_TextMsg other = (Cstrike15Usermessages.CCSUsrMsg_TextMsg) obj;
-
-      if (hasMsgDst() != other.hasMsgDst()) return false;
-      if (hasMsgDst()) {
-        if (getMsgDst()
-            != other.getMsgDst()) return false;
-      }
-      if (!getParamsList()
-          .equals(other.getParamsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasMsgDst()) {
-        hash = (37 * hash) + MSG_DST_FIELD_NUMBER;
-        hash = (53 * hash) + getMsgDst();
-      }
-      if (getParamsCount() > 0) {
-        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
-        hash = (53 * hash) + getParamsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_TextMsg prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CCSUsrMsg_TextMsg}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_TextMsg)
-        Cstrike15Usermessages.CCSUsrMsg_TextMsgOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_TextMsg_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_TextMsg_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Cstrike15Usermessages.CCSUsrMsg_TextMsg.class, Cstrike15Usermessages.CCSUsrMsg_TextMsg.Builder.class);
-      }
-
-      // Construct using Cstrike15Usermessages.CCSUsrMsg_TextMsg.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        msgDst_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_TextMsg_descriptor;
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_TextMsg getDefaultInstanceForType() {
-        return Cstrike15Usermessages.CCSUsrMsg_TextMsg.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_TextMsg build() {
-        Cstrike15Usermessages.CCSUsrMsg_TextMsg result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_TextMsg buildPartial() {
-        Cstrike15Usermessages.CCSUsrMsg_TextMsg result = new Cstrike15Usermessages.CCSUsrMsg_TextMsg(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.msgDst_ = msgDst_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((bitField0_ & 0x00000002) != 0)) {
-          params_ = params_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.params_ = params_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Cstrike15Usermessages.CCSUsrMsg_TextMsg) {
-          return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_TextMsg)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_TextMsg other) {
-        if (other == Cstrike15Usermessages.CCSUsrMsg_TextMsg.getDefaultInstance()) return this;
-        if (other.hasMsgDst()) {
-          setMsgDst(other.getMsgDst());
-        }
-        if (!other.params_.isEmpty()) {
-          if (params_.isEmpty()) {
-            params_ = other.params_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureParamsIsMutable();
-            params_.addAll(other.params_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        Cstrike15Usermessages.CCSUsrMsg_TextMsg parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_TextMsg) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private int msgDst_ ;
-      /**
-       * <code>optional int32 msg_dst = 1;</code>
-       * @return Whether the msgDst field is set.
-       */
-      @java.lang.Override
-      public boolean hasMsgDst() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional int32 msg_dst = 1;</code>
-       * @return The msgDst.
-       */
-      @java.lang.Override
-      public int getMsgDst() {
-        return msgDst_;
-      }
-      /**
-       * <code>optional int32 msg_dst = 1;</code>
-       * @param value The msgDst to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMsgDst(int value) {
-        bitField0_ |= 0x00000001;
-        msgDst_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 msg_dst = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMsgDst() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        msgDst_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureParamsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          params_ = new com.google.protobuf.LazyStringArrayList(params_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-      /**
-       * <code>repeated string params = 3;</code>
-       * @return A list containing the params.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getParamsList() {
-        return params_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string params = 3;</code>
-       * @return The count of params.
-       */
-      public int getParamsCount() {
-        return params_.size();
-      }
-      /**
-       * <code>repeated string params = 3;</code>
-       * @param index The index of the element to return.
-       * @return The params at the given index.
-       */
-      public java.lang.String getParams(int index) {
-        return params_.get(index);
-      }
-      /**
-       * <code>repeated string params = 3;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the params at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getParamsBytes(int index) {
-        return params_.getByteString(index);
-      }
-      /**
-       * <code>repeated string params = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The params to set.
-       * @return This builder for chaining.
-       */
-      public Builder setParams(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureParamsIsMutable();
-        params_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string params = 3;</code>
-       * @param value The params to add.
-       * @return This builder for chaining.
-       */
-      public Builder addParams(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureParamsIsMutable();
-        params_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string params = 3;</code>
-       * @param values The params to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllParams(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureParamsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, params_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string params = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearParams() {
-        params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string params = 3;</code>
-       * @param value The bytes of the params to add.
-       * @return This builder for chaining.
-       */
-      public Builder addParamsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureParamsIsMutable();
-        params_.add(value);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_TextMsg)
-    }
-
-    // @@protoc_insertion_point(class_scope:CCSUsrMsg_TextMsg)
-    private static final Cstrike15Usermessages.CCSUsrMsg_TextMsg DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_TextMsg();
-    }
-
-    public static Cstrike15Usermessages.CCSUsrMsg_TextMsg getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCSUsrMsg_TextMsg>
-        PARSER = new com.google.protobuf.AbstractParser<CCSUsrMsg_TextMsg>() {
-      @java.lang.Override
-      public CCSUsrMsg_TextMsg parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CCSUsrMsg_TextMsg(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CCSUsrMsg_TextMsg> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CCSUsrMsg_TextMsg> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_TextMsg getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface CCSUsrMsg_HudMsgOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCSUsrMsg_HudMsg)
       com.google.protobuf.MessageOrBuilder {
@@ -7161,11 +4414,11 @@ public final class Cstrike15Usermessages {
      * <code>optional .CMsgVector2D pos = 2;</code>
      * @return The pos.
      */
-    Netmessages.CMsgVector2D getPos();
+    Networkbasetypes.CMsgVector2D getPos();
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
-    Netmessages.CMsgVector2DOrBuilder getPosOrBuilder();
+    Networkbasetypes.CMsgVector2DOrBuilder getPosOrBuilder();
 
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
@@ -7176,11 +4429,11 @@ public final class Cstrike15Usermessages {
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      * @return The clr1.
      */
-    Netmessages.CMsgRGBA getClr1();
+    Networkbasetypes.CMsgRGBA getClr1();
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
-    Netmessages.CMsgRGBAOrBuilder getClr1OrBuilder();
+    Networkbasetypes.CMsgRGBAOrBuilder getClr1OrBuilder();
 
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
@@ -7191,11 +4444,11 @@ public final class Cstrike15Usermessages {
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      * @return The clr2.
      */
-    Netmessages.CMsgRGBA getClr2();
+    Networkbasetypes.CMsgRGBA getClr2();
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
-    Netmessages.CMsgRGBAOrBuilder getClr2OrBuilder();
+    Networkbasetypes.CMsgRGBAOrBuilder getClr2OrBuilder();
 
     /**
      * <code>optional int32 effect = 5;</code>
@@ -7322,11 +4575,11 @@ public final class Cstrike15Usermessages {
               break;
             }
             case 18: {
-              Netmessages.CMsgVector2D.Builder subBuilder = null;
+              Networkbasetypes.CMsgVector2D.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) != 0)) {
                 subBuilder = pos_.toBuilder();
               }
-              pos_ = input.readMessage(Netmessages.CMsgVector2D.PARSER, extensionRegistry);
+              pos_ = input.readMessage(Networkbasetypes.CMsgVector2D.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pos_);
                 pos_ = subBuilder.buildPartial();
@@ -7335,11 +4588,11 @@ public final class Cstrike15Usermessages {
               break;
             }
             case 26: {
-              Netmessages.CMsgRGBA.Builder subBuilder = null;
+              Networkbasetypes.CMsgRGBA.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) != 0)) {
                 subBuilder = clr1_.toBuilder();
               }
-              clr1_ = input.readMessage(Netmessages.CMsgRGBA.PARSER, extensionRegistry);
+              clr1_ = input.readMessage(Networkbasetypes.CMsgRGBA.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clr1_);
                 clr1_ = subBuilder.buildPartial();
@@ -7348,11 +4601,11 @@ public final class Cstrike15Usermessages {
               break;
             }
             case 34: {
-              Netmessages.CMsgRGBA.Builder subBuilder = null;
+              Networkbasetypes.CMsgRGBA.Builder subBuilder = null;
               if (((bitField0_ & 0x00000008) != 0)) {
                 subBuilder = clr2_.toBuilder();
               }
-              clr2_ = input.readMessage(Netmessages.CMsgRGBA.PARSER, extensionRegistry);
+              clr2_ = input.readMessage(Networkbasetypes.CMsgRGBA.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clr2_);
                 clr2_ = subBuilder.buildPartial();
@@ -7444,7 +4697,7 @@ public final class Cstrike15Usermessages {
     }
 
     public static final int POS_FIELD_NUMBER = 2;
-    private Netmessages.CMsgVector2D pos_;
+    private Networkbasetypes.CMsgVector2D pos_;
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      * @return Whether the pos field is set.
@@ -7458,19 +4711,19 @@ public final class Cstrike15Usermessages {
      * @return The pos.
      */
     @java.lang.Override
-    public Netmessages.CMsgVector2D getPos() {
-      return pos_ == null ? Netmessages.CMsgVector2D.getDefaultInstance() : pos_;
+    public Networkbasetypes.CMsgVector2D getPos() {
+      return pos_ == null ? Networkbasetypes.CMsgVector2D.getDefaultInstance() : pos_;
     }
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
     @java.lang.Override
-    public Netmessages.CMsgVector2DOrBuilder getPosOrBuilder() {
-      return pos_ == null ? Netmessages.CMsgVector2D.getDefaultInstance() : pos_;
+    public Networkbasetypes.CMsgVector2DOrBuilder getPosOrBuilder() {
+      return pos_ == null ? Networkbasetypes.CMsgVector2D.getDefaultInstance() : pos_;
     }
 
     public static final int CLR1_FIELD_NUMBER = 3;
-    private Netmessages.CMsgRGBA clr1_;
+    private Networkbasetypes.CMsgRGBA clr1_;
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      * @return Whether the clr1 field is set.
@@ -7484,19 +4737,19 @@ public final class Cstrike15Usermessages {
      * @return The clr1.
      */
     @java.lang.Override
-    public Netmessages.CMsgRGBA getClr1() {
-      return clr1_ == null ? Netmessages.CMsgRGBA.getDefaultInstance() : clr1_;
+    public Networkbasetypes.CMsgRGBA getClr1() {
+      return clr1_ == null ? Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr1_;
     }
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
     @java.lang.Override
-    public Netmessages.CMsgRGBAOrBuilder getClr1OrBuilder() {
-      return clr1_ == null ? Netmessages.CMsgRGBA.getDefaultInstance() : clr1_;
+    public Networkbasetypes.CMsgRGBAOrBuilder getClr1OrBuilder() {
+      return clr1_ == null ? Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr1_;
     }
 
     public static final int CLR2_FIELD_NUMBER = 4;
-    private Netmessages.CMsgRGBA clr2_;
+    private Networkbasetypes.CMsgRGBA clr2_;
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      * @return Whether the clr2 field is set.
@@ -7510,15 +4763,15 @@ public final class Cstrike15Usermessages {
      * @return The clr2.
      */
     @java.lang.Override
-    public Netmessages.CMsgRGBA getClr2() {
-      return clr2_ == null ? Netmessages.CMsgRGBA.getDefaultInstance() : clr2_;
+    public Networkbasetypes.CMsgRGBA getClr2() {
+      return clr2_ == null ? Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr2_;
     }
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
     @java.lang.Override
-    public Netmessages.CMsgRGBAOrBuilder getClr2OrBuilder() {
-      return clr2_ == null ? Netmessages.CMsgRGBA.getDefaultInstance() : clr2_;
+    public Networkbasetypes.CMsgRGBAOrBuilder getClr2OrBuilder() {
+      return clr2_ == null ? Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr2_;
     }
 
     public static final int EFFECT_FIELD_NUMBER = 5;
@@ -8278,9 +5531,9 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private Netmessages.CMsgVector2D pos_;
+      private Networkbasetypes.CMsgVector2D pos_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgVector2D, Netmessages.CMsgVector2D.Builder, Netmessages.CMsgVector2DOrBuilder> posBuilder_;
+          Networkbasetypes.CMsgVector2D, Networkbasetypes.CMsgVector2D.Builder, Networkbasetypes.CMsgVector2DOrBuilder> posBuilder_;
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        * @return Whether the pos field is set.
@@ -8292,9 +5545,9 @@ public final class Cstrike15Usermessages {
        * <code>optional .CMsgVector2D pos = 2;</code>
        * @return The pos.
        */
-      public Netmessages.CMsgVector2D getPos() {
+      public Networkbasetypes.CMsgVector2D getPos() {
         if (posBuilder_ == null) {
-          return pos_ == null ? Netmessages.CMsgVector2D.getDefaultInstance() : pos_;
+          return pos_ == null ? Networkbasetypes.CMsgVector2D.getDefaultInstance() : pos_;
         } else {
           return posBuilder_.getMessage();
         }
@@ -8302,7 +5555,7 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public Builder setPos(Netmessages.CMsgVector2D value) {
+      public Builder setPos(Networkbasetypes.CMsgVector2D value) {
         if (posBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8319,7 +5572,7 @@ public final class Cstrike15Usermessages {
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
       public Builder setPos(
-          Netmessages.CMsgVector2D.Builder builderForValue) {
+          Networkbasetypes.CMsgVector2D.Builder builderForValue) {
         if (posBuilder_ == null) {
           pos_ = builderForValue.build();
           onChanged();
@@ -8332,13 +5585,13 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public Builder mergePos(Netmessages.CMsgVector2D value) {
+      public Builder mergePos(Networkbasetypes.CMsgVector2D value) {
         if (posBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
               pos_ != null &&
-              pos_ != Netmessages.CMsgVector2D.getDefaultInstance()) {
+              pos_ != Networkbasetypes.CMsgVector2D.getDefaultInstance()) {
             pos_ =
-              Netmessages.CMsgVector2D.newBuilder(pos_).mergeFrom(value).buildPartial();
+              Networkbasetypes.CMsgVector2D.newBuilder(pos_).mergeFrom(value).buildPartial();
           } else {
             pos_ = value;
           }
@@ -8365,7 +5618,7 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public Netmessages.CMsgVector2D.Builder getPosBuilder() {
+      public Networkbasetypes.CMsgVector2D.Builder getPosBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getPosFieldBuilder().getBuilder();
@@ -8373,23 +5626,23 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public Netmessages.CMsgVector2DOrBuilder getPosOrBuilder() {
+      public Networkbasetypes.CMsgVector2DOrBuilder getPosOrBuilder() {
         if (posBuilder_ != null) {
           return posBuilder_.getMessageOrBuilder();
         } else {
           return pos_ == null ?
-              Netmessages.CMsgVector2D.getDefaultInstance() : pos_;
+              Networkbasetypes.CMsgVector2D.getDefaultInstance() : pos_;
         }
       }
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgVector2D, Netmessages.CMsgVector2D.Builder, Netmessages.CMsgVector2DOrBuilder> 
+          Networkbasetypes.CMsgVector2D, Networkbasetypes.CMsgVector2D.Builder, Networkbasetypes.CMsgVector2DOrBuilder> 
           getPosFieldBuilder() {
         if (posBuilder_ == null) {
           posBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Netmessages.CMsgVector2D, Netmessages.CMsgVector2D.Builder, Netmessages.CMsgVector2DOrBuilder>(
+              Networkbasetypes.CMsgVector2D, Networkbasetypes.CMsgVector2D.Builder, Networkbasetypes.CMsgVector2DOrBuilder>(
                   getPos(),
                   getParentForChildren(),
                   isClean());
@@ -8398,9 +5651,9 @@ public final class Cstrike15Usermessages {
         return posBuilder_;
       }
 
-      private Netmessages.CMsgRGBA clr1_;
+      private Networkbasetypes.CMsgRGBA clr1_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgRGBA, Netmessages.CMsgRGBA.Builder, Netmessages.CMsgRGBAOrBuilder> clr1Builder_;
+          Networkbasetypes.CMsgRGBA, Networkbasetypes.CMsgRGBA.Builder, Networkbasetypes.CMsgRGBAOrBuilder> clr1Builder_;
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        * @return Whether the clr1 field is set.
@@ -8412,9 +5665,9 @@ public final class Cstrike15Usermessages {
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        * @return The clr1.
        */
-      public Netmessages.CMsgRGBA getClr1() {
+      public Networkbasetypes.CMsgRGBA getClr1() {
         if (clr1Builder_ == null) {
-          return clr1_ == null ? Netmessages.CMsgRGBA.getDefaultInstance() : clr1_;
+          return clr1_ == null ? Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr1_;
         } else {
           return clr1Builder_.getMessage();
         }
@@ -8422,7 +5675,7 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public Builder setClr1(Netmessages.CMsgRGBA value) {
+      public Builder setClr1(Networkbasetypes.CMsgRGBA value) {
         if (clr1Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8439,7 +5692,7 @@ public final class Cstrike15Usermessages {
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
       public Builder setClr1(
-          Netmessages.CMsgRGBA.Builder builderForValue) {
+          Networkbasetypes.CMsgRGBA.Builder builderForValue) {
         if (clr1Builder_ == null) {
           clr1_ = builderForValue.build();
           onChanged();
@@ -8452,13 +5705,13 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public Builder mergeClr1(Netmessages.CMsgRGBA value) {
+      public Builder mergeClr1(Networkbasetypes.CMsgRGBA value) {
         if (clr1Builder_ == null) {
           if (((bitField0_ & 0x00000004) != 0) &&
               clr1_ != null &&
-              clr1_ != Netmessages.CMsgRGBA.getDefaultInstance()) {
+              clr1_ != Networkbasetypes.CMsgRGBA.getDefaultInstance()) {
             clr1_ =
-              Netmessages.CMsgRGBA.newBuilder(clr1_).mergeFrom(value).buildPartial();
+              Networkbasetypes.CMsgRGBA.newBuilder(clr1_).mergeFrom(value).buildPartial();
           } else {
             clr1_ = value;
           }
@@ -8485,7 +5738,7 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public Netmessages.CMsgRGBA.Builder getClr1Builder() {
+      public Networkbasetypes.CMsgRGBA.Builder getClr1Builder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getClr1FieldBuilder().getBuilder();
@@ -8493,23 +5746,23 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public Netmessages.CMsgRGBAOrBuilder getClr1OrBuilder() {
+      public Networkbasetypes.CMsgRGBAOrBuilder getClr1OrBuilder() {
         if (clr1Builder_ != null) {
           return clr1Builder_.getMessageOrBuilder();
         } else {
           return clr1_ == null ?
-              Netmessages.CMsgRGBA.getDefaultInstance() : clr1_;
+              Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr1_;
         }
       }
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgRGBA, Netmessages.CMsgRGBA.Builder, Netmessages.CMsgRGBAOrBuilder> 
+          Networkbasetypes.CMsgRGBA, Networkbasetypes.CMsgRGBA.Builder, Networkbasetypes.CMsgRGBAOrBuilder> 
           getClr1FieldBuilder() {
         if (clr1Builder_ == null) {
           clr1Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Netmessages.CMsgRGBA, Netmessages.CMsgRGBA.Builder, Netmessages.CMsgRGBAOrBuilder>(
+              Networkbasetypes.CMsgRGBA, Networkbasetypes.CMsgRGBA.Builder, Networkbasetypes.CMsgRGBAOrBuilder>(
                   getClr1(),
                   getParentForChildren(),
                   isClean());
@@ -8518,9 +5771,9 @@ public final class Cstrike15Usermessages {
         return clr1Builder_;
       }
 
-      private Netmessages.CMsgRGBA clr2_;
+      private Networkbasetypes.CMsgRGBA clr2_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgRGBA, Netmessages.CMsgRGBA.Builder, Netmessages.CMsgRGBAOrBuilder> clr2Builder_;
+          Networkbasetypes.CMsgRGBA, Networkbasetypes.CMsgRGBA.Builder, Networkbasetypes.CMsgRGBAOrBuilder> clr2Builder_;
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        * @return Whether the clr2 field is set.
@@ -8532,9 +5785,9 @@ public final class Cstrike15Usermessages {
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        * @return The clr2.
        */
-      public Netmessages.CMsgRGBA getClr2() {
+      public Networkbasetypes.CMsgRGBA getClr2() {
         if (clr2Builder_ == null) {
-          return clr2_ == null ? Netmessages.CMsgRGBA.getDefaultInstance() : clr2_;
+          return clr2_ == null ? Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr2_;
         } else {
           return clr2Builder_.getMessage();
         }
@@ -8542,7 +5795,7 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public Builder setClr2(Netmessages.CMsgRGBA value) {
+      public Builder setClr2(Networkbasetypes.CMsgRGBA value) {
         if (clr2Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8559,7 +5812,7 @@ public final class Cstrike15Usermessages {
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
       public Builder setClr2(
-          Netmessages.CMsgRGBA.Builder builderForValue) {
+          Networkbasetypes.CMsgRGBA.Builder builderForValue) {
         if (clr2Builder_ == null) {
           clr2_ = builderForValue.build();
           onChanged();
@@ -8572,13 +5825,13 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public Builder mergeClr2(Netmessages.CMsgRGBA value) {
+      public Builder mergeClr2(Networkbasetypes.CMsgRGBA value) {
         if (clr2Builder_ == null) {
           if (((bitField0_ & 0x00000008) != 0) &&
               clr2_ != null &&
-              clr2_ != Netmessages.CMsgRGBA.getDefaultInstance()) {
+              clr2_ != Networkbasetypes.CMsgRGBA.getDefaultInstance()) {
             clr2_ =
-              Netmessages.CMsgRGBA.newBuilder(clr2_).mergeFrom(value).buildPartial();
+              Networkbasetypes.CMsgRGBA.newBuilder(clr2_).mergeFrom(value).buildPartial();
           } else {
             clr2_ = value;
           }
@@ -8605,7 +5858,7 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public Netmessages.CMsgRGBA.Builder getClr2Builder() {
+      public Networkbasetypes.CMsgRGBA.Builder getClr2Builder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getClr2FieldBuilder().getBuilder();
@@ -8613,23 +5866,23 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public Netmessages.CMsgRGBAOrBuilder getClr2OrBuilder() {
+      public Networkbasetypes.CMsgRGBAOrBuilder getClr2OrBuilder() {
         if (clr2Builder_ != null) {
           return clr2Builder_.getMessageOrBuilder();
         } else {
           return clr2_ == null ?
-              Netmessages.CMsgRGBA.getDefaultInstance() : clr2_;
+              Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr2_;
         }
       }
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgRGBA, Netmessages.CMsgRGBA.Builder, Netmessages.CMsgRGBAOrBuilder> 
+          Networkbasetypes.CMsgRGBA, Networkbasetypes.CMsgRGBA.Builder, Networkbasetypes.CMsgRGBAOrBuilder> 
           getClr2FieldBuilder() {
         if (clr2Builder_ == null) {
           clr2Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Netmessages.CMsgRGBA, Netmessages.CMsgRGBA.Builder, Netmessages.CMsgRGBAOrBuilder>(
+              Networkbasetypes.CMsgRGBA, Networkbasetypes.CMsgRGBA.Builder, Networkbasetypes.CMsgRGBAOrBuilder>(
                   getClr2(),
                   getParentForChildren(),
                   isClean());
@@ -9841,11 +7094,11 @@ public final class Cstrike15Usermessages {
      * <code>optional .CMsgRGBA clr = 4;</code>
      * @return The clr.
      */
-    Netmessages.CMsgRGBA getClr();
+    Networkbasetypes.CMsgRGBA getClr();
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
-    Netmessages.CMsgRGBAOrBuilder getClrOrBuilder();
+    Networkbasetypes.CMsgRGBAOrBuilder getClrOrBuilder();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_Fade}
@@ -9909,11 +7162,11 @@ public final class Cstrike15Usermessages {
               break;
             }
             case 34: {
-              Netmessages.CMsgRGBA.Builder subBuilder = null;
+              Networkbasetypes.CMsgRGBA.Builder subBuilder = null;
               if (((bitField0_ & 0x00000008) != 0)) {
                 subBuilder = clr_.toBuilder();
               }
-              clr_ = input.readMessage(Netmessages.CMsgRGBA.PARSER, extensionRegistry);
+              clr_ = input.readMessage(Networkbasetypes.CMsgRGBA.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clr_);
                 clr_ = subBuilder.buildPartial();
@@ -10012,7 +7265,7 @@ public final class Cstrike15Usermessages {
     }
 
     public static final int CLR_FIELD_NUMBER = 4;
-    private Netmessages.CMsgRGBA clr_;
+    private Networkbasetypes.CMsgRGBA clr_;
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      * @return Whether the clr field is set.
@@ -10026,15 +7279,15 @@ public final class Cstrike15Usermessages {
      * @return The clr.
      */
     @java.lang.Override
-    public Netmessages.CMsgRGBA getClr() {
-      return clr_ == null ? Netmessages.CMsgRGBA.getDefaultInstance() : clr_;
+    public Networkbasetypes.CMsgRGBA getClr() {
+      return clr_ == null ? Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr_;
     }
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
     @java.lang.Override
-    public Netmessages.CMsgRGBAOrBuilder getClrOrBuilder() {
-      return clr_ == null ? Netmessages.CMsgRGBA.getDefaultInstance() : clr_;
+    public Networkbasetypes.CMsgRGBAOrBuilder getClrOrBuilder() {
+      return clr_ == null ? Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -10552,9 +7805,9 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private Netmessages.CMsgRGBA clr_;
+      private Networkbasetypes.CMsgRGBA clr_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgRGBA, Netmessages.CMsgRGBA.Builder, Netmessages.CMsgRGBAOrBuilder> clrBuilder_;
+          Networkbasetypes.CMsgRGBA, Networkbasetypes.CMsgRGBA.Builder, Networkbasetypes.CMsgRGBAOrBuilder> clrBuilder_;
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        * @return Whether the clr field is set.
@@ -10566,9 +7819,9 @@ public final class Cstrike15Usermessages {
        * <code>optional .CMsgRGBA clr = 4;</code>
        * @return The clr.
        */
-      public Netmessages.CMsgRGBA getClr() {
+      public Networkbasetypes.CMsgRGBA getClr() {
         if (clrBuilder_ == null) {
-          return clr_ == null ? Netmessages.CMsgRGBA.getDefaultInstance() : clr_;
+          return clr_ == null ? Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr_;
         } else {
           return clrBuilder_.getMessage();
         }
@@ -10576,7 +7829,7 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public Builder setClr(Netmessages.CMsgRGBA value) {
+      public Builder setClr(Networkbasetypes.CMsgRGBA value) {
         if (clrBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10593,7 +7846,7 @@ public final class Cstrike15Usermessages {
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
       public Builder setClr(
-          Netmessages.CMsgRGBA.Builder builderForValue) {
+          Networkbasetypes.CMsgRGBA.Builder builderForValue) {
         if (clrBuilder_ == null) {
           clr_ = builderForValue.build();
           onChanged();
@@ -10606,13 +7859,13 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public Builder mergeClr(Netmessages.CMsgRGBA value) {
+      public Builder mergeClr(Networkbasetypes.CMsgRGBA value) {
         if (clrBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0) &&
               clr_ != null &&
-              clr_ != Netmessages.CMsgRGBA.getDefaultInstance()) {
+              clr_ != Networkbasetypes.CMsgRGBA.getDefaultInstance()) {
             clr_ =
-              Netmessages.CMsgRGBA.newBuilder(clr_).mergeFrom(value).buildPartial();
+              Networkbasetypes.CMsgRGBA.newBuilder(clr_).mergeFrom(value).buildPartial();
           } else {
             clr_ = value;
           }
@@ -10639,7 +7892,7 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public Netmessages.CMsgRGBA.Builder getClrBuilder() {
+      public Networkbasetypes.CMsgRGBA.Builder getClrBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getClrFieldBuilder().getBuilder();
@@ -10647,23 +7900,23 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public Netmessages.CMsgRGBAOrBuilder getClrOrBuilder() {
+      public Networkbasetypes.CMsgRGBAOrBuilder getClrOrBuilder() {
         if (clrBuilder_ != null) {
           return clrBuilder_.getMessageOrBuilder();
         } else {
           return clr_ == null ?
-              Netmessages.CMsgRGBA.getDefaultInstance() : clr_;
+              Networkbasetypes.CMsgRGBA.getDefaultInstance() : clr_;
         }
       }
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgRGBA, Netmessages.CMsgRGBA.Builder, Netmessages.CMsgRGBAOrBuilder> 
+          Networkbasetypes.CMsgRGBA, Networkbasetypes.CMsgRGBA.Builder, Networkbasetypes.CMsgRGBAOrBuilder> 
           getClrFieldBuilder() {
         if (clrBuilder_ == null) {
           clrBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Netmessages.CMsgRGBA, Netmessages.CMsgRGBA.Builder, Netmessages.CMsgRGBAOrBuilder>(
+              Networkbasetypes.CMsgRGBA, Networkbasetypes.CMsgRGBA.Builder, Networkbasetypes.CMsgRGBAOrBuilder>(
                   getClr(),
                   getParentForChildren(),
                   isClean());
@@ -13693,12 +10946,12 @@ public final class Cstrike15Usermessages {
     int getPitch();
 
     /**
-     * <code>optional int32 entidx = 2;</code>
+     * <code>optional int32 entidx = 2 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     boolean hasEntidx();
     /**
-     * <code>optional int32 entidx = 2;</code>
+     * <code>optional int32 entidx = 2 [default = -1];</code>
      * @return The entidx.
      */
     int getEntidx();
@@ -13744,6 +10997,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_RawAudio() {
+      entidx_ = -1;
       voiceFilename_ = "";
     }
 
@@ -13854,7 +11108,7 @@ public final class Cstrike15Usermessages {
     public static final int ENTIDX_FIELD_NUMBER = 2;
     private int entidx_;
     /**
-     * <code>optional int32 entidx = 2;</code>
+     * <code>optional int32 entidx = 2 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     @java.lang.Override
@@ -13862,7 +11116,7 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional int32 entidx = 2;</code>
+     * <code>optional int32 entidx = 2 [default = -1];</code>
      * @return The entidx.
      */
     @java.lang.Override
@@ -14186,7 +11440,7 @@ public final class Cstrike15Usermessages {
         super.clear();
         pitch_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        entidx_ = 0;
+        entidx_ = -1;
         bitField0_ = (bitField0_ & ~0x00000002);
         duration_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -14225,9 +11479,9 @@ public final class Cstrike15Usermessages {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.entidx_ = entidx_;
           to_bitField0_ |= 0x00000002;
         }
+        result.entidx_ = entidx_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.duration_ = duration_;
           to_bitField0_ |= 0x00000004;
@@ -14368,9 +11622,9 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private int entidx_ ;
+      private int entidx_ = -1;
       /**
-       * <code>optional int32 entidx = 2;</code>
+       * <code>optional int32 entidx = 2 [default = -1];</code>
        * @return Whether the entidx field is set.
        */
       @java.lang.Override
@@ -14378,7 +11632,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional int32 entidx = 2;</code>
+       * <code>optional int32 entidx = 2 [default = -1];</code>
        * @return The entidx.
        */
       @java.lang.Override
@@ -14386,7 +11640,7 @@ public final class Cstrike15Usermessages {
         return entidx_;
       }
       /**
-       * <code>optional int32 entidx = 2;</code>
+       * <code>optional int32 entidx = 2 [default = -1];</code>
        * @param value The entidx to set.
        * @return This builder for chaining.
        */
@@ -14397,12 +11651,12 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional int32 entidx = 2;</code>
+       * <code>optional int32 entidx = 2 [default = -1];</code>
        * @return This builder for chaining.
        */
       public Builder clearEntidx() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        entidx_ = 0;
+        entidx_ = -1;
         onChanged();
         return this;
       }
@@ -16124,19 +13378,19 @@ public final class Cstrike15Usermessages {
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      * @return The inflictorWorldPos.
      */
-    Netmessages.CMsgVector getInflictorWorldPos();
+    Networkbasetypes.CMsgVector getInflictorWorldPos();
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
-    Netmessages.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder();
+    Networkbasetypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder();
 
     /**
-     * <code>optional int32 victim_entindex = 3;</code>
+     * <code>optional int32 victim_entindex = 3 [default = -1];</code>
      * @return Whether the victimEntindex field is set.
      */
     boolean hasVictimEntindex();
     /**
-     * <code>optional int32 victim_entindex = 3;</code>
+     * <code>optional int32 victim_entindex = 3 [default = -1];</code>
      * @return The victimEntindex.
      */
     int getVictimEntindex();
@@ -16154,6 +13408,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_Damage() {
+      victimEntindex_ = -1;
     }
 
     @java.lang.Override
@@ -16193,11 +13448,11 @@ public final class Cstrike15Usermessages {
               break;
             }
             case 18: {
-              Netmessages.CMsgVector.Builder subBuilder = null;
+              Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) != 0)) {
                 subBuilder = inflictorWorldPos_.toBuilder();
               }
-              inflictorWorldPos_ = input.readMessage(Netmessages.CMsgVector.PARSER, extensionRegistry);
+              inflictorWorldPos_ = input.readMessage(Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(inflictorWorldPos_);
                 inflictorWorldPos_ = subBuilder.buildPartial();
@@ -16263,7 +13518,7 @@ public final class Cstrike15Usermessages {
     }
 
     public static final int INFLICTOR_WORLD_POS_FIELD_NUMBER = 2;
-    private Netmessages.CMsgVector inflictorWorldPos_;
+    private Networkbasetypes.CMsgVector inflictorWorldPos_;
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      * @return Whether the inflictorWorldPos field is set.
@@ -16277,21 +13532,21 @@ public final class Cstrike15Usermessages {
      * @return The inflictorWorldPos.
      */
     @java.lang.Override
-    public Netmessages.CMsgVector getInflictorWorldPos() {
-      return inflictorWorldPos_ == null ? Netmessages.CMsgVector.getDefaultInstance() : inflictorWorldPos_;
+    public Networkbasetypes.CMsgVector getInflictorWorldPos() {
+      return inflictorWorldPos_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : inflictorWorldPos_;
     }
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
     @java.lang.Override
-    public Netmessages.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
-      return inflictorWorldPos_ == null ? Netmessages.CMsgVector.getDefaultInstance() : inflictorWorldPos_;
+    public Networkbasetypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
+      return inflictorWorldPos_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : inflictorWorldPos_;
     }
 
     public static final int VICTIM_ENTINDEX_FIELD_NUMBER = 3;
     private int victimEntindex_;
     /**
-     * <code>optional int32 victim_entindex = 3;</code>
+     * <code>optional int32 victim_entindex = 3 [default = -1];</code>
      * @return Whether the victimEntindex field is set.
      */
     @java.lang.Override
@@ -16299,7 +13554,7 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional int32 victim_entindex = 3;</code>
+     * <code>optional int32 victim_entindex = 3 [default = -1];</code>
      * @return The victimEntindex.
      */
     @java.lang.Override
@@ -16546,7 +13801,7 @@ public final class Cstrike15Usermessages {
           inflictorWorldPosBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
-        victimEntindex_ = 0;
+        victimEntindex_ = -1;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -16589,9 +13844,9 @@ public final class Cstrike15Usermessages {
           to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.victimEntindex_ = victimEntindex_;
           to_bitField0_ |= 0x00000004;
         }
+        result.victimEntindex_ = victimEntindex_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -16719,9 +13974,9 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private Netmessages.CMsgVector inflictorWorldPos_;
+      private Networkbasetypes.CMsgVector inflictorWorldPos_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgVector, Netmessages.CMsgVector.Builder, Netmessages.CMsgVectorOrBuilder> inflictorWorldPosBuilder_;
+          Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder> inflictorWorldPosBuilder_;
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        * @return Whether the inflictorWorldPos field is set.
@@ -16733,9 +13988,9 @@ public final class Cstrike15Usermessages {
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        * @return The inflictorWorldPos.
        */
-      public Netmessages.CMsgVector getInflictorWorldPos() {
+      public Networkbasetypes.CMsgVector getInflictorWorldPos() {
         if (inflictorWorldPosBuilder_ == null) {
-          return inflictorWorldPos_ == null ? Netmessages.CMsgVector.getDefaultInstance() : inflictorWorldPos_;
+          return inflictorWorldPos_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : inflictorWorldPos_;
         } else {
           return inflictorWorldPosBuilder_.getMessage();
         }
@@ -16743,7 +13998,7 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public Builder setInflictorWorldPos(Netmessages.CMsgVector value) {
+      public Builder setInflictorWorldPos(Networkbasetypes.CMsgVector value) {
         if (inflictorWorldPosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16760,7 +14015,7 @@ public final class Cstrike15Usermessages {
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
       public Builder setInflictorWorldPos(
-          Netmessages.CMsgVector.Builder builderForValue) {
+          Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (inflictorWorldPosBuilder_ == null) {
           inflictorWorldPos_ = builderForValue.build();
           onChanged();
@@ -16773,13 +14028,13 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public Builder mergeInflictorWorldPos(Netmessages.CMsgVector value) {
+      public Builder mergeInflictorWorldPos(Networkbasetypes.CMsgVector value) {
         if (inflictorWorldPosBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
               inflictorWorldPos_ != null &&
-              inflictorWorldPos_ != Netmessages.CMsgVector.getDefaultInstance()) {
+              inflictorWorldPos_ != Networkbasetypes.CMsgVector.getDefaultInstance()) {
             inflictorWorldPos_ =
-              Netmessages.CMsgVector.newBuilder(inflictorWorldPos_).mergeFrom(value).buildPartial();
+              Networkbasetypes.CMsgVector.newBuilder(inflictorWorldPos_).mergeFrom(value).buildPartial();
           } else {
             inflictorWorldPos_ = value;
           }
@@ -16806,7 +14061,7 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public Netmessages.CMsgVector.Builder getInflictorWorldPosBuilder() {
+      public Networkbasetypes.CMsgVector.Builder getInflictorWorldPosBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getInflictorWorldPosFieldBuilder().getBuilder();
@@ -16814,23 +14069,23 @@ public final class Cstrike15Usermessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public Netmessages.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
+      public Networkbasetypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
         if (inflictorWorldPosBuilder_ != null) {
           return inflictorWorldPosBuilder_.getMessageOrBuilder();
         } else {
           return inflictorWorldPos_ == null ?
-              Netmessages.CMsgVector.getDefaultInstance() : inflictorWorldPos_;
+              Networkbasetypes.CMsgVector.getDefaultInstance() : inflictorWorldPos_;
         }
       }
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Netmessages.CMsgVector, Netmessages.CMsgVector.Builder, Netmessages.CMsgVectorOrBuilder> 
+          Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder> 
           getInflictorWorldPosFieldBuilder() {
         if (inflictorWorldPosBuilder_ == null) {
           inflictorWorldPosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Netmessages.CMsgVector, Netmessages.CMsgVector.Builder, Netmessages.CMsgVectorOrBuilder>(
+              Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder>(
                   getInflictorWorldPos(),
                   getParentForChildren(),
                   isClean());
@@ -16839,9 +14094,9 @@ public final class Cstrike15Usermessages {
         return inflictorWorldPosBuilder_;
       }
 
-      private int victimEntindex_ ;
+      private int victimEntindex_ = -1;
       /**
-       * <code>optional int32 victim_entindex = 3;</code>
+       * <code>optional int32 victim_entindex = 3 [default = -1];</code>
        * @return Whether the victimEntindex field is set.
        */
       @java.lang.Override
@@ -16849,7 +14104,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional int32 victim_entindex = 3;</code>
+       * <code>optional int32 victim_entindex = 3 [default = -1];</code>
        * @return The victimEntindex.
        */
       @java.lang.Override
@@ -16857,7 +14112,7 @@ public final class Cstrike15Usermessages {
         return victimEntindex_;
       }
       /**
-       * <code>optional int32 victim_entindex = 3;</code>
+       * <code>optional int32 victim_entindex = 3 [default = -1];</code>
        * @param value The victimEntindex to set.
        * @return This builder for chaining.
        */
@@ -16868,12 +14123,12 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional int32 victim_entindex = 3;</code>
+       * <code>optional int32 victim_entindex = 3 [default = -1];</code>
        * @return This builder for chaining.
        */
       public Builder clearVictimEntindex() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        victimEntindex_ = 0;
+        victimEntindex_ = -1;
         onChanged();
         return this;
       }
@@ -16946,12 +14201,12 @@ public final class Cstrike15Usermessages {
     int getMsgDst();
 
     /**
-     * <code>optional int32 client = 2;</code>
+     * <code>optional int32 client = 2 [default = -1];</code>
      * @return Whether the client field is set.
      */
     boolean hasClient();
     /**
-     * <code>optional int32 client = 2;</code>
+     * <code>optional int32 client = 2 [default = -1];</code>
      * @return The client.
      */
     int getClient();
@@ -17011,6 +14266,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_RadioText() {
+      client_ = -1;
       msgName_ = "";
       params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
@@ -17129,7 +14385,7 @@ public final class Cstrike15Usermessages {
     public static final int CLIENT_FIELD_NUMBER = 2;
     private int client_;
     /**
-     * <code>optional int32 client = 2;</code>
+     * <code>optional int32 client = 2 [default = -1];</code>
      * @return Whether the client field is set.
      */
     @java.lang.Override
@@ -17137,7 +14393,7 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional int32 client = 2;</code>
+     * <code>optional int32 client = 2 [default = -1];</code>
      * @return The client.
      */
     @java.lang.Override
@@ -17476,7 +14732,7 @@ public final class Cstrike15Usermessages {
         super.clear();
         msgDst_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        client_ = 0;
+        client_ = -1;
         bitField0_ = (bitField0_ & ~0x00000002);
         msgName_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -17515,9 +14771,9 @@ public final class Cstrike15Usermessages {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.client_ = client_;
           to_bitField0_ |= 0x00000002;
         }
+        result.client_ = client_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           to_bitField0_ |= 0x00000004;
         }
@@ -17666,9 +14922,9 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private int client_ ;
+      private int client_ = -1;
       /**
-       * <code>optional int32 client = 2;</code>
+       * <code>optional int32 client = 2 [default = -1];</code>
        * @return Whether the client field is set.
        */
       @java.lang.Override
@@ -17676,7 +14932,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional int32 client = 2;</code>
+       * <code>optional int32 client = 2 [default = -1];</code>
        * @return The client.
        */
       @java.lang.Override
@@ -17684,7 +14940,7 @@ public final class Cstrike15Usermessages {
         return client_;
       }
       /**
-       * <code>optional int32 client = 2;</code>
+       * <code>optional int32 client = 2 [default = -1];</code>
        * @param value The client to set.
        * @return This builder for chaining.
        */
@@ -17695,12 +14951,12 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional int32 client = 2;</code>
+       * <code>optional int32 client = 2 [default = -1];</code>
        * @return This builder for chaining.
        */
       public Builder clearClient() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        client_ = 0;
+        client_ = -1;
         onChanged();
         return this;
       }
@@ -17955,21 +15211,21 @@ public final class Cstrike15Usermessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string text = 1;</code>
-     * @return Whether the text field is set.
+     * <code>optional string message = 1;</code>
+     * @return Whether the message field is set.
      */
-    boolean hasText();
+    boolean hasMessage();
     /**
-     * <code>optional string text = 1;</code>
-     * @return The text.
+     * <code>optional string message = 1;</code>
+     * @return The message.
      */
-    java.lang.String getText();
+    java.lang.String getMessage();
     /**
-     * <code>optional string text = 1;</code>
-     * @return The bytes for text.
+     * <code>optional string message = 1;</code>
+     * @return The bytes for message.
      */
     com.google.protobuf.ByteString
-        getTextBytes();
+        getMessageBytes();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_HintText}
@@ -17984,7 +15240,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_HintText() {
-      text_ = "";
+      message_ = "";
     }
 
     @java.lang.Override
@@ -18021,7 +15277,7 @@ public final class Cstrike15Usermessages {
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              text_ = bs;
+              message_ = bs;
               break;
             }
             default: {
@@ -18057,23 +15313,23 @@ public final class Cstrike15Usermessages {
     }
 
     private int bitField0_;
-    public static final int TEXT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object text_;
+    public static final int MESSAGE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object message_;
     /**
-     * <code>optional string text = 1;</code>
-     * @return Whether the text field is set.
+     * <code>optional string message = 1;</code>
+     * @return Whether the message field is set.
      */
     @java.lang.Override
-    public boolean hasText() {
+    public boolean hasMessage() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional string text = 1;</code>
-     * @return The text.
+     * <code>optional string message = 1;</code>
+     * @return The message.
      */
     @java.lang.Override
-    public java.lang.String getText() {
-      java.lang.Object ref = text_;
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -18081,24 +15337,24 @@ public final class Cstrike15Usermessages {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          text_ = s;
+          message_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string text = 1;</code>
-     * @return The bytes for text.
+     * <code>optional string message = 1;</code>
+     * @return The bytes for message.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getTextBytes() {
-      java.lang.Object ref = text_;
+        getMessageBytes() {
+      java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        text_ = b;
+        message_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -18120,7 +15376,7 @@ public final class Cstrike15Usermessages {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
       }
       unknownFields.writeTo(output);
     }
@@ -18132,7 +15388,7 @@ public final class Cstrike15Usermessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18149,10 +15405,10 @@ public final class Cstrike15Usermessages {
       }
       Cstrike15Usermessages.CCSUsrMsg_HintText other = (Cstrike15Usermessages.CCSUsrMsg_HintText) obj;
 
-      if (hasText() != other.hasText()) return false;
-      if (hasText()) {
-        if (!getText()
-            .equals(other.getText())) return false;
+      if (hasMessage() != other.hasMessage()) return false;
+      if (hasMessage()) {
+        if (!getMessage()
+            .equals(other.getMessage())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -18165,9 +15421,9 @@ public final class Cstrike15Usermessages {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasText()) {
-        hash = (37 * hash) + TEXT_FIELD_NUMBER;
-        hash = (53 * hash) + getText().hashCode();
+      if (hasMessage()) {
+        hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getMessage().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -18302,7 +15558,7 @@ public final class Cstrike15Usermessages {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        text_ = "";
+        message_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
@@ -18335,7 +15591,7 @@ public final class Cstrike15Usermessages {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.text_ = text_;
+        result.message_ = message_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -18385,9 +15641,9 @@ public final class Cstrike15Usermessages {
 
       public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_HintText other) {
         if (other == Cstrike15Usermessages.CCSUsrMsg_HintText.getDefaultInstance()) return this;
-        if (other.hasText()) {
+        if (other.hasMessage()) {
           bitField0_ |= 0x00000001;
-          text_ = other.text_;
+          message_ = other.message_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -18420,26 +15676,26 @@ public final class Cstrike15Usermessages {
       }
       private int bitField0_;
 
-      private java.lang.Object text_ = "";
+      private java.lang.Object message_ = "";
       /**
-       * <code>optional string text = 1;</code>
-       * @return Whether the text field is set.
+       * <code>optional string message = 1;</code>
+       * @return Whether the message field is set.
        */
-      public boolean hasText() {
+      public boolean hasMessage() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional string text = 1;</code>
-       * @return The text.
+       * <code>optional string message = 1;</code>
+       * @return The message.
        */
-      public java.lang.String getText() {
-        java.lang.Object ref = text_;
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            text_ = s;
+            message_ = s;
           }
           return s;
         } else {
@@ -18447,59 +15703,59 @@ public final class Cstrike15Usermessages {
         }
       }
       /**
-       * <code>optional string text = 1;</code>
-       * @return The bytes for text.
+       * <code>optional string message = 1;</code>
+       * @return The bytes for message.
        */
       public com.google.protobuf.ByteString
-          getTextBytes() {
-        java.lang.Object ref = text_;
+          getMessageBytes() {
+        java.lang.Object ref = message_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          text_ = b;
+          message_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string text = 1;</code>
-       * @param value The text to set.
+       * <code>optional string message = 1;</code>
+       * @param value The message to set.
        * @return This builder for chaining.
        */
-      public Builder setText(
+      public Builder setMessage(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        text_ = value;
+        message_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string text = 1;</code>
+       * <code>optional string message = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearText() {
+      public Builder clearMessage() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        text_ = getDefaultInstance().getText();
+        message_ = getDefaultInstance().getMessage();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string text = 1;</code>
-       * @param value The bytes for text to set.
+       * <code>optional string message = 1;</code>
+       * @param value The bytes for message to set.
        * @return This builder for chaining.
        */
-      public Builder setTextBytes(
+      public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        text_ = value;
+        message_ = value;
         onChanged();
         return this;
       }
@@ -18561,29 +15817,29 @@ public final class Cstrike15Usermessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string hints = 1;</code>
-     * @return A list containing the hints.
+     * <code>repeated string messages = 1;</code>
+     * @return A list containing the messages.
      */
     java.util.List<java.lang.String>
-        getHintsList();
+        getMessagesList();
     /**
-     * <code>repeated string hints = 1;</code>
-     * @return The count of hints.
+     * <code>repeated string messages = 1;</code>
+     * @return The count of messages.
      */
-    int getHintsCount();
+    int getMessagesCount();
     /**
-     * <code>repeated string hints = 1;</code>
+     * <code>repeated string messages = 1;</code>
      * @param index The index of the element to return.
-     * @return The hints at the given index.
+     * @return The messages at the given index.
      */
-    java.lang.String getHints(int index);
+    java.lang.String getMessages(int index);
     /**
-     * <code>repeated string hints = 1;</code>
+     * <code>repeated string messages = 1;</code>
      * @param index The index of the value to return.
-     * @return The bytes of the hints at the given index.
+     * @return The bytes of the messages at the given index.
      */
     com.google.protobuf.ByteString
-        getHintsBytes(int index);
+        getMessagesBytes(int index);
   }
   /**
    * Protobuf type {@code CCSUsrMsg_KeyHintText}
@@ -18598,7 +15854,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_KeyHintText() {
-      hints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      messages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -18635,10 +15891,10 @@ public final class Cstrike15Usermessages {
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                hints_ = new com.google.protobuf.LazyStringArrayList();
+                messages_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              hints_.add(bs);
+              messages_.add(bs);
               break;
             }
             default: {
@@ -18657,7 +15913,7 @@ public final class Cstrike15Usermessages {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          hints_ = hints_.getUnmodifiableView();
+          messages_ = messages_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -18676,39 +15932,39 @@ public final class Cstrike15Usermessages {
               Cstrike15Usermessages.CCSUsrMsg_KeyHintText.class, Cstrike15Usermessages.CCSUsrMsg_KeyHintText.Builder.class);
     }
 
-    public static final int HINTS_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList hints_;
+    public static final int MESSAGES_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList messages_;
     /**
-     * <code>repeated string hints = 1;</code>
-     * @return A list containing the hints.
+     * <code>repeated string messages = 1;</code>
+     * @return A list containing the messages.
      */
     public com.google.protobuf.ProtocolStringList
-        getHintsList() {
-      return hints_;
+        getMessagesList() {
+      return messages_;
     }
     /**
-     * <code>repeated string hints = 1;</code>
-     * @return The count of hints.
+     * <code>repeated string messages = 1;</code>
+     * @return The count of messages.
      */
-    public int getHintsCount() {
-      return hints_.size();
+    public int getMessagesCount() {
+      return messages_.size();
     }
     /**
-     * <code>repeated string hints = 1;</code>
+     * <code>repeated string messages = 1;</code>
      * @param index The index of the element to return.
-     * @return The hints at the given index.
+     * @return The messages at the given index.
      */
-    public java.lang.String getHints(int index) {
-      return hints_.get(index);
+    public java.lang.String getMessages(int index) {
+      return messages_.get(index);
     }
     /**
-     * <code>repeated string hints = 1;</code>
+     * <code>repeated string messages = 1;</code>
      * @param index The index of the value to return.
-     * @return The bytes of the hints at the given index.
+     * @return The bytes of the messages at the given index.
      */
     public com.google.protobuf.ByteString
-        getHintsBytes(int index) {
-      return hints_.getByteString(index);
+        getMessagesBytes(int index) {
+      return messages_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -18725,8 +15981,8 @@ public final class Cstrike15Usermessages {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < hints_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hints_.getRaw(i));
+      for (int i = 0; i < messages_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, messages_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -18739,11 +15995,11 @@ public final class Cstrike15Usermessages {
       size = 0;
       {
         int dataSize = 0;
-        for (int i = 0; i < hints_.size(); i++) {
-          dataSize += computeStringSizeNoTag(hints_.getRaw(i));
+        for (int i = 0; i < messages_.size(); i++) {
+          dataSize += computeStringSizeNoTag(messages_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getHintsList().size();
+        size += 1 * getMessagesList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18760,8 +16016,8 @@ public final class Cstrike15Usermessages {
       }
       Cstrike15Usermessages.CCSUsrMsg_KeyHintText other = (Cstrike15Usermessages.CCSUsrMsg_KeyHintText) obj;
 
-      if (!getHintsList()
-          .equals(other.getHintsList())) return false;
+      if (!getMessagesList()
+          .equals(other.getMessagesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -18773,9 +16029,9 @@ public final class Cstrike15Usermessages {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getHintsCount() > 0) {
-        hash = (37 * hash) + HINTS_FIELD_NUMBER;
-        hash = (53 * hash) + getHintsList().hashCode();
+      if (getMessagesCount() > 0) {
+        hash = (37 * hash) + MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getMessagesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -18910,7 +16166,7 @@ public final class Cstrike15Usermessages {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        hints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        messages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
@@ -18940,10 +16196,10 @@ public final class Cstrike15Usermessages {
         Cstrike15Usermessages.CCSUsrMsg_KeyHintText result = new Cstrike15Usermessages.CCSUsrMsg_KeyHintText(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          hints_ = hints_.getUnmodifiableView();
+          messages_ = messages_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.hints_ = hints_;
+        result.messages_ = messages_;
         onBuilt();
         return result;
       }
@@ -18992,13 +16248,13 @@ public final class Cstrike15Usermessages {
 
       public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_KeyHintText other) {
         if (other == Cstrike15Usermessages.CCSUsrMsg_KeyHintText.getDefaultInstance()) return this;
-        if (!other.hints_.isEmpty()) {
-          if (hints_.isEmpty()) {
-            hints_ = other.hints_;
+        if (!other.messages_.isEmpty()) {
+          if (messages_.isEmpty()) {
+            messages_ = other.messages_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureHintsIsMutable();
-            hints_.addAll(other.hints_);
+            ensureMessagesIsMutable();
+            messages_.addAll(other.messages_);
           }
           onChanged();
         }
@@ -19032,111 +16288,111 @@ public final class Cstrike15Usermessages {
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList hints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureHintsIsMutable() {
+      private com.google.protobuf.LazyStringList messages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureMessagesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          hints_ = new com.google.protobuf.LazyStringArrayList(hints_);
+          messages_ = new com.google.protobuf.LazyStringArrayList(messages_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated string hints = 1;</code>
-       * @return A list containing the hints.
+       * <code>repeated string messages = 1;</code>
+       * @return A list containing the messages.
        */
       public com.google.protobuf.ProtocolStringList
-          getHintsList() {
-        return hints_.getUnmodifiableView();
+          getMessagesList() {
+        return messages_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string hints = 1;</code>
-       * @return The count of hints.
+       * <code>repeated string messages = 1;</code>
+       * @return The count of messages.
        */
-      public int getHintsCount() {
-        return hints_.size();
+      public int getMessagesCount() {
+        return messages_.size();
       }
       /**
-       * <code>repeated string hints = 1;</code>
+       * <code>repeated string messages = 1;</code>
        * @param index The index of the element to return.
-       * @return The hints at the given index.
+       * @return The messages at the given index.
        */
-      public java.lang.String getHints(int index) {
-        return hints_.get(index);
+      public java.lang.String getMessages(int index) {
+        return messages_.get(index);
       }
       /**
-       * <code>repeated string hints = 1;</code>
+       * <code>repeated string messages = 1;</code>
        * @param index The index of the value to return.
-       * @return The bytes of the hints at the given index.
+       * @return The bytes of the messages at the given index.
        */
       public com.google.protobuf.ByteString
-          getHintsBytes(int index) {
-        return hints_.getByteString(index);
+          getMessagesBytes(int index) {
+        return messages_.getByteString(index);
       }
       /**
-       * <code>repeated string hints = 1;</code>
+       * <code>repeated string messages = 1;</code>
        * @param index The index to set the value at.
-       * @param value The hints to set.
+       * @param value The messages to set.
        * @return This builder for chaining.
        */
-      public Builder setHints(
+      public Builder setMessages(
           int index, java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureHintsIsMutable();
-        hints_.set(index, value);
+  ensureMessagesIsMutable();
+        messages_.set(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string hints = 1;</code>
-       * @param value The hints to add.
+       * <code>repeated string messages = 1;</code>
+       * @param value The messages to add.
        * @return This builder for chaining.
        */
-      public Builder addHints(
+      public Builder addMessages(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureHintsIsMutable();
-        hints_.add(value);
+  ensureMessagesIsMutable();
+        messages_.add(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string hints = 1;</code>
-       * @param values The hints to add.
+       * <code>repeated string messages = 1;</code>
+       * @param values The messages to add.
        * @return This builder for chaining.
        */
-      public Builder addAllHints(
+      public Builder addAllMessages(
           java.lang.Iterable<java.lang.String> values) {
-        ensureHintsIsMutable();
+        ensureMessagesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, hints_);
+            values, messages_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string hints = 1;</code>
+       * <code>repeated string messages = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearHints() {
-        hints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      public Builder clearMessages() {
+        messages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string hints = 1;</code>
-       * @param value The bytes of the hints to add.
+       * <code>repeated string messages = 1;</code>
+       * @param value The bytes of the messages to add.
        * @return This builder for chaining.
        */
-      public Builder addHintsBytes(
+      public Builder addMessagesBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureHintsIsMutable();
-        hints_.add(value);
+  ensureMessagesIsMutable();
+        messages_.add(value);
         onChanged();
         return this;
       }
@@ -19333,12 +16589,12 @@ public final class Cstrike15Usermessages {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional int32 entity_idx = 1;</code>
+       * <code>optional int32 entity_idx = 1 [default = -1];</code>
        * @return Whether the entityIdx field is set.
        */
       boolean hasEntityIdx();
       /**
-       * <code>optional int32 entity_idx = 1;</code>
+       * <code>optional int32 entity_idx = 1 [default = -1];</code>
        * @return The entityIdx.
        */
       int getEntityIdx();
@@ -19444,6 +16700,7 @@ public final class Cstrike15Usermessages {
         super(builder);
       }
       private SpottedEntityUpdate() {
+        entityIdx_ = -1;
       }
 
       @java.lang.Override
@@ -19558,7 +16815,7 @@ public final class Cstrike15Usermessages {
       public static final int ENTITY_IDX_FIELD_NUMBER = 1;
       private int entityIdx_;
       /**
-       * <code>optional int32 entity_idx = 1;</code>
+       * <code>optional int32 entity_idx = 1 [default = -1];</code>
        * @return Whether the entityIdx field is set.
        */
       @java.lang.Override
@@ -19566,7 +16823,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional int32 entity_idx = 1;</code>
+       * <code>optional int32 entity_idx = 1 [default = -1];</code>
        * @return The entityIdx.
        */
       @java.lang.Override
@@ -20055,7 +17312,7 @@ public final class Cstrike15Usermessages {
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          entityIdx_ = 0;
+          entityIdx_ = -1;
           bitField0_ = (bitField0_ & ~0x00000001);
           classId_ = 0;
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -20102,9 +17359,9 @@ public final class Cstrike15Usermessages {
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.entityIdx_ = entityIdx_;
             to_bitField0_ |= 0x00000001;
           }
+          result.entityIdx_ = entityIdx_;
           if (((from_bitField0_ & 0x00000002) != 0)) {
             result.classId_ = classId_;
             to_bitField0_ |= 0x00000002;
@@ -20243,9 +17500,9 @@ public final class Cstrike15Usermessages {
         }
         private int bitField0_;
 
-        private int entityIdx_ ;
+        private int entityIdx_ = -1;
         /**
-         * <code>optional int32 entity_idx = 1;</code>
+         * <code>optional int32 entity_idx = 1 [default = -1];</code>
          * @return Whether the entityIdx field is set.
          */
         @java.lang.Override
@@ -20253,7 +17510,7 @@ public final class Cstrike15Usermessages {
           return ((bitField0_ & 0x00000001) != 0);
         }
         /**
-         * <code>optional int32 entity_idx = 1;</code>
+         * <code>optional int32 entity_idx = 1 [default = -1];</code>
          * @return The entityIdx.
          */
         @java.lang.Override
@@ -20261,7 +17518,7 @@ public final class Cstrike15Usermessages {
           return entityIdx_;
         }
         /**
-         * <code>optional int32 entity_idx = 1;</code>
+         * <code>optional int32 entity_idx = 1 [default = -1];</code>
          * @param value The entityIdx to set.
          * @return This builder for chaining.
          */
@@ -20272,12 +17529,12 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>optional int32 entity_idx = 1;</code>
+         * <code>optional int32 entity_idx = 1 [default = -1];</code>
          * @return This builder for chaining.
          */
         public Builder clearEntityIdx() {
           bitField0_ = (bitField0_ & ~0x00000001);
-          entityIdx_ = 0;
+          entityIdx_ = -1;
           onChanged();
           return this;
         }
@@ -22220,15 +19477,15 @@ public final class Cstrike15Usermessages {
     Cstrike15Gcmessages.CEconItemPreviewDataBlockOrBuilder getIteminfoOrBuilder();
 
     /**
-     * <code>optional int32 entindex = 2;</code>
-     * @return Whether the entindex field is set.
+     * <code>optional int32 playerslot = 2 [default = -1];</code>
+     * @return Whether the playerslot field is set.
      */
-    boolean hasEntindex();
+    boolean hasPlayerslot();
     /**
-     * <code>optional int32 entindex = 2;</code>
-     * @return The entindex.
+     * <code>optional int32 playerslot = 2 [default = -1];</code>
+     * @return The playerslot.
      */
-    int getEntindex();
+    int getPlayerslot();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_SendPlayerItemFound}
@@ -22243,6 +19500,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_SendPlayerItemFound() {
+      playerslot_ = -1;
     }
 
     @java.lang.Override
@@ -22291,7 +19549,7 @@ public final class Cstrike15Usermessages {
             }
             case 16: {
               bitField0_ |= 0x00000002;
-              entindex_ = input.readInt32();
+              playerslot_ = input.readInt32();
               break;
             }
             default: {
@@ -22353,23 +19611,23 @@ public final class Cstrike15Usermessages {
       return iteminfo_ == null ? Cstrike15Gcmessages.CEconItemPreviewDataBlock.getDefaultInstance() : iteminfo_;
     }
 
-    public static final int ENTINDEX_FIELD_NUMBER = 2;
-    private int entindex_;
+    public static final int PLAYERSLOT_FIELD_NUMBER = 2;
+    private int playerslot_;
     /**
-     * <code>optional int32 entindex = 2;</code>
-     * @return Whether the entindex field is set.
+     * <code>optional int32 playerslot = 2 [default = -1];</code>
+     * @return Whether the playerslot field is set.
      */
     @java.lang.Override
-    public boolean hasEntindex() {
+    public boolean hasPlayerslot() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional int32 entindex = 2;</code>
-     * @return The entindex.
+     * <code>optional int32 playerslot = 2 [default = -1];</code>
+     * @return The playerslot.
      */
     @java.lang.Override
-    public int getEntindex() {
-      return entindex_;
+    public int getPlayerslot() {
+      return playerslot_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -22390,7 +19648,7 @@ public final class Cstrike15Usermessages {
         output.writeMessage(1, getIteminfo());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeInt32(2, entindex_);
+        output.writeInt32(2, playerslot_);
       }
       unknownFields.writeTo(output);
     }
@@ -22407,7 +19665,7 @@ public final class Cstrike15Usermessages {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, entindex_);
+          .computeInt32Size(2, playerslot_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -22429,10 +19687,10 @@ public final class Cstrike15Usermessages {
         if (!getIteminfo()
             .equals(other.getIteminfo())) return false;
       }
-      if (hasEntindex() != other.hasEntindex()) return false;
-      if (hasEntindex()) {
-        if (getEntindex()
-            != other.getEntindex()) return false;
+      if (hasPlayerslot() != other.hasPlayerslot()) return false;
+      if (hasPlayerslot()) {
+        if (getPlayerslot()
+            != other.getPlayerslot()) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -22449,9 +19707,9 @@ public final class Cstrike15Usermessages {
         hash = (37 * hash) + ITEMINFO_FIELD_NUMBER;
         hash = (53 * hash) + getIteminfo().hashCode();
       }
-      if (hasEntindex()) {
-        hash = (37 * hash) + ENTINDEX_FIELD_NUMBER;
-        hash = (53 * hash) + getEntindex();
+      if (hasPlayerslot()) {
+        hash = (37 * hash) + PLAYERSLOT_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayerslot();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -22593,7 +19851,7 @@ public final class Cstrike15Usermessages {
           iteminfoBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
-        entindex_ = 0;
+        playerslot_ = -1;
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -22632,9 +19890,9 @@ public final class Cstrike15Usermessages {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.entindex_ = entindex_;
           to_bitField0_ |= 0x00000002;
         }
+        result.playerslot_ = playerslot_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -22687,8 +19945,8 @@ public final class Cstrike15Usermessages {
         if (other.hasIteminfo()) {
           mergeIteminfo(other.getIteminfo());
         }
-        if (other.hasEntindex()) {
-          setEntindex(other.getEntindex());
+        if (other.hasPlayerslot()) {
+          setPlayerslot(other.getPlayerslot());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -22840,41 +20098,41 @@ public final class Cstrike15Usermessages {
         return iteminfoBuilder_;
       }
 
-      private int entindex_ ;
+      private int playerslot_ = -1;
       /**
-       * <code>optional int32 entindex = 2;</code>
-       * @return Whether the entindex field is set.
+       * <code>optional int32 playerslot = 2 [default = -1];</code>
+       * @return Whether the playerslot field is set.
        */
       @java.lang.Override
-      public boolean hasEntindex() {
+      public boolean hasPlayerslot() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional int32 entindex = 2;</code>
-       * @return The entindex.
+       * <code>optional int32 playerslot = 2 [default = -1];</code>
+       * @return The playerslot.
        */
       @java.lang.Override
-      public int getEntindex() {
-        return entindex_;
+      public int getPlayerslot() {
+        return playerslot_;
       }
       /**
-       * <code>optional int32 entindex = 2;</code>
-       * @param value The entindex to set.
+       * <code>optional int32 playerslot = 2 [default = -1];</code>
+       * @param value The playerslot to set.
        * @return This builder for chaining.
        */
-      public Builder setEntindex(int value) {
+      public Builder setPlayerslot(int value) {
         bitField0_ |= 0x00000002;
-        entindex_ = value;
+        playerslot_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 entindex = 2;</code>
+       * <code>optional int32 playerslot = 2 [default = -1];</code>
        * @return This builder for chaining.
        */
-      public Builder clearEntindex() {
+      public Builder clearPlayerslot() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        entindex_ = 0;
+        playerslot_ = -1;
         onChanged();
         return this;
       }
@@ -22936,12 +20194,12 @@ public final class Cstrike15Usermessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     boolean hasEntidx();
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return The entidx.
      */
     int getEntidx();
@@ -23003,6 +20261,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_ReloadEffect() {
+      entidx_ = -1;
     }
 
     @java.lang.Override
@@ -23097,7 +20356,7 @@ public final class Cstrike15Usermessages {
     public static final int ENTIDX_FIELD_NUMBER = 1;
     private int entidx_;
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     @java.lang.Override
@@ -23105,7 +20364,7 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return The entidx.
      */
     @java.lang.Override
@@ -23457,7 +20716,7 @@ public final class Cstrike15Usermessages {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        entidx_ = 0;
+        entidx_ = -1;
         bitField0_ = (bitField0_ & ~0x00000001);
         actanim_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -23496,9 +20755,9 @@ public final class Cstrike15Usermessages {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.entidx_ = entidx_;
           to_bitField0_ |= 0x00000001;
         }
+        result.entidx_ = entidx_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.actanim_ = actanim_;
           to_bitField0_ |= 0x00000002;
@@ -23609,9 +20868,9 @@ public final class Cstrike15Usermessages {
       }
       private int bitField0_;
 
-      private int entidx_ ;
+      private int entidx_ = -1;
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return Whether the entidx field is set.
        */
       @java.lang.Override
@@ -23619,7 +20878,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return The entidx.
        */
       @java.lang.Override
@@ -23627,7 +20886,7 @@ public final class Cstrike15Usermessages {
         return entidx_;
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @param value The entidx to set.
        * @return This builder for chaining.
        */
@@ -23638,12 +20897,12 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return This builder for chaining.
        */
       public Builder clearEntidx() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        entidx_ = 0;
+        entidx_ = -1;
         onChanged();
         return this;
       }
@@ -23861,12 +21120,12 @@ public final class Cstrike15Usermessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     boolean hasEntidx();
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return The entidx.
      */
     int getEntidx();
@@ -23922,15 +21181,26 @@ public final class Cstrike15Usermessages {
         getSoundBytes();
 
     /**
-     * <code>optional float timestamp = 6;</code>
-     * @return Whether the timestamp field is set.
+     * <code>optional float game_timestamp = 6;</code>
+     * @return Whether the gameTimestamp field is set.
      */
-    boolean hasTimestamp();
+    boolean hasGameTimestamp();
     /**
-     * <code>optional float timestamp = 6;</code>
-     * @return The timestamp.
+     * <code>optional float game_timestamp = 6;</code>
+     * @return The gameTimestamp.
      */
-    float getTimestamp();
+    float getGameTimestamp();
+
+    /**
+     * <code>optional fixed32 source_soundscapeid = 7;</code>
+     * @return Whether the sourceSoundscapeid field is set.
+     */
+    boolean hasSourceSoundscapeid();
+    /**
+     * <code>optional fixed32 source_soundscapeid = 7;</code>
+     * @return The sourceSoundscapeid.
+     */
+    int getSourceSoundscapeid();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_WeaponSound}
@@ -23945,6 +21215,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_WeaponSound() {
+      entidx_ = -1;
       sound_ = "";
     }
 
@@ -24007,7 +21278,12 @@ public final class Cstrike15Usermessages {
             }
             case 53: {
               bitField0_ |= 0x00000020;
-              timestamp_ = input.readFloat();
+              gameTimestamp_ = input.readFloat();
+              break;
+            }
+            case 61: {
+              bitField0_ |= 0x00000040;
+              sourceSoundscapeid_ = input.readFixed32();
               break;
             }
             default: {
@@ -24046,7 +21322,7 @@ public final class Cstrike15Usermessages {
     public static final int ENTIDX_FIELD_NUMBER = 1;
     private int entidx_;
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     @java.lang.Override
@@ -24054,7 +21330,7 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return The entidx.
      */
     @java.lang.Override
@@ -24167,23 +21443,42 @@ public final class Cstrike15Usermessages {
       }
     }
 
-    public static final int TIMESTAMP_FIELD_NUMBER = 6;
-    private float timestamp_;
+    public static final int GAME_TIMESTAMP_FIELD_NUMBER = 6;
+    private float gameTimestamp_;
     /**
-     * <code>optional float timestamp = 6;</code>
-     * @return Whether the timestamp field is set.
+     * <code>optional float game_timestamp = 6;</code>
+     * @return Whether the gameTimestamp field is set.
      */
     @java.lang.Override
-    public boolean hasTimestamp() {
+    public boolean hasGameTimestamp() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>optional float timestamp = 6;</code>
-     * @return The timestamp.
+     * <code>optional float game_timestamp = 6;</code>
+     * @return The gameTimestamp.
      */
     @java.lang.Override
-    public float getTimestamp() {
-      return timestamp_;
+    public float getGameTimestamp() {
+      return gameTimestamp_;
+    }
+
+    public static final int SOURCE_SOUNDSCAPEID_FIELD_NUMBER = 7;
+    private int sourceSoundscapeid_;
+    /**
+     * <code>optional fixed32 source_soundscapeid = 7;</code>
+     * @return Whether the sourceSoundscapeid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSourceSoundscapeid() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional fixed32 source_soundscapeid = 7;</code>
+     * @return The sourceSoundscapeid.
+     */
+    @java.lang.Override
+    public int getSourceSoundscapeid() {
+      return sourceSoundscapeid_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -24216,7 +21511,10 @@ public final class Cstrike15Usermessages {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sound_);
       }
       if (((bitField0_ & 0x00000020) != 0)) {
-        output.writeFloat(6, timestamp_);
+        output.writeFloat(6, gameTimestamp_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeFixed32(7, sourceSoundscapeid_);
       }
       unknownFields.writeTo(output);
     }
@@ -24248,7 +21546,11 @@ public final class Cstrike15Usermessages {
       }
       if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(6, timestamp_);
+          .computeFloatSize(6, gameTimestamp_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(7, sourceSoundscapeid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -24293,11 +21595,16 @@ public final class Cstrike15Usermessages {
         if (!getSound()
             .equals(other.getSound())) return false;
       }
-      if (hasTimestamp() != other.hasTimestamp()) return false;
-      if (hasTimestamp()) {
-        if (java.lang.Float.floatToIntBits(getTimestamp())
+      if (hasGameTimestamp() != other.hasGameTimestamp()) return false;
+      if (hasGameTimestamp()) {
+        if (java.lang.Float.floatToIntBits(getGameTimestamp())
             != java.lang.Float.floatToIntBits(
-                other.getTimestamp())) return false;
+                other.getGameTimestamp())) return false;
+      }
+      if (hasSourceSoundscapeid() != other.hasSourceSoundscapeid()) return false;
+      if (hasSourceSoundscapeid()) {
+        if (getSourceSoundscapeid()
+            != other.getSourceSoundscapeid()) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -24333,10 +21640,14 @@ public final class Cstrike15Usermessages {
         hash = (37 * hash) + SOUND_FIELD_NUMBER;
         hash = (53 * hash) + getSound().hashCode();
       }
-      if (hasTimestamp()) {
-        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      if (hasGameTimestamp()) {
+        hash = (37 * hash) + GAME_TIMESTAMP_FIELD_NUMBER;
         hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getTimestamp());
+            getGameTimestamp());
+      }
+      if (hasSourceSoundscapeid()) {
+        hash = (37 * hash) + SOURCE_SOUNDSCAPEID_FIELD_NUMBER;
+        hash = (53 * hash) + getSourceSoundscapeid();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -24471,7 +21782,7 @@ public final class Cstrike15Usermessages {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        entidx_ = 0;
+        entidx_ = -1;
         bitField0_ = (bitField0_ & ~0x00000001);
         originX_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -24481,8 +21792,10 @@ public final class Cstrike15Usermessages {
         bitField0_ = (bitField0_ & ~0x00000008);
         sound_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
-        timestamp_ = 0F;
+        gameTimestamp_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000020);
+        sourceSoundscapeid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -24512,9 +21825,9 @@ public final class Cstrike15Usermessages {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.entidx_ = entidx_;
           to_bitField0_ |= 0x00000001;
         }
+        result.entidx_ = entidx_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.originX_ = originX_;
           to_bitField0_ |= 0x00000002;
@@ -24532,8 +21845,12 @@ public final class Cstrike15Usermessages {
         }
         result.sound_ = sound_;
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.timestamp_ = timestamp_;
+          result.gameTimestamp_ = gameTimestamp_;
           to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.sourceSoundscapeid_ = sourceSoundscapeid_;
+          to_bitField0_ |= 0x00000040;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -24601,8 +21918,11 @@ public final class Cstrike15Usermessages {
           sound_ = other.sound_;
           onChanged();
         }
-        if (other.hasTimestamp()) {
-          setTimestamp(other.getTimestamp());
+        if (other.hasGameTimestamp()) {
+          setGameTimestamp(other.getGameTimestamp());
+        }
+        if (other.hasSourceSoundscapeid()) {
+          setSourceSoundscapeid(other.getSourceSoundscapeid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -24634,9 +21954,9 @@ public final class Cstrike15Usermessages {
       }
       private int bitField0_;
 
-      private int entidx_ ;
+      private int entidx_ = -1;
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return Whether the entidx field is set.
        */
       @java.lang.Override
@@ -24644,7 +21964,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return The entidx.
        */
       @java.lang.Override
@@ -24652,7 +21972,7 @@ public final class Cstrike15Usermessages {
         return entidx_;
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @param value The entidx to set.
        * @return This builder for chaining.
        */
@@ -24663,12 +21983,12 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return This builder for chaining.
        */
       public Builder clearEntidx() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        entidx_ = 0;
+        entidx_ = -1;
         onChanged();
         return this;
       }
@@ -24874,41 +22194,80 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private float timestamp_ ;
+      private float gameTimestamp_ ;
       /**
-       * <code>optional float timestamp = 6;</code>
-       * @return Whether the timestamp field is set.
+       * <code>optional float game_timestamp = 6;</code>
+       * @return Whether the gameTimestamp field is set.
        */
       @java.lang.Override
-      public boolean hasTimestamp() {
+      public boolean hasGameTimestamp() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>optional float timestamp = 6;</code>
-       * @return The timestamp.
+       * <code>optional float game_timestamp = 6;</code>
+       * @return The gameTimestamp.
        */
       @java.lang.Override
-      public float getTimestamp() {
-        return timestamp_;
+      public float getGameTimestamp() {
+        return gameTimestamp_;
       }
       /**
-       * <code>optional float timestamp = 6;</code>
-       * @param value The timestamp to set.
+       * <code>optional float game_timestamp = 6;</code>
+       * @param value The gameTimestamp to set.
        * @return This builder for chaining.
        */
-      public Builder setTimestamp(float value) {
+      public Builder setGameTimestamp(float value) {
         bitField0_ |= 0x00000020;
-        timestamp_ = value;
+        gameTimestamp_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional float timestamp = 6;</code>
+       * <code>optional float game_timestamp = 6;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTimestamp() {
+      public Builder clearGameTimestamp() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        timestamp_ = 0F;
+        gameTimestamp_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int sourceSoundscapeid_ ;
+      /**
+       * <code>optional fixed32 source_soundscapeid = 7;</code>
+       * @return Whether the sourceSoundscapeid field is set.
+       */
+      @java.lang.Override
+      public boolean hasSourceSoundscapeid() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional fixed32 source_soundscapeid = 7;</code>
+       * @return The sourceSoundscapeid.
+       */
+      @java.lang.Override
+      public int getSourceSoundscapeid() {
+        return sourceSoundscapeid_;
+      }
+      /**
+       * <code>optional fixed32 source_soundscapeid = 7;</code>
+       * @param value The sourceSoundscapeid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceSoundscapeid(int value) {
+        bitField0_ |= 0x00000040;
+        sourceSoundscapeid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 source_soundscapeid = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceSoundscapeid() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        sourceSoundscapeid_ = 0;
         onChanged();
         return this;
       }
@@ -24970,12 +22329,12 @@ public final class Cstrike15Usermessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     boolean hasEntidx();
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return The entidx.
      */
     int getEntidx();
@@ -25026,6 +22385,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_UpdateScreenHealthBar() {
+      entidx_ = -1;
     }
 
     @java.lang.Override
@@ -25115,7 +22475,7 @@ public final class Cstrike15Usermessages {
     public static final int ENTIDX_FIELD_NUMBER = 1;
     private int entidx_;
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     @java.lang.Override
@@ -25123,7 +22483,7 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return The entidx.
      */
     @java.lang.Override
@@ -25438,7 +22798,7 @@ public final class Cstrike15Usermessages {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        entidx_ = 0;
+        entidx_ = -1;
         bitField0_ = (bitField0_ & ~0x00000001);
         healthratioOld_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -25475,9 +22835,9 @@ public final class Cstrike15Usermessages {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.entidx_ = entidx_;
           to_bitField0_ |= 0x00000001;
         }
+        result.entidx_ = entidx_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.healthratioOld_ = healthratioOld_;
           to_bitField0_ |= 0x00000002;
@@ -25581,9 +22941,9 @@ public final class Cstrike15Usermessages {
       }
       private int bitField0_;
 
-      private int entidx_ ;
+      private int entidx_ = -1;
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return Whether the entidx field is set.
        */
       @java.lang.Override
@@ -25591,7 +22951,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return The entidx.
        */
       @java.lang.Override
@@ -25599,7 +22959,7 @@ public final class Cstrike15Usermessages {
         return entidx_;
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @param value The entidx to set.
        * @return This builder for chaining.
        */
@@ -25610,12 +22970,12 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return This builder for chaining.
        */
       public Builder clearEntidx() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        entidx_ = 0;
+        entidx_ = -1;
         onChanged();
         return this;
       }
@@ -25794,12 +23154,12 @@ public final class Cstrike15Usermessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     boolean hasEntidx();
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return The entidx.
      */
     int getEntidx();
@@ -25828,6 +23188,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_EntityOutlineHighlight() {
+      entidx_ = -1;
     }
 
     @java.lang.Override
@@ -25907,7 +23268,7 @@ public final class Cstrike15Usermessages {
     public static final int ENTIDX_FIELD_NUMBER = 1;
     private int entidx_;
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     @java.lang.Override
@@ -25915,7 +23276,7 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return The entidx.
      */
     @java.lang.Override
@@ -26157,7 +23518,7 @@ public final class Cstrike15Usermessages {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        entidx_ = 0;
+        entidx_ = -1;
         bitField0_ = (bitField0_ & ~0x00000001);
         removehighlight_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -26190,9 +23551,9 @@ public final class Cstrike15Usermessages {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.entidx_ = entidx_;
           to_bitField0_ |= 0x00000001;
         }
+        result.entidx_ = entidx_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.removehighlight_ = removehighlight_;
           to_bitField0_ |= 0x00000002;
@@ -26282,9 +23643,9 @@ public final class Cstrike15Usermessages {
       }
       private int bitField0_;
 
-      private int entidx_ ;
+      private int entidx_ = -1;
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return Whether the entidx field is set.
        */
       @java.lang.Override
@@ -26292,7 +23653,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return The entidx.
        */
       @java.lang.Override
@@ -26300,7 +23661,7 @@ public final class Cstrike15Usermessages {
         return entidx_;
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @param value The entidx to set.
        * @return This builder for chaining.
        */
@@ -26311,12 +23672,12 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return This builder for chaining.
        */
       public Builder clearEntidx() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        entidx_ = 0;
+        entidx_ = -1;
         onChanged();
         return this;
       }
@@ -27779,23 +25140,23 @@ public final class Cstrike15Usermessages {
     int getObsMode();
 
     /**
-     * <code>optional int32 first_target = 2;</code>
+     * <code>optional int32 first_target = 2 [default = -1];</code>
      * @return Whether the firstTarget field is set.
      */
     boolean hasFirstTarget();
     /**
-     * <code>optional int32 first_target = 2;</code>
+     * <code>optional int32 first_target = 2 [default = -1];</code>
      * @return The firstTarget.
      */
     int getFirstTarget();
 
     /**
-     * <code>optional int32 second_target = 3;</code>
+     * <code>optional int32 second_target = 3 [default = -1];</code>
      * @return Whether the secondTarget field is set.
      */
     boolean hasSecondTarget();
     /**
-     * <code>optional int32 second_target = 3;</code>
+     * <code>optional int32 second_target = 3 [default = -1];</code>
      * @return The secondTarget.
      */
     int getSecondTarget();
@@ -27813,6 +25174,8 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_KillCam() {
+      firstTarget_ = -1;
+      secondTarget_ = -1;
     }
 
     @java.lang.Override
@@ -27916,7 +25279,7 @@ public final class Cstrike15Usermessages {
     public static final int FIRST_TARGET_FIELD_NUMBER = 2;
     private int firstTarget_;
     /**
-     * <code>optional int32 first_target = 2;</code>
+     * <code>optional int32 first_target = 2 [default = -1];</code>
      * @return Whether the firstTarget field is set.
      */
     @java.lang.Override
@@ -27924,7 +25287,7 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional int32 first_target = 2;</code>
+     * <code>optional int32 first_target = 2 [default = -1];</code>
      * @return The firstTarget.
      */
     @java.lang.Override
@@ -27935,7 +25298,7 @@ public final class Cstrike15Usermessages {
     public static final int SECOND_TARGET_FIELD_NUMBER = 3;
     private int secondTarget_;
     /**
-     * <code>optional int32 second_target = 3;</code>
+     * <code>optional int32 second_target = 3 [default = -1];</code>
      * @return Whether the secondTarget field is set.
      */
     @java.lang.Override
@@ -27943,7 +25306,7 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional int32 second_target = 3;</code>
+     * <code>optional int32 second_target = 3 [default = -1];</code>
      * @return The secondTarget.
      */
     @java.lang.Override
@@ -28183,9 +25546,9 @@ public final class Cstrike15Usermessages {
         super.clear();
         obsMode_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        firstTarget_ = 0;
+        firstTarget_ = -1;
         bitField0_ = (bitField0_ & ~0x00000002);
-        secondTarget_ = 0;
+        secondTarget_ = -1;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -28220,13 +25583,13 @@ public final class Cstrike15Usermessages {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.firstTarget_ = firstTarget_;
           to_bitField0_ |= 0x00000002;
         }
+        result.firstTarget_ = firstTarget_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.secondTarget_ = secondTarget_;
           to_bitField0_ |= 0x00000004;
         }
+        result.secondTarget_ = secondTarget_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -28354,9 +25717,9 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private int firstTarget_ ;
+      private int firstTarget_ = -1;
       /**
-       * <code>optional int32 first_target = 2;</code>
+       * <code>optional int32 first_target = 2 [default = -1];</code>
        * @return Whether the firstTarget field is set.
        */
       @java.lang.Override
@@ -28364,7 +25727,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional int32 first_target = 2;</code>
+       * <code>optional int32 first_target = 2 [default = -1];</code>
        * @return The firstTarget.
        */
       @java.lang.Override
@@ -28372,7 +25735,7 @@ public final class Cstrike15Usermessages {
         return firstTarget_;
       }
       /**
-       * <code>optional int32 first_target = 2;</code>
+       * <code>optional int32 first_target = 2 [default = -1];</code>
        * @param value The firstTarget to set.
        * @return This builder for chaining.
        */
@@ -28383,19 +25746,19 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional int32 first_target = 2;</code>
+       * <code>optional int32 first_target = 2 [default = -1];</code>
        * @return This builder for chaining.
        */
       public Builder clearFirstTarget() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        firstTarget_ = 0;
+        firstTarget_ = -1;
         onChanged();
         return this;
       }
 
-      private int secondTarget_ ;
+      private int secondTarget_ = -1;
       /**
-       * <code>optional int32 second_target = 3;</code>
+       * <code>optional int32 second_target = 3 [default = -1];</code>
        * @return Whether the secondTarget field is set.
        */
       @java.lang.Override
@@ -28403,7 +25766,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional int32 second_target = 3;</code>
+       * <code>optional int32 second_target = 3 [default = -1];</code>
        * @return The secondTarget.
        */
       @java.lang.Override
@@ -28411,7 +25774,7 @@ public final class Cstrike15Usermessages {
         return secondTarget_;
       }
       /**
-       * <code>optional int32 second_target = 3;</code>
+       * <code>optional int32 second_target = 3 [default = -1];</code>
        * @param value The secondTarget to set.
        * @return This builder for chaining.
        */
@@ -28422,12 +25785,12 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional int32 second_target = 3;</code>
+       * <code>optional int32 second_target = 3 [default = -1];</code>
        * @return This builder for chaining.
        */
       public Builder clearSecondTarget() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        secondTarget_ = 0;
+        secondTarget_ = -1;
         onChanged();
         return this;
       }
@@ -30594,15 +27957,15 @@ public final class Cstrike15Usermessages {
     int getMpWinlimit();
 
     /**
-     * <code>optional int32 mp_timelimit = 4;</code>
+     * <code>optional float mp_timelimit = 4;</code>
      * @return Whether the mpTimelimit field is set.
      */
     boolean hasMpTimelimit();
     /**
-     * <code>optional int32 mp_timelimit = 4;</code>
+     * <code>optional float mp_timelimit = 4;</code>
      * @return The mpTimelimit.
      */
-    int getMpTimelimit();
+    float getMpTimelimit();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_MatchEndConditions}
@@ -30665,9 +28028,9 @@ public final class Cstrike15Usermessages {
               mpWinlimit_ = input.readInt32();
               break;
             }
-            case 32: {
+            case 37: {
               bitField0_ |= 0x00000008;
-              mpTimelimit_ = input.readInt32();
+              mpTimelimit_ = input.readFloat();
               break;
             }
             default: {
@@ -30761,9 +28124,9 @@ public final class Cstrike15Usermessages {
     }
 
     public static final int MP_TIMELIMIT_FIELD_NUMBER = 4;
-    private int mpTimelimit_;
+    private float mpTimelimit_;
     /**
-     * <code>optional int32 mp_timelimit = 4;</code>
+     * <code>optional float mp_timelimit = 4;</code>
      * @return Whether the mpTimelimit field is set.
      */
     @java.lang.Override
@@ -30771,11 +28134,11 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>optional int32 mp_timelimit = 4;</code>
+     * <code>optional float mp_timelimit = 4;</code>
      * @return The mpTimelimit.
      */
     @java.lang.Override
-    public int getMpTimelimit() {
+    public float getMpTimelimit() {
       return mpTimelimit_;
     }
 
@@ -30803,7 +28166,7 @@ public final class Cstrike15Usermessages {
         output.writeInt32(3, mpWinlimit_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeInt32(4, mpTimelimit_);
+        output.writeFloat(4, mpTimelimit_);
       }
       unknownFields.writeTo(output);
     }
@@ -30828,7 +28191,7 @@ public final class Cstrike15Usermessages {
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, mpTimelimit_);
+          .computeFloatSize(4, mpTimelimit_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -30862,8 +28225,9 @@ public final class Cstrike15Usermessages {
       }
       if (hasMpTimelimit() != other.hasMpTimelimit()) return false;
       if (hasMpTimelimit()) {
-        if (getMpTimelimit()
-            != other.getMpTimelimit()) return false;
+        if (java.lang.Float.floatToIntBits(getMpTimelimit())
+            != java.lang.Float.floatToIntBits(
+                other.getMpTimelimit())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -30890,7 +28254,8 @@ public final class Cstrike15Usermessages {
       }
       if (hasMpTimelimit()) {
         hash = (37 * hash) + MP_TIMELIMIT_FIELD_NUMBER;
-        hash = (53 * hash) + getMpTimelimit();
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getMpTimelimit());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -31031,7 +28396,7 @@ public final class Cstrike15Usermessages {
         bitField0_ = (bitField0_ & ~0x00000002);
         mpWinlimit_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
-        mpTimelimit_ = 0;
+        mpTimelimit_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
@@ -31285,9 +28650,9 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private int mpTimelimit_ ;
+      private float mpTimelimit_ ;
       /**
-       * <code>optional int32 mp_timelimit = 4;</code>
+       * <code>optional float mp_timelimit = 4;</code>
        * @return Whether the mpTimelimit field is set.
        */
       @java.lang.Override
@@ -31295,31 +28660,31 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>optional int32 mp_timelimit = 4;</code>
+       * <code>optional float mp_timelimit = 4;</code>
        * @return The mpTimelimit.
        */
       @java.lang.Override
-      public int getMpTimelimit() {
+      public float getMpTimelimit() {
         return mpTimelimit_;
       }
       /**
-       * <code>optional int32 mp_timelimit = 4;</code>
+       * <code>optional float mp_timelimit = 4;</code>
        * @param value The mpTimelimit to set.
        * @return This builder for chaining.
        */
-      public Builder setMpTimelimit(int value) {
+      public Builder setMpTimelimit(float value) {
         bitField0_ |= 0x00000008;
         mpTimelimit_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 mp_timelimit = 4;</code>
+       * <code>optional float mp_timelimit = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearMpTimelimit() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        mpTimelimit_ = 0;
+        mpTimelimit_ = 0F;
         onChanged();
         return this;
       }
@@ -31416,15 +28781,15 @@ public final class Cstrike15Usermessages {
         int index);
 
     /**
-     * <code>optional int32 user_id = 5;</code>
-     * @return Whether the userId field is set.
+     * <code>optional uint32 ehandle = 5;</code>
+     * @return Whether the ehandle field is set.
      */
-    boolean hasUserId();
+    boolean hasEhandle();
     /**
-     * <code>optional int32 user_id = 5;</code>
-     * @return The userId.
+     * <code>optional uint32 ehandle = 5;</code>
+     * @return The ehandle.
      */
-    int getUserId();
+    int getEhandle();
 
     /**
      * <code>optional int32 crc = 6;</code>
@@ -31500,7 +28865,7 @@ public final class Cstrike15Usermessages {
             }
             case 40: {
               bitField0_ |= 0x00000002;
-              userId_ = input.readInt32();
+              ehandle_ = input.readUInt32();
               break;
             }
             case 48: {
@@ -32225,23 +29590,23 @@ public final class Cstrike15Usermessages {
       return stats_.get(index);
     }
 
-    public static final int USER_ID_FIELD_NUMBER = 5;
-    private int userId_;
+    public static final int EHANDLE_FIELD_NUMBER = 5;
+    private int ehandle_;
     /**
-     * <code>optional int32 user_id = 5;</code>
-     * @return Whether the userId field is set.
+     * <code>optional uint32 ehandle = 5;</code>
+     * @return Whether the ehandle field is set.
      */
     @java.lang.Override
-    public boolean hasUserId() {
+    public boolean hasEhandle() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional int32 user_id = 5;</code>
-     * @return The userId.
+     * <code>optional uint32 ehandle = 5;</code>
+     * @return The ehandle.
      */
     @java.lang.Override
-    public int getUserId() {
-      return userId_;
+    public int getEhandle() {
+      return ehandle_;
     }
 
     public static final int CRC_FIELD_NUMBER = 6;
@@ -32284,7 +29649,7 @@ public final class Cstrike15Usermessages {
         output.writeMessage(4, stats_.get(i));
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeInt32(5, userId_);
+        output.writeUInt32(5, ehandle_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeInt32(6, crc_);
@@ -32308,7 +29673,7 @@ public final class Cstrike15Usermessages {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, userId_);
+          .computeUInt32Size(5, ehandle_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -32336,10 +29701,10 @@ public final class Cstrike15Usermessages {
       }
       if (!getStatsList()
           .equals(other.getStatsList())) return false;
-      if (hasUserId() != other.hasUserId()) return false;
-      if (hasUserId()) {
-        if (getUserId()
-            != other.getUserId()) return false;
+      if (hasEhandle() != other.hasEhandle()) return false;
+      if (hasEhandle()) {
+        if (getEhandle()
+            != other.getEhandle()) return false;
       }
       if (hasCrc() != other.hasCrc()) return false;
       if (hasCrc()) {
@@ -32365,9 +29730,9 @@ public final class Cstrike15Usermessages {
         hash = (37 * hash) + STATS_FIELD_NUMBER;
         hash = (53 * hash) + getStatsList().hashCode();
       }
-      if (hasUserId()) {
-        hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getUserId();
+      if (hasEhandle()) {
+        hash = (37 * hash) + EHANDLE_FIELD_NUMBER;
+        hash = (53 * hash) + getEhandle();
       }
       if (hasCrc()) {
         hash = (37 * hash) + CRC_FIELD_NUMBER;
@@ -32515,7 +29880,7 @@ public final class Cstrike15Usermessages {
         } else {
           statsBuilder_.clear();
         }
-        userId_ = 0;
+        ehandle_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
         crc_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -32561,7 +29926,7 @@ public final class Cstrike15Usermessages {
           result.stats_ = statsBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.userId_ = userId_;
+          result.ehandle_ = ehandle_;
           to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
@@ -32646,8 +30011,8 @@ public final class Cstrike15Usermessages {
             }
           }
         }
-        if (other.hasUserId()) {
-          setUserId(other.getUserId());
+        if (other.hasEhandle()) {
+          setEhandle(other.getEhandle());
         }
         if (other.hasCrc()) {
           setCrc(other.getCrc());
@@ -32961,41 +30326,41 @@ public final class Cstrike15Usermessages {
         return statsBuilder_;
       }
 
-      private int userId_ ;
+      private int ehandle_ ;
       /**
-       * <code>optional int32 user_id = 5;</code>
-       * @return Whether the userId field is set.
+       * <code>optional uint32 ehandle = 5;</code>
+       * @return Whether the ehandle field is set.
        */
       @java.lang.Override
-      public boolean hasUserId() {
+      public boolean hasEhandle() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional int32 user_id = 5;</code>
-       * @return The userId.
+       * <code>optional uint32 ehandle = 5;</code>
+       * @return The ehandle.
        */
       @java.lang.Override
-      public int getUserId() {
-        return userId_;
+      public int getEhandle() {
+        return ehandle_;
       }
       /**
-       * <code>optional int32 user_id = 5;</code>
-       * @param value The userId to set.
+       * <code>optional uint32 ehandle = 5;</code>
+       * @param value The ehandle to set.
        * @return This builder for chaining.
        */
-      public Builder setUserId(int value) {
+      public Builder setEhandle(int value) {
         bitField0_ |= 0x00000004;
-        userId_ = value;
+        ehandle_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 user_id = 5;</code>
+       * <code>optional uint32 ehandle = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearUserId() {
+      public Builder clearEhandle() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        userId_ = 0;
+        ehandle_ = 0;
         onChanged();
         return this;
       }
@@ -33086,629 +30451,6 @@ public final class Cstrike15Usermessages {
 
     @java.lang.Override
     public Cstrike15Usermessages.CCSUsrMsg_PlayerStatsUpdate getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CCSUsrMsg_DisplayInventoryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_DisplayInventory)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional bool display = 1;</code>
-     * @return Whether the display field is set.
-     */
-    boolean hasDisplay();
-    /**
-     * <code>optional bool display = 1;</code>
-     * @return The display.
-     */
-    boolean getDisplay();
-
-    /**
-     * <code>optional int32 user_id = 2;</code>
-     * @return Whether the userId field is set.
-     */
-    boolean hasUserId();
-    /**
-     * <code>optional int32 user_id = 2;</code>
-     * @return The userId.
-     */
-    int getUserId();
-  }
-  /**
-   * Protobuf type {@code CCSUsrMsg_DisplayInventory}
-   */
-  public static final class CCSUsrMsg_DisplayInventory extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CCSUsrMsg_DisplayInventory)
-      CCSUsrMsg_DisplayInventoryOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CCSUsrMsg_DisplayInventory.newBuilder() to construct.
-    private CCSUsrMsg_DisplayInventory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CCSUsrMsg_DisplayInventory() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CCSUsrMsg_DisplayInventory();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CCSUsrMsg_DisplayInventory(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              bitField0_ |= 0x00000001;
-              display_ = input.readBool();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              userId_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Cstrike15Usermessages.internal_static_CCSUsrMsg_DisplayInventory_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Cstrike15Usermessages.internal_static_CCSUsrMsg_DisplayInventory_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Cstrike15Usermessages.CCSUsrMsg_DisplayInventory.class, Cstrike15Usermessages.CCSUsrMsg_DisplayInventory.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int DISPLAY_FIELD_NUMBER = 1;
-    private boolean display_;
-    /**
-     * <code>optional bool display = 1;</code>
-     * @return Whether the display field is set.
-     */
-    @java.lang.Override
-    public boolean hasDisplay() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional bool display = 1;</code>
-     * @return The display.
-     */
-    @java.lang.Override
-    public boolean getDisplay() {
-      return display_;
-    }
-
-    public static final int USER_ID_FIELD_NUMBER = 2;
-    private int userId_;
-    /**
-     * <code>optional int32 user_id = 2;</code>
-     * @return Whether the userId field is set.
-     */
-    @java.lang.Override
-    public boolean hasUserId() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional int32 user_id = 2;</code>
-     * @return The userId.
-     */
-    @java.lang.Override
-    public int getUserId() {
-      return userId_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeBool(1, display_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeInt32(2, userId_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, display_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, userId_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_DisplayInventory)) {
-        return super.equals(obj);
-      }
-      Cstrike15Usermessages.CCSUsrMsg_DisplayInventory other = (Cstrike15Usermessages.CCSUsrMsg_DisplayInventory) obj;
-
-      if (hasDisplay() != other.hasDisplay()) return false;
-      if (hasDisplay()) {
-        if (getDisplay()
-            != other.getDisplay()) return false;
-      }
-      if (hasUserId() != other.hasUserId()) return false;
-      if (hasUserId()) {
-        if (getUserId()
-            != other.getUserId()) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasDisplay()) {
-        hash = (37 * hash) + DISPLAY_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getDisplay());
-      }
-      if (hasUserId()) {
-        hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getUserId();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_DisplayInventory prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CCSUsrMsg_DisplayInventory}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_DisplayInventory)
-        Cstrike15Usermessages.CCSUsrMsg_DisplayInventoryOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_DisplayInventory_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_DisplayInventory_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Cstrike15Usermessages.CCSUsrMsg_DisplayInventory.class, Cstrike15Usermessages.CCSUsrMsg_DisplayInventory.Builder.class);
-      }
-
-      // Construct using Cstrike15Usermessages.CCSUsrMsg_DisplayInventory.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        display_ = false;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        userId_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_DisplayInventory_descriptor;
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_DisplayInventory getDefaultInstanceForType() {
-        return Cstrike15Usermessages.CCSUsrMsg_DisplayInventory.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_DisplayInventory build() {
-        Cstrike15Usermessages.CCSUsrMsg_DisplayInventory result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_DisplayInventory buildPartial() {
-        Cstrike15Usermessages.CCSUsrMsg_DisplayInventory result = new Cstrike15Usermessages.CCSUsrMsg_DisplayInventory(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.display_ = display_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.userId_ = userId_;
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Cstrike15Usermessages.CCSUsrMsg_DisplayInventory) {
-          return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_DisplayInventory)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_DisplayInventory other) {
-        if (other == Cstrike15Usermessages.CCSUsrMsg_DisplayInventory.getDefaultInstance()) return this;
-        if (other.hasDisplay()) {
-          setDisplay(other.getDisplay());
-        }
-        if (other.hasUserId()) {
-          setUserId(other.getUserId());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        Cstrike15Usermessages.CCSUsrMsg_DisplayInventory parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_DisplayInventory) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean display_ ;
-      /**
-       * <code>optional bool display = 1;</code>
-       * @return Whether the display field is set.
-       */
-      @java.lang.Override
-      public boolean hasDisplay() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional bool display = 1;</code>
-       * @return The display.
-       */
-      @java.lang.Override
-      public boolean getDisplay() {
-        return display_;
-      }
-      /**
-       * <code>optional bool display = 1;</code>
-       * @param value The display to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDisplay(boolean value) {
-        bitField0_ |= 0x00000001;
-        display_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool display = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDisplay() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        display_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int userId_ ;
-      /**
-       * <code>optional int32 user_id = 2;</code>
-       * @return Whether the userId field is set.
-       */
-      @java.lang.Override
-      public boolean hasUserId() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional int32 user_id = 2;</code>
-       * @return The userId.
-       */
-      @java.lang.Override
-      public int getUserId() {
-        return userId_;
-      }
-      /**
-       * <code>optional int32 user_id = 2;</code>
-       * @param value The userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserId(int value) {
-        bitField0_ |= 0x00000002;
-        userId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 user_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        userId_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_DisplayInventory)
-    }
-
-    // @@protoc_insertion_point(class_scope:CCSUsrMsg_DisplayInventory)
-    private static final Cstrike15Usermessages.CCSUsrMsg_DisplayInventory DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_DisplayInventory();
-    }
-
-    public static Cstrike15Usermessages.CCSUsrMsg_DisplayInventory getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCSUsrMsg_DisplayInventory>
-        PARSER = new com.google.protobuf.AbstractParser<CCSUsrMsg_DisplayInventory>() {
-      @java.lang.Override
-      public CCSUsrMsg_DisplayInventory parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CCSUsrMsg_DisplayInventory(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CCSUsrMsg_DisplayInventory> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CCSUsrMsg_DisplayInventory> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_DisplayInventory getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -37780,15 +34522,15 @@ public final class Cstrike15Usermessages {
     int getTeam();
 
     /**
-     * <code>optional int32 ent_idx = 2;</code>
-     * @return Whether the entIdx field is set.
+     * <code>optional int32 player_slot = 2 [default = -1];</code>
+     * @return Whether the playerSlot field is set.
      */
-    boolean hasEntIdx();
+    boolean hasPlayerSlot();
     /**
-     * <code>optional int32 ent_idx = 2;</code>
-     * @return The entIdx.
+     * <code>optional int32 player_slot = 2 [default = -1];</code>
+     * @return The playerSlot.
      */
-    int getEntIdx();
+    int getPlayerSlot();
 
     /**
      * <code>optional int32 vote_type = 3;</code>
@@ -37864,15 +34606,15 @@ public final class Cstrike15Usermessages {
     boolean getIsYesNoVote();
 
     /**
-     * <code>optional int32 entidx_target = 8;</code>
-     * @return Whether the entidxTarget field is set.
+     * <code>optional int32 player_slot_target = 8 [default = -1];</code>
+     * @return Whether the playerSlotTarget field is set.
      */
-    boolean hasEntidxTarget();
+    boolean hasPlayerSlotTarget();
     /**
-     * <code>optional int32 entidx_target = 8;</code>
-     * @return The entidxTarget.
+     * <code>optional int32 player_slot_target = 8 [default = -1];</code>
+     * @return The playerSlotTarget.
      */
-    int getEntidxTarget();
+    int getPlayerSlotTarget();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_VoteStart}
@@ -37887,9 +34629,11 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_VoteStart() {
+      playerSlot_ = -1;
       dispStr_ = "";
       detailsStr_ = "";
       otherTeamStr_ = "";
+      playerSlotTarget_ = -1;
     }
 
     @java.lang.Override
@@ -37930,7 +34674,7 @@ public final class Cstrike15Usermessages {
             }
             case 16: {
               bitField0_ |= 0x00000002;
-              entIdx_ = input.readInt32();
+              playerSlot_ = input.readInt32();
               break;
             }
             case 24: {
@@ -37963,7 +34707,7 @@ public final class Cstrike15Usermessages {
             }
             case 64: {
               bitField0_ |= 0x00000080;
-              entidxTarget_ = input.readInt32();
+              playerSlotTarget_ = input.readInt32();
               break;
             }
             default: {
@@ -38018,23 +34762,23 @@ public final class Cstrike15Usermessages {
       return team_;
     }
 
-    public static final int ENT_IDX_FIELD_NUMBER = 2;
-    private int entIdx_;
+    public static final int PLAYER_SLOT_FIELD_NUMBER = 2;
+    private int playerSlot_;
     /**
-     * <code>optional int32 ent_idx = 2;</code>
-     * @return Whether the entIdx field is set.
+     * <code>optional int32 player_slot = 2 [default = -1];</code>
+     * @return Whether the playerSlot field is set.
      */
     @java.lang.Override
-    public boolean hasEntIdx() {
+    public boolean hasPlayerSlot() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional int32 ent_idx = 2;</code>
-     * @return The entIdx.
+     * <code>optional int32 player_slot = 2 [default = -1];</code>
+     * @return The playerSlot.
      */
     @java.lang.Override
-    public int getEntIdx() {
-      return entIdx_;
+    public int getPlayerSlot() {
+      return playerSlot_;
     }
 
     public static final int VOTE_TYPE_FIELD_NUMBER = 3;
@@ -38219,23 +34963,23 @@ public final class Cstrike15Usermessages {
       return isYesNoVote_;
     }
 
-    public static final int ENTIDX_TARGET_FIELD_NUMBER = 8;
-    private int entidxTarget_;
+    public static final int PLAYER_SLOT_TARGET_FIELD_NUMBER = 8;
+    private int playerSlotTarget_;
     /**
-     * <code>optional int32 entidx_target = 8;</code>
-     * @return Whether the entidxTarget field is set.
+     * <code>optional int32 player_slot_target = 8 [default = -1];</code>
+     * @return Whether the playerSlotTarget field is set.
      */
     @java.lang.Override
-    public boolean hasEntidxTarget() {
+    public boolean hasPlayerSlotTarget() {
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
-     * <code>optional int32 entidx_target = 8;</code>
-     * @return The entidxTarget.
+     * <code>optional int32 player_slot_target = 8 [default = -1];</code>
+     * @return The playerSlotTarget.
      */
     @java.lang.Override
-    public int getEntidxTarget() {
-      return entidxTarget_;
+    public int getPlayerSlotTarget() {
+      return playerSlotTarget_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -38256,7 +35000,7 @@ public final class Cstrike15Usermessages {
         output.writeInt32(1, team_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeInt32(2, entIdx_);
+        output.writeInt32(2, playerSlot_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeInt32(3, voteType_);
@@ -38274,7 +35018,7 @@ public final class Cstrike15Usermessages {
         output.writeBool(7, isYesNoVote_);
       }
       if (((bitField0_ & 0x00000080) != 0)) {
-        output.writeInt32(8, entidxTarget_);
+        output.writeInt32(8, playerSlotTarget_);
       }
       unknownFields.writeTo(output);
     }
@@ -38291,7 +35035,7 @@ public final class Cstrike15Usermessages {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, entIdx_);
+          .computeInt32Size(2, playerSlot_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -38312,7 +35056,7 @@ public final class Cstrike15Usermessages {
       }
       if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, entidxTarget_);
+          .computeInt32Size(8, playerSlotTarget_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -38334,10 +35078,10 @@ public final class Cstrike15Usermessages {
         if (getTeam()
             != other.getTeam()) return false;
       }
-      if (hasEntIdx() != other.hasEntIdx()) return false;
-      if (hasEntIdx()) {
-        if (getEntIdx()
-            != other.getEntIdx()) return false;
+      if (hasPlayerSlot() != other.hasPlayerSlot()) return false;
+      if (hasPlayerSlot()) {
+        if (getPlayerSlot()
+            != other.getPlayerSlot()) return false;
       }
       if (hasVoteType() != other.hasVoteType()) return false;
       if (hasVoteType()) {
@@ -38364,10 +35108,10 @@ public final class Cstrike15Usermessages {
         if (getIsYesNoVote()
             != other.getIsYesNoVote()) return false;
       }
-      if (hasEntidxTarget() != other.hasEntidxTarget()) return false;
-      if (hasEntidxTarget()) {
-        if (getEntidxTarget()
-            != other.getEntidxTarget()) return false;
+      if (hasPlayerSlotTarget() != other.hasPlayerSlotTarget()) return false;
+      if (hasPlayerSlotTarget()) {
+        if (getPlayerSlotTarget()
+            != other.getPlayerSlotTarget()) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -38384,9 +35128,9 @@ public final class Cstrike15Usermessages {
         hash = (37 * hash) + TEAM_FIELD_NUMBER;
         hash = (53 * hash) + getTeam();
       }
-      if (hasEntIdx()) {
-        hash = (37 * hash) + ENT_IDX_FIELD_NUMBER;
-        hash = (53 * hash) + getEntIdx();
+      if (hasPlayerSlot()) {
+        hash = (37 * hash) + PLAYER_SLOT_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayerSlot();
       }
       if (hasVoteType()) {
         hash = (37 * hash) + VOTE_TYPE_FIELD_NUMBER;
@@ -38409,9 +35153,9 @@ public final class Cstrike15Usermessages {
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsYesNoVote());
       }
-      if (hasEntidxTarget()) {
-        hash = (37 * hash) + ENTIDX_TARGET_FIELD_NUMBER;
-        hash = (53 * hash) + getEntidxTarget();
+      if (hasPlayerSlotTarget()) {
+        hash = (37 * hash) + PLAYER_SLOT_TARGET_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayerSlotTarget();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -38548,7 +35292,7 @@ public final class Cstrike15Usermessages {
         super.clear();
         team_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        entIdx_ = 0;
+        playerSlot_ = -1;
         bitField0_ = (bitField0_ & ~0x00000002);
         voteType_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -38560,7 +35304,7 @@ public final class Cstrike15Usermessages {
         bitField0_ = (bitField0_ & ~0x00000020);
         isYesNoVote_ = false;
         bitField0_ = (bitField0_ & ~0x00000040);
-        entidxTarget_ = 0;
+        playerSlotTarget_ = -1;
         bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
@@ -38595,9 +35339,9 @@ public final class Cstrike15Usermessages {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.entIdx_ = entIdx_;
           to_bitField0_ |= 0x00000002;
         }
+        result.playerSlot_ = playerSlot_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.voteType_ = voteType_;
           to_bitField0_ |= 0x00000004;
@@ -38619,9 +35363,9 @@ public final class Cstrike15Usermessages {
           to_bitField0_ |= 0x00000040;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.entidxTarget_ = entidxTarget_;
           to_bitField0_ |= 0x00000080;
         }
+        result.playerSlotTarget_ = playerSlotTarget_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -38674,8 +35418,8 @@ public final class Cstrike15Usermessages {
         if (other.hasTeam()) {
           setTeam(other.getTeam());
         }
-        if (other.hasEntIdx()) {
-          setEntIdx(other.getEntIdx());
+        if (other.hasPlayerSlot()) {
+          setPlayerSlot(other.getPlayerSlot());
         }
         if (other.hasVoteType()) {
           setVoteType(other.getVoteType());
@@ -38698,8 +35442,8 @@ public final class Cstrike15Usermessages {
         if (other.hasIsYesNoVote()) {
           setIsYesNoVote(other.getIsYesNoVote());
         }
-        if (other.hasEntidxTarget()) {
-          setEntidxTarget(other.getEntidxTarget());
+        if (other.hasPlayerSlotTarget()) {
+          setPlayerSlotTarget(other.getPlayerSlotTarget());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -38770,41 +35514,41 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private int entIdx_ ;
+      private int playerSlot_ = -1;
       /**
-       * <code>optional int32 ent_idx = 2;</code>
-       * @return Whether the entIdx field is set.
+       * <code>optional int32 player_slot = 2 [default = -1];</code>
+       * @return Whether the playerSlot field is set.
        */
       @java.lang.Override
-      public boolean hasEntIdx() {
+      public boolean hasPlayerSlot() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional int32 ent_idx = 2;</code>
-       * @return The entIdx.
+       * <code>optional int32 player_slot = 2 [default = -1];</code>
+       * @return The playerSlot.
        */
       @java.lang.Override
-      public int getEntIdx() {
-        return entIdx_;
+      public int getPlayerSlot() {
+        return playerSlot_;
       }
       /**
-       * <code>optional int32 ent_idx = 2;</code>
-       * @param value The entIdx to set.
+       * <code>optional int32 player_slot = 2 [default = -1];</code>
+       * @param value The playerSlot to set.
        * @return This builder for chaining.
        */
-      public Builder setEntIdx(int value) {
+      public Builder setPlayerSlot(int value) {
         bitField0_ |= 0x00000002;
-        entIdx_ = value;
+        playerSlot_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 ent_idx = 2;</code>
+       * <code>optional int32 player_slot = 2 [default = -1];</code>
        * @return This builder for chaining.
        */
-      public Builder clearEntIdx() {
+      public Builder clearPlayerSlot() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        entIdx_ = 0;
+        playerSlot_ = -1;
         onChanged();
         return this;
       }
@@ -39139,41 +35883,41 @@ public final class Cstrike15Usermessages {
         return this;
       }
 
-      private int entidxTarget_ ;
+      private int playerSlotTarget_ = -1;
       /**
-       * <code>optional int32 entidx_target = 8;</code>
-       * @return Whether the entidxTarget field is set.
+       * <code>optional int32 player_slot_target = 8 [default = -1];</code>
+       * @return Whether the playerSlotTarget field is set.
        */
       @java.lang.Override
-      public boolean hasEntidxTarget() {
+      public boolean hasPlayerSlotTarget() {
         return ((bitField0_ & 0x00000080) != 0);
       }
       /**
-       * <code>optional int32 entidx_target = 8;</code>
-       * @return The entidxTarget.
+       * <code>optional int32 player_slot_target = 8 [default = -1];</code>
+       * @return The playerSlotTarget.
        */
       @java.lang.Override
-      public int getEntidxTarget() {
-        return entidxTarget_;
+      public int getPlayerSlotTarget() {
+        return playerSlotTarget_;
       }
       /**
-       * <code>optional int32 entidx_target = 8;</code>
-       * @param value The entidxTarget to set.
+       * <code>optional int32 player_slot_target = 8 [default = -1];</code>
+       * @param value The playerSlotTarget to set.
        * @return This builder for chaining.
        */
-      public Builder setEntidxTarget(int value) {
+      public Builder setPlayerSlotTarget(int value) {
         bitField0_ |= 0x00000080;
-        entidxTarget_ = value;
+        playerSlotTarget_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 entidx_target = 8;</code>
+       * <code>optional int32 player_slot_target = 8 [default = -1];</code>
        * @return This builder for chaining.
        */
-      public Builder clearEntidxTarget() {
+      public Builder clearPlayerSlotTarget() {
         bitField0_ = (bitField0_ & ~0x00000080);
-        entidxTarget_ = 0;
+        playerSlotTarget_ = -1;
         onChanged();
         return this;
       }
@@ -41522,6 +38266,28 @@ public final class Cstrike15Usermessages {
      * @return The damageTaken.
      */
     int getDamageTaken();
+
+    /**
+     * <code>optional int32 actual_damage_given = 5;</code>
+     * @return Whether the actualDamageGiven field is set.
+     */
+    boolean hasActualDamageGiven();
+    /**
+     * <code>optional int32 actual_damage_given = 5;</code>
+     * @return The actualDamageGiven.
+     */
+    int getActualDamageGiven();
+
+    /**
+     * <code>optional int32 actual_damage_taken = 6;</code>
+     * @return Whether the actualDamageTaken field is set.
+     */
+    boolean hasActualDamageTaken();
+    /**
+     * <code>optional int32 actual_damage_taken = 6;</code>
+     * @return The actualDamageTaken.
+     */
+    int getActualDamageTaken();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_SendLastKillerDamageToClient}
@@ -41587,6 +38353,16 @@ public final class Cstrike15Usermessages {
             case 32: {
               bitField0_ |= 0x00000008;
               damageTaken_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              actualDamageGiven_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              actualDamageTaken_ = input.readInt32();
               break;
             }
             default: {
@@ -41698,6 +38474,44 @@ public final class Cstrike15Usermessages {
       return damageTaken_;
     }
 
+    public static final int ACTUAL_DAMAGE_GIVEN_FIELD_NUMBER = 5;
+    private int actualDamageGiven_;
+    /**
+     * <code>optional int32 actual_damage_given = 5;</code>
+     * @return Whether the actualDamageGiven field is set.
+     */
+    @java.lang.Override
+    public boolean hasActualDamageGiven() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional int32 actual_damage_given = 5;</code>
+     * @return The actualDamageGiven.
+     */
+    @java.lang.Override
+    public int getActualDamageGiven() {
+      return actualDamageGiven_;
+    }
+
+    public static final int ACTUAL_DAMAGE_TAKEN_FIELD_NUMBER = 6;
+    private int actualDamageTaken_;
+    /**
+     * <code>optional int32 actual_damage_taken = 6;</code>
+     * @return Whether the actualDamageTaken field is set.
+     */
+    @java.lang.Override
+    public boolean hasActualDamageTaken() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional int32 actual_damage_taken = 6;</code>
+     * @return The actualDamageTaken.
+     */
+    @java.lang.Override
+    public int getActualDamageTaken() {
+      return actualDamageTaken_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -41724,6 +38538,12 @@ public final class Cstrike15Usermessages {
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeInt32(4, damageTaken_);
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt32(5, actualDamageGiven_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt32(6, actualDamageTaken_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -41748,6 +38568,14 @@ public final class Cstrike15Usermessages {
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, damageTaken_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, actualDamageGiven_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, actualDamageTaken_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -41784,6 +38612,16 @@ public final class Cstrike15Usermessages {
         if (getDamageTaken()
             != other.getDamageTaken()) return false;
       }
+      if (hasActualDamageGiven() != other.hasActualDamageGiven()) return false;
+      if (hasActualDamageGiven()) {
+        if (getActualDamageGiven()
+            != other.getActualDamageGiven()) return false;
+      }
+      if (hasActualDamageTaken() != other.hasActualDamageTaken()) return false;
+      if (hasActualDamageTaken()) {
+        if (getActualDamageTaken()
+            != other.getActualDamageTaken()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -41810,6 +38648,14 @@ public final class Cstrike15Usermessages {
       if (hasDamageTaken()) {
         hash = (37 * hash) + DAMAGE_TAKEN_FIELD_NUMBER;
         hash = (53 * hash) + getDamageTaken();
+      }
+      if (hasActualDamageGiven()) {
+        hash = (37 * hash) + ACTUAL_DAMAGE_GIVEN_FIELD_NUMBER;
+        hash = (53 * hash) + getActualDamageGiven();
+      }
+      if (hasActualDamageTaken()) {
+        hash = (37 * hash) + ACTUAL_DAMAGE_TAKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getActualDamageTaken();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -41952,6 +38798,10 @@ public final class Cstrike15Usermessages {
         bitField0_ = (bitField0_ & ~0x00000004);
         damageTaken_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
+        actualDamageGiven_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        actualDamageTaken_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -41995,6 +38845,14 @@ public final class Cstrike15Usermessages {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.damageTaken_ = damageTaken_;
           to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.actualDamageGiven_ = actualDamageGiven_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.actualDamageTaken_ = actualDamageTaken_;
+          to_bitField0_ |= 0x00000020;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -42056,6 +38914,12 @@ public final class Cstrike15Usermessages {
         }
         if (other.hasDamageTaken()) {
           setDamageTaken(other.getDamageTaken());
+        }
+        if (other.hasActualDamageGiven()) {
+          setActualDamageGiven(other.getActualDamageGiven());
+        }
+        if (other.hasActualDamageTaken()) {
+          setActualDamageTaken(other.getActualDamageTaken());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -42239,6 +39103,84 @@ public final class Cstrike15Usermessages {
       public Builder clearDamageTaken() {
         bitField0_ = (bitField0_ & ~0x00000008);
         damageTaken_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int actualDamageGiven_ ;
+      /**
+       * <code>optional int32 actual_damage_given = 5;</code>
+       * @return Whether the actualDamageGiven field is set.
+       */
+      @java.lang.Override
+      public boolean hasActualDamageGiven() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional int32 actual_damage_given = 5;</code>
+       * @return The actualDamageGiven.
+       */
+      @java.lang.Override
+      public int getActualDamageGiven() {
+        return actualDamageGiven_;
+      }
+      /**
+       * <code>optional int32 actual_damage_given = 5;</code>
+       * @param value The actualDamageGiven to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActualDamageGiven(int value) {
+        bitField0_ |= 0x00000010;
+        actualDamageGiven_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 actual_damage_given = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActualDamageGiven() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        actualDamageGiven_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int actualDamageTaken_ ;
+      /**
+       * <code>optional int32 actual_damage_taken = 6;</code>
+       * @return Whether the actualDamageTaken field is set.
+       */
+      @java.lang.Override
+      public boolean hasActualDamageTaken() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional int32 actual_damage_taken = 6;</code>
+       * @return The actualDamageTaken.
+       */
+      @java.lang.Override
+      public int getActualDamageTaken() {
+        return actualDamageTaken_;
+      }
+      /**
+       * <code>optional int32 actual_damage_taken = 6;</code>
+       * @param value The actualDamageTaken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActualDamageTaken(int value) {
+        bitField0_ |= 0x00000020;
+        actualDamageTaken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 actual_damage_taken = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActualDamageTaken() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        actualDamageTaken_ = 0;
         onChanged();
         return this;
       }
@@ -46761,15 +43703,15 @@ public final class Cstrike15Usermessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 ammoIdx = 1;</code>
-     * @return Whether the ammoIdx field is set.
+     * <code>optional int32 ammoidx = 1;</code>
+     * @return Whether the ammoidx field is set.
      */
-    boolean hasAmmoIdx();
+    boolean hasAmmoidx();
     /**
-     * <code>optional int32 ammoIdx = 1;</code>
-     * @return The ammoIdx.
+     * <code>optional int32 ammoidx = 1;</code>
+     * @return The ammoidx.
      */
-    int getAmmoIdx();
+    int getAmmoidx();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_AmmoDenied}
@@ -46819,7 +43761,7 @@ public final class Cstrike15Usermessages {
               break;
             case 8: {
               bitField0_ |= 0x00000001;
-              ammoIdx_ = input.readInt32();
+              ammoidx_ = input.readInt32();
               break;
             }
             default: {
@@ -46856,22 +43798,22 @@ public final class Cstrike15Usermessages {
 
     private int bitField0_;
     public static final int AMMOIDX_FIELD_NUMBER = 1;
-    private int ammoIdx_;
+    private int ammoidx_;
     /**
-     * <code>optional int32 ammoIdx = 1;</code>
-     * @return Whether the ammoIdx field is set.
+     * <code>optional int32 ammoidx = 1;</code>
+     * @return Whether the ammoidx field is set.
      */
     @java.lang.Override
-    public boolean hasAmmoIdx() {
+    public boolean hasAmmoidx() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional int32 ammoIdx = 1;</code>
-     * @return The ammoIdx.
+     * <code>optional int32 ammoidx = 1;</code>
+     * @return The ammoidx.
      */
     @java.lang.Override
-    public int getAmmoIdx() {
-      return ammoIdx_;
+    public int getAmmoidx() {
+      return ammoidx_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -46889,7 +43831,7 @@ public final class Cstrike15Usermessages {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeInt32(1, ammoIdx_);
+        output.writeInt32(1, ammoidx_);
       }
       unknownFields.writeTo(output);
     }
@@ -46902,7 +43844,7 @@ public final class Cstrike15Usermessages {
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, ammoIdx_);
+          .computeInt32Size(1, ammoidx_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -46919,10 +43861,10 @@ public final class Cstrike15Usermessages {
       }
       Cstrike15Usermessages.CCSUsrMsg_AmmoDenied other = (Cstrike15Usermessages.CCSUsrMsg_AmmoDenied) obj;
 
-      if (hasAmmoIdx() != other.hasAmmoIdx()) return false;
-      if (hasAmmoIdx()) {
-        if (getAmmoIdx()
-            != other.getAmmoIdx()) return false;
+      if (hasAmmoidx() != other.hasAmmoidx()) return false;
+      if (hasAmmoidx()) {
+        if (getAmmoidx()
+            != other.getAmmoidx()) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -46935,9 +43877,9 @@ public final class Cstrike15Usermessages {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasAmmoIdx()) {
+      if (hasAmmoidx()) {
         hash = (37 * hash) + AMMOIDX_FIELD_NUMBER;
-        hash = (53 * hash) + getAmmoIdx();
+        hash = (53 * hash) + getAmmoidx();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -47072,7 +44014,7 @@ public final class Cstrike15Usermessages {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        ammoIdx_ = 0;
+        ammoidx_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
@@ -47103,7 +44045,7 @@ public final class Cstrike15Usermessages {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.ammoIdx_ = ammoIdx_;
+          result.ammoidx_ = ammoidx_;
           to_bitField0_ |= 0x00000001;
         }
         result.bitField0_ = to_bitField0_;
@@ -47155,8 +44097,8 @@ public final class Cstrike15Usermessages {
 
       public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_AmmoDenied other) {
         if (other == Cstrike15Usermessages.CCSUsrMsg_AmmoDenied.getDefaultInstance()) return this;
-        if (other.hasAmmoIdx()) {
-          setAmmoIdx(other.getAmmoIdx());
+        if (other.hasAmmoidx()) {
+          setAmmoidx(other.getAmmoidx());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -47188,41 +44130,41 @@ public final class Cstrike15Usermessages {
       }
       private int bitField0_;
 
-      private int ammoIdx_ ;
+      private int ammoidx_ ;
       /**
-       * <code>optional int32 ammoIdx = 1;</code>
-       * @return Whether the ammoIdx field is set.
+       * <code>optional int32 ammoidx = 1;</code>
+       * @return Whether the ammoidx field is set.
        */
       @java.lang.Override
-      public boolean hasAmmoIdx() {
+      public boolean hasAmmoidx() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional int32 ammoIdx = 1;</code>
-       * @return The ammoIdx.
+       * <code>optional int32 ammoidx = 1;</code>
+       * @return The ammoidx.
        */
       @java.lang.Override
-      public int getAmmoIdx() {
-        return ammoIdx_;
+      public int getAmmoidx() {
+        return ammoidx_;
       }
       /**
-       * <code>optional int32 ammoIdx = 1;</code>
-       * @param value The ammoIdx to set.
+       * <code>optional int32 ammoidx = 1;</code>
+       * @param value The ammoidx to set.
        * @return This builder for chaining.
        */
-      public Builder setAmmoIdx(int value) {
+      public Builder setAmmoidx(int value) {
         bitField0_ |= 0x00000001;
-        ammoIdx_ = value;
+        ammoidx_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 ammoIdx = 1;</code>
+       * <code>optional int32 ammoidx = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAmmoIdx() {
+      public Builder clearAmmoidx() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        ammoIdx_ = 0;
+        ammoidx_ = 0;
         onChanged();
         return this;
       }
@@ -49120,12 +46062,12 @@ public final class Cstrike15Usermessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     boolean hasEntidx();
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return The entidx.
      */
     int getEntidx();
@@ -49143,6 +46085,7 @@ public final class Cstrike15Usermessages {
       super(builder);
     }
     private CCSUsrMsg_GlowPropTurnOff() {
+      entidx_ = -1;
     }
 
     @java.lang.Override
@@ -49217,7 +46160,7 @@ public final class Cstrike15Usermessages {
     public static final int ENTIDX_FIELD_NUMBER = 1;
     private int entidx_;
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return Whether the entidx field is set.
      */
     @java.lang.Override
@@ -49225,7 +46168,7 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional int32 entidx = 1;</code>
+     * <code>optional int32 entidx = 1 [default = -1];</code>
      * @return The entidx.
      */
     @java.lang.Override
@@ -49431,7 +46374,7 @@ public final class Cstrike15Usermessages {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        entidx_ = 0;
+        entidx_ = -1;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
@@ -49462,9 +46405,9 @@ public final class Cstrike15Usermessages {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.entidx_ = entidx_;
           to_bitField0_ |= 0x00000001;
         }
+        result.entidx_ = entidx_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -49547,9 +46490,9 @@ public final class Cstrike15Usermessages {
       }
       private int bitField0_;
 
-      private int entidx_ ;
+      private int entidx_ = -1;
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return Whether the entidx field is set.
        */
       @java.lang.Override
@@ -49557,7 +46500,7 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return The entidx.
        */
       @java.lang.Override
@@ -49565,7 +46508,7 @@ public final class Cstrike15Usermessages {
         return entidx_;
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @param value The entidx to set.
        * @return This builder for chaining.
        */
@@ -49576,12 +46519,12 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional int32 entidx = 1;</code>
+       * <code>optional int32 entidx = 1 [default = -1];</code>
        * @return This builder for chaining.
        */
       public Builder clearEntidx() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        entidx_ = 0;
+        entidx_ = -1;
         onChanged();
         return this;
       }
@@ -56416,15 +53359,15 @@ public final class Cstrike15Usermessages {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional int32 entindex = 1;</code>
-       * @return Whether the entindex field is set.
+       * <code>optional int32 slot = 1 [default = -1];</code>
+       * @return Whether the slot field is set.
        */
-      boolean hasEntindex();
+      boolean hasSlot();
       /**
-       * <code>optional int32 entindex = 1;</code>
-       * @return The entindex.
+       * <code>optional int32 slot = 1 [default = -1];</code>
+       * @return The slot.
        */
-      int getEntindex();
+      int getSlot();
 
       /**
        * <code>optional uint64 xuid = 2;</code>
@@ -56539,6 +53482,7 @@ public final class Cstrike15Usermessages {
         super(builder);
       }
       private PlayerData() {
+        slot_ = -1;
         name_ = "";
         items_ = java.util.Collections.emptyList();
       }
@@ -56576,7 +53520,7 @@ public final class Cstrike15Usermessages {
                 break;
               case 8: {
                 bitField0_ |= 0x00000001;
-                entindex_ = input.readInt32();
+                slot_ = input.readInt32();
                 break;
               }
               case 16: {
@@ -56663,23 +53607,23 @@ public final class Cstrike15Usermessages {
       }
 
       private int bitField0_;
-      public static final int ENTINDEX_FIELD_NUMBER = 1;
-      private int entindex_;
+      public static final int SLOT_FIELD_NUMBER = 1;
+      private int slot_;
       /**
-       * <code>optional int32 entindex = 1;</code>
-       * @return Whether the entindex field is set.
+       * <code>optional int32 slot = 1 [default = -1];</code>
+       * @return Whether the slot field is set.
        */
       @java.lang.Override
-      public boolean hasEntindex() {
+      public boolean hasSlot() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional int32 entindex = 1;</code>
-       * @return The entindex.
+       * <code>optional int32 slot = 1 [default = -1];</code>
+       * @return The slot.
        */
       @java.lang.Override
-      public int getEntindex() {
-        return entindex_;
+      public int getSlot() {
+        return slot_;
       }
 
       public static final int XUID_FIELD_NUMBER = 2;
@@ -56887,7 +53831,7 @@ public final class Cstrike15Usermessages {
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (((bitField0_ & 0x00000001) != 0)) {
-          output.writeInt32(1, entindex_);
+          output.writeInt32(1, slot_);
         }
         if (((bitField0_ & 0x00000002) != 0)) {
           output.writeUInt64(2, xuid_);
@@ -56921,7 +53865,7 @@ public final class Cstrike15Usermessages {
         size = 0;
         if (((bitField0_ & 0x00000001) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(1, entindex_);
+            .computeInt32Size(1, slot_);
         }
         if (((bitField0_ & 0x00000002) != 0)) {
           size += com.google.protobuf.CodedOutputStream
@@ -56965,10 +53909,10 @@ public final class Cstrike15Usermessages {
         }
         Cstrike15Usermessages.CCSUsrMsg_EndOfMatchAllPlayersData.PlayerData other = (Cstrike15Usermessages.CCSUsrMsg_EndOfMatchAllPlayersData.PlayerData) obj;
 
-        if (hasEntindex() != other.hasEntindex()) return false;
-        if (hasEntindex()) {
-          if (getEntindex()
-              != other.getEntindex()) return false;
+        if (hasSlot() != other.hasSlot()) return false;
+        if (hasSlot()) {
+          if (getSlot()
+              != other.getSlot()) return false;
         }
         if (hasXuid() != other.hasXuid()) return false;
         if (hasXuid()) {
@@ -57013,9 +53957,9 @@ public final class Cstrike15Usermessages {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasEntindex()) {
-          hash = (37 * hash) + ENTINDEX_FIELD_NUMBER;
-          hash = (53 * hash) + getEntindex();
+        if (hasSlot()) {
+          hash = (37 * hash) + SLOT_FIELD_NUMBER;
+          hash = (53 * hash) + getSlot();
         }
         if (hasXuid()) {
           hash = (37 * hash) + XUID_FIELD_NUMBER;
@@ -57182,7 +54126,7 @@ public final class Cstrike15Usermessages {
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          entindex_ = 0;
+          slot_ = -1;
           bitField0_ = (bitField0_ & ~0x00000001);
           xuid_ = 0L;
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -57235,9 +54179,9 @@ public final class Cstrike15Usermessages {
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.entindex_ = entindex_;
             to_bitField0_ |= 0x00000001;
           }
+          result.slot_ = slot_;
           if (((from_bitField0_ & 0x00000002) != 0)) {
             result.xuid_ = xuid_;
             to_bitField0_ |= 0x00000002;
@@ -57324,8 +54268,8 @@ public final class Cstrike15Usermessages {
 
         public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_EndOfMatchAllPlayersData.PlayerData other) {
           if (other == Cstrike15Usermessages.CCSUsrMsg_EndOfMatchAllPlayersData.PlayerData.getDefaultInstance()) return this;
-          if (other.hasEntindex()) {
-            setEntindex(other.getEntindex());
+          if (other.hasSlot()) {
+            setSlot(other.getSlot());
           }
           if (other.hasXuid()) {
             setXuid(other.getXuid());
@@ -57403,41 +54347,41 @@ public final class Cstrike15Usermessages {
         }
         private int bitField0_;
 
-        private int entindex_ ;
+        private int slot_ = -1;
         /**
-         * <code>optional int32 entindex = 1;</code>
-         * @return Whether the entindex field is set.
+         * <code>optional int32 slot = 1 [default = -1];</code>
+         * @return Whether the slot field is set.
          */
         @java.lang.Override
-        public boolean hasEntindex() {
+        public boolean hasSlot() {
           return ((bitField0_ & 0x00000001) != 0);
         }
         /**
-         * <code>optional int32 entindex = 1;</code>
-         * @return The entindex.
+         * <code>optional int32 slot = 1 [default = -1];</code>
+         * @return The slot.
          */
         @java.lang.Override
-        public int getEntindex() {
-          return entindex_;
+        public int getSlot() {
+          return slot_;
         }
         /**
-         * <code>optional int32 entindex = 1;</code>
-         * @param value The entindex to set.
+         * <code>optional int32 slot = 1 [default = -1];</code>
+         * @param value The slot to set.
          * @return This builder for chaining.
          */
-        public Builder setEntindex(int value) {
+        public Builder setSlot(int value) {
           bitField0_ |= 0x00000001;
-          entindex_ = value;
+          slot_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional int32 entindex = 1;</code>
+         * <code>optional int32 slot = 1 [default = -1];</code>
          * @return This builder for chaining.
          */
-        public Builder clearEntindex() {
+        public Builder clearSlot() {
           bitField0_ = (bitField0_ & ~0x00000001);
-          entindex_ = 0;
+          slot_ = -1;
           onChanged();
           return this;
         }
@@ -58854,70 +55798,70 @@ public final class Cstrike15Usermessages {
 
   }
 
-  public interface CCSUsrMsg_RoundImpactScoreDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundImpactScoreData)
+  public interface CCSUsrMsg_RoundEndReportDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundEndReportData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+     * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
      * @return Whether the initConditions field is set.
      */
     boolean hasInitConditions();
     /**
-     * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+     * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
      * @return The initConditions.
      */
-    Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions getInitConditions();
+    Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions getInitConditions();
     /**
-     * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+     * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
      */
-    Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditionsOrBuilder getInitConditionsOrBuilder();
+    Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditionsOrBuilder getInitConditionsOrBuilder();
 
     /**
-     * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+     * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
      */
-    java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent> 
-        getAllRisEventDataList();
+    java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent> 
+        getAllRerEventDataList();
     /**
-     * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+     * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
      */
-    Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent getAllRisEventData(int index);
+    Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent getAllRerEventData(int index);
     /**
-     * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+     * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
      */
-    int getAllRisEventDataCount();
+    int getAllRerEventDataCount();
     /**
-     * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+     * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
      */
-    java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEventOrBuilder> 
-        getAllRisEventDataOrBuilderList();
+    java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEventOrBuilder> 
+        getAllRerEventDataOrBuilderList();
     /**
-     * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+     * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
      */
-    Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEventOrBuilder getAllRisEventDataOrBuilder(
+    Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEventOrBuilder getAllRerEventDataOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData}
+   * Protobuf type {@code CCSUsrMsg_RoundEndReportData}
    */
-  public static final class CCSUsrMsg_RoundImpactScoreData extends
+  public static final class CCSUsrMsg_RoundEndReportData extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundImpactScoreData)
-      CCSUsrMsg_RoundImpactScoreDataOrBuilder {
+      // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundEndReportData)
+      CCSUsrMsg_RoundEndReportDataOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CCSUsrMsg_RoundImpactScoreData.newBuilder() to construct.
-    private CCSUsrMsg_RoundImpactScoreData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CCSUsrMsg_RoundEndReportData.newBuilder() to construct.
+    private CCSUsrMsg_RoundEndReportData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CCSUsrMsg_RoundImpactScoreData() {
-      allRisEventData_ = java.util.Collections.emptyList();
+    private CCSUsrMsg_RoundEndReportData() {
+      allRerEventData_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CCSUsrMsg_RoundImpactScoreData();
+      return new CCSUsrMsg_RoundEndReportData();
     }
 
     @java.lang.Override
@@ -58925,7 +55869,7 @@ public final class Cstrike15Usermessages {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CCSUsrMsg_RoundImpactScoreData(
+    private CCSUsrMsg_RoundEndReportData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -58945,11 +55889,11 @@ public final class Cstrike15Usermessages {
               done = true;
               break;
             case 10: {
-              Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.Builder subBuilder = null;
+              Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) != 0)) {
                 subBuilder = initConditions_.toBuilder();
               }
-              initConditions_ = input.readMessage(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.PARSER, extensionRegistry);
+              initConditions_ = input.readMessage(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(initConditions_);
                 initConditions_ = subBuilder.buildPartial();
@@ -58959,11 +55903,11 @@ public final class Cstrike15Usermessages {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                allRisEventData_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent>();
+                allRerEventData_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              allRisEventData_.add(
-                  input.readMessage(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.PARSER, extensionRegistry));
+              allRerEventData_.add(
+                  input.readMessage(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.PARSER, extensionRegistry));
               break;
             }
             default: {
@@ -58982,7 +55926,7 @@ public final class Cstrike15Usermessages {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          allRisEventData_ = java.util.Collections.unmodifiableList(allRisEventData_);
+          allRerEventData_ = java.util.Collections.unmodifiableList(allRerEventData_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -58990,19 +55934,19 @@ public final class Cstrike15Usermessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_descriptor;
+      return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_fieldAccessorTable
+      return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.Builder.class);
+              Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.Builder.class);
     }
 
-    public interface RisEventOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundImpactScoreData.RisEvent)
+    public interface RerEventOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundEndReportData.RerEvent)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -59050,72 +55994,72 @@ public final class Cstrike15Usermessages {
       int getTAlive();
 
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
        * @return Whether the victimData field is set.
        */
       boolean hasVictimData();
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
        * @return The victimData.
        */
-      Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim getVictimData();
+      Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim getVictimData();
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
        */
-      Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.VictimOrBuilder getVictimDataOrBuilder();
+      Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.VictimOrBuilder getVictimDataOrBuilder();
 
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
        * @return Whether the objectiveData field is set.
        */
       boolean hasObjectiveData();
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
        * @return The objectiveData.
        */
-      Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective getObjectiveData();
+      Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective getObjectiveData();
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
        */
-      Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.ObjectiveOrBuilder getObjectiveDataOrBuilder();
+      Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.ObjectiveOrBuilder getObjectiveDataOrBuilder();
 
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
        */
-      java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage> 
+      java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage> 
           getAllDamageDataList();
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
        */
-      Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage getAllDamageData(int index);
+      Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage getAllDamageData(int index);
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
        */
       int getAllDamageDataCount();
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
        */
-      java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.DamageOrBuilder> 
+      java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.DamageOrBuilder> 
           getAllDamageDataOrBuilderList();
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
        */
-      Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.DamageOrBuilder getAllDamageDataOrBuilder(
+      Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.DamageOrBuilder getAllDamageDataOrBuilder(
           int index);
     }
     /**
-     * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData.RisEvent}
+     * Protobuf type {@code CCSUsrMsg_RoundEndReportData.RerEvent}
      */
-    public static final class RisEvent extends
+    public static final class RerEvent extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundImpactScoreData.RisEvent)
-        RisEventOrBuilder {
+        // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundEndReportData.RerEvent)
+        RerEventOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use RisEvent.newBuilder() to construct.
-      private RisEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use RerEvent.newBuilder() to construct.
+      private RerEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private RisEvent() {
+      private RerEvent() {
         allDamageData_ = java.util.Collections.emptyList();
       }
 
@@ -59123,7 +56067,7 @@ public final class Cstrike15Usermessages {
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(
           UnusedPrivateParameter unused) {
-        return new RisEvent();
+        return new RerEvent();
       }
 
       @java.lang.Override
@@ -59131,7 +56075,7 @@ public final class Cstrike15Usermessages {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private RisEvent(
+      private RerEvent(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -59171,11 +56115,11 @@ public final class Cstrike15Usermessages {
                 break;
               }
               case 42: {
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.Builder subBuilder = null;
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000010) != 0)) {
                   subBuilder = victimData_.toBuilder();
                 }
-                victimData_ = input.readMessage(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.PARSER, extensionRegistry);
+                victimData_ = input.readMessage(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(victimData_);
                   victimData_ = subBuilder.buildPartial();
@@ -59184,11 +56128,11 @@ public final class Cstrike15Usermessages {
                 break;
               }
               case 50: {
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.Builder subBuilder = null;
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000020) != 0)) {
                   subBuilder = objectiveData_.toBuilder();
                 }
-                objectiveData_ = input.readMessage(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.PARSER, extensionRegistry);
+                objectiveData_ = input.readMessage(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(objectiveData_);
                   objectiveData_ = subBuilder.buildPartial();
@@ -59198,11 +56142,11 @@ public final class Cstrike15Usermessages {
               }
               case 58: {
                 if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-                  allDamageData_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage>();
+                  allDamageData_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage>();
                   mutable_bitField0_ |= 0x00000040;
                 }
                 allDamageData_.add(
-                    input.readMessage(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.PARSER, extensionRegistry));
+                    input.readMessage(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.PARSER, extensionRegistry));
                 break;
               }
               default: {
@@ -59229,19 +56173,19 @@ public final class Cstrike15Usermessages {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_descriptor;
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_fieldAccessorTable
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder.class);
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder.class);
       }
 
       public interface VictimOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim)
+          // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundEndReportData.RerEvent.Victim)
           com.google.protobuf.MessageOrBuilder {
 
         /**
@@ -59256,15 +56200,15 @@ public final class Cstrike15Usermessages {
         int getTeamNumber();
 
         /**
-         * <code>optional int32 entindex = 2;</code>
-         * @return Whether the entindex field is set.
+         * <code>optional int32 playerslot = 2 [default = -1];</code>
+         * @return Whether the playerslot field is set.
          */
-        boolean hasEntindex();
+        boolean hasPlayerslot();
         /**
-         * <code>optional int32 entindex = 2;</code>
-         * @return The entindex.
+         * <code>optional int32 playerslot = 2 [default = -1];</code>
+         * @return The playerslot.
          */
-        int getEntindex();
+        int getPlayerslot();
 
         /**
          * <code>optional uint64 xuid = 3;</code>
@@ -59311,11 +56255,11 @@ public final class Cstrike15Usermessages {
         boolean getIsDead();
       }
       /**
-       * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim}
+       * Protobuf type {@code CCSUsrMsg_RoundEndReportData.RerEvent.Victim}
        */
       public static final class Victim extends
           com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim)
+          // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundEndReportData.RerEvent.Victim)
           VictimOrBuilder {
       private static final long serialVersionUID = 0L;
         // Use Victim.newBuilder() to construct.
@@ -59323,6 +56267,7 @@ public final class Cstrike15Usermessages {
           super(builder);
         }
         private Victim() {
+          playerslot_ = -1;
         }
 
         @java.lang.Override
@@ -59363,7 +56308,7 @@ public final class Cstrike15Usermessages {
                 }
                 case 16: {
                   bitField0_ |= 0x00000002;
-                  entindex_ = input.readInt32();
+                  playerslot_ = input.readInt32();
                   break;
                 }
                 case 24: {
@@ -59407,15 +56352,15 @@ public final class Cstrike15Usermessages {
         }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Victim_descriptor;
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Victim_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Victim_fieldAccessorTable
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Victim_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.Builder.class);
+                  Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.Builder.class);
         }
 
         private int bitField0_;
@@ -59438,23 +56383,23 @@ public final class Cstrike15Usermessages {
           return teamNumber_;
         }
 
-        public static final int ENTINDEX_FIELD_NUMBER = 2;
-        private int entindex_;
+        public static final int PLAYERSLOT_FIELD_NUMBER = 2;
+        private int playerslot_;
         /**
-         * <code>optional int32 entindex = 2;</code>
-         * @return Whether the entindex field is set.
+         * <code>optional int32 playerslot = 2 [default = -1];</code>
+         * @return Whether the playerslot field is set.
          */
         @java.lang.Override
-        public boolean hasEntindex() {
+        public boolean hasPlayerslot() {
           return ((bitField0_ & 0x00000002) != 0);
         }
         /**
-         * <code>optional int32 entindex = 2;</code>
-         * @return The entindex.
+         * <code>optional int32 playerslot = 2 [default = -1];</code>
+         * @return The playerslot.
          */
         @java.lang.Override
-        public int getEntindex() {
-          return entindex_;
+        public int getPlayerslot() {
+          return playerslot_;
         }
 
         public static final int XUID_FIELD_NUMBER = 3;
@@ -59551,7 +56496,7 @@ public final class Cstrike15Usermessages {
             output.writeInt32(1, teamNumber_);
           }
           if (((bitField0_ & 0x00000002) != 0)) {
-            output.writeInt32(2, entindex_);
+            output.writeInt32(2, playerslot_);
           }
           if (((bitField0_ & 0x00000004) != 0)) {
             output.writeUInt64(3, xuid_);
@@ -59580,7 +56525,7 @@ public final class Cstrike15Usermessages {
           }
           if (((bitField0_ & 0x00000002) != 0)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeInt32Size(2, entindex_);
+              .computeInt32Size(2, playerslot_);
           }
           if (((bitField0_ & 0x00000004) != 0)) {
             size += com.google.protobuf.CodedOutputStream
@@ -59608,20 +56553,20 @@ public final class Cstrike15Usermessages {
           if (obj == this) {
            return true;
           }
-          if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim)) {
+          if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim)) {
             return super.equals(obj);
           }
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim other = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim) obj;
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim other = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim) obj;
 
           if (hasTeamNumber() != other.hasTeamNumber()) return false;
           if (hasTeamNumber()) {
             if (getTeamNumber()
                 != other.getTeamNumber()) return false;
           }
-          if (hasEntindex() != other.hasEntindex()) return false;
-          if (hasEntindex()) {
-            if (getEntindex()
-                != other.getEntindex()) return false;
+          if (hasPlayerslot() != other.hasPlayerslot()) return false;
+          if (hasPlayerslot()) {
+            if (getPlayerslot()
+                != other.getPlayerslot()) return false;
           }
           if (hasXuid() != other.hasXuid()) return false;
           if (hasXuid()) {
@@ -59658,9 +56603,9 @@ public final class Cstrike15Usermessages {
             hash = (37 * hash) + TEAM_NUMBER_FIELD_NUMBER;
             hash = (53 * hash) + getTeamNumber();
           }
-          if (hasEntindex()) {
-            hash = (37 * hash) + ENTINDEX_FIELD_NUMBER;
-            hash = (53 * hash) + getEntindex();
+          if (hasPlayerslot()) {
+            hash = (37 * hash) + PLAYERSLOT_FIELD_NUMBER;
+            hash = (53 * hash) + getPlayerslot();
           }
           if (hasXuid()) {
             hash = (37 * hash) + XUID_FIELD_NUMBER;
@@ -59686,69 +56631,69 @@ public final class Cstrike15Usermessages {
           return hash;
         }
 
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseFrom(byte[] data)
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseFrom(java.io.InputStream input)
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseDelimitedFrom(java.io.InputStream input)
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseDelimitedFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -59761,7 +56706,7 @@ public final class Cstrike15Usermessages {
         public static Builder newBuilder() {
           return DEFAULT_INSTANCE.toBuilder();
         }
-        public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim prototype) {
+        public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim prototype) {
           return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
         }
         @java.lang.Override
@@ -59777,26 +56722,26 @@ public final class Cstrike15Usermessages {
           return builder;
         }
         /**
-         * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim}
+         * Protobuf type {@code CCSUsrMsg_RoundEndReportData.RerEvent.Victim}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim)
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.VictimOrBuilder {
+            // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundEndReportData.RerEvent.Victim)
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.VictimOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Victim_descriptor;
+            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Victim_descriptor;
           }
 
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Victim_fieldAccessorTable
+            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Victim_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.Builder.class);
+                    Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.Builder.class);
           }
 
-          // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.newBuilder()
+          // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -59816,7 +56761,7 @@ public final class Cstrike15Usermessages {
             super.clear();
             teamNumber_ = 0;
             bitField0_ = (bitField0_ & ~0x00000001);
-            entindex_ = 0;
+            playerslot_ = -1;
             bitField0_ = (bitField0_ & ~0x00000002);
             xuid_ = 0L;
             bitField0_ = (bitField0_ & ~0x00000004);
@@ -59832,17 +56777,17 @@ public final class Cstrike15Usermessages {
           @java.lang.Override
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Victim_descriptor;
+            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Victim_descriptor;
           }
 
           @java.lang.Override
-          public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim getDefaultInstanceForType() {
-            return Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.getDefaultInstance();
+          public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim getDefaultInstanceForType() {
+            return Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.getDefaultInstance();
           }
 
           @java.lang.Override
-          public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim build() {
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim result = buildPartial();
+          public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim build() {
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
@@ -59850,8 +56795,8 @@ public final class Cstrike15Usermessages {
           }
 
           @java.lang.Override
-          public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim buildPartial() {
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim result = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim(this);
+          public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim buildPartial() {
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim result = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim(this);
             int from_bitField0_ = bitField0_;
             int to_bitField0_ = 0;
             if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -59859,9 +56804,9 @@ public final class Cstrike15Usermessages {
               to_bitField0_ |= 0x00000001;
             }
             if (((from_bitField0_ & 0x00000002) != 0)) {
-              result.entindex_ = entindex_;
               to_bitField0_ |= 0x00000002;
             }
+            result.playerslot_ = playerslot_;
             if (((from_bitField0_ & 0x00000004) != 0)) {
               result.xuid_ = xuid_;
               to_bitField0_ |= 0x00000004;
@@ -59917,21 +56862,21 @@ public final class Cstrike15Usermessages {
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim) {
-              return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim)other);
+            if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim) {
+              return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim other) {
-            if (other == Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.getDefaultInstance()) return this;
+          public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim other) {
+            if (other == Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.getDefaultInstance()) return this;
             if (other.hasTeamNumber()) {
               setTeamNumber(other.getTeamNumber());
             }
-            if (other.hasEntindex()) {
-              setEntindex(other.getEntindex());
+            if (other.hasPlayerslot()) {
+              setPlayerslot(other.getPlayerslot());
             }
             if (other.hasXuid()) {
               setXuid(other.getXuid());
@@ -59960,11 +56905,11 @@ public final class Cstrike15Usermessages {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim parsedMessage = null;
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim) e.getUnfinishedMessage();
+              parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim) e.getUnfinishedMessage();
               throw e.unwrapIOException();
             } finally {
               if (parsedMessage != null) {
@@ -60014,41 +56959,41 @@ public final class Cstrike15Usermessages {
             return this;
           }
 
-          private int entindex_ ;
+          private int playerslot_ = -1;
           /**
-           * <code>optional int32 entindex = 2;</code>
-           * @return Whether the entindex field is set.
+           * <code>optional int32 playerslot = 2 [default = -1];</code>
+           * @return Whether the playerslot field is set.
            */
           @java.lang.Override
-          public boolean hasEntindex() {
+          public boolean hasPlayerslot() {
             return ((bitField0_ & 0x00000002) != 0);
           }
           /**
-           * <code>optional int32 entindex = 2;</code>
-           * @return The entindex.
+           * <code>optional int32 playerslot = 2 [default = -1];</code>
+           * @return The playerslot.
            */
           @java.lang.Override
-          public int getEntindex() {
-            return entindex_;
+          public int getPlayerslot() {
+            return playerslot_;
           }
           /**
-           * <code>optional int32 entindex = 2;</code>
-           * @param value The entindex to set.
+           * <code>optional int32 playerslot = 2 [default = -1];</code>
+           * @param value The playerslot to set.
            * @return This builder for chaining.
            */
-          public Builder setEntindex(int value) {
+          public Builder setPlayerslot(int value) {
             bitField0_ |= 0x00000002;
-            entindex_ = value;
+            playerslot_ = value;
             onChanged();
             return this;
           }
           /**
-           * <code>optional int32 entindex = 2;</code>
+           * <code>optional int32 playerslot = 2 [default = -1];</code>
            * @return This builder for chaining.
            */
-          public Builder clearEntindex() {
+          public Builder clearPlayerslot() {
             bitField0_ = (bitField0_ & ~0x00000002);
-            entindex_ = 0;
+            playerslot_ = -1;
             onChanged();
             return this;
           }
@@ -60221,16 +57166,16 @@ public final class Cstrike15Usermessages {
           }
 
 
-          // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim)
+          // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundEndReportData.RerEvent.Victim)
         }
 
-        // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim)
-        private static final Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim DEFAULT_INSTANCE;
+        // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundEndReportData.RerEvent.Victim)
+        private static final Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim DEFAULT_INSTANCE;
         static {
-          DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim();
+          DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim();
         }
 
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim getDefaultInstance() {
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim getDefaultInstance() {
           return DEFAULT_INSTANCE;
         }
 
@@ -60255,14 +57200,14 @@ public final class Cstrike15Usermessages {
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim getDefaultInstanceForType() {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim getDefaultInstanceForType() {
           return DEFAULT_INSTANCE;
         }
 
       }
 
       public interface ObjectiveOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective)
+          // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundEndReportData.RerEvent.Objective)
           com.google.protobuf.MessageOrBuilder {
 
         /**
@@ -60277,11 +57222,11 @@ public final class Cstrike15Usermessages {
         int getType();
       }
       /**
-       * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective}
+       * Protobuf type {@code CCSUsrMsg_RoundEndReportData.RerEvent.Objective}
        */
       public static final class Objective extends
           com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective)
+          // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundEndReportData.RerEvent.Objective)
           ObjectiveOrBuilder {
       private static final long serialVersionUID = 0L;
         // Use Objective.newBuilder() to construct.
@@ -60348,15 +57293,15 @@ public final class Cstrike15Usermessages {
         }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Objective_descriptor;
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Objective_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Objective_fieldAccessorTable
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Objective_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.Builder.class);
+                  Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.Builder.class);
         }
 
         private int bitField0_;
@@ -60419,10 +57364,10 @@ public final class Cstrike15Usermessages {
           if (obj == this) {
            return true;
           }
-          if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective)) {
+          if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective)) {
             return super.equals(obj);
           }
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective other = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective) obj;
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective other = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective) obj;
 
           if (hasType() != other.hasType()) return false;
           if (hasType()) {
@@ -60449,69 +57394,69 @@ public final class Cstrike15Usermessages {
           return hash;
         }
 
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseFrom(byte[] data)
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseFrom(java.io.InputStream input)
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseDelimitedFrom(java.io.InputStream input)
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseDelimitedFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -60524,7 +57469,7 @@ public final class Cstrike15Usermessages {
         public static Builder newBuilder() {
           return DEFAULT_INSTANCE.toBuilder();
         }
-        public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective prototype) {
+        public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective prototype) {
           return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
         }
         @java.lang.Override
@@ -60540,26 +57485,26 @@ public final class Cstrike15Usermessages {
           return builder;
         }
         /**
-         * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective}
+         * Protobuf type {@code CCSUsrMsg_RoundEndReportData.RerEvent.Objective}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective)
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.ObjectiveOrBuilder {
+            // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundEndReportData.RerEvent.Objective)
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.ObjectiveOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Objective_descriptor;
+            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Objective_descriptor;
           }
 
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Objective_fieldAccessorTable
+            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Objective_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.Builder.class);
+                    Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.Builder.class);
           }
 
-          // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.newBuilder()
+          // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -60585,17 +57530,17 @@ public final class Cstrike15Usermessages {
           @java.lang.Override
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Objective_descriptor;
+            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Objective_descriptor;
           }
 
           @java.lang.Override
-          public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective getDefaultInstanceForType() {
-            return Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.getDefaultInstance();
+          public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective getDefaultInstanceForType() {
+            return Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.getDefaultInstance();
           }
 
           @java.lang.Override
-          public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective build() {
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective result = buildPartial();
+          public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective build() {
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
@@ -60603,8 +57548,8 @@ public final class Cstrike15Usermessages {
           }
 
           @java.lang.Override
-          public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective buildPartial() {
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective result = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective(this);
+          public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective buildPartial() {
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective result = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective(this);
             int from_bitField0_ = bitField0_;
             int to_bitField0_ = 0;
             if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -60650,16 +57595,16 @@ public final class Cstrike15Usermessages {
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective) {
-              return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective)other);
+            if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective) {
+              return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective other) {
-            if (other == Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.getDefaultInstance()) return this;
+          public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective other) {
+            if (other == Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.getDefaultInstance()) return this;
             if (other.hasType()) {
               setType(other.getType());
             }
@@ -60678,11 +57623,11 @@ public final class Cstrike15Usermessages {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective parsedMessage = null;
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective) e.getUnfinishedMessage();
+              parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective) e.getUnfinishedMessage();
               throw e.unwrapIOException();
             } finally {
               if (parsedMessage != null) {
@@ -60744,16 +57689,16 @@ public final class Cstrike15Usermessages {
           }
 
 
-          // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective)
+          // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundEndReportData.RerEvent.Objective)
         }
 
-        // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective)
-        private static final Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective DEFAULT_INSTANCE;
+        // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundEndReportData.RerEvent.Objective)
+        private static final Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective DEFAULT_INSTANCE;
         static {
-          DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective();
+          DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective();
         }
 
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective getDefaultInstance() {
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective getDefaultInstance() {
           return DEFAULT_INSTANCE;
         }
 
@@ -60778,37 +57723,37 @@ public final class Cstrike15Usermessages {
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective getDefaultInstanceForType() {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective getDefaultInstanceForType() {
           return DEFAULT_INSTANCE;
         }
 
       }
 
       public interface DamageOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage)
+          // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundEndReportData.RerEvent.Damage)
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>optional int32 target_entindex = 1;</code>
-         * @return Whether the targetEntindex field is set.
+         * <code>optional int32 other_playerslot = 1 [default = -1];</code>
+         * @return Whether the otherPlayerslot field is set.
          */
-        boolean hasTargetEntindex();
+        boolean hasOtherPlayerslot();
         /**
-         * <code>optional int32 target_entindex = 1;</code>
-         * @return The targetEntindex.
+         * <code>optional int32 other_playerslot = 1 [default = -1];</code>
+         * @return The otherPlayerslot.
          */
-        int getTargetEntindex();
+        int getOtherPlayerslot();
 
         /**
-         * <code>optional uint64 target_xuid = 2;</code>
-         * @return Whether the targetXuid field is set.
+         * <code>optional uint64 other_xuid = 2;</code>
+         * @return Whether the otherXuid field is set.
          */
-        boolean hasTargetXuid();
+        boolean hasOtherXuid();
         /**
-         * <code>optional uint64 target_xuid = 2;</code>
-         * @return The targetXuid.
+         * <code>optional uint64 other_xuid = 2;</code>
+         * @return The otherXuid.
          */
-        long getTargetXuid();
+        long getOtherXuid();
 
         /**
          * <code>optional int32 health_removed = 3;</code>
@@ -60844,22 +57789,22 @@ public final class Cstrike15Usermessages {
         int getReturnHealthRemoved();
 
         /**
-         * <code>optional int32 num_return_hits = 6;</code>
-         * @return Whether the numReturnHits field is set.
+         * <code>optional int32 return_num_hits = 6;</code>
+         * @return Whether the returnNumHits field is set.
          */
-        boolean hasNumReturnHits();
+        boolean hasReturnNumHits();
         /**
-         * <code>optional int32 num_return_hits = 6;</code>
-         * @return The numReturnHits.
+         * <code>optional int32 return_num_hits = 6;</code>
+         * @return The returnNumHits.
          */
-        int getNumReturnHits();
+        int getReturnNumHits();
       }
       /**
-       * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage}
+       * Protobuf type {@code CCSUsrMsg_RoundEndReportData.RerEvent.Damage}
        */
       public static final class Damage extends
           com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage)
+          // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundEndReportData.RerEvent.Damage)
           DamageOrBuilder {
       private static final long serialVersionUID = 0L;
         // Use Damage.newBuilder() to construct.
@@ -60867,6 +57812,7 @@ public final class Cstrike15Usermessages {
           super(builder);
         }
         private Damage() {
+          otherPlayerslot_ = -1;
         }
 
         @java.lang.Override
@@ -60902,12 +57848,12 @@ public final class Cstrike15Usermessages {
                   break;
                 case 8: {
                   bitField0_ |= 0x00000001;
-                  targetEntindex_ = input.readInt32();
+                  otherPlayerslot_ = input.readInt32();
                   break;
                 }
                 case 16: {
                   bitField0_ |= 0x00000002;
-                  targetXuid_ = input.readUInt64();
+                  otherXuid_ = input.readUInt64();
                   break;
                 }
                 case 24: {
@@ -60927,7 +57873,7 @@ public final class Cstrike15Usermessages {
                 }
                 case 48: {
                   bitField0_ |= 0x00000020;
-                  numReturnHits_ = input.readInt32();
+                  returnNumHits_ = input.readInt32();
                   break;
                 }
                 default: {
@@ -60951,54 +57897,54 @@ public final class Cstrike15Usermessages {
         }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Damage_descriptor;
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Damage_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Damage_fieldAccessorTable
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Damage_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder.class);
+                  Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder.class);
         }
 
         private int bitField0_;
-        public static final int TARGET_ENTINDEX_FIELD_NUMBER = 1;
-        private int targetEntindex_;
+        public static final int OTHER_PLAYERSLOT_FIELD_NUMBER = 1;
+        private int otherPlayerslot_;
         /**
-         * <code>optional int32 target_entindex = 1;</code>
-         * @return Whether the targetEntindex field is set.
+         * <code>optional int32 other_playerslot = 1 [default = -1];</code>
+         * @return Whether the otherPlayerslot field is set.
          */
         @java.lang.Override
-        public boolean hasTargetEntindex() {
+        public boolean hasOtherPlayerslot() {
           return ((bitField0_ & 0x00000001) != 0);
         }
         /**
-         * <code>optional int32 target_entindex = 1;</code>
-         * @return The targetEntindex.
+         * <code>optional int32 other_playerslot = 1 [default = -1];</code>
+         * @return The otherPlayerslot.
          */
         @java.lang.Override
-        public int getTargetEntindex() {
-          return targetEntindex_;
+        public int getOtherPlayerslot() {
+          return otherPlayerslot_;
         }
 
-        public static final int TARGET_XUID_FIELD_NUMBER = 2;
-        private long targetXuid_;
+        public static final int OTHER_XUID_FIELD_NUMBER = 2;
+        private long otherXuid_;
         /**
-         * <code>optional uint64 target_xuid = 2;</code>
-         * @return Whether the targetXuid field is set.
+         * <code>optional uint64 other_xuid = 2;</code>
+         * @return Whether the otherXuid field is set.
          */
         @java.lang.Override
-        public boolean hasTargetXuid() {
+        public boolean hasOtherXuid() {
           return ((bitField0_ & 0x00000002) != 0);
         }
         /**
-         * <code>optional uint64 target_xuid = 2;</code>
-         * @return The targetXuid.
+         * <code>optional uint64 other_xuid = 2;</code>
+         * @return The otherXuid.
          */
         @java.lang.Override
-        public long getTargetXuid() {
-          return targetXuid_;
+        public long getOtherXuid() {
+          return otherXuid_;
         }
 
         public static final int HEALTH_REMOVED_FIELD_NUMBER = 3;
@@ -61058,23 +58004,23 @@ public final class Cstrike15Usermessages {
           return returnHealthRemoved_;
         }
 
-        public static final int NUM_RETURN_HITS_FIELD_NUMBER = 6;
-        private int numReturnHits_;
+        public static final int RETURN_NUM_HITS_FIELD_NUMBER = 6;
+        private int returnNumHits_;
         /**
-         * <code>optional int32 num_return_hits = 6;</code>
-         * @return Whether the numReturnHits field is set.
+         * <code>optional int32 return_num_hits = 6;</code>
+         * @return Whether the returnNumHits field is set.
          */
         @java.lang.Override
-        public boolean hasNumReturnHits() {
+        public boolean hasReturnNumHits() {
           return ((bitField0_ & 0x00000020) != 0);
         }
         /**
-         * <code>optional int32 num_return_hits = 6;</code>
-         * @return The numReturnHits.
+         * <code>optional int32 return_num_hits = 6;</code>
+         * @return The returnNumHits.
          */
         @java.lang.Override
-        public int getNumReturnHits() {
-          return numReturnHits_;
+        public int getReturnNumHits() {
+          return returnNumHits_;
         }
 
         private byte memoizedIsInitialized = -1;
@@ -61092,10 +58038,10 @@ public final class Cstrike15Usermessages {
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
           if (((bitField0_ & 0x00000001) != 0)) {
-            output.writeInt32(1, targetEntindex_);
+            output.writeInt32(1, otherPlayerslot_);
           }
           if (((bitField0_ & 0x00000002) != 0)) {
-            output.writeUInt64(2, targetXuid_);
+            output.writeUInt64(2, otherXuid_);
           }
           if (((bitField0_ & 0x00000004) != 0)) {
             output.writeInt32(3, healthRemoved_);
@@ -61107,7 +58053,7 @@ public final class Cstrike15Usermessages {
             output.writeInt32(5, returnHealthRemoved_);
           }
           if (((bitField0_ & 0x00000020) != 0)) {
-            output.writeInt32(6, numReturnHits_);
+            output.writeInt32(6, returnNumHits_);
           }
           unknownFields.writeTo(output);
         }
@@ -61120,11 +58066,11 @@ public final class Cstrike15Usermessages {
           size = 0;
           if (((bitField0_ & 0x00000001) != 0)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeInt32Size(1, targetEntindex_);
+              .computeInt32Size(1, otherPlayerslot_);
           }
           if (((bitField0_ & 0x00000002) != 0)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeUInt64Size(2, targetXuid_);
+              .computeUInt64Size(2, otherXuid_);
           }
           if (((bitField0_ & 0x00000004) != 0)) {
             size += com.google.protobuf.CodedOutputStream
@@ -61140,7 +58086,7 @@ public final class Cstrike15Usermessages {
           }
           if (((bitField0_ & 0x00000020) != 0)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeInt32Size(6, numReturnHits_);
+              .computeInt32Size(6, returnNumHits_);
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -61152,20 +58098,20 @@ public final class Cstrike15Usermessages {
           if (obj == this) {
            return true;
           }
-          if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage)) {
+          if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage)) {
             return super.equals(obj);
           }
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage other = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage) obj;
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage other = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage) obj;
 
-          if (hasTargetEntindex() != other.hasTargetEntindex()) return false;
-          if (hasTargetEntindex()) {
-            if (getTargetEntindex()
-                != other.getTargetEntindex()) return false;
+          if (hasOtherPlayerslot() != other.hasOtherPlayerslot()) return false;
+          if (hasOtherPlayerslot()) {
+            if (getOtherPlayerslot()
+                != other.getOtherPlayerslot()) return false;
           }
-          if (hasTargetXuid() != other.hasTargetXuid()) return false;
-          if (hasTargetXuid()) {
-            if (getTargetXuid()
-                != other.getTargetXuid()) return false;
+          if (hasOtherXuid() != other.hasOtherXuid()) return false;
+          if (hasOtherXuid()) {
+            if (getOtherXuid()
+                != other.getOtherXuid()) return false;
           }
           if (hasHealthRemoved() != other.hasHealthRemoved()) return false;
           if (hasHealthRemoved()) {
@@ -61182,10 +58128,10 @@ public final class Cstrike15Usermessages {
             if (getReturnHealthRemoved()
                 != other.getReturnHealthRemoved()) return false;
           }
-          if (hasNumReturnHits() != other.hasNumReturnHits()) return false;
-          if (hasNumReturnHits()) {
-            if (getNumReturnHits()
-                != other.getNumReturnHits()) return false;
+          if (hasReturnNumHits() != other.hasReturnNumHits()) return false;
+          if (hasReturnNumHits()) {
+            if (getReturnNumHits()
+                != other.getReturnNumHits()) return false;
           }
           if (!unknownFields.equals(other.unknownFields)) return false;
           return true;
@@ -61198,14 +58144,14 @@ public final class Cstrike15Usermessages {
           }
           int hash = 41;
           hash = (19 * hash) + getDescriptor().hashCode();
-          if (hasTargetEntindex()) {
-            hash = (37 * hash) + TARGET_ENTINDEX_FIELD_NUMBER;
-            hash = (53 * hash) + getTargetEntindex();
+          if (hasOtherPlayerslot()) {
+            hash = (37 * hash) + OTHER_PLAYERSLOT_FIELD_NUMBER;
+            hash = (53 * hash) + getOtherPlayerslot();
           }
-          if (hasTargetXuid()) {
-            hash = (37 * hash) + TARGET_XUID_FIELD_NUMBER;
+          if (hasOtherXuid()) {
+            hash = (37 * hash) + OTHER_XUID_FIELD_NUMBER;
             hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-                getTargetXuid());
+                getOtherXuid());
           }
           if (hasHealthRemoved()) {
             hash = (37 * hash) + HEALTH_REMOVED_FIELD_NUMBER;
@@ -61219,78 +58165,78 @@ public final class Cstrike15Usermessages {
             hash = (37 * hash) + RETURN_HEALTH_REMOVED_FIELD_NUMBER;
             hash = (53 * hash) + getReturnHealthRemoved();
           }
-          if (hasNumReturnHits()) {
-            hash = (37 * hash) + NUM_RETURN_HITS_FIELD_NUMBER;
-            hash = (53 * hash) + getNumReturnHits();
+          if (hasReturnNumHits()) {
+            hash = (37 * hash) + RETURN_NUM_HITS_FIELD_NUMBER;
+            hash = (53 * hash) + getReturnNumHits();
           }
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
           return hash;
         }
 
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseFrom(byte[] data)
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseFrom(java.io.InputStream input)
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseDelimitedFrom(java.io.InputStream input)
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseDelimitedFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parseFrom(
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -61303,7 +58249,7 @@ public final class Cstrike15Usermessages {
         public static Builder newBuilder() {
           return DEFAULT_INSTANCE.toBuilder();
         }
-        public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage prototype) {
+        public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage prototype) {
           return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
         }
         @java.lang.Override
@@ -61319,26 +58265,26 @@ public final class Cstrike15Usermessages {
           return builder;
         }
         /**
-         * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage}
+         * Protobuf type {@code CCSUsrMsg_RoundEndReportData.RerEvent.Damage}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage)
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.DamageOrBuilder {
+            // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundEndReportData.RerEvent.Damage)
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.DamageOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Damage_descriptor;
+            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Damage_descriptor;
           }
 
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Damage_fieldAccessorTable
+            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Damage_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder.class);
+                    Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder.class);
           }
 
-          // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.newBuilder()
+          // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -61356,9 +58302,9 @@ public final class Cstrike15Usermessages {
           @java.lang.Override
           public Builder clear() {
             super.clear();
-            targetEntindex_ = 0;
+            otherPlayerslot_ = -1;
             bitField0_ = (bitField0_ & ~0x00000001);
-            targetXuid_ = 0L;
+            otherXuid_ = 0L;
             bitField0_ = (bitField0_ & ~0x00000002);
             healthRemoved_ = 0;
             bitField0_ = (bitField0_ & ~0x00000004);
@@ -61366,7 +58312,7 @@ public final class Cstrike15Usermessages {
             bitField0_ = (bitField0_ & ~0x00000008);
             returnHealthRemoved_ = 0;
             bitField0_ = (bitField0_ & ~0x00000010);
-            numReturnHits_ = 0;
+            returnNumHits_ = 0;
             bitField0_ = (bitField0_ & ~0x00000020);
             return this;
           }
@@ -61374,17 +58320,17 @@ public final class Cstrike15Usermessages {
           @java.lang.Override
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Damage_descriptor;
+            return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Damage_descriptor;
           }
 
           @java.lang.Override
-          public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage getDefaultInstanceForType() {
-            return Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.getDefaultInstance();
+          public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage getDefaultInstanceForType() {
+            return Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.getDefaultInstance();
           }
 
           @java.lang.Override
-          public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage build() {
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage result = buildPartial();
+          public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage build() {
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
@@ -61392,16 +58338,16 @@ public final class Cstrike15Usermessages {
           }
 
           @java.lang.Override
-          public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage buildPartial() {
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage result = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage(this);
+          public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage buildPartial() {
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage result = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage(this);
             int from_bitField0_ = bitField0_;
             int to_bitField0_ = 0;
             if (((from_bitField0_ & 0x00000001) != 0)) {
-              result.targetEntindex_ = targetEntindex_;
               to_bitField0_ |= 0x00000001;
             }
+            result.otherPlayerslot_ = otherPlayerslot_;
             if (((from_bitField0_ & 0x00000002) != 0)) {
-              result.targetXuid_ = targetXuid_;
+              result.otherXuid_ = otherXuid_;
               to_bitField0_ |= 0x00000002;
             }
             if (((from_bitField0_ & 0x00000004) != 0)) {
@@ -61417,7 +58363,7 @@ public final class Cstrike15Usermessages {
               to_bitField0_ |= 0x00000010;
             }
             if (((from_bitField0_ & 0x00000020) != 0)) {
-              result.numReturnHits_ = numReturnHits_;
+              result.returnNumHits_ = returnNumHits_;
               to_bitField0_ |= 0x00000020;
             }
             result.bitField0_ = to_bitField0_;
@@ -61459,21 +58405,21 @@ public final class Cstrike15Usermessages {
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage) {
-              return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage)other);
+            if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage) {
+              return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage other) {
-            if (other == Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.getDefaultInstance()) return this;
-            if (other.hasTargetEntindex()) {
-              setTargetEntindex(other.getTargetEntindex());
+          public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage other) {
+            if (other == Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.getDefaultInstance()) return this;
+            if (other.hasOtherPlayerslot()) {
+              setOtherPlayerslot(other.getOtherPlayerslot());
             }
-            if (other.hasTargetXuid()) {
-              setTargetXuid(other.getTargetXuid());
+            if (other.hasOtherXuid()) {
+              setOtherXuid(other.getOtherXuid());
             }
             if (other.hasHealthRemoved()) {
               setHealthRemoved(other.getHealthRemoved());
@@ -61484,8 +58430,8 @@ public final class Cstrike15Usermessages {
             if (other.hasReturnHealthRemoved()) {
               setReturnHealthRemoved(other.getReturnHealthRemoved());
             }
-            if (other.hasNumReturnHits()) {
-              setNumReturnHits(other.getNumReturnHits());
+            if (other.hasReturnNumHits()) {
+              setReturnNumHits(other.getReturnNumHits());
             }
             this.mergeUnknownFields(other.unknownFields);
             onChanged();
@@ -61502,11 +58448,11 @@ public final class Cstrike15Usermessages {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage parsedMessage = null;
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage) e.getUnfinishedMessage();
+              parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage) e.getUnfinishedMessage();
               throw e.unwrapIOException();
             } finally {
               if (parsedMessage != null) {
@@ -61517,80 +58463,80 @@ public final class Cstrike15Usermessages {
           }
           private int bitField0_;
 
-          private int targetEntindex_ ;
+          private int otherPlayerslot_ = -1;
           /**
-           * <code>optional int32 target_entindex = 1;</code>
-           * @return Whether the targetEntindex field is set.
+           * <code>optional int32 other_playerslot = 1 [default = -1];</code>
+           * @return Whether the otherPlayerslot field is set.
            */
           @java.lang.Override
-          public boolean hasTargetEntindex() {
+          public boolean hasOtherPlayerslot() {
             return ((bitField0_ & 0x00000001) != 0);
           }
           /**
-           * <code>optional int32 target_entindex = 1;</code>
-           * @return The targetEntindex.
+           * <code>optional int32 other_playerslot = 1 [default = -1];</code>
+           * @return The otherPlayerslot.
            */
           @java.lang.Override
-          public int getTargetEntindex() {
-            return targetEntindex_;
+          public int getOtherPlayerslot() {
+            return otherPlayerslot_;
           }
           /**
-           * <code>optional int32 target_entindex = 1;</code>
-           * @param value The targetEntindex to set.
+           * <code>optional int32 other_playerslot = 1 [default = -1];</code>
+           * @param value The otherPlayerslot to set.
            * @return This builder for chaining.
            */
-          public Builder setTargetEntindex(int value) {
+          public Builder setOtherPlayerslot(int value) {
             bitField0_ |= 0x00000001;
-            targetEntindex_ = value;
+            otherPlayerslot_ = value;
             onChanged();
             return this;
           }
           /**
-           * <code>optional int32 target_entindex = 1;</code>
+           * <code>optional int32 other_playerslot = 1 [default = -1];</code>
            * @return This builder for chaining.
            */
-          public Builder clearTargetEntindex() {
+          public Builder clearOtherPlayerslot() {
             bitField0_ = (bitField0_ & ~0x00000001);
-            targetEntindex_ = 0;
+            otherPlayerslot_ = -1;
             onChanged();
             return this;
           }
 
-          private long targetXuid_ ;
+          private long otherXuid_ ;
           /**
-           * <code>optional uint64 target_xuid = 2;</code>
-           * @return Whether the targetXuid field is set.
+           * <code>optional uint64 other_xuid = 2;</code>
+           * @return Whether the otherXuid field is set.
            */
           @java.lang.Override
-          public boolean hasTargetXuid() {
+          public boolean hasOtherXuid() {
             return ((bitField0_ & 0x00000002) != 0);
           }
           /**
-           * <code>optional uint64 target_xuid = 2;</code>
-           * @return The targetXuid.
+           * <code>optional uint64 other_xuid = 2;</code>
+           * @return The otherXuid.
            */
           @java.lang.Override
-          public long getTargetXuid() {
-            return targetXuid_;
+          public long getOtherXuid() {
+            return otherXuid_;
           }
           /**
-           * <code>optional uint64 target_xuid = 2;</code>
-           * @param value The targetXuid to set.
+           * <code>optional uint64 other_xuid = 2;</code>
+           * @param value The otherXuid to set.
            * @return This builder for chaining.
            */
-          public Builder setTargetXuid(long value) {
+          public Builder setOtherXuid(long value) {
             bitField0_ |= 0x00000002;
-            targetXuid_ = value;
+            otherXuid_ = value;
             onChanged();
             return this;
           }
           /**
-           * <code>optional uint64 target_xuid = 2;</code>
+           * <code>optional uint64 other_xuid = 2;</code>
            * @return This builder for chaining.
            */
-          public Builder clearTargetXuid() {
+          public Builder clearOtherXuid() {
             bitField0_ = (bitField0_ & ~0x00000002);
-            targetXuid_ = 0L;
+            otherXuid_ = 0L;
             onChanged();
             return this;
           }
@@ -61712,41 +58658,41 @@ public final class Cstrike15Usermessages {
             return this;
           }
 
-          private int numReturnHits_ ;
+          private int returnNumHits_ ;
           /**
-           * <code>optional int32 num_return_hits = 6;</code>
-           * @return Whether the numReturnHits field is set.
+           * <code>optional int32 return_num_hits = 6;</code>
+           * @return Whether the returnNumHits field is set.
            */
           @java.lang.Override
-          public boolean hasNumReturnHits() {
+          public boolean hasReturnNumHits() {
             return ((bitField0_ & 0x00000020) != 0);
           }
           /**
-           * <code>optional int32 num_return_hits = 6;</code>
-           * @return The numReturnHits.
+           * <code>optional int32 return_num_hits = 6;</code>
+           * @return The returnNumHits.
            */
           @java.lang.Override
-          public int getNumReturnHits() {
-            return numReturnHits_;
+          public int getReturnNumHits() {
+            return returnNumHits_;
           }
           /**
-           * <code>optional int32 num_return_hits = 6;</code>
-           * @param value The numReturnHits to set.
+           * <code>optional int32 return_num_hits = 6;</code>
+           * @param value The returnNumHits to set.
            * @return This builder for chaining.
            */
-          public Builder setNumReturnHits(int value) {
+          public Builder setReturnNumHits(int value) {
             bitField0_ |= 0x00000020;
-            numReturnHits_ = value;
+            returnNumHits_ = value;
             onChanged();
             return this;
           }
           /**
-           * <code>optional int32 num_return_hits = 6;</code>
+           * <code>optional int32 return_num_hits = 6;</code>
            * @return This builder for chaining.
            */
-          public Builder clearNumReturnHits() {
+          public Builder clearReturnNumHits() {
             bitField0_ = (bitField0_ & ~0x00000020);
-            numReturnHits_ = 0;
+            returnNumHits_ = 0;
             onChanged();
             return this;
           }
@@ -61763,16 +58709,16 @@ public final class Cstrike15Usermessages {
           }
 
 
-          // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage)
+          // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundEndReportData.RerEvent.Damage)
         }
 
-        // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage)
-        private static final Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage DEFAULT_INSTANCE;
+        // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundEndReportData.RerEvent.Damage)
+        private static final Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage DEFAULT_INSTANCE;
         static {
-          DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage();
+          DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage();
         }
 
-        public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage getDefaultInstance() {
+        public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage getDefaultInstance() {
           return DEFAULT_INSTANCE;
         }
 
@@ -61797,7 +58743,7 @@ public final class Cstrike15Usermessages {
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage getDefaultInstanceForType() {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage getDefaultInstanceForType() {
           return DEFAULT_INSTANCE;
         }
 
@@ -61881,9 +58827,9 @@ public final class Cstrike15Usermessages {
       }
 
       public static final int VICTIM_DATA_FIELD_NUMBER = 5;
-      private Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victimData_;
+      private Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim victimData_;
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
        * @return Whether the victimData field is set.
        */
       @java.lang.Override
@@ -61891,25 +58837,25 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
        * @return The victimData.
        */
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim getVictimData() {
-        return victimData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.getDefaultInstance() : victimData_;
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim getVictimData() {
+        return victimData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.getDefaultInstance() : victimData_;
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
        */
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.VictimOrBuilder getVictimDataOrBuilder() {
-        return victimData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.getDefaultInstance() : victimData_;
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.VictimOrBuilder getVictimDataOrBuilder() {
+        return victimData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.getDefaultInstance() : victimData_;
       }
 
       public static final int OBJECTIVE_DATA_FIELD_NUMBER = 6;
-      private Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objectiveData_;
+      private Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective objectiveData_;
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
        * @return Whether the objectiveData field is set.
        */
       @java.lang.Override
@@ -61917,57 +58863,57 @@ public final class Cstrike15Usermessages {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
        * @return The objectiveData.
        */
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective getObjectiveData() {
-        return objectiveData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.getDefaultInstance() : objectiveData_;
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective getObjectiveData() {
+        return objectiveData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.getDefaultInstance() : objectiveData_;
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
        */
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.ObjectiveOrBuilder getObjectiveDataOrBuilder() {
-        return objectiveData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.getDefaultInstance() : objectiveData_;
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.ObjectiveOrBuilder getObjectiveDataOrBuilder() {
+        return objectiveData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.getDefaultInstance() : objectiveData_;
       }
 
       public static final int ALL_DAMAGE_DATA_FIELD_NUMBER = 7;
-      private java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage> allDamageData_;
+      private java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage> allDamageData_;
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
        */
       @java.lang.Override
-      public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage> getAllDamageDataList() {
+      public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage> getAllDamageDataList() {
         return allDamageData_;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
        */
       @java.lang.Override
-      public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.DamageOrBuilder> 
+      public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.DamageOrBuilder> 
           getAllDamageDataOrBuilderList() {
         return allDamageData_;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
        */
       @java.lang.Override
       public int getAllDamageDataCount() {
         return allDamageData_.size();
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
        */
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage getAllDamageData(int index) {
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage getAllDamageData(int index) {
         return allDamageData_.get(index);
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
        */
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.DamageOrBuilder getAllDamageDataOrBuilder(
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.DamageOrBuilder getAllDamageDataOrBuilder(
           int index) {
         return allDamageData_.get(index);
       }
@@ -62054,10 +59000,10 @@ public final class Cstrike15Usermessages {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent)) {
+        if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent)) {
           return super.equals(obj);
         }
-        Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent other = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent) obj;
+        Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent other = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent) obj;
 
         if (hasTimestamp() != other.hasTimestamp()) return false;
         if (hasTimestamp()) {
@@ -62137,69 +59083,69 @@ public final class Cstrike15Usermessages {
         return hash;
       }
 
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseFrom(byte[] data)
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseFrom(java.io.InputStream input)
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseDelimitedFrom(java.io.InputStream input)
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseDelimitedFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -62212,7 +59158,7 @@ public final class Cstrike15Usermessages {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent prototype) {
+      public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -62228,26 +59174,26 @@ public final class Cstrike15Usermessages {
         return builder;
       }
       /**
-       * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData.RisEvent}
+       * Protobuf type {@code CCSUsrMsg_RoundEndReportData.RerEvent}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundImpactScoreData.RisEvent)
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEventOrBuilder {
+          // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundEndReportData.RerEvent)
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEventOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_descriptor;
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_fieldAccessorTable
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder.class);
+                  Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder.class);
         }
 
-        // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.newBuilder()
+        // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -62300,17 +59246,17 @@ public final class Cstrike15Usermessages {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_descriptor;
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_descriptor;
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent getDefaultInstanceForType() {
-          return Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.getDefaultInstance();
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent getDefaultInstanceForType() {
+          return Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.getDefaultInstance();
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent build() {
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent result = buildPartial();
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent build() {
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -62318,8 +59264,8 @@ public final class Cstrike15Usermessages {
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent buildPartial() {
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent result = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent(this);
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent buildPartial() {
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent result = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -62402,16 +59348,16 @@ public final class Cstrike15Usermessages {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent) {
-            return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent)other);
+          if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent) {
+            return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent other) {
-          if (other == Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.getDefaultInstance()) return this;
+        public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent other) {
+          if (other == Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.getDefaultInstance()) return this;
           if (other.hasTimestamp()) {
             setTimestamp(other.getTimestamp());
           }
@@ -62471,11 +59417,11 @@ public final class Cstrike15Usermessages {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent parsedMessage = null;
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent) e.getUnfinishedMessage();
+            parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -62642,31 +59588,31 @@ public final class Cstrike15Usermessages {
           return this;
         }
 
-        private Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victimData_;
+        private Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim victimData_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.VictimOrBuilder> victimDataBuilder_;
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.VictimOrBuilder> victimDataBuilder_;
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
          * @return Whether the victimData field is set.
          */
         public boolean hasVictimData() {
           return ((bitField0_ & 0x00000010) != 0);
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
          * @return The victimData.
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim getVictimData() {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim getVictimData() {
           if (victimDataBuilder_ == null) {
-            return victimData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.getDefaultInstance() : victimData_;
+            return victimData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.getDefaultInstance() : victimData_;
           } else {
             return victimDataBuilder_.getMessage();
           }
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
          */
-        public Builder setVictimData(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim value) {
+        public Builder setVictimData(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim value) {
           if (victimDataBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -62680,10 +59626,10 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
          */
         public Builder setVictimData(
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.Builder builderForValue) {
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.Builder builderForValue) {
           if (victimDataBuilder_ == null) {
             victimData_ = builderForValue.build();
             onChanged();
@@ -62694,15 +59640,15 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
          */
-        public Builder mergeVictimData(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim value) {
+        public Builder mergeVictimData(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim value) {
           if (victimDataBuilder_ == null) {
             if (((bitField0_ & 0x00000010) != 0) &&
                 victimData_ != null &&
-                victimData_ != Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.getDefaultInstance()) {
+                victimData_ != Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.getDefaultInstance()) {
               victimData_ =
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.newBuilder(victimData_).mergeFrom(value).buildPartial();
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.newBuilder(victimData_).mergeFrom(value).buildPartial();
             } else {
               victimData_ = value;
             }
@@ -62714,7 +59660,7 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
          */
         public Builder clearVictimData() {
           if (victimDataBuilder_ == null) {
@@ -62727,33 +59673,33 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.Builder getVictimDataBuilder() {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.Builder getVictimDataBuilder() {
           bitField0_ |= 0x00000010;
           onChanged();
           return getVictimDataFieldBuilder().getBuilder();
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.VictimOrBuilder getVictimDataOrBuilder() {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.VictimOrBuilder getVictimDataOrBuilder() {
           if (victimDataBuilder_ != null) {
             return victimDataBuilder_.getMessageOrBuilder();
           } else {
             return victimData_ == null ?
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.getDefaultInstance() : victimData_;
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.getDefaultInstance() : victimData_;
           }
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim victim_data = 5;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Victim victim_data = 5;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.VictimOrBuilder> 
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.VictimOrBuilder> 
             getVictimDataFieldBuilder() {
           if (victimDataBuilder_ == null) {
             victimDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Victim.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.VictimOrBuilder>(
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Victim.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.VictimOrBuilder>(
                     getVictimData(),
                     getParentForChildren(),
                     isClean());
@@ -62762,31 +59708,31 @@ public final class Cstrike15Usermessages {
           return victimDataBuilder_;
         }
 
-        private Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objectiveData_;
+        private Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective objectiveData_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.ObjectiveOrBuilder> objectiveDataBuilder_;
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.ObjectiveOrBuilder> objectiveDataBuilder_;
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
          * @return Whether the objectiveData field is set.
          */
         public boolean hasObjectiveData() {
           return ((bitField0_ & 0x00000020) != 0);
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
          * @return The objectiveData.
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective getObjectiveData() {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective getObjectiveData() {
           if (objectiveDataBuilder_ == null) {
-            return objectiveData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.getDefaultInstance() : objectiveData_;
+            return objectiveData_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.getDefaultInstance() : objectiveData_;
           } else {
             return objectiveDataBuilder_.getMessage();
           }
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
          */
-        public Builder setObjectiveData(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective value) {
+        public Builder setObjectiveData(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective value) {
           if (objectiveDataBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -62800,10 +59746,10 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
          */
         public Builder setObjectiveData(
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.Builder builderForValue) {
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.Builder builderForValue) {
           if (objectiveDataBuilder_ == null) {
             objectiveData_ = builderForValue.build();
             onChanged();
@@ -62814,15 +59760,15 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
          */
-        public Builder mergeObjectiveData(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective value) {
+        public Builder mergeObjectiveData(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective value) {
           if (objectiveDataBuilder_ == null) {
             if (((bitField0_ & 0x00000020) != 0) &&
                 objectiveData_ != null &&
-                objectiveData_ != Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.getDefaultInstance()) {
+                objectiveData_ != Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.getDefaultInstance()) {
               objectiveData_ =
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.newBuilder(objectiveData_).mergeFrom(value).buildPartial();
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.newBuilder(objectiveData_).mergeFrom(value).buildPartial();
             } else {
               objectiveData_ = value;
             }
@@ -62834,7 +59780,7 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
          */
         public Builder clearObjectiveData() {
           if (objectiveDataBuilder_ == null) {
@@ -62847,33 +59793,33 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.Builder getObjectiveDataBuilder() {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.Builder getObjectiveDataBuilder() {
           bitField0_ |= 0x00000020;
           onChanged();
           return getObjectiveDataFieldBuilder().getBuilder();
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.ObjectiveOrBuilder getObjectiveDataOrBuilder() {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.ObjectiveOrBuilder getObjectiveDataOrBuilder() {
           if (objectiveDataBuilder_ != null) {
             return objectiveDataBuilder_.getMessageOrBuilder();
           } else {
             return objectiveData_ == null ?
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.getDefaultInstance() : objectiveData_;
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.getDefaultInstance() : objectiveData_;
           }
         }
         /**
-         * <code>optional .CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective objective_data = 6;</code>
+         * <code>optional .CCSUsrMsg_RoundEndReportData.RerEvent.Objective objective_data = 6;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.ObjectiveOrBuilder> 
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.ObjectiveOrBuilder> 
             getObjectiveDataFieldBuilder() {
           if (objectiveDataBuilder_ == null) {
             objectiveDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Objective.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.ObjectiveOrBuilder>(
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Objective.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.ObjectiveOrBuilder>(
                     getObjectiveData(),
                     getParentForChildren(),
                     isClean());
@@ -62882,22 +59828,22 @@ public final class Cstrike15Usermessages {
           return objectiveDataBuilder_;
         }
 
-        private java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage> allDamageData_ =
+        private java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage> allDamageData_ =
           java.util.Collections.emptyList();
         private void ensureAllDamageDataIsMutable() {
           if (!((bitField0_ & 0x00000040) != 0)) {
-            allDamageData_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage>(allDamageData_);
+            allDamageData_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage>(allDamageData_);
             bitField0_ |= 0x00000040;
            }
         }
 
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.DamageOrBuilder> allDamageDataBuilder_;
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.DamageOrBuilder> allDamageDataBuilder_;
 
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
-        public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage> getAllDamageDataList() {
+        public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage> getAllDamageDataList() {
           if (allDamageDataBuilder_ == null) {
             return java.util.Collections.unmodifiableList(allDamageData_);
           } else {
@@ -62905,7 +59851,7 @@ public final class Cstrike15Usermessages {
           }
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
         public int getAllDamageDataCount() {
           if (allDamageDataBuilder_ == null) {
@@ -62915,9 +59861,9 @@ public final class Cstrike15Usermessages {
           }
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage getAllDamageData(int index) {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage getAllDamageData(int index) {
           if (allDamageDataBuilder_ == null) {
             return allDamageData_.get(index);
           } else {
@@ -62925,10 +59871,10 @@ public final class Cstrike15Usermessages {
           }
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
         public Builder setAllDamageData(
-            int index, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage value) {
+            int index, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage value) {
           if (allDamageDataBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -62942,10 +59888,10 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
         public Builder setAllDamageData(
-            int index, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder builderForValue) {
+            int index, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder builderForValue) {
           if (allDamageDataBuilder_ == null) {
             ensureAllDamageDataIsMutable();
             allDamageData_.set(index, builderForValue.build());
@@ -62956,9 +59902,9 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
-        public Builder addAllDamageData(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage value) {
+        public Builder addAllDamageData(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage value) {
           if (allDamageDataBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -62972,10 +59918,10 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
         public Builder addAllDamageData(
-            int index, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage value) {
+            int index, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage value) {
           if (allDamageDataBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -62989,10 +59935,10 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
         public Builder addAllDamageData(
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder builderForValue) {
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder builderForValue) {
           if (allDamageDataBuilder_ == null) {
             ensureAllDamageDataIsMutable();
             allDamageData_.add(builderForValue.build());
@@ -63003,10 +59949,10 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
         public Builder addAllDamageData(
-            int index, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder builderForValue) {
+            int index, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder builderForValue) {
           if (allDamageDataBuilder_ == null) {
             ensureAllDamageDataIsMutable();
             allDamageData_.add(index, builderForValue.build());
@@ -63017,10 +59963,10 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
         public Builder addAllAllDamageData(
-            java.lang.Iterable<? extends Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage> values) {
+            java.lang.Iterable<? extends Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage> values) {
           if (allDamageDataBuilder_ == null) {
             ensureAllDamageDataIsMutable();
             com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -63032,7 +59978,7 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
         public Builder clearAllDamageData() {
           if (allDamageDataBuilder_ == null) {
@@ -63045,7 +59991,7 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
         public Builder removeAllDamageData(int index) {
           if (allDamageDataBuilder_ == null) {
@@ -63058,16 +60004,16 @@ public final class Cstrike15Usermessages {
           return this;
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder getAllDamageDataBuilder(
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder getAllDamageDataBuilder(
             int index) {
           return getAllDamageDataFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.DamageOrBuilder getAllDamageDataOrBuilder(
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.DamageOrBuilder getAllDamageDataOrBuilder(
             int index) {
           if (allDamageDataBuilder_ == null) {
             return allDamageData_.get(index);  } else {
@@ -63075,9 +60021,9 @@ public final class Cstrike15Usermessages {
           }
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
-        public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.DamageOrBuilder> 
+        public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.DamageOrBuilder> 
              getAllDamageDataOrBuilderList() {
           if (allDamageDataBuilder_ != null) {
             return allDamageDataBuilder_.getMessageOrBuilderList();
@@ -63086,33 +60032,33 @@ public final class Cstrike15Usermessages {
           }
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder addAllDamageDataBuilder() {
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder addAllDamageDataBuilder() {
           return getAllDamageDataFieldBuilder().addBuilder(
-              Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.getDefaultInstance());
+              Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.getDefaultInstance());
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder addAllDamageDataBuilder(
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder addAllDamageDataBuilder(
             int index) {
           return getAllDamageDataFieldBuilder().addBuilder(
-              index, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.getDefaultInstance());
+              index, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.getDefaultInstance());
         }
         /**
-         * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage all_damage_data = 7;</code>
+         * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent.Damage all_damage_data = 7;</code>
          */
-        public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder> 
+        public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder> 
              getAllDamageDataBuilderList() {
           return getAllDamageDataFieldBuilder().getBuilderList();
         }
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.DamageOrBuilder> 
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.DamageOrBuilder> 
             getAllDamageDataFieldBuilder() {
           if (allDamageDataBuilder_ == null) {
             allDamageDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Damage.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.DamageOrBuilder>(
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Damage.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.DamageOrBuilder>(
                     allDamageData_,
                     ((bitField0_ & 0x00000040) != 0),
                     getParentForChildren(),
@@ -63134,48 +60080,48 @@ public final class Cstrike15Usermessages {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundImpactScoreData.RisEvent)
+        // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundEndReportData.RerEvent)
       }
 
-      // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundImpactScoreData.RisEvent)
-      private static final Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundEndReportData.RerEvent)
+      private static final Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent();
+        DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent();
       }
 
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent getDefaultInstance() {
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      @java.lang.Deprecated public static final com.google.protobuf.Parser<RisEvent>
-          PARSER = new com.google.protobuf.AbstractParser<RisEvent>() {
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<RerEvent>
+          PARSER = new com.google.protobuf.AbstractParser<RerEvent>() {
         @java.lang.Override
-        public RisEvent parsePartialFrom(
+        public RerEvent parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new RisEvent(input, extensionRegistry);
+          return new RerEvent(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<RisEvent> parser() {
+      public static com.google.protobuf.Parser<RerEvent> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<RisEvent> getParserForType() {
+      public com.google.protobuf.Parser<RerEvent> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent getDefaultInstanceForType() {
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
     }
 
     public interface InitialConditionsOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundImpactScoreData.InitialConditions)
+        // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RoundEndReportData.InitialConditions)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -63212,11 +60158,11 @@ public final class Cstrike15Usermessages {
       int getTerroristOdds();
     }
     /**
-     * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData.InitialConditions}
+     * Protobuf type {@code CCSUsrMsg_RoundEndReportData.InitialConditions}
      */
     public static final class InitialConditions extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundImpactScoreData.InitialConditions)
+        // @@protoc_insertion_point(message_implements:CCSUsrMsg_RoundEndReportData.InitialConditions)
         InitialConditionsOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use InitialConditions.newBuilder() to construct.
@@ -63293,15 +60239,15 @@ public final class Cstrike15Usermessages {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_InitialConditions_descriptor;
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_InitialConditions_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_InitialConditions_fieldAccessorTable
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_InitialConditions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.Builder.class);
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.Builder.class);
       }
 
       private int bitField0_;
@@ -63416,10 +60362,10 @@ public final class Cstrike15Usermessages {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions)) {
+        if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions)) {
           return super.equals(obj);
         }
-        Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions other = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions) obj;
+        Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions other = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions) obj;
 
         if (hasCtEquipValue() != other.hasCtEquipValue()) return false;
         if (hasCtEquipValue()) {
@@ -63464,69 +60410,69 @@ public final class Cstrike15Usermessages {
         return hash;
       }
 
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseFrom(byte[] data)
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseFrom(java.io.InputStream input)
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseDelimitedFrom(java.io.InputStream input)
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseDelimitedFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parseFrom(
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -63539,7 +60485,7 @@ public final class Cstrike15Usermessages {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions prototype) {
+      public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -63555,26 +60501,26 @@ public final class Cstrike15Usermessages {
         return builder;
       }
       /**
-       * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData.InitialConditions}
+       * Protobuf type {@code CCSUsrMsg_RoundEndReportData.InitialConditions}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundImpactScoreData.InitialConditions)
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditionsOrBuilder {
+          // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundEndReportData.InitialConditions)
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditionsOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_InitialConditions_descriptor;
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_InitialConditions_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_InitialConditions_fieldAccessorTable
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_InitialConditions_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.Builder.class);
+                  Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.Builder.class);
         }
 
-        // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.newBuilder()
+        // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -63604,17 +60550,17 @@ public final class Cstrike15Usermessages {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_InitialConditions_descriptor;
+          return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_InitialConditions_descriptor;
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions getDefaultInstanceForType() {
-          return Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.getDefaultInstance();
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions getDefaultInstanceForType() {
+          return Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.getDefaultInstance();
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions build() {
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions result = buildPartial();
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions build() {
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -63622,8 +60568,8 @@ public final class Cstrike15Usermessages {
         }
 
         @java.lang.Override
-        public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions buildPartial() {
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions result = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions(this);
+        public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions buildPartial() {
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions result = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -63677,16 +60623,16 @@ public final class Cstrike15Usermessages {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions) {
-            return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions)other);
+          if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions) {
+            return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions other) {
-          if (other == Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.getDefaultInstance()) return this;
+        public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions other) {
+          if (other == Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.getDefaultInstance()) return this;
           if (other.hasCtEquipValue()) {
             setCtEquipValue(other.getCtEquipValue());
           }
@@ -63711,11 +60657,11 @@ public final class Cstrike15Usermessages {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions parsedMessage = null;
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions) e.getUnfinishedMessage();
+            parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -63855,16 +60801,16 @@ public final class Cstrike15Usermessages {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundImpactScoreData.InitialConditions)
+        // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundEndReportData.InitialConditions)
       }
 
-      // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundImpactScoreData.InitialConditions)
-      private static final Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundEndReportData.InitialConditions)
+      private static final Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions();
+        DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions();
       }
 
-      public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions getDefaultInstance() {
+      public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -63889,7 +60835,7 @@ public final class Cstrike15Usermessages {
       }
 
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions getDefaultInstanceForType() {
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -63897,9 +60843,9 @@ public final class Cstrike15Usermessages {
 
     private int bitField0_;
     public static final int INIT_CONDITIONS_FIELD_NUMBER = 1;
-    private Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions initConditions_;
+    private Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions initConditions_;
     /**
-     * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+     * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
      * @return Whether the initConditions field is set.
      */
     @java.lang.Override
@@ -63907,59 +60853,59 @@ public final class Cstrike15Usermessages {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+     * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
      * @return The initConditions.
      */
     @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions getInitConditions() {
-      return initConditions_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.getDefaultInstance() : initConditions_;
+    public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions getInitConditions() {
+      return initConditions_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.getDefaultInstance() : initConditions_;
     }
     /**
-     * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+     * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
      */
     @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditionsOrBuilder getInitConditionsOrBuilder() {
-      return initConditions_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.getDefaultInstance() : initConditions_;
+    public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditionsOrBuilder getInitConditionsOrBuilder() {
+      return initConditions_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.getDefaultInstance() : initConditions_;
     }
 
-    public static final int ALL_RIS_EVENT_DATA_FIELD_NUMBER = 2;
-    private java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent> allRisEventData_;
+    public static final int ALL_RER_EVENT_DATA_FIELD_NUMBER = 2;
+    private java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent> allRerEventData_;
     /**
-     * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+     * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent> getAllRisEventDataList() {
-      return allRisEventData_;
+    public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent> getAllRerEventDataList() {
+      return allRerEventData_;
     }
     /**
-     * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+     * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEventOrBuilder> 
-        getAllRisEventDataOrBuilderList() {
-      return allRisEventData_;
+    public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEventOrBuilder> 
+        getAllRerEventDataOrBuilderList() {
+      return allRerEventData_;
     }
     /**
-     * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+     * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
      */
     @java.lang.Override
-    public int getAllRisEventDataCount() {
-      return allRisEventData_.size();
+    public int getAllRerEventDataCount() {
+      return allRerEventData_.size();
     }
     /**
-     * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+     * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
      */
     @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent getAllRisEventData(int index) {
-      return allRisEventData_.get(index);
+    public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent getAllRerEventData(int index) {
+      return allRerEventData_.get(index);
     }
     /**
-     * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+     * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
      */
     @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEventOrBuilder getAllRisEventDataOrBuilder(
+    public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEventOrBuilder getAllRerEventDataOrBuilder(
         int index) {
-      return allRisEventData_.get(index);
+      return allRerEventData_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -63979,8 +60925,8 @@ public final class Cstrike15Usermessages {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getInitConditions());
       }
-      for (int i = 0; i < allRisEventData_.size(); i++) {
-        output.writeMessage(2, allRisEventData_.get(i));
+      for (int i = 0; i < allRerEventData_.size(); i++) {
+        output.writeMessage(2, allRerEventData_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -63995,9 +60941,9 @@ public final class Cstrike15Usermessages {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInitConditions());
       }
-      for (int i = 0; i < allRisEventData_.size(); i++) {
+      for (int i = 0; i < allRerEventData_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, allRisEventData_.get(i));
+          .computeMessageSize(2, allRerEventData_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -64009,18 +60955,18 @@ public final class Cstrike15Usermessages {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData)) {
+      if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData)) {
         return super.equals(obj);
       }
-      Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData other = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData) obj;
+      Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData other = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData) obj;
 
       if (hasInitConditions() != other.hasInitConditions()) return false;
       if (hasInitConditions()) {
         if (!getInitConditions()
             .equals(other.getInitConditions())) return false;
       }
-      if (!getAllRisEventDataList()
-          .equals(other.getAllRisEventDataList())) return false;
+      if (!getAllRerEventDataList()
+          .equals(other.getAllRerEventDataList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -64036,78 +60982,78 @@ public final class Cstrike15Usermessages {
         hash = (37 * hash) + INIT_CONDITIONS_FIELD_NUMBER;
         hash = (53 * hash) + getInitConditions().hashCode();
       }
-      if (getAllRisEventDataCount() > 0) {
-        hash = (37 * hash) + ALL_RIS_EVENT_DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getAllRisEventDataList().hashCode();
+      if (getAllRerEventDataCount() > 0) {
+        hash = (37 * hash) + ALL_RER_EVENT_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getAllRerEventDataList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseFrom(
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseFrom(
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseFrom(
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseFrom(
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseFrom(byte[] data)
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseFrom(
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseFrom(java.io.InputStream input)
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseFrom(
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseDelimitedFrom(java.io.InputStream input)
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseDelimitedFrom(
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseFrom(
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parseFrom(
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -64120,7 +61066,7 @@ public final class Cstrike15Usermessages {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData prototype) {
+    public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -64136,26 +61082,26 @@ public final class Cstrike15Usermessages {
       return builder;
     }
     /**
-     * Protobuf type {@code CCSUsrMsg_RoundImpactScoreData}
+     * Protobuf type {@code CCSUsrMsg_RoundEndReportData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundImpactScoreData)
-        Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreDataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RoundEndReportData)
+        Cstrike15Usermessages.CCSUsrMsg_RoundEndReportDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_descriptor;
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_fieldAccessorTable
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.class, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.Builder.class);
+                Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.class, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.Builder.class);
       }
 
-      // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.newBuilder()
+      // Construct using Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -64169,7 +61115,7 @@ public final class Cstrike15Usermessages {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getInitConditionsFieldBuilder();
-          getAllRisEventDataFieldBuilder();
+          getAllRerEventDataFieldBuilder();
         }
       }
       @java.lang.Override
@@ -64181,11 +61127,11 @@ public final class Cstrike15Usermessages {
           initConditionsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
-        if (allRisEventDataBuilder_ == null) {
-          allRisEventData_ = java.util.Collections.emptyList();
+        if (allRerEventDataBuilder_ == null) {
+          allRerEventData_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          allRisEventDataBuilder_.clear();
+          allRerEventDataBuilder_.clear();
         }
         return this;
       }
@@ -64193,17 +61139,17 @@ public final class Cstrike15Usermessages {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundImpactScoreData_descriptor;
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_RoundEndReportData_descriptor;
       }
 
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData getDefaultInstanceForType() {
-        return Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.getDefaultInstance();
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData getDefaultInstanceForType() {
+        return Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.getDefaultInstance();
       }
 
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData build() {
-        Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData result = buildPartial();
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData build() {
+        Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -64211,8 +61157,8 @@ public final class Cstrike15Usermessages {
       }
 
       @java.lang.Override
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData buildPartial() {
-        Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData result = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData(this);
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData buildPartial() {
+        Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData result = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -64223,14 +61169,14 @@ public final class Cstrike15Usermessages {
           }
           to_bitField0_ |= 0x00000001;
         }
-        if (allRisEventDataBuilder_ == null) {
+        if (allRerEventDataBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
-            allRisEventData_ = java.util.Collections.unmodifiableList(allRisEventData_);
+            allRerEventData_ = java.util.Collections.unmodifiableList(allRerEventData_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
-          result.allRisEventData_ = allRisEventData_;
+          result.allRerEventData_ = allRerEventData_;
         } else {
-          result.allRisEventData_ = allRisEventDataBuilder_.build();
+          result.allRerEventData_ = allRerEventDataBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -64271,42 +61217,42 @@ public final class Cstrike15Usermessages {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData) {
-          return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData)other);
+        if (other instanceof Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData) {
+          return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData other) {
-        if (other == Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.getDefaultInstance()) return this;
+      public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData other) {
+        if (other == Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.getDefaultInstance()) return this;
         if (other.hasInitConditions()) {
           mergeInitConditions(other.getInitConditions());
         }
-        if (allRisEventDataBuilder_ == null) {
-          if (!other.allRisEventData_.isEmpty()) {
-            if (allRisEventData_.isEmpty()) {
-              allRisEventData_ = other.allRisEventData_;
+        if (allRerEventDataBuilder_ == null) {
+          if (!other.allRerEventData_.isEmpty()) {
+            if (allRerEventData_.isEmpty()) {
+              allRerEventData_ = other.allRerEventData_;
               bitField0_ = (bitField0_ & ~0x00000002);
             } else {
-              ensureAllRisEventDataIsMutable();
-              allRisEventData_.addAll(other.allRisEventData_);
+              ensureAllRerEventDataIsMutable();
+              allRerEventData_.addAll(other.allRerEventData_);
             }
             onChanged();
           }
         } else {
-          if (!other.allRisEventData_.isEmpty()) {
-            if (allRisEventDataBuilder_.isEmpty()) {
-              allRisEventDataBuilder_.dispose();
-              allRisEventDataBuilder_ = null;
-              allRisEventData_ = other.allRisEventData_;
+          if (!other.allRerEventData_.isEmpty()) {
+            if (allRerEventDataBuilder_.isEmpty()) {
+              allRerEventDataBuilder_.dispose();
+              allRerEventDataBuilder_ = null;
+              allRerEventData_ = other.allRerEventData_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              allRisEventDataBuilder_ = 
+              allRerEventDataBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAllRisEventDataFieldBuilder() : null;
+                   getAllRerEventDataFieldBuilder() : null;
             } else {
-              allRisEventDataBuilder_.addAllMessages(other.allRisEventData_);
+              allRerEventDataBuilder_.addAllMessages(other.allRerEventData_);
             }
           }
         }
@@ -64325,11 +61271,11 @@ public final class Cstrike15Usermessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData parsedMessage = null;
+        Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData) e.getUnfinishedMessage();
+          parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -64340,31 +61286,31 @@ public final class Cstrike15Usermessages {
       }
       private int bitField0_;
 
-      private Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions initConditions_;
+      private Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions initConditions_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditionsOrBuilder> initConditionsBuilder_;
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditionsOrBuilder> initConditionsBuilder_;
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
        * @return Whether the initConditions field is set.
        */
       public boolean hasInitConditions() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
        * @return The initConditions.
        */
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions getInitConditions() {
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions getInitConditions() {
         if (initConditionsBuilder_ == null) {
-          return initConditions_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.getDefaultInstance() : initConditions_;
+          return initConditions_ == null ? Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.getDefaultInstance() : initConditions_;
         } else {
           return initConditionsBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
        */
-      public Builder setInitConditions(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions value) {
+      public Builder setInitConditions(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions value) {
         if (initConditionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -64378,10 +61324,10 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
        */
       public Builder setInitConditions(
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.Builder builderForValue) {
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.Builder builderForValue) {
         if (initConditionsBuilder_ == null) {
           initConditions_ = builderForValue.build();
           onChanged();
@@ -64392,15 +61338,15 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
        */
-      public Builder mergeInitConditions(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions value) {
+      public Builder mergeInitConditions(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions value) {
         if (initConditionsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
               initConditions_ != null &&
-              initConditions_ != Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.getDefaultInstance()) {
+              initConditions_ != Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.getDefaultInstance()) {
             initConditions_ =
-              Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.newBuilder(initConditions_).mergeFrom(value).buildPartial();
+              Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.newBuilder(initConditions_).mergeFrom(value).buildPartial();
           } else {
             initConditions_ = value;
           }
@@ -64412,7 +61358,7 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
        */
       public Builder clearInitConditions() {
         if (initConditionsBuilder_ == null) {
@@ -64425,33 +61371,33 @@ public final class Cstrike15Usermessages {
         return this;
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.Builder getInitConditionsBuilder() {
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.Builder getInitConditionsBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getInitConditionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditionsOrBuilder getInitConditionsOrBuilder() {
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditionsOrBuilder getInitConditionsOrBuilder() {
         if (initConditionsBuilder_ != null) {
           return initConditionsBuilder_.getMessageOrBuilder();
         } else {
           return initConditions_ == null ?
-              Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.getDefaultInstance() : initConditions_;
+              Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.getDefaultInstance() : initConditions_;
         }
       }
       /**
-       * <code>optional .CCSUsrMsg_RoundImpactScoreData.InitialConditions init_conditions = 1;</code>
+       * <code>optional .CCSUsrMsg_RoundEndReportData.InitialConditions init_conditions = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditionsOrBuilder> 
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditionsOrBuilder> 
           getInitConditionsFieldBuilder() {
         if (initConditionsBuilder_ == null) {
           initConditionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditions.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.InitialConditionsOrBuilder>(
+              Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditions.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.InitialConditionsOrBuilder>(
                   getInitConditions(),
                   getParentForChildren(),
                   isClean());
@@ -64460,244 +61406,244 @@ public final class Cstrike15Usermessages {
         return initConditionsBuilder_;
       }
 
-      private java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent> allRisEventData_ =
+      private java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent> allRerEventData_ =
         java.util.Collections.emptyList();
-      private void ensureAllRisEventDataIsMutable() {
+      private void ensureAllRerEventDataIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          allRisEventData_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent>(allRisEventData_);
+          allRerEventData_ = new java.util.ArrayList<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent>(allRerEventData_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEventOrBuilder> allRisEventDataBuilder_;
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEventOrBuilder> allRerEventDataBuilder_;
 
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent> getAllRisEventDataList() {
-        if (allRisEventDataBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(allRisEventData_);
+      public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent> getAllRerEventDataList() {
+        if (allRerEventDataBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(allRerEventData_);
         } else {
-          return allRisEventDataBuilder_.getMessageList();
+          return allRerEventDataBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public int getAllRisEventDataCount() {
-        if (allRisEventDataBuilder_ == null) {
-          return allRisEventData_.size();
+      public int getAllRerEventDataCount() {
+        if (allRerEventDataBuilder_ == null) {
+          return allRerEventData_.size();
         } else {
-          return allRisEventDataBuilder_.getCount();
+          return allRerEventDataBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent getAllRisEventData(int index) {
-        if (allRisEventDataBuilder_ == null) {
-          return allRisEventData_.get(index);
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent getAllRerEventData(int index) {
+        if (allRerEventDataBuilder_ == null) {
+          return allRerEventData_.get(index);
         } else {
-          return allRisEventDataBuilder_.getMessage(index);
+          return allRerEventDataBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Builder setAllRisEventData(
-          int index, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent value) {
-        if (allRisEventDataBuilder_ == null) {
+      public Builder setAllRerEventData(
+          int index, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent value) {
+        if (allRerEventDataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAllRisEventDataIsMutable();
-          allRisEventData_.set(index, value);
+          ensureAllRerEventDataIsMutable();
+          allRerEventData_.set(index, value);
           onChanged();
         } else {
-          allRisEventDataBuilder_.setMessage(index, value);
+          allRerEventDataBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Builder setAllRisEventData(
-          int index, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder builderForValue) {
-        if (allRisEventDataBuilder_ == null) {
-          ensureAllRisEventDataIsMutable();
-          allRisEventData_.set(index, builderForValue.build());
+      public Builder setAllRerEventData(
+          int index, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder builderForValue) {
+        if (allRerEventDataBuilder_ == null) {
+          ensureAllRerEventDataIsMutable();
+          allRerEventData_.set(index, builderForValue.build());
           onChanged();
         } else {
-          allRisEventDataBuilder_.setMessage(index, builderForValue.build());
+          allRerEventDataBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Builder addAllRisEventData(Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent value) {
-        if (allRisEventDataBuilder_ == null) {
+      public Builder addAllRerEventData(Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent value) {
+        if (allRerEventDataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAllRisEventDataIsMutable();
-          allRisEventData_.add(value);
+          ensureAllRerEventDataIsMutable();
+          allRerEventData_.add(value);
           onChanged();
         } else {
-          allRisEventDataBuilder_.addMessage(value);
+          allRerEventDataBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Builder addAllRisEventData(
-          int index, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent value) {
-        if (allRisEventDataBuilder_ == null) {
+      public Builder addAllRerEventData(
+          int index, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent value) {
+        if (allRerEventDataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAllRisEventDataIsMutable();
-          allRisEventData_.add(index, value);
+          ensureAllRerEventDataIsMutable();
+          allRerEventData_.add(index, value);
           onChanged();
         } else {
-          allRisEventDataBuilder_.addMessage(index, value);
+          allRerEventDataBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Builder addAllRisEventData(
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder builderForValue) {
-        if (allRisEventDataBuilder_ == null) {
-          ensureAllRisEventDataIsMutable();
-          allRisEventData_.add(builderForValue.build());
+      public Builder addAllRerEventData(
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder builderForValue) {
+        if (allRerEventDataBuilder_ == null) {
+          ensureAllRerEventDataIsMutable();
+          allRerEventData_.add(builderForValue.build());
           onChanged();
         } else {
-          allRisEventDataBuilder_.addMessage(builderForValue.build());
+          allRerEventDataBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Builder addAllRisEventData(
-          int index, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder builderForValue) {
-        if (allRisEventDataBuilder_ == null) {
-          ensureAllRisEventDataIsMutable();
-          allRisEventData_.add(index, builderForValue.build());
+      public Builder addAllRerEventData(
+          int index, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder builderForValue) {
+        if (allRerEventDataBuilder_ == null) {
+          ensureAllRerEventDataIsMutable();
+          allRerEventData_.add(index, builderForValue.build());
           onChanged();
         } else {
-          allRisEventDataBuilder_.addMessage(index, builderForValue.build());
+          allRerEventDataBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Builder addAllAllRisEventData(
-          java.lang.Iterable<? extends Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent> values) {
-        if (allRisEventDataBuilder_ == null) {
-          ensureAllRisEventDataIsMutable();
+      public Builder addAllAllRerEventData(
+          java.lang.Iterable<? extends Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent> values) {
+        if (allRerEventDataBuilder_ == null) {
+          ensureAllRerEventDataIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, allRisEventData_);
+              values, allRerEventData_);
           onChanged();
         } else {
-          allRisEventDataBuilder_.addAllMessages(values);
+          allRerEventDataBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Builder clearAllRisEventData() {
-        if (allRisEventDataBuilder_ == null) {
-          allRisEventData_ = java.util.Collections.emptyList();
+      public Builder clearAllRerEventData() {
+        if (allRerEventDataBuilder_ == null) {
+          allRerEventData_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
-          allRisEventDataBuilder_.clear();
+          allRerEventDataBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Builder removeAllRisEventData(int index) {
-        if (allRisEventDataBuilder_ == null) {
-          ensureAllRisEventDataIsMutable();
-          allRisEventData_.remove(index);
+      public Builder removeAllRerEventData(int index) {
+        if (allRerEventDataBuilder_ == null) {
+          ensureAllRerEventDataIsMutable();
+          allRerEventData_.remove(index);
           onChanged();
         } else {
-          allRisEventDataBuilder_.remove(index);
+          allRerEventDataBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder getAllRisEventDataBuilder(
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder getAllRerEventDataBuilder(
           int index) {
-        return getAllRisEventDataFieldBuilder().getBuilder(index);
+        return getAllRerEventDataFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEventOrBuilder getAllRisEventDataOrBuilder(
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEventOrBuilder getAllRerEventDataOrBuilder(
           int index) {
-        if (allRisEventDataBuilder_ == null) {
-          return allRisEventData_.get(index);  } else {
-          return allRisEventDataBuilder_.getMessageOrBuilder(index);
+        if (allRerEventDataBuilder_ == null) {
+          return allRerEventData_.get(index);  } else {
+          return allRerEventDataBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEventOrBuilder> 
-           getAllRisEventDataOrBuilderList() {
-        if (allRisEventDataBuilder_ != null) {
-          return allRisEventDataBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEventOrBuilder> 
+           getAllRerEventDataOrBuilderList() {
+        if (allRerEventDataBuilder_ != null) {
+          return allRerEventDataBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(allRisEventData_);
+          return java.util.Collections.unmodifiableList(allRerEventData_);
         }
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder addAllRisEventDataBuilder() {
-        return getAllRisEventDataFieldBuilder().addBuilder(
-            Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.getDefaultInstance());
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder addAllRerEventDataBuilder() {
+        return getAllRerEventDataFieldBuilder().addBuilder(
+            Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.getDefaultInstance());
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder addAllRisEventDataBuilder(
+      public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder addAllRerEventDataBuilder(
           int index) {
-        return getAllRisEventDataFieldBuilder().addBuilder(
-            index, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.getDefaultInstance());
+        return getAllRerEventDataFieldBuilder().addBuilder(
+            index, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.getDefaultInstance());
       }
       /**
-       * <code>repeated .CCSUsrMsg_RoundImpactScoreData.RisEvent all_ris_event_data = 2;</code>
+       * <code>repeated .CCSUsrMsg_RoundEndReportData.RerEvent all_rer_event_data = 2;</code>
        */
-      public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder> 
-           getAllRisEventDataBuilderList() {
-        return getAllRisEventDataFieldBuilder().getBuilderList();
+      public java.util.List<Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder> 
+           getAllRerEventDataBuilderList() {
+        return getAllRerEventDataFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEventOrBuilder> 
-          getAllRisEventDataFieldBuilder() {
-        if (allRisEventDataBuilder_ == null) {
-          allRisEventDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEvent.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData.RisEventOrBuilder>(
-                  allRisEventData_,
+          Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEventOrBuilder> 
+          getAllRerEventDataFieldBuilder() {
+        if (allRerEventDataBuilder_ == null) {
+          allRerEventDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEvent.Builder, Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData.RerEventOrBuilder>(
+                  allRerEventData_,
                   ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
-          allRisEventData_ = null;
+          allRerEventData_ = null;
         }
-        return allRisEventDataBuilder_;
+        return allRerEventDataBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -64712,41 +61658,1159 @@ public final class Cstrike15Usermessages {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundImpactScoreData)
+      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RoundEndReportData)
     }
 
-    // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundImpactScoreData)
-    private static final Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CCSUsrMsg_RoundEndReportData)
+    private static final Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData();
+      DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData();
     }
 
-    public static Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData getDefaultInstance() {
+    public static Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCSUsrMsg_RoundImpactScoreData>
-        PARSER = new com.google.protobuf.AbstractParser<CCSUsrMsg_RoundImpactScoreData>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCSUsrMsg_RoundEndReportData>
+        PARSER = new com.google.protobuf.AbstractParser<CCSUsrMsg_RoundEndReportData>() {
       @java.lang.Override
-      public CCSUsrMsg_RoundImpactScoreData parsePartialFrom(
+      public CCSUsrMsg_RoundEndReportData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CCSUsrMsg_RoundImpactScoreData(input, extensionRegistry);
+        return new CCSUsrMsg_RoundEndReportData(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CCSUsrMsg_RoundImpactScoreData> parser() {
+    public static com.google.protobuf.Parser<CCSUsrMsg_RoundEndReportData> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCSUsrMsg_RoundImpactScoreData> getParserForType() {
+    public com.google.protobuf.Parser<CCSUsrMsg_RoundEndReportData> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public Cstrike15Usermessages.CCSUsrMsg_RoundImpactScoreData getDefaultInstanceForType() {
+    public Cstrike15Usermessages.CCSUsrMsg_RoundEndReportData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CCSUsrMsg_PostRoundDamageReportOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_PostRoundDamageReport)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 other_xuid = 1;</code>
+     * @return Whether the otherXuid field is set.
+     */
+    boolean hasOtherXuid();
+    /**
+     * <code>optional uint64 other_xuid = 1;</code>
+     * @return The otherXuid.
+     */
+    long getOtherXuid();
+
+    /**
+     * <code>optional int32 given_kill_type = 2;</code>
+     * @return Whether the givenKillType field is set.
+     */
+    boolean hasGivenKillType();
+    /**
+     * <code>optional int32 given_kill_type = 2;</code>
+     * @return The givenKillType.
+     */
+    int getGivenKillType();
+
+    /**
+     * <code>optional int32 given_health_removed = 3;</code>
+     * @return Whether the givenHealthRemoved field is set.
+     */
+    boolean hasGivenHealthRemoved();
+    /**
+     * <code>optional int32 given_health_removed = 3;</code>
+     * @return The givenHealthRemoved.
+     */
+    int getGivenHealthRemoved();
+
+    /**
+     * <code>optional int32 given_num_hits = 4;</code>
+     * @return Whether the givenNumHits field is set.
+     */
+    boolean hasGivenNumHits();
+    /**
+     * <code>optional int32 given_num_hits = 4;</code>
+     * @return The givenNumHits.
+     */
+    int getGivenNumHits();
+
+    /**
+     * <code>optional int32 taken_kill_type = 5;</code>
+     * @return Whether the takenKillType field is set.
+     */
+    boolean hasTakenKillType();
+    /**
+     * <code>optional int32 taken_kill_type = 5;</code>
+     * @return The takenKillType.
+     */
+    int getTakenKillType();
+
+    /**
+     * <code>optional int32 taken_health_removed = 6;</code>
+     * @return Whether the takenHealthRemoved field is set.
+     */
+    boolean hasTakenHealthRemoved();
+    /**
+     * <code>optional int32 taken_health_removed = 6;</code>
+     * @return The takenHealthRemoved.
+     */
+    int getTakenHealthRemoved();
+
+    /**
+     * <code>optional int32 taken_num_hits = 7;</code>
+     * @return Whether the takenNumHits field is set.
+     */
+    boolean hasTakenNumHits();
+    /**
+     * <code>optional int32 taken_num_hits = 7;</code>
+     * @return The takenNumHits.
+     */
+    int getTakenNumHits();
+  }
+  /**
+   * Protobuf type {@code CCSUsrMsg_PostRoundDamageReport}
+   */
+  public static final class CCSUsrMsg_PostRoundDamageReport extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCSUsrMsg_PostRoundDamageReport)
+      CCSUsrMsg_PostRoundDamageReportOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCSUsrMsg_PostRoundDamageReport.newBuilder() to construct.
+    private CCSUsrMsg_PostRoundDamageReport(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCSUsrMsg_PostRoundDamageReport() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCSUsrMsg_PostRoundDamageReport();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCSUsrMsg_PostRoundDamageReport(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              otherXuid_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              givenKillType_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              givenHealthRemoved_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              givenNumHits_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              takenKillType_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              takenHealthRemoved_ = input.readInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              takenNumHits_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Cstrike15Usermessages.internal_static_CCSUsrMsg_PostRoundDamageReport_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Cstrike15Usermessages.internal_static_CCSUsrMsg_PostRoundDamageReport_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport.class, Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int OTHER_XUID_FIELD_NUMBER = 1;
+    private long otherXuid_;
+    /**
+     * <code>optional uint64 other_xuid = 1;</code>
+     * @return Whether the otherXuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasOtherXuid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 other_xuid = 1;</code>
+     * @return The otherXuid.
+     */
+    @java.lang.Override
+    public long getOtherXuid() {
+      return otherXuid_;
+    }
+
+    public static final int GIVEN_KILL_TYPE_FIELD_NUMBER = 2;
+    private int givenKillType_;
+    /**
+     * <code>optional int32 given_kill_type = 2;</code>
+     * @return Whether the givenKillType field is set.
+     */
+    @java.lang.Override
+    public boolean hasGivenKillType() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional int32 given_kill_type = 2;</code>
+     * @return The givenKillType.
+     */
+    @java.lang.Override
+    public int getGivenKillType() {
+      return givenKillType_;
+    }
+
+    public static final int GIVEN_HEALTH_REMOVED_FIELD_NUMBER = 3;
+    private int givenHealthRemoved_;
+    /**
+     * <code>optional int32 given_health_removed = 3;</code>
+     * @return Whether the givenHealthRemoved field is set.
+     */
+    @java.lang.Override
+    public boolean hasGivenHealthRemoved() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional int32 given_health_removed = 3;</code>
+     * @return The givenHealthRemoved.
+     */
+    @java.lang.Override
+    public int getGivenHealthRemoved() {
+      return givenHealthRemoved_;
+    }
+
+    public static final int GIVEN_NUM_HITS_FIELD_NUMBER = 4;
+    private int givenNumHits_;
+    /**
+     * <code>optional int32 given_num_hits = 4;</code>
+     * @return Whether the givenNumHits field is set.
+     */
+    @java.lang.Override
+    public boolean hasGivenNumHits() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional int32 given_num_hits = 4;</code>
+     * @return The givenNumHits.
+     */
+    @java.lang.Override
+    public int getGivenNumHits() {
+      return givenNumHits_;
+    }
+
+    public static final int TAKEN_KILL_TYPE_FIELD_NUMBER = 5;
+    private int takenKillType_;
+    /**
+     * <code>optional int32 taken_kill_type = 5;</code>
+     * @return Whether the takenKillType field is set.
+     */
+    @java.lang.Override
+    public boolean hasTakenKillType() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional int32 taken_kill_type = 5;</code>
+     * @return The takenKillType.
+     */
+    @java.lang.Override
+    public int getTakenKillType() {
+      return takenKillType_;
+    }
+
+    public static final int TAKEN_HEALTH_REMOVED_FIELD_NUMBER = 6;
+    private int takenHealthRemoved_;
+    /**
+     * <code>optional int32 taken_health_removed = 6;</code>
+     * @return Whether the takenHealthRemoved field is set.
+     */
+    @java.lang.Override
+    public boolean hasTakenHealthRemoved() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional int32 taken_health_removed = 6;</code>
+     * @return The takenHealthRemoved.
+     */
+    @java.lang.Override
+    public int getTakenHealthRemoved() {
+      return takenHealthRemoved_;
+    }
+
+    public static final int TAKEN_NUM_HITS_FIELD_NUMBER = 7;
+    private int takenNumHits_;
+    /**
+     * <code>optional int32 taken_num_hits = 7;</code>
+     * @return Whether the takenNumHits field is set.
+     */
+    @java.lang.Override
+    public boolean hasTakenNumHits() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional int32 taken_num_hits = 7;</code>
+     * @return The takenNumHits.
+     */
+    @java.lang.Override
+    public int getTakenNumHits() {
+      return takenNumHits_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, otherXuid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, givenKillType_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt32(3, givenHealthRemoved_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt32(4, givenNumHits_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeInt32(5, takenKillType_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeInt32(6, takenHealthRemoved_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeInt32(7, takenNumHits_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, otherXuid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, givenKillType_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, givenHealthRemoved_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, givenNumHits_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, takenKillType_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, takenHealthRemoved_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, takenNumHits_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport)) {
+        return super.equals(obj);
+      }
+      Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport other = (Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport) obj;
+
+      if (hasOtherXuid() != other.hasOtherXuid()) return false;
+      if (hasOtherXuid()) {
+        if (getOtherXuid()
+            != other.getOtherXuid()) return false;
+      }
+      if (hasGivenKillType() != other.hasGivenKillType()) return false;
+      if (hasGivenKillType()) {
+        if (getGivenKillType()
+            != other.getGivenKillType()) return false;
+      }
+      if (hasGivenHealthRemoved() != other.hasGivenHealthRemoved()) return false;
+      if (hasGivenHealthRemoved()) {
+        if (getGivenHealthRemoved()
+            != other.getGivenHealthRemoved()) return false;
+      }
+      if (hasGivenNumHits() != other.hasGivenNumHits()) return false;
+      if (hasGivenNumHits()) {
+        if (getGivenNumHits()
+            != other.getGivenNumHits()) return false;
+      }
+      if (hasTakenKillType() != other.hasTakenKillType()) return false;
+      if (hasTakenKillType()) {
+        if (getTakenKillType()
+            != other.getTakenKillType()) return false;
+      }
+      if (hasTakenHealthRemoved() != other.hasTakenHealthRemoved()) return false;
+      if (hasTakenHealthRemoved()) {
+        if (getTakenHealthRemoved()
+            != other.getTakenHealthRemoved()) return false;
+      }
+      if (hasTakenNumHits() != other.hasTakenNumHits()) return false;
+      if (hasTakenNumHits()) {
+        if (getTakenNumHits()
+            != other.getTakenNumHits()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOtherXuid()) {
+        hash = (37 * hash) + OTHER_XUID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getOtherXuid());
+      }
+      if (hasGivenKillType()) {
+        hash = (37 * hash) + GIVEN_KILL_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getGivenKillType();
+      }
+      if (hasGivenHealthRemoved()) {
+        hash = (37 * hash) + GIVEN_HEALTH_REMOVED_FIELD_NUMBER;
+        hash = (53 * hash) + getGivenHealthRemoved();
+      }
+      if (hasGivenNumHits()) {
+        hash = (37 * hash) + GIVEN_NUM_HITS_FIELD_NUMBER;
+        hash = (53 * hash) + getGivenNumHits();
+      }
+      if (hasTakenKillType()) {
+        hash = (37 * hash) + TAKEN_KILL_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getTakenKillType();
+      }
+      if (hasTakenHealthRemoved()) {
+        hash = (37 * hash) + TAKEN_HEALTH_REMOVED_FIELD_NUMBER;
+        hash = (53 * hash) + getTakenHealthRemoved();
+      }
+      if (hasTakenNumHits()) {
+        hash = (37 * hash) + TAKEN_NUM_HITS_FIELD_NUMBER;
+        hash = (53 * hash) + getTakenNumHits();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCSUsrMsg_PostRoundDamageReport}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_PostRoundDamageReport)
+        Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReportOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_PostRoundDamageReport_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_PostRoundDamageReport_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport.class, Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport.Builder.class);
+      }
+
+      // Construct using Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        otherXuid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        givenKillType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        givenHealthRemoved_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        givenNumHits_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        takenKillType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        takenHealthRemoved_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        takenNumHits_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_PostRoundDamageReport_descriptor;
+      }
+
+      @java.lang.Override
+      public Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport getDefaultInstanceForType() {
+        return Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport build() {
+        Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport buildPartial() {
+        Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport result = new Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.otherXuid_ = otherXuid_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.givenKillType_ = givenKillType_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.givenHealthRemoved_ = givenHealthRemoved_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.givenNumHits_ = givenNumHits_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.takenKillType_ = takenKillType_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.takenHealthRemoved_ = takenHealthRemoved_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.takenNumHits_ = takenNumHits_;
+          to_bitField0_ |= 0x00000040;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport) {
+          return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport other) {
+        if (other == Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport.getDefaultInstance()) return this;
+        if (other.hasOtherXuid()) {
+          setOtherXuid(other.getOtherXuid());
+        }
+        if (other.hasGivenKillType()) {
+          setGivenKillType(other.getGivenKillType());
+        }
+        if (other.hasGivenHealthRemoved()) {
+          setGivenHealthRemoved(other.getGivenHealthRemoved());
+        }
+        if (other.hasGivenNumHits()) {
+          setGivenNumHits(other.getGivenNumHits());
+        }
+        if (other.hasTakenKillType()) {
+          setTakenKillType(other.getTakenKillType());
+        }
+        if (other.hasTakenHealthRemoved()) {
+          setTakenHealthRemoved(other.getTakenHealthRemoved());
+        }
+        if (other.hasTakenNumHits()) {
+          setTakenNumHits(other.getTakenNumHits());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long otherXuid_ ;
+      /**
+       * <code>optional uint64 other_xuid = 1;</code>
+       * @return Whether the otherXuid field is set.
+       */
+      @java.lang.Override
+      public boolean hasOtherXuid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 other_xuid = 1;</code>
+       * @return The otherXuid.
+       */
+      @java.lang.Override
+      public long getOtherXuid() {
+        return otherXuid_;
+      }
+      /**
+       * <code>optional uint64 other_xuid = 1;</code>
+       * @param value The otherXuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOtherXuid(long value) {
+        bitField0_ |= 0x00000001;
+        otherXuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 other_xuid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOtherXuid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        otherXuid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int givenKillType_ ;
+      /**
+       * <code>optional int32 given_kill_type = 2;</code>
+       * @return Whether the givenKillType field is set.
+       */
+      @java.lang.Override
+      public boolean hasGivenKillType() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional int32 given_kill_type = 2;</code>
+       * @return The givenKillType.
+       */
+      @java.lang.Override
+      public int getGivenKillType() {
+        return givenKillType_;
+      }
+      /**
+       * <code>optional int32 given_kill_type = 2;</code>
+       * @param value The givenKillType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGivenKillType(int value) {
+        bitField0_ |= 0x00000002;
+        givenKillType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 given_kill_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGivenKillType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        givenKillType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int givenHealthRemoved_ ;
+      /**
+       * <code>optional int32 given_health_removed = 3;</code>
+       * @return Whether the givenHealthRemoved field is set.
+       */
+      @java.lang.Override
+      public boolean hasGivenHealthRemoved() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional int32 given_health_removed = 3;</code>
+       * @return The givenHealthRemoved.
+       */
+      @java.lang.Override
+      public int getGivenHealthRemoved() {
+        return givenHealthRemoved_;
+      }
+      /**
+       * <code>optional int32 given_health_removed = 3;</code>
+       * @param value The givenHealthRemoved to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGivenHealthRemoved(int value) {
+        bitField0_ |= 0x00000004;
+        givenHealthRemoved_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 given_health_removed = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGivenHealthRemoved() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        givenHealthRemoved_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int givenNumHits_ ;
+      /**
+       * <code>optional int32 given_num_hits = 4;</code>
+       * @return Whether the givenNumHits field is set.
+       */
+      @java.lang.Override
+      public boolean hasGivenNumHits() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional int32 given_num_hits = 4;</code>
+       * @return The givenNumHits.
+       */
+      @java.lang.Override
+      public int getGivenNumHits() {
+        return givenNumHits_;
+      }
+      /**
+       * <code>optional int32 given_num_hits = 4;</code>
+       * @param value The givenNumHits to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGivenNumHits(int value) {
+        bitField0_ |= 0x00000008;
+        givenNumHits_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 given_num_hits = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGivenNumHits() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        givenNumHits_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int takenKillType_ ;
+      /**
+       * <code>optional int32 taken_kill_type = 5;</code>
+       * @return Whether the takenKillType field is set.
+       */
+      @java.lang.Override
+      public boolean hasTakenKillType() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional int32 taken_kill_type = 5;</code>
+       * @return The takenKillType.
+       */
+      @java.lang.Override
+      public int getTakenKillType() {
+        return takenKillType_;
+      }
+      /**
+       * <code>optional int32 taken_kill_type = 5;</code>
+       * @param value The takenKillType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTakenKillType(int value) {
+        bitField0_ |= 0x00000010;
+        takenKillType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 taken_kill_type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTakenKillType() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        takenKillType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int takenHealthRemoved_ ;
+      /**
+       * <code>optional int32 taken_health_removed = 6;</code>
+       * @return Whether the takenHealthRemoved field is set.
+       */
+      @java.lang.Override
+      public boolean hasTakenHealthRemoved() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional int32 taken_health_removed = 6;</code>
+       * @return The takenHealthRemoved.
+       */
+      @java.lang.Override
+      public int getTakenHealthRemoved() {
+        return takenHealthRemoved_;
+      }
+      /**
+       * <code>optional int32 taken_health_removed = 6;</code>
+       * @param value The takenHealthRemoved to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTakenHealthRemoved(int value) {
+        bitField0_ |= 0x00000020;
+        takenHealthRemoved_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 taken_health_removed = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTakenHealthRemoved() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        takenHealthRemoved_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int takenNumHits_ ;
+      /**
+       * <code>optional int32 taken_num_hits = 7;</code>
+       * @return Whether the takenNumHits field is set.
+       */
+      @java.lang.Override
+      public boolean hasTakenNumHits() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional int32 taken_num_hits = 7;</code>
+       * @return The takenNumHits.
+       */
+      @java.lang.Override
+      public int getTakenNumHits() {
+        return takenNumHits_;
+      }
+      /**
+       * <code>optional int32 taken_num_hits = 7;</code>
+       * @param value The takenNumHits to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTakenNumHits(int value) {
+        bitField0_ |= 0x00000040;
+        takenNumHits_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 taken_num_hits = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTakenNumHits() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        takenNumHits_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_PostRoundDamageReport)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCSUsrMsg_PostRoundDamageReport)
+    private static final Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport();
+    }
+
+    public static Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCSUsrMsg_PostRoundDamageReport>
+        PARSER = new com.google.protobuf.AbstractParser<CCSUsrMsg_PostRoundDamageReport>() {
+      @java.lang.Override
+      public CCSUsrMsg_PostRoundDamageReport parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCSUsrMsg_PostRoundDamageReport(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCSUsrMsg_PostRoundDamageReport> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCSUsrMsg_PostRoundDamageReport> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Cstrike15Usermessages.CCSUsrMsg_PostRoundDamageReport getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -65902,6 +63966,1317 @@ public final class Cstrike15Usermessages {
 
     @java.lang.Override
     public Cstrike15Usermessages.CCSUsrMsg_DeepStats getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CCSUsrMsg_ShootInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_ShootInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 frame_number = 1;</code>
+     * @return Whether the frameNumber field is set.
+     */
+    boolean hasFrameNumber();
+    /**
+     * <code>optional int32 frame_number = 1;</code>
+     * @return The frameNumber.
+     */
+    int getFrameNumber();
+
+    /**
+     * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+     */
+    java.util.List<Networkbasetypes.CMsgTransform> 
+        getHitboxTransformsList();
+    /**
+     * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+     */
+    Networkbasetypes.CMsgTransform getHitboxTransforms(int index);
+    /**
+     * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+     */
+    int getHitboxTransformsCount();
+    /**
+     * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+     */
+    java.util.List<? extends Networkbasetypes.CMsgTransformOrBuilder> 
+        getHitboxTransformsOrBuilderList();
+    /**
+     * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+     */
+    Networkbasetypes.CMsgTransformOrBuilder getHitboxTransformsOrBuilder(
+        int index);
+
+    /**
+     * <code>optional .CMsgVector shoot_pos = 3;</code>
+     * @return Whether the shootPos field is set.
+     */
+    boolean hasShootPos();
+    /**
+     * <code>optional .CMsgVector shoot_pos = 3;</code>
+     * @return The shootPos.
+     */
+    Networkbasetypes.CMsgVector getShootPos();
+    /**
+     * <code>optional .CMsgVector shoot_pos = 3;</code>
+     */
+    Networkbasetypes.CMsgVectorOrBuilder getShootPosOrBuilder();
+
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+     * @return Whether the shootDir field is set.
+     */
+    boolean hasShootDir();
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+     * @return The shootDir.
+     */
+    Networkbasetypes.CMsgQAngle getShootDir();
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+     */
+    Networkbasetypes.CMsgQAngleOrBuilder getShootDirOrBuilder();
+  }
+  /**
+   * Protobuf type {@code CCSUsrMsg_ShootInfo}
+   */
+  public static final class CCSUsrMsg_ShootInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCSUsrMsg_ShootInfo)
+      CCSUsrMsg_ShootInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCSUsrMsg_ShootInfo.newBuilder() to construct.
+    private CCSUsrMsg_ShootInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCSUsrMsg_ShootInfo() {
+      hitboxTransforms_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCSUsrMsg_ShootInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCSUsrMsg_ShootInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              frameNumber_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                hitboxTransforms_ = new java.util.ArrayList<Networkbasetypes.CMsgTransform>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              hitboxTransforms_.add(
+                  input.readMessage(Networkbasetypes.CMsgTransform.PARSER, extensionRegistry));
+              break;
+            }
+            case 26: {
+              Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = shootPos_.toBuilder();
+              }
+              shootPos_ = input.readMessage(Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shootPos_);
+                shootPos_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 34: {
+              Networkbasetypes.CMsgQAngle.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) != 0)) {
+                subBuilder = shootDir_.toBuilder();
+              }
+              shootDir_ = input.readMessage(Networkbasetypes.CMsgQAngle.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shootDir_);
+                shootDir_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          hitboxTransforms_ = java.util.Collections.unmodifiableList(hitboxTransforms_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Cstrike15Usermessages.internal_static_CCSUsrMsg_ShootInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Cstrike15Usermessages.internal_static_CCSUsrMsg_ShootInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Cstrike15Usermessages.CCSUsrMsg_ShootInfo.class, Cstrike15Usermessages.CCSUsrMsg_ShootInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FRAME_NUMBER_FIELD_NUMBER = 1;
+    private int frameNumber_;
+    /**
+     * <code>optional int32 frame_number = 1;</code>
+     * @return Whether the frameNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasFrameNumber() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional int32 frame_number = 1;</code>
+     * @return The frameNumber.
+     */
+    @java.lang.Override
+    public int getFrameNumber() {
+      return frameNumber_;
+    }
+
+    public static final int HITBOX_TRANSFORMS_FIELD_NUMBER = 2;
+    private java.util.List<Networkbasetypes.CMsgTransform> hitboxTransforms_;
+    /**
+     * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<Networkbasetypes.CMsgTransform> getHitboxTransformsList() {
+      return hitboxTransforms_;
+    }
+    /**
+     * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends Networkbasetypes.CMsgTransformOrBuilder> 
+        getHitboxTransformsOrBuilderList() {
+      return hitboxTransforms_;
+    }
+    /**
+     * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+     */
+    @java.lang.Override
+    public int getHitboxTransformsCount() {
+      return hitboxTransforms_.size();
+    }
+    /**
+     * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+     */
+    @java.lang.Override
+    public Networkbasetypes.CMsgTransform getHitboxTransforms(int index) {
+      return hitboxTransforms_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+     */
+    @java.lang.Override
+    public Networkbasetypes.CMsgTransformOrBuilder getHitboxTransformsOrBuilder(
+        int index) {
+      return hitboxTransforms_.get(index);
+    }
+
+    public static final int SHOOT_POS_FIELD_NUMBER = 3;
+    private Networkbasetypes.CMsgVector shootPos_;
+    /**
+     * <code>optional .CMsgVector shoot_pos = 3;</code>
+     * @return Whether the shootPos field is set.
+     */
+    @java.lang.Override
+    public boolean hasShootPos() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .CMsgVector shoot_pos = 3;</code>
+     * @return The shootPos.
+     */
+    @java.lang.Override
+    public Networkbasetypes.CMsgVector getShootPos() {
+      return shootPos_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : shootPos_;
+    }
+    /**
+     * <code>optional .CMsgVector shoot_pos = 3;</code>
+     */
+    @java.lang.Override
+    public Networkbasetypes.CMsgVectorOrBuilder getShootPosOrBuilder() {
+      return shootPos_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : shootPos_;
+    }
+
+    public static final int SHOOT_DIR_FIELD_NUMBER = 4;
+    private Networkbasetypes.CMsgQAngle shootDir_;
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+     * @return Whether the shootDir field is set.
+     */
+    @java.lang.Override
+    public boolean hasShootDir() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+     * @return The shootDir.
+     */
+    @java.lang.Override
+    public Networkbasetypes.CMsgQAngle getShootDir() {
+      return shootDir_ == null ? Networkbasetypes.CMsgQAngle.getDefaultInstance() : shootDir_;
+    }
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+     */
+    @java.lang.Override
+    public Networkbasetypes.CMsgQAngleOrBuilder getShootDirOrBuilder() {
+      return shootDir_ == null ? Networkbasetypes.CMsgQAngle.getDefaultInstance() : shootDir_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, frameNumber_);
+      }
+      for (int i = 0; i < hitboxTransforms_.size(); i++) {
+        output.writeMessage(2, hitboxTransforms_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(3, getShootPos());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(4, getShootDir());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, frameNumber_);
+      }
+      for (int i = 0; i < hitboxTransforms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, hitboxTransforms_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getShootPos());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getShootDir());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsg_ShootInfo)) {
+        return super.equals(obj);
+      }
+      Cstrike15Usermessages.CCSUsrMsg_ShootInfo other = (Cstrike15Usermessages.CCSUsrMsg_ShootInfo) obj;
+
+      if (hasFrameNumber() != other.hasFrameNumber()) return false;
+      if (hasFrameNumber()) {
+        if (getFrameNumber()
+            != other.getFrameNumber()) return false;
+      }
+      if (!getHitboxTransformsList()
+          .equals(other.getHitboxTransformsList())) return false;
+      if (hasShootPos() != other.hasShootPos()) return false;
+      if (hasShootPos()) {
+        if (!getShootPos()
+            .equals(other.getShootPos())) return false;
+      }
+      if (hasShootDir() != other.hasShootDir()) return false;
+      if (hasShootDir()) {
+        if (!getShootDir()
+            .equals(other.getShootDir())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFrameNumber()) {
+        hash = (37 * hash) + FRAME_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getFrameNumber();
+      }
+      if (getHitboxTransformsCount() > 0) {
+        hash = (37 * hash) + HITBOX_TRANSFORMS_FIELD_NUMBER;
+        hash = (53 * hash) + getHitboxTransformsList().hashCode();
+      }
+      if (hasShootPos()) {
+        hash = (37 * hash) + SHOOT_POS_FIELD_NUMBER;
+        hash = (53 * hash) + getShootPos().hashCode();
+      }
+      if (hasShootDir()) {
+        hash = (37 * hash) + SHOOT_DIR_FIELD_NUMBER;
+        hash = (53 * hash) + getShootDir().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsg_ShootInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCSUsrMsg_ShootInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_ShootInfo)
+        Cstrike15Usermessages.CCSUsrMsg_ShootInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_ShootInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_ShootInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Cstrike15Usermessages.CCSUsrMsg_ShootInfo.class, Cstrike15Usermessages.CCSUsrMsg_ShootInfo.Builder.class);
+      }
+
+      // Construct using Cstrike15Usermessages.CCSUsrMsg_ShootInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHitboxTransformsFieldBuilder();
+          getShootPosFieldBuilder();
+          getShootDirFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        frameNumber_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (hitboxTransformsBuilder_ == null) {
+          hitboxTransforms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          hitboxTransformsBuilder_.clear();
+        }
+        if (shootPosBuilder_ == null) {
+          shootPos_ = null;
+        } else {
+          shootPosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (shootDirBuilder_ == null) {
+          shootDir_ = null;
+        } else {
+          shootDirBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Cstrike15Usermessages.internal_static_CCSUsrMsg_ShootInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public Cstrike15Usermessages.CCSUsrMsg_ShootInfo getDefaultInstanceForType() {
+        return Cstrike15Usermessages.CCSUsrMsg_ShootInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Cstrike15Usermessages.CCSUsrMsg_ShootInfo build() {
+        Cstrike15Usermessages.CCSUsrMsg_ShootInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Cstrike15Usermessages.CCSUsrMsg_ShootInfo buildPartial() {
+        Cstrike15Usermessages.CCSUsrMsg_ShootInfo result = new Cstrike15Usermessages.CCSUsrMsg_ShootInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.frameNumber_ = frameNumber_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (hitboxTransformsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            hitboxTransforms_ = java.util.Collections.unmodifiableList(hitboxTransforms_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.hitboxTransforms_ = hitboxTransforms_;
+        } else {
+          result.hitboxTransforms_ = hitboxTransformsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          if (shootPosBuilder_ == null) {
+            result.shootPos_ = shootPos_;
+          } else {
+            result.shootPos_ = shootPosBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          if (shootDirBuilder_ == null) {
+            result.shootDir_ = shootDir_;
+          } else {
+            result.shootDir_ = shootDirBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Cstrike15Usermessages.CCSUsrMsg_ShootInfo) {
+          return mergeFrom((Cstrike15Usermessages.CCSUsrMsg_ShootInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsg_ShootInfo other) {
+        if (other == Cstrike15Usermessages.CCSUsrMsg_ShootInfo.getDefaultInstance()) return this;
+        if (other.hasFrameNumber()) {
+          setFrameNumber(other.getFrameNumber());
+        }
+        if (hitboxTransformsBuilder_ == null) {
+          if (!other.hitboxTransforms_.isEmpty()) {
+            if (hitboxTransforms_.isEmpty()) {
+              hitboxTransforms_ = other.hitboxTransforms_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureHitboxTransformsIsMutable();
+              hitboxTransforms_.addAll(other.hitboxTransforms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.hitboxTransforms_.isEmpty()) {
+            if (hitboxTransformsBuilder_.isEmpty()) {
+              hitboxTransformsBuilder_.dispose();
+              hitboxTransformsBuilder_ = null;
+              hitboxTransforms_ = other.hitboxTransforms_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              hitboxTransformsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHitboxTransformsFieldBuilder() : null;
+            } else {
+              hitboxTransformsBuilder_.addAllMessages(other.hitboxTransforms_);
+            }
+          }
+        }
+        if (other.hasShootPos()) {
+          mergeShootPos(other.getShootPos());
+        }
+        if (other.hasShootDir()) {
+          mergeShootDir(other.getShootDir());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Cstrike15Usermessages.CCSUsrMsg_ShootInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Cstrike15Usermessages.CCSUsrMsg_ShootInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int frameNumber_ ;
+      /**
+       * <code>optional int32 frame_number = 1;</code>
+       * @return Whether the frameNumber field is set.
+       */
+      @java.lang.Override
+      public boolean hasFrameNumber() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional int32 frame_number = 1;</code>
+       * @return The frameNumber.
+       */
+      @java.lang.Override
+      public int getFrameNumber() {
+        return frameNumber_;
+      }
+      /**
+       * <code>optional int32 frame_number = 1;</code>
+       * @param value The frameNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrameNumber(int value) {
+        bitField0_ |= 0x00000001;
+        frameNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 frame_number = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrameNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        frameNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<Networkbasetypes.CMsgTransform> hitboxTransforms_ =
+        java.util.Collections.emptyList();
+      private void ensureHitboxTransformsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          hitboxTransforms_ = new java.util.ArrayList<Networkbasetypes.CMsgTransform>(hitboxTransforms_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          Networkbasetypes.CMsgTransform, Networkbasetypes.CMsgTransform.Builder, Networkbasetypes.CMsgTransformOrBuilder> hitboxTransformsBuilder_;
+
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public java.util.List<Networkbasetypes.CMsgTransform> getHitboxTransformsList() {
+        if (hitboxTransformsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(hitboxTransforms_);
+        } else {
+          return hitboxTransformsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public int getHitboxTransformsCount() {
+        if (hitboxTransformsBuilder_ == null) {
+          return hitboxTransforms_.size();
+        } else {
+          return hitboxTransformsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Networkbasetypes.CMsgTransform getHitboxTransforms(int index) {
+        if (hitboxTransformsBuilder_ == null) {
+          return hitboxTransforms_.get(index);
+        } else {
+          return hitboxTransformsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Builder setHitboxTransforms(
+          int index, Networkbasetypes.CMsgTransform value) {
+        if (hitboxTransformsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHitboxTransformsIsMutable();
+          hitboxTransforms_.set(index, value);
+          onChanged();
+        } else {
+          hitboxTransformsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Builder setHitboxTransforms(
+          int index, Networkbasetypes.CMsgTransform.Builder builderForValue) {
+        if (hitboxTransformsBuilder_ == null) {
+          ensureHitboxTransformsIsMutable();
+          hitboxTransforms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          hitboxTransformsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Builder addHitboxTransforms(Networkbasetypes.CMsgTransform value) {
+        if (hitboxTransformsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHitboxTransformsIsMutable();
+          hitboxTransforms_.add(value);
+          onChanged();
+        } else {
+          hitboxTransformsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Builder addHitboxTransforms(
+          int index, Networkbasetypes.CMsgTransform value) {
+        if (hitboxTransformsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHitboxTransformsIsMutable();
+          hitboxTransforms_.add(index, value);
+          onChanged();
+        } else {
+          hitboxTransformsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Builder addHitboxTransforms(
+          Networkbasetypes.CMsgTransform.Builder builderForValue) {
+        if (hitboxTransformsBuilder_ == null) {
+          ensureHitboxTransformsIsMutable();
+          hitboxTransforms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          hitboxTransformsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Builder addHitboxTransforms(
+          int index, Networkbasetypes.CMsgTransform.Builder builderForValue) {
+        if (hitboxTransformsBuilder_ == null) {
+          ensureHitboxTransformsIsMutable();
+          hitboxTransforms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          hitboxTransformsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Builder addAllHitboxTransforms(
+          java.lang.Iterable<? extends Networkbasetypes.CMsgTransform> values) {
+        if (hitboxTransformsBuilder_ == null) {
+          ensureHitboxTransformsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, hitboxTransforms_);
+          onChanged();
+        } else {
+          hitboxTransformsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Builder clearHitboxTransforms() {
+        if (hitboxTransformsBuilder_ == null) {
+          hitboxTransforms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          hitboxTransformsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Builder removeHitboxTransforms(int index) {
+        if (hitboxTransformsBuilder_ == null) {
+          ensureHitboxTransformsIsMutable();
+          hitboxTransforms_.remove(index);
+          onChanged();
+        } else {
+          hitboxTransformsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Networkbasetypes.CMsgTransform.Builder getHitboxTransformsBuilder(
+          int index) {
+        return getHitboxTransformsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Networkbasetypes.CMsgTransformOrBuilder getHitboxTransformsOrBuilder(
+          int index) {
+        if (hitboxTransformsBuilder_ == null) {
+          return hitboxTransforms_.get(index);  } else {
+          return hitboxTransformsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public java.util.List<? extends Networkbasetypes.CMsgTransformOrBuilder> 
+           getHitboxTransformsOrBuilderList() {
+        if (hitboxTransformsBuilder_ != null) {
+          return hitboxTransformsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(hitboxTransforms_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Networkbasetypes.CMsgTransform.Builder addHitboxTransformsBuilder() {
+        return getHitboxTransformsFieldBuilder().addBuilder(
+            Networkbasetypes.CMsgTransform.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public Networkbasetypes.CMsgTransform.Builder addHitboxTransformsBuilder(
+          int index) {
+        return getHitboxTransformsFieldBuilder().addBuilder(
+            index, Networkbasetypes.CMsgTransform.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
+       */
+      public java.util.List<Networkbasetypes.CMsgTransform.Builder> 
+           getHitboxTransformsBuilderList() {
+        return getHitboxTransformsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          Networkbasetypes.CMsgTransform, Networkbasetypes.CMsgTransform.Builder, Networkbasetypes.CMsgTransformOrBuilder> 
+          getHitboxTransformsFieldBuilder() {
+        if (hitboxTransformsBuilder_ == null) {
+          hitboxTransformsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              Networkbasetypes.CMsgTransform, Networkbasetypes.CMsgTransform.Builder, Networkbasetypes.CMsgTransformOrBuilder>(
+                  hitboxTransforms_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          hitboxTransforms_ = null;
+        }
+        return hitboxTransformsBuilder_;
+      }
+
+      private Networkbasetypes.CMsgVector shootPos_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder> shootPosBuilder_;
+      /**
+       * <code>optional .CMsgVector shoot_pos = 3;</code>
+       * @return Whether the shootPos field is set.
+       */
+      public boolean hasShootPos() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 3;</code>
+       * @return The shootPos.
+       */
+      public Networkbasetypes.CMsgVector getShootPos() {
+        if (shootPosBuilder_ == null) {
+          return shootPos_ == null ? Networkbasetypes.CMsgVector.getDefaultInstance() : shootPos_;
+        } else {
+          return shootPosBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 3;</code>
+       */
+      public Builder setShootPos(Networkbasetypes.CMsgVector value) {
+        if (shootPosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shootPos_ = value;
+          onChanged();
+        } else {
+          shootPosBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 3;</code>
+       */
+      public Builder setShootPos(
+          Networkbasetypes.CMsgVector.Builder builderForValue) {
+        if (shootPosBuilder_ == null) {
+          shootPos_ = builderForValue.build();
+          onChanged();
+        } else {
+          shootPosBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 3;</code>
+       */
+      public Builder mergeShootPos(Networkbasetypes.CMsgVector value) {
+        if (shootPosBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+              shootPos_ != null &&
+              shootPos_ != Networkbasetypes.CMsgVector.getDefaultInstance()) {
+            shootPos_ =
+              Networkbasetypes.CMsgVector.newBuilder(shootPos_).mergeFrom(value).buildPartial();
+          } else {
+            shootPos_ = value;
+          }
+          onChanged();
+        } else {
+          shootPosBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 3;</code>
+       */
+      public Builder clearShootPos() {
+        if (shootPosBuilder_ == null) {
+          shootPos_ = null;
+          onChanged();
+        } else {
+          shootPosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 3;</code>
+       */
+      public Networkbasetypes.CMsgVector.Builder getShootPosBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getShootPosFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 3;</code>
+       */
+      public Networkbasetypes.CMsgVectorOrBuilder getShootPosOrBuilder() {
+        if (shootPosBuilder_ != null) {
+          return shootPosBuilder_.getMessageOrBuilder();
+        } else {
+          return shootPos_ == null ?
+              Networkbasetypes.CMsgVector.getDefaultInstance() : shootPos_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder> 
+          getShootPosFieldBuilder() {
+        if (shootPosBuilder_ == null) {
+          shootPosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              Networkbasetypes.CMsgVector, Networkbasetypes.CMsgVector.Builder, Networkbasetypes.CMsgVectorOrBuilder>(
+                  getShootPos(),
+                  getParentForChildren(),
+                  isClean());
+          shootPos_ = null;
+        }
+        return shootPosBuilder_;
+      }
+
+      private Networkbasetypes.CMsgQAngle shootDir_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          Networkbasetypes.CMsgQAngle, Networkbasetypes.CMsgQAngle.Builder, Networkbasetypes.CMsgQAngleOrBuilder> shootDirBuilder_;
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+       * @return Whether the shootDir field is set.
+       */
+      public boolean hasShootDir() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+       * @return The shootDir.
+       */
+      public Networkbasetypes.CMsgQAngle getShootDir() {
+        if (shootDirBuilder_ == null) {
+          return shootDir_ == null ? Networkbasetypes.CMsgQAngle.getDefaultInstance() : shootDir_;
+        } else {
+          return shootDirBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+       */
+      public Builder setShootDir(Networkbasetypes.CMsgQAngle value) {
+        if (shootDirBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shootDir_ = value;
+          onChanged();
+        } else {
+          shootDirBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+       */
+      public Builder setShootDir(
+          Networkbasetypes.CMsgQAngle.Builder builderForValue) {
+        if (shootDirBuilder_ == null) {
+          shootDir_ = builderForValue.build();
+          onChanged();
+        } else {
+          shootDirBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+       */
+      public Builder mergeShootDir(Networkbasetypes.CMsgQAngle value) {
+        if (shootDirBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+              shootDir_ != null &&
+              shootDir_ != Networkbasetypes.CMsgQAngle.getDefaultInstance()) {
+            shootDir_ =
+              Networkbasetypes.CMsgQAngle.newBuilder(shootDir_).mergeFrom(value).buildPartial();
+          } else {
+            shootDir_ = value;
+          }
+          onChanged();
+        } else {
+          shootDirBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+       */
+      public Builder clearShootDir() {
+        if (shootDirBuilder_ == null) {
+          shootDir_ = null;
+          onChanged();
+        } else {
+          shootDirBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+       */
+      public Networkbasetypes.CMsgQAngle.Builder getShootDirBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getShootDirFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+       */
+      public Networkbasetypes.CMsgQAngleOrBuilder getShootDirOrBuilder() {
+        if (shootDirBuilder_ != null) {
+          return shootDirBuilder_.getMessageOrBuilder();
+        } else {
+          return shootDir_ == null ?
+              Networkbasetypes.CMsgQAngle.getDefaultInstance() : shootDir_;
+        }
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          Networkbasetypes.CMsgQAngle, Networkbasetypes.CMsgQAngle.Builder, Networkbasetypes.CMsgQAngleOrBuilder> 
+          getShootDirFieldBuilder() {
+        if (shootDirBuilder_ == null) {
+          shootDirBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              Networkbasetypes.CMsgQAngle, Networkbasetypes.CMsgQAngle.Builder, Networkbasetypes.CMsgQAngleOrBuilder>(
+                  getShootDir(),
+                  getParentForChildren(),
+                  isClean());
+          shootDir_ = null;
+        }
+        return shootDirBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_ShootInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCSUsrMsg_ShootInfo)
+    private static final Cstrike15Usermessages.CCSUsrMsg_ShootInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsg_ShootInfo();
+    }
+
+    public static Cstrike15Usermessages.CCSUsrMsg_ShootInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCSUsrMsg_ShootInfo>
+        PARSER = new com.google.protobuf.AbstractParser<CCSUsrMsg_ShootInfo>() {
+      @java.lang.Override
+      public CCSUsrMsg_ShootInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCSUsrMsg_ShootInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCSUsrMsg_ShootInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCSUsrMsg_ShootInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Cstrike15Usermessages.CCSUsrMsg_ShootInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -70300,16 +69675,821 @@ public final class Cstrike15Usermessages {
 
   }
 
+  public interface CCSUsrMsgPreMatchSayTextOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCSUsrMsgPreMatchSayText)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 account_id = 1;</code>
+     * @return Whether the accountId field is set.
+     */
+    boolean hasAccountId();
+    /**
+     * <code>optional uint32 account_id = 1;</code>
+     * @return The accountId.
+     */
+    int getAccountId();
+
+    /**
+     * <code>optional string text = 2;</code>
+     * @return Whether the text field is set.
+     */
+    boolean hasText();
+    /**
+     * <code>optional string text = 2;</code>
+     * @return The text.
+     */
+    java.lang.String getText();
+    /**
+     * <code>optional string text = 2;</code>
+     * @return The bytes for text.
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     * @return Whether the allChat field is set.
+     */
+    boolean hasAllChat();
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     * @return The allChat.
+     */
+    boolean getAllChat();
+  }
+  /**
+   * Protobuf type {@code CCSUsrMsgPreMatchSayText}
+   */
+  public static final class CCSUsrMsgPreMatchSayText extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CCSUsrMsgPreMatchSayText)
+      CCSUsrMsgPreMatchSayTextOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CCSUsrMsgPreMatchSayText.newBuilder() to construct.
+    private CCSUsrMsgPreMatchSayText(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CCSUsrMsgPreMatchSayText() {
+      text_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CCSUsrMsgPreMatchSayText();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCSUsrMsgPreMatchSayText(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              accountId_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              text_ = bs;
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              allChat_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Cstrike15Usermessages.internal_static_CCSUsrMsgPreMatchSayText_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Cstrike15Usermessages.internal_static_CCSUsrMsgPreMatchSayText_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Cstrike15Usermessages.CCSUsrMsgPreMatchSayText.class, Cstrike15Usermessages.CCSUsrMsgPreMatchSayText.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ACCOUNT_ID_FIELD_NUMBER = 1;
+    private int accountId_;
+    /**
+     * <code>optional uint32 account_id = 1;</code>
+     * @return Whether the accountId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccountId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 account_id = 1;</code>
+     * @return The accountId.
+     */
+    @java.lang.Override
+    public int getAccountId() {
+      return accountId_;
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object text_;
+    /**
+     * <code>optional string text = 2;</code>
+     * @return Whether the text field is set.
+     */
+    @java.lang.Override
+    public boolean hasText() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string text = 2;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          text_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string text = 2;</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALL_CHAT_FIELD_NUMBER = 3;
+    private boolean allChat_;
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     * @return Whether the allChat field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllChat() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     * @return The allChat.
+     */
+    @java.lang.Override
+    public boolean getAllChat() {
+      return allChat_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, accountId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBool(3, allChat_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, accountId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, allChat_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Cstrike15Usermessages.CCSUsrMsgPreMatchSayText)) {
+        return super.equals(obj);
+      }
+      Cstrike15Usermessages.CCSUsrMsgPreMatchSayText other = (Cstrike15Usermessages.CCSUsrMsgPreMatchSayText) obj;
+
+      if (hasAccountId() != other.hasAccountId()) return false;
+      if (hasAccountId()) {
+        if (getAccountId()
+            != other.getAccountId()) return false;
+      }
+      if (hasText() != other.hasText()) return false;
+      if (hasText()) {
+        if (!getText()
+            .equals(other.getText())) return false;
+      }
+      if (hasAllChat() != other.hasAllChat()) return false;
+      if (hasAllChat()) {
+        if (getAllChat()
+            != other.getAllChat()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAccountId()) {
+        hash = (37 * hash) + ACCOUNT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountId();
+      }
+      if (hasText()) {
+        hash = (37 * hash) + TEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getText().hashCode();
+      }
+      if (hasAllChat()) {
+        hash = (37 * hash) + ALL_CHAT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getAllChat());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Cstrike15Usermessages.CCSUsrMsgPreMatchSayText prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCSUsrMsgPreMatchSayText}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCSUsrMsgPreMatchSayText)
+        Cstrike15Usermessages.CCSUsrMsgPreMatchSayTextOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Cstrike15Usermessages.internal_static_CCSUsrMsgPreMatchSayText_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Cstrike15Usermessages.internal_static_CCSUsrMsgPreMatchSayText_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Cstrike15Usermessages.CCSUsrMsgPreMatchSayText.class, Cstrike15Usermessages.CCSUsrMsgPreMatchSayText.Builder.class);
+      }
+
+      // Construct using Cstrike15Usermessages.CCSUsrMsgPreMatchSayText.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        accountId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        text_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        allChat_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Cstrike15Usermessages.internal_static_CCSUsrMsgPreMatchSayText_descriptor;
+      }
+
+      @java.lang.Override
+      public Cstrike15Usermessages.CCSUsrMsgPreMatchSayText getDefaultInstanceForType() {
+        return Cstrike15Usermessages.CCSUsrMsgPreMatchSayText.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Cstrike15Usermessages.CCSUsrMsgPreMatchSayText build() {
+        Cstrike15Usermessages.CCSUsrMsgPreMatchSayText result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Cstrike15Usermessages.CCSUsrMsgPreMatchSayText buildPartial() {
+        Cstrike15Usermessages.CCSUsrMsgPreMatchSayText result = new Cstrike15Usermessages.CCSUsrMsgPreMatchSayText(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.accountId_ = accountId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.text_ = text_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.allChat_ = allChat_;
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Cstrike15Usermessages.CCSUsrMsgPreMatchSayText) {
+          return mergeFrom((Cstrike15Usermessages.CCSUsrMsgPreMatchSayText)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Cstrike15Usermessages.CCSUsrMsgPreMatchSayText other) {
+        if (other == Cstrike15Usermessages.CCSUsrMsgPreMatchSayText.getDefaultInstance()) return this;
+        if (other.hasAccountId()) {
+          setAccountId(other.getAccountId());
+        }
+        if (other.hasText()) {
+          bitField0_ |= 0x00000002;
+          text_ = other.text_;
+          onChanged();
+        }
+        if (other.hasAllChat()) {
+          setAllChat(other.getAllChat());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Cstrike15Usermessages.CCSUsrMsgPreMatchSayText parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Cstrike15Usermessages.CCSUsrMsgPreMatchSayText) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int accountId_ ;
+      /**
+       * <code>optional uint32 account_id = 1;</code>
+       * @return Whether the accountId field is set.
+       */
+      @java.lang.Override
+      public boolean hasAccountId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 account_id = 1;</code>
+       * @return The accountId.
+       */
+      @java.lang.Override
+      public int getAccountId() {
+        return accountId_;
+      }
+      /**
+       * <code>optional uint32 account_id = 1;</code>
+       * @param value The accountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountId(int value) {
+        bitField0_ |= 0x00000001;
+        accountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 account_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        accountId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <code>optional string text = 2;</code>
+       * @return Whether the text field is set.
+       */
+      public boolean hasText() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean allChat_ ;
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       * @return Whether the allChat field is set.
+       */
+      @java.lang.Override
+      public boolean hasAllChat() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       * @return The allChat.
+       */
+      @java.lang.Override
+      public boolean getAllChat() {
+        return allChat_;
+      }
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       * @param value The allChat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllChat(boolean value) {
+        bitField0_ |= 0x00000004;
+        allChat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllChat() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        allChat_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CCSUsrMsgPreMatchSayText)
+    }
+
+    // @@protoc_insertion_point(class_scope:CCSUsrMsgPreMatchSayText)
+    private static final Cstrike15Usermessages.CCSUsrMsgPreMatchSayText DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Cstrike15Usermessages.CCSUsrMsgPreMatchSayText();
+    }
+
+    public static Cstrike15Usermessages.CCSUsrMsgPreMatchSayText getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCSUsrMsgPreMatchSayText>
+        PARSER = new com.google.protobuf.AbstractParser<CCSUsrMsgPreMatchSayText>() {
+      @java.lang.Override
+      public CCSUsrMsgPreMatchSayText parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCSUsrMsgPreMatchSayText(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CCSUsrMsgPreMatchSayText> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCSUsrMsgPreMatchSayText> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Cstrike15Usermessages.CCSUsrMsgPreMatchSayText getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCSUsrMsg_VGUIMenu_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCSUsrMsg_VGUIMenu_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_VGUIMenu_Subkey_descriptor;
+    internal_static_CCSUsrMsg_VGUIMenu_Keys_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_VGUIMenu_Subkey_fieldAccessorTable;
+      internal_static_CCSUsrMsg_VGUIMenu_Keys_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCSUsrMsg_Geiger_descriptor;
   private static final 
@@ -70325,21 +70505,6 @@ public final class Cstrike15Usermessages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCSUsrMsg_HudText_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_SayText_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_SayText_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_SayText2_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_SayText2_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_TextMsg_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_TextMsg_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCSUsrMsg_HudMsg_descriptor;
   private static final 
@@ -70496,11 +70661,6 @@ public final class Cstrike15Usermessages {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCSUsrMsg_PlayerStatsUpdate_Stat_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_DisplayInventory_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_DisplayInventory_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCSUsrMsg_QuestProgress_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -70656,35 +70816,40 @@ public final class Cstrike15Usermessages {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCSUsrMsg_EndOfMatchAllPlayersData_PlayerData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_RoundImpactScoreData_descriptor;
+    internal_static_CCSUsrMsg_RoundEndReportData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_RoundImpactScoreData_fieldAccessorTable;
+      internal_static_CCSUsrMsg_RoundEndReportData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_descriptor;
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_fieldAccessorTable;
+      internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Victim_descriptor;
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Victim_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Victim_fieldAccessorTable;
+      internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Victim_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Objective_descriptor;
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Objective_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Objective_fieldAccessorTable;
+      internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Objective_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Damage_descriptor;
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Damage_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Damage_fieldAccessorTable;
+      internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Damage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCSUsrMsg_RoundImpactScoreData_InitialConditions_descriptor;
+    internal_static_CCSUsrMsg_RoundEndReportData_InitialConditions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCSUsrMsg_RoundImpactScoreData_InitialConditions_fieldAccessorTable;
+      internal_static_CCSUsrMsg_RoundEndReportData_InitialConditions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCSUsrMsg_PostRoundDamageReport_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCSUsrMsg_PostRoundDamageReport_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCSUsrMsg_CurrentRoundOdds_descriptor;
   private static final 
@@ -70695,6 +70860,11 @@ public final class Cstrike15Usermessages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCSUsrMsg_DeepStats_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCSUsrMsg_ShootInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCSUsrMsg_ShootInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCSUsrMsg_ResetHud_descriptor;
   private static final 
@@ -70735,6 +70905,11 @@ public final class Cstrike15Usermessages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCSUsrMsg_ServerRankRevealAll_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCSUsrMsgPreMatchSayText_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CCSUsrMsgPreMatchSayText_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -70744,257 +70919,265 @@ public final class Cstrike15Usermessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n!csgo/cstrike15_usermessages.proto\032 goo" +
-      "gle/protobuf/descriptor.proto\032\026csgo/netm" +
-      "essages.proto\032\037csgo/cstrike15_gcmessages" +
-      ".proto\"\202\001\n\022CCSUsrMsg_VGUIMenu\022\014\n\004name\030\001 " +
-      "\001(\t\022\014\n\004show\030\002 \001(\010\022+\n\007subkeys\030\003 \003(\0132\032.CCS" +
-      "UsrMsg_VGUIMenu.Subkey\032#\n\006Subkey\022\014\n\004name" +
-      "\030\001 \001(\t\022\013\n\003str\030\002 \001(\t\"!\n\020CCSUsrMsg_Geiger\022" +
-      "\r\n\005range\030\001 \001(\005\" \n\017CCSUsrMsg_Train\022\r\n\005tra" +
-      "in\030\001 \001(\005\"!\n\021CCSUsrMsg_HudText\022\014\n\004text\030\001 " +
-      "\001(\t\"U\n\021CCSUsrMsg_SayText\022\017\n\007ent_idx\030\001 \001(" +
-      "\005\022\014\n\004text\030\002 \001(\t\022\014\n\004chat\030\003 \001(\010\022\023\n\013textall" +
-      "chat\030\004 \001(\010\"j\n\022CCSUsrMsg_SayText2\022\017\n\007ent_" +
-      "idx\030\001 \001(\005\022\014\n\004chat\030\002 \001(\010\022\020\n\010msg_name\030\003 \001(" +
-      "\t\022\016\n\006params\030\004 \003(\t\022\023\n\013textallchat\030\005 \001(\010\"4" +
-      "\n\021CCSUsrMsg_TextMsg\022\017\n\007msg_dst\030\001 \001(\005\022\016\n\006" +
-      "params\030\003 \003(\t\"\340\001\n\020CCSUsrMsg_HudMsg\022\017\n\007cha" +
-      "nnel\030\001 \001(\005\022\032\n\003pos\030\002 \001(\0132\r.CMsgVector2D\022\027" +
-      "\n\004clr1\030\003 \001(\0132\t.CMsgRGBA\022\027\n\004clr2\030\004 \001(\0132\t." +
-      "CMsgRGBA\022\016\n\006effect\030\005 \001(\005\022\024\n\014fade_in_time" +
-      "\030\006 \001(\002\022\025\n\rfade_out_time\030\007 \001(\002\022\021\n\thold_ti" +
-      "me\030\t \001(\002\022\017\n\007fx_time\030\n \001(\002\022\014\n\004text\030\013 \001(\t\"" +
-      "`\n\017CCSUsrMsg_Shake\022\017\n\007command\030\001 \001(\005\022\027\n\017l" +
-      "ocal_amplitude\030\002 \001(\002\022\021\n\tfrequency\030\003 \001(\002\022" +
-      "\020\n\010duration\030\004 \001(\002\"\\\n\016CCSUsrMsg_Fade\022\020\n\010d" +
-      "uration\030\001 \001(\005\022\021\n\thold_time\030\002 \001(\005\022\r\n\005flag" +
-      "s\030\003 \001(\005\022\026\n\003clr\030\004 \001(\0132\t.CMsgRGBA\">\n\020CCSUs" +
-      "rMsg_Rumble\022\r\n\005index\030\001 \001(\005\022\014\n\004data\030\002 \001(\005" +
-      "\022\r\n\005flags\030\003 \001(\005\"^\n\026CCSUsrMsg_CloseCaptio" +
-      "n\022\014\n\004hash\030\001 \001(\r\022\020\n\010duration\030\002 \001(\005\022\023\n\013fro" +
-      "m_player\030\003 \001(\010\022\017\n\007cctoken\030\004 \001(\t\"S\n\034CCSUs" +
-      "rMsg_CloseCaptionDirect\022\014\n\004hash\030\001 \001(\r\022\020\n" +
-      "\010duration\030\002 \001(\005\022\023\n\013from_player\030\003 \001(\010\"*\n\023" +
-      "CCSUsrMsg_SendAudio\022\023\n\013radio_sound\030\001 \001(\t" +
-      "\"]\n\022CCSUsrMsg_RawAudio\022\r\n\005pitch\030\001 \001(\005\022\016\n" +
-      "\006entidx\030\002 \001(\005\022\020\n\010duration\030\003 \001(\002\022\026\n\016voice" +
+      "\n!csgo/cstrike15_usermessages.proto\032\033csg" +
+      "o/networkbasetypes.proto\032\037csgo/cstrike15" +
+      "_gcmessages.proto\"}\n\022CCSUsrMsg_VGUIMenu\022" +
+      "\014\n\004name\030\001 \001(\t\022\014\n\004show\030\002 \001(\010\022&\n\004keys\030\003 \003(" +
+      "\0132\030.CCSUsrMsg_VGUIMenu.Keys\032#\n\004Keys\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"!\n\020CCSUsrMsg_Ge" +
+      "iger\022\r\n\005range\030\001 \001(\005\" \n\017CCSUsrMsg_Train\022\r" +
+      "\n\005train\030\001 \001(\005\"!\n\021CCSUsrMsg_HudText\022\014\n\004te" +
+      "xt\030\001 \001(\t\"\340\001\n\020CCSUsrMsg_HudMsg\022\017\n\007channel" +
+      "\030\001 \001(\005\022\032\n\003pos\030\002 \001(\0132\r.CMsgVector2D\022\027\n\004cl" +
+      "r1\030\003 \001(\0132\t.CMsgRGBA\022\027\n\004clr2\030\004 \001(\0132\t.CMsg" +
+      "RGBA\022\016\n\006effect\030\005 \001(\005\022\024\n\014fade_in_time\030\006 \001" +
+      "(\002\022\025\n\rfade_out_time\030\007 \001(\002\022\021\n\thold_time\030\t" +
+      " \001(\002\022\017\n\007fx_time\030\n \001(\002\022\014\n\004text\030\013 \001(\t\"`\n\017C" +
+      "CSUsrMsg_Shake\022\017\n\007command\030\001 \001(\005\022\027\n\017local" +
+      "_amplitude\030\002 \001(\002\022\021\n\tfrequency\030\003 \001(\002\022\020\n\010d" +
+      "uration\030\004 \001(\002\"\\\n\016CCSUsrMsg_Fade\022\020\n\010durat" +
+      "ion\030\001 \001(\005\022\021\n\thold_time\030\002 \001(\005\022\r\n\005flags\030\003 " +
+      "\001(\005\022\026\n\003clr\030\004 \001(\0132\t.CMsgRGBA\">\n\020CCSUsrMsg" +
+      "_Rumble\022\r\n\005index\030\001 \001(\005\022\014\n\004data\030\002 \001(\005\022\r\n\005" +
+      "flags\030\003 \001(\005\"^\n\026CCSUsrMsg_CloseCaption\022\014\n" +
+      "\004hash\030\001 \001(\r\022\020\n\010duration\030\002 \001(\005\022\023\n\013from_pl" +
+      "ayer\030\003 \001(\010\022\017\n\007cctoken\030\004 \001(\t\"S\n\034CCSUsrMsg" +
+      "_CloseCaptionDirect\022\014\n\004hash\030\001 \001(\r\022\020\n\010dur" +
+      "ation\030\002 \001(\005\022\023\n\013from_player\030\003 \001(\010\"*\n\023CCSU" +
+      "srMsg_SendAudio\022\023\n\013radio_sound\030\001 \001(\t\"a\n\022" +
+      "CCSUsrMsg_RawAudio\022\r\n\005pitch\030\001 \001(\005\022\022\n\006ent" +
+      "idx\030\002 \001(\005:\002-1\022\020\n\010duration\030\003 \001(\002\022\026\n\016voice" +
       "_filename\030\004 \001(\t\"\241\001\n\023CCSUsrMsg_VoiceMask\022" +
       "5\n\014player_masks\030\001 \003(\0132\037.CCSUsrMsg_VoiceM" +
       "ask.PlayerMask\022\031\n\021player_mod_enable\030\002 \001(" +
       "\010\0328\n\nPlayerMask\022\027\n\017game_rules_mask\030\001 \001(\005" +
-      "\022\021\n\tban_masks\030\002 \001(\005\"e\n\020CCSUsrMsg_Damage\022" +
+      "\022\021\n\tban_masks\030\002 \001(\005\"i\n\020CCSUsrMsg_Damage\022" +
       "\016\n\006amount\030\001 \001(\005\022(\n\023inflictor_world_pos\030\002" +
-      " \001(\0132\013.CMsgVector\022\027\n\017victim_entindex\030\003 \001" +
-      "(\005\"X\n\023CCSUsrMsg_RadioText\022\017\n\007msg_dst\030\001 \001" +
-      "(\005\022\016\n\006client\030\002 \001(\005\022\020\n\010msg_name\030\003 \001(\t\022\016\n\006" +
-      "params\030\004 \003(\t\"\"\n\022CCSUsrMsg_HintText\022\014\n\004te" +
-      "xt\030\001 \001(\t\"&\n\025CCSUsrMsg_KeyHintText\022\r\n\005hin" +
-      "ts\030\001 \003(\t\"\326\002\n$CCSUsrMsg_ProcessSpottedEnt" +
-      "ityUpdate\022\022\n\nnew_update\030\001 \001(\010\022Q\n\016entity_" +
-      "updates\030\002 \003(\01329.CCSUsrMsg_ProcessSpotted" +
-      "EntityUpdate.SpottedEntityUpdate\032\306\001\n\023Spo" +
-      "ttedEntityUpdate\022\022\n\nentity_idx\030\001 \001(\005\022\020\n\010" +
-      "class_id\030\002 \001(\005\022\020\n\010origin_x\030\003 \001(\005\022\020\n\010orig" +
-      "in_y\030\004 \001(\005\022\020\n\010origin_z\030\005 \001(\005\022\017\n\007angle_y\030" +
-      "\006 \001(\005\022\017\n\007defuser\030\007 \001(\010\022\032\n\022player_has_def" +
-      "user\030\010 \001(\010\022\025\n\rplayer_has_c4\030\t \001(\010\"S\n\035CCS" +
-      "UsrMsg_SendPlayerItemDrops\0222\n\016entity_upd" +
-      "ates\030\001 \003(\0132\032.CEconItemPreviewDataBlock\"_" +
-      "\n\035CCSUsrMsg_SendPlayerItemFound\022,\n\010itemi" +
-      "nfo\030\001 \001(\0132\032.CEconItemPreviewDataBlock\022\020\n" +
-      "\010entindex\030\002 \001(\005\"o\n\026CCSUsrMsg_ReloadEffec" +
-      "t\022\016\n\006entidx\030\001 \001(\005\022\017\n\007actanim\030\002 \001(\005\022\020\n\010or" +
-      "igin_x\030\003 \001(\002\022\020\n\010origin_y\030\004 \001(\002\022\020\n\010origin" +
-      "_z\030\005 \001(\002\"\177\n\025CCSUsrMsg_WeaponSound\022\016\n\006ent" +
-      "idx\030\001 \001(\005\022\020\n\010origin_x\030\002 \001(\002\022\020\n\010origin_y\030" +
-      "\003 \001(\002\022\020\n\010origin_z\030\004 \001(\002\022\r\n\005sound\030\005 \001(\t\022\021" +
-      "\n\ttimestamp\030\006 \001(\002\"r\n\037CCSUsrMsg_UpdateScr" +
-      "eenHealthBar\022\016\n\006entidx\030\001 \001(\005\022\027\n\017healthra" +
-      "tio_old\030\002 \001(\002\022\027\n\017healthratio_new\030\003 \001(\002\022\r" +
-      "\n\005style\030\004 \001(\005\"K\n CCSUsrMsg_EntityOutline" +
-      "Highlight\022\016\n\006entidx\030\001 \001(\005\022\027\n\017removehighl" +
-      "ight\030\002 \001(\010\"\'\n\025CCSUsrMsg_AdjustMoney\022\016\n\006a" +
-      "mount\030\001 \001(\005\"U\n\023CCSUsrMsg_ReportHit\022\r\n\005po" +
-      "s_x\030\001 \001(\002\022\r\n\005pos_y\030\002 \001(\002\022\021\n\ttimestamp\030\004 " +
-      "\001(\002\022\r\n\005pos_z\030\003 \001(\002\"R\n\021CCSUsrMsg_KillCam\022" +
-      "\020\n\010obs_mode\030\001 \001(\005\022\024\n\014first_target\030\002 \001(\005\022" +
-      "\025\n\rsecond_target\030\003 \001(\005\"\213\001\n\032CCSUsrMsg_Des" +
-      "iredTimescale\022\031\n\021desired_timescale\030\001 \001(\002" +
-      "\022\035\n\025duration_realtime_sec\030\002 \001(\002\022\031\n\021inter" +
-      "polator_type\030\003 \001(\005\022\030\n\020start_blend_time\030\004" +
-      " \001(\002\"3\n\032CCSUsrMsg_CurrentTimescale\022\025\n\rcu" +
-      "r_timescale\030\001 \001(\002\"Q\n\032CCSUsrMsg_Achieveme" +
-      "ntEvent\022\023\n\013achievement\030\001 \001(\005\022\r\n\005count\030\002 " +
-      "\001(\005\022\017\n\007user_id\030\003 \001(\005\"r\n\034CCSUsrMsg_MatchE" +
-      "ndConditions\022\021\n\tfraglimit\030\001 \001(\005\022\024\n\014mp_ma" +
-      "xrounds\030\002 \001(\005\022\023\n\013mp_winlimit\030\003 \001(\005\022\024\n\014mp" +
-      "_timelimit\030\004 \001(\005\"\242\001\n\033CCSUsrMsg_PlayerSta" +
-      "tsUpdate\022\017\n\007version\030\001 \001(\005\0220\n\005stats\030\004 \003(\013" +
-      "2!.CCSUsrMsg_PlayerStatsUpdate.Stat\022\017\n\007u" +
-      "ser_id\030\005 \001(\005\022\013\n\003crc\030\006 \001(\005\032\"\n\004Stat\022\013\n\003idx" +
-      "\030\001 \001(\005\022\r\n\005delta\030\002 \001(\005\">\n\032CCSUsrMsg_Displ" +
-      "ayInventory\022\017\n\007display\030\001 \001(\010\022\017\n\007user_id\030" +
-      "\002 \001(\005\"p\n\027CCSUsrMsg_QuestProgress\022\020\n\010ques" +
-      "t_id\030\001 \001(\r\022\025\n\rnormal_points\030\002 \001(\r\022\024\n\014bon" +
-      "us_points\030\003 \001(\r\022\026\n\016is_event_quest\030\004 \001(\010\"" +
-      "E\n\036CCSUsrMsg_ScoreLeaderboardData\022#\n\004dat" +
-      "a\030\001 \001(\0132\025.ScoreLeaderboardData\"S\n%CCSUsr" +
-      "Msg_PlayerDecalDigitalSignature\022*\n\004data\030" +
-      "\001 \001(\0132\034.PlayerDecalDigitalSignature\":\n\022C" +
-      "CSUsrMsg_XRankGet\022\020\n\010mode_idx\030\001 \001(\005\022\022\n\nc" +
-      "ontroller\030\002 \001(\005\"K\n\022CCSUsrMsg_XRankUpd\022\020\n" +
-      "\010mode_idx\030\001 \001(\005\022\022\n\ncontroller\030\002 \001(\005\022\017\n\007r" +
-      "anking\030\003 \001(\005\"8\n\030CCSUsrMsg_CallVoteFailed" +
-      "\022\016\n\006reason\030\001 \001(\005\022\014\n\004time\030\002 \001(\005\"\265\001\n\023CCSUs" +
-      "rMsg_VoteStart\022\014\n\004team\030\001 \001(\005\022\017\n\007ent_idx\030" +
-      "\002 \001(\005\022\021\n\tvote_type\030\003 \001(\005\022\020\n\010disp_str\030\004 \001" +
-      "(\t\022\023\n\013details_str\030\005 \001(\t\022\026\n\016other_team_st" +
-      "r\030\006 \001(\t\022\026\n\016is_yes_no_vote\030\007 \001(\010\022\025\n\rentid" +
-      "x_target\030\010 \001(\005\"\\\n\022CCSUsrMsg_VotePass\022\014\n\004" +
-      "team\030\001 \001(\005\022\021\n\tvote_type\030\002 \001(\005\022\020\n\010disp_st" +
-      "r\030\003 \001(\t\022\023\n\013details_str\030\004 \001(\t\"4\n\024CCSUsrMs" +
-      "g_VoteFailed\022\014\n\004team\030\001 \001(\005\022\016\n\006reason\030\002 \001" +
-      "(\005\"/\n\023CCSUsrMsg_VoteSetup\022\030\n\020potential_i" +
-      "ssues\030\001 \003(\t\"\204\001\n&CCSUsrMsg_SendLastKiller" +
-      "DamageToClient\022\026\n\016num_hits_given\030\001 \001(\005\022\024" +
-      "\n\014damage_given\030\002 \001(\005\022\026\n\016num_hits_taken\030\003" +
-      " \001(\005\022\024\n\014damage_taken\030\004 \001(\005\"\335\001\n\032CCSUsrMsg" +
-      "_ServerRankUpdate\022;\n\013rank_update\030\001 \003(\0132&" +
-      ".CCSUsrMsg_ServerRankUpdate.RankUpdate\032\201" +
-      "\001\n\nRankUpdate\022\022\n\naccount_id\030\001 \001(\005\022\020\n\010ran" +
-      "k_old\030\002 \001(\005\022\020\n\010rank_new\030\003 \001(\005\022\020\n\010num_win" +
-      "s\030\004 \001(\005\022\023\n\013rank_change\030\005 \001(\002\022\024\n\014rank_typ" +
-      "e_id\030\006 \001(\005\"Q\n\022CCSUsrMsg_XpUpdate\022;\n\004data" +
-      "\030\001 \001(\0132-.CMsgGCCstrike15_v2_GC2ServerNot" +
-      "ifyXPRewarded\"$\n\024CCSUsrMsg_ItemPickup\022\014\n" +
-      "\004item\030\001 \001(\t\"Y\n\022CCSUsrMsg_ShowMenu\022\030\n\020bit" +
-      "s_valid_slots\030\001 \001(\005\022\024\n\014display_time\030\002 \001(" +
-      "\005\022\023\n\013menu_string\030\003 \001(\t\"!\n\021CCSUsrMsg_BarT" +
-      "ime\022\014\n\004time\030\001 \001(\t\"\'\n\024CCSUsrMsg_AmmoDenie" +
-      "d\022\017\n\007ammoIdx\030\001 \001(\005\"0\n\031CCSUsrMsg_MarkAchi" +
-      "evement\022\023\n\013achievement\030\001 \001(\t\",\n\032CCSUsrMs" +
-      "g_MatchStatsUpdate\022\016\n\006update\030\001 \001(\t\"3\n\022CC" +
-      "SUsrMsg_ItemDrop\022\016\n\006itemid\030\001 \001(\003\022\r\n\005deat" +
-      "h\030\002 \001(\010\"+\n\031CCSUsrMsg_GlowPropTurnOff\022\016\n\006" +
-      "entidx\030\001 \001(\005\"b\n\036CCSUsrMsg_RoundBackupFil" +
-      "enames\022\r\n\005count\030\001 \001(\005\022\r\n\005index\030\002 \001(\005\022\020\n\010" +
-      "filename\030\003 \001(\t\022\020\n\010nicename\030\004 \001(\t\"D\n\016CCSU" +
-      "srMsg_SSUI\022\014\n\004show\030\001 \001(\010\022\022\n\nstart_time\030\002" +
-      " \001(\002\022\020\n\010end_time\030\003 \001(\002\"\265\003\n\027CCSUsrMsg_Sur" +
-      "vivalStats\022\014\n\004xuid\030\001 \001(\004\022,\n\005facts\030\002 \003(\0132" +
-      "\035.CCSUsrMsg_SurvivalStats.Fact\0221\n\005users\030" +
-      "\003 \003(\0132\".CCSUsrMsg_SurvivalStats.Placemen" +
-      "t\0220\n\007damages\030\005 \003(\0132\037.CCSUsrMsg_SurvivalS" +
-      "tats.Damage\022\022\n\nticknumber\030\004 \001(\005\032M\n\004Fact\022" +
-      "\014\n\004type\030\001 \001(\005\022\017\n\007display\030\002 \001(\005\022\r\n\005value\030" +
-      "\003 \001(\005\022\027\n\017interestingness\030\004 \001(\002\032@\n\tPlacem" +
-      "ent\022\014\n\004xuid\030\001 \001(\004\022\022\n\nteamnumber\030\002 \001(\005\022\021\n" +
-      "\tplacement\030\003 \001(\005\032T\n\006Damage\022\014\n\004xuid\030\001 \001(\004" +
-      "\022\n\n\002to\030\002 \001(\005\022\017\n\007to_hits\030\003 \001(\005\022\014\n\004from\030\004 " +
-      "\001(\005\022\021\n\tfrom_hits\030\005 \001(\005\"\234\003\n\"CCSUsrMsg_End" +
-      "OfMatchAllPlayersData\022E\n\rallplayerdata\030\001" +
-      " \003(\0132..CCSUsrMsg_EndOfMatchAllPlayersDat" +
-      "a.PlayerData\022\r\n\005scene\030\002 \001(\005\032>\n\010Accolade\022" +
-      "\021\n\teaccolade\030\001 \001(\005\022\r\n\005value\030\002 \001(\002\022\020\n\010pos" +
-      "ition\030\003 \001(\005\032\337\001\n\nPlayerData\022\020\n\010entindex\030\001" +
-      " \001(\005\022\014\n\004xuid\030\002 \001(\004\022\014\n\004name\030\003 \001(\t\022\022\n\nteam" +
-      "number\030\004 \001(\005\022@\n\nnomination\030\005 \001(\0132,.CCSUs" +
-      "rMsg_EndOfMatchAllPlayersData.Accolade\022)" +
-      "\n\005items\030\006 \003(\0132\032.CEconItemPreviewDataBloc" +
-      "k\022\023\n\013playercolor\030\007 \001(\005\022\r\n\005isbot\030\010 \001(\010\"\352\006" +
-      "\n\036CCSUsrMsg_RoundImpactScoreData\022J\n\017init" +
-      "_conditions\030\001 \001(\01321.CCSUsrMsg_RoundImpac" +
-      "tScoreData.InitialConditions\022D\n\022all_ris_" +
-      "event_data\030\002 \003(\0132(.CCSUsrMsg_RoundImpact" +
-      "ScoreData.RisEvent\032\331\004\n\010RisEvent\022\021\n\ttimes" +
-      "tamp\030\001 \001(\002\022\026\n\016terrorist_odds\030\002 \001(\005\022\020\n\010ct" +
-      "_alive\030\003 \001(\005\022\017\n\007t_alive\030\004 \001(\005\022D\n\013victim_" +
-      "data\030\005 \001(\0132/.CCSUsrMsg_RoundImpactScoreD" +
-      "ata.RisEvent.Victim\022J\n\016objective_data\030\006 " +
-      "\001(\01322.CCSUsrMsg_RoundImpactScoreData.Ris" +
-      "Event.Objective\022H\n\017all_damage_data\030\007 \003(\013" +
-      "2/.CCSUsrMsg_RoundImpactScoreData.RisEve" +
-      "nt.Damage\032m\n\006Victim\022\023\n\013team_number\030\001 \001(\005" +
-      "\022\020\n\010entindex\030\002 \001(\005\022\014\n\004xuid\030\003 \001(\004\022\r\n\005colo" +
-      "r\030\004 \001(\005\022\016\n\006is_bot\030\005 \001(\010\022\017\n\007is_dead\030\006 \001(\010" +
-      "\032\031\n\tObjective\022\014\n\004type\030\001 \001(\005\032\230\001\n\006Damage\022\027" +
-      "\n\017target_entindex\030\001 \001(\005\022\023\n\013target_xuid\030\002" +
-      " \001(\004\022\026\n\016health_removed\030\003 \001(\005\022\020\n\010num_hits" +
-      "\030\004 \001(\005\022\035\n\025return_health_removed\030\005 \001(\005\022\027\n" +
-      "\017num_return_hits\030\006 \001(\005\032Z\n\021InitialConditi" +
-      "ons\022\026\n\016ct_equip_value\030\001 \001(\005\022\025\n\rt_equip_v" +
-      "alue\030\002 \001(\005\022\026\n\016terrorist_odds\030\003 \001(\005\"*\n\032CC" +
-      "SUsrMsg_CurrentRoundOdds\022\014\n\004odds\030\001 \001(\005\"F" +
-      "\n\023CCSUsrMsg_DeepStats\022/\n\005stats\030\001 \001(\0132 .C" +
-      "MsgGCCStrike15_ClientDeepStats\"#\n\022CCSUsr" +
-      "Msg_ResetHud\022\r\n\005reset\030\001 \001(\010\"$\n\023CCSUsrMsg" +
-      "_GameTitle\022\r\n\005dummy\030\001 \001(\005\"\'\n\026CCSUsrMsg_R" +
-      "equestState\022\r\n\005dummy\030\001 \001(\005\",\n\033CCSUsrMsg_" +
-      "StopSpectatorMode\022\r\n\005dummy\030\001 \001(\005\",\n\033CCSU" +
-      "srMsg_DisconnectToLobby\022\r\n\005dummy\030\001 \001(\005\")" +
-      "\n\030CCSUsrMsg_WarmupHasEnded\022\r\n\005dummy\030\001 \001(" +
-      "\005\"%\n\024CCSUsrMsg_ClientInfo\022\r\n\005dummy\030\001 \001(\005" +
-      "\"\204\001\n\035CCSUsrMsg_ServerRankRevealAll\022\035\n\025se" +
-      "conds_till_shutdown\030\001 \001(\005\022D\n\013reservation" +
-      "\030\002 \001(\0132/.CMsgGCCStrike15_v2_MatchmakingG" +
-      "C2ServerReserve*\257\016\n\026ECstrike15UserMessag" +
-      "es\022\022\n\016CS_UM_VGUIMenu\020\001\022\020\n\014CS_UM_Geiger\020\002" +
-      "\022\017\n\013CS_UM_Train\020\003\022\021\n\rCS_UM_HudText\020\004\022\021\n\r" +
-      "CS_UM_SayText\020\005\022\022\n\016CS_UM_SayText2\020\006\022\021\n\rC" +
-      "S_UM_TextMsg\020\007\022\020\n\014CS_UM_HudMsg\020\010\022\022\n\016CS_U" +
-      "M_ResetHud\020\t\022\023\n\017CS_UM_GameTitle\020\n\022\017\n\013CS_" +
-      "UM_Shake\020\014\022\016\n\nCS_UM_Fade\020\r\022\020\n\014CS_UM_Rumb" +
-      "le\020\016\022\026\n\022CS_UM_CloseCaption\020\017\022\034\n\030CS_UM_Cl" +
-      "oseCaptionDirect\020\020\022\023\n\017CS_UM_SendAudio\020\021\022" +
-      "\022\n\016CS_UM_RawAudio\020\022\022\023\n\017CS_UM_VoiceMask\020\023" +
-      "\022\026\n\022CS_UM_RequestState\020\024\022\020\n\014CS_UM_Damage" +
-      "\020\025\022\023\n\017CS_UM_RadioText\020\026\022\022\n\016CS_UM_HintTex" +
-      "t\020\027\022\025\n\021CS_UM_KeyHintText\020\030\022$\n CS_UM_Proc" +
-      "essSpottedEntityUpdate\020\031\022\026\n\022CS_UM_Reload" +
-      "Effect\020\032\022\025\n\021CS_UM_AdjustMoney\020\033\022\031\n\025CS_UM" +
-      "_UpdateTeamMoney\020\034\022\033\n\027CS_UM_StopSpectato" +
-      "rMode\020\035\022\021\n\rCS_UM_KillCam\020\036\022\032\n\026CS_UM_Desi" +
-      "redTimescale\020\037\022\032\n\026CS_UM_CurrentTimescale" +
-      "\020 \022\032\n\026CS_UM_AchievementEvent\020!\022\034\n\030CS_UM_" +
-      "MatchEndConditions\020\"\022\033\n\027CS_UM_Disconnect" +
-      "ToLobby\020#\022\033\n\027CS_UM_PlayerStatsUpdate\020$\022\032" +
-      "\n\026CS_UM_DisplayInventory\020%\022\030\n\024CS_UM_Warm" +
-      "upHasEnded\020&\022\024\n\020CS_UM_ClientInfo\020\'\022\022\n\016CS" +
-      "_UM_XRankGet\020(\022\022\n\016CS_UM_XRankUpd\020)\022\030\n\024CS" +
-      "_UM_CallVoteFailed\020-\022\023\n\017CS_UM_VoteStart\020" +
-      ".\022\022\n\016CS_UM_VotePass\020/\022\024\n\020CS_UM_VoteFaile" +
-      "d\0200\022\023\n\017CS_UM_VoteSetup\0201\022\035\n\031CS_UM_Server" +
-      "RankRevealAll\0202\022&\n\"CS_UM_SendLastKillerD" +
-      "amageToClient\0203\022\032\n\026CS_UM_ServerRankUpdat" +
-      "e\0204\022\024\n\020CS_UM_ItemPickup\0205\022\022\n\016CS_UM_ShowM" +
-      "enu\0206\022\021\n\rCS_UM_BarTime\0207\022\024\n\020CS_UM_AmmoDe" +
-      "nied\0208\022\031\n\025CS_UM_MarkAchievement\0209\022\032\n\026CS_" +
-      "UM_MatchStatsUpdate\020:\022\022\n\016CS_UM_ItemDrop\020" +
-      ";\022\031\n\025CS_UM_GlowPropTurnOff\020<\022\035\n\031CS_UM_Se" +
-      "ndPlayerItemDrops\020=\022\036\n\032CS_UM_RoundBackup" +
-      "Filenames\020>\022\035\n\031CS_UM_SendPlayerItemFound" +
-      "\020?\022\023\n\017CS_UM_ReportHit\020@\022\022\n\016CS_UM_XpUpdat" +
-      "e\020A\022\027\n\023CS_UM_QuestProgress\020B\022\036\n\032CS_UM_Sc" +
-      "oreLeaderboardData\020C\022%\n!CS_UM_PlayerDeca" +
-      "lDigitalSignature\020D\022\025\n\021CS_UM_WeaponSound" +
-      "\020E\022\037\n\033CS_UM_UpdateScreenHealthBar\020F\022 \n\034C" +
-      "S_UM_EntityOutlineHighlight\020G\022\016\n\nCS_UM_S" +
-      "SUI\020H\022\027\n\023CS_UM_SurvivalStats\020I\022\034\n\030CS_UM_" +
-      "DisconnectToLobby2\020J\022\"\n\036CS_UM_EndOfMatch" +
-      "AllPlayersData\020K\022\036\n\032CS_UM_RoundImpactSco" +
-      "reData\020O\022\032\n\026CS_UM_CurrentRoundOdds\020P\022\023\n\017" +
-      "CS_UM_DeepStats\020Q*\210\001\n\"ECSUsrMsg_Disconne" +
-      "ctToLobby_Action\0220\n,k_ECSUsrMsg_Disconne" +
-      "ctToLobby_Action_Default\020\000\0220\n,k_ECSUsrMs" +
-      "g_DisconnectToLobby_Action_GoQueue\020\001B\005H\001" +
-      "\200\001\000"
+      " \001(\0132\013.CMsgVector\022\033\n\017victim_entindex\030\003 \001" +
+      "(\005:\002-1\"\\\n\023CCSUsrMsg_RadioText\022\017\n\007msg_dst" +
+      "\030\001 \001(\005\022\022\n\006client\030\002 \001(\005:\002-1\022\020\n\010msg_name\030\003" +
+      " \001(\t\022\016\n\006params\030\004 \003(\t\"%\n\022CCSUsrMsg_HintTe" +
+      "xt\022\017\n\007message\030\001 \001(\t\")\n\025CCSUsrMsg_KeyHint" +
+      "Text\022\020\n\010messages\030\001 \003(\t\"\332\002\n$CCSUsrMsg_Pro" +
+      "cessSpottedEntityUpdate\022\022\n\nnew_update\030\001 " +
+      "\001(\010\022Q\n\016entity_updates\030\002 \003(\01329.CCSUsrMsg_" +
+      "ProcessSpottedEntityUpdate.SpottedEntity" +
+      "Update\032\312\001\n\023SpottedEntityUpdate\022\026\n\nentity" +
+      "_idx\030\001 \001(\005:\002-1\022\020\n\010class_id\030\002 \001(\005\022\020\n\010orig" +
+      "in_x\030\003 \001(\005\022\020\n\010origin_y\030\004 \001(\005\022\020\n\010origin_z" +
+      "\030\005 \001(\005\022\017\n\007angle_y\030\006 \001(\005\022\017\n\007defuser\030\007 \001(\010" +
+      "\022\032\n\022player_has_defuser\030\010 \001(\010\022\025\n\rplayer_h" +
+      "as_c4\030\t \001(\010\"S\n\035CCSUsrMsg_SendPlayerItemD" +
+      "rops\0222\n\016entity_updates\030\001 \003(\0132\032.CEconItem" +
+      "PreviewDataBlock\"e\n\035CCSUsrMsg_SendPlayer" +
+      "ItemFound\022,\n\010iteminfo\030\001 \001(\0132\032.CEconItemP" +
+      "reviewDataBlock\022\026\n\nplayerslot\030\002 \001(\005:\002-1\"" +
+      "s\n\026CCSUsrMsg_ReloadEffect\022\022\n\006entidx\030\001 \001(" +
+      "\005:\002-1\022\017\n\007actanim\030\002 \001(\005\022\020\n\010origin_x\030\003 \001(\002" +
+      "\022\020\n\010origin_y\030\004 \001(\002\022\020\n\010origin_z\030\005 \001(\002\"\245\001\n" +
+      "\025CCSUsrMsg_WeaponSound\022\022\n\006entidx\030\001 \001(\005:\002" +
+      "-1\022\020\n\010origin_x\030\002 \001(\002\022\020\n\010origin_y\030\003 \001(\002\022\020" +
+      "\n\010origin_z\030\004 \001(\002\022\r\n\005sound\030\005 \001(\t\022\026\n\016game_" +
+      "timestamp\030\006 \001(\002\022\033\n\023source_soundscapeid\030\007" +
+      " \001(\007\"v\n\037CCSUsrMsg_UpdateScreenHealthBar\022" +
+      "\022\n\006entidx\030\001 \001(\005:\002-1\022\027\n\017healthratio_old\030\002" +
+      " \001(\002\022\027\n\017healthratio_new\030\003 \001(\002\022\r\n\005style\030\004" +
+      " \001(\005\"O\n CCSUsrMsg_EntityOutlineHighlight" +
+      "\022\022\n\006entidx\030\001 \001(\005:\002-1\022\027\n\017removehighlight\030" +
+      "\002 \001(\010\"\'\n\025CCSUsrMsg_AdjustMoney\022\016\n\006amount" +
+      "\030\001 \001(\005\"U\n\023CCSUsrMsg_ReportHit\022\r\n\005pos_x\030\001" +
+      " \001(\002\022\r\n\005pos_y\030\002 \001(\002\022\021\n\ttimestamp\030\004 \001(\002\022\r" +
+      "\n\005pos_z\030\003 \001(\002\"Z\n\021CCSUsrMsg_KillCam\022\020\n\010ob" +
+      "s_mode\030\001 \001(\005\022\030\n\014first_target\030\002 \001(\005:\002-1\022\031" +
+      "\n\rsecond_target\030\003 \001(\005:\002-1\"\213\001\n\032CCSUsrMsg_" +
+      "DesiredTimescale\022\031\n\021desired_timescale\030\001 " +
+      "\001(\002\022\035\n\025duration_realtime_sec\030\002 \001(\002\022\031\n\021in" +
+      "terpolator_type\030\003 \001(\005\022\030\n\020start_blend_tim" +
+      "e\030\004 \001(\002\"3\n\032CCSUsrMsg_CurrentTimescale\022\025\n" +
+      "\rcur_timescale\030\001 \001(\002\"Q\n\032CCSUsrMsg_Achiev" +
+      "ementEvent\022\023\n\013achievement\030\001 \001(\005\022\r\n\005count" +
+      "\030\002 \001(\005\022\017\n\007user_id\030\003 \001(\005\"r\n\034CCSUsrMsg_Mat" +
+      "chEndConditions\022\021\n\tfraglimit\030\001 \001(\005\022\024\n\014mp" +
+      "_maxrounds\030\002 \001(\005\022\023\n\013mp_winlimit\030\003 \001(\005\022\024\n" +
+      "\014mp_timelimit\030\004 \001(\002\"\242\001\n\033CCSUsrMsg_Player" +
+      "StatsUpdate\022\017\n\007version\030\001 \001(\005\0220\n\005stats\030\004 " +
+      "\003(\0132!.CCSUsrMsg_PlayerStatsUpdate.Stat\022\017" +
+      "\n\007ehandle\030\005 \001(\r\022\013\n\003crc\030\006 \001(\005\032\"\n\004Stat\022\013\n\003" +
+      "idx\030\001 \001(\005\022\r\n\005delta\030\002 \001(\005\"p\n\027CCSUsrMsg_Qu" +
+      "estProgress\022\020\n\010quest_id\030\001 \001(\r\022\025\n\rnormal_" +
+      "points\030\002 \001(\r\022\024\n\014bonus_points\030\003 \001(\r\022\026\n\016is" +
+      "_event_quest\030\004 \001(\010\"E\n\036CCSUsrMsg_ScoreLea" +
+      "derboardData\022#\n\004data\030\001 \001(\0132\025.ScoreLeader" +
+      "boardData\"S\n%CCSUsrMsg_PlayerDecalDigita" +
+      "lSignature\022*\n\004data\030\001 \001(\0132\034.PlayerDecalDi" +
+      "gitalSignature\":\n\022CCSUsrMsg_XRankGet\022\020\n\010" +
+      "mode_idx\030\001 \001(\005\022\022\n\ncontroller\030\002 \001(\005\"K\n\022CC" +
+      "SUsrMsg_XRankUpd\022\020\n\010mode_idx\030\001 \001(\005\022\022\n\nco" +
+      "ntroller\030\002 \001(\005\022\017\n\007ranking\030\003 \001(\005\"8\n\030CCSUs" +
+      "rMsg_CallVoteFailed\022\016\n\006reason\030\001 \001(\005\022\014\n\004t" +
+      "ime\030\002 \001(\005\"\306\001\n\023CCSUsrMsg_VoteStart\022\014\n\004tea" +
+      "m\030\001 \001(\005\022\027\n\013player_slot\030\002 \001(\005:\002-1\022\021\n\tvote" +
+      "_type\030\003 \001(\005\022\020\n\010disp_str\030\004 \001(\t\022\023\n\013details" +
+      "_str\030\005 \001(\t\022\026\n\016other_team_str\030\006 \001(\t\022\026\n\016is" +
+      "_yes_no_vote\030\007 \001(\010\022\036\n\022player_slot_target" +
+      "\030\010 \001(\005:\002-1\"\\\n\022CCSUsrMsg_VotePass\022\014\n\004team" +
+      "\030\001 \001(\005\022\021\n\tvote_type\030\002 \001(\005\022\020\n\010disp_str\030\003 " +
+      "\001(\t\022\023\n\013details_str\030\004 \001(\t\"4\n\024CCSUsrMsg_Vo" +
+      "teFailed\022\014\n\004team\030\001 \001(\005\022\016\n\006reason\030\002 \001(\005\"/" +
+      "\n\023CCSUsrMsg_VoteSetup\022\030\n\020potential_issue" +
+      "s\030\001 \003(\t\"\276\001\n&CCSUsrMsg_SendLastKillerDama" +
+      "geToClient\022\026\n\016num_hits_given\030\001 \001(\005\022\024\n\014da" +
+      "mage_given\030\002 \001(\005\022\026\n\016num_hits_taken\030\003 \001(\005" +
+      "\022\024\n\014damage_taken\030\004 \001(\005\022\033\n\023actual_damage_" +
+      "given\030\005 \001(\005\022\033\n\023actual_damage_taken\030\006 \001(\005" +
+      "\"\335\001\n\032CCSUsrMsg_ServerRankUpdate\022;\n\013rank_" +
+      "update\030\001 \003(\0132&.CCSUsrMsg_ServerRankUpdat" +
+      "e.RankUpdate\032\201\001\n\nRankUpdate\022\022\n\naccount_i" +
+      "d\030\001 \001(\005\022\020\n\010rank_old\030\002 \001(\005\022\020\n\010rank_new\030\003 " +
+      "\001(\005\022\020\n\010num_wins\030\004 \001(\005\022\023\n\013rank_change\030\005 \001" +
+      "(\002\022\024\n\014rank_type_id\030\006 \001(\005\"Q\n\022CCSUsrMsg_Xp" +
+      "Update\022;\n\004data\030\001 \001(\0132-.CMsgGCCstrike15_v" +
+      "2_GC2ServerNotifyXPRewarded\"$\n\024CCSUsrMsg" +
+      "_ItemPickup\022\014\n\004item\030\001 \001(\t\"Y\n\022CCSUsrMsg_S" +
+      "howMenu\022\030\n\020bits_valid_slots\030\001 \001(\005\022\024\n\014dis" +
+      "play_time\030\002 \001(\005\022\023\n\013menu_string\030\003 \001(\t\"!\n\021" +
+      "CCSUsrMsg_BarTime\022\014\n\004time\030\001 \001(\t\"\'\n\024CCSUs" +
+      "rMsg_AmmoDenied\022\017\n\007ammoidx\030\001 \001(\005\"0\n\031CCSU" +
+      "srMsg_MarkAchievement\022\023\n\013achievement\030\001 \001" +
+      "(\t\",\n\032CCSUsrMsg_MatchStatsUpdate\022\016\n\006upda" +
+      "te\030\001 \001(\t\"3\n\022CCSUsrMsg_ItemDrop\022\016\n\006itemid" +
+      "\030\001 \001(\003\022\r\n\005death\030\002 \001(\010\"/\n\031CCSUsrMsg_GlowP" +
+      "ropTurnOff\022\022\n\006entidx\030\001 \001(\005:\002-1\"b\n\036CCSUsr" +
+      "Msg_RoundBackupFilenames\022\r\n\005count\030\001 \001(\005\022" +
+      "\r\n\005index\030\002 \001(\005\022\020\n\010filename\030\003 \001(\t\022\020\n\010nice" +
+      "name\030\004 \001(\t\"D\n\016CCSUsrMsg_SSUI\022\014\n\004show\030\001 \001" +
+      "(\010\022\022\n\nstart_time\030\002 \001(\002\022\020\n\010end_time\030\003 \001(\002" +
+      "\"\265\003\n\027CCSUsrMsg_SurvivalStats\022\014\n\004xuid\030\001 \001" +
+      "(\004\022,\n\005facts\030\002 \003(\0132\035.CCSUsrMsg_SurvivalSt" +
+      "ats.Fact\0221\n\005users\030\003 \003(\0132\".CCSUsrMsg_Surv" +
+      "ivalStats.Placement\0220\n\007damages\030\005 \003(\0132\037.C" +
+      "CSUsrMsg_SurvivalStats.Damage\022\022\n\nticknum" +
+      "ber\030\004 \001(\005\032M\n\004Fact\022\014\n\004type\030\001 \001(\005\022\017\n\007displ" +
+      "ay\030\002 \001(\005\022\r\n\005value\030\003 \001(\005\022\027\n\017interestingne" +
+      "ss\030\004 \001(\002\032@\n\tPlacement\022\014\n\004xuid\030\001 \001(\004\022\022\n\nt" +
+      "eamnumber\030\002 \001(\005\022\021\n\tplacement\030\003 \001(\005\032T\n\006Da" +
+      "mage\022\014\n\004xuid\030\001 \001(\004\022\n\n\002to\030\002 \001(\005\022\017\n\007to_hit" +
+      "s\030\003 \001(\005\022\014\n\004from\030\004 \001(\005\022\021\n\tfrom_hits\030\005 \001(\005" +
+      "\"\234\003\n\"CCSUsrMsg_EndOfMatchAllPlayersData\022" +
+      "E\n\rallplayerdata\030\001 \003(\0132..CCSUsrMsg_EndOf" +
+      "MatchAllPlayersData.PlayerData\022\r\n\005scene\030" +
+      "\002 \001(\005\032>\n\010Accolade\022\021\n\teaccolade\030\001 \001(\005\022\r\n\005" +
+      "value\030\002 \001(\002\022\020\n\010position\030\003 \001(\005\032\337\001\n\nPlayer" +
+      "Data\022\020\n\004slot\030\001 \001(\005:\002-1\022\014\n\004xuid\030\002 \001(\004\022\014\n\004" +
+      "name\030\003 \001(\t\022\022\n\nteamnumber\030\004 \001(\005\022@\n\nnomina" +
+      "tion\030\005 \001(\0132,.CCSUsrMsg_EndOfMatchAllPlay" +
+      "ersData.Accolade\022)\n\005items\030\006 \003(\0132\032.CEconI" +
+      "temPreviewDataBlock\022\023\n\013playercolor\030\007 \001(\005" +
+      "\022\r\n\005isbot\030\010 \001(\010\"\350\006\n\034CCSUsrMsg_RoundEndRe" +
+      "portData\022H\n\017init_conditions\030\001 \001(\0132/.CCSU" +
+      "srMsg_RoundEndReportData.InitialConditio" +
+      "ns\022B\n\022all_rer_event_data\030\002 \003(\0132&.CCSUsrM" +
+      "sg_RoundEndReportData.RerEvent\032\335\004\n\010RerEv" +
+      "ent\022\021\n\ttimestamp\030\001 \001(\002\022\026\n\016terrorist_odds" +
+      "\030\002 \001(\005\022\020\n\010ct_alive\030\003 \001(\005\022\017\n\007t_alive\030\004 \001(" +
+      "\005\022B\n\013victim_data\030\005 \001(\0132-.CCSUsrMsg_Round" +
+      "EndReportData.RerEvent.Victim\022H\n\016objecti" +
+      "ve_data\030\006 \001(\01320.CCSUsrMsg_RoundEndReport" +
+      "Data.RerEvent.Objective\022F\n\017all_damage_da" +
+      "ta\030\007 \003(\0132-.CCSUsrMsg_RoundEndReportData." +
+      "RerEvent.Damage\032s\n\006Victim\022\023\n\013team_number" +
+      "\030\001 \001(\005\022\026\n\nplayerslot\030\002 \001(\005:\002-1\022\014\n\004xuid\030\003" +
+      " \001(\004\022\r\n\005color\030\004 \001(\005\022\016\n\006is_bot\030\005 \001(\010\022\017\n\007i" +
+      "s_dead\030\006 \001(\010\032\031\n\tObjective\022\014\n\004type\030\001 \001(\005\032" +
+      "\234\001\n\006Damage\022\034\n\020other_playerslot\030\001 \001(\005:\002-1" +
+      "\022\022\n\nother_xuid\030\002 \001(\004\022\026\n\016health_removed\030\003" +
+      " \001(\005\022\020\n\010num_hits\030\004 \001(\005\022\035\n\025return_health_" +
+      "removed\030\005 \001(\005\022\027\n\017return_num_hits\030\006 \001(\005\032Z" +
+      "\n\021InitialConditions\022\026\n\016ct_equip_value\030\001 " +
+      "\001(\005\022\025\n\rt_equip_value\030\002 \001(\005\022\026\n\016terrorist_" +
+      "odds\030\003 \001(\005\"\323\001\n\037CCSUsrMsg_PostRoundDamage" +
+      "Report\022\022\n\nother_xuid\030\001 \001(\004\022\027\n\017given_kill" +
+      "_type\030\002 \001(\005\022\034\n\024given_health_removed\030\003 \001(" +
+      "\005\022\026\n\016given_num_hits\030\004 \001(\005\022\027\n\017taken_kill_" +
+      "type\030\005 \001(\005\022\034\n\024taken_health_removed\030\006 \001(\005" +
+      "\022\026\n\016taken_num_hits\030\007 \001(\005\"*\n\032CCSUsrMsg_Cu" +
+      "rrentRoundOdds\022\014\n\004odds\030\001 \001(\005\"F\n\023CCSUsrMs" +
+      "g_DeepStats\022/\n\005stats\030\001 \001(\0132 .CMsgGCCStri" +
+      "ke15_ClientDeepStats\"\226\001\n\023CCSUsrMsg_Shoot" +
+      "Info\022\024\n\014frame_number\030\001 \001(\005\022)\n\021hitbox_tra" +
+      "nsforms\030\002 \003(\0132\016.CMsgTransform\022\036\n\tshoot_p" +
+      "os\030\003 \001(\0132\013.CMsgVector\022\036\n\tshoot_dir\030\004 \001(\013" +
+      "2\013.CMsgQAngle\"#\n\022CCSUsrMsg_ResetHud\022\r\n\005r" +
+      "eset\030\001 \001(\010\"$\n\023CCSUsrMsg_GameTitle\022\r\n\005dum" +
+      "my\030\001 \001(\005\"\'\n\026CCSUsrMsg_RequestState\022\r\n\005du" +
+      "mmy\030\001 \001(\005\",\n\033CCSUsrMsg_StopSpectatorMode" +
+      "\022\r\n\005dummy\030\001 \001(\005\",\n\033CCSUsrMsg_DisconnectT" +
+      "oLobby\022\r\n\005dummy\030\001 \001(\005\")\n\030CCSUsrMsg_Warmu" +
+      "pHasEnded\022\r\n\005dummy\030\001 \001(\005\"%\n\024CCSUsrMsg_Cl" +
+      "ientInfo\022\r\n\005dummy\030\001 \001(\005\"\204\001\n\035CCSUsrMsg_Se" +
+      "rverRankRevealAll\022\035\n\025seconds_till_shutdo" +
+      "wn\030\001 \001(\005\022D\n\013reservation\030\002 \001(\0132/.CMsgGCCS" +
+      "trike15_v2_MatchmakingGC2ServerReserve\"N" +
+      "\n\030CCSUsrMsgPreMatchSayText\022\022\n\naccount_id" +
+      "\030\001 \001(\r\022\014\n\004text\030\002 \001(\t\022\020\n\010all_chat\030\003 \001(\010*\246" +
+      "\017\n\026ECstrike15UserMessages\022\023\n\016CS_UM_VGUIM" +
+      "enu\020\255\002\022\021\n\014CS_UM_Geiger\020\256\002\022\020\n\013CS_UM_Train" +
+      "\020\257\002\022\022\n\rCS_UM_HudText\020\260\002\022\022\n\rCS_UM_SayText" +
+      "\020\261\002\022\023\n\016CS_UM_SayText2\020\262\002\022\022\n\rCS_UM_TextMs" +
+      "g\020\263\002\022\021\n\014CS_UM_HudMsg\020\264\002\022\023\n\016CS_UM_ResetHu" +
+      "d\020\265\002\022\024\n\017CS_UM_GameTitle\020\266\002\022\020\n\013CS_UM_Shak" +
+      "e\020\270\002\022\017\n\nCS_UM_Fade\020\271\002\022\021\n\014CS_UM_Rumble\020\272\002" +
+      "\022\027\n\022CS_UM_CloseCaption\020\273\002\022\035\n\030CS_UM_Close" +
+      "CaptionDirect\020\274\002\022\024\n\017CS_UM_SendAudio\020\275\002\022\023" +
+      "\n\016CS_UM_RawAudio\020\276\002\022\024\n\017CS_UM_VoiceMask\020\277" +
+      "\002\022\027\n\022CS_UM_RequestState\020\300\002\022\021\n\014CS_UM_Dama" +
+      "ge\020\301\002\022\024\n\017CS_UM_RadioText\020\302\002\022\023\n\016CS_UM_Hin" +
+      "tText\020\303\002\022\026\n\021CS_UM_KeyHintText\020\304\002\022%\n CS_U" +
+      "M_ProcessSpottedEntityUpdate\020\305\002\022\027\n\022CS_UM" +
+      "_ReloadEffect\020\306\002\022\026\n\021CS_UM_AdjustMoney\020\307\002" +
+      "\022\032\n\025CS_UM_UpdateTeamMoney\020\310\002\022\034\n\027CS_UM_St" +
+      "opSpectatorMode\020\311\002\022\022\n\rCS_UM_KillCam\020\312\002\022\033" +
+      "\n\026CS_UM_DesiredTimescale\020\313\002\022\033\n\026CS_UM_Cur" +
+      "rentTimescale\020\314\002\022\033\n\026CS_UM_AchievementEve" +
+      "nt\020\315\002\022\035\n\030CS_UM_MatchEndConditions\020\316\002\022\034\n\027" +
+      "CS_UM_DisconnectToLobby\020\317\002\022\034\n\027CS_UM_Play" +
+      "erStatsUpdate\020\320\002\022\031\n\024CS_UM_WarmupHasEnded" +
+      "\020\322\002\022\025\n\020CS_UM_ClientInfo\020\323\002\022\023\n\016CS_UM_XRan" +
+      "kGet\020\324\002\022\023\n\016CS_UM_XRankUpd\020\325\002\022\031\n\024CS_UM_Ca" +
+      "llVoteFailed\020\331\002\022\024\n\017CS_UM_VoteStart\020\332\002\022\023\n" +
+      "\016CS_UM_VotePass\020\333\002\022\025\n\020CS_UM_VoteFailed\020\334" +
+      "\002\022\024\n\017CS_UM_VoteSetup\020\335\002\022\036\n\031CS_UM_ServerR" +
+      "ankRevealAll\020\336\002\022\'\n\"CS_UM_SendLastKillerD" +
+      "amageToClient\020\337\002\022\033\n\026CS_UM_ServerRankUpda" +
+      "te\020\340\002\022\025\n\020CS_UM_ItemPickup\020\341\002\022\023\n\016CS_UM_Sh" +
+      "owMenu\020\342\002\022\022\n\rCS_UM_BarTime\020\343\002\022\025\n\020CS_UM_A" +
+      "mmoDenied\020\344\002\022\032\n\025CS_UM_MarkAchievement\020\345\002" +
+      "\022\033\n\026CS_UM_MatchStatsUpdate\020\346\002\022\023\n\016CS_UM_I" +
+      "temDrop\020\347\002\022\032\n\025CS_UM_GlowPropTurnOff\020\350\002\022\036" +
+      "\n\031CS_UM_SendPlayerItemDrops\020\351\002\022\037\n\032CS_UM_" +
+      "RoundBackupFilenames\020\352\002\022\036\n\031CS_UM_SendPla" +
+      "yerItemFound\020\353\002\022\024\n\017CS_UM_ReportHit\020\354\002\022\023\n" +
+      "\016CS_UM_XpUpdate\020\355\002\022\030\n\023CS_UM_QuestProgres" +
+      "s\020\356\002\022\037\n\032CS_UM_ScoreLeaderboardData\020\357\002\022&\n" +
+      "!CS_UM_PlayerDecalDigitalSignature\020\360\002\022\026\n" +
+      "\021CS_UM_WeaponSound\020\361\002\022 \n\033CS_UM_UpdateScr" +
+      "eenHealthBar\020\362\002\022!\n\034CS_UM_EntityOutlineHi" +
+      "ghlight\020\363\002\022\017\n\nCS_UM_SSUI\020\364\002\022\030\n\023CS_UM_Sur" +
+      "vivalStats\020\365\002\022\035\n\030CS_UM_DisconnectToLobby" +
+      "2\020\366\002\022#\n\036CS_UM_EndOfMatchAllPlayersData\020\367" +
+      "\002\022 \n\033CS_UM_PostRoundDamageReport\020\370\002\022\035\n\030C" +
+      "S_UM_RoundEndReportData\020\373\002\022\033\n\026CS_UM_Curr" +
+      "entRoundOdds\020\374\002\022\024\n\017CS_UM_DeepStats\020\375\002\022\022\n" +
+      "\rCS_UM_UtilMsg\020\376\002\022\024\n\017CS_UM_ShootInfo\020\377\002*" +
+      "\210\001\n\"ECSUsrMsg_DisconnectToLobby_Action\0220" +
+      "\n,k_ECSUsrMsg_DisconnectToLobby_Action_D" +
+      "efault\020\000\0220\n,k_ECSUsrMsg_DisconnectToLobb" +
+      "y_Action_GoQueue\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.DescriptorProtos.getDescriptor(),
-          Netmessages.getDescriptor(),
+          Networkbasetypes.getDescriptor(),
           Cstrike15Gcmessages.getDescriptor(),
         });
     internal_static_CCSUsrMsg_VGUIMenu_descriptor =
@@ -71002,13 +71185,13 @@ public final class Cstrike15Usermessages {
     internal_static_CCSUsrMsg_VGUIMenu_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_VGUIMenu_descriptor,
-        new java.lang.String[] { "Name", "Show", "Subkeys", });
-    internal_static_CCSUsrMsg_VGUIMenu_Subkey_descriptor =
+        new java.lang.String[] { "Name", "Show", "Keys", });
+    internal_static_CCSUsrMsg_VGUIMenu_Keys_descriptor =
       internal_static_CCSUsrMsg_VGUIMenu_descriptor.getNestedTypes().get(0);
-    internal_static_CCSUsrMsg_VGUIMenu_Subkey_fieldAccessorTable = new
+    internal_static_CCSUsrMsg_VGUIMenu_Keys_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_VGUIMenu_Subkey_descriptor,
-        new java.lang.String[] { "Name", "Str", });
+        internal_static_CCSUsrMsg_VGUIMenu_Keys_descriptor,
+        new java.lang.String[] { "Name", "Value", });
     internal_static_CCSUsrMsg_Geiger_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CCSUsrMsg_Geiger_fieldAccessorTable = new
@@ -71027,74 +71210,56 @@ public final class Cstrike15Usermessages {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_HudText_descriptor,
         new java.lang.String[] { "Text", });
-    internal_static_CCSUsrMsg_SayText_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_CCSUsrMsg_SayText_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_SayText_descriptor,
-        new java.lang.String[] { "EntIdx", "Text", "Chat", "Textallchat", });
-    internal_static_CCSUsrMsg_SayText2_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_CCSUsrMsg_SayText2_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_SayText2_descriptor,
-        new java.lang.String[] { "EntIdx", "Chat", "MsgName", "Params", "Textallchat", });
-    internal_static_CCSUsrMsg_TextMsg_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_CCSUsrMsg_TextMsg_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_TextMsg_descriptor,
-        new java.lang.String[] { "MsgDst", "Params", });
     internal_static_CCSUsrMsg_HudMsg_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CCSUsrMsg_HudMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_HudMsg_descriptor,
         new java.lang.String[] { "Channel", "Pos", "Clr1", "Clr2", "Effect", "FadeInTime", "FadeOutTime", "HoldTime", "FxTime", "Text", });
     internal_static_CCSUsrMsg_Shake_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CCSUsrMsg_Shake_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_Shake_descriptor,
         new java.lang.String[] { "Command", "LocalAmplitude", "Frequency", "Duration", });
     internal_static_CCSUsrMsg_Fade_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CCSUsrMsg_Fade_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_Fade_descriptor,
         new java.lang.String[] { "Duration", "HoldTime", "Flags", "Clr", });
     internal_static_CCSUsrMsg_Rumble_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CCSUsrMsg_Rumble_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_Rumble_descriptor,
         new java.lang.String[] { "Index", "Data", "Flags", });
     internal_static_CCSUsrMsg_CloseCaption_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CCSUsrMsg_CloseCaption_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_CloseCaption_descriptor,
         new java.lang.String[] { "Hash", "Duration", "FromPlayer", "Cctoken", });
     internal_static_CCSUsrMsg_CloseCaptionDirect_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CCSUsrMsg_CloseCaptionDirect_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_CloseCaptionDirect_descriptor,
         new java.lang.String[] { "Hash", "Duration", "FromPlayer", });
     internal_static_CCSUsrMsg_SendAudio_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CCSUsrMsg_SendAudio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_SendAudio_descriptor,
         new java.lang.String[] { "RadioSound", });
     internal_static_CCSUsrMsg_RawAudio_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CCSUsrMsg_RawAudio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_RawAudio_descriptor,
         new java.lang.String[] { "Pitch", "Entidx", "Duration", "VoiceFilename", });
     internal_static_CCSUsrMsg_VoiceMask_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CCSUsrMsg_VoiceMask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_VoiceMask_descriptor,
@@ -71106,31 +71271,31 @@ public final class Cstrike15Usermessages {
         internal_static_CCSUsrMsg_VoiceMask_PlayerMask_descriptor,
         new java.lang.String[] { "GameRulesMask", "BanMasks", });
     internal_static_CCSUsrMsg_Damage_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CCSUsrMsg_Damage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_Damage_descriptor,
         new java.lang.String[] { "Amount", "InflictorWorldPos", "VictimEntindex", });
     internal_static_CCSUsrMsg_RadioText_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CCSUsrMsg_RadioText_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_RadioText_descriptor,
         new java.lang.String[] { "MsgDst", "Client", "MsgName", "Params", });
     internal_static_CCSUsrMsg_HintText_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CCSUsrMsg_HintText_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_HintText_descriptor,
-        new java.lang.String[] { "Text", });
+        new java.lang.String[] { "Message", });
     internal_static_CCSUsrMsg_KeyHintText_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CCSUsrMsg_KeyHintText_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_KeyHintText_descriptor,
-        new java.lang.String[] { "Hints", });
+        new java.lang.String[] { "Messages", });
     internal_static_CCSUsrMsg_ProcessSpottedEntityUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CCSUsrMsg_ProcessSpottedEntityUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ProcessSpottedEntityUpdate_descriptor,
@@ -71142,169 +71307,163 @@ public final class Cstrike15Usermessages {
         internal_static_CCSUsrMsg_ProcessSpottedEntityUpdate_SpottedEntityUpdate_descriptor,
         new java.lang.String[] { "EntityIdx", "ClassId", "OriginX", "OriginY", "OriginZ", "AngleY", "Defuser", "PlayerHasDefuser", "PlayerHasC4", });
     internal_static_CCSUsrMsg_SendPlayerItemDrops_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CCSUsrMsg_SendPlayerItemDrops_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_SendPlayerItemDrops_descriptor,
         new java.lang.String[] { "EntityUpdates", });
     internal_static_CCSUsrMsg_SendPlayerItemFound_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_CCSUsrMsg_SendPlayerItemFound_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_SendPlayerItemFound_descriptor,
-        new java.lang.String[] { "Iteminfo", "Entindex", });
+        new java.lang.String[] { "Iteminfo", "Playerslot", });
     internal_static_CCSUsrMsg_ReloadEffect_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_CCSUsrMsg_ReloadEffect_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ReloadEffect_descriptor,
         new java.lang.String[] { "Entidx", "Actanim", "OriginX", "OriginY", "OriginZ", });
     internal_static_CCSUsrMsg_WeaponSound_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_CCSUsrMsg_WeaponSound_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_WeaponSound_descriptor,
-        new java.lang.String[] { "Entidx", "OriginX", "OriginY", "OriginZ", "Sound", "Timestamp", });
+        new java.lang.String[] { "Entidx", "OriginX", "OriginY", "OriginZ", "Sound", "GameTimestamp", "SourceSoundscapeid", });
     internal_static_CCSUsrMsg_UpdateScreenHealthBar_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_CCSUsrMsg_UpdateScreenHealthBar_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_UpdateScreenHealthBar_descriptor,
         new java.lang.String[] { "Entidx", "HealthratioOld", "HealthratioNew", "Style", });
     internal_static_CCSUsrMsg_EntityOutlineHighlight_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_CCSUsrMsg_EntityOutlineHighlight_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_EntityOutlineHighlight_descriptor,
         new java.lang.String[] { "Entidx", "Removehighlight", });
     internal_static_CCSUsrMsg_AdjustMoney_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_CCSUsrMsg_AdjustMoney_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_AdjustMoney_descriptor,
         new java.lang.String[] { "Amount", });
     internal_static_CCSUsrMsg_ReportHit_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_CCSUsrMsg_ReportHit_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ReportHit_descriptor,
         new java.lang.String[] { "PosX", "PosY", "Timestamp", "PosZ", });
     internal_static_CCSUsrMsg_KillCam_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_CCSUsrMsg_KillCam_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_KillCam_descriptor,
         new java.lang.String[] { "ObsMode", "FirstTarget", "SecondTarget", });
     internal_static_CCSUsrMsg_DesiredTimescale_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_CCSUsrMsg_DesiredTimescale_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_DesiredTimescale_descriptor,
         new java.lang.String[] { "DesiredTimescale", "DurationRealtimeSec", "InterpolatorType", "StartBlendTime", });
     internal_static_CCSUsrMsg_CurrentTimescale_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_CCSUsrMsg_CurrentTimescale_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_CurrentTimescale_descriptor,
         new java.lang.String[] { "CurTimescale", });
     internal_static_CCSUsrMsg_AchievementEvent_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_CCSUsrMsg_AchievementEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_AchievementEvent_descriptor,
         new java.lang.String[] { "Achievement", "Count", "UserId", });
     internal_static_CCSUsrMsg_MatchEndConditions_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_CCSUsrMsg_MatchEndConditions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_MatchEndConditions_descriptor,
         new java.lang.String[] { "Fraglimit", "MpMaxrounds", "MpWinlimit", "MpTimelimit", });
     internal_static_CCSUsrMsg_PlayerStatsUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_CCSUsrMsg_PlayerStatsUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_PlayerStatsUpdate_descriptor,
-        new java.lang.String[] { "Version", "Stats", "UserId", "Crc", });
+        new java.lang.String[] { "Version", "Stats", "Ehandle", "Crc", });
     internal_static_CCSUsrMsg_PlayerStatsUpdate_Stat_descriptor =
       internal_static_CCSUsrMsg_PlayerStatsUpdate_descriptor.getNestedTypes().get(0);
     internal_static_CCSUsrMsg_PlayerStatsUpdate_Stat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_PlayerStatsUpdate_Stat_descriptor,
         new java.lang.String[] { "Idx", "Delta", });
-    internal_static_CCSUsrMsg_DisplayInventory_descriptor =
-      getDescriptor().getMessageTypes().get(35);
-    internal_static_CCSUsrMsg_DisplayInventory_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_DisplayInventory_descriptor,
-        new java.lang.String[] { "Display", "UserId", });
     internal_static_CCSUsrMsg_QuestProgress_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_CCSUsrMsg_QuestProgress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_QuestProgress_descriptor,
         new java.lang.String[] { "QuestId", "NormalPoints", "BonusPoints", "IsEventQuest", });
     internal_static_CCSUsrMsg_ScoreLeaderboardData_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_CCSUsrMsg_ScoreLeaderboardData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ScoreLeaderboardData_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_CCSUsrMsg_PlayerDecalDigitalSignature_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_CCSUsrMsg_PlayerDecalDigitalSignature_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_PlayerDecalDigitalSignature_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_CCSUsrMsg_XRankGet_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_CCSUsrMsg_XRankGet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_XRankGet_descriptor,
         new java.lang.String[] { "ModeIdx", "Controller", });
     internal_static_CCSUsrMsg_XRankUpd_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_CCSUsrMsg_XRankUpd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_XRankUpd_descriptor,
         new java.lang.String[] { "ModeIdx", "Controller", "Ranking", });
     internal_static_CCSUsrMsg_CallVoteFailed_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_CCSUsrMsg_CallVoteFailed_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_CallVoteFailed_descriptor,
         new java.lang.String[] { "Reason", "Time", });
     internal_static_CCSUsrMsg_VoteStart_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_CCSUsrMsg_VoteStart_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_VoteStart_descriptor,
-        new java.lang.String[] { "Team", "EntIdx", "VoteType", "DispStr", "DetailsStr", "OtherTeamStr", "IsYesNoVote", "EntidxTarget", });
+        new java.lang.String[] { "Team", "PlayerSlot", "VoteType", "DispStr", "DetailsStr", "OtherTeamStr", "IsYesNoVote", "PlayerSlotTarget", });
     internal_static_CCSUsrMsg_VotePass_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_CCSUsrMsg_VotePass_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_VotePass_descriptor,
         new java.lang.String[] { "Team", "VoteType", "DispStr", "DetailsStr", });
     internal_static_CCSUsrMsg_VoteFailed_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_CCSUsrMsg_VoteFailed_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_VoteFailed_descriptor,
         new java.lang.String[] { "Team", "Reason", });
     internal_static_CCSUsrMsg_VoteSetup_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_CCSUsrMsg_VoteSetup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_VoteSetup_descriptor,
         new java.lang.String[] { "PotentialIssues", });
     internal_static_CCSUsrMsg_SendLastKillerDamageToClient_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_CCSUsrMsg_SendLastKillerDamageToClient_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_SendLastKillerDamageToClient_descriptor,
-        new java.lang.String[] { "NumHitsGiven", "DamageGiven", "NumHitsTaken", "DamageTaken", });
+        new java.lang.String[] { "NumHitsGiven", "DamageGiven", "NumHitsTaken", "DamageTaken", "ActualDamageGiven", "ActualDamageTaken", });
     internal_static_CCSUsrMsg_ServerRankUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_CCSUsrMsg_ServerRankUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ServerRankUpdate_descriptor,
@@ -71316,73 +71475,73 @@ public final class Cstrike15Usermessages {
         internal_static_CCSUsrMsg_ServerRankUpdate_RankUpdate_descriptor,
         new java.lang.String[] { "AccountId", "RankOld", "RankNew", "NumWins", "RankChange", "RankTypeId", });
     internal_static_CCSUsrMsg_XpUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_CCSUsrMsg_XpUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_XpUpdate_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_CCSUsrMsg_ItemPickup_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_CCSUsrMsg_ItemPickup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ItemPickup_descriptor,
         new java.lang.String[] { "Item", });
     internal_static_CCSUsrMsg_ShowMenu_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_CCSUsrMsg_ShowMenu_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ShowMenu_descriptor,
         new java.lang.String[] { "BitsValidSlots", "DisplayTime", "MenuString", });
     internal_static_CCSUsrMsg_BarTime_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_CCSUsrMsg_BarTime_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_BarTime_descriptor,
         new java.lang.String[] { "Time", });
     internal_static_CCSUsrMsg_AmmoDenied_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_CCSUsrMsg_AmmoDenied_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_AmmoDenied_descriptor,
-        new java.lang.String[] { "AmmoIdx", });
+        new java.lang.String[] { "Ammoidx", });
     internal_static_CCSUsrMsg_MarkAchievement_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_CCSUsrMsg_MarkAchievement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_MarkAchievement_descriptor,
         new java.lang.String[] { "Achievement", });
     internal_static_CCSUsrMsg_MatchStatsUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_CCSUsrMsg_MatchStatsUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_MatchStatsUpdate_descriptor,
         new java.lang.String[] { "Update", });
     internal_static_CCSUsrMsg_ItemDrop_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_CCSUsrMsg_ItemDrop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ItemDrop_descriptor,
         new java.lang.String[] { "Itemid", "Death", });
     internal_static_CCSUsrMsg_GlowPropTurnOff_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_CCSUsrMsg_GlowPropTurnOff_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_GlowPropTurnOff_descriptor,
         new java.lang.String[] { "Entidx", });
     internal_static_CCSUsrMsg_RoundBackupFilenames_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_CCSUsrMsg_RoundBackupFilenames_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_RoundBackupFilenames_descriptor,
         new java.lang.String[] { "Count", "Index", "Filename", "Nicename", });
     internal_static_CCSUsrMsg_SSUI_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_CCSUsrMsg_SSUI_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_SSUI_descriptor,
         new java.lang.String[] { "Show", "StartTime", "EndTime", });
     internal_static_CCSUsrMsg_SurvivalStats_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_CCSUsrMsg_SurvivalStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_SurvivalStats_descriptor,
@@ -71406,7 +71565,7 @@ public final class Cstrike15Usermessages {
         internal_static_CCSUsrMsg_SurvivalStats_Damage_descriptor,
         new java.lang.String[] { "Xuid", "To", "ToHits", "From", "FromHits", });
     internal_static_CCSUsrMsg_EndOfMatchAllPlayersData_descriptor =
-      getDescriptor().getMessageTypes().get(60);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_CCSUsrMsg_EndOfMatchAllPlayersData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_EndOfMatchAllPlayersData_descriptor,
@@ -71422,105 +71581,122 @@ public final class Cstrike15Usermessages {
     internal_static_CCSUsrMsg_EndOfMatchAllPlayersData_PlayerData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_EndOfMatchAllPlayersData_PlayerData_descriptor,
-        new java.lang.String[] { "Entindex", "Xuid", "Name", "Teamnumber", "Nomination", "Items", "Playercolor", "Isbot", });
-    internal_static_CCSUsrMsg_RoundImpactScoreData_descriptor =
-      getDescriptor().getMessageTypes().get(61);
-    internal_static_CCSUsrMsg_RoundImpactScoreData_fieldAccessorTable = new
+        new java.lang.String[] { "Slot", "Xuid", "Name", "Teamnumber", "Nomination", "Items", "Playercolor", "Isbot", });
+    internal_static_CCSUsrMsg_RoundEndReportData_descriptor =
+      getDescriptor().getMessageTypes().get(57);
+    internal_static_CCSUsrMsg_RoundEndReportData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_RoundImpactScoreData_descriptor,
-        new java.lang.String[] { "InitConditions", "AllRisEventData", });
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_descriptor =
-      internal_static_CCSUsrMsg_RoundImpactScoreData_descriptor.getNestedTypes().get(0);
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_fieldAccessorTable = new
+        internal_static_CCSUsrMsg_RoundEndReportData_descriptor,
+        new java.lang.String[] { "InitConditions", "AllRerEventData", });
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_descriptor =
+      internal_static_CCSUsrMsg_RoundEndReportData_descriptor.getNestedTypes().get(0);
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_descriptor,
+        internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_descriptor,
         new java.lang.String[] { "Timestamp", "TerroristOdds", "CtAlive", "TAlive", "VictimData", "ObjectiveData", "AllDamageData", });
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Victim_descriptor =
-      internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_descriptor.getNestedTypes().get(0);
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Victim_fieldAccessorTable = new
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Victim_descriptor =
+      internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_descriptor.getNestedTypes().get(0);
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Victim_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Victim_descriptor,
-        new java.lang.String[] { "TeamNumber", "Entindex", "Xuid", "Color", "IsBot", "IsDead", });
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Objective_descriptor =
-      internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_descriptor.getNestedTypes().get(1);
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Objective_fieldAccessorTable = new
+        internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Victim_descriptor,
+        new java.lang.String[] { "TeamNumber", "Playerslot", "Xuid", "Color", "IsBot", "IsDead", });
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Objective_descriptor =
+      internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_descriptor.getNestedTypes().get(1);
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Objective_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Objective_descriptor,
+        internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Objective_descriptor,
         new java.lang.String[] { "Type", });
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Damage_descriptor =
-      internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_descriptor.getNestedTypes().get(2);
-    internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Damage_fieldAccessorTable = new
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Damage_descriptor =
+      internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_descriptor.getNestedTypes().get(2);
+    internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Damage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_RoundImpactScoreData_RisEvent_Damage_descriptor,
-        new java.lang.String[] { "TargetEntindex", "TargetXuid", "HealthRemoved", "NumHits", "ReturnHealthRemoved", "NumReturnHits", });
-    internal_static_CCSUsrMsg_RoundImpactScoreData_InitialConditions_descriptor =
-      internal_static_CCSUsrMsg_RoundImpactScoreData_descriptor.getNestedTypes().get(1);
-    internal_static_CCSUsrMsg_RoundImpactScoreData_InitialConditions_fieldAccessorTable = new
+        internal_static_CCSUsrMsg_RoundEndReportData_RerEvent_Damage_descriptor,
+        new java.lang.String[] { "OtherPlayerslot", "OtherXuid", "HealthRemoved", "NumHits", "ReturnHealthRemoved", "ReturnNumHits", });
+    internal_static_CCSUsrMsg_RoundEndReportData_InitialConditions_descriptor =
+      internal_static_CCSUsrMsg_RoundEndReportData_descriptor.getNestedTypes().get(1);
+    internal_static_CCSUsrMsg_RoundEndReportData_InitialConditions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCSUsrMsg_RoundImpactScoreData_InitialConditions_descriptor,
+        internal_static_CCSUsrMsg_RoundEndReportData_InitialConditions_descriptor,
         new java.lang.String[] { "CtEquipValue", "TEquipValue", "TerroristOdds", });
+    internal_static_CCSUsrMsg_PostRoundDamageReport_descriptor =
+      getDescriptor().getMessageTypes().get(58);
+    internal_static_CCSUsrMsg_PostRoundDamageReport_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCSUsrMsg_PostRoundDamageReport_descriptor,
+        new java.lang.String[] { "OtherXuid", "GivenKillType", "GivenHealthRemoved", "GivenNumHits", "TakenKillType", "TakenHealthRemoved", "TakenNumHits", });
     internal_static_CCSUsrMsg_CurrentRoundOdds_descriptor =
-      getDescriptor().getMessageTypes().get(62);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_CCSUsrMsg_CurrentRoundOdds_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_CurrentRoundOdds_descriptor,
         new java.lang.String[] { "Odds", });
     internal_static_CCSUsrMsg_DeepStats_descriptor =
-      getDescriptor().getMessageTypes().get(63);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_CCSUsrMsg_DeepStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_DeepStats_descriptor,
         new java.lang.String[] { "Stats", });
+    internal_static_CCSUsrMsg_ShootInfo_descriptor =
+      getDescriptor().getMessageTypes().get(61);
+    internal_static_CCSUsrMsg_ShootInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCSUsrMsg_ShootInfo_descriptor,
+        new java.lang.String[] { "FrameNumber", "HitboxTransforms", "ShootPos", "ShootDir", });
     internal_static_CCSUsrMsg_ResetHud_descriptor =
-      getDescriptor().getMessageTypes().get(64);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_CCSUsrMsg_ResetHud_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ResetHud_descriptor,
         new java.lang.String[] { "Reset", });
     internal_static_CCSUsrMsg_GameTitle_descriptor =
-      getDescriptor().getMessageTypes().get(65);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_CCSUsrMsg_GameTitle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_GameTitle_descriptor,
         new java.lang.String[] { "Dummy", });
     internal_static_CCSUsrMsg_RequestState_descriptor =
-      getDescriptor().getMessageTypes().get(66);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_CCSUsrMsg_RequestState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_RequestState_descriptor,
         new java.lang.String[] { "Dummy", });
     internal_static_CCSUsrMsg_StopSpectatorMode_descriptor =
-      getDescriptor().getMessageTypes().get(67);
+      getDescriptor().getMessageTypes().get(65);
     internal_static_CCSUsrMsg_StopSpectatorMode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_StopSpectatorMode_descriptor,
         new java.lang.String[] { "Dummy", });
     internal_static_CCSUsrMsg_DisconnectToLobby_descriptor =
-      getDescriptor().getMessageTypes().get(68);
+      getDescriptor().getMessageTypes().get(66);
     internal_static_CCSUsrMsg_DisconnectToLobby_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_DisconnectToLobby_descriptor,
         new java.lang.String[] { "Dummy", });
     internal_static_CCSUsrMsg_WarmupHasEnded_descriptor =
-      getDescriptor().getMessageTypes().get(69);
+      getDescriptor().getMessageTypes().get(67);
     internal_static_CCSUsrMsg_WarmupHasEnded_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_WarmupHasEnded_descriptor,
         new java.lang.String[] { "Dummy", });
     internal_static_CCSUsrMsg_ClientInfo_descriptor =
-      getDescriptor().getMessageTypes().get(70);
+      getDescriptor().getMessageTypes().get(68);
     internal_static_CCSUsrMsg_ClientInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ClientInfo_descriptor,
         new java.lang.String[] { "Dummy", });
     internal_static_CCSUsrMsg_ServerRankRevealAll_descriptor =
-      getDescriptor().getMessageTypes().get(71);
+      getDescriptor().getMessageTypes().get(69);
     internal_static_CCSUsrMsg_ServerRankRevealAll_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCSUsrMsg_ServerRankRevealAll_descriptor,
         new java.lang.String[] { "SecondsTillShutdown", "Reservation", });
-    com.google.protobuf.DescriptorProtos.getDescriptor();
-    Netmessages.getDescriptor();
+    internal_static_CCSUsrMsgPreMatchSayText_descriptor =
+      getDescriptor().getMessageTypes().get(70);
+    internal_static_CCSUsrMsgPreMatchSayText_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CCSUsrMsgPreMatchSayText_descriptor,
+        new java.lang.String[] { "AccountId", "Text", "AllChat", });
+    Networkbasetypes.getDescriptor();
     Cstrike15Gcmessages.getDescriptor();
   }
 

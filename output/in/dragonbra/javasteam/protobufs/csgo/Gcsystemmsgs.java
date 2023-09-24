@@ -13602,7 +13602,7 @@ public final class Gcsystemmsgs {
       "emAttribute_CommunityItemType\020\007\0223\n/k_ECo" +
       "mmunityItemAttribute_ProfileModiferEnabl" +
       "ed\020\010\022(\n$k_ECommunityItemAttribute_Expiry" +
-      "Time\020\tB\005H\001\200\001\000"
+      "Time\020\t"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

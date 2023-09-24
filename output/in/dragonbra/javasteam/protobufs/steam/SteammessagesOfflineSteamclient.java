@@ -28,6 +28,17 @@ public final class SteammessagesOfflineSteamclient {
      * @return The priority.
      */
     int getPriority();
+
+    /**
+     * <code>optional bool perform_encryption = 2;</code>
+     * @return Whether the performEncryption field is set.
+     */
+    boolean hasPerformEncryption();
+    /**
+     * <code>optional bool perform_encryption = 2;</code>
+     * @return The performEncryption.
+     */
+    boolean getPerformEncryption();
   }
   /**
    * Protobuf type {@code COffline_GetOfflineLogonTicket_Request}
@@ -78,6 +89,11 @@ public final class SteammessagesOfflineSteamclient {
             case 8: {
               bitField0_ |= 0x00000001;
               priority_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              performEncryption_ = input.readBool();
               break;
             }
             default: {
@@ -132,6 +148,25 @@ public final class SteammessagesOfflineSteamclient {
       return priority_;
     }
 
+    public static final int PERFORM_ENCRYPTION_FIELD_NUMBER = 2;
+    private boolean performEncryption_;
+    /**
+     * <code>optional bool perform_encryption = 2;</code>
+     * @return Whether the performEncryption field is set.
+     */
+    @java.lang.Override
+    public boolean hasPerformEncryption() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool perform_encryption = 2;</code>
+     * @return The performEncryption.
+     */
+    @java.lang.Override
+    public boolean getPerformEncryption() {
+      return performEncryption_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -149,6 +184,9 @@ public final class SteammessagesOfflineSteamclient {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeUInt32(1, priority_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, performEncryption_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -161,6 +199,10 @@ public final class SteammessagesOfflineSteamclient {
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, priority_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, performEncryption_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -182,6 +224,11 @@ public final class SteammessagesOfflineSteamclient {
         if (getPriority()
             != other.getPriority()) return false;
       }
+      if (hasPerformEncryption() != other.hasPerformEncryption()) return false;
+      if (hasPerformEncryption()) {
+        if (getPerformEncryption()
+            != other.getPerformEncryption()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -196,6 +243,11 @@ public final class SteammessagesOfflineSteamclient {
       if (hasPriority()) {
         hash = (37 * hash) + PRIORITY_FIELD_NUMBER;
         hash = (53 * hash) + getPriority();
+      }
+      if (hasPerformEncryption()) {
+        hash = (37 * hash) + PERFORM_ENCRYPTION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPerformEncryption());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -332,6 +384,8 @@ public final class SteammessagesOfflineSteamclient {
         super.clear();
         priority_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
+        performEncryption_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -363,6 +417,10 @@ public final class SteammessagesOfflineSteamclient {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.priority_ = priority_;
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.performEncryption_ = performEncryption_;
+          to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -415,6 +473,9 @@ public final class SteammessagesOfflineSteamclient {
         if (other == SteammessagesOfflineSteamclient.COffline_GetOfflineLogonTicket_Request.getDefaultInstance()) return this;
         if (other.hasPriority()) {
           setPriority(other.getPriority());
+        }
+        if (other.hasPerformEncryption()) {
+          setPerformEncryption(other.getPerformEncryption());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -481,6 +542,45 @@ public final class SteammessagesOfflineSteamclient {
       public Builder clearPriority() {
         bitField0_ = (bitField0_ & ~0x00000001);
         priority_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean performEncryption_ ;
+      /**
+       * <code>optional bool perform_encryption = 2;</code>
+       * @return Whether the performEncryption field is set.
+       */
+      @java.lang.Override
+      public boolean hasPerformEncryption() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool perform_encryption = 2;</code>
+       * @return The performEncryption.
+       */
+      @java.lang.Override
+      public boolean getPerformEncryption() {
+        return performEncryption_;
+      }
+      /**
+       * <code>optional bool perform_encryption = 2;</code>
+       * @param value The performEncryption to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPerformEncryption(boolean value) {
+        bitField0_ |= 0x00000002;
+        performEncryption_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool perform_encryption = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPerformEncryption() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        performEncryption_ = false;
         onChanged();
         return this;
       }
@@ -562,6 +662,21 @@ public final class SteammessagesOfflineSteamclient {
      * @return The signature.
      */
     com.google.protobuf.ByteString getSignature();
+
+    /**
+     * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+     * @return Whether the encryptedTicket field is set.
+     */
+    boolean hasEncryptedTicket();
+    /**
+     * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+     * @return The encryptedTicket.
+     */
+    OfflineTicket.Offline_Ticket getEncryptedTicket();
+    /**
+     * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+     */
+    OfflineTicket.Offline_TicketOrBuilder getEncryptedTicketOrBuilder();
   }
   /**
    * Protobuf type {@code COffline_GetOfflineLogonTicket_Response}
@@ -619,6 +734,19 @@ public final class SteammessagesOfflineSteamclient {
             case 18: {
               bitField0_ |= 0x00000002;
               signature_ = input.readBytes();
+              break;
+            }
+            case 26: {
+              OfflineTicket.Offline_Ticket.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) != 0)) {
+                subBuilder = encryptedTicket_.toBuilder();
+              }
+              encryptedTicket_ = input.readMessage(OfflineTicket.Offline_Ticket.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(encryptedTicket_);
+                encryptedTicket_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
               break;
             }
             default: {
@@ -692,6 +820,32 @@ public final class SteammessagesOfflineSteamclient {
       return signature_;
     }
 
+    public static final int ENCRYPTED_TICKET_FIELD_NUMBER = 3;
+    private OfflineTicket.Offline_Ticket encryptedTicket_;
+    /**
+     * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+     * @return Whether the encryptedTicket field is set.
+     */
+    @java.lang.Override
+    public boolean hasEncryptedTicket() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+     * @return The encryptedTicket.
+     */
+    @java.lang.Override
+    public OfflineTicket.Offline_Ticket getEncryptedTicket() {
+      return encryptedTicket_ == null ? OfflineTicket.Offline_Ticket.getDefaultInstance() : encryptedTicket_;
+    }
+    /**
+     * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+     */
+    @java.lang.Override
+    public OfflineTicket.Offline_TicketOrBuilder getEncryptedTicketOrBuilder() {
+      return encryptedTicket_ == null ? OfflineTicket.Offline_Ticket.getDefaultInstance() : encryptedTicket_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -712,6 +866,9 @@ public final class SteammessagesOfflineSteamclient {
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeBytes(2, signature_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getEncryptedTicket());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -728,6 +885,10 @@ public final class SteammessagesOfflineSteamclient {
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, signature_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getEncryptedTicket());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -754,6 +915,11 @@ public final class SteammessagesOfflineSteamclient {
         if (!getSignature()
             .equals(other.getSignature())) return false;
       }
+      if (hasEncryptedTicket() != other.hasEncryptedTicket()) return false;
+      if (hasEncryptedTicket()) {
+        if (!getEncryptedTicket()
+            .equals(other.getEncryptedTicket())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -772,6 +938,10 @@ public final class SteammessagesOfflineSteamclient {
       if (hasSignature()) {
         hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
         hash = (53 * hash) + getSignature().hashCode();
+      }
+      if (hasEncryptedTicket()) {
+        hash = (37 * hash) + ENCRYPTED_TICKET_FIELD_NUMBER;
+        hash = (53 * hash) + getEncryptedTicket().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -901,6 +1071,7 @@ public final class SteammessagesOfflineSteamclient {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getEncryptedTicketFieldBuilder();
         }
       }
       @java.lang.Override
@@ -910,6 +1081,12 @@ public final class SteammessagesOfflineSteamclient {
         bitField0_ = (bitField0_ & ~0x00000001);
         signature_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (encryptedTicketBuilder_ == null) {
+          encryptedTicket_ = null;
+        } else {
+          encryptedTicketBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -946,6 +1123,14 @@ public final class SteammessagesOfflineSteamclient {
           to_bitField0_ |= 0x00000002;
         }
         result.signature_ = signature_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          if (encryptedTicketBuilder_ == null) {
+            result.encryptedTicket_ = encryptedTicket_;
+          } else {
+            result.encryptedTicket_ = encryptedTicketBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1000,6 +1185,9 @@ public final class SteammessagesOfflineSteamclient {
         }
         if (other.hasSignature()) {
           setSignature(other.getSignature());
+        }
+        if (other.hasEncryptedTicket()) {
+          mergeEncryptedTicket(other.getEncryptedTicket());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1113,6 +1301,126 @@ public final class SteammessagesOfflineSteamclient {
         signature_ = getDefaultInstance().getSignature();
         onChanged();
         return this;
+      }
+
+      private OfflineTicket.Offline_Ticket encryptedTicket_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          OfflineTicket.Offline_Ticket, OfflineTicket.Offline_Ticket.Builder, OfflineTicket.Offline_TicketOrBuilder> encryptedTicketBuilder_;
+      /**
+       * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+       * @return Whether the encryptedTicket field is set.
+       */
+      public boolean hasEncryptedTicket() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+       * @return The encryptedTicket.
+       */
+      public OfflineTicket.Offline_Ticket getEncryptedTicket() {
+        if (encryptedTicketBuilder_ == null) {
+          return encryptedTicket_ == null ? OfflineTicket.Offline_Ticket.getDefaultInstance() : encryptedTicket_;
+        } else {
+          return encryptedTicketBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+       */
+      public Builder setEncryptedTicket(OfflineTicket.Offline_Ticket value) {
+        if (encryptedTicketBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          encryptedTicket_ = value;
+          onChanged();
+        } else {
+          encryptedTicketBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+       */
+      public Builder setEncryptedTicket(
+          OfflineTicket.Offline_Ticket.Builder builderForValue) {
+        if (encryptedTicketBuilder_ == null) {
+          encryptedTicket_ = builderForValue.build();
+          onChanged();
+        } else {
+          encryptedTicketBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+       */
+      public Builder mergeEncryptedTicket(OfflineTicket.Offline_Ticket value) {
+        if (encryptedTicketBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+              encryptedTicket_ != null &&
+              encryptedTicket_ != OfflineTicket.Offline_Ticket.getDefaultInstance()) {
+            encryptedTicket_ =
+              OfflineTicket.Offline_Ticket.newBuilder(encryptedTicket_).mergeFrom(value).buildPartial();
+          } else {
+            encryptedTicket_ = value;
+          }
+          onChanged();
+        } else {
+          encryptedTicketBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+       */
+      public Builder clearEncryptedTicket() {
+        if (encryptedTicketBuilder_ == null) {
+          encryptedTicket_ = null;
+          onChanged();
+        } else {
+          encryptedTicketBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+       */
+      public OfflineTicket.Offline_Ticket.Builder getEncryptedTicketBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getEncryptedTicketFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+       */
+      public OfflineTicket.Offline_TicketOrBuilder getEncryptedTicketOrBuilder() {
+        if (encryptedTicketBuilder_ != null) {
+          return encryptedTicketBuilder_.getMessageOrBuilder();
+        } else {
+          return encryptedTicket_ == null ?
+              OfflineTicket.Offline_Ticket.getDefaultInstance() : encryptedTicket_;
+        }
+      }
+      /**
+       * <code>optional .Offline_Ticket encrypted_ticket = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          OfflineTicket.Offline_Ticket, OfflineTicket.Offline_Ticket.Builder, OfflineTicket.Offline_TicketOrBuilder> 
+          getEncryptedTicketFieldBuilder() {
+        if (encryptedTicketBuilder_ == null) {
+          encryptedTicketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              OfflineTicket.Offline_Ticket, OfflineTicket.Offline_Ticket.Builder, OfflineTicket.Offline_TicketOrBuilder>(
+                  getEncryptedTicket(),
+                  getParentForChildren(),
+                  isClean());
+          encryptedTicket_ = null;
+        }
+        return encryptedTicketBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2874,46 +3182,51 @@ public final class SteammessagesOfflineSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n-steam/steammessages_offline.steamclien" +
-      "t.proto\0322steam/steammessages_unified_bas" +
-      "e.steamclient.proto\":\n&COffline_GetOffli" +
-      "neLogonTicket_Request\022\020\n\010priority\030\001 \001(\r\"" +
-      "W\n\'COffline_GetOfflineLogonTicket_Respon" +
-      "se\022\031\n\021serialized_ticket\030\001 \001(\014\022\021\n\tsignatu" +
-      "re\030\002 \001(\014\"0\n.COffline_GetUnsignedOfflineL" +
-      "ogonTicket_Request\"O\n\033COffline_OfflineLo" +
-      "gonTicket\022\021\n\taccountid\030\001 \001(\r\022\035\n\025rtime32_" +
-      "creation_time\030\002 \001(\007\"_\n/COffline_GetUnsig" +
-      "nedOfflineLogonTicket_Response\022,\n\006ticket" +
-      "\030\001 \001(\0132\034.COffline_OfflineLogonTicket2\243\003\n" +
-      "\007Offline\022\265\001\n\025GetOfflineLogonTicket\022\'.COf" +
-      "fline_GetOfflineLogonTicket_Request\032(.CO" +
-      "ffline_GetOfflineLogonTicket_Response\"I\202" +
-      "\265\030EGet a serialized and signed offline l" +
-      "ogon ticket for the current user\022\301\001\n\035Get" +
-      "UnsignedOfflineLogonTicket\022/.COffline_Ge" +
-      "tUnsignedOfflineLogonTicket_Request\0320.CO" +
-      "ffline_GetUnsignedOfflineLogonTicket_Res" +
-      "ponse\"=\202\265\0309Get an unsigned offline logon" +
-      " ticket for the current user\032\034\202\265\030\030Offlin" +
-      "e settings serviceB\003\200\001\001"
+      "t.proto\032\036steam/steammessages_base.proto\032" +
+      "2steam/steammessages_unified_base.steamc" +
+      "lient.proto\032\032steam/offline_ticket.proto\"" +
+      "V\n&COffline_GetOfflineLogonTicket_Reques" +
+      "t\022\020\n\010priority\030\001 \001(\r\022\032\n\022perform_encryptio" +
+      "n\030\002 \001(\010\"\202\001\n\'COffline_GetOfflineLogonTick" +
+      "et_Response\022\031\n\021serialized_ticket\030\001 \001(\014\022\021" +
+      "\n\tsignature\030\002 \001(\014\022)\n\020encrypted_ticket\030\003 " +
+      "\001(\0132\017.Offline_Ticket\"0\n.COffline_GetUnsi" +
+      "gnedOfflineLogonTicket_Request\"O\n\033COffli" +
+      "ne_OfflineLogonTicket\022\021\n\taccountid\030\001 \001(\r" +
+      "\022\035\n\025rtime32_creation_time\030\002 \001(\007\"_\n/COffl" +
+      "ine_GetUnsignedOfflineLogonTicket_Respon" +
+      "se\022,\n\006ticket\030\001 \001(\0132\034.COffline_OfflineLog" +
+      "onTicket2\243\003\n\007Offline\022\265\001\n\025GetOfflineLogon" +
+      "Ticket\022\'.COffline_GetOfflineLogonTicket_" +
+      "Request\032(.COffline_GetOfflineLogonTicket" +
+      "_Response\"I\202\265\030EGet a serialized and sign" +
+      "ed offline logon ticket for the current " +
+      "user\022\301\001\n\035GetUnsignedOfflineLogonTicket\022/" +
+      ".COffline_GetUnsignedOfflineLogonTicket_" +
+      "Request\0320.COffline_GetUnsignedOfflineLog" +
+      "onTicket_Response\"=\202\265\0309Get an unsigned o" +
+      "ffline logon ticket for the current user" +
+      "\032\034\202\265\030\030Offline settings serviceB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
+          OfflineTicket.getDescriptor(),
         });
     internal_static_COffline_GetOfflineLogonTicket_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_COffline_GetOfflineLogonTicket_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_COffline_GetOfflineLogonTicket_Request_descriptor,
-        new java.lang.String[] { "Priority", });
+        new java.lang.String[] { "Priority", "PerformEncryption", });
     internal_static_COffline_GetOfflineLogonTicket_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_COffline_GetOfflineLogonTicket_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_COffline_GetOfflineLogonTicket_Response_descriptor,
-        new java.lang.String[] { "SerializedTicket", "Signature", });
+        new java.lang.String[] { "SerializedTicket", "Signature", "EncryptedTicket", });
     internal_static_COffline_GetUnsignedOfflineLogonTicket_Request_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_COffline_GetUnsignedOfflineLogonTicket_Request_fieldAccessorTable = new
@@ -2938,7 +3251,9 @@ public final class SteammessagesOfflineSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
+    OfflineTicket.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

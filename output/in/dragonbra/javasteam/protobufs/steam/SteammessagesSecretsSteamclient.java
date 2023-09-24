@@ -3264,31 +3264,32 @@ public final class SteammessagesSecretsSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n-steam/steammessages_secrets.steamclien" +
-      "t.proto\0322steam/steammessages_unified_bas" +
-      "e.steamclient.proto\"\233\001\n\022CKeyEscrow_Reque" +
-      "st\022\033\n\023rsa_oaep_sha_ticket\030\001 \001(\014\022\020\n\010passw" +
-      "ord\030\002 \001(\014\022A\n\005usage\030\003 \001(\0162\020.EKeyEscrowUsa" +
-      "ge: k_EKeyEscrowUsageStreamingDevice\022\023\n\013" +
-      "device_name\030\004 \001(\t\"\202\002\n\021CKeyEscrow_Ticket\022" +
-      "\020\n\010password\030\001 \001(\014\022\022\n\nidentifier\030\002 \001(\004\022\017\n" +
-      "\007payload\030\003 \001(\014\022\021\n\ttimestamp\030\004 \001(\r\022A\n\005usa" +
-      "ge\030\005 \001(\0162\020.EKeyEscrowUsage: k_EKeyEscrow" +
-      "UsageStreamingDevice\022\023\n\013device_name\030\006 \001(" +
-      "\t\022\024\n\014device_model\030\007 \001(\t\022\025\n\rdevice_serial" +
-      "\030\010 \001(\t\022\036\n\026device_provisioning_id\030\t \001(\r\"9" +
-      "\n\023CKeyEscrow_Response\022\"\n\006ticket\030\001 \001(\0132\022." +
-      "CKeyEscrow_Ticket*7\n\017EKeyEscrowUsage\022$\n " +
-      "k_EKeyEscrowUsageStreamingDevice\020\0002\310\001\n\007S" +
-      "ecrets\022\200\001\n\tKeyEscrow\022\023.CKeyEscrow_Reques" +
-      "t\032\024.CKeyEscrow_Response\"H\202\265\030DService to " +
-      "perform authenticated key-exchange invol" +
-      "ving Steam Client\032:\202\265\0306Service for acces" +
-      "sing credentials and guarding secretsB\003\200" +
-      "\001\001"
+      "t.proto\032\036steam/steammessages_base.proto\032" +
+      "2steam/steammessages_unified_base.steamc" +
+      "lient.proto\"\233\001\n\022CKeyEscrow_Request\022\033\n\023rs" +
+      "a_oaep_sha_ticket\030\001 \001(\014\022\020\n\010password\030\002 \001(" +
+      "\014\022A\n\005usage\030\003 \001(\0162\020.EKeyEscrowUsage: k_EK" +
+      "eyEscrowUsageStreamingDevice\022\023\n\013device_n" +
+      "ame\030\004 \001(\t\"\202\002\n\021CKeyEscrow_Ticket\022\020\n\010passw" +
+      "ord\030\001 \001(\014\022\022\n\nidentifier\030\002 \001(\004\022\017\n\007payload" +
+      "\030\003 \001(\014\022\021\n\ttimestamp\030\004 \001(\r\022A\n\005usage\030\005 \001(\016" +
+      "2\020.EKeyEscrowUsage: k_EKeyEscrowUsageStr" +
+      "eamingDevice\022\023\n\013device_name\030\006 \001(\t\022\024\n\014dev" +
+      "ice_model\030\007 \001(\t\022\025\n\rdevice_serial\030\010 \001(\t\022\036" +
+      "\n\026device_provisioning_id\030\t \001(\r\"9\n\023CKeyEs" +
+      "crow_Response\022\"\n\006ticket\030\001 \001(\0132\022.CKeyEscr" +
+      "ow_Ticket*7\n\017EKeyEscrowUsage\022$\n k_EKeyEs" +
+      "crowUsageStreamingDevice\020\0002\310\001\n\007Secrets\022\200" +
+      "\001\n\tKeyEscrow\022\023.CKeyEscrow_Request\032\024.CKey" +
+      "Escrow_Response\"H\202\265\030DService to perform " +
+      "authenticated key-exchange involving Ste" +
+      "am Client\032:\202\265\0306Service for accessing cre" +
+      "dentials and guarding secretsB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CKeyEscrow_Request_descriptor =
@@ -3315,6 +3316,7 @@ public final class SteammessagesSecretsSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

@@ -3254,6 +3254,1858 @@ public final class SteammessagesClientlanp2P {
 
   }
 
+  public interface CMsgClientPeerChunkRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgClientPeerChunkRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 app_id = 1;</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <code>optional uint32 app_id = 1;</code>
+     * @return The appId.
+     */
+    int getAppId();
+
+    /**
+     * <code>optional uint32 depot_id = 2;</code>
+     * @return Whether the depotId field is set.
+     */
+    boolean hasDepotId();
+    /**
+     * <code>optional uint32 depot_id = 2;</code>
+     * @return The depotId.
+     */
+    int getDepotId();
+
+    /**
+     * <code>optional bytes sha = 3;</code>
+     * @return Whether the sha field is set.
+     */
+    boolean hasSha();
+    /**
+     * <code>optional bytes sha = 3;</code>
+     * @return The sha.
+     */
+    com.google.protobuf.ByteString getSha();
+  }
+  /**
+   * Protobuf type {@code CMsgClientPeerChunkRequest}
+   */
+  public static final class CMsgClientPeerChunkRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgClientPeerChunkRequest)
+      CMsgClientPeerChunkRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgClientPeerChunkRequest.newBuilder() to construct.
+    private CMsgClientPeerChunkRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgClientPeerChunkRequest() {
+      sha_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgClientPeerChunkRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgClientPeerChunkRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              appId_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              depotId_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              sha_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesClientlanp2P.internal_static_CMsgClientPeerChunkRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesClientlanp2P.internal_static_CMsgClientPeerChunkRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesClientlanp2P.CMsgClientPeerChunkRequest.class, SteammessagesClientlanp2P.CMsgClientPeerChunkRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private int appId_;
+    /**
+     * <code>optional uint32 app_id = 1;</code>
+     * @return Whether the appId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 app_id = 1;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public int getAppId() {
+      return appId_;
+    }
+
+    public static final int DEPOT_ID_FIELD_NUMBER = 2;
+    private int depotId_;
+    /**
+     * <code>optional uint32 depot_id = 2;</code>
+     * @return Whether the depotId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepotId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 depot_id = 2;</code>
+     * @return The depotId.
+     */
+    @java.lang.Override
+    public int getDepotId() {
+      return depotId_;
+    }
+
+    public static final int SHA_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString sha_;
+    /**
+     * <code>optional bytes sha = 3;</code>
+     * @return Whether the sha field is set.
+     */
+    @java.lang.Override
+    public boolean hasSha() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional bytes sha = 3;</code>
+     * @return The sha.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSha() {
+      return sha_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, appId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, depotId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBytes(3, sha_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, appId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, depotId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, sha_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesClientlanp2P.CMsgClientPeerChunkRequest)) {
+        return super.equals(obj);
+      }
+      SteammessagesClientlanp2P.CMsgClientPeerChunkRequest other = (SteammessagesClientlanp2P.CMsgClientPeerChunkRequest) obj;
+
+      if (hasAppId() != other.hasAppId()) return false;
+      if (hasAppId()) {
+        if (getAppId()
+            != other.getAppId()) return false;
+      }
+      if (hasDepotId() != other.hasDepotId()) return false;
+      if (hasDepotId()) {
+        if (getDepotId()
+            != other.getDepotId()) return false;
+      }
+      if (hasSha() != other.hasSha()) return false;
+      if (hasSha()) {
+        if (!getSha()
+            .equals(other.getSha())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAppId()) {
+        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppId();
+      }
+      if (hasDepotId()) {
+        hash = (37 * hash) + DEPOT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDepotId();
+      }
+      if (hasSha()) {
+        hash = (37 * hash) + SHA_FIELD_NUMBER;
+        hash = (53 * hash) + getSha().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesClientlanp2P.CMsgClientPeerChunkRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgClientPeerChunkRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgClientPeerChunkRequest)
+        SteammessagesClientlanp2P.CMsgClientPeerChunkRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesClientlanp2P.internal_static_CMsgClientPeerChunkRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesClientlanp2P.internal_static_CMsgClientPeerChunkRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesClientlanp2P.CMsgClientPeerChunkRequest.class, SteammessagesClientlanp2P.CMsgClientPeerChunkRequest.Builder.class);
+      }
+
+      // Construct using SteammessagesClientlanp2P.CMsgClientPeerChunkRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        appId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        depotId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sha_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesClientlanp2P.internal_static_CMsgClientPeerChunkRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientlanp2P.CMsgClientPeerChunkRequest getDefaultInstanceForType() {
+        return SteammessagesClientlanp2P.CMsgClientPeerChunkRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesClientlanp2P.CMsgClientPeerChunkRequest build() {
+        SteammessagesClientlanp2P.CMsgClientPeerChunkRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientlanp2P.CMsgClientPeerChunkRequest buildPartial() {
+        SteammessagesClientlanp2P.CMsgClientPeerChunkRequest result = new SteammessagesClientlanp2P.CMsgClientPeerChunkRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.depotId_ = depotId_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.sha_ = sha_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesClientlanp2P.CMsgClientPeerChunkRequest) {
+          return mergeFrom((SteammessagesClientlanp2P.CMsgClientPeerChunkRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesClientlanp2P.CMsgClientPeerChunkRequest other) {
+        if (other == SteammessagesClientlanp2P.CMsgClientPeerChunkRequest.getDefaultInstance()) return this;
+        if (other.hasAppId()) {
+          setAppId(other.getAppId());
+        }
+        if (other.hasDepotId()) {
+          setDepotId(other.getDepotId());
+        }
+        if (other.hasSha()) {
+          setSha(other.getSha());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesClientlanp2P.CMsgClientPeerChunkRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesClientlanp2P.CMsgClientPeerChunkRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int appId_ ;
+      /**
+       * <code>optional uint32 app_id = 1;</code>
+       * @return Whether the appId field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 app_id = 1;</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public int getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>optional uint32 app_id = 1;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(int value) {
+        bitField0_ |= 0x00000001;
+        appId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 app_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int depotId_ ;
+      /**
+       * <code>optional uint32 depot_id = 2;</code>
+       * @return Whether the depotId field is set.
+       */
+      @java.lang.Override
+      public boolean hasDepotId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 depot_id = 2;</code>
+       * @return The depotId.
+       */
+      @java.lang.Override
+      public int getDepotId() {
+        return depotId_;
+      }
+      /**
+       * <code>optional uint32 depot_id = 2;</code>
+       * @param value The depotId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepotId(int value) {
+        bitField0_ |= 0x00000002;
+        depotId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 depot_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepotId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        depotId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString sha_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes sha = 3;</code>
+       * @return Whether the sha field is set.
+       */
+      @java.lang.Override
+      public boolean hasSha() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bytes sha = 3;</code>
+       * @return The sha.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSha() {
+        return sha_;
+      }
+      /**
+       * <code>optional bytes sha = 3;</code>
+       * @param value The sha to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSha(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        sha_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes sha = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSha() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        sha_ = getDefaultInstance().getSha();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgClientPeerChunkRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgClientPeerChunkRequest)
+    private static final SteammessagesClientlanp2P.CMsgClientPeerChunkRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesClientlanp2P.CMsgClientPeerChunkRequest();
+    }
+
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgClientPeerChunkRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgClientPeerChunkRequest>() {
+      @java.lang.Override
+      public CMsgClientPeerChunkRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgClientPeerChunkRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgClientPeerChunkRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgClientPeerChunkRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesClientlanp2P.CMsgClientPeerChunkRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CMsgClientPeerChunkResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgClientPeerChunkResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 result = 1;</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>optional uint32 result = 1;</code>
+     * @return The result.
+     */
+    int getResult();
+
+    /**
+     * <code>optional uint32 app_id = 2;</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <code>optional uint32 app_id = 2;</code>
+     * @return The appId.
+     */
+    int getAppId();
+
+    /**
+     * <code>optional uint32 depot_id = 3;</code>
+     * @return Whether the depotId field is set.
+     */
+    boolean hasDepotId();
+    /**
+     * <code>optional uint32 depot_id = 3;</code>
+     * @return The depotId.
+     */
+    int getDepotId();
+
+    /**
+     * <code>optional bytes sha = 4;</code>
+     * @return Whether the sha field is set.
+     */
+    boolean hasSha();
+    /**
+     * <code>optional bytes sha = 4;</code>
+     * @return The sha.
+     */
+    com.google.protobuf.ByteString getSha();
+
+    /**
+     * <code>optional bool encrypted = 5;</code>
+     * @return Whether the encrypted field is set.
+     */
+    boolean hasEncrypted();
+    /**
+     * <code>optional bool encrypted = 5;</code>
+     * @return The encrypted.
+     */
+    boolean getEncrypted();
+
+    /**
+     * <code>optional bool compressed = 6;</code>
+     * @return Whether the compressed field is set.
+     */
+    boolean hasCompressed();
+    /**
+     * <code>optional bool compressed = 6;</code>
+     * @return The compressed.
+     */
+    boolean getCompressed();
+
+    /**
+     * <code>optional bytes chunk_data = 7;</code>
+     * @return Whether the chunkData field is set.
+     */
+    boolean hasChunkData();
+    /**
+     * <code>optional bytes chunk_data = 7;</code>
+     * @return The chunkData.
+     */
+    com.google.protobuf.ByteString getChunkData();
+  }
+  /**
+   * Protobuf type {@code CMsgClientPeerChunkResponse}
+   */
+  public static final class CMsgClientPeerChunkResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CMsgClientPeerChunkResponse)
+      CMsgClientPeerChunkResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CMsgClientPeerChunkResponse.newBuilder() to construct.
+    private CMsgClientPeerChunkResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CMsgClientPeerChunkResponse() {
+      sha_ = com.google.protobuf.ByteString.EMPTY;
+      chunkData_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CMsgClientPeerChunkResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgClientPeerChunkResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              result_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              appId_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              depotId_ = input.readUInt32();
+              break;
+            }
+            case 34: {
+              bitField0_ |= 0x00000008;
+              sha_ = input.readBytes();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              encrypted_ = input.readBool();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              compressed_ = input.readBool();
+              break;
+            }
+            case 58: {
+              bitField0_ |= 0x00000040;
+              chunkData_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return SteammessagesClientlanp2P.internal_static_CMsgClientPeerChunkResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return SteammessagesClientlanp2P.internal_static_CMsgClientPeerChunkResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              SteammessagesClientlanp2P.CMsgClientPeerChunkResponse.class, SteammessagesClientlanp2P.CMsgClientPeerChunkResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private int result_;
+    /**
+     * <code>optional uint32 result = 1;</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint32 result = 1;</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public int getResult() {
+      return result_;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private int appId_;
+    /**
+     * <code>optional uint32 app_id = 2;</code>
+     * @return Whether the appId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 app_id = 2;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public int getAppId() {
+      return appId_;
+    }
+
+    public static final int DEPOT_ID_FIELD_NUMBER = 3;
+    private int depotId_;
+    /**
+     * <code>optional uint32 depot_id = 3;</code>
+     * @return Whether the depotId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepotId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional uint32 depot_id = 3;</code>
+     * @return The depotId.
+     */
+    @java.lang.Override
+    public int getDepotId() {
+      return depotId_;
+    }
+
+    public static final int SHA_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString sha_;
+    /**
+     * <code>optional bytes sha = 4;</code>
+     * @return Whether the sha field is set.
+     */
+    @java.lang.Override
+    public boolean hasSha() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional bytes sha = 4;</code>
+     * @return The sha.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSha() {
+      return sha_;
+    }
+
+    public static final int ENCRYPTED_FIELD_NUMBER = 5;
+    private boolean encrypted_;
+    /**
+     * <code>optional bool encrypted = 5;</code>
+     * @return Whether the encrypted field is set.
+     */
+    @java.lang.Override
+    public boolean hasEncrypted() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional bool encrypted = 5;</code>
+     * @return The encrypted.
+     */
+    @java.lang.Override
+    public boolean getEncrypted() {
+      return encrypted_;
+    }
+
+    public static final int COMPRESSED_FIELD_NUMBER = 6;
+    private boolean compressed_;
+    /**
+     * <code>optional bool compressed = 6;</code>
+     * @return Whether the compressed field is set.
+     */
+    @java.lang.Override
+    public boolean hasCompressed() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional bool compressed = 6;</code>
+     * @return The compressed.
+     */
+    @java.lang.Override
+    public boolean getCompressed() {
+      return compressed_;
+    }
+
+    public static final int CHUNK_DATA_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString chunkData_;
+    /**
+     * <code>optional bytes chunk_data = 7;</code>
+     * @return Whether the chunkData field is set.
+     */
+    @java.lang.Override
+    public boolean hasChunkData() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional bytes chunk_data = 7;</code>
+     * @return The chunkData.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getChunkData() {
+      return chunkData_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt32(1, result_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, appId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeUInt32(3, depotId_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBytes(4, sha_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeBool(5, encrypted_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeBool(6, compressed_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeBytes(7, chunkData_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, result_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, appId_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, depotId_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, sha_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, encrypted_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, compressed_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, chunkData_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof SteammessagesClientlanp2P.CMsgClientPeerChunkResponse)) {
+        return super.equals(obj);
+      }
+      SteammessagesClientlanp2P.CMsgClientPeerChunkResponse other = (SteammessagesClientlanp2P.CMsgClientPeerChunkResponse) obj;
+
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (getResult()
+            != other.getResult()) return false;
+      }
+      if (hasAppId() != other.hasAppId()) return false;
+      if (hasAppId()) {
+        if (getAppId()
+            != other.getAppId()) return false;
+      }
+      if (hasDepotId() != other.hasDepotId()) return false;
+      if (hasDepotId()) {
+        if (getDepotId()
+            != other.getDepotId()) return false;
+      }
+      if (hasSha() != other.hasSha()) return false;
+      if (hasSha()) {
+        if (!getSha()
+            .equals(other.getSha())) return false;
+      }
+      if (hasEncrypted() != other.hasEncrypted()) return false;
+      if (hasEncrypted()) {
+        if (getEncrypted()
+            != other.getEncrypted()) return false;
+      }
+      if (hasCompressed() != other.hasCompressed()) return false;
+      if (hasCompressed()) {
+        if (getCompressed()
+            != other.getCompressed()) return false;
+      }
+      if (hasChunkData() != other.hasChunkData()) return false;
+      if (hasChunkData()) {
+        if (!getChunkData()
+            .equals(other.getChunkData())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult();
+      }
+      if (hasAppId()) {
+        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppId();
+      }
+      if (hasDepotId()) {
+        hash = (37 * hash) + DEPOT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDepotId();
+      }
+      if (hasSha()) {
+        hash = (37 * hash) + SHA_FIELD_NUMBER;
+        hash = (53 * hash) + getSha().hashCode();
+      }
+      if (hasEncrypted()) {
+        hash = (37 * hash) + ENCRYPTED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEncrypted());
+      }
+      if (hasCompressed()) {
+        hash = (37 * hash) + COMPRESSED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCompressed());
+      }
+      if (hasChunkData()) {
+        hash = (37 * hash) + CHUNK_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getChunkData().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(SteammessagesClientlanp2P.CMsgClientPeerChunkResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgClientPeerChunkResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgClientPeerChunkResponse)
+        SteammessagesClientlanp2P.CMsgClientPeerChunkResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return SteammessagesClientlanp2P.internal_static_CMsgClientPeerChunkResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return SteammessagesClientlanp2P.internal_static_CMsgClientPeerChunkResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                SteammessagesClientlanp2P.CMsgClientPeerChunkResponse.class, SteammessagesClientlanp2P.CMsgClientPeerChunkResponse.Builder.class);
+      }
+
+      // Construct using SteammessagesClientlanp2P.CMsgClientPeerChunkResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        result_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        depotId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        sha_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        encrypted_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        compressed_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        chunkData_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return SteammessagesClientlanp2P.internal_static_CMsgClientPeerChunkResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientlanp2P.CMsgClientPeerChunkResponse getDefaultInstanceForType() {
+        return SteammessagesClientlanp2P.CMsgClientPeerChunkResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public SteammessagesClientlanp2P.CMsgClientPeerChunkResponse build() {
+        SteammessagesClientlanp2P.CMsgClientPeerChunkResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public SteammessagesClientlanp2P.CMsgClientPeerChunkResponse buildPartial() {
+        SteammessagesClientlanp2P.CMsgClientPeerChunkResponse result = new SteammessagesClientlanp2P.CMsgClientPeerChunkResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = result_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.depotId_ = depotId_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.sha_ = sha_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.encrypted_ = encrypted_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.compressed_ = compressed_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.chunkData_ = chunkData_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof SteammessagesClientlanp2P.CMsgClientPeerChunkResponse) {
+          return mergeFrom((SteammessagesClientlanp2P.CMsgClientPeerChunkResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(SteammessagesClientlanp2P.CMsgClientPeerChunkResponse other) {
+        if (other == SteammessagesClientlanp2P.CMsgClientPeerChunkResponse.getDefaultInstance()) return this;
+        if (other.hasResult()) {
+          setResult(other.getResult());
+        }
+        if (other.hasAppId()) {
+          setAppId(other.getAppId());
+        }
+        if (other.hasDepotId()) {
+          setDepotId(other.getDepotId());
+        }
+        if (other.hasSha()) {
+          setSha(other.getSha());
+        }
+        if (other.hasEncrypted()) {
+          setEncrypted(other.getEncrypted());
+        }
+        if (other.hasCompressed()) {
+          setCompressed(other.getCompressed());
+        }
+        if (other.hasChunkData()) {
+          setChunkData(other.getChunkData());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        SteammessagesClientlanp2P.CMsgClientPeerChunkResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (SteammessagesClientlanp2P.CMsgClientPeerChunkResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int result_ ;
+      /**
+       * <code>optional uint32 result = 1;</code>
+       * @return Whether the result field is set.
+       */
+      @java.lang.Override
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint32 result = 1;</code>
+       * @return The result.
+       */
+      @java.lang.Override
+      public int getResult() {
+        return result_;
+      }
+      /**
+       * <code>optional uint32 result = 1;</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(int value) {
+        bitField0_ |= 0x00000001;
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 result = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int appId_ ;
+      /**
+       * <code>optional uint32 app_id = 2;</code>
+       * @return Whether the appId field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 app_id = 2;</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public int getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>optional uint32 app_id = 2;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(int value) {
+        bitField0_ |= 0x00000002;
+        appId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 app_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int depotId_ ;
+      /**
+       * <code>optional uint32 depot_id = 3;</code>
+       * @return Whether the depotId field is set.
+       */
+      @java.lang.Override
+      public boolean hasDepotId() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional uint32 depot_id = 3;</code>
+       * @return The depotId.
+       */
+      @java.lang.Override
+      public int getDepotId() {
+        return depotId_;
+      }
+      /**
+       * <code>optional uint32 depot_id = 3;</code>
+       * @param value The depotId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepotId(int value) {
+        bitField0_ |= 0x00000004;
+        depotId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 depot_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepotId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        depotId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString sha_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes sha = 4;</code>
+       * @return Whether the sha field is set.
+       */
+      @java.lang.Override
+      public boolean hasSha() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bytes sha = 4;</code>
+       * @return The sha.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSha() {
+        return sha_;
+      }
+      /**
+       * <code>optional bytes sha = 4;</code>
+       * @param value The sha to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSha(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        sha_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes sha = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSha() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        sha_ = getDefaultInstance().getSha();
+        onChanged();
+        return this;
+      }
+
+      private boolean encrypted_ ;
+      /**
+       * <code>optional bool encrypted = 5;</code>
+       * @return Whether the encrypted field is set.
+       */
+      @java.lang.Override
+      public boolean hasEncrypted() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional bool encrypted = 5;</code>
+       * @return The encrypted.
+       */
+      @java.lang.Override
+      public boolean getEncrypted() {
+        return encrypted_;
+      }
+      /**
+       * <code>optional bool encrypted = 5;</code>
+       * @param value The encrypted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncrypted(boolean value) {
+        bitField0_ |= 0x00000010;
+        encrypted_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool encrypted = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEncrypted() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        encrypted_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean compressed_ ;
+      /**
+       * <code>optional bool compressed = 6;</code>
+       * @return Whether the compressed field is set.
+       */
+      @java.lang.Override
+      public boolean hasCompressed() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional bool compressed = 6;</code>
+       * @return The compressed.
+       */
+      @java.lang.Override
+      public boolean getCompressed() {
+        return compressed_;
+      }
+      /**
+       * <code>optional bool compressed = 6;</code>
+       * @param value The compressed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompressed(boolean value) {
+        bitField0_ |= 0x00000020;
+        compressed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool compressed = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompressed() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        compressed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString chunkData_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes chunk_data = 7;</code>
+       * @return Whether the chunkData field is set.
+       */
+      @java.lang.Override
+      public boolean hasChunkData() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional bytes chunk_data = 7;</code>
+       * @return The chunkData.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getChunkData() {
+        return chunkData_;
+      }
+      /**
+       * <code>optional bytes chunk_data = 7;</code>
+       * @param value The chunkData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChunkData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        chunkData_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes chunk_data = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChunkData() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        chunkData_ = getDefaultInstance().getChunkData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CMsgClientPeerChunkResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgClientPeerChunkResponse)
+    private static final SteammessagesClientlanp2P.CMsgClientPeerChunkResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new SteammessagesClientlanp2P.CMsgClientPeerChunkResponse();
+    }
+
+    public static SteammessagesClientlanp2P.CMsgClientPeerChunkResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CMsgClientPeerChunkResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CMsgClientPeerChunkResponse>() {
+      @java.lang.Override
+      public CMsgClientPeerChunkResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgClientPeerChunkResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CMsgClientPeerChunkResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgClientPeerChunkResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public SteammessagesClientlanp2P.CMsgClientPeerChunkResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgClientLANP2PRequestChunks_descriptor;
   private static final 
@@ -3274,6 +5126,16 @@ public final class SteammessagesClientlanp2P {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgClientLANP2PRequestChunksResponse_ChunkData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgClientPeerChunkRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgClientPeerChunkRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgClientPeerChunkResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CMsgClientPeerChunkResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3294,7 +5156,13 @@ public final class SteammessagesClientlanp2P {
       "unkData\032u\n\tChunkData\022\016\n\006result\030\001 \001(\r\022\020\n\010" +
       "depot_id\030\002 \001(\r\022\013\n\003sha\030\003 \001(\014\022\022\n\nchunk_dat" +
       "a\030\004 \001(\014\022\021\n\tencrypted\030\005 \001(\010\022\022\n\ncompressed" +
-      "\030\006 \001(\010B\005H\001\200\001\000"
+      "\030\006 \001(\010\"K\n\032CMsgClientPeerChunkRequest\022\016\n\006" +
+      "app_id\030\001 \001(\r\022\020\n\010depot_id\030\002 \001(\r\022\013\n\003sha\030\003 " +
+      "\001(\014\"\227\001\n\033CMsgClientPeerChunkResponse\022\016\n\006r" +
+      "esult\030\001 \001(\r\022\016\n\006app_id\030\002 \001(\r\022\020\n\010depot_id\030" +
+      "\003 \001(\r\022\013\n\003sha\030\004 \001(\014\022\021\n\tencrypted\030\005 \001(\010\022\022\n" +
+      "\ncompressed\030\006 \001(\010\022\022\n\nchunk_data\030\007 \001(\014B\005H" +
+      "\001\200\001\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3325,6 +5193,18 @@ public final class SteammessagesClientlanp2P {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgClientLANP2PRequestChunksResponse_ChunkData_descriptor,
         new java.lang.String[] { "Result", "DepotId", "Sha", "ChunkData", "Encrypted", "Compressed", });
+    internal_static_CMsgClientPeerChunkRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_CMsgClientPeerChunkRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgClientPeerChunkRequest_descriptor,
+        new java.lang.String[] { "AppId", "DepotId", "Sha", });
+    internal_static_CMsgClientPeerChunkResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_CMsgClientPeerChunkResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CMsgClientPeerChunkResponse_descriptor,
+        new java.lang.String[] { "Result", "AppId", "DepotId", "Sha", "Encrypted", "Compressed", "ChunkData", });
     SteammessagesBase.getDescriptor();
   }
 

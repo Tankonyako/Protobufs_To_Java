@@ -13972,6 +13972,28 @@ public final class SteammessagesDeviceauthSteamclient {
        * @return The isUsed.
        */
       boolean getIsUsed();
+
+      /**
+       * <code>optional uint32 time_removed = 6;</code>
+       * @return Whether the timeRemoved field is set.
+       */
+      boolean hasTimeRemoved();
+      /**
+       * <code>optional uint32 time_removed = 6;</code>
+       * @return The timeRemoved.
+       */
+      int getTimeRemoved();
+
+      /**
+       * <code>optional uint32 time_first = 7;</code>
+       * @return Whether the timeFirst field is set.
+       */
+      boolean hasTimeFirst();
+      /**
+       * <code>optional uint32 time_first = 7;</code>
+       * @return The timeFirst.
+       */
+      int getTimeFirst();
     }
     /**
      * Protobuf type {@code CDeviceAuth_GetAuthorizedAsBorrower_Response.Lender}
@@ -14042,6 +14064,16 @@ public final class SteammessagesDeviceauthSteamclient {
               case 40: {
                 bitField0_ |= 0x00000010;
                 isUsed_ = input.readBool();
+                break;
+              }
+              case 48: {
+                bitField0_ |= 0x00000020;
+                timeRemoved_ = input.readUInt32();
+                break;
+              }
+              case 56: {
+                bitField0_ |= 0x00000040;
+                timeFirst_ = input.readUInt32();
                 break;
               }
               default: {
@@ -14172,6 +14204,44 @@ public final class SteammessagesDeviceauthSteamclient {
         return isUsed_;
       }
 
+      public static final int TIME_REMOVED_FIELD_NUMBER = 6;
+      private int timeRemoved_;
+      /**
+       * <code>optional uint32 time_removed = 6;</code>
+       * @return Whether the timeRemoved field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeRemoved() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional uint32 time_removed = 6;</code>
+       * @return The timeRemoved.
+       */
+      @java.lang.Override
+      public int getTimeRemoved() {
+        return timeRemoved_;
+      }
+
+      public static final int TIME_FIRST_FIELD_NUMBER = 7;
+      private int timeFirst_;
+      /**
+       * <code>optional uint32 time_first = 7;</code>
+       * @return Whether the timeFirst field is set.
+       */
+      @java.lang.Override
+      public boolean hasTimeFirst() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional uint32 time_first = 7;</code>
+       * @return The timeFirst.
+       */
+      @java.lang.Override
+      public int getTimeFirst() {
+        return timeFirst_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -14201,6 +14271,12 @@ public final class SteammessagesDeviceauthSteamclient {
         if (((bitField0_ & 0x00000010) != 0)) {
           output.writeBool(5, isUsed_);
         }
+        if (((bitField0_ & 0x00000020) != 0)) {
+          output.writeUInt32(6, timeRemoved_);
+        }
+        if (((bitField0_ & 0x00000040) != 0)) {
+          output.writeUInt32(7, timeFirst_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -14229,6 +14305,14 @@ public final class SteammessagesDeviceauthSteamclient {
         if (((bitField0_ & 0x00000010) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(5, isUsed_);
+        }
+        if (((bitField0_ & 0x00000020) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(6, timeRemoved_);
+        }
+        if (((bitField0_ & 0x00000040) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(7, timeFirst_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -14270,6 +14354,16 @@ public final class SteammessagesDeviceauthSteamclient {
           if (getIsUsed()
               != other.getIsUsed()) return false;
         }
+        if (hasTimeRemoved() != other.hasTimeRemoved()) return false;
+        if (hasTimeRemoved()) {
+          if (getTimeRemoved()
+              != other.getTimeRemoved()) return false;
+        }
+        if (hasTimeFirst() != other.hasTimeFirst()) return false;
+        if (hasTimeFirst()) {
+          if (getTimeFirst()
+              != other.getTimeFirst()) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -14304,6 +14398,14 @@ public final class SteammessagesDeviceauthSteamclient {
           hash = (37 * hash) + IS_USED_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getIsUsed());
+        }
+        if (hasTimeRemoved()) {
+          hash = (37 * hash) + TIME_REMOVED_FIELD_NUMBER;
+          hash = (53 * hash) + getTimeRemoved();
+        }
+        if (hasTimeFirst()) {
+          hash = (37 * hash) + TIME_FIRST_FIELD_NUMBER;
+          hash = (53 * hash) + getTimeFirst();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -14448,6 +14550,10 @@ public final class SteammessagesDeviceauthSteamclient {
           bitField0_ = (bitField0_ & ~0x00000008);
           isUsed_ = false;
           bitField0_ = (bitField0_ & ~0x00000010);
+          timeRemoved_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000020);
+          timeFirst_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000040);
           return this;
         }
 
@@ -14495,6 +14601,14 @@ public final class SteammessagesDeviceauthSteamclient {
           if (((from_bitField0_ & 0x00000010) != 0)) {
             result.isUsed_ = isUsed_;
             to_bitField0_ |= 0x00000010;
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.timeRemoved_ = timeRemoved_;
+            to_bitField0_ |= 0x00000020;
+          }
+          if (((from_bitField0_ & 0x00000040) != 0)) {
+            result.timeFirst_ = timeFirst_;
+            to_bitField0_ |= 0x00000040;
           }
           result.bitField0_ = to_bitField0_;
           onBuilt();
@@ -14559,6 +14673,12 @@ public final class SteammessagesDeviceauthSteamclient {
           }
           if (other.hasIsUsed()) {
             setIsUsed(other.getIsUsed());
+          }
+          if (other.hasTimeRemoved()) {
+            setTimeRemoved(other.getTimeRemoved());
+          }
+          if (other.hasTimeFirst()) {
+            setTimeFirst(other.getTimeFirst());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -14781,6 +14901,84 @@ public final class SteammessagesDeviceauthSteamclient {
         public Builder clearIsUsed() {
           bitField0_ = (bitField0_ & ~0x00000010);
           isUsed_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int timeRemoved_ ;
+        /**
+         * <code>optional uint32 time_removed = 6;</code>
+         * @return Whether the timeRemoved field is set.
+         */
+        @java.lang.Override
+        public boolean hasTimeRemoved() {
+          return ((bitField0_ & 0x00000020) != 0);
+        }
+        /**
+         * <code>optional uint32 time_removed = 6;</code>
+         * @return The timeRemoved.
+         */
+        @java.lang.Override
+        public int getTimeRemoved() {
+          return timeRemoved_;
+        }
+        /**
+         * <code>optional uint32 time_removed = 6;</code>
+         * @param value The timeRemoved to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTimeRemoved(int value) {
+          bitField0_ |= 0x00000020;
+          timeRemoved_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 time_removed = 6;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTimeRemoved() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          timeRemoved_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int timeFirst_ ;
+        /**
+         * <code>optional uint32 time_first = 7;</code>
+         * @return Whether the timeFirst field is set.
+         */
+        @java.lang.Override
+        public boolean hasTimeFirst() {
+          return ((bitField0_ & 0x00000040) != 0);
+        }
+        /**
+         * <code>optional uint32 time_first = 7;</code>
+         * @return The timeFirst.
+         */
+        @java.lang.Override
+        public int getTimeFirst() {
+          return timeFirst_;
+        }
+        /**
+         * <code>optional uint32 time_first = 7;</code>
+         * @param value The timeFirst to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTimeFirst(int value) {
+          bitField0_ |= 0x00000040;
+          timeFirst_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 time_first = 7;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTimeFirst() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          timeFirst_ = 0;
           onChanged();
           return this;
         }
@@ -17747,6 +17945,17 @@ public final class SteammessagesDeviceauthSteamclient {
      * @return The steamid.
      */
     long getSteamid();
+
+    /**
+     * <code>optional uint32 appid = 2;</code>
+     * @return Whether the appid field is set.
+     */
+    boolean hasAppid();
+    /**
+     * <code>optional uint32 appid = 2;</code>
+     * @return The appid.
+     */
+    int getAppid();
   }
   /**
    * Protobuf type {@code CDeviceAuth_GetBorrowerPlayHistory_Request}
@@ -17797,6 +18006,11 @@ public final class SteammessagesDeviceauthSteamclient {
             case 9: {
               bitField0_ |= 0x00000001;
               steamid_ = input.readFixed64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              appid_ = input.readUInt32();
               break;
             }
             default: {
@@ -17851,6 +18065,25 @@ public final class SteammessagesDeviceauthSteamclient {
       return steamid_;
     }
 
+    public static final int APPID_FIELD_NUMBER = 2;
+    private int appid_;
+    /**
+     * <code>optional uint32 appid = 2;</code>
+     * @return Whether the appid field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppid() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional uint32 appid = 2;</code>
+     * @return The appid.
+     */
+    @java.lang.Override
+    public int getAppid() {
+      return appid_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17868,6 +18101,9 @@ public final class SteammessagesDeviceauthSteamclient {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeFixed64(1, steamid_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeUInt32(2, appid_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -17880,6 +18116,10 @@ public final class SteammessagesDeviceauthSteamclient {
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed64Size(1, steamid_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, appid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -17901,6 +18141,11 @@ public final class SteammessagesDeviceauthSteamclient {
         if (getSteamid()
             != other.getSteamid()) return false;
       }
+      if (hasAppid() != other.hasAppid()) return false;
+      if (hasAppid()) {
+        if (getAppid()
+            != other.getAppid()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17916,6 +18161,10 @@ public final class SteammessagesDeviceauthSteamclient {
         hash = (37 * hash) + STEAMID_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getSteamid());
+      }
+      if (hasAppid()) {
+        hash = (37 * hash) + APPID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppid();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -18052,6 +18301,8 @@ public final class SteammessagesDeviceauthSteamclient {
         super.clear();
         steamid_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
+        appid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -18083,6 +18334,10 @@ public final class SteammessagesDeviceauthSteamclient {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.steamid_ = steamid_;
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appid_ = appid_;
+          to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -18135,6 +18390,9 @@ public final class SteammessagesDeviceauthSteamclient {
         if (other == SteammessagesDeviceauthSteamclient.CDeviceAuth_GetBorrowerPlayHistory_Request.getDefaultInstance()) return this;
         if (other.hasSteamid()) {
           setSteamid(other.getSteamid());
+        }
+        if (other.hasAppid()) {
+          setAppid(other.getAppid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -18201,6 +18459,45 @@ public final class SteammessagesDeviceauthSteamclient {
       public Builder clearSteamid() {
         bitField0_ = (bitField0_ & ~0x00000001);
         steamid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int appid_ ;
+      /**
+       * <code>optional uint32 appid = 2;</code>
+       * @return Whether the appid field is set.
+       */
+      @java.lang.Override
+      public boolean hasAppid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional uint32 appid = 2;</code>
+       * @return The appid.
+       */
+      @java.lang.Override
+      public int getAppid() {
+        return appid_;
+      }
+      /**
+       * <code>optional uint32 appid = 2;</code>
+       * @param value The appid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppid(int value) {
+        bitField0_ |= 0x00000002;
+        appid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 appid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appid_ = 0;
         onChanged();
         return this;
       }
@@ -20822,133 +21119,136 @@ public final class SteammessagesDeviceauthSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n0steam/steammessages_deviceauth.steamcl" +
-      "ient.proto\0322steam/steammessages_unified_" +
-      "base.steamclient.proto\"X\n+CDeviceAuth_Ge" +
-      "tOwnAuthorizedDevices_Request\022\017\n\007steamid" +
-      "\030\001 \001(\006\022\030\n\020include_canceled\030\002 \001(\010\"\270\002\n,CDe" +
-      "viceAuth_GetOwnAuthorizedDevices_Respons" +
-      "e\022E\n\007devices\030\001 \003(\01324.CDeviceAuth_GetOwnA" +
-      "uthorizedDevices_Response.Device\032\300\001\n\006Dev" +
-      "ice\022\031\n\021auth_device_token\030\001 \001(\006\022\023\n\013device" +
-      "_name\030\002 \001(\t\022\022\n\nis_pending\030\003 \001(\010\022\023\n\013is_ca" +
-      "nceled\030\004 \001(\010\022\026\n\016last_time_used\030\005 \001(\r\022\030\n\020" +
-      "last_borrower_id\030\006 \001(\006\022\027\n\017last_app_playe" +
-      "d\030\007 \001(\r\022\022\n\nis_limited\030\010 \001(\010\"\205\001\n.CDeviceA" +
-      "uth_AcceptAuthorizationRequest_Request\022\017" +
-      "\n\007steamid\030\001 \001(\006\022\031\n\021auth_device_token\030\002 \001" +
-      "(\006\022\021\n\tauth_code\030\003 \001(\006\022\024\n\014from_steamid\030\004 " +
-      "\001(\006\"1\n/CDeviceAuth_AcceptAuthorizationRe" +
-      "quest_Response\"W\n)CDeviceAuth_AuthorizeR" +
-      "emoteDevice_Request\022\017\n\007steamid\030\001 \001(\006\022\031\n\021" +
-      "auth_device_token\030\002 \001(\006\",\n*CDeviceAuth_A" +
-      "uthorizeRemoteDevice_Response\"Y\n+CDevice" +
-      "Auth_DeauthorizeRemoteDevice_Request\022\017\n\007" +
-      "steamid\030\001 \001(\006\022\031\n\021auth_device_token\030\002 \001(\006" +
-      "\".\n,CDeviceAuth_DeauthorizeRemoteDevice_" +
-      "Response\"?\n,CDeviceAuth_GetUsedAuthorize" +
-      "dDevices_Request\022\017\n\007steamid\030\001 \001(\006\"\372\001\n-CD" +
-      "eviceAuth_GetUsedAuthorizedDevices_Respo" +
-      "nse\022F\n\007devices\030\001 \003(\01325.CDeviceAuth_GetUs" +
-      "edAuthorizedDevices_Response.Device\032\200\001\n\006" +
-      "Device\022\031\n\021auth_device_token\030\001 \001(\006\022\023\n\013dev" +
-      "ice_name\030\002 \001(\t\022\025\n\rowner_steamid\030\003 \001(\006\022\026\n" +
-      "\016last_time_used\030\004 \001(\r\022\027\n\017last_app_played" +
-      "\030\005 \001(\r\"p\n*CDeviceAuth_GetAuthorizedBorro" +
-      "wers_Request\022\017\n\007steamid\030\001 \001(\006\022\030\n\020include" +
-      "_canceled\030\002 \001(\010\022\027\n\017include_pending\030\003 \001(\010" +
-      "\"\323\001\n+CDeviceAuth_GetAuthorizedBorrowers_" +
-      "Response\022H\n\tborrowers\030\001 \003(\01325.CDeviceAut" +
-      "h_GetAuthorizedBorrowers_Response.Borrow" +
-      "er\032Z\n\010Borrower\022\017\n\007steamid\030\001 \001(\006\022\022\n\nis_pe" +
-      "nding\030\002 \001(\010\022\023\n\013is_canceled\030\003 \001(\010\022\024\n\014time" +
-      "_created\030\004 \001(\r\"W\n*CDeviceAuth_AddAuthori" +
-      "zedBorrowers_Request\022\017\n\007steamid\030\001 \001(\006\022\030\n" +
-      "\020steamid_borrower\030\002 \003(\006\"F\n+CDeviceAuth_A" +
-      "ddAuthorizedBorrowers_Response\022\027\n\017second" +
-      "s_to_wait\030\001 \001(\005\"Z\n-CDeviceAuth_RemoveAut" +
-      "horizedBorrowers_Request\022\017\n\007steamid\030\001 \001(" +
-      "\006\022\030\n\020steamid_borrower\030\002 \003(\006\"0\n.CDeviceAu" +
-      "th_RemoveAuthorizedBorrowers_Response\"q\n" +
-      "+CDeviceAuth_GetAuthorizedAsBorrower_Req" +
+      "ient.proto\032\036steam/steammessages_base.pro" +
+      "to\0322steam/steammessages_unified_base.ste" +
+      "amclient.proto\"X\n+CDeviceAuth_GetOwnAuth" +
+      "orizedDevices_Request\022\017\n\007steamid\030\001 \001(\006\022\030" +
+      "\n\020include_canceled\030\002 \001(\010\"\270\002\n,CDeviceAuth" +
+      "_GetOwnAuthorizedDevices_Response\022E\n\007dev" +
+      "ices\030\001 \003(\01324.CDeviceAuth_GetOwnAuthorize" +
+      "dDevices_Response.Device\032\300\001\n\006Device\022\031\n\021a" +
+      "uth_device_token\030\001 \001(\006\022\023\n\013device_name\030\002 " +
+      "\001(\t\022\022\n\nis_pending\030\003 \001(\010\022\023\n\013is_canceled\030\004" +
+      " \001(\010\022\026\n\016last_time_used\030\005 \001(\r\022\030\n\020last_bor" +
+      "rower_id\030\006 \001(\006\022\027\n\017last_app_played\030\007 \001(\r\022" +
+      "\022\n\nis_limited\030\010 \001(\010\"\205\001\n.CDeviceAuth_Acce" +
+      "ptAuthorizationRequest_Request\022\017\n\007steami" +
+      "d\030\001 \001(\006\022\031\n\021auth_device_token\030\002 \001(\006\022\021\n\tau" +
+      "th_code\030\003 \001(\006\022\024\n\014from_steamid\030\004 \001(\006\"1\n/C" +
+      "DeviceAuth_AcceptAuthorizationRequest_Re" +
+      "sponse\"W\n)CDeviceAuth_AuthorizeRemoteDev" +
+      "ice_Request\022\017\n\007steamid\030\001 \001(\006\022\031\n\021auth_dev" +
+      "ice_token\030\002 \001(\006\",\n*CDeviceAuth_Authorize" +
+      "RemoteDevice_Response\"Y\n+CDeviceAuth_Dea" +
+      "uthorizeRemoteDevice_Request\022\017\n\007steamid\030" +
+      "\001 \001(\006\022\031\n\021auth_device_token\030\002 \001(\006\".\n,CDev" +
+      "iceAuth_DeauthorizeRemoteDevice_Response" +
+      "\"?\n,CDeviceAuth_GetUsedAuthorizedDevices" +
+      "_Request\022\017\n\007steamid\030\001 \001(\006\"\372\001\n-CDeviceAut" +
+      "h_GetUsedAuthorizedDevices_Response\022F\n\007d" +
+      "evices\030\001 \003(\01325.CDeviceAuth_GetUsedAuthor" +
+      "izedDevices_Response.Device\032\200\001\n\006Device\022\031" +
+      "\n\021auth_device_token\030\001 \001(\006\022\023\n\013device_name" +
+      "\030\002 \001(\t\022\025\n\rowner_steamid\030\003 \001(\006\022\026\n\016last_ti" +
+      "me_used\030\004 \001(\r\022\027\n\017last_app_played\030\005 \001(\r\"p" +
+      "\n*CDeviceAuth_GetAuthorizedBorrowers_Req" +
       "uest\022\017\n\007steamid\030\001 \001(\006\022\030\n\020include_cancele" +
-      "d\030\002 \001(\010\022\027\n\017include_pending\030\003 \001(\010\"\340\001\n,CDe" +
-      "viceAuth_GetAuthorizedAsBorrower_Respons" +
-      "e\022E\n\007lenders\030\001 \003(\01324.CDeviceAuth_GetAuth" +
-      "orizedAsBorrower_Response.Lender\032i\n\006Lend" +
-      "er\022\017\n\007steamid\030\001 \001(\006\022\024\n\014time_created\030\002 \001(" +
-      "\r\022\022\n\nis_pending\030\003 \001(\010\022\023\n\013is_canceled\030\004 \001" +
-      "(\010\022\017\n\007is_used\030\005 \001(\010\"@\n-CDeviceAuth_GetEx" +
-      "cludedGamesInLibrary_Request\022\017\n\007steamid\030" +
-      "\001 \001(\006\"\346\001\n.CDeviceAuth_GetExcludedGamesIn" +
-      "Library_Response\022T\n\016excluded_games\030\001 \003(\013" +
-      "2<.CDeviceAuth_GetExcludedGamesInLibrary" +
-      "_Response.ExcludedGame\032^\n\014ExcludedGame\022\r" +
-      "\n\005appid\030\001 \001(\r\022\021\n\tgame_name\030\002 \001(\t\022\022\n\nvac_" +
-      "banned\030\003 \001(\010\022\030\n\020package_excluded\030\004 \001(\010\"=" +
-      "\n*CDeviceAuth_GetBorrowerPlayHistory_Req" +
-      "uest\022\017\n\007steamid\030\001 \001(\006\"\270\002\n+CDeviceAuth_Ge" +
-      "tBorrowerPlayHistory_Response\022R\n\016lender_" +
-      "history\030\001 \003(\0132:.CDeviceAuth_GetBorrowerP" +
-      "layHistory_Response.LenderHistory\032C\n\013Gam" +
-      "eHistory\022\r\n\005appid\030\001 \001(\r\022\021\n\ttime_last\030\002 \001" +
-      "(\r\022\022\n\ntime_total\030\003 \001(\r\032p\n\rLenderHistory\022" +
-      "\017\n\007steamid\030\001 \001(\006\022N\n\014game_history\030\002 \003(\01328" +
-      ".CDeviceAuth_GetBorrowerPlayHistory_Resp" +
-      "onse.GameHistory2\302\017\n\nDeviceAuth\022\232\001\n\027GetO" +
-      "wnAuthorizedDevices\022,.CDeviceAuth_GetOwn" +
-      "AuthorizedDevices_Request\032-.CDeviceAuth_" +
-      "GetOwnAuthorizedDevices_Response\"\"\202\265\030\036Ge" +
-      "t list of authorized devices\022\265\001\n\032AcceptA" +
-      "uthorizationRequest\022/.CDeviceAuth_Accept" +
-      "AuthorizationRequest_Request\0320.CDeviceAu" +
-      "th_AcceptAuthorizationRequest_Response\"4" +
-      "\202\265\0300Accept an authorization request by a" +
-      "nother users\022\252\001\n\025AuthorizeRemoteDevice\022*" +
-      ".CDeviceAuth_AuthorizeRemoteDevice_Reque" +
-      "st\032+.CDeviceAuth_AuthorizeRemoteDevice_R" +
-      "esponse\"8\202\265\0304Authorize own remote device" +
-      " that has pending request\022\233\001\n\027Deauthoriz" +
-      "eRemoteDevice\022,.CDeviceAuth_DeauthorizeR" +
-      "emoteDevice_Request\032-.CDeviceAuth_Deauth" +
-      "orizeRemoteDevice_Response\"#\202\265\030\037Revoke o" +
-      "wn device authorization\022\273\001\n\030GetUsedAutho" +
-      "rizedDevices\022-.CDeviceAuth_GetUsedAuthor" +
-      "izedDevices_Request\032..CDeviceAuth_GetUse" +
-      "dAuthorizedDevices_Response\"@\202\265\030<Get lis" +
-      "t of authorized devices user played borr" +
-      "owed games on\022\262\001\n\026GetAuthorizedBorrowers" +
-      "\022+.CDeviceAuth_GetAuthorizedBorrowers_Re" +
-      "quest\032,.CDeviceAuth_GetAuthorizedBorrowe" +
-      "rs_Response\"=\202\265\0309Get list of users that " +
-      "can borrow on an authorized device\022\260\001\n\026A" +
-      "ddAuthorizedBorrowers\022+.CDeviceAuth_AddA" +
-      "uthorizedBorrowers_Request\032,.CDeviceAuth" +
-      "_AddAuthorizedBorrowers_Response\";\202\265\0307Ad" +
-      "d users that can borrow on limited autho" +
-      "rized devices\022\274\001\n\031RemoveAuthorizedBorrow" +
-      "ers\022..CDeviceAuth_RemoveAuthorizedBorrow" +
-      "ers_Request\032/.CDeviceAuth_RemoveAuthoriz" +
-      "edBorrowers_Response\">\202\265\030:Remove users t" +
-      "hat can borrow on limited authorized dev" +
-      "ices\022\271\001\n\027GetAuthorizedAsBorrower\022,.CDevi" +
-      "ceAuth_GetAuthorizedAsBorrower_Request\032-" +
-      ".CDeviceAuth_GetAuthorizedAsBorrower_Res" +
-      "ponse\"A\202\265\030=Get list of lenders that auth" +
-      "orized given account as borrower\022\257\001\n\031Get" +
-      "ExcludedGamesInLibrary\022..CDeviceAuth_Get" +
-      "ExcludedGamesInLibrary_Request\032/.CDevice" +
-      "Auth_GetExcludedGamesInLibrary_Response\"" +
-      "1\202\265\030-Get list of excluded games in lende" +
-      "rs library\022\232\001\n\026GetBorrowerPlayHistory\022+." +
-      "CDeviceAuth_GetBorrowerPlayHistory_Reque" +
-      "st\032,.CDeviceAuth_GetBorrowerPlayHistory_" +
-      "Response\"%\202\265\030!Get list played games as b" +
-      "orrower\032$\202\265\030 Library Sharing settings se" +
-      "rviceB\003\200\001\001"
+      "d\030\002 \001(\010\022\027\n\017include_pending\030\003 \001(\010\"\323\001\n+CDe" +
+      "viceAuth_GetAuthorizedBorrowers_Response" +
+      "\022H\n\tborrowers\030\001 \003(\01325.CDeviceAuth_GetAut" +
+      "horizedBorrowers_Response.Borrower\032Z\n\010Bo" +
+      "rrower\022\017\n\007steamid\030\001 \001(\006\022\022\n\nis_pending\030\002 " +
+      "\001(\010\022\023\n\013is_canceled\030\003 \001(\010\022\024\n\014time_created" +
+      "\030\004 \001(\r\"W\n*CDeviceAuth_AddAuthorizedBorro" +
+      "wers_Request\022\017\n\007steamid\030\001 \001(\006\022\030\n\020steamid" +
+      "_borrower\030\002 \003(\006\"F\n+CDeviceAuth_AddAuthor" +
+      "izedBorrowers_Response\022\027\n\017seconds_to_wai" +
+      "t\030\001 \001(\005\"Z\n-CDeviceAuth_RemoveAuthorizedB" +
+      "orrowers_Request\022\017\n\007steamid\030\001 \001(\006\022\030\n\020ste" +
+      "amid_borrower\030\002 \003(\006\"0\n.CDeviceAuth_Remov" +
+      "eAuthorizedBorrowers_Response\"q\n+CDevice" +
+      "Auth_GetAuthorizedAsBorrower_Request\022\017\n\007" +
+      "steamid\030\001 \001(\006\022\030\n\020include_canceled\030\002 \001(\010\022" +
+      "\027\n\017include_pending\030\003 \001(\010\"\213\002\n,CDeviceAuth" +
+      "_GetAuthorizedAsBorrower_Response\022E\n\007len" +
+      "ders\030\001 \003(\01324.CDeviceAuth_GetAuthorizedAs" +
+      "Borrower_Response.Lender\032\223\001\n\006Lender\022\017\n\007s" +
+      "teamid\030\001 \001(\006\022\024\n\014time_created\030\002 \001(\r\022\022\n\nis" +
+      "_pending\030\003 \001(\010\022\023\n\013is_canceled\030\004 \001(\010\022\017\n\007i" +
+      "s_used\030\005 \001(\010\022\024\n\014time_removed\030\006 \001(\r\022\022\n\nti" +
+      "me_first\030\007 \001(\r\"@\n-CDeviceAuth_GetExclude" +
+      "dGamesInLibrary_Request\022\017\n\007steamid\030\001 \001(\006" +
+      "\"\346\001\n.CDeviceAuth_GetExcludedGamesInLibra" +
+      "ry_Response\022T\n\016excluded_games\030\001 \003(\0132<.CD" +
+      "eviceAuth_GetExcludedGamesInLibrary_Resp" +
+      "onse.ExcludedGame\032^\n\014ExcludedGame\022\r\n\005app" +
+      "id\030\001 \001(\r\022\021\n\tgame_name\030\002 \001(\t\022\022\n\nvac_banne" +
+      "d\030\003 \001(\010\022\030\n\020package_excluded\030\004 \001(\010\"L\n*CDe" +
+      "viceAuth_GetBorrowerPlayHistory_Request\022" +
+      "\017\n\007steamid\030\001 \001(\006\022\r\n\005appid\030\002 \001(\r\"\270\002\n+CDev" +
+      "iceAuth_GetBorrowerPlayHistory_Response\022" +
+      "R\n\016lender_history\030\001 \003(\0132:.CDeviceAuth_Ge" +
+      "tBorrowerPlayHistory_Response.LenderHist" +
+      "ory\032C\n\013GameHistory\022\r\n\005appid\030\001 \001(\r\022\021\n\ttim" +
+      "e_last\030\002 \001(\r\022\022\n\ntime_total\030\003 \001(\r\032p\n\rLend" +
+      "erHistory\022\017\n\007steamid\030\001 \001(\006\022N\n\014game_histo" +
+      "ry\030\002 \003(\01328.CDeviceAuth_GetBorrowerPlayHi" +
+      "story_Response.GameHistory2\302\017\n\nDeviceAut" +
+      "h\022\232\001\n\027GetOwnAuthorizedDevices\022,.CDeviceA" +
+      "uth_GetOwnAuthorizedDevices_Request\032-.CD" +
+      "eviceAuth_GetOwnAuthorizedDevices_Respon" +
+      "se\"\"\202\265\030\036Get list of authorized devices\022\265" +
+      "\001\n\032AcceptAuthorizationRequest\022/.CDeviceA" +
+      "uth_AcceptAuthorizationRequest_Request\0320" +
+      ".CDeviceAuth_AcceptAuthorizationRequest_" +
+      "Response\"4\202\265\0300Accept an authorization re" +
+      "quest by another users\022\252\001\n\025AuthorizeRemo" +
+      "teDevice\022*.CDeviceAuth_AuthorizeRemoteDe" +
+      "vice_Request\032+.CDeviceAuth_AuthorizeRemo" +
+      "teDevice_Response\"8\202\265\0304Authorize own rem" +
+      "ote device that has pending request\022\233\001\n\027" +
+      "DeauthorizeRemoteDevice\022,.CDeviceAuth_De" +
+      "authorizeRemoteDevice_Request\032-.CDeviceA" +
+      "uth_DeauthorizeRemoteDevice_Response\"#\202\265" +
+      "\030\037Revoke own device authorization\022\273\001\n\030Ge" +
+      "tUsedAuthorizedDevices\022-.CDeviceAuth_Get" +
+      "UsedAuthorizedDevices_Request\032..CDeviceA" +
+      "uth_GetUsedAuthorizedDevices_Response\"@\202" +
+      "\265\030<Get list of authorized devices user p" +
+      "layed borrowed games on\022\262\001\n\026GetAuthorize" +
+      "dBorrowers\022+.CDeviceAuth_GetAuthorizedBo" +
+      "rrowers_Request\032,.CDeviceAuth_GetAuthori" +
+      "zedBorrowers_Response\"=\202\265\0309Get list of u" +
+      "sers that can borrow on an authorized de" +
+      "vice\022\260\001\n\026AddAuthorizedBorrowers\022+.CDevic" +
+      "eAuth_AddAuthorizedBorrowers_Request\032,.C" +
+      "DeviceAuth_AddAuthorizedBorrowers_Respon" +
+      "se\";\202\265\0307Add users that can borrow on lim" +
+      "ited authorized devices\022\274\001\n\031RemoveAuthor" +
+      "izedBorrowers\022..CDeviceAuth_RemoveAuthor" +
+      "izedBorrowers_Request\032/.CDeviceAuth_Remo" +
+      "veAuthorizedBorrowers_Response\">\202\265\030:Remo" +
+      "ve users that can borrow on limited auth" +
+      "orized devices\022\271\001\n\027GetAuthorizedAsBorrow" +
+      "er\022,.CDeviceAuth_GetAuthorizedAsBorrower" +
+      "_Request\032-.CDeviceAuth_GetAuthorizedAsBo" +
+      "rrower_Response\"A\202\265\030=Get list of lenders" +
+      " that authorized given account as borrow" +
+      "er\022\257\001\n\031GetExcludedGamesInLibrary\022..CDevi" +
+      "ceAuth_GetExcludedGamesInLibrary_Request" +
+      "\032/.CDeviceAuth_GetExcludedGamesInLibrary" +
+      "_Response\"1\202\265\030-Get list of excluded game" +
+      "s in lenders library\022\232\001\n\026GetBorrowerPlay" +
+      "History\022+.CDeviceAuth_GetBorrowerPlayHis" +
+      "tory_Request\032,.CDeviceAuth_GetBorrowerPl" +
+      "ayHistory_Response\"%\202\265\030!Get list played " +
+      "games as borrower\032$\202\265\030 Library Sharing s" +
+      "ettings serviceB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CDeviceAuth_GetOwnAuthorizedDevices_Request_descriptor =
@@ -21082,7 +21382,7 @@ public final class SteammessagesDeviceauthSteamclient {
     internal_static_CDeviceAuth_GetAuthorizedAsBorrower_Response_Lender_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CDeviceAuth_GetAuthorizedAsBorrower_Response_Lender_descriptor,
-        new java.lang.String[] { "Steamid", "TimeCreated", "IsPending", "IsCanceled", "IsUsed", });
+        new java.lang.String[] { "Steamid", "TimeCreated", "IsPending", "IsCanceled", "IsUsed", "TimeRemoved", "TimeFirst", });
     internal_static_CDeviceAuth_GetExcludedGamesInLibrary_Request_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_CDeviceAuth_GetExcludedGamesInLibrary_Request_fieldAccessorTable = new
@@ -21106,7 +21406,7 @@ public final class SteammessagesDeviceauthSteamclient {
     internal_static_CDeviceAuth_GetBorrowerPlayHistory_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CDeviceAuth_GetBorrowerPlayHistory_Request_descriptor,
-        new java.lang.String[] { "Steamid", });
+        new java.lang.String[] { "Steamid", "Appid", });
     internal_static_CDeviceAuth_GetBorrowerPlayHistory_Response_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_CDeviceAuth_GetBorrowerPlayHistory_Response_fieldAccessorTable = new
@@ -21131,6 +21431,7 @@ public final class SteammessagesDeviceauthSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

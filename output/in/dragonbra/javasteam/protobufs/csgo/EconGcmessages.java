@@ -564,10 +564,6 @@ public final class EconGcmessages {
      */
     k_EMsgGCServerVersionUpdated(2522),
     /**
-     * <code>k_EMsgGCApplyAutograph = 2523;</code>
-     */
-    k_EMsgGCApplyAutograph(2523),
-    /**
      * <code>k_EMsgGCToGCWebAPIAccountChanged = 2524;</code>
      */
     k_EMsgGCToGCWebAPIAccountChanged(2524),
@@ -595,6 +591,10 @@ public final class EconGcmessages {
      * <code>k_EMsgGCRecurringSubscriptionStatus = 2530;</code>
      */
     k_EMsgGCRecurringSubscriptionStatus(2530),
+    /**
+     * <code>k_EMsgGCAdjustEquipSlots = 2531;</code>
+     */
+    k_EMsgGCAdjustEquipSlots(2531),
     ;
 
     /**
@@ -1142,10 +1142,6 @@ public final class EconGcmessages {
      */
     public static final int k_EMsgGCServerVersionUpdated_VALUE = 2522;
     /**
-     * <code>k_EMsgGCApplyAutograph = 2523;</code>
-     */
-    public static final int k_EMsgGCApplyAutograph_VALUE = 2523;
-    /**
      * <code>k_EMsgGCToGCWebAPIAccountChanged = 2524;</code>
      */
     public static final int k_EMsgGCToGCWebAPIAccountChanged_VALUE = 2524;
@@ -1173,6 +1169,10 @@ public final class EconGcmessages {
      * <code>k_EMsgGCRecurringSubscriptionStatus = 2530;</code>
      */
     public static final int k_EMsgGCRecurringSubscriptionStatus_VALUE = 2530;
+    /**
+     * <code>k_EMsgGCAdjustEquipSlots = 2531;</code>
+     */
+    public static final int k_EMsgGCAdjustEquipSlots_VALUE = 2531;
 
 
     public final int getNumber() {
@@ -1331,7 +1331,6 @@ public final class EconGcmessages {
         case 2520: return k_EMsgGCToGCIsTrustedServerResponse;
         case 2521: return k_EMsgGCToGCBroadcastConsoleCommand;
         case 2522: return k_EMsgGCServerVersionUpdated;
-        case 2523: return k_EMsgGCApplyAutograph;
         case 2524: return k_EMsgGCToGCWebAPIAccountChanged;
         case 2525: return k_EMsgGCRequestAnnouncements;
         case 2526: return k_EMsgGCRequestAnnouncementsResponse;
@@ -1339,6 +1338,7 @@ public final class EconGcmessages {
         case 2528: return k_EMsgGCClientVersionUpdated;
         case 2529: return k_EMsgGCAdjustItemEquippedStateMulti;
         case 2530: return k_EMsgGCRecurringSubscriptionStatus;
+        case 2531: return k_EMsgGCAdjustEquipSlots;
         default: return null;
       }
     }
@@ -5444,6 +5444,612 @@ public final class EconGcmessages {
 
   }
 
+  public interface CAttribute_StringOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CAttribute_String)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>optional string value = 1;</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>optional string value = 1;</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code CAttribute_String}
+   */
+  public static final class CAttribute_String extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CAttribute_String)
+      CAttribute_StringOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CAttribute_String.newBuilder() to construct.
+    private CAttribute_String(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CAttribute_String() {
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CAttribute_String();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CAttribute_String(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              value_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return EconGcmessages.internal_static_CAttribute_String_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return EconGcmessages.internal_static_CAttribute_String_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              EconGcmessages.CAttribute_String.class, EconGcmessages.CAttribute_String.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object value_;
+    /**
+     * <code>optional string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string value = 1;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          value_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string value = 1;</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof EconGcmessages.CAttribute_String)) {
+        return super.equals(obj);
+      }
+      EconGcmessages.CAttribute_String other = (EconGcmessages.CAttribute_String) obj;
+
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static EconGcmessages.CAttribute_String parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static EconGcmessages.CAttribute_String parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static EconGcmessages.CAttribute_String parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static EconGcmessages.CAttribute_String parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static EconGcmessages.CAttribute_String parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static EconGcmessages.CAttribute_String parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static EconGcmessages.CAttribute_String parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static EconGcmessages.CAttribute_String parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static EconGcmessages.CAttribute_String parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static EconGcmessages.CAttribute_String parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static EconGcmessages.CAttribute_String parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static EconGcmessages.CAttribute_String parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(EconGcmessages.CAttribute_String prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CAttribute_String}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CAttribute_String)
+        EconGcmessages.CAttribute_StringOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return EconGcmessages.internal_static_CAttribute_String_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return EconGcmessages.internal_static_CAttribute_String_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                EconGcmessages.CAttribute_String.class, EconGcmessages.CAttribute_String.Builder.class);
+      }
+
+      // Construct using EconGcmessages.CAttribute_String.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        value_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return EconGcmessages.internal_static_CAttribute_String_descriptor;
+      }
+
+      @java.lang.Override
+      public EconGcmessages.CAttribute_String getDefaultInstanceForType() {
+        return EconGcmessages.CAttribute_String.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public EconGcmessages.CAttribute_String build() {
+        EconGcmessages.CAttribute_String result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public EconGcmessages.CAttribute_String buildPartial() {
+        EconGcmessages.CAttribute_String result = new EconGcmessages.CAttribute_String(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.value_ = value_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof EconGcmessages.CAttribute_String) {
+          return mergeFrom((EconGcmessages.CAttribute_String)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(EconGcmessages.CAttribute_String other) {
+        if (other == EconGcmessages.CAttribute_String.getDefaultInstance()) return this;
+        if (other.hasValue()) {
+          bitField0_ |= 0x00000001;
+          value_ = other.value_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        EconGcmessages.CAttribute_String parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (EconGcmessages.CAttribute_String) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>optional string value = 1;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string value = 1;</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string value = 1;</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string value = 1;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string value = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string value = 1;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CAttribute_String)
+    }
+
+    // @@protoc_insertion_point(class_scope:CAttribute_String)
+    private static final EconGcmessages.CAttribute_String DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new EconGcmessages.CAttribute_String();
+    }
+
+    public static EconGcmessages.CAttribute_String getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CAttribute_String>
+        PARSER = new com.google.protobuf.AbstractParser<CAttribute_String>() {
+      @java.lang.Override
+      public CAttribute_String parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CAttribute_String(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CAttribute_String> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CAttribute_String> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public EconGcmessages.CAttribute_String getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgGCGiftedItems_descriptor;
   private static final 
@@ -5469,6 +6075,11 @@ public final class EconGcmessages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CMsgGCItemCustomizationNotification_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CAttribute_String_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CAttribute_String_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5478,191 +6089,192 @@ public final class EconGcmessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032csgo/econ_gcmessages.proto\032\031steam/stea" +
-      "mmessages.proto\"\230\001\n\021CMsgGCGiftedItems\022\021\n" +
-      "\taccountid\030\001 \001(\r\022\024\n\014giftdefindex\030\002 \001(\r\022\032" +
-      "\n\022max_gifts_possible\030\003 \001(\r\022\037\n\027num_eligib" +
-      "le_recipients\030\004 \001(\r\022\035\n\025recipients_accoun" +
-      "tids\030\005 \003(\r\"E\n\022CMsgApplyAutograph\022\031\n\021auto" +
-      "graph_item_id\030\001 \001(\004\022\024\n\014item_item_id\030\002 \001(" +
-      "\004\">\n\016CMsgCasketItem\022\026\n\016casket_item_id\030\001 " +
-      "\001(\004\022\024\n\014item_item_id\030\002 \001(\004\"7\n&CMsgGCUserT" +
-      "rackTimePlayedConsecutively\022\r\n\005state\030\001 \001" +
-      "(\r\"G\n#CMsgGCItemCustomizationNotificatio" +
-      "n\022\017\n\007item_id\030\001 \003(\004\022\017\n\007request\030\002 \001(\r*\207(\n\n" +
-      "EGCItemMsg\022\021\n\014k_EMsgGCBase\020\350\007\022\034\n\027k_EMsgG" +
-      "CSetItemPosition\020\351\007\022\022\n\rk_EMsgGCCraft\020\352\007\022" +
-      "\032\n\025k_EMsgGCCraftResponse\020\353\007\022\023\n\016k_EMsgGCD" +
-      "elete\020\354\007\022$\n\037k_EMsgGCVerifyCacheSubscript" +
-      "ion\020\355\007\022\025\n\020k_EMsgGCNameItem\020\356\007\022\030\n\023k_EMsgG" +
-      "CUnlockCrate\020\357\007\022 \n\033k_EMsgGCUnlockCrateRe" +
-      "sponse\020\360\007\022\026\n\021k_EMsgGCPaintItem\020\361\007\022\036\n\031k_E" +
-      "MsgGCPaintItemResponse\020\362\007\022\"\n\035k_EMsgGCGol" +
-      "denWrenchBroadcast\020\363\007\022\030\n\023k_EMsgGCMOTDReq" +
-      "uest\020\364\007\022 \n\033k_EMsgGCMOTDRequestResponse\020\365" +
-      "\007\022\'\n\"k_EMsgGCAddItemToSocket_DEPRECATED\020" +
-      "\366\007\022/\n*k_EMsgGCAddItemToSocketResponse_DE" +
-      "PRECATED\020\367\007\022+\n&k_EMsgGCAddSocketToBaseIt" +
-      "em_DEPRECATED\020\370\007\022\'\n\"k_EMsgGCAddSocketToI" +
-      "tem_DEPRECATED\020\371\007\022/\n*k_EMsgGCAddSocketTo" +
-      "ItemResponse_DEPRECATED\020\372\007\022\031\n\024k_EMsgGCNa" +
-      "meBaseItem\020\373\007\022!\n\034k_EMsgGCNameBaseItemRes" +
-      "ponse\020\374\007\022(\n#k_EMsgGCRemoveSocketItem_DEP" +
-      "RECATED\020\375\007\0220\n+k_EMsgGCRemoveSocketItemRe" +
-      "sponse_DEPRECATED\020\376\007\022!\n\034k_EMsgGCCustomiz" +
-      "eItemTexture\020\377\007\022)\n$k_EMsgGCCustomizeItem" +
-      "TextureResponse\020\200\010\022\033\n\026k_EMsgGCUseItemReq" +
-      "uest\020\201\010\022\034\n\027k_EMsgGCUseItemResponse\020\202\010\022#\n" +
-      "\036k_EMsgGCGiftedItems_DEPRECATED\020\203\010\022\033\n\026k_" +
-      "EMsgGCRemoveItemName\020\206\010\022\034\n\027k_EMsgGCRemov" +
-      "eItemPaint\020\207\010\022\031\n\024k_EMsgGCGiftWrapItem\020\210\010" +
-      "\022!\n\034k_EMsgGCGiftWrapItemResponse\020\211\010\022\030\n\023k" +
-      "_EMsgGCDeliverGift\020\212\010\022%\n k_EMsgGCDeliver" +
-      "GiftResponseGiver\020\213\010\022(\n#k_EMsgGCDeliverG" +
-      "iftResponseReceiver\020\214\010\022\036\n\031k_EMsgGCUnwrap" +
-      "GiftRequest\020\215\010\022\037\n\032k_EMsgGCUnwrapGiftResp" +
-      "onse\020\216\010\022\031\n\024k_EMsgGCSetItemStyle\020\217\010\022\036\n\031k_" +
-      "EMsgGCUsedClaimCodeItem\020\220\010\022\026\n\021k_EMsgGCSo" +
-      "rtItems\020\221\010\022*\n%k_EMsgGC_RevolvingLootList" +
-      "_DEPRECATED\020\222\010\022\032\n\025k_EMsgGCLookupAccount\020" +
-      "\223\010\022\"\n\035k_EMsgGCLookupAccountResponse\020\224\010\022\036" +
-      "\n\031k_EMsgGCLookupAccountName\020\225\010\022&\n!k_EMsg" +
-      "GCLookupAccountNameResponse\020\226\010\022\035\n\030k_EMsg" +
-      "GCUpdateItemSchema\020\231\010\022 \n\033k_EMsgGCRemoveC" +
-      "ustomTexture\020\233\010\022(\n#k_EMsgGCRemoveCustomT" +
-      "extureResponse\020\234\010\022\035\n\030k_EMsgGCRemoveMaker" +
-      "sMark\020\235\010\022%\n k_EMsgGCRemoveMakersMarkResp" +
-      "onse\020\236\010\022#\n\036k_EMsgGCRemoveUniqueCraftInde" +
-      "x\020\237\010\022+\n&k_EMsgGCRemoveUniqueCraftIndexRe" +
-      "sponse\020\240\010\022\033\n\026k_EMsgGCSaxxyBroadcast\020\241\010\022!" +
-      "\n\034k_EMsgGCBackpackSortFinished\020\242\010\022$\n\037k_E" +
-      "MsgGCAdjustItemEquippedState\020\243\010\022\030\n\023k_EMs" +
-      "gGCCollectItem\020\245\010\022)\n$k_EMsgGCItemAcknowl" +
-      "edged__DEPRECATED\020\246\010\022\031\n\024k_EMsgGC_ReportA" +
-      "buse\020\251\010\022!\n\034k_EMsgGC_ReportAbuseResponse\020" +
-      "\252\010\022!\n\034k_EMsgGCNameItemNotification\020\254\010\022#\n" +
-      "\036k_EMsgGCApplyConsumableEffects\020\255\010\022 \n\033k_" +
-      "EMsgGCConsumableExhausted\020\256\010\022\036\n\031k_EMsgGC" +
-      "ShowItemsPickedUp\020\257\010\022&\n!k_EMsgGCClientDi" +
-      "splayNotification\020\260\010\022\035\n\030k_EMsgGCApplyStr" +
-      "angePart\020\261\010\022)\n$k_EMsgGC_IncrementKillCou" +
-      "ntAttribute\020\262\010\022(\n#k_EMsgGC_IncrementKill" +
-      "CountResponse\020\263\010\022 \n\033k_EMsgGCApplyPennant" +
-      "Upgrade\020\264\010\022\035\n\030k_EMsgGCSetItemPositions\020\265" +
-      "\010\022\034\n\027k_EMsgGCApplyEggEssence\020\266\010\022#\n\036k_EMs" +
-      "gGCNameEggEssenceResponse\020\267\010\022\031\n\024k_EMsgGC" +
-      "PaintKitItem\020\270\010\022\035\n\030k_EMsgGCPaintKitBaseI" +
-      "tem\020\271\010\022!\n\034k_EMsgGCPaintKitItemResponse\020\272" +
-      "\010\022\030\n\023k_EMsgGCGiftedItems\020\273\010\022\034\n\027k_EMsgGCU" +
-      "nlockItemStyle\020\274\010\022$\n\037k_EMsgGCUnlockItemS" +
-      "tyleResponse\020\275\010\022\031\n\024k_EMsgGCApplySticker\020" +
-      "\276\010\022\035\n\030k_EMsgGCItemAcknowledged\020\277\010\022\031\n\024k_E" +
-      "MsgGCStatTrakSwap\020\300\010\022-\n(k_EMsgGCUserTrac" +
-      "kTimePlayedConsecutively\020\301\010\022*\n%k_EMsgGCI" +
-      "temCustomizationNotification\020\302\010\022 \n\033k_EMs" +
-      "gGCModifyItemAttribute\020\303\010\022\032\n\025k_EMsgGCCas" +
-      "ketItemAdd\020\304\010\022\036\n\031k_EMsgGCCasketItemExtra" +
-      "ct\020\305\010\022#\n\036k_EMsgGCCasketItemLoadContents\020" +
-      "\306\010\022\030\n\023k_EMsgGCTradingBase\020\334\013\022)\n$k_EMsgGC" +
-      "Trading_InitiateTradeRequest\020\335\013\022*\n%k_EMs" +
-      "gGCTrading_InitiateTradeResponse\020\336\013\022!\n\034k" +
-      "_EMsgGCTrading_StartSession\020\337\013\022\034\n\027k_EMsg" +
-      "GCTrading_SetItem\020\340\013\022\037\n\032k_EMsgGCTrading_" +
-      "RemoveItem\020\341\013\022$\n\037k_EMsgGCTrading_UpdateT" +
-      "radeInfo\020\342\013\022!\n\034k_EMsgGCTrading_SetReadin" +
-      "ess\020\343\013\022&\n!k_EMsgGCTrading_ReadinessRespo" +
-      "nse\020\344\013\022\"\n\035k_EMsgGCTrading_SessionClosed\020" +
-      "\345\013\022\"\n\035k_EMsgGCTrading_CancelSession\020\346\013\022!" +
-      "\n\034k_EMsgGCTrading_TradeChatMsg\020\347\013\022!\n\034k_E" +
-      "MsgGCTrading_ConfirmOffer\020\350\013\022\'\n\"k_EMsgGC" +
-      "Trading_TradeTypingChatMsg\020\351\013\022)\n$k_EMsgG" +
-      "CServerBrowser_FavoriteServer\020\301\014\022*\n%k_EM" +
-      "sgGCServerBrowser_BlacklistServer\020\302\014\022\036\n\031" +
-      "k_EMsgGCServerRentalsBase\020\244\r\022#\n\036k_EMsgGC" +
-      "ItemPreviewCheckStatus\020\245\r\022&\n!k_EMsgGCIte" +
-      "mPreviewStatusResponse\020\246\r\022\037\n\032k_EMsgGCIte" +
-      "mPreviewRequest\020\247\r\022\'\n\"k_EMsgGCItemPrevie" +
-      "wRequestResponse\020\250\r\022\036\n\031k_EMsgGCItemPrevi" +
-      "ewExpire\020\251\r\022*\n%k_EMsgGCItemPreviewExpire" +
-      "Notification\020\252\r\022.\n)k_EMsgGCItemPreviewIt" +
-      "emBoughtNotification\020\253\r\022\037\n\032k_EMsgGCDev_N" +
-      "ewItemRequest\020\321\017\022\'\n\"k_EMsgGCDev_NewItemR" +
-      "equestResponse\020\322\017\022!\n\034k_EMsgGCDev_PaintKi" +
-      "tDropItem\020\323\017\022\035\n\030k_EMsgGCStoreGetUserData" +
-      "\020\304\023\022%\n k_EMsgGCStoreGetUserDataResponse\020" +
-      "\305\023\022)\n$k_EMsgGCStorePurchaseInit_DEPRECAT" +
-      "ED\020\306\023\0221\n,k_EMsgGCStorePurchaseInitRespon" +
-      "se_DEPRECATED\020\307\023\022\"\n\035k_EMsgGCStorePurchas" +
-      "eFinalize\020\310\023\022*\n%k_EMsgGCStorePurchaseFin" +
-      "alizeResponse\020\311\023\022 \n\033k_EMsgGCStorePurchas" +
-      "eCancel\020\312\023\022(\n#k_EMsgGCStorePurchaseCance" +
-      "lResponse\020\313\023\022\"\n\035k_EMsgGCStorePurchaseQue" +
-      "ryTxn\020\314\023\022*\n%k_EMsgGCStorePurchaseQueryTx" +
-      "nResponse\020\315\023\022\036\n\031k_EMsgGCStorePurchaseIni" +
-      "t\020\316\023\022&\n!k_EMsgGCStorePurchaseInitRespons" +
-      "e\020\317\023\022\"\n\035k_EMsgGCBannedWordListRequest\020\320\023" +
-      "\022#\n\036k_EMsgGCBannedWordListResponse\020\321\023\022(\n" +
-      "#k_EMsgGCToGCBannedWordListBroadcast\020\322\023\022" +
-      "&\n!k_EMsgGCToGCBannedWordListUpdated\020\323\023\022" +
-      "\036\n\031k_EMsgGCToGCDirtySDOCache\020\324\023\022&\n!k_EMs" +
-      "gGCToGCDirtyMultipleSDOCache\020\325\023\022\"\n\035k_EMs" +
-      "gGCToGCUpdateSQLKeyValue\020\326\023\022 \n\033k_EMsgGCT" +
-      "oGCIsTrustedServer\020\327\023\022(\n#k_EMsgGCToGCIsT" +
-      "rustedServerResponse\020\330\023\022(\n#k_EMsgGCToGCB" +
-      "roadcastConsoleCommand\020\331\023\022!\n\034k_EMsgGCSer" +
-      "verVersionUpdated\020\332\023\022\033\n\026k_EMsgGCApplyAut" +
-      "ograph\020\333\023\022%\n k_EMsgGCToGCWebAPIAccountCh" +
-      "anged\020\334\023\022!\n\034k_EMsgGCRequestAnnouncements" +
-      "\020\335\023\022)\n$k_EMsgGCRequestAnnouncementsRespo" +
-      "nse\020\336\023\022%\n k_EMsgGCRequestPassportItemGra" +
-      "nt\020\337\023\022!\n\034k_EMsgGCClientVersionUpdated\020\340\023" +
-      "\022)\n$k_EMsgGCAdjustItemEquippedStateMulti" +
-      "\020\341\023\022(\n#k_EMsgGCRecurringSubscriptionStat" +
-      "us\020\342\023*\325\002\n\016EGCMsgResponse\022\026\n\022k_EGCMsgResp" +
-      "onseOK\020\000\022\032\n\026k_EGCMsgResponseDenied\020\001\022\037\n\033" +
-      "k_EGCMsgResponseServerError\020\002\022\033\n\027k_EGCMs" +
-      "gResponseTimeout\020\003\022\033\n\027k_EGCMsgResponseIn" +
-      "valid\020\004\022\033\n\027k_EGCMsgResponseNoMatch\020\005\022 \n\034" +
-      "k_EGCMsgResponseUnknownError\020\006\022\037\n\033k_EGCM" +
-      "sgResponseNotLoggedOn\020\007\022\032\n\026k_EGCMsgFaile" +
-      "dToCreate\020\010\022\031\n\025k_EGCMsgLimitExceeded\020\t\022\035" +
-      "\n\031k_EGCMsgCommitUnfinalized\020\n*\351\001\n\014EUnloc" +
-      "kStyle\022\033\n\027k_UnlockStyle_Succeeded\020\000\022\037\n\033k" +
-      "_UnlockStyle_Failed_PreReq\020\001\022#\n\037k_Unlock" +
-      "Style_Failed_CantAfford\020\002\022#\n\037k_UnlockSty" +
-      "le_Failed_CantCommit\020\003\022&\n\"k_UnlockStyle_" +
-      "Failed_CantLockCache\020\004\022)\n%k_UnlockStyle_" +
-      "Failed_CantAffordAttrib\020\005*\262\t\n EGCItemCus" +
-      "tomizationNotification\0220\n+k_EGCItemCusto" +
-      "mizationNotification_NameItem\020\356\007\0223\n.k_EG" +
-      "CItemCustomizationNotification_UnlockCra" +
-      "te\020\357\007\0226\n1k_EGCItemCustomizationNotificat" +
-      "ion_XRayItemReveal\020\360\007\0225\n0k_EGCItemCustom" +
-      "izationNotification_XRayItemClaim\020\361\007\0225\n0" +
-      "k_EGCItemCustomizationNotification_Caske" +
-      "tTooFull\020\363\007\0226\n1k_EGCItemCustomizationNot" +
-      "ification_CasketContents\020\364\007\0223\n.k_EGCItem" +
-      "CustomizationNotification_CasketAdded\020\365\007" +
-      "\0225\n0k_EGCItemCustomizationNotification_C" +
-      "asketRemoved\020\366\007\0225\n0k_EGCItemCustomizatio" +
-      "nNotification_CasketInvFull\020\367\007\0224\n/k_EGCI" +
-      "temCustomizationNotification_NameBaseIte" +
-      "m\020\373\007\0226\n1k_EGCItemCustomizationNotificati" +
-      "on_RemoveItemName\020\206\010\0225\n0k_EGCItemCustomi" +
-      "zationNotification_RemoveSticker\020\235\010\0224\n/k" +
-      "_EGCItemCustomizationNotification_ApplyS" +
-      "ticker\020\276\010\0224\n/k_EGCItemCustomizationNotif" +
-      "ication_StatTrakSwap\020\300\010\0223\n.k_EGCItemCust" +
-      "omizationNotification_RemovePatch\020\301\010\0222\n-" +
-      "k_EGCItemCustomizationNotification_Apply" +
-      "Patch\020\302\010\0228\n3k_EGCItemCustomizationNotifi" +
-      "cation_ActivateFanToken\020\332G\022=\n8k_EGCItemC" +
-      "ustomizationNotification_ActivateOperati" +
-      "onCoin\020\333G\0226\n1k_EGCItemCustomizationNotif" +
-      "ication_GraffitiUnseal\020\341G\0228\n3k_EGCItemCu" +
-      "stomizationNotification_GenerateSouvenir" +
-      "\020\364G\022A\n<k_EGCItemCustomizationNotificatio" +
-      "n_ClientRedeemMissionReward\020\371GB\005H\001\200\001\000"
+      "\n\032csgo/econ_gcmessages.proto\032\030csgo/steam" +
+      "messages.proto\"\230\001\n\021CMsgGCGiftedItems\022\021\n\t" +
+      "accountid\030\001 \001(\r\022\024\n\014giftdefindex\030\002 \001(\r\022\032\n" +
+      "\022max_gifts_possible\030\003 \001(\r\022\037\n\027num_eligibl" +
+      "e_recipients\030\004 \001(\r\022\035\n\025recipients_account" +
+      "ids\030\005 \003(\r\"E\n\022CMsgApplyAutograph\022\031\n\021autog" +
+      "raph_item_id\030\001 \001(\004\022\024\n\014item_item_id\030\002 \001(\004" +
+      "\">\n\016CMsgCasketItem\022\026\n\016casket_item_id\030\001 \001" +
+      "(\004\022\024\n\014item_item_id\030\002 \001(\004\"7\n&CMsgGCUserTr" +
+      "ackTimePlayedConsecutively\022\r\n\005state\030\001 \001(" +
+      "\r\"G\n#CMsgGCItemCustomizationNotification" +
+      "\022\017\n\007item_id\030\001 \003(\004\022\017\n\007request\030\002 \001(\r\"\"\n\021CA" +
+      "ttribute_String\022\r\n\005value\030\001 \001(\t*\211(\n\nEGCIt" +
+      "emMsg\022\021\n\014k_EMsgGCBase\020\350\007\022\034\n\027k_EMsgGCSetI" +
+      "temPosition\020\351\007\022\022\n\rk_EMsgGCCraft\020\352\007\022\032\n\025k_" +
+      "EMsgGCCraftResponse\020\353\007\022\023\n\016k_EMsgGCDelete" +
+      "\020\354\007\022$\n\037k_EMsgGCVerifyCacheSubscription\020\355" +
+      "\007\022\025\n\020k_EMsgGCNameItem\020\356\007\022\030\n\023k_EMsgGCUnlo" +
+      "ckCrate\020\357\007\022 \n\033k_EMsgGCUnlockCrateRespons" +
+      "e\020\360\007\022\026\n\021k_EMsgGCPaintItem\020\361\007\022\036\n\031k_EMsgGC" +
+      "PaintItemResponse\020\362\007\022\"\n\035k_EMsgGCGoldenWr" +
+      "enchBroadcast\020\363\007\022\030\n\023k_EMsgGCMOTDRequest\020" +
+      "\364\007\022 \n\033k_EMsgGCMOTDRequestResponse\020\365\007\022\'\n\"" +
+      "k_EMsgGCAddItemToSocket_DEPRECATED\020\366\007\022/\n" +
+      "*k_EMsgGCAddItemToSocketResponse_DEPRECA" +
+      "TED\020\367\007\022+\n&k_EMsgGCAddSocketToBaseItem_DE" +
+      "PRECATED\020\370\007\022\'\n\"k_EMsgGCAddSocketToItem_D" +
+      "EPRECATED\020\371\007\022/\n*k_EMsgGCAddSocketToItemR" +
+      "esponse_DEPRECATED\020\372\007\022\031\n\024k_EMsgGCNameBas" +
+      "eItem\020\373\007\022!\n\034k_EMsgGCNameBaseItemResponse" +
+      "\020\374\007\022(\n#k_EMsgGCRemoveSocketItem_DEPRECAT" +
+      "ED\020\375\007\0220\n+k_EMsgGCRemoveSocketItemRespons" +
+      "e_DEPRECATED\020\376\007\022!\n\034k_EMsgGCCustomizeItem" +
+      "Texture\020\377\007\022)\n$k_EMsgGCCustomizeItemTextu" +
+      "reResponse\020\200\010\022\033\n\026k_EMsgGCUseItemRequest\020" +
+      "\201\010\022\034\n\027k_EMsgGCUseItemResponse\020\202\010\022#\n\036k_EM" +
+      "sgGCGiftedItems_DEPRECATED\020\203\010\022\033\n\026k_EMsgG" +
+      "CRemoveItemName\020\206\010\022\034\n\027k_EMsgGCRemoveItem" +
+      "Paint\020\207\010\022\031\n\024k_EMsgGCGiftWrapItem\020\210\010\022!\n\034k" +
+      "_EMsgGCGiftWrapItemResponse\020\211\010\022\030\n\023k_EMsg" +
+      "GCDeliverGift\020\212\010\022%\n k_EMsgGCDeliverGiftR" +
+      "esponseGiver\020\213\010\022(\n#k_EMsgGCDeliverGiftRe" +
+      "sponseReceiver\020\214\010\022\036\n\031k_EMsgGCUnwrapGiftR" +
+      "equest\020\215\010\022\037\n\032k_EMsgGCUnwrapGiftResponse\020" +
+      "\216\010\022\031\n\024k_EMsgGCSetItemStyle\020\217\010\022\036\n\031k_EMsgG" +
+      "CUsedClaimCodeItem\020\220\010\022\026\n\021k_EMsgGCSortIte" +
+      "ms\020\221\010\022*\n%k_EMsgGC_RevolvingLootList_DEPR" +
+      "ECATED\020\222\010\022\032\n\025k_EMsgGCLookupAccount\020\223\010\022\"\n" +
+      "\035k_EMsgGCLookupAccountResponse\020\224\010\022\036\n\031k_E" +
+      "MsgGCLookupAccountName\020\225\010\022&\n!k_EMsgGCLoo" +
+      "kupAccountNameResponse\020\226\010\022\035\n\030k_EMsgGCUpd" +
+      "ateItemSchema\020\231\010\022 \n\033k_EMsgGCRemoveCustom" +
+      "Texture\020\233\010\022(\n#k_EMsgGCRemoveCustomTextur" +
+      "eResponse\020\234\010\022\035\n\030k_EMsgGCRemoveMakersMark" +
+      "\020\235\010\022%\n k_EMsgGCRemoveMakersMarkResponse\020" +
+      "\236\010\022#\n\036k_EMsgGCRemoveUniqueCraftIndex\020\237\010\022" +
+      "+\n&k_EMsgGCRemoveUniqueCraftIndexRespons" +
+      "e\020\240\010\022\033\n\026k_EMsgGCSaxxyBroadcast\020\241\010\022!\n\034k_E" +
+      "MsgGCBackpackSortFinished\020\242\010\022$\n\037k_EMsgGC" +
+      "AdjustItemEquippedState\020\243\010\022\030\n\023k_EMsgGCCo" +
+      "llectItem\020\245\010\022)\n$k_EMsgGCItemAcknowledged" +
+      "__DEPRECATED\020\246\010\022\031\n\024k_EMsgGC_ReportAbuse\020" +
+      "\251\010\022!\n\034k_EMsgGC_ReportAbuseResponse\020\252\010\022!\n" +
+      "\034k_EMsgGCNameItemNotification\020\254\010\022#\n\036k_EM" +
+      "sgGCApplyConsumableEffects\020\255\010\022 \n\033k_EMsgG" +
+      "CConsumableExhausted\020\256\010\022\036\n\031k_EMsgGCShowI" +
+      "temsPickedUp\020\257\010\022&\n!k_EMsgGCClientDisplay" +
+      "Notification\020\260\010\022\035\n\030k_EMsgGCApplyStrangeP" +
+      "art\020\261\010\022)\n$k_EMsgGC_IncrementKillCountAtt" +
+      "ribute\020\262\010\022(\n#k_EMsgGC_IncrementKillCount" +
+      "Response\020\263\010\022 \n\033k_EMsgGCApplyPennantUpgra" +
+      "de\020\264\010\022\035\n\030k_EMsgGCSetItemPositions\020\265\010\022\034\n\027" +
+      "k_EMsgGCApplyEggEssence\020\266\010\022#\n\036k_EMsgGCNa" +
+      "meEggEssenceResponse\020\267\010\022\031\n\024k_EMsgGCPaint" +
+      "KitItem\020\270\010\022\035\n\030k_EMsgGCPaintKitBaseItem\020\271" +
+      "\010\022!\n\034k_EMsgGCPaintKitItemResponse\020\272\010\022\030\n\023" +
+      "k_EMsgGCGiftedItems\020\273\010\022\034\n\027k_EMsgGCUnlock" +
+      "ItemStyle\020\274\010\022$\n\037k_EMsgGCUnlockItemStyleR" +
+      "esponse\020\275\010\022\031\n\024k_EMsgGCApplySticker\020\276\010\022\035\n" +
+      "\030k_EMsgGCItemAcknowledged\020\277\010\022\031\n\024k_EMsgGC" +
+      "StatTrakSwap\020\300\010\022-\n(k_EMsgGCUserTrackTime" +
+      "PlayedConsecutively\020\301\010\022*\n%k_EMsgGCItemCu" +
+      "stomizationNotification\020\302\010\022 \n\033k_EMsgGCMo" +
+      "difyItemAttribute\020\303\010\022\032\n\025k_EMsgGCCasketIt" +
+      "emAdd\020\304\010\022\036\n\031k_EMsgGCCasketItemExtract\020\305\010" +
+      "\022#\n\036k_EMsgGCCasketItemLoadContents\020\306\010\022\030\n" +
+      "\023k_EMsgGCTradingBase\020\334\013\022)\n$k_EMsgGCTradi" +
+      "ng_InitiateTradeRequest\020\335\013\022*\n%k_EMsgGCTr" +
+      "ading_InitiateTradeResponse\020\336\013\022!\n\034k_EMsg" +
+      "GCTrading_StartSession\020\337\013\022\034\n\027k_EMsgGCTra" +
+      "ding_SetItem\020\340\013\022\037\n\032k_EMsgGCTrading_Remov" +
+      "eItem\020\341\013\022$\n\037k_EMsgGCTrading_UpdateTradeI" +
+      "nfo\020\342\013\022!\n\034k_EMsgGCTrading_SetReadiness\020\343" +
+      "\013\022&\n!k_EMsgGCTrading_ReadinessResponse\020\344" +
+      "\013\022\"\n\035k_EMsgGCTrading_SessionClosed\020\345\013\022\"\n" +
+      "\035k_EMsgGCTrading_CancelSession\020\346\013\022!\n\034k_E" +
+      "MsgGCTrading_TradeChatMsg\020\347\013\022!\n\034k_EMsgGC" +
+      "Trading_ConfirmOffer\020\350\013\022\'\n\"k_EMsgGCTradi" +
+      "ng_TradeTypingChatMsg\020\351\013\022)\n$k_EMsgGCServ" +
+      "erBrowser_FavoriteServer\020\301\014\022*\n%k_EMsgGCS" +
+      "erverBrowser_BlacklistServer\020\302\014\022\036\n\031k_EMs" +
+      "gGCServerRentalsBase\020\244\r\022#\n\036k_EMsgGCItemP" +
+      "reviewCheckStatus\020\245\r\022&\n!k_EMsgGCItemPrev" +
+      "iewStatusResponse\020\246\r\022\037\n\032k_EMsgGCItemPrev" +
+      "iewRequest\020\247\r\022\'\n\"k_EMsgGCItemPreviewRequ" +
+      "estResponse\020\250\r\022\036\n\031k_EMsgGCItemPreviewExp" +
+      "ire\020\251\r\022*\n%k_EMsgGCItemPreviewExpireNotif" +
+      "ication\020\252\r\022.\n)k_EMsgGCItemPreviewItemBou" +
+      "ghtNotification\020\253\r\022\037\n\032k_EMsgGCDev_NewIte" +
+      "mRequest\020\321\017\022\'\n\"k_EMsgGCDev_NewItemReques" +
+      "tResponse\020\322\017\022!\n\034k_EMsgGCDev_PaintKitDrop" +
+      "Item\020\323\017\022\035\n\030k_EMsgGCStoreGetUserData\020\304\023\022%" +
+      "\n k_EMsgGCStoreGetUserDataResponse\020\305\023\022)\n" +
+      "$k_EMsgGCStorePurchaseInit_DEPRECATED\020\306\023" +
+      "\0221\n,k_EMsgGCStorePurchaseInitResponse_DE" +
+      "PRECATED\020\307\023\022\"\n\035k_EMsgGCStorePurchaseFina" +
+      "lize\020\310\023\022*\n%k_EMsgGCStorePurchaseFinalize" +
+      "Response\020\311\023\022 \n\033k_EMsgGCStorePurchaseCanc" +
+      "el\020\312\023\022(\n#k_EMsgGCStorePurchaseCancelResp" +
+      "onse\020\313\023\022\"\n\035k_EMsgGCStorePurchaseQueryTxn" +
+      "\020\314\023\022*\n%k_EMsgGCStorePurchaseQueryTxnResp" +
+      "onse\020\315\023\022\036\n\031k_EMsgGCStorePurchaseInit\020\316\023\022" +
+      "&\n!k_EMsgGCStorePurchaseInitResponse\020\317\023\022" +
+      "\"\n\035k_EMsgGCBannedWordListRequest\020\320\023\022#\n\036k" +
+      "_EMsgGCBannedWordListResponse\020\321\023\022(\n#k_EM" +
+      "sgGCToGCBannedWordListBroadcast\020\322\023\022&\n!k_" +
+      "EMsgGCToGCBannedWordListUpdated\020\323\023\022\036\n\031k_" +
+      "EMsgGCToGCDirtySDOCache\020\324\023\022&\n!k_EMsgGCTo" +
+      "GCDirtyMultipleSDOCache\020\325\023\022\"\n\035k_EMsgGCTo" +
+      "GCUpdateSQLKeyValue\020\326\023\022 \n\033k_EMsgGCToGCIs" +
+      "TrustedServer\020\327\023\022(\n#k_EMsgGCToGCIsTruste" +
+      "dServerResponse\020\330\023\022(\n#k_EMsgGCToGCBroadc" +
+      "astConsoleCommand\020\331\023\022!\n\034k_EMsgGCServerVe" +
+      "rsionUpdated\020\332\023\022%\n k_EMsgGCToGCWebAPIAcc" +
+      "ountChanged\020\334\023\022!\n\034k_EMsgGCRequestAnnounc" +
+      "ements\020\335\023\022)\n$k_EMsgGCRequestAnnouncement" +
+      "sResponse\020\336\023\022%\n k_EMsgGCRequestPassportI" +
+      "temGrant\020\337\023\022!\n\034k_EMsgGCClientVersionUpda" +
+      "ted\020\340\023\022)\n$k_EMsgGCAdjustItemEquippedStat" +
+      "eMulti\020\341\023\022(\n#k_EMsgGCRecurringSubscripti" +
+      "onStatus\020\342\023\022\035\n\030k_EMsgGCAdjustEquipSlots\020" +
+      "\343\023*\325\002\n\016EGCMsgResponse\022\026\n\022k_EGCMsgRespons" +
+      "eOK\020\000\022\032\n\026k_EGCMsgResponseDenied\020\001\022\037\n\033k_E" +
+      "GCMsgResponseServerError\020\002\022\033\n\027k_EGCMsgRe" +
+      "sponseTimeout\020\003\022\033\n\027k_EGCMsgResponseInval" +
+      "id\020\004\022\033\n\027k_EGCMsgResponseNoMatch\020\005\022 \n\034k_E" +
+      "GCMsgResponseUnknownError\020\006\022\037\n\033k_EGCMsgR" +
+      "esponseNotLoggedOn\020\007\022\032\n\026k_EGCMsgFailedTo" +
+      "Create\020\010\022\031\n\025k_EGCMsgLimitExceeded\020\t\022\035\n\031k" +
+      "_EGCMsgCommitUnfinalized\020\n*\351\001\n\014EUnlockSt" +
+      "yle\022\033\n\027k_UnlockStyle_Succeeded\020\000\022\037\n\033k_Un" +
+      "lockStyle_Failed_PreReq\020\001\022#\n\037k_UnlockSty" +
+      "le_Failed_CantAfford\020\002\022#\n\037k_UnlockStyle_" +
+      "Failed_CantCommit\020\003\022&\n\"k_UnlockStyle_Fai" +
+      "led_CantLockCache\020\004\022)\n%k_UnlockStyle_Fai" +
+      "led_CantAffordAttrib\020\005*\262\t\n EGCItemCustom" +
+      "izationNotification\0220\n+k_EGCItemCustomiz" +
+      "ationNotification_NameItem\020\356\007\0223\n.k_EGCIt" +
+      "emCustomizationNotification_UnlockCrate\020" +
+      "\357\007\0226\n1k_EGCItemCustomizationNotification" +
+      "_XRayItemReveal\020\360\007\0225\n0k_EGCItemCustomiza" +
+      "tionNotification_XRayItemClaim\020\361\007\0225\n0k_E" +
+      "GCItemCustomizationNotification_CasketTo" +
+      "oFull\020\363\007\0226\n1k_EGCItemCustomizationNotifi" +
+      "cation_CasketContents\020\364\007\0223\n.k_EGCItemCus" +
+      "tomizationNotification_CasketAdded\020\365\007\0225\n" +
+      "0k_EGCItemCustomizationNotification_Cask" +
+      "etRemoved\020\366\007\0225\n0k_EGCItemCustomizationNo" +
+      "tification_CasketInvFull\020\367\007\0224\n/k_EGCItem" +
+      "CustomizationNotification_NameBaseItem\020\373" +
+      "\007\0226\n1k_EGCItemCustomizationNotification_" +
+      "RemoveItemName\020\206\010\0225\n0k_EGCItemCustomizat" +
+      "ionNotification_RemoveSticker\020\235\010\0224\n/k_EG" +
+      "CItemCustomizationNotification_ApplyStic" +
+      "ker\020\276\010\0224\n/k_EGCItemCustomizationNotifica" +
+      "tion_StatTrakSwap\020\300\010\0223\n.k_EGCItemCustomi" +
+      "zationNotification_RemovePatch\020\301\010\0222\n-k_E" +
+      "GCItemCustomizationNotification_ApplyPat" +
+      "ch\020\302\010\0228\n3k_EGCItemCustomizationNotificat" +
+      "ion_ActivateFanToken\020\332G\022=\n8k_EGCItemCust" +
+      "omizationNotification_ActivateOperationC" +
+      "oin\020\333G\0226\n1k_EGCItemCustomizationNotifica" +
+      "tion_GraffitiUnseal\020\341G\0228\n3k_EGCItemCusto" +
+      "mizationNotification_GenerateSouvenir\020\364G" +
+      "\022A\n<k_EGCItemCustomizationNotification_C" +
+      "lientRedeemMissionReward\020\371G"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5699,6 +6311,12 @@ public final class EconGcmessages {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CMsgGCItemCustomizationNotification_descriptor,
         new java.lang.String[] { "ItemId", "Request", });
+    internal_static_CAttribute_String_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_CAttribute_String_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CAttribute_String_descriptor,
+        new java.lang.String[] { "Value", });
     Steammessages.getDescriptor();
   }
 

@@ -151,6 +151,18 @@ public final class SteammessagesAppoverview {
      * <code>k_EDisplayStatusNotLaunchable = 33;</code>
      */
     k_EDisplayStatusNotLaunchable(33),
+    /**
+     * <code>k_EDisplayStatusCloudError = 34;</code>
+     */
+    k_EDisplayStatusCloudError(34),
+    /**
+     * <code>k_EDisplayStatusCloudOutOfDate = 35;</code>
+     */
+    k_EDisplayStatusCloudOutOfDate(35),
+    /**
+     * <code>k_EDisplayStatusTerminating = 36;</code>
+     */
+    k_EDisplayStatusTerminating(36),
     ;
 
     /**
@@ -285,6 +297,18 @@ public final class SteammessagesAppoverview {
      * <code>k_EDisplayStatusNotLaunchable = 33;</code>
      */
     public static final int k_EDisplayStatusNotLaunchable_VALUE = 33;
+    /**
+     * <code>k_EDisplayStatusCloudError = 34;</code>
+     */
+    public static final int k_EDisplayStatusCloudError_VALUE = 34;
+    /**
+     * <code>k_EDisplayStatusCloudOutOfDate = 35;</code>
+     */
+    public static final int k_EDisplayStatusCloudOutOfDate_VALUE = 35;
+    /**
+     * <code>k_EDisplayStatusTerminating = 36;</code>
+     */
+    public static final int k_EDisplayStatusTerminating_VALUE = 36;
 
 
     public final int getNumber() {
@@ -340,6 +364,9 @@ public final class SteammessagesAppoverview {
         case 31: return k_EDisplayStatusPurchase;
         case 32: return k_EDisplayStatusUnavailable;
         case 33: return k_EDisplayStatusNotLaunchable;
+        case 34: return k_EDisplayStatusCloudError;
+        case 35: return k_EDisplayStatusCloudOutOfDate;
+        case 36: return k_EDisplayStatusTerminating;
         default: return null;
       }
     }
@@ -387,6 +414,183 @@ public final class SteammessagesAppoverview {
     }
 
     // @@protoc_insertion_point(enum_scope:EDisplayStatus)
+  }
+
+  /**
+   * Protobuf enum {@code EAppCloudStatus}
+   */
+  public enum EAppCloudStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EAppCloudStatusInvalid = 0;</code>
+     */
+    k_EAppCloudStatusInvalid(0),
+    /**
+     * <code>k_EAppCloudStatusDisabled = 1;</code>
+     */
+    k_EAppCloudStatusDisabled(1),
+    /**
+     * <code>k_EAppCloudStatusUnknown = 2;</code>
+     */
+    k_EAppCloudStatusUnknown(2),
+    /**
+     * <code>k_EAppCloudStatusSynchronized = 3;</code>
+     */
+    k_EAppCloudStatusSynchronized(3),
+    /**
+     * <code>k_EAppCloudStatusChecking = 4;</code>
+     */
+    k_EAppCloudStatusChecking(4),
+    /**
+     * <code>k_EAppCloudStatusOutOfSync = 5;</code>
+     */
+    k_EAppCloudStatusOutOfSync(5),
+    /**
+     * <code>k_EAppCloudStatusUploading = 6;</code>
+     */
+    k_EAppCloudStatusUploading(6),
+    /**
+     * <code>k_EAppCloudStatusDownloading = 7;</code>
+     */
+    k_EAppCloudStatusDownloading(7),
+    /**
+     * <code>k_EAppCloudStatusSyncFailed = 8;</code>
+     */
+    k_EAppCloudStatusSyncFailed(8),
+    /**
+     * <code>k_EAppCloudStatusConflict = 9;</code>
+     */
+    k_EAppCloudStatusConflict(9),
+    /**
+     * <code>k_EAppCloudStatusPendingElsewhere = 10;</code>
+     */
+    k_EAppCloudStatusPendingElsewhere(10),
+    ;
+
+    /**
+     * <code>k_EAppCloudStatusInvalid = 0;</code>
+     */
+    public static final int k_EAppCloudStatusInvalid_VALUE = 0;
+    /**
+     * <code>k_EAppCloudStatusDisabled = 1;</code>
+     */
+    public static final int k_EAppCloudStatusDisabled_VALUE = 1;
+    /**
+     * <code>k_EAppCloudStatusUnknown = 2;</code>
+     */
+    public static final int k_EAppCloudStatusUnknown_VALUE = 2;
+    /**
+     * <code>k_EAppCloudStatusSynchronized = 3;</code>
+     */
+    public static final int k_EAppCloudStatusSynchronized_VALUE = 3;
+    /**
+     * <code>k_EAppCloudStatusChecking = 4;</code>
+     */
+    public static final int k_EAppCloudStatusChecking_VALUE = 4;
+    /**
+     * <code>k_EAppCloudStatusOutOfSync = 5;</code>
+     */
+    public static final int k_EAppCloudStatusOutOfSync_VALUE = 5;
+    /**
+     * <code>k_EAppCloudStatusUploading = 6;</code>
+     */
+    public static final int k_EAppCloudStatusUploading_VALUE = 6;
+    /**
+     * <code>k_EAppCloudStatusDownloading = 7;</code>
+     */
+    public static final int k_EAppCloudStatusDownloading_VALUE = 7;
+    /**
+     * <code>k_EAppCloudStatusSyncFailed = 8;</code>
+     */
+    public static final int k_EAppCloudStatusSyncFailed_VALUE = 8;
+    /**
+     * <code>k_EAppCloudStatusConflict = 9;</code>
+     */
+    public static final int k_EAppCloudStatusConflict_VALUE = 9;
+    /**
+     * <code>k_EAppCloudStatusPendingElsewhere = 10;</code>
+     */
+    public static final int k_EAppCloudStatusPendingElsewhere_VALUE = 10;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EAppCloudStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EAppCloudStatus forNumber(int value) {
+      switch (value) {
+        case 0: return k_EAppCloudStatusInvalid;
+        case 1: return k_EAppCloudStatusDisabled;
+        case 2: return k_EAppCloudStatusUnknown;
+        case 3: return k_EAppCloudStatusSynchronized;
+        case 4: return k_EAppCloudStatusChecking;
+        case 5: return k_EAppCloudStatusOutOfSync;
+        case 6: return k_EAppCloudStatusUploading;
+        case 7: return k_EAppCloudStatusDownloading;
+        case 8: return k_EAppCloudStatusSyncFailed;
+        case 9: return k_EAppCloudStatusConflict;
+        case 10: return k_EAppCloudStatusPendingElsewhere;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EAppCloudStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EAppCloudStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EAppCloudStatus>() {
+            public EAppCloudStatus findValueByNumber(int number) {
+              return EAppCloudStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return SteammessagesAppoverview.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final EAppCloudStatus[] VALUES = values();
+
+    public static EAppCloudStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EAppCloudStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EAppCloudStatus)
   }
 
   /**
@@ -624,7 +828,7 @@ public final class SteammessagesAppoverview {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return SteammessagesAppoverview.getDescriptor().getEnumTypes().get(1);
+      return SteammessagesAppoverview.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final EProtoAppType[] VALUES = values();
@@ -738,7 +942,7 @@ public final class SteammessagesAppoverview {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return SteammessagesAppoverview.getDescriptor().getEnumTypes().get(2);
+      return SteammessagesAppoverview.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final EAppAssociationType[] VALUES = values();
@@ -843,7 +1047,7 @@ public final class SteammessagesAppoverview {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return SteammessagesAppoverview.getDescriptor().getEnumTypes().get(3);
+      return SteammessagesAppoverview.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final EAppControllerSupportLevel[] VALUES = values();
@@ -864,6 +1068,120 @@ public final class SteammessagesAppoverview {
     }
 
     // @@protoc_insertion_point(enum_scope:EAppControllerSupportLevel)
+  }
+
+  /**
+   * Protobuf enum {@code EAppGamepadGyroTrackpadSupportLevel}
+   */
+  public enum EAppGamepadGyroTrackpadSupportLevel
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EAppGamepadGyroTrackpadSupportLevelUnknown = -1;</code>
+     */
+    k_EAppGamepadGyroTrackpadSupportLevelUnknown(-1),
+    /**
+     * <code>k_EAppGamepadGyroTrackpadSupportLevelNoGamepad = 0;</code>
+     */
+    k_EAppGamepadGyroTrackpadSupportLevelNoGamepad(0),
+    /**
+     * <code>k_EAppGamepadGyroTrackpadSupportLevelGamepad = 1;</code>
+     */
+    k_EAppGamepadGyroTrackpadSupportLevelGamepad(1),
+    /**
+     * <code>k_EAppGamepadGyroTrackpadSupportLevelSimultaneous = 2;</code>
+     */
+    k_EAppGamepadGyroTrackpadSupportLevelSimultaneous(2),
+    ;
+
+    /**
+     * <code>k_EAppGamepadGyroTrackpadSupportLevelUnknown = -1;</code>
+     */
+    public static final int k_EAppGamepadGyroTrackpadSupportLevelUnknown_VALUE = -1;
+    /**
+     * <code>k_EAppGamepadGyroTrackpadSupportLevelNoGamepad = 0;</code>
+     */
+    public static final int k_EAppGamepadGyroTrackpadSupportLevelNoGamepad_VALUE = 0;
+    /**
+     * <code>k_EAppGamepadGyroTrackpadSupportLevelGamepad = 1;</code>
+     */
+    public static final int k_EAppGamepadGyroTrackpadSupportLevelGamepad_VALUE = 1;
+    /**
+     * <code>k_EAppGamepadGyroTrackpadSupportLevelSimultaneous = 2;</code>
+     */
+    public static final int k_EAppGamepadGyroTrackpadSupportLevelSimultaneous_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EAppGamepadGyroTrackpadSupportLevel valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EAppGamepadGyroTrackpadSupportLevel forNumber(int value) {
+      switch (value) {
+        case -1: return k_EAppGamepadGyroTrackpadSupportLevelUnknown;
+        case 0: return k_EAppGamepadGyroTrackpadSupportLevelNoGamepad;
+        case 1: return k_EAppGamepadGyroTrackpadSupportLevelGamepad;
+        case 2: return k_EAppGamepadGyroTrackpadSupportLevelSimultaneous;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EAppGamepadGyroTrackpadSupportLevel>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EAppGamepadGyroTrackpadSupportLevel> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EAppGamepadGyroTrackpadSupportLevel>() {
+            public EAppGamepadGyroTrackpadSupportLevel findValueByNumber(int number) {
+              return EAppGamepadGyroTrackpadSupportLevel.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return SteammessagesAppoverview.getDescriptor().getEnumTypes().get(5);
+    }
+
+    private static final EAppGamepadGyroTrackpadSupportLevel[] VALUES = values();
+
+    public static EAppGamepadGyroTrackpadSupportLevel valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EAppGamepadGyroTrackpadSupportLevel(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EAppGamepadGyroTrackpadSupportLevel)
   }
 
   public interface CAppOverview_AppAssociationOrBuilder extends
@@ -1729,6 +2047,17 @@ public final class SteammessagesAppoverview {
      * @return The playtimeLeft.
      */
     int getPlaytimeLeft();
+
+    /**
+     * <code>optional .EAppCloudStatus cloud_status = 13 [default = k_EAppCloudStatusInvalid];</code>
+     * @return Whether the cloudStatus field is set.
+     */
+    boolean hasCloudStatus();
+    /**
+     * <code>optional .EAppCloudStatus cloud_status = 13 [default = k_EAppCloudStatusInvalid];</code>
+     * @return The cloudStatus.
+     */
+    SteammessagesAppoverview.EAppCloudStatus getCloudStatus();
   }
   /**
    * Protobuf type {@code CAppOverview_PerClientData}
@@ -1746,6 +2075,7 @@ public final class SteammessagesAppoverview {
       clientName_ = "";
       displayStatus_ = 0;
       activeBeta_ = "";
+      cloudStatus_ = 0;
     }
 
     @java.lang.Override
@@ -1846,6 +2176,18 @@ public final class SteammessagesAppoverview {
             case 96: {
               bitField0_ |= 0x00000800;
               playtimeLeft_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              SteammessagesAppoverview.EAppCloudStatus value = SteammessagesAppoverview.EAppCloudStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(13, rawValue);
+              } else {
+                bitField0_ |= 0x00001000;
+                cloudStatus_ = rawValue;
+              }
               break;
             }
             default: {
@@ -2167,6 +2509,25 @@ public final class SteammessagesAppoverview {
       return playtimeLeft_;
     }
 
+    public static final int CLOUD_STATUS_FIELD_NUMBER = 13;
+    private int cloudStatus_;
+    /**
+     * <code>optional .EAppCloudStatus cloud_status = 13 [default = k_EAppCloudStatusInvalid];</code>
+     * @return Whether the cloudStatus field is set.
+     */
+    @java.lang.Override public boolean hasCloudStatus() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>optional .EAppCloudStatus cloud_status = 13 [default = k_EAppCloudStatusInvalid];</code>
+     * @return The cloudStatus.
+     */
+    @java.lang.Override public SteammessagesAppoverview.EAppCloudStatus getCloudStatus() {
+      @SuppressWarnings("deprecation")
+      SteammessagesAppoverview.EAppCloudStatus result = SteammessagesAppoverview.EAppCloudStatus.valueOf(cloudStatus_);
+      return result == null ? SteammessagesAppoverview.EAppCloudStatus.k_EAppCloudStatusInvalid : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2216,6 +2577,9 @@ public final class SteammessagesAppoverview {
       }
       if (((bitField0_ & 0x00000800) != 0)) {
         output.writeUInt32(12, playtimeLeft_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeEnum(13, cloudStatus_);
       }
       unknownFields.writeTo(output);
     }
@@ -2271,6 +2635,10 @@ public final class SteammessagesAppoverview {
       if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, playtimeLeft_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(13, cloudStatus_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2346,6 +2714,10 @@ public final class SteammessagesAppoverview {
         if (getPlaytimeLeft()
             != other.getPlaytimeLeft()) return false;
       }
+      if (hasCloudStatus() != other.hasCloudStatus()) return false;
+      if (hasCloudStatus()) {
+        if (cloudStatus_ != other.cloudStatus_) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2411,6 +2783,10 @@ public final class SteammessagesAppoverview {
       if (hasPlaytimeLeft()) {
         hash = (37 * hash) + PLAYTIME_LEFT_FIELD_NUMBER;
         hash = (53 * hash) + getPlaytimeLeft();
+      }
+      if (hasCloudStatus()) {
+        hash = (37 * hash) + CLOUD_STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + cloudStatus_;
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2569,6 +2945,8 @@ public final class SteammessagesAppoverview {
         bitField0_ = (bitField0_ & ~0x00000400);
         playtimeLeft_ = 0;
         bitField0_ = (bitField0_ & ~0x00000800);
+        cloudStatus_ = 0;
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -2645,6 +3023,10 @@ public final class SteammessagesAppoverview {
           result.playtimeLeft_ = playtimeLeft_;
           to_bitField0_ |= 0x00000800;
         }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.cloudStatus_ = cloudStatus_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2733,6 +3115,9 @@ public final class SteammessagesAppoverview {
         }
         if (other.hasPlaytimeLeft()) {
           setPlaytimeLeft(other.getPlaytimeLeft());
+        }
+        if (other.hasCloudStatus()) {
+          setCloudStatus(other.getCloudStatus());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3325,6 +3710,49 @@ public final class SteammessagesAppoverview {
         onChanged();
         return this;
       }
+
+      private int cloudStatus_ = 0;
+      /**
+       * <code>optional .EAppCloudStatus cloud_status = 13 [default = k_EAppCloudStatusInvalid];</code>
+       * @return Whether the cloudStatus field is set.
+       */
+      @java.lang.Override public boolean hasCloudStatus() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional .EAppCloudStatus cloud_status = 13 [default = k_EAppCloudStatusInvalid];</code>
+       * @return The cloudStatus.
+       */
+      @java.lang.Override
+      public SteammessagesAppoverview.EAppCloudStatus getCloudStatus() {
+        @SuppressWarnings("deprecation")
+        SteammessagesAppoverview.EAppCloudStatus result = SteammessagesAppoverview.EAppCloudStatus.valueOf(cloudStatus_);
+        return result == null ? SteammessagesAppoverview.EAppCloudStatus.k_EAppCloudStatusInvalid : result;
+      }
+      /**
+       * <code>optional .EAppCloudStatus cloud_status = 13 [default = k_EAppCloudStatusInvalid];</code>
+       * @param value The cloudStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCloudStatus(SteammessagesAppoverview.EAppCloudStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00001000;
+        cloudStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .EAppCloudStatus cloud_status = 13 [default = k_EAppCloudStatusInvalid];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCloudStatus() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        cloudStatus_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3602,23 +4030,6 @@ public final class SteammessagesAppoverview {
         getIconHashBytes();
 
     /**
-     * <code>optional string logo_hash = 30;</code>
-     * @return Whether the logoHash field is set.
-     */
-    boolean hasLogoHash();
-    /**
-     * <code>optional string logo_hash = 30;</code>
-     * @return The logoHash.
-     */
-    java.lang.String getLogoHash();
-    /**
-     * <code>optional string logo_hash = 30;</code>
-     * @return The bytes for logoHash.
-     */
-    com.google.protobuf.ByteString
-        getLogoHashBytes();
-
-    /**
      * <code>optional .EAppControllerSupportLevel controller_support = 31 [default = k_EAppControllerSupportLevelNone];</code>
      * @return Whether the controllerSupport field is set.
      */
@@ -3832,45 +4243,6 @@ public final class SteammessagesAppoverview {
     int getOwnerAccountId();
 
     /**
-     * <code>optional bool compat_mapping_enabled = 50;</code>
-     * @return Whether the compatMappingEnabled field is set.
-     */
-    boolean hasCompatMappingEnabled();
-    /**
-     * <code>optional bool compat_mapping_enabled = 50;</code>
-     * @return The compatMappingEnabled.
-     */
-    boolean getCompatMappingEnabled();
-
-    /**
-     * <code>optional uint32 compat_mapping_priority = 51;</code>
-     * @return Whether the compatMappingPriority field is set.
-     */
-    boolean hasCompatMappingPriority();
-    /**
-     * <code>optional uint32 compat_mapping_priority = 51;</code>
-     * @return The compatMappingPriority.
-     */
-    int getCompatMappingPriority();
-
-    /**
-     * <code>optional string compat_mapping_tool_name = 52;</code>
-     * @return Whether the compatMappingToolName field is set.
-     */
-    boolean hasCompatMappingToolName();
-    /**
-     * <code>optional string compat_mapping_tool_name = 52;</code>
-     * @return The compatMappingToolName.
-     */
-    java.lang.String getCompatMappingToolName();
-    /**
-     * <code>optional string compat_mapping_tool_name = 52;</code>
-     * @return The bytes for compatMappingToolName.
-     */
-    com.google.protobuf.ByteString
-        getCompatMappingToolNameBytes();
-
-    /**
      * <code>optional uint32 review_score_with_bombs = 53;</code>
      * @return Whether the reviewScoreWithBombs field is set.
      */
@@ -3971,17 +4343,6 @@ public final class SteammessagesAppoverview {
         getMastersubIncludedwithLogoBytes();
 
     /**
-     * <code>optional uint32 compat_allowlist_setting = 61 [default = 0];</code>
-     * @return Whether the compatAllowlistSetting field is set.
-     */
-    boolean hasCompatAllowlistSetting();
-    /**
-     * <code>optional uint32 compat_allowlist_setting = 61 [default = 0];</code>
-     * @return The compatAllowlistSetting.
-     */
-    int getCompatAllowlistSetting();
-
-    /**
      * <code>optional string site_license_site_name = 62;</code>
      * @return Whether the siteLicenseSiteName field is set.
      */
@@ -4008,6 +4369,56 @@ public final class SteammessagesAppoverview {
      * @return The shortcutOverrideAppid.
      */
     int getShortcutOverrideAppid();
+
+    /**
+     * <code>optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 64 [default = k_ESteamDeckCompatibilityCategory_Unknown];</code>
+     * @return Whether the steamDeckCompatCategory field is set.
+     */
+    boolean hasSteamDeckCompatCategory();
+    /**
+     * <code>optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 64 [default = k_ESteamDeckCompatibilityCategory_Unknown];</code>
+     * @return The steamDeckCompatCategory.
+     */
+    Enums.ESteamDeckCompatibilityCategory getSteamDeckCompatCategory();
+
+    /**
+     * <code>optional uint32 rt_last_time_locally_played = 65;</code>
+     * @return Whether the rtLastTimeLocallyPlayed field is set.
+     */
+    boolean hasRtLastTimeLocallyPlayed();
+    /**
+     * <code>optional uint32 rt_last_time_locally_played = 65;</code>
+     * @return The rtLastTimeLocallyPlayed.
+     */
+    int getRtLastTimeLocallyPlayed();
+
+    /**
+     * <code>optional uint32 rt_purchased_time = 66;</code>
+     * @return Whether the rtPurchasedTime field is set.
+     */
+    boolean hasRtPurchasedTime();
+    /**
+     * <code>optional uint32 rt_purchased_time = 66;</code>
+     * @return The rtPurchasedTime.
+     */
+    int getRtPurchasedTime();
+
+    /**
+     * <code>optional string header_filename = 67;</code>
+     * @return Whether the headerFilename field is set.
+     */
+    boolean hasHeaderFilename();
+    /**
+     * <code>optional string header_filename = 67;</code>
+     * @return The headerFilename.
+     */
+    java.lang.String getHeaderFilename();
+    /**
+     * <code>optional string header_filename = 67;</code>
+     * @return The bytes for headerFilename.
+     */
+    com.google.protobuf.ByteString
+        getHeaderFilenameBytes();
   }
   /**
    * Protobuf type {@code CAppOverview}
@@ -4029,17 +4440,17 @@ public final class SteammessagesAppoverview {
       association_ = java.util.Collections.emptyList();
       storeCategory_ = emptyIntList();
       iconHash_ = "";
-      logoHash_ = "";
       controllerSupport_ = 0;
       iconData_ = "";
       iconDataFormat_ = "";
       gameid_ = "";
       libraryCapsuleFilename_ = "";
       perClientData_ = java.util.Collections.emptyList();
-      compatMappingToolName_ = "";
       libraryId_ = "";
       mastersubIncludedwithLogo_ = "";
       siteLicenseSiteName_ = "";
+      steamDeckCompatCategory_ = 0;
+      headerFilename_ = "";
     }
 
     @java.lang.Override
@@ -4200,12 +4611,6 @@ public final class SteammessagesAppoverview {
               iconHash_ = bs;
               break;
             }
-            case 242: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00002000;
-              logoHash_ = bs;
-              break;
-            }
             case 248: {
               int rawValue = input.readEnum();
                 @SuppressWarnings("deprecation")
@@ -4213,166 +4618,173 @@ public final class SteammessagesAppoverview {
               if (value == null) {
                 unknownFields.mergeVarintField(31, rawValue);
               } else {
-                bitField0_ |= 0x00004000;
+                bitField0_ |= 0x00002000;
                 controllerSupport_ = rawValue;
               }
               break;
             }
             case 256: {
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00004000;
               vrSupported_ = input.readBool();
               break;
             }
             case 288: {
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00008000;
               metacriticScore_ = input.readUInt32();
               break;
             }
             case 296: {
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00010000;
               sizeOnDisk_ = input.readUInt64();
               break;
             }
             case 304: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00020000;
               thirdPartyMod_ = input.readBool();
               break;
             }
             case 314: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00040000;
               iconData_ = bs;
               break;
             }
             case 322: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00080000;
               iconDataFormat_ = bs;
               break;
             }
             case 330: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00100000;
               gameid_ = bs;
               break;
             }
             case 338: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00200000;
               libraryCapsuleFilename_ = bs;
               break;
             }
             case 346: {
-              if (!((mutable_bitField0_ & 0x04000000) != 0)) {
+              if (!((mutable_bitField0_ & 0x02000000) != 0)) {
                 perClientData_ = new java.util.ArrayList<SteammessagesAppoverview.CAppOverview_PerClientData>();
-                mutable_bitField0_ |= 0x04000000;
+                mutable_bitField0_ |= 0x02000000;
               }
               perClientData_.add(
                   input.readMessage(SteammessagesAppoverview.CAppOverview_PerClientData.PARSER, extensionRegistry));
               break;
             }
             case 352: {
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x00400000;
               mostAvailableClientid_ = input.readUInt64();
               break;
             }
             case 360: {
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x00800000;
               selectedClientid_ = input.readUInt64();
               break;
             }
             case 368: {
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x01000000;
               rtStoreAssetMtime_ = input.readUInt32();
               break;
             }
             case 376: {
-              bitField0_ |= 0x04000000;
+              bitField0_ |= 0x02000000;
               rtCustomImageMtime_ = input.readUInt32();
               break;
             }
             case 384: {
-              bitField0_ |= 0x08000000;
+              bitField0_ |= 0x04000000;
               optionalParentAppId_ = input.readUInt32();
               break;
             }
             case 392: {
-              bitField0_ |= 0x10000000;
+              bitField0_ |= 0x08000000;
               ownerAccountId_ = input.readUInt32();
               break;
             }
-            case 400: {
-              bitField0_ |= 0x20000000;
-              compatMappingEnabled_ = input.readBool();
-              break;
-            }
-            case 408: {
-              bitField0_ |= 0x40000000;
-              compatMappingPriority_ = input.readUInt32();
-              break;
-            }
-            case 418: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x80000000;
-              compatMappingToolName_ = bs;
-              break;
-            }
             case 424: {
-              bitField1_ |= 0x00000001;
+              bitField0_ |= 0x10000000;
               reviewScoreWithBombs_ = input.readUInt32();
               break;
             }
             case 432: {
-              bitField1_ |= 0x00000002;
+              bitField0_ |= 0x20000000;
               reviewPercentageWithBombs_ = input.readUInt32();
               break;
             }
             case 440: {
-              bitField1_ |= 0x00000004;
+              bitField0_ |= 0x40000000;
               reviewScoreWithoutBombs_ = input.readUInt32();
               break;
             }
             case 448: {
-              bitField1_ |= 0x00000008;
+              bitField0_ |= 0x80000000;
               reviewPercentageWithoutBombs_ = input.readUInt32();
               break;
             }
             case 458: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField1_ |= 0x00000010;
+              bitField1_ |= 0x00000001;
               libraryId_ = bs;
               break;
             }
             case 464: {
-              bitField1_ |= 0x00000020;
+              bitField1_ |= 0x00000002;
               vrOnly_ = input.readBool();
               break;
             }
             case 472: {
-              bitField1_ |= 0x00000040;
+              bitField1_ |= 0x00000004;
               mastersubAppid_ = input.readUInt32();
               break;
             }
             case 482: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField1_ |= 0x00000080;
+              bitField1_ |= 0x00000008;
               mastersubIncludedwithLogo_ = bs;
-              break;
-            }
-            case 488: {
-              bitField1_ |= 0x00000100;
-              compatAllowlistSetting_ = input.readUInt32();
               break;
             }
             case 498: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField1_ |= 0x00000200;
+              bitField1_ |= 0x00000010;
               siteLicenseSiteName_ = bs;
               break;
             }
             case 504: {
-              bitField1_ |= 0x00000400;
+              bitField1_ |= 0x00000020;
               shortcutOverrideAppid_ = input.readUInt32();
+              break;
+            }
+            case 512: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              Enums.ESteamDeckCompatibilityCategory value = Enums.ESteamDeckCompatibilityCategory.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(64, rawValue);
+              } else {
+                bitField1_ |= 0x00000040;
+                steamDeckCompatCategory_ = rawValue;
+              }
+              break;
+            }
+            case 520: {
+              bitField1_ |= 0x00000080;
+              rtLastTimeLocallyPlayed_ = input.readUInt32();
+              break;
+            }
+            case 528: {
+              bitField1_ |= 0x00000100;
+              rtPurchasedTime_ = input.readUInt32();
+              break;
+            }
+            case 538: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField1_ |= 0x00000200;
+              headerFilename_ = bs;
               break;
             }
             default: {
@@ -4399,7 +4811,7 @@ public final class SteammessagesAppoverview {
         if (((mutable_bitField0_ & 0x00001000) != 0)) {
           storeCategory_.makeImmutable(); // C
         }
-        if (((mutable_bitField0_ & 0x04000000) != 0)) {
+        if (((mutable_bitField0_ & 0x02000000) != 0)) {
           perClientData_ = java.util.Collections.unmodifiableList(perClientData_);
         }
         this.unknownFields = unknownFields.build();
@@ -4849,54 +5261,6 @@ public final class SteammessagesAppoverview {
       }
     }
 
-    public static final int LOGO_HASH_FIELD_NUMBER = 30;
-    private volatile java.lang.Object logoHash_;
-    /**
-     * <code>optional string logo_hash = 30;</code>
-     * @return Whether the logoHash field is set.
-     */
-    @java.lang.Override
-    public boolean hasLogoHash() {
-      return ((bitField0_ & 0x00002000) != 0);
-    }
-    /**
-     * <code>optional string logo_hash = 30;</code>
-     * @return The logoHash.
-     */
-    @java.lang.Override
-    public java.lang.String getLogoHash() {
-      java.lang.Object ref = logoHash_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          logoHash_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string logo_hash = 30;</code>
-     * @return The bytes for logoHash.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLogoHashBytes() {
-      java.lang.Object ref = logoHash_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        logoHash_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int CONTROLLER_SUPPORT_FIELD_NUMBER = 31;
     private int controllerSupport_;
     /**
@@ -4904,7 +5268,7 @@ public final class SteammessagesAppoverview {
      * @return Whether the controllerSupport field is set.
      */
     @java.lang.Override public boolean hasControllerSupport() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <code>optional .EAppControllerSupportLevel controller_support = 31 [default = k_EAppControllerSupportLevelNone];</code>
@@ -4924,7 +5288,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasVrSupported() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <code>optional bool vr_supported = 32;</code>
@@ -4943,7 +5307,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasMetacriticScore() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <code>optional uint32 metacritic_score = 36;</code>
@@ -4962,7 +5326,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasSizeOnDisk() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <code>optional uint64 size_on_disk = 37;</code>
@@ -4981,7 +5345,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasThirdPartyMod() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <code>optional bool third_party_mod = 38;</code>
@@ -5000,7 +5364,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasIconData() {
-      return ((bitField0_ & 0x00080000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <code>optional string icon_data = 39;</code>
@@ -5048,7 +5412,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasIconDataFormat() {
-      return ((bitField0_ & 0x00100000) != 0);
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <code>optional string icon_data_format = 40;</code>
@@ -5096,7 +5460,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasGameid() {
-      return ((bitField0_ & 0x00200000) != 0);
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <code>optional string gameid = 41;</code>
@@ -5144,7 +5508,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasLibraryCapsuleFilename() {
-      return ((bitField0_ & 0x00400000) != 0);
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <code>optional string library_capsule_filename = 42;</code>
@@ -5232,7 +5596,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasMostAvailableClientid() {
-      return ((bitField0_ & 0x00800000) != 0);
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <code>optional uint64 most_available_clientid = 44;</code>
@@ -5251,7 +5615,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasSelectedClientid() {
-      return ((bitField0_ & 0x01000000) != 0);
+      return ((bitField0_ & 0x00800000) != 0);
     }
     /**
      * <code>optional uint64 selected_clientid = 45;</code>
@@ -5270,7 +5634,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasRtStoreAssetMtime() {
-      return ((bitField0_ & 0x02000000) != 0);
+      return ((bitField0_ & 0x01000000) != 0);
     }
     /**
      * <code>optional uint32 rt_store_asset_mtime = 46;</code>
@@ -5289,7 +5653,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasRtCustomImageMtime() {
-      return ((bitField0_ & 0x04000000) != 0);
+      return ((bitField0_ & 0x02000000) != 0);
     }
     /**
      * <code>optional uint32 rt_custom_image_mtime = 47;</code>
@@ -5308,7 +5672,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasOptionalParentAppId() {
-      return ((bitField0_ & 0x08000000) != 0);
+      return ((bitField0_ & 0x04000000) != 0);
     }
     /**
      * <code>optional uint32 optional_parent_app_id = 48;</code>
@@ -5327,7 +5691,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasOwnerAccountId() {
-      return ((bitField0_ & 0x10000000) != 0);
+      return ((bitField0_ & 0x08000000) != 0);
     }
     /**
      * <code>optional uint32 owner_account_id = 49;</code>
@@ -5338,92 +5702,6 @@ public final class SteammessagesAppoverview {
       return ownerAccountId_;
     }
 
-    public static final int COMPAT_MAPPING_ENABLED_FIELD_NUMBER = 50;
-    private boolean compatMappingEnabled_;
-    /**
-     * <code>optional bool compat_mapping_enabled = 50;</code>
-     * @return Whether the compatMappingEnabled field is set.
-     */
-    @java.lang.Override
-    public boolean hasCompatMappingEnabled() {
-      return ((bitField0_ & 0x20000000) != 0);
-    }
-    /**
-     * <code>optional bool compat_mapping_enabled = 50;</code>
-     * @return The compatMappingEnabled.
-     */
-    @java.lang.Override
-    public boolean getCompatMappingEnabled() {
-      return compatMappingEnabled_;
-    }
-
-    public static final int COMPAT_MAPPING_PRIORITY_FIELD_NUMBER = 51;
-    private int compatMappingPriority_;
-    /**
-     * <code>optional uint32 compat_mapping_priority = 51;</code>
-     * @return Whether the compatMappingPriority field is set.
-     */
-    @java.lang.Override
-    public boolean hasCompatMappingPriority() {
-      return ((bitField0_ & 0x40000000) != 0);
-    }
-    /**
-     * <code>optional uint32 compat_mapping_priority = 51;</code>
-     * @return The compatMappingPriority.
-     */
-    @java.lang.Override
-    public int getCompatMappingPriority() {
-      return compatMappingPriority_;
-    }
-
-    public static final int COMPAT_MAPPING_TOOL_NAME_FIELD_NUMBER = 52;
-    private volatile java.lang.Object compatMappingToolName_;
-    /**
-     * <code>optional string compat_mapping_tool_name = 52;</code>
-     * @return Whether the compatMappingToolName field is set.
-     */
-    @java.lang.Override
-    public boolean hasCompatMappingToolName() {
-      return ((bitField0_ & 0x80000000) != 0);
-    }
-    /**
-     * <code>optional string compat_mapping_tool_name = 52;</code>
-     * @return The compatMappingToolName.
-     */
-    @java.lang.Override
-    public java.lang.String getCompatMappingToolName() {
-      java.lang.Object ref = compatMappingToolName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          compatMappingToolName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string compat_mapping_tool_name = 52;</code>
-     * @return The bytes for compatMappingToolName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCompatMappingToolNameBytes() {
-      java.lang.Object ref = compatMappingToolName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        compatMappingToolName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int REVIEW_SCORE_WITH_BOMBS_FIELD_NUMBER = 53;
     private int reviewScoreWithBombs_;
     /**
@@ -5432,7 +5710,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasReviewScoreWithBombs() {
-      return ((bitField1_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x10000000) != 0);
     }
     /**
      * <code>optional uint32 review_score_with_bombs = 53;</code>
@@ -5451,7 +5729,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasReviewPercentageWithBombs() {
-      return ((bitField1_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x20000000) != 0);
     }
     /**
      * <code>optional uint32 review_percentage_with_bombs = 54;</code>
@@ -5470,7 +5748,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasReviewScoreWithoutBombs() {
-      return ((bitField1_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x40000000) != 0);
     }
     /**
      * <code>optional uint32 review_score_without_bombs = 55;</code>
@@ -5489,7 +5767,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasReviewPercentageWithoutBombs() {
-      return ((bitField1_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x80000000) != 0);
     }
     /**
      * <code>optional uint32 review_percentage_without_bombs = 56;</code>
@@ -5508,7 +5786,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasLibraryId() {
-      return ((bitField1_ & 0x00000010) != 0);
+      return ((bitField1_ & 0x00000001) != 0);
     }
     /**
      * <code>optional string library_id = 57;</code>
@@ -5556,7 +5834,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasVrOnly() {
-      return ((bitField1_ & 0x00000020) != 0);
+      return ((bitField1_ & 0x00000002) != 0);
     }
     /**
      * <code>optional bool vr_only = 58;</code>
@@ -5575,7 +5853,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasMastersubAppid() {
-      return ((bitField1_ & 0x00000040) != 0);
+      return ((bitField1_ & 0x00000004) != 0);
     }
     /**
      * <code>optional uint32 mastersub_appid = 59;</code>
@@ -5594,7 +5872,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasMastersubIncludedwithLogo() {
-      return ((bitField1_ & 0x00000080) != 0);
+      return ((bitField1_ & 0x00000008) != 0);
     }
     /**
      * <code>optional string mastersub_includedwith_logo = 60;</code>
@@ -5634,25 +5912,6 @@ public final class SteammessagesAppoverview {
       }
     }
 
-    public static final int COMPAT_ALLOWLIST_SETTING_FIELD_NUMBER = 61;
-    private int compatAllowlistSetting_;
-    /**
-     * <code>optional uint32 compat_allowlist_setting = 61 [default = 0];</code>
-     * @return Whether the compatAllowlistSetting field is set.
-     */
-    @java.lang.Override
-    public boolean hasCompatAllowlistSetting() {
-      return ((bitField1_ & 0x00000100) != 0);
-    }
-    /**
-     * <code>optional uint32 compat_allowlist_setting = 61 [default = 0];</code>
-     * @return The compatAllowlistSetting.
-     */
-    @java.lang.Override
-    public int getCompatAllowlistSetting() {
-      return compatAllowlistSetting_;
-    }
-
     public static final int SITE_LICENSE_SITE_NAME_FIELD_NUMBER = 62;
     private volatile java.lang.Object siteLicenseSiteName_;
     /**
@@ -5661,7 +5920,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasSiteLicenseSiteName() {
-      return ((bitField1_ & 0x00000200) != 0);
+      return ((bitField1_ & 0x00000010) != 0);
     }
     /**
      * <code>optional string site_license_site_name = 62;</code>
@@ -5709,7 +5968,7 @@ public final class SteammessagesAppoverview {
      */
     @java.lang.Override
     public boolean hasShortcutOverrideAppid() {
-      return ((bitField1_ & 0x00000400) != 0);
+      return ((bitField1_ & 0x00000020) != 0);
     }
     /**
      * <code>optional uint32 shortcut_override_appid = 63;</code>
@@ -5718,6 +5977,111 @@ public final class SteammessagesAppoverview {
     @java.lang.Override
     public int getShortcutOverrideAppid() {
       return shortcutOverrideAppid_;
+    }
+
+    public static final int STEAM_DECK_COMPAT_CATEGORY_FIELD_NUMBER = 64;
+    private int steamDeckCompatCategory_;
+    /**
+     * <code>optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 64 [default = k_ESteamDeckCompatibilityCategory_Unknown];</code>
+     * @return Whether the steamDeckCompatCategory field is set.
+     */
+    @java.lang.Override public boolean hasSteamDeckCompatCategory() {
+      return ((bitField1_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 64 [default = k_ESteamDeckCompatibilityCategory_Unknown];</code>
+     * @return The steamDeckCompatCategory.
+     */
+    @java.lang.Override public Enums.ESteamDeckCompatibilityCategory getSteamDeckCompatCategory() {
+      @SuppressWarnings("deprecation")
+      Enums.ESteamDeckCompatibilityCategory result = Enums.ESteamDeckCompatibilityCategory.valueOf(steamDeckCompatCategory_);
+      return result == null ? Enums.ESteamDeckCompatibilityCategory.k_ESteamDeckCompatibilityCategory_Unknown : result;
+    }
+
+    public static final int RT_LAST_TIME_LOCALLY_PLAYED_FIELD_NUMBER = 65;
+    private int rtLastTimeLocallyPlayed_;
+    /**
+     * <code>optional uint32 rt_last_time_locally_played = 65;</code>
+     * @return Whether the rtLastTimeLocallyPlayed field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtLastTimeLocallyPlayed() {
+      return ((bitField1_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional uint32 rt_last_time_locally_played = 65;</code>
+     * @return The rtLastTimeLocallyPlayed.
+     */
+    @java.lang.Override
+    public int getRtLastTimeLocallyPlayed() {
+      return rtLastTimeLocallyPlayed_;
+    }
+
+    public static final int RT_PURCHASED_TIME_FIELD_NUMBER = 66;
+    private int rtPurchasedTime_;
+    /**
+     * <code>optional uint32 rt_purchased_time = 66;</code>
+     * @return Whether the rtPurchasedTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtPurchasedTime() {
+      return ((bitField1_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional uint32 rt_purchased_time = 66;</code>
+     * @return The rtPurchasedTime.
+     */
+    @java.lang.Override
+    public int getRtPurchasedTime() {
+      return rtPurchasedTime_;
+    }
+
+    public static final int HEADER_FILENAME_FIELD_NUMBER = 67;
+    private volatile java.lang.Object headerFilename_;
+    /**
+     * <code>optional string header_filename = 67;</code>
+     * @return Whether the headerFilename field is set.
+     */
+    @java.lang.Override
+    public boolean hasHeaderFilename() {
+      return ((bitField1_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>optional string header_filename = 67;</code>
+     * @return The headerFilename.
+     */
+    @java.lang.Override
+    public java.lang.String getHeaderFilename() {
+      java.lang.Object ref = headerFilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          headerFilename_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string header_filename = 67;</code>
+     * @return The bytes for headerFilename.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHeaderFilenameBytes() {
+      java.lang.Object ref = headerFilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        headerFilename_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5783,97 +6147,94 @@ public final class SteammessagesAppoverview {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 27, iconHash_);
       }
       if (((bitField0_ & 0x00002000) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 30, logoHash_);
-      }
-      if (((bitField0_ & 0x00004000) != 0)) {
         output.writeEnum(31, controllerSupport_);
       }
-      if (((bitField0_ & 0x00008000) != 0)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         output.writeBool(32, vrSupported_);
       }
-      if (((bitField0_ & 0x00010000) != 0)) {
+      if (((bitField0_ & 0x00008000) != 0)) {
         output.writeUInt32(36, metacriticScore_);
       }
-      if (((bitField0_ & 0x00020000) != 0)) {
+      if (((bitField0_ & 0x00010000) != 0)) {
         output.writeUInt64(37, sizeOnDisk_);
       }
-      if (((bitField0_ & 0x00040000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         output.writeBool(38, thirdPartyMod_);
       }
-      if (((bitField0_ & 0x00080000) != 0)) {
+      if (((bitField0_ & 0x00040000) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 39, iconData_);
       }
-      if (((bitField0_ & 0x00100000) != 0)) {
+      if (((bitField0_ & 0x00080000) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 40, iconDataFormat_);
       }
-      if (((bitField0_ & 0x00200000) != 0)) {
+      if (((bitField0_ & 0x00100000) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 41, gameid_);
       }
-      if (((bitField0_ & 0x00400000) != 0)) {
+      if (((bitField0_ & 0x00200000) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 42, libraryCapsuleFilename_);
       }
       for (int i = 0; i < perClientData_.size(); i++) {
         output.writeMessage(43, perClientData_.get(i));
       }
-      if (((bitField0_ & 0x00800000) != 0)) {
+      if (((bitField0_ & 0x00400000) != 0)) {
         output.writeUInt64(44, mostAvailableClientid_);
       }
-      if (((bitField0_ & 0x01000000) != 0)) {
+      if (((bitField0_ & 0x00800000) != 0)) {
         output.writeUInt64(45, selectedClientid_);
       }
-      if (((bitField0_ & 0x02000000) != 0)) {
+      if (((bitField0_ & 0x01000000) != 0)) {
         output.writeUInt32(46, rtStoreAssetMtime_);
       }
-      if (((bitField0_ & 0x04000000) != 0)) {
+      if (((bitField0_ & 0x02000000) != 0)) {
         output.writeUInt32(47, rtCustomImageMtime_);
       }
-      if (((bitField0_ & 0x08000000) != 0)) {
+      if (((bitField0_ & 0x04000000) != 0)) {
         output.writeUInt32(48, optionalParentAppId_);
       }
-      if (((bitField0_ & 0x10000000) != 0)) {
+      if (((bitField0_ & 0x08000000) != 0)) {
         output.writeUInt32(49, ownerAccountId_);
       }
-      if (((bitField0_ & 0x20000000) != 0)) {
-        output.writeBool(50, compatMappingEnabled_);
-      }
-      if (((bitField0_ & 0x40000000) != 0)) {
-        output.writeUInt32(51, compatMappingPriority_);
-      }
-      if (((bitField0_ & 0x80000000) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 52, compatMappingToolName_);
-      }
-      if (((bitField1_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x10000000) != 0)) {
         output.writeUInt32(53, reviewScoreWithBombs_);
       }
-      if (((bitField1_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x20000000) != 0)) {
         output.writeUInt32(54, reviewPercentageWithBombs_);
       }
-      if (((bitField1_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x40000000) != 0)) {
         output.writeUInt32(55, reviewScoreWithoutBombs_);
       }
-      if (((bitField1_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x80000000) != 0)) {
         output.writeUInt32(56, reviewPercentageWithoutBombs_);
       }
-      if (((bitField1_ & 0x00000010) != 0)) {
+      if (((bitField1_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 57, libraryId_);
       }
-      if (((bitField1_ & 0x00000020) != 0)) {
+      if (((bitField1_ & 0x00000002) != 0)) {
         output.writeBool(58, vrOnly_);
       }
-      if (((bitField1_ & 0x00000040) != 0)) {
+      if (((bitField1_ & 0x00000004) != 0)) {
         output.writeUInt32(59, mastersubAppid_);
       }
-      if (((bitField1_ & 0x00000080) != 0)) {
+      if (((bitField1_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 60, mastersubIncludedwithLogo_);
       }
-      if (((bitField1_ & 0x00000100) != 0)) {
-        output.writeUInt32(61, compatAllowlistSetting_);
-      }
-      if (((bitField1_ & 0x00000200) != 0)) {
+      if (((bitField1_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 62, siteLicenseSiteName_);
       }
-      if (((bitField1_ & 0x00000400) != 0)) {
+      if (((bitField1_ & 0x00000020) != 0)) {
         output.writeUInt32(63, shortcutOverrideAppid_);
+      }
+      if (((bitField1_ & 0x00000040) != 0)) {
+        output.writeEnum(64, steamDeckCompatCategory_);
+      }
+      if (((bitField1_ & 0x00000080) != 0)) {
+        output.writeUInt32(65, rtLastTimeLocallyPlayed_);
+      }
+      if (((bitField1_ & 0x00000100) != 0)) {
+        output.writeUInt32(66, rtPurchasedTime_);
+      }
+      if (((bitField1_ & 0x00000200) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 67, headerFilename_);
       }
       unknownFields.writeTo(output);
     }
@@ -5956,119 +6317,116 @@ public final class SteammessagesAppoverview {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, iconHash_);
       }
       if (((bitField0_ & 0x00002000) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, logoHash_);
-      }
-      if (((bitField0_ & 0x00004000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(31, controllerSupport_);
       }
-      if (((bitField0_ & 0x00008000) != 0)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(32, vrSupported_);
       }
-      if (((bitField0_ & 0x00010000) != 0)) {
+      if (((bitField0_ & 0x00008000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(36, metacriticScore_);
       }
-      if (((bitField0_ & 0x00020000) != 0)) {
+      if (((bitField0_ & 0x00010000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(37, sizeOnDisk_);
       }
-      if (((bitField0_ & 0x00040000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(38, thirdPartyMod_);
       }
-      if (((bitField0_ & 0x00080000) != 0)) {
+      if (((bitField0_ & 0x00040000) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, iconData_);
       }
-      if (((bitField0_ & 0x00100000) != 0)) {
+      if (((bitField0_ & 0x00080000) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, iconDataFormat_);
       }
-      if (((bitField0_ & 0x00200000) != 0)) {
+      if (((bitField0_ & 0x00100000) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(41, gameid_);
       }
-      if (((bitField0_ & 0x00400000) != 0)) {
+      if (((bitField0_ & 0x00200000) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(42, libraryCapsuleFilename_);
       }
       for (int i = 0; i < perClientData_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(43, perClientData_.get(i));
       }
-      if (((bitField0_ & 0x00800000) != 0)) {
+      if (((bitField0_ & 0x00400000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(44, mostAvailableClientid_);
       }
-      if (((bitField0_ & 0x01000000) != 0)) {
+      if (((bitField0_ & 0x00800000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(45, selectedClientid_);
       }
-      if (((bitField0_ & 0x02000000) != 0)) {
+      if (((bitField0_ & 0x01000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(46, rtStoreAssetMtime_);
       }
-      if (((bitField0_ & 0x04000000) != 0)) {
+      if (((bitField0_ & 0x02000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(47, rtCustomImageMtime_);
       }
-      if (((bitField0_ & 0x08000000) != 0)) {
+      if (((bitField0_ & 0x04000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(48, optionalParentAppId_);
       }
-      if (((bitField0_ & 0x10000000) != 0)) {
+      if (((bitField0_ & 0x08000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(49, ownerAccountId_);
       }
-      if (((bitField0_ & 0x20000000) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(50, compatMappingEnabled_);
-      }
-      if (((bitField0_ & 0x40000000) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(51, compatMappingPriority_);
-      }
-      if (((bitField0_ & 0x80000000) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(52, compatMappingToolName_);
-      }
-      if (((bitField1_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x10000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(53, reviewScoreWithBombs_);
       }
-      if (((bitField1_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x20000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(54, reviewPercentageWithBombs_);
       }
-      if (((bitField1_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x40000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(55, reviewScoreWithoutBombs_);
       }
-      if (((bitField1_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x80000000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(56, reviewPercentageWithoutBombs_);
       }
-      if (((bitField1_ & 0x00000010) != 0)) {
+      if (((bitField1_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(57, libraryId_);
       }
-      if (((bitField1_ & 0x00000020) != 0)) {
+      if (((bitField1_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(58, vrOnly_);
       }
-      if (((bitField1_ & 0x00000040) != 0)) {
+      if (((bitField1_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(59, mastersubAppid_);
       }
-      if (((bitField1_ & 0x00000080) != 0)) {
+      if (((bitField1_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(60, mastersubIncludedwithLogo_);
+      }
+      if (((bitField1_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(62, siteLicenseSiteName_);
+      }
+      if (((bitField1_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(63, shortcutOverrideAppid_);
+      }
+      if (((bitField1_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(64, steamDeckCompatCategory_);
+      }
+      if (((bitField1_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(65, rtLastTimeLocallyPlayed_);
       }
       if (((bitField1_ & 0x00000100) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(61, compatAllowlistSetting_);
+          .computeUInt32Size(66, rtPurchasedTime_);
       }
       if (((bitField1_ & 0x00000200) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(62, siteLicenseSiteName_);
-      }
-      if (((bitField1_ & 0x00000400) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(63, shortcutOverrideAppid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(67, headerFilename_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6155,11 +6513,6 @@ public final class SteammessagesAppoverview {
         if (!getIconHash()
             .equals(other.getIconHash())) return false;
       }
-      if (hasLogoHash() != other.hasLogoHash()) return false;
-      if (hasLogoHash()) {
-        if (!getLogoHash()
-            .equals(other.getLogoHash())) return false;
-      }
       if (hasControllerSupport() != other.hasControllerSupport()) return false;
       if (hasControllerSupport()) {
         if (controllerSupport_ != other.controllerSupport_) return false;
@@ -6236,21 +6589,6 @@ public final class SteammessagesAppoverview {
         if (getOwnerAccountId()
             != other.getOwnerAccountId()) return false;
       }
-      if (hasCompatMappingEnabled() != other.hasCompatMappingEnabled()) return false;
-      if (hasCompatMappingEnabled()) {
-        if (getCompatMappingEnabled()
-            != other.getCompatMappingEnabled()) return false;
-      }
-      if (hasCompatMappingPriority() != other.hasCompatMappingPriority()) return false;
-      if (hasCompatMappingPriority()) {
-        if (getCompatMappingPriority()
-            != other.getCompatMappingPriority()) return false;
-      }
-      if (hasCompatMappingToolName() != other.hasCompatMappingToolName()) return false;
-      if (hasCompatMappingToolName()) {
-        if (!getCompatMappingToolName()
-            .equals(other.getCompatMappingToolName())) return false;
-      }
       if (hasReviewScoreWithBombs() != other.hasReviewScoreWithBombs()) return false;
       if (hasReviewScoreWithBombs()) {
         if (getReviewScoreWithBombs()
@@ -6291,11 +6629,6 @@ public final class SteammessagesAppoverview {
         if (!getMastersubIncludedwithLogo()
             .equals(other.getMastersubIncludedwithLogo())) return false;
       }
-      if (hasCompatAllowlistSetting() != other.hasCompatAllowlistSetting()) return false;
-      if (hasCompatAllowlistSetting()) {
-        if (getCompatAllowlistSetting()
-            != other.getCompatAllowlistSetting()) return false;
-      }
       if (hasSiteLicenseSiteName() != other.hasSiteLicenseSiteName()) return false;
       if (hasSiteLicenseSiteName()) {
         if (!getSiteLicenseSiteName()
@@ -6305,6 +6638,25 @@ public final class SteammessagesAppoverview {
       if (hasShortcutOverrideAppid()) {
         if (getShortcutOverrideAppid()
             != other.getShortcutOverrideAppid()) return false;
+      }
+      if (hasSteamDeckCompatCategory() != other.hasSteamDeckCompatCategory()) return false;
+      if (hasSteamDeckCompatCategory()) {
+        if (steamDeckCompatCategory_ != other.steamDeckCompatCategory_) return false;
+      }
+      if (hasRtLastTimeLocallyPlayed() != other.hasRtLastTimeLocallyPlayed()) return false;
+      if (hasRtLastTimeLocallyPlayed()) {
+        if (getRtLastTimeLocallyPlayed()
+            != other.getRtLastTimeLocallyPlayed()) return false;
+      }
+      if (hasRtPurchasedTime() != other.hasRtPurchasedTime()) return false;
+      if (hasRtPurchasedTime()) {
+        if (getRtPurchasedTime()
+            != other.getRtPurchasedTime()) return false;
+      }
+      if (hasHeaderFilename() != other.hasHeaderFilename()) return false;
+      if (hasHeaderFilename()) {
+        if (!getHeaderFilename()
+            .equals(other.getHeaderFilename())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -6382,10 +6734,6 @@ public final class SteammessagesAppoverview {
         hash = (37 * hash) + ICON_HASH_FIELD_NUMBER;
         hash = (53 * hash) + getIconHash().hashCode();
       }
-      if (hasLogoHash()) {
-        hash = (37 * hash) + LOGO_HASH_FIELD_NUMBER;
-        hash = (53 * hash) + getLogoHash().hashCode();
-      }
       if (hasControllerSupport()) {
         hash = (37 * hash) + CONTROLLER_SUPPORT_FIELD_NUMBER;
         hash = (53 * hash) + controllerSupport_;
@@ -6455,19 +6803,6 @@ public final class SteammessagesAppoverview {
         hash = (37 * hash) + OWNER_ACCOUNT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getOwnerAccountId();
       }
-      if (hasCompatMappingEnabled()) {
-        hash = (37 * hash) + COMPAT_MAPPING_ENABLED_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getCompatMappingEnabled());
-      }
-      if (hasCompatMappingPriority()) {
-        hash = (37 * hash) + COMPAT_MAPPING_PRIORITY_FIELD_NUMBER;
-        hash = (53 * hash) + getCompatMappingPriority();
-      }
-      if (hasCompatMappingToolName()) {
-        hash = (37 * hash) + COMPAT_MAPPING_TOOL_NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getCompatMappingToolName().hashCode();
-      }
       if (hasReviewScoreWithBombs()) {
         hash = (37 * hash) + REVIEW_SCORE_WITH_BOMBS_FIELD_NUMBER;
         hash = (53 * hash) + getReviewScoreWithBombs();
@@ -6501,10 +6836,6 @@ public final class SteammessagesAppoverview {
         hash = (37 * hash) + MASTERSUB_INCLUDEDWITH_LOGO_FIELD_NUMBER;
         hash = (53 * hash) + getMastersubIncludedwithLogo().hashCode();
       }
-      if (hasCompatAllowlistSetting()) {
-        hash = (37 * hash) + COMPAT_ALLOWLIST_SETTING_FIELD_NUMBER;
-        hash = (53 * hash) + getCompatAllowlistSetting();
-      }
       if (hasSiteLicenseSiteName()) {
         hash = (37 * hash) + SITE_LICENSE_SITE_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getSiteLicenseSiteName().hashCode();
@@ -6512,6 +6843,22 @@ public final class SteammessagesAppoverview {
       if (hasShortcutOverrideAppid()) {
         hash = (37 * hash) + SHORTCUT_OVERRIDE_APPID_FIELD_NUMBER;
         hash = (53 * hash) + getShortcutOverrideAppid();
+      }
+      if (hasSteamDeckCompatCategory()) {
+        hash = (37 * hash) + STEAM_DECK_COMPAT_CATEGORY_FIELD_NUMBER;
+        hash = (53 * hash) + steamDeckCompatCategory_;
+      }
+      if (hasRtLastTimeLocallyPlayed()) {
+        hash = (37 * hash) + RT_LAST_TIME_LOCALLY_PLAYED_FIELD_NUMBER;
+        hash = (53 * hash) + getRtLastTimeLocallyPlayed();
+      }
+      if (hasRtPurchasedTime()) {
+        hash = (37 * hash) + RT_PURCHASED_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getRtPurchasedTime();
+      }
+      if (hasHeaderFilename()) {
+        hash = (37 * hash) + HEADER_FILENAME_FIELD_NUMBER;
+        hash = (53 * hash) + getHeaderFilename().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6684,72 +7031,70 @@ public final class SteammessagesAppoverview {
         bitField0_ = (bitField0_ & ~0x00004000);
         iconHash_ = "";
         bitField0_ = (bitField0_ & ~0x00008000);
-        logoHash_ = "";
-        bitField0_ = (bitField0_ & ~0x00010000);
         controllerSupport_ = 0;
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         vrSupported_ = false;
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         metacriticScore_ = 0;
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         sizeOnDisk_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         thirdPartyMod_ = false;
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         iconData_ = "";
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         iconDataFormat_ = "";
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         gameid_ = "";
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         libraryCapsuleFilename_ = "";
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         if (perClientDataBuilder_ == null) {
           perClientData_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x04000000);
+          bitField0_ = (bitField0_ & ~0x02000000);
         } else {
           perClientDataBuilder_.clear();
         }
         mostAvailableClientid_ = 0L;
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         selectedClientid_ = 0L;
-        bitField0_ = (bitField0_ & ~0x10000000);
+        bitField0_ = (bitField0_ & ~0x08000000);
         rtStoreAssetMtime_ = 0;
-        bitField0_ = (bitField0_ & ~0x20000000);
+        bitField0_ = (bitField0_ & ~0x10000000);
         rtCustomImageMtime_ = 0;
-        bitField0_ = (bitField0_ & ~0x40000000);
+        bitField0_ = (bitField0_ & ~0x20000000);
         optionalParentAppId_ = 0;
-        bitField0_ = (bitField0_ & ~0x80000000);
+        bitField0_ = (bitField0_ & ~0x40000000);
         ownerAccountId_ = 0;
-        bitField1_ = (bitField1_ & ~0x00000001);
-        compatMappingEnabled_ = false;
-        bitField1_ = (bitField1_ & ~0x00000002);
-        compatMappingPriority_ = 0;
-        bitField1_ = (bitField1_ & ~0x00000004);
-        compatMappingToolName_ = "";
-        bitField1_ = (bitField1_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x80000000);
         reviewScoreWithBombs_ = 0;
-        bitField1_ = (bitField1_ & ~0x00000010);
+        bitField1_ = (bitField1_ & ~0x00000001);
         reviewPercentageWithBombs_ = 0;
-        bitField1_ = (bitField1_ & ~0x00000020);
+        bitField1_ = (bitField1_ & ~0x00000002);
         reviewScoreWithoutBombs_ = 0;
-        bitField1_ = (bitField1_ & ~0x00000040);
+        bitField1_ = (bitField1_ & ~0x00000004);
         reviewPercentageWithoutBombs_ = 0;
-        bitField1_ = (bitField1_ & ~0x00000080);
+        bitField1_ = (bitField1_ & ~0x00000008);
         libraryId_ = "";
-        bitField1_ = (bitField1_ & ~0x00000100);
+        bitField1_ = (bitField1_ & ~0x00000010);
         vrOnly_ = false;
-        bitField1_ = (bitField1_ & ~0x00000200);
+        bitField1_ = (bitField1_ & ~0x00000020);
         mastersubAppid_ = 0;
-        bitField1_ = (bitField1_ & ~0x00000400);
+        bitField1_ = (bitField1_ & ~0x00000040);
         mastersubIncludedwithLogo_ = "";
-        bitField1_ = (bitField1_ & ~0x00000800);
-        compatAllowlistSetting_ = 0;
-        bitField1_ = (bitField1_ & ~0x00001000);
+        bitField1_ = (bitField1_ & ~0x00000080);
         siteLicenseSiteName_ = "";
-        bitField1_ = (bitField1_ & ~0x00002000);
+        bitField1_ = (bitField1_ & ~0x00000100);
         shortcutOverrideAppid_ = 0;
-        bitField1_ = (bitField1_ & ~0x00004000);
+        bitField1_ = (bitField1_ & ~0x00000200);
+        steamDeckCompatCategory_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000400);
+        rtLastTimeLocallyPlayed_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000800);
+        rtPurchasedTime_ = 0;
+        bitField1_ = (bitField1_ & ~0x00001000);
+        headerFilename_ = "";
+        bitField1_ = (bitField1_ & ~0x00002000);
         return this;
       }
 
@@ -6854,132 +7199,128 @@ public final class SteammessagesAppoverview {
         if (((from_bitField0_ & 0x00010000) != 0)) {
           to_bitField0_ |= 0x00002000;
         }
-        result.logoHash_ = logoHash_;
+        result.controllerSupport_ = controllerSupport_;
         if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.vrSupported_ = vrSupported_;
           to_bitField0_ |= 0x00004000;
         }
-        result.controllerSupport_ = controllerSupport_;
         if (((from_bitField0_ & 0x00040000) != 0)) {
-          result.vrSupported_ = vrSupported_;
+          result.metacriticScore_ = metacriticScore_;
           to_bitField0_ |= 0x00008000;
         }
         if (((from_bitField0_ & 0x00080000) != 0)) {
-          result.metacriticScore_ = metacriticScore_;
+          result.sizeOnDisk_ = sizeOnDisk_;
           to_bitField0_ |= 0x00010000;
         }
         if (((from_bitField0_ & 0x00100000) != 0)) {
-          result.sizeOnDisk_ = sizeOnDisk_;
+          result.thirdPartyMod_ = thirdPartyMod_;
           to_bitField0_ |= 0x00020000;
         }
         if (((from_bitField0_ & 0x00200000) != 0)) {
-          result.thirdPartyMod_ = thirdPartyMod_;
           to_bitField0_ |= 0x00040000;
         }
+        result.iconData_ = iconData_;
         if (((from_bitField0_ & 0x00400000) != 0)) {
           to_bitField0_ |= 0x00080000;
         }
-        result.iconData_ = iconData_;
+        result.iconDataFormat_ = iconDataFormat_;
         if (((from_bitField0_ & 0x00800000) != 0)) {
           to_bitField0_ |= 0x00100000;
         }
-        result.iconDataFormat_ = iconDataFormat_;
+        result.gameid_ = gameid_;
         if (((from_bitField0_ & 0x01000000) != 0)) {
           to_bitField0_ |= 0x00200000;
         }
-        result.gameid_ = gameid_;
-        if (((from_bitField0_ & 0x02000000) != 0)) {
-          to_bitField0_ |= 0x00400000;
-        }
         result.libraryCapsuleFilename_ = libraryCapsuleFilename_;
         if (perClientDataBuilder_ == null) {
-          if (((bitField0_ & 0x04000000) != 0)) {
+          if (((bitField0_ & 0x02000000) != 0)) {
             perClientData_ = java.util.Collections.unmodifiableList(perClientData_);
-            bitField0_ = (bitField0_ & ~0x04000000);
+            bitField0_ = (bitField0_ & ~0x02000000);
           }
           result.perClientData_ = perClientData_;
         } else {
           result.perClientData_ = perClientDataBuilder_.build();
         }
-        if (((from_bitField0_ & 0x08000000) != 0)) {
+        if (((from_bitField0_ & 0x04000000) != 0)) {
           result.mostAvailableClientid_ = mostAvailableClientid_;
+          to_bitField0_ |= 0x00400000;
+        }
+        if (((from_bitField0_ & 0x08000000) != 0)) {
+          result.selectedClientid_ = selectedClientid_;
           to_bitField0_ |= 0x00800000;
         }
         if (((from_bitField0_ & 0x10000000) != 0)) {
-          result.selectedClientid_ = selectedClientid_;
+          result.rtStoreAssetMtime_ = rtStoreAssetMtime_;
           to_bitField0_ |= 0x01000000;
         }
         if (((from_bitField0_ & 0x20000000) != 0)) {
-          result.rtStoreAssetMtime_ = rtStoreAssetMtime_;
+          result.rtCustomImageMtime_ = rtCustomImageMtime_;
           to_bitField0_ |= 0x02000000;
         }
         if (((from_bitField0_ & 0x40000000) != 0)) {
-          result.rtCustomImageMtime_ = rtCustomImageMtime_;
+          result.optionalParentAppId_ = optionalParentAppId_;
           to_bitField0_ |= 0x04000000;
         }
         if (((from_bitField0_ & 0x80000000) != 0)) {
-          result.optionalParentAppId_ = optionalParentAppId_;
+          result.ownerAccountId_ = ownerAccountId_;
           to_bitField0_ |= 0x08000000;
         }
         if (((from_bitField1_ & 0x00000001) != 0)) {
-          result.ownerAccountId_ = ownerAccountId_;
+          result.reviewScoreWithBombs_ = reviewScoreWithBombs_;
           to_bitField0_ |= 0x10000000;
         }
         if (((from_bitField1_ & 0x00000002) != 0)) {
-          result.compatMappingEnabled_ = compatMappingEnabled_;
+          result.reviewPercentageWithBombs_ = reviewPercentageWithBombs_;
           to_bitField0_ |= 0x20000000;
         }
         if (((from_bitField1_ & 0x00000004) != 0)) {
-          result.compatMappingPriority_ = compatMappingPriority_;
+          result.reviewScoreWithoutBombs_ = reviewScoreWithoutBombs_;
           to_bitField0_ |= 0x40000000;
         }
         if (((from_bitField1_ & 0x00000008) != 0)) {
+          result.reviewPercentageWithoutBombs_ = reviewPercentageWithoutBombs_;
           to_bitField0_ |= 0x80000000;
         }
-        result.compatMappingToolName_ = compatMappingToolName_;
         if (((from_bitField1_ & 0x00000010) != 0)) {
-          result.reviewScoreWithBombs_ = reviewScoreWithBombs_;
           to_bitField1_ |= 0x00000001;
         }
+        result.libraryId_ = libraryId_;
         if (((from_bitField1_ & 0x00000020) != 0)) {
-          result.reviewPercentageWithBombs_ = reviewPercentageWithBombs_;
+          result.vrOnly_ = vrOnly_;
           to_bitField1_ |= 0x00000002;
         }
         if (((from_bitField1_ & 0x00000040) != 0)) {
-          result.reviewScoreWithoutBombs_ = reviewScoreWithoutBombs_;
+          result.mastersubAppid_ = mastersubAppid_;
           to_bitField1_ |= 0x00000004;
         }
         if (((from_bitField1_ & 0x00000080) != 0)) {
-          result.reviewPercentageWithoutBombs_ = reviewPercentageWithoutBombs_;
           to_bitField1_ |= 0x00000008;
         }
+        result.mastersubIncludedwithLogo_ = mastersubIncludedwithLogo_;
         if (((from_bitField1_ & 0x00000100) != 0)) {
           to_bitField1_ |= 0x00000010;
         }
-        result.libraryId_ = libraryId_;
+        result.siteLicenseSiteName_ = siteLicenseSiteName_;
         if (((from_bitField1_ & 0x00000200) != 0)) {
-          result.vrOnly_ = vrOnly_;
+          result.shortcutOverrideAppid_ = shortcutOverrideAppid_;
           to_bitField1_ |= 0x00000020;
         }
         if (((from_bitField1_ & 0x00000400) != 0)) {
-          result.mastersubAppid_ = mastersubAppid_;
           to_bitField1_ |= 0x00000040;
         }
+        result.steamDeckCompatCategory_ = steamDeckCompatCategory_;
         if (((from_bitField1_ & 0x00000800) != 0)) {
+          result.rtLastTimeLocallyPlayed_ = rtLastTimeLocallyPlayed_;
           to_bitField1_ |= 0x00000080;
         }
-        result.mastersubIncludedwithLogo_ = mastersubIncludedwithLogo_;
         if (((from_bitField1_ & 0x00001000) != 0)) {
-          result.compatAllowlistSetting_ = compatAllowlistSetting_;
+          result.rtPurchasedTime_ = rtPurchasedTime_;
           to_bitField1_ |= 0x00000100;
         }
         if (((from_bitField1_ & 0x00002000) != 0)) {
           to_bitField1_ |= 0x00000200;
         }
-        result.siteLicenseSiteName_ = siteLicenseSiteName_;
-        if (((from_bitField1_ & 0x00004000) != 0)) {
-          result.shortcutOverrideAppid_ = shortcutOverrideAppid_;
-          to_bitField1_ |= 0x00000400;
-        }
+        result.headerFilename_ = headerFilename_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -7121,11 +7462,6 @@ public final class SteammessagesAppoverview {
           iconHash_ = other.iconHash_;
           onChanged();
         }
-        if (other.hasLogoHash()) {
-          bitField0_ |= 0x00010000;
-          logoHash_ = other.logoHash_;
-          onChanged();
-        }
         if (other.hasControllerSupport()) {
           setControllerSupport(other.getControllerSupport());
         }
@@ -7142,22 +7478,22 @@ public final class SteammessagesAppoverview {
           setThirdPartyMod(other.getThirdPartyMod());
         }
         if (other.hasIconData()) {
-          bitField0_ |= 0x00400000;
+          bitField0_ |= 0x00200000;
           iconData_ = other.iconData_;
           onChanged();
         }
         if (other.hasIconDataFormat()) {
-          bitField0_ |= 0x00800000;
+          bitField0_ |= 0x00400000;
           iconDataFormat_ = other.iconDataFormat_;
           onChanged();
         }
         if (other.hasGameid()) {
-          bitField0_ |= 0x01000000;
+          bitField0_ |= 0x00800000;
           gameid_ = other.gameid_;
           onChanged();
         }
         if (other.hasLibraryCapsuleFilename()) {
-          bitField0_ |= 0x02000000;
+          bitField0_ |= 0x01000000;
           libraryCapsuleFilename_ = other.libraryCapsuleFilename_;
           onChanged();
         }
@@ -7165,7 +7501,7 @@ public final class SteammessagesAppoverview {
           if (!other.perClientData_.isEmpty()) {
             if (perClientData_.isEmpty()) {
               perClientData_ = other.perClientData_;
-              bitField0_ = (bitField0_ & ~0x04000000);
+              bitField0_ = (bitField0_ & ~0x02000000);
             } else {
               ensurePerClientDataIsMutable();
               perClientData_.addAll(other.perClientData_);
@@ -7178,7 +7514,7 @@ public final class SteammessagesAppoverview {
               perClientDataBuilder_.dispose();
               perClientDataBuilder_ = null;
               perClientData_ = other.perClientData_;
-              bitField0_ = (bitField0_ & ~0x04000000);
+              bitField0_ = (bitField0_ & ~0x02000000);
               perClientDataBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPerClientDataFieldBuilder() : null;
@@ -7205,17 +7541,6 @@ public final class SteammessagesAppoverview {
         if (other.hasOwnerAccountId()) {
           setOwnerAccountId(other.getOwnerAccountId());
         }
-        if (other.hasCompatMappingEnabled()) {
-          setCompatMappingEnabled(other.getCompatMappingEnabled());
-        }
-        if (other.hasCompatMappingPriority()) {
-          setCompatMappingPriority(other.getCompatMappingPriority());
-        }
-        if (other.hasCompatMappingToolName()) {
-          bitField1_ |= 0x00000008;
-          compatMappingToolName_ = other.compatMappingToolName_;
-          onChanged();
-        }
         if (other.hasReviewScoreWithBombs()) {
           setReviewScoreWithBombs(other.getReviewScoreWithBombs());
         }
@@ -7229,7 +7554,7 @@ public final class SteammessagesAppoverview {
           setReviewPercentageWithoutBombs(other.getReviewPercentageWithoutBombs());
         }
         if (other.hasLibraryId()) {
-          bitField1_ |= 0x00000100;
+          bitField1_ |= 0x00000010;
           libraryId_ = other.libraryId_;
           onChanged();
         }
@@ -7240,20 +7565,31 @@ public final class SteammessagesAppoverview {
           setMastersubAppid(other.getMastersubAppid());
         }
         if (other.hasMastersubIncludedwithLogo()) {
-          bitField1_ |= 0x00000800;
+          bitField1_ |= 0x00000080;
           mastersubIncludedwithLogo_ = other.mastersubIncludedwithLogo_;
           onChanged();
         }
-        if (other.hasCompatAllowlistSetting()) {
-          setCompatAllowlistSetting(other.getCompatAllowlistSetting());
-        }
         if (other.hasSiteLicenseSiteName()) {
-          bitField1_ |= 0x00002000;
+          bitField1_ |= 0x00000100;
           siteLicenseSiteName_ = other.siteLicenseSiteName_;
           onChanged();
         }
         if (other.hasShortcutOverrideAppid()) {
           setShortcutOverrideAppid(other.getShortcutOverrideAppid());
+        }
+        if (other.hasSteamDeckCompatCategory()) {
+          setSteamDeckCompatCategory(other.getSteamDeckCompatCategory());
+        }
+        if (other.hasRtLastTimeLocallyPlayed()) {
+          setRtLastTimeLocallyPlayed(other.getRtLastTimeLocallyPlayed());
+        }
+        if (other.hasRtPurchasedTime()) {
+          setRtPurchasedTime(other.getRtPurchasedTime());
+        }
+        if (other.hasHeaderFilename()) {
+          bitField1_ |= 0x00002000;
+          headerFilename_ = other.headerFilename_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8330,97 +8666,13 @@ public final class SteammessagesAppoverview {
         return this;
       }
 
-      private java.lang.Object logoHash_ = "";
-      /**
-       * <code>optional string logo_hash = 30;</code>
-       * @return Whether the logoHash field is set.
-       */
-      public boolean hasLogoHash() {
-        return ((bitField0_ & 0x00010000) != 0);
-      }
-      /**
-       * <code>optional string logo_hash = 30;</code>
-       * @return The logoHash.
-       */
-      public java.lang.String getLogoHash() {
-        java.lang.Object ref = logoHash_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            logoHash_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string logo_hash = 30;</code>
-       * @return The bytes for logoHash.
-       */
-      public com.google.protobuf.ByteString
-          getLogoHashBytes() {
-        java.lang.Object ref = logoHash_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          logoHash_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string logo_hash = 30;</code>
-       * @param value The logoHash to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogoHash(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00010000;
-        logoHash_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string logo_hash = 30;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLogoHash() {
-        bitField0_ = (bitField0_ & ~0x00010000);
-        logoHash_ = getDefaultInstance().getLogoHash();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string logo_hash = 30;</code>
-       * @param value The bytes for logoHash to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogoHashBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00010000;
-        logoHash_ = value;
-        onChanged();
-        return this;
-      }
-
       private int controllerSupport_ = 0;
       /**
        * <code>optional .EAppControllerSupportLevel controller_support = 31 [default = k_EAppControllerSupportLevelNone];</code>
        * @return Whether the controllerSupport field is set.
        */
       @java.lang.Override public boolean hasControllerSupport() {
-        return ((bitField0_ & 0x00020000) != 0);
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <code>optional .EAppControllerSupportLevel controller_support = 31 [default = k_EAppControllerSupportLevelNone];</code>
@@ -8441,7 +8693,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00010000;
         controllerSupport_ = value.getNumber();
         onChanged();
         return this;
@@ -8451,7 +8703,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearControllerSupport() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         controllerSupport_ = 0;
         onChanged();
         return this;
@@ -8464,7 +8716,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasVrSupported() {
-        return ((bitField0_ & 0x00040000) != 0);
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
        * <code>optional bool vr_supported = 32;</code>
@@ -8480,7 +8732,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setVrSupported(boolean value) {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00020000;
         vrSupported_ = value;
         onChanged();
         return this;
@@ -8490,7 +8742,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearVrSupported() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         vrSupported_ = false;
         onChanged();
         return this;
@@ -8503,7 +8755,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasMetacriticScore() {
-        return ((bitField0_ & 0x00080000) != 0);
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <code>optional uint32 metacritic_score = 36;</code>
@@ -8519,7 +8771,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setMetacriticScore(int value) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00040000;
         metacriticScore_ = value;
         onChanged();
         return this;
@@ -8529,7 +8781,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearMetacriticScore() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         metacriticScore_ = 0;
         onChanged();
         return this;
@@ -8542,7 +8794,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasSizeOnDisk() {
-        return ((bitField0_ & 0x00100000) != 0);
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <code>optional uint64 size_on_disk = 37;</code>
@@ -8558,7 +8810,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setSizeOnDisk(long value) {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00080000;
         sizeOnDisk_ = value;
         onChanged();
         return this;
@@ -8568,7 +8820,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearSizeOnDisk() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         sizeOnDisk_ = 0L;
         onChanged();
         return this;
@@ -8581,7 +8833,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasThirdPartyMod() {
-        return ((bitField0_ & 0x00200000) != 0);
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <code>optional bool third_party_mod = 38;</code>
@@ -8597,7 +8849,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setThirdPartyMod(boolean value) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00100000;
         thirdPartyMod_ = value;
         onChanged();
         return this;
@@ -8607,7 +8859,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearThirdPartyMod() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         thirdPartyMod_ = false;
         onChanged();
         return this;
@@ -8619,7 +8871,7 @@ public final class SteammessagesAppoverview {
        * @return Whether the iconData field is set.
        */
       public boolean hasIconData() {
-        return ((bitField0_ & 0x00400000) != 0);
+        return ((bitField0_ & 0x00200000) != 0);
       }
       /**
        * <code>optional string icon_data = 39;</code>
@@ -8666,7 +8918,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00400000;
+  bitField0_ |= 0x00200000;
         iconData_ = value;
         onChanged();
         return this;
@@ -8676,7 +8928,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearIconData() {
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         iconData_ = getDefaultInstance().getIconData();
         onChanged();
         return this;
@@ -8691,7 +8943,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00400000;
+  bitField0_ |= 0x00200000;
         iconData_ = value;
         onChanged();
         return this;
@@ -8703,7 +8955,7 @@ public final class SteammessagesAppoverview {
        * @return Whether the iconDataFormat field is set.
        */
       public boolean hasIconDataFormat() {
-        return ((bitField0_ & 0x00800000) != 0);
+        return ((bitField0_ & 0x00400000) != 0);
       }
       /**
        * <code>optional string icon_data_format = 40;</code>
@@ -8750,7 +9002,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00800000;
+  bitField0_ |= 0x00400000;
         iconDataFormat_ = value;
         onChanged();
         return this;
@@ -8760,7 +9012,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearIconDataFormat() {
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         iconDataFormat_ = getDefaultInstance().getIconDataFormat();
         onChanged();
         return this;
@@ -8775,7 +9027,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00800000;
+  bitField0_ |= 0x00400000;
         iconDataFormat_ = value;
         onChanged();
         return this;
@@ -8787,7 +9039,7 @@ public final class SteammessagesAppoverview {
        * @return Whether the gameid field is set.
        */
       public boolean hasGameid() {
-        return ((bitField0_ & 0x01000000) != 0);
+        return ((bitField0_ & 0x00800000) != 0);
       }
       /**
        * <code>optional string gameid = 41;</code>
@@ -8834,7 +9086,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x01000000;
+  bitField0_ |= 0x00800000;
         gameid_ = value;
         onChanged();
         return this;
@@ -8844,7 +9096,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearGameid() {
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         gameid_ = getDefaultInstance().getGameid();
         onChanged();
         return this;
@@ -8859,7 +9111,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x01000000;
+  bitField0_ |= 0x00800000;
         gameid_ = value;
         onChanged();
         return this;
@@ -8871,7 +9123,7 @@ public final class SteammessagesAppoverview {
        * @return Whether the libraryCapsuleFilename field is set.
        */
       public boolean hasLibraryCapsuleFilename() {
-        return ((bitField0_ & 0x02000000) != 0);
+        return ((bitField0_ & 0x01000000) != 0);
       }
       /**
        * <code>optional string library_capsule_filename = 42;</code>
@@ -8918,7 +9170,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x02000000;
+  bitField0_ |= 0x01000000;
         libraryCapsuleFilename_ = value;
         onChanged();
         return this;
@@ -8928,7 +9180,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearLibraryCapsuleFilename() {
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         libraryCapsuleFilename_ = getDefaultInstance().getLibraryCapsuleFilename();
         onChanged();
         return this;
@@ -8943,7 +9195,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x02000000;
+  bitField0_ |= 0x01000000;
         libraryCapsuleFilename_ = value;
         onChanged();
         return this;
@@ -8952,9 +9204,9 @@ public final class SteammessagesAppoverview {
       private java.util.List<SteammessagesAppoverview.CAppOverview_PerClientData> perClientData_ =
         java.util.Collections.emptyList();
       private void ensurePerClientDataIsMutable() {
-        if (!((bitField0_ & 0x04000000) != 0)) {
+        if (!((bitField0_ & 0x02000000) != 0)) {
           perClientData_ = new java.util.ArrayList<SteammessagesAppoverview.CAppOverview_PerClientData>(perClientData_);
-          bitField0_ |= 0x04000000;
+          bitField0_ |= 0x02000000;
          }
       }
 
@@ -9104,7 +9356,7 @@ public final class SteammessagesAppoverview {
       public Builder clearPerClientData() {
         if (perClientDataBuilder_ == null) {
           perClientData_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x04000000);
+          bitField0_ = (bitField0_ & ~0x02000000);
           onChanged();
         } else {
           perClientDataBuilder_.clear();
@@ -9181,7 +9433,7 @@ public final class SteammessagesAppoverview {
           perClientDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               SteammessagesAppoverview.CAppOverview_PerClientData, SteammessagesAppoverview.CAppOverview_PerClientData.Builder, SteammessagesAppoverview.CAppOverview_PerClientDataOrBuilder>(
                   perClientData_,
-                  ((bitField0_ & 0x04000000) != 0),
+                  ((bitField0_ & 0x02000000) != 0),
                   getParentForChildren(),
                   isClean());
           perClientData_ = null;
@@ -9196,7 +9448,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasMostAvailableClientid() {
-        return ((bitField0_ & 0x08000000) != 0);
+        return ((bitField0_ & 0x04000000) != 0);
       }
       /**
        * <code>optional uint64 most_available_clientid = 44;</code>
@@ -9212,7 +9464,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setMostAvailableClientid(long value) {
-        bitField0_ |= 0x08000000;
+        bitField0_ |= 0x04000000;
         mostAvailableClientid_ = value;
         onChanged();
         return this;
@@ -9222,7 +9474,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearMostAvailableClientid() {
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         mostAvailableClientid_ = 0L;
         onChanged();
         return this;
@@ -9235,7 +9487,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasSelectedClientid() {
-        return ((bitField0_ & 0x10000000) != 0);
+        return ((bitField0_ & 0x08000000) != 0);
       }
       /**
        * <code>optional uint64 selected_clientid = 45;</code>
@@ -9251,7 +9503,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setSelectedClientid(long value) {
-        bitField0_ |= 0x10000000;
+        bitField0_ |= 0x08000000;
         selectedClientid_ = value;
         onChanged();
         return this;
@@ -9261,7 +9513,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearSelectedClientid() {
-        bitField0_ = (bitField0_ & ~0x10000000);
+        bitField0_ = (bitField0_ & ~0x08000000);
         selectedClientid_ = 0L;
         onChanged();
         return this;
@@ -9274,7 +9526,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasRtStoreAssetMtime() {
-        return ((bitField0_ & 0x20000000) != 0);
+        return ((bitField0_ & 0x10000000) != 0);
       }
       /**
        * <code>optional uint32 rt_store_asset_mtime = 46;</code>
@@ -9290,7 +9542,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setRtStoreAssetMtime(int value) {
-        bitField0_ |= 0x20000000;
+        bitField0_ |= 0x10000000;
         rtStoreAssetMtime_ = value;
         onChanged();
         return this;
@@ -9300,7 +9552,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearRtStoreAssetMtime() {
-        bitField0_ = (bitField0_ & ~0x20000000);
+        bitField0_ = (bitField0_ & ~0x10000000);
         rtStoreAssetMtime_ = 0;
         onChanged();
         return this;
@@ -9313,7 +9565,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasRtCustomImageMtime() {
-        return ((bitField0_ & 0x40000000) != 0);
+        return ((bitField0_ & 0x20000000) != 0);
       }
       /**
        * <code>optional uint32 rt_custom_image_mtime = 47;</code>
@@ -9329,7 +9581,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setRtCustomImageMtime(int value) {
-        bitField0_ |= 0x40000000;
+        bitField0_ |= 0x20000000;
         rtCustomImageMtime_ = value;
         onChanged();
         return this;
@@ -9339,7 +9591,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearRtCustomImageMtime() {
-        bitField0_ = (bitField0_ & ~0x40000000);
+        bitField0_ = (bitField0_ & ~0x20000000);
         rtCustomImageMtime_ = 0;
         onChanged();
         return this;
@@ -9352,7 +9604,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasOptionalParentAppId() {
-        return ((bitField0_ & 0x80000000) != 0);
+        return ((bitField0_ & 0x40000000) != 0);
       }
       /**
        * <code>optional uint32 optional_parent_app_id = 48;</code>
@@ -9368,7 +9620,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setOptionalParentAppId(int value) {
-        bitField0_ |= 0x80000000;
+        bitField0_ |= 0x40000000;
         optionalParentAppId_ = value;
         onChanged();
         return this;
@@ -9378,7 +9630,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearOptionalParentAppId() {
-        bitField0_ = (bitField0_ & ~0x80000000);
+        bitField0_ = (bitField0_ & ~0x40000000);
         optionalParentAppId_ = 0;
         onChanged();
         return this;
@@ -9391,7 +9643,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasOwnerAccountId() {
-        return ((bitField1_ & 0x00000001) != 0);
+        return ((bitField0_ & 0x80000000) != 0);
       }
       /**
        * <code>optional uint32 owner_account_id = 49;</code>
@@ -9407,7 +9659,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setOwnerAccountId(int value) {
-        bitField1_ |= 0x00000001;
+        bitField0_ |= 0x80000000;
         ownerAccountId_ = value;
         onChanged();
         return this;
@@ -9417,170 +9669,8 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearOwnerAccountId() {
-        bitField1_ = (bitField1_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x80000000);
         ownerAccountId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean compatMappingEnabled_ ;
-      /**
-       * <code>optional bool compat_mapping_enabled = 50;</code>
-       * @return Whether the compatMappingEnabled field is set.
-       */
-      @java.lang.Override
-      public boolean hasCompatMappingEnabled() {
-        return ((bitField1_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional bool compat_mapping_enabled = 50;</code>
-       * @return The compatMappingEnabled.
-       */
-      @java.lang.Override
-      public boolean getCompatMappingEnabled() {
-        return compatMappingEnabled_;
-      }
-      /**
-       * <code>optional bool compat_mapping_enabled = 50;</code>
-       * @param value The compatMappingEnabled to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCompatMappingEnabled(boolean value) {
-        bitField1_ |= 0x00000002;
-        compatMappingEnabled_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool compat_mapping_enabled = 50;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCompatMappingEnabled() {
-        bitField1_ = (bitField1_ & ~0x00000002);
-        compatMappingEnabled_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int compatMappingPriority_ ;
-      /**
-       * <code>optional uint32 compat_mapping_priority = 51;</code>
-       * @return Whether the compatMappingPriority field is set.
-       */
-      @java.lang.Override
-      public boolean hasCompatMappingPriority() {
-        return ((bitField1_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>optional uint32 compat_mapping_priority = 51;</code>
-       * @return The compatMappingPriority.
-       */
-      @java.lang.Override
-      public int getCompatMappingPriority() {
-        return compatMappingPriority_;
-      }
-      /**
-       * <code>optional uint32 compat_mapping_priority = 51;</code>
-       * @param value The compatMappingPriority to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCompatMappingPriority(int value) {
-        bitField1_ |= 0x00000004;
-        compatMappingPriority_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 compat_mapping_priority = 51;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCompatMappingPriority() {
-        bitField1_ = (bitField1_ & ~0x00000004);
-        compatMappingPriority_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object compatMappingToolName_ = "";
-      /**
-       * <code>optional string compat_mapping_tool_name = 52;</code>
-       * @return Whether the compatMappingToolName field is set.
-       */
-      public boolean hasCompatMappingToolName() {
-        return ((bitField1_ & 0x00000008) != 0);
-      }
-      /**
-       * <code>optional string compat_mapping_tool_name = 52;</code>
-       * @return The compatMappingToolName.
-       */
-      public java.lang.String getCompatMappingToolName() {
-        java.lang.Object ref = compatMappingToolName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            compatMappingToolName_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string compat_mapping_tool_name = 52;</code>
-       * @return The bytes for compatMappingToolName.
-       */
-      public com.google.protobuf.ByteString
-          getCompatMappingToolNameBytes() {
-        java.lang.Object ref = compatMappingToolName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          compatMappingToolName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string compat_mapping_tool_name = 52;</code>
-       * @param value The compatMappingToolName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCompatMappingToolName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField1_ |= 0x00000008;
-        compatMappingToolName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string compat_mapping_tool_name = 52;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCompatMappingToolName() {
-        bitField1_ = (bitField1_ & ~0x00000008);
-        compatMappingToolName_ = getDefaultInstance().getCompatMappingToolName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string compat_mapping_tool_name = 52;</code>
-       * @param value The bytes for compatMappingToolName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCompatMappingToolNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField1_ |= 0x00000008;
-        compatMappingToolName_ = value;
         onChanged();
         return this;
       }
@@ -9592,7 +9682,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasReviewScoreWithBombs() {
-        return ((bitField1_ & 0x00000010) != 0);
+        return ((bitField1_ & 0x00000001) != 0);
       }
       /**
        * <code>optional uint32 review_score_with_bombs = 53;</code>
@@ -9608,7 +9698,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setReviewScoreWithBombs(int value) {
-        bitField1_ |= 0x00000010;
+        bitField1_ |= 0x00000001;
         reviewScoreWithBombs_ = value;
         onChanged();
         return this;
@@ -9618,7 +9708,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearReviewScoreWithBombs() {
-        bitField1_ = (bitField1_ & ~0x00000010);
+        bitField1_ = (bitField1_ & ~0x00000001);
         reviewScoreWithBombs_ = 0;
         onChanged();
         return this;
@@ -9631,7 +9721,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasReviewPercentageWithBombs() {
-        return ((bitField1_ & 0x00000020) != 0);
+        return ((bitField1_ & 0x00000002) != 0);
       }
       /**
        * <code>optional uint32 review_percentage_with_bombs = 54;</code>
@@ -9647,7 +9737,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setReviewPercentageWithBombs(int value) {
-        bitField1_ |= 0x00000020;
+        bitField1_ |= 0x00000002;
         reviewPercentageWithBombs_ = value;
         onChanged();
         return this;
@@ -9657,7 +9747,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearReviewPercentageWithBombs() {
-        bitField1_ = (bitField1_ & ~0x00000020);
+        bitField1_ = (bitField1_ & ~0x00000002);
         reviewPercentageWithBombs_ = 0;
         onChanged();
         return this;
@@ -9670,7 +9760,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasReviewScoreWithoutBombs() {
-        return ((bitField1_ & 0x00000040) != 0);
+        return ((bitField1_ & 0x00000004) != 0);
       }
       /**
        * <code>optional uint32 review_score_without_bombs = 55;</code>
@@ -9686,7 +9776,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setReviewScoreWithoutBombs(int value) {
-        bitField1_ |= 0x00000040;
+        bitField1_ |= 0x00000004;
         reviewScoreWithoutBombs_ = value;
         onChanged();
         return this;
@@ -9696,7 +9786,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearReviewScoreWithoutBombs() {
-        bitField1_ = (bitField1_ & ~0x00000040);
+        bitField1_ = (bitField1_ & ~0x00000004);
         reviewScoreWithoutBombs_ = 0;
         onChanged();
         return this;
@@ -9709,7 +9799,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasReviewPercentageWithoutBombs() {
-        return ((bitField1_ & 0x00000080) != 0);
+        return ((bitField1_ & 0x00000008) != 0);
       }
       /**
        * <code>optional uint32 review_percentage_without_bombs = 56;</code>
@@ -9725,7 +9815,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setReviewPercentageWithoutBombs(int value) {
-        bitField1_ |= 0x00000080;
+        bitField1_ |= 0x00000008;
         reviewPercentageWithoutBombs_ = value;
         onChanged();
         return this;
@@ -9735,7 +9825,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearReviewPercentageWithoutBombs() {
-        bitField1_ = (bitField1_ & ~0x00000080);
+        bitField1_ = (bitField1_ & ~0x00000008);
         reviewPercentageWithoutBombs_ = 0;
         onChanged();
         return this;
@@ -9747,7 +9837,7 @@ public final class SteammessagesAppoverview {
        * @return Whether the libraryId field is set.
        */
       public boolean hasLibraryId() {
-        return ((bitField1_ & 0x00000100) != 0);
+        return ((bitField1_ & 0x00000010) != 0);
       }
       /**
        * <code>optional string library_id = 57;</code>
@@ -9794,7 +9884,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField1_ |= 0x00000100;
+  bitField1_ |= 0x00000010;
         libraryId_ = value;
         onChanged();
         return this;
@@ -9804,7 +9894,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearLibraryId() {
-        bitField1_ = (bitField1_ & ~0x00000100);
+        bitField1_ = (bitField1_ & ~0x00000010);
         libraryId_ = getDefaultInstance().getLibraryId();
         onChanged();
         return this;
@@ -9819,7 +9909,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField1_ |= 0x00000100;
+  bitField1_ |= 0x00000010;
         libraryId_ = value;
         onChanged();
         return this;
@@ -9832,7 +9922,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasVrOnly() {
-        return ((bitField1_ & 0x00000200) != 0);
+        return ((bitField1_ & 0x00000020) != 0);
       }
       /**
        * <code>optional bool vr_only = 58;</code>
@@ -9848,7 +9938,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setVrOnly(boolean value) {
-        bitField1_ |= 0x00000200;
+        bitField1_ |= 0x00000020;
         vrOnly_ = value;
         onChanged();
         return this;
@@ -9858,7 +9948,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearVrOnly() {
-        bitField1_ = (bitField1_ & ~0x00000200);
+        bitField1_ = (bitField1_ & ~0x00000020);
         vrOnly_ = false;
         onChanged();
         return this;
@@ -9871,7 +9961,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasMastersubAppid() {
-        return ((bitField1_ & 0x00000400) != 0);
+        return ((bitField1_ & 0x00000040) != 0);
       }
       /**
        * <code>optional uint32 mastersub_appid = 59;</code>
@@ -9887,7 +9977,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setMastersubAppid(int value) {
-        bitField1_ |= 0x00000400;
+        bitField1_ |= 0x00000040;
         mastersubAppid_ = value;
         onChanged();
         return this;
@@ -9897,7 +9987,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearMastersubAppid() {
-        bitField1_ = (bitField1_ & ~0x00000400);
+        bitField1_ = (bitField1_ & ~0x00000040);
         mastersubAppid_ = 0;
         onChanged();
         return this;
@@ -9909,7 +9999,7 @@ public final class SteammessagesAppoverview {
        * @return Whether the mastersubIncludedwithLogo field is set.
        */
       public boolean hasMastersubIncludedwithLogo() {
-        return ((bitField1_ & 0x00000800) != 0);
+        return ((bitField1_ & 0x00000080) != 0);
       }
       /**
        * <code>optional string mastersub_includedwith_logo = 60;</code>
@@ -9956,7 +10046,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField1_ |= 0x00000800;
+  bitField1_ |= 0x00000080;
         mastersubIncludedwithLogo_ = value;
         onChanged();
         return this;
@@ -9966,7 +10056,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearMastersubIncludedwithLogo() {
-        bitField1_ = (bitField1_ & ~0x00000800);
+        bitField1_ = (bitField1_ & ~0x00000080);
         mastersubIncludedwithLogo_ = getDefaultInstance().getMastersubIncludedwithLogo();
         onChanged();
         return this;
@@ -9981,47 +10071,8 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField1_ |= 0x00000800;
+  bitField1_ |= 0x00000080;
         mastersubIncludedwithLogo_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int compatAllowlistSetting_ ;
-      /**
-       * <code>optional uint32 compat_allowlist_setting = 61 [default = 0];</code>
-       * @return Whether the compatAllowlistSetting field is set.
-       */
-      @java.lang.Override
-      public boolean hasCompatAllowlistSetting() {
-        return ((bitField1_ & 0x00001000) != 0);
-      }
-      /**
-       * <code>optional uint32 compat_allowlist_setting = 61 [default = 0];</code>
-       * @return The compatAllowlistSetting.
-       */
-      @java.lang.Override
-      public int getCompatAllowlistSetting() {
-        return compatAllowlistSetting_;
-      }
-      /**
-       * <code>optional uint32 compat_allowlist_setting = 61 [default = 0];</code>
-       * @param value The compatAllowlistSetting to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCompatAllowlistSetting(int value) {
-        bitField1_ |= 0x00001000;
-        compatAllowlistSetting_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 compat_allowlist_setting = 61 [default = 0];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCompatAllowlistSetting() {
-        bitField1_ = (bitField1_ & ~0x00001000);
-        compatAllowlistSetting_ = 0;
         onChanged();
         return this;
       }
@@ -10032,7 +10083,7 @@ public final class SteammessagesAppoverview {
        * @return Whether the siteLicenseSiteName field is set.
        */
       public boolean hasSiteLicenseSiteName() {
-        return ((bitField1_ & 0x00002000) != 0);
+        return ((bitField1_ & 0x00000100) != 0);
       }
       /**
        * <code>optional string site_license_site_name = 62;</code>
@@ -10079,7 +10130,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField1_ |= 0x00002000;
+  bitField1_ |= 0x00000100;
         siteLicenseSiteName_ = value;
         onChanged();
         return this;
@@ -10089,7 +10140,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearSiteLicenseSiteName() {
-        bitField1_ = (bitField1_ & ~0x00002000);
+        bitField1_ = (bitField1_ & ~0x00000100);
         siteLicenseSiteName_ = getDefaultInstance().getSiteLicenseSiteName();
         onChanged();
         return this;
@@ -10104,7 +10155,7 @@ public final class SteammessagesAppoverview {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField1_ |= 0x00002000;
+  bitField1_ |= 0x00000100;
         siteLicenseSiteName_ = value;
         onChanged();
         return this;
@@ -10117,7 +10168,7 @@ public final class SteammessagesAppoverview {
        */
       @java.lang.Override
       public boolean hasShortcutOverrideAppid() {
-        return ((bitField1_ & 0x00004000) != 0);
+        return ((bitField1_ & 0x00000200) != 0);
       }
       /**
        * <code>optional uint32 shortcut_override_appid = 63;</code>
@@ -10133,7 +10184,7 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder setShortcutOverrideAppid(int value) {
-        bitField1_ |= 0x00004000;
+        bitField1_ |= 0x00000200;
         shortcutOverrideAppid_ = value;
         onChanged();
         return this;
@@ -10143,8 +10194,213 @@ public final class SteammessagesAppoverview {
        * @return This builder for chaining.
        */
       public Builder clearShortcutOverrideAppid() {
-        bitField1_ = (bitField1_ & ~0x00004000);
+        bitField1_ = (bitField1_ & ~0x00000200);
         shortcutOverrideAppid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int steamDeckCompatCategory_ = 0;
+      /**
+       * <code>optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 64 [default = k_ESteamDeckCompatibilityCategory_Unknown];</code>
+       * @return Whether the steamDeckCompatCategory field is set.
+       */
+      @java.lang.Override public boolean hasSteamDeckCompatCategory() {
+        return ((bitField1_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 64 [default = k_ESteamDeckCompatibilityCategory_Unknown];</code>
+       * @return The steamDeckCompatCategory.
+       */
+      @java.lang.Override
+      public Enums.ESteamDeckCompatibilityCategory getSteamDeckCompatCategory() {
+        @SuppressWarnings("deprecation")
+        Enums.ESteamDeckCompatibilityCategory result = Enums.ESteamDeckCompatibilityCategory.valueOf(steamDeckCompatCategory_);
+        return result == null ? Enums.ESteamDeckCompatibilityCategory.k_ESteamDeckCompatibilityCategory_Unknown : result;
+      }
+      /**
+       * <code>optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 64 [default = k_ESteamDeckCompatibilityCategory_Unknown];</code>
+       * @param value The steamDeckCompatCategory to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSteamDeckCompatCategory(Enums.ESteamDeckCompatibilityCategory value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField1_ |= 0x00000400;
+        steamDeckCompatCategory_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 64 [default = k_ESteamDeckCompatibilityCategory_Unknown];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSteamDeckCompatCategory() {
+        bitField1_ = (bitField1_ & ~0x00000400);
+        steamDeckCompatCategory_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rtLastTimeLocallyPlayed_ ;
+      /**
+       * <code>optional uint32 rt_last_time_locally_played = 65;</code>
+       * @return Whether the rtLastTimeLocallyPlayed field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtLastTimeLocallyPlayed() {
+        return ((bitField1_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>optional uint32 rt_last_time_locally_played = 65;</code>
+       * @return The rtLastTimeLocallyPlayed.
+       */
+      @java.lang.Override
+      public int getRtLastTimeLocallyPlayed() {
+        return rtLastTimeLocallyPlayed_;
+      }
+      /**
+       * <code>optional uint32 rt_last_time_locally_played = 65;</code>
+       * @param value The rtLastTimeLocallyPlayed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtLastTimeLocallyPlayed(int value) {
+        bitField1_ |= 0x00000800;
+        rtLastTimeLocallyPlayed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rt_last_time_locally_played = 65;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtLastTimeLocallyPlayed() {
+        bitField1_ = (bitField1_ & ~0x00000800);
+        rtLastTimeLocallyPlayed_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rtPurchasedTime_ ;
+      /**
+       * <code>optional uint32 rt_purchased_time = 66;</code>
+       * @return Whether the rtPurchasedTime field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtPurchasedTime() {
+        return ((bitField1_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>optional uint32 rt_purchased_time = 66;</code>
+       * @return The rtPurchasedTime.
+       */
+      @java.lang.Override
+      public int getRtPurchasedTime() {
+        return rtPurchasedTime_;
+      }
+      /**
+       * <code>optional uint32 rt_purchased_time = 66;</code>
+       * @param value The rtPurchasedTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRtPurchasedTime(int value) {
+        bitField1_ |= 0x00001000;
+        rtPurchasedTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rt_purchased_time = 66;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRtPurchasedTime() {
+        bitField1_ = (bitField1_ & ~0x00001000);
+        rtPurchasedTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object headerFilename_ = "";
+      /**
+       * <code>optional string header_filename = 67;</code>
+       * @return Whether the headerFilename field is set.
+       */
+      public boolean hasHeaderFilename() {
+        return ((bitField1_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>optional string header_filename = 67;</code>
+       * @return The headerFilename.
+       */
+      public java.lang.String getHeaderFilename() {
+        java.lang.Object ref = headerFilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            headerFilename_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string header_filename = 67;</code>
+       * @return The bytes for headerFilename.
+       */
+      public com.google.protobuf.ByteString
+          getHeaderFilenameBytes() {
+        java.lang.Object ref = headerFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          headerFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string header_filename = 67;</code>
+       * @param value The headerFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeaderFilename(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00002000;
+        headerFilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string header_filename = 67;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeaderFilename() {
+        bitField1_ = (bitField1_ & ~0x00002000);
+        headerFilename_ = getDefaultInstance().getHeaderFilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string header_filename = 67;</code>
+       * @param value The bytes for headerFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeaderFilenameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00002000;
+        headerFilename_ = value;
         onChanged();
         return this;
       }
@@ -10245,6 +10501,28 @@ public final class SteammessagesAppoverview {
      * @return The removedAppid at the given index.
      */
     int getRemovedAppid(int index);
+
+    /**
+     * <code>optional bool full_update = 3;</code>
+     * @return Whether the fullUpdate field is set.
+     */
+    boolean hasFullUpdate();
+    /**
+     * <code>optional bool full_update = 3;</code>
+     * @return The fullUpdate.
+     */
+    boolean getFullUpdate();
+
+    /**
+     * <code>optional bool update_complete = 4;</code>
+     * @return Whether the updateComplete field is set.
+     */
+    boolean hasUpdateComplete();
+    /**
+     * <code>optional bool update_complete = 4;</code>
+     * @return The updateComplete.
+     */
+    boolean getUpdateComplete();
   }
   /**
    * Protobuf type {@code CAppOverview_Change}
@@ -10324,6 +10602,16 @@ public final class SteammessagesAppoverview {
               input.popLimit(limit);
               break;
             }
+            case 24: {
+              bitField0_ |= 0x00000001;
+              fullUpdate_ = input.readBool();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000002;
+              updateComplete_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10362,6 +10650,7 @@ public final class SteammessagesAppoverview {
               SteammessagesAppoverview.CAppOverview_Change.class, SteammessagesAppoverview.CAppOverview_Change.Builder.class);
     }
 
+    private int bitField0_;
     public static final int APP_OVERVIEW_FIELD_NUMBER = 1;
     private java.util.List<SteammessagesAppoverview.CAppOverview> appOverview_;
     /**
@@ -10429,6 +10718,44 @@ public final class SteammessagesAppoverview {
       return removedAppid_.getInt(index);
     }
 
+    public static final int FULL_UPDATE_FIELD_NUMBER = 3;
+    private boolean fullUpdate_;
+    /**
+     * <code>optional bool full_update = 3;</code>
+     * @return Whether the fullUpdate field is set.
+     */
+    @java.lang.Override
+    public boolean hasFullUpdate() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional bool full_update = 3;</code>
+     * @return The fullUpdate.
+     */
+    @java.lang.Override
+    public boolean getFullUpdate() {
+      return fullUpdate_;
+    }
+
+    public static final int UPDATE_COMPLETE_FIELD_NUMBER = 4;
+    private boolean updateComplete_;
+    /**
+     * <code>optional bool update_complete = 4;</code>
+     * @return Whether the updateComplete field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateComplete() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool update_complete = 4;</code>
+     * @return The updateComplete.
+     */
+    @java.lang.Override
+    public boolean getUpdateComplete() {
+      return updateComplete_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10448,6 +10775,12 @@ public final class SteammessagesAppoverview {
       }
       for (int i = 0; i < removedAppid_.size(); i++) {
         output.writeUInt32(2, removedAppid_.getInt(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(3, fullUpdate_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(4, updateComplete_);
       }
       unknownFields.writeTo(output);
     }
@@ -10471,6 +10804,14 @@ public final class SteammessagesAppoverview {
         size += dataSize;
         size += 1 * getRemovedAppidList().size();
       }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, fullUpdate_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, updateComplete_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10490,6 +10831,16 @@ public final class SteammessagesAppoverview {
           .equals(other.getAppOverviewList())) return false;
       if (!getRemovedAppidList()
           .equals(other.getRemovedAppidList())) return false;
+      if (hasFullUpdate() != other.hasFullUpdate()) return false;
+      if (hasFullUpdate()) {
+        if (getFullUpdate()
+            != other.getFullUpdate()) return false;
+      }
+      if (hasUpdateComplete() != other.hasUpdateComplete()) return false;
+      if (hasUpdateComplete()) {
+        if (getUpdateComplete()
+            != other.getUpdateComplete()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10508,6 +10859,16 @@ public final class SteammessagesAppoverview {
       if (getRemovedAppidCount() > 0) {
         hash = (37 * hash) + REMOVED_APPID_FIELD_NUMBER;
         hash = (53 * hash) + getRemovedAppidList().hashCode();
+      }
+      if (hasFullUpdate()) {
+        hash = (37 * hash) + FULL_UPDATE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getFullUpdate());
+      }
+      if (hasUpdateComplete()) {
+        hash = (37 * hash) + UPDATE_COMPLETE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUpdateComplete());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10651,6 +11012,10 @@ public final class SteammessagesAppoverview {
         }
         removedAppid_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        fullUpdate_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        updateComplete_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -10678,6 +11043,7 @@ public final class SteammessagesAppoverview {
       public SteammessagesAppoverview.CAppOverview_Change buildPartial() {
         SteammessagesAppoverview.CAppOverview_Change result = new SteammessagesAppoverview.CAppOverview_Change(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (appOverviewBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             appOverview_ = java.util.Collections.unmodifiableList(appOverview_);
@@ -10692,6 +11058,15 @@ public final class SteammessagesAppoverview {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.removedAppid_ = removedAppid_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.fullUpdate_ = fullUpdate_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.updateComplete_ = updateComplete_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -10775,6 +11150,12 @@ public final class SteammessagesAppoverview {
             removedAppid_.addAll(other.removedAppid_);
           }
           onChanged();
+        }
+        if (other.hasFullUpdate()) {
+          setFullUpdate(other.getFullUpdate());
+        }
+        if (other.hasUpdateComplete()) {
+          setUpdateComplete(other.getUpdateComplete());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11121,6 +11502,84 @@ public final class SteammessagesAppoverview {
       public Builder clearRemovedAppid() {
         removedAppid_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private boolean fullUpdate_ ;
+      /**
+       * <code>optional bool full_update = 3;</code>
+       * @return Whether the fullUpdate field is set.
+       */
+      @java.lang.Override
+      public boolean hasFullUpdate() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional bool full_update = 3;</code>
+       * @return The fullUpdate.
+       */
+      @java.lang.Override
+      public boolean getFullUpdate() {
+        return fullUpdate_;
+      }
+      /**
+       * <code>optional bool full_update = 3;</code>
+       * @param value The fullUpdate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullUpdate(boolean value) {
+        bitField0_ |= 0x00000004;
+        fullUpdate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool full_update = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFullUpdate() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        fullUpdate_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean updateComplete_ ;
+      /**
+       * <code>optional bool update_complete = 4;</code>
+       * @return Whether the updateComplete field is set.
+       */
+      @java.lang.Override
+      public boolean hasUpdateComplete() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional bool update_complete = 4;</code>
+       * @return The updateComplete.
+       */
+      @java.lang.Override
+      public boolean getUpdateComplete() {
+        return updateComplete_;
+      }
+      /**
+       * <code>optional bool update_complete = 4;</code>
+       * @param value The updateComplete to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdateComplete(boolean value) {
+        bitField0_ |= 0x00000008;
+        updateComplete_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool update_complete = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdateComplete() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        updateComplete_ = false;
         onChanged();
         return this;
       }
@@ -12848,116 +13307,140 @@ public final class SteammessagesAppoverview {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n%steam/steammessages_appoverview.proto\"" +
-      "m\n\033CAppOverview_AppAssociation\022@\n\004type\030\001" +
-      " \001(\0162\024.EAppAssociationType:\034k_EAppAssoci" +
-      "ationTypeInvalid\022\014\n\004name\030\002 \001(\t\"\200\003\n\032CAppO" +
-      "verview_PerClientData\022\020\n\010clientid\030\001 \001(\004\022" +
-      "\023\n\013client_name\030\002 \001(\t\022@\n\016display_status\030\003" +
-      " \001(\0162\017.EDisplayStatus:\027k_EDisplayStatusI" +
-      "nvalid\022\034\n\021status_percentage\030\004 \001(\r:\0010\022\023\n\013" +
-      "active_beta\030\005 \001(\t\022\021\n\tinstalled\030\006 \001(\010\022\033\n\020" +
-      "bytes_downloaded\030\007 \001(\004:\0010\022\026\n\013bytes_total" +
-      "\030\010 \001(\004:\0010\022!\n\031streaming_to_local_client\030\t" +
-      " \001(\010\022(\n is_available_on_current_platform" +
-      "\030\n \001(\010\022\032\n\022is_invalid_os_type\030\013 \001(\010\022\025\n\rpl" +
-      "aytime_left\030\014 \001(\r\"\314\013\n\014CAppOverview\022\r\n\005ap" +
-      "pid\030\001 \001(\r\022\024\n\014display_name\030\002 \001(\t\022\034\n\024visib" +
-      "le_in_game_list\030\004 \001(\010\022\017\n\007sort_as\030\006 \001(\t\0223" +
-      "\n\010app_type\030\007 \001(\0162\016.EProtoAppType:\021k_EApp" +
-      "TypeInvalid\022\021\n\tmru_index\030\r \001(\r\022\"\n\027rt_rec" +
-      "ent_activity_time\030\016 \001(\r:\0010\022#\n\030minutes_pl" +
-      "aytime_forever\030\020 \001(\r:\0010\022*\n\037minutes_playt" +
-      "ime_last_two_weeks\030\021 \001(\r:\0010\022\036\n\023rt_last_t" +
-      "ime_played\030\022 \001(\r:\0010\022\021\n\tstore_tag\030\023 \003(\r\0221" +
-      "\n\013association\030\024 \003(\0132\034.CAppOverview_AppAs" +
-      "sociation\022\026\n\016store_category\030\027 \003(\r\022#\n\030rt_" +
-      "original_release_date\030\031 \001(\r:\0010\022 \n\025rt_ste" +
-      "am_release_date\030\032 \001(\r:\0010\022\021\n\ticon_hash\030\033 " +
-      "\001(\t\022\021\n\tlogo_hash\030\036 \001(\t\022Y\n\022controller_sup" +
-      "port\030\037 \001(\0162\033.EAppControllerSupportLevel:" +
-      " k_EAppControllerSupportLevelNone\022\024\n\014vr_" +
-      "supported\030  \001(\010\022\030\n\020metacritic_score\030$ \001(" +
-      "\r\022\024\n\014size_on_disk\030% \001(\004\022\027\n\017third_party_m" +
-      "od\030& \001(\010\022\021\n\ticon_data\030\' \001(\t\022\030\n\020icon_data" +
-      "_format\030( \001(\t\022\016\n\006gameid\030) \001(\t\022 \n\030library" +
-      "_capsule_filename\030* \001(\t\0224\n\017per_client_da" +
-      "ta\030+ \003(\0132\033.CAppOverview_PerClientData\022\037\n" +
-      "\027most_available_clientid\030, \001(\004\022\031\n\021select" +
-      "ed_clientid\030- \001(\004\022\034\n\024rt_store_asset_mtim" +
-      "e\030. \001(\r\022\035\n\025rt_custom_image_mtime\030/ \001(\r\022\036" +
-      "\n\026optional_parent_app_id\0300 \001(\r\022\030\n\020owner_" +
-      "account_id\0301 \001(\r\022\036\n\026compat_mapping_enabl" +
-      "ed\0302 \001(\010\022\037\n\027compat_mapping_priority\0303 \001(" +
-      "\r\022 \n\030compat_mapping_tool_name\0304 \001(\t\022\037\n\027r" +
-      "eview_score_with_bombs\0305 \001(\r\022$\n\034review_p" +
-      "ercentage_with_bombs\0306 \001(\r\022\"\n\032review_sco" +
-      "re_without_bombs\0307 \001(\r\022\'\n\037review_percent" +
-      "age_without_bombs\0308 \001(\r\022\022\n\nlibrary_id\0309 " +
-      "\001(\t\022\017\n\007vr_only\030: \001(\010\022\027\n\017mastersub_appid\030" +
-      "; \001(\r\022#\n\033mastersub_includedwith_logo\030< \001" +
-      "(\t\022#\n\030compat_allowlist_setting\030= \001(\r:\0010\022" +
-      "\036\n\026site_license_site_name\030> \001(\t\022\037\n\027short" +
-      "cut_override_appid\030? \001(\r\"Q\n\023CAppOverview" +
-      "_Change\022#\n\014app_overview\030\001 \003(\0132\r.CAppOver" +
-      "view\022\025\n\rremoved_appid\030\002 \003(\r\"D\n\021CAppBoots" +
-      "trapData\022\r\n\005appid\030\001 \001(\r\022\016\n\006hidden\030\002 \001(\010\022" +
-      "\020\n\010user_tag\030\003 \003(\t\"=\n\025CLibraryBootstrapDa" +
-      "ta\022$\n\010app_data\030\001 \003(\0132\022.CAppBootstrapData" +
-      "*\200\t\n\016EDisplayStatus\022\033\n\027k_EDisplayStatusI" +
-      "nvalid\020\000\022\035\n\031k_EDisplayStatusLaunching\020\001\022" +
-      " \n\034k_EDisplayStatusUninstalling\020\002\022\036\n\032k_E" +
-      "DisplayStatusInstalling\020\003\022\033\n\027k_EDisplayS" +
-      "tatusRunning\020\004\022\036\n\032k_EDisplayStatusValida" +
-      "ting\020\005\022\034\n\030k_EDisplayStatusUpdating\020\006\022\037\n\033" +
-      "k_EDisplayStatusDownloading\020\007\022!\n\035k_EDisp" +
-      "layStatusSynchronizing\020\010\022\"\n\036k_EDisplaySt" +
-      "atusReadyToInstall\020\t\022\"\n\036k_EDisplayStatus" +
-      "ReadyToPreload\020\n\022!\n\035k_EDisplayStatusRead" +
-      "yToLaunch\020\013\022$\n k_EDisplayStatusRegionRes" +
-      "tricted\020\014\022\037\n\033k_EDisplayStatusPresaleOnly" +
-      "\020\r\022#\n\037k_EDisplayStatusInvalidPlatform\020\016\022" +
-      "#\n\037k_EDisplayStatusPreloadComplete\020\020\022\"\n\036" +
-      "k_EDisplayStatusBorrowerLocked\020\021\022 \n\034k_ED" +
-      "isplayStatusUpdatePaused\020\022\022 \n\034k_EDisplay" +
-      "StatusUpdateQueued\020\023\022\"\n\036k_EDisplayStatus" +
-      "UpdateRequired\020\024\022\"\n\036k_EDisplayStatusUpda" +
-      "teDisabled\020\025\022\"\n\036k_EDisplayStatusDownload" +
-      "Paused\020\026\022\"\n\036k_EDisplayStatusDownloadQueu" +
-      "ed\020\027\022$\n k_EDisplayStatusDownloadRequired" +
-      "\020\030\022$\n k_EDisplayStatusDownloadDisabled\020\031" +
-      "\022\"\n\036k_EDisplayStatusLicensePending\020\032\022\"\n\036" +
-      "k_EDisplayStatusLicenseExpired\020\033\022 \n\034k_ED" +
-      "isplayStatusAvailForFree\020\034\022!\n\035k_EDisplay" +
-      "StatusAvailToBorrow\020\035\022\"\n\036k_EDisplayStatu" +
-      "sAvailGuestPass\020\036\022\034\n\030k_EDisplayStatusPur" +
-      "chase\020\037\022\037\n\033k_EDisplayStatusUnavailable\020 " +
-      "\022!\n\035k_EDisplayStatusNotLaunchable\020!*\352\003\n\r" +
-      "EProtoAppType\022\025\n\021k_EAppTypeInvalid\020\000\022\022\n\016" +
-      "k_EAppTypeGame\020\001\022\031\n\025k_EAppTypeApplicatio" +
-      "n\020\002\022\022\n\016k_EAppTypeTool\020\004\022\022\n\016k_EAppTypeDem" +
-      "o\020\010\022\027\n\023k_EAppTypeDeprected\020\020\022\021\n\rk_EAppTy" +
-      "peDLC\020 \022\023\n\017k_EAppTypeGuide\020@\022\025\n\020k_EAppTy" +
-      "peDriver\020\200\001\022\025\n\020k_EAppTypeConfig\020\200\002\022\027\n\022k_" +
-      "EAppTypeHardware\020\200\004\022\030\n\023k_EAppTypeFranchi" +
-      "se\020\200\010\022\024\n\017k_EAppTypeVideo\020\200\020\022\025\n\020k_EAppTyp" +
-      "ePlugin\020\200 \022\031\n\024k_EAppTypeMusicAlbum\020\200@\022\026\n" +
-      "\020k_EAppTypeSeries\020\200\200\001\022\025\n\017k_EAppTypeComic" +
-      "\020\200\200\002\022\024\n\016k_EAppTypeBeta\020\200\200\004\022\032\n\022k_EAppType" +
-      "Shortcut\020\200\200\200\200\004\022 \n\023k_EAppTypeDepotOnly\020\200\200" +
-      "\200\200\370\377\377\377\377\001*\243\001\n\023EAppAssociationType\022 \n\034k_EA" +
-      "ppAssociationTypeInvalid\020\000\022\"\n\036k_EAppAsso" +
-      "ciationTypePublisher\020\001\022\"\n\036k_EAppAssociat" +
-      "ionTypeDeveloper\020\002\022\"\n\036k_EAppAssociationT" +
-      "ypeFranchise\020\003*\221\001\n\032EAppControllerSupport" +
-      "Level\022$\n k_EAppControllerSupportLevelNon" +
-      "e\020\000\022\'\n#k_EAppControllerSupportLevelParti" +
-      "al\020\001\022$\n k_EAppControllerSupportLevelFull" +
-      "\020\002B\005H\001\200\001\001"
+      "\n%steam/steammessages_appoverview.proto\032" +
+      "\021steam/enums.proto\"m\n\033CAppOverview_AppAs" +
+      "sociation\022@\n\004type\030\001 \001(\0162\024.EAppAssociatio" +
+      "nType:\034k_EAppAssociationTypeInvalid\022\014\n\004n" +
+      "ame\030\002 \001(\t\"\302\003\n\032CAppOverview_PerClientData" +
+      "\022\020\n\010clientid\030\001 \001(\004\022\023\n\013client_name\030\002 \001(\t\022" +
+      "@\n\016display_status\030\003 \001(\0162\017.EDisplayStatus" +
+      ":\027k_EDisplayStatusInvalid\022\034\n\021status_perc" +
+      "entage\030\004 \001(\r:\0010\022\023\n\013active_beta\030\005 \001(\t\022\021\n\t" +
+      "installed\030\006 \001(\010\022\033\n\020bytes_downloaded\030\007 \001(" +
+      "\004:\0010\022\026\n\013bytes_total\030\010 \001(\004:\0010\022!\n\031streamin" +
+      "g_to_local_client\030\t \001(\010\022(\n is_available_" +
+      "on_current_platform\030\n \001(\010\022\032\n\022is_invalid_" +
+      "os_type\030\013 \001(\010\022\025\n\rplaytime_left\030\014 \001(\r\022@\n\014" +
+      "cloud_status\030\r \001(\0162\020.EAppCloudStatus:\030k_" +
+      "EAppCloudStatusInvalid\"\373\013\n\014CAppOverview\022" +
+      "\r\n\005appid\030\001 \001(\r\022\024\n\014display_name\030\002 \001(\t\022\034\n\024" +
+      "visible_in_game_list\030\004 \001(\010\022\017\n\007sort_as\030\006 " +
+      "\001(\t\0223\n\010app_type\030\007 \001(\0162\016.EProtoAppType:\021k" +
+      "_EAppTypeInvalid\022\021\n\tmru_index\030\r \001(\r\022\"\n\027r" +
+      "t_recent_activity_time\030\016 \001(\r:\0010\022#\n\030minut" +
+      "es_playtime_forever\030\020 \001(\r:\0010\022*\n\037minutes_" +
+      "playtime_last_two_weeks\030\021 \001(\r:\0010\022\036\n\023rt_l" +
+      "ast_time_played\030\022 \001(\r:\0010\022\021\n\tstore_tag\030\023 " +
+      "\003(\r\0221\n\013association\030\024 \003(\0132\034.CAppOverview_" +
+      "AppAssociation\022\026\n\016store_category\030\027 \003(\r\022#" +
+      "\n\030rt_original_release_date\030\031 \001(\r:\0010\022 \n\025r" +
+      "t_steam_release_date\030\032 \001(\r:\0010\022\021\n\ticon_ha" +
+      "sh\030\033 \001(\t\022Y\n\022controller_support\030\037 \001(\0162\033.E" +
+      "AppControllerSupportLevel: k_EAppControl" +
+      "lerSupportLevelNone\022\024\n\014vr_supported\030  \001(" +
+      "\010\022\030\n\020metacritic_score\030$ \001(\r\022\024\n\014size_on_d" +
+      "isk\030% \001(\004\022\027\n\017third_party_mod\030& \001(\010\022\021\n\tic" +
+      "on_data\030\' \001(\t\022\030\n\020icon_data_format\030( \001(\t\022" +
+      "\016\n\006gameid\030) \001(\t\022 \n\030library_capsule_filen" +
+      "ame\030* \001(\t\0224\n\017per_client_data\030+ \003(\0132\033.CAp" +
+      "pOverview_PerClientData\022\037\n\027most_availabl" +
+      "e_clientid\030, \001(\004\022\031\n\021selected_clientid\030- " +
+      "\001(\004\022\034\n\024rt_store_asset_mtime\030. \001(\r\022\035\n\025rt_" +
+      "custom_image_mtime\030/ \001(\r\022\036\n\026optional_par" +
+      "ent_app_id\0300 \001(\r\022\030\n\020owner_account_id\0301 \001" +
+      "(\r\022\037\n\027review_score_with_bombs\0305 \001(\r\022$\n\034r" +
+      "eview_percentage_with_bombs\0306 \001(\r\022\"\n\032rev" +
+      "iew_score_without_bombs\0307 \001(\r\022\'\n\037review_" +
+      "percentage_without_bombs\0308 \001(\r\022\022\n\nlibrar" +
+      "y_id\0309 \001(\t\022\017\n\007vr_only\030: \001(\010\022\027\n\017mastersub" +
+      "_appid\030; \001(\r\022#\n\033mastersub_includedwith_l" +
+      "ogo\030< \001(\t\022\036\n\026site_license_site_name\030> \001(" +
+      "\t\022\037\n\027shortcut_override_appid\030? \001(\r\022o\n\032st" +
+      "eam_deck_compat_category\030@ \001(\0162 .ESteamD" +
+      "eckCompatibilityCategory:)k_ESteamDeckCo" +
+      "mpatibilityCategory_Unknown\022#\n\033rt_last_t" +
+      "ime_locally_played\030A \001(\r\022\031\n\021rt_purchased" +
+      "_time\030B \001(\r\022\027\n\017header_filename\030C \001(\t\"\177\n\023" +
+      "CAppOverview_Change\022#\n\014app_overview\030\001 \003(" +
+      "\0132\r.CAppOverview\022\025\n\rremoved_appid\030\002 \003(\r\022" +
+      "\023\n\013full_update\030\003 \001(\010\022\027\n\017update_complete\030" +
+      "\004 \001(\010\"D\n\021CAppBootstrapData\022\r\n\005appid\030\001 \001(" +
+      "\r\022\016\n\006hidden\030\002 \001(\010\022\020\n\010user_tag\030\003 \003(\t\"=\n\025C" +
+      "LibraryBootstrapData\022$\n\010app_data\030\001 \003(\0132\022" +
+      ".CAppBootstrapData*\345\t\n\016EDisplayStatus\022\033\n" +
+      "\027k_EDisplayStatusInvalid\020\000\022\035\n\031k_EDisplay" +
+      "StatusLaunching\020\001\022 \n\034k_EDisplayStatusUni" +
+      "nstalling\020\002\022\036\n\032k_EDisplayStatusInstallin" +
+      "g\020\003\022\033\n\027k_EDisplayStatusRunning\020\004\022\036\n\032k_ED" +
+      "isplayStatusValidating\020\005\022\034\n\030k_EDisplaySt" +
+      "atusUpdating\020\006\022\037\n\033k_EDisplayStatusDownlo" +
+      "ading\020\007\022!\n\035k_EDisplayStatusSynchronizing" +
+      "\020\010\022\"\n\036k_EDisplayStatusReadyToInstall\020\t\022\"" +
+      "\n\036k_EDisplayStatusReadyToPreload\020\n\022!\n\035k_" +
+      "EDisplayStatusReadyToLaunch\020\013\022$\n k_EDisp" +
+      "layStatusRegionRestricted\020\014\022\037\n\033k_EDispla" +
+      "yStatusPresaleOnly\020\r\022#\n\037k_EDisplayStatus" +
+      "InvalidPlatform\020\016\022#\n\037k_EDisplayStatusPre" +
+      "loadComplete\020\020\022\"\n\036k_EDisplayStatusBorrow" +
+      "erLocked\020\021\022 \n\034k_EDisplayStatusUpdatePaus" +
+      "ed\020\022\022 \n\034k_EDisplayStatusUpdateQueued\020\023\022\"" +
+      "\n\036k_EDisplayStatusUpdateRequired\020\024\022\"\n\036k_" +
+      "EDisplayStatusUpdateDisabled\020\025\022\"\n\036k_EDis" +
+      "playStatusDownloadPaused\020\026\022\"\n\036k_EDisplay" +
+      "StatusDownloadQueued\020\027\022$\n k_EDisplayStat" +
+      "usDownloadRequired\020\030\022$\n k_EDisplayStatus" +
+      "DownloadDisabled\020\031\022\"\n\036k_EDisplayStatusLi" +
+      "censePending\020\032\022\"\n\036k_EDisplayStatusLicens" +
+      "eExpired\020\033\022 \n\034k_EDisplayStatusAvailForFr" +
+      "ee\020\034\022!\n\035k_EDisplayStatusAvailToBorrow\020\035\022" +
+      "\"\n\036k_EDisplayStatusAvailGuestPass\020\036\022\034\n\030k" +
+      "_EDisplayStatusPurchase\020\037\022\037\n\033k_EDisplayS" +
+      "tatusUnavailable\020 \022!\n\035k_EDisplayStatusNo" +
+      "tLaunchable\020!\022\036\n\032k_EDisplayStatusCloudEr" +
+      "ror\020\"\022\"\n\036k_EDisplayStatusCloudOutOfDate\020" +
+      "#\022\037\n\033k_EDisplayStatusTerminating\020$*\367\002\n\017E" +
+      "AppCloudStatus\022\034\n\030k_EAppCloudStatusInval" +
+      "id\020\000\022\035\n\031k_EAppCloudStatusDisabled\020\001\022\034\n\030k" +
+      "_EAppCloudStatusUnknown\020\002\022!\n\035k_EAppCloud" +
+      "StatusSynchronized\020\003\022\035\n\031k_EAppCloudStatu" +
+      "sChecking\020\004\022\036\n\032k_EAppCloudStatusOutOfSyn" +
+      "c\020\005\022\036\n\032k_EAppCloudStatusUploading\020\006\022 \n\034k" +
+      "_EAppCloudStatusDownloading\020\007\022\037\n\033k_EAppC" +
+      "loudStatusSyncFailed\020\010\022\035\n\031k_EAppCloudSta" +
+      "tusConflict\020\t\022%\n!k_EAppCloudStatusPendin" +
+      "gElsewhere\020\n*\352\003\n\rEProtoAppType\022\025\n\021k_EApp" +
+      "TypeInvalid\020\000\022\022\n\016k_EAppTypeGame\020\001\022\031\n\025k_E" +
+      "AppTypeApplication\020\002\022\022\n\016k_EAppTypeTool\020\004" +
+      "\022\022\n\016k_EAppTypeDemo\020\010\022\027\n\023k_EAppTypeDeprec" +
+      "ted\020\020\022\021\n\rk_EAppTypeDLC\020 \022\023\n\017k_EAppTypeGu" +
+      "ide\020@\022\025\n\020k_EAppTypeDriver\020\200\001\022\025\n\020k_EAppTy" +
+      "peConfig\020\200\002\022\027\n\022k_EAppTypeHardware\020\200\004\022\030\n\023" +
+      "k_EAppTypeFranchise\020\200\010\022\024\n\017k_EAppTypeVide" +
+      "o\020\200\020\022\025\n\020k_EAppTypePlugin\020\200 \022\031\n\024k_EAppTyp" +
+      "eMusicAlbum\020\200@\022\026\n\020k_EAppTypeSeries\020\200\200\001\022\025" +
+      "\n\017k_EAppTypeComic\020\200\200\002\022\024\n\016k_EAppTypeBeta\020" +
+      "\200\200\004\022\032\n\022k_EAppTypeShortcut\020\200\200\200\200\004\022 \n\023k_EAp" +
+      "pTypeDepotOnly\020\200\200\200\200\370\377\377\377\377\001*\243\001\n\023EAppAssoci" +
+      "ationType\022 \n\034k_EAppAssociationTypeInvali" +
+      "d\020\000\022\"\n\036k_EAppAssociationTypePublisher\020\001\022" +
+      "\"\n\036k_EAppAssociationTypeDeveloper\020\002\022\"\n\036k" +
+      "_EAppAssociationTypeFranchise\020\003*\221\001\n\032EApp" +
+      "ControllerSupportLevel\022$\n k_EAppControll" +
+      "erSupportLevelNone\020\000\022\'\n#k_EAppController" +
+      "SupportLevelPartial\020\001\022$\n k_EAppControlle" +
+      "rSupportLevelFull\020\002*\375\001\n#EAppGamepadGyroT" +
+      "rackpadSupportLevel\0229\n,k_EAppGamepadGyro" +
+      "TrackpadSupportLevelUnknown\020\377\377\377\377\377\377\377\377\377\001\0222" +
+      "\n.k_EAppGamepadGyroTrackpadSupportLevelN" +
+      "oGamepad\020\000\0220\n,k_EAppGamepadGyroTrackpadS" +
+      "upportLevelGamepad\020\001\0225\n1k_EAppGamepadGyr" +
+      "oTrackpadSupportLevelSimultaneous\020\002B\005H\001\200" +
+      "\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          Enums.getDescriptor(),
         });
     internal_static_CAppOverview_AppAssociation_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -12970,19 +13453,19 @@ public final class SteammessagesAppoverview {
     internal_static_CAppOverview_PerClientData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CAppOverview_PerClientData_descriptor,
-        new java.lang.String[] { "Clientid", "ClientName", "DisplayStatus", "StatusPercentage", "ActiveBeta", "Installed", "BytesDownloaded", "BytesTotal", "StreamingToLocalClient", "IsAvailableOnCurrentPlatform", "IsInvalidOsType", "PlaytimeLeft", });
+        new java.lang.String[] { "Clientid", "ClientName", "DisplayStatus", "StatusPercentage", "ActiveBeta", "Installed", "BytesDownloaded", "BytesTotal", "StreamingToLocalClient", "IsAvailableOnCurrentPlatform", "IsInvalidOsType", "PlaytimeLeft", "CloudStatus", });
     internal_static_CAppOverview_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CAppOverview_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CAppOverview_descriptor,
-        new java.lang.String[] { "Appid", "DisplayName", "VisibleInGameList", "SortAs", "AppType", "MruIndex", "RtRecentActivityTime", "MinutesPlaytimeForever", "MinutesPlaytimeLastTwoWeeks", "RtLastTimePlayed", "StoreTag", "Association", "StoreCategory", "RtOriginalReleaseDate", "RtSteamReleaseDate", "IconHash", "LogoHash", "ControllerSupport", "VrSupported", "MetacriticScore", "SizeOnDisk", "ThirdPartyMod", "IconData", "IconDataFormat", "Gameid", "LibraryCapsuleFilename", "PerClientData", "MostAvailableClientid", "SelectedClientid", "RtStoreAssetMtime", "RtCustomImageMtime", "OptionalParentAppId", "OwnerAccountId", "CompatMappingEnabled", "CompatMappingPriority", "CompatMappingToolName", "ReviewScoreWithBombs", "ReviewPercentageWithBombs", "ReviewScoreWithoutBombs", "ReviewPercentageWithoutBombs", "LibraryId", "VrOnly", "MastersubAppid", "MastersubIncludedwithLogo", "CompatAllowlistSetting", "SiteLicenseSiteName", "ShortcutOverrideAppid", });
+        new java.lang.String[] { "Appid", "DisplayName", "VisibleInGameList", "SortAs", "AppType", "MruIndex", "RtRecentActivityTime", "MinutesPlaytimeForever", "MinutesPlaytimeLastTwoWeeks", "RtLastTimePlayed", "StoreTag", "Association", "StoreCategory", "RtOriginalReleaseDate", "RtSteamReleaseDate", "IconHash", "ControllerSupport", "VrSupported", "MetacriticScore", "SizeOnDisk", "ThirdPartyMod", "IconData", "IconDataFormat", "Gameid", "LibraryCapsuleFilename", "PerClientData", "MostAvailableClientid", "SelectedClientid", "RtStoreAssetMtime", "RtCustomImageMtime", "OptionalParentAppId", "OwnerAccountId", "ReviewScoreWithBombs", "ReviewPercentageWithBombs", "ReviewScoreWithoutBombs", "ReviewPercentageWithoutBombs", "LibraryId", "VrOnly", "MastersubAppid", "MastersubIncludedwithLogo", "SiteLicenseSiteName", "ShortcutOverrideAppid", "SteamDeckCompatCategory", "RtLastTimeLocallyPlayed", "RtPurchasedTime", "HeaderFilename", });
     internal_static_CAppOverview_Change_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_CAppOverview_Change_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CAppOverview_Change_descriptor,
-        new java.lang.String[] { "AppOverview", "RemovedAppid", });
+        new java.lang.String[] { "AppOverview", "RemovedAppid", "FullUpdate", "UpdateComplete", });
     internal_static_CAppBootstrapData_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_CAppBootstrapData_fieldAccessorTable = new
@@ -12995,6 +13478,7 @@ public final class SteammessagesAppoverview {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CLibraryBootstrapData_descriptor,
         new java.lang.String[] { "AppData", });
+    Enums.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

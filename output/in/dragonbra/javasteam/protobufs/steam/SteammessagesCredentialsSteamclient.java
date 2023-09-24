@@ -1434,17 +1434,6 @@ public final class SteammessagesCredentialsSteamclient {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional bool include_new_authentications = 1 [default = true, (.description) = "Whether or not to populate the newauthentication field in the response"];</code>
-     * @return Whether the includeNewAuthentications field is set.
-     */
-    boolean hasIncludeNewAuthentications();
-    /**
-     * <code>optional bool include_new_authentications = 1 [default = true, (.description) = "Whether or not to populate the newauthentication field in the response"];</code>
-     * @return The includeNewAuthentications.
-     */
-    boolean getIncludeNewAuthentications();
-
-    /**
      * <code>optional string webcookie = 2 [(.description) = "The user&#92;'s Steam Guard machine auth cookie. If present, it&#92;'ll be used to get the user&#92;'s machine ID instead of the AM session."];</code>
      * @return Whether the webcookie field is set.
      */
@@ -1511,7 +1500,6 @@ public final class SteammessagesCredentialsSteamclient {
       super(builder);
     }
     private CCredentials_GetSteamGuardDetails_Request() {
-      includeNewAuthentications_ = true;
       webcookie_ = "";
     }
 
@@ -1546,30 +1534,25 @@ public final class SteammessagesCredentialsSteamclient {
             case 0:
               done = true;
               break;
-            case 8: {
-              bitField0_ |= 0x00000001;
-              includeNewAuthentications_ = input.readBool();
-              break;
-            }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               webcookie_ = bs;
               break;
             }
             case 29: {
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               timestampMinimumWanted_ = input.readFixed32();
               break;
             }
             case 32: {
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               deprecatedIpaddress_ = input.readInt32();
               break;
             }
             case 42: {
               SteammessagesBase.CMsgIPAddress.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000010) != 0)) {
+              if (((bitField0_ & 0x00000008) != 0)) {
                 subBuilder = ipAddress_.toBuilder();
               }
               ipAddress_ = input.readMessage(SteammessagesBase.CMsgIPAddress.PARSER, extensionRegistry);
@@ -1577,7 +1560,7 @@ public final class SteammessagesCredentialsSteamclient {
                 subBuilder.mergeFrom(ipAddress_);
                 ipAddress_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             }
             default: {
@@ -1613,25 +1596,6 @@ public final class SteammessagesCredentialsSteamclient {
     }
 
     private int bitField0_;
-    public static final int INCLUDE_NEW_AUTHENTICATIONS_FIELD_NUMBER = 1;
-    private boolean includeNewAuthentications_;
-    /**
-     * <code>optional bool include_new_authentications = 1 [default = true, (.description) = "Whether or not to populate the newauthentication field in the response"];</code>
-     * @return Whether the includeNewAuthentications field is set.
-     */
-    @java.lang.Override
-    public boolean hasIncludeNewAuthentications() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional bool include_new_authentications = 1 [default = true, (.description) = "Whether or not to populate the newauthentication field in the response"];</code>
-     * @return The includeNewAuthentications.
-     */
-    @java.lang.Override
-    public boolean getIncludeNewAuthentications() {
-      return includeNewAuthentications_;
-    }
-
     public static final int WEBCOOKIE_FIELD_NUMBER = 2;
     private volatile java.lang.Object webcookie_;
     /**
@@ -1640,7 +1604,7 @@ public final class SteammessagesCredentialsSteamclient {
      */
     @java.lang.Override
     public boolean hasWebcookie() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>optional string webcookie = 2 [(.description) = "The user&#92;'s Steam Guard machine auth cookie. If present, it&#92;'ll be used to get the user&#92;'s machine ID instead of the AM session."];</code>
@@ -1688,7 +1652,7 @@ public final class SteammessagesCredentialsSteamclient {
      */
     @java.lang.Override
     public boolean hasTimestampMinimumWanted() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>optional fixed32 timestamp_minimum_wanted = 3;</code>
@@ -1707,7 +1671,7 @@ public final class SteammessagesCredentialsSteamclient {
      */
     @java.lang.Override
     public boolean hasDeprecatedIpaddress() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>optional int32 deprecated_ipaddress = 4;</code>
@@ -1726,7 +1690,7 @@ public final class SteammessagesCredentialsSteamclient {
      */
     @java.lang.Override
     public boolean hasIpAddress() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>optional .CMsgIPAddress ip_address = 5;</code>
@@ -1759,18 +1723,15 @@ public final class SteammessagesCredentialsSteamclient {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeBool(1, includeNewAuthentications_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, webcookie_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeFixed32(3, timestampMinimumWanted_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeInt32(4, deprecatedIpaddress_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(5, getIpAddress());
       }
       unknownFields.writeTo(output);
@@ -1783,21 +1744,17 @@ public final class SteammessagesCredentialsSteamclient {
 
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, includeNewAuthentications_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, webcookie_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(3, timestampMinimumWanted_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, deprecatedIpaddress_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getIpAddress());
       }
@@ -1816,11 +1773,6 @@ public final class SteammessagesCredentialsSteamclient {
       }
       SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Request other = (SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Request) obj;
 
-      if (hasIncludeNewAuthentications() != other.hasIncludeNewAuthentications()) return false;
-      if (hasIncludeNewAuthentications()) {
-        if (getIncludeNewAuthentications()
-            != other.getIncludeNewAuthentications()) return false;
-      }
       if (hasWebcookie() != other.hasWebcookie()) return false;
       if (hasWebcookie()) {
         if (!getWebcookie()
@@ -1852,11 +1804,6 @@ public final class SteammessagesCredentialsSteamclient {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasIncludeNewAuthentications()) {
-        hash = (37 * hash) + INCLUDE_NEW_AUTHENTICATIONS_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getIncludeNewAuthentications());
-      }
       if (hasWebcookie()) {
         hash = (37 * hash) + WEBCOOKIE_FIELD_NUMBER;
         hash = (53 * hash) + getWebcookie().hashCode();
@@ -2007,20 +1954,18 @@ public final class SteammessagesCredentialsSteamclient {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        includeNewAuthentications_ = true;
-        bitField0_ = (bitField0_ & ~0x00000001);
         webcookie_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         timestampMinimumWanted_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         deprecatedIpaddress_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (ipAddressBuilder_ == null) {
           ipAddress_ = null;
         } else {
           ipAddressBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -2052,26 +1997,22 @@ public final class SteammessagesCredentialsSteamclient {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.includeNewAuthentications_ = includeNewAuthentications_;
+        result.webcookie_ = webcookie_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.timestampMinimumWanted_ = timestampMinimumWanted_;
           to_bitField0_ |= 0x00000002;
         }
-        result.webcookie_ = webcookie_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.timestampMinimumWanted_ = timestampMinimumWanted_;
+          result.deprecatedIpaddress_ = deprecatedIpaddress_;
           to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.deprecatedIpaddress_ = deprecatedIpaddress_;
-          to_bitField0_ |= 0x00000008;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
           if (ipAddressBuilder_ == null) {
             result.ipAddress_ = ipAddress_;
           } else {
             result.ipAddress_ = ipAddressBuilder_.build();
           }
-          to_bitField0_ |= 0x00000010;
+          to_bitField0_ |= 0x00000008;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -2122,11 +2063,8 @@ public final class SteammessagesCredentialsSteamclient {
 
       public Builder mergeFrom(SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Request other) {
         if (other == SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Request.getDefaultInstance()) return this;
-        if (other.hasIncludeNewAuthentications()) {
-          setIncludeNewAuthentications(other.getIncludeNewAuthentications());
-        }
         if (other.hasWebcookie()) {
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
           webcookie_ = other.webcookie_;
           onChanged();
         }
@@ -2169,52 +2107,13 @@ public final class SteammessagesCredentialsSteamclient {
       }
       private int bitField0_;
 
-      private boolean includeNewAuthentications_ = true;
-      /**
-       * <code>optional bool include_new_authentications = 1 [default = true, (.description) = "Whether or not to populate the newauthentication field in the response"];</code>
-       * @return Whether the includeNewAuthentications field is set.
-       */
-      @java.lang.Override
-      public boolean hasIncludeNewAuthentications() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional bool include_new_authentications = 1 [default = true, (.description) = "Whether or not to populate the newauthentication field in the response"];</code>
-       * @return The includeNewAuthentications.
-       */
-      @java.lang.Override
-      public boolean getIncludeNewAuthentications() {
-        return includeNewAuthentications_;
-      }
-      /**
-       * <code>optional bool include_new_authentications = 1 [default = true, (.description) = "Whether or not to populate the newauthentication field in the response"];</code>
-       * @param value The includeNewAuthentications to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIncludeNewAuthentications(boolean value) {
-        bitField0_ |= 0x00000001;
-        includeNewAuthentications_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool include_new_authentications = 1 [default = true, (.description) = "Whether or not to populate the newauthentication field in the response"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIncludeNewAuthentications() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        includeNewAuthentications_ = true;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object webcookie_ = "";
       /**
        * <code>optional string webcookie = 2 [(.description) = "The user&#92;'s Steam Guard machine auth cookie. If present, it&#92;'ll be used to get the user&#92;'s machine ID instead of the AM session."];</code>
        * @return Whether the webcookie field is set.
        */
       public boolean hasWebcookie() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>optional string webcookie = 2 [(.description) = "The user&#92;'s Steam Guard machine auth cookie. If present, it&#92;'ll be used to get the user&#92;'s machine ID instead of the AM session."];</code>
@@ -2261,7 +2160,7 @@ public final class SteammessagesCredentialsSteamclient {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000001;
         webcookie_ = value;
         onChanged();
         return this;
@@ -2271,7 +2170,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearWebcookie() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         webcookie_ = getDefaultInstance().getWebcookie();
         onChanged();
         return this;
@@ -2286,7 +2185,7 @@ public final class SteammessagesCredentialsSteamclient {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000001;
         webcookie_ = value;
         onChanged();
         return this;
@@ -2299,7 +2198,7 @@ public final class SteammessagesCredentialsSteamclient {
        */
       @java.lang.Override
       public boolean hasTimestampMinimumWanted() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>optional fixed32 timestamp_minimum_wanted = 3;</code>
@@ -2315,7 +2214,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder setTimestampMinimumWanted(int value) {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         timestampMinimumWanted_ = value;
         onChanged();
         return this;
@@ -2325,7 +2224,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearTimestampMinimumWanted() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         timestampMinimumWanted_ = 0;
         onChanged();
         return this;
@@ -2338,7 +2237,7 @@ public final class SteammessagesCredentialsSteamclient {
        */
       @java.lang.Override
       public boolean hasDeprecatedIpaddress() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>optional int32 deprecated_ipaddress = 4;</code>
@@ -2354,7 +2253,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder setDeprecatedIpaddress(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         deprecatedIpaddress_ = value;
         onChanged();
         return this;
@@ -2364,7 +2263,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearDeprecatedIpaddress() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         deprecatedIpaddress_ = 0;
         onChanged();
         return this;
@@ -2378,7 +2277,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return Whether the ipAddress field is set.
        */
       public boolean hasIpAddress() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>optional .CMsgIPAddress ip_address = 5;</code>
@@ -2404,7 +2303,7 @@ public final class SteammessagesCredentialsSteamclient {
         } else {
           ipAddressBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -2418,7 +2317,7 @@ public final class SteammessagesCredentialsSteamclient {
         } else {
           ipAddressBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -2426,7 +2325,7 @@ public final class SteammessagesCredentialsSteamclient {
        */
       public Builder mergeIpAddress(SteammessagesBase.CMsgIPAddress value) {
         if (ipAddressBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
+          if (((bitField0_ & 0x00000008) != 0) &&
               ipAddress_ != null &&
               ipAddress_ != SteammessagesBase.CMsgIPAddress.getDefaultInstance()) {
             ipAddress_ =
@@ -2438,7 +2337,7 @@ public final class SteammessagesCredentialsSteamclient {
         } else {
           ipAddressBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -2451,14 +2350,14 @@ public final class SteammessagesCredentialsSteamclient {
         } else {
           ipAddressBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
       /**
        * <code>optional .CMsgIPAddress ip_address = 5;</code>
        */
       public SteammessagesBase.CMsgIPAddress.Builder getIpAddressBuilder() {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return getIpAddressFieldBuilder().getBuilder();
       }
@@ -2567,30 +2466,6 @@ public final class SteammessagesCredentialsSteamclient {
      * @return The timestampSteamguardEnabled.
      */
     int getTimestampSteamguardEnabled();
-
-    /**
-     * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-     */
-    java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> 
-        getDeprecatedNewauthenticationList();
-    /**
-     * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-     */
-    SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication getDeprecatedNewauthentication(int index);
-    /**
-     * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-     */
-    int getDeprecatedNewauthenticationCount();
-    /**
-     * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-     */
-    java.util.List<? extends SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder> 
-        getDeprecatedNewauthenticationOrBuilderList();
-    /**
-     * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-     */
-    SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder getDeprecatedNewauthenticationOrBuilder(
-        int index);
 
     /**
      * <code>optional string deprecated_machine_name_userchosen = 4;</code>
@@ -2712,7 +2587,6 @@ public final class SteammessagesCredentialsSteamclient {
       super(builder);
     }
     private CCredentials_GetSteamGuardDetails_Response() {
-      deprecatedNewauthentication_ = java.util.Collections.emptyList();
       deprecatedMachineNameUserchosen_ = "";
       sessionData_ = java.util.Collections.emptyList();
     }
@@ -2758,15 +2632,6 @@ public final class SteammessagesCredentialsSteamclient {
               timestampSteamguardEnabled_ = input.readFixed32();
               break;
             }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                deprecatedNewauthentication_ = new java.util.ArrayList<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              deprecatedNewauthentication_.add(
-                  input.readMessage(SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.PARSER, extensionRegistry));
-              break;
-            }
             case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
@@ -2789,9 +2654,9 @@ public final class SteammessagesCredentialsSteamclient {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 sessionData_ = new java.util.ArrayList<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.SessionData>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000040;
               }
               sessionData_.add(
                   input.readMessage(SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.SessionData.PARSER, extensionRegistry));
@@ -2827,10 +2692,7 @@ public final class SteammessagesCredentialsSteamclient {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          deprecatedNewauthentication_ = java.util.Collections.unmodifiableList(deprecatedNewauthentication_);
-        }
-        if (((mutable_bitField0_ & 0x00000080) != 0)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           sessionData_ = java.util.Collections.unmodifiableList(sessionData_);
         }
         this.unknownFields = unknownFields.build();
@@ -2848,1499 +2710,6 @@ public final class SteammessagesCredentialsSteamclient {
       return SteammessagesCredentialsSteamclient.internal_static_CCredentials_GetSteamGuardDetails_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.class, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.Builder.class);
-    }
-
-    public interface NewAuthenticationOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:CCredentials_GetSteamGuardDetails_Response.NewAuthentication)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>optional fixed32 timestamp_steamguard_enabled = 1;</code>
-       * @return Whether the timestampSteamguardEnabled field is set.
-       */
-      boolean hasTimestampSteamguardEnabled();
-      /**
-       * <code>optional fixed32 timestamp_steamguard_enabled = 1;</code>
-       * @return The timestampSteamguardEnabled.
-       */
-      int getTimestampSteamguardEnabled();
-
-      /**
-       * <code>optional bool is_web_cookie = 2;</code>
-       * @return Whether the isWebCookie field is set.
-       */
-      boolean hasIsWebCookie();
-      /**
-       * <code>optional bool is_web_cookie = 2;</code>
-       * @return The isWebCookie.
-       */
-      boolean getIsWebCookie();
-
-      /**
-       * <code>optional int32 deprecated_ipaddress = 3;</code>
-       * @return Whether the deprecatedIpaddress field is set.
-       */
-      boolean hasDeprecatedIpaddress();
-      /**
-       * <code>optional int32 deprecated_ipaddress = 3;</code>
-       * @return The deprecatedIpaddress.
-       */
-      int getDeprecatedIpaddress();
-
-      /**
-       * <code>optional string geoloc_info = 4;</code>
-       * @return Whether the geolocInfo field is set.
-       */
-      boolean hasGeolocInfo();
-      /**
-       * <code>optional string geoloc_info = 4;</code>
-       * @return The geolocInfo.
-       */
-      java.lang.String getGeolocInfo();
-      /**
-       * <code>optional string geoloc_info = 4;</code>
-       * @return The bytes for geolocInfo.
-       */
-      com.google.protobuf.ByteString
-          getGeolocInfoBytes();
-
-      /**
-       * <code>optional bool is_remembered = 5;</code>
-       * @return Whether the isRemembered field is set.
-       */
-      boolean hasIsRemembered();
-      /**
-       * <code>optional bool is_remembered = 5;</code>
-       * @return The isRemembered.
-       */
-      boolean getIsRemembered();
-
-      /**
-       * <code>optional string machine_name_user_supplied = 6;</code>
-       * @return Whether the machineNameUserSupplied field is set.
-       */
-      boolean hasMachineNameUserSupplied();
-      /**
-       * <code>optional string machine_name_user_supplied = 6;</code>
-       * @return The machineNameUserSupplied.
-       */
-      java.lang.String getMachineNameUserSupplied();
-      /**
-       * <code>optional string machine_name_user_supplied = 6;</code>
-       * @return The bytes for machineNameUserSupplied.
-       */
-      com.google.protobuf.ByteString
-          getMachineNameUserSuppliedBytes();
-
-      /**
-       * <code>optional int32 status = 7;</code>
-       * @return Whether the status field is set.
-       */
-      boolean hasStatus();
-      /**
-       * <code>optional int32 status = 7;</code>
-       * @return The status.
-       */
-      int getStatus();
-
-      /**
-       * <code>optional .CMsgIPAddress ip_address = 8;</code>
-       * @return Whether the ipAddress field is set.
-       */
-      boolean hasIpAddress();
-      /**
-       * <code>optional .CMsgIPAddress ip_address = 8;</code>
-       * @return The ipAddress.
-       */
-      SteammessagesBase.CMsgIPAddress getIpAddress();
-      /**
-       * <code>optional .CMsgIPAddress ip_address = 8;</code>
-       */
-      SteammessagesBase.CMsgIPAddressOrBuilder getIpAddressOrBuilder();
-    }
-    /**
-     * Protobuf type {@code CCredentials_GetSteamGuardDetails_Response.NewAuthentication}
-     */
-    public static final class NewAuthentication extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:CCredentials_GetSteamGuardDetails_Response.NewAuthentication)
-        NewAuthenticationOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use NewAuthentication.newBuilder() to construct.
-      private NewAuthentication(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private NewAuthentication() {
-        geolocInfo_ = "";
-        machineNameUserSupplied_ = "";
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new NewAuthentication();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private NewAuthentication(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 13: {
-                bitField0_ |= 0x00000001;
-                timestampSteamguardEnabled_ = input.readFixed32();
-                break;
-              }
-              case 16: {
-                bitField0_ |= 0x00000002;
-                isWebCookie_ = input.readBool();
-                break;
-              }
-              case 24: {
-                bitField0_ |= 0x00000004;
-                deprecatedIpaddress_ = input.readInt32();
-                break;
-              }
-              case 34: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000008;
-                geolocInfo_ = bs;
-                break;
-              }
-              case 40: {
-                bitField0_ |= 0x00000010;
-                isRemembered_ = input.readBool();
-                break;
-              }
-              case 50: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000020;
-                machineNameUserSupplied_ = bs;
-                break;
-              }
-              case 56: {
-                bitField0_ |= 0x00000040;
-                status_ = input.readInt32();
-                break;
-              }
-              case 66: {
-                SteammessagesBase.CMsgIPAddress.Builder subBuilder = null;
-                if (((bitField0_ & 0x00000080) != 0)) {
-                  subBuilder = ipAddress_.toBuilder();
-                }
-                ipAddress_ = input.readMessage(SteammessagesBase.CMsgIPAddress.PARSER, extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(ipAddress_);
-                  ipAddress_ = subBuilder.buildPartial();
-                }
-                bitField0_ |= 0x00000080;
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesCredentialsSteamclient.internal_static_CCredentials_GetSteamGuardDetails_Response_NewAuthentication_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesCredentialsSteamclient.internal_static_CCredentials_GetSteamGuardDetails_Response_NewAuthentication_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.class, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder.class);
-      }
-
-      private int bitField0_;
-      public static final int TIMESTAMP_STEAMGUARD_ENABLED_FIELD_NUMBER = 1;
-      private int timestampSteamguardEnabled_;
-      /**
-       * <code>optional fixed32 timestamp_steamguard_enabled = 1;</code>
-       * @return Whether the timestampSteamguardEnabled field is set.
-       */
-      @java.lang.Override
-      public boolean hasTimestampSteamguardEnabled() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional fixed32 timestamp_steamguard_enabled = 1;</code>
-       * @return The timestampSteamguardEnabled.
-       */
-      @java.lang.Override
-      public int getTimestampSteamguardEnabled() {
-        return timestampSteamguardEnabled_;
-      }
-
-      public static final int IS_WEB_COOKIE_FIELD_NUMBER = 2;
-      private boolean isWebCookie_;
-      /**
-       * <code>optional bool is_web_cookie = 2;</code>
-       * @return Whether the isWebCookie field is set.
-       */
-      @java.lang.Override
-      public boolean hasIsWebCookie() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional bool is_web_cookie = 2;</code>
-       * @return The isWebCookie.
-       */
-      @java.lang.Override
-      public boolean getIsWebCookie() {
-        return isWebCookie_;
-      }
-
-      public static final int DEPRECATED_IPADDRESS_FIELD_NUMBER = 3;
-      private int deprecatedIpaddress_;
-      /**
-       * <code>optional int32 deprecated_ipaddress = 3;</code>
-       * @return Whether the deprecatedIpaddress field is set.
-       */
-      @java.lang.Override
-      public boolean hasDeprecatedIpaddress() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>optional int32 deprecated_ipaddress = 3;</code>
-       * @return The deprecatedIpaddress.
-       */
-      @java.lang.Override
-      public int getDeprecatedIpaddress() {
-        return deprecatedIpaddress_;
-      }
-
-      public static final int GEOLOC_INFO_FIELD_NUMBER = 4;
-      private volatile java.lang.Object geolocInfo_;
-      /**
-       * <code>optional string geoloc_info = 4;</code>
-       * @return Whether the geolocInfo field is set.
-       */
-      @java.lang.Override
-      public boolean hasGeolocInfo() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <code>optional string geoloc_info = 4;</code>
-       * @return The geolocInfo.
-       */
-      @java.lang.Override
-      public java.lang.String getGeolocInfo() {
-        java.lang.Object ref = geolocInfo_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            geolocInfo_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string geoloc_info = 4;</code>
-       * @return The bytes for geolocInfo.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getGeolocInfoBytes() {
-        java.lang.Object ref = geolocInfo_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          geolocInfo_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int IS_REMEMBERED_FIELD_NUMBER = 5;
-      private boolean isRemembered_;
-      /**
-       * <code>optional bool is_remembered = 5;</code>
-       * @return Whether the isRemembered field is set.
-       */
-      @java.lang.Override
-      public boolean hasIsRemembered() {
-        return ((bitField0_ & 0x00000010) != 0);
-      }
-      /**
-       * <code>optional bool is_remembered = 5;</code>
-       * @return The isRemembered.
-       */
-      @java.lang.Override
-      public boolean getIsRemembered() {
-        return isRemembered_;
-      }
-
-      public static final int MACHINE_NAME_USER_SUPPLIED_FIELD_NUMBER = 6;
-      private volatile java.lang.Object machineNameUserSupplied_;
-      /**
-       * <code>optional string machine_name_user_supplied = 6;</code>
-       * @return Whether the machineNameUserSupplied field is set.
-       */
-      @java.lang.Override
-      public boolean hasMachineNameUserSupplied() {
-        return ((bitField0_ & 0x00000020) != 0);
-      }
-      /**
-       * <code>optional string machine_name_user_supplied = 6;</code>
-       * @return The machineNameUserSupplied.
-       */
-      @java.lang.Override
-      public java.lang.String getMachineNameUserSupplied() {
-        java.lang.Object ref = machineNameUserSupplied_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            machineNameUserSupplied_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string machine_name_user_supplied = 6;</code>
-       * @return The bytes for machineNameUserSupplied.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getMachineNameUserSuppliedBytes() {
-        java.lang.Object ref = machineNameUserSupplied_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          machineNameUserSupplied_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int STATUS_FIELD_NUMBER = 7;
-      private int status_;
-      /**
-       * <code>optional int32 status = 7;</code>
-       * @return Whether the status field is set.
-       */
-      @java.lang.Override
-      public boolean hasStatus() {
-        return ((bitField0_ & 0x00000040) != 0);
-      }
-      /**
-       * <code>optional int32 status = 7;</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public int getStatus() {
-        return status_;
-      }
-
-      public static final int IP_ADDRESS_FIELD_NUMBER = 8;
-      private SteammessagesBase.CMsgIPAddress ipAddress_;
-      /**
-       * <code>optional .CMsgIPAddress ip_address = 8;</code>
-       * @return Whether the ipAddress field is set.
-       */
-      @java.lang.Override
-      public boolean hasIpAddress() {
-        return ((bitField0_ & 0x00000080) != 0);
-      }
-      /**
-       * <code>optional .CMsgIPAddress ip_address = 8;</code>
-       * @return The ipAddress.
-       */
-      @java.lang.Override
-      public SteammessagesBase.CMsgIPAddress getIpAddress() {
-        return ipAddress_ == null ? SteammessagesBase.CMsgIPAddress.getDefaultInstance() : ipAddress_;
-      }
-      /**
-       * <code>optional .CMsgIPAddress ip_address = 8;</code>
-       */
-      @java.lang.Override
-      public SteammessagesBase.CMsgIPAddressOrBuilder getIpAddressOrBuilder() {
-        return ipAddress_ == null ? SteammessagesBase.CMsgIPAddress.getDefaultInstance() : ipAddress_;
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          output.writeFixed32(1, timestampSteamguardEnabled_);
-        }
-        if (((bitField0_ & 0x00000002) != 0)) {
-          output.writeBool(2, isWebCookie_);
-        }
-        if (((bitField0_ & 0x00000004) != 0)) {
-          output.writeInt32(3, deprecatedIpaddress_);
-        }
-        if (((bitField0_ & 0x00000008) != 0)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, geolocInfo_);
-        }
-        if (((bitField0_ & 0x00000010) != 0)) {
-          output.writeBool(5, isRemembered_);
-        }
-        if (((bitField0_ & 0x00000020) != 0)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 6, machineNameUserSupplied_);
-        }
-        if (((bitField0_ & 0x00000040) != 0)) {
-          output.writeInt32(7, status_);
-        }
-        if (((bitField0_ & 0x00000080) != 0)) {
-          output.writeMessage(8, getIpAddress());
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeFixed32Size(1, timestampSteamguardEnabled_);
-        }
-        if (((bitField0_ & 0x00000002) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBoolSize(2, isWebCookie_);
-        }
-        if (((bitField0_ & 0x00000004) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(3, deprecatedIpaddress_);
-        }
-        if (((bitField0_ & 0x00000008) != 0)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, geolocInfo_);
-        }
-        if (((bitField0_ & 0x00000010) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBoolSize(5, isRemembered_);
-        }
-        if (((bitField0_ & 0x00000020) != 0)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, machineNameUserSupplied_);
-        }
-        if (((bitField0_ & 0x00000040) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(7, status_);
-        }
-        if (((bitField0_ & 0x00000080) != 0)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(8, getIpAddress());
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication)) {
-          return super.equals(obj);
-        }
-        SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication other = (SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication) obj;
-
-        if (hasTimestampSteamguardEnabled() != other.hasTimestampSteamguardEnabled()) return false;
-        if (hasTimestampSteamguardEnabled()) {
-          if (getTimestampSteamguardEnabled()
-              != other.getTimestampSteamguardEnabled()) return false;
-        }
-        if (hasIsWebCookie() != other.hasIsWebCookie()) return false;
-        if (hasIsWebCookie()) {
-          if (getIsWebCookie()
-              != other.getIsWebCookie()) return false;
-        }
-        if (hasDeprecatedIpaddress() != other.hasDeprecatedIpaddress()) return false;
-        if (hasDeprecatedIpaddress()) {
-          if (getDeprecatedIpaddress()
-              != other.getDeprecatedIpaddress()) return false;
-        }
-        if (hasGeolocInfo() != other.hasGeolocInfo()) return false;
-        if (hasGeolocInfo()) {
-          if (!getGeolocInfo()
-              .equals(other.getGeolocInfo())) return false;
-        }
-        if (hasIsRemembered() != other.hasIsRemembered()) return false;
-        if (hasIsRemembered()) {
-          if (getIsRemembered()
-              != other.getIsRemembered()) return false;
-        }
-        if (hasMachineNameUserSupplied() != other.hasMachineNameUserSupplied()) return false;
-        if (hasMachineNameUserSupplied()) {
-          if (!getMachineNameUserSupplied()
-              .equals(other.getMachineNameUserSupplied())) return false;
-        }
-        if (hasStatus() != other.hasStatus()) return false;
-        if (hasStatus()) {
-          if (getStatus()
-              != other.getStatus()) return false;
-        }
-        if (hasIpAddress() != other.hasIpAddress()) return false;
-        if (hasIpAddress()) {
-          if (!getIpAddress()
-              .equals(other.getIpAddress())) return false;
-        }
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasTimestampSteamguardEnabled()) {
-          hash = (37 * hash) + TIMESTAMP_STEAMGUARD_ENABLED_FIELD_NUMBER;
-          hash = (53 * hash) + getTimestampSteamguardEnabled();
-        }
-        if (hasIsWebCookie()) {
-          hash = (37 * hash) + IS_WEB_COOKIE_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getIsWebCookie());
-        }
-        if (hasDeprecatedIpaddress()) {
-          hash = (37 * hash) + DEPRECATED_IPADDRESS_FIELD_NUMBER;
-          hash = (53 * hash) + getDeprecatedIpaddress();
-        }
-        if (hasGeolocInfo()) {
-          hash = (37 * hash) + GEOLOC_INFO_FIELD_NUMBER;
-          hash = (53 * hash) + getGeolocInfo().hashCode();
-        }
-        if (hasIsRemembered()) {
-          hash = (37 * hash) + IS_REMEMBERED_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getIsRemembered());
-        }
-        if (hasMachineNameUserSupplied()) {
-          hash = (37 * hash) + MACHINE_NAME_USER_SUPPLIED_FIELD_NUMBER;
-          hash = (53 * hash) + getMachineNameUserSupplied().hashCode();
-        }
-        if (hasStatus()) {
-          hash = (37 * hash) + STATUS_FIELD_NUMBER;
-          hash = (53 * hash) + getStatus();
-        }
-        if (hasIpAddress()) {
-          hash = (37 * hash) + IP_ADDRESS_FIELD_NUMBER;
-          hash = (53 * hash) + getIpAddress().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code CCredentials_GetSteamGuardDetails_Response.NewAuthentication}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:CCredentials_GetSteamGuardDetails_Response.NewAuthentication)
-          SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return SteammessagesCredentialsSteamclient.internal_static_CCredentials_GetSteamGuardDetails_Response_NewAuthentication_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return SteammessagesCredentialsSteamclient.internal_static_CCredentials_GetSteamGuardDetails_Response_NewAuthentication_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.class, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder.class);
-        }
-
-        // Construct using SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getIpAddressFieldBuilder();
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          timestampSteamguardEnabled_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          isWebCookie_ = false;
-          bitField0_ = (bitField0_ & ~0x00000002);
-          deprecatedIpaddress_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000004);
-          geolocInfo_ = "";
-          bitField0_ = (bitField0_ & ~0x00000008);
-          isRemembered_ = false;
-          bitField0_ = (bitField0_ & ~0x00000010);
-          machineNameUserSupplied_ = "";
-          bitField0_ = (bitField0_ & ~0x00000020);
-          status_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000040);
-          if (ipAddressBuilder_ == null) {
-            ipAddress_ = null;
-          } else {
-            ipAddressBuilder_.clear();
-          }
-          bitField0_ = (bitField0_ & ~0x00000080);
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return SteammessagesCredentialsSteamclient.internal_static_CCredentials_GetSteamGuardDetails_Response_NewAuthentication_descriptor;
-        }
-
-        @java.lang.Override
-        public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication getDefaultInstanceForType() {
-          return SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication build() {
-          SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication buildPartial() {
-          SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication result = new SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.timestampSteamguardEnabled_ = timestampSteamguardEnabled_;
-            to_bitField0_ |= 0x00000001;
-          }
-          if (((from_bitField0_ & 0x00000002) != 0)) {
-            result.isWebCookie_ = isWebCookie_;
-            to_bitField0_ |= 0x00000002;
-          }
-          if (((from_bitField0_ & 0x00000004) != 0)) {
-            result.deprecatedIpaddress_ = deprecatedIpaddress_;
-            to_bitField0_ |= 0x00000004;
-          }
-          if (((from_bitField0_ & 0x00000008) != 0)) {
-            to_bitField0_ |= 0x00000008;
-          }
-          result.geolocInfo_ = geolocInfo_;
-          if (((from_bitField0_ & 0x00000010) != 0)) {
-            result.isRemembered_ = isRemembered_;
-            to_bitField0_ |= 0x00000010;
-          }
-          if (((from_bitField0_ & 0x00000020) != 0)) {
-            to_bitField0_ |= 0x00000020;
-          }
-          result.machineNameUserSupplied_ = machineNameUserSupplied_;
-          if (((from_bitField0_ & 0x00000040) != 0)) {
-            result.status_ = status_;
-            to_bitField0_ |= 0x00000040;
-          }
-          if (((from_bitField0_ & 0x00000080) != 0)) {
-            if (ipAddressBuilder_ == null) {
-              result.ipAddress_ = ipAddress_;
-            } else {
-              result.ipAddress_ = ipAddressBuilder_.build();
-            }
-            to_bitField0_ |= 0x00000080;
-          }
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication) {
-            return mergeFrom((SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication other) {
-          if (other == SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.getDefaultInstance()) return this;
-          if (other.hasTimestampSteamguardEnabled()) {
-            setTimestampSteamguardEnabled(other.getTimestampSteamguardEnabled());
-          }
-          if (other.hasIsWebCookie()) {
-            setIsWebCookie(other.getIsWebCookie());
-          }
-          if (other.hasDeprecatedIpaddress()) {
-            setDeprecatedIpaddress(other.getDeprecatedIpaddress());
-          }
-          if (other.hasGeolocInfo()) {
-            bitField0_ |= 0x00000008;
-            geolocInfo_ = other.geolocInfo_;
-            onChanged();
-          }
-          if (other.hasIsRemembered()) {
-            setIsRemembered(other.getIsRemembered());
-          }
-          if (other.hasMachineNameUserSupplied()) {
-            bitField0_ |= 0x00000020;
-            machineNameUserSupplied_ = other.machineNameUserSupplied_;
-            onChanged();
-          }
-          if (other.hasStatus()) {
-            setStatus(other.getStatus());
-          }
-          if (other.hasIpAddress()) {
-            mergeIpAddress(other.getIpAddress());
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private int timestampSteamguardEnabled_ ;
-        /**
-         * <code>optional fixed32 timestamp_steamguard_enabled = 1;</code>
-         * @return Whether the timestampSteamguardEnabled field is set.
-         */
-        @java.lang.Override
-        public boolean hasTimestampSteamguardEnabled() {
-          return ((bitField0_ & 0x00000001) != 0);
-        }
-        /**
-         * <code>optional fixed32 timestamp_steamguard_enabled = 1;</code>
-         * @return The timestampSteamguardEnabled.
-         */
-        @java.lang.Override
-        public int getTimestampSteamguardEnabled() {
-          return timestampSteamguardEnabled_;
-        }
-        /**
-         * <code>optional fixed32 timestamp_steamguard_enabled = 1;</code>
-         * @param value The timestampSteamguardEnabled to set.
-         * @return This builder for chaining.
-         */
-        public Builder setTimestampSteamguardEnabled(int value) {
-          bitField0_ |= 0x00000001;
-          timestampSteamguardEnabled_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional fixed32 timestamp_steamguard_enabled = 1;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearTimestampSteamguardEnabled() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          timestampSteamguardEnabled_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private boolean isWebCookie_ ;
-        /**
-         * <code>optional bool is_web_cookie = 2;</code>
-         * @return Whether the isWebCookie field is set.
-         */
-        @java.lang.Override
-        public boolean hasIsWebCookie() {
-          return ((bitField0_ & 0x00000002) != 0);
-        }
-        /**
-         * <code>optional bool is_web_cookie = 2;</code>
-         * @return The isWebCookie.
-         */
-        @java.lang.Override
-        public boolean getIsWebCookie() {
-          return isWebCookie_;
-        }
-        /**
-         * <code>optional bool is_web_cookie = 2;</code>
-         * @param value The isWebCookie to set.
-         * @return This builder for chaining.
-         */
-        public Builder setIsWebCookie(boolean value) {
-          bitField0_ |= 0x00000002;
-          isWebCookie_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional bool is_web_cookie = 2;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearIsWebCookie() {
-          bitField0_ = (bitField0_ & ~0x00000002);
-          isWebCookie_ = false;
-          onChanged();
-          return this;
-        }
-
-        private int deprecatedIpaddress_ ;
-        /**
-         * <code>optional int32 deprecated_ipaddress = 3;</code>
-         * @return Whether the deprecatedIpaddress field is set.
-         */
-        @java.lang.Override
-        public boolean hasDeprecatedIpaddress() {
-          return ((bitField0_ & 0x00000004) != 0);
-        }
-        /**
-         * <code>optional int32 deprecated_ipaddress = 3;</code>
-         * @return The deprecatedIpaddress.
-         */
-        @java.lang.Override
-        public int getDeprecatedIpaddress() {
-          return deprecatedIpaddress_;
-        }
-        /**
-         * <code>optional int32 deprecated_ipaddress = 3;</code>
-         * @param value The deprecatedIpaddress to set.
-         * @return This builder for chaining.
-         */
-        public Builder setDeprecatedIpaddress(int value) {
-          bitField0_ |= 0x00000004;
-          deprecatedIpaddress_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional int32 deprecated_ipaddress = 3;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearDeprecatedIpaddress() {
-          bitField0_ = (bitField0_ & ~0x00000004);
-          deprecatedIpaddress_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object geolocInfo_ = "";
-        /**
-         * <code>optional string geoloc_info = 4;</code>
-         * @return Whether the geolocInfo field is set.
-         */
-        public boolean hasGeolocInfo() {
-          return ((bitField0_ & 0x00000008) != 0);
-        }
-        /**
-         * <code>optional string geoloc_info = 4;</code>
-         * @return The geolocInfo.
-         */
-        public java.lang.String getGeolocInfo() {
-          java.lang.Object ref = geolocInfo_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              geolocInfo_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string geoloc_info = 4;</code>
-         * @return The bytes for geolocInfo.
-         */
-        public com.google.protobuf.ByteString
-            getGeolocInfoBytes() {
-          java.lang.Object ref = geolocInfo_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            geolocInfo_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string geoloc_info = 4;</code>
-         * @param value The geolocInfo to set.
-         * @return This builder for chaining.
-         */
-        public Builder setGeolocInfo(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-          geolocInfo_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string geoloc_info = 4;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearGeolocInfo() {
-          bitField0_ = (bitField0_ & ~0x00000008);
-          geolocInfo_ = getDefaultInstance().getGeolocInfo();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string geoloc_info = 4;</code>
-         * @param value The bytes for geolocInfo to set.
-         * @return This builder for chaining.
-         */
-        public Builder setGeolocInfoBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-          geolocInfo_ = value;
-          onChanged();
-          return this;
-        }
-
-        private boolean isRemembered_ ;
-        /**
-         * <code>optional bool is_remembered = 5;</code>
-         * @return Whether the isRemembered field is set.
-         */
-        @java.lang.Override
-        public boolean hasIsRemembered() {
-          return ((bitField0_ & 0x00000010) != 0);
-        }
-        /**
-         * <code>optional bool is_remembered = 5;</code>
-         * @return The isRemembered.
-         */
-        @java.lang.Override
-        public boolean getIsRemembered() {
-          return isRemembered_;
-        }
-        /**
-         * <code>optional bool is_remembered = 5;</code>
-         * @param value The isRemembered to set.
-         * @return This builder for chaining.
-         */
-        public Builder setIsRemembered(boolean value) {
-          bitField0_ |= 0x00000010;
-          isRemembered_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional bool is_remembered = 5;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearIsRemembered() {
-          bitField0_ = (bitField0_ & ~0x00000010);
-          isRemembered_ = false;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object machineNameUserSupplied_ = "";
-        /**
-         * <code>optional string machine_name_user_supplied = 6;</code>
-         * @return Whether the machineNameUserSupplied field is set.
-         */
-        public boolean hasMachineNameUserSupplied() {
-          return ((bitField0_ & 0x00000020) != 0);
-        }
-        /**
-         * <code>optional string machine_name_user_supplied = 6;</code>
-         * @return The machineNameUserSupplied.
-         */
-        public java.lang.String getMachineNameUserSupplied() {
-          java.lang.Object ref = machineNameUserSupplied_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              machineNameUserSupplied_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string machine_name_user_supplied = 6;</code>
-         * @return The bytes for machineNameUserSupplied.
-         */
-        public com.google.protobuf.ByteString
-            getMachineNameUserSuppliedBytes() {
-          java.lang.Object ref = machineNameUserSupplied_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            machineNameUserSupplied_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string machine_name_user_supplied = 6;</code>
-         * @param value The machineNameUserSupplied to set.
-         * @return This builder for chaining.
-         */
-        public Builder setMachineNameUserSupplied(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-          machineNameUserSupplied_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string machine_name_user_supplied = 6;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearMachineNameUserSupplied() {
-          bitField0_ = (bitField0_ & ~0x00000020);
-          machineNameUserSupplied_ = getDefaultInstance().getMachineNameUserSupplied();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string machine_name_user_supplied = 6;</code>
-         * @param value The bytes for machineNameUserSupplied to set.
-         * @return This builder for chaining.
-         */
-        public Builder setMachineNameUserSuppliedBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-          machineNameUserSupplied_ = value;
-          onChanged();
-          return this;
-        }
-
-        private int status_ ;
-        /**
-         * <code>optional int32 status = 7;</code>
-         * @return Whether the status field is set.
-         */
-        @java.lang.Override
-        public boolean hasStatus() {
-          return ((bitField0_ & 0x00000040) != 0);
-        }
-        /**
-         * <code>optional int32 status = 7;</code>
-         * @return The status.
-         */
-        @java.lang.Override
-        public int getStatus() {
-          return status_;
-        }
-        /**
-         * <code>optional int32 status = 7;</code>
-         * @param value The status to set.
-         * @return This builder for chaining.
-         */
-        public Builder setStatus(int value) {
-          bitField0_ |= 0x00000040;
-          status_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional int32 status = 7;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearStatus() {
-          bitField0_ = (bitField0_ & ~0x00000040);
-          status_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private SteammessagesBase.CMsgIPAddress ipAddress_;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            SteammessagesBase.CMsgIPAddress, SteammessagesBase.CMsgIPAddress.Builder, SteammessagesBase.CMsgIPAddressOrBuilder> ipAddressBuilder_;
-        /**
-         * <code>optional .CMsgIPAddress ip_address = 8;</code>
-         * @return Whether the ipAddress field is set.
-         */
-        public boolean hasIpAddress() {
-          return ((bitField0_ & 0x00000080) != 0);
-        }
-        /**
-         * <code>optional .CMsgIPAddress ip_address = 8;</code>
-         * @return The ipAddress.
-         */
-        public SteammessagesBase.CMsgIPAddress getIpAddress() {
-          if (ipAddressBuilder_ == null) {
-            return ipAddress_ == null ? SteammessagesBase.CMsgIPAddress.getDefaultInstance() : ipAddress_;
-          } else {
-            return ipAddressBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>optional .CMsgIPAddress ip_address = 8;</code>
-         */
-        public Builder setIpAddress(SteammessagesBase.CMsgIPAddress value) {
-          if (ipAddressBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ipAddress_ = value;
-            onChanged();
-          } else {
-            ipAddressBuilder_.setMessage(value);
-          }
-          bitField0_ |= 0x00000080;
-          return this;
-        }
-        /**
-         * <code>optional .CMsgIPAddress ip_address = 8;</code>
-         */
-        public Builder setIpAddress(
-            SteammessagesBase.CMsgIPAddress.Builder builderForValue) {
-          if (ipAddressBuilder_ == null) {
-            ipAddress_ = builderForValue.build();
-            onChanged();
-          } else {
-            ipAddressBuilder_.setMessage(builderForValue.build());
-          }
-          bitField0_ |= 0x00000080;
-          return this;
-        }
-        /**
-         * <code>optional .CMsgIPAddress ip_address = 8;</code>
-         */
-        public Builder mergeIpAddress(SteammessagesBase.CMsgIPAddress value) {
-          if (ipAddressBuilder_ == null) {
-            if (((bitField0_ & 0x00000080) != 0) &&
-                ipAddress_ != null &&
-                ipAddress_ != SteammessagesBase.CMsgIPAddress.getDefaultInstance()) {
-              ipAddress_ =
-                SteammessagesBase.CMsgIPAddress.newBuilder(ipAddress_).mergeFrom(value).buildPartial();
-            } else {
-              ipAddress_ = value;
-            }
-            onChanged();
-          } else {
-            ipAddressBuilder_.mergeFrom(value);
-          }
-          bitField0_ |= 0x00000080;
-          return this;
-        }
-        /**
-         * <code>optional .CMsgIPAddress ip_address = 8;</code>
-         */
-        public Builder clearIpAddress() {
-          if (ipAddressBuilder_ == null) {
-            ipAddress_ = null;
-            onChanged();
-          } else {
-            ipAddressBuilder_.clear();
-          }
-          bitField0_ = (bitField0_ & ~0x00000080);
-          return this;
-        }
-        /**
-         * <code>optional .CMsgIPAddress ip_address = 8;</code>
-         */
-        public SteammessagesBase.CMsgIPAddress.Builder getIpAddressBuilder() {
-          bitField0_ |= 0x00000080;
-          onChanged();
-          return getIpAddressFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>optional .CMsgIPAddress ip_address = 8;</code>
-         */
-        public SteammessagesBase.CMsgIPAddressOrBuilder getIpAddressOrBuilder() {
-          if (ipAddressBuilder_ != null) {
-            return ipAddressBuilder_.getMessageOrBuilder();
-          } else {
-            return ipAddress_ == null ?
-                SteammessagesBase.CMsgIPAddress.getDefaultInstance() : ipAddress_;
-          }
-        }
-        /**
-         * <code>optional .CMsgIPAddress ip_address = 8;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            SteammessagesBase.CMsgIPAddress, SteammessagesBase.CMsgIPAddress.Builder, SteammessagesBase.CMsgIPAddressOrBuilder> 
-            getIpAddressFieldBuilder() {
-          if (ipAddressBuilder_ == null) {
-            ipAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                SteammessagesBase.CMsgIPAddress, SteammessagesBase.CMsgIPAddress.Builder, SteammessagesBase.CMsgIPAddressOrBuilder>(
-                    getIpAddress(),
-                    getParentForChildren(),
-                    isClean());
-            ipAddress_ = null;
-          }
-          return ipAddressBuilder_;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:CCredentials_GetSteamGuardDetails_Response.NewAuthentication)
-      }
-
-      // @@protoc_insertion_point(class_scope:CCredentials_GetSteamGuardDetails_Response.NewAuthentication)
-      private static final SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication();
-      }
-
-      public static SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      @java.lang.Deprecated public static final com.google.protobuf.Parser<NewAuthentication>
-          PARSER = new com.google.protobuf.AbstractParser<NewAuthentication>() {
-        @java.lang.Override
-        public NewAuthentication parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new NewAuthentication(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<NewAuthentication> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<NewAuthentication> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
     }
 
     public interface SessionDataOrBuilder extends
@@ -4398,30 +2767,6 @@ public final class SteammessagesCredentialsSteamclient {
       boolean getAuthenticationExistsFromGeolocBeforeMintime();
 
       /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-       */
-      java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> 
-          getNewauthenticationList();
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-       */
-      SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication getNewauthentication(int index);
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-       */
-      int getNewauthenticationCount();
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-       */
-      java.util.List<? extends SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder> 
-          getNewauthenticationOrBuilderList();
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-       */
-      SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder getNewauthenticationOrBuilder(
-          int index);
-
-      /**
        * <code>optional bool authentication_exists_from_same_ip_before_mintime = 6;</code>
        * @return Whether the authenticationExistsFromSameIpBeforeMintime field is set.
        */
@@ -4474,7 +2819,6 @@ public final class SteammessagesCredentialsSteamclient {
       }
       private SessionData() {
         machineNameUserchosen_ = "";
-        newauthentication_ = java.util.Collections.emptyList();
         publicIpAddress_ = "";
       }
 
@@ -4530,15 +2874,6 @@ public final class SteammessagesCredentialsSteamclient {
                 authenticationExistsFromGeolocBeforeMintime_ = input.readBool();
                 break;
               }
-              case 42: {
-                if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                  newauthentication_ = new java.util.ArrayList<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication>();
-                  mutable_bitField0_ |= 0x00000010;
-                }
-                newauthentication_.add(
-                    input.readMessage(SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.PARSER, extensionRegistry));
-                break;
-              }
               case 48: {
                 bitField0_ |= 0x00000010;
                 authenticationExistsFromSameIpBeforeMintime_ = input.readBool();
@@ -4570,9 +2905,6 @@ public final class SteammessagesCredentialsSteamclient {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000010) != 0)) {
-            newauthentication_ = java.util.Collections.unmodifiableList(newauthentication_);
-          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
@@ -4696,46 +3028,6 @@ public final class SteammessagesCredentialsSteamclient {
         return authenticationExistsFromGeolocBeforeMintime_;
       }
 
-      public static final int NEWAUTHENTICATION_FIELD_NUMBER = 5;
-      private java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> newauthentication_;
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-       */
-      @java.lang.Override
-      public java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> getNewauthenticationList() {
-        return newauthentication_;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-       */
-      @java.lang.Override
-      public java.util.List<? extends SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder> 
-          getNewauthenticationOrBuilderList() {
-        return newauthentication_;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-       */
-      @java.lang.Override
-      public int getNewauthenticationCount() {
-        return newauthentication_.size();
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-       */
-      @java.lang.Override
-      public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication getNewauthentication(int index) {
-        return newauthentication_.get(index);
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-       */
-      @java.lang.Override
-      public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder getNewauthenticationOrBuilder(
-          int index) {
-        return newauthentication_.get(index);
-      }
-
       public static final int AUTHENTICATION_EXISTS_FROM_SAME_IP_BEFORE_MINTIME_FIELD_NUMBER = 6;
       private boolean authenticationExistsFromSameIpBeforeMintime_;
       /**
@@ -4848,9 +3140,6 @@ public final class SteammessagesCredentialsSteamclient {
         if (((bitField0_ & 0x00000008) != 0)) {
           output.writeBool(4, authenticationExistsFromGeolocBeforeMintime_);
         }
-        for (int i = 0; i < newauthentication_.size(); i++) {
-          output.writeMessage(5, newauthentication_.get(i));
-        }
         if (((bitField0_ & 0x00000010) != 0)) {
           output.writeBool(6, authenticationExistsFromSameIpBeforeMintime_);
         }
@@ -4883,10 +3172,6 @@ public final class SteammessagesCredentialsSteamclient {
         if (((bitField0_ & 0x00000008) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(4, authenticationExistsFromGeolocBeforeMintime_);
-        }
-        for (int i = 0; i < newauthentication_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(5, newauthentication_.get(i));
         }
         if (((bitField0_ & 0x00000010) != 0)) {
           size += com.google.protobuf.CodedOutputStream
@@ -4934,8 +3219,6 @@ public final class SteammessagesCredentialsSteamclient {
           if (getAuthenticationExistsFromGeolocBeforeMintime()
               != other.getAuthenticationExistsFromGeolocBeforeMintime()) return false;
         }
-        if (!getNewauthenticationList()
-            .equals(other.getNewauthenticationList())) return false;
         if (hasAuthenticationExistsFromSameIpBeforeMintime() != other.hasAuthenticationExistsFromSameIpBeforeMintime()) return false;
         if (hasAuthenticationExistsFromSameIpBeforeMintime()) {
           if (getAuthenticationExistsFromSameIpBeforeMintime()
@@ -4979,10 +3262,6 @@ public final class SteammessagesCredentialsSteamclient {
           hash = (37 * hash) + AUTHENTICATION_EXISTS_FROM_GEOLOC_BEFORE_MINTIME_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getAuthenticationExistsFromGeolocBeforeMintime());
-        }
-        if (getNewauthenticationCount() > 0) {
-          hash = (37 * hash) + NEWAUTHENTICATION_FIELD_NUMBER;
-          hash = (53 * hash) + getNewauthenticationList().hashCode();
         }
         if (hasAuthenticationExistsFromSameIpBeforeMintime()) {
           hash = (37 * hash) + AUTHENTICATION_EXISTS_FROM_SAME_IP_BEFORE_MINTIME_FIELD_NUMBER;
@@ -5125,7 +3404,6 @@ public final class SteammessagesCredentialsSteamclient {
         private void maybeForceBuilderInitialization() {
           if (com.google.protobuf.GeneratedMessageV3
                   .alwaysUseFieldBuilders) {
-            getNewauthenticationFieldBuilder();
           }
         }
         @java.lang.Override
@@ -5139,18 +3417,12 @@ public final class SteammessagesCredentialsSteamclient {
           bitField0_ = (bitField0_ & ~0x00000004);
           authenticationExistsFromGeolocBeforeMintime_ = false;
           bitField0_ = (bitField0_ & ~0x00000008);
-          if (newauthenticationBuilder_ == null) {
-            newauthentication_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000010);
-          } else {
-            newauthenticationBuilder_.clear();
-          }
           authenticationExistsFromSameIpBeforeMintime_ = false;
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
           publicIpv4_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000020);
           publicIpAddress_ = "";
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000040);
           return this;
         }
 
@@ -5195,24 +3467,15 @@ public final class SteammessagesCredentialsSteamclient {
             result.authenticationExistsFromGeolocBeforeMintime_ = authenticationExistsFromGeolocBeforeMintime_;
             to_bitField0_ |= 0x00000008;
           }
-          if (newauthenticationBuilder_ == null) {
-            if (((bitField0_ & 0x00000010) != 0)) {
-              newauthentication_ = java.util.Collections.unmodifiableList(newauthentication_);
-              bitField0_ = (bitField0_ & ~0x00000010);
-            }
-            result.newauthentication_ = newauthentication_;
-          } else {
-            result.newauthentication_ = newauthenticationBuilder_.build();
-          }
-          if (((from_bitField0_ & 0x00000020) != 0)) {
+          if (((from_bitField0_ & 0x00000010) != 0)) {
             result.authenticationExistsFromSameIpBeforeMintime_ = authenticationExistsFromSameIpBeforeMintime_;
             to_bitField0_ |= 0x00000010;
           }
-          if (((from_bitField0_ & 0x00000040) != 0)) {
+          if (((from_bitField0_ & 0x00000020) != 0)) {
             result.publicIpv4_ = publicIpv4_;
             to_bitField0_ |= 0x00000020;
           }
-          if (((from_bitField0_ & 0x00000080) != 0)) {
+          if (((from_bitField0_ & 0x00000040) != 0)) {
             to_bitField0_ |= 0x00000040;
           }
           result.publicIpAddress_ = publicIpAddress_;
@@ -5279,32 +3542,6 @@ public final class SteammessagesCredentialsSteamclient {
           if (other.hasAuthenticationExistsFromGeolocBeforeMintime()) {
             setAuthenticationExistsFromGeolocBeforeMintime(other.getAuthenticationExistsFromGeolocBeforeMintime());
           }
-          if (newauthenticationBuilder_ == null) {
-            if (!other.newauthentication_.isEmpty()) {
-              if (newauthentication_.isEmpty()) {
-                newauthentication_ = other.newauthentication_;
-                bitField0_ = (bitField0_ & ~0x00000010);
-              } else {
-                ensureNewauthenticationIsMutable();
-                newauthentication_.addAll(other.newauthentication_);
-              }
-              onChanged();
-            }
-          } else {
-            if (!other.newauthentication_.isEmpty()) {
-              if (newauthenticationBuilder_.isEmpty()) {
-                newauthenticationBuilder_.dispose();
-                newauthenticationBuilder_ = null;
-                newauthentication_ = other.newauthentication_;
-                bitField0_ = (bitField0_ & ~0x00000010);
-                newauthenticationBuilder_ = 
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                     getNewauthenticationFieldBuilder() : null;
-              } else {
-                newauthenticationBuilder_.addAllMessages(other.newauthentication_);
-              }
-            }
-          }
           if (other.hasAuthenticationExistsFromSameIpBeforeMintime()) {
             setAuthenticationExistsFromSameIpBeforeMintime(other.getAuthenticationExistsFromSameIpBeforeMintime());
           }
@@ -5312,7 +3549,7 @@ public final class SteammessagesCredentialsSteamclient {
             setPublicIpv4(other.getPublicIpv4());
           }
           if (other.hasPublicIpAddress()) {
-            bitField0_ |= 0x00000080;
+            bitField0_ |= 0x00000040;
             publicIpAddress_ = other.publicIpAddress_;
             onChanged();
           }
@@ -5547,246 +3784,6 @@ public final class SteammessagesCredentialsSteamclient {
           return this;
         }
 
-        private java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> newauthentication_ =
-          java.util.Collections.emptyList();
-        private void ensureNewauthenticationIsMutable() {
-          if (!((bitField0_ & 0x00000010) != 0)) {
-            newauthentication_ = new java.util.ArrayList<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication>(newauthentication_);
-            bitField0_ |= 0x00000010;
-           }
-        }
-
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder> newauthenticationBuilder_;
-
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> getNewauthenticationList() {
-          if (newauthenticationBuilder_ == null) {
-            return java.util.Collections.unmodifiableList(newauthentication_);
-          } else {
-            return newauthenticationBuilder_.getMessageList();
-          }
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public int getNewauthenticationCount() {
-          if (newauthenticationBuilder_ == null) {
-            return newauthentication_.size();
-          } else {
-            return newauthenticationBuilder_.getCount();
-          }
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication getNewauthentication(int index) {
-          if (newauthenticationBuilder_ == null) {
-            return newauthentication_.get(index);
-          } else {
-            return newauthenticationBuilder_.getMessage(index);
-          }
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public Builder setNewauthentication(
-            int index, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication value) {
-          if (newauthenticationBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureNewauthenticationIsMutable();
-            newauthentication_.set(index, value);
-            onChanged();
-          } else {
-            newauthenticationBuilder_.setMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public Builder setNewauthentication(
-            int index, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder builderForValue) {
-          if (newauthenticationBuilder_ == null) {
-            ensureNewauthenticationIsMutable();
-            newauthentication_.set(index, builderForValue.build());
-            onChanged();
-          } else {
-            newauthenticationBuilder_.setMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public Builder addNewauthentication(SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication value) {
-          if (newauthenticationBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureNewauthenticationIsMutable();
-            newauthentication_.add(value);
-            onChanged();
-          } else {
-            newauthenticationBuilder_.addMessage(value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public Builder addNewauthentication(
-            int index, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication value) {
-          if (newauthenticationBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureNewauthenticationIsMutable();
-            newauthentication_.add(index, value);
-            onChanged();
-          } else {
-            newauthenticationBuilder_.addMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public Builder addNewauthentication(
-            SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder builderForValue) {
-          if (newauthenticationBuilder_ == null) {
-            ensureNewauthenticationIsMutable();
-            newauthentication_.add(builderForValue.build());
-            onChanged();
-          } else {
-            newauthenticationBuilder_.addMessage(builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public Builder addNewauthentication(
-            int index, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder builderForValue) {
-          if (newauthenticationBuilder_ == null) {
-            ensureNewauthenticationIsMutable();
-            newauthentication_.add(index, builderForValue.build());
-            onChanged();
-          } else {
-            newauthenticationBuilder_.addMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public Builder addAllNewauthentication(
-            java.lang.Iterable<? extends SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> values) {
-          if (newauthenticationBuilder_ == null) {
-            ensureNewauthenticationIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, newauthentication_);
-            onChanged();
-          } else {
-            newauthenticationBuilder_.addAllMessages(values);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public Builder clearNewauthentication() {
-          if (newauthenticationBuilder_ == null) {
-            newauthentication_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000010);
-            onChanged();
-          } else {
-            newauthenticationBuilder_.clear();
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public Builder removeNewauthentication(int index) {
-          if (newauthenticationBuilder_ == null) {
-            ensureNewauthenticationIsMutable();
-            newauthentication_.remove(index);
-            onChanged();
-          } else {
-            newauthenticationBuilder_.remove(index);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder getNewauthenticationBuilder(
-            int index) {
-          return getNewauthenticationFieldBuilder().getBuilder(index);
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder getNewauthenticationOrBuilder(
-            int index) {
-          if (newauthenticationBuilder_ == null) {
-            return newauthentication_.get(index);  } else {
-            return newauthenticationBuilder_.getMessageOrBuilder(index);
-          }
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public java.util.List<? extends SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder> 
-             getNewauthenticationOrBuilderList() {
-          if (newauthenticationBuilder_ != null) {
-            return newauthenticationBuilder_.getMessageOrBuilderList();
-          } else {
-            return java.util.Collections.unmodifiableList(newauthentication_);
-          }
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder addNewauthenticationBuilder() {
-          return getNewauthenticationFieldBuilder().addBuilder(
-              SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder addNewauthenticationBuilder(
-            int index) {
-          return getNewauthenticationFieldBuilder().addBuilder(
-              index, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication newauthentication = 5;</code>
-         */
-        public java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder> 
-             getNewauthenticationBuilderList() {
-          return getNewauthenticationFieldBuilder().getBuilderList();
-        }
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder> 
-            getNewauthenticationFieldBuilder() {
-          if (newauthenticationBuilder_ == null) {
-            newauthenticationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder>(
-                    newauthentication_,
-                    ((bitField0_ & 0x00000010) != 0),
-                    getParentForChildren(),
-                    isClean());
-            newauthentication_ = null;
-          }
-          return newauthenticationBuilder_;
-        }
-
         private boolean authenticationExistsFromSameIpBeforeMintime_ ;
         /**
          * <code>optional bool authentication_exists_from_same_ip_before_mintime = 6;</code>
@@ -5794,7 +3791,7 @@ public final class SteammessagesCredentialsSteamclient {
          */
         @java.lang.Override
         public boolean hasAuthenticationExistsFromSameIpBeforeMintime() {
-          return ((bitField0_ & 0x00000020) != 0);
+          return ((bitField0_ & 0x00000010) != 0);
         }
         /**
          * <code>optional bool authentication_exists_from_same_ip_before_mintime = 6;</code>
@@ -5810,7 +3807,7 @@ public final class SteammessagesCredentialsSteamclient {
          * @return This builder for chaining.
          */
         public Builder setAuthenticationExistsFromSameIpBeforeMintime(boolean value) {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           authenticationExistsFromSameIpBeforeMintime_ = value;
           onChanged();
           return this;
@@ -5820,7 +3817,7 @@ public final class SteammessagesCredentialsSteamclient {
          * @return This builder for chaining.
          */
         public Builder clearAuthenticationExistsFromSameIpBeforeMintime() {
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
           authenticationExistsFromSameIpBeforeMintime_ = false;
           onChanged();
           return this;
@@ -5833,7 +3830,7 @@ public final class SteammessagesCredentialsSteamclient {
          */
         @java.lang.Override
         public boolean hasPublicIpv4() {
-          return ((bitField0_ & 0x00000040) != 0);
+          return ((bitField0_ & 0x00000020) != 0);
         }
         /**
          * <code>optional uint32 public_ipv4 = 7;</code>
@@ -5849,7 +3846,7 @@ public final class SteammessagesCredentialsSteamclient {
          * @return This builder for chaining.
          */
         public Builder setPublicIpv4(int value) {
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
           publicIpv4_ = value;
           onChanged();
           return this;
@@ -5859,7 +3856,7 @@ public final class SteammessagesCredentialsSteamclient {
          * @return This builder for chaining.
          */
         public Builder clearPublicIpv4() {
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000020);
           publicIpv4_ = 0;
           onChanged();
           return this;
@@ -5871,7 +3868,7 @@ public final class SteammessagesCredentialsSteamclient {
          * @return Whether the publicIpAddress field is set.
          */
         public boolean hasPublicIpAddress() {
-          return ((bitField0_ & 0x00000080) != 0);
+          return ((bitField0_ & 0x00000040) != 0);
         }
         /**
          * <code>optional string public_ip_address = 8;</code>
@@ -5918,7 +3915,7 @@ public final class SteammessagesCredentialsSteamclient {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000040;
           publicIpAddress_ = value;
           onChanged();
           return this;
@@ -5928,7 +3925,7 @@ public final class SteammessagesCredentialsSteamclient {
          * @return This builder for chaining.
          */
         public Builder clearPublicIpAddress() {
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000040);
           publicIpAddress_ = getDefaultInstance().getPublicIpAddress();
           onChanged();
           return this;
@@ -5943,7 +3940,7 @@ public final class SteammessagesCredentialsSteamclient {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000080;
+  bitField0_ |= 0x00000040;
           publicIpAddress_ = value;
           onChanged();
           return this;
@@ -6038,46 +4035,6 @@ public final class SteammessagesCredentialsSteamclient {
     @java.lang.Override
     public int getTimestampSteamguardEnabled() {
       return timestampSteamguardEnabled_;
-    }
-
-    public static final int DEPRECATED_NEWAUTHENTICATION_FIELD_NUMBER = 3;
-    private java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> deprecatedNewauthentication_;
-    /**
-     * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-     */
-    @java.lang.Override
-    public java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> getDeprecatedNewauthenticationList() {
-      return deprecatedNewauthentication_;
-    }
-    /**
-     * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder> 
-        getDeprecatedNewauthenticationOrBuilderList() {
-      return deprecatedNewauthentication_;
-    }
-    /**
-     * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-     */
-    @java.lang.Override
-    public int getDeprecatedNewauthenticationCount() {
-      return deprecatedNewauthentication_.size();
-    }
-    /**
-     * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-     */
-    @java.lang.Override
-    public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication getDeprecatedNewauthentication(int index) {
-      return deprecatedNewauthentication_.get(index);
-    }
-    /**
-     * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-     */
-    @java.lang.Override
-    public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder getDeprecatedNewauthenticationOrBuilder(
-        int index) {
-      return deprecatedNewauthentication_.get(index);
     }
 
     public static final int DEPRECATED_MACHINE_NAME_USERCHOSEN_FIELD_NUMBER = 4;
@@ -6302,9 +4259,6 @@ public final class SteammessagesCredentialsSteamclient {
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeFixed32(2, timestampSteamguardEnabled_);
       }
-      for (int i = 0; i < deprecatedNewauthentication_.size(); i++) {
-        output.writeMessage(3, deprecatedNewauthentication_.get(i));
-      }
       if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deprecatedMachineNameUserchosen_);
       }
@@ -6345,10 +4299,6 @@ public final class SteammessagesCredentialsSteamclient {
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(2, timestampSteamguardEnabled_);
-      }
-      for (int i = 0; i < deprecatedNewauthentication_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, deprecatedNewauthentication_.get(i));
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deprecatedMachineNameUserchosen_);
@@ -6406,8 +4356,6 @@ public final class SteammessagesCredentialsSteamclient {
         if (getTimestampSteamguardEnabled()
             != other.getTimestampSteamguardEnabled()) return false;
       }
-      if (!getDeprecatedNewauthenticationList()
-          .equals(other.getDeprecatedNewauthenticationList())) return false;
       if (hasDeprecatedMachineNameUserchosen() != other.hasDeprecatedMachineNameUserchosen()) return false;
       if (hasDeprecatedMachineNameUserchosen()) {
         if (!getDeprecatedMachineNameUserchosen()
@@ -6464,10 +4412,6 @@ public final class SteammessagesCredentialsSteamclient {
       if (hasTimestampSteamguardEnabled()) {
         hash = (37 * hash) + TIMESTAMP_STEAMGUARD_ENABLED_FIELD_NUMBER;
         hash = (53 * hash) + getTimestampSteamguardEnabled();
-      }
-      if (getDeprecatedNewauthenticationCount() > 0) {
-        hash = (37 * hash) + DEPRECATED_NEWAUTHENTICATION_FIELD_NUMBER;
-        hash = (53 * hash) + getDeprecatedNewauthenticationList().hashCode();
       }
       if (hasDeprecatedMachineNameUserchosen()) {
         hash = (37 * hash) + DEPRECATED_MACHINE_NAME_USERCHOSEN_FIELD_NUMBER;
@@ -6633,7 +4577,6 @@ public final class SteammessagesCredentialsSteamclient {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getDeprecatedNewauthenticationFieldBuilder();
           getSessionDataFieldBuilder();
         }
       }
@@ -6644,32 +4587,26 @@ public final class SteammessagesCredentialsSteamclient {
         bitField0_ = (bitField0_ & ~0x00000001);
         timestampSteamguardEnabled_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          deprecatedNewauthentication_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          deprecatedNewauthenticationBuilder_.clear();
-        }
         deprecatedMachineNameUserchosen_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         deprecatedTimestampMachineSteamguardEnabled_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         deprecatedAuthenticationExistsFromGeolocBeforeMintime_ = false;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         deprecatedMachineId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (sessionDataBuilder_ == null) {
           sessionData_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
           sessionDataBuilder_.clear();
         }
         isTwofactorEnabled_ = false;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         timestampTwofactorEnabled_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         isPhoneVerified_ = false;
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -6706,49 +4643,40 @@ public final class SteammessagesCredentialsSteamclient {
           result.timestampSteamguardEnabled_ = timestampSteamguardEnabled_;
           to_bitField0_ |= 0x00000002;
         }
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
-            deprecatedNewauthentication_ = java.util.Collections.unmodifiableList(deprecatedNewauthentication_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.deprecatedNewauthentication_ = deprecatedNewauthentication_;
-        } else {
-          result.deprecatedNewauthentication_ = deprecatedNewauthenticationBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           to_bitField0_ |= 0x00000004;
         }
         result.deprecatedMachineNameUserchosen_ = deprecatedMachineNameUserchosen_;
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.deprecatedTimestampMachineSteamguardEnabled_ = deprecatedTimestampMachineSteamguardEnabled_;
           to_bitField0_ |= 0x00000008;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.deprecatedAuthenticationExistsFromGeolocBeforeMintime_ = deprecatedAuthenticationExistsFromGeolocBeforeMintime_;
           to_bitField0_ |= 0x00000010;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.deprecatedMachineId_ = deprecatedMachineId_;
           to_bitField0_ |= 0x00000020;
         }
         if (sessionDataBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             sessionData_ = java.util.Collections.unmodifiableList(sessionData_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.sessionData_ = sessionData_;
         } else {
           result.sessionData_ = sessionDataBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000080) != 0)) {
           result.isTwofactorEnabled_ = isTwofactorEnabled_;
           to_bitField0_ |= 0x00000040;
         }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (((from_bitField0_ & 0x00000100) != 0)) {
           result.timestampTwofactorEnabled_ = timestampTwofactorEnabled_;
           to_bitField0_ |= 0x00000080;
         }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
+        if (((from_bitField0_ & 0x00000200) != 0)) {
           result.isPhoneVerified_ = isPhoneVerified_;
           to_bitField0_ |= 0x00000100;
         }
@@ -6807,34 +4735,8 @@ public final class SteammessagesCredentialsSteamclient {
         if (other.hasTimestampSteamguardEnabled()) {
           setTimestampSteamguardEnabled(other.getTimestampSteamguardEnabled());
         }
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          if (!other.deprecatedNewauthentication_.isEmpty()) {
-            if (deprecatedNewauthentication_.isEmpty()) {
-              deprecatedNewauthentication_ = other.deprecatedNewauthentication_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureDeprecatedNewauthenticationIsMutable();
-              deprecatedNewauthentication_.addAll(other.deprecatedNewauthentication_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.deprecatedNewauthentication_.isEmpty()) {
-            if (deprecatedNewauthenticationBuilder_.isEmpty()) {
-              deprecatedNewauthenticationBuilder_.dispose();
-              deprecatedNewauthenticationBuilder_ = null;
-              deprecatedNewauthentication_ = other.deprecatedNewauthentication_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              deprecatedNewauthenticationBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getDeprecatedNewauthenticationFieldBuilder() : null;
-            } else {
-              deprecatedNewauthenticationBuilder_.addAllMessages(other.deprecatedNewauthentication_);
-            }
-          }
-        }
         if (other.hasDeprecatedMachineNameUserchosen()) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           deprecatedMachineNameUserchosen_ = other.deprecatedMachineNameUserchosen_;
           onChanged();
         }
@@ -6851,7 +4753,7 @@ public final class SteammessagesCredentialsSteamclient {
           if (!other.sessionData_.isEmpty()) {
             if (sessionData_.isEmpty()) {
               sessionData_ = other.sessionData_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureSessionDataIsMutable();
               sessionData_.addAll(other.sessionData_);
@@ -6864,7 +4766,7 @@ public final class SteammessagesCredentialsSteamclient {
               sessionDataBuilder_.dispose();
               sessionDataBuilder_ = null;
               sessionData_ = other.sessionData_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000040);
               sessionDataBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSessionDataFieldBuilder() : null;
@@ -6990,253 +4892,13 @@ public final class SteammessagesCredentialsSteamclient {
         return this;
       }
 
-      private java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> deprecatedNewauthentication_ =
-        java.util.Collections.emptyList();
-      private void ensureDeprecatedNewauthenticationIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          deprecatedNewauthentication_ = new java.util.ArrayList<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication>(deprecatedNewauthentication_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder> deprecatedNewauthenticationBuilder_;
-
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> getDeprecatedNewauthenticationList() {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(deprecatedNewauthentication_);
-        } else {
-          return deprecatedNewauthenticationBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public int getDeprecatedNewauthenticationCount() {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          return deprecatedNewauthentication_.size();
-        } else {
-          return deprecatedNewauthenticationBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication getDeprecatedNewauthentication(int index) {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          return deprecatedNewauthentication_.get(index);
-        } else {
-          return deprecatedNewauthenticationBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public Builder setDeprecatedNewauthentication(
-          int index, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication value) {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDeprecatedNewauthenticationIsMutable();
-          deprecatedNewauthentication_.set(index, value);
-          onChanged();
-        } else {
-          deprecatedNewauthenticationBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public Builder setDeprecatedNewauthentication(
-          int index, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder builderForValue) {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          ensureDeprecatedNewauthenticationIsMutable();
-          deprecatedNewauthentication_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          deprecatedNewauthenticationBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public Builder addDeprecatedNewauthentication(SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication value) {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDeprecatedNewauthenticationIsMutable();
-          deprecatedNewauthentication_.add(value);
-          onChanged();
-        } else {
-          deprecatedNewauthenticationBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public Builder addDeprecatedNewauthentication(
-          int index, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication value) {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDeprecatedNewauthenticationIsMutable();
-          deprecatedNewauthentication_.add(index, value);
-          onChanged();
-        } else {
-          deprecatedNewauthenticationBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public Builder addDeprecatedNewauthentication(
-          SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder builderForValue) {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          ensureDeprecatedNewauthenticationIsMutable();
-          deprecatedNewauthentication_.add(builderForValue.build());
-          onChanged();
-        } else {
-          deprecatedNewauthenticationBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public Builder addDeprecatedNewauthentication(
-          int index, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder builderForValue) {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          ensureDeprecatedNewauthenticationIsMutable();
-          deprecatedNewauthentication_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          deprecatedNewauthenticationBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public Builder addAllDeprecatedNewauthentication(
-          java.lang.Iterable<? extends SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication> values) {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          ensureDeprecatedNewauthenticationIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, deprecatedNewauthentication_);
-          onChanged();
-        } else {
-          deprecatedNewauthenticationBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public Builder clearDeprecatedNewauthentication() {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          deprecatedNewauthentication_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          deprecatedNewauthenticationBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public Builder removeDeprecatedNewauthentication(int index) {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          ensureDeprecatedNewauthenticationIsMutable();
-          deprecatedNewauthentication_.remove(index);
-          onChanged();
-        } else {
-          deprecatedNewauthenticationBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder getDeprecatedNewauthenticationBuilder(
-          int index) {
-        return getDeprecatedNewauthenticationFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder getDeprecatedNewauthenticationOrBuilder(
-          int index) {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          return deprecatedNewauthentication_.get(index);  } else {
-          return deprecatedNewauthenticationBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public java.util.List<? extends SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder> 
-           getDeprecatedNewauthenticationOrBuilderList() {
-        if (deprecatedNewauthenticationBuilder_ != null) {
-          return deprecatedNewauthenticationBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(deprecatedNewauthentication_);
-        }
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder addDeprecatedNewauthenticationBuilder() {
-        return getDeprecatedNewauthenticationFieldBuilder().addBuilder(
-            SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder addDeprecatedNewauthenticationBuilder(
-          int index) {
-        return getDeprecatedNewauthenticationFieldBuilder().addBuilder(
-            index, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .CCredentials_GetSteamGuardDetails_Response.NewAuthentication deprecated_newauthentication = 3;</code>
-       */
-      public java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder> 
-           getDeprecatedNewauthenticationBuilderList() {
-        return getDeprecatedNewauthenticationFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder> 
-          getDeprecatedNewauthenticationFieldBuilder() {
-        if (deprecatedNewauthenticationBuilder_ == null) {
-          deprecatedNewauthenticationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthentication.Builder, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.NewAuthenticationOrBuilder>(
-                  deprecatedNewauthentication_,
-                  ((bitField0_ & 0x00000004) != 0),
-                  getParentForChildren(),
-                  isClean());
-          deprecatedNewauthentication_ = null;
-        }
-        return deprecatedNewauthenticationBuilder_;
-      }
-
       private java.lang.Object deprecatedMachineNameUserchosen_ = "";
       /**
        * <code>optional string deprecated_machine_name_userchosen = 4;</code>
        * @return Whether the deprecatedMachineNameUserchosen field is set.
        */
       public boolean hasDeprecatedMachineNameUserchosen() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>optional string deprecated_machine_name_userchosen = 4;</code>
@@ -7283,7 +4945,7 @@ public final class SteammessagesCredentialsSteamclient {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         deprecatedMachineNameUserchosen_ = value;
         onChanged();
         return this;
@@ -7293,7 +4955,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearDeprecatedMachineNameUserchosen() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         deprecatedMachineNameUserchosen_ = getDefaultInstance().getDeprecatedMachineNameUserchosen();
         onChanged();
         return this;
@@ -7308,7 +4970,7 @@ public final class SteammessagesCredentialsSteamclient {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         deprecatedMachineNameUserchosen_ = value;
         onChanged();
         return this;
@@ -7321,7 +4983,7 @@ public final class SteammessagesCredentialsSteamclient {
        */
       @java.lang.Override
       public boolean hasDeprecatedTimestampMachineSteamguardEnabled() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>optional fixed32 deprecated_timestamp_machine_steamguard_enabled = 5;</code>
@@ -7337,7 +4999,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder setDeprecatedTimestampMachineSteamguardEnabled(int value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         deprecatedTimestampMachineSteamguardEnabled_ = value;
         onChanged();
         return this;
@@ -7347,7 +5009,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearDeprecatedTimestampMachineSteamguardEnabled() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         deprecatedTimestampMachineSteamguardEnabled_ = 0;
         onChanged();
         return this;
@@ -7360,7 +5022,7 @@ public final class SteammessagesCredentialsSteamclient {
        */
       @java.lang.Override
       public boolean hasDeprecatedAuthenticationExistsFromGeolocBeforeMintime() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>optional bool deprecated_authentication_exists_from_geoloc_before_mintime = 6;</code>
@@ -7376,7 +5038,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder setDeprecatedAuthenticationExistsFromGeolocBeforeMintime(boolean value) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         deprecatedAuthenticationExistsFromGeolocBeforeMintime_ = value;
         onChanged();
         return this;
@@ -7386,7 +5048,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearDeprecatedAuthenticationExistsFromGeolocBeforeMintime() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         deprecatedAuthenticationExistsFromGeolocBeforeMintime_ = false;
         onChanged();
         return this;
@@ -7399,7 +5061,7 @@ public final class SteammessagesCredentialsSteamclient {
        */
       @java.lang.Override
       public boolean hasDeprecatedMachineId() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>optional uint64 deprecated_machine_id = 7;</code>
@@ -7415,7 +5077,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder setDeprecatedMachineId(long value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         deprecatedMachineId_ = value;
         onChanged();
         return this;
@@ -7425,7 +5087,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearDeprecatedMachineId() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         deprecatedMachineId_ = 0L;
         onChanged();
         return this;
@@ -7434,9 +5096,9 @@ public final class SteammessagesCredentialsSteamclient {
       private java.util.List<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.SessionData> sessionData_ =
         java.util.Collections.emptyList();
       private void ensureSessionDataIsMutable() {
-        if (!((bitField0_ & 0x00000080) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           sessionData_ = new java.util.ArrayList<SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.SessionData>(sessionData_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -7586,7 +5248,7 @@ public final class SteammessagesCredentialsSteamclient {
       public Builder clearSessionData() {
         if (sessionDataBuilder_ == null) {
           sessionData_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           sessionDataBuilder_.clear();
@@ -7663,7 +5325,7 @@ public final class SteammessagesCredentialsSteamclient {
           sessionDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.SessionData, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.SessionData.Builder, SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response.SessionDataOrBuilder>(
                   sessionData_,
-                  ((bitField0_ & 0x00000080) != 0),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           sessionData_ = null;
@@ -7678,7 +5340,7 @@ public final class SteammessagesCredentialsSteamclient {
        */
       @java.lang.Override
       public boolean hasIsTwofactorEnabled() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <code>optional bool is_twofactor_enabled = 9;</code>
@@ -7694,7 +5356,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder setIsTwofactorEnabled(boolean value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000080;
         isTwofactorEnabled_ = value;
         onChanged();
         return this;
@@ -7704,7 +5366,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearIsTwofactorEnabled() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         isTwofactorEnabled_ = false;
         onChanged();
         return this;
@@ -7717,7 +5379,7 @@ public final class SteammessagesCredentialsSteamclient {
        */
       @java.lang.Override
       public boolean hasTimestampTwofactorEnabled() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <code>optional fixed32 timestamp_twofactor_enabled = 10;</code>
@@ -7733,7 +5395,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder setTimestampTwofactorEnabled(int value) {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000100;
         timestampTwofactorEnabled_ = value;
         onChanged();
         return this;
@@ -7743,7 +5405,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearTimestampTwofactorEnabled() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         timestampTwofactorEnabled_ = 0;
         onChanged();
         return this;
@@ -7756,7 +5418,7 @@ public final class SteammessagesCredentialsSteamclient {
        */
       @java.lang.Override
       public boolean hasIsPhoneVerified() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>optional bool is_phone_verified = 11;</code>
@@ -7772,7 +5434,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder setIsPhoneVerified(boolean value) {
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000200;
         isPhoneVerified_ = value;
         onChanged();
         return this;
@@ -7782,7 +5444,7 @@ public final class SteammessagesCredentialsSteamclient {
        * @return This builder for chaining.
        */
       public Builder clearIsPhoneVerified() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
         isPhoneVerified_ = false;
         onChanged();
         return this;
@@ -7835,1048 +5497,6 @@ public final class SteammessagesCredentialsSteamclient {
 
     @java.lang.Override
     public SteammessagesCredentialsSteamclient.CCredentials_GetSteamGuardDetails_Response getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CCredentials_NewMachineNotificationDialog_RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CCredentials_NewMachineNotificationDialog_Request)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional bool is_approved = 1;</code>
-     * @return Whether the isApproved field is set.
-     */
-    boolean hasIsApproved();
-    /**
-     * <code>optional bool is_approved = 1;</code>
-     * @return The isApproved.
-     */
-    boolean getIsApproved();
-
-    /**
-     * <code>optional bool is_wizard_complete = 2;</code>
-     * @return Whether the isWizardComplete field is set.
-     */
-    boolean hasIsWizardComplete();
-    /**
-     * <code>optional bool is_wizard_complete = 2;</code>
-     * @return The isWizardComplete.
-     */
-    boolean getIsWizardComplete();
-  }
-  /**
-   * Protobuf type {@code CCredentials_NewMachineNotificationDialog_Request}
-   */
-  public static final class CCredentials_NewMachineNotificationDialog_Request extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CCredentials_NewMachineNotificationDialog_Request)
-      CCredentials_NewMachineNotificationDialog_RequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CCredentials_NewMachineNotificationDialog_Request.newBuilder() to construct.
-    private CCredentials_NewMachineNotificationDialog_Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CCredentials_NewMachineNotificationDialog_Request() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CCredentials_NewMachineNotificationDialog_Request();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CCredentials_NewMachineNotificationDialog_Request(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              bitField0_ |= 0x00000001;
-              isApproved_ = input.readBool();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              isWizardComplete_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesCredentialsSteamclient.internal_static_CCredentials_NewMachineNotificationDialog_Request_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesCredentialsSteamclient.internal_static_CCredentials_NewMachineNotificationDialog_Request_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request.class, SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int IS_APPROVED_FIELD_NUMBER = 1;
-    private boolean isApproved_;
-    /**
-     * <code>optional bool is_approved = 1;</code>
-     * @return Whether the isApproved field is set.
-     */
-    @java.lang.Override
-    public boolean hasIsApproved() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>optional bool is_approved = 1;</code>
-     * @return The isApproved.
-     */
-    @java.lang.Override
-    public boolean getIsApproved() {
-      return isApproved_;
-    }
-
-    public static final int IS_WIZARD_COMPLETE_FIELD_NUMBER = 2;
-    private boolean isWizardComplete_;
-    /**
-     * <code>optional bool is_wizard_complete = 2;</code>
-     * @return Whether the isWizardComplete field is set.
-     */
-    @java.lang.Override
-    public boolean hasIsWizardComplete() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional bool is_wizard_complete = 2;</code>
-     * @return The isWizardComplete.
-     */
-    @java.lang.Override
-    public boolean getIsWizardComplete() {
-      return isWizardComplete_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeBool(1, isApproved_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeBool(2, isWizardComplete_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isApproved_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isWizardComplete_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request)) {
-        return super.equals(obj);
-      }
-      SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request other = (SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request) obj;
-
-      if (hasIsApproved() != other.hasIsApproved()) return false;
-      if (hasIsApproved()) {
-        if (getIsApproved()
-            != other.getIsApproved()) return false;
-      }
-      if (hasIsWizardComplete() != other.hasIsWizardComplete()) return false;
-      if (hasIsWizardComplete()) {
-        if (getIsWizardComplete()
-            != other.getIsWizardComplete()) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasIsApproved()) {
-        hash = (37 * hash) + IS_APPROVED_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getIsApproved());
-      }
-      if (hasIsWizardComplete()) {
-        hash = (37 * hash) + IS_WIZARD_COMPLETE_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getIsWizardComplete());
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CCredentials_NewMachineNotificationDialog_Request}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CCredentials_NewMachineNotificationDialog_Request)
-        SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_RequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesCredentialsSteamclient.internal_static_CCredentials_NewMachineNotificationDialog_Request_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesCredentialsSteamclient.internal_static_CCredentials_NewMachineNotificationDialog_Request_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request.class, SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request.Builder.class);
-      }
-
-      // Construct using SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        isApproved_ = false;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isWizardComplete_ = false;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesCredentialsSteamclient.internal_static_CCredentials_NewMachineNotificationDialog_Request_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request getDefaultInstanceForType() {
-        return SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request build() {
-        SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request buildPartial() {
-        SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request result = new SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isApproved_ = isApproved_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.isWizardComplete_ = isWizardComplete_;
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request) {
-          return mergeFrom((SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request other) {
-        if (other == SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request.getDefaultInstance()) return this;
-        if (other.hasIsApproved()) {
-          setIsApproved(other.getIsApproved());
-        }
-        if (other.hasIsWizardComplete()) {
-          setIsWizardComplete(other.getIsWizardComplete());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean isApproved_ ;
-      /**
-       * <code>optional bool is_approved = 1;</code>
-       * @return Whether the isApproved field is set.
-       */
-      @java.lang.Override
-      public boolean hasIsApproved() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>optional bool is_approved = 1;</code>
-       * @return The isApproved.
-       */
-      @java.lang.Override
-      public boolean getIsApproved() {
-        return isApproved_;
-      }
-      /**
-       * <code>optional bool is_approved = 1;</code>
-       * @param value The isApproved to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsApproved(boolean value) {
-        bitField0_ |= 0x00000001;
-        isApproved_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool is_approved = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsApproved() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isApproved_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean isWizardComplete_ ;
-      /**
-       * <code>optional bool is_wizard_complete = 2;</code>
-       * @return Whether the isWizardComplete field is set.
-       */
-      @java.lang.Override
-      public boolean hasIsWizardComplete() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>optional bool is_wizard_complete = 2;</code>
-       * @return The isWizardComplete.
-       */
-      @java.lang.Override
-      public boolean getIsWizardComplete() {
-        return isWizardComplete_;
-      }
-      /**
-       * <code>optional bool is_wizard_complete = 2;</code>
-       * @param value The isWizardComplete to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsWizardComplete(boolean value) {
-        bitField0_ |= 0x00000002;
-        isWizardComplete_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool is_wizard_complete = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsWizardComplete() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        isWizardComplete_ = false;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CCredentials_NewMachineNotificationDialog_Request)
-    }
-
-    // @@protoc_insertion_point(class_scope:CCredentials_NewMachineNotificationDialog_Request)
-    private static final SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request();
-    }
-
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCredentials_NewMachineNotificationDialog_Request>
-        PARSER = new com.google.protobuf.AbstractParser<CCredentials_NewMachineNotificationDialog_Request>() {
-      @java.lang.Override
-      public CCredentials_NewMachineNotificationDialog_Request parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CCredentials_NewMachineNotificationDialog_Request(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CCredentials_NewMachineNotificationDialog_Request> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CCredentials_NewMachineNotificationDialog_Request> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Request getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CCredentials_NewMachineNotificationDialog_ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CCredentials_NewMachineNotificationDialog_Response)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * Protobuf type {@code CCredentials_NewMachineNotificationDialog_Response}
-   */
-  public static final class CCredentials_NewMachineNotificationDialog_Response extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CCredentials_NewMachineNotificationDialog_Response)
-      CCredentials_NewMachineNotificationDialog_ResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CCredentials_NewMachineNotificationDialog_Response.newBuilder() to construct.
-    private CCredentials_NewMachineNotificationDialog_Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CCredentials_NewMachineNotificationDialog_Response() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CCredentials_NewMachineNotificationDialog_Response();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CCredentials_NewMachineNotificationDialog_Response(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return SteammessagesCredentialsSteamclient.internal_static_CCredentials_NewMachineNotificationDialog_Response_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return SteammessagesCredentialsSteamclient.internal_static_CCredentials_NewMachineNotificationDialog_Response_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response.class, SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response)) {
-        return super.equals(obj);
-      }
-      SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response other = (SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response) obj;
-
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CCredentials_NewMachineNotificationDialog_Response}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CCredentials_NewMachineNotificationDialog_Response)
-        SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_ResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SteammessagesCredentialsSteamclient.internal_static_CCredentials_NewMachineNotificationDialog_Response_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SteammessagesCredentialsSteamclient.internal_static_CCredentials_NewMachineNotificationDialog_Response_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response.class, SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response.Builder.class);
-      }
-
-      // Construct using SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return SteammessagesCredentialsSteamclient.internal_static_CCredentials_NewMachineNotificationDialog_Response_descriptor;
-      }
-
-      @java.lang.Override
-      public SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response getDefaultInstanceForType() {
-        return SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response build() {
-        SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response buildPartial() {
-        SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response result = new SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response) {
-          return mergeFrom((SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response other) {
-        if (other == SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CCredentials_NewMachineNotificationDialog_Response)
-    }
-
-    // @@protoc_insertion_point(class_scope:CCredentials_NewMachineNotificationDialog_Response)
-    private static final SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response();
-    }
-
-    public static SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<CCredentials_NewMachineNotificationDialog_Response>
-        PARSER = new com.google.protobuf.AbstractParser<CCredentials_NewMachineNotificationDialog_Response>() {
-      @java.lang.Override
-      public CCredentials_NewMachineNotificationDialog_Response parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CCredentials_NewMachineNotificationDialog_Response(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CCredentials_NewMachineNotificationDialog_Response> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CCredentials_NewMachineNotificationDialog_Response> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public SteammessagesCredentialsSteamclient.CCredentials_NewMachineNotificationDialog_Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15172,25 +11792,10 @@ public final class SteammessagesCredentialsSteamclient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCredentials_GetSteamGuardDetails_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCredentials_GetSteamGuardDetails_Response_NewAuthentication_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCredentials_GetSteamGuardDetails_Response_NewAuthentication_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCredentials_GetSteamGuardDetails_Response_SessionData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CCredentials_GetSteamGuardDetails_Response_SessionData_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCredentials_NewMachineNotificationDialog_Request_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCredentials_NewMachineNotificationDialog_Request_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CCredentials_NewMachineNotificationDialog_Response_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CCredentials_NewMachineNotificationDialog_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCredentials_ValidateEmailAddress_Request_descriptor;
   private static final 
@@ -15241,115 +11846,93 @@ public final class SteammessagesCredentialsSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n1steam/steammessages_credentials.steamc" +
-      "lient.proto\0322steam/steammessages_unified" +
-      "_base.steamclient.proto\032\036steam/steammess" +
-      "ages_base.proto\"q\n*CCredentials_TestAvai" +
+      "lient.proto\032\036steam/steammessages_base.pr" +
+      "oto\0322steam/steammessages_unified_base.st" +
+      "eamclient.proto\"q\n*CCredentials_TestAvai" +
       "lablePassword_Request\022\020\n\010password\030\001 \001(\t\022" +
       "\033\n\023sha_digest_password\030\002 \001(\014\022\024\n\014account_" +
       "name\030\003 \001(\t\"?\n+CCredentials_TestAvailable" +
-      "Password_Response\022\020\n\010is_valid\030\003 \001(\010\"\236\003\n)" +
+      "Password_Response\022\020\n\010is_valid\030\003 \001(\010\"\247\002\n)" +
       "CCredentials_GetSteamGuardDetails_Reques" +
-      "t\022u\n\033include_new_authentications\030\001 \001(\010:\004" +
-      "trueBJ\202\265\030FWhether or not to populate the" +
-      " newauthentication field in the response" +
-      "\022\225\001\n\twebcookie\030\002 \001(\tB\201\001\202\265\030}The user\'s St" +
-      "eam Guard machine auth cookie. If presen" +
-      "t, it\'ll be used to get the user\'s machi" +
-      "ne ID instead of the AM session.\022 \n\030time" +
-      "stamp_minimum_wanted\030\003 \001(\007\022\034\n\024deprecated" +
-      "_ipaddress\030\004 \001(\005\022\"\n\nip_address\030\005 \001(\0132\016.C" +
-      "MsgIPAddress\"\263\t\n*CCredentials_GetSteamGu" +
-      "ardDetails_Response\022\035\n\025is_steamguard_ena" +
-      "bled\030\001 \001(\010\022$\n\034timestamp_steamguard_enabl" +
-      "ed\030\002 \001(\007\022c\n\034deprecated_newauthentication" +
-      "\030\003 \003(\0132=.CCredentials_GetSteamGuardDetai" +
-      "ls_Response.NewAuthentication\022*\n\"depreca" +
-      "ted_machine_name_userchosen\030\004 \001(\t\0227\n/dep" +
-      "recated_timestamp_machine_steamguard_ena" +
-      "bled\030\005 \001(\007\022C\n;deprecated_authentication_" +
-      "exists_from_geoloc_before_mintime\030\006 \001(\010\022" +
-      "\035\n\025deprecated_machine_id\030\007 \001(\004\022M\n\014sessio" +
-      "n_data\030\010 \003(\01327.CCredentials_GetSteamGuar" +
-      "dDetails_Response.SessionData\022\034\n\024is_twof" +
-      "actor_enabled\030\t \001(\010\022#\n\033timestamp_twofact" +
-      "or_enabled\030\n \001(\007\022\031\n\021is_phone_verified\030\013 " +
-      "\001(\010\032\362\001\n\021NewAuthentication\022$\n\034timestamp_s" +
-      "teamguard_enabled\030\001 \001(\007\022\025\n\ris_web_cookie" +
-      "\030\002 \001(\010\022\034\n\024deprecated_ipaddress\030\003 \001(\005\022\023\n\013" +
-      "geoloc_info\030\004 \001(\t\022\025\n\ris_remembered\030\005 \001(\010" +
-      "\022\"\n\032machine_name_user_supplied\030\006 \001(\t\022\016\n\006" +
-      "status\030\007 \001(\005\022\"\n\nip_address\030\010 \001(\0132\016.CMsgI" +
-      "PAddress\032\357\002\n\013SessionData\022\022\n\nmachine_id\030\001" +
-      " \001(\004\022\037\n\027machine_name_userchosen\030\002 \001(\t\022,\n" +
-      "$timestamp_machine_steamguard_enabled\030\003 " +
-      "\001(\007\0228\n0authentication_exists_from_geoloc" +
-      "_before_mintime\030\004 \001(\010\022X\n\021newauthenticati" +
-      "on\030\005 \003(\0132=.CCredentials_GetSteamGuardDet" +
-      "ails_Response.NewAuthentication\0229\n1authe" +
-      "ntication_exists_from_same_ip_before_min" +
-      "time\030\006 \001(\010\022\023\n\013public_ipv4\030\007 \001(\r\022\031\n\021publi" +
-      "c_ip_address\030\010 \001(\t\"d\n1CCredentials_NewMa" +
-      "chineNotificationDialog_Request\022\023\n\013is_ap" +
-      "proved\030\001 \001(\010\022\032\n\022is_wizard_complete\030\002 \001(\010" +
-      "\"4\n2CCredentials_NewMachineNotificationD" +
-      "ialog_Response\";\n)CCredentials_ValidateE" +
-      "mailAddress_Request\022\016\n\006stoken\030\001 \001(\t\"C\n*C" +
-      "Credentials_ValidateEmailAddress_Respons" +
-      "e\022\025\n\rwas_validated\030\001 \001(\010\"_\n-CCredentials" +
-      "_SteamGuardPhishingReport_Request\022\024\n\014par" +
-      "am_string\030\001 \001(\t\022\030\n\020ipaddress_actual\030\002 \001(" +
-      "\t\"\263\002\n.CCredentials_SteamGuardPhishingRep" +
-      "ort_Response\022\036\n\026ipaddress_loginattempt\030\001" +
-      " \001(\t\022 \n\030countryname_loginattempt\030\002 \001(\t\022\036" +
-      "\n\026statename_loginattempt\030\003 \001(\t\022\035\n\025cityna" +
-      "me_loginattempt\030\004 \001(\t\022\030\n\020ipaddress_actua" +
-      "l\030\005 \001(\t\022\032\n\022countryname_actual\030\006 \001(\t\022\030\n\020s" +
-      "tatename_actual\030\007 \001(\t\022\027\n\017cityname_actual" +
-      "\030\010 \001(\t\022\027\n\017steamguard_code\030\t \001(\t\"J\n-CCred" +
-      "entials_LastCredentialChangeTime_Request" +
-      "\022\031\n\021user_changes_only\030\001 \001(\010\"\244\001\n.CCredent" +
-      "ials_LastCredentialChangeTime_Response\022&" +
-      "\n\036timestamp_last_password_change\030\001 \001(\007\022#" +
-      "\n\033timestamp_last_email_change\030\002 \001(\007\022%\n\035t" +
-      "imestamp_last_password_reset\030\003 \001(\007\"+\n)CC" +
-      "redentials_GetAccountAuthSecret_Request\"" +
-      "O\n*CCredentials_GetAccountAuthSecret_Res" +
-      "ponse\022\021\n\tsecret_id\030\001 \001(\005\022\016\n\006secret\030\002 \001(\014" +
-      "2\355\010\n\013Credentials\022\216\001\n\025TestAvailablePasswo" +
-      "rd\022+.CCredentials_TestAvailablePassword_" +
-      "Request\032,.CCredentials_TestAvailablePass" +
-      "word_Response\"\032\202\265\030\026TestAvailablePassword" +
-      ".\022\212\001\n\024GetSteamGuardDetails\022*.CCredential" +
-      "s_GetSteamGuardDetails_Request\032+.CCreden" +
-      "tials_GetSteamGuardDetails_Response\"\031\202\265\030" +
-      "\025GetSteamGuardDetails.\022\266\001\n\"NewMachineNot" +
-      "ificationDialogResult\0222.CCredentials_New" +
-      "MachineNotificationDialog_Request\0323.CCre" +
-      "dentials_NewMachineNotificationDialog_Re" +
-      "sponse\"\'\202\265\030#NewMachineNotificationDialog" +
-      "Result.\022\234\001\n\024ValidateEmailAddress\022*.CCred" +
-      "entials_ValidateEmailAddress_Request\032+.C" +
-      "Credentials_ValidateEmailAddress_Respons" +
-      "e\"+\202\265\030\'Validate an email address given a" +
-      " token\022\231\001\n\030SteamGuardPhishingReport\022..CC" +
-      "redentials_SteamGuardPhishingReport_Requ" +
-      "est\032/.CCredentials_SteamGuardPhishingRep" +
-      "ort_Response\"\034\202\265\030\030SteamGuardPhishingRepo" +
-      "rt\022\246\001\n\036GetCredentialChangeTimeDetails\022.." +
-      "CCredentials_LastCredentialChangeTime_Re" +
-      "quest\032/.CCredentials_LastCredentialChang" +
-      "eTime_Response\"#\202\265\030\037GetCredentialChangeT" +
-      "imeDetails.\022\211\001\n\024GetAccountAuthSecret\022*.C" +
-      "Credentials_GetAccountAuthSecret_Request" +
-      "\032+.CCredentials_GetAccountAuthSecret_Res" +
-      "ponse\"\030\202\265\030\024GetAccountAuthSecret\032\027\202\265\030\023Cre" +
-      "dentials serviceB\003\200\001\001"
+      "t\022\225\001\n\twebcookie\030\002 \001(\tB\201\001\202\265\030}The user\'s S" +
+      "team Guard machine auth cookie. If prese" +
+      "nt, it\'ll be used to get the user\'s mach" +
+      "ine ID instead of the AM session.\022 \n\030tim" +
+      "estamp_minimum_wanted\030\003 \001(\007\022\034\n\024deprecate" +
+      "d_ipaddress\030\004 \001(\005\022\"\n\nip_address\030\005 \001(\0132\016." +
+      "CMsgIPAddress\"\377\005\n*CCredentials_GetSteamG" +
+      "uardDetails_Response\022\035\n\025is_steamguard_en" +
+      "abled\030\001 \001(\010\022$\n\034timestamp_steamguard_enab" +
+      "led\030\002 \001(\007\022*\n\"deprecated_machine_name_use" +
+      "rchosen\030\004 \001(\t\0227\n/deprecated_timestamp_ma" +
+      "chine_steamguard_enabled\030\005 \001(\007\022C\n;deprec" +
+      "ated_authentication_exists_from_geoloc_b" +
+      "efore_mintime\030\006 \001(\010\022\035\n\025deprecated_machin" +
+      "e_id\030\007 \001(\004\022M\n\014session_data\030\010 \003(\01327.CCred" +
+      "entials_GetSteamGuardDetails_Response.Se" +
+      "ssionData\022\034\n\024is_twofactor_enabled\030\t \001(\010\022" +
+      "#\n\033timestamp_twofactor_enabled\030\n \001(\007\022\031\n\021" +
+      "is_phone_verified\030\013 \001(\010\032\225\002\n\013SessionData\022" +
+      "\022\n\nmachine_id\030\001 \001(\004\022\037\n\027machine_name_user" +
+      "chosen\030\002 \001(\t\022,\n$timestamp_machine_steamg" +
+      "uard_enabled\030\003 \001(\007\0228\n0authentication_exi" +
+      "sts_from_geoloc_before_mintime\030\004 \001(\010\0229\n1" +
+      "authentication_exists_from_same_ip_befor" +
+      "e_mintime\030\006 \001(\010\022\023\n\013public_ipv4\030\007 \001(\r\022\031\n\021" +
+      "public_ip_address\030\010 \001(\t\";\n)CCredentials_" +
+      "ValidateEmailAddress_Request\022\016\n\006stoken\030\001" +
+      " \001(\t\"C\n*CCredentials_ValidateEmailAddres" +
+      "s_Response\022\025\n\rwas_validated\030\001 \001(\010\"_\n-CCr" +
+      "edentials_SteamGuardPhishingReport_Reque" +
+      "st\022\024\n\014param_string\030\001 \001(\t\022\030\n\020ipaddress_ac" +
+      "tual\030\002 \001(\t\"\263\002\n.CCredentials_SteamGuardPh" +
+      "ishingReport_Response\022\036\n\026ipaddress_login" +
+      "attempt\030\001 \001(\t\022 \n\030countryname_loginattemp" +
+      "t\030\002 \001(\t\022\036\n\026statename_loginattempt\030\003 \001(\t\022" +
+      "\035\n\025cityname_loginattempt\030\004 \001(\t\022\030\n\020ipaddr" +
+      "ess_actual\030\005 \001(\t\022\032\n\022countryname_actual\030\006" +
+      " \001(\t\022\030\n\020statename_actual\030\007 \001(\t\022\027\n\017cityna" +
+      "me_actual\030\010 \001(\t\022\027\n\017steamguard_code\030\t \001(\t" +
+      "\"J\n-CCredentials_LastCredentialChangeTim" +
+      "e_Request\022\031\n\021user_changes_only\030\001 \001(\010\"\244\001\n" +
+      ".CCredentials_LastCredentialChangeTime_R" +
+      "esponse\022&\n\036timestamp_last_password_chang" +
+      "e\030\001 \001(\007\022#\n\033timestamp_last_email_change\030\002" +
+      " \001(\007\022%\n\035timestamp_last_password_reset\030\003 " +
+      "\001(\007\"+\n)CCredentials_GetAccountAuthSecret" +
+      "_Request\"O\n*CCredentials_GetAccountAuthS" +
+      "ecret_Response\022\021\n\tsecret_id\030\001 \001(\005\022\016\n\006sec" +
+      "ret\030\002 \001(\0142\264\007\n\013Credentials\022\216\001\n\025TestAvaila" +
+      "blePassword\022+.CCredentials_TestAvailable" +
+      "Password_Request\032,.CCredentials_TestAvai" +
+      "lablePassword_Response\"\032\202\265\030\026TestAvailabl" +
+      "ePassword.\022\212\001\n\024GetSteamGuardDetails\022*.CC" +
+      "redentials_GetSteamGuardDetails_Request\032" +
+      "+.CCredentials_GetSteamGuardDetails_Resp" +
+      "onse\"\031\202\265\030\025GetSteamGuardDetails.\022\234\001\n\024Vali" +
+      "dateEmailAddress\022*.CCredentials_Validate" +
+      "EmailAddress_Request\032+.CCredentials_Vali" +
+      "dateEmailAddress_Response\"+\202\265\030\'Validate " +
+      "an email address given a token\022\231\001\n\030Steam" +
+      "GuardPhishingReport\022..CCredentials_Steam" +
+      "GuardPhishingReport_Request\032/.CCredentia" +
+      "ls_SteamGuardPhishingReport_Response\"\034\202\265" +
+      "\030\030SteamGuardPhishingReport\022\246\001\n\036GetCreden" +
+      "tialChangeTimeDetails\022..CCredentials_Las" +
+      "tCredentialChangeTime_Request\032/.CCredent" +
+      "ials_LastCredentialChangeTime_Response\"#" +
+      "\202\265\030\037GetCredentialChangeTimeDetails.\022\211\001\n\024" +
+      "GetAccountAuthSecret\022*.CCredentials_GetA" +
+      "ccountAuthSecret_Request\032+.CCredentials_" +
+      "GetAccountAuthSecret_Response\"\030\202\265\030\024GetAc" +
+      "countAuthSecret\032\027\202\265\030\023Credentials service" +
+      "B\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          SteammessagesUnifiedBaseSteamclient.getDescriptor(),
           SteammessagesBase.getDescriptor(),
+          SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CCredentials_TestAvailablePassword_Request_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -15368,81 +11951,63 @@ public final class SteammessagesCredentialsSteamclient {
     internal_static_CCredentials_GetSteamGuardDetails_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_GetSteamGuardDetails_Request_descriptor,
-        new java.lang.String[] { "IncludeNewAuthentications", "Webcookie", "TimestampMinimumWanted", "DeprecatedIpaddress", "IpAddress", });
+        new java.lang.String[] { "Webcookie", "TimestampMinimumWanted", "DeprecatedIpaddress", "IpAddress", });
     internal_static_CCredentials_GetSteamGuardDetails_Response_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_CCredentials_GetSteamGuardDetails_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_GetSteamGuardDetails_Response_descriptor,
-        new java.lang.String[] { "IsSteamguardEnabled", "TimestampSteamguardEnabled", "DeprecatedNewauthentication", "DeprecatedMachineNameUserchosen", "DeprecatedTimestampMachineSteamguardEnabled", "DeprecatedAuthenticationExistsFromGeolocBeforeMintime", "DeprecatedMachineId", "SessionData", "IsTwofactorEnabled", "TimestampTwofactorEnabled", "IsPhoneVerified", });
-    internal_static_CCredentials_GetSteamGuardDetails_Response_NewAuthentication_descriptor =
-      internal_static_CCredentials_GetSteamGuardDetails_Response_descriptor.getNestedTypes().get(0);
-    internal_static_CCredentials_GetSteamGuardDetails_Response_NewAuthentication_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCredentials_GetSteamGuardDetails_Response_NewAuthentication_descriptor,
-        new java.lang.String[] { "TimestampSteamguardEnabled", "IsWebCookie", "DeprecatedIpaddress", "GeolocInfo", "IsRemembered", "MachineNameUserSupplied", "Status", "IpAddress", });
+        new java.lang.String[] { "IsSteamguardEnabled", "TimestampSteamguardEnabled", "DeprecatedMachineNameUserchosen", "DeprecatedTimestampMachineSteamguardEnabled", "DeprecatedAuthenticationExistsFromGeolocBeforeMintime", "DeprecatedMachineId", "SessionData", "IsTwofactorEnabled", "TimestampTwofactorEnabled", "IsPhoneVerified", });
     internal_static_CCredentials_GetSteamGuardDetails_Response_SessionData_descriptor =
-      internal_static_CCredentials_GetSteamGuardDetails_Response_descriptor.getNestedTypes().get(1);
+      internal_static_CCredentials_GetSteamGuardDetails_Response_descriptor.getNestedTypes().get(0);
     internal_static_CCredentials_GetSteamGuardDetails_Response_SessionData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_GetSteamGuardDetails_Response_SessionData_descriptor,
-        new java.lang.String[] { "MachineId", "MachineNameUserchosen", "TimestampMachineSteamguardEnabled", "AuthenticationExistsFromGeolocBeforeMintime", "Newauthentication", "AuthenticationExistsFromSameIpBeforeMintime", "PublicIpv4", "PublicIpAddress", });
-    internal_static_CCredentials_NewMachineNotificationDialog_Request_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_CCredentials_NewMachineNotificationDialog_Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCredentials_NewMachineNotificationDialog_Request_descriptor,
-        new java.lang.String[] { "IsApproved", "IsWizardComplete", });
-    internal_static_CCredentials_NewMachineNotificationDialog_Response_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_CCredentials_NewMachineNotificationDialog_Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CCredentials_NewMachineNotificationDialog_Response_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "MachineId", "MachineNameUserchosen", "TimestampMachineSteamguardEnabled", "AuthenticationExistsFromGeolocBeforeMintime", "AuthenticationExistsFromSameIpBeforeMintime", "PublicIpv4", "PublicIpAddress", });
     internal_static_CCredentials_ValidateEmailAddress_Request_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CCredentials_ValidateEmailAddress_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_ValidateEmailAddress_Request_descriptor,
         new java.lang.String[] { "Stoken", });
     internal_static_CCredentials_ValidateEmailAddress_Response_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CCredentials_ValidateEmailAddress_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_ValidateEmailAddress_Response_descriptor,
         new java.lang.String[] { "WasValidated", });
     internal_static_CCredentials_SteamGuardPhishingReport_Request_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CCredentials_SteamGuardPhishingReport_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_SteamGuardPhishingReport_Request_descriptor,
         new java.lang.String[] { "ParamString", "IpaddressActual", });
     internal_static_CCredentials_SteamGuardPhishingReport_Response_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CCredentials_SteamGuardPhishingReport_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_SteamGuardPhishingReport_Response_descriptor,
         new java.lang.String[] { "IpaddressLoginattempt", "CountrynameLoginattempt", "StatenameLoginattempt", "CitynameLoginattempt", "IpaddressActual", "CountrynameActual", "StatenameActual", "CitynameActual", "SteamguardCode", });
     internal_static_CCredentials_LastCredentialChangeTime_Request_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CCredentials_LastCredentialChangeTime_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_LastCredentialChangeTime_Request_descriptor,
         new java.lang.String[] { "UserChangesOnly", });
     internal_static_CCredentials_LastCredentialChangeTime_Response_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CCredentials_LastCredentialChangeTime_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_LastCredentialChangeTime_Response_descriptor,
         new java.lang.String[] { "TimestampLastPasswordChange", "TimestampLastEmailChange", "TimestampLastPasswordReset", });
     internal_static_CCredentials_GetAccountAuthSecret_Request_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CCredentials_GetAccountAuthSecret_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_GetAccountAuthSecret_Request_descriptor,
         new java.lang.String[] { });
     internal_static_CCredentials_GetAccountAuthSecret_Response_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CCredentials_GetAccountAuthSecret_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CCredentials_GetAccountAuthSecret_Response_descriptor,
@@ -15454,8 +12019,8 @@ public final class SteammessagesCredentialsSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    SteammessagesUnifiedBaseSteamclient.getDescriptor();
     SteammessagesBase.getDescriptor();
+    SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

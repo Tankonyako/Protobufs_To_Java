@@ -7680,64 +7680,65 @@ public final class SteammessagesStarSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n*steam/steammessages_star.steamclient.p" +
-      "roto\0322steam/steammessages_unified_base.s" +
-      "teamclient.proto\"\306\001\n\023CSTAR_KeyValueQuery" +
-      "\022C\n\003key\030\001 \001(\tB6\202\265\0302key to search for in " +
-      "JSON path format (SQL subset)\022j\n\005value\030\002" +
-      " \001(\tB[\202\265\030Wthe value to compare against (" +
-      "the JSON value will be compared for equa" +
-      "lity as a string)\"\313\001\n\026CSTAR_GlyphQueryPa" +
-      "rams\022s\n\tbundle_id\030\001 \001(\004B`\202\265\030\\if provided" +
-      ", Bundle ID is used instead of the other" +
-      " query parameters (much faster SQL query" +
-      ")\022<\n\007queries\030\002 \003(\0132\024.CSTAR_KeyValueQuery" +
-      "B\025\202\265\030\021key value queries\"\224\002\n\033CSTAR_ReadGl" +
-      "yphData_Request\022e\n\014query_params\030\001 \001(\0132\027." +
-      "CSTAR_GlyphQueryParamsB6\202\265\0302parameters t" +
-      "o identify the glyphs to read from SQL\022\215" +
-      "\001\n\036last_modified_time_lower_limit\030\002 \001(\tB" +
-      "e\202\265\030aif provided, only return glyphs mod" +
-      "ified more recently than this timestamp " +
-      " (RFC 3339 UTC format)\"\354\001\n\017CSTAR_GlyphDa" +
-      "ta\022<\n\nglyph_guid\030\001 \001(\014B(\202\265\030$GUID uniquel" +
-      "y identifying this glyph\022e\n\023glyph_last_m" +
-      "odified\030\002 \001(\tBH\202\265\030Dtimestamp of when thi" +
-      "s glyph was last modified (RFC 3339 UTC " +
-      "format)\0224\n\017glyph_json_data\030\003 \001(\tB\033\202\265\030\027JS" +
-      "ON encoded glyph data\"\264\001\n\034CSTAR_WriteGly" +
-      "phData_Request\022@\n\tbundle_id\030\001 \001(\004B-\202\265\030)t" +
-      "he Bundle ID of the glyphs to be written" +
-      "\022R\n\nglyph_data\030\002 \003(\0132\020.CSTAR_GlyphDataB," +
-      "\202\265\030(one or more items of glyph data to w" +
-      "rite\"\177\n\rCSTAR_Request\0225\n\017read_glyph_data" +
-      "\030\001 \001(\0132\034.CSTAR_ReadGlyphData_Request\0227\n\020" +
-      "write_glyph_data\030\002 \001(\0132\035.CSTAR_WriteGlyp" +
-      "hData_Request\"\361\001\n\034CSTAR_ReadGlyphData_Re" +
-      "sponse\022|\n\tbundle_id\030\001 \001(\004Bi\202\265\030ethe Bundl" +
-      "e ID of the returned glyphs; the client " +
-      "should send this back to optimize subseq" +
-      "uent queries\022S\n\nglyph_data\030\002 \003(\0132\020.CSTAR" +
-      "_GlyphDataB-\202\265\030)zero or more items of re" +
-      "turned glyph data\"w\n\035CSTAR_WriteGlyphDat" +
-      "a_Response\022V\n\006result\030\001 \003(\0162\030.E_STAR_Glyp" +
-      "hWriteResultB,\202\265\030(write result for each " +
-      "item of glyph data\"\202\001\n\016CSTAR_Response\0226\n" +
-      "\017read_glyph_data\030\001 \001(\0132\035.CSTAR_ReadGlyph" +
-      "Data_Response\0228\n\020write_glyph_data\030\002 \001(\0132" +
-      "\036.CSTAR_WriteGlyphData_Response*\301\001\n\027E_ST" +
-      "AR_GlyphWriteResult\022%\n!k_E_STAR_GlyphWri" +
-      "teResult_Success\020\000\022,\n(k_E_STAR_GlyphWrit" +
-      "eResult_InvalidMessage\020\001\022)\n%k_E_STAR_Gly" +
-      "phWriteResult_InvalidJSON\020\002\022&\n\"k_E_STAR_" +
-      "GlyphWriteResult_SQLError\020\0032\205\001\n\004STAR\022R\n\016" +
-      "ProcessMessage\022\016.CSTAR_Request\032\017.CSTAR_R" +
-      "esponse\"\037\202\265\030\033processes a generic message" +
-      "\032)\202\265\030%service for reading/writing STAR d" +
-      "ataB\003\200\001\001"
+      "roto\032\036steam/steammessages_base.proto\0322st" +
+      "eam/steammessages_unified_base.steamclie" +
+      "nt.proto\"\306\001\n\023CSTAR_KeyValueQuery\022C\n\003key\030" +
+      "\001 \001(\tB6\202\265\0302key to search for in JSON pat" +
+      "h format (SQL subset)\022j\n\005value\030\002 \001(\tB[\202\265" +
+      "\030Wthe value to compare against (the JSON" +
+      " value will be compared for equality as " +
+      "a string)\"\313\001\n\026CSTAR_GlyphQueryParams\022s\n\t" +
+      "bundle_id\030\001 \001(\004B`\202\265\030\\if provided, Bundle" +
+      " ID is used instead of the other query p" +
+      "arameters (much faster SQL query)\022<\n\007que" +
+      "ries\030\002 \003(\0132\024.CSTAR_KeyValueQueryB\025\202\265\030\021ke" +
+      "y value queries\"\224\002\n\033CSTAR_ReadGlyphData_" +
+      "Request\022e\n\014query_params\030\001 \001(\0132\027.CSTAR_Gl" +
+      "yphQueryParamsB6\202\265\0302parameters to identi" +
+      "fy the glyphs to read from SQL\022\215\001\n\036last_" +
+      "modified_time_lower_limit\030\002 \001(\tBe\202\265\030aif " +
+      "provided, only return glyphs modified mo" +
+      "re recently than this timestamp  (RFC 33" +
+      "39 UTC format)\"\354\001\n\017CSTAR_GlyphData\022<\n\ngl" +
+      "yph_guid\030\001 \001(\014B(\202\265\030$GUID uniquely identi" +
+      "fying this glyph\022e\n\023glyph_last_modified\030" +
+      "\002 \001(\tBH\202\265\030Dtimestamp of when this glyph " +
+      "was last modified (RFC 3339 UTC format)\022" +
+      "4\n\017glyph_json_data\030\003 \001(\tB\033\202\265\030\027JSON encod" +
+      "ed glyph data\"\264\001\n\034CSTAR_WriteGlyphData_R" +
+      "equest\022@\n\tbundle_id\030\001 \001(\004B-\202\265\030)the Bundl" +
+      "e ID of the glyphs to be written\022R\n\nglyp" +
+      "h_data\030\002 \003(\0132\020.CSTAR_GlyphDataB,\202\265\030(one " +
+      "or more items of glyph data to write\"\177\n\r" +
+      "CSTAR_Request\0225\n\017read_glyph_data\030\001 \001(\0132\034" +
+      ".CSTAR_ReadGlyphData_Request\0227\n\020write_gl" +
+      "yph_data\030\002 \001(\0132\035.CSTAR_WriteGlyphData_Re" +
+      "quest\"\361\001\n\034CSTAR_ReadGlyphData_Response\022|" +
+      "\n\tbundle_id\030\001 \001(\004Bi\202\265\030ethe Bundle ID of " +
+      "the returned glyphs; the client should s" +
+      "end this back to optimize subsequent que" +
+      "ries\022S\n\nglyph_data\030\002 \003(\0132\020.CSTAR_GlyphDa" +
+      "taB-\202\265\030)zero or more items of returned g" +
+      "lyph data\"w\n\035CSTAR_WriteGlyphData_Respon" +
+      "se\022V\n\006result\030\001 \003(\0162\030.E_STAR_GlyphWriteRe" +
+      "sultB,\202\265\030(write result for each item of " +
+      "glyph data\"\202\001\n\016CSTAR_Response\0226\n\017read_gl" +
+      "yph_data\030\001 \001(\0132\035.CSTAR_ReadGlyphData_Res" +
+      "ponse\0228\n\020write_glyph_data\030\002 \001(\0132\036.CSTAR_" +
+      "WriteGlyphData_Response*\301\001\n\027E_STAR_Glyph" +
+      "WriteResult\022%\n!k_E_STAR_GlyphWriteResult" +
+      "_Success\020\000\022,\n(k_E_STAR_GlyphWriteResult_" +
+      "InvalidMessage\020\001\022)\n%k_E_STAR_GlyphWriteR" +
+      "esult_InvalidJSON\020\002\022&\n\"k_E_STAR_GlyphWri" +
+      "teResult_SQLError\020\0032\205\001\n\004STAR\022R\n\016ProcessM" +
+      "essage\022\016.CSTAR_Request\032\017.CSTAR_Response\"" +
+      "\037\202\265\030\033processes a generic message\032)\202\265\030%se" +
+      "rvice for reading/writing STAR dataB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CSTAR_KeyValueQuery_descriptor =
@@ -7801,6 +7802,7 @@ public final class SteammessagesStarSteamclient {
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 

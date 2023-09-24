@@ -2918,6 +2918,17 @@ public final class SteammessagesPartnerappsSteamclient {
      */
     com.google.protobuf.ByteString
         getToolNameBytes();
+
+    /**
+     * <code>optional bool use_cloud = 6 [default = false, (.description) = "use cloud storage for build products"];</code>
+     * @return Whether the useCloud field is set.
+     */
+    boolean hasUseCloud();
+    /**
+     * <code>optional bool use_cloud = 6 [default = false, (.description) = "use cloud storage for build products"];</code>
+     * @return The useCloud.
+     */
+    boolean getUseCloud();
   }
   /**
    * Protobuf type {@code CPartnerApps_FinishUploadLegacyDRM_Request}
@@ -2990,6 +3001,11 @@ public final class SteammessagesPartnerappsSteamclient {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
               toolName_ = bs;
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              useCloud_ = input.readBool();
               break;
             }
             default: {
@@ -3149,6 +3165,25 @@ public final class SteammessagesPartnerappsSteamclient {
       }
     }
 
+    public static final int USE_CLOUD_FIELD_NUMBER = 6;
+    private boolean useCloud_;
+    /**
+     * <code>optional bool use_cloud = 6 [default = false, (.description) = "use cloud storage for build products"];</code>
+     * @return Whether the useCloud field is set.
+     */
+    @java.lang.Override
+    public boolean hasUseCloud() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional bool use_cloud = 6 [default = false, (.description) = "use cloud storage for build products"];</code>
+     * @return The useCloud.
+     */
+    @java.lang.Override
+    public boolean getUseCloud() {
+      return useCloud_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3178,6 +3213,9 @@ public final class SteammessagesPartnerappsSteamclient {
       if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, toolName_);
       }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeBool(6, useCloud_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3205,6 +3243,10 @@ public final class SteammessagesPartnerappsSteamclient {
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, toolName_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, useCloud_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3246,6 +3288,11 @@ public final class SteammessagesPartnerappsSteamclient {
         if (!getToolName()
             .equals(other.getToolName())) return false;
       }
+      if (hasUseCloud() != other.hasUseCloud()) return false;
+      if (hasUseCloud()) {
+        if (getUseCloud()
+            != other.getUseCloud()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3278,6 +3325,11 @@ public final class SteammessagesPartnerappsSteamclient {
       if (hasToolName()) {
         hash = (37 * hash) + TOOL_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getToolName().hashCode();
+      }
+      if (hasUseCloud()) {
+        hash = (37 * hash) + USE_CLOUD_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUseCloud());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3422,6 +3474,8 @@ public final class SteammessagesPartnerappsSteamclient {
         bitField0_ = (bitField0_ & ~0x00000008);
         toolName_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
+        useCloud_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -3470,6 +3524,10 @@ public final class SteammessagesPartnerappsSteamclient {
           to_bitField0_ |= 0x00000010;
         }
         result.toolName_ = toolName_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.useCloud_ = useCloud_;
+          to_bitField0_ |= 0x00000020;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3535,6 +3593,9 @@ public final class SteammessagesPartnerappsSteamclient {
           bitField0_ |= 0x00000010;
           toolName_ = other.toolName_;
           onChanged();
+        }
+        if (other.hasUseCloud()) {
+          setUseCloud(other.getUseCloud());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3802,6 +3863,45 @@ public final class SteammessagesPartnerappsSteamclient {
   }
   bitField0_ |= 0x00000010;
         toolName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean useCloud_ ;
+      /**
+       * <code>optional bool use_cloud = 6 [default = false, (.description) = "use cloud storage for build products"];</code>
+       * @return Whether the useCloud field is set.
+       */
+      @java.lang.Override
+      public boolean hasUseCloud() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional bool use_cloud = 6 [default = false, (.description) = "use cloud storage for build products"];</code>
+       * @return The useCloud.
+       */
+      @java.lang.Override
+      public boolean getUseCloud() {
+        return useCloud_;
+      }
+      /**
+       * <code>optional bool use_cloud = 6 [default = false, (.description) = "use cloud storage for build products"];</code>
+       * @param value The useCloud to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUseCloud(boolean value) {
+        bitField0_ |= 0x00000020;
+        useCloud_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool use_cloud = 6 [default = false, (.description) = "use cloud storage for build products"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUseCloud() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        useCloud_ = false;
         onChanged();
         return this;
       }
@@ -5806,6 +5906,17 @@ public final class SteammessagesPartnerappsSteamclient {
   public interface CPartnerApps_FinishUploadDepot_ResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CPartnerApps_FinishUploadDepot_Response)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 build_routing_id = 1;</code>
+     * @return Whether the buildRoutingId field is set.
+     */
+    boolean hasBuildRoutingId();
+    /**
+     * <code>optional uint64 build_routing_id = 1;</code>
+     * @return The buildRoutingId.
+     */
+    long getBuildRoutingId();
   }
   /**
    * Protobuf type {@code CPartnerApps_FinishUploadDepot_Response}
@@ -5842,6 +5953,7 @@ public final class SteammessagesPartnerappsSteamclient {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5852,6 +5964,11 @@ public final class SteammessagesPartnerappsSteamclient {
             case 0:
               done = true;
               break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              buildRoutingId_ = input.readUInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5884,6 +6001,26 @@ public final class SteammessagesPartnerappsSteamclient {
               SteammessagesPartnerappsSteamclient.CPartnerApps_FinishUploadDepot_Response.class, SteammessagesPartnerappsSteamclient.CPartnerApps_FinishUploadDepot_Response.Builder.class);
     }
 
+    private int bitField0_;
+    public static final int BUILD_ROUTING_ID_FIELD_NUMBER = 1;
+    private long buildRoutingId_;
+    /**
+     * <code>optional uint64 build_routing_id = 1;</code>
+     * @return Whether the buildRoutingId field is set.
+     */
+    @java.lang.Override
+    public boolean hasBuildRoutingId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional uint64 build_routing_id = 1;</code>
+     * @return The buildRoutingId.
+     */
+    @java.lang.Override
+    public long getBuildRoutingId() {
+      return buildRoutingId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5898,6 +6035,9 @@ public final class SteammessagesPartnerappsSteamclient {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeUInt64(1, buildRoutingId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5907,6 +6047,10 @@ public final class SteammessagesPartnerappsSteamclient {
       if (size != -1) return size;
 
       size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, buildRoutingId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5922,6 +6066,11 @@ public final class SteammessagesPartnerappsSteamclient {
       }
       SteammessagesPartnerappsSteamclient.CPartnerApps_FinishUploadDepot_Response other = (SteammessagesPartnerappsSteamclient.CPartnerApps_FinishUploadDepot_Response) obj;
 
+      if (hasBuildRoutingId() != other.hasBuildRoutingId()) return false;
+      if (hasBuildRoutingId()) {
+        if (getBuildRoutingId()
+            != other.getBuildRoutingId()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5933,6 +6082,11 @@ public final class SteammessagesPartnerappsSteamclient {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBuildRoutingId()) {
+        hash = (37 * hash) + BUILD_ROUTING_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getBuildRoutingId());
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6066,6 +6220,8 @@ public final class SteammessagesPartnerappsSteamclient {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        buildRoutingId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -6092,6 +6248,13 @@ public final class SteammessagesPartnerappsSteamclient {
       @java.lang.Override
       public SteammessagesPartnerappsSteamclient.CPartnerApps_FinishUploadDepot_Response buildPartial() {
         SteammessagesPartnerappsSteamclient.CPartnerApps_FinishUploadDepot_Response result = new SteammessagesPartnerappsSteamclient.CPartnerApps_FinishUploadDepot_Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.buildRoutingId_ = buildRoutingId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -6140,6 +6303,9 @@ public final class SteammessagesPartnerappsSteamclient {
 
       public Builder mergeFrom(SteammessagesPartnerappsSteamclient.CPartnerApps_FinishUploadDepot_Response other) {
         if (other == SteammessagesPartnerappsSteamclient.CPartnerApps_FinishUploadDepot_Response.getDefaultInstance()) return this;
+        if (other.hasBuildRoutingId()) {
+          setBuildRoutingId(other.getBuildRoutingId());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6166,6 +6332,46 @@ public final class SteammessagesPartnerappsSteamclient {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+      private int bitField0_;
+
+      private long buildRoutingId_ ;
+      /**
+       * <code>optional uint64 build_routing_id = 1;</code>
+       * @return Whether the buildRoutingId field is set.
+       */
+      @java.lang.Override
+      public boolean hasBuildRoutingId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional uint64 build_routing_id = 1;</code>
+       * @return The buildRoutingId.
+       */
+      @java.lang.Override
+      public long getBuildRoutingId() {
+        return buildRoutingId_;
+      }
+      /**
+       * <code>optional uint64 build_routing_id = 1;</code>
+       * @param value The buildRoutingId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuildRoutingId(long value) {
+        bitField0_ |= 0x00000001;
+        buildRoutingId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 build_routing_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuildRoutingId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        buildRoutingId_ = 0L;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -11915,93 +12121,97 @@ public final class SteammessagesPartnerappsSteamclient {
   static {
     java.lang.String[] descriptorData = {
       "\n1steam/steammessages_partnerapps.steamc" +
-      "lient.proto\0322steam/steammessages_unified" +
-      "_base.steamclient.proto\"J\n\'CPartnerApps_" +
-      "RequestUploadToken_Request\022\020\n\010filename\030\001" +
-      " \001(\t\022\r\n\005appid\030\002 \001(\r\"f\n(CPartnerApps_Requ" +
-      "estUploadToken_Response\022\024\n\014upload_token\030" +
-      "\001 \001(\004\022\020\n\010location\030\002 \001(\t\022\022\n\nrouting_id\030\003 " +
-      "\001(\004\"]\n!CPartnerApps_FinishUpload_Request" +
-      "\022\024\n\014upload_token\030\001 \001(\004\022\022\n\nrouting_id\030\002 \001" +
-      "(\004\022\016\n\006app_id\030\003 \001(\r\"H\n(CPartnerApps_Finis" +
-      "hUploadKVSign_Response\022\034\n\024signed_install" +
-      "script\030\001 \001(\t\"\210\001\n*CPartnerApps_FinishUplo" +
-      "adLegacyDRM_Request\022\024\n\014upload_token\030\001 \001(" +
-      "\004\022\022\n\nrouting_id\030\002 \001(\004\022\016\n\006app_id\030\003 \001(\r\022\r\n" +
-      "\005flags\030\004 \001(\r\022\021\n\ttool_name\030\005 \001(\t\">\n+CPart" +
-      "nerApps_FinishUploadLegacyDRM_Response\022\017" +
-      "\n\007file_id\030\001 \001(\t\"$\n\"CPartnerApps_FinishUp" +
-      "load_Response\"\211\001\n&CPartnerApps_FinishUpl" +
-      "oadDepot_Request\022\024\n\014upload_token\030\001 \001(\004\022\022" +
-      "\n\nrouting_id\030\002 \001(\004\022\016\n\006app_id\030\003 \001(\r\022\020\n\010de" +
-      "pot_id\030\004 \001(\r\022\023\n\013build_flags\030\005 \001(\r\")\n\'CPa" +
-      "rtnerApps_FinishUploadDepot_Response\"T\n(" +
-      "CPartnerApps_GetDepotBuildResult_Request" +
-      "\022\024\n\014upload_token\030\001 \001(\004\022\022\n\nrouting_id\030\002 \001" +
-      "(\004\"S\n)CPartnerApps_GetDepotBuildResult_R" +
-      "esponse\022\023\n\013manifest_id\030\001 \001(\004\022\021\n\terror_ms" +
-      "g\030\002 \001(\t\"5\n#CPartnerApps_FindDRMUploads_R" +
-      "equest\022\016\n\006app_id\030\001 \001(\005\"\264\001\n\036CPartnerApps_" +
-      "ExistingDRMUpload\022\017\n\007file_id\030\001 \001(\t\022\016\n\006ap" +
-      "p_id\030\002 \001(\r\022\020\n\010actor_id\030\003 \001(\005\022\025\n\rsupplied" +
-      "_name\030\005 \001(\t\022\r\n\005flags\030\006 \001(\r\022\020\n\010mod_type\030\007" +
-      " \001(\t\022\021\n\ttimestamp\030\010 \001(\007\022\024\n\014orig_file_id\030" +
-      "\t \001(\t\"X\n$CPartnerApps_FindDRMUploads_Res" +
-      "ponse\0220\n\007uploads\030\001 \003(\0132\037.CPartnerApps_Ex" +
-      "istingDRMUpload\"@\n\035CPartnerApps_Download" +
-      "_Request\022\017\n\007file_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(" +
-      "\005\"F\n\036CPartnerApps_Download_Response\022\024\n\014d" +
-      "ownload_url\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\0052\241\016\n\013Pa" +
-      "rtnerApps\022\261\001\n\030RequestKVSignUploadToken\022(" +
+      "lient.proto\032\036steam/steammessages_base.pr" +
+      "oto\0322steam/steammessages_unified_base.st" +
+      "eamclient.proto\"J\n\'CPartnerApps_RequestU" +
+      "ploadToken_Request\022\020\n\010filename\030\001 \001(\t\022\r\n\005" +
+      "appid\030\002 \001(\r\"f\n(CPartnerApps_RequestUploa" +
+      "dToken_Response\022\024\n\014upload_token\030\001 \001(\004\022\020\n" +
+      "\010location\030\002 \001(\t\022\022\n\nrouting_id\030\003 \001(\004\"]\n!C" +
+      "PartnerApps_FinishUpload_Request\022\024\n\014uplo" +
+      "ad_token\030\001 \001(\004\022\022\n\nrouting_id\030\002 \001(\004\022\016\n\006ap" +
+      "p_id\030\003 \001(\r\"H\n(CPartnerApps_FinishUploadK" +
+      "VSign_Response\022\034\n\024signed_installscript\030\001" +
+      " \001(\t\"\314\001\n*CPartnerApps_FinishUploadLegacy" +
+      "DRM_Request\022\024\n\014upload_token\030\001 \001(\004\022\022\n\nrou" +
+      "ting_id\030\002 \001(\004\022\016\n\006app_id\030\003 \001(\r\022\r\n\005flags\030\004" +
+      " \001(\r\022\021\n\ttool_name\030\005 \001(\t\022B\n\tuse_cloud\030\006 \001" +
+      "(\010:\005falseB(\202\265\030$use cloud storage for bui" +
+      "ld products\">\n+CPartnerApps_FinishUpload" +
+      "LegacyDRM_Response\022\017\n\007file_id\030\001 \001(\t\"$\n\"C" +
+      "PartnerApps_FinishUpload_Response\"\211\001\n&CP" +
+      "artnerApps_FinishUploadDepot_Request\022\024\n\014" +
+      "upload_token\030\001 \001(\004\022\022\n\nrouting_id\030\002 \001(\004\022\016" +
+      "\n\006app_id\030\003 \001(\r\022\020\n\010depot_id\030\004 \001(\r\022\023\n\013buil" +
+      "d_flags\030\005 \001(\r\"C\n\'CPartnerApps_FinishUplo" +
+      "adDepot_Response\022\030\n\020build_routing_id\030\001 \001" +
+      "(\004\"T\n(CPartnerApps_GetDepotBuildResult_R" +
+      "equest\022\024\n\014upload_token\030\001 \001(\004\022\022\n\nrouting_" +
+      "id\030\002 \001(\004\"S\n)CPartnerApps_GetDepotBuildRe" +
+      "sult_Response\022\023\n\013manifest_id\030\001 \001(\004\022\021\n\ter" +
+      "ror_msg\030\002 \001(\t\"5\n#CPartnerApps_FindDRMUpl" +
+      "oads_Request\022\016\n\006app_id\030\001 \001(\005\"\264\001\n\036CPartne" +
+      "rApps_ExistingDRMUpload\022\017\n\007file_id\030\001 \001(\t" +
+      "\022\016\n\006app_id\030\002 \001(\r\022\020\n\010actor_id\030\003 \001(\005\022\025\n\rsu" +
+      "pplied_name\030\005 \001(\t\022\r\n\005flags\030\006 \001(\r\022\020\n\010mod_" +
+      "type\030\007 \001(\t\022\021\n\ttimestamp\030\010 \001(\007\022\024\n\014orig_fi" +
+      "le_id\030\t \001(\t\"X\n$CPartnerApps_FindDRMUploa" +
+      "ds_Response\0220\n\007uploads\030\001 \003(\0132\037.CPartnerA" +
+      "pps_ExistingDRMUpload\"@\n\035CPartnerApps_Do" +
+      "wnload_Request\022\017\n\007file_id\030\001 \001(\t\022\016\n\006app_i" +
+      "d\030\002 \001(\005\"F\n\036CPartnerApps_Download_Respons" +
+      "e\022\024\n\014download_url\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\0052" +
+      "\241\016\n\013PartnerApps\022\261\001\n\030RequestKVSignUploadT" +
+      "oken\022(.CPartnerApps_RequestUploadToken_R" +
+      "equest\032).CPartnerApps_RequestUploadToken" +
+      "_Response\"@\202\265\030<Request upload token for " +
+      "installscript file upload / signing\022\256\001\n\025" +
+      "RequestDRMUploadToken\022(.CPartnerApps_Req" +
+      "uestUploadToken_Request\032).CPartnerApps_R" +
+      "equestUploadToken_Response\"@\202\265\030<Request " +
+      "upload token for executable file upload " +
+      "/ processing\022\265\001\n\025RequestCEGUploadToken\022(" +
       ".CPartnerApps_RequestUploadToken_Request" +
       "\032).CPartnerApps_RequestUploadToken_Respo" +
-      "nse\"@\202\265\030<Request upload token for instal" +
-      "lscript file upload / signing\022\256\001\n\025Reques" +
-      "tDRMUploadToken\022(.CPartnerApps_RequestUp" +
-      "loadToken_Request\032).CPartnerApps_Request" +
-      "UploadToken_Response\"@\202\265\030<Request upload" +
-      " token for executable file upload / proc" +
-      "essing\022\265\001\n\025RequestCEGUploadToken\022(.CPart" +
-      "nerApps_RequestUploadToken_Request\032).CPa" +
-      "rtnerApps_RequestUploadToken_Response\"G\202" +
-      "\265\030CRequest upload token for custom execu" +
-      "table file upload / processing\022\243\001\n\027Reque" +
-      "stDepotUploadToken\022(.CPartnerApps_Reques" +
-      "tUploadToken_Request\032).CPartnerApps_Requ" +
-      "estUploadToken_Response\"3\202\265\030/Request upl" +
-      "oad token for steampipe depot upload\022\253\001\n" +
-      "\022FinishUploadKVSign\022\".CPartnerApps_Finis" +
-      "hUpload_Request\032).CPartnerApps_FinishUpl" +
-      "oadKVSign_Response\"F\202\265\030BCommit method to" +
-      " sign an installscript after an upload i" +
-      "s complete\022\244\001\n\025FinishUploadDRMUpload\022+.C" +
-      "PartnerApps_FinishUploadLegacyDRM_Reques" +
-      "t\032,.CPartnerApps_FinishUploadLegacyDRM_R" +
-      "esponse\"0\202\265\030,Commit method for executabl" +
-      "e file processing\022\231\001\n\025FinishUploadCEGUpl" +
-      "oad\022\".CPartnerApps_FinishUpload_Request\032" +
-      "#.CPartnerApps_FinishUpload_Response\"7\202\265" +
-      "\0303Commit method for custom executable fi" +
-      "le processing\022\245\001\n\027FinishUploadDepotUploa" +
-      "d\022\'.CPartnerApps_FinishUploadDepot_Reque" +
-      "st\032(.CPartnerApps_FinishUploadDepot_Resp" +
-      "onse\"7\202\265\0303Commit method for custom execu" +
-      "table file processing\022\244\001\n\023GetDepotBuildR" +
-      "esult\022).CPartnerApps_GetDepotBuildResult" +
-      "_Request\032*.CPartnerApps_GetDepotBuildRes" +
-      "ult_Response\"6\202\265\0302Get build status for p" +
-      "reviously uploaded depot ZIP\022\215\001\n\016FindDRM" +
-      "Uploads\022$.CPartnerApps_FindDRMUploads_Re" +
-      "quest\032%.CPartnerApps_FindDRMUploads_Resp" +
-      "onse\".\202\265\030*Finds N most recent prior uplo" +
-      "ads by appid\022K\n\010Download\022\036.CPartnerApps_" +
-      "Download_Request\032\037.CPartnerApps_Download" +
-      "_Response\0322\202\265\030.Service methods for app m" +
-      "anagement by partnersB\003\200\001\001"
+      "nse\"G\202\265\030CRequest upload token for custom" +
+      " executable file upload / processing\022\243\001\n" +
+      "\027RequestDepotUploadToken\022(.CPartnerApps_" +
+      "RequestUploadToken_Request\032).CPartnerApp" +
+      "s_RequestUploadToken_Response\"3\202\265\030/Reque" +
+      "st upload token for steampipe depot uplo" +
+      "ad\022\253\001\n\022FinishUploadKVSign\022\".CPartnerApps" +
+      "_FinishUpload_Request\032).CPartnerApps_Fin" +
+      "ishUploadKVSign_Response\"F\202\265\030BCommit met" +
+      "hod to sign an installscript after an up" +
+      "load is complete\022\244\001\n\025FinishUploadDRMUplo" +
+      "ad\022+.CPartnerApps_FinishUploadLegacyDRM_" +
+      "Request\032,.CPartnerApps_FinishUploadLegac" +
+      "yDRM_Response\"0\202\265\030,Commit method for exe" +
+      "cutable file processing\022\231\001\n\025FinishUpload" +
+      "CEGUpload\022\".CPartnerApps_FinishUpload_Re" +
+      "quest\032#.CPartnerApps_FinishUpload_Respon" +
+      "se\"7\202\265\0303Commit method for custom executa" +
+      "ble file processing\022\245\001\n\027FinishUploadDepo" +
+      "tUpload\022\'.CPartnerApps_FinishUploadDepot" +
+      "_Request\032(.CPartnerApps_FinishUploadDepo" +
+      "t_Response\"7\202\265\0303Commit method for custom" +
+      " executable file processing\022\244\001\n\023GetDepot" +
+      "BuildResult\022).CPartnerApps_GetDepotBuild" +
+      "Result_Request\032*.CPartnerApps_GetDepotBu" +
+      "ildResult_Response\"6\202\265\0302Get build status" +
+      " for previously uploaded depot ZIP\022\215\001\n\016F" +
+      "indDRMUploads\022$.CPartnerApps_FindDRMUplo" +
+      "ads_Request\032%.CPartnerApps_FindDRMUpload" +
+      "s_Response\".\202\265\030*Finds N most recent prio" +
+      "r uploads by appid\022K\n\010Download\022\036.CPartne" +
+      "rApps_Download_Request\032\037.CPartnerApps_Do" +
+      "wnload_Response\0322\202\265\030.Service methods for" +
+      " app management by partnersB\003\200\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          SteammessagesBase.getDescriptor(),
           SteammessagesUnifiedBaseSteamclient.getDescriptor(),
         });
     internal_static_CPartnerApps_RequestUploadToken_Request_descriptor =
@@ -12033,7 +12243,7 @@ public final class SteammessagesPartnerappsSteamclient {
     internal_static_CPartnerApps_FinishUploadLegacyDRM_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPartnerApps_FinishUploadLegacyDRM_Request_descriptor,
-        new java.lang.String[] { "UploadToken", "RoutingId", "AppId", "Flags", "ToolName", });
+        new java.lang.String[] { "UploadToken", "RoutingId", "AppId", "Flags", "ToolName", "UseCloud", });
     internal_static_CPartnerApps_FinishUploadLegacyDRM_Response_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_CPartnerApps_FinishUploadLegacyDRM_Response_fieldAccessorTable = new
@@ -12057,7 +12267,7 @@ public final class SteammessagesPartnerappsSteamclient {
     internal_static_CPartnerApps_FinishUploadDepot_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CPartnerApps_FinishUploadDepot_Response_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "BuildRoutingId", });
     internal_static_CPartnerApps_GetDepotBuildResult_Request_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_CPartnerApps_GetDepotBuildResult_Request_fieldAccessorTable = new
@@ -12102,10 +12312,12 @@ public final class SteammessagesPartnerappsSteamclient {
         new java.lang.String[] { "DownloadUrl", "AppId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(SteammessagesUnifiedBaseSteamclient.description);
     registry.add(SteammessagesUnifiedBaseSteamclient.methodDescription);
     registry.add(SteammessagesUnifiedBaseSteamclient.serviceDescription);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    SteammessagesBase.getDescriptor();
     SteammessagesUnifiedBaseSteamclient.getDescriptor();
   }
 
