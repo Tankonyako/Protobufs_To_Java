@@ -16,7 +16,8 @@ For ($i=0; $i -lt $games.Length; $i++)
 
             $content = (Get-Content -path $fullpath)
             
-            $content = $content.replace('import "steammessages','import "steam/steammessages')
+            $content = $content.replace('import "steamdatagram_auth_messages','import "' + $game + '/steamdatagram_auth_messages')
+            $content = $content.replace('import "steammessages','import "' + $game + '/steammessages')
             $content = $content.replace('import "steamnetworking','import "steam/steamnetworking')
             $content = $content.replace('import "steamdatagram','import "steam/steamdatagram')
             
