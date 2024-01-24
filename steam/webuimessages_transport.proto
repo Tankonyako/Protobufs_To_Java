@@ -18,4 +18,3 @@ service TransportAuth {
 
 	rpc Authenticate (.CTransportAuth_Authenticate_Request) returns (.CTransportAuth_Authenticate_Response);
 }
-

@@ -18,4 +18,3 @@ service OAuthToken {
 		option (method_description) = "Grants an implicit OAuth token (grant type 'token') for the specified client ID on behalf of a user without prompting";
 	}
 }
-

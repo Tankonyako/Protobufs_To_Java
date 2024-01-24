@@ -62,4 +62,3 @@ message ContentDeltaChunks {
 	repeated .ContentDeltaChunks.DeltaChunk deltaChunks = 4;
 	optional .EContentDeltaChunkDataLocation chunk_data_location = 5 [default = k_EContentDeltaChunkDataLocationInProtobuf];
 }
-

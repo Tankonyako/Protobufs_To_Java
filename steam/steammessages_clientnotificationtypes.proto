@@ -49,6 +49,11 @@ enum EClientNotificationType {
 	k_EClientNotificationType_RemoteClientStartStream = 42;
 	k_EClientNotificationType_StreamingClientConnection = 43;
 	k_EClientNotificationType_FamilyInvite = 44;
+	k_EClientNotificationType_PlaytimeWarning = 45;
+	k_EClientNotificationType_FamilyPurchaseRequest = 46;
+	k_EClientNotificationType_FamilyPurchaseRequestResponse = 47;
+	k_EClientNotificationType_ParentalFeatureRequest = 48;
+	k_EClientNotificationType_ParentalPlaytimeRequest = 49;
 }
 
 enum ESystemUpdateNotificationType {
@@ -144,6 +149,7 @@ message CClientNotificationFamilySharingDeviceAuthorizationChanged {
 message CClientNotificationFamilySharingStopPlaying {
 	optional uint32 accountid_owner = 1;
 	optional uint32 seconds_remaining = 2;
+	optional uint32 appid = 3;
 }
 
 message CClientNotificationFamilySharingLibraryAvailable {
@@ -232,3 +238,7 @@ message CClientNotificationStreamingClientConnection {
 	optional bool connected = 3;
 }
 
+message CClientNotificationPlaytimeWarning {
+	optional string type = 1;
+	optional uint32 playtime_remaining = 2;
+}

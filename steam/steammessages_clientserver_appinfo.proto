@@ -131,4 +131,3 @@ message CMsgClientPICSAccessTokenResponse {
 	repeated .CMsgClientPICSAccessTokenResponse.AppToken app_access_tokens = 3;
 	repeated uint32 app_denied_tokens = 4;
 }
-

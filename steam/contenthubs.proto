@@ -41,4 +41,3 @@ message CStorePageFilter {
 	optional .CStorePageFilter.ContentHubFilter content_hub_filter = 2;
 	repeated .CStorePageFilter.StoreFilter store_filters = 3;
 }
-

@@ -126,4 +126,3 @@ enum ENetworkDisconnectionReason {
 	NETWORK_DISCONNECT_KICKED_NOSTEAMLOGIN = 160 [(network_connection_token) = "#Player_DisconnectReason_NoSteamLogin"];
 	NETWORK_DISCONNECT_KICKED_NOSTEAMTICKET = 161 [(network_connection_token) = "#Player_DisconnectReason_NoSteamTicket"];
 }
-

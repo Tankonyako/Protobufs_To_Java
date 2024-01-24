@@ -8,4 +8,3 @@ message Offline_Ticket {
 	optional int32 kdf2 = 5;
 	optional bytes salt2 = 6;
 }
-

@@ -61,4 +61,3 @@ message CGameNetworkingUI_AppSummary {
 	optional uint32 active_connections = 20;
 	optional .CGameNetworkingUI_ConnectionSummary main_cxn = 30;
 }
-

@@ -259,4 +259,3 @@ message CMsgTEWorldDecal {
 	optional .CMsgVector normal = 2;
 	optional uint32 index = 3;
 }
-

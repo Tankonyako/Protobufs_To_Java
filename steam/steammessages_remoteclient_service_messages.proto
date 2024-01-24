@@ -217,4 +217,3 @@ message CCMRemoteClient_ServerMessage {
 		.CRemoteClient_GetReplies_Response reply_packet = 6;
 	}
 }
-

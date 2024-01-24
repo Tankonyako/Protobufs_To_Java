@@ -597,4 +597,3 @@ message CChinaAgreementSessions_StartAgreementSessionInGame_Request {
 message CChinaAgreementSessions_StartAgreementSessionInGame_Response {
 	optional string agreement_url = 1;
 }
-

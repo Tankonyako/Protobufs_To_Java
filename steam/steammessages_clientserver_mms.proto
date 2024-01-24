@@ -228,4 +228,3 @@ message CMsgClientMMSGetLobbyStatusResponse {
 	optional fixed64 steam_id_lobby = 2;
 	optional .EMMSLobbyStatus lobby_status = 3 [default = k_EMMSLobbyStatusInvalid];
 }
-

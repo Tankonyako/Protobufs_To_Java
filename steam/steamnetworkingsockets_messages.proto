@@ -205,4 +205,3 @@ message CMsgSteamNetworkingICESessionSummary {
 	optional uint32 ice_enable_var = 14;
 	optional uint32 local_candidate_types_allowed = 15;
 }
-

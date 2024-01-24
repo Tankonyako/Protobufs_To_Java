@@ -254,4 +254,3 @@ service Player {
 		option (method_description) = "Marks latest announcement timestamp read by user";
 	}
 }
-

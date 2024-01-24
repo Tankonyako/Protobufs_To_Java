@@ -598,4 +598,3 @@ message CMsgQuestMapNodeCondition {
 message CMsgHeaderOnly {
 	required .CMsgProtoDefHeader header = 1;
 }
-

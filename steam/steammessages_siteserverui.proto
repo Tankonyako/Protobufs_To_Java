@@ -130,4 +130,3 @@ message SiteServerUI_ContentCacheConfig_Request {
 
 message SiteServerUI_ContentCacheConfig_Response {
 }
-

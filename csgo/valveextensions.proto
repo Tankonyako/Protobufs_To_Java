@@ -17,4 +17,3 @@ extend .google.protobuf.EnumValueOptions {
 	optional string schema_description = 1001;
 	optional bool schema_suppress_enumerator = 1002;
 }
-

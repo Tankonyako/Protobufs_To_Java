@@ -99,4 +99,3 @@ message CMsgRemoteClientGetControllerConfigResponse {
 message CMsgRemoteClientStreamingEnabled {
 	required bool enabled = 1;
 }
-

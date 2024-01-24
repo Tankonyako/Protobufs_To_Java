@@ -68,4 +68,3 @@ service Cloud {
 		option (method_description) = "Deletes a file from the user's cloud.";
 	}
 }
-

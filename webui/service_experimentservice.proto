@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+import "webui/common_base.proto";
+
+service ExperimentService {
+	rpc ReportProductImpressionsFromClient (.NotImplemented) returns (.NoResponse);
+}
+

@@ -281,4 +281,3 @@ message GeneratedCodeInfo {
 
 	repeated .google.protobuf.GeneratedCodeInfo.Annotation annotation = 1;
 }
-

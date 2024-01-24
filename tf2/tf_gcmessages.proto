@@ -1624,4 +1624,3 @@ message GCQuestStrangeEvent {
 message CMsgSDRTicket {
 	optional bytes serialized_ticket = 1;
 }
-

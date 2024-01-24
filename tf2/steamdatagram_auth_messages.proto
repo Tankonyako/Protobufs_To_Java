@@ -50,4 +50,3 @@ message CMsgSteamDatagramCertificateSigned {
 	optional bytes ca_signature = 6;
 }
 
-

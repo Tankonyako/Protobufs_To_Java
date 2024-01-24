@@ -244,4 +244,3 @@ message CNETMsg_DebugOverlay {
 	repeated uint64 uint64s = 7;
 	repeated string strings = 8;
 }
-

@@ -45,4 +45,3 @@ message CClientMetrics_ContentDownloadResponse_HostCounts {
 message CClientMetrics_ContentDownloadResponse_Hosts {
 	repeated .CClientMetrics_ContentDownloadResponse_HostCounts hosts = 1;
 }
-

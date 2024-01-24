@@ -277,6 +277,7 @@ message CMsgSystemPerfLimits {
 	repeated .ESplitScalingScaler split_scaling_scalers_available = 27;
 	optional bool is_hdr_supported = 28;
 	optional int32 display_refresh_manual_hz_oc_max = 29;
+	optional bool disable_refresh_rate_management = 30;
 }
 
 message CMsgSystemPerfSettingsGlobal {
@@ -488,6 +489,8 @@ message CMsgSystemDisplay {
 	optional bool is_vrr_enabled = 15;
 	optional bool is_hdr_capable = 16;
 	optional bool is_hdr_enabled = 17;
+	repeated int32 compatibility_params = 18;
+	optional bool app_wants_hdr = 19;
 }
 
 message CMsgSystemDisplayManagerState {
@@ -645,4 +648,3 @@ message CMsgClientShaderHitCacheEntry {
 message CMsgClientShaderHitCache {
 	repeated .CMsgClientShaderHitCacheEntry entries = 1;
 }
-

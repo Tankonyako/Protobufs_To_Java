@@ -1529,4 +1529,3 @@ enum ESteamReviewScore {
 	k_ESteamReviewScore_OverwhelminglyNegative = 1;
 	k_ESteamReviewScore_None = 0;
 }
-

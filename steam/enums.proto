@@ -61,9 +61,10 @@ enum EPersonaStateFlag {
 
 enum EContentCheckProvider {
 	k_EContentCheckProvider_Invalid = 0;
-	k_EContentCheckProvider_Google = 1;
+	k_EContentCheckProvider_Google_DEPRECATED = 1;
 	k_EContentCheckProvider_Amazon = 2;
 	k_EContentCheckProvider_Local = 3;
+	k_EContentCheckProvider_GoogleVertexAI = 4;
 }
 
 enum EProfileCustomizationType {
@@ -130,6 +131,12 @@ enum ESystemFanControlMode {
 	k_SystemFanControlMode_Invalid = 0;
 	k_SystemFanControlMode_Disabled = 1;
 	k_SystemFanControlMode_Default = 2;
+}
+
+enum EStartupMovieVariant {
+	k_EStartupMovieVariant_Invalid = 0;
+	k_EStartupMovieVariant_Default = 1;
+	k_EStartupMovieVariant_Orange = 2;
 }
 
 enum EColorGamutLabelSet {
@@ -235,6 +242,29 @@ enum ESplitScalingScaler {
 	k_ESplitScalingScaler_Stretch = 5;
 }
 
+enum EGamescopeBlurMode {
+	k_EGamescopeBlurMode_Disabled = 0;
+	k_EGamescopeBlurMode_IfOccluded = 1;
+	k_EGamescopeBlurMode_Always = 2;
+}
+
+enum ESLSHelper {
+	k_ESLSHelper_Invalid = 0;
+	k_ESLSHelper_Minidump = 1;
+	k_ESLSHelper_Kdump = 2;
+	k_ESLSHelper_Journal = 3;
+	k_ESLSHelper_Gpu = 4;
+	k_ESLSHelper_SystemInfo = 5;
+}
+
+enum EHDRVisualization {
+	k_EHDRVisualization_None = 0;
+	k_EHDRVisualization_Heatmap = 1;
+	k_EHDRVisualization_Analysis = 2;
+	k_EHDRVisualization_HeatmapExtended = 3;
+	k_EHDRVisualization_HeatmapClassic = 4;
+}
+
 enum EHDRToneMapOperator {
 	k_EHDRToneMapOperator_Invalid = 0;
 	k_EHDRToneMapOperator_Uncharted = 1;
@@ -311,6 +341,14 @@ enum ESteamDeckCompatibilityResultDisplayType {
 	k_ESteamDeckCompatibilityResultDisplayType_Unsupported = 2;
 	k_ESteamDeckCompatibilityResultDisplayType_Playable = 3;
 	k_ESteamDeckCompatibilityResultDisplayType_Verified = 4;
+}
+
+enum ESteamDeckCompatibilityTestResult {
+	k_ESteamDeckCompatibilityTestResult_Invalid = 0;
+	k_ESteamDeckCompatibilityTestResult_NotApplicable = 1;
+	k_ESteamDeckCompatibilityTestResult_Pass = 2;
+	k_ESteamDeckCompatibilityTestResult_Fail = 3;
+	k_ESteamDeckCompatibilityTestResult_FailMinor = 4;
 }
 
 enum EACState {
@@ -444,4 +482,3 @@ enum ECloudGamingPlatform {
 	k_ECloudGamingPlatformValve = 1;
 	k_ECloudGamingPlatformNVIDIA = 2;
 }
-

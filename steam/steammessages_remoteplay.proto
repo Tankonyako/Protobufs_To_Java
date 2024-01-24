@@ -976,4 +976,3 @@ message CControllerConfigMsg {
 	repeated .CControllerConfigMsg.ControllerConfigResponse configResponse = 6;
 	optional .CControllerConfigMsg.ControllerActiveConfigMsg activeConfigChangeMsg = 7;
 }
-

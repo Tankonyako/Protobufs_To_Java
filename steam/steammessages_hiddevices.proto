@@ -157,4 +157,3 @@ message CHIDMessageFromRemote {
 		.CHIDMessageFromRemote.CloseAllDevices close_all_devices = 5;
 	}
 }
-

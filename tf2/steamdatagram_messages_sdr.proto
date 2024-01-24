@@ -518,4 +518,3 @@ message CMsgSteamDatagramSetSecondaryAddressResult {
 	optional bool success = 1;
 	optional string message = 2;
 }
-

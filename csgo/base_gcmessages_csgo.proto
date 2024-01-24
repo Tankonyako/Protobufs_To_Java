@@ -547,4 +547,3 @@ message CMsgAdjustEquipSlot {
 message CMsgAdjustEquipSlots {
 	repeated .CMsgAdjustEquipSlot slots = 1;
 }
-

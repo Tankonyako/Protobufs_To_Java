@@ -233,4 +233,3 @@ service PublishedFile {
 		option (method_description) = "Refresh the voting queue for the user";
 	}
 }
-

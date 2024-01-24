@@ -323,4 +323,3 @@ message CMsgSerializedSOCache {
 	repeated .CMsgSerializedSOCache.Cache caches = 2;
 	optional uint32 gc_socache_file_version = 3;
 }
-

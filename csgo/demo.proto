@@ -160,4 +160,3 @@ message CDemoUserCmd {
 message CDemoSpawnGroups {
 	repeated bytes msgs = 3;
 }
-

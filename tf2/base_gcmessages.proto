@@ -561,4 +561,3 @@ message CWorkshop_SetItemPaymentRules_Request {
 
 message CWorkshop_SetItemPaymentRules_Response {
 }
-

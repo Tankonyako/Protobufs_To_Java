@@ -598,4 +598,3 @@ message CMsgSteamSockets_UDP_Stats {
 	optional uint32 seq_num = 4;
 }
 
-

@@ -138,4 +138,3 @@ message CVirtualControllerGlobalConfig {
 	optional bool rumble_enabled = 4 [default = true];
 	optional bool shake_fade_enabled = 5;
 }
-

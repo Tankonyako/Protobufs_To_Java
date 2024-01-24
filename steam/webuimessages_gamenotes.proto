@@ -21,4 +21,3 @@ service GameNotes {
 
 	rpc UploadImage (.CGameNotes_UploadImage_Request) returns (.CGameNotes_UploadImage_Response);
 }
-

@@ -70,4 +70,3 @@ message CMsgClientLBSGetLBEntriesResponse {
 	optional int32 leaderboard_entry_count = 2;
 	repeated .CMsgClientLBSGetLBEntriesResponse.Entry entries = 3;
 }
-

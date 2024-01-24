@@ -125,4 +125,3 @@ message VacNetShot {
 	repeated float delta_yaw_window = 6;
 	repeated float delta_pitch_window = 7;
 }
-

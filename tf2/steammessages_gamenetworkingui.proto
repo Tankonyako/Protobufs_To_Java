@@ -42,4 +42,3 @@ message CGameNetworkingUI_ConnectionState {
 message CGameNetworkingUI_Message {
 	repeated .CGameNetworkingUI_ConnectionState connection_state = 1;
 }
-
