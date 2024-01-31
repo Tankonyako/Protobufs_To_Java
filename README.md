@@ -1,13 +1,33 @@
 ## Protobufs To Java
 **🌟 Allows you to convert Protobuf from CS:GO, Steam, TF2 to Java format for use.**
 You need https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java for use.
+## Maven
+#### Add JitPack repository
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+#### Add package
+```xml
+<dependency>
+    <groupId>com.github.Tankonyako</groupId>
+    <artifactId>Protobufs_To_Java</artifactId>
+    <version>-036ec0d698-1</version>
+</dependency>
+```
+### If without maven (importing directly source code)
 
-    <dependency>
-	    <groupId>com.google.protobuf</groupId>
-	    <artifactId>protobuf-java</artifactId>
-	    <version>3.17.3</version>
-	</dependency>
-
+```xml
+<dependency>
+    <groupId>com.google.protobuf</groupId>
+    <artifactId>protobuf-java</artifactId>
+    <version>3.17.3</version>
+</dependency>
+```
 
 There are already generated Protobufs, but you can also use your own ones or generate them yourself.
 
