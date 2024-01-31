@@ -3,7 +3,7 @@
 # YOU MAY NEED TO ADD YOUR EXECUTION PERMISSIONS CODE HERE
 
 SRC_DIR=$(pwd)
-OUT_DIR="output"
+OUT_DIR="src/main/java"
 
 JavaPackage="in.dragonbra.javasteam.protobufs"
 
